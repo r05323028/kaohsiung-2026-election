@@ -1,0 +1,471 @@
+﻿
+<!DOCTYPE html>
+
+<html id="FormHtml" xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant-tw">
+<head id="Head1">    <style>
+        .for_accessibility a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 99;
+            width: 1px;
+            height: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #000;
+        }
+            .for_accessibility a:focus {
+                width: auto;
+                height: auto;
+                padding: 6px;
+                background-color: #fff;
+            }
+        .for_accessibility div {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: transparent;
+            opacity: .1
+        }
+    </style>
+<script src="https://youth.kcg.gov.tw/Scripts/core.min.js" integrity="sha384-I9nvsY534/cx2CBx9qnDDuNkP4tBw4Va7eW8+2CXSaiPmfhB42fq032++kvT8woz" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/Scripts/jquery.cookie.js" integrity="sha384-yC2HrVIaO4kF2CFMl9k63nN9kdLpRgjsHv9mGblvS1i7btpa32pZQxu8NpKZOGpL" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/Scripts/jUtil.js" integrity="sha384-TxJUW9Sm3KMo4Og+xd1gURIJV6PthsPlVxQqJ4dz6AyKRb9UEsTCDQZ7Dh9lD9xC" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/Scripts/fancybox/jquery.fancybox.js" integrity="sha384-3SDJbyurSgeOdtahVMR/PhuagxEuG+wYRK7iubqlLmPkco63ytK4ZHziw+F/rOJu" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://youth.kcg.gov.tw/Scripts/fancybox/jquery.fancybox.css" integrity="sha384-F/TkoNA+xa+RxqyyYd2YmsgYzijWseW76WCdssunVezD+2rSk3uW39FZdPa3w1Ko" crossorigin="anonymous">
+<script src="https://youth.kcg.gov.tw/Scripts/lightGallery/js/lightgallery-all.min.js" integrity="sha384-PUujGjKFqpvFHdym4MJOtZffXRaLdxSJ7dF1xIImGV43+8Wx3rl2w8SMN9TfPrPk" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://youth.kcg.gov.tw/Scripts/lightGallery/css/lightgallery.min.css" integrity="sha384-IbIjrwFN0m/kI5A6nXFhfhLlqrtWXUpW1MnWT6nYAdMMl6nsO2n32jIOQJutxf2x" crossorigin="anonymous">
+<script src="https://youth.kcg.gov.tw/Scripts/J_Pager.js" integrity="sha384-i8BH2oBpRX0yOZcKirmMsAECc3l/ODBvXSwHsKITOM6tWnsmAFV6PH3/KHCC/RD3" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/Scripts/jquery.mousewheel.min.js" integrity="sha384-WjH6quX6n6PsB78rPmQM/eKxwkxTjuJcWbyyu4mkz9QNxScr50vZyXh5DGQ0Hb7r" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/Scripts/jquery.touchwipe.min.js" integrity="sha384-1LiSfckXgq4JttMwYFL1/Qn4kHGVAnxANHdBaYV5Ge7n9+c4yLXVrg+ez/xAi5Lk" crossorigin="anonymous"></script>
+<script src="https://www.instagram.com/embed.js" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/Scripts/fu_Accessibility.js" integrity="sha384-uMpmjsblsmB8b2AKwzd1Wb+Adfvj0+JAx4/YiH9dpzNdoauKAU6/AD5BFwFAwEqW" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/js/airdatepicker/datepicker.min.js" integrity="sha384-kU1c7O99Jp3Ahj9XuEFBN4k9xpJsTjb0JwNw6AAr7+vKZ5vL2RJJgG1Flko3rmWT" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/js/airdatepicker/datepicker.zh-tw.js" integrity="sha384-F81MiQr/bNyph47kge9XTbkmXXumq3PvDJLs25icN2oCbD2Qlz2pk910yV5Fhcvz" crossorigin="anonymous"></script>
+<script src="https://youth.kcg.gov.tw/js/airdatepicker/datepicker.en.js" integrity="sha384-ddFmV1OYv89Hqrn9ZcZw4eX84cQacwhojy/w2QtMOuShqveWYWZFtQFqAEg9Ofzp" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://youth.kcg.gov.tw/js/airdatepicker/datepicker.min.css" integrity="sha384-qL6odLoQ/R6QVvt//H0MwIry0ceO9d7ko6xUNpTouZfmBqaQzB0OhSyVVm8cU2Zj" crossorigin="anonymous">
+<script type="text/javascript" language="javascript" charset="big5" src="https://youth.kcg.gov.tw/Scripts/PageCollection.js" integrity="sha384-zmhRSmZgJq52L964SaaHZzW7JOn81hFIzdf5G7qqbgtFTGLWBn0q8RIfgJ7Qny12" crossorigin="anonymous"></script>
+<script>var CCMS_WWWURL='https://youth.kcg.gov.tw';var CCMS_LanguageSN=1;var CCMS_SitesSN_Encryption='448';</script><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="DC.Title" content="" />
+<meta name="DC.Subject" content="" />
+<meta name="DC.Creator" content="" />
+<meta name="DC.Publisher" content="" />
+<meta name="DC.Date" content="" />
+<meta name="DC.Type" content="" />
+<meta name="DC.Identifier" content="" />
+<meta name="DC.Description" content="" />
+<meta name="DC.Contributor" content="" />
+<meta name="DC.Format" content="" />
+<meta name="DC.Relation" content="" />
+<meta name="DC.Source" content="" />
+<meta name="DC.Language" content="" />
+<meta name="DC.Rights" content="" />
+<meta name="Category.Theme" content="" />
+<meta name="Category.Cake" content="" />
+<meta name="Category.Service" content="" />
+<meta name="DC.Keywords" content="" />
+<title>
+	高雄市政府青年局-局長介紹
+</title><link id="likCssGlobal" href="/css/global.css" rel="stylesheet" type="text/css" /><link id="likCssPage" href="/css/page.css" rel="stylesheet" type="text/css" /><link id="likPrint" href="/css/print.css" rel="stylesheet" type="text/css" media="print" /><link id="lnkCssSysDetail" href="/css/sys_detail.css" rel="stylesheet" type="text/css" />
+
+<link href="https://youth-ws.kcg.gov.tw/001/Upload/448/sites/pagebackimage/14da0044-3bfa-4d53-b8d5-16864abfc385.png" rel="icon" type="image/x-icon"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNYFHDCKJJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+ 
+
+  gtag('config', 'G-JNYFHDCKJJ');
+</script><meta property="og:title" content="局長介紹" >
+<meta property="og:type" content="article" >
+<meta property="og:url" content="https://youth.kcg.gov.tw/cp.aspx?n=3" >
+<meta property="og:site_name" content="高雄市政府青年局" >
+</head>
+<body id="Formbody" data-js="false"><div class="for_accessibility">
+    <a href="#CCMS_Content" class="" title="跳到主要內容區塊">跳到主要內容區塊</a>    <script>
+        var $a = $('.for_accessibility a');
+        $a.on('click', function (evt) {
+            var $href = $($(this).attr('href')),
+                $target = $href.find('a').eq(0).get(0);
+            setTimeout(function () { try { $target.focus(); } catch (e) { } }, 0);
+        });
+    </script>
+</div>
+<script> document.body.setAttribute("data-js", "true");</script>
+    
+    <form method="post" action="./cp.aspx?n=3&amp;Create=1" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ClY+rLyhcRvEbLWRh6wQbhyAuqpRr/kcVnlfP90izxHar0KZ+v23ftEy1YYvxyYgk9Q4ZCM4C2SrUpsiSL8YNfN+rLQ=" />
+</div>
+
+        <!--主選單 結束-->
+        <!--標題-->
+        
+        <div class="title">
+            
+
+        </div>
+        
+        
+        
+        
+        
+        
+     <div class="group sys-root" data-func="{&#39;datePicker&#39;:{&#39;autoClose&#39;:true,&#39;language&#39;:&#39;zh-tw&#39;,&#39;navTitles&#39;:{&#39;days&#39;:&#39;&lt;i&amp;gt;民國 rrr 年&lt;/i&amp;gt; &amp;nbsp; MM&#39;,&#39;months&#39;:&#39;民國 rrr 年&#39;,&#39;years&#39;:&#39;民國 rrr1 至 rrr2 年&#39;}}}" data-nojs="您的瀏覽器似乎不支援 JavaScript 語法，但沒關係，這並不會影響到內容的陳述。如需要選擇適合您的字級大小，可利用鍵盤 Ctrl   ( )放大 (-)縮小。如需要回到上一頁，可使用瀏覽器提供的 Alt   左方向鍵(←)。如需要列印，可利用鍵盤 Ctrl   p 使用瀏覽器提供的列印功能。" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="group base-mobile" data-func="{&#39;toggleBtn&#39;:{&#39;btnOrangeText&#39;:&#39;必&#39;,&#39;btnActiveText&#39;:&#39;尚未定義&#39;}}" data-index="1" data-type="3"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a    title="手機版選單"   >手機版選單</a></span></div></div></div><div class="ct"><div class="in"> <div class="area-form search" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a   href="javascript:void(0)"   title="搜尋"   target="_self"  >搜尋</a></span></div></div></div><div class="ct"><div class="in"><div class="fieldset">
+  <span class="search"><input data-search="btn_fb53ce08fc04455fa37925f0a70b5843" type="search" placeholder="Search" title="搜尋"></span>
+  <span class="submit"><a href="#" class='CCMS_SearchBtn' data-search="btn_fb53ce08fc04455fa37925f0a70b5843" title="搜尋" >搜尋</a></span>
+</div>
+<div class="list">
+  <ul data-index="1" data-child="2">
+    <li data-index="1"><span><a href="#">貸款</a></span></li>
+    <li data-index="2"><span><a href="#">補助</a></span></li>
+  </ul>
+</div>
+<script >
+$(function () {
+    $('[data-search="fb53ce08fc04455fa37925f0a70b5843"]').on("keydown", function (event) {
+        if (event.which == 13) {
+             doSearch($('#btn_fb53ce08fc04455fa37925f0a70b5843'));
+            return false;
+        }
+    });
+});
+</script>
+</div></div><div class="ft"><div class="in"><ul data-index="1" data-child="1">
+  <li data-index="1" class="advanced"><span><a target="_blank" href="https://www.google.com.tw/advanced_search?hl=zh-Hant-tw&as_sitesearch=https://youth.kcg.gov.tw" title="進階搜尋[另開新視窗]">進階搜尋</a></span></li>
+</ul>
+</div></div></div></div> <div class="list-text share" data-index="2" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a   href="#"   title="分享"   >分享</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  class="facebook"  >		<span  ><a   href="javascript: void(window.open('https://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) ));"   title="Share to Facebook[另開新視窗]"   target="_self"  >Facebook</a></span></li><li   data-index="2"  class="twitter"  >		<span  ><a   href="javascript: void(window.open('https://twitter.com/home/?status='.concat(encodeURIComponent(document.title)) .concat(' ') .concat(encodeURIComponent(location.href))));"   title="Share to twitter[另開新視窗]"   target="_self"  >Twitter</a></span></li><li   data-index="3"  class="line"  >		<span  ><a   href="javascript: void(window.open('https://line.naver.jp/R/msg/text/?'.concat(encodeURIComponent(location.href)) ));"   title="Share to line[另開新視窗]"   target="_self"  >line</a></span></li><li   data-index="4"  class="email"  >		<span  ><a   href="javascript:  void(window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&amp;body=' +  encodeURIComponent(document.URL)));"   title="Share to email[另開新視窗]"   target="_self"  >Email</a></span></li></ul>
+</div></div></div></div> <div class="group-list nav" data-func="{&#39;majorNavMobile&#39;:{}}" data-index="3" data-type="4" data-child="6"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"> <div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=1"      title="認識我們"   >認識我們</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=2"      title="關於青年局"   >關於青年局</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=3"      title="局長介紹"   >局長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=4"      title="業務職掌"   >業務職掌</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=5"      title="交通資訊"   >交通資訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="2"> <div class="group nav" data-index="2" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=7"      title="訊息公告"   >訊息公告</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="News_Focus.aspx?n=57&sms=0"      title="焦點政策"   >焦點政策</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=9&sms=10146"      title="最新消息"   >最新消息</a></span></li><li   data-index="3"  >		<span  ><a   href="News_Calendarmonth.aspx?n=10&sms=10147"      title="活動快訊"   >活動快訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="3"> <div class="group nav" data-index="3" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=12"      title="雄青資源"   >雄青資源</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="ResourceSearch.aspx?n=36&sms=10158"      title="找資金"   >找資金</a></span></li><li   data-index="2"  >		<span  ><a   href="ResourceSearch.aspx?n=38&sms=10161"      title="找補助"   >找補助</a></span></li><li   data-index="3"  >		<span  ><a   href="ResourceSearch.aspx?n=39&sms=10162"      title="找空間"   >找空間</a></span></li><li   data-index="4"  >		<span  ><a   href="ResourceSearch.aspx?n=40&sms=10163"      title="找活動"   >找活動</a></span></li><li   data-index="5"  >		<span  ><a   href="ResourceSearch.aspx?n=41&sms=10164"      title="找課程"   >找課程</a></span></li><li   data-index="6"  >		<span  ><a   href="ResourceSearch.aspx?n=42&sms=10165"      title="找實習"   >找實習</a></span></li><li   data-index="7"  >		<span  ><a   href="ResourceSearch.aspx?n=43&sms=10166"      title="找專家"   >找專家</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="4"> <div class="group nav" data-index="4" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=13"      title="主題專區"   >主題專區</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="16"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=46"      title="學生社團專區"   >學生社團專區</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=402"      title="Pinway(駁二8號倉庫)"   >Pinway(駁二8號倉庫)</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=97"      title="青年創業專區"   >青年創業專區</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=98"      title="職涯補給站"   >職涯補給站</a></span></li><li   data-index="5"  >		<span  ><a   href="cp.aspx?n=477"      title="[另開新視窗]創業O'STAR及諮詢輔導"   target="_blank"  >創業O'STAR及諮詢輔導</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=96"      title="青年事務委員會"   >青年事務委員會</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=131"      title="雄青創業補助全攻略"   >雄青創業補助全攻略</a></span></li><li   data-index="8"  >		<span  ><a   href="cp.aspx?n=180"      title="K-TV高雄新媒體人才培育專區"   >K-TV高雄新媒體人才培育專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cp.aspx?n=194"      title="青年志工專區"   >青年志工專區</a></span></li><li   data-index="10"  >		<span  ><a   href="cp.aspx?n=266"      title="高雄青年攤車品牌輔導計畫"   >高雄青年攤車品牌輔導計畫</a></span></li><li   data-index="11"  >		<span  ><a   href="cp.aspx?n=276"      title="大港經典升級提案競賽專區"   >大港經典升級提案競賽專區</a></span></li><li   data-index="12"  >		<span  ><a   href="cl.aspx?n=344"      title="青創店家專區"   >青創店家專區</a></span></li><li   data-index="13"  >		<span  ><a   href="cp.aspx?n=351"      title="KFA高雄時尚大賞專區"   >KFA高雄時尚大賞專區</a></span></li><li   data-index="14"  >		<span  ><a   href="cp.aspx?n=427"      title="大青年專區"   >大青年專區</a></span></li><li   data-index="15"  >		<span  ><a   href="cp.aspx?n=540"      title="2026永續高雄青年創業挑戰賽"   >2026永續高雄青年創業挑戰賽</a></span></li><li   data-index="16"  >		<span  ><a   href="cp.aspx?n=558"      title="數位遊牧資訊專區"   >數位遊牧資訊專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="5"> <div class="group nav" data-index="5" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=14"      title="便民服務"   >便民服務</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=380"      title="檔案應用專區"   >檔案應用專區</a></span></li><li   data-index="2"  >		<span  ><a   href="cl.aspx?n=25"      title="[另開新視窗]申辦進度查詢"   target="_blank"  >申辦進度查詢</a></span></li><li   data-index="3"  >		<span  ><a   href="News.aspx?n=27&sms=10154"      title="檔案下載"   >檔案下載</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=28&sms=10155"      title="相關連結"   >相關連結</a></span></li><li   data-index="5"  >		<span  ><a   href="Message.aspx?n=29&sms=10156"      title="局長信箱"   >局長信箱</a></span></li><li   data-index="6"  >		<span  ><a   href="News_Toggle.aspx?n=64&sms=10167"      title="常見問答"   >常見問答</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=632"      title="新住民服務專區"   >新住民服務專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="6"> <div class="group nav" data-index="6" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=15"      title="公開資訊"   >公開資訊</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="14"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=16"      title="基金捐款專戶"   >基金捐款專戶</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=18&sms=10149"      title="施政報告"   >施政報告</a></span></li><li   data-index="3"  >		<span  ><a   href="cl.aspx?n=99"      title="法規查詢"   >法規查詢</a></span></li><li   data-index="4"  >		<span  ><a   href="cl.aspx?n=20"      title="會計資訊"   >會計資訊</a></span></li><li   data-index="5"  >		<span  ><a   href="News.aspx?n=102&sms=10193"      title="統計資訊"   >統計資訊</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=156"      title="性別主流化專區"   >性別主流化專區</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=525"      title="職場霸凌防治(含安全及衛生防護)宣導專區"   >職場霸凌防治(含安全及衛生防護)宣導專區</a></span></li><li   data-index="8"  >		<span  ><a   href="cl.aspx?n=169"      title="公職人員利益衝突迴避身分揭露專區"   >公職人員利益衝突迴避身分揭露專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cp.aspx?n=636"      title="補助交易身分關係揭露專區"   >補助交易身分關係揭露專區</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=161"      title="高雄市青年失業率"   >高雄市青年失業率</a></span></li><li   data-index="11"  >		<span  ><a   href="cl.aspx?n=212"      title="遊說法資訊專區"   >遊說法資訊專區</a></span></li><li   data-index="12"  >		<span  ><a   href="cl.aspx?n=307"      title="宣導專區"   >宣導專區</a></span></li><li   data-index="13"  >		<span  ><a   href="cp.aspx?n=619"      title="人民申請案件處理時限"   >人民申請案件處理時限</a></span></li><li   data-index="14"  >		<span  ><a   href="cp.aspx?n=620"      title="人民陳情案件處理時限"   >人民陳情案件處理時限</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li></ul></div></div></div></div> <div class="list-text hot-key-word" data-index="4" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="熱門關鍵字"   >熱門關鍵字</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="2"><li   data-index="1"  >		<span  ><a   href="Advanced_Search.aspx?q=貸款"   title="貸款"   target="_self"  >貸款</a></span></li><li   data-index="2"  >		<span  ><a   href="Advanced_Search.aspx?q=補助"   title="補助"   target="_self"  >補助</a></span></li></ul>
+</div></div></div></div> <div class="list-text link" data-index="5" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="上方連結"   >上方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="SiteMap.aspx"   title="網站導覽"   target="_self"  >網站導覽</a></span></li><li   data-index="2"  >		<span  ><a   href="https://youth.kcg.gov.tw/Message.aspx?n=29&sms=10156"   title="局長信箱"   target="_self"  >局長信箱</a></span></li><li   data-index="3"  >		<span  ><a   href="https://terms.naer.edu.tw/"   title="[另開新視窗]雙語詞彙[另開新視窗]"   target="_blank"  >雙語詞彙</a></span></li><li   data-index="4"  >		<span  ><a   href="https://www.facebook.com/Youth.Bureau.KH"   title="[另開新視窗]Facebook[另開新視窗]"   target="_blank"  >Facebook</a></span></li><li   data-index="5"  >		<span  ><a   href="https://www.instagram.com/youth.kcg/"   title="[另開新視窗]Instagram[另開新視窗]"   target="_blank"  >Instagram</a></span></li><li   data-index="6"  >		<span  ><a   href="https://liff.line.me/1645278921-kWRPP32q?accountId=youth.kcg&openerPlatform=native&openerKey=talkroom%3Aheader"   title="[另開新視窗]Line[另開新視窗]"   target="_blank"  >Line</a></span></li></ul>
+</div></div></div></div> <div class="list-text link" data-index="6" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="下方連結"   >下方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="2"><li   data-index="1"  >		<span  ><a   href="https://youth.kcg.gov.tw/cp.aspx?n=68&s=29&ccms_cs=1&state=3EAA1D2041344ACA"   title="隱私權及安全政策"   target="_self"  >隱私權及安全政策</a></span></li><li   data-index="2"  >		<span  ><a   href="https://youth.kcg.gov.tw/cp.aspx?n=67&s=28&ccms_cs=1&state=3EAA1D2041344ACA"   title="政府網站資料開放宣告"   target="_self"  >政府網站資料開放宣告</a></span></li></ul>
+</div></div></div></div></div></div></div></div> <div class="group base-extend" data-index="2" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_U" id="Accesskey_U" accesskey="U" title="上方選單連結區，此區塊列有本網站的主要連結">:::</a></span></div></div></div></div> <div class="list-text link" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="上方連結"   >上方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="SiteMap.aspx"   title="網站導覽"   target="_self"  >網站導覽</a></span></li><li   data-index="2"  >		<span  ><a   href="https://youth.kcg.gov.tw/Message.aspx?n=29&sms=10156"   title="局長信箱"   target="_self"  >局長信箱</a></span></li><li   data-index="3"  >		<span  ><a   href="https://terms.naer.edu.tw/"   title="[另開新視窗]雙語詞彙[另開新視窗]"   target="_blank"  >雙語詞彙</a></span></li><li   data-index="4"  >		<span  ><a   href="https://www.facebook.com/Youth.Bureau.KH"   title="[另開新視窗]Facebook[另開新視窗]"   target="_blank"  >Facebook</a></span></li><li   data-index="5"  >		<span  ><a   href="https://www.instagram.com/youth.kcg/"   title="[另開新視窗]Instagram[另開新視窗]"   target="_blank"  >Instagram</a></span></li><li   data-index="6"  >		<span  ><a   href="https://liff.line.me/1645278921-kWRPP32q?accountId=youth.kcg&openerPlatform=native&openerKey=talkroom%3Aheader"   title="[另開新視窗]Line[另開新視窗]"   target="_blank"  >Line</a></span></li></ul>
+</div></div></div></div> <div class="list-text share" data-func="{&#39;toggleBtn&#39;:{&#39;clickToRemove&#39;:true}}" data-index="2" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a   href="#"   title="分享"   >分享</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  class="facebook"  >		<span  ><a   href="javascript: void(window.open('https://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) ));"   title="Share to Facebook[另開新視窗]"   target="_self"  >Facebook</a></span></li><li   data-index="2"  class="twitter"  >		<span  ><a   href="javascript: void(window.open('https://twitter.com/home/?status='.concat(encodeURIComponent(document.title)) .concat(' ') .concat(encodeURIComponent(location.href))));"   title="Share to twitter[另開新視窗]"   target="_self"  >Twitter</a></span></li><li   data-index="3"  class="line"  >		<span  ><a   href="javascript: void(window.open('https://line.naver.jp/R/msg/text/?'.concat(encodeURIComponent(location.href)) ));"   title="Share to line[另開新視窗]"   target="_self"  >line</a></span></li><li   data-index="4"  class="email"  >		<span  ><a   href="javascript:  void(window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&amp;body=' +  encodeURIComponent(document.URL)));"   title="Share to email[另開新視窗]"   target="_self"  >Email</a></span></li></ul>
+</div></div></div></div> <div class="list-text font-size" data-func="{&#39;toggleBtn&#39;:{&#39;clickToRemove&#39;:true},&#39;fontSize&#39;:{}}" data-index="3" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a   href="#"   title="字級"   >字級</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  class="small"  >		<span  ><a   href="#"   title="小"   >小</a></span></li><li   data-index="2"  class="medium"  >		<span  ><a   href="#"   title="中"   >中</a></span></li><li   data-index="3"  class="large"  >		<span  ><a   href="#"   title="大"   >大</a></span></li></ul>
+</div></div></div></div> <div class="area-form searchbox" data-index="4" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><div class="search_keyword">
+     <a id="search_btn" href="#" title="搜尋" class="search_btn" role="button" onclick="ShowSearch()">搜尋</a>
+     <div class="search">
+	        <div class="searchbt1">
+                    <span class="searchbox"><input data-search="btn_0ac16d3c4ae34878b6e95cadf14f24b7" id="txtSearchBox" type="search" placeholder="Search" title="搜尋"></span>
+		        <div class="searchbt1">
+                    <span class="submit"><a href="#" onClick="doSearchBox()" title="搜尋" role="button">搜尋</a></span>
+             </div>
+<div class="searchbt2">
+ <a target="_blank" href="https://www.google.com.tw/advanced_search?hl=zh-Hant-tw&as_sitesearch=https://youth.kcg.gov.tw" title="進階搜尋[另開新視窗]">進階搜尋</a>
+</div>
+  <ul data-index="1" data-child="2">
+    <li data-index="1"><span><a href="Advanced_Search.aspx?q=貸款">貸款</a></span></li>
+    <li data-index="2"><span><a href="Advanced_Search.aspx?q=補助">補助</a></span></li>
+  </ul>
+         </div>
+     </div>
+     </div>
+<script >
+$(function () {
+    $('[data-search="0ac16d3c4ae34878b6e95cadf14f24b7"]').on("keydown", function (event) {
+        if (event.which == 13) {
+             doSearchBox();
+            return false;
+        }
+    });
+});
+function ShowSearch() {
+     if ($('.search').hasClass("active")) {
+         $('.search').removeClass("active");
+         $('.searchbox').removeClass("active");
+     }
+     else{
+         $('.search').addClass("active");
+         $('.searchbox').addClass("active");
+     }
+}
+function doSearchBox() {
+    var KeyWord = $('#txtSearchBox').val();
+    window.location.href = "Advanced_Search.aspx?q=" + KeyWord;
+}
+</script>
+<div id="google_translate_element"></div>
+<div id="google_translate_element_phone"></div>
+                <script type="text/javascript">
+  function googleTranslateElementInit() {
+    var targetId = (window.innerWidth < 768)
+      ? 'google_translate_element_phone'
+      : 'google_translate_element';
+    new google.translate.TranslateElement({
+      pageLanguage: 'zh-TW',
+      includedLanguages: 'en,zh-TW,ja,ko',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, targetId);
+  }
+  setTimeout(function () {
+    var s = document.createElement('script');
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    s.async = true;
+    document.head.appendChild(s);
+  }, 3000);
+                </script>
+<script type="text/javascript">
+  function onGoogleTranslateReady(callback) {
+    if (window.google && window.google.translate && window.google.translate.TranslateElement) {
+      callback();
+    } else {
+      setTimeout(function () {
+        onGoogleTranslateReady(callback);
+      }, 200);
+    }
+  }
+  onGoogleTranslateReady(function () {
+    console.log("Google Translate 載入完成");
+let currentLang = '';
+
+const match = document.cookie.match(/googtrans=([^;]+)/);
+currentLang = match ? decodeURIComponent(match[1]) : '';
+
+setInterval(function () {
+
+  const match = document.cookie.match(/googtrans=([^;]+)/);
+  const lang = match ? decodeURIComponent(match[1]) : '';
+
+  if (lang && lang !== currentLang && lang.endsWith('/en')) {
+
+    currentLang = lang;
+
+    alert(
+      'This is a machine-generated translation. The content may be inaccurate. Thank you for your understanding.'
+    );
+
+  }
+  if (lang && lang !== currentLang && lang.endsWith('/ja')) {
+
+    currentLang = lang;
+
+    alert(
+      'この翻訳は機械翻訳によるものです。内容に誤りが含まれる場合がございますので、あらかじめご了承ください。'
+    );
+
+  }
+  if (lang && lang !== currentLang && lang.endsWith('/ko')) {
+
+    currentLang = lang;
+
+    alert(
+      '본 번역은 기계 번역에 의해 제공됩니다. 내용에 오류가 있을 수 있으니 양해 부탁드립니다.'
+    );
+
+  }
+
+}, 500);
+    const inputs = document.querySelectorAll('input[id]');
+    inputs.forEach(input => {
+      const id = input.getAttribute('id');
+      if (!id) return;
+      const existingLabel = document.querySelector(`label[for="${id}"]`);
+      if (!existingLabel) {
+        const label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.setAttribute('style', 'font-size:0rem;');
+        label.textContent = `Label for ${id}`;
+        input.parentNode.insertBefore(label, input);
+      }
+    });
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+      if (!iframe.hasAttribute('title') || iframe.getAttribute('title').trim() === '') {
+        const titleText = iframe.getAttribute('name') || iframe.getAttribute('id') || 'Embedded content';
+        iframe.setAttribute('title', titleText);
+      }
+    });
+  });
+</script>
+</div></div></div></div></div></div></div></div> <div class="group base-wrapper" data-index="3" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="group base-header" data-index="1" data-type="3" data-child="1"><div class="in"><div class="ct"><div class="in"> <div class="group default info" data-func="{&#39;hud&#39;:{}}" data-index="1" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="simple-text major-logo" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><h1><a href="Default.aspx" title="回首頁">高雄市政府青年局</a><strong style="display: none;">高雄市政府青年局</strong></h1></div></div></div></div> <div class="group-list nav" data-func="{&#39;majorNavHorizontal&#39;:{},&#39;setNavWidth&#39;:{}}" data-index="2" data-type="4" data-child="6"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"> <div id="Group_7_8156574469" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="7" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="1" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=1"      title="認識我們"   >認識我們</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_8_5594374819" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="8" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=2"      title="關於青年局"   >關於青年局</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=3"      title="局長介紹"   >局長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=4"      title="業務職掌"   >業務職掌</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=5"      title="交通資訊"   >交通資訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="2"> <div id="Group_18_8970300691" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="18" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="2" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=7"      title="訊息公告"   >訊息公告</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_19_9962962228" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="19" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="News_Focus.aspx?n=57&sms=0"      title="焦點政策"   >焦點政策</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=9&sms=10146"      title="最新消息"   >最新消息</a></span></li><li   data-index="3"  >		<span  ><a   href="News_Calendarmonth.aspx?n=10&sms=10147"      title="活動快訊"   >活動快訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="3"> <div id="Group_20_0604004617" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="20" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="3" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=12"      title="雄青資源"   >雄青資源</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_21_4675071636" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="21" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="ResourceSearch.aspx?n=36&sms=10158"      title="找資金"   >找資金</a></span></li><li   data-index="2"  >		<span  ><a   href="ResourceSearch.aspx?n=38&sms=10161"      title="找補助"   >找補助</a></span></li><li   data-index="3"  >		<span  ><a   href="ResourceSearch.aspx?n=39&sms=10162"      title="找空間"   >找空間</a></span></li><li   data-index="4"  >		<span  ><a   href="ResourceSearch.aspx?n=40&sms=10163"      title="找活動"   >找活動</a></span></li><li   data-index="5"  >		<span  ><a   href="ResourceSearch.aspx?n=41&sms=10164"      title="找課程"   >找課程</a></span></li><li   data-index="6"  >		<span  ><a   href="ResourceSearch.aspx?n=42&sms=10165"      title="找實習"   >找實習</a></span></li><li   data-index="7"  >		<span  ><a   href="ResourceSearch.aspx?n=43&sms=10166"      title="找專家"   >找專家</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="4"> <div id="Group_22_6857071841" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="22" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="4" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=13"      title="主題專區"   >主題專區</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_23_1915373023" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="23" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="16"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=46"      title="學生社團專區"   >學生社團專區</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=402"      title="Pinway(駁二8號倉庫)"   >Pinway(駁二8號倉庫)</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=97"      title="青年創業專區"   >青年創業專區</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=98"      title="職涯補給站"   >職涯補給站</a></span></li><li   data-index="5"  >		<span  ><a   href="cp.aspx?n=477"      title="[另開新視窗]創業O'STAR及諮詢輔導"   target="_blank"  >創業O'STAR及諮詢輔導</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=96"      title="青年事務委員會"   >青年事務委員會</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=131"      title="雄青創業補助全攻略"   >雄青創業補助全攻略</a></span></li><li   data-index="8"  >		<span  ><a   href="cp.aspx?n=180"      title="K-TV高雄新媒體人才培育專區"   >K-TV高雄新媒體人才培育專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cp.aspx?n=194"      title="青年志工專區"   >青年志工專區</a></span></li><li   data-index="10"  >		<span  ><a   href="cp.aspx?n=266"      title="高雄青年攤車品牌輔導計畫"   >高雄青年攤車品牌輔導計畫</a></span></li><li   data-index="11"  >		<span  ><a   href="cp.aspx?n=276"      title="大港經典升級提案競賽專區"   >大港經典升級提案競賽專區</a></span></li><li   data-index="12"  >		<span  ><a   href="cl.aspx?n=344"      title="青創店家專區"   >青創店家專區</a></span></li><li   data-index="13"  >		<span  ><a   href="cp.aspx?n=351"      title="KFA高雄時尚大賞專區"   >KFA高雄時尚大賞專區</a></span></li><li   data-index="14"  >		<span  ><a   href="cp.aspx?n=427"      title="大青年專區"   >大青年專區</a></span></li><li   data-index="15"  >		<span  ><a   href="cp.aspx?n=540"      title="2026永續高雄青年創業挑戰賽"   >2026永續高雄青年創業挑戰賽</a></span></li><li   data-index="16"  >		<span  ><a   href="cp.aspx?n=558"      title="數位遊牧資訊專區"   >數位遊牧資訊專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="5"> <div id="Group_24_6822087543" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="24" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="5" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=14"      title="便民服務"   >便民服務</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_25_1483647130" data-SitesModuleSN="75" data-Margin_right="0" data-sort="2" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="25" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=380"      title="檔案應用專區"   >檔案應用專區</a></span></li><li   data-index="2"  >		<span  ><a   href="cl.aspx?n=25"      title="[另開新視窗]申辦進度查詢"   target="_blank"  >申辦進度查詢</a></span></li><li   data-index="3"  >		<span  ><a   href="News.aspx?n=27&sms=10154"      title="檔案下載"   >檔案下載</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=28&sms=10155"      title="相關連結"   >相關連結</a></span></li><li   data-index="5"  >		<span  ><a   href="Message.aspx?n=29&sms=10156"      title="局長信箱"   >局長信箱</a></span></li><li   data-index="6"  >		<span  ><a   href="News_Toggle.aspx?n=64&sms=10167"      title="常見問答"   >常見問答</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=632"      title="新住民服務專區"   >新住民服務專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="6"> <div id="Group_26_2021436407" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="26" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="6" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=15"      title="公開資訊"   >公開資訊</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_27_0580319544" data-SitesModuleSN="75" data-Margin_right="0" data-sort="2" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="27" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="14"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=16"      title="基金捐款專戶"   >基金捐款專戶</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=18&sms=10149"      title="施政報告"   >施政報告</a></span></li><li   data-index="3"  >		<span  ><a   href="cl.aspx?n=99"      title="法規查詢"   >法規查詢</a></span></li><li   data-index="4"  >		<span  ><a   href="cl.aspx?n=20"      title="會計資訊"   >會計資訊</a></span></li><li   data-index="5"  >		<span  ><a   href="News.aspx?n=102&sms=10193"      title="統計資訊"   >統計資訊</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=156"      title="性別主流化專區"   >性別主流化專區</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=525"      title="職場霸凌防治(含安全及衛生防護)宣導專區"   >職場霸凌防治(含安全及衛生防護)宣導專區</a></span></li><li   data-index="8"  >		<span  ><a   href="cl.aspx?n=169"      title="公職人員利益衝突迴避身分揭露專區"   >公職人員利益衝突迴避身分揭露專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cp.aspx?n=636"      title="補助交易身分關係揭露專區"   >補助交易身分關係揭露專區</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=161"      title="高雄市青年失業率"   >高雄市青年失業率</a></span></li><li   data-index="11"  >		<span  ><a   href="cl.aspx?n=212"      title="遊說法資訊專區"   >遊說法資訊專區</a></span></li><li   data-index="12"  >		<span  ><a   href="cl.aspx?n=307"      title="宣導專區"   >宣導專區</a></span></li><li   data-index="13"  >		<span  ><a   href="cp.aspx?n=619"      title="人民申請案件處理時限"   >人民申請案件處理時限</a></span></li><li   data-index="14"  >		<span  ><a   href="cp.aspx?n=620"      title="人民陳情案件處理時限"   >人民陳情案件處理時限</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li></ul></div></div></div></div></div></div></div></div></div></div></div></div> <div id="base-content" class="group base-content" data-index="2" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div id="Group_6_5891764580" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="6" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group base-module-area" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"> <div id="Group_353_3572432915" data-SitesModuleSN="6" data-Margin_right="0" data-sort="2" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="353" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="area-editor default float-tool" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="float-tool" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="ct"><div class="in"><script>
+	$(function()
+	{
+		$('.float-tool a').focus(function()
+		{
+			$(this).parent().parent().find('.main').removeAttr('style');
+			$(this).parent().find('.main').show();
+		})
+		$('.float-tool a').focusout(function()
+		{
+			if (!CheckLiHref($(this).parent().attr('class')))
+				$(this).parent().find('.main').removeAttr('style');
+		})
+		var first = '', last = '';
+		var index = 0;
+		$('.float-tool div div div ul .resources a').each(function()
+		{
+			var url = $(this).attr('href');
+			if (index == 0 && url != null && url != '' && url != '#')
+			{
+				first = url;
+				index++;
+			}
+			else if (url != null && url != '' && url != '#')
+			{
+				last = url;
+				index++;
+			}
+		})
+		$(".float-tool div div div ul .resources a").on('keydown blur', function(e)
+		{
+			var url = $(this).attr('href');
+			if (e.shiftKey && e.keyCode === 9)
+			{
+				if (url == first)
+				{
+					$('.resources div div').removeAttr('style');
+				}
+			}
+			else if (e.keyCode === 9)
+			{
+				if (url == last)
+					$('.float-tool').find('.main').removeAttr('style');
+			}
+		});
+	})
+
+	function CheckLiHref(name)
+	{
+		var check = false;
+		$('.' + name + ' a').each(function()
+		{
+			if ($(this).attr('href') != null && $(this).attr('href') != '' && $(this).attr('href') != '#')
+				check = true;
+		})
+		return check;
+	}
+
+</script><ul><li class="favorites"><a href="#">我的收藏</a><div class="box"><div class="main"><div class="tem"><div class="title">網頁收藏</div><ol><li><a href="#">經濟部小型企業創新計劃</a><a class="del" href="#">X</a></li><li><a href="#">經濟部小型企業創新計劃</a><a class="del" href="#">X</a></li><li><a href="#">經濟部小型企業創新計劃</a><a class="del" href="#">X</a></li></ol></div><div class="tem"><div class="title">資源收藏</div><ol><li><a href="#">經濟部小型企業創新計劃</a><a class="del" href="#">X</a></li><li><a href="#">經濟部小型企業創新計劃</a><a class="del" href="#">X</a></li><li><a href="#">經濟部小型企業創新計劃</a><a class="del" href="#">X</a></li></ol></div><div class="tem"><div class="title">推薦文章</div><ol><li><a href="#">經濟部小型企業創新計劃</a></li><li><a href="#">經濟部小型企業創新計劃</a></li><li><a href="#">經濟部小型企業創新計劃</a></li></ol></div></div></div></li><li class="helper"><a href="#">小幫手</a><div class="box"><div class="main "><div class="tem"><div class="title">需要協助嗎？</div><p>趕快加入高雄青年局LINE@官方帳號，將可使用更智慧的問答方式取得相關資訊喔！</p></div><div class="tem"><div class="title">加入方式</div><ol><li>搜尋「@youth.kcg」並加入好友</li><li>搜尋官方帳號「高雄青年局」並加入好友</li><li>直接掃描下方QRcode</li></ol><img src="images/line_qr.png" alt="青年局官方Line" width="100%" class="fr-fic fr-dii"></div></div></div></li><li class="resources"><a href="#">找資源</a><div class="box"><div class="main "><div class="tem"><ol><li><a href="/ResourceSearch.aspx?n=36&sms=10158">找資金</a></li><li><a href="/ResourceSearch.aspx?n=38&sms=10161">找補助</a></li><li><a href="/ResourceSearch.aspx?n=39&sms=10162">找空間</a></li><li><a href="/ResourceSearch.aspx?n=40&sms=10163">找活動</a></li><li><a href="/ResourceSearch.aspx?n=42&sms=10165">找實習</a></li><li><a href="/ResourceSearch.aspx?n=41&sms=10164">找課程</a></li><li><a href="/ResourceSearch.aspx?n=43&sms=10166">找專家</a></li></ol></div></div></div></li><li class="compare"><a href="#">比較<span class="sign">3</span></a></li></ul></div></div></div></div></div></div></div></div> <div class="group base-page-area" data-index="1" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div id="Group_5_2295287095" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="5" data-WidthDeskTop="" data-anchor="" data-tabType="1" class="group base-aside" data-index="1" data-Margin_DefaultSetting="false" data-type="1" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_L" id="Accesskey_L" accesskey="L" title="左方次要連結區，此區塊列有本網站的次要連結">:::</a></span></div></div></div></div> <div id="Group_49_3168304662" data-SitesModuleSN="8" data-Margin_right="0" data-sort="2" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="49" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="list-text minor-nav is-pad-hide is-phone-hide" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="認識我們"   >認識我們</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=2"      title="關於青年局"   >關於青年局</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=3"      title="局長介紹"   >局長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=4"      title="業務職掌"   >業務職掌</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=5"      title="交通資訊"   >交通資訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div> <div class="group base-section" data-index="2" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_C" id="Accesskey_C" accesskey="C" title="中間主要內容區，此區塊呈現網頁的網頁內容">:::</a></span></div></div></div></div> <div class="group page-header" data-index="1" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div class="list-text breadcrumb" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="Default.aspx"   title="首頁"   target="_self"  >首頁</a></span></li><li   data-index="2"  >		<span  ><a   href="cl.aspx?n=1"   title="認識我們"   target="_self"  >認識我們</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=3"   title="局長介紹"   target="_self"  >局長介紹</a></span></li></ul>
+</div></div></div></div> <div class="group default info" data-index="2" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div class="simple-text heading" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><h2><span>局長介紹</span></h2></div></div></div></div> <div class="group default msg-tool" data-index="2" data-type="3" data-child="1"><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-func="{&#39;focusContent&#39;:{}}" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#CCMS_Content" title="跳過此子選單列請按[Enter]，繼續則按[Tab]">_</a></span></div></div></div></div> <div class="list-text user-tool" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a   href="javascript :return false;"   title="網頁功能"   target="_self"  >網頁功能</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  class="print"  >		<span  ><a   href="javascript:CCMS_Print(448);"   title="列印內容"   target="_self"  >列印內容</a></span></li><li   data-index="2"  class="favorites_icon"  >		<span  ><a   href="javascript:void(0);"   title="收藏網頁"   target="_self"  >收藏網頁</a></span></li><li   data-index="3"  class="bopomofo"  >		<span  ><a   href="#"   title="Bopomofo"   >Bopomofo</a></span></li></ul>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <div class="group page-content " id="CCMS_Content" data-func="{&#39;linkType&#39;:{&#39;domains&#39;:[&#39;https://youth-ws.kcg.gov.tw&#39;,&#39;https://youth-ws.kcg.gov.tw&#39;]}}" data-index="2" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in">
+        
+        
+     <link href="css/cp.css" rel="stylesheet" type="text/css" />
+
+
+
+    <script>
+        $(function () {
+            $('[tab-cp]').each(function () {
+
+                $(this).click(function (event) {
+                    event.preventDefault();
+                    $('[tab-cp]').removeClass('is-active');
+                    $.each($('[tab-cp]'), function (i,item) {
+                        var title = $(item).find('a').html();
+                        $(item).find('a').attr('title', title);
+                        
+                    })
+                    $(this).addClass('is-active');
+                    var title = $(this).find('a').html();
+                    $(this).find('a').attr('title','當前頁面 ' +title);
+                    $('[tab-cp-target]').hide();
+                    $('[tab-cp-target="' + $(this).attr('tab-cp') + '"]').show();
+                })
+            }).eq(0).click();
+            if (getParameterByName('s') != '') {
+                $('[tab-cp="' + getParameterByName('s') + '"]').click();
+            }
+            $('[tab-show="false"]').each(function () {
+
+                $(this).hide();
+            })
+        })
+    </script>
+ <div class="list-text classify" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="1"><li  tab-cp='2' tab-show='false' style='display:none'   data-index="1"  >		<span  ><a   href="#"   title="局長介紹"   >局長介紹</a></span></li></ul>
+</div></div></div></div> <div tab-cp-target="2" data-type="0" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="list-text detail" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="1"><li   data-index="1"  >		<span  >日期：114-03-03</span></li></ul>
+</div></div></div></div> <div class="area-editor user-edit" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><style>
+ .cp_box .main {
+  overflow: hidden; padding: 30px;
+ }
+ 
+ .cp_box .main h3 {
+  color: #158373; font-size: 1.3em;
+ }
+ 
+ .cp_box .main ul,
+ p,
+ h3 {
+  margin: 0px;padding: 0px ;list-style: none
+ }
+ 
+ .cp_box .main ul li {
+  padding: 3px 0px;
+ }
+ 
+ .cp_box .main ul li:before {
+  content: ''; display: inline-block; vertical-align: middle; width: 9px; height: 5px; background-color: #f6cd01; margin-right: 8px; border-radius: 16px;
+ }
+ 
+ .list-pic.pic-download {
+  display: none;
+ }
+ 
+ .cp_box {
+  padding: 10px; border: 1px solid #ccc; border-radius: 16px; box-shadow: 0px 0px 8px #646464;
+ }
+ 
+ .cp_box img {
+  float: left; display: block;
+ }
+ 
+ @media screen and (max-width: 768px) {
+  .cp_box img {
+   float: none;margin: 0 auto;
+  }
+ }
+
+</style><div class="cp_box"><img src="https://youth-ws.kcg.gov.tw/001/Upload/448/relpic/10143/2/32df2bb5-e22e-4d00-9e49-a866d9e736e1.jpg" alt="局長 林楷軒" style="width: 300px;padding: 30px 15px 30px 15px;" class="fr-fic fr-dib"><div class="main"><h3>局長 林楷軒</h3><hr><h3>學歷</h3><p>政治大學法律學士</p><p>台灣大學法學碩士</p><hr><h3>經歷</h3><ul><li>市長室專門委員</li><li>市長室專員</li><li>立法院陳其邁委員法案助理</li><li>台灣大學國家發展研究所畢業代表</li><li>政治大學學生議員暨校務會議代表</li></ul><hr></div></div></div></div></div></div> <div class="group page-footer" data-type="3" data-child="1"><div class="in"><div class="ct"><div class="in"> <div class="list-pic pic-download" data-func="{&#39;gallery&#39;:{},&#39;backgroundResize&#39;:{}}" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="相關圖片"   >相關圖片</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-src="https://youth-ws.kcg.gov.tw/001/Upload/448/relpic/10143/2/32df2bb5-e22e-4d00-9e49-a866d9e736e1.jpg"  data-index="1"  class="is-img"  >		<span style="background-image: url('https://youth-ws.kcg.gov.tw/001/Upload/448/relpic/10143/2/32df2bb5-e22e-4d00-9e49-a866d9e736e1@710x470.jpg');" ><a   href="https://youth-ws.kcg.gov.tw/001/Upload/448/relpic/10143/2/32df2bb5-e22e-4d00-9e49-a866d9e736e1.jpg"   title="[另開新視窗]局長介紹"   target="_blank"  ><img src="https://youth-ws.kcg.gov.tw/001/Upload/448/relpic/10143/2/32df2bb5-e22e-4d00-9e49-a866d9e736e1@710x470.jpg" alt="局長介紹"   /></a></span></li></ul>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <div class="group page-footer" data-index="3" data-type="3" data-child="4"><div class="in"><div class="ct"><div class="in"> <div class="area-editor system-info" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"></div></div></div></div> <div class="list-text detail" data-index="2" data-type="0"><div class="in"><div class="ct"><div class="in"></div></div></div></div> <div class="list-text jump-tool" data-index="3" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="2"><li   data-index="1"  class="back"  >		<span  ><a   href="javascript:window.history.back();"  role='button' title="回上一頁"   target="_self"  >回上一頁</a></span></li><li   data-index="2"  class="to-top"  >		<span  ><a   href="javascript: ScrollToTop();"  role='button' title="回最上面"   target="_self"  >回最上面</a></span></li></ul>
+<script>
+	function ScrollToTop()
+	{
+		$('html, body').stop().animate({
+			scrollTop: 0
+		}, 300);
+		$('#Accesskey_U').focus();
+	}
+</script>
+</div></div></div></div>
+        </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <div class="group base-footer" data-func="{&#39;toggleBtn&#39;:{&#39;btnOrangeText&#39;:&#39;關閉&#39;,&#39;btnActiveText&#39;:&#39;開啟&#39;,&#39;focusActive&#39;:false,&#39;btnTextRemove&#39;:true}}" data-index="3" data-type="3" data-child="3"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a    title="選單"   >選單</a></span></div></div></div><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_Z" id="Accesskey_Z" accesskey="Z" title="下方選單連結區，此區塊列有[意見信箱]、[資訊安全政策]、[隱私權政策]等連結">:::</a></span></div></div></div></div> <div class="group-list nav" data-func="{&#39;setNavLen&#39;:{}}" data-index="1" data-type="4" data-child="7"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"> <div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=1"      title="認識我們"   >認識我們</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=2"      title="關於青年局"   >關於青年局</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=3"      title="局長介紹"   >局長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=4"      title="業務職掌"   >業務職掌</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=5"      title="交通資訊"   >交通資訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="2"> <div class="group nav" data-index="2" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=7"      title="訊息公告"   >訊息公告</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="News_Focus.aspx?n=57&sms=0"      title="焦點政策"   >焦點政策</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=9&sms=10146"      title="最新消息"   >最新消息</a></span></li><li   data-index="3"  >		<span  ><a   href="News_Calendarmonth.aspx?n=10&sms=10147"      title="活動快訊"   >活動快訊</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="3"> <div class="group nav" data-index="3" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=12"      title="雄青資源"   >雄青資源</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="ResourceSearch.aspx?n=36&sms=10158"      title="找資金"   >找資金</a></span></li><li   data-index="2"  >		<span  ><a   href="ResourceSearch.aspx?n=38&sms=10161"      title="找補助"   >找補助</a></span></li><li   data-index="3"  >		<span  ><a   href="ResourceSearch.aspx?n=39&sms=10162"      title="找空間"   >找空間</a></span></li><li   data-index="4"  >		<span  ><a   href="ResourceSearch.aspx?n=40&sms=10163"      title="找活動"   >找活動</a></span></li><li   data-index="5"  >		<span  ><a   href="ResourceSearch.aspx?n=41&sms=10164"      title="找課程"   >找課程</a></span></li><li   data-index="6"  >		<span  ><a   href="ResourceSearch.aspx?n=42&sms=10165"      title="找實習"   >找實習</a></span></li><li   data-index="7"  >		<span  ><a   href="ResourceSearch.aspx?n=43&sms=10166"      title="找專家"   >找專家</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="4"> <div class="group nav" data-index="4" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=13"      title="主題專區"   >主題專區</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="14"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=46"      title="學生社團專區"   >學生社團專區</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=402"      title="Pinway(駁二8號倉庫)"   >Pinway(駁二8號倉庫)</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=97"      title="青年創業專區"   >青年創業專區</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=98"      title="職涯補給站"   >職涯補給站</a></span></li><li   data-index="5"  >		<span  ><a   href="cp.aspx?n=477"      title="[另開新視窗]創業O'STAR及諮詢輔導"   target="_blank"  >創業O'STAR及諮詢輔導</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=96"      title="青年事務委員會"   >青年事務委員會</a></span></li><li   data-index="7"  >		<span  ><a   href="cp.aspx?n=131"      title="雄青創業補助全攻略"   >雄青創業補助全攻略</a></span></li><li   data-index="8"  >		<span  ><a   href="cp.aspx?n=194"      title="青年志工專區"   >青年志工專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cp.aspx?n=276"      title="大港經典升級提案競賽專區"   >大港經典升級提案競賽專區</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=344"      title="青創店家專區"   >青創店家專區</a></span></li><li   data-index="11"  >		<span  ><a   href="cp.aspx?n=351"      title="KFA高雄時尚大賞專區"   >KFA高雄時尚大賞專區</a></span></li><li   data-index="12"  >		<span  ><a   href="cp.aspx?n=427"      title="大青年專區"   >大青年專區</a></span></li><li   data-index="13"  >		<span  ><a   href="cp.aspx?n=540"      title="2026永續高雄青年創業挑戰賽"   >2026永續高雄青年創業挑戰賽</a></span></li><li   data-index="14"  >		<span  ><a   href="cp.aspx?n=558"      title="數位遊牧資訊專區"   >數位遊牧資訊專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="5"> <div class="group nav" data-index="5" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=14"      title="便民服務"   >便民服務</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=380"      title="檔案應用專區"   >檔案應用專區</a></span></li><li   data-index="2"  >		<span  ><a   href="cl.aspx?n=25"      title="[另開新視窗]申辦進度查詢"   target="_blank"  >申辦進度查詢</a></span></li><li   data-index="3"  >		<span  ><a   href="News.aspx?n=27&sms=10154"      title="檔案下載"   >檔案下載</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=28&sms=10155"      title="相關連結"   >相關連結</a></span></li><li   data-index="5"  >		<span  ><a   href="Message.aspx?n=29&sms=10156"      title="局長信箱"   >局長信箱</a></span></li><li   data-index="6"  >		<span  ><a   href="News_Toggle.aspx?n=64&sms=10167"      title="常見問答"   >常見問答</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="6"> <div class="group nav" data-index="6" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=15"      title="公開資訊"   >公開資訊</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="13"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=16"      title="基金捐款專戶"   >基金捐款專戶</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=18&sms=10149"      title="施政報告"   >施政報告</a></span></li><li   data-index="3"  >		<span  ><a   href="cl.aspx?n=20"      title="會計資訊"   >會計資訊</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=102&sms=10193"      title="統計資訊"   >統計資訊</a></span></li><li   data-index="5"  >		<span  ><a   href="cp.aspx?n=156"      title="性別主流化專區"   >性別主流化專區</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=525"      title="職場霸凌防治(含安全及衛生防護)宣導專區"   >職場霸凌防治(含安全及衛生防護)宣導專區</a></span></li><li   data-index="7"  >		<span  ><a   href="cl.aspx?n=169"      title="公職人員利益衝突迴避身分揭露專區"   >公職人員利益衝突迴避身分揭露專區</a></span></li><li   data-index="8"  >		<span  ><a   href="cp.aspx?n=636"      title="補助交易身分關係揭露專區"   >補助交易身分關係揭露專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cl.aspx?n=161"      title="高雄市青年失業率"   >高雄市青年失業率</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=212"      title="遊說法資訊專區"   >遊說法資訊專區</a></span></li><li   data-index="11"  >		<span  ><a   href="cl.aspx?n=307"      title="宣導專區"   >宣導專區</a></span></li><li   data-index="12"  >		<span  ><a   href="cp.aspx?n=619"      title="人民申請案件處理時限"   >人民申請案件處理時限</a></span></li><li   data-index="13"  >		<span  ><a   href="cp.aspx?n=620"      title="人民陳情案件處理時限"   >人民陳情案件處理時限</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="7"> <div class="group nav" data-index="7" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  class="headH3"  >		<span  ><a   href="cl.aspx?n=30"      title="網站服務"   >網站服務</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="https://terms.naer.edu.tw/"      title="[另開新視窗]雙語詞彙"   target="_blank"  >雙語詞彙</a></span></li><li   data-index="2"  >		<span  ><a   href="Rss.aspx?n=66&sms=0"      title="RSS訂閱"   >RSS訂閱</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=67"      title="政府網站資料開放宣告"   >政府網站資料開放宣告</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=68"      title="隱私權及安全政策"   >隱私權及安全政策</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li></ul></div></div></div></div> <div class="list-text link" data-index="2" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="下方連結"   >下方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="2"><li   data-index="1"  >		<span  ><a   href="https://youth.kcg.gov.tw/cp.aspx?n=68&s=29&ccms_cs=1&state=3EAA1D2041344ACA"   title="隱私權及安全政策"   target="_self"  >隱私權及安全政策</a></span></li><li   data-index="2"  >		<span  ><a   href="https://youth.kcg.gov.tw/cp.aspx?n=67&s=28&ccms_cs=1&state=3EAA1D2041344ACA"   title="政府網站資料開放宣告"   target="_self"  >政府網站資料開放宣告</a></span></li></ul>
+</div></div></div></div> <div class="list-pic icon" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="1"><li   data-index="1"  class="wcag"  >		<span style="background-image: url('/images/aplus.png');" ><a   href="https://accessibility.moda.gov.tw/Applications/Detail?category=20240828102057"   title="[另開新視窗]連結至無障礙標章網頁"   target="_blank"  ><img src="/images/aplus.png" alt="連結至無障礙標章網頁"   /></a></span></li></ul>
+</div></div></div></div> <div data-func="{&#39;anchor&#39;:{},&#39;scrollToShow&#39;:{}}" class="simple-text btn" data-index="2" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#" title="回最上面">回最上面</a></span></div></div></div></div> <div class="group default info" data-index="3" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="simple-text update-time" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div   data-index="0"  >		<span  ><a    title="更新日期"   >更新日期</a></span></div></div></div><div class="ct"><div class="in"><span>115-11-06</span></div></div></div></div> <div class="area-editor address" data-func="{&#39;linkToMap&#39;:{&#39;bindClass&#39;:&#39;.map&#39;,&#39;linkClass&#39;:&#39;is-map&#39;}}" data-index="2" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><p>地址：高雄市鳳山區光復路二段132號2樓(鳳山行政中心)<br>電話：07-7995678<br>&copy;版權所有 2021 高雄市政府青年局</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B0CBEB2A" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div></form>
+    <script type="text/javascript" src="/Scripts/jHandicapFree.js"></script>
+<script src="https://youth.kcg.gov.tw/js/require.js" integrity="sha384-GyNKEQQ0JmctGsT7tWnUOO5IkVFQpm9jARs8MFeJXiE8nFy2wJ4x0hzzGgHlzyV9" crossorigin="anonymous"></script>
+<script>
+        requirejs.config({  
+             baseUrl:'https://youth.kcg.gov.tw/js'
+        }); 
+        requirejs(['main'], function (func) {
+            func();
+        });
+</script>
+</body>
+</html>
+

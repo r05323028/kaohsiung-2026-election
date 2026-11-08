@@ -1,0 +1,666 @@
+{
+  "generatedAt": "2026-11-07T14:37:18.547Z",
+  "policyVersion": "automated-editorial-policy-v1",
+  "adjudicationPolicyVersion": "adjudication-materiality-v2",
+  "snapshotPath": "data/published/2026/zuoying-mayoral-automated-v2.json",
+  "snapshotChecksum": "0f0c227ad0385ee09155c6f9e4b7cc5c95eb87fe0234aab2b32813e71a28dd73",
+  "previousSnapshot": {
+    "path": "data/published/2026/zuoying-mayoral-automated.json",
+    "checksum": "6682b5f95ecc8ae5b54e7b06b073ff995eb4759477185334a82d707be7a8f3ad",
+    "records": 1
+  },
+  "counts": {
+    "totalClaims": 143,
+    "machineApproved": 75,
+    "machineRejected": 68,
+    "published": 75,
+    "withdrawals": 0,
+    "uniqueSources": 9,
+    "candidatesWithPublishedContent": 9,
+    "candidatesInScope": 17
+  },
+  "retainedFromPrevious": [
+    "enrich-claim-0031"
+  ],
+  "withdrawals": [],
+  "sourceReopen": [
+    {
+      "claimId": "enrich-claim-0002",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0002"
+    },
+    {
+      "claimId": "enrich-claim-0003",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0003"
+    },
+    {
+      "claimId": "enrich-claim-0004",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0004"
+    },
+    {
+      "claimId": "enrich-claim-0005",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0005"
+    },
+    {
+      "claimId": "enrich-claim-0006",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0006"
+    },
+    {
+      "claimId": "enrich-claim-0007",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0007"
+    },
+    {
+      "claimId": "enrich-claim-0008",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0008"
+    },
+    {
+      "claimId": "enrich-claim-0009",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0009"
+    },
+    {
+      "claimId": "enrich-claim-0010",
+      "sourceId": "scope-kcc-profile-2185",
+      "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+      "byteLength": 149188,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0010"
+    },
+    {
+      "claimId": "enrich-claim-0013",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0013"
+    },
+    {
+      "claimId": "enrich-claim-0014",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0014"
+    },
+    {
+      "claimId": "enrich-claim-0015",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0015"
+    },
+    {
+      "claimId": "enrich-claim-0016",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0016"
+    },
+    {
+      "claimId": "enrich-claim-0017",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0017"
+    },
+    {
+      "claimId": "enrich-claim-0018",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0018"
+    },
+    {
+      "claimId": "enrich-claim-0019",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0019"
+    },
+    {
+      "claimId": "enrich-claim-0020",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0020"
+    },
+    {
+      "claimId": "enrich-claim-0021",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0021"
+    },
+    {
+      "claimId": "enrich-claim-0022",
+      "sourceId": "scope-kcc-profile-2187",
+      "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+      "byteLength": 135027,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0022"
+    },
+    {
+      "claimId": "enrich-claim-0025",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0025"
+    },
+    {
+      "claimId": "enrich-claim-0026",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0026"
+    },
+    {
+      "claimId": "enrich-claim-0027",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0027"
+    },
+    {
+      "claimId": "enrich-claim-0028",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0028"
+    },
+    {
+      "claimId": "enrich-claim-0029",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0029"
+    },
+    {
+      "claimId": "enrich-claim-0030",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0030"
+    },
+    {
+      "claimId": "enrich-claim-0031",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0031"
+    },
+    {
+      "claimId": "enrich-claim-0032",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0032"
+    },
+    {
+      "claimId": "enrich-claim-0033",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0033"
+    },
+    {
+      "claimId": "enrich-claim-0034",
+      "sourceId": "scope-kcc-profile-2181",
+      "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+      "byteLength": 151045,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0034"
+    },
+    {
+      "claimId": "enrich-claim-0041",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0041"
+    },
+    {
+      "claimId": "enrich-claim-0042",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0042"
+    },
+    {
+      "claimId": "enrich-claim-0043",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0043"
+    },
+    {
+      "claimId": "enrich-claim-0044",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0044"
+    },
+    {
+      "claimId": "enrich-claim-0045",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0045"
+    },
+    {
+      "claimId": "enrich-claim-0046",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0046"
+    },
+    {
+      "claimId": "enrich-claim-0047",
+      "sourceId": "scope-kcc-profile-2186",
+      "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+      "byteLength": 126207,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0047"
+    },
+    {
+      "claimId": "enrich-claim-0050",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0050"
+    },
+    {
+      "claimId": "enrich-claim-0051",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0051"
+    },
+    {
+      "claimId": "enrich-claim-0052",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0052"
+    },
+    {
+      "claimId": "enrich-claim-0053",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0053"
+    },
+    {
+      "claimId": "enrich-claim-0054",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0054"
+    },
+    {
+      "claimId": "enrich-claim-0055",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0055"
+    },
+    {
+      "claimId": "enrich-claim-0056",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0056"
+    },
+    {
+      "claimId": "enrich-claim-0057",
+      "sourceId": "scope-kcc-profile-2188",
+      "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+      "byteLength": 159390,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0057"
+    },
+    {
+      "claimId": "enrich-claim-0060",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0060"
+    },
+    {
+      "claimId": "enrich-claim-0061",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0061"
+    },
+    {
+      "claimId": "enrich-claim-0062",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0062"
+    },
+    {
+      "claimId": "enrich-claim-0063",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0063"
+    },
+    {
+      "claimId": "enrich-claim-0064",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0064"
+    },
+    {
+      "claimId": "enrich-claim-0065",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0065"
+    },
+    {
+      "claimId": "enrich-claim-0066",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0066"
+    },
+    {
+      "claimId": "enrich-claim-0068",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0068"
+    },
+    {
+      "claimId": "enrich-claim-0069",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0069"
+    },
+    {
+      "claimId": "enrich-claim-0070",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0070"
+    },
+    {
+      "claimId": "enrich-claim-0071",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0071"
+    },
+    {
+      "claimId": "enrich-claim-0072",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0072"
+    },
+    {
+      "claimId": "enrich-claim-0073",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0073"
+    },
+    {
+      "claimId": "enrich-claim-0074",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0074"
+    },
+    {
+      "claimId": "enrich-claim-0075",
+      "sourceId": "scope-kcc-profile-2189",
+      "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+      "byteLength": 129887,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0075"
+    },
+    {
+      "claimId": "enrich-claim-0089",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0089"
+    },
+    {
+      "claimId": "enrich-claim-0090",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0090"
+    },
+    {
+      "claimId": "enrich-claim-0091",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0091"
+    },
+    {
+      "claimId": "enrich-claim-0092",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0092"
+    },
+    {
+      "claimId": "enrich-claim-0093",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0093"
+    },
+    {
+      "claimId": "enrich-claim-0094",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0094"
+    },
+    {
+      "claimId": "enrich-claim-0095",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0095"
+    },
+    {
+      "claimId": "enrich-claim-0096",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0096"
+    },
+    {
+      "claimId": "enrich-claim-0097",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0097"
+    },
+    {
+      "claimId": "enrich-claim-0098",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0098"
+    },
+    {
+      "claimId": "enrich-claim-0099",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0099"
+    },
+    {
+      "claimId": "enrich-claim-0100",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0100"
+    },
+    {
+      "claimId": "enrich-claim-0101",
+      "sourceId": "scope-kcc-profile-2184",
+      "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+      "byteLength": 137533,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0101"
+    },
+    {
+      "claimId": "enrich-claim-0135",
+      "sourceId": "scope-ly-ke-profile",
+      "sha256": "227641ea0917bf6a602e7d1d091dbf379aa630e5ea08defd72f56d0485b30d69",
+      "byteLength": 160803,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0135"
+    },
+    {
+      "claimId": "enrich-claim-0136",
+      "sourceId": "scope-ly-ke-profile",
+      "sha256": "227641ea0917bf6a602e7d1d091dbf379aa630e5ea08defd72f56d0485b30d69",
+      "byteLength": 160803,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0136"
+    },
+    {
+      "claimId": "enrich-claim-0141",
+      "sourceId": "scope-ly-lai-profile",
+      "sha256": "b3688136a6c88e6e4c9da5ea90dfef0723de352d4a1c03d6ea9141628ded2346",
+      "byteLength": 161148,
+      "reopen": "retained-evidence-excerpt",
+      "decisionId": "automated-decision-v2-enrich-claim-0141"
+    }
+  ],
+  "publishedByCandidate": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "claims": 9
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "claims": 10
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "claims": 10
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "claims": 7
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "claims": 8
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "claims": 15
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "claims": 13
+    },
+    {
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "claims": 2
+    },
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "claims": 1
+    }
+  ]
+}

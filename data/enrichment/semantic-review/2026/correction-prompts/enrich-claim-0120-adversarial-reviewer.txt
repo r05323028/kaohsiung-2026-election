@@ -1,0 +1,87 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：adversarial-reviewer
+Your job: try to falsify the CORRECTED wording. Look for overreach, unsupported precision, promotional epithets presented as credentials, attribution slipped from "a report said" to "it is so", and any sentence fragment that the source does not actually contain. If a neutral reader would be misled, set materialConcern to a concrete sentence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0120
+- 候選人: 張靜
+- 類別 / 類型: basic-biography / professional-experience
+- 標題: 新聞報導中的專業經歷
+- 組織: （未提供）
+- 修正後內容: 獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰
+- 原始內容（修正前，僅供比對）: 獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團 udn
+- 歸因: news-report｜來源依賴: source-dependent
+- 時效狀態: historical
+- 發布日期: 2026-03-29
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-news-zhang-jing-udn
+- 來源類別: news-report
+- URL: https://udn.com/news/story/124652/9409570
+- HTTP: 200
+- rawPath: data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot
+- sha256: 4bfc27f13241119476f1635ec6af23d64475b9797087197f05768fe3945174de
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團 udn line 好友 股市理財 經濟日報網 房地產 中經社 樂透 發票 生活娛樂 噓！星聞 優人物 udnSTYLE 500輯 遊戲角落 發燒車訊 元氣網 橘世代 寵物部落 科技玩家 女子漾 報時光 運動 udn NBA 野球夢田 HBL 閱讀創作 琅琅悅讀 琅琅書店 琅琅原創 一刻鯨選 U好學 聯副70 udn部落格 聯合文學 聯經出版 聯文雜誌 文創購物 數位文創 IP 授權 瘋活動 售票網 時光商號 時光自造所 品牌故事館 更多產品 聯合知識庫 聯合電子報 聯合影音網 聯合學苑 有行旅 APP行動網 關於我們 P 訂閱 刊登廣告 FAQ · 客服 新聞授權 服務條款 · 著作權 · 隱私權聲明 聯合報系 訂報紙 關於我們 網站總覽 聯合線上公司 著作權所有 ©2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 2026-03-29 10:02 聯合報／ 記者 徐白櫻 ／高雄即時報導 政治獻金 司法改革黨黨主席張靜為小黨爭取生存空間，有意投入下屆高雄市長選舉。圖／本報資料照 --> 贊助本文 --> 2026高雄市長藍綠參選人底定，將由立委 柯志恩 及 賴瑞隆 出戰。曾因前總統蔡英文論文案入獄服刑的司法改革黨主席 張靜 今天也宣布參選高雄市長。他表示，面對2026年地方選舉，司法改革黨不能再坐以待斃；為了小黨的生存與尊嚴，決定投身今年高雄市市長的選舉，希望在高雄這塊民主聖地，化不可能為可能。 司法改革黨近年在高雄相當活躍，多次與民眾黨高雄市黨部聯手舉辦活動。張靜批評，民眾黨前主席柯文哲被羅織入獄，甚至面臨17年的重判；前時代力量黨主席徐永明也因SOGO案遭到重判。政黨運作、選舉拜票，收受 政治獻金 本是民主政治運作的常態，但在現今台灣，只要政治聲望威脅到執政黨，獻金隨時可以被扭曲成政治收賄。 張靜表示，藍綠兩大黨長期輪流執政，早已將司法資源與政商關係盤根錯節地綁定在一起，容不下真正能監督他們的第三勢力，更容不下一個多元、透明的政黨文化。尤其在台灣實施單一選區兩票制，立委席次減為113席，分為區域79席與不分區34席，配合公職人員選舉罷免法的修正，小政黨要選上區域立委及不分區立委難上加難。 張靜說，小政黨有許多好的訴求與政見，在沒有立法委員席次的情況下，都是空談，完全沒有付諸實現的能力。依照民進黨過去從黨外到執政的歷史經驗，必須從地方縣市長選舉做起，從地方包圍中央，有地方執政權才能從各地方的小內閣吸納人才，逐漸累積政治資源，小政黨才有生存空間，慢慢發展到取得不分區或分區立委席次。 張靜過去曾擔任法官及檢察官，資深媒體人彭文正質疑蔡英文論文造假，委請律師張靜提起「確認博士論文不存在之訴」，2022年台北地院開庭時，張靜因當庭斥法官「混蛋」而挨告，北院依公然侮辱罪判處罰金8千元，張靜入獄服刑，寧願坐牢也不繳罰金。此外，過去張靜也曾宣布參選2022總統大選，但最後未參選。 2026九合一選舉 2026縣市長選舉登記結束！看22縣市完整參選名單 全國1502人要爭919席議員 看你的選區有誰參選? 政治獻金 賴瑞隆 張靜 柯志恩 2026九合一選舉 高雄市選舉 登入後開始簽到 會員來簽到 您即將前往會員中心 登入簽到送 LINE POINTS 🪙 每日打卡送 LINE POINTS 玩遊戲再抽7-11禮券🧧 立即登入 立即前往 延伸閱讀 開放閱讀">聯合報社論／政治清算寒冬來臨，藍白已無容錯空間 開放閱讀">新聞分析／凱道抗議…民眾黨溫度計 藍白合試金石 開放閱讀">九合一風雲／柯文哲悲情牌 讓小草成李四川關鍵助攻？ 開放閱讀">彰化王惠美喊退休卻勤跑行程 地方解讀不敗女王下一步 --> --> 相關新聞 固本拓票…盧秀燕出任蔣萬安競總主委 藍委看好「姐弟強強聯手」 台北市長選戰白熱化，民進黨參選人沈伯洋形塑「洋流」強勢進逼，台北市長蔣萬安近期也化被動為主動，積極展開攻勢。北市藍營輔選人士證實，台中市長盧秀燕已點頭出任蔣萬安競總主委。北市藍委直言，這是一步好棋，盧秀燕具備全國級知名度與號召力，是真正的「姐弟強強聯手」。 2026-10-18 00:00 民眾黨造勢大會將邀請蔣萬安 黃國昌：北市藍白合作漸入佳境 選舉倒數21天，台北市長蔣萬安陣營除鞏固藍軍基本盤，也把目光投向民眾黨，有媒體報導至今前主席柯文哲都還沒點頭，傳出是因北士科跟京華城案過去蔣市府處理手段讓柯感到心寒。對此，民眾黨黨主席黃國昌表示，他不會去揣測柯文哲的心意，沒得到授權也不會發言，但無論是北市科或京華城，都是柯主席在市長任內重要的建設，若當初沒做好北市科，何來李四川迎來輝達?這就是市政一棒接一棒。 2026-11-07 13:14 影／好險有影片！蔣萬安拱手、彎腰入「又一村」 前後40秒何來出征？ 台北市長蔣萬安昨掃遼寧夜市，挺洋流店家「又一村」指控，被藍
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+<!--getArticle 0.0019 --><!--hottest_news long cache--><!--getReporter 0.0066 --><!--extend_news 0.0025 --><!-- enter else --><!-- 9482 --><!--related_news 0.0727 --><!--content 0.1256 --><!--ad_1 0.0338 --><!--ad 0.1216 --><!--view_type 0.0000 --><!--meta 0.0103 --><!--family_bar 0.0008 --><!--family_bar sub  --><!--breaking_news 0.0035 --><!--top 0.0066 --><!--bottom 0.0025 --><!--nav 0.0000 --><!--code 0.2670 --><!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 縣市長議員選戰 | 要聞 | 聯合新聞網</title>
+  <link rel="amphtml" href="https://udn.com/news/amp/story/124652/9409570">
+<link rel="canonical" itemprop="mainEntityOfPage" href="https://udn.com/news/story/124652/9409570"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+<!-- favicon -->
+<link rel="icon" href="/static/img/icons/icon-128x128.png" sizes="128x128">
+<link rel="icon" href="/static/img/icons/icon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+
+<!-- for Facebook -->
+<meta property="og:title" itemprop="name" content="獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 聯合新聞網"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" itemprop="url" content="https://udn.com/news/story/124652/9409570"/>
+<meta property="og:image" itemprop="image" content="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/03/29/34807729.jpg&M=1&s=Y&x=0&y=0&sw=1280&sh=853&exp=3600"/>
+<meta property="og:image:width" content="1280"/>
+<meta property="og:image:height" content="853"/>
+<meta property="og:site_name" content="聯合新聞網"/>
+<meta property="og:description" content="2026高雄市長藍綠參選人底定，將由立委柯志恩及賴瑞隆出戰。曾因前總統蔡英文論文案入獄服刑的司法改革黨主席張靜今天也宣布參選高雄市長。他表示，面對2026年地方選舉，司法改革黨不能再坐以待斃；為了小黨的生存與尊嚴，決定投身今年高雄市市長的選舉，希望在高雄這塊民主聖地，化不可能為可能。"/>
+<meta property="og:locale" content="zh_TW">
+<meta property="fb:admins" content="100002847892748" />
+<meta property="fb:app_id" content="350231215126101" />
+<meta property="fb:pages" content="241284961029" />
+<meta property="article:author" content="https://udn.com/news/reporter/MDYwMjk=" />
+<meta property="article:publisher" content="https://www.facebook.com/myudn/" />
+
+<!-- for Google -->
+<meta
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0120",
+    "sourceId": "scope-news-zhang-jing-udn",
+    "documentLocation": "data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot（包含「律師」之內文段落）",
+    "excerpt": "獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0120","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-news-zhang-jing-udn","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

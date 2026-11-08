@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { dataset } from '../data';
+import { officialSourceManifest } from '../data/official';
+
+const officialSources = officialSourceManifest.sources.filter(
+  (source) =>
+    source.verificationStatus !== 'unreachable-or-forbidden' &&
+    !source.publicationStatus.startsWith('not-used'),
+);
+const unavailableSources = officialSourceManifest.sources.filter(
+  (source) => source.verificationStatus === 'unreachable-or-forbidden',
+);
+
+function statusLabel(status: string) {
+  const labels: Record<string, string> = {
+    verified: '已核對',
+    'verified-duplicate-alias': '重複別名已核對',
+    'verified-context-only': '制度背景',
+    'unreachable-or-forbidden': '未取得／受限制',
+  };
+  return labels[status] ?? status;
+}
+---
+
+<BaseLayout
+  title="資料與編輯政策｜港都人物誌"
+  description="港都人物誌的官方來源、示範資料、來源追蹤與查核狀態。"
+>
+  <div class="page-wrap">
+    <section class="page-heading">
+      <span class="eyebrow">SOURCES & EDITORIAL POLICY</span>
+      <h1>資料不是裝飾，是每個主張的回程路。</h1>
+      <p>本頁說明官方快照、公共紀錄、示範資料與查核狀態如何工作，以及哪些內容仍等待人工審查或正式公告。</p>
+      <div class="demo-notice" role="note">
+        <span aria-hidden="true">✦</span>
+        <div>
+          <strong>官方與示範資料分層</strong>
+          截至 2026-11-05，網站已納入中央選舉委員會、高雄市選舉委員會與高雄市議會的留存來源；示範人物仍使用 example.invalid，並會明確標示為虛構資料。
+        </div>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <article class="info-page-card info-page-card--wide">
+        <span class="section-kicker">source record</span>
+        <h2>來源紀錄欄位</h2>
+        <ul>
+          <li><strong>Source ID：</strong>穩定識別碼，讓多個內容項目可以引用同一筆來源。</li>
+          <li><strong>URL / publisher：</strong>原始連結與出版者，不複製受版權保護的全文。</li>
+          <li><strong>Publication / retrieval date：</strong>出版日與本次取得日分開保存；未標示出版日不會被補填。</li>
+          <li><strong>Verification status：</strong>來源是否已核對、是否只是制度背景，或目前無法取得。</li>
+          <li><strong>Checksum：</strong>建置前核對留存快照，避免離線資料在未察覺下改變。</li>
+        </ul>
+      </article>
+      <article class="info-page-card">
+        <span class="section-kicker">status</span>
+        <h2>查核狀態不等於結論</h2>
+        <p>Pending review 代表還沒有完成編輯查核；Disputed 代表存在爭議；Insufficient information 代表目前資料不足。任何空白欄位都不被解讀為負面證據。</p>
+      </article>
+      <article class="info-page-card">
+        <span class="section-kicker">policy</span>
+        <h2>公共利益邊界</h2>
+        <p>只記錄與公共職務、公開政策、可核實活動及公共歷史相關的內容。不收集與公共利益無關的私人家庭資訊，也不從相似姓名或社群貼文推論關係。</p>
+      </article>
+    </div>
+
+    <section style="margin-top: 1rem;" aria-labelledby="official-source-list-heading">
+      <div class="profile-section-heading" style="margin-bottom: 1rem;">
+        <h2 id="official-source-list-heading">官方留存來源</h2>
+        <p>{officialSources.length} 筆來源列入目前建置資料；官方候選人號次仍以「抽定、非正式公告」呈現，議員正式公告前不提前宣稱為最終名冊。</p>
+      </div>
+      <div class="candidate-grid">
+        {officialSources.map((source) => (
+          <article class="content-card" id={source.id}>
+            <div class="content-card__meta">
+              <span class="status-chip">{statusLabel(source.verificationStatus)}</span>
+              <span>{source.publicationDate ?? '出版日期未標示'}</span>
+            </div>
+            <h4>{source.publisher}</h4>
+            <p>{source.title}</p>
+            <p>{source.role}・取得日期：{source.retrievalDate}</p>
+            <p>{source.sha256 ? '已留存並核對快照' : '僅保存來源索引，未留存快照'}</p>
+            <a class="secondary-link" href={source.canonicalUrl} target="_blank" rel="noreferrer">開啟官方來源 →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section style="margin-top: 1rem;" aria-labelledby="unavailable-source-list-heading">
+      <div class="profile-section-heading" style="margin-bottom: 1rem;">
+        <h2 id="unavailable-source-list-heading">未採用或目前無法取得的官方子路徑</h2>
+        <p>這些記錄保留在來源清冊中以維持可追溯性，但不會被當作已取得的內容證據。</p>
+      </div>
+      <div class="candidate-grid">
+        {unavailableSources.map((source) => (
+          <article class="content-card" id={source.id}>
+            <div class="content-card__meta"><span class="status-chip">{statusLabel(source.verificationStatus)}</span><span>{source.retrievalDate}</span></div>
+            <h4>{source.publisher}</h4>
+            <p>{source.title}</p>
+            <a class="secondary-link" href={source.canonicalUrl} target="_blank" rel="noreferrer">查看官方路徑 →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section style="margin-top: 1rem;" aria-labelledby="demo-source-list-heading">
+      <div class="profile-section-heading" style="margin-bottom: 1rem;">
+        <h2 id="demo-source-list-heading">虛構示範來源</h2>
+        <p>{dataset.sources.length} 筆來源只服務於示範資料，全部標記為虛構示範與待查核，不可作為真實選舉證據。</p>
+      </div>
+      <div class="candidate-grid">
+        {dataset.sources.map((source) => (
+          <article class="content-card" id={source.id}>
+            <div class="content-card__meta"><span class="status-chip">{source.verificationStatus}</span><span>{source.publicationDate}</span></div>
+            <h4>{source.publisher}</h4>
+            <p>{source.note}</p>
+            <p>取得日期：{source.retrievalDate}・關聯項目：{source.relatedEntityIds.length} 筆</p>
+            <a class="secondary-link" href={source.url} target="_blank" rel="noreferrer">開啟示範連結 →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

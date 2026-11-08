@@ -1,0 +1,28 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+const out='reports/visual/hud-geo/after';
+await fs.mkdir(out,{recursive:true});
+const browser=await chromium.launch({args:['--use-gl=angle','--use-angle=swiftshader']});
+const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+async function ready(url){await page.goto('http://127.0.0.1:4321'+url,{waitUntil:'domcontentloaded'});await page.locator('[data-testid="city-explorer"][data-hydrated="true"]').waitFor({timeout:45000});await page.waitForTimeout(2200);}
+await ready('/');
+await page.screenshot({path:out+'/08-mobile-citywide.png'});
+const menuButton=page.getByRole('button',{name:'開啟網站選單'});
+const menuBox=await menuButton.boundingBox();
+await menuButton.click();
+await page.waitForTimeout(350);
+const menuVisible=await page.locator('#city-mobile-nav').isVisible();
+const menuLinks=await page.locator('#city-mobile-nav nav a').count();
+const active=await page.locator('#city-mobile-nav nav a[aria-current="page"]').innerText();
+await page.screenshot({path:out+'/09-mobile-menu.png'});
+await page.keyboard.press('Escape');
+await page.waitForTimeout(250);
+const menuClosed=!(await page.locator('#city-mobile-nav').isVisible());
+const restored=await menuButton.evaluate((el)=>el===document.activeElement);
+console.log('mobile-menu',JSON.stringify({menuBox,menuVisible,menuLinks,active,menuClosed,restored}));
+await ready('/?admin=E03');
+await page.screenshot({path:out+'/10-mobile-zuoying.png'});
+const focus=await page.locator('[data-testid="city-explorer"]').getAttribute('data-scene-focus');
+const brand=await page.locator('.city-brand__title').innerText();
+console.log('mobile-zuoying',JSON.stringify({focus,brand}));
+await browser.close();

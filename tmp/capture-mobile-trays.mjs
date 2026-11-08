@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page = await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,reducedMotion:'reduce'});
+await page.goto('http://127.0.0.1:4321/');
+await page.waitForSelector('[data-testid="city-explorer"][data-hydrated="true"]');
+await page.waitForTimeout(2200);
+await page.evaluate(() => document.querySelector('astro-dev-toolbar')?.remove());
+await page.locator('[aria-controls="city-district-tray"]').click();
+await page.waitForTimeout(300);
+await page.screenshot({path:'tmp/mobile-district-tray.png'});
+await page.evaluate(() => document.querySelector('astro-dev-toolbar')?.remove());
+await page.locator('[aria-controls="city-district-tray"]').click();
+await page.locator('[aria-controls="city-people-tray"]').click();
+await page.waitForTimeout(300);
+await page.screenshot({path:'tmp/mobile-people-tray.png'});
+await browser.close();

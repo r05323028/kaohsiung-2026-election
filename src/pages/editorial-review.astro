@@ -1,0 +1,599 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EditorialReviewApp from '../components/EditorialReviewApp';
+import type { EditorialDecisionSet, EditorialReviewPacket, ReviewerRegistry } from '../data/editorial';
+import type { EditorialReleaseBatch, ReleaseClaimAudit } from '../data/editorial/release';
+import type { EnrichmentReviewPacket } from '../data/enrichment/schema';
+import type { IndependentAIAuditReport } from '../data/enrichment/ai-audit';
+import type { SemanticReviewReport } from '../data/enrichment/semantic-review';
+import type {
+  ScopedPublicationReadiness,
+  ScopedReviewQueueReport,
+} from '../data/enrichment/review-publication';
+
+const enabled = import.meta.env.DEV || process.env.EDITORIAL_REVIEW === 'true';
+let packet: EditorialReviewPacket | null = null;
+let registry: ReviewerRegistry | null = null;
+let decisions: EditorialDecisionSet | null = null;
+let releaseBatch: EditorialReleaseBatch | null = null;
+let releaseAudits: ReleaseClaimAudit[] = [];
+let scopedPacket: EnrichmentReviewPacket | null = null;
+let scopedQueue: ScopedReviewQueueReport | null = null;
+let scopedReadiness: ScopedPublicationReadiness | null = null;
+let scopedAudit: IndependentAIAuditReport | null = null;
+let semanticReport: SemanticReviewReport | null = null;
+if (enabled) {
+  packet = (await import('../../data/editorial/review-packet/2026/biography-review-packet.json')).default as EditorialReviewPacket;
+  registry = (await import('../../data/editorial/reviewer-registry.json')).default as ReviewerRegistry;
+  decisions = (await import('../../data/editorial/decisions/2026/biography-decisions.json')).default as EditorialDecisionSet;
+  releaseBatch = (await import('../../data/editorial/release/2026/biography-release-batch.json')).default as EditorialReleaseBatch;
+  releaseAudits = ((await import('../../reports/editorial-release-readiness.json')).default as { audits: ReleaseClaimAudit[] }).audits;
+  scopedPacket = (await import('../../data/enrichment/review/2026/zuoying-mayoral-review.json')).default as EnrichmentReviewPacket;
+  scopedQueue = (await import('../../reports/zuoying-mayoral-review-queue.json')).default as ScopedReviewQueueReport;
+  scopedReadiness = (await import('../../reports/zuoying-mayoral-publication-readiness.json')).default as ScopedPublicationReadiness;
+  scopedAudit = (await import('../../reports/independent-ai-review.json')).default as IndependentAIAuditReport;
+  semanticReport = (await import('../../reports/semantic-review-execution.json')).default as SemanticReviewReport;
+}
+---
+
+<BaseLayout
+  title="編輯審查工作區｜港都人物誌"
+  description="僅供本機使用的候選人履歷身分、證據與出版閘門審查工作區。"
+  noindex={true}
+>
+  {enabled && packet && registry && decisions ? (
+    <EditorialReviewApp
+      client:load
+      packet={packet}
+      registry={registry}
+      initialDecisions={decisions.decisions}
+      releaseBatch={releaseBatch ?? undefined}
+      releaseAudits={releaseAudits}
+      scopedPacket={scopedPacket ?? undefined}
+      scopedQueue={scopedQueue ?? undefined}
+      scopedReadiness={scopedReadiness ?? undefined}
+      scopedAudit={scopedAudit ?? undefined}
+      semanticReport={semanticReport ?? undefined}
+    />
+  ) : (
+    <main class="page-wrap editorial-review-disabled">
+      <section class="page-heading">
+        <span class="eyebrow">LOCAL EDITORIAL WORKSPACE</span>
+        <h1>編輯審查工作區未啟用</h1>
+        <p>此頁不會在公開建置載入待審履歷資料。請在本機以 EDITORIAL_REVIEW=true 啟動開發伺服器，並先設定 reviewer registry。</p>
+      </section>
+    </main>
+  )}
+</BaseLayout>
+
+<style is:global>
+  .editorial-review {
+    width: min(1440px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+    color: #294858;
+  }
+  .editorial-review__header,
+  .editorial-review__detail-heading,
+  .editorial-review__list-heading,
+  .editorial-review__buttons,
+  .editorial-review__badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .editorial-review__header,
+  .editorial-review__detail-heading,
+  .editorial-review__list-heading {
+    justify-content: space-between;
+  }
+  .editorial-review__header {
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .editorial-review__header h1,
+  .editorial-review__detail-heading h2,
+  .editorial-review__section h3 {
+    margin: 0;
+  }
+  .editorial-review__header p {
+    max-width: 48rem;
+    color: rgba(41, 72, 88, 0.75);
+  }
+  .editorial-review__notice,
+  .editorial-review__filters,
+  .editorial-review__list,
+  .editorial-review__detail,
+  .editorial-review__section,
+  .editorial-review__actions {
+    border: 1px solid rgba(41, 72, 88, 0.13);
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 12px 30px rgba(41, 72, 88, 0.06);
+  }
+  .editorial-review__notice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .editorial-review__filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .editorial-review label {
+    display: grid;
+    gap: 0.35rem;
+    color: rgba(41, 72, 88, 0.78);
+    font-size: 0.78rem;
+    font-weight: 750;
+  }
+  .editorial-review input,
+  .editorial-review select,
+  .editorial-review textarea {
+    width: 100%;
+    border: 1px solid rgba(41, 72, 88, 0.2);
+    border-radius: 0.65rem;
+    padding: 0.65rem 0.7rem;
+    background: #fff;
+    color: #294858;
+    font: inherit;
+  }
+  .editorial-review textarea {
+    min-height: 5rem;
+    resize: vertical;
+  }
+  .editorial-review__body {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.8fr) minmax(0, 1.7fr);
+    gap: 1rem;
+    align-items: start;
+  }
+  .editorial-review__list {
+    overflow: hidden;
+    position: sticky;
+    top: 1rem;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+  .editorial-review__list-heading {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(41, 72, 88, 0.1);
+  }
+  .editorial-review__item {
+    display: grid;
+    width: 100%;
+    gap: 0.35rem;
+    padding: 0.85rem 1rem;
+    border: 0;
+    border-bottom: 1px solid rgba(41, 72, 88, 0.08);
+    background: transparent;
+    color: #294858;
+    text-align: left;
+    cursor: pointer;
+  }
+  .editorial-review__item:hover,
+  .editorial-review__item.is-selected {
+    background: #f5e8d4;
+  }
+  .editorial-review__item-title {
+    font-weight: 850;
+  }
+  .editorial-review__item span:not(.editorial-review__item-title) {
+    color: rgba(41, 72, 88, 0.68);
+    font-size: 0.76rem;
+  }
+  .editorial-review__badges small,
+  .editorial-review__state {
+    border-radius: 999px;
+    padding: 0.2rem 0.45rem;
+    background: rgba(76, 175, 168, 0.15);
+    color: #2f817e;
+    font-size: 0.68rem;
+    font-weight: 800;
+  }
+  .editorial-review__detail {
+    display: grid;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  .editorial-review__claim-copy,
+  .editorial-review__evidence,
+  .editorial-review__history {
+    display: grid;
+    gap: 0.45rem;
+  }
+  .editorial-review__claim-copy {
+    padding: 1rem;
+    border-radius: 0.85rem;
+    background: #fff9f0;
+  }
+  .editorial-review__claim-copy p,
+  .editorial-review__evidence p,
+  .editorial-review__history p {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .editorial-review__claim-copy dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+  }
+  .editorial-review__claim-copy dl div {
+    display: grid;
+    gap: 0.15rem;
+  }
+  .editorial-review__claim-copy dt,
+  .editorial-review__claim-copy dd {
+    margin: 0;
+  }
+  .editorial-review__claim-copy dt {
+    color: rgba(41, 72, 88, 0.6);
+    font-size: 0.72rem;
+  }
+  .editorial-review__claim-copy dd {
+    font-weight: 750;
+  }
+  .editorial-review__section,
+  .editorial-review__actions {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  .editorial-review__evidence,
+  .editorial-review__history {
+    padding: 0.8rem;
+    border-radius: 0.75rem;
+    background: rgba(245, 232, 212, 0.42);
+  }
+  .editorial-review__evidence small,
+  .editorial-review__history span,
+  .editorial-review__meta {
+    color: rgba(41, 72, 88, 0.65);
+    font-size: 0.75rem;
+  }
+  .editorial-review__evidence a {
+    color: #2f817e;
+    font-weight: 800;
+  }
+  .editorial-review__checkbox {
+    display: flex !important;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .editorial-review__checkbox input {
+    width: auto;
+  }
+  .editorial-review__buttons {
+    flex-wrap: wrap;
+  }
+  .editorial-review__buttons button,
+  .editorial-review .button {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.65rem 0.9rem;
+    background: #4cafa8;
+    color: #fff;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .editorial-review .button--primary {
+    background: #294858;
+  }
+  .editorial-review__empty {
+    padding: 1rem;
+  }
+
+  .scoped-enrichment-review {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(76, 175, 168, 0.28);
+    border-radius: 1.1rem;
+    background: rgba(255, 249, 240, 0.92);
+  }
+  .scoped-enrichment-review__header,
+  .scoped-enrichment-review__summary,
+  .scoped-enrichment-review__filters,
+  .scoped-enrichment-review__body,
+  .scoped-enrichment-review__metadata,
+  .scoped-enrichment-review__sources article {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .scoped-enrichment-review__header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+  .scoped-enrichment-review__header h2,
+  .scoped-enrichment-review__header p,
+  .scoped-enrichment-review__detail-heading h3,
+  .scoped-enrichment-review__detail-heading p,
+  .scoped-enrichment-review h4 {
+    margin: 0;
+  }
+  .scoped-enrichment-review__summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .scoped-enrichment-review__summary span,
+  .scoped-enrichment-review__state {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(76, 175, 168, 0.14);
+    color: #2f817e;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  .scoped-enrichment-review__filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+    padding: 0.85rem;
+    border: 1px solid rgba(41, 72, 88, 0.13);
+    border-radius: 0.85rem;
+  }
+  .scoped-enrichment-review__legend {
+    padding: 0 0.35rem;
+    color: rgba(41, 72, 88, 0.72);
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  .scoped-enrichment-review__body {
+    grid-template-columns: minmax(16rem, 0.75fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+  .scoped-enrichment-review__list,
+  .scoped-enrichment-review__detail,
+  .scoped-enrichment-review__sources,
+  .scoped-enrichment-review__actions,
+  .scoped-enrichment-review__blockers {
+    border: 1px solid rgba(41, 72, 88, 0.13);
+    border-radius: 0.85rem;
+    background: rgba(255, 255, 255, 0.76);
+  }
+  .scoped-enrichment-review__list {
+    max-height: 38rem;
+    overflow: auto;
+  }
+  .scoped-enrichment-review__list-heading,
+  .scoped-enrichment-review__detail-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: start;
+    padding: 0.85rem;
+    border-bottom: 1px solid rgba(41, 72, 88, 0.1);
+  }
+  .scoped-enrichment-review__item {
+    display: grid;
+    width: 100%;
+    gap: 0.3rem;
+    padding: 0.75rem 0.85rem;
+    border: 0;
+    border-bottom: 1px solid rgba(41, 72, 88, 0.08);
+    background: transparent;
+    color: #294858;
+    text-align: left;
+    cursor: pointer;
+  }
+  .scoped-enrichment-review__item:hover,
+  .scoped-enrichment-review__item.is-selected {
+    background: #f5e8d4;
+  }
+  .scoped-enrichment-review__item span,
+  .scoped-enrichment-review__item small,
+  .scoped-enrichment-review__sources small,
+  .scoped-enrichment-review__neutral {
+    color: rgba(41, 72, 88, 0.68);
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+  .scoped-enrichment-review__detail {
+    display: grid;
+    gap: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+  .scoped-enrichment-review__metadata {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+    padding: 0 0.85rem;
+  }
+  .scoped-enrichment-review__metadata div {
+    display: grid;
+    gap: 0.15rem;
+  }
+  .scoped-enrichment-review__metadata dt {
+    color: rgba(41, 72, 88, 0.58);
+    font-size: 0.72rem;
+  }
+  .scoped-enrichment-review__metadata dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-weight: 750;
+  }
+  .scoped-enrichment-review__evidence,
+  .scoped-enrichment-review__sources,
+  .scoped-enrichment-review__actions,
+  .scoped-enrichment-review__blockers {
+    margin: 0 0.85rem;
+    padding: 0.85rem;
+  }
+  .scoped-enrichment-review__evidence p,
+  .scoped-enrichment-review__blockers ul,
+  .scoped-enrichment-review__sources p {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .scoped-enrichment-review__blockers {
+    border-color: rgba(233, 150, 121, 0.45);
+    background: rgba(233, 150, 121, 0.1);
+  }
+  .scoped-enrichment-review__blockers ul {
+    padding-left: 1.2rem;
+  }
+  .scoped-enrichment-review__sources article {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(41, 72, 88, 0.08);
+  }
+  .scoped-enrichment-review__sources article:last-child {
+    border-bottom: 0;
+  }
+  .scoped-enrichment-review__sources a {
+    color: #2f817e;
+    font-weight: 800;
+  }
+  .scoped-enrichment-review__actions {
+    display: grid;
+    gap: 0.65rem;
+  }
+  .scoped-enrichment-review__actions p {
+    margin: 0;
+    color: rgba(41, 72, 88, 0.7);
+    font-size: 0.8rem;
+  }
+  .scoped-enrichment-review__actions textarea {
+    min-height: 4rem;
+  }
+  .scoped-enrichment-review__empty {
+    padding: 0.85rem;
+  }
+  .scoped-ai-audit {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .scoped-ai-audit__notice {
+    margin: 0;
+    color: rgba(41, 72, 88, 0.75);
+  }
+  .scoped-ai-audit__summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+  .scoped-ai-audit__summary span,
+  .scoped-ai-audit .editorial-review__badge {
+    border-radius: 999px;
+    padding: 0.35rem 0.6rem;
+    background: rgba(76, 175, 168, 0.12);
+    color: #2f817e;
+    font-size: 0.78rem;
+    font-weight: 750;
+  }
+  .scoped-ai-audit > label {
+    max-width: 18rem;
+  }
+  .scoped-ai-audit__grid {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.8fr) minmax(0, 1.6fr);
+    gap: 1rem;
+  }
+  .scoped-ai-audit__list,
+  .scoped-ai-audit__detail {
+    min-height: 12rem;
+    border: 1px solid rgba(41, 72, 88, 0.1);
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .scoped-ai-audit__list {
+    display: grid;
+    align-content: start;
+    max-height: 28rem;
+    overflow: auto;
+  }
+  .scoped-ai-audit__item {
+    display: grid;
+    gap: 0.2rem;
+    border: 0;
+    border-bottom: 1px solid rgba(41, 72, 88, 0.08);
+    padding: 0.7rem;
+    background: transparent;
+    color: #294858;
+    text-align: left;
+    cursor: pointer;
+  }
+  .scoped-ai-audit__item span {
+    color: rgba(41, 72, 88, 0.65);
+    font-size: 0.76rem;
+  }
+  .scoped-ai-audit__item.is-selected {
+    background: rgba(76, 175, 168, 0.12);
+  }
+  .scoped-ai-audit__detail {
+    padding: 1rem;
+  }
+  .scoped-ai-audit__detail h3 {
+    margin-top: 0;
+  }
+  .scoped-ai-audit__detail dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+  .scoped-ai-audit__detail dl div {
+    padding: 0.55rem;
+    border-radius: 0.6rem;
+    background: rgba(41, 72, 88, 0.05);
+  }
+  .scoped-ai-audit__detail dt {
+    color: rgba(41, 72, 88, 0.65);
+    font-size: 0.72rem;
+  }
+  .scoped-ai-audit__detail dd {
+    margin: 0.2rem 0 0;
+    font-weight: 750;
+  }
+  @media (max-width: 900px) {
+    .scoped-enrichment-review__body,
+    .scoped-enrichment-review__filters {
+      grid-template-columns: 1fr 1fr;
+    }
+    .scoped-enrichment-review__body {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .scoped-enrichment-review__header,
+    .scoped-enrichment-review__filters,
+    .scoped-enrichment-review__metadata {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 900px) {
+    .editorial-review__filters,
+    .editorial-review__body {
+      grid-template-columns: 1fr 1fr;
+    }
+    .editorial-review__list {
+      position: static;
+      max-height: 32rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .editorial-review {
+      width: min(100% - 1rem, 100%);
+      padding-top: 1rem;
+    }
+    .editorial-review__header,
+    .editorial-review__filters,
+    .editorial-review__body {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .editorial-review__header .button {
+      width: 100%;
+    }
+  }
+</style>

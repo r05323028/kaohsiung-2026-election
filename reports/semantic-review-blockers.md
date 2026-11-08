@@ -1,0 +1,146 @@
+# Semantic review blockers
+
+- Previous deterministic blocker rows retained: 139
+- Current model-review failed/invalid attempts: 206
+- Current paired disagreements: 71
+- A model finding never clears a human/editorial blocker by itself. Every prior row remains claim-linked and requires human disposition or additional evidence.
+
+- remains-open: enrich-claim-0001 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0001.
+- remains-open: enrich-claim-0002 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0002.
+- remains-open: enrich-claim-0003 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0003.
+- remains-open: enrich-claim-0004 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0004.
+- remains-open: enrich-claim-0005 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0005.
+- remains-open: enrich-claim-0006 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0006.
+- remains-open: enrich-claim-0007 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0007.
+- remains-open: enrich-claim-0008 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0008.
+- remains-open: enrich-claim-0009 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0009.
+- remains-open: enrich-claim-0010 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0010.
+- remains-open: enrich-claim-0011 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2185; evidence refs: enrich-evidence-0011.
+- remains-open: enrich-claim-0012 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0012.
+- remains-open: enrich-claim-0013 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0013.
+- remains-open: enrich-claim-0014 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0014.
+- remains-open: enrich-claim-0015 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0015.
+- remains-open: enrich-claim-0016 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0016.
+- remains-open: enrich-claim-0017 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0017.
+- remains-open: enrich-claim-0018 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0018.
+- remains-open: enrich-claim-0019 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0019.
+- remains-open: enrich-claim-0020 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0020.
+- remains-open: enrich-claim-0021 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0021.
+- remains-open: enrich-claim-0022 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0022.
+- remains-open: enrich-claim-0023 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2187; evidence refs: enrich-evidence-0023.
+- remains-open: enrich-claim-0024 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0024.
+- remains-open: enrich-claim-0025 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0025.
+- remains-open: enrich-claim-0026 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0026.
+- remains-open: enrich-claim-0027 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0027.
+- remains-open: enrich-claim-0028 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0028.
+- remains-open: enrich-claim-0029 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0029.
+- remains-open: enrich-claim-0030 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0030.
+- remains-open: enrich-claim-0031 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0031.
+- remains-open: enrich-claim-0032 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0032.
+- remains-open: enrich-claim-0033 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0033.
+- remains-open: enrich-claim-0034 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0034.
+- remains-open: enrich-claim-0035 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2181; evidence refs: enrich-evidence-0035.
+- remains-open: enrich-claim-0036 (policies/policy-statement): candidate-attribution-requires-human-confirmation. Source refs: scope-news-liu-shufang-udn; evidence refs: enrich-evidence-0036.
+- remains-open: enrich-claim-0037 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-liu-shufang-udn; evidence refs: enrich-evidence-0037.
+- remains-open: enrich-claim-0038 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-liu-shufang-udn; evidence refs: enrich-evidence-0038.
+- remains-open: enrich-claim-0039 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-liu-shufang-udn; evidence refs: enrich-evidence-0039.
+- remains-open: enrich-claim-0040 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0040.
+- remains-open: enrich-claim-0041 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0041.
+- remains-open: enrich-claim-0042 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0042.
+- remains-open: enrich-claim-0043 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0043.
+- remains-open: enrich-claim-0044 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0044.
+- remains-open: enrich-claim-0045 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0045.
+- remains-open: enrich-claim-0046 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0046.
+- remains-open: enrich-claim-0047 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0047.
+- remains-open: enrich-claim-0048 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2186; evidence refs: enrich-evidence-0048.
+- remains-open: enrich-claim-0049 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0049.
+- remains-open: enrich-claim-0050 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0050.
+- remains-open: enrich-claim-0051 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0051.
+- remains-open: enrich-claim-0052 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0052.
+- remains-open: enrich-claim-0053 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0053.
+- remains-open: enrich-claim-0054 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0054.
+- remains-open: enrich-claim-0055 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0055.
+- remains-open: enrich-claim-0056 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0056.
+- remains-open: enrich-claim-0057 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0057.
+- remains-open: enrich-claim-0058 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2188; evidence refs: enrich-evidence-0058.
+- remains-open: enrich-claim-0059 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0059.
+- remains-open: enrich-claim-0060 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0060.
+- remains-open: enrich-claim-0061 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0061.
+- remains-open: enrich-claim-0062 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0062.
+- remains-open: enrich-claim-0063 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0063.
+- remains-open: enrich-claim-0064 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0064.
+- remains-open: enrich-claim-0065 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0065.
+- remains-open: enrich-claim-0066 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0066.
+- remains-open: enrich-claim-0067 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0067.
+- remains-open: enrich-claim-0068 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0068.
+- remains-open: enrich-claim-0069 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0069.
+- remains-open: enrich-claim-0070 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0070.
+- remains-open: enrich-claim-0071 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0071.
+- remains-open: enrich-claim-0072 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0072.
+- remains-open: enrich-claim-0073 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0073.
+- remains-open: enrich-claim-0074 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0074.
+- remains-open: enrich-claim-0075 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0075.
+- remains-open: enrich-claim-0076 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2189; evidence refs: enrich-evidence-0076.
+- remains-open: enrich-claim-0077 (basic-biography/historical-position): reported-attribution-requires-human-review. Source refs: scope-news-zhang-yili-cna; evidence refs: enrich-evidence-0077.
+- remains-open: enrich-claim-0078 (basic-biography/historical-position): reported-attribution-requires-human-review. Source refs: scope-news-zhang-yili-cna; evidence refs: enrich-evidence-0078.
+- remains-open: enrich-claim-0079 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-zhang-yili-cna; evidence refs: enrich-evidence-0079.
+- remains-open: enrich-claim-0080 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-zhang-yili-cna; evidence refs: enrich-evidence-0080.
+- remains-open: enrich-claim-0081 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-zhang-yili-cna; evidence refs: enrich-evidence-0081.
+- remains-open: enrich-claim-0082 (basic-biography/historical-position): reported-attribution-requires-human-review; duplicate-or-overlap-group-requires-human-disposition. Source refs: scope-news-chen-guanyu-udn; evidence refs: enrich-evidence-0082.
+- remains-open: enrich-claim-0083 (basic-biography/historical-position): reported-attribution-requires-human-review; duplicate-or-overlap-group-requires-human-disposition. Source refs: scope-news-chen-guanyu-udn; evidence refs: enrich-evidence-0083.
+- remains-open: enrich-claim-0084 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-chen-guanyu-udn; evidence refs: enrich-evidence-0084.
+- remains-open: enrich-claim-0085 (relationships/family-relationship): reported-attribution-requires-human-review; sensitive-relationship-claim-requires-human-review. Source refs: scope-news-chen-guanyu-udn; evidence refs: enrich-evidence-0085.
+- remains-open: enrich-claim-0086 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-chen-guanyu-udn; evidence refs: enrich-evidence-0086.
+- remains-open: enrich-claim-0087 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-chen-guanyu-udn; evidence refs: enrich-evidence-0087.
+- remains-open: enrich-claim-0088 (basic-biography/current-position): currentness-requires-a-dated-source-version. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0088.
+- remains-open: enrich-claim-0089 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0089.
+- remains-open: enrich-claim-0090 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0090.
+- remains-open: enrich-claim-0091 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0091.
+- remains-open: enrich-claim-0092 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0092.
+- remains-open: enrich-claim-0093 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0093.
+- remains-open: enrich-claim-0094 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0094.
+- remains-open: enrich-claim-0095 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0095.
+- remains-open: enrich-claim-0096 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0096.
+- remains-open: enrich-claim-0097 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0097.
+- remains-open: enrich-claim-0098 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0098.
+- remains-open: enrich-claim-0099 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0099.
+- remains-open: enrich-claim-0100 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0100.
+- remains-open: enrich-claim-0101 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0101.
+- remains-open: enrich-claim-0102 (policies/policy-statement): temporal-scope-or-date-is-unknown; candidate-attribution-requires-human-confirmation. Source refs: scope-kcc-profile-2184; evidence refs: enrich-evidence-0102.
+- remains-open: enrich-claim-0103 (basic-biography/professional-experience): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-udn; evidence refs: enrich-evidence-0103.
+- remains-open: enrich-claim-0104 (basic-biography/professional-experience): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-ltn; evidence refs: enrich-evidence-0104.
+- remains-open: enrich-claim-0105 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-udn; evidence refs: enrich-evidence-0105.
+- remains-open: enrich-claim-0106 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-ltn; evidence refs: enrich-evidence-0106.
+- remains-open: enrich-claim-0107 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-udn; evidence refs: enrich-evidence-0107.
+- remains-open: enrich-claim-0108 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-udn; evidence refs: enrich-evidence-0108.
+- remains-open: enrich-claim-0109 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-ltn; evidence refs: enrich-evidence-0109.
+- remains-open: enrich-claim-0110 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-xue-zhaoji-ltn; evidence refs: enrich-evidence-0110.
+- remains-open: enrich-claim-0111 (basic-biography/historical-position): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-cna; evidence refs: enrich-evidence-0111.
+- remains-open: enrich-claim-0112 (basic-biography/historical-position): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-cna; evidence refs: enrich-evidence-0112.
+- remains-open: enrich-claim-0113 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-cna; evidence refs: enrich-evidence-0113.
+- remains-open: enrich-claim-0114 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-ltn; evidence refs: enrich-evidence-0114.
+- remains-open: enrich-claim-0115 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-cna; evidence refs: enrich-evidence-0115.
+- remains-open: enrich-claim-0116 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-cna; evidence refs: enrich-evidence-0116.
+- remains-open: enrich-claim-0117 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-ltn; evidence refs: enrich-evidence-0117.
+- remains-open: enrich-claim-0118 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-yin-li-ltn; evidence refs: enrich-evidence-0118.
+- remains-open: enrich-claim-0119 (basic-biography/historical-candidacy): temporal-scope-or-date-is-unknown. Source refs: scope-cec-qualification; evidence refs: enrich-evidence-0119.
+- remains-open: enrich-claim-0120 (basic-biography/professional-experience): reported-attribution-requires-human-review. Source refs: scope-news-zhang-jing-udn; evidence refs: enrich-evidence-0120.
+- remains-open: enrich-claim-0121 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-zhang-jing-udn; evidence refs: enrich-evidence-0121.
+- remains-open: enrich-claim-0122 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-zhang-jing-udn; evidence refs: enrich-evidence-0122.
+- remains-open: enrich-claim-0123 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-zhang-jing-udn; evidence refs: enrich-evidence-0123.
+- remains-open: enrich-claim-0124 (basic-biography/historical-candidacy): temporal-scope-or-date-is-unknown. Source refs: scope-cec-qualification; evidence refs: enrich-evidence-0124.
+- remains-open: enrich-claim-0125 (public-records/public-activity): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-ebc; evidence refs: enrich-evidence-0125.
+- remains-open: enrich-claim-0126 (public-records/public-activity): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-et; evidence refs: enrich-evidence-0126.
+- remains-open: enrich-claim-0127 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-ebc; evidence refs: enrich-evidence-0127.
+- remains-open: enrich-claim-0128 (news/news-report): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-et; evidence refs: enrich-evidence-0128.
+- remains-open: enrich-claim-0129 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-ebc; evidence refs: enrich-evidence-0129.
+- remains-open: enrich-claim-0130 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-ebc; evidence refs: enrich-evidence-0130.
+- remains-open: enrich-claim-0131 (timeline/timeline-event): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-et; evidence refs: enrich-evidence-0131.
+- remains-open: enrich-claim-0132 (timeline/historical-candidacy): reported-attribution-requires-human-review. Source refs: scope-news-wang-zhaomin-et; evidence refs: enrich-evidence-0132.
+- remains-open: enrich-claim-0133 (basic-biography/historical-candidacy): temporal-scope-or-date-is-unknown. Source refs: scope-cec-qualification; evidence refs: enrich-evidence-0133.
+- remains-open: enrich-claim-0135 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-ly-ke-profile; evidence refs: enrich-evidence-0135.
+- remains-open: enrich-claim-0136 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-ly-ke-profile; evidence refs: enrich-evidence-0136.
+- remains-open: enrich-claim-0138 (basic-biography/historical-candidacy): temporal-scope-or-date-is-unknown. Source refs: scope-cec-qualification; evidence refs: enrich-evidence-0138.
+- remains-open: enrich-claim-0139 (basic-biography/historical-candidacy): temporal-scope-or-date-is-unknown. Source refs: scope-cec-qualification; evidence refs: enrich-evidence-0139.
+- remains-open: enrich-claim-0141 (basic-biography/education): temporal-scope-or-date-is-unknown. Source refs: scope-ly-lai-profile; evidence refs: enrich-evidence-0141.
+- remains-open: enrich-claim-0142 (basic-biography/professional-experience): temporal-scope-or-date-is-unknown. Source refs: scope-ly-lai-profile; evidence refs: enrich-evidence-0142.

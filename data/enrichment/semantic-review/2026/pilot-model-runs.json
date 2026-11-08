@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1",
+  "datasetId": "kaohsiung-2026-zuoying-mayoral-enrichment",
+  "snapshotDate": "2026-11-07",
+  "generatedAt": "2026-11-07T09:45:14.441Z",
+  "attempts": [
+    {
+      "invocationId": "pilot-reviewer-a-enrich-claim-0134",
+      "reviewerRole": "reviewer-a",
+      "claimId": "enrich-claim-0134",
+      "model": "openai-codex/gpt-5.6-luna",
+      "runner": "pi-durable",
+      "sessionId": null,
+      "packetId": "semantic-packet-enrich-claim-0134",
+      "packetSha256": "cbe1e942c48b2703dcd5d1bf679abda241a46ff8b6c968af6ed69244e66dbe20",
+      "status": "completed",
+      "startedAt": "2026-11-07T09:44:33.108Z",
+      "finishedAt": "2026-11-07T09:45:14.441Z",
+      "inputTokens": 17051,
+      "outputTokens": 862,
+      "cost": 0.0044446,
+      "error": null,
+      "result": {
+        "claimId": "enrich-claim-0134",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "The Legislative Yuan institutional record directly identifies 柯志恩 and lists her 11th-term legislative membership and start date.",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "The source labels her as a current-term legislator and reports the 11th term and start date. Current status is supported as of the 2026-11-07 retrieval snapshot, not indefinitely."
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-ly-ke-profile",
+            "evidenceId": "enrich-evidence-0134",
+            "location": "data/enrichment/raw/2026-11-07/ly/ke.snapshot（立法院委員資料）",
+            "excerpt": "柯志恩 英文姓名：Ko, Chih-En 屆別：第 11 屆 ... 到職日期：113年2月1日",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-ly-ke-profile",
+            "evidenceId": "enrich-evidence-0134",
+            "location": "data/enrichment/raw/2026-11-07/ly/ke.snapshot（立法院委員資料）",
+            "excerpt": "第十一屆 第六會期 ... 本屆立委 ... 柯志恩委員",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "The official Legislative Yuan page identifies the person as 柯志恩委員, places her in the 11th Legislative Yuan term, and gives the exact start date 113年2月1日（2024-02-01）. This directly supports the current-position claim and its institutional attribution.",
+        "proposedCorrection": null,
+        "limitations": [
+          "The source has no publication date; current status is limited to the source retrieval snapshot on 2026-11-07.",
+          "The packet does not independently establish the candidate's electoral identity beyond the provided identity observation."
+        ]
+      },
+      "rawText": "{\"claimId\":\"enrich-claim-0134\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"The Legislative Yuan institutional record directly identifies 柯志恩 and lists her 11th-term legislative membership and start date.\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"The source labels her as a current-term legislator and reports the 11th term and start date. Current status is supported as of the 2026-11-07 retrieval snapshot, not indefinitely.\"},\"evidence\":[{\"sourceId\":\"scope-ly-ke-profile\",\"evidenceId\":\"enrich-evidence-0134\",\"location\":\"data/enrichment/raw/2026-11-07/ly/ke.snapshot（立法院委員資料）\",\"excerpt\":\"柯志恩 英文姓名：Ko, Chih-En 屆別：第 11 屆 ... 到職日期：113年2月1日\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-ly-ke-profile\",\"evidenceId\":\"enrich-evidence-0134\",\"location\":\"data/enrichment/raw/2026-11-07/ly/ke.snapshot（立法院委員資料）\",\"excerpt\":\"第十一屆 第六會期 ... 本屆立委 ... 柯志恩委員\",\"relationship\":\"supports\"}],\"rationale\":\"The official Legislative Yuan page identifies the person as 柯志恩委員, places her in the 11th Legislative Yuan term, and gives the exact start date 113年2月1日（2024-02-01）. This directly supports the current-position claim and its institutional attribution.\",\"proposedCorrection\":null,\"limitations\":[\"The source has no publication date; current status is limited to the source retrieval snapshot on 2026-11-07.\",\"The packet does not independently establish the candidate's electoral identity beyond the provided identity observation.\"]}",
+      "runId": "6ad4ab21cfa74132a6cb43ebbeaecded"
+    },
+    {
+      "invocationId": "pilot-reviewer-b-enrich-claim-0134",
+      "reviewerRole": "reviewer-b",
+      "claimId": "enrich-claim-0134",
+      "model": "openai-codex/gpt-5.6-luna",
+      "runner": "pi-durable",
+      "sessionId": null,
+      "packetId": "semantic-packet-enrich-claim-0134",
+      "packetSha256": "cbe1e942c48b2703dcd5d1bf679abda241a46ff8b6c968af6ed69244e66dbe20",
+      "status": "completed",
+      "startedAt": "2026-11-07T09:44:33.110Z",
+      "finishedAt": "2026-11-07T09:45:01.965Z",
+      "inputTokens": 17452,
+      "outputTokens": 670,
+      "cost": 0.0042944,
+      "error": null,
+      "result": {
+        "claimId": "enrich-claim-0134",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "The official Legislative Yuan member page identifies 柯志恩 and records her 11th-term legislative office; the page notes that the data were provided by the member’s office.",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "The source identifies her as a current 11th-term legislator and states 到職日期：113年2月1日. Currentness is supported as of retrieval on 2026-11-07, not indefinitely."
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-ly-ke-profile",
+            "evidenceId": "enrich-evidence-0134",
+            "location": "data/enrichment/raw/2026-11-07/ly/ke.snapshot（立法院委員資料）",
+            "excerpt": "本屆立委 柯志恩委員 ... 屆別：第 11 屆 ... 到職日期：113年2月1日",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "The source directly matches the candidate’s name and states that 柯志恩 is a member of the current 11th Legislative Yuan term, with an entry date of 2024-02-01. The retrieved page also shows 第十一屆 第六會期, supporting the current-position characterization at retrieval time.",
+        "proposedCorrection": null,
+        "limitations": [
+          "The source has no publication date and is a retrieved webpage snapshot.",
+          "The page states that the data were provided by the member’s office; no independent corroborating source is included."
+        ]
+      },
+      "rawText": "{\"claimId\":\"enrich-claim-0134\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"The official Legislative Yuan member page identifies 柯志恩 and records her 11th-term legislative office; the page notes that the data were provided by the member’s office.\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"The source identifies her as a current 11th-term legislator and states 到職日期：113年2月1日. Currentness is supported as of retrieval on 2026-11-07, not indefinitely.\"},\"evidence\":[{\"sourceId\":\"scope-ly-ke-profile\",\"evidenceId\":\"enrich-evidence-0134\",\"location\":\"data/enrichment/raw/2026-11-07/ly/ke.snapshot（立法院委員資料）\",\"excerpt\":\"本屆立委 柯志恩委員 ... 屆別：第 11 屆 ... 到職日期：113年2月1日\",\"relationship\":\"supports\"}],\"rationale\":\"The source directly matches the candidate’s name and states that 柯志恩 is a member of the current 11th Legislative Yuan term, with an entry date of 2024-02-01. The retrieved page also shows 第十一屆 第六會期, supporting the current-position characterization at retrieval time.\",\"proposedCorrection\":null,\"limitations\":[\"The source has no publication date and is a retrieved webpage snapshot.\",\"The page states that the data were provided by the member’s office; no independent corroborating source is included.\"]}",
+      "runId": "4ae325f97f3a4511ba96f800c8b36d94"
+    },
+    {
+      "invocationId": "pilot-reviewer-a-enrich-claim-0140",
+      "reviewerRole": "reviewer-a",
+      "claimId": "enrich-claim-0140",
+      "model": "openai-codex/gpt-5.6-luna",
+      "runner": "pi-durable",
+      "sessionId": null,
+      "packetId": "semantic-packet-enrich-claim-0140",
+      "packetSha256": "7cdca4d71888fc56f79cadc563aef8eca43678ab08a4741033f9b92bcbf50b58",
+      "status": "completed",
+      "startedAt": "2026-11-07T09:44:33.110Z",
+      "finishedAt": "2026-11-07T09:45:12.463Z",
+      "inputTokens": 5725,
+      "outputTokens": 976,
+      "cost": 0.00255172,
+      "error": null,
+      "result": {
+        "claimId": "enrich-claim-0140",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "The claim is attributed to an institutional Legislative Yuan record; the page identifies 賴瑞隆 as a current legislator, although the biographical details are noted as provided by the member's office.",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "The source identifies him as a member of the current 11th Legislative Yuan and gives the start date 113年2月1日 (2024-02-01). The retrieved source supports the current-position wording as of 2026-11-07, but does not establish an end date."
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-ly-lai-profile",
+            "evidenceId": "enrich-evidence-0140-a",
+            "location": "data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）",
+            "excerpt": "本屆立委 賴瑞隆委員",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-ly-lai-profile",
+            "evidenceId": "enrich-evidence-0140-b",
+            "location": "data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）",
+            "excerpt": "英文姓名：Lai, Jui-Lung 屆別：第 11 屆",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-ly-lai-profile",
+            "evidenceId": "enrich-evidence-0140-c",
+            "location": "data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）",
+            "excerpt": "到職日期：113年2月1日",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "The official Legislative Yuan member page matches the candidate name and identifies him as a member of the 11th Legislative Yuan, with the stated start date. The claim does not add unsupported details beyond the source.",
+        "proposedCorrection": null,
+        "limitations": [
+          "The source provides no end date, so continued service after the retrieval date is supported only by the page's current-member context.",
+          "The source text states that the listed information was provided by the member's office."
+        ]
+      },
+      "rawText": "{\"claimId\":\"enrich-claim-0140\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"The claim is attributed to an institutional Legislative Yuan record; the page identifies 賴瑞隆 as a current legislator, although the biographical details are noted as provided by the member's office.\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"The source identifies him as a member of the current 11th Legislative Yuan and gives the start date 113年2月1日 (2024-02-01). The retrieved source supports the current-position wording as of 2026-11-07, but does not establish an end date.\"},\"evidence\":[{\"sourceId\":\"scope-ly-lai-profile\",\"evidenceId\":\"enrich-evidence-0140-a\",\"location\":\"data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）\",\"excerpt\":\"本屆立委 賴瑞隆委員\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-ly-lai-profile\",\"evidenceId\":\"enrich-evidence-0140-b\",\"location\":\"data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）\",\"excerpt\":\"英文姓名：Lai, Jui-Lung 屆別：第 11 屆\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-ly-lai-profile\",\"evidenceId\":\"enrich-evidence-0140-c\",\"location\":\"data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）\",\"excerpt\":\"到職日期：113年2月1日\",\"relationship\":\"supports\"}],\"rationale\":\"The official Legislative Yuan member page matches the candidate name and identifies him as a member of the 11th Legislative Yuan, with the stated start date. The claim does not add unsupported details beyond the source.\",\"proposedCorrection\":null,\"limitations\":[\"The source provides no end date, so continued service after the retrieval date is supported only by the page's current-member context.\",\"The source text states that the listed information was provided by the member's office.\"]}",
+      "runId": "de4dcbdb082a44dfa01a3540d70f7259"
+    },
+    {
+      "invocationId": "pilot-reviewer-b-enrich-claim-0140",
+      "reviewerRole": "reviewer-b",
+      "claimId": "enrich-claim-0140",
+      "model": "openai-codex/gpt-5.6-luna",
+      "runner": "pi-durable",
+      "sessionId": null,
+      "packetId": "semantic-packet-enrich-claim-0140",
+      "packetSha256": "7cdca4d71888fc56f79cadc563aef8eca43678ab08a4741033f9b92bcbf50b58",
+      "status": "completed",
+      "startedAt": "2026-11-07T09:44:33.111Z",
+      "finishedAt": "2026-11-07T09:44:59.770Z",
+      "inputTokens": 17512,
+      "outputTokens": 810,
+      "cost": 0.0044744,
+      "error": null,
+      "result": {
+        "claimId": "enrich-claim-0140",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "The official Legislative Yuan member page directly attributes the role and start date to institutional records, with biographical details noted as provided by the member's office.",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "The retrieved page identifies 賴瑞隆 as a current 11th-term legislator and lists the start date as 113年2月1日. This supports current status as of the 2026-11-07 retrieval date, but not beyond that date."
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-ly-lai-profile",
+            "evidenceId": "enrich-evidence-0140",
+            "location": "data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）",
+            "excerpt": "賴瑞隆 英文姓名：Lai, Jui-Lung 屆別：第 11 屆 ... 到職日期：113年2月1日",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-ly-lai-profile",
+            "evidenceId": "enrich-evidence-0140",
+            "location": "data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）",
+            "excerpt": "本屆立委 賴瑞隆委員",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "The source is an official Legislative Yuan page, names 賴瑞隆, identifies him as a current 11th-term member, and provides the claimed start date. The identity also aligns with the Kaohsiung context and the page's constituency listing.",
+        "proposedCorrection": null,
+        "limitations": [
+          "The source has no separate publication date; currentness is bounded by the 2026-11-07 retrieval date.",
+          "The page does not establish that the status remains current after retrieval."
+        ]
+      },
+      "rawText": "{\"claimId\":\"enrich-claim-0140\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"The official Legislative Yuan member page directly attributes the role and start date to institutional records, with biographical details noted as provided by the member's office.\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"The retrieved page identifies 賴瑞隆 as a current 11th-term legislator and lists the start date as 113年2月1日. This supports current status as of the 2026-11-07 retrieval date, but not beyond that date.\"},\"evidence\":[{\"sourceId\":\"scope-ly-lai-profile\",\"evidenceId\":\"enrich-evidence-0140\",\"location\":\"data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）\",\"excerpt\":\"賴瑞隆 英文姓名：Lai, Jui-Lung 屆別：第 11 屆 ... 到職日期：113年2月1日\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-ly-lai-profile\",\"evidenceId\":\"enrich-evidence-0140\",\"location\":\"data/enrichment/raw/2026-11-07/ly/lai.snapshot（立法院委員資料）\",\"excerpt\":\"本屆立委 賴瑞隆委員\",\"relationship\":\"supports\"}],\"rationale\":\"The source is an official Legislative Yuan page, names 賴瑞隆, identifies him as a current 11th-term member, and provides the claimed start date. The identity also aligns with the Kaohsiung context and the page's constituency listing.\",\"proposedCorrection\":null,\"limitations\":[\"The source has no separate publication date; currentness is bounded by the 2026-11-07 retrieval date.\",\"The page does not establish that the status remains current after retrieval.\"]}",
+      "runId": "5120d244929941e79f8d2085e9a77448"
+    }
+  ]
+}

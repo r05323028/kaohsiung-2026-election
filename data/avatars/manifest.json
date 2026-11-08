@@ -1,0 +1,238 @@
+{
+  "schemaVersion": "1",
+  "generatedAt": "2026-11-06T00:00:00.000Z",
+  "generator": "scripts/generate-avatar-assets.ts:three-primitives-v1",
+  "coordinateSystem": {
+    "up": "Y",
+    "forward": "-Z",
+    "units": "meters",
+    "targetHeightMeters": 2.7
+  },
+  "assets": [
+    {
+      "avatarId": "avatar-base",
+      "modelPath": "/assets/avatars/avatar-base.glb",
+      "state": "validated",
+      "assetVersion": "1.0.0",
+      "generatedAt": "2026-11-06T00:00:00.000Z",
+      "generator": "scripts/generate-avatar-assets.ts:three-primitives-v1",
+      "sha256": "e7e53d2d9374e1dcf900d9501381a5463c01aa98824d7fdbfc9599b269eedc6a",
+      "fileSizeBytes": 50560,
+      "meshCount": 14,
+      "triangleCount": 940,
+      "materialCount": 4,
+      "heightMeters": 2.663,
+      "animationClips": [
+        "Idle",
+        "Selected",
+        "Greeting",
+        "Walking"
+      ],
+      "note": "Original fictional chibi asset generated from deterministic Three.js primitives; not a real-person likeness."
+    },
+    {
+      "avatarId": "avatar-lantern",
+      "modelPath": "/assets/avatars/avatar-lantern.glb",
+      "state": "validated",
+      "assetVersion": "1.0.0",
+      "generatedAt": "2026-11-06T00:00:00.000Z",
+      "generator": "scripts/generate-avatar-assets.ts:three-primitives-v1",
+      "sha256": "f8036126d1424e2b7245719d0d460eb441a3aa58665137949911386940ec4821",
+      "fileSizeBytes": 63472,
+      "meshCount": 18,
+      "triangleCount": 1204,
+      "materialCount": 4,
+      "heightMeters": 2.663,
+      "animationClips": [
+        "Idle",
+        "Selected",
+        "Greeting",
+        "Walking"
+      ],
+      "note": "Original fictional chibi asset generated from deterministic Three.js primitives; not a real-person likeness."
+    },
+    {
+      "avatarId": "avatar-reading",
+      "modelPath": "/assets/avatars/avatar-reading.glb",
+      "state": "validated",
+      "assetVersion": "1.0.0",
+      "generatedAt": "2026-11-06T00:00:00.000Z",
+      "generator": "scripts/generate-avatar-assets.ts:three-primitives-v1",
+      "sha256": "14c969d26bd0cf04f479481ce08c51021b955ec0f72693e3d1e20d3c9cf04a29",
+      "fileSizeBytes": 69908,
+      "meshCount": 19,
+      "triangleCount": 1420,
+      "materialCount": 6,
+      "heightMeters": 2.663,
+      "animationClips": [
+        "Idle",
+        "Selected",
+        "Greeting",
+        "Walking"
+      ],
+      "note": "Original fictional chibi asset generated from deterministic Three.js primitives; not a real-person likeness."
+    },
+    {
+      "avatarId": "avatar-civic",
+      "modelPath": "/assets/avatars/avatar-civic.glb",
+      "state": "validated",
+      "assetVersion": "1.0.0",
+      "generatedAt": "2026-11-06T00:00:00.000Z",
+      "generator": "scripts/generate-avatar-assets.ts:three-primitives-v1",
+      "sha256": "3a5d5260e645e6e01c11f80f245dba3e826b9e10ef25184a5e7f552af619ca75",
+      "fileSizeBytes": 58028,
+      "meshCount": 16,
+      "triangleCount": 1036,
+      "materialCount": 5,
+      "heightMeters": 2.916,
+      "animationClips": [
+        "Idle",
+        "Selected",
+        "Greeting",
+        "Walking"
+      ],
+      "note": "Original fictional chibi asset generated from deterministic Three.js primitives; not a real-person likeness."
+    },
+    {
+      "avatarId": "avatar-harbor",
+      "modelPath": "/assets/avatars/avatar-harbor.glb",
+      "state": "validated",
+      "assetVersion": "1.0.0",
+      "generatedAt": "2026-11-06T00:00:00.000Z",
+      "generator": "scripts/generate-avatar-assets.ts:three-primitives-v1",
+      "sha256": "0a4f2ce6cb8084124facad0f78c46ffb28b79695872b4271a4093e43999a2a56",
+      "fileSizeBytes": 50696,
+      "meshCount": 14,
+      "triangleCount": 940,
+      "materialCount": 5,
+      "heightMeters": 2.663,
+      "animationClips": [
+        "Idle",
+        "Selected",
+        "Greeting",
+        "Walking"
+      ],
+      "note": "Original fictional chibi asset generated from deterministic Three.js primitives; not a real-person likeness."
+    }
+  ],
+  "appearances": [
+    {
+      "candidateId": null,
+      "avatarId": "avatar-base",
+      "bodyPreset": "compact-adult",
+      "facePreset": "soft-neutral",
+      "hairPreset": "short-cap",
+      "hairColor": "#294858",
+      "skinMaterial": "warm-peach",
+      "outfitPreset": "civic-blue",
+      "accessories": [],
+      "modelPath": "/assets/avatars/avatar-base.glb",
+      "animationSet": {
+        "idle": "Idle",
+        "selected": "Selected",
+        "greeting": "Greeting",
+        "walking": "Walking"
+      },
+      "referenceIds": [],
+      "visualReviewStatus": "not-applicable-fictional",
+      "assetVersion": "1.0.0",
+      "isFictional": true
+    },
+    {
+      "candidateId": "candidacy-lin-haixing-2026-demo",
+      "avatarId": "avatar-lantern",
+      "bodyPreset": "compact-adult",
+      "facePreset": "soft-neutral",
+      "hairPreset": "bob",
+      "hairColor": "#294858",
+      "skinMaterial": "warm-peach",
+      "outfitPreset": "coral-sand",
+      "accessories": [
+        "scarf"
+      ],
+      "modelPath": "/assets/avatars/avatar-lantern.glb",
+      "animationSet": {
+        "idle": "Idle",
+        "selected": "Selected",
+        "greeting": "Greeting",
+        "walking": "Walking"
+      },
+      "referenceIds": [],
+      "visualReviewStatus": "not-applicable-fictional",
+      "assetVersion": "1.0.0",
+      "isFictional": true
+    },
+    {
+      "candidateId": "candidacy-zhou-qingyu-2026-demo",
+      "avatarId": "avatar-reading",
+      "bodyPreset": "compact-adult",
+      "facePreset": "round-neutral",
+      "hairPreset": "side-sweep",
+      "hairColor": "#6D4437",
+      "skinMaterial": "soft-umber",
+      "outfitPreset": "harbor-teal",
+      "accessories": [
+        "glasses"
+      ],
+      "modelPath": "/assets/avatars/avatar-reading.glb",
+      "animationSet": {
+        "idle": "Idle",
+        "selected": "Selected",
+        "greeting": "Greeting",
+        "walking": "Walking"
+      },
+      "referenceIds": [],
+      "visualReviewStatus": "not-applicable-fictional",
+      "assetVersion": "1.0.0",
+      "isFictional": true
+    },
+    {
+      "candidateId": "candidacy-shen-anbo-2026-demo",
+      "avatarId": "avatar-civic",
+      "bodyPreset": "compact-adult",
+      "facePreset": "soft-neutral",
+      "hairPreset": "hat-crop",
+      "hairColor": "#6D4437",
+      "skinMaterial": "warm-peach",
+      "outfitPreset": "warm-sand",
+      "accessories": [
+        "hat"
+      ],
+      "modelPath": "/assets/avatars/avatar-civic.glb",
+      "animationSet": {
+        "idle": "Idle",
+        "selected": "Selected",
+        "greeting": "Greeting",
+        "walking": "Walking"
+      },
+      "referenceIds": [],
+      "visualReviewStatus": "not-applicable-fictional",
+      "assetVersion": "1.0.0",
+      "isFictional": true
+    },
+    {
+      "candidateId": "candidacy-xu-shanhe-2026-demo",
+      "avatarId": "avatar-harbor",
+      "bodyPreset": "compact-adult",
+      "facePreset": "soft-neutral",
+      "hairPreset": "short-cap",
+      "hairColor": "#294858",
+      "skinMaterial": "warm-peach",
+      "outfitPreset": "civic-blue",
+      "accessories": [],
+      "modelPath": "/assets/avatars/avatar-harbor.glb",
+      "animationSet": {
+        "idle": "Idle",
+        "selected": "Selected",
+        "greeting": "Greeting",
+        "walking": "Walking"
+      },
+      "referenceIds": [],
+      "visualReviewStatus": "not-applicable-fictional",
+      "assetVersion": "1.0.0",
+      "isFictional": true
+    }
+  ],
+  "references": [],
+  "note": "Technical avatar manifest for fictional demonstration characters only. Real candidate likenesses require suitable references, human visual review, and separate publication approval."
+}

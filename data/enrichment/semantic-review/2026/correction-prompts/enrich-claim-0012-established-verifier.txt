@@ -1,0 +1,103 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：established-verifier
+Your job: confirm whether the CORRECTED wording is directly supported by the retained source bytes. Establish the strongest defensible reading of the source; if the source does not literally carry the wording, return partially-supported or insufficient-evidence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0012
+- 候選人: 李雅芬
+- 類別 / 類型: basic-biography / current-position
+- 標題: KCC 本屆議員名錄
+- 組織: 高雄市議會
+- 修正後內容: 本屆議員
+- 原始內容（修正前，僅供比對）: 高雄市議會本屆議員（第四選舉區）
+- 歸因: institutional-record｜來源依賴: institutional-record
+- 時效狀態: current
+- 發布日期: （未提供）
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-kcc-profile-2187
+- 來源類別: kcc-member-profile
+- URL: https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187
+- HTTP: 200
+- rawPath: data/biographies/raw/2026-11-06/kcc/profiles/2187.html
+- sha256: 072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+高雄市議會全球網-中文網-本屆議員-李雅芬 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail 熱門關鍵字 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 下方連結 隱私權宣告 資訊安全政策宣告 著作權聲明 RSS訂閱專區 ::: 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 高雄市議會全球網-中文網 熱門關鍵字 search 搜尋 進階搜尋 字級 小 中 大 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail ::: 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 ::: 首頁 本會議員 本屆議員 本屆議員-李雅芬 _ 網頁功能 列印內容 李雅芬 性 別： 女 所屬政黨： 中國國民黨 聯絡電話： 3639123 傳真電話： 3639766 通訊地址： 811楠梓區加昌路725-5號 備註： 邱于軒、李雅芬、宋立彬、林智鴻、張漢忠、范織欽議員總質詢摘要 警消衛環部門委員會議員質詢摘要 舊市議會都更動土 康議長感念前人犧牲與市民配合 成就今日繁榮高雄 挺國防最強後盾！高雄市議會赴台中清泉崗勞軍 慰問空軍第三聯隊官兵辛勞 高雄市議會跨黨派訪團再訪布里斯本 曾副議長：歡迎大家投資高雄 邱于軒、宋立彬、李雅芬、朱信強、邱俊憲、張漢忠議員總質詢摘要 警消衛環部門委員會議員質詢摘要 白喬茵、簡煥宗、陳麗珍議員、李雅芬、邱于軒、宋立彬議員總質詢摘要 教育部門委員會議員質詢摘要 台式華語在國際正夯！ 曾副議長率團訪法國亭林中文學校 拜會大諾瓦西市政府 曾副議長提議打造「台灣生活節」在法國 李雅芬、邱于軒、宋立彬、李順進、蔡武宏、李亞築議員總質詢摘要 教育部門委員會議員質詢摘要 警力有限，民力無窮！康裕成議長強調議會不分黨派支持警察局設備與人力補充 李雅芬、邱于軒、宋立彬、許采蓁、林富寶、黃文志議員總質詢摘要 關心學童營養 高雄市議會前進校園考察 教育部門委員會議員質詢摘要 議員集團參訪英珍藏展 康議長期許以藝術提升城市涵養 拜會連江縣議會 康議長隔空連線搏感情 首度前進馬祖勞軍 議會感謝國軍戍守前線 甜蜜快閃！康議長陪議員及議會同仁歡度母親節 教育部門委員會議員質詢摘要 議會慰勞列車啟動 感謝第一線清潔隊員對抗登革熱疫情 劉德林、李雅芬、宋立彬、吳利成、許采蓁、陳美雅議員總質詢摘要 美國學校師生參訪 康議長鼓勵學生積極參與公民議題 教育部門委員會議員質詢摘要 教育委員會考察巴楠花部落國民中小學 龍舟隊、 啦啦隊合體，議會隊一定贏 鍾易仲.蔡金晏.黃香菽.李雅芬.宋立彬議員總質詢摘要 教育部門委員會議員質詢摘要 關心台積電投資進度 康議長率隊考察楠梓產業園區 教育委員會考察本市學校營養午餐 本屆議會成立112年各種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-12 第4屆第8次定期會 警消衛環部門業務報告與質詢_影片連結 115-09-23 第4屆第8次定期會 交通部門業務質詢_影片連結 115-09-22 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家立業加分：楠科（中油舊廠址，台積電將進駐）、橋科廠商提撥適當名額優先錄用在地子弟，工作期間結婚者，要求市府視財政狀況補助房租，生育者發獎金。 為教育質量加分：爭取楠梓國小新建校舍、增設藍田國小。未來爭取楠梓新設國中、科學實驗中學留在楠梓、高雄大學附設中小學，強化雙語、科技教學。 為洽公、活動便利加分：後勁設楠梓第二行政中心、高大特定區新建合署辦公大樓。增設里民活動中心；高
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+gov.tw/Scripts/fu_Accessibility.js'></script> 
+<script>var CCMS_WWWURL='https://www.kcc.gov.tw';var CCMS_LanguageSN=1;var CCMS_SitesSN_Encryption='1';</script><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="DC.Title" content="" />
+<meta name="DC.Subject" content="" />
+<meta name="DC.Creator" content="" />
+<meta name="DC.Publisher" content="" />
+<meta name="DC.Date" content="2019-02-27" />
+<meta name="DC.Type" content="" />
+<meta name="DC.Identifier" content="" />
+<meta name="DC.Description" content="" />
+<meta name="DC.Contributor" content="" />
+<meta name="DC.Format" content="" />
+<meta name="DC.Relation" content="" />
+<meta name="DC.Source" content="" />
+<meta name="DC.Language" content="" />
+<meta name="DC.Coverage.t.min" content="2019-02-27" />
+<meta name="DC.Coverage.t.max" content="2019-02-27" />
+<meta name="DC.Rights" content="" />
+<meta name="Category.Theme" content="" />
+<meta name="Category.Cake" content="" />
+<meta name="Category.Service" content="" />
+<meta name="DC.Keywords" content="" />
+<title>
+	高雄市議會全球網-中文網-本屆議員-李雅芬
+</title><link id="likCssGlobal" href="/css/global.css" rel="stylesheet" type="text/css" /><link id="likCssPage" href="/css/page.css" rel="stylesheet" type="text/css" /><link id="likPrint" href="/css/print.css" rel="stylesheet" type="text/css" media="print" /><link id="lnkCssSysDetail" href="/css/sys_detail.css" rel="stylesheet" type="text/css" />
+    <style>
+        .group.base-aside {
+            display: none;
+        }
+    </style>
+<link href="https://ws.kcc.gov.tw" rel="icon" type="image/x-icon"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_UA-24833141-6.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24833141-6');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_G-965X83HTMQ.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-965X83HTMQ');
+</script><meta property="og:title" content="本屆議員-李雅芬" >
+<meta property="og:type
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0012",
+    "sourceId": "scope-kcc-profile-2187",
+    "documentLocation": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html（議員個人頁）",
+    "excerpt": "高雄市議會全球網-中文網-本屆議員-李雅芬 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0012","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-kcc-profile-2187","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

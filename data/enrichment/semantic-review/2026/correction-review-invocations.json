@@ -1,0 +1,2067 @@
+{
+  "schemaVersion": "1",
+  "createdAt": "2026-11-07T14:44:22.371Z",
+  "updatedAt": "2026-11-07T14:49:37.502Z",
+  "invocations": [
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0001",
+      "claimId": "enrich-claim-0001",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0001",
+      "packetSha256": "1fa034bcbb3b1427f292307c5c7d63461c3afbbb9504efb91b7b3f8fa7ab57ff",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0001-adversarial-reviewer.txt",
+      "promptSha256": "eb191437319552b243fa57aabd9fe2c2904be68b793b6695d126e0b704067993",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:22.375Z",
+      "finishedAt": "2026-11-07T14:44:40.068Z",
+      "durationMs": 17685,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0001\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"相符：修正後文字以高雄市議會官方個人頁的「本屆議員」分類與標題為據，屬 institutional-record；未把轉述或推論寫成事實。\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」是相對時間用語；來源頁面以「本屆議員」標示現屆分類，並含115年（2026）第4屆議事與活動紀錄，支持現屆表述。惟頁面未明示更新日期，且 DC.Date 為 2019-02-27，與 body 的 2026 年內容不一致，實務上應以擷取日 2026-11-06 理解「本屆」。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2185\",\"evidenceId\":\"enrich-evidence-0002\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2185.html（頁面標題）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-黃文志\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2185\",\"evidenceId\":\"enrich-evidence-0001\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2185.html（麵包屑導覽）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-黃文志\",\"relationship\":\"supports\"}],\"rationale\":\"修正後僅主張「本屆議員」，與來源頁面標題及導覽的「本屆議員-黃文志」逐字相符；來源未提供「第四選舉區」，原稿的選區資訊已被刪除，修正後沒有超出來源的精確度。個人頁的姓名、性別、政黨與聯絡資訊可確認身分。\",\"materialConcern\":null,\"limitations\":[\"「本屆」未指明屆次或基準日，讀者需依擷取日理解。\",\"來源頁面未提供選舉區資訊，因此不得回填第四選舉區。\",\"頁面 DC.Date 為 2019-02-27，與 body 的 2026 年議事紀錄不一致，日期欄位不可靠。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0001",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "相符：修正後文字以高雄市議會官方個人頁的「本屆議員」分類與標題為據，屬 institutional-record；未把轉述或推論寫成事實。",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」是相對時間用語；來源頁面以「本屆議員」標示現屆分類，並含115年（2026）第4屆議事與活動紀錄，支持現屆表述。惟頁面未明示更新日期，且 DC.Date 為 2019-02-27，與 body 的 2026 年內容不一致，實務上應以擷取日 2026-11-06 理解「本屆」。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2185",
+            "evidenceId": "enrich-evidence-0002",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html（頁面標題）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-黃文志",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2185",
+            "evidenceId": "enrich-evidence-0001",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html（麵包屑導覽）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-黃文志",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後僅主張「本屆議員」，與來源頁面標題及導覽的「本屆議員-黃文志」逐字相符；來源未提供「第四選舉區」，原稿的選區資訊已被刪除，修正後沒有超出來源的精確度。個人頁的姓名、性別、政黨與聯絡資訊可確認身分。",
+        "materialConcern": null,
+        "limitations": [
+          "「本屆」未指明屆次或基準日，讀者需依擷取日理解。",
+          "來源頁面未提供選舉區資訊，因此不得回填第四選舉區。",
+          "頁面 DC.Date 為 2019-02-27，與 body 的 2026 年議事紀錄不一致，日期欄位不可靠。"
+        ]
+      },
+      "outputSha256": "fdd55387ba0c789d3edb36db4dd6934a62e47561c1eb2a946c72eebac535d7eb",
+      "usage": {
+        "inputTokens": 3995,
+        "outputTokens": 4018,
+        "totalTokens": 8295,
+        "costUsd": 0.003010896
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0012",
+      "claimId": "enrich-claim-0012",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0012",
+      "packetSha256": "c9e4f491d63b17618355613a74d3374705280a160e2d238a2910142393755cd4",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0012-adversarial-reviewer.txt",
+      "promptSha256": "fefeea85639c171b64e70231ccff81604cf33d905975a72875fdad6b20d31698",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:22.376Z",
+      "finishedAt": "2026-11-07T14:44:59.079Z",
+      "durationMs": 36698,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0012\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"institutional-record 與來源相符：來源為高雄市議會官網議員個人頁（kcc-member-profile），頁面標題與麵包屑導覽以第一方身分寫明「本屆議員-李雅芬」，並非媒體轉述；claim 也未把「某報導稱」升級為事實。不過「本屆」是隨屆次變動的相對指稱，來源本身未標示屆次編號（頁面 meta DC.Date 為 2019-02-27，屬舊版快照痕跡），歸因正確但可再補屆次。\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆議員」含時間性主張（現任／本屆），因此需以快照時點錨定；claim 未提供發布日期。來源純文字中的頁首即為「本屆議員」，且內文出現「第4屆成立大會」「第4屆第8次定期會」「115-10-12」等第4屆（2026）活動紀錄，可合理錨定為第4屆；但頁面 meta DC.Date=2019-02-27 與「經歷：高雄市縣市合併後第3屆議員」並存，顯示頁面為長期沿用模板，單看文字無法自證屆次，需依快照日期（2026-11-06）判定 current。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2187\",\"evidenceId\":\"enrich-evidence-0012\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2187.html（頁面標題、麵包屑導覽）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-李雅芬\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2187\",\"evidenceId\":\"enrich-evidence-0012\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2187.html（學經歷區塊）\",\"excerpt\":\"學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理\",\"relationship\":\"context\"}],\"rationale\":\"修正後只剩「本屆議員」四字，與來源標題「本屆議員-李雅芬」及導覽層級「本會議員 本屆議員」逐字相符，屬議會自身名錄的第一方身分記載，故為 supported。修正已刪除原始文字中來源不存在的「第四選舉區」（全文無「第四選舉區」「左楠選區」等字樣，僅有「左楠」作為政見敘述語），此刪除是必要的去過度精確化。殘餘風險不在真假，而在精確度與可驗證性：來源未寫屆次編號，「本屆」為浮動指稱；頁面同時存在第3屆經歷與第4屆活動紀錄，若不附快照日期與屆次，讀者無法自行驗證「本屆」指哪一屆。此外 claim 標題「KCC 本屆議員名錄」與組織「高雄市議會」皆與來源一致，未見宣傳性形容詞或將敘述語誤作頭銜的情形。\",\"materialConcern\":null,\"limitations\":[\"來源未標示屆次編號（如第4屆），「本屆」須依快照日期 2026-11-06 方能錨定，claim 未附發布日期。\",\"頁面 meta DC.Date 為 2019-02-27，且經歷欄僅列「第3屆議員」，屬範本頁長期沿用，僅憑文字無法自證現任狀態，需以快照時間判定 current。\",\"原始文字中的「第四選舉區」在來源中無對應文字（來源僅有政見段落的「左楠」），已於修正時刪除，不宜再回填。\",\"其餘學歷、政黨、聯絡資訊、政見等內容不在本 claim 範圍，未審查。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0012",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "institutional-record 與來源相符：來源為高雄市議會官網議員個人頁（kcc-member-profile），頁面標題與麵包屑導覽以第一方身分寫明「本屆議員-李雅芬」，並非媒體轉述；claim 也未把「某報導稱」升級為事實。不過「本屆」是隨屆次變動的相對指稱，來源本身未標示屆次編號（頁面 meta DC.Date 為 2019-02-27，屬舊版快照痕跡），歸因正確但可再補屆次。",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆議員」含時間性主張（現任／本屆），因此需以快照時點錨定；claim 未提供發布日期。來源純文字中的頁首即為「本屆議員」，且內文出現「第4屆成立大會」「第4屆第8次定期會」「115-10-12」等第4屆（2026）活動紀錄，可合理錨定為第4屆；但頁面 meta DC.Date=2019-02-27 與「經歷：高雄市縣市合併後第3屆議員」並存，顯示頁面為長期沿用模板，單看文字無法自證屆次，需依快照日期（2026-11-06）判定 current。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2187",
+            "evidenceId": "enrich-evidence-0012",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html（頁面標題、麵包屑導覽）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-李雅芬",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2187",
+            "evidenceId": "enrich-evidence-0012",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html（學經歷區塊）",
+            "excerpt": "學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理",
+            "relationship": "context"
+          }
+        ],
+        "rationale": "修正後只剩「本屆議員」四字，與來源標題「本屆議員-李雅芬」及導覽層級「本會議員 本屆議員」逐字相符，屬議會自身名錄的第一方身分記載，故為 supported。修正已刪除原始文字中來源不存在的「第四選舉區」（全文無「第四選舉區」「左楠選區」等字樣，僅有「左楠」作為政見敘述語），此刪除是必要的去過度精確化。殘餘風險不在真假，而在精確度與可驗證性：來源未寫屆次編號，「本屆」為浮動指稱；頁面同時存在第3屆經歷與第4屆活動紀錄，若不附快照日期與屆次，讀者無法自行驗證「本屆」指哪一屆。此外 claim 標題「KCC 本屆議員名錄」與組織「高雄市議會」皆與來源一致，未見宣傳性形容詞或將敘述語誤作頭銜的情形。",
+        "materialConcern": null,
+        "limitations": [
+          "來源未標示屆次編號（如第4屆），「本屆」須依快照日期 2026-11-06 方能錨定，claim 未附發布日期。",
+          "頁面 meta DC.Date 為 2019-02-27，且經歷欄僅列「第3屆議員」，屬範本頁長期沿用，僅憑文字無法自證現任狀態，需以快照時間判定 current。",
+          "原始文字中的「第四選舉區」在來源中無對應文字（來源僅有政見段落的「左楠」），已於修正時刪除，不宜再回填。",
+          "其餘學歷、政黨、聯絡資訊、政見等內容不在本 claim 範圍，未審查。"
+        ]
+      },
+      "outputSha256": "cb7240d2cd657bc8d821917e588e9a0c2baa632e5362e50996eddd956d53a950",
+      "usage": {
+        "inputTokens": 4214,
+        "outputTokens": 2350,
+        "totalTokens": 6564,
+        "costUsd": 0.0020421
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0024",
+      "claimId": "enrich-claim-0024",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0024",
+      "packetSha256": "b1bdeaa456b385d12ba70fe3d81807ceb31bfdbbbd96bba091c8cfc9fef318b4",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0024-adversarial-reviewer.txt",
+      "promptSha256": "b47f808870c94259d5118c6f3065a1e572321374e5a918b92ce4d47ac289d66b",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:30.873Z",
+      "finishedAt": "2026-11-07T14:46:19.334Z",
+      "durationMs": 108460,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0024\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"歸因 institutional-record 與來源性質相符：來源為高雄市議會官方網站的議員個人頁（kcc-member-profile），屬機構自身發布之名錄紀錄，非媒體轉述或第三方報告，因此不存在「報導說」被升格為「事實即如此」的滑移。修正後文字僅保留「本屆議員」，未再引用任何來源未載明之選舉區、職銜或稱謂。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」為指示性（deictic）屆期用語，來源頁面確將白喬茵列於「本會議員／本屆議員」名錄之下，並在站內可見第4屆相關議事資料（如「第4屆第8次定期會」），故「本屆議員」之屆期指涉有來源支持。文字本身未含具體日期主張，故 requiresDate 為 false；但因屬指示性用語，換屆後須重新查核，此點列入 limitations 而非 materialConcern。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2181\",\"evidenceId\":\"enrich-evidence-0024\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2181.html（頁面標題／breadcrumb）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-白喬茵\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2181\",\"evidenceId\":\"enrich-evidence-0024-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2181.html（名錄導覽與個人資料區）\",\"excerpt\":\"::: 首頁 本會議員 本屆議員 本屆議員-白喬茵 _ 網頁功能 列印內容 白喬茵 性 別： 女 所屬政黨： 中國國民黨\",\"relationship\":\"supports\"}],\"rationale\":\"逐項檢驗修正後文字「本屆議員」：(1) 該字串在來源純文字中逐字出現於頁面標題與導覽路徑（「本會議員 本屆議員 本屆議員-白喬茵」），非改寫、非拼湊；(2) 個人資料區塊確認頁面主體為白喬茵（性別女、所屬政黨中國國民黨），身分對應無誤，排除 wrong-identity；(3) 修正已刪除原「（第四選舉區）」——來源純文字視窗中確實查無「第四選舉區」或任何選舉區字樣，該修正是收斂而非放寬，符合「不得超出來源」之要求；(4) 文字未含政績、評價性形容詞、職稱頭銜加碼（如「資深」「專業」）或任何 promotional epithet，無以榮銜冒充資歷之情形；(5) 未見將他處報導（如總質詢摘要列表）之內容誤植為本人職務主張。整體屬來源可直接驗證之最小化職務記述，中性讀者不會被誤導，故 verdict 為 supported 且 materialConcern 為 null。\",\"materialConcern\":null,\"limitations\":[\"來源未提供發布或更新日期；HTML 中 DC.Date／DC.Coverage 為 2019-02-27，屬網站版型痕跡，不宜逕作為本頁時效依據。\",\"「本屆」為指示性用語，換屆或名錄改版後即可能失效，需以屆期重新查核。\",\"來源純文字視窗尾端被截斷（止於「好茵果小農平台創」），學經歷段落不完整，惟不影響本 claim 僅主張「本屆議員」之範圍。\",\"本審查僅使用單一來源（scope-kcc-profile-2181），未與中央選舉委員會當選人名單交叉比對。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0024",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "歸因 institutional-record 與來源性質相符：來源為高雄市議會官方網站的議員個人頁（kcc-member-profile），屬機構自身發布之名錄紀錄，非媒體轉述或第三方報告，因此不存在「報導說」被升格為「事實即如此」的滑移。修正後文字僅保留「本屆議員」，未再引用任何來源未載明之選舉區、職銜或稱謂。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」為指示性（deictic）屆期用語，來源頁面確將白喬茵列於「本會議員／本屆議員」名錄之下，並在站內可見第4屆相關議事資料（如「第4屆第8次定期會」），故「本屆議員」之屆期指涉有來源支持。文字本身未含具體日期主張，故 requiresDate 為 false；但因屬指示性用語，換屆後須重新查核，此點列入 limitations 而非 materialConcern。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2181",
+            "evidenceId": "enrich-evidence-0024",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2181.html（頁面標題／breadcrumb）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-白喬茵",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2181",
+            "evidenceId": "enrich-evidence-0024-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2181.html（名錄導覽與個人資料區）",
+            "excerpt": "::: 首頁 本會議員 本屆議員 本屆議員-白喬茵 _ 網頁功能 列印內容 白喬茵 性 別： 女 所屬政黨： 中國國民黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "逐項檢驗修正後文字「本屆議員」：(1) 該字串在來源純文字中逐字出現於頁面標題與導覽路徑（「本會議員 本屆議員 本屆議員-白喬茵」），非改寫、非拼湊；(2) 個人資料區塊確認頁面主體為白喬茵（性別女、所屬政黨中國國民黨），身分對應無誤，排除 wrong-identity；(3) 修正已刪除原「（第四選舉區）」——來源純文字視窗中確實查無「第四選舉區」或任何選舉區字樣，該修正是收斂而非放寬，符合「不得超出來源」之要求；(4) 文字未含政績、評價性形容詞、職稱頭銜加碼（如「資深」「專業」）或任何 promotional epithet，無以榮銜冒充資歷之情形；(5) 未見將他處報導（如總質詢摘要列表）之內容誤植為本人職務主張。整體屬來源可直接驗證之最小化職務記述，中性讀者不會被誤導，故 verdict 為 supported 且 materialConcern 為 null。",
+        "materialConcern": null,
+        "limitations": [
+          "來源未提供發布或更新日期；HTML 中 DC.Date／DC.Coverage 為 2019-02-27，屬網站版型痕跡，不宜逕作為本頁時效依據。",
+          "「本屆」為指示性用語，換屆或名錄改版後即可能失效，需以屆期重新查核。",
+          "來源純文字視窗尾端被截斷（止於「好茵果小農平台創」），學經歷段落不完整，惟不影響本 claim 僅主張「本屆議員」之範圍。",
+          "本審查僅使用單一來源（scope-kcc-profile-2181），未與中央選舉委員會當選人名單交叉比對。"
+        ]
+      },
+      "outputSha256": "bd8e4b6b16a168231671487075dcf034e8ee87a18fbe7301fafb484fd1664d29",
+      "usage": {
+        "inputTokens": 4264,
+        "outputTokens": 1750,
+        "totalTokens": 6014,
+        "costUsd": 0.0016895999999999999
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0040",
+      "claimId": "enrich-claim-0040",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0040",
+      "packetSha256": "594b27f600d3e4b9054be24febcf303a375fc6bd62f6d571696b3524f244028f",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0040-adversarial-reviewer.txt",
+      "promptSha256": "64d6ad448da0d0979421b7cbd407d1cec1be8d86e8c2f0bc82e9ff6dc02cdc15",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:46.985Z",
+      "finishedAt": "2026-11-07T14:44:57.942Z",
+      "durationMs": 10954,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0040\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"歸因標示為 institutional-record，與來源性質相符：來源是高雄市議會官網「本屆議員」單元下的李眉蓁個人頁，屬於機構自身名錄，並非媒體報導或第三方轉述。修正後文字沒有把「某一報導稱」升級為「事實就是如此」；「本屆議員」正是該名錄頁面的單元標題與頁面定位，因此歸因與措辭一致。\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」是隨時間變動的相對用語，因此需要一個時間錨點。來源頁本身未標示發布或更新日期；HTML 中的 DC.Date 為 2019-02-27，屬版型殘留值，不可作為發布日期。時間錨點只能取自保留位元組的抓取日（2026-11-06，即 raw 路徑日期）與頁面內最新活動訊息（115-10-06、115-09-21），兩者一致，故來源支持「抓取當下為本屆議員」。但該時效僅在此快照點成立，未來屆次更替後，「本屆議員」即失效。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2186\",\"evidenceId\":\"enrich-evidence-0040\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2186.html（頁面 title 與麵包屑導覽）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-李眉蓁\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2186\",\"evidenceId\":\"enrich-evidence-0040-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2186.html（麵包屑與個人資料區）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-李眉蓁 _ 網頁功能 列印內容 李眉蓁 性 別： 女 所屬政黨： 中國國民黨\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字僅保留「本屆議員」四字，這是來源頁面標題（高雄市議會全球網-中文網-本屆議員-李眉蓁）與導覽層級（本會議員 > 本屆議員）逐字可見的內容，且該頁個人資料區塊確實列有李眉蓁的性別、政黨、電話、傳真、通訊地址（左營區），可確認是同一人的現任議員名錄頁；修正已刪除原始文字中來源未提供的「（第四選舉區）」，此刪除正確，因為來源純文字視窗內並無選舉區資訊。文字無促銷性形容詞、無未支撐的精確度（未指明屆次、選區、任期起訖），中性讀者不會被誤導。\",\"materialConcern\":null,\"limitations\":[\"來源未以文字明示屆次，「本屆」對應第 4 屆僅能由頁面內「第4屆成立大會」「第4屆第8次定期會」及經歷欄「第1、2、3屆市議員」推得，屬推論而非原文直述。\",\"來源頁無可靠發布或更新日期（DC.Date 2019-02-27 為版型殘留），時效僅以抓取日 2026-11-06 為錨點。\",\"修正後文字已不含選區資訊，若日後需補選區，現有保留位元組不足以支撐。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0040",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "歸因標示為 institutional-record，與來源性質相符：來源是高雄市議會官網「本屆議員」單元下的李眉蓁個人頁，屬於機構自身名錄，並非媒體報導或第三方轉述。修正後文字沒有把「某一報導稱」升級為「事實就是如此」；「本屆議員」正是該名錄頁面的單元標題與頁面定位，因此歸因與措辭一致。",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」是隨時間變動的相對用語，因此需要一個時間錨點。來源頁本身未標示發布或更新日期；HTML 中的 DC.Date 為 2019-02-27，屬版型殘留值，不可作為發布日期。時間錨點只能取自保留位元組的抓取日（2026-11-06，即 raw 路徑日期）與頁面內最新活動訊息（115-10-06、115-09-21），兩者一致，故來源支持「抓取當下為本屆議員」。但該時效僅在此快照點成立，未來屆次更替後，「本屆議員」即失效。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2186",
+            "evidenceId": "enrich-evidence-0040",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2186.html（頁面 title 與麵包屑導覽）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李眉蓁",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2186",
+            "evidenceId": "enrich-evidence-0040-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2186.html（麵包屑與個人資料區）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-李眉蓁 _ 網頁功能 列印內容 李眉蓁 性 別： 女 所屬政黨： 中國國民黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字僅保留「本屆議員」四字，這是來源頁面標題（高雄市議會全球網-中文網-本屆議員-李眉蓁）與導覽層級（本會議員 > 本屆議員）逐字可見的內容，且該頁個人資料區塊確實列有李眉蓁的性別、政黨、電話、傳真、通訊地址（左營區），可確認是同一人的現任議員名錄頁；修正已刪除原始文字中來源未提供的「（第四選舉區）」，此刪除正確，因為來源純文字視窗內並無選舉區資訊。文字無促銷性形容詞、無未支撐的精確度（未指明屆次、選區、任期起訖），中性讀者不會被誤導。",
+        "materialConcern": null,
+        "limitations": [
+          "來源未以文字明示屆次，「本屆」對應第 4 屆僅能由頁面內「第4屆成立大會」「第4屆第8次定期會」及經歷欄「第1、2、3屆市議員」推得，屬推論而非原文直述。",
+          "來源頁無可靠發布或更新日期（DC.Date 2019-02-27 為版型殘留），時效僅以抓取日 2026-11-06 為錨點。",
+          "修正後文字已不含選區資訊，若日後需補選區，現有保留位元組不足以支撐。"
+        ]
+      },
+      "outputSha256": "b493ac568ac7525638aa65c096424f2e3a224c64d0488a682db7660711a9c420",
+      "usage": {
+        "inputTokens": 3920,
+        "outputTokens": 2036,
+        "totalTokens": 6270,
+        "costUsd": 0.001810542
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0049",
+      "claimId": "enrich-claim-0049",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0049",
+      "packetSha256": "30fa3a1b350e5f34d695b7b58a02fdad202026d80f1b3f320e3dd60eb98fbd0c",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0049-adversarial-reviewer.txt",
+      "promptSha256": "6c37b17fd98d8aca804be6245293cd346ce018ab7c51779f78472ec791b3037a",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:59.081Z",
+      "finishedAt": "2026-11-07T14:46:43.719Z",
+      "durationMs": 104636,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0049\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"歸因 institutional-record 恰當：來源為高雄市議會官方網站（kcc.gov.tw）之本屆議員名錄個人頁，頁面標題與麵包屑均直指「本屆議員-李雅慧」，claim 僅沿用名錄的職務分類，未把「名錄頁這麼寫」升格為其他實質主張，也未加入來源未有的選區、屆次或評價語。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆議員」為來源逐字用語（頁面標題、麵包屑、頁首均出現），本身不含具體日期，故 requiresDate 為 false；但「本屆」是指涉式用語，其真實性綁定擷取時點（rawPath 標記為 2026-11-06，頁面可見 115-10-13 議程，顯示擷取時仍屬第 4 屆），換屆後同一文字將失去所指，時效狀態 current 僅在此擷取視窗內成立。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2188\",\"evidenceId\":\"enrich-evidence-0049\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2188.html（頁面 title 與麵包屑）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-李雅慧 跳到主要內容區塊\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2188\",\"evidenceId\":\"enrich-evidence-0049-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2188.html（內容區塊）\",\"excerpt\":\"::: 首頁 本會議員 本屆議員 本屆議員-李雅慧 _ 網頁功能 列印內容 李雅慧 性 別： 女 所屬政黨： 民主進步黨\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字僅有「本屆議員」四字，屬來源逐字存在的最小主張：頁面 title 為「本屆議員-李雅慧」，導覽與麵包屑為「本會議員 / 本屆議員 / 本屆議員-李雅慧」，內容區並以「李雅慧」佐以身分（女）、政黨（民主進步黨）、聯絡電話等欄位，足以確認所指人物即該名錄頁的本人，故 identity 為 confirmed。原句「高雄市議會本屆議員（第四選舉區）」中的「第四選舉區」在來源文字視窗中完全不存在，屬來源未有的精確度，刪除後反而更貼近來源。修正後文字無促銷性形容、無榮銜當資歷、無「報導稱」被寫成「事實即如此」的歸因滑移，亦無來源未含的句子片段，中性讀者不會被誤導。唯一殘留的弱點是「本屆」未標屆次，屬指涉性而非不實，列為 limitation 而非 materialConcern。\",\"materialConcern\":null,\"limitations\":[\"「本屆」未標明屆次（來源頁面未載明第 4 屆），單獨使用時讀者無法判斷所指會期，須綁定擷取日期 2026-11-06 方能定位。\",\"來源純文字視窗未出現「第四選舉區」，故修正後不再提供選區資訊；若 claim 目的在於呈現選區，現有保留位元組不足以支持，需另尋來源。\",\"來源頁 DC.Date 為 2019-02-27，屬版型樣板欄位，不能作為本頁內容更新時間之證據；本頁時效僅由內文出現的 115 年議程與擷取路徑推定。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0049",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "歸因 institutional-record 恰當：來源為高雄市議會官方網站（kcc.gov.tw）之本屆議員名錄個人頁，頁面標題與麵包屑均直指「本屆議員-李雅慧」，claim 僅沿用名錄的職務分類，未把「名錄頁這麼寫」升格為其他實質主張，也未加入來源未有的選區、屆次或評價語。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆議員」為來源逐字用語（頁面標題、麵包屑、頁首均出現），本身不含具體日期，故 requiresDate 為 false；但「本屆」是指涉式用語，其真實性綁定擷取時點（rawPath 標記為 2026-11-06，頁面可見 115-10-13 議程，顯示擷取時仍屬第 4 屆），換屆後同一文字將失去所指，時效狀態 current 僅在此擷取視窗內成立。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2188",
+            "evidenceId": "enrich-evidence-0049",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2188.html（頁面 title 與麵包屑）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李雅慧 跳到主要內容區塊",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2188",
+            "evidenceId": "enrich-evidence-0049-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2188.html（內容區塊）",
+            "excerpt": "::: 首頁 本會議員 本屆議員 本屆議員-李雅慧 _ 網頁功能 列印內容 李雅慧 性 別： 女 所屬政黨： 民主進步黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字僅有「本屆議員」四字，屬來源逐字存在的最小主張：頁面 title 為「本屆議員-李雅慧」，導覽與麵包屑為「本會議員 / 本屆議員 / 本屆議員-李雅慧」，內容區並以「李雅慧」佐以身分（女）、政黨（民主進步黨）、聯絡電話等欄位，足以確認所指人物即該名錄頁的本人，故 identity 為 confirmed。原句「高雄市議會本屆議員（第四選舉區）」中的「第四選舉區」在來源文字視窗中完全不存在，屬來源未有的精確度，刪除後反而更貼近來源。修正後文字無促銷性形容、無榮銜當資歷、無「報導稱」被寫成「事實即如此」的歸因滑移，亦無來源未含的句子片段，中性讀者不會被誤導。唯一殘留的弱點是「本屆」未標屆次，屬指涉性而非不實，列為 limitation 而非 materialConcern。",
+        "materialConcern": null,
+        "limitations": [
+          "「本屆」未標明屆次（來源頁面未載明第 4 屆），單獨使用時讀者無法判斷所指會期，須綁定擷取日期 2026-11-06 方能定位。",
+          "來源純文字視窗未出現「第四選舉區」，故修正後不再提供選區資訊；若 claim 目的在於呈現選區，現有保留位元組不足以支持，需另尋來源。",
+          "來源頁 DC.Date 為 2019-02-27，屬版型樣板欄位，不能作為本頁內容更新時間之證據；本頁時效僅由內文出現的 115 年議程與擷取路徑推定。"
+        ]
+      },
+      "outputSha256": "6503fd90961295ce7be2b5236e2e9435a69713c6c7fd00be70764561223dcccc",
+      "usage": {
+        "inputTokens": 4280,
+        "outputTokens": 2066,
+        "totalTokens": 6346,
+        "costUsd": 0.0018816
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0059",
+      "claimId": "enrich-claim-0059",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0059",
+      "packetSha256": "2196461efe73555f6f16f4a832dc8a9a998386e338ee52637666b1bc19b5e8f4",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0059-adversarial-reviewer.txt",
+      "promptSha256": "f5458596a92dbf3e607c320dcd2088178af08ac2c45a80ed36a339ee810d75ff",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:45:21.347Z",
+      "finishedAt": "2026-11-07T14:46:59.728Z",
+      "durationMs": 98380,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0059\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"歸因與來源一致：本頁為高雄市議會官網「本屆議員」單元下的陳玫娟個人頁，屬機關自身名錄（institutional-record）。「本屆議員」四字為目錄／頁面標題用語，非記者轉述，故以 institutional-record 歸因並未誇大；修正後文字亦已刪除原句「（第四選舉區）」，該選舉區字樣在提供的來源視窗中查無，刪除正確。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」是相對於議會屆次的用語，非具體日期主張，故不觸發 requiresDate；其時效由來源頁面所屬「本屆議員」目錄（現任名錄）即時界定，而非靠發布日期。惟頁面中 DC.Date 為 2019-02-27 之模板中繼資料，與現任狀態無直接對應，僅能作為抓取時（2026-11-06）仍列於本屆名錄之佐證。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2189\",\"evidenceId\":\"enrich-evidence-0059\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2189.html（議員個人頁，頁面標題／麵包屑）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-陳玫娟\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2189\",\"evidenceId\":\"enrich-evidence-0059\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2189.html（學經歷區塊）\",\"excerpt\":\"高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員\",\"relationship\":\"context\"}],\"rationale\":\"修正後僅保留「本屆議員」四字。該字串逐字出現於來源頁面標題「本屆議員-陳玫娟」與導覽路徑「本會議員 本屆議員」，屬議會官方現任名錄的直接標示，故為 supported。相較原句，已移除來源中不存在的「第四選舉區」，避免把行政區推論寫成來源事實。須注意：來源「經歷」欄僅列至合併後第1、2、3屆，未明寫「第4屆」，「本屆」之現任性質是透過頁面所屬目錄（而非經歷欄文字）成立；但因頁面本身即置於「本屆議員」單元且內文含「第4屆第8次定期會」等字樣，尚不致誤導。無促銷性形容詞、無過度精確數字、無歸因滑移。\",\"materialConcern\":null,\"limitations\":[\"來源純文字視窗在政見第10條處遭截斷，未取得頁面其餘區塊全文。\",\"「本屆」之現任認定依賴頁面所屬目錄與站內屆次用語，來源未以單一句子明示「陳玫娟為第4屆議員」。\",\"頁面未提供明確發布／更新日期，DC.Date 2019-02-27 屬模板中繼資料，不宜作為時效依據。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0059",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "歸因與來源一致：本頁為高雄市議會官網「本屆議員」單元下的陳玫娟個人頁，屬機關自身名錄（institutional-record）。「本屆議員」四字為目錄／頁面標題用語，非記者轉述，故以 institutional-record 歸因並未誇大；修正後文字亦已刪除原句「（第四選舉區）」，該選舉區字樣在提供的來源視窗中查無，刪除正確。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」是相對於議會屆次的用語，非具體日期主張，故不觸發 requiresDate；其時效由來源頁面所屬「本屆議員」目錄（現任名錄）即時界定，而非靠發布日期。惟頁面中 DC.Date 為 2019-02-27 之模板中繼資料，與現任狀態無直接對應，僅能作為抓取時（2026-11-06）仍列於本屆名錄之佐證。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2189",
+            "evidenceId": "enrich-evidence-0059",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2189.html（議員個人頁，頁面標題／麵包屑）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-陳玫娟",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2189",
+            "evidenceId": "enrich-evidence-0059",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2189.html（學經歷區塊）",
+            "excerpt": "高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員",
+            "relationship": "context"
+          }
+        ],
+        "rationale": "修正後僅保留「本屆議員」四字。該字串逐字出現於來源頁面標題「本屆議員-陳玫娟」與導覽路徑「本會議員 本屆議員」，屬議會官方現任名錄的直接標示，故為 supported。相較原句，已移除來源中不存在的「第四選舉區」，避免把行政區推論寫成來源事實。須注意：來源「經歷」欄僅列至合併後第1、2、3屆，未明寫「第4屆」，「本屆」之現任性質是透過頁面所屬目錄（而非經歷欄文字）成立；但因頁面本身即置於「本屆議員」單元且內文含「第4屆第8次定期會」等字樣，尚不致誤導。無促銷性形容詞、無過度精確數字、無歸因滑移。",
+        "materialConcern": null,
+        "limitations": [
+          "來源純文字視窗在政見第10條處遭截斷，未取得頁面其餘區塊全文。",
+          "「本屆」之現任認定依賴頁面所屬目錄與站內屆次用語，來源未以單一句子明示「陳玫娟為第4屆議員」。",
+          "頁面未提供明確發布／更新日期，DC.Date 2019-02-27 屬模板中繼資料，不宜作為時效依據。"
+        ]
+      },
+      "outputSha256": "2e6f46b7f29888813471d539c733ab08aad3fc77ce373b7807429d6518ccb441",
+      "usage": {
+        "inputTokens": 4233,
+        "outputTokens": 1742,
+        "totalTokens": 5975,
+        "costUsd": 0.00168015
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0077",
+      "claimId": "enrich-claim-0077",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0077",
+      "packetSha256": "2d0b9ca1b107d455434c9c53acf825ecfad0fdcf5bbbc92eebfc0f49cea13177",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0077-adversarial-reviewer.txt",
+      "promptSha256": "76228b7a5db4236fe211f48b53692a584608c72366ee9034094cde0c81cba00a",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:19.336Z",
+      "finishedAt": "2026-11-07T14:46:26.040Z",
+      "durationMs": 6702,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0077\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"修正後文字與來源標題逐字相同；評價性成分（肯定任內努力）在句內即明確歸屬於陳其邁，未滑動為「一般公認」或機構立場。惟須注意此為新聞標題層級的表述（報導所述事件），非職務任免的官方文件陳述。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"文字本身不含時間主張（無年份、無「現任／卸任於某年」字樣）；來源發布時間為 2025-02-17T13:12:00+08:00，與 historical 時效標記一致。\"},\"evidence\":[{\"sourceId\":\"scope-news-zhang-yili-cna\",\"evidenceId\":\"enrich-evidence-0077\",\"location\":\"data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（頁面 title 與 og:title）\",\"excerpt\":\"張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA\",\"relationship\":\"supports\"}],\"rationale\":\"逐字比對：修正後內容「張以理卸任青年局長 陳其邁肯定任內努力」完整出現於來源純文字視窗開頭（title 與 og:title 皆同），無增字、無改寫、無添加來源未有的頭銜或讚語（例如來源 meta 中的「點子王」並未被寫進 claim，屬正確的克制）。身分確認：來源 HTML meta 描述為「高雄市青年局長張以理今天卸任，將投入市議員參選」，與候選人張以理一致，無同名混淆疑慮。歸因層級正確：claim 類別標為 news-report，文字亦停留在「新聞報導所述」層次，未升級為機關認定。找不到可證偽的超額精確度或 promotional 修飾語誤植為資歷的情形，故判 supported。\",\"materialConcern\":null,\"limitations\":[\"claim 僅為標題片段，未含來源所述之關鍵後續（張以理卸任後將投入市議員參選），單獨呈現時可能被讀者理解為中性的職務沿革，而忽略其參選脈絡。\",\"既有 evidence excerpt 為頁面開頭 UI 雜訊（隱私聲明、語系提示）之混合字串，非最小充分引文；本次審查已改以 title 字串作為引文。\",\"來源為單一新聞媒體（中央社）報導，屬 source-dependent，未經市府人事令或監察院財產申報等一手文件交叉驗證。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0077",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "修正後文字與來源標題逐字相同；評價性成分（肯定任內努力）在句內即明確歸屬於陳其邁，未滑動為「一般公認」或機構立場。惟須注意此為新聞標題層級的表述（報導所述事件），非職務任免的官方文件陳述。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "文字本身不含時間主張（無年份、無「現任／卸任於某年」字樣）；來源發布時間為 2025-02-17T13:12:00+08:00，與 historical 時效標記一致。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-zhang-yili-cna",
+            "evidenceId": "enrich-evidence-0077",
+            "location": "data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（頁面 title 與 og:title）",
+            "excerpt": "張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "逐字比對：修正後內容「張以理卸任青年局長 陳其邁肯定任內努力」完整出現於來源純文字視窗開頭（title 與 og:title 皆同），無增字、無改寫、無添加來源未有的頭銜或讚語（例如來源 meta 中的「點子王」並未被寫進 claim，屬正確的克制）。身分確認：來源 HTML meta 描述為「高雄市青年局長張以理今天卸任，將投入市議員參選」，與候選人張以理一致，無同名混淆疑慮。歸因層級正確：claim 類別標為 news-report，文字亦停留在「新聞報導所述」層次，未升級為機關認定。找不到可證偽的超額精確度或 promotional 修飾語誤植為資歷的情形，故判 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "claim 僅為標題片段，未含來源所述之關鍵後續（張以理卸任後將投入市議員參選），單獨呈現時可能被讀者理解為中性的職務沿革，而忽略其參選脈絡。",
+          "既有 evidence excerpt 為頁面開頭 UI 雜訊（隱私聲明、語系提示）之混合字串，非最小充分引文；本次審查已改以 title 字串作為引文。",
+          "來源為單一新聞媒體（中央社）報導，屬 source-dependent，未經市府人事令或監察院財產申報等一手文件交叉驗證。"
+        ]
+      },
+      "outputSha256": "eb43aece5ee4e7d43079cc63d5bea8d34a18cc3118b7df48480cbf30547dff19",
+      "usage": {
+        "inputTokens": 4280,
+        "outputTokens": 1142,
+        "totalTokens": 5422,
+        "costUsd": 0.0013272
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0088",
+      "claimId": "enrich-claim-0088",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0088",
+      "packetSha256": "4ea044803c8274e42a67593d43c70e9f939625952867a5830f475c2de80ed03c",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0088-adversarial-reviewer.txt",
+      "promptSha256": "e0189bde5a2cf6d250be472ad7fd91bb6e2f9669d94cf01f8f9ee29835d36e55",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:33.794Z",
+      "finishedAt": "2026-11-07T14:46:45.611Z",
+      "durationMs": 11813,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0088\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"正確：文字未把來源的說法升格為獨立事實陳述，僅保留名錄頁面所登載的職位。惟須注意，該主張是由「頁面位置與頁面標題」推得（麵包屑將陳麗珍置於「本會議員／本屆議員」之下、頁面標題為「本屆議員-陳麗珍」），並非來自內文任何一句明示「陳麗珍為本屆議員」的句子；此種結構性登載仍屬 institutional-record 的正當歸因，未誇大為官方認證或選務公告。\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」屬指示性（deictic）時間用語，其意義隨頁面更新時點變動，故屬時間主張。來源雖無可信發布日期（HTML metadata DC.Date／DC.Coverage 為 2019-02-27，顯為模板殘留，與內文「第4屆第8次定期會 115-10-08」等 2026 年活動紀錄不一致），但內文活動影音與質詢摘要均指向第4屆近期會期，可支持該頁於擷取時（2026-11-06）仍為現任屆次名錄；「current」時效標記可接受，惟不足以支撐任何具體屆次編號或任期起訖。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2184\",\"evidenceId\":\"enrich-evidence-0088\",\"location\":\"頁面標題與麵包屑導覽（data/biographies/raw/2026-11-06/kcc/profiles/2184.html）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-陳麗珍\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2184\",\"evidenceId\":\"enrich-evidence-0088-b\",\"location\":\"內文導覽路徑與個人資料區\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-陳麗珍 _ 網頁功能 列印內容 陳麗珍 性 別： 女 所屬政黨： 中國國民黨\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字僅保留「本屆議員」四字，屬最小化主張：(1) 來源頁面標題即為「本屆議員-陳麗珍」，且導覽層級明確將其歸入「本會議員＞本屆議員」名錄，屬議會自身之 institutional-record 登載；(2) 修正已刪除原始文字中的「第四選舉區」，該資訊在提供的來源文字視窗中完全不存在（頁面僅有通訊地址「813 左營區至真路536號」，不足以推得選舉區），刪除係正確的收斂而非放寬；(3) 無促銷性形容詞、無「報導稱」被升格為「事實如此」的歸因滑移、無來源未含之逐字引述被偽造。identity 由頁面標題姓名、性別、政黨、左營區地址與經歷（高雄市第一、二、三屆議員、左營區新下里里長）交叉一致而確認。唯一保留意見為「本屆」的指示性與頁面 metadata 日期陳舊，已在 temporalAssessment 與 limitations 中揭露，尚不足以構成誤導中性讀者之實質疑慮。\",\"materialConcern\":null,\"limitations\":[\"「本屆」為指示性用語，未標明屆次（第4屆）或任期起訖；若日後頁面改版而未重新擷取，該字串將自動失準。\",\"主張來源為名錄頁的結構位置與標題，而非內文明示職稱之句子；內文區塊僅列性別、政黨、電話、傳真、地址、備註與學經歷政見，未見「職稱：議員」字樣。\",\"HTML metadata 日期（DC.Date 2019-02-27）與內文 2026 年會期紀錄不一致，不可作為任期或發布時間依據。\",\"來源未提供選舉區資訊，故任何選區、里別或轄區範圍之延伸描述均無來源支持，不得回填。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0088",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "正確：文字未把來源的說法升格為獨立事實陳述，僅保留名錄頁面所登載的職位。惟須注意，該主張是由「頁面位置與頁面標題」推得（麵包屑將陳麗珍置於「本會議員／本屆議員」之下、頁面標題為「本屆議員-陳麗珍」），並非來自內文任何一句明示「陳麗珍為本屆議員」的句子；此種結構性登載仍屬 institutional-record 的正當歸因，未誇大為官方認證或選務公告。",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」屬指示性（deictic）時間用語，其意義隨頁面更新時點變動，故屬時間主張。來源雖無可信發布日期（HTML metadata DC.Date／DC.Coverage 為 2019-02-27，顯為模板殘留，與內文「第4屆第8次定期會 115-10-08」等 2026 年活動紀錄不一致），但內文活動影音與質詢摘要均指向第4屆近期會期，可支持該頁於擷取時（2026-11-06）仍為現任屆次名錄；「current」時效標記可接受，惟不足以支撐任何具體屆次編號或任期起訖。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2184",
+            "evidenceId": "enrich-evidence-0088",
+            "location": "頁面標題與麵包屑導覽（data/biographies/raw/2026-11-06/kcc/profiles/2184.html）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-陳麗珍",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2184",
+            "evidenceId": "enrich-evidence-0088-b",
+            "location": "內文導覽路徑與個人資料區",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-陳麗珍 _ 網頁功能 列印內容 陳麗珍 性 別： 女 所屬政黨： 中國國民黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字僅保留「本屆議員」四字，屬最小化主張：(1) 來源頁面標題即為「本屆議員-陳麗珍」，且導覽層級明確將其歸入「本會議員＞本屆議員」名錄，屬議會自身之 institutional-record 登載；(2) 修正已刪除原始文字中的「第四選舉區」，該資訊在提供的來源文字視窗中完全不存在（頁面僅有通訊地址「813 左營區至真路536號」，不足以推得選舉區），刪除係正確的收斂而非放寬；(3) 無促銷性形容詞、無「報導稱」被升格為「事實如此」的歸因滑移、無來源未含之逐字引述被偽造。identity 由頁面標題姓名、性別、政黨、左營區地址與經歷（高雄市第一、二、三屆議員、左營區新下里里長）交叉一致而確認。唯一保留意見為「本屆」的指示性與頁面 metadata 日期陳舊，已在 temporalAssessment 與 limitations 中揭露，尚不足以構成誤導中性讀者之實質疑慮。",
+        "materialConcern": null,
+        "limitations": [
+          "「本屆」為指示性用語，未標明屆次（第4屆）或任期起訖；若日後頁面改版而未重新擷取，該字串將自動失準。",
+          "主張來源為名錄頁的結構位置與標題，而非內文明示職稱之句子；內文區塊僅列性別、政黨、電話、傳真、地址、備註與學經歷政見，未見「職稱：議員」字樣。",
+          "HTML metadata 日期（DC.Date 2019-02-27）與內文 2026 年會期紀錄不一致，不可作為任期或發布時間依據。",
+          "來源未提供選舉區資訊，故任何選區、里別或轄區範圍之延伸描述均無來源支持，不得回填。"
+        ]
+      },
+      "outputSha256": "aa0ad3bd764bfbbfe4d9344be059d096a1428fba924ecdb570beffa01e29e120",
+      "usage": {
+        "inputTokens": 4275,
+        "outputTokens": 2041,
+        "totalTokens": 6316,
+        "costUsd": 0.00186585
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0103",
+      "claimId": "enrich-claim-0103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0103",
+      "packetSha256": "3fc9a11bec7e75f689c6045f8cd00fb516c04043a309a76ebf11fa7a26dbcec5",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0103-adversarial-reviewer.txt",
+      "promptSha256": "daaf5ce4d83738e329730154c81fa288daae671c242899a528e1a27f5aa06041",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:45.613Z",
+      "finishedAt": "2026-11-07T14:47:47.863Z",
+      "durationMs": 62248,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0103\",\"verdict\":\"partially-supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"這句話確實是《聯合報》2026-06-09 報導的標題，但標題本身帶有政治評價；內文只支持薛兆基曾任謝長廷機要秘書、接受「台灣前進陣線」提名並爭取左楠區市議員席次，並未以中性事實語句直接支持「大綠變小綠」或「參選到底」。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"文字本身沒有明確時間主張；2026-06-09 是報導發布日期與詮釋資料，不是句子中的時間命題。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0103-a\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（標題與 2026-06-09 12:30 段落）\",\"excerpt\":\"大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導\",\"relationship\":\"partially-supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0103-b\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（內文第2段）\",\"excerpt\":\"薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任，希望以累積的經驗與歷練，為地方發展注入新的動能。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字逐字等於來源新聞標題，因此「謝長廷前幕僚」與「轉投入台灣前進陣線」可在來源中找到對應；內文也確認他曾任謝長廷機要秘書、接受台灣前進陣線提名。然而「大綠變小綠」是標題式政治光譜評價，「參選到底」也不是內文的中性事實陳述，且將整句標題放在「工作經歷」欄位，會讓中性讀者把競選標題與政治評價誤讀為已確認的專業經歷。\",\"materialConcern\":\"「大綠變小綠！謝長廷前幕僚薛兆基轉投入『台灣前進陣線』參選到底」是新聞標題式的政治評價，卻被放在「工作經歷」欄位，會讓讀者誤以為「大綠變小綠」與「參選到底」是已確認的中性事實。\",\"limitations\":[\"來源僅有新聞標題與內文摘要，未見「參選到底」的具體定義或後續結果。\",\"「大綠變小綠」是政治光譜的標題式用語，非來源內文的中性事實描述。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0103",
+        "verdict": "partially-supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "這句話確實是《聯合報》2026-06-09 報導的標題，但標題本身帶有政治評價；內文只支持薛兆基曾任謝長廷機要秘書、接受「台灣前進陣線」提名並爭取左楠區市議員席次，並未以中性事實語句直接支持「大綠變小綠」或「參選到底」。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "文字本身沒有明確時間主張；2026-06-09 是報導發布日期與詮釋資料，不是句子中的時間命題。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0103-a",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（標題與 2026-06-09 12:30 段落）",
+            "excerpt": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導",
+            "relationship": "partially-supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0103-b",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（內文第2段）",
+            "excerpt": "薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任，希望以累積的經驗與歷練，為地方發展注入新的動能。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字逐字等於來源新聞標題，因此「謝長廷前幕僚」與「轉投入台灣前進陣線」可在來源中找到對應；內文也確認他曾任謝長廷機要秘書、接受台灣前進陣線提名。然而「大綠變小綠」是標題式政治光譜評價，「參選到底」也不是內文的中性事實陳述，且將整句標題放在「工作經歷」欄位，會讓中性讀者把競選標題與政治評價誤讀為已確認的專業經歷。",
+        "materialConcern": "「大綠變小綠！謝長廷前幕僚薛兆基轉投入『台灣前進陣線』參選到底」是新聞標題式的政治評價，卻被放在「工作經歷」欄位，會讓讀者誤以為「大綠變小綠」與「參選到底」是已確認的中性事實。",
+        "limitations": [
+          "來源僅有新聞標題與內文摘要，未見「參選到底」的具體定義或後續結果。",
+          "「大綠變小綠」是政治光譜的標題式用語，非來源內文的中性事實描述。"
+        ]
+      },
+      "outputSha256": "94328151db7349cfe524e1f9d91148441c47a372eb2147ad73cfd66378a10c74",
+      "usage": {
+        "inputTokens": 4150,
+        "outputTokens": 4047,
+        "totalTokens": 8581,
+        "costUsd": 0.003051852
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0104",
+      "claimId": "enrich-claim-0104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0104",
+      "packetSha256": "8c0bc8a4ed0c2c314b8c95828ae30083abaaf2cab58a894be8d12c5075ff057b",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0104-adversarial-reviewer.txt",
+      "promptSha256": "f75b038eb56a75bf3352c6b195185d8c66bf05c56d2ed78740167a73d28ac750",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:01.787Z",
+      "finishedAt": "2026-11-07T14:47:11.129Z",
+      "durationMs": 9340,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0104\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"歸因正確且未被升高：來源以「曾任前高雄市長謝長廷機要秘書的薛兆基指出」的形式呈現，句子主語仍是薛兆基本人，「指出」保留了新聞報導的轉述性質，修正後文字未改寫成「事實即如此」的直接斷言，也未把記者敘述的頭銜（曾任謝長廷機要秘書）誤植為候選人自述；claim 的歸因標記 news-report／source-dependent 與來源性質相符。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"文字僅有「曾任」與「長期以來」等過去式／持續性表述，未含具體日期主張，故 requiresDate 為 false；來源發布日 2026-06-10 與 historical 時效標記一致，「曾任」的過去式用法亦與來源文句相符。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-ltn\",\"evidenceId\":\"enrich-evidence-0104\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot 內文第 4 段（「請繼續往下閱讀...」之後、談蓮池潭之前）\",\"excerpt\":\"曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」。\",\"relationship\":\"supports\"}],\"rationale\":\"逐字比對：修正後內容與來源內文該段完全一致，無增刪、無改寫、無把引號內外的界線移動；「曾任前高雄市長謝長廷機要秘書」為來源記者記述之頭銜，後半段為記者轉述薛兆基的說法，兩者在修正後文字中維持原有的敘述層次與「指出」的轉述動詞，未出現促銷性形容詞被當成資歷、或把報導轉述升格為事實的情形。唯一可留意處為標題「新聞報導中的工作經歷」與類別 professional-experience，相對於正文（大部分是政治立場與評論）略寬，但該句確實含有工作經歷成分（機要秘書），且未據此延伸其他未經來源支持之經歷，尚不足構成誤導中性讀者。\",\"materialConcern\":null,\"limitations\":[\"本筆僅能佐證「曾任前高雄市長謝長廷機要秘書」這一項經歷，不能推論其完整職涯、任期長短或具體職責。\",\"該頭銜出自記者敘述，來源未提供候選人本人或市府人事資料佐證。\",\"正文主體為候選人政治評論與競選語境（台灣前進陣線推薦、退黨爭議），非中性傳記資料；引用時宜避免讓讀者誤以為全文皆為資歷陳述。\",\"來源為單一媒體報導（自由時報，2026-06-10），無第二來源交叉驗證。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0104",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "歸因正確且未被升高：來源以「曾任前高雄市長謝長廷機要秘書的薛兆基指出」的形式呈現，句子主語仍是薛兆基本人，「指出」保留了新聞報導的轉述性質，修正後文字未改寫成「事實即如此」的直接斷言，也未把記者敘述的頭銜（曾任謝長廷機要秘書）誤植為候選人自述；claim 的歸因標記 news-report／source-dependent 與來源性質相符。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "文字僅有「曾任」與「長期以來」等過去式／持續性表述，未含具體日期主張，故 requiresDate 為 false；來源發布日 2026-06-10 與 historical 時效標記一致，「曾任」的過去式用法亦與來源文句相符。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-ltn",
+            "evidenceId": "enrich-evidence-0104",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot 內文第 4 段（「請繼續往下閱讀...」之後、談蓮池潭之前）",
+            "excerpt": "曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "逐字比對：修正後內容與來源內文該段完全一致，無增刪、無改寫、無把引號內外的界線移動；「曾任前高雄市長謝長廷機要秘書」為來源記者記述之頭銜，後半段為記者轉述薛兆基的說法，兩者在修正後文字中維持原有的敘述層次與「指出」的轉述動詞，未出現促銷性形容詞被當成資歷、或把報導轉述升格為事實的情形。唯一可留意處為標題「新聞報導中的工作經歷」與類別 professional-experience，相對於正文（大部分是政治立場與評論）略寬，但該句確實含有工作經歷成分（機要秘書），且未據此延伸其他未經來源支持之經歷，尚不足構成誤導中性讀者。",
+        "materialConcern": null,
+        "limitations": [
+          "本筆僅能佐證「曾任前高雄市長謝長廷機要秘書」這一項經歷，不能推論其完整職涯、任期長短或具體職責。",
+          "該頭銜出自記者敘述，來源未提供候選人本人或市府人事資料佐證。",
+          "正文主體為候選人政治評論與競選語境（台灣前進陣線推薦、退黨爭議），非中性傳記資料；引用時宜避免讓讀者誤以為全文皆為資歷陳述。",
+          "來源為單一媒體報導（自由時報，2026-06-10），無第二來源交叉驗證。"
+        ]
+      },
+      "outputSha256": "cf1d1cf79e556549bef402834af97507bbbfaa43012a96e8a1aedc3d7a043cbd",
+      "usage": {
+        "inputTokens": 4542,
+        "outputTokens": 1665,
+        "totalTokens": 6207,
+        "costUsd": 0.0016802999999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0108",
+      "claimId": "enrich-claim-0108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0108",
+      "packetSha256": "22ea4295ce5197c934dd62d043a1805c94a302326685162f0663f74201824754",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0108-adversarial-reviewer.txt",
+      "promptSha256": "c808560edf2f7d94d30dcd2e4ac26a4ac1962a714014c80fc2ea84faa2cfa232",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:11.131Z",
+      "finishedAt": "2026-11-07T14:47:27.166Z",
+      "durationMs": 16031,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0108\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"修正文字逐字等於聯合新聞網報導標題，內文由聯合報記者徐白櫻報導，並引述民進黨高市黨部說法；以「新聞報導的參選事件」呈現，歸因尚可辨識。惟「大綠變小綠」「參選到底」屬標題修辭與陣營表述，不應視為本平台獨立認定之事實。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正文字本身未含明確日期；來源發布日為 2026-06-09，內文稱「今天接受『台灣前進陣線』提名」，與「前幕僚」及該參選事件時點相符。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0108-headline\",\"location\":\"報導標題\",\"excerpt\":\"大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0108-body\",\"location\":\"報導內文\",\"excerpt\":\"薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任\",\"relationship\":\"supports\"}],\"rationale\":\"修正文字逐字等於來源標題；內文亦明載薛兆基曾任謝長廷機要秘書，並接受「台灣前進陣線」提名、爭取高雄市左楠區市議員席次。身分與核心參選事件均可由來源核對，沒有把報導內容改寫成另一項事實主張。\",\"materialConcern\":null,\"limitations\":[\"「大綠變小綠」與「參選到底」是來源標題的修辭及陣營表述，內文未獨立證明政治評價或最終參選結果。\",\"來源為 2026-06-09 新聞，後續退黨、違紀處分與參選狀態可能變動。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0108",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "修正文字逐字等於聯合新聞網報導標題，內文由聯合報記者徐白櫻報導，並引述民進黨高市黨部說法；以「新聞報導的參選事件」呈現，歸因尚可辨識。惟「大綠變小綠」「參選到底」屬標題修辭與陣營表述，不應視為本平台獨立認定之事實。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正文字本身未含明確日期；來源發布日為 2026-06-09，內文稱「今天接受『台灣前進陣線』提名」，與「前幕僚」及該參選事件時點相符。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0108-headline",
+            "location": "報導標題",
+            "excerpt": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0108-body",
+            "location": "報導內文",
+            "excerpt": "薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正文字逐字等於來源標題；內文亦明載薛兆基曾任謝長廷機要秘書，並接受「台灣前進陣線」提名、爭取高雄市左楠區市議員席次。身分與核心參選事件均可由來源核對，沒有把報導內容改寫成另一項事實主張。",
+        "materialConcern": null,
+        "limitations": [
+          "「大綠變小綠」與「參選到底」是來源標題的修辭及陣營表述，內文未獨立證明政治評價或最終參選結果。",
+          "來源為 2026-06-09 新聞，後續退黨、違紀處分與參選狀態可能變動。"
+        ]
+      },
+      "outputSha256": "97571bbbb59f6c011aec87876b45e5bc963100371330783fee19cfb3823fa206",
+      "usage": {
+        "inputTokens": 4530,
+        "outputTokens": 3260,
+        "totalTokens": 7790,
+        "costUsd": 0.0026355
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0110",
+      "claimId": "enrich-claim-0110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0110",
+      "packetSha256": "c89e4b1125047c13e9b99b8c48173ae389f24d1c5dac1e182667a5e8d5bff15d",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0110-adversarial-reviewer.txt",
+      "promptSha256": "6d51e316b5b7648951f29f5bb97ef6029071ae75803c3ef778cac103fac10c8f",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:26.800Z",
+      "finishedAt": "2026-11-07T14:47:48.108Z",
+      "durationMs": 21306,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0110\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"修正後文字逐字等同自由時報頁面標題（僅刪去「- 政治 - 自由時報電子報」站別尾綴），已明確標為 news-report 並綁定 URL 與發稿日 2026/06/10；「是責任的開始」屬薛兆基受訪自述，報導內文明確寫為其「淡然表示，推薦不是榮耀時刻，而是責任開始」，屬引述而非報導自身的評價，未發生由『報導說』滑移為『事實如此』的情形。惟文字本身脫離標題語境，未加引號或註明為標題，讀者需依歸因欄位理解其為新聞標題引述。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"文字本身不含任何時間主張（無年份、無『昨』『今』等相對時間詞），故 requiresDate 為 false；惟事件時點可由來源內文與頁面時間戳支持：內文載明台灣前進陣線『昨（9）日』推薦、薛兆基『今（10）日』回應，頁面時間為 2026/06/10 10:17，與 claim 發布日期 2026-06-10 一致，historical 時效標記適當。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-ltn\",\"evidenceId\":\"enrich-evidence-0110\",\"location\":\"標題／頁首（title、og:title 與內文標題列）\",\"excerpt\":\"台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始 2026/06/10 10:17 記者 葛祐豪 ／高雄報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-ltn\",\"evidenceId\":\"enrich-evidence-0110-b\",\"location\":\"參選事件內文第一段\",\"excerpt\":\"台灣前進陣線昨（9）日正式推薦高雄市左營、楠梓市議員參選人薛兆基，引發地方政壇熱議；面對外界關注，薛兆基今（10）日淡然表示，推薦不是榮耀時刻，而是責任開始，自己抱持感恩與謙卑的心情接受這份推薦。\",\"relationship\":\"supports\"}],\"rationale\":\"逐項檢核修正後文字：主體『台灣前進陣線』、動作『推薦參選高雄市議員』、對象『薛兆基』、引語『是責任的開始』，四項均可在來源標題與內文第一段逐字對應，無新增修飾語、無促銷性形容詞被當成資歷、亦無來源未含之片段。相較修正前僅刪除瀏覽器建議與站別尾綴等導覽雜訊，屬忠實擷取。唯一需提醒的是斷言強度：來源所述為『正式推薦』（推薦／背書事件），並非完成候選人登記；若後續以本 claim 推論『已登記參選』即超出此位元組範圍。\",\"materialConcern\":null,\"limitations\":[\"此文字為新聞標題引述，未含日期與媒體標記，單獨閱讀時須依歸因欄位理解為自由時報 2026/06/10 報導標題\",\"來源僅支持『台灣前進陣線推薦』之推薦／背書事件，未含正式候選人登記、政黨提名或當選結果之資訊\",\"標題作『高雄市議員』，內文限定為『左營、楠梓』選區，選區層級細節不在 claim 文字中\"]}",
+      "result": {
+        "claimId": "enrich-claim-0110",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "修正後文字逐字等同自由時報頁面標題（僅刪去「- 政治 - 自由時報電子報」站別尾綴），已明確標為 news-report 並綁定 URL 與發稿日 2026/06/10；「是責任的開始」屬薛兆基受訪自述，報導內文明確寫為其「淡然表示，推薦不是榮耀時刻，而是責任開始」，屬引述而非報導自身的評價，未發生由『報導說』滑移為『事實如此』的情形。惟文字本身脫離標題語境，未加引號或註明為標題，讀者需依歸因欄位理解其為新聞標題引述。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "文字本身不含任何時間主張（無年份、無『昨』『今』等相對時間詞），故 requiresDate 為 false；惟事件時點可由來源內文與頁面時間戳支持：內文載明台灣前進陣線『昨（9）日』推薦、薛兆基『今（10）日』回應，頁面時間為 2026/06/10 10:17，與 claim 發布日期 2026-06-10 一致，historical 時效標記適當。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-ltn",
+            "evidenceId": "enrich-evidence-0110",
+            "location": "標題／頁首（title、og:title 與內文標題列）",
+            "excerpt": "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始 2026/06/10 10:17 記者 葛祐豪 ／高雄報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-ltn",
+            "evidenceId": "enrich-evidence-0110-b",
+            "location": "參選事件內文第一段",
+            "excerpt": "台灣前進陣線昨（9）日正式推薦高雄市左營、楠梓市議員參選人薛兆基，引發地方政壇熱議；面對外界關注，薛兆基今（10）日淡然表示，推薦不是榮耀時刻，而是責任開始，自己抱持感恩與謙卑的心情接受這份推薦。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "逐項檢核修正後文字：主體『台灣前進陣線』、動作『推薦參選高雄市議員』、對象『薛兆基』、引語『是責任的開始』，四項均可在來源標題與內文第一段逐字對應，無新增修飾語、無促銷性形容詞被當成資歷、亦無來源未含之片段。相較修正前僅刪除瀏覽器建議與站別尾綴等導覽雜訊，屬忠實擷取。唯一需提醒的是斷言強度：來源所述為『正式推薦』（推薦／背書事件），並非完成候選人登記；若後續以本 claim 推論『已登記參選』即超出此位元組範圍。",
+        "materialConcern": null,
+        "limitations": [
+          "此文字為新聞標題引述，未含日期與媒體標記，單獨閱讀時須依歸因欄位理解為自由時報 2026/06/10 報導標題",
+          "來源僅支持『台灣前進陣線推薦』之推薦／背書事件，未含正式候選人登記、政黨提名或當選結果之資訊",
+          "標題作『高雄市議員』，內文限定為『左營、楠梓』選區，選區層級細節不在 claim 文字中"
+        ]
+      },
+      "outputSha256": "da25ec9493506309572148ba4193fffdd9aff9771c7a1c0b426235bb942b723e",
+      "usage": {
+        "inputTokens": 4136,
+        "outputTokens": 2106,
+        "totalTokens": 6242,
+        "costUsd": 0.0018839999999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0114",
+      "claimId": "enrich-claim-0114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0114",
+      "packetSha256": "39dbe37757a5f12c32ce000975c25a1b7e4cfd6489710026596943b983490ca5",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0114-adversarial-reviewer.txt",
+      "promptSha256": "85538321973eaf6722910d07b88fcc05f2854cbb6140c3703f98293f9e2178ab",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:47.865Z",
+      "finishedAt": "2026-11-07T14:48:10.292Z",
+      "durationMs": 22426,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0114\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"修正後文字是逐字引用的新聞標題，且保留「被爆」二字，明確標示該指控來自報導／爆料，而非把「尹立拿高市府多項標案」直接斷言為事實；後半段「尹立：」也清楚標示為當事人回應。歸因為 news-report 與來源性質相符，沒有把「報導說」滑移成「事實如此」。唯一可挑剔處是標題本身是來源（自由時報）的編輯框架，但修正後內容僅以「新聞報導標題」欄位呈現，未加任何本專案自製的斷語。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含任何時間主張，故事件不需日期即成立。惟須注意：claim 中介資料記載的發布日期 2025-08-26 與來源視窗所示「2026/05/13 15:27」不一致，來源並不支持 2025-08-26 這個日期；此屬中介資料問題，不在修正後文字內，故不影響 supported 判定，但應另行更正。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0114\",\"location\":\"來源純文字視窗，頁面標題區（「首頁 > 政治」後）與 <title>／og:title 標籤\",\"excerpt\":\"首頁 > 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0114\",\"location\":\"來源純文字視窗，第二段（尹立說明接案單位）\",\"excerpt\":\"尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚\",\"relationship\":\"supports\"}],\"rationale\":\"修正後內容與來源標題逐字相同（僅刪去「- 政治 - 自由時報電子報」的網站後綴），屬標題引用而非內容改寫，故無新增主張。「被爆拿高市府多項標案」保留「被爆」的歸因動詞，「尹立：烏龍抹黑、協會接案非個人」是當事人回應的忠實節錄，來源第二段「一直都是中華民國設計師協會，不是他個人」直接支撐「協會接案非個人」一語。以中性讀者角度檢視，不會誤以為本專案已認定尹立個人拿取標案；也沒有促銷性形容詞、無來源未含的評價語、無捏造的精確度（如金額、件數）。尹立身分亦與來源「民進黨高市議員參選人尹立」一致。\",\"materialConcern\":null,\"limitations\":[\"claim 中介資料的發布日期 2025-08-26 與來源顯示的 2026/05/13 15:27 不符，來源不支持該日期，建議更正中介資料（不影響本文字審查）。\",\"修正後文字僅為標題，未納入報導中尹立的核心答辯細節（如「最大標是馬英九總統任內的建國百年吉祥物設計」、「理事長無給職」），若下游用途需呈現雙方論點，單靠此標題會使讀者只看到指控與否認的口號，而非具體說明。\",\"標題中的「被爆」未指明爆料者或原始報導出處，來源亦未交代，無法進一步追溯第一手指控來源。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0114",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "修正後文字是逐字引用的新聞標題，且保留「被爆」二字，明確標示該指控來自報導／爆料，而非把「尹立拿高市府多項標案」直接斷言為事實；後半段「尹立：」也清楚標示為當事人回應。歸因為 news-report 與來源性質相符，沒有把「報導說」滑移成「事實如此」。唯一可挑剔處是標題本身是來源（自由時報）的編輯框架，但修正後內容僅以「新聞報導標題」欄位呈現，未加任何本專案自製的斷語。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含任何時間主張，故事件不需日期即成立。惟須注意：claim 中介資料記載的發布日期 2025-08-26 與來源視窗所示「2026/05/13 15:27」不一致，來源並不支持 2025-08-26 這個日期；此屬中介資料問題，不在修正後文字內，故不影響 supported 判定，但應另行更正。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0114",
+            "location": "來源純文字視窗，頁面標題區（「首頁 > 政治」後）與 <title>／og:title 標籤",
+            "excerpt": "首頁 > 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0114",
+            "location": "來源純文字視窗，第二段（尹立說明接案單位）",
+            "excerpt": "尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後內容與來源標題逐字相同（僅刪去「- 政治 - 自由時報電子報」的網站後綴），屬標題引用而非內容改寫，故無新增主張。「被爆拿高市府多項標案」保留「被爆」的歸因動詞，「尹立：烏龍抹黑、協會接案非個人」是當事人回應的忠實節錄，來源第二段「一直都是中華民國設計師協會，不是他個人」直接支撐「協會接案非個人」一語。以中性讀者角度檢視，不會誤以為本專案已認定尹立個人拿取標案；也沒有促銷性形容詞、無來源未含的評價語、無捏造的精確度（如金額、件數）。尹立身分亦與來源「民進黨高市議員參選人尹立」一致。",
+        "materialConcern": null,
+        "limitations": [
+          "claim 中介資料的發布日期 2025-08-26 與來源顯示的 2026/05/13 15:27 不符，來源不支持該日期，建議更正中介資料（不影響本文字審查）。",
+          "修正後文字僅為標題，未納入報導中尹立的核心答辯細節（如「最大標是馬英九總統任內的建國百年吉祥物設計」、「理事長無給職」），若下游用途需呈現雙方論點，單靠此標題會使讀者只看到指控與否認的口號，而非具體說明。",
+          "標題中的「被爆」未指明爆料者或原始報導出處，來源亦未交代，無法進一步追溯第一手指控來源。"
+        ]
+      },
+      "outputSha256": "cc0c685e73eb544186ee031505dc0d32b99f2a87c4746866184f381cfa271322",
+      "usage": {
+        "inputTokens": 4101,
+        "outputTokens": 1597,
+        "totalTokens": 5698,
+        "costUsd": 0.0015733499999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0116",
+      "claimId": "enrich-claim-0116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0116",
+      "packetSha256": "991dad8690290c9be6ad6cb6a89949ddbf9c22a68b02b5113d0fc7fc95abe28a",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0116-adversarial-reviewer.txt",
+      "promptSha256": "c27df936fd4485747abce21c0a23e5301c0a56a31afb59d074ea4ce806737d2b",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:49:13.764Z",
+      "finishedAt": "2026-11-07T14:49:37.501Z",
+      "durationMs": 23736,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0116\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"正確且保守：文字逐字等同中央社報導標題（含「尹立：延續公民力量」之引述句式），claim 的歸因欄位明示 news-report，未將標題改寫為「尹立已當選」或「尹立為左楠區議員」等事實化斷言。惟內容本身僅為標題，未在文字內嵌入「報導指出」字樣，若脫離歸因欄位單獨呈現，讀者仍可能將其讀成既成事實，故屬可接受但偏薄弱的歸因設計。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字不含任何時間詞（無「今日」「昨天」「2025年」「將於」等），因此 requiresDate 為 false。來源 metadata 顯示 article:published_time 為 2025-08-26T13:30:00+08:00，與 claim 的 publishDate 2025-08-26 一致；時效標記 historical 與此相符。須注意：事件本身是「宣布參選」（表態），非登記或當選，來源未提供後續狀態，claim 亦未主張，故無時效性誇大。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-cna\",\"evidenceId\":\"enrich-evidence-0116\",\"location\":\"https://www.cna.com.tw/news/aloc/202508260141.aspx（<title>／og:title 標題列，對應 rawPath data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot）\",\"excerpt\":\"宣布參選高市左楠區市議員 尹立：延續公民力量 | 地方 | 中央社 CNA\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-cna\",\"evidenceId\":\"enrich-evidence-0116-b\",\"location\":\"同一來源 HTML <meta name=\\\"description\\\">／og:description（內文摘要）\",\"excerpt\":\"前高雄市文化局長、罷韓發起人之一的尹立，今天在民進黨高雄市立委李柏毅陪同下，宣布參選高雄市左營、楠梓區市議員。尹立說，為了延續公民力量，守護高雄、保衛台灣，決定投身地方政治。\",\"relationship\":\"supports\"}],\"rationale\":\"逐項比對修正後文字：「宣布參選高市左楠區市議員」對應標題與內文摘要「宣布參選高雄市左營、楠梓區市議員」；「尹立」為當事人姓名，來源明確；「延續公民力量」為標題引述之尹立說法，內文摘要亦載「為了延續公民力量……決定投身地方政治」。全句即來源標題本體，無額外添加之形容詞、政黨歸屬、當選狀態或職稱膨脹（未誤寫為「前文化局長尹立當選」等）。人名與職稱對應正確，無身分混淆。唯一可議處為「左楠區」係標題簡稱，內文為「左營、楠梓區」，語意相同且屬來源自身用語，不構成誤導。因所有主張均可在保留位元組中找到，判定 supported。\",\"materialConcern\":null,\"limitations\":[\"證據主體僅為新聞標題（及 meta description 摘要），未涵蓋報導全文，故無法佐證競選後續進展、政黨提名狀態或選區最終確認。\",\"claim 文字未標示事件日期，事件時點僅由 publishDate 與來源 metadata 支撐；若他處以「近日宣布」等方式引用，可能產生時效誤讀。\",\"標題原文使用全角空格（「市議員　尹立」），claim 轉為半角空格，屬排版正規化，非語意變更。\",\"來源未說明尹立當時是否已完成政黨提名程序，claim 亦未主張，惟讀者可能自行推論其代表民進黨參選，此推論不在來源標題支持範圍內。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0116",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "正確且保守：文字逐字等同中央社報導標題（含「尹立：延續公民力量」之引述句式），claim 的歸因欄位明示 news-report，未將標題改寫為「尹立已當選」或「尹立為左楠區議員」等事實化斷言。惟內容本身僅為標題，未在文字內嵌入「報導指出」字樣，若脫離歸因欄位單獨呈現，讀者仍可能將其讀成既成事實，故屬可接受但偏薄弱的歸因設計。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字不含任何時間詞（無「今日」「昨天」「2025年」「將於」等），因此 requiresDate 為 false。來源 metadata 顯示 article:published_time 為 2025-08-26T13:30:00+08:00，與 claim 的 publishDate 2025-08-26 一致；時效標記 historical 與此相符。須注意：事件本身是「宣布參選」（表態），非登記或當選，來源未提供後續狀態，claim 亦未主張，故無時效性誇大。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-cna",
+            "evidenceId": "enrich-evidence-0116",
+            "location": "https://www.cna.com.tw/news/aloc/202508260141.aspx（<title>／og:title 標題列，對應 rawPath data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot）",
+            "excerpt": "宣布參選高市左楠區市議員 尹立：延續公民力量 | 地方 | 中央社 CNA",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-cna",
+            "evidenceId": "enrich-evidence-0116-b",
+            "location": "同一來源 HTML <meta name=\"description\">／og:description（內文摘要）",
+            "excerpt": "前高雄市文化局長、罷韓發起人之一的尹立，今天在民進黨高雄市立委李柏毅陪同下，宣布參選高雄市左營、楠梓區市議員。尹立說，為了延續公民力量，守護高雄、保衛台灣，決定投身地方政治。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "逐項比對修正後文字：「宣布參選高市左楠區市議員」對應標題與內文摘要「宣布參選高雄市左營、楠梓區市議員」；「尹立」為當事人姓名，來源明確；「延續公民力量」為標題引述之尹立說法，內文摘要亦載「為了延續公民力量……決定投身地方政治」。全句即來源標題本體，無額外添加之形容詞、政黨歸屬、當選狀態或職稱膨脹（未誤寫為「前文化局長尹立當選」等）。人名與職稱對應正確，無身分混淆。唯一可議處為「左楠區」係標題簡稱，內文為「左營、楠梓區」，語意相同且屬來源自身用語，不構成誤導。因所有主張均可在保留位元組中找到，判定 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "證據主體僅為新聞標題（及 meta description 摘要），未涵蓋報導全文，故無法佐證競選後續進展、政黨提名狀態或選區最終確認。",
+          "claim 文字未標示事件日期，事件時點僅由 publishDate 與來源 metadata 支撐；若他處以「近日宣布」等方式引用，可能產生時效誤讀。",
+          "標題原文使用全角空格（「市議員　尹立」），claim 轉為半角空格，屬排版正規化，非語意變更。",
+          "來源未說明尹立當時是否已完成政黨提名程序，claim 亦未主張，惟讀者可能自行推論其代表民進黨參選，此推論不在來源標題支持範圍內。"
+        ]
+      },
+      "outputSha256": "ff8c06b13561194bede60632b98d925d8eb316f876e9fe5b0a1c9fa9173d7051",
+      "usage": {
+        "inputTokens": 4285,
+        "outputTokens": 1679,
+        "totalTokens": 5964,
+        "costUsd": 0.00165015
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0117",
+      "claimId": "enrich-claim-0117",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0117",
+      "packetSha256": "ff6712eb3625d30f0c278c98c2895cf9760c30f46e72d05a463f8e0efcc50309",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0117-adversarial-reviewer.txt",
+      "promptSha256": "463fc20a4ef0531d36b6eb25e01b9209fb1858aaac7abb519a1e8c680a66e314",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:48:02.263Z",
+      "finishedAt": "2026-11-07T14:48:29.370Z",
+      "durationMs": 27106,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0117\",\"verdict\":\"partially-supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"修正後文字與來源標題逐字相同（僅刪去「- 政治 - 自由時報電子報」的欄目後綴），且整句本身就是新聞標題形態：前半「被爆拿高市府多項標案」以「被爆」把指控歸屬於他人爆料，後半「尹立：烏龍抹黑、協會接案非個人」明白標示為尹立本人回應，並未把爆料內容寫成事實陳述。歸因層級與來源一致，沒有從「報導說」滑向「事實如此」。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":false,\"assessment\":\"修正後文字本身不含任何時間主張，故 requiresDate 為 false；但紀錄所載發布日期 2025-08-26 與來源內文標示的「2026/05/13 15:27」不符，該日期中繼資料不被來源支持。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0117\",\"location\":\"標題與刊頭（來源純文字視窗）\",\"excerpt\":\"被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0117\",\"location\":\"報導第一段（來源純文字視窗）\",\"excerpt\":\"民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後內容是來源標題的逐字複製，兩個分句（「被爆拿高市府多項標案」＋「尹立：烏龍抹黑、協會接案非個人」）都可在來源標題與第一段找到對應，且保留了「被爆」的歸因與尹立回應的對稱結構，沒有誇大、沒有添加來源未有的細節或評價性修辭。身分亦與來源一致（民進黨高市議員參選人尹立）。唯一未獲支持的是紀錄層級的發布日期 2025-08-26，來源明載為 2026/05/13，屬可驗證的具體落差，故不給 supported 而給 partially-supported。\",\"materialConcern\":\"紀錄將發布日期寫為 2025-08-26，但來源報導標示為「2026/05/13 15:27」，相差近九個月，會使讀者誤判事件發生時點。\",\"limitations\":[\"內容僅為新聞標題，未包含內文所述的標案名稱、金額、指控來源等實質細節\",\"來源將尹立身分寫為「民進黨高市議員參選人」，非市長候選人，引用時不宜逕稱市長候選人\",\"該報導主體為尹立的澄清與反駁，未獨立查證爆料所指標案內容，屬單方回應性質\",\"原始內容中「來源於2025-08-26報導」的日期敘述亦與來源刊頭日期不符\"]}",
+      "result": {
+        "claimId": "enrich-claim-0117",
+        "verdict": "partially-supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "修正後文字與來源標題逐字相同（僅刪去「- 政治 - 自由時報電子報」的欄目後綴），且整句本身就是新聞標題形態：前半「被爆拿高市府多項標案」以「被爆」把指控歸屬於他人爆料，後半「尹立：烏龍抹黑、協會接案非個人」明白標示為尹立本人回應，並未把爆料內容寫成事實陳述。歸因層級與來源一致，沒有從「報導說」滑向「事實如此」。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": false,
+          "assessment": "修正後文字本身不含任何時間主張，故 requiresDate 為 false；但紀錄所載發布日期 2025-08-26 與來源內文標示的「2026/05/13 15:27」不符，該日期中繼資料不被來源支持。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0117",
+            "location": "標題與刊頭（來源純文字視窗）",
+            "excerpt": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0117",
+            "location": "報導第一段（來源純文字視窗）",
+            "excerpt": "民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後內容是來源標題的逐字複製，兩個分句（「被爆拿高市府多項標案」＋「尹立：烏龍抹黑、協會接案非個人」）都可在來源標題與第一段找到對應，且保留了「被爆」的歸因與尹立回應的對稱結構，沒有誇大、沒有添加來源未有的細節或評價性修辭。身分亦與來源一致（民進黨高市議員參選人尹立）。唯一未獲支持的是紀錄層級的發布日期 2025-08-26，來源明載為 2026/05/13，屬可驗證的具體落差，故不給 supported 而給 partially-supported。",
+        "materialConcern": "紀錄將發布日期寫為 2025-08-26，但來源報導標示為「2026/05/13 15:27」，相差近九個月，會使讀者誤判事件發生時點。",
+        "limitations": [
+          "內容僅為新聞標題，未包含內文所述的標案名稱、金額、指控來源等實質細節",
+          "來源將尹立身分寫為「民進黨高市議員參選人」，非市長候選人，引用時不宜逕稱市長候選人",
+          "該報導主體為尹立的澄清與反駁，未獨立查證爆料所指標案內容，屬單方回應性質",
+          "原始內容中「來源於2025-08-26報導」的日期敘述亦與來源刊頭日期不符"
+        ]
+      },
+      "outputSha256": "080de78af4eb788abb5ebcb89e235ace1eb7ea00bbbf202ab7f92978c6ca5023",
+      "usage": {
+        "inputTokens": 3722,
+        "outputTokens": 2893,
+        "totalTokens": 6999,
+        "costUsd": 0.002295252
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0118",
+      "claimId": "enrich-claim-0118",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0118",
+      "packetSha256": "e61a5ac33ede1576521f23dde200d1da0ac61c9b0d7c6b316525a493cb6d36dc",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0118-adversarial-reviewer.txt",
+      "promptSha256": "a2ab58b6d5d3d9de67092c4875f89219ec0db4f8779acc235625928f5243e6cb",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:48:11.236Z",
+      "finishedAt": "2026-11-07T14:48:40.241Z",
+      "durationMs": 29004,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0118\",\"verdict\":\"partially-supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"內容句逐字等同來源圖片說明（圖說）文字，且語句為「尹立澄清…」的轉述句型，並未把否認內容寫成已證實事實，歸因為 news-report 尚屬適當；惟「民進黨高市議員參選人」此一頭銜亦僅見於該報導之描述，claim 未明示為報導用語，屬輕微歸因滑移。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":false,\"assessment\":\"修正後文字本身不含任何時間主張，故 requiresDate 為 false；但 claim 標記之發布日期 2025-08-26 與來源內文所載「2026/05/13 15:27」明顯不符，來源不支持該日期，時效中介資料有誤。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0118\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（內文圖說，標題下第一段）\",\"excerpt\":\"民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。（記者王榮祥翻攝）\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0118\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（內文第二段，尹立發言）\",\"excerpt\":\"民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0118\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（標題與時間欄）\",\"excerpt\":\"被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導\",\"relationship\":\"context\"}],\"rationale\":\"修正後內容句與來源圖說逐字相符，屬轉述尹立否認之語句，未把否認升格為事實，主體（尹立）與組織（中華民國設計師協會）均可自來源確認。但 claim 的標題／類別「新聞報導的參選事件」（timeline / historical-candidacy）並非來源所載事件：來源描述的是當事人回應「被爆拿高市府多項標案」的澄清與反駁，全文無任何宣布參選、登記或參選歷程之時間事件；「參選人」僅是報導对尹立身分的描述用語。此外 claim 的發布日期 2025-08-26 與來源所示 2026/05/13 不符。故內容句 supported，但整體 claim 中介資料（標題、類別、日期）有實質偏差，評為 partially-supported。\",\"materialConcern\":\"標題「新聞報導的參選事件」與類別 timeline / historical-candidacy 將一則「尹立否認個人承接高市府標案」的澄清報導錯誤框定為參選歷程事件，來源全文並無任何參選宣布或參選時間點。\",\"limitations\":[\"來源為自由時報單一報導，內容屬尹立單方澄清與否認，來源未提供標案、委託對象或金額等佐證文件。\",\"claim 發布日期 2025-08-26 與來源標示 2026/05/13 15:27 不一致，需回溯日期欄位來源。\",\"「民進黨高市議員參選人」為報導用語，非來源所載之政黨提名文件或選委會登記紀錄。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0118",
+        "verdict": "partially-supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "內容句逐字等同來源圖片說明（圖說）文字，且語句為「尹立澄清…」的轉述句型，並未把否認內容寫成已證實事實，歸因為 news-report 尚屬適當；惟「民進黨高市議員參選人」此一頭銜亦僅見於該報導之描述，claim 未明示為報導用語，屬輕微歸因滑移。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": false,
+          "assessment": "修正後文字本身不含任何時間主張，故 requiresDate 為 false；但 claim 標記之發布日期 2025-08-26 與來源內文所載「2026/05/13 15:27」明顯不符，來源不支持該日期，時效中介資料有誤。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0118",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（內文圖說，標題下第一段）",
+            "excerpt": "民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。（記者王榮祥翻攝）",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0118",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（內文第二段，尹立發言）",
+            "excerpt": "民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0118",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（標題與時間欄）",
+            "excerpt": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導",
+            "relationship": "context"
+          }
+        ],
+        "rationale": "修正後內容句與來源圖說逐字相符，屬轉述尹立否認之語句，未把否認升格為事實，主體（尹立）與組織（中華民國設計師協會）均可自來源確認。但 claim 的標題／類別「新聞報導的參選事件」（timeline / historical-candidacy）並非來源所載事件：來源描述的是當事人回應「被爆拿高市府多項標案」的澄清與反駁，全文無任何宣布參選、登記或參選歷程之時間事件；「參選人」僅是報導对尹立身分的描述用語。此外 claim 的發布日期 2025-08-26 與來源所示 2026/05/13 不符。故內容句 supported，但整體 claim 中介資料（標題、類別、日期）有實質偏差，評為 partially-supported。",
+        "materialConcern": "標題「新聞報導的參選事件」與類別 timeline / historical-candidacy 將一則「尹立否認個人承接高市府標案」的澄清報導錯誤框定為參選歷程事件，來源全文並無任何參選宣布或參選時間點。",
+        "limitations": [
+          "來源為自由時報單一報導，內容屬尹立單方澄清與否認，來源未提供標案、委託對象或金額等佐證文件。",
+          "claim 發布日期 2025-08-26 與來源標示 2026/05/13 15:27 不一致，需回溯日期欄位來源。",
+          "「民進黨高市議員參選人」為報導用語，非來源所載之政黨提名文件或選委會登記紀錄。"
+        ]
+      },
+      "outputSha256": "bbe9f19b95116ee86ed61ef6e6d200872c8e9e3be0ad41e2e5b6f8c5cb42d8fd",
+      "usage": {
+        "inputTokens": 3968,
+        "outputTokens": 1835,
+        "totalTokens": 5803,
+        "costUsd": 0.0016962
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-adversarial-reviewer-enrich-claim-0120",
+      "claimId": "enrich-claim-0120",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "adjudicatorRole": "adversarial-reviewer",
+      "packetId": "correction-packet-enrich-claim-0120",
+      "packetSha256": "ed91bc671e747477cfd450a5418de7d32f00e0b839a2775793cc5d2ae0030820",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0120-adversarial-reviewer.txt",
+      "promptSha256": "705f9b3d9b91ca2486fa89c5baa0b268ec2c8df16ef36f6be3e21ff2d36adeac",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:48:29.373Z",
+      "finishedAt": "2026-11-07T14:48:55.474Z",
+      "durationMs": 26099,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0120\",\"verdict\":\"partially-supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"修正後文字與來源標題逐字相同（含「獨／」與「+1」），屬新聞標題引用，並未把報導所述升級為事實陳述；但把整句標題當成「專業經歷」內容，已超出標題本身承載的資訊。「律師」是標題中的稱謂；報導內文另有「張靜過去曾擔任法官及檢察官」，但修正後文字並未納入，因此以 professional-experience 歸類仍屬薄弱。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含時間主張；來源標題下確有「2026-03-29 10:02」發稿時間，與 claim 的發布日期 2026-03-29 相符。此為當時宣布參選的歷史報導（historical），後續登記或退選情況不在本文字範圍。\"},\"evidence\":[{\"sourceId\":\"scope-news-zhang-jing-udn\",\"evidenceId\":\"enrich-evidence-0120\",\"location\":\"來源純文字視窗，文章標題與發稿資訊行（內文 H1 區塊）\",\"excerpt\":\"獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 2026-03-29 10:02 聯合報／ 記者 徐白櫻 ／高雄即時報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-zhang-jing-udn\",\"evidenceId\":\"enrich-evidence-0120-b\",\"location\":\"來源純文字視窗，內文第五段（專業資歷段落）\",\"excerpt\":\"張靜過去曾擔任法官及檢察官，資深媒體人彭文正質疑蔡英文論文造假\",\"relationship\":\"context\"}],\"rationale\":\"修正後文字為聯合新聞網報導標題的逐字複製，在來源標題、og:title 與內文標題列均可逐字比對，無增添、無改寫，故文字本身可判為 supported。惟本 claim 的標題「新聞報導中的專業經歷」與類別 professional-experience 暗示該文字記載其專業資歷；實際上此句僅是新黨主席宣布參選市長的新聞標題，「律師」為標題稱謂（epithet），真正的資歷描述（曾任法官及檢察官、因論文案入獄服刑、2022 曾宣布參選總統）都在內文而未進入修正後文字。另既有 evidence 的 excerpt 為導覽列雜訊字串，未包含標題句，屬證據品質瑕疵，已在本次以正確逐字片段補正。綜合判定 partially-supported：文字可證，但其作為「專業經歷」證據的定位與資訊量不足以支撐該標題與類別。\",\"materialConcern\":\"以「新聞報導中的專業經歷」為標題、professional-experience 為類別，會讓中性讀者以為來源記載張靜的專業資歷，但修正後文字僅為新聞標題「獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰」，其中「律師」僅是標題稱謂，並非對其執業資歷的報導內容。\",\"limitations\":[\"來源為聯合新聞網即時報導之標題，內文多為張靜本人政治主張之轉述，屬單一媒體、單方說法。\",\"「曾因前總統蔡英文論文案入獄服刑」等敘述見於報導導言，涉及司法評價，若後續擴充引用須另附原始判決或第二來源。\",\"本 claim 未涵蓋其後是否完成高雄市長登記或退選，時效僅及於 2026-03-29 之宣布時點。\",\"既有 evidence（enrich-evidence-0120）之 excerpt 為網站導覽雜訊，未含標題句，建議以本次補正片段替換。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0120",
+        "verdict": "partially-supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "修正後文字與來源標題逐字相同（含「獨／」與「+1」），屬新聞標題引用，並未把報導所述升級為事實陳述；但把整句標題當成「專業經歷」內容，已超出標題本身承載的資訊。「律師」是標題中的稱謂；報導內文另有「張靜過去曾擔任法官及檢察官」，但修正後文字並未納入，因此以 professional-experience 歸類仍屬薄弱。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含時間主張；來源標題下確有「2026-03-29 10:02」發稿時間，與 claim 的發布日期 2026-03-29 相符。此為當時宣布參選的歷史報導（historical），後續登記或退選情況不在本文字範圍。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-zhang-jing-udn",
+            "evidenceId": "enrich-evidence-0120",
+            "location": "來源純文字視窗，文章標題與發稿資訊行（內文 H1 區塊）",
+            "excerpt": "獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 2026-03-29 10:02 聯合報／ 記者 徐白櫻 ／高雄即時報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-zhang-jing-udn",
+            "evidenceId": "enrich-evidence-0120-b",
+            "location": "來源純文字視窗，內文第五段（專業資歷段落）",
+            "excerpt": "張靜過去曾擔任法官及檢察官，資深媒體人彭文正質疑蔡英文論文造假",
+            "relationship": "context"
+          }
+        ],
+        "rationale": "修正後文字為聯合新聞網報導標題的逐字複製，在來源標題、og:title 與內文標題列均可逐字比對，無增添、無改寫，故文字本身可判為 supported。惟本 claim 的標題「新聞報導中的專業經歷」與類別 professional-experience 暗示該文字記載其專業資歷；實際上此句僅是新黨主席宣布參選市長的新聞標題，「律師」為標題稱謂（epithet），真正的資歷描述（曾任法官及檢察官、因論文案入獄服刑、2022 曾宣布參選總統）都在內文而未進入修正後文字。另既有 evidence 的 excerpt 為導覽列雜訊字串，未包含標題句，屬證據品質瑕疵，已在本次以正確逐字片段補正。綜合判定 partially-supported：文字可證，但其作為「專業經歷」證據的定位與資訊量不足以支撐該標題與類別。",
+        "materialConcern": "以「新聞報導中的專業經歷」為標題、professional-experience 為類別，會讓中性讀者以為來源記載張靜的專業資歷，但修正後文字僅為新聞標題「獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰」，其中「律師」僅是標題稱謂，並非對其執業資歷的報導內容。",
+        "limitations": [
+          "來源為聯合新聞網即時報導之標題，內文多為張靜本人政治主張之轉述，屬單一媒體、單方說法。",
+          "「曾因前總統蔡英文論文案入獄服刑」等敘述見於報導導言，涉及司法評價，若後續擴充引用須另附原始判決或第二來源。",
+          "本 claim 未涵蓋其後是否完成高雄市長登記或退選，時效僅及於 2026-03-29 之宣布時點。",
+          "既有 evidence（enrich-evidence-0120）之 excerpt 為網站導覽雜訊，未含標題句，建議以本次補正片段替換。"
+        ]
+      },
+      "outputSha256": "9d854e97303fd00eaae2d44b0bfa21fdcd26e211d9ca7feb8b4b8c855b354f4e",
+      "usage": {
+        "inputTokens": 4082,
+        "outputTokens": 1931,
+        "totalTokens": 6397,
+        "costUsd": 0.0017720519999999997
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0001",
+      "claimId": "enrich-claim-0001",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0001",
+      "packetSha256": "1fa034bcbb3b1427f292307c5c7d63461c3afbbb9504efb91b7b3f8fa7ab57ff",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0001-established-verifier.txt",
+      "promptSha256": "a4ab68cce70b1180756b6c07eaf59909392d9eedd17b69a3d412040ca3f8ee0d",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:22.374Z",
+      "finishedAt": "2026-11-07T14:44:30.863Z",
+      "durationMs": 8484,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0001\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"Supported. 來源為高雄市議會官方網站（kcc.gov.tw）之議員個人頁，頁面標題與麵包屑均為「本屆議員-黃文志」，且頁內明列「黃文志 性 別： 男 所屬政黨： 民主進步黨」，屬議會自身之 institutional record，與 claim 所標示的歸因（institutional-record／高雄市議會）一致。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字僅有「本屆議員」四字，未含具體年份或任期屆次，故不強制要求發布日期。「本屆」屬網站現行名錄之自我指涉用語，該頁確實將黃文志列於「本會議員／本屆議員」分類下，足以支持擷取時點之現任狀態；惟頁面本身未載明屆次與更新日期（HTML metadata 的 DC.Date 為 2019-02-27，屬版型產物，不宜作為任期證據），故僅能支持「相對於該頁現行名錄為本屆」，不能獨立證明特定屆次。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2185\",\"evidenceId\":\"enrich-evidence-0001\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2185.html（頁面 title）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-黃文志 跳到主要內容區塊\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2185\",\"evidenceId\":\"enrich-evidence-0002\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2185.html（麵包屑與個人資料區）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-黃文志 _ 網頁功能 列印內容 黃文志 性 別： 男 所屬政黨： 民主進步黨\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字「本屆議員」逐字出現於來源：頁面 title 為「本屆議員-黃文志」，導覽與麵包屑為「本會議員 > 本屆議員 > 本屆議員-黃文志」，個人資料區塊並確認為黃文志本人（男、民主進步黨）。修正已刪除原始文字中來源未出現的「第四選舉區」，使每一項主張均可由保留位元組直接支持；身分、歸因、現任狀態三項均無逾越來源之處，故判定 supported。\",\"materialConcern\":null,\"limitations\":[\"來源頁面未載明屆次數字（如第4屆），「本屆」僅相對於該站現行名錄而言；頁內僅在經歷欄出現「高雄市第三屆市議員」，不足以推導現行屆次。\",\"頁面無人為發布／更新日期，HTML metadata 的 DC.Date（2019-02-27）為版型固定值，不可作為時效證據。\",\"本審查僅依據所提供的來源純文字視窗與 HTML 節錄，未重新抓取網路頁面。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0001",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "Supported. 來源為高雄市議會官方網站（kcc.gov.tw）之議員個人頁，頁面標題與麵包屑均為「本屆議員-黃文志」，且頁內明列「黃文志 性 別： 男 所屬政黨： 民主進步黨」，屬議會自身之 institutional record，與 claim 所標示的歸因（institutional-record／高雄市議會）一致。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字僅有「本屆議員」四字，未含具體年份或任期屆次，故不強制要求發布日期。「本屆」屬網站現行名錄之自我指涉用語，該頁確實將黃文志列於「本會議員／本屆議員」分類下，足以支持擷取時點之現任狀態；惟頁面本身未載明屆次與更新日期（HTML metadata 的 DC.Date 為 2019-02-27，屬版型產物，不宜作為任期證據），故僅能支持「相對於該頁現行名錄為本屆」，不能獨立證明特定屆次。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2185",
+            "evidenceId": "enrich-evidence-0001",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html（頁面 title）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-黃文志 跳到主要內容區塊",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2185",
+            "evidenceId": "enrich-evidence-0002",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html（麵包屑與個人資料區）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-黃文志 _ 網頁功能 列印內容 黃文志 性 別： 男 所屬政黨： 民主進步黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字「本屆議員」逐字出現於來源：頁面 title 為「本屆議員-黃文志」，導覽與麵包屑為「本會議員 > 本屆議員 > 本屆議員-黃文志」，個人資料區塊並確認為黃文志本人（男、民主進步黨）。修正已刪除原始文字中來源未出現的「第四選舉區」，使每一項主張均可由保留位元組直接支持；身分、歸因、現任狀態三項均無逾越來源之處，故判定 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "來源頁面未載明屆次數字（如第4屆），「本屆」僅相對於該站現行名錄而言；頁內僅在經歷欄出現「高雄市第三屆市議員」，不足以推導現行屆次。",
+          "頁面無人為發布／更新日期，HTML metadata 的 DC.Date（2019-02-27）為版型固定值，不可作為時效證據。",
+          "本審查僅依據所提供的來源純文字視窗與 HTML 節錄，未重新抓取網路頁面。"
+        ]
+      },
+      "outputSha256": "02aaeee9b55b6e8bc89ecb280fca0c1a05c3b9405237e1807982890d1beb506b",
+      "usage": {
+        "inputTokens": 4250,
+        "outputTokens": 1723,
+        "totalTokens": 5973,
+        "costUsd": 0.0016712999999999997
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0012",
+      "claimId": "enrich-claim-0012",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0012",
+      "packetSha256": "c9e4f491d63b17618355613a74d3374705280a160e2d238a2910142393755cd4",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0012-established-verifier.txt",
+      "promptSha256": "4839fbf43284415fc8890363f9c71db11d137c5e50e217487ced3ea416ee3048",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:22.375Z",
+      "finishedAt": "2026-11-07T14:44:29.676Z",
+      "durationMs": 7295,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0012\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"Supported: the retained bytes are an official kcc.gov.tw member-profile page (title tag and og:title read 「高雄市議會全球網-中文網-本屆議員-李雅芬」), so attributing 「本屆議員」 to 高雄市議會 as an institutional record is directly defensible.\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆議員」 appears literally in the page title, breadcrumb and section navigation, so the wording is carried by the source. The page's DC.Date/DC.Coverage metadata (2019-02-27) is stale template metadata that conflicts with the in-page content (第4屆第8次定期會, 115-10-12), so it should not be treated as a publication date; the current-term claim rests on the literal 「本屆」 labelling rather than on a dated assertion, hence no date requirement.\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2187\",\"evidenceId\":\"enrich-evidence-0012\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2187.html — 頁面標題與麵包屑導覽（議員個人頁）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-李雅芬 _ 網頁功能 列印內容 李雅芬 性 別： 女 所屬政黨： 中國國民黨\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2187\",\"evidenceId\":\"enrich-evidence-0012-title\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2187.html — <title> / og:title\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-李雅芬\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字僅主張李雅芬為「本屆議員」，而來源位元組在 <title>、og:title 及「首頁 本會議員 本屆議員 本屆議員-李雅芬」導覽路徑中逐字出現「本屆議員」，並以同名個人頁呈現其性別、政黨、聯絡資訊，身分確認無誤。修正前所加之「第四選舉區」在保留位元組中查無對應文字，修正後刪除該項屬正確收斂；本審查僅就修正後文字判斷，其單一主張已獲直接支持。\",\"materialConcern\":null,\"limitations\":[\"保留視窗未出現「第四選舉區」或選區編號，故不得再以本來源支持選區主張。\",\"頁面 meta DC.Date/DC.Coverage 為 2019-02-27（第3屆時期），與內文第4屆議事資料不一致，屬模板殘留，不可作為發布日期。\",\"「本屆」之判斷依賴頁面所屬屆次標示，未見明示屆次數字（如「第4屆」）與該頁標題直接綁定。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0012",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "Supported: the retained bytes are an official kcc.gov.tw member-profile page (title tag and og:title read 「高雄市議會全球網-中文網-本屆議員-李雅芬」), so attributing 「本屆議員」 to 高雄市議會 as an institutional record is directly defensible.",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆議員」 appears literally in the page title, breadcrumb and section navigation, so the wording is carried by the source. The page's DC.Date/DC.Coverage metadata (2019-02-27) is stale template metadata that conflicts with the in-page content (第4屆第8次定期會, 115-10-12), so it should not be treated as a publication date; the current-term claim rests on the literal 「本屆」 labelling rather than on a dated assertion, hence no date requirement."
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2187",
+            "evidenceId": "enrich-evidence-0012",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html — 頁面標題與麵包屑導覽（議員個人頁）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-李雅芬 _ 網頁功能 列印內容 李雅芬 性 別： 女 所屬政黨： 中國國民黨",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2187",
+            "evidenceId": "enrich-evidence-0012-title",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html — <title> / og:title",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李雅芬",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字僅主張李雅芬為「本屆議員」，而來源位元組在 <title>、og:title 及「首頁 本會議員 本屆議員 本屆議員-李雅芬」導覽路徑中逐字出現「本屆議員」，並以同名個人頁呈現其性別、政黨、聯絡資訊，身分確認無誤。修正前所加之「第四選舉區」在保留位元組中查無對應文字，修正後刪除該項屬正確收斂；本審查僅就修正後文字判斷，其單一主張已獲直接支持。",
+        "materialConcern": null,
+        "limitations": [
+          "保留視窗未出現「第四選舉區」或選區編號，故不得再以本來源支持選區主張。",
+          "頁面 meta DC.Date/DC.Coverage 為 2019-02-27（第3屆時期），與內文第4屆議事資料不一致，屬模板殘留，不可作為發布日期。",
+          "「本屆」之判斷依賴頁面所屬屆次標示，未見明示屆次數字（如「第4屆」）與該頁標題直接綁定。"
+        ]
+      },
+      "outputSha256": "cd431d71144ba0f8eb93d48bda011286f786cfd5fe68dbd05f52251bc05a6e6f",
+      "usage": {
+        "inputTokens": 4187,
+        "outputTokens": 1296,
+        "totalTokens": 5483,
+        "costUsd": 0.00140565
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0024",
+      "claimId": "enrich-claim-0024",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0024",
+      "packetSha256": "b1bdeaa456b385d12ba70fe3d81807ceb31bfdbbbd96bba091c8cfc9fef318b4",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0024-established-verifier.txt",
+      "promptSha256": "8a69ad702dd30deecfa530b288e7455aa3814e93d85b46ca40e5041688ad46d2",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:29.678Z",
+      "finishedAt": "2026-11-07T14:46:01.594Z",
+      "durationMs": 91914,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0024\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為高雄市議會官方網站（kcc.gov.tw）之議員個人頁，屬議會自身維運之 institutional record；頁面標題「高雄市議會全球網-中文網-本屆議員-白喬茵」、meta og:title「本屆議員-白喬茵」及麵包屑「首頁 本會議員 本屆議員 本屆議員-白喬茵」皆為議會機構自述，將「本屆議員」歸因為 institutional-record 恰當。\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」本身即含相對時點意涵，屬時間性措辭；保留位元組中該頁以「本屆議員」為欄目並自述所屬屆次（如「第4屆第8次定期會」「115-10-14」等），可支持擷取時點（2026-11-06）之「本屆」指涉。惟「本屆」未在文字中綁定具體屆次編號，若日後換屆，單獨使用「本屆議員」將失準，建議維運時併記屆次與擷取日期。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2181\",\"evidenceId\":\"enrich-evidence-0024\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2181.html（頁面標題與麵包屑導覽）\",\"excerpt\":\"::: 首頁 本會議員 本屆議員 本屆議員-白喬茵 _ 網頁功能 列印內容 白喬茵 性 別： 女 所屬政黨： 中國國民黨 聯絡電話： 3506530\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2181\",\"evidenceId\":\"enrich-evidence-0024-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2181.html（HTML <title> 與 og:title）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-白喬茵\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字僅主張「本屆議員」此一身分／職稱，未再主張選舉區。來源純文字與 HTML 兩處均逐字出現「本屆議員」，且該頁確為白喬茵個人頁（頁內列性別、政黨、聯絡電話、學經歷），故「白喬茵為高雄市議會本屆議員」直接由保留位元組支持。原修正前文字所加之「第四選舉區」在來源中查無對應字樣，移除該部分係收斂而非放寬，符合來源證據強度。\",\"materialConcern\":null,\"limitations\":[\"來源為欄目導覽字樣「本屆議員」，並非明白表述「當選屆次＝第4屆」之正式文字，屆次對應需另以議會屆次資料佐證。\",\"保留位元組未提供發布或更新日期，時效性僅能以擷取日期（2026-11-06）與頁內活動日期推估。\",\"頁面內容含大量新聞標題列表（如總質詢摘要），屬動態列表，不影響本 claim 之核心主張，但不宜由此頁推論其他職務或政見內容。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0024",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為高雄市議會官方網站（kcc.gov.tw）之議員個人頁，屬議會自身維運之 institutional record；頁面標題「高雄市議會全球網-中文網-本屆議員-白喬茵」、meta og:title「本屆議員-白喬茵」及麵包屑「首頁 本會議員 本屆議員 本屆議員-白喬茵」皆為議會機構自述，將「本屆議員」歸因為 institutional-record 恰當。",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」本身即含相對時點意涵，屬時間性措辭；保留位元組中該頁以「本屆議員」為欄目並自述所屬屆次（如「第4屆第8次定期會」「115-10-14」等），可支持擷取時點（2026-11-06）之「本屆」指涉。惟「本屆」未在文字中綁定具體屆次編號，若日後換屆，單獨使用「本屆議員」將失準，建議維運時併記屆次與擷取日期。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2181",
+            "evidenceId": "enrich-evidence-0024",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2181.html（頁面標題與麵包屑導覽）",
+            "excerpt": "::: 首頁 本會議員 本屆議員 本屆議員-白喬茵 _ 網頁功能 列印內容 白喬茵 性 別： 女 所屬政黨： 中國國民黨 聯絡電話： 3506530",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2181",
+            "evidenceId": "enrich-evidence-0024-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2181.html（HTML <title> 與 og:title）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-白喬茵",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字僅主張「本屆議員」此一身分／職稱，未再主張選舉區。來源純文字與 HTML 兩處均逐字出現「本屆議員」，且該頁確為白喬茵個人頁（頁內列性別、政黨、聯絡電話、學經歷），故「白喬茵為高雄市議會本屆議員」直接由保留位元組支持。原修正前文字所加之「第四選舉區」在來源中查無對應字樣，移除該部分係收斂而非放寬，符合來源證據強度。",
+        "materialConcern": null,
+        "limitations": [
+          "來源為欄目導覽字樣「本屆議員」，並非明白表述「當選屆次＝第4屆」之正式文字，屆次對應需另以議會屆次資料佐證。",
+          "保留位元組未提供發布或更新日期，時效性僅能以擷取日期（2026-11-06）與頁內活動日期推估。",
+          "頁面內容含大量新聞標題列表（如總質詢摘要），屬動態列表，不影響本 claim 之核心主張，但不宜由此頁推論其他職務或政見內容。"
+        ]
+      },
+      "outputSha256": "500706991a039ce9ce438ab479c434ef26fc378dd16f1cc0225fc66041e540b9",
+      "usage": {
+        "inputTokens": 4237,
+        "outputTokens": 1549,
+        "totalTokens": 5786,
+        "costUsd": 0.0015649499999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0040",
+      "claimId": "enrich-claim-0040",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0040",
+      "packetSha256": "594b27f600d3e4b9054be24febcf303a375fc6bd62f6d571696b3524f244028f",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0040-established-verifier.txt",
+      "promptSha256": "8e5be0343266773b731f40ebe16a68987a3a941ffdfd61b8390510960e1a0613",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:40.071Z",
+      "finishedAt": "2026-11-07T14:44:46.983Z",
+      "durationMs": 6910,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0040\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"Supported. The retained bytes come from the official 高雄市議會 website (kcc.gov.tw), and the page is the institution's own councillor profile (member ID 2186). Its breadcrumb and title place 李眉蓁 squarely in the official 本屆議員 (current-term councillors) listing, so attribution to the institutional record is correct.\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"The corrected wording '本屆議員' is a relative, term-based descriptor rather than a dated assertion, so no publication date is required. The page self-identifies as 本屆議員 and its 經歷 lists 高雄市第1、2、3屆市議員, with current-term (第4屆) activity entries such as '第4屆第8次定期會' and dates rendered as 115年, which is consistent with a current-term reading at capture time.\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2186\",\"evidenceId\":\"enrich-evidence-0040-r1\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2186.html（頁面標題與麵包屑導覽）\",\"excerpt\":\"::: 首頁 本會議員 本屆議員 本屆議員-李眉蓁 _ 網頁功能 列印內容 李眉蓁 性 別： 女\",\"relationship\":\"supports\"}],\"rationale\":\"The corrected content has been reduced to a single assertion: that 李眉蓁 is listed as a 本屆議員 (current-term councillor) of 高雄市議會. Every element of that wording appears verbatim in the retained bytes: the document <title> is '高雄市議會全球網-中文網-本屆議員-李眉蓁', the breadcrumb path is '首頁 本會議員 本屆議員 本屆議員-李眉蓁', and the profile block immediately follows with 李眉蓁's own details (性別、所屬政黨：中國國民黨、聯絡電話、通訊地址 813 左營區…). The nav menu also carries the parallel current-term sections 本屆議員聯絡資訊 and 本屆議員服務處地址及電話傳真, confirming '本屆議員' is the institution's own label for the current-term roster rather than an inference. The page's 經歷 entry '高雄市第1、2、3 屆市議員' is consistent with — not contradictory to — a current-term listing. The corrected text drops the unsupported parenthetical '（第四選舉區）', and no electoral-district designation appears anywhere in the retained text, so the corrected form is the strongest defensible reading. This is a minimal, literal claim and the bar is met without relaxation.\",\"materialConcern\":null,\"limitations\":[\"The page carries no explicit publication or update date in the retained text; the only date-like metadata is DC.Date/DC.Coverage of 2019-02-27 in the HTML head, which likely reflects original template creation rather than content currency.\",\"'本屆' is a relative term whose referent depends on capture time; the retained text does not state the council term number for the current listing explicitly, though 第4屆 is implied by the 第4屆第8次定期會 and 115年 activity entries.\",\"The retained text does not contain any electoral-district (選舉區) designation, which is why removal of '（第四選舉區）' in the corrected wording is appropriate.\"]}",
+      "result": {
+        "claimId": "enrich-claim-0040",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "Supported. The retained bytes come from the official 高雄市議會 website (kcc.gov.tw), and the page is the institution's own councillor profile (member ID 2186). Its breadcrumb and title place 李眉蓁 squarely in the official 本屆議員 (current-term councillors) listing, so attribution to the institutional record is correct.",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "The corrected wording '本屆議員' is a relative, term-based descriptor rather than a dated assertion, so no publication date is required. The page self-identifies as 本屆議員 and its 經歷 lists 高雄市第1、2、3屆市議員, with current-term (第4屆) activity entries such as '第4屆第8次定期會' and dates rendered as 115年, which is consistent with a current-term reading at capture time."
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2186",
+            "evidenceId": "enrich-evidence-0040-r1",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2186.html（頁面標題與麵包屑導覽）",
+            "excerpt": "::: 首頁 本會議員 本屆議員 本屆議員-李眉蓁 _ 網頁功能 列印內容 李眉蓁 性 別： 女",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "The corrected content has been reduced to a single assertion: that 李眉蓁 is listed as a 本屆議員 (current-term councillor) of 高雄市議會. Every element of that wording appears verbatim in the retained bytes: the document <title> is '高雄市議會全球網-中文網-本屆議員-李眉蓁', the breadcrumb path is '首頁 本會議員 本屆議員 本屆議員-李眉蓁', and the profile block immediately follows with 李眉蓁's own details (性別、所屬政黨：中國國民黨、聯絡電話、通訊地址 813 左營區…). The nav menu also carries the parallel current-term sections 本屆議員聯絡資訊 and 本屆議員服務處地址及電話傳真, confirming '本屆議員' is the institution's own label for the current-term roster rather than an inference. The page's 經歷 entry '高雄市第1、2、3 屆市議員' is consistent with — not contradictory to — a current-term listing. The corrected text drops the unsupported parenthetical '（第四選舉區）', and no electoral-district designation appears anywhere in the retained text, so the corrected form is the strongest defensible reading. This is a minimal, literal claim and the bar is met without relaxation.",
+        "materialConcern": null,
+        "limitations": [
+          "The page carries no explicit publication or update date in the retained text; the only date-like metadata is DC.Date/DC.Coverage of 2019-02-27 in the HTML head, which likely reflects original template creation rather than content currency.",
+          "'本屆' is a relative term whose referent depends on capture time; the retained text does not state the council term number for the current listing explicitly, though 第4屆 is implied by the 第4屆第8次定期會 and 115年 activity entries.",
+          "The retained text does not contain any electoral-district (選舉區) designation, which is why removal of '（第四選舉區）' in the corrected wording is appropriate."
+        ]
+      },
+      "outputSha256": "b3487cf5fb695ca4fae3406696692304ce8c25fc769cc34abf1714151069f2fa",
+      "usage": {
+        "inputTokens": 4207,
+        "outputTokens": 1307,
+        "totalTokens": 5514,
+        "costUsd": 0.0014152499999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0049",
+      "claimId": "enrich-claim-0049",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0049",
+      "packetSha256": "30fa3a1b350e5f34d695b7b58a02fdad202026d80f1b3f320e3dd60eb98fbd0c",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0049-established-verifier.txt",
+      "promptSha256": "539113f69af87a6e4a2a63fda440685884333290cd98362fc97fe07113334de7",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:44:57.944Z",
+      "finishedAt": "2026-11-07T14:45:13.887Z",
+      "durationMs": 15942,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0049\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"Supported：保留位元組是 kcc.gov.tw 上的官方議員個人頁（MemberInfo_New.aspx?…&msn=2188），頁面中的麵包屑標示為「首頁 本會議員 本屆議員 本屆議員-李雅慧」；因此，「本屆議員」這項職銜可歸因於高雄市議會本身作為機構紀錄，而非第三方轉述。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆」是頁面自身使用的相對用語（頁面標題與麵包屑為「本屆議員-李雅慧」），並無明示日期，故不需要另外補充日期。頁面內容包含 115 年（2026）活動與第4屆相關条目，與 2026-11-06 快照時點一致；但 <meta name=\\\"DC.Date\\\"> 為 2019-02-27，屬過期後設資料，不可用來否定現行任期表述。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2188\",\"evidenceId\":\"enrich-evidence-0049\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2188.html（議員個人頁標題與麵包屑）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-李雅慧\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2188\",\"evidenceId\":\"enrich-evidence-0049-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2188.html（頁面主體個人資料區）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-李雅慧 _ 網頁功能 列印內容 李雅慧 性 別： 女 所屬政黨： 民主進步黨\",\"relationship\":\"supports\"}],\"rationale\":\"修正後內容僅主張李雅慧為「本屆議員」，此語詞逐字出現在保留位元組的頁面標題及本會議員分類麵包屑中，且該頁主體為李雅慧個人資料（性別女、民主進步黨、聯絡電話與左營區地址），故「本屆議員」可直接由來源支持。修正同時移除了原本無從佐證的「第四選舉區」，屬收窄而非放寬，未見誇大。\",\"materialConcern\":null,\"limitations\":[\"「本屆」所指任期須以快照日期 2026-11-06 對應解讀；來源未在該頁文字中明寫「第4屆」與李雅慧的對應關係（僅見全站性第4屆成立大會等字樣）。\",\"頁面 <meta name=\\\"DC.Date\\\">／DC.Coverage 為 2019-02-27，屬過期後設資料，不能作為任期時間依據。\",\"來源未提供選舉區資訊，修正後文字亦未再主張選區。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0049",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "Supported：保留位元組是 kcc.gov.tw 上的官方議員個人頁（MemberInfo_New.aspx?…&msn=2188），頁面中的麵包屑標示為「首頁 本會議員 本屆議員 本屆議員-李雅慧」；因此，「本屆議員」這項職銜可歸因於高雄市議會本身作為機構紀錄，而非第三方轉述。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆」是頁面自身使用的相對用語（頁面標題與麵包屑為「本屆議員-李雅慧」），並無明示日期，故不需要另外補充日期。頁面內容包含 115 年（2026）活動與第4屆相關条目，與 2026-11-06 快照時點一致；但 <meta name=\"DC.Date\"> 為 2019-02-27，屬過期後設資料，不可用來否定現行任期表述。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2188",
+            "evidenceId": "enrich-evidence-0049",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2188.html（議員個人頁標題與麵包屑）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李雅慧",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2188",
+            "evidenceId": "enrich-evidence-0049-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2188.html（頁面主體個人資料區）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-李雅慧 _ 網頁功能 列印內容 李雅慧 性 別： 女 所屬政黨： 民主進步黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後內容僅主張李雅慧為「本屆議員」，此語詞逐字出現在保留位元組的頁面標題及本會議員分類麵包屑中，且該頁主體為李雅慧個人資料（性別女、民主進步黨、聯絡電話與左營區地址），故「本屆議員」可直接由來源支持。修正同時移除了原本無從佐證的「第四選舉區」，屬收窄而非放寬，未見誇大。",
+        "materialConcern": null,
+        "limitations": [
+          "「本屆」所指任期須以快照日期 2026-11-06 對應解讀；來源未在該頁文字中明寫「第4屆」與李雅慧的對應關係（僅見全站性第4屆成立大會等字樣）。",
+          "頁面 <meta name=\"DC.Date\">／DC.Coverage 為 2019-02-27，屬過期後設資料，不能作為任期時間依據。",
+          "來源未提供選舉區資訊，修正後文字亦未再主張選區。"
+        ]
+      },
+      "outputSha256": "91d50a6676d7a2fbaddb5ae263b86f090694986fc3e5ebf7913b2b1e93007396",
+      "usage": {
+        "inputTokens": 4253,
+        "outputTokens": 1618,
+        "totalTokens": 5871,
+        "costUsd": 0.00160875
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0059",
+      "claimId": "enrich-claim-0059",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0059",
+      "packetSha256": "2196461efe73555f6f16f4a832dc8a9a998386e338ee52637666b1bc19b5e8f4",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0059-established-verifier.txt",
+      "promptSha256": "94a3979966bfd16afd67f52eeea651b72491a03d1c55a64f774651c1427adcf2",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:45:13.888Z",
+      "finishedAt": "2026-11-07T14:45:21.345Z",
+      "durationMs": 7454,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0059\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為高雄市議會官方網站（www.kcc.gov.tw）議員個人頁，頁面標題與麵包屑皆為「本屆議員-陳玫娟」，姓名、性別、政黨、聯絡電話等欄位亦指向陳玫娟本人，屬 institution-record 性質，歸因與來源依賴相符。\",\"temporalAssessment\":{\"requiresDate\":true,\"sourceSupportsTemporalWording\":true,\"assessment\":\"「本屆議員」本身帶有屆期指示性（相對時間主張），故需一併記錄擷取時點。來源文字在同一頁面反覆以「本屆議員」定位該議員（導覽列、麵包屑、頁面標題），且內文出現「第4屆第8次定期會」「願景相承，本會定12月25日舉行第4屆成立大會」等第4屆議事與活動訊息，可支持該頁所指「本屆」即第4屆；惟頁面 meta（DC.Date 2019-02-27）為舊版範本日期，不宜作為屆期時點依據。時效狀態 current 與來源呈現一致。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2189\",\"evidenceId\":\"enrich-evidence-0059\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2189.html（<title> 與頁面標題／麵包屑）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-陳玫娟\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2189\",\"evidenceId\":\"enrich-evidence-0059-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2189.html（導覽與麵包屑區塊）\",\"excerpt\":\"本會議員 本屆議員 本屆議員聯絡資訊\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字「本屆議員」逐字見於保留位元組：HTML <title> 為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，純文字視窗開頭亦同，導覽列與麵包屑重複出現「本屆議員」並以「本屆議員-陳玫娟」標示該頁，足以直接支持「陳玫娟為本屆（第4屆）議員」之 current-position 主張。修正後刪去「（第四選舉區）」屬合理收斂，因來源文字未直接標示選舉區；剩餘文字每一項主張均可於來源找到對應，故判定 supported。\",\"materialConcern\":null,\"limitations\":[\"來源頁未標示屆次編號與選舉區，屆次僅能由內文「第4屆」相關議事與活動訊息間接推得。\",\"頁面 meta DC.Date/DC.Coverage 為 2019-02-27，屬網站範本殘留，不足以作為「本屆」時點之獨立證明；建議另記錄擷取日期。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0059",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為高雄市議會官方網站（www.kcc.gov.tw）議員個人頁，頁面標題與麵包屑皆為「本屆議員-陳玫娟」，姓名、性別、政黨、聯絡電話等欄位亦指向陳玫娟本人，屬 institution-record 性質，歸因與來源依賴相符。",
+        "temporalAssessment": {
+          "requiresDate": true,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "「本屆議員」本身帶有屆期指示性（相對時間主張），故需一併記錄擷取時點。來源文字在同一頁面反覆以「本屆議員」定位該議員（導覽列、麵包屑、頁面標題），且內文出現「第4屆第8次定期會」「願景相承，本會定12月25日舉行第4屆成立大會」等第4屆議事與活動訊息，可支持該頁所指「本屆」即第4屆；惟頁面 meta（DC.Date 2019-02-27）為舊版範本日期，不宜作為屆期時點依據。時效狀態 current 與來源呈現一致。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2189",
+            "evidenceId": "enrich-evidence-0059",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2189.html（<title> 與頁面標題／麵包屑）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-陳玫娟",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2189",
+            "evidenceId": "enrich-evidence-0059-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2189.html（導覽與麵包屑區塊）",
+            "excerpt": "本會議員 本屆議員 本屆議員聯絡資訊",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字「本屆議員」逐字見於保留位元組：HTML <title> 為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，純文字視窗開頭亦同，導覽列與麵包屑重複出現「本屆議員」並以「本屆議員-陳玫娟」標示該頁，足以直接支持「陳玫娟為本屆（第4屆）議員」之 current-position 主張。修正後刪去「（第四選舉區）」屬合理收斂，因來源文字未直接標示選舉區；剩餘文字每一項主張均可於來源找到對應，故判定 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "來源頁未標示屆次編號與選舉區，屆次僅能由內文「第4屆」相關議事與活動訊息間接推得。",
+          "頁面 meta DC.Date/DC.Coverage 為 2019-02-27，屬網站範本殘留，不足以作為「本屆」時點之獨立證明；建議另記錄擷取日期。"
+        ]
+      },
+      "outputSha256": "6ea4cc28d637509ff4d95aff654d3886ddb599819087844a2be6fd406e2d7ffe",
+      "usage": {
+        "inputTokens": 4206,
+        "outputTokens": 1372,
+        "totalTokens": 5578,
+        "costUsd": 0.0014540999999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0077",
+      "claimId": "enrich-claim-0077",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0077",
+      "packetSha256": "2d0b9ca1b107d455434c9c53acf825ecfad0fdcf5bbbc92eebfc0f49cea13177",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0077-established-verifier.txt",
+      "promptSha256": "77c7f52df843041b133a4f1788ced11fbfcc3d573ee9a1722b1711ebfae03a0c",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:01.595Z",
+      "finishedAt": "2026-11-07T14:47:26.798Z",
+      "durationMs": 85202,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0077\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為中央社（CNA）即時新聞頁面本身；修正後文字逐字等於該頁 <title>／og:title 標題（僅刪去「| 地方 | 中央社 CNA」站台後綴），屬新聞報導自身標題的引用，news-report 歸因恰當，無轉引或他站混淆情形。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含日期或期間主張，僅敘述「卸任青年局長」之既有事實，故 requiresDate 為 false。惟事件時點可由保留位元組佐證：article:published_time 為 2025-02-17T13:12:00+08:00、article:modified_time 為 2025-02-17T13:56:00+08:00，meta description 亦記「今天卸任」，與 claim 標示之發布日期 2025-02-17 及 historical 時效狀態一致。\"},\"evidence\":[{\"sourceId\":\"scope-news-zhang-yili-cna\",\"evidenceId\":\"enrich-evidence-0077\",\"location\":\"data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（純文字視窗開頭，即頁面 <title>／og:title／twitter:title）\",\"excerpt\":\"張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-zhang-yili-cna\",\"evidenceId\":\"enrich-evidence-0077-b\",\"location\":\"data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（HTML meta name=\\\"description\\\" 及 og:description）\",\"excerpt\":\"高雄市青年局長張以理今天卸任，將投入市議員參選。市長陳其邁今天表示，張以理在青年局任內可說是點子王，感謝其努力；年輕人在這個城市有很多發揮空間是好事。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字「張以理卸任青年局長 陳其邁肯定任內努力」與保留位元組中的頁面標題逐字相同（純文字視窗第一行即為該字串，僅多出站台分類後綴「| 地方 | 中央社 CNA」），且 HTML 的 <title>、og:title、twitter:title 三處一致。標題所含兩項主張均可回溯：其一「張以理卸任青年局長」由標題與 meta description「高雄市青年局長張以理今天卸任，將投入市議員參選」直接支持（並可確認任職組織為高雄市青年局）；其二「陳其邁肯定任內努力」由 meta description「市長陳其邁今天表示…感謝其努力」直接支持。姓名與職務對應一致，無他機關或同名人物混用，故 identityAssessment 為 confirmed；無任何與來源牴觸之處，故 verdict 為 supported。\",\"materialConcern\":null,\"limitations\":[\"純文字視窗僅保留標題列與導覽／即時新聞列表，未見報導正文段落；「點子王」「將投入市議員參選」等細節僅存於 HTML meta description 節錄，正文全文未完整保留。\",\"修正後文字為標題層級資訊，未含人事生效日期與後續動向，若下游用於敘述完整職涯歷程仍須另尋來源。\",\"此 claim 為 historical 職務紀錄，僅反映 2025-02-17 當時狀態，不代表候選人現職。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0077",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為中央社（CNA）即時新聞頁面本身；修正後文字逐字等於該頁 <title>／og:title 標題（僅刪去「| 地方 | 中央社 CNA」站台後綴），屬新聞報導自身標題的引用，news-report 歸因恰當，無轉引或他站混淆情形。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含日期或期間主張，僅敘述「卸任青年局長」之既有事實，故 requiresDate 為 false。惟事件時點可由保留位元組佐證：article:published_time 為 2025-02-17T13:12:00+08:00、article:modified_time 為 2025-02-17T13:56:00+08:00，meta description 亦記「今天卸任」，與 claim 標示之發布日期 2025-02-17 及 historical 時效狀態一致。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-zhang-yili-cna",
+            "evidenceId": "enrich-evidence-0077",
+            "location": "data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（純文字視窗開頭，即頁面 <title>／og:title／twitter:title）",
+            "excerpt": "張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-zhang-yili-cna",
+            "evidenceId": "enrich-evidence-0077-b",
+            "location": "data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（HTML meta name=\"description\" 及 og:description）",
+            "excerpt": "高雄市青年局長張以理今天卸任，將投入市議員參選。市長陳其邁今天表示，張以理在青年局任內可說是點子王，感謝其努力；年輕人在這個城市有很多發揮空間是好事。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字「張以理卸任青年局長 陳其邁肯定任內努力」與保留位元組中的頁面標題逐字相同（純文字視窗第一行即為該字串，僅多出站台分類後綴「| 地方 | 中央社 CNA」），且 HTML 的 <title>、og:title、twitter:title 三處一致。標題所含兩項主張均可回溯：其一「張以理卸任青年局長」由標題與 meta description「高雄市青年局長張以理今天卸任，將投入市議員參選」直接支持（並可確認任職組織為高雄市青年局）；其二「陳其邁肯定任內努力」由 meta description「市長陳其邁今天表示…感謝其努力」直接支持。姓名與職務對應一致，無他機關或同名人物混用，故 identityAssessment 為 confirmed；無任何與來源牴觸之處，故 verdict 為 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "純文字視窗僅保留標題列與導覽／即時新聞列表，未見報導正文段落；「點子王」「將投入市議員參選」等細節僅存於 HTML meta description 節錄，正文全文未完整保留。",
+          "修正後文字為標題層級資訊，未含人事生效日期與後續動向，若下游用於敘述完整職涯歷程仍須另尋來源。",
+          "此 claim 為 historical 職務紀錄，僅反映 2025-02-17 當時狀態，不代表候選人現職。"
+        ]
+      },
+      "outputSha256": "a7f00438ab812aea7bdc496c5a5d0525003dfccd19a91efd2c3948786c87188d",
+      "usage": {
+        "inputTokens": 4253,
+        "outputTokens": 1575,
+        "totalTokens": 5828,
+        "costUsd": 0.00158295
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0088",
+      "claimId": "enrich-claim-0088",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0088",
+      "packetSha256": "4ea044803c8274e42a67593d43c70e9f939625952867a5830f475c2de80ed03c",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0088-established-verifier.txt",
+      "promptSha256": "2b9481430caeffa3e603019a14b8a7e474c014228e8999e8e48ad353730d707c",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:26.041Z",
+      "finishedAt": "2026-11-07T14:46:33.792Z",
+      "durationMs": 7748,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0088\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為高雄市議會官網（kcc.gov.tw）議員個人頁，頁面標題即以「本屆議員-陳麗珍」呈現，屬議會自身發布之機構紀錄；發布主體與 claim 所稱「高雄市議會」一致。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字「本屆議員」僅描述頁面所屬之現任屆次分類，未含具體日期、任期起訖或選舉屆次數字等時間主張，故不需發布日期；來源頁面本身位於「本會議員／本屆議員」現行分類下，並以現任職稱方式呈現陳麗珍，與「current」之時效標記一致。\"},\"evidence\":[{\"sourceId\":\"scope-kcc-profile-2184\",\"evidenceId\":\"enrich-evidence-0088\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2184.html（頁面 title 與主要內容區標題）\",\"excerpt\":\"高雄市議會全球網-中文網-本屆議員-陳麗珍 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-kcc-profile-2184\",\"evidenceId\":\"enrich-evidence-0088-b\",\"location\":\"data/biographies/raw/2026-11-06/kcc/profiles/2184.html（麵包屑與個人資料區開頭）\",\"excerpt\":\"首頁 本會議員 本屆議員 本屆議員-陳麗珍 _ 網頁功能 列印內容 陳麗珍 性 別： 女 所屬政黨： 中國國民黨\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字僅主張陳麗珍屬高雄市議會「本屆議員」，此點在保留位元組中有多重直接證據：（1）HTML <title> 與 og:title 為「本屆議員-陳麗珍」；（2）頁面麵包屑為「首頁 本會議員 本屆議員 本屆議員-陳麗珍」；（3）個人資料區以現任議員格式列出陳麗珍之性別、政黨、聯絡電話與通訊地址。修正前之「第四選舉區」在來源文字中查無對應字樣（全文未出現「第四選舉區」或選區編號），故修正後刪除該項屬正確收斂；剩餘主張「本屆議員」逐字可證，判定 supported。\",\"materialConcern\":null,\"limitations\":[\"來源頁面未標示陳麗珍所屬選舉區（第四選舉區等字樣不存在於保留位元組），亦未標示本屆屆次數字，故任何選區或屆次編號之主張均不可由本來源支持。\",\"同一頁面「經歷」欄載有「高雄市第一、二、三屆議員」，屬過往屆次經歷陳述，與「本屆議員」之現任定位並存，解讀時應以頁面分類與標題為現任依據。\",\"來源未提供發布日期；DC.Date/DC.Coverage 顯示 2019-02-27 為頁面模板時間，不宜作為本筆 claim 的時效依據。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0088",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為高雄市議會官網（kcc.gov.tw）議員個人頁，頁面標題即以「本屆議員-陳麗珍」呈現，屬議會自身發布之機構紀錄；發布主體與 claim 所稱「高雄市議會」一致。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字「本屆議員」僅描述頁面所屬之現任屆次分類，未含具體日期、任期起訖或選舉屆次數字等時間主張，故不需發布日期；來源頁面本身位於「本會議員／本屆議員」現行分類下，並以現任職稱方式呈現陳麗珍，與「current」之時效標記一致。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-kcc-profile-2184",
+            "evidenceId": "enrich-evidence-0088",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2184.html（頁面 title 與主要內容區標題）",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-陳麗珍 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-kcc-profile-2184",
+            "evidenceId": "enrich-evidence-0088-b",
+            "location": "data/biographies/raw/2026-11-06/kcc/profiles/2184.html（麵包屑與個人資料區開頭）",
+            "excerpt": "首頁 本會議員 本屆議員 本屆議員-陳麗珍 _ 網頁功能 列印內容 陳麗珍 性 別： 女 所屬政黨： 中國國民黨",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字僅主張陳麗珍屬高雄市議會「本屆議員」，此點在保留位元組中有多重直接證據：（1）HTML <title> 與 og:title 為「本屆議員-陳麗珍」；（2）頁面麵包屑為「首頁 本會議員 本屆議員 本屆議員-陳麗珍」；（3）個人資料區以現任議員格式列出陳麗珍之性別、政黨、聯絡電話與通訊地址。修正前之「第四選舉區」在來源文字中查無對應字樣（全文未出現「第四選舉區」或選區編號），故修正後刪除該項屬正確收斂；剩餘主張「本屆議員」逐字可證，判定 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "來源頁面未標示陳麗珍所屬選舉區（第四選舉區等字樣不存在於保留位元組），亦未標示本屆屆次數字，故任何選區或屆次編號之主張均不可由本來源支持。",
+          "同一頁面「經歷」欄載有「高雄市第一、二、三屆議員」，屬過往屆次經歷陳述，與「本屆議員」之現任定位並存，解讀時應以頁面分類與標題為現任依據。",
+          "來源未提供發布日期；DC.Date/DC.Coverage 顯示 2019-02-27 為頁面模板時間，不宜作為本筆 claim 的時效依據。"
+        ]
+      },
+      "outputSha256": "398a39ef29722a923e39ce09bbeaeddafb42cfa3459441ad8af6d89df3c4bbca",
+      "usage": {
+        "inputTokens": 3966,
+        "outputTokens": 1380,
+        "totalTokens": 5628,
+        "costUsd": 0.001423746
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0103",
+      "claimId": "enrich-claim-0103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0103",
+      "packetSha256": "3fc9a11bec7e75f689c6045f8cd00fb516c04043a309a76ebf11fa7a26dbcec5",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0103-established-verifier.txt",
+      "promptSha256": "d0d44ba253f4f9b56dbbffcfdddcc577e26c93c27ea2238f15aa8ef71b785b21",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:43.721Z",
+      "finishedAt": "2026-11-07T14:47:01.785Z",
+      "durationMs": 18063,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0103\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為聯合新聞網（udn）報導，記者徐白櫻高雄即時報導，署名與 OG 標籤一致；修正後文字逐字等同該報導標題，歸因為 news-report 適當。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含明確時間主張（僅有『轉投入…參選到底』之事件描述），來源內文已載明『2026-06-09 12:30』，與 claim 發布日期 2026-06-09 相符。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0103\",\"location\":\"內文標題列（正文區塊，緊接導言之前）\",\"excerpt\":\"大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0103-b\",\"location\":\"第三段內文（說明其與謝長廷之職務關係）\",\"excerpt\":\"薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任，希望以累積的經驗與歷練，為地方發展注入新的動能。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字與保留位元組中的報導標題逐字相同（<title>、og:title 及正文標題列皆出現同一字串），因此『大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底』整體為來源可直接支持之文字。其中『謝長廷前幕僚』之身分主張亦由內文『曾擔任前市長謝長廷機要秘書』具體佐證，『轉投入「台灣前進陣線」』則由內文『今天接受「台灣前進陣線」提名，爭取高雄市左楠區市議員席次』佐證；人名、組織與事件三要素皆落在來源位元組內，無外推。\",\"materialConcern\":null,\"limitations\":[\"『大綠變小綠』屬新聞標題之評論式修辭，非中性職稱描述；此 claim 僅承載標題文字，未進一步陳述具體職務內容。\",\"作為 basic-biography／professional-experience 欄位使用時，標題本身不含正式職稱，職務細節須依賴內文（機要秘書、辦公室主任）；若僅擷取標題易使讀者誤以為其現職即為『謝長廷幕僚』。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0103",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為聯合新聞網（udn）報導，記者徐白櫻高雄即時報導，署名與 OG 標籤一致；修正後文字逐字等同該報導標題，歸因為 news-report 適當。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含明確時間主張（僅有『轉投入…參選到底』之事件描述），來源內文已載明『2026-06-09 12:30』，與 claim 發布日期 2026-06-09 相符。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0103",
+            "location": "內文標題列（正文區塊，緊接導言之前）",
+            "excerpt": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0103-b",
+            "location": "第三段內文（說明其與謝長廷之職務關係）",
+            "excerpt": "薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任，希望以累積的經驗與歷練，為地方發展注入新的動能。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字與保留位元組中的報導標題逐字相同（<title>、og:title 及正文標題列皆出現同一字串），因此『大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底』整體為來源可直接支持之文字。其中『謝長廷前幕僚』之身分主張亦由內文『曾擔任前市長謝長廷機要秘書』具體佐證，『轉投入「台灣前進陣線」』則由內文『今天接受「台灣前進陣線」提名，爭取高雄市左楠區市議員席次』佐證；人名、組織與事件三要素皆落在來源位元組內，無外推。",
+        "materialConcern": null,
+        "limitations": [
+          "『大綠變小綠』屬新聞標題之評論式修辭，非中性職稱描述；此 claim 僅承載標題文字，未進一步陳述具體職務內容。",
+          "作為 basic-biography／professional-experience 欄位使用時，標題本身不含正式職稱，職務細節須依賴內文（機要秘書、辦公室主任）；若僅擷取標題易使讀者誤以為其現職即為『謝長廷幕僚』。"
+        ]
+      },
+      "outputSha256": "f6bc515aa11b06e5f16eeb6926b8826eb468e38dd367bb08cce804fa5cbe7a72",
+      "usage": {
+        "inputTokens": 4507,
+        "outputTokens": 1349,
+        "totalTokens": 5856,
+        "costUsd": 0.00148545
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0104",
+      "claimId": "enrich-claim-0104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0104",
+      "packetSha256": "8c0bc8a4ed0c2c314b8c95828ae30083abaaf2cab58a894be8d12c5075ff057b",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0104-established-verifier.txt",
+      "promptSha256": "5ffe2d7525494c48da75ba6201e02fdea590f189644bb088c65189ea9276df9b",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:46:59.730Z",
+      "finishedAt": "2026-11-07T14:47:07.316Z",
+      "durationMs": 7583,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0104\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為自由時報記者葛祐豪之新聞報導，文中以「曾任前高雄市長謝長廷機要秘書的薛兆基指出……」直接引述薛兆基本人說法，claim 保留相同歸因（news-report），未將記者敘述誤植為候選人發言，亦未將引述擴張為本報立場。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字僅含「長期以來」此一概略時間副詞，未主張具體日期或任期區間，故不要求時效佐證；來源本身刊載日期為 2026/06/10 10:17，與 claim 標示之發布日期 2026-06-10 一致，時效狀態 historical 合理。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-ltn\",\"evidenceId\":\"enrich-evidence-0104\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot（內文段落，緊接「請繼續往下閱讀...」之後）\",\"excerpt\":\"曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字與保留來源位元組中的該段內文逐字相同，唯一差異為來源句末有句號、claim 省略句尾標點，不影響語意。逐項比對：①「曾任前高雄市長謝長廷機要秘書」—來源明載，屬 professional-experience 陳述；②「薛兆基指出」—來源明載發言主體；③藍綠對立與意識形態爭論之描述—逐字相符；④基層民眾關心交通、產業、年輕人、城市進步之四項列舉—逐字相符；⑤「人民需要的是解決問題的人，而不是製造對立的人」引號內文字—逐字相符。修正已移除原先誤植之首句「請繼續往下閱讀...」（該串實為網站導讀元件文字，非文章內容），使 claim 不再包含來源中不屬於敘事內容的片段，故可判定為 supported。\",\"materialConcern\":null,\"limitations\":[\"claim 為 source-dependent，僅以單一新聞來源之單段引述為據，未經候選人競選辦公室、政黨或第三方媒體交叉佐證。\",\"「曾任前高雄市長謝長廷機要秘書」一節係記者於報導中敘述，來源未提供任期起訖、職稱全銜或佐證文件，故僅能確認「報導如此記載」，不能確認職務細節之準確性。\",\"claim 類別為 professional-experience，惟內容主體為政治立場引述，工作經歷僅佔首句；此屬分類粒度問題，不影響文字本身之可支持性，惟若作為經歷欄位單獨呈現，讀者可能低估其為引述性言論。\",\"審查僅限本次提供之純文字視窗與 HTML 節錄，未驗證 snapshot 全文雜湊以外之內容，亦未檢查該報導後續是否更正或下架。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0104",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為自由時報記者葛祐豪之新聞報導，文中以「曾任前高雄市長謝長廷機要秘書的薛兆基指出……」直接引述薛兆基本人說法，claim 保留相同歸因（news-report），未將記者敘述誤植為候選人發言，亦未將引述擴張為本報立場。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字僅含「長期以來」此一概略時間副詞，未主張具體日期或任期區間，故不要求時效佐證；來源本身刊載日期為 2026/06/10 10:17，與 claim 標示之發布日期 2026-06-10 一致，時效狀態 historical 合理。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-ltn",
+            "evidenceId": "enrich-evidence-0104",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot（內文段落，緊接「請繼續往下閱讀...」之後）",
+            "excerpt": "曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字與保留來源位元組中的該段內文逐字相同，唯一差異為來源句末有句號、claim 省略句尾標點，不影響語意。逐項比對：①「曾任前高雄市長謝長廷機要秘書」—來源明載，屬 professional-experience 陳述；②「薛兆基指出」—來源明載發言主體；③藍綠對立與意識形態爭論之描述—逐字相符；④基層民眾關心交通、產業、年輕人、城市進步之四項列舉—逐字相符；⑤「人民需要的是解決問題的人，而不是製造對立的人」引號內文字—逐字相符。修正已移除原先誤植之首句「請繼續往下閱讀...」（該串實為網站導讀元件文字，非文章內容），使 claim 不再包含來源中不屬於敘事內容的片段，故可判定為 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "claim 為 source-dependent，僅以單一新聞來源之單段引述為據，未經候選人競選辦公室、政黨或第三方媒體交叉佐證。",
+          "「曾任前高雄市長謝長廷機要秘書」一節係記者於報導中敘述，來源未提供任期起訖、職稱全銜或佐證文件，故僅能確認「報導如此記載」，不能確認職務細節之準確性。",
+          "claim 類別為 professional-experience，惟內容主體為政治立場引述，工作經歷僅佔首句；此屬分類粒度問題，不影響文字本身之可支持性，惟若作為經歷欄位單獨呈現，讀者可能低估其為引述性言論。",
+          "審查僅限本次提供之純文字視窗與 HTML 節錄，未驗證 snapshot 全文雜湊以外之內容，亦未檢查該報導後續是否更正或下架。"
+        ]
+      },
+      "outputSha256": "c12fb7721167b26c5431913c741c53ce24e9930d14ce5341f7cd578ba4b8dbfc",
+      "usage": {
+        "inputTokens": 4515,
+        "outputTokens": 1362,
+        "totalTokens": 5877,
+        "costUsd": 0.00149445
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0108",
+      "claimId": "enrich-claim-0108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0108",
+      "packetSha256": "22ea4295ce5197c934dd62d043a1805c94a302326685162f0663f74201824754",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0108-established-verifier.txt",
+      "promptSha256": "e9f76d22fd559230e681f853b70145b9d0a778a99ceb3d9ebff6d52fa6624989",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:07.318Z",
+      "finishedAt": "2026-11-07T14:47:15.682Z",
+      "durationMs": 8362,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0108\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為聯合新聞網報導（記者徐白櫻，高雄即時報導），與 claim 標示的 news-report 歸因一致；修正後文字逐字等同該報導標題，屬來源自身的新聞標題框架。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含明確日期或時間主張（僅「參選到底」的選戰表述），故 requiresDate 為 false；來源內文刊載時間為 2026-06-09 12:30，與 claim 的發布日期 2026-06-09 及 historical 時效狀態相符，報導亦描述已發生的提名事件（接受「台灣前進陣線」提名、爭取左楠區市議員）。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0108-title\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（<title> 與 og:title）\",\"excerpt\":\"大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0108-body\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（報導標題與刊載時間）\",\"excerpt\":\"大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-udn\",\"evidenceId\":\"enrich-evidence-0108-context\",\"location\":\"data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（報導內文第一段）\",\"excerpt\":\"高雄 市前市長 謝長廷 機要秘書薛兆基曾參與民進黨議員黨內初選，今天接受「台灣前進陣線」提名，爭取 高雄市 左楠區市議員席次\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字為該聯合新聞網報導的標題，於保留位元組中以 <title>、og:title 及內文標題列三處逐字出現，故「謝長廷前幕僚薛兆基轉投入『台灣前進陣線』參選」與「參選到底」的標題表述均可由來源字面支持；內文並佐證其接受台灣前進陣線提名、爭取左楠區市議員席次，主體為薛兆基，身分無誤。由於此 claim 以「新聞報導的參選事件」為題並採 news-report 歸因，重述標題本身不構成超出來源的主張，故判為 supported。\",\"materialConcern\":null,\"limitations\":[\"修正後文字僅為新聞標題，未包含內文細節（如民進黨高市黨部認定違紀參選、7 月執評委會議懲處等），若後續用於陳述事實細節需另引內文。\",\"「大綠變小綠」屬來源標題的編輯式框架用語，非客觀分類陳述；此處僅作為標題逐字引用呈現。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0108",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為聯合新聞網報導（記者徐白櫻，高雄即時報導），與 claim 標示的 news-report 歸因一致；修正後文字逐字等同該報導標題，屬來源自身的新聞標題框架。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含明確日期或時間主張（僅「參選到底」的選戰表述），故 requiresDate 為 false；來源內文刊載時間為 2026-06-09 12:30，與 claim 的發布日期 2026-06-09 及 historical 時效狀態相符，報導亦描述已發生的提名事件（接受「台灣前進陣線」提名、爭取左楠區市議員）。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0108-title",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（<title> 與 og:title）",
+            "excerpt": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0108-body",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（報導標題與刊載時間）",
+            "excerpt": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-udn",
+            "evidenceId": "enrich-evidence-0108-context",
+            "location": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（報導內文第一段）",
+            "excerpt": "高雄 市前市長 謝長廷 機要秘書薛兆基曾參與民進黨議員黨內初選，今天接受「台灣前進陣線」提名，爭取 高雄市 左楠區市議員席次",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字為該聯合新聞網報導的標題，於保留位元組中以 <title>、og:title 及內文標題列三處逐字出現，故「謝長廷前幕僚薛兆基轉投入『台灣前進陣線』參選」與「參選到底」的標題表述均可由來源字面支持；內文並佐證其接受台灣前進陣線提名、爭取左楠區市議員席次，主體為薛兆基，身分無誤。由於此 claim 以「新聞報導的參選事件」為題並採 news-report 歸因，重述標題本身不構成超出來源的主張，故判為 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "修正後文字僅為新聞標題，未包含內文細節（如民進黨高市黨部認定違紀參選、7 月執評委會議懲處等），若後續用於陳述事實細節需另引內文。",
+          "「大綠變小綠」屬來源標題的編輯式框架用語，非客觀分類陳述；此處僅作為標題逐字引用呈現。"
+        ]
+      },
+      "outputSha256": "aa6329b02bc4af602ef354bdc37c2f5caf57e70db46c9f845b9a28296c5b8d54",
+      "usage": {
+        "inputTokens": 4221,
+        "outputTokens": 1632,
+        "totalTokens": 6135,
+        "costUsd": 0.001613196
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0110",
+      "claimId": "enrich-claim-0110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0110",
+      "packetSha256": "c89e4b1125047c13e9b99b8c48173ae389f24d1c5dac1e182667a5e8d5bff15d",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0110-established-verifier.txt",
+      "promptSha256": "9ae87f03d726a41d975f000c3797bb32b116316a916bad158fcb032ad9da3a6e",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:15.686Z",
+      "finishedAt": "2026-11-07T14:48:35.647Z",
+      "durationMs": 79961,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0110\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為自由時報電子報（記者葛祐豪／高雄報導）之新聞報導，屬 news-report 類別，與 claim 歸因一致；修正後文字即該報導標題（去掉站名尾綴「- 政治 - 自由時報電子報」並將標題內雙空格正規化為單空格），屬標題引用而非候選人逐字原話，惟內文亦以「推薦不是榮耀時刻，而是責任開始」對應，無歸因錯置。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含時間主張（僅為事件標題），故 requiresDate 為 false；來源內頁明確標示「2026/06/10 10:17」，與 claim 發布日期 2026-06-10 一致，內文並稱推薦發生於「昨（9）日」，事件時序（2026-06-09 推薦、2026-06-10 報導）在來源中可完整支持。\"},\"evidence\":[{\"sourceId\":\"scope-news-xue-zhaoji-ltn\",\"evidenceId\":\"enrich-evidence-0110\",\"location\":\"標題／文章頁首（data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot）\",\"excerpt\":\"首頁 > 政治 台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始 2026/06/10 10:17 記者 葛祐豪 ／高雄報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-xue-zhaoji-ltn\",\"evidenceId\":\"enrich-evidence-0110-body\",\"location\":\"報導第一段內文（參選事件）\",\"excerpt\":\"台灣前進陣線昨（9）日正式推薦高雄市左營、楠梓市議員參選人薛兆基，引發地方政壇熱議\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字「台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始」逐字對應來源頁面 title／og:title／h1 層級標題「台灣前進陣線推薦參選高雄市議員  薛兆基：是責任的開始 - 政治 - 自由時報電子報」，差異僅在移除站名分類尾綴與空白正規化，不改變任何語意主張。內文進一步確認主體（薛兆基）、推薦組織（台灣前進陣線）、參選層級與區域（高雄市左營、楠梓市議員參選人）與事件時間（9 日推薦、10 日報導），標題中的「是責任的開始」亦與其受訪說法「推薦不是榮耀時刻，而是責任開始」相符。因此標題層級的三項主張（推薦主體、參選職務、引語）皆可在保留位元組中找到直接依據，判定 supported。\",\"materialConcern\":null,\"limitations\":[\"來源標題在 HTML 中為雙空格「高雄市議員  薛兆基」，修正後文字正規化為單空格，屬排版差異而非內容差異。\",\"「是責任的開始」在標題中為編輯改寫之引語，內文原話為「推薦不是榮耀時刻，而是責任開始」，語意相同但非逐字引用。\",\"修正後文字未保留「- 政治 - 自由時報電子報」站名分類尾綴，屬引用時常見的標題清理，不影響可辨識性。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0110",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為自由時報電子報（記者葛祐豪／高雄報導）之新聞報導，屬 news-report 類別，與 claim 歸因一致；修正後文字即該報導標題（去掉站名尾綴「- 政治 - 自由時報電子報」並將標題內雙空格正規化為單空格），屬標題引用而非候選人逐字原話，惟內文亦以「推薦不是榮耀時刻，而是責任開始」對應，無歸因錯置。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含時間主張（僅為事件標題），故 requiresDate 為 false；來源內頁明確標示「2026/06/10 10:17」，與 claim 發布日期 2026-06-10 一致，內文並稱推薦發生於「昨（9）日」，事件時序（2026-06-09 推薦、2026-06-10 報導）在來源中可完整支持。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-xue-zhaoji-ltn",
+            "evidenceId": "enrich-evidence-0110",
+            "location": "標題／文章頁首（data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot）",
+            "excerpt": "首頁 > 政治 台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始 2026/06/10 10:17 記者 葛祐豪 ／高雄報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-xue-zhaoji-ltn",
+            "evidenceId": "enrich-evidence-0110-body",
+            "location": "報導第一段內文（參選事件）",
+            "excerpt": "台灣前進陣線昨（9）日正式推薦高雄市左營、楠梓市議員參選人薛兆基，引發地方政壇熱議",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字「台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始」逐字對應來源頁面 title／og:title／h1 層級標題「台灣前進陣線推薦參選高雄市議員  薛兆基：是責任的開始 - 政治 - 自由時報電子報」，差異僅在移除站名分類尾綴與空白正規化，不改變任何語意主張。內文進一步確認主體（薛兆基）、推薦組織（台灣前進陣線）、參選層級與區域（高雄市左營、楠梓市議員參選人）與事件時間（9 日推薦、10 日報導），標題中的「是責任的開始」亦與其受訪說法「推薦不是榮耀時刻，而是責任開始」相符。因此標題層級的三項主張（推薦主體、參選職務、引語）皆可在保留位元組中找到直接依據，判定 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "來源標題在 HTML 中為雙空格「高雄市議員  薛兆基」，修正後文字正規化為單空格，屬排版差異而非內容差異。",
+          "「是責任的開始」在標題中為編輯改寫之引語，內文原話為「推薦不是榮耀時刻，而是責任開始」，語意相同但非逐字引用。",
+          "修正後文字未保留「- 政治 - 自由時報電子報」站名分類尾綴，屬引用時常見的標題清理，不影響可辨識性。"
+        ]
+      },
+      "outputSha256": "77dfcfd17746c8bfad5abf484bed6c690b06387da062460d47d2793351f647af",
+      "usage": {
+        "inputTokens": 4109,
+        "outputTokens": 1348,
+        "totalTokens": 5457,
+        "costUsd": 0.00142515
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0114",
+      "claimId": "enrich-claim-0114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0114",
+      "packetSha256": "39dbe37757a5f12c32ce000975c25a1b7e4cfd6489710026596943b983490ca5",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0114-established-verifier.txt",
+      "promptSha256": "ba365a85778c20931239a49de6f78f6443c4401d69208a22655e221a080c739b",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:27.169Z",
+      "finishedAt": "2026-11-07T14:47:50.262Z",
+      "durationMs": 23090,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0114\",\"verdict\":\"partially-supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"confirmed：來源為自由時報電子報政治版新聞報導，內文署名記者王榮祥，屬 news-report。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":false,\"assessment\":\"標題文字本身沒有時間主張；但來源內文顯示發布時間為 2026/05/13 15:27，與 claim 標示的 2025-08-26 不符。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0114-title\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（HTML <title>／og:title）\",\"excerpt\":\"被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0114-date\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（內文發布時間）\",\"excerpt\":\"2026/05/13 15:27 記者 王榮祥 ／高雄報導\",\"relationship\":\"contradicts\"}],\"rationale\":\"修正後標題逐字對應來源標題（僅省略媒體與版面後綴），且來源內文確實在報導尹立對此事的回應，身份與新聞報導歸因均可確認。然而 claim 的發布日期 2025-08-26 與來源明示的 2026/05/13 15:27 矛盾，因此不能整體判定為完全支持。\",\"materialConcern\":\"來源顯示發布時間為 2026/05/13 15:27，claim 卻標示 2025-08-26；中性讀者會對報導日期產生錯誤理解。\",\"limitations\":[\"僅能核對保留位元組中的標題與內文，無法還原外部刊登歷史或解釋日期欄位為何不一致。\",\"標題省略了「- 政治 - 自由時報電子報」後綴，屬合理正規化，但日期矛盾仍未被來源解釋。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0114",
+        "verdict": "partially-supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "confirmed：來源為自由時報電子報政治版新聞報導，內文署名記者王榮祥，屬 news-report。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": false,
+          "assessment": "標題文字本身沒有時間主張；但來源內文顯示發布時間為 2026/05/13 15:27，與 claim 標示的 2025-08-26 不符。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0114-title",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（HTML <title>／og:title）",
+            "excerpt": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0114-date",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（內文發布時間）",
+            "excerpt": "2026/05/13 15:27 記者 王榮祥 ／高雄報導",
+            "relationship": "contradicts"
+          }
+        ],
+        "rationale": "修正後標題逐字對應來源標題（僅省略媒體與版面後綴），且來源內文確實在報導尹立對此事的回應，身份與新聞報導歸因均可確認。然而 claim 的發布日期 2025-08-26 與來源明示的 2026/05/13 15:27 矛盾，因此不能整體判定為完全支持。",
+        "materialConcern": "來源顯示發布時間為 2026/05/13 15:27，claim 卻標示 2025-08-26；中性讀者會對報導日期產生錯誤理解。",
+        "limitations": [
+          "僅能核對保留位元組中的標題與內文，無法還原外部刊登歷史或解釋日期欄位為何不一致。",
+          "標題省略了「- 政治 - 自由時報電子報」後綴，屬合理正規化，但日期矛盾仍未被來源解釋。"
+        ]
+      },
+      "outputSha256": "85b67cd4823089a92be52694dc23d59752f2f67372c803753decbdba991670a8",
+      "usage": {
+        "inputTokens": 4074,
+        "outputTokens": 2581,
+        "totalTokens": 6655,
+        "costUsd": 0.0021597
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0116",
+      "claimId": "enrich-claim-0116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0116",
+      "packetSha256": "991dad8690290c9be6ad6cb6a89949ddbf9c22a68b02b5113d0fc7fc95abe28a",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0116-established-verifier.txt",
+      "promptSha256": "7da837304aa40be8683dcbf28393a7d72b9750922e0a067336ab156dfab18f1c",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:48.110Z",
+      "finishedAt": "2026-11-07T14:47:57.088Z",
+      "durationMs": 8977,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0116\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為中央社（CNA）新聞報導，URL 為 /news/aloc/202508260141.aspx，HTML head 中 article:author 為「中央通訊社」、og:site_name 為「中央社 CNA」，與 claim 所標示的 news-report 歸因一致；claim 文字本身即為該報導標題，未加入來源未承載的評論。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身不含任何日期或時間副詞（僅陳述『宣布參選…』之事件與引語），故 requiresDate 為 false。來源端可支撐時效定位：article:published_time 為 2025-08-26T13:30:00+08:00、article:modified_time 為 2025-08-26T14:06:00+08:00，與 claim 的發布日期 2025-08-26 相符，historical 時效狀態合理。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-cna\",\"evidenceId\":\"enrich-evidence-0116-title\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot｜HTML <title> 與 og:title／純文字視窗首行（報導標題）\",\"excerpt\":\"宣布參選高市左楠區市議員 尹立：延續公民力量 | 地方 | 中央社 CNA\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-cna\",\"evidenceId\":\"enrich-evidence-0116-desc\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot｜HTML <meta name=\\\"description\\\"> 與 og:description\",\"excerpt\":\"前高雄市文化局長、罷韓發起人之一的尹立，今天在民進黨高雄市立委李柏毅陪同下，宣布參選高雄市左營、楠梓區市議員。尹立說，為了延續公民力量，守護高雄、保衛台灣，決定投身地方政治。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字「宣布參選高市左楠區市議員　尹立：延續公民力量」與保留位元組中的報導標題逐字一致（差別僅在標題原使用全形空格 U+3000，claim 記為半形空格，屬排版層級差異，不改變語意）。來源 meta description 進一步以完整句子承載同一組主張：尹立宣布參選高雄市左營、楠梓區（即左楠區）市議員，並以「延續公民力量」為理由，故候選人身份、參選事實、選區與引語訴求四項元素皆在來源中有直接文字依據。identityAssessment 為 confirmed：來源同時指稱「前高雄市文化局長、罷韓發起人之一的尹立」，與 claim 之候選人一致，無同名混淆風險。發布日期 2025-08-26 由 published_time 支撐，與 historical 狀態相符。未發現會誤導中性讀者的落差。\",\"materialConcern\":null,\"limitations\":[\"claim 文字使用半形空格，來源標題為全形空格（U+3000），僅屬字元正規化差異。\",\"純文字視窗後段主體内容在取樣視窗內被截斷，選區與引語的完整句子證據取自 HTML head 的 description／og:description 區塊，未涵蓋報導全文段落。\",\"來源未提供候選人黨籍登記或後續參選結果，claim 亦未主張該等內容，故不影響本次判定。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0116",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為中央社（CNA）新聞報導，URL 為 /news/aloc/202508260141.aspx，HTML head 中 article:author 為「中央通訊社」、og:site_name 為「中央社 CNA」，與 claim 所標示的 news-report 歸因一致；claim 文字本身即為該報導標題，未加入來源未承載的評論。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身不含任何日期或時間副詞（僅陳述『宣布參選…』之事件與引語），故 requiresDate 為 false。來源端可支撐時效定位：article:published_time 為 2025-08-26T13:30:00+08:00、article:modified_time 為 2025-08-26T14:06:00+08:00，與 claim 的發布日期 2025-08-26 相符，historical 時效狀態合理。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-cna",
+            "evidenceId": "enrich-evidence-0116-title",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot｜HTML <title> 與 og:title／純文字視窗首行（報導標題）",
+            "excerpt": "宣布參選高市左楠區市議員 尹立：延續公民力量 | 地方 | 中央社 CNA",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-cna",
+            "evidenceId": "enrich-evidence-0116-desc",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot｜HTML <meta name=\"description\"> 與 og:description",
+            "excerpt": "前高雄市文化局長、罷韓發起人之一的尹立，今天在民進黨高雄市立委李柏毅陪同下，宣布參選高雄市左營、楠梓區市議員。尹立說，為了延續公民力量，守護高雄、保衛台灣，決定投身地方政治。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字「宣布參選高市左楠區市議員　尹立：延續公民力量」與保留位元組中的報導標題逐字一致（差別僅在標題原使用全形空格 U+3000，claim 記為半形空格，屬排版層級差異，不改變語意）。來源 meta description 進一步以完整句子承載同一組主張：尹立宣布參選高雄市左營、楠梓區（即左楠區）市議員，並以「延續公民力量」為理由，故候選人身份、參選事實、選區與引語訴求四項元素皆在來源中有直接文字依據。identityAssessment 為 confirmed：來源同時指稱「前高雄市文化局長、罷韓發起人之一的尹立」，與 claim 之候選人一致，無同名混淆風險。發布日期 2025-08-26 由 published_time 支撐，與 historical 狀態相符。未發現會誤導中性讀者的落差。",
+        "materialConcern": null,
+        "limitations": [
+          "claim 文字使用半形空格，來源標題為全形空格（U+3000），僅屬字元正規化差異。",
+          "純文字視窗後段主體内容在取樣視窗內被截斷，選區與引語的完整句子證據取自 HTML head 的 description／og:description 區塊，未涵蓋報導全文段落。",
+          "來源未提供候選人黨籍登記或後續參選結果，claim 亦未主張該等內容，故不影響本次判定。"
+        ]
+      },
+      "outputSha256": "b26ba5a1224e3fd66d51b1543571135901646b69a7849bbc6c4ff45db6dad026",
+      "usage": {
+        "inputTokens": 4258,
+        "outputTokens": 1256,
+        "totalTokens": 5514,
+        "costUsd": 0.0013923
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0117",
+      "claimId": "enrich-claim-0117",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0117",
+      "packetSha256": "ff6712eb3625d30f0c278c98c2895cf9760c30f46e72d05a463f8e0efcc50309",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0117-established-verifier.txt",
+      "promptSha256": "e11852753fb4fed6b57f81bb7aa8923517b009df39afddcbf6298f8c6e388eda",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:47:57.090Z",
+      "finishedAt": "2026-11-07T14:48:11.232Z",
+      "durationMs": 14141,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0117\",\"verdict\":\"partially-supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為自由時報電子報政治版即時新聞（記者王榮祥／高雄報導），屬 news-report 類型，與 claim 的歸因 news-report 相符；標題與 og:title、meta title 一致，可直接歸屬。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身（新聞標題）不含任何時間主張，因此 requiresDate 為 false。但 claim 的發布日期欄位記為 2025-08-26，保留位元組中的報導時間卻是「2026/05/13 15:27」，兩者明顯不符；來源不支持 claim 所載的 2025-08-26，日期欄位需更正。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0117\",\"location\":\"標題／meta title 與報導標題列（報導時間 2026/05/13 15:27）\",\"excerpt\":\"首頁 > 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0117-b\",\"location\":\"報導第一段內文\",\"excerpt\":\"民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字「被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人」是來源報導的標題，在 <title>、og:title、meta name=\\\"title\\\" 以及頁面正文標題列中逐字出現，內文亦完整支撐「遭爆拿市府標案」與「尹立稱烏龍抹黑、協會接案非個人」兩項語意，故就文字本身而言可逐字對上，身分（尹立）確認為同一人。然而 claim 所附發布日期 2025-08-26 與來源報導時間 2026/05/13 15:27 直接衝突，屬於時間資訊的錯誤，會讓中性讀者誤判事件發生時間，因此不給予 fully supported，評為 partially-supported。\",\"materialConcern\":\"claim 記載之發布日期 2025-08-26 與保留來源所顯示的報導時間 2026/05/13 15:27 不符，讀者會誤解事件時點。\",\"limitations\":[\"僅能依提供的純文字視窗與 HTML 節錄判斷，未檢視完整 HTML 的 article:published_time 等結構化時間欄位。\",\"純文字視窗可能受頁面其他元素（如側欄、熱門新聞）混入，但標題與第一段內文仍屬報導本文範圍。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0117",
+        "verdict": "partially-supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為自由時報電子報政治版即時新聞（記者王榮祥／高雄報導），屬 news-report 類型，與 claim 的歸因 news-report 相符；標題與 og:title、meta title 一致，可直接歸屬。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身（新聞標題）不含任何時間主張，因此 requiresDate 為 false。但 claim 的發布日期欄位記為 2025-08-26，保留位元組中的報導時間卻是「2026/05/13 15:27」，兩者明顯不符；來源不支持 claim 所載的 2025-08-26，日期欄位需更正。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0117",
+            "location": "標題／meta title 與報導標題列（報導時間 2026/05/13 15:27）",
+            "excerpt": "首頁 > 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0117-b",
+            "location": "報導第一段內文",
+            "excerpt": "民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字「被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人」是來源報導的標題，在 <title>、og:title、meta name=\"title\" 以及頁面正文標題列中逐字出現，內文亦完整支撐「遭爆拿市府標案」與「尹立稱烏龍抹黑、協會接案非個人」兩項語意，故就文字本身而言可逐字對上，身分（尹立）確認為同一人。然而 claim 所附發布日期 2025-08-26 與來源報導時間 2026/05/13 15:27 直接衝突，屬於時間資訊的錯誤，會讓中性讀者誤判事件發生時間，因此不給予 fully supported，評為 partially-supported。",
+        "materialConcern": "claim 記載之發布日期 2025-08-26 與保留來源所顯示的報導時間 2026/05/13 15:27 不符，讀者會誤解事件時點。",
+        "limitations": [
+          "僅能依提供的純文字視窗與 HTML 節錄判斷，未檢視完整 HTML 的 article:published_time 等結構化時間欄位。",
+          "純文字視窗可能受頁面其他元素（如側欄、熱門新聞）混入，但標題與第一段內文仍屬報導本文範圍。"
+        ]
+      },
+      "outputSha256": "615becbc53c10977dc894068e4aa76800cea880dda4c488de74c5eecf704e016",
+      "usage": {
+        "inputTokens": 4079,
+        "outputTokens": 1896,
+        "totalTokens": 5975,
+        "costUsd": 0.0017494499999999998
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0118",
+      "claimId": "enrich-claim-0118",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0118",
+      "packetSha256": "e61a5ac33ede1576521f23dde200d1da0ac61c9b0d7c6b316525a493cb6d36dc",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0118-established-verifier.txt",
+      "promptSha256": "6efee2c050ae33dda2d73447fe10a3603998ef0321fb89275916365bd675fc04",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:48:10.294Z",
+      "finishedAt": "2026-11-07T14:48:25.638Z",
+      "durationMs": 15343,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0118\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為自由時報電子報（LTN）政治版即時新聞，記者王榮祥／高雄報導，與 claim 標示的 news-report 歸因一致；判斷依據的句子正是該報圖片說明，內容為記者對尹立澄清內容的轉述，屬於報導主體的一部分，並非第三方或未署名來源。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身沒有時間主張，只敘述澄清內容，因此不需要日期。但既有記錄的「發布日期 2025-08-26」與來源所載「2026/05/13 15:27」不一致；這是 metadata 的問題，不影響本句是否成立，但應予更正，以免日後被誤讀為 2025 年的事件。\"},\"evidence\":[{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0118\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（新聞圖片說明／內文）\",\"excerpt\":\"民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。（記者王榮祥翻攝）\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-yin-li-ltn\",\"evidenceId\":\"enrich-evidence-0118\",\"location\":\"data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（第三段內文）\",\"excerpt\":\"尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字逐字出現在保留來源位元組中：來源圖片說明即為「民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。」（僅多出「（記者王榮祥翻攝）」的圖片註記），同一段 HTML 的 image.name 欄位也載有相同字串。內文第三段以尹立第一人稱說明再次支持「承接單位一直都是中華民國設計師協會，不是他個人」。候選人姓名、政黨與身分（民進黨高市議員參選人尹立）均與來源一致，身分認定確定。文字未含時間主張，故 requiresDate 為 false。唯一瑕疵在於記錄層級的發布日期（2025-08-26）與來源日期（2026/05/13）不符，但這不動搖本句的文字支持度。\",\"materialConcern\":null,\"limitations\":[\"此句在來源中首先是新聞圖片說明（captions），其次才是由記者轉述的內文；雖然逐字相符，但屬於記者對尹立說法的轉述，不是尹立發言的原始逐字稿。\",\"既有記錄的發布日期 2025-08-26 與來源所載 2026/05/13 15:27 不符，建議另行更正。\",\"claim 標題為「新聞報導的參選事件」，但本句內容實為「回應標案質疑的澄清」，與 timeline/historical-candidacy 的分類語意略有落差。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0118",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為自由時報電子報（LTN）政治版即時新聞，記者王榮祥／高雄報導，與 claim 標示的 news-report 歸因一致；判斷依據的句子正是該報圖片說明，內容為記者對尹立澄清內容的轉述，屬於報導主體的一部分，並非第三方或未署名來源。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身沒有時間主張，只敘述澄清內容，因此不需要日期。但既有記錄的「發布日期 2025-08-26」與來源所載「2026/05/13 15:27」不一致；這是 metadata 的問題，不影響本句是否成立，但應予更正，以免日後被誤讀為 2025 年的事件。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0118",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（新聞圖片說明／內文）",
+            "excerpt": "民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。（記者王榮祥翻攝）",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-yin-li-ltn",
+            "evidenceId": "enrich-evidence-0118",
+            "location": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（第三段內文）",
+            "excerpt": "尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字逐字出現在保留來源位元組中：來源圖片說明即為「民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。」（僅多出「（記者王榮祥翻攝）」的圖片註記），同一段 HTML 的 image.name 欄位也載有相同字串。內文第三段以尹立第一人稱說明再次支持「承接單位一直都是中華民國設計師協會，不是他個人」。候選人姓名、政黨與身分（民進黨高市議員參選人尹立）均與來源一致，身分認定確定。文字未含時間主張，故 requiresDate 為 false。唯一瑕疵在於記錄層級的發布日期（2025-08-26）與來源日期（2026/05/13）不符，但這不動搖本句的文字支持度。",
+        "materialConcern": null,
+        "limitations": [
+          "此句在來源中首先是新聞圖片說明（captions），其次才是由記者轉述的內文；雖然逐字相符，但屬於記者對尹立說法的轉述，不是尹立發言的原始逐字稿。",
+          "既有記錄的發布日期 2025-08-26 與來源所載 2026/05/13 15:27 不符，建議另行更正。",
+          "claim 標題為「新聞報導的參選事件」，但本句內容實為「回應標案質疑的澄清」，與 timeline/historical-candidacy 的分類語意略有落差。"
+        ]
+      },
+      "outputSha256": "b12c985aac086789d3a6c4c7c7fe8ba96287982f431c915cf6ba9712fc582e07",
+      "usage": {
+        "inputTokens": 3941,
+        "outputTokens": 1450,
+        "totalTokens": 5391,
+        "costUsd": 0.00146115
+      },
+      "failureReason": null
+    },
+    {
+      "invocationId": "correction-established-verifier-enrich-claim-0120",
+      "claimId": "enrich-claim-0120",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "adjudicatorRole": "established-verifier",
+      "packetId": "correction-packet-enrich-claim-0120",
+      "packetSha256": "ed91bc671e747477cfd450a5418de7d32f00e0b839a2775793cc5d2ae0030820",
+      "promptPath": "data/enrichment/semantic-review/2026/correction-prompts/enrich-claim-0120-established-verifier.txt",
+      "promptSha256": "50fe21f961fc8c5cc9bcdf06c59abcc83bf8d38b9606eb8d56eccf43308a62a3",
+      "provider": "opencode-go",
+      "model": "deepseek-v4.1-flash",
+      "runner": "pi-cli-correction-review-v1/medium",
+      "startedAt": "2026-11-07T14:48:25.640Z",
+      "finishedAt": "2026-11-07T14:48:31.922Z",
+      "durationMs": 6280,
+      "status": "completed",
+      "exitCode": 0,
+      "rawOutput": "{\"claimId\":\"enrich-claim-0120\",\"verdict\":\"supported\",\"identityAssessment\":\"confirmed\",\"attributionAssessment\":\"來源為聯合新聞網（聯合報）即時報導，記者徐白櫻，屬 news-report 類別；修正後文字即該報導標題，與來源頁面 title／h1 完全一致，歸因為新聞報導可支持。\",\"temporalAssessment\":{\"requiresDate\":false,\"sourceSupportsTemporalWording\":true,\"assessment\":\"修正後文字本身未含任何時間主張（無年份、無『今日』等相對時間詞），故 requiresDate 為 false；來源頁面另載『2026-03-29 10:02』與 claimed publishDate 2026-03-29 相符，時效標記 historical 與來源內容（談 2026 參選宣布）一致。\"},\"evidence\":[{\"sourceId\":\"scope-news-zhang-jing-udn\",\"evidenceId\":\"enrich-evidence-0120\",\"location\":\"data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot（純文字視窗，文章標題與發稿資訊行）\",\"excerpt\":\"獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 2026-03-29 10:02 聯合報／ 記者 徐白櫻 ／高雄即時報導\",\"relationship\":\"supports\"},{\"sourceId\":\"scope-news-zhang-jing-udn\",\"evidenceId\":\"enrich-evidence-0120-b\",\"location\":\"data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot（純文字視窗，內文第一段）\",\"excerpt\":\"曾因前總統蔡英文論文案入獄服刑的司法改革黨主席 張靜 今天也宣布參選高雄市長。他表示，面對2026年地方選舉，司法改革黨不能再坐以待斃；為了小黨的生存與尊嚴，決定投身今年高雄市市長的選舉，希望在高雄這塊民主聖地，化不可能為可能。\",\"relationship\":\"supports\"}],\"rationale\":\"修正後文字逐字等同來源保留位元組中的報導標題（頁面 <title>、og:title 與內文標題皆為同一字串），每一項主張（『獨／』、『高雄市長參選人+1』、『律師張靜』、『宣布要為小黨的尊嚴而戰』）均可在來源中直接找到；內文並進一步證實張靜為司法改革黨主席、宣布參選高雄市長，且文中提及『曾擔任法官及檢察官』與律師身分，與 professional-experience 類型無牴觸。故判定 supported。\",\"materialConcern\":null,\"limitations\":[\"修正後文字僅為報導標題，未包含內文對其法官／檢察官經歷的具體描述；若後續要主張完整專業經歷，應另引內文段落。\",\"標題中之『+1』屬編輯式口語表達，非正式職稱或經歷陳述。\"]}",
+      "result": {
+        "claimId": "enrich-claim-0120",
+        "verdict": "supported",
+        "identityAssessment": "confirmed",
+        "attributionAssessment": "來源為聯合新聞網（聯合報）即時報導，記者徐白櫻，屬 news-report 類別；修正後文字即該報導標題，與來源頁面 title／h1 完全一致，歸因為新聞報導可支持。",
+        "temporalAssessment": {
+          "requiresDate": false,
+          "sourceSupportsTemporalWording": true,
+          "assessment": "修正後文字本身未含任何時間主張（無年份、無『今日』等相對時間詞），故 requiresDate 為 false；來源頁面另載『2026-03-29 10:02』與 claimed publishDate 2026-03-29 相符，時效標記 historical 與來源內容（談 2026 參選宣布）一致。"
+        },
+        "evidence": [
+          {
+            "sourceId": "scope-news-zhang-jing-udn",
+            "evidenceId": "enrich-evidence-0120",
+            "location": "data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot（純文字視窗，文章標題與發稿資訊行）",
+            "excerpt": "獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 2026-03-29 10:02 聯合報／ 記者 徐白櫻 ／高雄即時報導",
+            "relationship": "supports"
+          },
+          {
+            "sourceId": "scope-news-zhang-jing-udn",
+            "evidenceId": "enrich-evidence-0120-b",
+            "location": "data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot（純文字視窗，內文第一段）",
+            "excerpt": "曾因前總統蔡英文論文案入獄服刑的司法改革黨主席 張靜 今天也宣布參選高雄市長。他表示，面對2026年地方選舉，司法改革黨不能再坐以待斃；為了小黨的生存與尊嚴，決定投身今年高雄市市長的選舉，希望在高雄這塊民主聖地，化不可能為可能。",
+            "relationship": "supports"
+          }
+        ],
+        "rationale": "修正後文字逐字等同來源保留位元組中的報導標題（頁面 <title>、og:title 與內文標題皆為同一字串），每一項主張（『獨／』、『高雄市長參選人+1』、『律師張靜』、『宣布要為小黨的尊嚴而戰』）均可在來源中直接找到；內文並進一步證實張靜為司法改革黨主席、宣布參選高雄市長，且文中提及『曾擔任法官及檢察官』與律師身分，與 professional-experience 類型無牴觸。故判定 supported。",
+        "materialConcern": null,
+        "limitations": [
+          "修正後文字僅為報導標題，未包含內文對其法官／檢察官經歷的具體描述；若後續要主張完整專業經歷，應另引內文段落。",
+          "標題中之『+1』屬編輯式口語表達，非正式職稱或經歷陳述。"
+        ]
+      },
+      "outputSha256": "18806894305e07c8f101d91d496ed8fa4edae9dcfbe6edbfe7b71e54ff44ef5b",
+      "usage": {
+        "inputTokens": 4157,
+        "outputTokens": 1170,
+        "totalTokens": 5609,
+        "costUsd": 0.001326396
+      },
+      "failureReason": null
+    }
+  ]
+}

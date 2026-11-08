@@ -1,0 +1,1817 @@
+{
+  "schemaVersion": "1",
+  "generatedAt": "2026-11-07T15:16:25.101Z",
+  "retrievalPolicy": {
+    "userAgent": "KaohsiungCivicStories/1.0 (evidence remediation; contact: project maintainer)",
+    "maxAttempts": 2,
+    "attemptTimeoutMs": 30000,
+    "retainsSnapshots": true,
+    "note": "本次檢索只新增觀察紀錄，不覆寫任何既有快照；同一個來源的舊位元組仍保留在 data/ 之下。"
+  },
+  "summary": {
+    "retainedSources": 31,
+    "classifications": {
+      "changed-text": 12,
+      "identical-text": 12,
+      "minor-text-change": 7
+    },
+    "exploratoryEndpoints": 4,
+    "newSourcesAdmittedAsEvidence": 0
+  },
+  "sources": [
+    {
+      "sourceId": "scope-cec-qualification",
+      "publisher": "中央選舉委員會",
+      "sourceClass": "cec-roster",
+      "claimValuePresence": {
+        "checked": 5,
+        "present": 0,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0119",
+            "value": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。"
+          },
+          {
+            "claimId": "enrich-claim-0124",
+            "value": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。"
+          },
+          {
+            "claimId": "enrich-claim-0133",
+            "value": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。"
+          },
+          {
+            "claimId": "enrich-claim-0138",
+            "value": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。"
+          },
+          {
+            "claimId": "enrich-claim-0139",
+            "value": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/raw/official/2026/cec-central-65213.json",
+        "exists": true,
+        "sha256": "265a5a291b151765c4df5fafcd5cd9a738b3108e4e625e800e2c24676efb8a8a",
+        "byteLength": 17711,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://web.cec.gov.tw/central/article/65213",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html;charset=utf-8",
+            "byteLength": 480767,
+            "sha256": "c5dfe6731c4c7dacf020763797e365aff9d8c28e21e255fa1c59372bfc7c7b30",
+            "textSha256": "578b74bc3c43edaee26025e93e4b0725c378ba036f3f3252f3ff0762b0067e39",
+            "textLength": 227,
+            "startedAt": "2026-11-07T15:12:53.321Z",
+            "finishedAt": "2026-11-07T15:12:53.585Z",
+            "durationMs": 264,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html;charset=utf-8",
+        "byteLength": 480767,
+        "sha256": "c5dfe6731c4c7dacf020763797e365aff9d8c28e21e255fa1c59372bfc7c7b30",
+        "textSha256": "578b74bc3c43edaee26025e93e4b0725c378ba036f3f3252f3ff0762b0067e39",
+        "textLength": 227,
+        "textSimilarityToRetained": 0.0368,
+        "textDeltaSample": {
+          "retained": "{\"code\":\"0\",\"message\":\"操作成功\",\"data\":{\"title\":\"中選會審定115年直轄市長、直轄市議員、縣（市）長及縣（市）議員選舉候選人資格\",\"content\":\"{\\\"content\\\":[{\\\"blockType\\\":\\\"Text\\\",\\\"content\\\":\\\" 中央選舉委員會今(16)日舉行委員會議，審查通過115年直轄市長、直轄市議員、縣(市)長及縣(市)議員選舉候選人資格，各直轄市、縣(市)選舉委員會將於10月23日辦理候選人姓名號次抽籤。 中選會表示，審查通過的候選人名",
+          "live": "中選會審定115年直轄市長、直轄市議員、縣（市）長及縣（市）議員選舉候選人資格 跳到主要內容 跳到導覽連結 網站頁尾 ::: 收合 重要訊息 新聞稿 防疫及近期選務專區 爭議訊息澄清專區 公告 最新消息 RSS訂閱 首頁 重要訊息 新聞稿 115年度新聞稿 中選會審定115年直轄市長、直轄市議員、縣（市）長及縣（市）議員選舉候選人資格 中選會審定115年直轄市長、直轄市議員、縣（市）長及縣（市）議員選舉候選人資格 上一篇 下一篇 列印時間 : Top"
+        },
+        "retrievedAt": "2026-11-07T15:12:53.585Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-directory-page-1",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-current-member-directory",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/pages/1.html",
+        "exists": true,
+        "sha256": "7daea001054661076797bf978dc4eccdd16df79350087230cf90e6229eda764f",
+        "byteLength": 109655,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_List1.aspx?n=39&sms=9028&page=1&PageSize=20",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 109655,
+            "sha256": "4381223cd7ca36a1985e515807cad2db17f103985a985db27f24d995e5cc6fc5",
+            "textSha256": "f469432321a81a7fe856231ebcea6b6077a724d7c58bc40e33992867c9331be8",
+            "textLength": 2166,
+            "startedAt": "2026-11-07T15:12:53.987Z",
+            "finishedAt": "2026-11-07T15:12:55.923Z",
+            "durationMs": 1936,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 109655,
+        "sha256": "4381223cd7ca36a1985e515807cad2db17f103985a985db27f24d995e5cc6fc5",
+        "textSha256": "f469432321a81a7fe856231ebcea6b6077a724d7c58bc40e33992867c9331be8",
+        "textLength": 2166,
+        "textSimilarityToRetained": 0.9991,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:12:55.923Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-32",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-32.snapshot",
+        "exists": true,
+        "sha256": "a8331dfc1a8557988dc13af722907bf2a09c539cf4408304ef6a991ef1ea2232",
+        "byteLength": 176197,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 176197,
+            "sha256": "1c609c78686bb1fe627c65ebc8d4ee6d0faaace7225071de599e1b0dc2b99ff9",
+            "textSha256": "c965aab4698cc48f3ca79e384e8ce5da831ff7893b879868c0df9a0f2c39a392",
+            "textLength": 4280,
+            "startedAt": "2026-11-07T15:12:56.327Z",
+            "finishedAt": "2026-11-07T15:12:57.836Z",
+            "durationMs": 1509,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 176197,
+        "sha256": "1c609c78686bb1fe627c65ebc8d4ee6d0faaace7225071de599e1b0dc2b99ff9",
+        "textSha256": "c965aab4698cc48f3ca79e384e8ce5da831ff7893b879868c0df9a0f2c39a392",
+        "textLength": 4280,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:12:57.836Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-33",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-33.snapshot",
+        "exists": true,
+        "sha256": "58b1e9eee42cd1989cd03632947237a0398804216cfa3fb288c937355be130d1",
+        "byteLength": 181028,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=33",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 181028,
+            "sha256": "f00cb942c133f8196c31f67695718cb3bed9e7b8910d0c1cb4ba89fe878f081c",
+            "textSha256": "a73b51ae51a5b927ae83986c80171ae4d1db651215c3c04ab18cd34e9976fc24",
+            "textLength": 4595,
+            "startedAt": "2026-11-07T15:12:58.240Z",
+            "finishedAt": "2026-11-07T15:12:59.816Z",
+            "durationMs": 1576,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 181028,
+        "sha256": "f00cb942c133f8196c31f67695718cb3bed9e7b8910d0c1cb4ba89fe878f081c",
+        "textSha256": "a73b51ae51a5b927ae83986c80171ae4d1db651215c3c04ab18cd34e9976fc24",
+        "textLength": 4595,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:12:59.816Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-34",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-34.snapshot",
+        "exists": true,
+        "sha256": "22d34d83ddddf3e5ac6555e7bb104d2f4218b00d22537862bd0cc74e4ae2927d",
+        "byteLength": 199225,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 199225,
+            "sha256": "e53da0eb5ab155dc1db1b9ffa13c2052fa63f98c7df9c50c5f3e0e8f46d229f7",
+            "textSha256": "864cadec7b983ebd63bd1fc595bb4e199647b6f5eb75201358ee542a85601bff",
+            "textLength": 5080,
+            "startedAt": "2026-11-07T15:13:00.219Z",
+            "finishedAt": "2026-11-07T15:13:01.967Z",
+            "durationMs": 1748,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 199225,
+        "sha256": "e53da0eb5ab155dc1db1b9ffa13c2052fa63f98c7df9c50c5f3e0e8f46d229f7",
+        "textSha256": "864cadec7b983ebd63bd1fc595bb4e199647b6f5eb75201358ee542a85601bff",
+        "textLength": 5080,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:13:01.967Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-35",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-35.snapshot",
+        "exists": true,
+        "sha256": "4cff95f828442c9aa311893025daeee02ae547a8bac450097409346d5f751e6e",
+        "byteLength": 175089,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=35",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 175089,
+            "sha256": "50299983529fb28491ab377898809cd154a445b3b50019ef93e3dab49fa453d7",
+            "textSha256": "056fdf76d4c68f41ff5a183055f29cd917f015da159c61c03ceaecc3cf81f557",
+            "textLength": 4331,
+            "startedAt": "2026-11-07T15:13:02.370Z",
+            "finishedAt": "2026-11-07T15:13:03.772Z",
+            "durationMs": 1402,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 175089,
+        "sha256": "50299983529fb28491ab377898809cd154a445b3b50019ef93e3dab49fa453d7",
+        "textSha256": "056fdf76d4c68f41ff5a183055f29cd917f015da159c61c03ceaecc3cf81f557",
+        "textLength": 4331,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:13:03.772Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-36",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-36.snapshot",
+        "exists": true,
+        "sha256": "972a6c700a230b5b8b28c0e5d73dfa55f43092065e329354f4f7e5bb0c17a0dc",
+        "byteLength": 243878,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 243878,
+            "sha256": "262dd26884ecc4e916168478114527d4a7fd8a013c3c215feebb0084e01420a4",
+            "textSha256": "e3a02d91b5378f2f82872fc78f88862022484f2bc7cfcdf1b54034d77f94e356",
+            "textLength": 6261,
+            "startedAt": "2026-11-07T15:13:04.175Z",
+            "finishedAt": "2026-11-07T15:13:06.400Z",
+            "durationMs": 2225,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 243878,
+        "sha256": "262dd26884ecc4e916168478114527d4a7fd8a013c3c215feebb0084e01420a4",
+        "textSha256": "e3a02d91b5378f2f82872fc78f88862022484f2bc7cfcdf1b54034d77f94e356",
+        "textLength": 6261,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:13:06.400Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-37",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-37.snapshot",
+        "exists": true,
+        "sha256": "283aba6796f124b47548df9c3866bfe2a51eaecf6a924899bb843d1f6429d2e5",
+        "byteLength": 240690,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 240690,
+            "sha256": "8cd698e9b08d7f9050740cb4c267ba3675de0713abafc7791120e659e723e8ad",
+            "textSha256": "6e948283ad5ef304f31d764eaabbee5aef51c20077fba484c45fc89330043af0",
+            "textLength": 6448,
+            "startedAt": "2026-11-07T15:13:06.803Z",
+            "finishedAt": "2026-11-07T15:13:09.520Z",
+            "durationMs": 2717,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 240690,
+        "sha256": "8cd698e9b08d7f9050740cb4c267ba3675de0713abafc7791120e659e723e8ad",
+        "textSha256": "6e948283ad5ef304f31d764eaabbee5aef51c20077fba484c45fc89330043af0",
+        "textLength": 6448,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:13:09.520Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-history-38",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-history",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/kcc-history/history-38.snapshot",
+        "exists": true,
+        "sha256": "e9beba3dd8d66d0379f91e35448af83c7807ce4f0df1600075acc66f21a7470b",
+        "byteLength": 225847,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 225847,
+            "sha256": "3cc581b35b0d28bb51939a60b67ce517def89c83c0a503b349c1d92c17110989",
+            "textSha256": "c0eb044d70929255c49052f99614fadddd922c71b6cc553b8dc591d307b1a10f",
+            "textLength": 5850,
+            "startedAt": "2026-11-07T15:13:09.922Z",
+            "finishedAt": "2026-11-07T15:13:12.552Z",
+            "durationMs": 2630,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 225847,
+        "sha256": "3cc581b35b0d28bb51939a60b67ce517def89c83c0a503b349c1d92c17110989",
+        "textSha256": "c0eb044d70929255c49052f99614fadddd922c71b6cc553b8dc591d307b1a10f",
+        "textLength": 5850,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:13:12.552Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2181",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 12,
+        "present": 9,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0024",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2181.html",
+        "exists": true,
+        "sha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+        "byteLength": 151045,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 149027,
+            "sha256": "09840956c998aea2f3fd58bb5f02ad79bb65dad9dd088a8416fffcff839aafa5",
+            "textSha256": "0986084d03e03e39209ab5cc0df07f7cf7ab7c9577f270da75f33e35e1aa40bf",
+            "textLength": 5375,
+            "startedAt": "2026-11-07T15:13:12.955Z",
+            "finishedAt": "2026-11-07T15:13:35.272Z",
+            "durationMs": 22317,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 149027,
+        "sha256": "09840956c998aea2f3fd58bb5f02ad79bb65dad9dd088a8416fffcff839aafa5",
+        "textSha256": "0986084d03e03e39209ab5cc0df07f7cf7ab7c9577f270da75f33e35e1aa40bf",
+        "textLength": 5375,
+        "textSimilarityToRetained": 0.9896,
+        "textDeltaSample": {
+          "retained": "美好未來 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-14 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 第4屆第8次定期會 交通部門業務質詢_影片連結 115-09-22 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播",
+          "live": "美好未來 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽"
+        },
+        "retrievedAt": "2026-11-07T15:13:35.272Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2184",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 15,
+        "present": 14,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0088",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2184.html",
+        "exists": true,
+        "sha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+        "byteLength": 137533,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 135518,
+            "sha256": "cbbdb0fe5c3d19a3c441a22ff5a1a84135f18eea29a4b12322fce200ad77d1a3",
+            "textSha256": "cf5656ad0a5e8556a884572cf652df76728540cbf9f4f290948dce7b9a6dc37a",
+            "textLength": 4632,
+            "startedAt": "2026-11-07T15:13:35.677Z",
+            "finishedAt": "2026-11-07T15:13:57.924Z",
+            "durationMs": 22247,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 135518,
+        "sha256": "cbbdb0fe5c3d19a3c441a22ff5a1a84135f18eea29a4b12322fce200ad77d1a3",
+        "textSha256": "cf5656ad0a5e8556a884572cf652df76728540cbf9f4f290948dce7b9a6dc37a",
+        "textLength": 4632,
+        "textSimilarityToRetained": 0.9879,
+        "textDeltaSample": {
+          "retained": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-08 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 第4屆第8次定期會 交通部門業務質詢_影片連結 115-09-22 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 ",
+          "live": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學"
+        },
+        "retrievedAt": "2026-11-07T15:13:57.924Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2185",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 11,
+        "present": 10,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0001",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html",
+        "exists": true,
+        "sha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+        "byteLength": 149188,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2185",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 147167,
+            "sha256": "eb7f229c0d39bc8e5d22c7c82cec0e0bfa5971c9ab6f6348c67097f1e536d2c7",
+            "textSha256": "fe45e5ffbdd66bb5d84e04e0f88f5732137fcc626b795d7a0c9427d6a091727f",
+            "textLength": 5263,
+            "startedAt": "2026-11-07T15:13:58.329Z",
+            "finishedAt": "2026-11-07T15:14:20.685Z",
+            "durationMs": 22356,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 147167,
+        "sha256": "eb7f229c0d39bc8e5d22c7c82cec0e0bfa5971c9ab6f6348c67097f1e536d2c7",
+        "textSha256": "fe45e5ffbdd66bb5d84e04e0f88f5732137fcc626b795d7a0c9427d6a091727f",
+        "textLength": 5263,
+        "textSimilarityToRetained": 0.9893,
+        "textDeltaSample": {
+          "retained": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-09-30 第4屆第8次定期會 教育部門業務報告與質詢_影片連結 115-09-15 第4屆第8次定期會 社政部門業務質詢_影片連結 115-09-10 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市立後勁國小 高雄市立後勁國中 高雄市立海青工商 私立樹德科技大學 英國基爾大學碩士 經歷： 高雄市第三屆市議員",
+          "live": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市立後勁國小 高雄市立後勁國中 高雄市立海青工商 私立樹德科技大學 英國基爾大學碩士 經歷： 高雄市第三屆市議員 高雄市議會民進黨團書記長 蔡英文總統高雄市競選總部副總幹事 高雄市射箭委員會副主任委員 服務政見： 一、 交通再邁進：加速推動鐵路立體化延伸至楠梓、橋頭，縫合楠梓市容拆除楠梓陸橋。打通楠梓產業園"
+        },
+        "retrievedAt": "2026-11-07T15:14:20.685Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2186",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 9,
+        "present": 8,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0040",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2186.html",
+        "exists": true,
+        "sha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+        "byteLength": 126207,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 124183,
+            "sha256": "367dbf6468c3cd35f462d2cae9819cbc30c84ab6d429400863f838ac4d1f65f5",
+            "textSha256": "df2e4aa31ba25f029291d45623064983e066903dd5456533d5a254e514f7923c",
+            "textLength": 3901,
+            "startedAt": "2026-11-07T15:14:21.089Z",
+            "finishedAt": "2026-11-07T15:14:43.137Z",
+            "durationMs": 22048,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 124183,
+        "sha256": "367dbf6468c3cd35f462d2cae9819cbc30c84ab6d429400863f838ac4d1f65f5",
+        "textSha256": "df2e4aa31ba25f029291d45623064983e066903dd5456533d5a254e514f7923c",
+        "textLength": 3901,
+        "textSimilarityToRetained": 0.9853,
+        "textDeltaSample": {
+          "retained": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-06 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 第4屆第8次定期會 交通部門業務報告與質詢_影片連結 115-09-21 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市",
+          "live": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質"
+        },
+        "retrievedAt": "2026-11-07T15:14:43.137Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2187",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 12,
+        "present": 11,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0012",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html",
+        "exists": true,
+        "sha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+        "byteLength": 135027,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 133003,
+            "sha256": "9d73efcaba23e7c8fec92a017d8bee82531c02c4c3c3e01222c1d82378baac14",
+            "textSha256": "b0628c72e58cbd54ed9cda2961cda4d1b457e71d3069ed3480718d8d73637a01",
+            "textLength": 4487,
+            "startedAt": "2026-11-07T15:14:43.541Z",
+            "finishedAt": "2026-11-07T15:15:05.663Z",
+            "durationMs": 22122,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 133003,
+        "sha256": "9d73efcaba23e7c8fec92a017d8bee82531c02c4c3c3e01222c1d82378baac14",
+        "textSha256": "b0628c72e58cbd54ed9cda2961cda4d1b457e71d3069ed3480718d8d73637a01",
+        "textLength": 4487,
+        "textSimilarityToRetained": 0.9872,
+        "textDeltaSample": {
+          "retained": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-12 第4屆第8次定期會 警消衛環部門業務報告與質詢_影片連結 115-09-23 第4屆第8次定期會 交通部門業務質詢_影片連結 115-09-22 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新",
+          "live": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政"
+        },
+        "retrievedAt": "2026-11-07T15:15:05.663Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2188",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 10,
+        "present": 9,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0049",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2188.html",
+        "exists": true,
+        "sha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+        "byteLength": 159390,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 157381,
+            "sha256": "d3de30e786250a8bb707483c32809a5e6509e3541cd32ee87a6fcc1853412508",
+            "textSha256": "e5be63866670a4115d39381f9843c54fde366004bb1dfd914ddf1650b990500e",
+            "textLength": 5411,
+            "startedAt": "2026-11-07T15:15:06.066Z",
+            "finishedAt": "2026-11-07T15:15:28.705Z",
+            "durationMs": 22639,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 157381,
+        "sha256": "d3de30e786250a8bb707483c32809a5e6509e3541cd32ee87a6fcc1853412508",
+        "textSha256": "e5be63866670a4115d39381f9843c54fde366004bb1dfd914ddf1650b990500e",
+        "textLength": 5411,
+        "textSimilarityToRetained": 0.9899,
+        "textDeltaSample": {
+          "retained": "美好未來 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-13 第4屆第8次定期會 市政總質詢_影片連結 115-10-08 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日",
+          "live": "美好未來 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營"
+        },
+        "retrievedAt": "2026-11-07T15:15:28.705Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-kcc-profile-2189",
+      "publisher": "高雄市議會全球網",
+      "sourceClass": "kcc-member-profile",
+      "claimValuePresence": {
+        "checked": 18,
+        "present": 14,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0059",
+            "value": "高雄市議會本屆議員（第四選舉區）"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2189.html",
+        "exists": true,
+        "sha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+        "byteLength": 129887,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "classification": "minor-text-change",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 127872,
+            "sha256": "b8fa6cba6d1f8202cdf6ef1f1c61e0a3375c078f6204bf25ea7423ea18a90f85",
+            "textSha256": "06bc3c9d15bf6a7d70ba027f1486e7d6504d9ea483527e0eb38f1e94023e7fa1",
+            "textLength": 4105,
+            "startedAt": "2026-11-07T15:15:29.110Z",
+            "finishedAt": "2026-11-07T15:15:51.235Z",
+            "durationMs": 22125,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 127872,
+        "sha256": "b8fa6cba6d1f8202cdf6ef1f1c61e0a3375c078f6204bf25ea7423ea18a90f85",
+        "textSha256": "06bc3c9d15bf6a7d70ba027f1486e7d6504d9ea483527e0eb38f1e94023e7fa1",
+        "textLength": 4105,
+        "textSimilarityToRetained": 0.9869,
+        "textDeltaSample": {
+          "retained": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-07 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 第4屆第8次定期會 交通部門業務質詢_影片連結 115-09-22 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高",
+          "live": "種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 高雄市議會_影片連結 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄"
+        },
+        "retrievedAt": "2026-11-07T15:15:51.235Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-khec-number-draw",
+      "publisher": "高雄市選舉委員會",
+      "sourceClass": "khec-roster",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/raw/official/2026/khec-65366.json",
+        "exists": true,
+        "sha256": "7cfcb4d99dd964ee9ba30456656727f802f101fa9933ce92cd2e3f8c363d6bd4",
+        "byteLength": 13241,
+        "sourceRetrievedAt": null
+      },
+      "live": {
+        "url": "https://www.cec.gov.tw/khec/article/65366",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html;charset=utf-8",
+            "byteLength": 499963,
+            "sha256": "e12b72fe37c665d6bf158f42a174f6df35da3d5d916ad4c49ff1b4e9f4c77f57",
+            "textSha256": "c95f2b47eb7a00cc349879a1f16972f40d9b6d752a04e50395701ff423e08a0a",
+            "textLength": 248,
+            "startedAt": "2026-11-07T15:15:51.640Z",
+            "finishedAt": "2026-11-07T15:15:51.862Z",
+            "durationMs": 222,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html;charset=utf-8",
+        "byteLength": 499963,
+        "sha256": "e12b72fe37c665d6bf158f42a174f6df35da3d5d916ad4c49ff1b4e9f4c77f57",
+        "textSha256": "c95f2b47eb7a00cc349879a1f16972f40d9b6d752a04e50395701ff423e08a0a",
+        "textLength": 248,
+        "textSimilarityToRetained": 0.0277,
+        "textDeltaSample": {
+          "retained": "{\"code\":\"0\",\"message\":\"操作成功\",\"data\":{\"title\":\"高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表\",\"content\":\"{\\\"content\\\":[]}\",\"articleType\":\"001\",\"beginTime\":\"20261027\",\"isDirectOpenNew\":false,\"prePage\":\"65527\",\"nextPage\":\"65267\",\"fileList\":[{\"fileId\":\"9bd4f559-e527-4f55-a4ef-21653d",
+          "live": "高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表 跳到主要內容 跳到導覽連結 網站頁尾 ::: 收合 高雄市選舉委員會 115年選舉 本會簡介 重要訊息 選舉介紹 選舉資訊 公民投票 為民服務 影音宣導 研究出版 選舉大事記 資訊公開 首頁 重要訊息 最新消息 高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表 高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表 附件下載 高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表 pdf 851 KB 上一篇 下一篇 列印時間 : Top"
+        },
+        "retrievedAt": "2026-11-07T15:15:51.862Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-ly-current-index",
+      "publisher": "立法院全球資訊網",
+      "sourceClass": "legislative-yuan",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/ly/current-index.snapshot",
+        "exists": true,
+        "sha256": "9fb98b86ce374df7100b8f7fcf3d140234ca747d7ed189b273394306d7922cea",
+        "byteLength": 357763,
+        "sourceRetrievedAt": "2026-11-07T06:03:13.000Z"
+      },
+      "live": {
+        "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=109",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 357763,
+            "sha256": "9b363d74d74d888a33bcaaac02f440f52d6b0bb018adee436feefa468e4ddb8e",
+            "textSha256": "c5fe53c98d95aae1d64989d385d8dfcf5406dd729bb064561c039b65f81e7c1c",
+            "textLength": 2640,
+            "startedAt": "2026-11-07T15:15:52.266Z",
+            "finishedAt": "2026-11-07T15:15:53.721Z",
+            "durationMs": 1455,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 357763,
+        "sha256": "9b363d74d74d888a33bcaaac02f440f52d6b0bb018adee436feefa468e4ddb8e",
+        "textSha256": "c5fe53c98d95aae1d64989d385d8dfcf5406dd729bb064561c039b65f81e7c1c",
+        "textLength": 2640,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:15:53.721Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-ly-ke-profile",
+      "publisher": "立法院全球資訊網",
+      "sourceClass": "legislative-yuan",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 2,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0134",
+            "value": "第11屆立法委員；到職日期：113年2月1日（2024-02-01）。"
+          },
+          {
+            "claimId": "enrich-claim-0137",
+            "value": "立法院資料記載第11屆立法委員於113年2月1日到職。"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/ly/ke.snapshot",
+        "exists": true,
+        "sha256": "227641ea0917bf6a602e7d1d091dbf379aa630e5ea08defd72f56d0485b30d69",
+        "byteLength": 160803,
+        "sourceRetrievedAt": "2026-11-07T06:04:07.000Z"
+      },
+      "live": {
+        "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46792",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 160803,
+            "sha256": "d37b665089ce78a6cbdac31fcc2e9f8cfc4b7ac3b07fabfc41059926a96e8ef8",
+            "textSha256": "5bcd1d7ceb98a6a864d5a99d28d7190c9b7ddf58dc639a7f86e23c7f42305602",
+            "textLength": 2476,
+            "startedAt": "2026-11-07T15:15:54.125Z",
+            "finishedAt": "2026-11-07T15:15:55.714Z",
+            "durationMs": 1589,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 160803,
+        "sha256": "d37b665089ce78a6cbdac31fcc2e9f8cfc4b7ac3b07fabfc41059926a96e8ef8",
+        "textSha256": "5bcd1d7ceb98a6a864d5a99d28d7190c9b7ddf58dc639a7f86e23c7f42305602",
+        "textLength": 2476,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:15:55.714Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-ly-lai-profile",
+      "publisher": "立法院全球資訊網",
+      "sourceClass": "legislative-yuan",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 2,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0140",
+            "value": "第11屆立法委員；到職日期：113年2月1日（2024-02-01）。"
+          },
+          {
+            "claimId": "enrich-claim-0143",
+            "value": "立法院資料記載第11屆立法委員於113年2月1日到職。"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/ly/lai.snapshot",
+        "exists": true,
+        "sha256": "b3688136a6c88e6e4c9da5ea90dfef0723de352d4a1c03d6ea9141628ded2346",
+        "byteLength": 161148,
+        "sourceRetrievedAt": "2026-11-07T06:04:09.000Z"
+      },
+      "live": {
+        "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46850",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 161148,
+            "sha256": "1ac050b7e7a2f4f611c388443e71fa9e8538e89803a8e3ada1ce3376a8ded4b7",
+            "textSha256": "b10366f9eef155336c594b69a3728cdc8ae0dc30c3a784bac79f9ce1b272e01d",
+            "textLength": 2545,
+            "startedAt": "2026-11-07T15:15:56.118Z",
+            "finishedAt": "2026-11-07T15:15:57.564Z",
+            "durationMs": 1446,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 161148,
+        "sha256": "1ac050b7e7a2f4f611c388443e71fa9e8538e89803a8e3ada1ce3376a8ded4b7",
+        "textSha256": "b10366f9eef155336c594b69a3728cdc8ae0dc30c3a784bac79f9ce1b272e01d",
+        "textLength": 2545,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:15:57.564Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-chen-guanyu-udn",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 6,
+        "present": 3,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0084",
+            "value": "報導標題：高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 聯合新聞網"
+          },
+          {
+            "claimId": "enrich-claim-0086",
+            "value": "來源於2026-08-07報導：高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 聯合新聞網"
+          },
+          {
+            "claimId": "enrich-claim-0087",
+            "value": "即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 2026-08-07 10:29 聯合報／ 記者 徐白櫻 ／高雄即時報導 議員 高雄市無黨籍議員陳善慧（右）宣布交棒，擔任特助的兒子陳冠宇（左）將參選下屆左楠區市議員。"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/chen-guanyu-udn.snapshot",
+        "exists": true,
+        "sha256": "ac55daea5dcc5d622e23fe67337f218ad42788954545984c9ea9a8979bd5424b",
+        "byteLength": 192661,
+        "sourceRetrievedAt": "2026-11-07T06:09:55.000Z"
+      },
+      "live": {
+        "url": "https://udn.com/news/story/124652/9676613",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=UTF-8",
+            "byteLength": 192149,
+            "sha256": "0a16674547cde64bc08fbe0d0dccc14cc5249d2b5e1a5ba38f8dcc3ddf46fcae",
+            "textSha256": "7db8cec99e2e7a216c94b56cd277f01fb97a549779019820612e2b456b650000",
+            "textLength": 3480,
+            "startedAt": "2026-11-07T15:15:57.969Z",
+            "finishedAt": "2026-11-07T15:15:58.392Z",
+            "durationMs": 423,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "byteLength": 192149,
+        "sha256": "0a16674547cde64bc08fbe0d0dccc14cc5249d2b5e1a5ba38f8dcc3ddf46fcae",
+        "textSha256": "7db8cec99e2e7a216c94b56cd277f01fb97a549779019820612e2b456b650000",
+        "textLength": 3480,
+        "textSimilarityToRetained": 0.8199,
+        "textDeltaSample": {
+          "retained": "2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 高雄市又一議員宣布交棒 陳善慧推薦兒",
+          "live": "2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 全身病？醫界4線索稱蒙娜麗莎有「鬼剃頭」哈佛曾指她甲狀腺功能低下 23:08 誰開第一槍？美股血流成河、AI股賣壓狂湧 剖析華爾街科技股股災 22:14 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 2026-08-07 10:2"
+        },
+        "retrievedAt": "2026-11-07T15:15:58.392Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-liu-shufang-udn",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 1,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0037",
+            "value": "報導標題：影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 | 2026九合一選舉"
+          },
+          {
+            "claimId": "enrich-claim-0038",
+            "value": "來源於2026-10-27報導：影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 | 2026九合一選舉"
+          },
+          {
+            "claimId": "enrich-claim-0039",
+            "value": "影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 | 2026九合一選舉 首頁 即時選情 選戰評論 影音新聞 選將點名-縣市長 選將點名-議員 圖解大選 民調儀表板 遊戲 快訊 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 2026-10-27 12:18 聯合報／記者郭韋綺／高雄即時報導 高雄市議員候選人柳淑芳第8度披掛上陣，今天抽號次抽籤，再度上演招牌「脫衣秀」，當眾脫下競選旗幟，露出白色內衣，現場員警上前圍成人牆，成為抽籤會場另類焦點。"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/liu-shufang-udn.snapshot",
+        "exists": true,
+        "sha256": "90922dfcb3a0ca93265091b59c67937f3a284ef28b4830b4e7856705b860c06d",
+        "byteLength": 69766,
+        "sourceRetrievedAt": "2026-11-07T06:09:54.000Z"
+      },
+      "live": {
+        "url": "https://udn.com/news/story/124652/9839460",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=UTF-8",
+            "byteLength": 197446,
+            "sha256": "0615116c2146b79d7ce746d622e0b69dae9db5ada006955971346e671040cfb9",
+            "textSha256": "c47dba96b6d0548e0c4c5ab35d8f5b217bfce4f92795f26dd40ad39a50cc69e0",
+            "textLength": 3937,
+            "startedAt": "2026-11-07T15:15:58.797Z",
+            "finishedAt": "2026-11-07T15:15:59.274Z",
+            "durationMs": 477,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "byteLength": 197446,
+        "sha256": "0615116c2146b79d7ce746d622e0b69dae9db5ada006955971346e671040cfb9",
+        "textSha256": "c47dba96b6d0548e0c4c5ab35d8f5b217bfce4f92795f26dd40ad39a50cc69e0",
+        "textLength": 3937,
+        "textSimilarityToRetained": 0.4719,
+        "textDeltaSample": {
+          "retained": "影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 | 2026九合一選舉 首頁 即時選情 選戰評論 影音新聞 選將點名-縣市長 選將點名-議員 圖解大選 民調儀表板 遊戲 快訊 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 2026-10-27 12:18 聯合報／記者郭韋綺／高雄即時報導 高雄市議員候選人柳淑芳第8度披掛上陣，今天抽號次抽籤，再度上演招牌「脫衣秀」，當眾",
+          "live": "影／又脫了！柳淑芳8度參選 脫衣曝「刻在心裡的名字」 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 "
+        },
+        "retrievedAt": "2026-11-07T15:15:59.274Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-wang-zhaomin-ebc",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 1,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0125",
+            "value": "高雄市長候選人造勢「台下只有8人」！冷清畫面曝｜東森新聞 東森電視 EBC地產王 造咖 東森娛樂 東森財經 東森美洲 简体 熱門關鍵字 高雄 新竹 台中 日本 super junior 沈伯洋 新北 關閉選單 2026選舉 台股暴跌 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 更多 高雄 新竹 台中 日本 super junior 沈伯洋 新北 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 拖動分類可調整排列順序 恢復預設 取消 儲存 自訂排序 2026選舉 台股暴跌 NBA 五熊疑毀日本國寶 美國期中選舉 河口湖凶殺案 追蹤東森新聞 我要爆料 關於我們 隱私權政策 Copyright &copy; 2024"
+          },
+          {
+            "claimId": "enrich-claim-0127",
+            "value": "報導標題：高雄市長候選人造勢「台下只有8人」！冷清畫面曝｜東森新聞"
+          },
+          {
+            "claimId": "enrich-claim-0129",
+            "value": "來源於2026-11-06報導：高雄市長候選人造勢「台下只有8人」！冷清畫面曝｜東森新聞"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/wang-zhaomin-ebc.snapshot",
+        "exists": true,
+        "sha256": "f0e824bb60401539cb2ab1d3d1bb96b7d20f6b4f108ea3bc0c8673ce57c4bdfd",
+        "byteLength": 84554,
+        "sourceRetrievedAt": "2026-11-07T06:03:38.000Z"
+      },
+      "live": {
+        "url": "https://news.ebc.net.tw/news/politics/579444",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 81886,
+            "sha256": "ee121a6f19fbf350fd8a37a0ffe397eca186388425864fcc703dc9c637549cfd",
+            "textSha256": "a961cd41b75a3f84a7c3498682f236e5b19430284fe66da6e1506bc5805c429c",
+            "textLength": 2318,
+            "startedAt": "2026-11-07T15:15:59.679Z",
+            "finishedAt": "2026-11-07T15:15:59.740Z",
+            "durationMs": 61,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 81886,
+        "sha256": "ee121a6f19fbf350fd8a37a0ffe397eca186388425864fcc703dc9c637549cfd",
+        "textSha256": "a961cd41b75a3f84a7c3498682f236e5b19430284fe66da6e1506bc5805c429c",
+        "textLength": 2318,
+        "textSimilarityToRetained": 0.8783,
+        "textDeltaSample": {
+          "retained": "下只有8人」！冷清畫面曝｜東森新聞 東森電視 EBC地產王 造咖 東森娛樂 東森財經 東森美洲 简体 熱門關鍵字 高雄 新竹 台中 日本 super junior 沈伯洋 新北 關閉選單 2026選舉 台股暴跌 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 更多 高雄 新竹 台中 日本 super junior 沈伯洋 新北 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 拖動分類可調整排列順序 恢復預設 取消 儲存 ",
+          "live": "下只有8人」！冷清畫面曝｜東森新聞 東森電視 EBC地產王 造咖 東森娛樂 東森財經 東森美洲 简体 熱門關鍵字 高雄 日本 台中 新竹 super junior 沈伯洋 新北 關閉選單 2026選舉 台股暴跌 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 更多 高雄 日本 台中 新竹 super junior 沈伯洋 新北 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 拖動分類可調整排列順序 恢復預設 取消 儲存 "
+        },
+        "retrievedAt": "2026-11-07T15:15:59.740Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-wang-zhaomin-et",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 2,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0128",
+            "value": "報導標題：高雄市長候選人造勢！台下僅8人仍講完68分鐘　辛酸影片讓網喊佩服 | ETtoday政治新聞 | ETtoday新聞雲"
+          },
+          {
+            "claimId": "enrich-claim-0131",
+            "value": "來源於2026-11-06報導：高雄市長候選人造勢！台下僅8人仍講完68分鐘　辛酸影片讓網喊佩服 | ETtoday政治新聞 | ETtoday新聞雲"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/wang-zhaomin-et.snapshot",
+        "exists": true,
+        "sha256": "984612d161cd0a1af5dec6d183b5b4932c25f56b49e506b529f2b8c618ada0dc",
+        "byteLength": 128258,
+        "sourceRetrievedAt": "2026-11-07T06:09:59.000Z"
+      },
+      "live": {
+        "url": "https://www.ettoday.net/news/20261106/3267823.htm",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 128441,
+            "sha256": "e47e56e0fb5fbced47e6d7aba1f60e362ba3b7d3052caa588a1aa8f2d016034f",
+            "textSha256": "9c28f9fa0bd70a03b66da57533521bd0e09f49268b804dde3837e2d0bcc666a9",
+            "textLength": 4781,
+            "startedAt": "2026-11-07T15:16:00.145Z",
+            "finishedAt": "2026-11-07T15:16:00.329Z",
+            "durationMs": 184,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 128441,
+        "sha256": "e47e56e0fb5fbced47e6d7aba1f60e362ba3b7d3052caa588a1aa8f2d016034f",
+        "textSha256": "9c28f9fa0bd70a03b66da57533521bd0e09f49268b804dde3837e2d0bcc666a9",
+        "textLength": 4781,
+        "textSimilarityToRetained": 0.7499,
+        "textDeltaSample": {
+          "retained": "1號張靜、2號王肇民、3號柯志恩、4號洪方隆及5號賴瑞隆。 每日新聞精選 免費訂閱 《ETtoday電子報》 ET快訊 台股暴跌...女星成重災戶「慘虧200萬」 悲嘆：快流落街頭 快訊／台男「曼谷知名百貨」墜樓亡！顧客驚嚇 快訊／柴山步道跌倒！高雄男送醫不治身亡 快訊／熱炒店出人命！20歲男胸部中刀亡 台股崩跌「百萬KOL被抄家」！老公反應超寵 給4血淚建議：快 分享給朋友： 追蹤我們： --> ※本文版權所有，非經授權，不得轉載。 [ ETtoday著作權聲明 ] ※ 推薦閱讀 熱門影音 政治最新 全站最新 ‧",
+          "live": "1號張靜、2號王肇民、3號柯志恩、4號洪方隆及5號賴瑞隆。 每日新聞精選 免費訂閱 《ETtoday電子報》 ET快訊 作家質疑「垃圾車廣播拉票」！北市環保局緊急回應 在家裝監視器「抓包尪出軌80次」！福建女提告求離婚吞敗 蘋果的「蘋」不只念ㄆㄧㄥˊ！ 一票驚呆 蕭敬騰發燒...Summer竟為他演唱會拋夫！ 連李千娜都來 遭騙2千萬！陳鴻怒嗆「郭XX背負6條人命」：有種回來告我 台北超人氣名店 宣布搬家 分享給朋友： 追蹤我們： --> ※本文版權所有，非經授權，不得轉載。 [ ETtoday著作權聲明 ] ※ "
+        },
+        "retrievedAt": "2026-11-07T15:16:00.329Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-xue-zhaoji-ltn",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 2,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0106",
+            "value": "報導標題：台灣前進陣線推薦參選高雄市議員  薛兆基：是責任的開始 - 政治 - 自由時報電子報"
+          },
+          {
+            "claimId": "enrich-claim-0109",
+            "value": "來源於2026-06-10報導：台灣前進陣線推薦參選高雄市議員  薛兆基：是責任的開始 - 政治 - 自由時報電子報"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot",
+        "exists": true,
+        "sha256": "ff26e897dd5388cec22d6c27402b3530f44b3954360c50c428a5b5c5588f2e0d",
+        "byteLength": 236783,
+        "sourceRetrievedAt": "2026-11-07T06:09:59.000Z"
+      },
+      "live": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5466983",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=UTF-8",
+            "byteLength": 235178,
+            "sha256": "10f3031fcd304f3f922e2fe55dd9676eaaa06f839cf1e6080a72ef4167417b42",
+            "textSha256": "27d1c94002d93d0914c76f105303e1e08c43d2ccd66617835b996de4a5695f9f",
+            "textLength": 2337,
+            "startedAt": "2026-11-07T15:16:00.733Z",
+            "finishedAt": "2026-11-07T15:16:01.101Z",
+            "durationMs": 368,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "byteLength": 235178,
+        "sha256": "10f3031fcd304f3f922e2fe55dd9676eaaa06f839cf1e6080a72ef4167417b42",
+        "textSha256": "27d1c94002d93d0914c76f105303e1e08c43d2ccd66617835b996de4a5695f9f",
+        "textLength": 2337,
+        "textSimilarityToRetained": 0.8076,
+        "textDeltaSample": {
+          "retained": "我下載APP 按我看活動辦法 讀者留言 留言 相關新聞 政治今日熱門 看更多！請加入自由時報粉絲團 熱門新聞 熱門新訊 千萬買宅、億萬買鄰！道明中學首排 吸引科技菁英與醫生爭相入主 全國電子破盤雙11限時開跑！指定大家電5折起、全館家電9折 歐陸瘋傳暗黑神作！哥雅名畫改編《女巫安息日》亞洲首演在臺中 王美惠推婚育宅青年成家！促嘉義「縣市共榮」台積電雙城生活圈 大家都關注 廖大乙 立冬 秦慧珠 蕭美琴 全球股災 中職 台積電 輝達 國民黨 江啟臣 亞冠賽 護盤 金管會 借券賣出 台灣隊 中信兄弟 全球股災 今彩539",
+          "live": "我下載APP 按我看活動辦法 讀者留言 留言 相關新聞 政治今日熱門 看更多！請加入自由時報粉絲團 熱門新聞 熱門新訊 國家重點領域校際研教園區串聯頂尖大學與產業需求 落實人才培育 (高市府廣告) 國家重點領域校際研教園區串聯頂尖大學與產業需求 落實人才培育 2026凱基運動會 展現One Team團隊精神 10家優質業者獲選「屏東金牌水產」 大家都關注 陳健治 柯志恩 李洋 桃園亞洲職棒交流賽 國民黨 蕭美琴 台積電 美股 台股 味全龍 大湖公園 培證英雄 邱臣遠 解放軍 高志綱 又一村水餃店 高雄市長選舉 正面"
+        },
+        "retrievedAt": "2026-11-07T15:16:01.101Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-xue-zhaoji-udn",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 2,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0105",
+            "value": "報導標題：大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 聯合新聞網"
+          },
+          {
+            "claimId": "enrich-claim-0107",
+            "value": "來源於2026-06-09報導：大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 聯合新聞網"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot",
+        "exists": true,
+        "sha256": "83f8764b13a6b10a635a50d6a78bac2f816a98ff4fc768977c8a942b50e968a3",
+        "byteLength": 194871,
+        "sourceRetrievedAt": "2026-11-07T06:09:56.000Z"
+      },
+      "live": {
+        "url": "https://udn.com/news/story/124652/9554978",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=UTF-8",
+            "byteLength": 194359,
+            "sha256": "d16bad52f0c232fd56e15f95ef416e17b01e1f709ab2b3309b724475d9b3b2b5",
+            "textSha256": "034587f8f5d00da748fd4bf2b0f6795e9c4d6feeb0787f6440f06a4880d942ca",
+            "textLength": 3624,
+            "startedAt": "2026-11-07T15:16:01.506Z",
+            "finishedAt": "2026-11-07T15:16:01.888Z",
+            "durationMs": 382,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "byteLength": 194359,
+        "sha256": "d16bad52f0c232fd56e15f95ef416e17b01e1f709ab2b3309b724475d9b3b2b5",
+        "textSha256": "034587f8f5d00da748fd4bf2b0f6795e9c4d6feeb0787f6440f06a4880d942ca",
+        "textLength": 3624,
+        "textSimilarityToRetained": 0.827,
+        "textDeltaSample": {
+          "retained": "2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 大綠變小綠！謝長廷前幕僚薛兆基轉投入",
+          "live": "2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 全身病？醫界4線索稱蒙娜麗莎有「鬼剃頭」哈佛曾指她甲狀腺功能低下 23:08 誰開第一槍？美股血流成河、AI股賣壓狂湧 剖析華爾街科技股股災 22:14 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 "
+        },
+        "retrievedAt": "2026-11-07T15:16:01.888Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-yin-li-cna",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 5,
+        "present": 3,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0113",
+            "value": "報導標題：宣布參選高市左楠區市議員　尹立：延續公民力量 | 地方 | 中央社 CNA"
+          },
+          {
+            "claimId": "enrich-claim-0115",
+            "value": "來源於2025-08-26報導：宣布參選高市左楠區市議員　尹立：延續公民力量 | 地方 | 中央社 CNA"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot",
+        "exists": true,
+        "sha256": "16e079a98bb50d5257d2f4669c85278ef4d4246fcb078add0b192a0ff76df02b",
+        "byteLength": 124670,
+        "sourceRetrievedAt": "2026-11-07T06:09:53.000Z"
+      },
+      "live": {
+        "url": "https://www.cna.com.tw/news/aloc/202508260141.aspx",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 123677,
+            "sha256": "28b77e9cf60fe61748fd9adab28fd6c880dfe040e198c9b40597a942e9a3a5a0",
+            "textSha256": "b8c1b7a7c096a124c18c35689333a1f1a450177b041b5f66c4f9301d73bd402a",
+            "textLength": 6088,
+            "startedAt": "2026-11-07T15:16:02.294Z",
+            "finishedAt": "2026-11-07T15:16:02.433Z",
+            "durationMs": 139,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 123677,
+        "sha256": "28b77e9cf60fe61748fd9adab28fd6c880dfe040e198c9b40597a942e9a3a5a0",
+        "textSha256": "b8c1b7a7c096a124c18c35689333a1f1a450177b041b5f66c4f9301d73bd402a",
+        "textLength": 6088,
+        "textSimilarityToRetained": 0.6407,
+        "textDeltaSample": {
+          "retained": "I淨零 特派看世界 解釋性新聞 新聞圖表 中央社好POD 文化+ 悅讀閱讀 中央社eBooks 早安世界電子報 九合一 支持者出征「洋流」店家？蔣萬安：應是誤會 前台東縣長徐慶元力挺陳瑩 吳秀華助茶農促銷 國民黨「三子」合體力抗洋流 拚2026勝選也拚2028 民進黨「3+1」交叉輔選 賴蕭蔡卓各展戰力 張善政專業無傲氣體貼基層 以理性實績證明桃園進步 黃世杰漁港出身法律學霸 聰明溫暖拚盼改變桃園 蔣萬安訪東區商圈、遼寧街 石舫亘赴景美夜市分頭拜票 專訪被問對蔣萬安的看法 沈伯洋：令人尊敬對手 即時 共和黨敗選後川",
+          "live": "I淨零 特派看世界 解釋性新聞 新聞圖表 中央社好POD 文化+ 悅讀閱讀 中央社eBooks 早安世界電子報 九合一 盧秀燕、石舫亘同赴奉天宮福宴 120桌逐一敬酒拜票 卓榮泰站台挺蘇巧慧 籲議員過半助推新北市政 李洋陪同沈伯洋車掃港湖 蕭副總統助講送航海圖、魯夫草帽 賴清德赴岡山挺賴瑞隆 黨政人士：布局高雄未來10年 林佳龍回麥寮挺劉建國 細數交通建設籲支持 賴瑞隆岡山造勢 賴總統：中央全力支持高雄建設 柯志恩合體蔣萬安旗山造勢 喊北高連線爭取勝利 韓國瑜力挺游淑貞 前花蓮衛生局長現身張峻後援會 即時 盧秀燕、"
+        },
+        "retrievedAt": "2026-11-07T15:16:02.433Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-yin-li-ltn",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 3,
+        "present": 0,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0114",
+            "value": "報導標題：被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報"
+          },
+          {
+            "claimId": "enrich-claim-0117",
+            "value": "來源於2025-08-26報導：被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報"
+          },
+          {
+            "claimId": "enrich-claim-0118",
+            "value": "台灣網站分級推廣基金會（TICRF）網站：http://www.ticrf.org.tw 首頁 &gt; 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導 加入Google首選 留言 new 民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot",
+        "exists": true,
+        "sha256": "3996e25ac776d774337af4c0850390d8bb72f63386ce65c226d70409da4be2ed",
+        "byteLength": 235386,
+        "sourceRetrievedAt": "2026-11-07T06:10:00.000Z"
+      },
+      "live": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5435667",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=UTF-8",
+            "byteLength": 234931,
+            "sha256": "9ad60f062478a66e6bd025cbe438f1e4a9cfb5ae7e715564ee99faa5c0e6ef3e",
+            "textSha256": "e3bf305f4670a69523b253e6334fc67b83b64108812e7b075208876255292ae7",
+            "textLength": 2167,
+            "startedAt": "2026-11-07T15:16:02.839Z",
+            "finishedAt": "2026-11-07T15:16:03.182Z",
+            "durationMs": 343,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "byteLength": 234931,
+        "sha256": "9ad60f062478a66e6bd025cbe438f1e4a9cfb5ae7e715564ee99faa5c0e6ef3e",
+        "textSha256": "e3bf305f4670a69523b253e6334fc67b83b64108812e7b075208876255292ae7",
+        "textLength": 2167,
+        "textSimilarityToRetained": 0.785,
+        "textDeltaSample": {
+          "retained": "我下載APP 按我看活動辦法 讀者留言 留言 相關新聞 政治今日熱門 看更多！請加入自由時報粉絲團 熱門新聞 熱門新訊 千萬買宅、億萬買鄰！道明中學首排 吸引科技菁英與醫生爭相入主 全國電子破盤雙11限時開跑！指定大家電5折起、全館家電9折 歐陸瘋傳暗黑神作！哥雅名畫改編《女巫安息日》亞洲首演在臺中 王美惠推婚育宅青年成家！促嘉義「縣市共榮」台積電雙城生活圈 大家都關注 國安基金 台股大跌 蘇巧慧 第五縱隊 共諜 台指期夜盤 亞冠賽 中職 農業部 陳健治 宋楚瑜 洋流 立院三讀 行政院 AI股 高虹安 英語能力爭議",
+          "live": "我下載APP 按我看活動辦法 讀者留言 留言 相關新聞 政治今日熱門 看更多！請加入自由時報粉絲團 熱門新聞 熱門新訊 國家重點領域校際研教園區串聯頂尖大學與產業需求 落實人才培育 (高市府廣告) 國家重點領域校際研教園區串聯頂尖大學與產業需求 落實人才培育 2026凱基運動會 展現One Team團隊精神 10家優質業者獲選「屏東金牌水產」 大家都關注 陳健治 柯志恩 李洋 桃園亞洲職棒交流賽 國民黨 蕭美琴 台積電 美股 台股 味全龍 大湖公園 培證英雄 邱臣遠 解放軍 高志綱 又一村水餃店 高雄市長選舉 正面"
+        },
+        "retrievedAt": "2026-11-07T15:16:03.182Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-zhang-jing-udn",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 4,
+        "present": 2,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0121",
+            "value": "報導標題：獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 聯合新聞網"
+          },
+          {
+            "claimId": "enrich-claim-0122",
+            "value": "來源於2026-03-29報導：獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 聯合新聞網"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot",
+        "exists": true,
+        "sha256": "4bfc27f13241119476f1635ec6af23d64475b9797087197f05768fe3945174de",
+        "byteLength": 193693,
+        "sourceRetrievedAt": "2026-11-07T06:09:57.000Z"
+      },
+      "live": {
+        "url": "https://udn.com/news/story/124652/9409570",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=UTF-8",
+            "byteLength": 193100,
+            "sha256": "086b88c3357b7ff2e51203d9086f8dfb54ec55379f696ab0ca060d2ce8105b5e",
+            "textSha256": "685c08fc71ba0190c1ce9c542df4e1380515bfdf66112bced79005c2d1de0cf3",
+            "textLength": 3671,
+            "startedAt": "2026-11-07T15:16:03.585Z",
+            "finishedAt": "2026-11-07T15:16:03.950Z",
+            "durationMs": 365,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "byteLength": 193100,
+        "sha256": "086b88c3357b7ff2e51203d9086f8dfb54ec55379f696ab0ca060d2ce8105b5e",
+        "textSha256": "685c08fc71ba0190c1ce9c542df4e1380515bfdf66112bced79005c2d1de0cf3",
+        "textLength": 3671,
+        "textSimilarityToRetained": 0.8326,
+        "textDeltaSample": {
+          "retained": "2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 獨／高雄市長參選人+1 律師張靜宣布",
+          "live": "2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 全身病？醫界4線索稱蒙娜麗莎有「鬼剃頭」哈佛曾指她甲狀腺功能低下 23:08 誰開第一槍？美股血流成河、AI股賣壓狂湧 剖析華爾街科技股股災 22:14 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 2026-03-29 10:"
+        },
+        "retrievedAt": "2026-11-07T15:16:03.950Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-news-zhang-yili-cna",
+      "publisher": "新聞媒體報導",
+      "sourceClass": "news-report",
+      "claimValuePresence": {
+        "checked": 5,
+        "present": 3,
+        "missing": [
+          {
+            "claimId": "enrich-claim-0079",
+            "value": "報導標題：張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA"
+          },
+          {
+            "claimId": "enrich-claim-0080",
+            "value": "來源於2025-02-17報導：張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA"
+          }
+        ]
+      },
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot",
+        "exists": true,
+        "sha256": "e37384229bf9df9594dce2c2eb0cef1b6a05d217335b4ac3b7001df7e443d4d2",
+        "byteLength": 123958,
+        "sourceRetrievedAt": "2026-11-07T06:09:52.000Z"
+      },
+      "live": {
+        "url": "https://www.cna.com.tw/news/aloc/202502170115.aspx",
+        "classification": "changed-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 122965,
+            "sha256": "55e344d340567409a8241fa2e5b4f5741a036ffe312719c367c7197d938a11fc",
+            "textSha256": "8b3f0a96e63f5d861b22e0b6f418d307fd2b0ad268ff9c6d8800fd2e1b095fe3",
+            "textLength": 5980,
+            "startedAt": "2026-11-07T15:16:04.355Z",
+            "finishedAt": "2026-11-07T15:16:04.458Z",
+            "durationMs": 103,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 122965,
+        "sha256": "55e344d340567409a8241fa2e5b4f5741a036ffe312719c367c7197d938a11fc",
+        "textSha256": "8b3f0a96e63f5d861b22e0b6f418d307fd2b0ad268ff9c6d8800fd2e1b095fe3",
+        "textLength": 5980,
+        "textSimilarityToRetained": 0.6341,
+        "textDeltaSample": {
+          "retained": "I淨零 特派看世界 解釋性新聞 新聞圖表 中央社好POD 文化+ 悅讀閱讀 中央社eBooks 早安世界電子報 九合一 支持者出征「洋流」店家？蔣萬安：應是誤會 前台東縣長徐慶元力挺陳瑩 吳秀華助茶農促銷 國民黨「三子」合體力抗洋流 拚2026勝選也拚2028 民進黨「3+1」交叉輔選 賴蕭蔡卓各展戰力 張善政專業無傲氣體貼基層 以理性實績證明桃園進步 黃世杰漁港出身法律學霸 聰明溫暖拚盼改變桃園 蔣萬安訪東區商圈、遼寧街 石舫亘赴景美夜市分頭拜票 專訪被問對蔣萬安的看法 沈伯洋：令人尊敬對手 即時 共和黨敗選後川",
+          "live": "I淨零 特派看世界 解釋性新聞 新聞圖表 中央社好POD 文化+ 悅讀閱讀 中央社eBooks 早安世界電子報 九合一 盧秀燕、石舫亘同赴奉天宮福宴 120桌逐一敬酒拜票 卓榮泰站台挺蘇巧慧 籲議員過半助推新北市政 李洋陪同沈伯洋車掃港湖 蕭副總統助講送航海圖、魯夫草帽 賴清德赴岡山挺賴瑞隆 黨政人士：布局高雄未來10年 林佳龍回麥寮挺劉建國 細數交通建設籲支持 賴瑞隆岡山造勢 賴總統：中央全力支持高雄建設 柯志恩合體蔣萬安旗山造勢 喊北高連線爭取勝利 韓國瑜力挺游淑貞 前花蓮衛生局長現身張峻後援會 即時 盧秀燕、"
+        },
+        "retrievedAt": "2026-11-07T15:16:04.458Z",
+        "failureReason": null
+      }
+    },
+    {
+      "sourceId": "scope-official-youth-zhang-yili",
+      "publisher": "高雄市政府青年局",
+      "sourceClass": "government-record",
+      "claimValuePresence": null,
+      "retained": {
+        "rawPath": "data/enrichment/raw/2026-11-07/official/zhang-yili-youth.snapshot",
+        "exists": true,
+        "sha256": "3c04299e881402a77c8b399e44efcfdfdcb3a05e3fbd2dd04efe5fd1cc9a5171",
+        "byteLength": 80242,
+        "sourceRetrievedAt": "2026-11-07T06:09:51.000Z"
+      },
+      "live": {
+        "url": "https://youth.kcg.gov.tw/cp.aspx?n=3",
+        "classification": "identical-text",
+        "attempts": [
+          {
+            "attempt": 1,
+            "ok": true,
+            "httpStatus": 200,
+            "contentType": "text/html; charset=utf-8",
+            "byteLength": 80242,
+            "sha256": "cd8fa9ca3617b6e10846148c77109d5008aa07a67bcaa7c6bfc63e3d3b6a2f20",
+            "textSha256": "2d8cc244d3e06dad5e14894349d1bbd208f3bc582709804bce4a6462d1a9caaf",
+            "textLength": 2170,
+            "startedAt": "2026-11-07T15:16:04.865Z",
+            "finishedAt": "2026-11-07T15:16:06.371Z",
+            "durationMs": 1506,
+            "error": null
+          }
+        ],
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "byteLength": 80242,
+        "sha256": "cd8fa9ca3617b6e10846148c77109d5008aa07a67bcaa7c6bfc63e3d3b6a2f20",
+        "textSha256": "2d8cc244d3e06dad5e14894349d1bbd208f3bc582709804bce4a6462d1a9caaf",
+        "textLength": 2170,
+        "textSimilarityToRetained": 1,
+        "textDeltaSample": null,
+        "retrievedAt": "2026-11-07T15:16:06.371Z",
+        "failureReason": null
+      }
+    }
+  ],
+  "exploratory": [
+    {
+      "label": "高雄市議會 — 議員名錄",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+      "purpose": "確認現任議員名錄是否包含沒有自動發布內容的候選人（挑戰者通常不在名錄中）。",
+      "classification": "observed-no-retained-snapshot",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "httpStatus": 200,
+          "contentType": "text/html; charset=utf-8",
+          "byteLength": 151038,
+          "sha256": "31504e71d64da659a7ad4cc283fbda29a1402de65c1e550c5e3bbe46fc34af55",
+          "textSha256": "f9c26292a43d958d634eeb88a53f237ac8a463a59d3734afa7f569a7e9eae944",
+          "textLength": 3362,
+          "startedAt": "2026-11-07T15:16:06.774Z",
+          "finishedAt": "2026-11-07T15:16:09.153Z",
+          "durationMs": 2379,
+          "error": null
+        }
+      ],
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "byteLength": 151038,
+      "sha256": "31504e71d64da659a7ad4cc283fbda29a1402de65c1e550c5e3bbe46fc34af55",
+      "textSha256": "f9c26292a43d958d634eeb88a53f237ac8a463a59d3734afa7f569a7e9eae944",
+      "textLength": 3362,
+      "textSimilarityToRetained": null,
+      "textDeltaSample": null,
+      "retrievedAt": "2026-11-07T15:16:09.153Z",
+      "failureReason": null
+    },
+    {
+      "label": "高雄市選舉委員會",
+      "url": "https://www.khec.gov.tw/",
+      "purpose": "確認選委會公告入口可用；候選人資格屬 cec-roster/khec-roster 類，政策不得用於履歷發布。",
+      "classification": "unavailable",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "httpStatus": null,
+          "contentType": null,
+          "byteLength": null,
+          "sha256": null,
+          "textSha256": null,
+          "textLength": null,
+          "startedAt": "2026-11-07T15:16:09.556Z",
+          "finishedAt": "2026-11-07T15:16:20.072Z",
+          "durationMs": 10516,
+          "error": "fetch failed"
+        },
+        {
+          "attempt": 2,
+          "ok": false,
+          "httpStatus": null,
+          "contentType": null,
+          "byteLength": null,
+          "sha256": null,
+          "textSha256": null,
+          "textLength": null,
+          "startedAt": "2026-11-07T15:16:20.474Z",
+          "finishedAt": "2026-11-07T15:16:21.954Z",
+          "durationMs": 1480,
+          "error": "fetch failed"
+        }
+      ],
+      "httpStatus": null,
+      "contentType": null,
+      "byteLength": null,
+      "sha256": null,
+      "textSha256": null,
+      "textLength": null,
+      "textSimilarityToRetained": null,
+      "textDeltaSample": null,
+      "retrievedAt": "2026-11-07T15:16:21.954Z",
+      "failureReason": "fetch failed"
+    },
+    {
+      "label": "中央選舉委員會",
+      "url": "https://www.cec.gov.tw/",
+      "purpose": "確認中央選委會入口可用；同上，資格公告不是履歷來源。",
+      "classification": "observed-no-retained-snapshot",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "httpStatus": 200,
+          "contentType": "text/html;charset=utf-8",
+          "byteLength": 499123,
+          "sha256": "d40167d56884147fe086f6c65755a025cb9f3ed34bc5ace2e8675dbab4c5f61e",
+          "textSha256": "f3b0453acfd59a9e432b21a4825f98115d4d02fb3dc03cc776037a515d0434b5",
+          "textLength": 364,
+          "startedAt": "2026-11-07T15:16:22.356Z",
+          "finishedAt": "2026-11-07T15:16:22.622Z",
+          "durationMs": 266,
+          "error": null
+        }
+      ],
+      "httpStatus": 200,
+      "contentType": "text/html;charset=utf-8",
+      "byteLength": 499123,
+      "sha256": "d40167d56884147fe086f6c65755a025cb9f3ed34bc5ace2e8675dbab4c5f61e",
+      "textSha256": "f3b0453acfd59a9e432b21a4825f98115d4d02fb3dc03cc776037a515d0434b5",
+      "textLength": 364,
+      "textSimilarityToRetained": null,
+      "textDeltaSample": null,
+      "retrievedAt": "2026-11-07T15:16:22.622Z",
+      "failureReason": null
+    },
+    {
+      "label": "立法院 — 委員名錄",
+      "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46850",
+      "purpose": "確認立法院委員名錄可用，供市長候選人立法委員紀錄覆核。",
+      "classification": "observed-no-retained-snapshot",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "httpStatus": 200,
+          "contentType": "text/html; charset=utf-8",
+          "byteLength": 161148,
+          "sha256": "3e454670c7a708d452b0e68b707117ec5f6fce0f7e99ed5ec833d8b47395d322",
+          "textSha256": "b10366f9eef155336c594b69a3728cdc8ae0dc30c3a784bac79f9ce1b272e01d",
+          "textLength": 2545,
+          "startedAt": "2026-11-07T15:16:23.024Z",
+          "finishedAt": "2026-11-07T15:16:24.700Z",
+          "durationMs": 1676,
+          "error": null
+        }
+      ],
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "byteLength": 161148,
+      "sha256": "3e454670c7a708d452b0e68b707117ec5f6fce0f7e99ed5ec833d8b47395d322",
+      "textSha256": "b10366f9eef155336c594b69a3728cdc8ae0dc30c3a784bac79f9ce1b272e01d",
+      "textLength": 2545,
+      "textSimilarityToRetained": null,
+      "textDeltaSample": null,
+      "retrievedAt": "2026-11-07T15:16:24.700Z",
+      "failureReason": null
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProfileTabs from '../../components/ProfileTabs';
+import { candidateProfiles, isDemoProfile } from '../../data';
+import { withBase } from '../../utils/paths';
+
+export function getStaticPaths() {
+  return candidateProfiles.map((candidate) => ({
+    params: { slug: candidate.candidacy.slug },
+    props: { candidate },
+  }));
+}
+
+interface Props {
+  candidate: (typeof candidateProfiles)[number];
+}
+
+const { candidate } = Astro.props;
+const demo = isDemoProfile(candidate);
+const numberLabel = candidate.candidacy.candidateNumberStatus === 'drawn'
+  ? `號次 ${candidate.candidacy.candidateNumber}（抽定，非正式公告）`
+  : candidate.candidacy.candidateNumber
+    ? `號次 ${candidate.candidacy.candidateNumber}`
+    : '號次尚未發布';
+const partyLabel = candidate.candidacy.partyStatus === 'not-published'
+  ? '政黨資訊尚未刊載'
+  : candidate.candidacy.politicalParty;
+const officialStatusNote = candidate.candidacy.electionType === 'mayoral'
+  ? '候選人資格已由官方資料核准；完整人物履歷仍待後續人工核對。'
+  : '本頁呈現高雄市選舉委員會官方號次抽定的預公告列名；正式市議員候選人公告預定於 2026-11-17，完整人物履歷仍待後續人工核對。';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: candidate.person.displayName,
+  description: candidate.person.summary,
+  url: new URL(withBase(`/candidates/${candidate.candidacy.slug}/`), Astro.site ?? new URL('https://example.invalid')).href,
+  additionalProperty: [{ '@type': 'PropertyValue', name: '資料狀態', value: demo ? '虛構示範' : '官方核准切片' }],
+};
+---
+
+<BaseLayout
+  title={`${candidate.person.displayName}｜港都人物誌`}
+  description={`${candidate.person.displayName}的${demo ? '虛構示範人物' : '官方切片人物'}頁，包含基本資料、資料狀態與來源。`}
+  canonicalPath={`/candidates/${candidate.candidacy.slug}/`}
+  structuredData={structuredData}
+>
+  <div class="page-wrap">
+    <section class="page-heading">
+      <span class="eyebrow">CANDIDATE PROFILE / {demo ? 'FICTIONAL DEMO' : 'OFFICIAL SNAPSHOT'}</span>
+      <h1>{candidate.person.displayName}</h1>
+      <p>{candidate.person.summary}</p>
+      <div class="demo-notice" role="note"><span aria-hidden="true">✦</span><div><strong>{demo ? '虛構示範人物' : '官方資料切片'}</strong>{demo ? '此頁面不代表任何真實候選人、黨派、職務、新聞或公共紀錄。' : '本頁僅呈現已通過來源核對的候選人資格切片；空白欄位不代表不存在，抽定號次也不等於正式候選人公告。'}</div></div>
+    </section>
+
+    <div class="profile-page">
+      <main class="profile-page__main">
+        <ProfileTabs client:load candidate={candidate} />
+        <noscript><p class="demo-notice" style="margin-top: 1rem;">啟用 JavaScript 可切換完整資料分類；本頁的基本資料已在 HTML 中預先產生。</p></noscript>
+      </main>
+      <aside class="profile-page__aside" aria-label="人物摘要">
+        <div class="profile-page__identity">
+          <span class="profile-badge">{demo ? '虛構示範' : '官方資料'}</span>
+          <h2>{candidate.candidacy.currentPosition}</h2>
+          <p>{partyLabel}・{candidate.district.name}</p>
+          <p>{candidate.candidacy.electionYear}・{numberLabel}</p>
+        </div>
+        <div class="profile-page__aside-card">
+          <h3>資料狀態</h3>
+          <p>{demo ? '本原型以示範來源展示流程。' : officialStatusNote}</p>
+          <h3>來源</h3>
+          <ul>
+            {candidate.sources.map((source) => <li><a href={source.url} target="_blank" rel="noreferrer">{source.publisher}・{source.id}</a></li>)}
+          </ul>
+        </div>
+        <a class="secondary-link" href={withBase(`/districts/${candidate.district.slug}/`)}>回到 {candidate.district.name}</a>
+        <a class="secondary-link" href={withBase('/')}>回到城市探索</a>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

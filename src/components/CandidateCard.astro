@@ -1,0 +1,30 @@
+---
+import { isDemoProfile, type CandidateProfile } from '../data';
+import { withBase } from '../utils/paths';
+
+interface Props {
+  candidate: CandidateProfile;
+}
+
+const { candidate } = Astro.props;
+const { person, candidacy, district } = candidate;
+const demo = isDemoProfile(candidate);
+const numberLabel = candidacy.candidateNumberStatus === 'drawn'
+  ? `號次 ${candidacy.candidateNumber}（抽定，非正式公告）`
+  : candidacy.candidateNumber
+    ? `號次 ${candidacy.candidateNumber}`
+    : '號次尚未發布';
+---
+
+<a class="candidate-card" href={withBase(`/candidates/${candidacy.slug}/`)}>
+  <div class="candidate-card__top">
+    <span class="profile-badge">{demo ? '虛構示範' : '官方資料'}</span>
+    <span class="status-chip">{numberLabel}</span>
+  </div>
+  <div>
+    <h2>{person.displayName}</h2>
+    <p>{candidacy.currentPosition}</p>
+  </div>
+  <p>{district.name}・{candidacy.partyStatus === 'not-published' ? '政黨資訊尚未刊載' : candidacy.politicalParty}</p>
+  <span class="secondary-link">閱讀人物資料 →</span>
+</a>

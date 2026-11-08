@@ -1,0 +1,22 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ headless: true, args:['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const context = await browser.newContext({ viewport:{width:1600,height:1000}, reducedMotion:'reduce' });
+const page = await context.newPage();
+await page.goto('http://127.0.0.1:4321/?district=kaohsiung-mayor-2026&candidate=zhang-jing-2026', { waitUntil:'domcontentloaded' });
+await page.locator('[data-testid="city-explorer"][data-hydrated="true"]').waitFor({timeout:30000});
+await page.locator('canvas').waitFor({timeout:30000});
+await page.waitForTimeout(2500);
+console.log(await page.evaluate(() => {
+  const g = window.__heroGroup;
+  const scene = g?.parent;
+  const cams = [];
+  scene?.traverse((o) => { if (o.isCamera) cams.push(o); });
+  const cam = cams[0];
+  const world = g.position.clone();
+  g.parent.updateMatrixWorld(true);
+  g.updateMatrixWorld(true);
+  g.getWorldPosition(world);
+  const p = world.clone().project(cam);
+  return JSON.stringify({ cams: cams.map(c=>({type:c.type, pos:c.position.toArray(), zoom:c.zoom, near:c.near, far:c.far, left:c.left,right:c.right,top:c.top,bottom:c.bottom})), world: world.toArray(), ndc: p.toArray(), child0: g.children[0]?.type, child1: g.children[1]?.type });
+}));
+await browser.close();

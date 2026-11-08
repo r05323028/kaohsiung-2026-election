@@ -1,0 +1,2089 @@
+{
+  "schemaVersion": "1",
+  "datasetId": "kaohsiung-2026-zuoying-mayoral-enrichment",
+  "generatedAt": "2026-11-07T15:20:12.603Z",
+  "derivedFrom": {
+    "path": "data/enrichment/normalized/2026/zuoying-mayoral.json",
+    "sha256": "993abcce1e9671222ee1495e2a11d6cae567505abf4e77237ac5d56e01ddd719"
+  },
+  "policy": "correction-lineage-v1",
+  "summary": {
+    "targets": 25,
+    "applied": 12,
+    "published": 0,
+    "note": "Corrected records are intentionally not published: automated-editorial-policy-v1 permits only education / historical-position / professional-experience claims sourced from Kaohsiung City Council member profiles or Legislative Yuan profiles, and none of the corrected claims meets those constraints."
+  },
+  "claims": [
+    {
+      "claimId": "enrich-claim-0001",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0001"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0002"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0001",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0001",
+          "correction-established-verifier-enrich-claim-0001"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0012",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0012"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0014"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0012",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0012",
+          "correction-established-verifier-enrich-claim-0012"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0024",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0024"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0026"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0024",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0024",
+          "correction-established-verifier-enrich-claim-0024"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0040",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0040"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0044"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0040",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0040",
+          "correction-established-verifier-enrich-claim-0040"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0049",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0049"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0056"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0049",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0049",
+          "correction-established-verifier-enrich-claim-0049"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0059",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0059"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0068"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0059",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0059",
+          "correction-established-verifier-enrich-claim-0059"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0077",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "originalValue": "張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。",
+      "value": "張以理卸任青年局長 陳其邁肯定任內努力",
+      "sourceIds": [
+        "scope-news-zhang-yili-cna"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0077"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0079"
+      ],
+      "sourcePublicationDate": "2025-02-17",
+      "currentStatus": "historical",
+      "attribution": "news-report",
+      "correctionId": "correction-enrich-claim-0077",
+      "correctionKind": "chrome-segment",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0077",
+          "correction-established-verifier-enrich-claim-0077"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0088",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "value": "本屆議員",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0088"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0092"
+      ],
+      "sourcePublicationDate": null,
+      "currentStatus": "current",
+      "attribution": "institutional-record",
+      "correctionId": "correction-enrich-claim-0088",
+      "correctionKind": "district-strip",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0088",
+          "correction-established-verifier-enrich-claim-0088"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "originalValue": "請繼續往下閱讀... 曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」。",
+      "value": "曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」",
+      "sourceIds": [
+        "scope-news-xue-zhaoji-ltn"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0104"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0104"
+      ],
+      "sourcePublicationDate": "2026-06-10",
+      "currentStatus": "historical",
+      "attribution": "news-report",
+      "correctionId": "correction-enrich-claim-0104",
+      "correctionKind": "chrome-segment",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0104",
+          "correction-established-verifier-enrich-claim-0104"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "originalValue": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團",
+      "value": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底",
+      "sourceIds": [
+        "scope-news-xue-zhaoji-udn"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0108"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0113"
+      ],
+      "sourcePublicationDate": "2026-06-09",
+      "currentStatus": "historical",
+      "attribution": "news-report",
+      "correctionId": "correction-enrich-claim-0108",
+      "correctionKind": "chrome-segment",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0108",
+          "correction-established-verifier-enrich-claim-0108"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "originalValue": "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始 - 政治 - 自由時報電子報 為達最佳瀏覽效果，建議使用 Chrome、Firefox 或 Microsoft Edge 的瀏覽器。",
+      "value": "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始",
+      "sourceIds": [
+        "scope-news-xue-zhaoji-ltn"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0110"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0114"
+      ],
+      "sourcePublicationDate": "2026-06-10",
+      "currentStatus": "historical",
+      "attribution": "news-report",
+      "correctionId": "correction-enrich-claim-0110",
+      "correctionKind": "proposal-literal",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0110",
+          "correction-established-verifier-enrich-claim-0110"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    },
+    {
+      "claimId": "enrich-claim-0116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "originalValue": "宣布參選高市左楠區市議員 尹立：延續公民力量 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。",
+      "value": "宣布參選高市左楠區市議員 尹立：延續公民力量",
+      "sourceIds": [
+        "scope-news-yin-li-cna"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0116"
+      ],
+      "identityObservationIds": [
+        "enrich-observation-0125"
+      ],
+      "sourcePublicationDate": "2025-08-26",
+      "currentStatus": "historical",
+      "attribution": "news-report",
+      "correctionId": "correction-enrich-claim-0116",
+      "correctionKind": "chrome-segment",
+      "publicationStatus": "withheld-pending-review",
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0116",
+          "correction-established-verifier-enrich-claim-0116"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      },
+      "notes": [
+        "Derived record: the original claim in data/enrichment/normalized/2026/zuoying-mayoral.json is unchanged.",
+        "A correction never inherits a prior review outcome or approval."
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "correctionId": "correction-enrich-claim-0001",
+      "claimId": "enrich-claim-0001",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員黃文志"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2185",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html",
+        "sourceSha256": "4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c",
+        "byteLength": 149188,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "ab5490bc28a47a14e0d8ea181b3861234ec9f00f288cf62f4ca36073de0451a2",
+        "correctedClaimSha256": "1ca27d7b00e77fb436d84ac498ecbf6bbce83a4e853519762035918136e0e144",
+        "derivedAt": "2026-11-07T15:20:12.545Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0001",
+          "correction-established-verifier-enrich-claim-0001"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0012",
+      "claimId": "enrich-claim-0012",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2187",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2187.html",
+        "sourceSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1",
+        "byteLength": 135027,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "0d2889a4cb3c911dd15f28cf248a7833ba2ecfb0cf110892e04f7e0f96366faa",
+        "correctedClaimSha256": "af2156f51970bd7bea7cf4010cab2e9e8858bcce2d6d015a50091e66958025b3",
+        "derivedAt": "2026-11-07T15:20:12.547Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0012",
+          "correction-established-verifier-enrich-claim-0012"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0024",
+      "claimId": "enrich-claim-0024",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員",
+        "高雄市議會本屆議員白喬茵"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2181",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2181.html",
+        "sourceSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0",
+        "byteLength": 151045,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "4fd3ec84138fcc0d488f3eaad18c609f6eee075e658958d7111d7ba8592e5db4",
+        "correctedClaimSha256": "bb632f174958c2b7fec17accb51e69462d990a7adfd28e3ee4007b3ea8d903d9",
+        "derivedAt": "2026-11-07T15:20:12.548Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0024",
+          "correction-established-verifier-enrich-claim-0024"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0040",
+      "claimId": "enrich-claim-0040",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員李眉蓁",
+        "高雄市議會本屆議員"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2186",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2186.html",
+        "sourceSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a",
+        "byteLength": 126207,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "852c8227d920d5da37bc1481a09e9f34bf90359f070cbd082f16e608ea4b77ed",
+        "correctedClaimSha256": "a9dcea02ef9b48f26220a3fcf1688d61822eb6d72e88de4d63357cdec4fdab91",
+        "derivedAt": "2026-11-07T15:20:12.548Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0040",
+          "correction-established-verifier-enrich-claim-0040"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0049",
+      "claimId": "enrich-claim-0049",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2188",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2188.html",
+        "sourceSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16",
+        "byteLength": 159390,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "867174dde6fc0dc866801753ea9e97c8a38534f5e98e3df7840f591bedf9d42c",
+        "correctedClaimSha256": "400bbcc325f0f9c0225a5fb2180434ce3c789a4a38ad5a27c23c704002ccc044",
+        "derivedAt": "2026-11-07T15:20:12.549Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0049",
+          "correction-established-verifier-enrich-claim-0049"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0059",
+      "claimId": "enrich-claim-0059",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員",
+        "高雄市議會本屆議員陳玫娟"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2189",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2189.html",
+        "sourceSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f",
+        "byteLength": 129887,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "223d6f2b594533035391fc2677c9f46cbe24d939ba6515fb09300557c8bddba7",
+        "correctedClaimSha256": "7d93485f4a880923c9b5be8d6b9cd07d39a66c47a72480e0a74d3a33cd09deac",
+        "derivedAt": "2026-11-07T15:20:12.550Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0059",
+          "correction-established-verifier-enrich-claim-0059"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0077",
+      "claimId": "enrich-claim-0077",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "claimType": "historical-position",
+      "category": "basic-biography",
+      "kind": "chrome-segment",
+      "originalValue": "張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。",
+      "correctedValue": "張以理卸任青年局長 陳其邁肯定任內努力",
+      "defect": "stored value contains publisher page chrome (立刻加入)",
+      "reviewerProposals": [
+        "張以理曾任高雄市青年局長，於2025年2月17日卸任。"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-zhang-yili-cna",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot",
+        "sourceSha256": "e37384229bf9df9594dce2c2eb0cef1b6a05d217335b4ac3b7001df7e443d4d2",
+        "byteLength": 123958,
+        "matchedText": "張以理卸任青年局長 陳其邁肯定任內努力",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「張以理卸任青年局長 陳其邁肯定任內努力」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "f04e73962887d8e10bc87f879f696d6c10ac68a9daaca68dfa1622901dfca20c",
+        "correctedClaimSha256": "5e6e617ea19014b3ef034042b29e3cf5bdd4375ad2bc585ab6070ed6d60a1bf5",
+        "derivedAt": "2026-11-07T15:20:12.552Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0077",
+          "correction-established-verifier-enrich-claim-0077"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0087",
+      "claimId": "enrich-claim-0087",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "claimType": "historical-candidacy",
+      "category": "timeline",
+      "kind": "requires-more-evidence",
+      "originalValue": "即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 2026-08-07 10:29 聯合報／ 記者 徐白櫻 ／高雄即時報導 議員 高雄市無黨籍議員陳善慧（右）宣布交棒，擔任特助的兒子陳冠宇（左）將參選下屆左楠區市議員。",
+      "correctedValue": null,
+      "defect": "stored value contains publisher page chrome (-->, ^即時 要聞); no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "2026年8月7日，聯合報報導陳冠宇將接棒參選高雄市第四選區（左營、楠梓）市議員。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-news-chen-guanyu-udn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/chen-guanyu-udn.snapshot",
+        "sourceSha256": "ac55daea5dcc5d622e23fe67337f218ad42788954545984c9ea9a8979bd5424b",
+        "byteLength": 192661,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "5e945b9571074bd4dfa28f535134c000c0eecfcf1778a3811cbb4c4c353b5ea3",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.553Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0088",
+      "claimId": "enrich-claim-0088",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "claimType": "current-position",
+      "category": "basic-biography",
+      "kind": "district-strip",
+      "originalValue": "高雄市議會本屆議員（第四選舉區）",
+      "correctedValue": "本屆議員",
+      "defect": "",
+      "reviewerProposals": [
+        "高雄市議會本屆議員"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-kcc-profile-2184",
+        "sourceClass": "kcc-member-profile",
+        "rawPath": "data/biographies/raw/2026-11-06/kcc/profiles/2184.html",
+        "sourceSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a",
+        "byteLength": 137533,
+        "matchedText": "本屆議員",
+        "location": "normalized source text index 13"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「本屆議員」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "9a92c83f3e48615cc6a0faddda589108157069368ce5f8d8f0baa39492c942ba",
+        "correctedClaimSha256": "9bdfb5aaec9ef2a0350bb434345f096f822ced727674e50ee45993286dde4c33",
+        "derivedAt": "2026-11-07T15:20:12.554Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0088",
+          "correction-established-verifier-enrich-claim-0088"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0103",
+      "claimId": "enrich-claim-0103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "claimType": "professional-experience",
+      "category": "basic-biography",
+      "kind": "chrome-segment",
+      "originalValue": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團",
+      "correctedValue": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底",
+      "defect": "stored value contains publisher page chrome (-->, 會員中心)",
+      "reviewerProposals": [
+        "薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任。"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-xue-zhaoji-udn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot",
+        "sourceSha256": "83f8764b13a6b10a635a50d6a78bac2f816a98ff4fc768977c8a942b50e968a3",
+        "byteLength": 194871,
+        "matchedText": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "rejected",
+      "dispositionReason": "Deletion-only correction applied: 「大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底」 occurs verbatim in the retained source bytes. Withdrawn from the remediated dataset: fresh independent review did not verify it (verdict-partially-supported:adversarial-reviewer, material-concern:adversarial-reviewer).",
+      "lineage": {
+        "originalClaimSha256": "0565ba6baa3888fff4ce282f8e82d109cdb3d879ef24b5df71440854a8d8f240",
+        "correctedClaimSha256": "a3d9e4bc43973a7a74f977b0b760b86a84ae9856d1b0f29e14c8dc2de4aec621",
+        "derivedAt": "2026-11-07T15:20:12.556Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "rejected",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0103",
+          "correction-established-verifier-enrich-claim-0103"
+        ],
+        "verdicts": [
+          "partially-supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [
+          "「大綠變小綠！謝長廷前幕僚薛兆基轉投入『台灣前進陣線』參選到底」是新聞標題式的政治評價，卻被放在「工作經歷」欄位，會讓讀者誤以為「大綠變小綠」與「參選到底」是已確認的中性事實。"
+        ],
+        "reasons": [
+          "verdict-partially-supported:adversarial-reviewer",
+          "material-concern:adversarial-reviewer"
+        ]
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0104",
+      "claimId": "enrich-claim-0104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "claimType": "professional-experience",
+      "category": "basic-biography",
+      "kind": "chrome-segment",
+      "originalValue": "請繼續往下閱讀... 曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」。",
+      "correctedValue": "曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」",
+      "defect": "stored value contains publisher page chrome (請繼續往下閱讀)",
+      "reviewerProposals": [
+        "薛兆基曾任前高雄市長謝長廷機要秘書。"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-xue-zhaoji-ltn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot",
+        "sourceSha256": "ff26e897dd5388cec22d6c27402b3530f44b3954360c50c428a5b5c5588f2e0d",
+        "byteLength": 236783,
+        "matchedText": "曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」",
+        "location": "normalized source text index 861"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「曾任前高雄市長謝長廷機要秘書的薛兆基指出，長期以來，台灣政治習慣陷入藍綠對立與意識形態爭論，但基層民眾真正關心的，其實是交通能否改善、產業能否發展、年輕人是否有希望、城市是否持續進步，「人民需要的是解決問題的人，而不是製造對立的人」」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "7d3b677d6acc7fd2382c8f126e4cf161dcf6128509279a7505d1d44a6c9a096e",
+        "correctedClaimSha256": "f8456f0d912a04dda7a7d7c57d31470f3ba050dadefca43ea096c422c3605a76",
+        "derivedAt": "2026-11-07T15:20:12.558Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0104",
+          "correction-established-verifier-enrich-claim-0104"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0108",
+      "claimId": "enrich-claim-0108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "claimType": "historical-candidacy",
+      "category": "timeline",
+      "kind": "chrome-segment",
+      "originalValue": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團",
+      "correctedValue": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底",
+      "defect": "stored value contains publisher page chrome (-->, 會員中心)",
+      "reviewerProposals": [
+        "2026年6月9日，聯合報報導薛兆基接受「台灣前進陣線」提名，爭取參選高雄市左楠區市議員。",
+        "2026年6月9日，薛兆基接受「台灣前進陣線」提名，參選高雄市左楠區市議員。"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-xue-zhaoji-udn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot",
+        "sourceSha256": "83f8764b13a6b10a635a50d6a78bac2f816a98ff4fc768977c8a942b50e968a3",
+        "byteLength": 194871,
+        "matchedText": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "f72a3462878925d761c45ffbc0f8e3ef7cb635294ce22876291d541587a3a172",
+        "correctedClaimSha256": "1c318b4f8ed11d9761b4099db619118b4aadc9321459c11e3e918587cd8bd96c",
+        "derivedAt": "2026-11-07T15:20:12.558Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0108",
+          "correction-established-verifier-enrich-claim-0108"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0110",
+      "claimId": "enrich-claim-0110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "claimType": "historical-candidacy",
+      "category": "timeline",
+      "kind": "proposal-literal",
+      "originalValue": "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始 - 政治 - 自由時報電子報 為達最佳瀏覽效果，建議使用 Chrome、Firefox 或 Microsoft Edge 的瀏覽器。",
+      "correctedValue": "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始",
+      "defect": "",
+      "reviewerProposals": [
+        "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-xue-zhaoji-ltn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-ltn.snapshot",
+        "sourceSha256": "ff26e897dd5388cec22d6c27402b3530f44b3954360c50c428a5b5c5588f2e0d",
+        "byteLength": 236783,
+        "matchedText": "台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「台灣前進陣線推薦參選高雄市議員 薛兆基：是責任的開始」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "6f245a409b57581b0356b4f422a70e7d444e502a66281d2f2804c805bf6da814",
+        "correctedClaimSha256": "a744d93c1cb854b08c2f25019bc6bb9585c038db054d69c2b6cf750d3dde02fe",
+        "derivedAt": "2026-11-07T15:20:12.559Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0110",
+          "correction-established-verifier-enrich-claim-0110"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0111",
+      "claimId": "enrich-claim-0111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "claimType": "historical-position",
+      "category": "basic-biography",
+      "kind": "blocked-wrong-identity",
+      "originalValue": "民進黨除了現任議員爭取連任，目前另有前立委劉世芳服務處執行長黃偵琳、前高雄市青年局長張以理等人投入初選。",
+      "correctedValue": null,
+      "defect": "Both reviewers returned verdict=wrong-identity: the stored value describes other people (民進黨前立委劉世芳服務處執行長黃偵琳、前高雄市青年局長張以理), not the candidate the claim is attached to.",
+      "reviewerProposals": [
+        "尹立為前高雄市文化局長、罷韓發起人之一。",
+        "尹立曾任高雄市文化局長。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-news-yin-li-cna",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot",
+        "sourceSha256": "16e079a98bb50d5257d2f4669c85278ef4d4246fcb078add0b192a0ff76df02b",
+        "byteLength": 124670,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "blocked",
+      "dispositionReason": "Identity cannot be repaired from this source: the retained bytes never describe the candidate, and no replacement wording occurs verbatim in them. The claim stays excluded (and is policy-ineligible as a news-report claim in any case).",
+      "lineage": {
+        "originalClaimSha256": "dd111ad8fd5cbe43d8e4c68c203c449cb35d14dc64c690aef60fec722f14cef4",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.560Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0114",
+      "claimId": "enrich-claim-0114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "claimType": "news-report",
+      "category": "news",
+      "kind": "chrome-segment",
+      "originalValue": "報導標題：被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報",
+      "correctedValue": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人",
+      "defect": "",
+      "reviewerProposals": [
+        "sourcePublicationDate: 2026-05-13"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-yin-li-ltn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot",
+        "sourceSha256": "3996e25ac776d774337af4c0850390d8bb72f63386ce65c226d70409da4be2ed",
+        "byteLength": 235386,
+        "matchedText": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": {
+        "field": "sourcePublicationDate",
+        "from": "2025-08-26",
+        "to": "2026-05-13",
+        "literalEvidence": "2026/05/13"
+      },
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "rejected",
+      "dispositionReason": "Deletion-only correction applied: 「被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人」 occurs verbatim in the retained source bytes. Withdrawn from the remediated dataset: fresh independent review did not verify it (verdict-partially-supported:established-verifier, material-concern:established-verifier).",
+      "lineage": {
+        "originalClaimSha256": "c70e16f3a259b4bc3a1808dc816dfc4ebe462dac4b5fbc5931bc0648cbbb567a",
+        "correctedClaimSha256": "fd21a0379f5e6ff162a012671c4d01b8bf96e5371cebc628cc76ee697cc81d4a",
+        "derivedAt": "2026-11-07T15:20:12.562Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "rejected",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0114",
+          "correction-established-verifier-enrich-claim-0114"
+        ],
+        "verdicts": [
+          "supported",
+          "partially-supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [
+          "來源顯示發布時間為 2026/05/13 15:27，claim 卻標示 2025-08-26；中性讀者會對報導日期產生錯誤理解。"
+        ],
+        "reasons": [
+          "verdict-partially-supported:established-verifier",
+          "material-concern:established-verifier"
+        ]
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0116",
+      "claimId": "enrich-claim-0116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "claimType": "historical-candidacy",
+      "category": "timeline",
+      "kind": "chrome-segment",
+      "originalValue": "宣布參選高市左楠區市議員 尹立：延續公民力量 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。",
+      "correctedValue": "宣布參選高市左楠區市議員 尹立：延續公民力量",
+      "defect": "stored value contains publisher page chrome (立刻加入)",
+      "reviewerProposals": [
+        "尹立於2025年8月26日宣布參選高雄市左營、楠梓區市議員。"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-yin-li-cna",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-cna.snapshot",
+        "sourceSha256": "16e079a98bb50d5257d2f4669c85278ef4d4246fcb078add0b192a0ff76df02b",
+        "byteLength": 124670,
+        "matchedText": "宣布參選高市左楠區市議員 尹立：延續公民力量",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "applied",
+      "dispositionReason": "Deletion-only correction applied: 「宣布參選高市左楠區市議員 尹立：延續公民力量」 occurs verbatim in the retained source bytes.",
+      "lineage": {
+        "originalClaimSha256": "d24cef1d196a3fe53a3b4abd3e8a4606a491da02a77bd1110e7057f76fe11632",
+        "correctedClaimSha256": "e981c1862be9befef5ed9fa5d9d536abce6ca46f472cbec723a6198881ce99fd",
+        "derivedAt": "2026-11-07T15:20:12.562Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "verified",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0116",
+          "correction-established-verifier-enrich-claim-0116"
+        ],
+        "verdicts": [
+          "supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0117",
+      "claimId": "enrich-claim-0117",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "claimType": "timeline-event",
+      "category": "timeline",
+      "kind": "chrome-segment",
+      "originalValue": "來源於2025-08-26報導：被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報",
+      "correctedValue": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人",
+      "defect": "",
+      "reviewerProposals": [
+        "來源於2026-05-13報導：被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-yin-li-ltn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot",
+        "sourceSha256": "3996e25ac776d774337af4c0850390d8bb72f63386ce65c226d70409da4be2ed",
+        "byteLength": 235386,
+        "matchedText": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": {
+        "field": "sourcePublicationDate",
+        "from": "2025-08-26",
+        "to": "2026-05-13",
+        "literalEvidence": "2026/05/13"
+      },
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "rejected",
+      "dispositionReason": "Deletion-only correction applied: 「被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人」 occurs verbatim in the retained source bytes. Withdrawn from the remediated dataset: fresh independent review did not verify it (verdict-partially-supported:adversarial-reviewer, material-concern:adversarial-reviewer, verdict-partially-supported:established-verifier, material-concern:established-verifier).",
+      "lineage": {
+        "originalClaimSha256": "5618aa8d4713171aec0a07327dcc6495f9368ba089718b292a0587c4c6aff1cc",
+        "correctedClaimSha256": "78e4ddfceeb8bb174acccc247b714fdfcf5c4951622dc797261e2a992bece837",
+        "derivedAt": "2026-11-07T15:20:12.564Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "rejected",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0117",
+          "correction-established-verifier-enrich-claim-0117"
+        ],
+        "verdicts": [
+          "partially-supported",
+          "partially-supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [
+          "紀錄將發布日期寫為 2025-08-26，但來源報導標示為「2026/05/13 15:27」，相差近九個月，會使讀者誤判事件發生時點。",
+          "claim 記載之發布日期 2025-08-26 與保留來源所顯示的報導時間 2026/05/13 15:27 不符，讀者會誤解事件時點。"
+        ],
+        "reasons": [
+          "verdict-partially-supported:adversarial-reviewer",
+          "material-concern:adversarial-reviewer",
+          "verdict-partially-supported:established-verifier",
+          "material-concern:established-verifier"
+        ]
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0118",
+      "claimId": "enrich-claim-0118",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "claimType": "historical-candidacy",
+      "category": "timeline",
+      "kind": "chrome-segment",
+      "originalValue": "台灣網站分級推廣基金會（TICRF）網站：http://www.ticrf.org.tw 首頁 &gt; 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導 加入Google首選 留言 new 民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。",
+      "correctedValue": "民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案",
+      "defect": "stored value contains publisher page chrome (&gt;, 加入Google首選)",
+      "reviewerProposals": [
+        "新聞報導於2026/05/13 15:27稱尹立為民進黨高市議員參選人，並報導其澄清相關委託由中華民國設計師協會承接、非其個人接案。",
+        "sourcePublicationDate and validFrom: 2026-05-13"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-yin-li-ltn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot",
+        "sourceSha256": "3996e25ac776d774337af4c0850390d8bb72f63386ce65c226d70409da4be2ed",
+        "byteLength": 235386,
+        "matchedText": "民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案",
+        "location": "normalized source text index 643"
+      },
+      "metadataCorrection": {
+        "field": "sourcePublicationDate",
+        "from": "2025-08-26",
+        "to": "2026-05-13",
+        "literalEvidence": "2026/05/13"
+      },
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "rejected",
+      "dispositionReason": "Deletion-only correction applied: 「民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案」 occurs verbatim in the retained source bytes. Withdrawn from the remediated dataset: fresh independent review did not verify it (verdict-partially-supported:adversarial-reviewer, material-concern:adversarial-reviewer).",
+      "lineage": {
+        "originalClaimSha256": "f870f88e17cc917d83482aad5bdab8ae567ec56c1128dee9899abacfd3e67e30",
+        "correctedClaimSha256": "af730fc8e2875f9c1309708b24d695c36d0fc30ca12e2ff03ce3b66601b91a3a",
+        "derivedAt": "2026-11-07T15:20:12.565Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "rejected",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0118",
+          "correction-established-verifier-enrich-claim-0118"
+        ],
+        "verdicts": [
+          "partially-supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [
+          "標題「新聞報導的參選事件」與類別 timeline / historical-candidacy 將一則「尹立否認個人承接高市府標案」的澄清報導錯誤框定為參選歷程事件，來源全文並無任何參選宣布或參選時間點。"
+        ],
+        "reasons": [
+          "verdict-partially-supported:adversarial-reviewer",
+          "material-concern:adversarial-reviewer"
+        ]
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0119",
+      "claimId": "enrich-claim-0119",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "claimType": "historical-candidacy",
+      "category": "basic-biography",
+      "kind": "requires-more-evidence",
+      "originalValue": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。",
+      "correctedValue": null,
+      "defect": "no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "中央選舉委員會審查通過的2026年高雄市長候選人名單包括張靜。",
+        "2026年高雄市長候選人；中央選舉委員會已審查通過其候選人資格。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-cec-qualification",
+        "sourceClass": "cec-roster",
+        "rawPath": "data/raw/official/2026/cec-central-65213.json",
+        "sourceSha256": "265a5a291b151765c4df5fafcd5cd9a738b3108e4e625e800e2c24676efb8a8a",
+        "byteLength": 17711,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "source-class-not-permitted:cec-roster",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "e53eb0a509c8eeae8a3db35383e3af7bf1e223acf633f789e1b0ae41fdc9ba95",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.565Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0120",
+      "claimId": "enrich-claim-0120",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "claimType": "professional-experience",
+      "category": "basic-biography",
+      "kind": "chrome-segment",
+      "originalValue": "獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團 udn",
+      "correctedValue": "獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰",
+      "defect": "stored value contains publisher page chrome (-->, 會員中心)",
+      "reviewerProposals": [
+        "新聞報導稱，張靜過去曾擔任法官及檢察官，並以律師身分被提及。",
+        "張靜為律師，過去曾擔任法官及檢察官。"
+      ],
+      "literalSupport": {
+        "verified": true,
+        "sourceId": "scope-news-zhang-jing-udn",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/zhang-jing-udn.snapshot",
+        "sourceSha256": "4bfc27f13241119476f1635ec6af23d64475b9797087197f05768fe3945174de",
+        "byteLength": 193693,
+        "matchedText": "獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰",
+        "location": "normalized source text index 0"
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "rejected",
+      "dispositionReason": "Deletion-only correction applied: 「獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰」 occurs verbatim in the retained source bytes. Withdrawn from the remediated dataset: fresh independent review did not verify it (verdict-partially-supported:adversarial-reviewer, material-concern:adversarial-reviewer).",
+      "lineage": {
+        "originalClaimSha256": "0445f1bbab2b1058334c77d30fb9c890c896751ee0c671ee889908aadf5d3070",
+        "correctedClaimSha256": "8c9aab8aa4279db52cbbbe2dbb4e734662558776ec2afc34626386f84b5fd68c",
+        "derivedAt": "2026-11-07T15:20:12.568Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "rejected",
+        "invocationIds": [
+          "correction-adversarial-reviewer-enrich-claim-0120",
+          "correction-established-verifier-enrich-claim-0120"
+        ],
+        "verdicts": [
+          "partially-supported",
+          "supported"
+        ],
+        "identityAssessments": [
+          "confirmed",
+          "confirmed"
+        ],
+        "materialConcerns": [
+          "以「新聞報導中的專業經歷」為標題、professional-experience 為類別，會讓中性讀者以為來源記載張靜的專業資歷，但修正後文字僅為新聞標題「獨／高雄市長參選人+1 律師張靜宣布要為小黨的尊嚴而戰」，其中「律師」僅是標題稱謂，並非對其執業資歷的報導內容。"
+        ],
+        "reasons": [
+          "verdict-partially-supported:adversarial-reviewer",
+          "material-concern:adversarial-reviewer"
+        ]
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0124",
+      "claimId": "enrich-claim-0124",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "claimType": "historical-candidacy",
+      "category": "basic-biography",
+      "kind": "requires-more-evidence",
+      "originalValue": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。",
+      "correctedValue": null,
+      "defect": "no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "中選會審查通過115年高雄市長候選人資格，王肇民列於高雄市5名候選人名單中。",
+        "中選會資料列載王肇民為115年（2026年）高雄市長選舉候選人之一，且其候選人資格審查通過。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-cec-qualification",
+        "sourceClass": "cec-roster",
+        "rawPath": "data/raw/official/2026/cec-central-65213.json",
+        "sourceSha256": "265a5a291b151765c4df5fafcd5cd9a738b3108e4e625e800e2c24676efb8a8a",
+        "byteLength": 17711,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "source-class-not-permitted:cec-roster",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "8e6328464f6bd26b2e9e2216d86235eda4a4852d208661ea7698979970fbeacb",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.568Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0125",
+      "claimId": "enrich-claim-0125",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "claimType": "public-activity",
+      "category": "public-records",
+      "kind": "requires-more-evidence",
+      "originalValue": "高雄市長候選人造勢「台下只有8人」！冷清畫面曝｜東森新聞 東森電視 EBC地產王 造咖 東森娛樂 東森財經 東森美洲 简体 熱門關鍵字 高雄 新竹 台中 日本 super junior 沈伯洋 新北 關閉選單 2026選舉 台股暴跌 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 更多 高雄 新竹 台中 日本 super junior 沈伯洋 新北 即時 熱門 生活 娛樂 社會 政治 國際 體育 財經 健康 暖聞 車訊 兩岸 專欄 特企 投票 拖動分類可調整排列順序 恢復預設 取消 儲存 自訂排序 2026選舉 台股暴跌 NBA 五熊疑毀日本國寶 美國期中選舉 河口湖凶殺案 追蹤東森新聞 我要爆料 關於我們 隱私權政策 Copyright &copy; 2024",
+      "correctedValue": null,
+      "defect": "stored value contains publisher page chrome (熱門關鍵字); no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "東森新聞報導，王肇民於2026年11月3日在岡山壽天宮舉辦造勢晚會，現場據報有8名民眾，並演講約68分鐘。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-news-wang-zhaomin-ebc",
+        "sourceClass": "news-report",
+        "rawPath": "data/enrichment/raw/2026-11-07/news/wang-zhaomin-ebc.snapshot",
+        "sourceSha256": "f0e824bb60401539cb2ab1d3d1bb96b7d20f6b4f108ea3bc0c8673ce57c4bdfd",
+        "byteLength": 84554,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "category-not-permitted",
+          "claim-type-not-permitted",
+          "source-class-not-permitted:news-report",
+          "institutional-attribution-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "e29d68fb332fd7c739e7bbf52fd369583aea14082a3c7b8045397a7b3596b584",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.569Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0133",
+      "claimId": "enrich-claim-0133",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "claimType": "historical-candidacy",
+      "category": "basic-biography",
+      "kind": "requires-more-evidence",
+      "originalValue": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。",
+      "correctedValue": null,
+      "defect": "no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "截至2026年10月16日，中選會審查通過的高雄市長候選人名單包括柯志恩。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-cec-qualification",
+        "sourceClass": "cec-roster",
+        "rawPath": "data/raw/official/2026/cec-central-65213.json",
+        "sourceSha256": "265a5a291b151765c4df5fafcd5cd9a738b3108e4e625e800e2c24676efb8a8a",
+        "byteLength": 17711,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "source-class-not-permitted:cec-roster",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "610f91761f2b2d3a408792fca4ff12404ef216e5b310ab2325ffe474592bac35",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.569Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0138",
+      "claimId": "enrich-claim-0138",
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "candidateName": "洪方隆",
+      "claimType": "historical-candidacy",
+      "category": "basic-biography",
+      "kind": "requires-more-evidence",
+      "originalValue": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。",
+      "correctedValue": null,
+      "defect": "no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "2026年高雄市長候選人。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-cec-qualification",
+        "sourceClass": "cec-roster",
+        "rawPath": "data/raw/official/2026/cec-central-65213.json",
+        "sourceSha256": "265a5a291b151765c4df5fafcd5cd9a738b3108e4e625e800e2c24676efb8a8a",
+        "byteLength": 17711,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "source-class-not-permitted:cec-roster",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "37314240ca26c39dc8553add8fc56ecb357fa2fb1e53006c69d83c29c212be0d",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.569Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    },
+    {
+      "correctionId": "correction-enrich-claim-0139",
+      "claimId": "enrich-claim-0139",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "claimType": "historical-candidacy",
+      "category": "basic-biography",
+      "kind": "requires-more-evidence",
+      "originalValue": "2026年高雄市長候選人；候選人狀態為qualified，正式公告狀態為pending-announcement，政黨資訊狀態為not-published。",
+      "correctedValue": null,
+      "defect": "no contiguous fragment of the stored value (and no reviewer proposal) occurs verbatim in the retained source, so every available repair would require authoring new wording",
+      "reviewerProposals": [
+        "中選會審查通過的2026年高雄市長候選人。"
+      ],
+      "literalSupport": {
+        "verified": false,
+        "sourceId": "scope-cec-qualification",
+        "sourceClass": "cec-roster",
+        "rawPath": "data/raw/official/2026/cec-central-65213.json",
+        "sourceSha256": "265a5a291b151765c4df5fafcd5cd9a738b3108e4e625e800e2c24676efb8a8a",
+        "byteLength": 17711,
+        "matchedText": null,
+        "location": null
+      },
+      "metadataCorrection": null,
+      "publicationEligibilityAfterCorrection": {
+        "eligible": false,
+        "reasons": [
+          "claim-type-not-permitted",
+          "source-class-not-permitted:cec-roster",
+          "historical-status-required"
+        ]
+      },
+      "disposition": "requires-more-evidence",
+      "dispositionReason": "No correction applied: every reviewer proposal is a paraphrase that does not occur verbatim in the retained source bytes, so applying it would require authoring new content.",
+      "lineage": {
+        "originalClaimSha256": "739674a14f39188684c2a7f9f85829b5eefee297df88f4edd82a45fc081dc733",
+        "correctedClaimSha256": null,
+        "derivedAt": "2026-11-07T15:20:12.569Z",
+        "derivedFrom": "data/enrichment/normalized/2026/zuoying-mayoral.json"
+      },
+      "freshReview": {
+        "status": "not-required",
+        "invocationIds": [],
+        "verdicts": [],
+        "identityAssessments": [],
+        "materialConcerns": [],
+        "reasons": []
+      }
+    }
+  ]
+}

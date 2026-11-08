@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1",
+  "datasetId": "kaohsiung-2026-zuoying-mayoral-enrichment",
+  "policyVersion": "automated-editorial-policy-v1",
+  "snapshotDate": "2026-11-07",
+  "generatedAt": "2026-11-07T13:26:07.036Z",
+  "records": [
+    {
+      "claimId": "enrich-claim-0031",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "三立新聞台主播",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0031"
+      ],
+      "machineApprovalId": "automated-decision-enrich-claim-0031",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "scope-kcc-profile-2181",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "高雄市議會全球網原始快照；來源版本由 automated-editorial-policy-v1 離線校驗。"
+    }
+  ],
+  "withdrawnClaimIds": [],
+  "note": "Only machine-approved low-risk historical institutional facts are included. This snapshot is not human editorial approval.",
+  "checksum": "6682b5f95ecc8ae5b54e7b06b073ff995eb4759477185334a82d707be7a8f3ad"
+}

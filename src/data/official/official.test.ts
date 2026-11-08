@@ -1,0 +1,260 @@
+import { describe, expect, it } from 'vitest';
+import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
+import councilRosterInput from '../../../data/normalized/2026/kaohsiung-council-roster.json';
+import cecConstituencies from '../../../data/raw/official/2026/cec-central-63625.json';
+import cecRegistration from '../../../data/raw/official/2026/cec-central-64009.json';
+import cecQualification from '../../../data/raw/official/2026/cec-central-65213.json';
+import khecDrawing from '../../../data/raw/official/2026/khec-65366.json';
+import khecAlias from '../../../data/raw/official/2026/khec-65368.json';
+import khecBulletin from '../../../data/raw/official/2026/khec-bulletin.json';
+import {
+  normalizeMayorNames,
+  parseCecArticleMetadata,
+  parseCecQualifiedKaohsiungMayors,
+  parseKhecBulletin,
+  parseKhecDrawingMetadata,
+  sourceChangeStatus,
+} from './adapters';
+import {
+  councilCandidateSlug,
+  councilCandidateStableId,
+  khecAliasStatus,
+  validateCouncilRoster,
+} from './council';
+import { reconcileOfficialData } from './reconcile';
+import { validateOfficialDataset } from './schema';
+
+describe('official source adapters', () => {
+  it('extracts the five Kaohsiung mayor names from the retained CEC snapshot', () => {
+    expect(
+      parseCecQualifiedKaohsiungMayors(cecQualification)
+        .map((candidate) => candidate.displayName)
+        .sort(),
+    ).toEqual(['張靜', '王肇民', '柯志恩', '洪方隆', '賴瑞隆'].sort());
+  });
+
+  it('extracts official article and bulletin metadata deterministically', () => {
+    expect(
+      parseCecArticleMetadata(cecConstituencies, 'source-cec-central-63625'),
+    ).toMatchObject({
+      publicationDate: '2026-08-20',
+      attachmentFileIds: expect.arrayContaining([
+        '45d8e965-f63a-46d5-b636-7d81e47cf4d1',
+      ]),
+    });
+    expect(
+      parseCecArticleMetadata(cecRegistration, 'source-cec-central-64009'),
+    ).toMatchObject({ publicationDate: '2026-08-27' });
+    expect(parseKhecBulletin(khecBulletin)).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          articleId: 65366,
+          beginDate: '2026-10-27',
+        }),
+      ]),
+    );
+  });
+
+  it('extracts KHEC drawing metadata and duplicate alias status', () => {
+    const metadata = parseKhecDrawingMetadata(khecDrawing);
+    const aliasMetadata = parseKhecDrawingMetadata(khecAlias);
+    expect(metadata.fileId).toBe('9bd4f559-e527-4f55-a4ef-21653d340f79');
+    expect(metadata.beginDate).toBe('2026-10-27');
+    expect(metadata.isImageOnly).toBe(true);
+    expect(
+      khecAliasStatus(
+        metadata.fileId,
+        aliasMetadata.fileId,
+        'attachment-sha',
+        'attachment-sha',
+      ),
+    ).toBe('duplicate-alias');
+    expect(
+      khecAliasStatus(
+        metadata.fileId,
+        'different-file',
+        'attachment-sha',
+        'attachment-sha',
+      ),
+    ).toBe('independent');
+  });
+
+  it('is deterministic and reports source changes explicitly', () => {
+    const first = parseCecQualifiedKaohsiungMayors(cecQualification);
+    const second = parseCecQualifiedKaohsiungMayors(cecQualification);
+    expect(second).toEqual(first);
+    expect(sourceChangeStatus('abc', 'abc')).toBe('unchanged');
+    expect(sourceChangeStatus('abc', 'def')).toBe('changed');
+    expect(
+      normalizeMayorNames(
+        cecQualification,
+        first.map((candidate) => candidate.displayName),
+      ).unexpected,
+    ).toEqual([]);
+  });
+});
+
+describe('official council roster', () => {
+  it('validates all 101 preliminary rows and stable identity helpers', () => {
+    const roster = validateCouncilRoster(councilRosterInput);
+    expect(roster.totalRowCount).toBe(101);
+    expect(roster.constituencies).toHaveLength(15);
+    expect(
+      councilCandidateStableId(2026, 'district-kaohsiung-council-01', '李振豪'),
+    ).toBe(
+      councilCandidateStableId(2026, 'district-kaohsiung-council-01', '李振豪'),
+    );
+    expect(councilCandidateSlug(2026, 1, '李振豪')).toMatch(
+      /^kaohsiung-council-01-[a-f0-9]{8}$/,
+    );
+  });
+});
+
+describe('approved official dataset', () => {
+  it('rejects a drawn number that is incorrectly marked final', () => {
+    const invalid = structuredClone(approvedInput) as Record<
+      string,
+      unknown
+    > & {
+      candidates: Array<Record<string, unknown>>;
+    };
+    const firstCandidate = invalid.candidates.at(0);
+    if (!firstCandidate) {
+      throw new Error('Approved dataset has no candidate for invalid fixture.');
+    }
+    firstCandidate.candidateNumberIsFinal = true;
+    expect(() => validateOfficialDataset(invalid)).toThrow(
+      'non-final number as final',
+    );
+  });
+
+  it('reconciles all 101 council rows while formal announcement remains pending', () => {
+    const dataset = validateOfficialDataset(approvedInput);
+    const roster = validateCouncilRoster(councilRosterInput);
+    const names = parseCecQualifiedKaohsiungMayors(cecQualification).map(
+      (candidate) => candidate.displayName,
+    );
+    const report = reconcileOfficialData(dataset, names, roster);
+    expect(report.status).toBe('partial');
+    expect(report.counts).toMatchObject({
+      cecQualifiedMayors: 5,
+      approvedMayors: 5,
+      matchedMayors: 5,
+      pendingReviewScopes: 1,
+      officialDistricts: 16,
+      councilConstituencies: 15,
+      councilSourceRows: 101,
+      councilNormalizedRows: 101,
+      councilApprovedRows: 101,
+      councilPublishedRows: 101,
+    });
+    expect(
+      report.councilConstituencies.every((item) => item.status === 'complete'),
+    ).toBe(true);
+    expect(report.publication.councilCandidatesPublished).toBe(true);
+    expect(report.publication.councilRosterStatus).toBe(
+      'preliminary-drawn-non-final',
+    );
+    expect(report.discrepancies).toEqual([]);
+  });
+
+  it('rejects party values, duplicate numbers, and missing source references', () => {
+    const partyInvalid = structuredClone(approvedInput) as {
+      candidates: Array<Record<string, unknown>>;
+    };
+    const firstCouncil = partyInvalid.candidates.find(
+      (candidate) => candidate.electionType !== 'mayoral',
+    );
+    if (!firstCouncil)
+      throw new Error('Approved dataset has no council fixture.');
+    firstCouncil.politicalParty = '未經來源證實的政黨';
+    expect(() => validateOfficialDataset(partyInvalid)).toThrow(
+      'includes a party value',
+    );
+
+    const duplicateInvalid = structuredClone(approvedInput) as {
+      candidates: Array<Record<string, unknown>>;
+    };
+    const councilRows = duplicateInvalid.candidates.filter(
+      (candidate) => candidate.districtId === firstCouncil.districtId,
+    );
+    const firstCouncilRow = councilRows.at(0);
+    const secondCouncilRow = councilRows.at(1);
+    if (!firstCouncilRow || !secondCouncilRow)
+      throw new Error('Approved dataset lacks a council pair.');
+    secondCouncilRow.candidateNumber = firstCouncilRow.candidateNumber;
+    expect(() => validateOfficialDataset(duplicateInvalid)).toThrow(
+      'duplicate candidate number',
+    );
+
+    const missingSourceInvalid = structuredClone(approvedInput) as {
+      candidates: Array<Record<string, unknown>>;
+    };
+    const missingSourceCandidate = missingSourceInvalid.candidates.at(0);
+    if (!missingSourceCandidate)
+      throw new Error('Approved dataset has no candidate.');
+    missingSourceCandidate.sourceIds = ['missing-source'];
+    expect(() => validateOfficialDataset(missingSourceInvalid)).toThrow(
+      'references missing source',
+    );
+  });
+
+  it('reports wrong-number and wrong-constituency mutations', () => {
+    const names = parseCecQualifiedKaohsiungMayors(cecQualification).map(
+      (candidate) => candidate.displayName,
+    );
+    const roster = validateCouncilRoster(councilRosterInput);
+    const wrongNumber = structuredClone(validateOfficialDataset(approvedInput));
+    const wrongNumberCandidate = wrongNumber.candidates.find(
+      (candidate) => candidate.electionType !== 'mayoral',
+    );
+    if (!wrongNumberCandidate)
+      throw new Error('Approved dataset has no council fixture.');
+    wrongNumberCandidate.candidateNumber = '999';
+    const numberReport = reconcileOfficialData(wrongNumber, names, roster);
+    expect(numberReport.counts.councilApprovedRows).toBe(101);
+    expect(
+      numberReport.councilConstituencies.some(
+        (item) => item.numberMismatches.length > 0,
+      ),
+    ).toBe(true);
+
+    const wrongConstituency = structuredClone(
+      validateOfficialDataset(approvedInput),
+    );
+    const movedCandidate = wrongConstituency.candidates.find(
+      (candidate) => candidate.electionType !== 'mayoral',
+    );
+    if (!movedCandidate)
+      throw new Error('Approved dataset has no council fixture.');
+    movedCandidate.districtId = 'district-kaohsiung-council-02';
+    movedCandidate.candidateNumber = '999';
+    const constituencyReport = reconcileOfficialData(
+      wrongConstituency,
+      names,
+      roster,
+    );
+    expect(
+      constituencyReport.councilConstituencies.some(
+        (item) => item.constituencyMismatches.length > 0,
+      ),
+    ).toBe(true);
+  });
+
+  it('validates a synthetic several-hundred-candidate dataset', () => {
+    const scaled = structuredClone(validateOfficialDataset(approvedInput));
+    const base = scaled.candidates.at(0);
+    if (!base)
+      throw new Error('Approved dataset has no candidate for scale fixture.');
+    scaled.candidates = Array.from({ length: 505 }, (_, index) => ({
+      ...base,
+      id: `candidate-scale-${index + 1}`,
+      slug: `candidate-scale-${index + 1}`,
+      displayName: `合成候選人${index + 1}`,
+      shortName: `合成${index + 1}`,
+      candidateNumber: String(index + 1),
+    }));
+    const parsed = validateOfficialDataset(scaled);
+    expect(parsed.candidates).toHaveLength(505);
+  });
+});

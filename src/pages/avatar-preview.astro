@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AvatarPreviewApp from '../components/AvatarPreviewApp';
+import { validateAvatarManifest } from '../data/avatars/schema';
+
+const previewEnabled = import.meta.env.DEV || process.env.AVATAR_PREVIEW === 'true';
+const manifest = previewEnabled
+  ? validateAvatarManifest((await import('../../data/avatars/manifest.json')).default)
+  : null;
+---
+
+<BaseLayout
+  title="角色資產預覽｜港都人物誌"
+  description="僅供本機開發檢查原創虛構角色資產的預覽工作區。"
+  noindex
+>
+  <div class="page-wrap avatar-preview-page">
+    <section class="page-heading">
+      <span class="eyebrow">DEVELOPER PREVIEW</span>
+      <h1>原創角色資產預覽</h1>
+      <p>這是本機開發用的 GLB 檢查頁，不是候選人 likeness 審查，也不提供公共人物的視覺核准。</p>
+    </section>
+    {previewEnabled && manifest ? (
+      <AvatarPreviewApp client:load manifest={manifest} />
+    ) : (
+      <section class="content-card" data-testid="avatar-preview-disabled">
+        <h2>角色預覽未啟用</h2>
+        <p>正式靜態輸出不載入角色資產預覽資料。請在本機以 <code>AVATAR_PREVIEW=true npm run dev</code> 啟用。</p>
+      </section>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,89 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：adversarial-reviewer
+Your job: try to falsify the CORRECTED wording. Look for overreach, unsupported precision, promotional epithets presented as credentials, attribution slipped from "a report said" to "it is so", and any sentence fragment that the source does not actually contain. If a neutral reader would be misled, set materialConcern to a concrete sentence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0117
+- 候選人: 尹立
+- 類別 / 類型: timeline / timeline-event
+- 標題: 新聞報導事件
+- 組織: （未提供）
+- 修正後內容: 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人
+- 原始內容（修正前，僅供比對）: 來源於2025-08-26報導：被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報
+- 歸因: news-report｜來源依賴: source-dependent
+- 時效狀態: historical
+- 發布日期: 2025-08-26
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-news-yin-li-ltn
+- 來源類別: news-report
+- URL: https://news.ltn.com.tw/news/politics/breakingnews/5435667
+- HTTP: 200
+- rawPath: data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot
+- sha256: 3996e25ac776d774337af4c0850390d8bb72f63386ce65c226d70409da4be2ed
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報 為達最佳瀏覽效果，建議使用 Chrome、Firefox 或 Microsoft Edge 的瀏覽器。 請至Edge官網下載 請至FireFox官網下載 請至Google官網下載 全球股災 美國期中選舉 沈伯洋 〉 關鍵字五字 --> 即時 熱門 政治 財富自由 軍武 社會 生活 健康 國際 地方 AI科技 影音 財經 娛樂 汽車 時尚 體育 3 C 評論 藝文 玩咖 食譜 地產 專區 TAIPEI TIMES 求職 Search 自由電子報 自由影音 即時 熱門 政治 軍武 社會 生活 健康 國際 地方 蒐奇 財富自由 財經 娛樂 藝文 汽車 時尚 體育 3 C 評論 玩咖 食譜 地產 --> 專區 服務 自由電子報 APP 自由電子報粉絲團 自由電子報 Line 自由電子報 X 熱門新訊 限制級 您即將進入之新聞內容 需滿18歲 方可瀏覽。 未滿18歲 或不同意本條款 離開 我同意 我已年滿18歲 進入 根據「電腦網路內容分級處理辦法」修正條文第六條第三款規定，已於網站首頁或各該限制級網頁，依台灣網站分級推廣基金會規定作標示。 台灣網站分級推廣基金會（TICRF）網站：http://www.ticrf.org.tw 首頁 > 政治 被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 2026/05/13 15:27 記者 王榮祥 ／高雄報導 加入Google首選 留言 new 民進黨高市議員參選人尹立澄清，中華民國設計師協會承接相關委託、執行策展工作，並不是尹立個人接案。（記者王榮祥翻攝） 民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。 尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚；設計師協會是依法成立的社會團體，也是由專業設計師組成的專業設計團隊，它不是私人公司，是長期投入公共設計與文化事務的公益組織，理事長無給職。 請繼續往下閱讀... 尹立解釋自己當時身分，是經由會員選舉產生、當選為中華民國設計師協會理事長，理事長是協會職務，是公共性的代表與責任角色，不等於個人接案，更不等於把公共資源放進自己口袋。 他認為，有心人把協會的專業承接，刻意扭曲成個人的私相授受，這不是監督、而是抹黑，不是爆料、而是造謠。 更重要的是，設計師協會專業服務從不分黨派，協會過去承接過最大的標案之一，正是馬英九執政時期的建國百年吉祥物設計比賽；協會服務的是設計專業、公共事務與社會需要，不是哪一個政黨附屬機構，更不是誰的私人公司。 尹立正告惡意攻擊者不要再用烏龍爆料傷害設計界，也不要再用移花接木的方式抹黑尹立，請停止造謠，或拿出尹立接案的證據，否則這樣的指控就不是監督，而是惡意抹黑。 不用抽 不用搶 現在用APP看新聞 保證天天中獎 點我下載APP 按我看活動辦法 讀者留言 留言 相關新聞 政治今日熱門 看更多！請加入自由時報粉絲團 熱門新聞 熱門新訊 千萬買宅、億萬買鄰！道明中學首排 吸引科技菁英與醫生爭相入主 全國電子破盤雙11限時開跑！指定大家電5折起、全館家電9折 歐陸瘋傳暗黑神作！哥雅名畫改編《女巫安息日》亞洲首演在臺中 王美惠推婚育宅青年成家！促嘉義「縣市共榮」台積電雙城生活圈 大家都關注 國安基金 台股大跌 蘇巧慧 第五縱隊 共諜 台指期夜盤 亞冠賽 中職 農業部 陳健治 宋楚瑜 洋流 立院三讀 行政院 AI股 高虹安 英語能力爭議 全英文致詞 台北國際青年科學論壇 建國中學 爆 即時 熱門 政治 財富自由 軍武 社會 生活 健康 國際 地方 蒐奇 影音 財經 娛樂 藝文 汽車 時尚 體育 3C 評論 玩咖 食譜 地產 專區 TAIPEI TIMES ．廣告 ．熱門新訊 ．發票 ．樂透 ．徵才 ．RSS ．關於我們 ．聯絡我們 ．著作權聲明 ．隱私權政策 ．投稿 ．訂閱推播Q&A ．訂報 ．下載APP ．聯邦文教基金會 ．林榮三文學獎 ．聯邦銀行 ．瓏山林台北中和飯店 ．瓏山林蘇澳冷熱泉度假飯店 ．自由廣場會議中心 ．yes123求職網 自由時報版權所有不得轉載 © 2026 The Liberty Times. All Rights Reserved. 此網頁已閒置超過5分鐘，請點擊透明黑底或右下角 Ｘ 鈕。 熱門推播 女神表態了！八點檔億級千金喊話「洋流慧聚」 釣出蘇巧慧親回5字暖爆 自由爆新聞》首都戰最新預測震撼！「這些選票」倒戈挺沈伯洋！ 金管會出手了！祭出五大措施 打擊市場空頭 戒慎恐懼之夜》沈伯洋金句連發酸爆蔣萬安：不給加LINE 還跟風拜會陳健治 蔡康永轉發《康熙》哏圖彩虹圖 蔡英文現身暖喊：一起為淋雨的孩子撐傘 台股本週跌點、市值蒸發近18兆破紀錄 股民荷包平均縮水64萬 國安基金要護盤了！台指期夜盤大漲1000點 台積電ADR盤前也嗨翻 巴紐再逼撤館！外交部不忍了主動關閉駐處 全面終止援助合作 自由說新聞》1.7億養「第五縱隊」！高金案燒向這陣營？網：最恐怖詭故事 台股下週有轉機？台指期夜盤翻紅 狂拉逾500點
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+<!DOCTYPE html>
+<html lang="zh-TW" itemscope itemtype="https://schema.org/WebSite">
+    <head>
+        <script>
+    let cdnDate = '20261106220413';
+    var pvDomain = 'pv.ltn.com.tw';
+    var pvServer = 'pv.ltn.com.tw';
+    var interstitialSlot;
+    var staticSlot = false;
+</script>
+<script src="https://cache.ltn.com.tw/js/c.js"></script>
+        <base href='https://news.ltn.com.tw/'>
+        <meta name="ltn:device" content="R" />
+        <title>被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta property="og:site_name" name="application-name" content="自由時報電子報" />
+<meta name="author" itemprop="author" content="自由時報電子報" />
+<meta name="dcterms.rightsHolder" content="自由時報電子報" />
+<meta name="copyright" content="自由時報電子報" />
+<meta property="og:title" itemprop="name" content="被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報" />
+<meta name="title" itemprop="headline" content="被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報" />
+<meta name="keywords" content="標案,尹立,2026九合一選舉" />
+<meta name="news_keywords" itemprop="keywords" content="標案,尹立,2026九合一選舉" />
+<meta property="og:image" itemprop="image" content="https://img.ltn.com.tw/Upload/news/600/2026/05/13/5435667_1_1.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="998" />
+<meta property="article:section" name="section" itemprop="articleSection" content="politics" />
+<meta name="description" itemprop="description" content="民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚；設計師協會是依法成立的社會團體，也是由專業設計師組成的專業設計團隊，它不是私人公司，是長期投入公共設計與文化事務的公益組織，理事長無給職。" />
+<meta property="og:description" itemprop="description" content="民進黨高市議員參選人尹立指出，有人刻意把「中華民國設計師協會承接相關委託、執行策展工作」扭曲成「尹立接案」，他強調這是烏龍抹黑，協會專業承接委託不分黨派，更不是尹立個人接案，最大標是馬英九總統任內的建國百年吉祥物設計。尹立說明，幾年來承接相關委託、執行策展工作的單位，一直都是中華民國設計師協會，不是他個人，這一點必須先講清楚；設計師協會是依法成立的社會團體，也是由專業設計師組成的專業設計團隊，它不是私人公司，是長期投入公共設計與文化事務的公益組織，理事長無給職。" />
+<meta property="og:url" itemprop="url" content="https://news.ltn.com.tw/news/politics/breakingnews/5435667" />
+<meta property="og:type" content="article" />
+<meta property="dable:
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0117",
+    "sourceId": "scope-news-yin-li-ltn",
+    "documentLocation": "data/enrichment/raw/2026-11-07/news/yin-li-ltn.snapshot（報導日期／內文）",
+    "excerpt": "被爆拿高市府多項標案 尹立：烏龍抹黑、協會接案非個人 - 政治 - 自由時報電子報 為達最佳瀏覽效果，建議使用 Chrome、Firefox 或 Microsoft Edge 的瀏覽器。 請至Edge官網下載 請至FireFox官網下載 請至Google官網下載 全球股災 美國期中選舉 沈伯洋 〉 關鍵字五字 --> 即時 熱門 政治 財富自由 軍武 社會 生活 健康 國際 地方 AI科技 影音 財經 娛樂 汽車 時尚 體育 3 C 評論 藝文 玩咖 食譜 地產 專區 TAIPEI TIMES 求職 Search 自由電子報 自由影音 即時 熱門 政治 軍武 社會 生活 健康 國際 地方 蒐奇 財富自由 財經 娛樂 藝文 汽車 時尚 體育 3 C 評論 玩咖 食譜 地產 --> 專區 服務 自由電子報 APP 自由電子報粉絲團 自由電子報 Line 自由電子報 X 熱門新訊 限制級 您即將進入之新聞內容 需滿18歲 方可瀏覽。 "
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0117","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-news-yin-li-ltn","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

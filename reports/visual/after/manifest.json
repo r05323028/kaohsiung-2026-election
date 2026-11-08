@@ -1,0 +1,98 @@
+{
+  "label": "after",
+  "baseURL": "http://127.0.0.1:4322",
+  "capturedAt": "2026-11-07T19:34:24.778Z",
+  "shots": [
+    {
+      "name": "01-district-overview",
+      "url": "/?district=kaohsiung-council-04",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "overview",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/01-district-overview.png"
+    },
+    {
+      "name": "02-lotus-pond",
+      "url": "/?district=kaohsiung-council-04&focus=lotus-pond",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "lotus-pond",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/02-lotus-pond.png"
+    },
+    {
+      "name": "03-dragon-tiger-pagodas",
+      "url": "/?district=kaohsiung-council-04&focus=dragon-tiger-pagodas",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "dragon-tiger-pagodas",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/03-dragon-tiger-pagodas.png"
+    },
+    {
+      "name": "04-zuoying-neighborhood",
+      "url": "/?district=kaohsiung-council-04&focus=zuoying-old-street",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "zuoying-old-street",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/04-zuoying-neighborhood.png"
+    },
+    {
+      "name": "05-houjing-river",
+      "url": "/?district=kaohsiung-council-04&focus=houjing-river",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "houjing-river",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/05-houjing-river.png"
+    },
+    {
+      "name": "06-metropolitan-park",
+      "url": "/?district=kaohsiung-council-04&focus=metropolitan-park",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "metropolitan-park",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/06-metropolitan-park.png"
+    },
+    {
+      "name": "07-nanzih-neighborhood",
+      "url": "/?district=kaohsiung-council-04&focus=nanzih-neighborhood",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "nanzih-neighborhood",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/07-nanzih-neighborhood.png"
+    },
+    {
+      "name": "08-candidate-selection",
+      "url": "/?district=kaohsiung-council-04&candidate=kaohsiung-council-04-712cf4dd",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "camera": "candidate",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/08-candidate-selection.png"
+    },
+    {
+      "name": "09-mobile",
+      "url": "/?district=kaohsiung-council-04",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "deviceScaleFactor": 2,
+      "camera": "overview",
+      "file": "/Users/seanchang/kaohsiung-2026-election/reports/visual/after/09-mobile.png"
+    }
+  ]
+}

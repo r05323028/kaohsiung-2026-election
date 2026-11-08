@@ -1,0 +1,110 @@
+{
+  "datasetId": "kaohsiung-2026-public-records",
+  "snapshotDate": "2026-11-05",
+  "reviewStatus": "pending-human-review",
+  "reviewerId": null,
+  "reviewedAt": null,
+  "disposition": "source-checked-pending-human-review",
+  "selectedCandidates": [
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "personId": "person-lai-rui-long-2026",
+      "displayName": "賴瑞隆",
+      "categories": {
+        "positions": "unavailable",
+        "policies": "unavailable",
+        "activities": "unavailable",
+        "news": "unavailable",
+        "relationships": "unavailable",
+        "timeline": "unavailable"
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "personId": "person-kaohsiung-council-04-a7ed58d6",
+      "displayName": "李眉蓁",
+      "categories": {
+        "positions": "pending-review",
+        "policies": "unavailable",
+        "activities": "pending-review",
+        "news": "pending-review",
+        "relationships": "unavailable",
+        "timeline": "pending-review"
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "personId": "person-kaohsiung-council-12-1a977b21",
+      "displayName": "王義雄",
+      "categories": {
+        "positions": "pending-review",
+        "policies": "unavailable",
+        "activities": "pending-review",
+        "news": "pending-review",
+        "relationships": "unavailable",
+        "timeline": "pending-review"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "claimId": "claim-li-current-council-position",
+      "subjectId": "person-kaohsiung-council-04-a7ed58d6",
+      "evidenceIds": [
+        "evidence-li-member-profile"
+      ],
+      "disposition": "pending-human-review",
+      "rationale": "來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。"
+    },
+    {
+      "claimId": "claim-wang-current-council-position",
+      "subjectId": "person-kaohsiung-council-12-1a977b21",
+      "evidenceIds": [
+        "evidence-wang-member-profile"
+      ],
+      "disposition": "pending-human-review",
+      "rationale": "來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。"
+    },
+    {
+      "claimId": "claim-li-questioning-17284",
+      "subjectId": "person-kaohsiung-council-04-a7ed58d6",
+      "evidenceIds": [
+        "evidence-li-news-17284"
+      ],
+      "disposition": "pending-human-review",
+      "rationale": "來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。"
+    },
+    {
+      "claimId": "claim-li-questioning-17102",
+      "subjectId": "person-kaohsiung-council-04-a7ed58d6",
+      "evidenceIds": [
+        "evidence-li-news-17102"
+      ],
+      "disposition": "pending-human-review",
+      "rationale": "來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。"
+    },
+    {
+      "claimId": "claim-wang-questioning-17293",
+      "subjectId": "person-kaohsiung-council-12-1a977b21",
+      "evidenceIds": [
+        "evidence-wang-news-17293"
+      ],
+      "disposition": "pending-human-review",
+      "rationale": "來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。"
+    },
+    {
+      "claimId": "claim-wang-questioning-17093",
+      "subjectId": "person-kaohsiung-council-12-1a977b21",
+      "evidenceIds": [
+        "evidence-wang-news-17093"
+      ],
+      "disposition": "pending-human-review",
+      "rationale": "來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。"
+    }
+  ],
+  "notes": [
+    "KCC member pages provide current institutional identity only; their party text is not copied into the 2026 candidacy record.",
+    "KCC questioning summaries support documented participation, not personal achievement, policy completion, or administrative outcome.",
+    "No family or political relationship is published because no qualifying evidence was captured in this representative slice."
+  ]
+}

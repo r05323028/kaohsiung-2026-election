@@ -1,0 +1,100 @@
+{
+  "datasetId": "kaohsiung-2026-candidate-biographies",
+  "snapshotDate": "2026-11-06",
+  "candidateCount": 106,
+  "audits": 106,
+  "candidatesWithEvidence": 9,
+  "candidatesWithClaims": 9,
+  "candidatesWithIdentityConflict": 9,
+  "candidatesWithoutConservativeMatch": 88,
+  "sourceCounts": {
+    "kcc-current-member-directory": {
+      "total": 4,
+      "retrieved": 4,
+      "blocked": 0,
+      "unattempted": 0
+    },
+    "kcc-member-profile": {
+      "total": 65,
+      "retrieved": 65,
+      "blocked": 0,
+      "unattempted": 0
+    },
+    "moi-local-official-index": {
+      "total": 1,
+      "retrieved": 1,
+      "blocked": 0,
+      "unattempted": 0
+    },
+    "moi-local-official-detail": {
+      "total": 16,
+      "retrieved": 16,
+      "blocked": 0,
+      "unattempted": 0
+    },
+    "legislative-yuan": {
+      "total": 2,
+      "retrieved": 2,
+      "blocked": 0,
+      "unattempted": 0
+    },
+    "cec-historical": {
+      "total": 2,
+      "retrieved": 2,
+      "blocked": 0,
+      "unattempted": 0
+    },
+    "government-record": {
+      "total": 1,
+      "retrieved": 0,
+      "blocked": 0,
+      "unattempted": 1
+    },
+    "candidate-self-report": {
+      "total": 1,
+      "retrieved": 0,
+      "blocked": 0,
+      "unattempted": 1
+    }
+  },
+  "claimsByType": {
+    "current-position": 9,
+    "historical-position": 380,
+    "historical-candidacy": 0,
+    "elected-office": 0,
+    "professional-experience": 481,
+    "education": 27,
+    "career-event": 0
+  },
+  "groups": {
+    "mayoral": {
+      "candidateCount": 5,
+      "evidenceFound": 0,
+      "conflicts": 0,
+      "noConservativeMatch": 5
+    },
+    "city-council": {
+      "candidateCount": 91,
+      "evidenceFound": 9,
+      "conflicts": 6,
+      "noConservativeMatch": 76
+    },
+    "indigenous-council": {
+      "candidateCount": 10,
+      "evidenceFound": 0,
+      "conflicts": 3,
+      "noConservativeMatch": 7
+    }
+  },
+  "stages": {
+    "machineValidatedClaims": 897,
+    "humanReviewedClaims": 0,
+    "editoriallyApprovedClaims": 0,
+    "staticallyPublishedClaims": 0
+  },
+  "nonNegativeGaps": [
+    "No conservative match is not evidence that a person has no biography.",
+    "A historical candidacy is not counted as elected office.",
+    "Candidate self-reports were not used as independent evidence."
+  ]
+}

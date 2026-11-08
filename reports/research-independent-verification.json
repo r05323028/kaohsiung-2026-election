@@ -1,0 +1,39 @@
+{
+  "reportVersion": "1.0.0",
+  "reportType": "independent-machine-reparse",
+  "snapshotDate": "2026-11-05",
+  "method": "重新以保留的 CEC C1/T 原始快照依選舉區與號次抽樣比對；這是獨立機器重解析，不是人工審查。",
+  "sampleCriteria": [
+    "至少一名市長候選人",
+    "第4普通市議員選舉區",
+    "第13原住民族市議員選舉區",
+    "至少一筆姓名衝突",
+    "未執行類別不被標記為已驗證"
+  ],
+  "sampleAuditIds": [
+    "research-official-mayor-zhang-jing-2026-positions",
+    "research-official-candidate-2026-district-kaohsiung-council-04-fa4f92b7-positions",
+    "research-official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f-positions",
+    "research-official-candidate-2026-district-kaohsiung-council-03-53fbb71e-positions",
+    "research-official-mayor-wang-zhao-min-2026-positions",
+    "research-official-mayor-ke-zhi-en-2026-positions",
+    "research-official-mayor-hong-fang-long-2026-positions",
+    "research-official-mayor-lai-rui-long-2026-positions",
+    "research-official-candidate-2026-district-kaohsiung-council-01-fb74ce74-positions",
+    "research-official-candidate-2026-district-kaohsiung-council-01-b7b307c1-positions",
+    "research-official-candidate-2026-district-kaohsiung-council-01-3ac62854-positions",
+    "research-official-candidate-2026-district-kaohsiung-council-01-1bea56a9-positions"
+  ],
+  "checkedCount": 12,
+  "matchedCount": 11,
+  "discrepancyCount": 1,
+  "discrepancies": [
+    "official-candidate-2026-district-kaohsiung-council-03-53fbb71e: 保留官方姓名字元衝突，未判定為相同姓名。"
+  ],
+  "reviewerId": null,
+  "reviewedAt": null,
+  "limitations": [
+    "樣本結果不代表全名冊已人工驗證。",
+    "未執行、受阻或衝突的類別仍須後續研究與人工裁決。"
+  ]
+}

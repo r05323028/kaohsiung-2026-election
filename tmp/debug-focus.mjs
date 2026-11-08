@@ -1,0 +1,13 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ args: ['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport: { width: 1600, height: 1000 } });
+page.on('console', m => console.log('[console]', m.type(), m.text()));
+page.on('pageerror', e => console.log('[pageerror]', e.message));
+await page.goto('http://127.0.0.1:4321/?district=kaohsiung-council-04&focus=lotus-pond', { waitUntil: 'domcontentloaded' });
+await page.waitForSelector('[data-testid="city-explorer"][data-hydrated="true"]', { timeout: 30000 });
+await page.waitForTimeout(4000);
+console.log('datasets', await page.evaluate(() => ({ ...document.body.dataset })));
+console.log('focus attr', await page.locator('[data-testid="city-explorer"]').getAttribute('data-scene-focus'));
+console.log('zone text', await page.locator('.city-scene-label__zone').innerText());
+await page.screenshot({ path: 'reports/visual/debug-focus-lotus3.png', timeout: 120000 });
+await browser.close();

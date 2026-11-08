@@ -1,0 +1,1886 @@
+{
+  "schemaVersion": "1",
+  "datasetId": "kaohsiung-2026-zuoying-mayoral-enrichment",
+  "policyVersion": "automated-editorial-policy-v1",
+  "snapshotDate": "2026-11-07",
+  "generatedAt": "2026-11-07T14:37:18.547Z",
+  "records": [
+    {
+      "claimId": "enrich-claim-0002",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市立後勁國小",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0002"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0002",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0003",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市立後勁國中",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0003"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0003",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0004",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市立海青工商",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0004"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0004",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0005",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "私立樹德科技大學",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0005"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0005",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0006",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "英國基爾大學碩士",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0006"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0006",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0007",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市第三屆市議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0007"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0007",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0008",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市議會民進黨團書記長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0008"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0008",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0009",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "蔡英文總統高雄市競選總部副總幹事",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0009"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0009",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0010",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市射箭委員會副主任委員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2185"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0010"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0010",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0013",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市私立國際商工畢",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0013"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0013",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0014",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市縣市合併後第3屆議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0014"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0014",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0015",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "立法委員黃昭順辦公室助理",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0015"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0015",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0016",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市義勇消防防火宣導大隊新莊分隊顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0016"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0016",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0017",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市善心慈善會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0017"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0017",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0018",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "社團法人高雄市青少年服務協會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0018"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0018",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0019",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市楠陽桌球聯誼會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0019"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0019",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0020",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "國立高雄科技大學校友總會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0020"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0020",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0021",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市救國團楠梓區團委會會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0021"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0021",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0022",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "中國國民黨第19、20、21屆全國代表",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2187"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0022"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0022",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0025",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "台中二中",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0025"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0025",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0026",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "世新大學新聞系",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0026"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0026",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0027",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "國民黨發言人",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0027"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0027",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0028",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市府副發言人",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0028"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0028",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0029",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市府參議",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0029"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0029",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0030",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市府新聞局機要秘書",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0030"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0030",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0031",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "三立新聞台主播",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0031"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0031",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0032",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "聯合報記者",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0032"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0032",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0033",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "好茵果小農平台創辦人",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0033"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0033",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0034",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "倫敦城市大學肄業",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2181"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0034"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0034",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0041",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "正修科技大學化妝品與時尚彩妝系碩士畢業",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0041"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0041",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0042",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市第1、2、3 屆市議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0042"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0042",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0043",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "國民黨改革委員會委員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0043"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0043",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0044",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "國民黨高雄市黨部副主任委員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0044"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0044",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0045",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "國民黨高雄市青工總會會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0045"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0045",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0046",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市正友獅子會會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0046"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0046",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0047",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "正修校友會化工系會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2186"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0047"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0047",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0050",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市左營區勝利國小",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0050"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0050",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0051",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市立左營國民中學",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0051"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0051",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0052",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄市私立立志高級中學",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0052"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0052",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0053",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "嘉南藥理大學",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0053"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0053",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0054",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "高雄師範大學成人教育研究所碩士",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0054"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0054",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0055",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "日本慶應大學醫學部訪問研究員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0055"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0055",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0056",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "立法委員趙天麟辦公室藝文部執行長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0056"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0056",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0057",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市第三屆市議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2188"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0057"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0057",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0060",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "舊城國小",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0060"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0060",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0061",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "大義國中",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0061"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0061",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0062",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "道明高中",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0062"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0062",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0063",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "日本東洋大學",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0063"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0063",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0064",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "美國威斯頓大學企業管理碩士",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0064"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0064",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0065",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市縣市合併後第1、2、3屆議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0065"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0065",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0066",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市議會第6、7屆市議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0066"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0066",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0068",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "日本亞細亞航空公司",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0068"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0068",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0069",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "立委黃昭順及侯彩鳳服務處特別助理",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0069"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0069",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0070",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市千禧國際同濟會創會會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0070"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0070",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0071",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市2007女國際青商會特友會主席",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0071"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0071",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0072",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "國民黨高雄青工會前副總會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0072"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0072",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0073",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市清玉文教發展協會理事長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0073"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0073",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0074",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市滑水、排舞委員會主委",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0074"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0074",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0075",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市國劇研究會理事長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2189"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0075"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0075",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0089",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "義守大學管理學學士",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0089"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0089",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0090",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "高雄市議會",
+      "value": "國立高雄師範大學教育學碩士",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0090"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0090",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0091",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市第一、二、三屆議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0091"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0091",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0092",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市第七屆議員",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0092"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0092",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0093",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "左營區新下里里長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0093"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0093",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0094",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "十七全黨代表",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0094"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0094",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0095",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "婦聯會楠梓支會主委",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0095"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0095",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0096",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "左營救國團會長",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0096"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0096",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0097",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "楠梓社會教育站顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0097"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0097",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0098",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "高雄市龍舟委員會主委",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0098"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0098",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0099",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "博仁慈善會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0099"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0099",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0100",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "嘉義同鄉會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0100"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0100",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "高雄市議會",
+      "value": "雲林同鄉會顧問",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-kcc-profile-2184"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0101"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0101",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0135",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "立法院",
+      "value": "美國南加大教育心理學博士 美國密西根州立大學教育碩士 國立政治大學教育系學士",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-ly-ke-profile"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0135"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0135",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0136",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "title": "經歷",
+      "organization": "立法院",
+      "value": "國家政策研究基金會執行長 第九屆立法委員 中國國民黨副秘書長兼婦女部主任 淡江大學學務長 淡江大學教心所專任教授 高等教育評鑑中心心理學門評鑑委員 新聞局電視金鐘獎最佳教育文化節目主持人 新聞局金鼎獎最佳圖書著作得獎人",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-ly-ke-profile"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0136"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0136",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    },
+    {
+      "claimId": "enrich-claim-0141",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "category": "basic-biography",
+      "claimType": "education",
+      "title": "學歷",
+      "organization": "立法院",
+      "value": "台灣大學國家發展研究所碩士 東吳大學政治學系",
+      "sourcePublicationDate": null,
+      "validFrom": null,
+      "validTo": null,
+      "temporalPrecision": "unknown",
+      "currentStatus": "historical",
+      "attribution": "institutional-record",
+      "sourceIds": [
+        "scope-ly-lai-profile"
+      ],
+      "evidenceIds": [
+        "enrich-evidence-0141"
+      ],
+      "machineApprovalId": "automated-decision-v2-enrich-claim-0141",
+      "policyVersion": "automated-editorial-policy-v1",
+      "publicationOrigin": "automated-policy"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "scope-kcc-profile-2181",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 03ed977e8b16fbc8…, 151045 bytes."
+    },
+    {
+      "sourceId": "scope-kcc-profile-2184",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 70dcabafe411608c…, 137533 bytes."
+    },
+    {
+      "sourceId": "scope-kcc-profile-2185",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2185",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 4670654f6eafd374…, 149188 bytes."
+    },
+    {
+      "sourceId": "scope-kcc-profile-2186",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 ab133d8169199b9a…, 126207 bytes."
+    },
+    {
+      "sourceId": "scope-kcc-profile-2187",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 072f3b6082f4a604…, 135027 bytes."
+    },
+    {
+      "sourceId": "scope-kcc-profile-2188",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 fae3bd42c1f829df…, 159390 bytes."
+    },
+    {
+      "sourceId": "scope-kcc-profile-2189",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+      "publisher": "高雄市議會全球網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained kcc-member-profile capture, HTTP 200, SHA-256 b608dc62367f364b…, 129887 bytes."
+    },
+    {
+      "sourceId": "scope-ly-ke-profile",
+      "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46792",
+      "publisher": "立法院全球資訊網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained legislative-yuan capture, HTTP 200, SHA-256 227641ea0917bf6a…, 160803 bytes."
+    },
+    {
+      "sourceId": "scope-ly-lai-profile",
+      "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46850",
+      "publisher": "立法院全球資訊網",
+      "publicationDate": null,
+      "verificationStatus": "Verified",
+      "note": "Retained legislative-yuan capture, HTTP 200, SHA-256 b3688136a6c88e6e…, 161148 bytes."
+    }
+  ],
+  "withdrawnClaimIds": [],
+  "checksum": "0f0c227ad0385ee09155c6f9e4b7cc5c95eb87fe0234aab2b32813e71a28dd73",
+  "note": "Machine approval under automated-editorial-policy-v1 plus fresh independent adjudication (adjudication-materiality-v2). Every record cites a retained institutional capture; this is not human editorial approval. Supersedes the 1-record snapshot at data/published/2026/zuoying-mayoral-automated.json."
+}

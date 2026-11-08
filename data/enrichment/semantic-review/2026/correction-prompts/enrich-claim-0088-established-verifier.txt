@@ -1,0 +1,103 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：established-verifier
+Your job: confirm whether the CORRECTED wording is directly supported by the retained source bytes. Establish the strongest defensible reading of the source; if the source does not literally carry the wording, return partially-supported or insufficient-evidence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0088
+- 候選人: 陳麗珍
+- 類別 / 類型: basic-biography / current-position
+- 標題: KCC 本屆議員名錄
+- 組織: 高雄市議會
+- 修正後內容: 本屆議員
+- 原始內容（修正前，僅供比對）: 高雄市議會本屆議員（第四選舉區）
+- 歸因: institutional-record｜來源依賴: institutional-record
+- 時效狀態: current
+- 發布日期: （未提供）
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-kcc-profile-2184
+- 來源類別: kcc-member-profile
+- URL: https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184
+- HTTP: 200
+- rawPath: data/biographies/raw/2026-11-06/kcc/profiles/2184.html
+- sha256: 70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+高雄市議會全球網-中文網-本屆議員-陳麗珍 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail 熱門關鍵字 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 下方連結 隱私權宣告 資訊安全政策宣告 著作權聲明 RSS訂閱專區 ::: 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 高雄市議會全球網-中文網 熱門關鍵字 search 搜尋 進階搜尋 字級 小 中 大 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail ::: 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 ::: 首頁 本會議員 本屆議員 本屆議員-陳麗珍 _ 網頁功能 列印內容 陳麗珍 性 別： 女 所屬政黨： 中國國民黨 聯絡電話： 3450581 傳真電話： 3450580 通訊地址： 813 左營區至真路536號 備註： 方信淵、陳麗珍、許采蓁、曾麗燕、陳慧文、蔡金晏議員總質詢摘要 財經部門委員會議員質詢摘要 議會中元普渡 康議長祈願高雄平安順利、好運接棒 高雄市議會跨黨派訪團再訪布里斯本 曾副議長：歡迎大家投資高雄 李順進、陳明澤、陳幸富、黃飛鳳、陳麗珍、高忠德議員總質詢摘要 財經部門委員會議員質詢摘要 牧師祝禱及陽明國中管樂聲飄揚 議會聖誕樹溫暖點燈 白喬茵、簡煥宗、陳麗珍議員、李雅芬、邱于軒、宋立彬議員總質詢摘要 警消衛環部門委員會議員質詢摘要 議會中元普渡 康議長祈願城市揮別風雨 好運連連 邱俊憲、陳慧文、陳麗娜、陳美雅、陳麗珍、曾麗燕議員總質詢摘要 警消衛環部門委員會議員質詢摘要 劉德林、黃柏霖、陳麗珍、黃飛鳳議員總質詢摘要 財經部門委員會議員質詢摘要 全球淨零浪潮 康議長：議會要跑得比誰都快 議會中元普渡 康議長為市民祈福免於風災之苦 拜會連江縣議會 康議長隔空連線搏感情 首度前進馬祖勞軍 議會感謝國軍戍守前線 考察和發產業園區 康議長要求市府持續優化行政服務 李喬如、黃飛鳳、黃秋媖及曾麗燕議員、曾俊傑副議長、陳麗珍議員總質詢摘要 支持頂尖大學在左營設分校 康議長偕同陳市長聆聽在地心聲 緊跟AIoT技術浪潮 議會舉辦教育訓練講座 考察岡山焚化廠 康議長要求不該發生的事故切勿再發生 何權峰、黃秋媖、李雅慧、陳麗珍、陸淑美、李亞築議員總質詢摘要 淨零學院民代班開課，本會議員上課拿學分 警消衛環部門委員會議員質詢摘要 警消衛環委員會考察消防局搜救犬馴養中心並頒贈加菜金 府會龍舟PK賽 議會「用力划起來」勇奪亞軍 龍舟隊、 啦啦隊合體，議會隊一定贏 黃文志.曾俊傑副議長.何權峰.陳麗珍.方信淵.黃彥毓議員總質詢摘要 警消衛環部門委員會議員質詢摘要 康議長率警消衛環委員會考察中油高煉廠污染整治進度 關心台積電投資進度 康議長率隊考察楠梓產業園區 佛光山開山宗師星雲法師捨報圓寂，正副議長康裕成、曾俊傑率議員前往追思 本屆議會成立112年各種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-08 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 第4屆第8次定期會 交通部門業務質詢_影片連結 115-09-22 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市府不任意舉債。 二、加速右昌高鐵線連結高雄學園捷運紫線、新台十七線全線通車、鐵路地下化延至楠梓，楠梓火車站站體更新，串聯北高雄交通路網。 三、爭取生育、育兒、托育津貼提高，增設公托、公幼、托嬰中心，減輕家庭經濟負擔。 四、落實長照福利政策，重視長輩及弱勢安全照護；爭取新住民權益、婦女福利，放寬補助門檻。 五、重視勞工權益，提供多元就業輔導，培訓產業人才，促進二度就業機會。 六、持續推動蓮池潭觀光園區，結合舊城古蹟、見城計劃、半屏山，發展高鐵站商圈，創造觀光與文創產業。
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+gov.tw/Scripts/fu_Accessibility.js'></script> 
+<script>var CCMS_WWWURL='https://www.kcc.gov.tw';var CCMS_LanguageSN=1;var CCMS_SitesSN_Encryption='1';</script><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="DC.Title" content="" />
+<meta name="DC.Subject" content="" />
+<meta name="DC.Creator" content="" />
+<meta name="DC.Publisher" content="" />
+<meta name="DC.Date" content="2019-02-27" />
+<meta name="DC.Type" content="" />
+<meta name="DC.Identifier" content="" />
+<meta name="DC.Description" content="" />
+<meta name="DC.Contributor" content="" />
+<meta name="DC.Format" content="" />
+<meta name="DC.Relation" content="" />
+<meta name="DC.Source" content="" />
+<meta name="DC.Language" content="" />
+<meta name="DC.Coverage.t.min" content="2019-02-27" />
+<meta name="DC.Coverage.t.max" content="2019-02-27" />
+<meta name="DC.Rights" content="" />
+<meta name="Category.Theme" content="" />
+<meta name="Category.Cake" content="" />
+<meta name="Category.Service" content="" />
+<meta name="DC.Keywords" content="" />
+<title>
+	高雄市議會全球網-中文網-本屆議員-陳麗珍
+</title><link id="likCssGlobal" href="/css/global.css" rel="stylesheet" type="text/css" /><link id="likCssPage" href="/css/page.css" rel="stylesheet" type="text/css" /><link id="likPrint" href="/css/print.css" rel="stylesheet" type="text/css" media="print" /><link id="lnkCssSysDetail" href="/css/sys_detail.css" rel="stylesheet" type="text/css" />
+    <style>
+        .group.base-aside {
+            display: none;
+        }
+    </style>
+<link href="https://ws.kcc.gov.tw" rel="icon" type="image/x-icon"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_UA-24833141-6.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24833141-6');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_G-965X83HTMQ.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-965X83HTMQ');
+</script><meta property="og:title" content="本屆議員-陳麗珍" >
+<meta property="og:type
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0088",
+    "sourceId": "scope-kcc-profile-2184",
+    "documentLocation": "data/biographies/raw/2026-11-06/kcc/profiles/2184.html（議員個人頁）",
+    "excerpt": "高雄市議會全球網-中文網-本屆議員-陳麗珍 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0088","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-kcc-profile-2184","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

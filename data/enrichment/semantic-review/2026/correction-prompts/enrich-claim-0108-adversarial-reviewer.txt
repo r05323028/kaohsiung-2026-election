@@ -1,0 +1,87 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：adversarial-reviewer
+Your job: try to falsify the CORRECTED wording. Look for overreach, unsupported precision, promotional epithets presented as credentials, attribution slipped from "a report said" to "it is so", and any sentence fragment that the source does not actually contain. If a neutral reader would be misled, set materialConcern to a concrete sentence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0108
+- 候選人: 薛兆基
+- 類別 / 類型: timeline / historical-candidacy
+- 標題: 新聞報導的參選事件
+- 組織: （未提供）
+- 修正後內容: 大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底
+- 原始內容（修正前，僅供比對）: 大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團
+- 歸因: news-report｜來源依賴: source-dependent
+- 時效狀態: historical
+- 發布日期: 2026-06-09
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-news-xue-zhaoji-udn
+- 來源類別: news-report
+- URL: https://udn.com/news/story/124652/9554978
+- HTTP: 200
+- rawPath: data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot
+- sha256: 83f8764b13a6b10a635a50d6a78bac2f816a98ff4fc768977c8a942b50e968a3
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲 專題 網誌 女子漾 陽光行動 影音網 U好學 購物 全產品速覽 新聞評論 聯合新聞網 河好如初 陽光行動 聯合報數位版 聯合70 轉角國際 倡議家 世界日報 新聞話題 服務 會員中心 U利點數 我的新聞 歷史新聞 活動專區 udn粉絲團 udn line 好友 股市理財 經濟日報網 房地產 中經社 樂透 發票 生活娛樂 噓！星聞 優人物 udnSTYLE 500輯 遊戲角落 發燒車訊 元氣網 橘世代 寵物部落 科技玩家 女子漾 報時光 運動 udn NBA 野球夢田 HBL 閱讀創作 琅琅悅讀 琅琅書店 琅琅原創 一刻鯨選 U好學 聯副70 udn部落格 聯合文學 聯經出版 聯文雜誌 文創購物 數位文創 IP 授權 瘋活動 售票網 時光商號 時光自造所 品牌故事館 更多產品 聯合知識庫 聯合電子報 聯合影音網 聯合學苑 有行旅 APP行動網 關於我們 P 訂閱 刊登廣告 FAQ · 客服 新聞授權 服務條款 · 著作權 · 隱私權聲明 聯合報系 訂報紙 關於我們 網站總覽 聯合線上公司 著作權所有 ©2025 我的頻道 * 拖拉選單自訂排序儲存 恢復預設 確定 設定 加入橘世代VIP富活人生下半場。 即時 要聞 快訊 華邦電今年獲利豐收 焦佑鈞證實員工平均獎金上看30個月 14:06 行政院不副署老人健保補助 盧秀燕：民進黨做不到應該換黨執政 14:11 曝幕僚勸講話含蓄點！柯志恩笑回：遇事就是直球對決 13:44 udn 要聞 縣市長議員選戰 聽新聞 --> 0:00 / 0:00 Your browser does not support HTML5 Audio! 😢 大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 2026-06-09 12:30 聯合報／ 記者 徐白櫻 ／高雄即時報導 謝長廷 高雄市前市長謝長廷的幕僚薛兆基（右）轉投入「台灣前進陣線」，爭取左楠區市議員席次。圖／台灣基進提供 --> 贊助本文 --> 高雄 市前市長 謝長廷 機要秘書薛兆基曾參與民進黨議員黨內初選，今天接受「台灣前進陣線」提名，爭取 高雄市 左楠區市議員席次，他主張，台積電進駐楠梓，希望打造高雄最具競爭力的科技生活圈，翻轉左營、楠梓的發展格局。民進黨高市黨部表示，薛兆基違紀參選，將依規定懲處。 時代力量、小民參政歐巴桑聯盟、台灣綠黨及台灣基進共同組成的「台灣前進陣線」，今日公布第四波公職參選人名單，提名11位來自台北、新北、宜蘭、新竹、雲林、高雄、屏東等縣市的市議員、縣議員及鎮民代表參選人。 11名被提名人之中，薛兆基受台灣基進推薦參選高雄市左楠區市議員。薛兆基曾擔任前市長謝長廷機要秘書及前代理市長葉菊蘭辦公室主任，希望以累積的經驗與歷練，為地方發展注入新的動能。 薛兆基指出，面對台積電進駐帶來的產業轉型契機，他提出八大政見，希望打造高雄最具競爭力的科技生活圈，翻轉左營、楠梓的發展格局。另主張成立「樂齡長青局」，以健康、快樂與尊嚴為核心目標，建立更完善的高齡照顧體系。 今年2月，民進黨高雄市議員議員初選期間，左楠區出現7搶4局面，黃偵琳爆發酒駕爭議退選，郭原甫、薛兆基陸續宣布退出初選，當時薛兆基強調將以無黨籍身分投入年底大選，持續爭取選民認同。 高雄市黨部表示，薛兆基上月已向黨部提出退黨申請，但他違紀參選在先，不會因為有無主動退黨結果不同，預計7月召開執評委會議討論懲處，最重給予開除黨籍處分，5年內不得申請入黨。 台灣前進陣線今天公布第四波參選人，提名薛兆基（右）參選高雄市左楠區市議員。圖／台灣基進提供 2026九合一選舉 2026縣市長選舉登記結束！看22縣市完整參選名單 全國1502人要爭919席議員 看你的選區有誰參選? 謝長廷 高雄 高雄市 2026九合一選舉 高雄市選舉 登入後開始簽到 會員來簽到 您即將前往會員中心 登入簽到送 LINE POINTS 🪙 每日打卡送 LINE POINTS 玩遊戲再抽7-11禮券🧧 立即登入 立即前往 延伸閱讀 開放閱讀">真退黨了！邱建富宣布參選彰化縣長 預告將遭綠營抹黑抹黃抹紅 開放閱讀">黃捷接掌高市黨部 延攬陳致中幕僚、北高將合辦黨員見面會 開放閱讀">再控蘇巧慧胞妹任職公司連年獲補助 民眾黨喊話辭職宣布退選 開放閱讀">世代布局 柯志恩市政顧問團首波公布 --> --> 相關新聞 固本拓票…盧秀燕出任蔣萬安競總主委 藍委看好「姐弟強強聯手」 台北市長選戰白熱化，民進黨參選人沈伯洋形塑「洋流」強勢進逼，台北市長蔣萬安近期也化被動為主動，積極展開攻勢。北市藍營輔選人士證實，台中市長盧秀燕已點頭出任蔣萬安競總主委。北市藍委直言，這是一步好棋，盧秀燕具備全國級知名度與號召力，是真正的「姐弟強強聯手」。 2026-10-18 00:00 民眾黨造勢大會將邀請蔣萬安 黃國昌：北市藍白合作漸入佳境 選舉倒數21天，台北市長蔣萬安陣營除鞏固藍軍基本盤，也把目光投向民眾黨，有媒體報導至今前主席柯文哲都還沒點頭，傳出是因北士科跟京華城案過去蔣市府處理手段讓柯感到心寒。對此，民眾黨黨主席黃國昌表示，他不會去揣測柯文哲的心意，沒得到授權也不會發言，但無論是北市科或京華城，都是柯主席在市長任內重要的建設，若當初沒做好北市科，何來李四川迎來輝達?這就是市政一棒接一棒。 2026-11-07 13:14 影／好險有影片！蔣萬安拱手、彎腰入「又一村」 前後40秒何來出征？ 台北市長蔣萬安昨掃遼寧夜市，挺洋流店家「又一村」指控，被藍營支持者包圍，綠營支持者猛批霸凌、出征。蔣萬安今回應「如果說有出征，如果說有出征或霸凌，這個可能誤會大了。許多人也出面發影片還原，蔣萬安彎腰拱手入內拜票，前後大約四十秒，「
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+<!--getArticle 0.0019 --><!--hottest_news long cache--><!--getReporter 0.0061 --><!--extend_news 0.0012 --><!-- enter else --><!-- 7875 --><!--related_news 0.0304 --><!--content 0.0815 --><!--ad_1 0.0305 --><!--ad 0.1060 --><!--view_type 0.0000 --><!--meta 0.0170 --><!--family_bar 0.0009 --><!--family_bar sub  --><!--breaking_news 0.0043 --><!--top 0.0079 --><!--bottom 0.0023 --><!--nav 0.0000 --><!--code 0.2151 --><!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網</title>
+  <link rel="amphtml" href="https://udn.com/news/amp/story/124652/9554978">
+<link rel="canonical" itemprop="mainEntityOfPage" href="https://udn.com/news/story/124652/9554978"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+<!-- favicon -->
+<link rel="icon" href="/static/img/icons/icon-128x128.png" sizes="128x128">
+<link rel="icon" href="/static/img/icons/icon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+
+<!-- for Facebook -->
+<meta property="og:title" itemprop="name" content="大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 聯合新聞網"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" itemprop="url" content="https://udn.com/news/story/124652/9554978"/>
+<meta property="og:image" itemprop="image" content="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/06/09/35026337.jpg&M=1&s=Y&x=0&y=0&sw=1080&sh=720&exp=3600"/>
+<meta property="og:image:width" content="1080"/>
+<meta property="og:image:height" content="720"/>
+<meta property="og:site_name" content="聯合新聞網"/>
+<meta property="og:description" content="高雄市前市長謝長廷機要秘書薛兆基曾參與民進黨議員黨內初選，今天接受「台灣前進陣線」提名，爭取高雄市左楠區市議員席次，他主張，台積電進駐楠梓，希望打造高雄最具競爭力的科技生活圈，翻轉左營、楠梓的發展格局。民進黨高市黨部表示，薛兆基違紀參選，將依規定懲處。"/>
+<meta property="og:locale" content="zh_TW">
+<meta property="fb:admins" content="100002847892748" />
+<meta property="fb:app_id" content="350231215126101" />
+<meta property="fb:pages" content="241284961029" />
+<meta property="article:author" content="https://udn.com/news/reporter/MDYwMjk=" />
+<meta property="article:publisher" content="https://www.facebook.com/myudn/" />
+
+<!-- for Google -->
+<meta name="des
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0108",
+    "sourceId": "scope-news-xue-zhaoji-udn",
+    "documentLocation": "data/enrichment/raw/2026-11-07/news/xue-zhaoji-udn.snapshot（參選事件內文）",
+    "excerpt": "大綠變小綠！謝長廷前幕僚薛兆基轉投入「台灣前進陣線」參選到底 | 縣市長議員選戰 | 要聞 | 聯合新聞網 --> --> --> --> --> --> 聯合報 經濟日報 河好如初 人文企業 有設計 有行旅 願景 我的新聞 會員中心 我的設定 訂閱管理 登出 即時 要聞 選舉 娛樂 運動 全球 社會 地方 產經 股市 房市 生活 寵物 健康 橘世代 文教 評論 兩岸 科技 Oops 閱讀 旅遊 雜誌 報時光 倡議+ 500輯 轉角國際 NBA 時尚 汽車 棒球 HBL 遊戲"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0108","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-news-xue-zhaoji-udn","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

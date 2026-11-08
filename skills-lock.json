@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-desktop": {
+      "source": "vercel-labs/agent-desktop",
+      "sourceType": "github",
+      "skillPath": "skills/agent-desktop/SKILL.md",
+      "computedHash": "2d108c00ab812928464c7cda3857c12be0cf3c3148f3677621b5f9e99c6e9f6c"
+    },
+    "agent-desktop-ffi": {
+      "source": "vercel-labs/agent-desktop",
+      "sourceType": "github",
+      "skillPath": "skills/agent-desktop-ffi/SKILL.md",
+      "computedHash": "27b2167ceb4f8f4c259861b42449e4b45ea29695d9246d0ab6398a8240156dff"
+    },
+    "agent-desktop-macos": {
+      "source": "vercel-labs/agent-desktop",
+      "sourceType": "github",
+      "skillPath": "skills/agent-desktop-macos/SKILL.md",
+      "computedHash": "d1dd7b1e697b91a0f1b0254f530787c45262082fd9c54e5a1b360c45fbec6e09"
+    },
+    "jev-desktop": {
+      "source": "vercel-labs/agent-desktop",
+      "sourceType": "github",
+      "skillPath": "skills/jev-desktop/SKILL.md",
+      "computedHash": "0e53dac1b97042c44fd16eafc04ff53a6a0338a48dbb9b22fff18caae0620b9b"
+    },
+    "worktrunk": {
+      "source": "max-sixty/worktrunk",
+      "sourceType": "github",
+      "skillPath": "skills/worktrunk/SKILL.md",
+      "computedHash": "c04a592e9d071f994e8cc30eb18080345cb86a23870ac87a95cc462e7d2dc40c"
+    },
+    "wt-switch-create": {
+      "source": "max-sixty/worktrunk",
+      "sourceType": "github",
+      "skillPath": "skills/wt-switch-create/SKILL.md",
+      "computedHash": "160ee3f1d078819e6d5c83f8fad21db157c6369e3577123d18b4f2b6acfa4984"
+    }
+  }
+}

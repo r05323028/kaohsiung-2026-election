@@ -1,0 +1,86 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：established-verifier
+Your job: confirm whether the CORRECTED wording is directly supported by the retained source bytes. Establish the strongest defensible reading of the source; if the source does not literally carry the wording, return partially-supported or insufficient-evidence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0077
+- 候選人: 張以理
+- 類別 / 類型: basic-biography / historical-position
+- 標題: 新聞報導中的歷史職務
+- 組織: （未提供）
+- 修正後內容: 張以理卸任青年局長 陳其邁肯定任內努力
+- 原始內容（修正前，僅供比對）: 張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。
+- 歸因: news-report｜來源依賴: source-dependent
+- 時效狀態: historical
+- 發布日期: 2025-02-17
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-news-zhang-yili-cna
+- 來源類別: news-report
+- URL: https://www.cna.com.tw/news/aloc/202502170115.aspx
+- HTTP: 200
+- rawPath: data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot
+- sha256: e37384229bf9df9594dce2c2eb0cef1b6a05d217335b4ac3b7001df7e443d4d2
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。 當您關閉此視窗，代表您同意上述規範。 Your browser does not appear to support Traditional Chinese. Would you like to go to CNA’s English website, “Focus Taiwan” ? こちらのページは繁体字版です。日本語版 「フォーカス台湾」 に移動しますか。 Focus Taiwan フォーカス台湾 Fokus Taiwan Enfoque en Taiwán 淨零碳排 媒體識讀 好生活 影像空間 客戶頻道 永續願景 支持中央社 Focus Taiwan フォーカス台湾 支持中央社 上一頁 支持中央社 本社簡介 直播 新聞專題 AI淨零 特派看世界 解釋性新聞 新聞圖表 中央社好POD 文化+ 悅讀閱讀 中央社eBooks 早安世界電子報 九合一 支持者出征「洋流」店家？蔣萬安：應是誤會 前台東縣長徐慶元力挺陳瑩 吳秀華助茶農促銷 國民黨「三子」合體力抗洋流 拚2026勝選也拚2028 民進黨「3+1」交叉輔選 賴蕭蔡卓各展戰力 張善政專業無傲氣體貼基層 以理性實績證明桃園進步 黃世杰漁港出身法律學霸 聰明溫暖拚盼改變桃園 蔣萬安訪東區商圈、遼寧街 石舫亘赴景美夜市分頭拜票 專訪被問對蔣萬安的看法 沈伯洋：令人尊敬對手 即時 共和黨敗選後川普預告調整人事 戰爭部長暫不撤換、米勒將任幕僚長 虎尾農會千名股東採花生 張嘉郡籲挺國產農產 老人福利法修法 卓榮泰：樂於再與立院協商 台水：烏山頭水庫原水及清水檢測符合標準 美今年通報逾5000起麻疹病例 創35年來新高 1101-1107一週大事 中共部署21大將選2360名代表 強調嚴守人選廉潔 藍批民進黨擋老農津貼 綠：在野黨違法違憲捨近求遠 政治 蕭旭岑：無足夠電力就無算力和國力 老人福利法修法 卓榮泰：樂於再與立院協商 藍批民進黨擋老農津貼 綠：在野黨違法違憲捨近求遠 國家住都中心：積極協調嘉義社宅土方去化問題 外交部宣布關閉駐巴紐代表處 藍籲回歸務實外交路線 97年次役男兵籍調查網路申報至11/15 建立兵籍資料 貝里斯觀光部長訪台 盼推廣旅遊、強化人才培育 中國加彭聲明再談一中原則 外交部譴責散播不實論述 外媒團來訪 外交部：盼各國支持台灣入CPTPP 國際 共和黨敗選後川普預告調整人事 戰爭部長暫不撤換、米勒將任幕僚長 美今年通報逾5000起麻疹病例 創35年來新高 從籃球國手到國家元首 阿里亞納意外接任巴拉圭總統 巴拉圭總統潘尼亞下台親信辭職 群眾守寓所外防脫逃 又見中國貓熊外交 平平、福雙亮相亞特蘭大動物園 美軍對伊朗發動新有限度打擊 德黑蘭評估卡達核議題方案 美懸賞2000萬美元徵求伊朗核情報 提供線索者可能獲協助遷居 海地證實黑幫頭目死亡 總理誓言繼續掃黑 教宗良十四世展開南美「返鄉之旅」 籲區域國家團結合作 兩岸 衛報揭黃之鋒獄中書信 吐露擔心世人遺忘香港 中共部署21大將選2360名代表 強調嚴守人選廉潔 停滯8年中加重啟財經對話 何立峰將赴加拿大出席會議 鋪路川習會 何立峰通話貝森特、葛里爾：關切美對中經貿限制 被撤全國政協委員後 中國前中醫藥局長投案受查 分析：民主黨傑福瑞斯有望成下任美眾院議長 友台、曾會晤蔡英文 紐時：與川普、普丁舉行峰會 習近平可能有點尷尬 整治AI冒充公眾人物帶貨 中國處置近4000個帳號 上海進博會 參展台企：爭取加大曝光度 產經 美資料中心建置添變數 台股伺服器供應鏈耐震度受考驗 新台幣逆勢強彈現止貶曙光？專家：反轉仍有長路 外資資產達外匯存底近3倍 台股震盪掀資金潮考驗央行穩匯 輝達RTX Spark掀話題 分析師：普及仍需時間 一台20萬搶破頭 輝達RTX Spark打破PC傳統界線 市場衡量中東局勢 油價震盪小漲 中油桶裝瓦斯賣一桶賠一桶 經部盼撥補穩物價 東協財經／ 緯穎決議增資馬來西亞子公司2億美元 美光：已安排下次調解會議 與桃園工會繼續討論 證券 美就業數據優於預期 華爾街科技股回彈 科技股反彈仍難挽跌勢 歐股三大指數收黑 美股多開高那指漲逾1.2% 晶片股反彈 美期中選舉衝擊AI前景 全球股市市值一天蒸發115兆元 台股失守4萬點 上市櫃融資餘額合計大減564.18億元 富采第3季本業虧損收斂 每股盈餘1.99元 榮昌：看好IoT等智能應用 攻加州、德州網通基建市場 緯穎前3季每股賺94.04元 超越去年全年 華航前3季營收、淨利創同期新高 每股賺1.8元 科技 傳台積電進軍3D DRAM 應輝達要求規劃製造、評估建廠 傳微軟逐步終止租用甲骨文AI算力 重新評估雲端合作 IREN延後交付微軟AI基礎設施 宣布追加150億美元投資 路透：微軟不擴大與Nscale德州資料中心算力租用合約 NASA雨燕天文台墜入大氣層 22年太空任務烈焰中謝幕 騰訊發布新一代大語言模型Hy4 首增視覺理解將開源 前輝達韓國代表俞應浚揭密企業文化 7年任職收穫多【專訪】 蘋果繁中Siri AI開放測試 專家：積極布局華文市場 蘋果iOS 27.3開發者測試版上線 Siri AI支援繁中 生活 1101-1107一週大事 環境部推動無紙化 逾6成環保專業證照申請電子證書 大學生作弊被抓毆打助教 校方啟動輔導機制 蕭副總統：保護兒童交通安全 織密道安防護網 北科大派學生赴美取經AI 實戰養成工程解題力 亞洲首座人工核分裂加速器在台大 獲IEEE里程碑認證 印度藥廠眼藥水爆品質問題緊急回收 食藥署：台灣未進口 轉機入境旅客600元機場消費券 延長至117年底 颱風查帕卡最快今生成對台無影響 吳德榮：下週冷空氣低溫探16度 社會 限制出境男AI換臉冒用護照 闖金門小三通被識破送辦 花蓮秀林鄉長夫妻涉賄遭起訴移審 法院裁定續押 台中學生網路發文釀校外肢體衝突 警受理報案 台中男持木棍校門外打傷學童 涉傷害恐嚇遭收押 張俊傑疑偷渡出海 中國籍船員等6人羈押禁見 高金素梅案2助理認罪 高院認有逃亡串證之虞續押 彰檢偵辦謝典霖涉賄及詐取公款案 議長秘書10萬交
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+<!DOCTYPE html><html lang="zh-Hant-TW"><head><title>
+	張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA
+</title><meta name="description" content="高雄市青年局長張以理今天卸任，將投入市議員參選。市長陳其邁今天表示，張以理在青年局任內可說是點子王，感謝其努力；年輕人在這個城市有很多發揮空間是好事。" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<link href="https://www.cna.com.tw/news/aloc/202502170115.aspx" rel="canonical" />
+<meta property="article:modified_time" content="2025-02-17T13:56:00+08:00" />
+<meta property="article:published_time" content="2025-02-17T13:12:00+08:00" />
+<link href="https://imgcdn.cna.com.tw/www/WebPhotos/1024/20250217/1152x768_wmkn_0_C20250217000058.jpg" rel="image_src" type="image/jpeg" />
+<meta property="author" content="中央通訊社" />
+<link href="https://imgcdn.cna.com.tw/www/website/img/fav-icon.png" type="image/png" rel="icon" />
+<meta property="og:url" content="https://www.cna.com.tw/news/aloc/202502170115.aspx" />
+<meta property="og:title" content="張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA" />
+<meta property="og:description" content="高雄市青年局長張以理今天卸任，將投入市議員參選。市長陳其邁今天表示，張以理在青年局任內可說是點子王，感謝其努力；年輕人在這個城市有很多發揮空間是好事。" />
+<meta property="og:image:height" content="1024" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image" content="https://imgcdn.cna.com.tw/www/WebPhotos/1024/20250217/1152x768_wmkn_0_C20250217000058.jpg" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="中央社 CNA" />
+<meta property="fb:admins" content="100000193024403" />
+<meta property="fb:app_id" content="524202197752727" />
+<meta property="fb:pages" content="214159925349838" />
+<meta property="fb:pages" content="148395741852581" />
+<meta property="article:author" content="https://www.facebook.com/cnanewstaiwan" />
+<meta property="article:publisher" content="https://www.facebook.com/cnanewstaiwan" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA" />
+<meta property="twitter:description" content="高雄市青年局長張以理今天卸任，將投入市議員參選。市長陳其邁今天表示，張以理在青年局任內可說是點子王，感謝其努力；年輕人在這個城市有很多發揮空間是好事。" />
+<meta property="twitter:image" content="https://imgcdn.cna.com.tw/www/WebPhotos/1024/20250217/1152x768_wmkn_0_C20250217000058.jpg" />
+<met
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0077",
+    "sourceId": "scope-news-zhang-yili-cna",
+    "documentLocation": "data/enrichment/raw/2026-11-07/news/zhang-yili-cna.snapshot（包含「青年局長」之內文段落）",
+    "excerpt": "張以理卸任青年局長 陳其邁肯定任內努力 | 地方 | 中央社 CNA 立刻加入 本網站使用相關技術提供更好的閱讀體驗，同時尊重使用者隱私，點這裡瞭解 中央社隱私聲明 。 當您關閉此視窗，代表您同意上述規範。 Your browser does not appear to support Traditional Chinese. Would you like to go to CNA’s English website, “Focus Taiwan” ? こちらのページは繁体字"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0077","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-news-zhang-yili-cna","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

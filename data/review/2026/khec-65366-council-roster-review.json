@@ -1,0 +1,974 @@
+{
+  "reviewId": "review-khec-65366-council-roster-2026-11-05",
+  "datasetId": "kaohsiung-2026-council-drawn-roster",
+  "snapshotDate": "2026-11-05",
+  "sourceId": "source-khec-65366",
+  "sourceAttachmentSha256": "9bcbf34a3f18c634b3b619192288a2ff4712ef080d9d05343a90d5cf4a550aa1",
+  "duplicateAliases": [
+    {
+      "sourceId": "source-khec-65368",
+      "articleId": "65368",
+      "sameFileId": "9bd4f559-e527-4f55-a4ef-21653d340f79",
+      "sameAttachmentSha256": "9bcbf34a3f18c634b3b619192288a2ff4712ef080d9d05343a90d5cf4a550aa1",
+      "disposition": "duplicate-alias-not-independent-evidence"
+    }
+  ],
+  "reviewMethod": "manual visual transcription of the retained official image-only PDF; no OCR or secondary source",
+  "reviewDisposition": "preliminary-source-checked",
+  "partyFieldPresent": false,
+  "formalAnnouncementScheduled": "2026-11-17",
+  "formalStatus": "pending-announcement",
+  "approvedForPreliminaryDisplay": true,
+  "approvedRowCount": 101,
+  "pendingRowCount": 0,
+  "blockedRows": [],
+  "constituencies": [
+    {
+      "districtNumber": 1,
+      "districtId": "district-kaohsiung-council-01",
+      "sourceRowCount": 5,
+      "approvedRowCount": 5,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "李振豪",
+          "sourceLocation": "KHEC 65366 PDF 第1選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "林義迪",
+          "sourceLocation": "KHEC 65366 PDF 第1選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "林慧欣",
+          "sourceLocation": "KHEC 65366 PDF 第1選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "鍾炳光",
+          "sourceLocation": "KHEC 65366 PDF 第1選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "林富寶",
+          "sourceLocation": "KHEC 65366 PDF 第1選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 2,
+      "districtId": "district-kaohsiung-council-02",
+      "sourceRowCount": 5,
+      "approvedRowCount": 5,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "李柏融",
+          "sourceLocation": "KHEC 65366 PDF 第2選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "李亞築",
+          "sourceLocation": "KHEC 65366 PDF 第2選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "黃明太",
+          "sourceLocation": "KHEC 65366 PDF 第2選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "陳琳潔",
+          "sourceLocation": "KHEC 65366 PDF 第2選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "鄭東元",
+          "sourceLocation": "KHEC 65366 PDF 第2選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 3,
+      "districtId": "district-kaohsiung-council-03",
+      "sourceRowCount": 8,
+      "approvedRowCount": 8,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "方信淵",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "張驥晟",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "宋立彬",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "蔣黃女",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "黃秋媛",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "林志誠",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "黃韻涵",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "8",
+          "displayName": "蔡秉穎",
+          "sourceLocation": "KHEC 65366 PDF 第3選舉區第8號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 4,
+      "districtId": "district-kaohsiung-council-04",
+      "sourceRowCount": 12,
+      "approvedRowCount": 12,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "黃文志",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "李雅芬",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "白喬茵",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "柳淑芳",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "李眉蓁",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "李雅慧",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "陳玫娟",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "8",
+          "displayName": "張以理",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第8號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "9",
+          "displayName": "陳冠宇",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第9號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "10",
+          "displayName": "陳麗珍",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第10號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "11",
+          "displayName": "薛兆基",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第11號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "12",
+          "displayName": "尹立",
+          "sourceLocation": "KHEC 65366 PDF 第4選舉區第12號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 5,
+      "districtId": "district-kaohsiung-council-05",
+      "sourceRowCount": 7,
+      "approvedRowCount": 7,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "黃飛鳳",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "陳惠君",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "張勝富",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "江瑞鴻",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "邱俊憲",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "陳若翠",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "吳利成",
+          "sourceLocation": "KHEC 65366 PDF 第5選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 6,
+      "districtId": "district-kaohsiung-council-06",
+      "sourceRowCount": 4,
+      "approvedRowCount": 4,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "簡煥宗",
+          "sourceLocation": "KHEC 65366 PDF 第6選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "李喬如",
+          "sourceLocation": "KHEC 65366 PDF 第6選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "蔡金晏",
+          "sourceLocation": "KHEC 65366 PDF 第6選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "陳美雅",
+          "sourceLocation": "KHEC 65366 PDF 第6選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 7,
+      "districtId": "district-kaohsiung-council-07",
+      "sourceRowCount": 12,
+      "approvedRowCount": 12,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "何權峰",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "童燕珍",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "林彥",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "黃香菽",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "曾俊傑",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "張博洋",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "林于凱",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "8",
+          "displayName": "康裕成",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第8號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "9",
+          "displayName": "鄭孟洽",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第9號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "10",
+          "displayName": "黃柏霖",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第10號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "11",
+          "displayName": "余聖明",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第11號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "12",
+          "displayName": "黃淑美",
+          "sourceLocation": "KHEC 65366 PDF 第7選舉區第12號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 8,
+      "districtId": "district-kaohsiung-council-08",
+      "sourceRowCount": 9,
+      "approvedRowCount": 9,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "黃舜杰",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "黃裕庭",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "許采蓁",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "湯詠瑜",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "黃文益",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "黃鈺婷",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "陳雅敏",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "8",
+          "displayName": "鄒約翰",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第8號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "9",
+          "displayName": "郭建盟",
+          "sourceLocation": "KHEC 65366 PDF 第8選舉區第9號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 9,
+      "districtId": "district-kaohsiung-council-09",
+      "sourceRowCount": 10,
+      "approvedRowCount": 10,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "林智鴻",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "張漢忠",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "鄭安秝",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "蘇致榮",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "陳慧文",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "劉德林",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "李雅靜",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "8",
+          "displayName": "徐尚賢",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第8號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "9",
+          "displayName": "鍾易仲",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第9號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "10",
+          "displayName": "鄧巧佩",
+          "sourceLocation": "KHEC 65366 PDF 第9選舉區第10號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 10,
+      "districtId": "district-kaohsiung-council-10",
+      "sourceRowCount": 13,
+      "approvedRowCount": 13,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "李政憲",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "湯茹婷",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "劉仙娥",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "蔡武宏",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "張藝瑾",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "于仙玲",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "7",
+          "displayName": "鄭光峰",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第7號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "8",
+          "displayName": "陳麗娜",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第8號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "9",
+          "displayName": "李順進",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第9號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "10",
+          "displayName": "李絃毅",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第10號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "11",
+          "displayName": "吳銘賜",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第11號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "12",
+          "displayName": "吳昱鋒",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第12號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "13",
+          "displayName": "黃敬雅",
+          "sourceLocation": "KHEC 65366 PDF 第10選舉區第13號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 11,
+      "districtId": "district-kaohsiung-council-11",
+      "sourceRowCount": 6,
+      "approvedRowCount": 6,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "洪村銘",
+          "sourceLocation": "KHEC 65366 PDF 第11選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "黃天煌",
+          "sourceLocation": "KHEC 65366 PDF 第11選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "邱于軒",
+          "sourceLocation": "KHEC 65366 PDF 第11選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "4",
+          "displayName": "王耀裕",
+          "sourceLocation": "KHEC 65366 PDF 第11選舉區第4號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "5",
+          "displayName": "李雨庭",
+          "sourceLocation": "KHEC 65366 PDF 第11選舉區第5號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "6",
+          "displayName": "張耀中",
+          "sourceLocation": "KHEC 65366 PDF 第11選舉區第6號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 12,
+      "districtId": "district-kaohsiung-indigenous-flat-12",
+      "sourceRowCount": 3,
+      "approvedRowCount": 3,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "巫振興",
+          "sourceLocation": "KHEC 65366 PDF 第12選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "宋紹銘",
+          "sourceLocation": "KHEC 65366 PDF 第12選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "王義雄",
+          "sourceLocation": "KHEC 65366 PDF 第12選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 13,
+      "districtId": "district-kaohsiung-indigenous-mountain-13",
+      "sourceRowCount": 2,
+      "approvedRowCount": 2,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "陳幸富",
+          "sourceLocation": "KHEC 65366 PDF 第13選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "葛娜瑩",
+          "sourceLocation": "KHEC 65366 PDF 第13選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 14,
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "sourceRowCount": 3,
+      "approvedRowCount": 3,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "洪英雄",
+          "sourceLocation": "KHEC 65366 PDF 第14選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "林錫閔",
+          "sourceLocation": "KHEC 65366 PDF 第14選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "3",
+          "displayName": "高忠德",
+          "sourceLocation": "KHEC 65366 PDF 第14選舉區第3號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    },
+    {
+      "districtNumber": 15,
+      "districtId": "district-kaohsiung-indigenous-mountain-15",
+      "sourceRowCount": 2,
+      "approvedRowCount": 2,
+      "pendingRowCount": 0,
+      "rows": [
+        {
+          "candidateNumber": "1",
+          "displayName": "金禾雅",
+          "sourceLocation": "KHEC 65366 PDF 第15選舉區第1號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        },
+        {
+          "candidateNumber": "2",
+          "displayName": "陳奕蓁",
+          "sourceLocation": "KHEC 65366 PDF 第15選舉區第2號",
+          "reviewStatus": "source-checked",
+          "partyStatus": "not-published",
+          "disposition": "approved-preliminary"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "候選人姓名與號次逐列依保留之官方影像 PDF 轉錄；PDF 未提供政黨欄位，因此所有政黨狀態保持未刊載。",
+    "本資料層允許預公告展示，不等同 2026-11-17 正式候選人公告；正式公告後須重新抓取、比對、審核並取代此層。"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "datasetId": "kaohsiung-2026-zuoying-mayoral-enrichment",
+  "snapshotDate": "2026-11-07",
+  "generatedAt": "2026-11-07T06:32:47.041Z",
+  "sourceClasses": {
+    "cec-roster": 102,
+    "khec-roster": 102,
+    "kcc-current-member-directory": 42,
+    "kcc-member-profile": 42,
+    "news-report": 60,
+    "kcc-history": 210,
+    "government-record": 6,
+    "legislative-yuan": 24
+  },
+  "outcomes": {
+    "retrieved": 378,
+    "retrieved-no-candidate-match": 210
+  },
+  "timestampQuality": {
+    "unavailable": 204,
+    "capture-file-mtime": 294,
+    "source-header": 90
+  },
+  "temporalPrecision": {
+    "unknown": 96,
+    "day": 47
+  },
+  "attribution": {
+    "institutional-record": 93,
+    "candidate-statement": 8,
+    "news-report": 42
+  },
+  "duplicateGroups": 1,
+  "conflicts": 0,
+  "allClaimsPending": true
+}

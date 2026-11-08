@@ -1,0 +1,34 @@
+
+Running 5 tests using 4 workers
+
+[1/5] [chromium] › tests/e2e/unified-world.spec.ts:65:3 › unified Kaohsiung world › every one of the 38 administrative districts can be focused
+[2/5] [chromium] › tests/e2e/unified-world.spec.ts:36:3 › unified Kaohsiung world › administrative district focus shows geography and returns to the city
+[3/5] [chromium] › tests/e2e/unified-world.spec.ts:129:3 › unified Kaohsiung world › simulation persists when the profile closes and another district is focused
+[4/5] [chromium] › tests/e2e/unified-world.spec.ts:92:3 › unified Kaohsiung world › council-04 simulation stays inside Zuoying and Nanzih while following
+[5/5] [chromium] › tests/e2e/unified-world.spec.ts:189:3 › unified Kaohsiung world › mayoral simulation crosses several administrative districts
+  1) [chromium] › tests/e2e/unified-world.spec.ts:129:3 › unified Kaohsiung world › simulation persists when the profile closes and another district is focused 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('[data-testid="city-explorer"]')
+    Expected pattern: /^admin-E04-/
+    Received string:  ""
+
+
+      157 |       .filter({ hasText: '楠梓' })
+      158 |       .click();
+    > 159 |     await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
+          |                                                                 ^
+      160 |       'data-scene-focus',
+      161 |       /^admin-E04-/,
+      162 |       { timeout: 15_000 },
+        at /Users/seanchang/kaohsiung-2026-election/tests/e2e/unified-world.spec.ts:159:65
+
+    Error Context: test-results/unified-world-unified-Kaoh-7fda6-another-district-is-focused-chromium/error-context.md
+
+
+  1 failed
+    [chromium] › tests/e2e/unified-world.spec.ts:129:3 › unified Kaohsiung world › simulation persists when the profile closes and another district is focused 
+  4 passed (50.3s)

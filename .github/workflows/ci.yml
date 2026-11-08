@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate demo data
+        run: npm run validate:data
+      - name: Validate official snapshot and reconciliation
+        run: npm run validate:official
+      - name: Validate public-record snapshots and reports
+        run: npm run validate:public-records
+      - name: Validate full-roster coverage audits and reports
+        run: npm run validate:full-roster
+      - name: Validate executed candidate research and reports
+        run: npm run validate:research
+      - name: Validate candidate biography layers and source snapshots
+        run: npm run validate:biographies
+      - name: Validate biography editorial layers and publication gate
+        run: npm run editorial:validate
+      - name: Verify bounded editorial pilot reports
+        run: npm run pilot:verify
+      - name: Verify first biography release preparation
+        run: npm run release:verify
+      - name: Validate scoped candidate enrichment
+        run: npm run validate:enrichment
+      - name: Validate independent scoped evidence audit
+        run: npm run ai-audit:validate
+      - name: Validate semantic evidence adjudication
+        run: npm run semantic:verify
+      - name: Validate scoped review and publication preparation
+        run: npm run scoped-review:verify
+      - name: Validate generated avatar assets
+        run: npm run validate:avatars
+      - name: Validate autonomous candidate publication policy
+        run: npm run automated:verify
+      - name: Validate biography OpenSpec contract
+        run: npm run openspec:validate
+      - name: Validate editorial review OpenSpec contract
+        run: npm run openspec:validate:editorial
+      - name: Validate pilot OpenSpec contract
+        run: npm run openspec:validate:pilot
+      - name: Validate release preparation OpenSpec contract
+        run: npm run openspec:validate:release
+      - name: Validate avatar pipeline OpenSpec contract
+        run: npm run openspec:validate:avatars
+      - name: Validate scoped enrichment OpenSpec contract
+        run: npm run openspec:validate:enrichment
+      - name: Validate independent evidence audit OpenSpec contract
+        run: npm run openspec:validate:ai-audit
+      - name: Validate semantic evidence adjudication OpenSpec contract
+        run: npm run openspec:validate:semantic
+      - name: Validate scoped review and publication OpenSpec contract
+        run: npm run openspec:validate:scoped-review
+      - name: Validate autonomous publication OpenSpec contract
+        run: npm run openspec:validate:automated
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Unit tests
+        run: npm test
+      - name: Static build
+        run: npm run build
+      - name: Static build with a non-root base path
+        run: BASE_PATH=/kaohsiung-civic-stories/ npm run build
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser smoke tests
+        run: npm run test:e2e

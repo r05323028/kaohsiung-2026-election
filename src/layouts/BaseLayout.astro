@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+import { SITE_NAV_LINKS } from '../data/site-nav';
+import { withBase } from '../utils/paths';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown>;
+  immersive?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  noindex = false,
+  structuredData,
+  immersive = false,
+} = Astro.props;
+const siteOrigin = Astro.site ?? new URL('https://example.invalid');
+const basePath = import.meta.env.BASE_URL ?? '/';
+const currentPath = Astro.url.pathname.replace(basePath, '/');
+const canonical = new URL(withBase(canonicalPath ?? currentPath), siteOrigin);
+const image = new URL(withBase('/harbor-mark.svg'), siteOrigin);
+const navItems = SITE_NAV_LINKS.map((item) => ({ ...item, match: currentPath === item.href || currentPath.startsWith(item.href) && item.href !== '/' }));
+const siteStructuredData = structuredData ?? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: '港都人物誌 Kaohsiung Civic Stories',
+  description,
+  url: canonical.href,
+};
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#4CAFA8" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" type="image/svg+xml" href={withBase('/harbor-mark.svg')} />
+    <link rel="canonical" href={canonical.href} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="港都人物誌 Kaohsiung Civic Stories" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={image.href} />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(siteStructuredData)}></script>
+  </head>
+  <body class={immersive ? 'is-immersive' : undefined}>
+    <a class="skip-link" href="#main-content">跳到主要內容</a>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand-lockup" href={withBase('/')} aria-label="港都人物誌首頁">
+            <span class="brand-lockup__mark"><img src={withBase('/harbor-mark.svg')} alt="" /></span>
+            <span>
+              <span class="brand-lockup__title">港都人物誌</span>
+              <span class="brand-lockup__subtitle">KAOHSIUNG CIVIC STORIES</span>
+            </span>
+          </a>
+          <nav class="topbar__nav topbar__nav--desktop" aria-label="主要導覽">
+            {navItems.map((item) => (
+              <a href={withBase(item.href)} aria-current={item.match ? 'page' : undefined}>{item.label}</a>
+            ))}
+          </nav>
+          <details class="topbar-menu">
+            <summary aria-label="網站選單"><span aria-hidden="true">☰</span></summary>
+            <nav class="topbar-menu__nav" aria-label="主要導覽">
+              {navItems.map((item) => (
+                <a href={withBase(item.href)} aria-current={item.match ? 'page' : undefined}>{item.label}</a>
+              ))}
+            </nav>
+          </details>
+        </div>
+      </header>
+      <main id="main-content"><slot /></main>
+      <footer class="site-footer">
+        <p>港都人物誌是非黨派的公共資訊介面。此版本混合呈現已留存的官方來源資料與明確標示的虛構示範資料；官方內容仍可能處於預公告或待人工審查狀態。</p>
+      </footer>
+    </div>
+  </body>
+</html>

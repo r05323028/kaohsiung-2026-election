@@ -1,0 +1,23 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ headless: true, args:['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const context = await browser.newContext({ viewport:{width:1600,height:1000}, reducedMotion:'reduce' });
+const page = await context.newPage();
+await page.goto('http://127.0.0.1:4321/?district=kaohsiung-mayor-2026&candidate=zhang-jing-2026', { waitUntil:'domcontentloaded' });
+await page.locator('[data-testid="city-explorer"][data-hydrated="true"]').waitFor({timeout:30000});
+await page.locator('canvas').waitFor({timeout:30000});
+await page.waitForTimeout(2500);
+console.log(await page.evaluate(() => {
+  const g = window.__heroGroup;
+  const scene = g.parent;
+  const camera = window.__cityCamera;
+  const THREE = window.__THREE;
+  g.updateMatrixWorld(true); scene.updateMatrixWorld(true);
+  const red = g.children[0];
+  const redCenter = red.getWorldPosition(new THREE.Vector3());
+  const ndcRed = redCenter.clone().project(camera);
+  const ndcGround = g.getWorldPosition(new THREE.Vector3()).project(camera);
+  const ray = new THREE.Raycaster(); ray.setFromCamera(new THREE.Vector2(ndcRed.x, ndcRed.y), camera);
+  const hits = ray.intersectObjects(scene.children, true).slice(0,6).map(h => ({d:+h.distance.toFixed(2), type:h.object.type, color:h.object.material?.color?.getHexString?.(), y:+h.point.y.toFixed(3), x:+h.point.x.toFixed(2), z:+h.point.z.toFixed(2)}));
+  return JSON.stringify({ redCenter:redCenter.toArray(), ndcRed:ndcRed.toArray(), ndcGround:ndcGround.toArray(), hits });
+}));
+await browser.close();

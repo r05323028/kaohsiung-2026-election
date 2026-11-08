@@ -1,0 +1,27 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ headless: true, args:['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const context = await browser.newContext({ viewport:{width:1600,height:1000}, reducedMotion:'reduce' });
+const page = await context.newPage();
+await page.goto('http://127.0.0.1:4321/?district=kaohsiung-mayor-2026&candidate=zhang-jing-2026', { waitUntil:'domcontentloaded' });
+await page.locator('[data-testid="city-explorer"][data-hydrated="true"]').waitFor({timeout:30000});
+await page.locator('canvas').waitFor({timeout:30000});
+await page.waitForTimeout(2500);
+console.log(await page.evaluate(() => {
+  const g = window.__heroGroup; const camera = window.__cityCamera; const THREE = window.__THREE; const gl = window.__cityGL; const scene = window.__cityScene;
+  g.updateMatrixWorld(true); scene.updateMatrixWorld(true);
+  const ctx = gl.getContext();
+  const red = g.children[0];
+  const p = red.getWorldPosition(new THREE.Vector3()).project(camera);
+  const sx = Math.round((p.x + 1) / 2 * gl.domElement.width);
+  const sy = Math.round((1 - p.y) / 2 * gl.domElement.height);
+  gl.render(scene, camera);
+  const buf = new Uint8Array(4);
+  ctx.readPixels(sx, gl.domElement.height - sy, 1, 1, ctx.RGBA, ctx.UNSIGNED_BYTE, buf);
+  const after = [...buf];
+  const gp = g.getWorldPosition(new THREE.Vector3()).project(camera);
+  const gx = Math.round((gp.x + 1) / 2 * gl.domElement.width);
+  const gy = Math.round((1 - gp.y) / 2 * gl.domElement.height);
+  ctx.readPixels(gx, gl.domElement.height - gy, 1, 1, ctx.RGBA, ctx.UNSIGNED_BYTE, buf);
+  return JSON.stringify({ sx, sy, redPixel: after, gx, gy, groundPixel: [...buf], canvas:[gl.domElement.width,gl.domElement.height], info: gl.info.render, err: ctx.getError() });
+}));
+await browser.close();

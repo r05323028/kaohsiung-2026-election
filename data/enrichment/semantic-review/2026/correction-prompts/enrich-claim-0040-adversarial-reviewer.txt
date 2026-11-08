@@ -1,0 +1,103 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：adversarial-reviewer
+Your job: try to falsify the CORRECTED wording. Look for overreach, unsupported precision, promotional epithets presented as credentials, attribution slipped from "a report said" to "it is so", and any sentence fragment that the source does not actually contain. If a neutral reader would be misled, set materialConcern to a concrete sentence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0040
+- 候選人: 李眉蓁
+- 類別 / 類型: basic-biography / current-position
+- 標題: KCC 本屆議員名錄
+- 組織: 高雄市議會
+- 修正後內容: 本屆議員
+- 原始內容（修正前，僅供比對）: 高雄市議會本屆議員（第四選舉區）
+- 歸因: institutional-record｜來源依賴: institutional-record
+- 時效狀態: current
+- 發布日期: （未提供）
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-kcc-profile-2186
+- 來源類別: kcc-member-profile
+- URL: https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186
+- HTTP: 200
+- rawPath: data/biographies/raw/2026-11-06/kcc/profiles/2186.html
+- sha256: ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+高雄市議會全球網-中文網-本屆議員-李眉蓁 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail 熱門關鍵字 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 下方連結 隱私權宣告 資訊安全政策宣告 著作權聲明 RSS訂閱專區 ::: 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 高雄市議會全球網-中文網 熱門關鍵字 search 搜尋 進階搜尋 字級 小 中 大 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail ::: 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 ::: 首頁 本會議員 本屆議員 本屆議員-李眉蓁 _ 網頁功能 列印內容 李眉蓁 性 別： 女 所屬政黨： 中國國民黨 聯絡電話： 5889757 傳真電話： 5887342 通訊地址： 813 左營區聖后里左營下路21號 備註： 本議員頭像係採用 創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款 授權. 黃香菽、李眉蓁、吳利成議員總質詢摘要 交通部門委員會議員質詢摘要 挺國防最強後盾！高雄市議會赴台中清泉崗勞軍 慰問空軍第三聯隊官兵辛勞 取經MLB魅力 高市議員盛讚大都會球場 康議長：澄清湖球場升級才能迎來更多國際賽事 李眉蓁、黃香菽、陳美雅、陳善慧、何權峰、李亞築議員總質詢摘要 交通部門委員會議員質詢摘要 李雅慧、黃秋媖、陸淑美、蔡金晏、黃香菽、李眉蓁議員總質詢摘要 警消衛環部門委員會議員質詢摘要 張博洋、王耀裕、李雅慧、蔡金晏、李眉蓁、張漢忠議員總質詢摘要 警消衛環部門委員會議員質詢摘要 黃香菽、蔡武宏、李眉蓁、陳慧文、王義雄、李順進議員總質詢摘要 工務部門委員會議員質詢摘要 林義迪、湯詠瑜、高忠德、林富寶、李眉蓁、江瑞鴻議員總質詢摘要 工務部門委員會議員質詢摘要 議會慰勞列車啟動 感謝第一線清潔隊員對抗登革熱疫情 議員四年來質詢上千次 捷運黃線工程動土 鍾易仲、李眉蓁、鄭孟洳、陳明澤、郭建盟、高忠德議員總質詢摘要 議會召開「高雄市進口雞蛋稽查」專案報告 工務部門委員會議員質詢摘要 市長施政報告與質詢黨團聯合質詢摘要 府會龍舟PK賽 議會「用力划起來」勇奪亞軍 李眉蓁.黃天煌.李順進.黃捷.黃秋媖.陳美雅議員總質詢摘要 本會「用力划起來」龍舟隊成軍，將力拼強敵市府首長隊 工務部門委員會議員質詢摘要 關心台積電投資進度 康議長率隊考察楠梓產業園區 本屆議會成立112年各種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-10-06 第4屆第8次定期會 警消衛環部門業務質詢_影片連結 115-09-24 第4屆第8次定期會 交通部門業務報告與質詢_影片連結 115-09-21 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園霸凌。 八、維護居住正義，保障中油後勁勞宅既有權，社區道路公園由高雄市政府代為養護。 九、配合2024年奧運新增競賽項目，推廣滑板、霹靂舞、運動攀岩等運動，增加室內練舞練團空間。 十、善用海洋流行音樂中心、衛武營藝文中心等場館設施，扶助在地音樂、藝文人才，發展音樂、藝文產業。 相關新聞 115/10/6 黃香菽、李眉蓁、吳利成議員總質詢摘要 115/9/21 交通部門委員會議員質詢摘要 115/6/23 挺國防最強後盾！高雄市議會赴
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+gov.tw/Scripts/fu_Accessibility.js'></script> 
+<script>var CCMS_WWWURL='https://www.kcc.gov.tw';var CCMS_LanguageSN=1;var CCMS_SitesSN_Encryption='1';</script><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="DC.Title" content="" />
+<meta name="DC.Subject" content="" />
+<meta name="DC.Creator" content="" />
+<meta name="DC.Publisher" content="" />
+<meta name="DC.Date" content="2019-02-27" />
+<meta name="DC.Type" content="" />
+<meta name="DC.Identifier" content="" />
+<meta name="DC.Description" content="" />
+<meta name="DC.Contributor" content="" />
+<meta name="DC.Format" content="" />
+<meta name="DC.Relation" content="" />
+<meta name="DC.Source" content="" />
+<meta name="DC.Language" content="" />
+<meta name="DC.Coverage.t.min" content="2019-02-27" />
+<meta name="DC.Coverage.t.max" content="2019-02-27" />
+<meta name="DC.Rights" content="" />
+<meta name="Category.Theme" content="" />
+<meta name="Category.Cake" content="" />
+<meta name="Category.Service" content="" />
+<meta name="DC.Keywords" content="" />
+<title>
+	高雄市議會全球網-中文網-本屆議員-李眉蓁
+</title><link id="likCssGlobal" href="/css/global.css" rel="stylesheet" type="text/css" /><link id="likCssPage" href="/css/page.css" rel="stylesheet" type="text/css" /><link id="likPrint" href="/css/print.css" rel="stylesheet" type="text/css" media="print" /><link id="lnkCssSysDetail" href="/css/sys_detail.css" rel="stylesheet" type="text/css" />
+    <style>
+        .group.base-aside {
+            display: none;
+        }
+    </style>
+<link href="https://ws.kcc.gov.tw" rel="icon" type="image/x-icon"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_UA-24833141-6.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24833141-6');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_G-965X83HTMQ.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-965X83HTMQ');
+</script><meta property="og:title" content="本屆議員-李眉蓁" >
+<meta property="og:type
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0040",
+    "sourceId": "scope-kcc-profile-2186",
+    "documentLocation": "data/biographies/raw/2026-11-06/kcc/profiles/2186.html（議員個人頁）",
+    "excerpt": "高雄市議會全球網-中文網-本屆議員-李眉蓁 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0040","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-kcc-profile-2186","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

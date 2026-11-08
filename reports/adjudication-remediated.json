@@ -1,0 +1,5315 @@
+{
+  "schemaVersion": "1",
+  "generatedAt": "2026-11-07T14:29:02.502Z",
+  "policyVersion": "automated-editorial-policy-v1",
+  "adjudicationPolicyVersion": "adjudication-materiality-v2",
+  "summary": {
+    "totalClaims": 143,
+    "adjudicatedClaims": 76,
+    "machineApproved": 75,
+    "machineRejected": 68,
+    "previouslyApproved": 1,
+    "reviewerDisagreements": 71,
+    "correctionTargets": 25,
+    "humanApproved": 0
+  },
+  "invocations": {
+    "recorded": 157,
+    "verified": 152,
+    "selected": 152,
+    "promptDriftRejected": [
+      "adjudicator-adversarial-reviewer-enrich-claim-0135-a2",
+      "adjudicator-established-verifier-enrich-claim-0010-a2",
+      "adjudicator-established-verifier-enrich-claim-0033-a2",
+      "adjudicator-established-verifier-enrich-claim-0074-a2",
+      "adjudicator-established-verifier-enrich-claim-0090-a2"
+    ],
+    "claims": 76,
+    "model": "deepseek-v4.1-flash",
+    "runner": "pi-cli-adjudicator-v2/medium",
+    "inputTokens": 502410,
+    "outputTokens": 157705,
+    "costUsd": 0.17003
+  },
+  "promptDriftRejected": [
+    "adjudicator-adversarial-reviewer-enrich-claim-0135-a2",
+    "adjudicator-established-verifier-enrich-claim-0010-a2",
+    "adjudicator-established-verifier-enrich-claim-0033-a2",
+    "adjudicator-established-verifier-enrich-claim-0074-a2",
+    "adjudicator-established-verifier-enrich-claim-0090-a2"
+  ],
+  "claims": [
+    {
+      "claimId": "enrich-claim-0001",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0002",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0002-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0002-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0003",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0003-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0003-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0004",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0004-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0004-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0005",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0005-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0005-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0006",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0006-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0006-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0007",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0007-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0007-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0008",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0008-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0008-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0009",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0009-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0009-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0010",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0010-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0010-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0011",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0012",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0013",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0013-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0013-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0014",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0014-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0014-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0015",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0015-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0015-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "temporal",
+          "limitations"
+        ],
+        "rationale": [
+          "Temporal flags differ, but neither reviewer requires a date and both accept the wording as historically presented.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0016",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0016-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0016-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0017",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0017-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0017-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0018",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0018-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0018-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0019",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0019-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0019-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0020",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0020-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0020-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0021",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0021-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0021-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0022",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0022-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0022-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0023",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0024",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0025",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0025-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0025-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0026",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0026-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0026-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0027",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0027-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0027-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0028",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0028-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0028-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0029",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0029-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0029-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0030",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0030-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0030-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0031",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0031-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0031-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0032",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0032-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0032-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0033",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0033-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0033-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0034",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0034-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0034-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0035",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0036",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "candidateName": "柳淑芳",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0037",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "candidateName": "柳淑芳",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0038",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "candidateName": "柳淑芳",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0039",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "candidateName": "柳淑芳",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0040",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0041",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0041-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0041-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0042",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0042-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0042-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0043",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0043-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0043-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0044",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0044-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0044-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0045",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0045-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0045-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0046",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0046-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0046-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0047",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0047-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0047-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0048",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0049",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0050",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0050-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0050-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0051",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0051-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0051-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "temporal",
+          "limitations"
+        ],
+        "rationale": [
+          "Temporal flags differ, but neither reviewer requires a date and both accept the wording as historically presented.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0052",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0052-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0052-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0053",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0053-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0053-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0054",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0054-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0054-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0055",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0055-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0055-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0056",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0056-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0056-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0057",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0057-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0057-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0058",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0059",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0060",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0060-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0060-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0061",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0061-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0061-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0062",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0062-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0062-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0063",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0063-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0063-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0064",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0064-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0064-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0065",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0065-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0065-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0066",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0066-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0066-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0067",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [
+        "semantic-review-not-fully-supported"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0068",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0068-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0068-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "temporal",
+          "limitations"
+        ],
+        "rationale": [
+          "Temporal flags differ, but neither reviewer requires a date and both accept the wording as historically presented.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0069",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0069-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0069-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0070",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0070-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0070-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0071",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0071-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0071-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "temporal",
+          "limitations"
+        ],
+        "rationale": [
+          "Temporal flags differ, but neither reviewer requires a date and both accept the wording as historically presented.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0072",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0072-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0072-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0073",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0073-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0073-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0074",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0074-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0074-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0075",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0075-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0075-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0076",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0077",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0078",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0079",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0080",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0081",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0082",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "duplicate-or-overlap-review",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "duplicate-or-overlap-review",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0083",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "duplicate-or-overlap-review",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "duplicate-or-overlap-review",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0084",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0085",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "category": "relationships",
+      "claimType": "family-relationship",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0086",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0087",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0088",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0089",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0089-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0089-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0090",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0090-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0090-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0091",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0091-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0091-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "temporal",
+          "limitations"
+        ],
+        "rationale": [
+          "Temporal flags differ, but neither reviewer requires a date and both accept the wording as historically presented.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0092",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0092-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0092-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0093",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0093-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0093-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0094",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0094-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0094-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0095",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0095-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0095-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0096",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0096-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0096-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0097",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0097-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0097-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0098",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0098-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0098-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0099",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0099-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0099-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0100",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0100-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0100-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0101-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0101-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "category": "policies",
+      "claimType": "policy-statement",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "institutional-attribution-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "basic-biography",
+      "claimType": "historical-position",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0113",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0115",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0117",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0118",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0119",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "category": "basic-biography",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0120",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0121",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0122",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0123",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0124",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "basic-biography",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0125",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "public-records",
+      "claimType": "public-activity",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0126",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "public-records",
+      "claimType": "public-activity",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "semantic-identity-not-confirmed",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-identity-not-confirmed",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0127",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0128",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "news",
+      "claimType": "news-report",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-review-not-fully-supported",
+        "semantic-identity-not-confirmed",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "semantic-identity-not-confirmed",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0129",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0130",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0131",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0132",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "category": "timeline",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted",
+        "institutional-attribution-required",
+        "source-class-not-permitted:news-report"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0133",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "category": "basic-biography",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0134",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "historical-status-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0135",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0135-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0135-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "temporal",
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Temporal flags differ, but neither reviewer requires a date and both accept the wording as historically presented.",
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0136",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0136-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0136-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0137",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0138",
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "candidateName": "洪方隆",
+      "category": "basic-biography",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0139",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "category": "basic-biography",
+      "claimType": "historical-candidacy",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster",
+        "correction-proposed"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "correction-proposed",
+        "historical-status-required",
+        "semantic-review-not-fully-supported",
+        "source-class-not-permitted:cec-roster"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0140",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "category": "basic-biography",
+      "claimType": "current-position",
+      "policyReasons": [
+        "claim-type-not-permitted",
+        "historical-status-required"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "claim-type-not-permitted",
+        "historical-status-required"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    },
+    {
+      "claimId": "enrich-claim-0141",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "category": "basic-biography",
+      "claimType": "education",
+      "policyReasons": [],
+      "adjudicationReasons": [],
+      "blockingReasons": [],
+      "status": "machine-approved",
+      "stopReason": "eligible-after-fresh-independent-adjudication",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0141-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0141-a1"
+      ],
+      "materiality": {
+        "material": false,
+        "materialDimensions": [],
+        "nonMaterialDimensions": [
+          "evidence",
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers cited different passages of the retained source; passage selection is not itself an evidentiary disagreement.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "full-agreement"
+    },
+    {
+      "claimId": "enrich-claim-0142",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "category": "basic-biography",
+      "claimType": "professional-experience",
+      "policyReasons": [],
+      "adjudicationReasons": [
+        "adjudicated-material-concern",
+        "adjudicated-material-difference"
+      ],
+      "blockingReasons": [
+        "adjudicated-material-concern",
+        "adjudicated-material-difference"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "adjudication-blocked:adjudicated-material-concern",
+      "adjudicated": true,
+      "invocationIds": [
+        "adjudicator-established-verifier-enrich-claim-0142-a1",
+        "adjudicator-adversarial-reviewer-enrich-claim-0142-a1"
+      ],
+      "materiality": {
+        "material": true,
+        "materialDimensions": [
+          "attribution"
+        ],
+        "nonMaterialDimensions": [
+          "limitations"
+        ],
+        "rationale": [
+          "Reviewers disagreed on the attribution stance of the source.",
+          "Reviewers recorded different limitation notes; limitation prose describes evidential boundaries and is not part of the claim wording."
+        ]
+      },
+      "verdicts": {
+        "reviewerA": "supported",
+        "reviewerB": "supported"
+      },
+      "identity": {
+        "reviewerA": "confirmed",
+        "reviewerB": "confirmed"
+      },
+      "comparison": "partial-disagreement"
+    },
+    {
+      "claimId": "enrich-claim-0143",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "category": "timeline",
+      "claimType": "timeline-event",
+      "policyReasons": [
+        "category-not-permitted",
+        "claim-type-not-permitted"
+      ],
+      "adjudicationReasons": [
+        "adjudication-not-run:policy-ineligible"
+      ],
+      "blockingReasons": [
+        "adjudication-not-run:policy-ineligible",
+        "category-not-permitted",
+        "claim-type-not-permitted"
+      ],
+      "status": "machine-rejected",
+      "stopReason": "not-adjudicated:policy-ineligible-regardless-of-semantic-findings",
+      "adjudicated": false,
+      "invocationIds": [],
+      "materiality": null,
+      "verdicts": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "identity": {
+        "reviewerA": null,
+        "reviewerB": null
+      },
+      "comparison": "same-verdict-different-reasoning"
+    }
+  ]
+}

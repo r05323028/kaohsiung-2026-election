@@ -1,0 +1,103 @@
+你是獨立的資料審查者，正在審查筆「修正後」的 2026 高雄市候選人公開資料 claim。
+
+角色：adversarial-reviewer
+Your job: try to falsify the CORRECTED wording. Look for overreach, unsupported precision, promotional epithets presented as credentials, attribution slipped from "a report said" to "it is so", and any sentence fragment that the source does not actually contain. If a neutral reader would be misled, set materialConcern to a concrete sentence.
+
+Claim（修正後文字，這是你必須判斷的對象）：
+- claimId: enrich-claim-0001
+- 候選人: 黃文志
+- 類別 / 類型: basic-biography / current-position
+- 標題: KCC 本屆議員名錄
+- 組織: 高雄市議會
+- 修正後內容: 本屆議員
+- 原始內容（修正前，僅供比對）: 高雄市議會本屆議員（第四選舉區）
+- 歸因: institutional-record｜來源依賴: institutional-record
+- 時效狀態: current
+- 發布日期: （未提供）
+
+來源（僅能使用這些保留位元組）：
+- sourceId: scope-kcc-profile-2185
+- 來源類別: kcc-member-profile
+- URL: https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2185
+- HTTP: 200
+- rawPath: data/biographies/raw/2026-11-06/kcc/profiles/2185.html
+- sha256: 4670654f6eafd374b2cce6da966825c351f0abc57653d0303920a43232c18a7c
+
+來源純文字視窗（由保留位元組轉換）：
+"""
+高雄市議會全球網-中文網-本屆議員-黃文志 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail 熱門關鍵字 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 下方連結 隱私權宣告 資訊安全政策宣告 著作權聲明 RSS訂閱專區 ::: 上方連結 回首頁 網站導覽 ENGLISH 影音隨選視訊系統 議長信箱 高雄市議會全球網-中文網 熱門關鍵字 search 搜尋 進階搜尋 字級 小 中 大 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事查詢系統 影音隨選視訊系統 議員入口網 WebMail ::: 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 ::: 首頁 本會議員 本屆議員 本屆議員-黃文志 _ 網頁功能 列印內容 黃文志 性 別： 男 所屬政黨： 民主進步黨 聯絡電話： 3643880 傳真電話： 3649837 通訊地址： 811楠梓區後勁南路7巷17號 備註： 李順進、湯詠瑜、劉德林、黃文志、林志誠、江瑞鴻議員總質詢摘要 工務部門委員會議員質詢摘要 高市議會跨黨派慰勞國防自主尖兵 康議長：看不見的堅守 成就看得見的和平 取經MLB魅力 高市議員盛讚大都會球場 康議長：澄清湖球場升級才能迎來更多國際賽事 張博洋、黃文志、方信淵、李雨庭、黃彥毓議員總質詢摘要 倒數通車的亞洲新地標 康議長借鏡淡江大橋擘劃高雄百年交通藍圖 工務部門委員會議員質詢摘要 迎春海味進議會 康議長力挺興達港漁業 笑稱「烏魚子一出、議員全到齊」 黃文志、陳慧文、王耀裕、范織欽議員總質詢摘要 康議長率團訪橫濱市議會 高雄T搭領巾展現姊妹情 展現台日友好 康議長率跨黨派議員出席第11屆「IZA鎌倉」峰會活動 工務部門委員會議員質詢摘要 高雄粉紅熱潮迎BLACKPINK 議長康裕成：行銷高雄、議會不缺席！ 企業發展兼顧環境永續 康議長率隊考察中鋼公司 議長康裕成授旗高市議會軟網隊 送面膜幽默勉勵：奪冠也要亮麗回家 議會中元普渡 康議長祈願城市揮別風雨 好運連連 議長康裕成偕同議員會勘澄清湖 關切觀光環境與安全配套 黃文志、黃彥毓、李雨庭、李雅靜、林富寶議員總質詢摘要 工務部門委員會議員質詢摘要 高鐵南延要選擇對高雄影響最小最有共識方案 李雅芬、邱于軒、宋立彬、許采蓁、林富寶、黃文志議員總質詢摘要 工務部門委員會議員質詢摘要 全球淨零浪潮 康議長：議會要跑得比誰都快 康議長督軍 「議起划」龍舟隊與應援團士氣高昂 陳明澤、鄭孟洳、簡煥宗、蔡武宏、陳玫娟、黃文志議員總質詢摘要 甜蜜快閃！康議長陪議員及議會同仁歡度母親節 工務部門委員會議員質詢摘要 給媽媽的禮物「小扇御守」亮相! 議會揪市民4/21作伙看戲 英國在台辦事處一行首次拜會康議長 暢聊高雄市政建設 議會舉行龍年新春團拜 康議長期許讓市民感到驕傲 第3次臨時會開議，康議長送面膜禮盒 議會慰勞列車啟動 感謝第一線清潔隊員對抗登革熱疫情 黃文志、李雅靜、李雨庭、方信淵、王耀裕、林富寶議員總質詢摘要 淨零學院民代班開課，本會議員上課拿學分 工務部門委員會議員質詢摘要 市長施政報告與質詢黨團聯合質詢摘要 府會龍舟PK賽 議會「用力划起來」勇奪亞軍 黃文志.曾俊傑副議長.何權峰.陳麗珍.方信淵.黃彥毓議員總質詢摘要 本會「用力划起來」龍舟隊成軍，將力拼強敵市府首長隊 康議長掌勺煮竹筍海鮮粥，沖淡嚴肅議事氛圍 工務部門委員會議員質詢摘要 康議長率隊慰勞國訓中心市籍舉重選手 關心台積電投資進度 康議長率隊考察楠梓產業園區 佛光山開山宗師星雲法師捨報圓寂，正副議長康裕成、曾俊傑率議員前往追思 本屆議會成立112年各種委員會 願景相承，本會定12月25日舉行第4屆成立大會 中央選委會今(2)日公告高雄市第4屆議員當選人名單 活動影音 第4屆第8次定期會 市政總質詢_影片連結 115-09-30 第4屆第8次定期會 教育部門業務報告與質詢_影片連結 115-09-15 第4屆第8次定期會 社政部門業務質詢_影片連結 115-09-10 更多活動影音 學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市立後勁國小 高雄市立後勁國中 高雄市立海青工商 私立樹德科技大學 英國基爾大學碩士 經歷： 高雄市第三屆市議員 高雄市議會民進黨團書記長 蔡英文總統高雄市競選總部副總幹事 高雄市射箭委員會副主任委員 服務政見： 一、 交通再邁進：加速推動鐵路立體化延伸至楠梓、橋頭，縫合楠梓市容拆除楠梓陸橋。打通楠梓產業
+"""
+
+原始 HTML 視窗（節錄）：
+"""
+gov.tw/Scripts/fu_Accessibility.js'></script> 
+<script>var CCMS_WWWURL='https://www.kcc.gov.tw';var CCMS_LanguageSN=1;var CCMS_SitesSN_Encryption='1';</script><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="DC.Title" content="" />
+<meta name="DC.Subject" content="" />
+<meta name="DC.Creator" content="" />
+<meta name="DC.Publisher" content="" />
+<meta name="DC.Date" content="2019-02-27" />
+<meta name="DC.Type" content="" />
+<meta name="DC.Identifier" content="" />
+<meta name="DC.Description" content="" />
+<meta name="DC.Contributor" content="" />
+<meta name="DC.Format" content="" />
+<meta name="DC.Relation" content="" />
+<meta name="DC.Source" content="" />
+<meta name="DC.Language" content="" />
+<meta name="DC.Coverage.t.min" content="2019-02-27" />
+<meta name="DC.Coverage.t.max" content="2019-02-27" />
+<meta name="DC.Rights" content="" />
+<meta name="Category.Theme" content="" />
+<meta name="Category.Cake" content="" />
+<meta name="Category.Service" content="" />
+<meta name="DC.Keywords" content="" />
+<title>
+	高雄市議會全球網-中文網-本屆議員-黃文志
+</title><link id="likCssGlobal" href="/css/global.css" rel="stylesheet" type="text/css" /><link id="likCssPage" href="/css/page.css" rel="stylesheet" type="text/css" /><link id="likPrint" href="/css/print.css" rel="stylesheet" type="text/css" media="print" /><link id="lnkCssSysDetail" href="/css/sys_detail.css" rel="stylesheet" type="text/css" />
+    <style>
+        .group.base-aside {
+            display: none;
+        }
+    </style>
+<link href="https://ws.kcc.gov.tw" rel="icon" type="image/x-icon"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_UA-24833141-6.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24833141-6');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_G-965X83HTMQ.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-965X83HTMQ');
+</script><meta property="og:title" content="本屆議員-黃文志" >
+<meta property="og:type
+"""
+
+既有證據紀錄：
+[
+  {
+    "evidenceId": "enrich-evidence-0001",
+    "sourceId": "scope-kcc-profile-2185",
+    "documentLocation": "data/biographies/raw/2026-11-06/kcc/profiles/2185.html（議員個人頁）",
+    "excerpt": "高雄市議會全球網-中文網-本屆議員-黃文志 跳到主要內容區塊 高雄市議會全球網-中文網 mobile botton search 搜尋 進階搜尋 分享 Facebook Plurk Twitter line Email 本會介紹 議長介紹 副議長介紹 本會沿革 組織與職權 多媒體簡介 本會資訊 國際交流專區 本會議員 本屆議員 本屆議員聯絡資訊 本屆議員服務處地址及電話傳真 歷屆議員 委員會一覽表 新聞與活動 新聞快訊 歷史新聞 訊息公告 城市互訪 公聽會 活動影音 大會資訊 議事日程表 會議記錄 專案報告 各種會議譯文稿 提案資料 質詢資料 本會出版品 議事資訊彙編 議事錄 出版刊物 電子期刊 專刊 其他報告 法規專區 議政法規 高雄市法令 法律網站 便民服務 議長信箱 議員聯絡資訊 遊說法專區 性平專區 申請資訊與表單 預決算資訊 媒體政策及業務宣導經費執行情形 公職人員利益衝突迴避法專區 檔案閱覽 施政統計 本會系統 議事"
+  }
+]
+
+審查要求：
+1. 只有當修正後文字中的每一項主張都能在來源文字中找到時，verdict 才是 supported。
+2. evidence 至少一筆；excerpt 必須逐字複製上面提供的來源文字；relationship 只能是 supports、partially-supports、contradicts、context。
+3. identityAssessment 只能是 confirmed、uncertain、wrong-identity。
+4. temporalAssessment.requiresDate 只有在文字本身含有時間主張時才為 true。
+5. 若中性讀者會被誤導，materialConcern 必須是具體字串；否則為 null。
+6. 不要因為這是修正後的文字而放寬標準。
+
+只輸出一個 JSON 物件（不要程式碼圍籬、不要說明）：
+{"claimId":"enrich-claim-0001","verdict":"supported|partially-supported|insufficient-evidence|contradicted|wrong-identity","identityAssessment":"confirmed|uncertain|wrong-identity","attributionAssessment":"...","temporalAssessment":{"requiresDate":false,"sourceSupportsTemporalWording":true,"assessment":"..."},"evidence":[{"sourceId":"scope-kcc-profile-2185","evidenceId":"...","location":"...","excerpt":"...","relationship":"supports"}],"rationale":"...","materialConcern":null,"limitations":[]}

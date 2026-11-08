@@ -1,0 +1,89 @@
+{
+  "datasetId": "kaohsiung-2026-candidate-biographies",
+  "snapshotDate": "2026-11-06",
+  "rosterSnapshotDate": "2026-11-05",
+  "pilotCandidateIds": [
+    "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+    "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+    "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+    "official-candidate-2026-district-kaohsiung-council-11-aa063da4"
+  ],
+  "pilotCandidates": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "displayName": "鄭光峰",
+      "slug": "kaohsiung-council-10-f1f8ec11",
+      "districtId": "district-kaohsiung-council-10",
+      "candidateNumber": "7",
+      "profileMsn": "2220",
+      "claimsPrepared": 93,
+      "machineIdentityStatus": "confirmed",
+      "humanIdentityStatus": "pending-human-review",
+      "selectedConflictIds": []
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "displayName": "陳麗娜",
+      "slug": "kaohsiung-council-10-b6784261",
+      "districtId": "district-kaohsiung-council-10",
+      "candidateNumber": "8",
+      "profileMsn": "2221",
+      "claimsPrepared": 104,
+      "machineIdentityStatus": "confirmed",
+      "humanIdentityStatus": "pending-human-review",
+      "selectedConflictIds": []
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "displayName": "邱于軒",
+      "slug": "kaohsiung-council-11-6db9e527",
+      "districtId": "district-kaohsiung-council-11",
+      "candidateNumber": "3",
+      "profileMsn": "2227",
+      "claimsPrepared": 113,
+      "machineIdentityStatus": "confirmed",
+      "humanIdentityStatus": "pending-human-review",
+      "selectedConflictIds": []
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "displayName": "王耀裕",
+      "slug": "kaohsiung-council-11-ec23428a",
+      "districtId": "district-kaohsiung-council-11",
+      "candidateNumber": "4",
+      "profileMsn": "2228",
+      "claimsPrepared": 95,
+      "machineIdentityStatus": "confirmed",
+      "humanIdentityStatus": "pending-human-review",
+      "selectedConflictIds": []
+    }
+  ],
+  "claimsPrepared": 405,
+  "sourcesInspected": 6,
+  "directSourceSupportedClaims": 405,
+  "claimsRequiringAdditionalEvidence": 0,
+  "claimsWithLinkedEvidence": 405,
+  "claimsWithContradictoryEvidence": 0,
+  "claimsWithVerifiedDates": 0,
+  "claimsWithUnknownDates": 405,
+  "candidateStatementClaims": 4,
+  "institutionalClaims": 401,
+  "attributionReviewRequiredClaims": 4,
+  "machineIdentityConfirmedCandidates": 4,
+  "humanIdentityConfirmedCandidates": 0,
+  "selectedIdentityConflicts": 0,
+  "awaitingHumanReviewClaims": 405,
+  "humanReviewedClaims": 0,
+  "humanApprovedClaims": 0,
+  "rejectedClaims": 0,
+  "disputedClaims": 0,
+  "publishedClaims": 0,
+  "reviewerIds": [],
+  "publicationEligibleClaims": 0,
+  "completion": {
+    "engineeringPreparation": "complete-after-verification",
+    "humanEditorialReview": "incomplete-no-authorized-reviewer-decisions",
+    "staticPublication": "incomplete-no-approved-claims"
+  },
+  "note": "Machine source reopening is not human editorial approval. No reviewer, decision, date, identity confirmation, or publication record was fabricated."
+}

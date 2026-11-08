@@ -1,0 +1,14 @@
+HTTP/2 200 
+server: nginx
+content-type: text/html; charset=UTF-8
+service-worker-allowed: /
+access-control-allow-origin: *
+access-control-allow-credentials: true
+origin-trial: A1RkcxrobtMOu6Pq18oAQO8w+Q6laQuZt4zl/5a1BBGVWln1cDNiTuW6GroY4MBHo8FYdUCxZoKXl+yyi55gyg0AAACAeyJvcmlnaW4iOiJodHRwczovL3Vkbi5jb206NDQzIiwiZmVhdHVyZSI6IkxvbmdBbmltYXRpb25GcmFtZVRpbWluZyIsImV4cGlyeSI6MTcxNjk0MDc5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=
+x-mhn: uniweb-75985f7cc4-n789l
+content-encoding: gzip
+content-length: 46001
+date: Sat, 07 Nov 2026 06:09:56 GMT
+vary: Accept-Encoding
+content-security-policy: frame-ancestors 'self' https://udn.com https://*.udn.com
+

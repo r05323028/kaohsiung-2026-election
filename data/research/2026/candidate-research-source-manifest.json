@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetId": "kaohsiung-2026-candidate-public-record-research",
+  "snapshotDate": "2026-11-05",
+  "retrievalDate": "2026-11-05",
+  "publisherPolicy": "primary-official-sources-only",
+  "sources": [
+    {
+      "sourceId": "source-cec-vote2026-c1-64000",
+      "url": "https://info.cec.gov.tw/vote2026/static/json/cand/C1/64000.json",
+      "role": "official-candidate-roster-mayoral",
+      "priority": "P0",
+      "rawPath": "data/raw/official/2026/research/cec-vote2026-c1-64000.json",
+      "sha256": "1e0d64624d42f4e8db647fbd1289e8040e10980e3746a69f88821a9dd75f238a",
+      "retrievedAt": "2026-11-05T16:15:19.349Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "byteLength": 1231,
+      "scope": "2026 高雄市長候選人資料列"
+    },
+    {
+      "sourceId": "source-cec-vote2026-t-64000",
+      "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+      "role": "official-candidate-roster-city-council",
+      "priority": "P0",
+      "rawPath": "data/raw/official/2026/research/cec-vote2026-t-64000.json",
+      "sha256": "738bc63436cfd7095bc0f2ad21e29c5e06e91ad3b06716fd015e6d14cedca78a",
+      "retrievedAt": "2026-11-05T16:15:19.349Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "byteLength": 54281,
+      "scope": "2026 高雄市議員第1至15選舉區候選人資料列"
+    },
+    {
+      "sourceId": "source-cec-vote2026-party",
+      "url": "https://info.cec.gov.tw/vote2026/static/json/party/party.json",
+      "role": "official-party-reference",
+      "priority": "P0",
+      "rawPath": "data/raw/official/2026/research/cec-vote2026-party.json",
+      "sha256": "badd30a9824dcea07a204ffd5230da3fe640198d96e61d21d9cc00a5635f5858",
+      "retrievedAt": "2026-11-05T16:15:19.349Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "byteLength": 2684,
+      "scope": "CEC 2026 政黨參照清單；本批次不以此單獨建立候選人主張"
+    },
+    {
+      "sourceId": "source-cec-vote2026-prvCityDept",
+      "url": "https://info.cec.gov.tw/vote2026/static/json/dist/prvCityDept.json",
+      "role": "official-constituency-reference",
+      "priority": "P0",
+      "rawPath": "data/raw/official/2026/research/cec-vote2026-prvCityDept.json",
+      "sha256": "470f78d43162e0e5f584094f713730488ee1868bfe1444a7ae95a3e23d20f812",
+      "retrievedAt": "2026-11-05T16:15:19.349Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "byteLength": 93064,
+      "scope": "CEC 2026 行政區與選舉區參照資料"
+    },
+    {
+      "sourceId": "source-cec-vote2026-type-64000",
+      "url": "https://info.cec.gov.tw/vote2026/static/json/type/64000.json",
+      "role": "official-election-type-reference",
+      "priority": "P0",
+      "rawPath": "data/raw/official/2026/research/cec-vote2026-type-64000.json",
+      "sha256": "898a9a56ca1bae3966b7ad51c31e4a809ee1ff1c532edae308a54b96307b503d",
+      "retrievedAt": "2026-11-05T16:15:19.349Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "byteLength": 117,
+      "scope": "CEC 2026 選舉類型參照資料"
+    }
+  ],
+  "excludedSources": [
+    {
+      "url": "https://info.cec.gov.tw/vote2026/static/json/cand/R3/64000.json",
+      "reason": "原住民族區域立法／代表類別不是本次 106 名高雄市長及市議員名冊，禁止合併。"
+    }
+  ]
+}

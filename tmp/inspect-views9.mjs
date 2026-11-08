@@ -1,0 +1,24 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ args: ['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const views = [
+  ['overview9','/?district=kaohsiung-council-04',1600,1000,1],
+  ['pagodas9','/?district=kaohsiung-council-04&focus=dragon-tiger-pagodas',1600,1000,1],
+  ['river9','/?district=kaohsiung-council-04&focus=houjing-river',1600,1000,1],
+  ['zuoying9','/?district=kaohsiung-council-04&focus=zuoying-old-street',1600,1000,1],
+  ['park9','/?district=kaohsiung-council-04&focus=metropolitan-park',1600,1000,1],
+  ['mobile9','/?district=kaohsiung-council-04',390,844,2]
+];
+for (const [name, url, w, h, dpr] of views) {
+  const context = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: dpr, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
+  await page.goto('http://127.0.0.1:4321' + url, { waitUntil: 'domcontentloaded' });
+  await page.waitForSelector('[data-testid="city-explorer"][data-hydrated="true"]', { timeout: 30000 });
+  await page.waitForTimeout(1600);
+  console.log(name, JSON.stringify(errors.slice(0,2)));
+  await page.screenshot({ path: 'reports/visual/debug-' + name + '.png', timeout: 120000 });
+  await context.close();
+}
+await browser.close();

@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CandidateCard from '../../components/CandidateCard.astro';
+import { candidateProfiles, districts, getDistrictCandidates } from '../../data';
+import { withBase } from '../../utils/paths';
+
+export function getStaticPaths() {
+  return districts.map((district) => ({
+    params: { slug: district.slug },
+    props: { district, candidates: getDistrictCandidates(district.id) },
+  }));
+}
+
+interface Props {
+  district: (typeof districts)[number];
+  candidates: typeof candidateProfiles;
+}
+
+const { district, candidates } = Astro.props;
+const demo = district.isDemo === true;
+---
+
+<BaseLayout
+  title={`${district.name}｜港都人物誌`}
+  description={`${district.name}的${demo ? '虛構示範' : '官方切片'}選舉區與人物資料。`}
+  canonicalPath={`/districts/${district.slug}/`}
+>
+  <div class="page-wrap">
+    <section class="page-heading">
+      <span class="eyebrow">{district.districtLabel} / {demo ? 'FICTIONAL DEMO' : 'OFFICIAL SNAPSHOT'}</span>
+      <h1>{district.name}</h1>
+      <p>{district.description}</p>
+      <div class="demo-notice" role="note"><span aria-hidden="true">✦</span><div><strong>{demo ? '不是官方選區' : '官方選舉區切片'}</strong>{demo ? `${district.scopeNote}這一頁只展示資料模型與閱讀流程。` : `${district.scopeNote}候選人資料只在完成來源核對與人工核准後發布。`}</div></div>
+      <div class="route-actions">
+        <a class="primary-link" href={withBase(`/?district=${district.slug}`)}>在城市裡探索 →</a>
+        <a class="secondary-link" href={withBase('/districts/')}>回選區索引</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="district-candidates-heading">
+      <div class="profile-section-heading" style="margin-bottom: 1rem;">
+        <h2 id="district-candidates-heading">{demo ? '本區示範人物' : '本區官方預公告人物'}</h2>
+        <p>{demo ? '每位人物使用相同的卡片與資料入口，不以主觀屬性排序或評分。' : '這些列名來自官方號次抽定表，號次仍是抽定、非正式公告；政黨與完整人物資料尚未刊載。'}</p>
+      </div>
+      {candidates.length > 0 ? (
+        <div class="candidate-grid">
+          {candidates.map((candidate) => <CandidateCard candidate={candidate} />)}
+        </div>
+      ) : (
+        <div class="content-card"><h3>目前尚無已核准的候選人資料</h3><p>這個選舉區的候選人資料仍在官方文件核對與人工審查流程中；空白不代表不存在。</p></div>
+      )}
+    </section>
+
+    <section class="content-grid" style="margin-top: 1rem;">
+      <article class="info-page-card">
+        <span class="section-kicker">data boundary</span>
+        <h2>場景與制度分開</h2>
+        <p>港灣、街道、建物與人物位置是藝術化的視覺語言；選區的制度性資訊則在資料欄位中單獨保存。</p>
+      </article>
+      <article class="info-page-card">
+        <span class="section-kicker">future-ready</span>
+        <h2>資料狀態可追溯</h2>
+        <p>每筆官方切片保留來源、發布狀態與擷取日期；正式公告後才會重新審查抽定號次與候選人清單。</p>
+      </article>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,101 @@
+
+Running 26 tests using 4 workers
+
+[1/26] [chromium] › tests/e2e/city-experience.spec.ts:4:3 › immersive city exploration › Escape closes settings and progressive-disclosure trays
+[2/26] [chromium] › tests/e2e/city-experience.spec.ts:81:1 › candidate profile moves focus in and restores it on close
+[3/26] [chromium] › tests/e2e/city-experience.spec.ts:32:3 › immersive city exploration › landmark URL focus is dismissible and restores a city view
+[4/26] [chromium] › tests/e2e/city-experience.spec.ts:56:3 › immersive city exploration › candidate overlay closes with Escape and clears the URL selection
+[5/26] [chromium] › tests/e2e/smoke.spec.ts:3:1 › homepage renders the city explorer
+[6/26] [chromium] › tests/e2e/smoke.spec.ts:12:1 › district selection changes the active scene and candidate list
+[7/26] [chromium] › tests/e2e/smoke.spec.ts:29:1 › candidate selection opens profile tabs
+[8/26] [chromium] › tests/e2e/smoke.spec.ts:53:1 › direct candidate URL renders without relying on the city scene
+[9/26] [chromium] › tests/e2e/smoke.spec.ts:64:1 › official election filters expose mayor, council, and indigenous districts
+[10/26] [chromium] › tests/e2e/smoke.spec.ts:103:1 › official routes expose source references and neutral missing states
+[11/26] [chromium] › tests/e2e/smoke.spec.ts:147:1 › automated policy publishes only an eligible scoped claim
+[12/26] [chromium] › tests/e2e/smoke.spec.ts:180:1 › official biography observations remain withheld pending review
+[13/26] [chromium] › tests/e2e/smoke.spec.ts:199:1 › local editorial workspace loads only in the development review route
+[14/26] [chromium] › tests/e2e/smoke.spec.ts:270:1 › selected public-record profiles expose provenance and neutral gaps
+[15/26] [chromium] › tests/e2e/smoke.spec.ts:252:1 › editorial workspace can inspect a real pilot candidate without recording a decision
+[16/26] [chromium] › tests/e2e/smoke.spec.ts:316:1 › static search finds the fictional demo candidate without changing official data
+[17/26] [chromium] › tests/e2e/smoke.spec.ts:330:1 › developer avatar preview loads the fictional asset inspector
+[18/26] [chromium] › tests/e2e/smoke.spec.ts:346:1 › WebGL fallback keeps the candidate journey usable
+[19/26] [chromium] › tests/e2e/unified-world.spec.ts:36:3 › unified Kaohsiung world › administrative district focus shows geography and returns to the city
+[20/26] [chromium] › tests/e2e/unified-world.spec.ts:65:3 › unified Kaohsiung world › every one of the 38 administrative districts can be focused
+[21/26] [chromium] › tests/e2e/unified-world.spec.ts:92:3 › unified Kaohsiung world › council-04 simulation stays inside Zuoying and Nanzih while following
+[22/26] [chromium] › tests/e2e/unified-world.spec.ts:129:3 › unified Kaohsiung world › simulation persists when the profile closes and another district is focused
+[23/26] [chromium] › tests/e2e/unified-world.spec.ts:192:3 › unified Kaohsiung world › mayoral simulation crosses several administrative districts
+[24/26] [mobile-chromium] › tests/e2e/mobile.spec.ts:3:1 › mobile layout exposes touch-friendly candidate navigation and bottom-sheet profile
+[25/26] [mobile-chromium] › tests/e2e/mobile.spec.ts:25:1 › mobile avatar preview stays within the touch viewport
+[26/26] [mobile-chromium] › tests/e2e/mobile.spec.ts:40:1 › mobile essential controls meet a 44px touch target at 390x844
+  1) [chromium] › tests/e2e/unified-world.spec.ts:192:3 › unified Kaohsiung world › mayoral simulation crosses several administrative districts 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-testid="city-explorer"][data-hydrated="true"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('[data-testid="city-explorer"][data-hydrated="true"]') with timeout 5000ms
+      - waiting for locator('[data-testid="city-explorer"][data-hydrated="true"]')
+
+
+      23 |     '[data-testid="city-explorer"][data-hydrated="true"]',
+      24 |   );
+    > 25 |   await expect(locator).toBeVisible();
+         |                         ^
+      26 |   return locator;
+      27 | }
+      28 |
+        at explorer (/Users/seanchang/kaohsiung-2026-election/tests/e2e/unified-world.spec.ts:25:25)
+        at /Users/seanchang/kaohsiung-2026-election/tests/e2e/unified-world.spec.ts:196:11
+
+    Error Context: test-results/unified-world-unified-Kaoh-97c34-al-administrative-districts-chromium/error-context.md
+
+
+  2) [chromium] › tests/e2e/unified-world.spec.ts:129:3 › unified Kaohsiung world › simulation persists when the profile closes and another district is focused 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.evaluate: Test timeout of 60000ms exceeded.
+
+      166 |     );
+      167 |
+    > 168 |     const after = await page.evaluate(() => {
+          |                              ^
+      169 |       const world = (window as WorldWindow).__kaohsiungWorld as WorldBridge;
+      170 |       world.advance(60);
+      171 |       const actors = world.actors();
+        at /Users/seanchang/kaohsiung-2026-election/tests/e2e/unified-world.spec.ts:168:30
+
+    Error Context: test-results/unified-world-unified-Kaoh-7fda6-another-district-is-focused-chromium/error-context.md
+
+
+  3) [mobile-chromium] › tests/e2e/mobile.spec.ts:40:1 › mobile essential controls meet a 44px touch target at 390x844 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('[aria-controls="city-people-tray"]')
+        - locator resolved to <button type="button" aria-expanded="false" class="city-dock__toggle" aria-controls="city-people-tray">…</button>
+
+
+      136 |   await expect(adminCard).toBeHidden();
+      137 |
+    > 138 |   await page.locator('[aria-controls="city-people-tray"]').click();
+          |                                                            ^
+      139 |   const peopleTray = page.locator('#city-people-tray');
+      140 |   await expect(peopleTray).toBeVisible();
+      141 |   assertTargets(
+        at /Users/seanchang/kaohsiung-2026-election/tests/e2e/mobile.spec.ts:138:60
+
+    Error Context: test-results/mobile-mobile-essential-co-fb474-4px-touch-target-at-390x844-mobile-chromium/error-context.md
+
+
+  3 failed
+    [chromium] › tests/e2e/unified-world.spec.ts:129:3 › unified Kaohsiung world › simulation persists when the profile closes and another district is focused 
+    [chromium] › tests/e2e/unified-world.spec.ts:192:3 › unified Kaohsiung world › mayoral simulation crosses several administrative districts 
+    [mobile-chromium] › tests/e2e/mobile.spec.ts:40:1 › mobile essential controls meet a 44px touch target at 390x844 
+  23 passed (2.0m)

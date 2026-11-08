@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="關於計畫｜港都人物誌"
+  description="港都人物誌的專案定位、互動原則、官方資料範圍與示範範圍。"
+>
+  <div class="page-wrap">
+    <section class="page-heading">
+      <span class="eyebrow">ABOUT THE PROJECT</span>
+      <h1>把公共資料，做成可以慢慢閱讀的城市。</h1>
+      <p>港都人物誌是一個面向公民的靜態政治百科：用原創 3D 城市作為入口，用可追溯的資料欄位作為內容核心。</p>
+      <div class="demo-notice" role="note">
+        <span aria-hidden="true">✦</span>
+        <div>
+          <strong>官方資料與虛構示範並存</strong>
+          截至 2026-11-05，本版包含官方選舉資料與一小段高雄市議會公開紀錄；另保留四位虛構人物與兩個虛構選區，供 3D 探索互動示範。兩者在介面與資料層分開標示。
+        </div>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <article class="info-page-card">
+        <span class="section-kicker">why</span>
+        <h2>為什麼是城市探索？</h2>
+        <p>公共資訊常常被分散在選舉制度、人物背景、政策文字與新聞連結之間。城市場景提供方向感，但不取代制度資料，也不把人物做成分數或排名。</p>
+      </article>
+      <article class="info-page-card">
+        <span class="section-kicker">who</span>
+        <h2>給誰使用？</h2>
+        <p>原型面向想比較資料來源、理解選區脈絡、或從手機快速閱讀人物背景的市民與地方媒體。文字維持繁體中文，分類 token 可逐步接軌未來資料輸入。</p>
+      </article>
+      <article class="info-page-card info-page-card--wide">
+        <span class="section-kicker">principles</span>
+        <h2>非黨派與內容完整性</h2>
+        <ul>
+          <li>所有人物使用等同的視覺待遇，不提供人氣、好感度、戰力或主觀排序。</li>
+          <li>清楚區分人物自述、編輯整理、獨立紀錄與待查核狀態。</li>
+          <li>不推論未有來源的家庭關係、失德或成就；缺少資料不當作不存在的證明。</li>
+          <li>未來若加入真實人物模型，需使用適當參照素材並經人工審閱，保持可辨識但尊重的 likeness。</li>
+          <li>不暗示選委會、政黨、候選人或任何機構的背書。</li>
+        </ul>
+      </article>
+      <article class="info-page-card">
+        <span class="section-kicker">scope</span>
+        <h2>這一版做了什麼？</h2>
+        <p>一座原創城市、5 位官方市長候選人、101 筆高雄市議員預公告抽定資料、16 個官方選舉區，以及四位虛構程序化角色、兩個示範選區、靜態人物路由、客戶端搜尋與 WebGL fallback。</p>
+        <p>另外，李眉蓁與王義雄各有一小段高雄市議會來源紀錄；賴瑞隆保留官方人物頁，但沒有查到可納入本切片的公共紀錄，介面會顯示資料尚未查證，而不是推論不存在。</p>
+      </article>
+      <article class="info-page-card">
+        <span class="section-kicker">not yet</span>
+        <h2>這一版沒有做什麼？</h2>
+        <p>議員號次仍是抽定、非 2026-11-17 正式公告；政黨與完整人物背景尚未由本切片補齊，公共紀錄也不是全體候選人的完整資料。尚未提供正式選區邊界、後端 API、登入、資料庫、推薦排名、遊戲化任務或完整高雄地理重建。</p>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

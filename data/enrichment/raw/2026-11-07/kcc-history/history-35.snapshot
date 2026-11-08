@@ -1,0 +1,1016 @@
+
+<!DOCTYPE html>
+
+<html id="FormHtml" xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant-tw">
+<head id="Head1"><script src='https://www.kcc.gov.tw/Scripts/jquery.min.js?v=20240703'></script>
+<script src='https://www.kcc.gov.tw/Scripts/jquery-migrate.min.js?v=20240703'></script>
+<script src='https://www.kcc.gov.tw/Scripts/jquery.lazy.min.js'></script>
+<script src='https://www.kcc.gov.tw/Scripts/jquery.lazy.plugins.min.js'></script>
+<script src='https://www.kcc.gov.tw/Scripts/jquery.cookie.js'></script>
+<script src='https://www.kcc.gov.tw/Scripts/jUtil.js'></script>
+<script src='https://www.kcc.gov.tw/Scripts/fancybox/jquery.fancybox.js'></script>
+<link rel='stylesheet' type='text/css'  href='https://www.kcc.gov.tw/Scripts/fancybox/jquery.fancybox.css'> 
+<script src='https://www.kcc.gov.tw/Scripts/lightGallery/js/lightgallery-all.min.js'></script>
+<link rel='stylesheet' type='text/css'  href='https://www.kcc.gov.tw/Scripts/lightGallery/css/lightgallery.min.css'> 
+<script  src='https://www.kcc.gov.tw/Scripts/jquery.mousewheel.min.js'></script> 
+<script  src='https://www.kcc.gov.tw/Scripts/jquery.touchwipe.min.js'></script> 
+<script  src='https://www.kcc.gov.tw/js/airdatepicker/datepicker.min.js'></script> 
+<script  src='https://www.kcc.gov.tw/js/airdatepicker/datepicker.zh-tw.js'></script> 
+<script  src='https://www.kcc.gov.tw/js/airdatepicker/datepicker.en.js'></script> 
+<link rel='stylesheet' type='text/css'  href='https://www.kcc.gov.tw/js/airdatepicker/datepicker.min.css'> 
+<script  src='https://www.kcc.gov.tw/Scripts/jQueryRotate.js'></script> 
+<script  src='https://www.kcc.gov.tw/Scripts/fu_Accessibility.js'></script> 
+<script>var CCMS_WWWURL='https://www.kcc.gov.tw';var CCMS_LanguageSN=1;var CCMS_SitesSN_Encryption='1';</script><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="DC.Title" content="" />
+<meta name="DC.Subject" content="" />
+<meta name="DC.Creator" content="" />
+<meta name="DC.Publisher" content="" />
+<meta name="DC.Date" content="2019-02-27" />
+<meta name="DC.Type" content="" />
+<meta name="DC.Identifier" content="" />
+<meta name="DC.Description" content="" />
+<meta name="DC.Contributor" content="" />
+<meta name="DC.Format" content="" />
+<meta name="DC.Relation" content="" />
+<meta name="DC.Source" content="" />
+<meta name="DC.Language" content="" />
+<meta name="DC.Coverage.t.min" content="2019-02-27" />
+<meta name="DC.Coverage.t.max" content="2019-02-27" />
+<meta name="DC.Rights" content="" />
+<meta name="Category.Theme" content="" />
+<meta name="Category.Cake" content="" />
+<meta name="Category.Service" content="" />
+<meta name="DC.Keywords" content="" />
+<title>
+	高雄市議會全球網-中文網-歷屆議員簡介
+</title><link id="likCssGlobal" href="/css/global.css" rel="stylesheet" type="text/css" /><link id="likCssPage" href="/css/page.css" rel="stylesheet" type="text/css" /><link id="likPrint" href="/css/print.css" rel="stylesheet" type="text/css" media="print" /><link id="lnkCssSysDetail" href="/css/sys_detail.css" rel="stylesheet" type="text/css" />
+    <style>
+        .group.base-aside {
+            display: none;
+        }
+    </style>
+    <script>
+        function ChangePeriodTerm() {
+            var PeriodSN = $('#ContentPlaceHolder1_ddlPeriod').val();
+            if (PeriodSN != '') {
+                $('#ContentPlaceHolder1_ddlPeriodTerm option[data-id != "' + PeriodSN + '"]').hide();
+                $('#ContentPlaceHolder1_ddlPeriodTerm option[value = ""]').show();
+                $('#ContentPlaceHolder1_ddlPeriodTerm option[data-id = "' + PeriodSN + '"]').show();    
+                if ($('#ContentPlaceHolder1_ddlPeriodTerm option[value = "' + $('#ContentPlaceHolder1_ddlPeriodTerm').val() + '"]').css('display') == 'none') {
+                    $('#ContentPlaceHolder1_ddlPeriodTerm').val('');
+                }                
+            }
+            else {
+                $('#ContentPlaceHolder1_ddlPeriodTerm option[value != ""]').hide();
+                $('#ContentPlaceHolder1_ddlPeriodTerm option[value = ""]').show();
+                $('#ContentPlaceHolder1_ddlPeriodTerm').val('');
+            }
+        }
+        $(document).ready(function () {
+            var hash = window.location.hash;
+            if (hash != null && hash.trim() != '') {
+                $('#ContentPlaceHolder1_main3').show();
+                $('#ContentPlaceHolder1_main3 > div').hide();
+                $(hash).show();
+            }
+            $('#memberinfo a').each(function () {
+                $(this).on("click", function (e) {
+                    e.preventDefault();
+                    var p = $(this).attr('href');
+                    if (p != null && p != '' && p.indexOf('#') > -1) {
+                        //console.log(p);
+                        $('#ContentPlaceHolder1_main3').show();
+                        $('#ContentPlaceHolder1_main3 > div').hide();
+                        $(p).show();
+                    }
+                });
+            });
+            $("#ContentPlaceHolder1_ddlPeriod").change(function () {
+                ChangePeriodTerm();
+            });
+
+        });
+        $(window).load(function () {
+            ChangePeriodTerm();
+        });
+    </script>
+<link href="https://ws.kcc.gov.tw" rel="icon" type="image/x-icon"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_UA-24833141-6.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24833141-6');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.kcc.gov.tw/Scripts/gtag_G-965X83HTMQ.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-965X83HTMQ');
+</script><meta property="og:title" content="歷屆議員簡介" >
+<meta property="og:type" content="article" >
+<meta property="og:url" content="https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=35" >
+<meta property="og:site_name" content="高雄市議會全球網-中文網" >
+</head>
+<body id="Formbody" data-js="false">    <style>
+        .for_accessibility a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 99;
+            width: 1px;
+            height: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #000;
+        }
+            .for_accessibility a:focus {
+                width: auto;
+                height: auto;
+                padding: 6px;
+                background-color: #fff;
+            }
+        .for_accessibility div {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: transparent;
+            opacity: .1
+        }
+            .for_accessibility h1, .for_accessibility h2 {
+                font-size: 0.00000000000001em;
+                margin: 0;
+            }
+    </style>
+<div class="for_accessibility">
+    <a href="#CCMS_Content" class="" title="跳到主要內容區塊">跳到主要內容區塊</a>    <div>
+        <h1>高雄市議會全球網-中文網</h1>    </div>
+    <script>
+        var $a = $('.for_accessibility a');
+        $a.on('click', function (evt) {
+            var $href = $($(this).attr('href')),
+                $target = $href.find('a').eq(0).get(0);
+            setTimeout(function () { try { $target.focus(); } catch (e) { } }, 0);
+        });
+    </script>
+</div>
+<script> document.body.setAttribute("data-js", "true");</script>
+    
+    <form method="post" action="./Member_HistoryList.aspx?n=122&amp;sms=0&amp;s=35" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+        <!--主選單 結束-->
+        <!--標題-->
+
+        <div class="title">
+            
+
+        </div>
+        
+        
+        
+        
+        
+        
+     <div class="group sys-root" data-func="{&#39;datePicker&#39;:{&#39;autoClose&#39;:true,&#39;language&#39;:&#39;zh-tw&#39;,&#39;navTitles&#39;:{&#39;days&#39;:&#39;&lt;i&amp;gt;民國 rrr 年&lt;/i&amp;gt; &amp;nbsp; MM&#39;,&#39;months&#39;:&#39;民國 rrr 年&#39;,&#39;years&#39;:&#39;民國 rrr1 至 rrr2 年&#39;}}}" data-nojs="您的瀏覽器似乎不支援 JavaScript 語法，網頁功能(上方區塊社群分享、主選單)無法正常使用時，請開啟瀏覽器JavaScript狀態。如需要選擇適合您的字級大小，可利用鍵盤 Ctrl ( )放大 (-)縮小。如需要回到上一頁，可使用瀏覽器提供的 Alt 左方向鍵(←)。如需要列印，可利用鍵盤 Ctrl p 使用瀏覽器提供的列印功能。" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="group base-mobile" data-func="{&#39;toggleBtn&#39;:{}}" data-index="1" data-type="3"><div class="in"><div class="hd"><div class="in"><div class="h2"  data-index="0"  >		<span  ><a    title="mobile botton"   >mobile botton</a></span></div></div></div><div class="ct"><div class="in"> <div class="area-form search" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="search"   >search</a></span></div></div></div><div class="ct"><div class="in"><div class="fieldset">
+  <span class="search"><input data-search="btn_91af83b4216b42089d0d2841dbca0cc6" type="search" placeholder="Search" title="搜尋"></span>
+  <span class="submit"><a href="#" class='CCMS_SearchBtn' role="button" data-search="btn_91af83b4216b42089d0d2841dbca0cc6" >搜尋</a></span>
+</div>
+<div class="list">
+  <ul data-index="1" data-child="0">
+  </ul>
+</div>
+<script >
+$(function () {
+    $('[data-search="91af83b4216b42089d0d2841dbca0cc6"]').on("keydown", function (event) {
+        if (event.which == 13) {
+             doSearch($('#btn_91af83b4216b42089d0d2841dbca0cc6'));
+            return false;
+        }
+    });
+});
+</script>
+</div></div><div class="ft"><div class="in"><ul data-index="1" data-child="1">
+  <li data-index="1" class="advanced"><span><a target="_blank" href="https://www.google.com.tw/advanced_search?hl=zh-Hant-tw&as_sitesearch=https://www.kcc.gov.tw" title="進階搜尋[另開新視窗]">進階搜尋</a></span></li>
+</ul>
+</div></div></div></div> <div class="list-text share" data-index="2" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a   href="#"   title="分享"   >分享</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  class="facebook"  >		<span  ><a   href="#"  onclick="window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) );" title="Share to Facebook[另開新視窗]"   >Facebook</a></span></li><li   data-index="2"  class="plurk"  >		<span  ><a   href="#"  onclick="window.open('http://www.plurk.com/?qualifier=shares&status='.concat(encodeURIComponent(location.href)));" title="Share toPlurk[另開新視窗]"   >Plurk</a></span></li><li   data-index="3"  class="twitter"  >		<span  ><a   href="#"  onclick="window.open('http://twitter.com/home/?status='.concat(encodeURIComponent(document.title)) .concat(' ') .concat(encodeURIComponent(location.href)));" title="Share to twitter[另開新視窗]"   >Twitter</a></span></li><li   data-index="4"  class="line"  >		<span  ><a   href="#"  onclick="window.open('http://line.naver.jp/R/msg/text/?'.concat(encodeURIComponent(location.href)) );" title="Share to line[另開新視窗]"   >line</a></span></li><li   data-index="5"  class="email"  >		<span  ><a   href="#"  onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&amp;body=' +  encodeURIComponent(document.URL));" title="Share to email[另開新視窗]"   >Email</a></span></li></ul>
+</div></div></div></div> <div class="group-list nav" data-func="{&#39;majorNavMobile&#39;:{}}" data-index="3" data-type="4" data-child="8"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"> <div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Chief.aspx?n=29&type=1"      title="本會介紹"   >本會介紹</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="Chief.aspx?n=29&type=1"      title="議長介紹"   >議長介紹</a></span></li><li   data-index="2"  >		<span  ><a   href="Chief.aspx?n=30&type=2"      title="副議長介紹"   >副議長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=33"      title="本會沿革"   >本會沿革</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=31"      title="組織與職權"   >組織與職權</a></span></li><li   data-index="5"  >		<span  ><a   href="News_Video.aspx?n=36&sms=8969"      title="多媒體簡介"   >多媒體簡介</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=38"      title="本會資訊"   >本會資訊</a></span></li><li   data-index="7"  >		<span  ><a   href="https://www.kcc.gov.tw/international-exchange/"      title="[另開新視窗]國際交流專區"   target="_blank"  >國際交流專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="2"> <div class="group nav" data-index="2" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"      title="本會議員"   >本會議員</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"      title="本屆議員"   >本屆議員</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_Contact.aspx?n=40&sms=0"      title="本屆議員聯絡資訊"   >本屆議員聯絡資訊</a></span></li><li   data-index="3"  >		<span  ><a   href="https://www.kcc.gov.tw/News_Content.aspx?n=81&s=17147"      title="本屆議員服務處地址及電話傳真"   >本屆議員服務處地址及電話傳真</a></span></li><li   data-index="4"  >		<span  ><a   href="Member_HistoryList.aspx?n=122&type=1"      title="歷屆議員"   >歷屆議員</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/CommitteeList/Default.aspx"      title="[另開新視窗]委員會一覽表"   target="_blank"  >委員會一覽表</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="3"> <div class="group nav" data-index="3" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=45"      title="新聞與活動"   >新聞與活動</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="News.aspx?n=46&sms=8971"      title="新聞快訊"   >新聞快訊</a></span></li><li   data-index="2"  >		<span  ><a   href="News_History.aspx?n=47&sms=8971"      title="歷史新聞"   >歷史新聞</a></span></li><li   data-index="3"  >		<span  ><a   href="News.aspx?n=48&sms=8972"      title="訊息公告"   >訊息公告</a></span></li><li   data-index="4"  >		<span  ><a   href="News2.aspx?n=51&sms=8974"      title="城市互訪"   >城市互訪</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/PublicHearing/Default.aspx"      title="[另開新視窗]公聽會"   target="_blank"  >公聽會</a></span></li><li   data-index="6"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"      title="[另開新視窗]活動影音"   target="_blank"  >活動影音</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="4"> <div class="group nav" data-index="4" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=20"      title="大會資訊"   >大會資訊</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Schedule/Default.aspx"      title="[另開新視窗]議事日程表"   target="_blank"  >議事日程表</a></span></li><li   data-index="2"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"      title="[另開新視窗]會議記錄"   target="_blank"  >會議記錄</a></span></li><li   data-index="3"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/ProjectReport/Default.aspx"      title="[另開新視窗]專案報告"   target="_blank"  >專案報告</a></span></li><li   data-index="4"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/BulletinDraft/Default.aspx"      title="[另開新視窗]各種會議譯文稿"   target="_blank"  >各種會議譯文稿</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Proposal/Default.aspx"      title="[另開新視窗]提案資料"   target="_blank"  >提案資料</a></span></li><li   data-index="6"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Question/Default.aspx"      title="[另開新視窗]質詢資料"   target="_blank"  >質詢資料</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="5"> <div class="group nav" data-index="5" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=61"      title="本會出版品"   >本會出版品</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="cl.aspx?n=61"      title="議事資訊彙編"   >議事資訊彙編</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=65&sms=8976"      title="議事錄"   >議事錄</a></span></li><li   data-index="3"  >		<span  ><a   href="News3.aspx?n=221&sms=9053"      title=" 出版刊物"   > 出版刊物</a></span></li><li   data-index="4"  >		<span  ><a   href="cl.aspx?n=66"      title="電子期刊"   >電子期刊</a></span></li><li   data-index="5"  >		<span  ><a   href="News2.aspx?n=69&sms=8979"      title="專刊"   >專刊</a></span></li><li   data-index="6"  >		<span  ><a   href="News.aspx?n=218&sms=9045"      title="其他報告"   >其他報告</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="6"> <div class="group nav" data-index="6" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Law.aspx?n=83"      title="法規專區"   >法規專區</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="Law.aspx?n=83"      title="議政法規"   >議政法規</a></span></li><li   data-index="2"  >		<span  ><a   href="https://outlaw.kcg.gov.tw/LawCategoryMain.aspx"      title="[另開新視窗]高雄市法令"   target="_blank"  >高雄市法令</a></span></li><li   data-index="3"  >		<span  ><a   href="News_Link.aspx?n=74&sms=8982"      title="法律網站"   >法律網站</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="7"> <div class="group nav" data-index="7" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"      title="便民服務"   >便民服務</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="10"><li   data-index="1"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"      title="議長信箱"   >議長信箱</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_Contact.aspx?n=76&sms=0"      title="議員聯絡資訊"   >議員聯絡資訊</a></span></li><li   data-index="3"  >		<span  ><a   href="cl.aspx?n=77"      title="遊說法專區"   >遊說法專區</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=211&sms=9044"      title="性平專區"   >性平專區</a></span></li><li   data-index="5"  >		<span  ><a   href="News.aspx?n=81&sms=8981"      title="申請資訊與表單"   >申請資訊與表單</a></span></li><li   data-index="6"  >		<span  ><a   href="News.aspx?n=163&sms=9041"      title="預決算資訊"   >預決算資訊</a></span></li><li   data-index="7"  >		<span  ><a   href="cl.aspx?n=187"      title="媒體政策及業務宣導經費執行情形"   >媒體政策及業務宣導經費執行情形</a></span></li><li   data-index="8"  >		<span  ><a   href="cl.aspx?n=168"      title="公職人員利益衝突迴避法專區"   >公職人員利益衝突迴避法專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cl.aspx?n=192"      title="檔案閱覽"   >檔案閱覽</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=205"      title="施政統計"   >施政統計</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="8"> <div class="group nav" data-index="8" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=24"      title="本會系統"   >本會系統</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/"      title="[另開新視窗]議事查詢系統"   target="_blank"  >議事查詢系統</a></span></li><li   data-index="2"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"      title="[另開新視窗]影音隨選視訊系統"   target="_blank"  >影音隨選視訊系統</a></span></li><li   data-index="3"  >		<span  ><a   href="https://cip.kcc.gov.tw/"      title="[另開新視窗]議員入口網"   target="_blank"  >議員入口網</a></span></li><li   data-index="4"  >		<span  ><a   href="https://mail1.kcc.gov.tw/"      title="[另開新視窗]WebMail"   target="_blank"  >WebMail</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li></ul></div></div></div></div> <div class="list-text hot-key-word" data-index="4" data-type="0"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="熱門關鍵字"   >熱門關鍵字</a></span></div></div></div><div class="ct"><div class="in"></div></div></div></div> <div class="list-text link" data-index="5" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="上方連結"   >上方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  >		<span  ><a   href="Default.aspx"   title="回首頁"   target="_self"  >回首頁</a></span></li><li   data-index="2"  >		<span  ><a   href="SiteMap.aspx?n=150"   title="網站導覽"   target="_self"  >網站導覽</a></span></li><li   data-index="3"  >		<span  ><a   href="/en/"   title="[另開新視窗]ENGLISH[另開新視窗]"   target="_blank"  >ENGLISH</a></span></li><li   data-index="4"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"   title="[另開新視窗]影音隨選視訊系統[另開新視窗]"   target="_blank"  >影音隨選視訊系統</a></span></li><li   data-index="5"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"   title="議長信箱"   target="_self"  >議長信箱</a></span></li></ul>
+</div></div></div></div> <div class="list-text link" data-index="6" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="下方連結"   >下方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=102"   title="隱私權宣告"   target="_self"  >隱私權宣告</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=103"   title="資訊安全政策宣告"   target="_self"  >資訊安全政策宣告</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=104"   title="著作權聲明"   target="_self"  >著作權聲明</a></span></li><li   data-index="4"  >		<span  ><a   href="Rss.aspx?n=136&sms=0"   title="RSS訂閱專區"   target="_self"  >RSS訂閱專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div> <div class="group base-extend" data-index="2" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div class="group default info" data-index="1" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_U" id="Accesskey_U" accesskey="U" title="上方選單連結區，此區塊列有本網站的主要連結">:::</a></span></div></div></div></div> <div class="list-text link" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="上方連結"   >上方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  >		<span  ><a   href="Default.aspx"   title="回首頁"   target="_self"  >回首頁</a></span></li><li   data-index="2"  >		<span  ><a   href="SiteMap.aspx?n=150"   title="網站導覽"   target="_self"  >網站導覽</a></span></li><li   data-index="3"  >		<span  ><a   href="/en/"   title="[另開新視窗]ENGLISH[另開新視窗]"   target="_blank"  >ENGLISH</a></span></li><li   data-index="4"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"   title="[另開新視窗]影音隨選視訊系統[另開新視窗]"   target="_blank"  >影音隨選視訊系統</a></span></li><li   data-index="5"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"   title="議長信箱"   target="_self"  >議長信箱</a></span></li></ul>
+</div></div></div></div></div></div></div></div> <div class="simple-text major-logo" data-index="2" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="Default.aspx" title="回首頁">高雄市議會全球網-中文網</a></span></div></div></div></div> <div class="group default msg-tool" data-index="2" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="list-text hot-key-word" data-index="1" data-type="0"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="熱門關鍵字"   >熱門關鍵字</a></span></div></div></div><div class="ct"><div class="in"></div></div></div></div> <div class="area-form search" data-func="{&#39;showDataList&#39;:{}}" data-index="2" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="search"   >search</a></span></div></div></div><div class="ct"><div class="in"><div class="fieldset">
+  <span class="search"><input data-search="btn_196948be8ffb4184ae59594a9b4144fd" type="search" placeholder="Search" title="搜尋"></span>
+  <span class="submit"><a href="#" class='CCMS_SearchBtn' role="button" data-search="btn_196948be8ffb4184ae59594a9b4144fd" >搜尋</a></span>
+</div>
+<div class="list">
+  <ul data-index="1" data-child="0">
+  </ul>
+</div>
+<script >
+$(function () {
+    $('[data-search="196948be8ffb4184ae59594a9b4144fd"]').on("keydown", function (event) {
+        if (event.which == 13) {
+             doSearch($('#btn_196948be8ffb4184ae59594a9b4144fd'));
+            return false;
+        }
+    });
+});
+</script>
+</div></div><div class="ft"><div class="in"><ul data-index="1" data-child="1">
+  <li data-index="1" class="advanced"><span><a target="_blank" href="https://www.google.com.tw/advanced_search?hl=zh-Hant-tw&as_sitesearch=https://www.kcc.gov.tw" title="進階搜尋[另開新視窗]">進階搜尋</a></span></li>
+</ul>
+</div></div></div></div> <div class="list-text font-size" data-func="{&#39;fontSize&#39;:{},&#39;toggleBtn&#39;:{&#39;clickToRemove&#39;:true}}" data-index="3" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a   href="#"   title="字級"   >字級</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  class="small"  >		<span  ><a   href="#"   title="小"   >小</a></span></li><li   data-index="2"  class="medium"  >		<span  ><a   href="#"   title="中"   >中</a></span></li><li   data-index="3"  class="large"  >		<span  ><a   href="#"   title="大"   >大</a></span></li></ul>
+</div></div></div></div> <div class="list-text share" data-func="{&#39;toggleBtn&#39;:{&#39;clickToRemove&#39;:true}}" data-index="4" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a   href="#"   title="分享"   >分享</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  class="facebook"  >		<span  ><a   href="#"  onclick="window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) );" title="Share to Facebook[另開新視窗]"   >Facebook</a></span></li><li   data-index="2"  class="plurk"  >		<span  ><a   href="#"  onclick="window.open('http://www.plurk.com/?qualifier=shares&status='.concat(encodeURIComponent(location.href)));" title="Share toPlurk[另開新視窗]"   >Plurk</a></span></li><li   data-index="3"  class="twitter"  >		<span  ><a   href="#"  onclick="window.open('http://twitter.com/home/?status='.concat(encodeURIComponent(document.title)) .concat(' ') .concat(encodeURIComponent(location.href)));" title="Share to twitter[另開新視窗]"   >Twitter</a></span></li><li   data-index="4"  class="line"  >		<span  ><a   href="#"  onclick="window.open('http://line.naver.jp/R/msg/text/?'.concat(encodeURIComponent(location.href)) );" title="Share to line[另開新視窗]"   >line</a></span></li><li   data-index="5"  class="email"  >		<span  ><a   href="#"  onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&amp;body=' +  encodeURIComponent(document.URL));" title="Share to email[另開新視窗]"   >Email</a></span></li></ul>
+</div></div></div></div></div></div></div></div></div></div></div></div> <div class="group base-wrapper" data-index="3" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="group base-header" data-index="1" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="group-list nav" data-func="{&#39;hud&#39;:{},&#39;majorNavHorizontal&#39;:{},&#39;majorNavStraight&#39;:{},&#39;setNavWidth&#39;:{}}" data-index="1" data-type="4" data-child="8"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"> <div id="Group_21_NJEPtjAKpK" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="21" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="1" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Chief.aspx?n=29&type=1"      title="本會介紹"   >本會介紹</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_22_mSRUMGjgje" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="22" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="Chief.aspx?n=29&type=1"      title="議長介紹"   >議長介紹</a></span></li><li   data-index="2"  >		<span  ><a   href="Chief.aspx?n=30&type=2"      title="副議長介紹"   >副議長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=33"      title="本會沿革"   >本會沿革</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=31"      title="組織與職權"   >組織與職權</a></span></li><li   data-index="5"  >		<span  ><a   href="News_Video.aspx?n=36&sms=8969"      title="多媒體簡介"   >多媒體簡介</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=38"      title="本會資訊"   >本會資訊</a></span></li><li   data-index="7"  >		<span  ><a   href="https://www.kcc.gov.tw/international-exchange/"      title="[另開新視窗]國際交流專區"   target="_blank"  >國際交流專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="2"> <div id="Group_23_VQuvopsovc" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="23" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="2" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"      title="本會議員"   >本會議員</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_24_VDdpqvJuNU" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="24" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"      title="本屆議員"   >本屆議員</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_Contact.aspx?n=40&sms=0"      title="本屆議員聯絡資訊"   >本屆議員聯絡資訊</a></span></li><li   data-index="3"  >		<span  ><a   href="https://www.kcc.gov.tw/News_Content.aspx?n=81&s=17147"      title="本屆議員服務處地址及電話傳真"   >本屆議員服務處地址及電話傳真</a></span></li><li   data-index="4"  >		<span  ><a   href="Member_HistoryList.aspx?n=122&type=1"      title="歷屆議員"   >歷屆議員</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/CommitteeList/Default.aspx"      title="[另開新視窗]委員會一覽表"   target="_blank"  >委員會一覽表</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="3"> <div id="Group_25_xvXdveoWQV" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="25" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="3" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=45"      title="新聞與活動"   >新聞與活動</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_26_EPuqSiCKbd" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="26" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="News.aspx?n=46&sms=8971"      title="新聞快訊"   >新聞快訊</a></span></li><li   data-index="2"  >		<span  ><a   href="News_History.aspx?n=47&sms=8971"      title="歷史新聞"   >歷史新聞</a></span></li><li   data-index="3"  >		<span  ><a   href="News.aspx?n=48&sms=8972"      title="訊息公告"   >訊息公告</a></span></li><li   data-index="4"  >		<span  ><a   href="News2.aspx?n=51&sms=8974"      title="城市互訪"   >城市互訪</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/PublicHearing/Default.aspx"      title="[另開新視窗]公聽會"   target="_blank"  >公聽會</a></span></li><li   data-index="6"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"      title="[另開新視窗]活動影音"   target="_blank"  >活動影音</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="4"> <div id="Group_27_DWGmiboGIy" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="27" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="4" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=20"      title="大會資訊"   >大會資訊</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_28_nCGmaoYKxB" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="28" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Schedule/Default.aspx"      title="[另開新視窗]議事日程表"   target="_blank"  >議事日程表</a></span></li><li   data-index="2"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"      title="[另開新視窗]會議記錄"   target="_blank"  >會議記錄</a></span></li><li   data-index="3"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/ProjectReport/Default.aspx"      title="[另開新視窗]專案報告"   target="_blank"  >專案報告</a></span></li><li   data-index="4"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/BulletinDraft/Default.aspx"      title="[另開新視窗]各種會議譯文稿"   target="_blank"  >各種會議譯文稿</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Proposal/Default.aspx"      title="[另開新視窗]提案資料"   target="_blank"  >提案資料</a></span></li><li   data-index="6"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Question/Default.aspx"      title="[另開新視窗]質詢資料"   target="_blank"  >質詢資料</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="5"> <div id="Group_29_MSGrKmYyYU" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="29" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="5" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=61"      title="本會出版品"   >本會出版品</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_30_nxLaPWBChN" data-SitesModuleSN="75" data-Margin_right="0" data-sort="2" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="30" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="cl.aspx?n=61"      title="議事資訊彙編"   >議事資訊彙編</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=65&sms=8976"      title="議事錄"   >議事錄</a></span></li><li   data-index="3"  >		<span  ><a   href="News3.aspx?n=221&sms=9053"      title=" 出版刊物"   > 出版刊物</a></span></li><li   data-index="4"  >		<span  ><a   href="cl.aspx?n=66"      title="電子期刊"   >電子期刊</a></span></li><li   data-index="5"  >		<span  ><a   href="News2.aspx?n=69&sms=8979"      title="專刊"   >專刊</a></span></li><li   data-index="6"  >		<span  ><a   href="News.aspx?n=218&sms=9045"      title="其他報告"   >其他報告</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="6"> <div id="Group_31_UpdPmBGTWB" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="31" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="6" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Law.aspx?n=83"      title="法規專區"   >法規專區</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_32_mHMpCXeVfM" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="32" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="Law.aspx?n=83"      title="議政法規"   >議政法規</a></span></li><li   data-index="2"  >		<span  ><a   href="https://outlaw.kcg.gov.tw/LawCategoryMain.aspx"      title="[另開新視窗]高雄市法令"   target="_blank"  >高雄市法令</a></span></li><li   data-index="3"  >		<span  ><a   href="News_Link.aspx?n=74&sms=8982"      title="法律網站"   >法律網站</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="7"> <div id="Group_33_hLcWvptSom" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="33" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="7" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"      title="便民服務"   >便民服務</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_34_FEIPVfEjRJ" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="34" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="10"><li   data-index="1"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"      title="議長信箱"   >議長信箱</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_Contact.aspx?n=76&sms=0"      title="議員聯絡資訊"   >議員聯絡資訊</a></span></li><li   data-index="3"  >		<span  ><a   href="cl.aspx?n=77"      title="遊說法專區"   >遊說法專區</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=211&sms=9044"      title="性平專區"   >性平專區</a></span></li><li   data-index="5"  >		<span  ><a   href="News.aspx?n=81&sms=8981"      title="申請資訊與表單"   >申請資訊與表單</a></span></li><li   data-index="6"  >		<span  ><a   href="News.aspx?n=163&sms=9041"      title="預決算資訊"   >預決算資訊</a></span></li><li   data-index="7"  >		<span  ><a   href="cl.aspx?n=187"      title="媒體政策及業務宣導經費執行情形"   >媒體政策及業務宣導經費執行情形</a></span></li><li   data-index="8"  >		<span  ><a   href="cl.aspx?n=168"      title="公職人員利益衝突迴避法專區"   >公職人員利益衝突迴避法專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cl.aspx?n=192"      title="檔案閱覽"   >檔案閱覽</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=205"      title="施政統計"   >施政統計</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="8"> <div id="Group_35_MNIkdesuft" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="35" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group nav" data-index="8" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=24"      title="本會系統"   >本會系統</a></span></div></div></div><div class="ct"><div class="in"> <div id="Group_36_CNAqpBQYYA" data-SitesModuleSN="75" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="36" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text nav" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/"      title="[另開新視窗]議事查詢系統"   target="_blank"  >議事查詢系統</a></span></li><li   data-index="2"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"      title="[另開新視窗]影音隨選視訊系統"   target="_blank"  >影音隨選視訊系統</a></span></li><li   data-index="3"  >		<span  ><a   href="https://cip.kcc.gov.tw/"      title="[另開新視窗]議員入口網"   target="_blank"  >議員入口網</a></span></li><li   data-index="4"  >		<span  ><a   href="https://mail1.kcc.gov.tw/"      title="[另開新視窗]WebMail"   target="_blank"  >WebMail</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li></ul></div></div></div></div></div></div></div></div> <div id="base-content" class="group base-content" data-index="2" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div id="Group_6_ETjRIeesTa" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="6" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group base-module-area" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"> <div id="Group_3740_XwqKWbnrEH" data-SitesModuleSN="6" data-Margin_right="0" data-sort="2" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="3740" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="area-editor default" data-index="1" data-Margin_DefaultSetting="true" data-type="0" data-bgClass="" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="ct"><div class="in"><style type="text/css">.banner{
+    background-image: url(https://ws.kcc.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvMS9ja2ZpbGUvMTRjYjRlOTAtMGNhOS00NzFjLTlkODEtMmIyNWNiMThjZTczLmpwZw%3d%3d&n=cGFnZS1iYW5uZXIuanBn);
+    height: 319px;
+    background-position:top center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px){
+.banner {
+     background-size: cover;
+    height: 110px;
+}
+}
+</style>
+<div class="banner">&nbsp;</div>
+</div></div></div><style>
+[id*='Group_3740_XwqKWbnrEH'] > .in { margin-top:0px !important; margin-bottom:0px !important; margin-left:0px !important; margin-right:0px !important;}[id*='Group_3740_XwqKWbnrEH'] > .bg-drop-layout > .in { margin-top:0px !important; margin-bottom:0px !important; margin-left:0px !important; margin-right:0px !important;}</style>
+</div></div></div></div></div> <div class="group base-page-area" data-index="1" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div id="Group_5_qeciCfYpPH" data-Margin_right="" data-sort="" data-bgColor="" data-AddParentGroup="" data-GroupSN="5" data-WidthDeskTop="" data-anchor="" data-tabType="3" class="group base-aside" data-index="1" data-Margin_DefaultSetting="false" data-type="3" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-Margin_bottom="" data-child="2" data-Margin_Top=""><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_L" id="Accesskey_L" accesskey="L" title="左方次要連結區，此區塊列有本網站的次要連結">:::</a></span></div></div></div></div> <div id="Group_4269_amQMEGEcCq" data-SitesModuleSN="8" data-Margin_right="" data-sort="2" data-bgColor="" data-AddParentGroup="" data-GroupSN="4269" data-WidthDeskTop="" data-anchor="" data-tabType="0" class="list-text minor-nav is-pad-hide is-phone-hide" data-index="1" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="" data-groupname="" data-WidthPad="" data-Margin_left="" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="" data-child="1" data-Margin_Top=""><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a    title="歷屆議員"   >歷屆議員</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="1"><li   data-index="1"  >		<span  ><a   href="Member_HistoryList.aspx?n=122&type=1"      title="歷屆議員簡介"   >歷屆議員簡介</a></span></li></ul>
+</div></div></div></div> <div id="Group_20405_sQNdMYdbYm" data-SitesModuleSN="6" data-Margin_right="0" data-sort="4" data-bgColor="#0000ffff" data-AddParentGroup="False" data-GroupSN="20405" data-WidthDeskTop="0" data-anchor="" data-tabType="0" class="area-editor default" data-index="2" data-Margin_DefaultSetting="false" data-type="0" data-bgClass="" data-WidthMobile="0" data-groupname="" data-WidthPad="0" data-Margin_left="0" data-MenuWidth="" data-isgroup="true" data-setLen="0" data-Margin_bottom="0" data-child="1" data-Margin_Top="0"><div class="in"><div class="ct"><div class="in"></div></div></div></div></div></div></div></div> <div class="group base-section" data-index="2" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_C" id="Accesskey_C" accesskey="C" title="中間主要內容區，此區塊呈現網頁的網頁內容">:::</a></span></div></div></div></div> <div class="group page-header" data-index="1" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div class="list-text breadcrumb" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="Default.aspx"   title="首頁"   target="_self"  >首頁</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"   title="本會議員"   target="_self"  >本會議員</a></span></li><li   data-index="3"  >		<span  ><a   href="Member_HistoryList.aspx?n=122&type=1"   title="歷屆議員"   target="_self"  >歷屆議員</a></span></li><li   data-index="4"  >		<span  ><a   href="Member_HistoryList.aspx?n=122&type=1"   title="歷屆議員簡介"   target="_self"  >歷屆議員簡介</a></span></li></ul>
+</div></div></div></div> <div class="group default info" data-index="2" data-type="3" data-child="2"><div class="in"><div class="ct"><div class="in"> <div class="simple-text heading" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><h2><span>歷屆議員簡介</span></h2></div></div></div></div> <div class="group default msg-tool" data-index="2" data-type="3" data-child="1"><div class="in"><div class="ct"><div class="in"> <div class="simple-text accesskey" data-func="{&#39;focusContent&#39;:{}}" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#CCMS_Content" title="跳過此子選單列請按[Enter]，繼續則按[Tab]">_</a></span></div></div></div></div> <div class="list-text user-tool" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a   href="javascript :return false;"   title="網頁功能"   target="_self"  >網頁功能</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="1"><li   data-index="1"  class="print"  >		<span  ><a   href="javascript:CCMS_Print(1);"   title="列印內容"   target="_self"  >列印內容</a></span></li></ul>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <div class="group page-content " id="CCMS_Content" data-func="{&#39;linkType&#39;:{&#39;domains&#39;:[&#39;https://ws.kcc.gov.tw&#39;,&#39;https://ws.kcc.gov.tw&#39;]}}" data-index="2" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in">
+        
+        
+    <link href="css/cp.css" rel="stylesheet" type="text/css" />
+    <div class="period-member">
+
+        <div class="period-list">
+            <ul>
+                <li><a href="Member_HistoryList.aspx?n=122&type=1" title="歷屆議員查詢">歷屆議員查詢</a></li><li><a href="Member_HistoryList.aspx?n=122" title="議會史略">議會史略</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=38" title="高雄市議會第三屆"><span>107-111</span> 高雄市議會第三屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=37" title="高雄市議會第二屆"><span>103-107</span> 高雄市議會第二屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=36" title="高雄市議會第一屆"><span>99-103</span> 高雄市議會第一屆</a></li><li class="is-active"><a href="Member_HistoryList.aspx?n=122&sms=0&s=35" title="合併前高雄市議會第七屆"><span>95-99</span> 合併前高雄市議會第七屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=34" title="合併前高雄市議會第六屆"><span>91-95</span> 合併前高雄市議會第六屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=33" title="合併前高雄市議會第五屆"><span>87-91</span> 合併前高雄市議會第五屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=32" title="合併前高雄市議會第四屆"><span>83-87</span> 合併前高雄市議會第四屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=31" title="合併前高雄市議會第三屆"><span>78-83</span> 合併前高雄市議會第三屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=30" title="合併前高雄市議會第二屆"><span>74-78</span> 合併前高雄市議會第二屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=29" title="合併前高雄市議會第一屆"><span>70-74</span> 合併前高雄市議會第一屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=28" title="改制直轄市臨時市議會臨時市議會"><span>68-70</span> 改制直轄市臨時市議會</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=27" title="省轄市高雄市議會第九屆"><span>66-68</span> 省轄市高雄市議會第九屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=26" title="省轄市高雄市議會第八屆"><span>62-66</span> 省轄市高雄市議會第八屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=25" title="省轄市高雄市議會第七屆"><span>57-62</span> 省轄市高雄市議會第七屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=24" title="省轄市高雄市議會第六屆"><span>53-57</span> 省轄市高雄市議會第六屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=23" title="省轄市高雄市議會第五屆"><span>50-53</span> 省轄市高雄市議會第五屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=22" title="省轄市高雄市議會第四屆"><span>47-50</span> 省轄市高雄市議會第四屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=21" title="省轄市高雄市議會第三屆"><span>44-47</span> 省轄市高雄市議會第三屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=20" title="省轄市高雄市議會第二屆"><span>42-44</span> 省轄市高雄市議會第二屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=19" title="省轄市高雄市議會第一屆"><span>40-42</span> 省轄市高雄市議會第一屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=18" title="高雄市參議會參議會"><span>35-40</span> 高雄市參議會</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=17" title="高雄縣議會第十六屆"><span>95-99</span> 高雄縣議會第十六屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=16" title="高雄縣議會第十五屆"><span>91-95</span> 高雄縣議會第十五屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=15" title="高雄縣議會第十四屆"><span>87-91</span> 高雄縣議會第十四屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=14" title="高雄縣議會第十三屆"><span>83-87</span> 高雄縣議會第十三屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=13" title="高雄縣議會第十二屆"><span>79-83</span> 高雄縣議會第十二屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=12" title="高雄縣議會第十一屆"><span>75-79</span> 高雄縣議會第十一屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=11" title="高雄縣議會第十屆"><span>71-75</span> 高雄縣議會第十屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=10" title="高雄縣議會第九屆"><span>66-71</span> 高雄縣議會第九屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=9" title="高雄縣議會第八屆"><span>62-66</span> 高雄縣議會第八屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=8" title="高雄縣議會第七屆"><span>57-62</span> 高雄縣議會第七屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=7" title="高雄縣議會第六屆"><span>53-57</span> 高雄縣議會第六屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=6" title="高雄縣議會第五屆"><span>50-53</span> 高雄縣議會第五屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=5" title="高雄縣議會第四屆"><span>47-50</span> 高雄縣議會第四屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=4" title="高雄縣議會第三屆"><span>44-47</span> 高雄縣議會第三屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=3" title="高雄縣議會第二屆"><span>42-44</span> 高雄縣議會第二屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=2" title="高雄縣議會第一屆"><span>40-42</span> 高雄縣議會第一屆</a></li><li><a href="Member_HistoryList.aspx?n=122&sms=0&s=1" title="高雄縣參議會參議會"><span>35-40</span> 高雄縣參議會</a></li>
+            </ul>
+        </div>
+        
+
+        
+
+        <div id="ContentPlaceHolder1_main" class="period-main">
+            <h3 class="period-title">
+                合併前高雄市議會第七屆
+            </h3>
+            <span class="data">
+                民國 95 年 12 月 25 日至民國 99 年 12 月 24 日
+            </span>
+            <div class="period-content">
+                <div id="ContentPlaceHolder1_Caption" class="period-block">
+                    <h4 class="period-subtitle">說明</h4>
+
+                    <div class="p">
+                        <p>
+                            一、	依據「地方制度法」第三十三條規定各選區應選議員名額達４名者，應有婦女當選名額１名。<br>二、	本屆女性議員１４名。<br>三、	本屆議員３人因故解職、離職。
+                    </div>
+                </div>
+
+                
+
+                <div class="period-block">
+                    <h4 class="period-subtitle">議員人數
+                        <span>
+                            44
+                        </span>
+                        人
+                    </h4>
+
+                    <div id="memberinfo" class="p">
+                        <p>
+                            議 長：
+                            <a href="#h1621" title="莊啟旺">莊啟旺</a>
+                        </p>
+
+                        <p>
+                            副議長：
+                            <a href="#h1622" title="黃石龍">黃石龍</a>
+                        </p>
+                        <p>
+                            秘書長：<a href="#h1968" title="徐隆盛">徐隆盛</a>
+                        </p>
+                        <p>
+                            議員：<br/>
+                            <a href="#h1653" title="王齡嬌">王齡嬌</a>、<a href="#h1663" title="朱挺玗">朱挺玗</a>、<a href="#h1652" title="吳益政">吳益政</a>、<a href="#h1659" title="吳銘賜">吳銘賜</a>、<a href="#h1650" title="李文良">李文良</a>、<a href="#h1624" title="李喬如">李喬如</a>、<a href="#h1658" title="李順進">李順進</a>、<a href="#h1647" title="周玲妏">周玲妏</a>、<a href="#h1632" title="周鍾㴴">周鍾㴴</a>、<a href="#h1655" title="林宛蓉">林宛蓉</a>、<a href="#h1640" title="林武忠">林武忠</a>、<a href="#h1654" title="林國正">林國正</a>、<a href="#h1664" title="林國權">林國權</a>、<a href="#h1628" title="林瑩蓉">林瑩蓉</a>、<a href="#h1644" title="洪平朗">洪平朗</a>、<a href="#h1638" title="康裕成">康裕成</a>、<a href="#h1626" title="張省吾">張省吾</a>、<a href="#h1639" title="梅再興">梅再興</a>、<a href="#h1649" title="許崑源">許崑源</a>、<a href="#h1627" title="連立堅">連立堅</a>、<a href="#h1630" title="陳玫娟">陳玫娟</a>、<a href="#h1657" title="陳信瑜">陳信瑜</a>、<a href="#h1623" title="陳美雅">陳美雅</a>、<a href="#h1625" title="陳漢昇">陳漢昇</a>、<a href="#h1633" title="陳麗珍">陳麗珍</a>、<a href="#h1656" title="陳麗娜">陳麗娜</a>、<a href="#h1645" title="曾俊傑">曾俊傑</a>、<a href="#h1661" title="曾麗燕">曾麗燕</a>、<a href="#h1646" title="童燕珍">童燕珍</a>、<a href="#h1635" title="黃昭星">黃昭星</a>、<a href="#h1637" title="黃柏霖">黃柏霖</a>、<a href="#h1643" title="黃添財">黃添財</a>、<a href="#h1642" title="黃淑美">黃淑美</a>、<a href="#h1648" title="黃紹庭">黃紹庭</a>、<a href="#h1636" title="楊色玉">楊色玉</a>、<a href="#h1666" title="趙天麟">趙天麟</a>、<a href="#h1665" title="蔡武宏">蔡武宏</a>、<a href="#h1662" title="蔡媽福">蔡媽福</a>、<a href="#h1660" title="鄭光峰">鄭光峰</a>、<a href="#h1641" title="鄭新助">鄭新助</a>、<a href="#h1651" title="蕭永達">蕭永達</a>、<a href="#h1629" title="戴德銘">戴德銘</a>、<a href="#h1631" title="藍星木">藍星木</a>、<a href="#h1634" title="藍健菖">藍健菖</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="ContentPlaceHolder1_main3" class="period-main" style="display: none">
+                            <div class="period-Intro" id="h1621">
+            <img alt="莊啟旺" src="https://ws.kcc.gov.tw/001/Upload/member/1621/444197dd-bb71-4fc6-b81b-e3331575d06a.jpg">
+            <div class="text">
+            <h3>莊啟旺</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1622">
+            <img alt="黃石龍" src="https://ws.kcc.gov.tw/001/Upload/member/1622/0607002.jpg">
+            <div class="text">
+            <h3>黃石龍</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1968">
+            <img alt="徐隆盛" src="https://ws.kcc.gov.tw/001/Upload/member/1968/0adc2f47-efd9-422d-8784-20616c71a409.jpg">
+            <div class="text">
+            <h3>徐隆盛</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1653">
+            <img alt="王齡嬌" src="https://ws.kcc.gov.tw/001/Upload/member/1653/0607034.jpg">
+            <div class="text">
+            <h3>王齡嬌</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1663">
+            <img alt="朱挺玗" src="https://ws.kcc.gov.tw/001/Upload/member/1663/0607044.jpg">
+            <div class="text">
+            <h3>朱挺玗</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99<br>(辭職)</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1652">
+            <img alt="吳益政" src="https://ws.kcc.gov.tw/001/Upload/member/1652/0607033.jpg">
+            <div class="text">
+            <h3>吳益政</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1659">
+            <img alt="吳銘賜" src="https://ws.kcc.gov.tw/001/Upload/member/1659/0607040.jpg">
+            <div class="text">
+            <h3>吳銘賜</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1650">
+            <img alt="李文良" src="https://ws.kcc.gov.tw/001/Upload/member/1650/0607031.jpg">
+            <div class="text">
+            <h3>李文良</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1624">
+            <img alt="李喬如" src="https://ws.kcc.gov.tw/001/Upload/member/1624/0607005.jpg">
+            <div class="text">
+            <h3>李喬如</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1658">
+            <img alt="李順進" src="https://ws.kcc.gov.tw/001/Upload/member/1658/0607039.jpg">
+            <div class="text">
+            <h3>李順進</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1647">
+            <img alt="周玲妏" src="https://ws.kcc.gov.tw/001/Upload/member/1647/0607028.jpg">
+            <div class="text">
+            <h3>周玲妏</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1632">
+            <img alt="周鍾㴴" src="https://ws.kcc.gov.tw/001/Upload/member/1632/0607013.jpg">
+            <div class="text">
+            <h3>周鍾㴴</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第二屆74~78</span></li>
+                        <li><span>第三屆78~83</span></li>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1655">
+            <img alt="林宛蓉" src="https://ws.kcc.gov.tw/001/Upload/member/1655/0607036.jpg">
+            <div class="text">
+            <h3>林宛蓉</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1640">
+            <img alt="林武忠" src="https://ws.kcc.gov.tw/001/Upload/member/1640/0607021.jpg">
+            <div class="text">
+            <h3>林武忠</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1654">
+            <img alt="林國正" src="https://ws.kcc.gov.tw/001/Upload/member/1654/0607035.jpg">
+            <div class="text">
+            <h3>林國正</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1664">
+            <img alt="林國權" src="https://ws.kcc.gov.tw/001/Upload/member/1664/0607045.jpg">
+            <div class="text">
+            <h3>林國權</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1628">
+            <img alt="林瑩蓉" src="https://ws.kcc.gov.tw/001/Upload/member/1628/0607009.jpg">
+            <div class="text">
+            <h3>林瑩蓉</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1644">
+            <img alt="洪平朗" src="https://ws.kcc.gov.tw/001/Upload/member/1644/0607025.jpg">
+            <div class="text">
+            <h3>洪平朗</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1638">
+            <img alt="康裕成" src="https://ws.kcc.gov.tw/001/Upload/member/1638/0607019.jpg">
+            <div class="text">
+            <h3>康裕成</h3>
+                <ul>
+                    <li style="max-width:220px"><span>高雄縣議會</span>
+                        <ol>
+                        <li><span>第十四屆87~91</span></li>
+                        </ol>
+                    </li>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1626">
+            <img alt="張省吾" src="https://ws.kcc.gov.tw/001/Upload/member/1626/0607007.jpg">
+            <div class="text">
+            <h3>張省吾</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1639">
+            <img alt="梅再興" src="https://ws.kcc.gov.tw/001/Upload/member/1639/0607020.jpg">
+            <div class="text">
+            <h3>梅再興</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1649">
+            <img alt="許崑源" src="https://ws.kcc.gov.tw/001/Upload/member/1649/0607030.jpg">
+            <div class="text">
+            <h3>許崑源</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1627">
+            <img alt="連立堅" src="https://ws.kcc.gov.tw/001/Upload/member/1627/2eee69ce-a30d-4c11-b70b-85f4e4d0d859.jpg">
+            <div class="text">
+            <h3>連立堅</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1630">
+            <img alt="陳玫娟" src="https://ws.kcc.gov.tw/001/Upload/member/1630/0607011.jpg">
+            <div class="text">
+            <h3>陳玫娟</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1657">
+            <img alt="陳信瑜" src="https://ws.kcc.gov.tw/001/Upload/member/1657/0607038.jpg">
+            <div class="text">
+            <h3>陳信瑜</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1623">
+            <img alt="陳美雅" src="https://ws.kcc.gov.tw/001/Upload/member/1623/0607004.jpg">
+            <div class="text">
+            <h3>陳美雅</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1625">
+            <img alt="陳漢昇" src="https://ws.kcc.gov.tw/001/Upload/member/1625/0607006.jpg">
+            <div class="text">
+            <h3>陳漢昇</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第三屆78~83</span></li>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1633">
+            <img alt="陳麗珍" src="https://ws.kcc.gov.tw/001/Upload/member/1633/0607014.jpg">
+            <div class="text">
+            <h3>陳麗珍</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1656">
+            <img alt="陳麗娜" src="https://ws.kcc.gov.tw/001/Upload/member/1656/0607037.jpg">
+            <div class="text">
+            <h3>陳麗娜</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1645">
+            <img alt="曾俊傑" src="https://ws.kcc.gov.tw/001/Upload/member/1645/0607026.jpg">
+            <div class="text">
+            <h3>曾俊傑</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1661">
+            <img alt="曾麗燕" src="https://ws.kcc.gov.tw/001/Upload/member/1661/0607042.jpg">
+            <div class="text">
+            <h3>曾麗燕</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1646">
+            <img alt="童燕珍" src="https://ws.kcc.gov.tw/001/Upload/member/1646/0607027.jpg">
+            <div class="text">
+            <h3>童燕珍</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1635">
+            <img alt="黃昭星" src="https://ws.kcc.gov.tw/001/Upload/member/1635/0607016.jpg">
+            <div class="text">
+            <h3>黃昭星</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第三屆78~83</span></li>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1637">
+            <img alt="黃柏霖" src="https://ws.kcc.gov.tw/001/Upload/member/1637/0607018.jpg">
+            <div class="text">
+            <h3>黃柏霖</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1643">
+            <img alt="黃添財" src="https://ws.kcc.gov.tw/001/Upload/member/1643/0607024.jpg">
+            <div class="text">
+            <h3>黃添財</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1642">
+            <img alt="黃淑美" src="https://ws.kcc.gov.tw/001/Upload/member/1642/0607023.jpg">
+            <div class="text">
+            <h3>黃淑美</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1648">
+            <img alt="黃紹庭" src="https://ws.kcc.gov.tw/001/Upload/member/1648/0607029.jpg">
+            <div class="text">
+            <h3>黃紹庭</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99<br>(解職)</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1636">
+            <img alt="楊色玉" src="https://ws.kcc.gov.tw/001/Upload/member/1636/0607017.jpg">
+            <div class="text">
+            <h3>楊色玉</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99<br>(辭職)</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1666">
+            <img alt="趙天麟" src="https://ws.kcc.gov.tw/001/Upload/member/1666/0607047.jpg">
+            <div class="text">
+            <h3>趙天麟</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99<br>(遞補)</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1665">
+            <img alt="蔡武宏" src="https://ws.kcc.gov.tw/001/Upload/member/1665/0607046.jpg">
+            <div class="text">
+            <h3>蔡武宏</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99<br>(遞補)</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1662">
+            <img alt="蔡媽福" src="https://ws.kcc.gov.tw/001/Upload/member/1662/0607043.jpg">
+            <div class="text">
+            <h3>蔡媽福</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第三屆78~83</span></li>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1660">
+            <img alt="鄭光峰" src="https://ws.kcc.gov.tw/001/Upload/member/1660/0607041.jpg">
+            <div class="text">
+            <h3>鄭光峰</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1641">
+            <img alt="鄭新助" src="https://ws.kcc.gov.tw/001/Upload/member/1641/0607022.jpg">
+            <div class="text">
+            <h3>鄭新助</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1651">
+            <img alt="蕭永達" src="https://ws.kcc.gov.tw/001/Upload/member/1651/0607032.jpg">
+            <div class="text">
+            <h3>蕭永達</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1629">
+            <img alt="戴德銘" src="https://ws.kcc.gov.tw/001/Upload/member/1629/0607010.jpg">
+            <div class="text">
+            <h3>戴德銘</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1631">
+            <img alt="藍星木" src="https://ws.kcc.gov.tw/001/Upload/member/1631/0607012.jpg">
+            <div class="text">
+            <h3>藍星木</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第四屆83~87</span></li>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+        <div class="period-Intro" id="h1634">
+            <img alt="藍健菖" src="https://ws.kcc.gov.tw/001/Upload/member/1634/0607015.jpg">
+            <div class="text">
+            <h3>藍健菖</h3>
+                <ul>
+                    <li style="max-width:220px"><span>合併前高雄市議會</span>
+                        <ol>
+                        <li><span>第五屆87~91</span></li>
+                        <li><span>第六屆91~95<br>補選</span></li>
+                        <li><span>第七屆95~99</span></li>
+                        </ol>
+                    </li>
+                </div>
+            </div>
+
+                </div>
+
+                <div id="ContentPlaceHolder1_Photo" class="period-photo">
+                    <img src="https://ws.kcc.gov.tw/001/Upload/memberperiod/35/4eafb3ec-0859-4dd2-885c-8ef9af752528.jpg" alt="直轄第七屆_照片">
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div></div></div> <div class="group page-footer" data-index="3" data-type="3" data-child="3"><div class="in"><div class="ct"><div class="in"> <div class="list-text detail" data-index="1" data-type="0"><div class="in"><div class="ct"><div class="in"></div></div></div></div> <div class="list-text jump-tool" data-index="2" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="2"><li   data-index="1"  class="back"  >		<span  ><a   href="javascript:window.location =document.referrer;"   title="回上一頁"   target="_self"  >回上一頁</a></span></li><li   data-index="2"  class="to-top"  >		<span  ><a   href="#Accesskey_U"   title="回最上面"   target="_self"  >回最上面</a></span></li></ul>
+</div></div></div></div>
+        </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <div class="group base-footer" data-func="{&#39;toggleBtn&#39;:{&#39;btnOrangeText&#39;:&#39;close&#39;,&#39;btnActiveText&#39;:&#39;open&#39;,&#39;focusActive&#39;:false}}" data-index="3" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a    title="close"   >close</a></span></div></div></div><div class="ct"><div class="in"> <div class="simple-text accesskey" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><span><a href="#Accesskey_Z" id="Accesskey_Z" accesskey="Z" title="下方選單連結區，此區塊列有本網站的頁尾相關連結">:::</a></span></div></div></div></div> <div class="group-list nav" data-func="{&#39;setNavLen&#39;:{}}" data-index="1" data-type="4" data-child="8"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"> <div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Chief.aspx?n=29&type=1"      title="本會介紹"   >本會介紹</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="7"><li   data-index="1"  >		<span  ><a   href="Chief.aspx?n=29&type=1"      title="議長介紹"   >議長介紹</a></span></li><li   data-index="2"  >		<span  ><a   href="Chief.aspx?n=30&type=2"      title="副議長介紹"   >副議長介紹</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=33"      title="本會沿革"   >本會沿革</a></span></li><li   data-index="4"  >		<span  ><a   href="cp.aspx?n=31"      title="組織與職權"   >組織與職權</a></span></li><li   data-index="5"  >		<span  ><a   href="News_Video.aspx?n=36&sms=8969"      title="多媒體簡介"   >多媒體簡介</a></span></li><li   data-index="6"  >		<span  ><a   href="cp.aspx?n=38"      title="本會資訊"   >本會資訊</a></span></li><li   data-index="7"  >		<span  ><a   href="https://www.kcc.gov.tw/international-exchange/"      title="[另開新視窗]國際交流專區"   target="_blank"  >國際交流專區</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="2"> <div class="group nav" data-index="2" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"      title="本會議員"   >本會議員</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  >		<span  ><a   href="Member_List3.aspx?n=39&sms=9028"      title="本屆議員"   >本屆議員</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_Contact.aspx?n=40&sms=0"      title="本屆議員聯絡資訊"   >本屆議員聯絡資訊</a></span></li><li   data-index="3"  >		<span  ><a   href="https://www.kcc.gov.tw/News_Content.aspx?n=81&s=17147"      title="本屆議員服務處地址及電話傳真"   >本屆議員服務處地址及電話傳真</a></span></li><li   data-index="4"  >		<span  ><a   href="Member_HistoryList.aspx?n=122&type=1"      title="歷屆議員"   >歷屆議員</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/CommitteeList/Default.aspx"      title="[另開新視窗]委員會一覽表"   target="_blank"  >委員會一覽表</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="3"> <div class="group nav" data-index="3" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=45"      title="新聞與活動"   >新聞與活動</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="News.aspx?n=46&sms=8971"      title="新聞快訊"   >新聞快訊</a></span></li><li   data-index="2"  >		<span  ><a   href="News_History.aspx?n=47&sms=8971"      title="歷史新聞"   >歷史新聞</a></span></li><li   data-index="3"  >		<span  ><a   href="News.aspx?n=48&sms=8972"      title="訊息公告"   >訊息公告</a></span></li><li   data-index="4"  >		<span  ><a   href="News2.aspx?n=51&sms=8974"      title="城市互訪"   >城市互訪</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/PublicHearing/Default.aspx"      title="[另開新視窗]公聽會"   target="_blank"  >公聽會</a></span></li><li   data-index="6"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"      title="[另開新視窗]活動影音"   target="_blank"  >活動影音</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="4"> <div class="group nav" data-index="4" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=20"      title="大會資訊"   >大會資訊</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Schedule/Default.aspx"      title="[另開新視窗]議事日程表"   target="_blank"  >議事日程表</a></span></li><li   data-index="2"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/MeetingRecord/Default.aspx"      title="[另開新視窗]會議記錄"   target="_blank"  >會議記錄</a></span></li><li   data-index="3"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/ProjectReport/Default.aspx"      title="[另開新視窗]專案報告"   target="_blank"  >專案報告</a></span></li><li   data-index="4"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/BulletinDraft/Default.aspx"      title="[另開新視窗]各種會議譯文稿"   target="_blank"  >各種會議譯文稿</a></span></li><li   data-index="5"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Proposal/Default.aspx"      title="[另開新視窗]提案資料"   target="_blank"  >提案資料</a></span></li><li   data-index="6"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/System/Question/Default.aspx"      title="[另開新視窗]質詢資料"   target="_blank"  >質詢資料</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="5"> <div class="group nav" data-index="5" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=61"      title="本會出版品"   >本會出版品</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="6"><li   data-index="1"  >		<span  ><a   href="cl.aspx?n=61"      title="議事資訊彙編"   >議事資訊彙編</a></span></li><li   data-index="2"  >		<span  ><a   href="News.aspx?n=65&sms=8976"      title="議事錄"   >議事錄</a></span></li><li   data-index="3"  >		<span  ><a   href="News3.aspx?n=221&sms=9053"      title=" 出版刊物"   > 出版刊物</a></span></li><li   data-index="4"  >		<span  ><a   href="cl.aspx?n=66"      title="電子期刊"   >電子期刊</a></span></li><li   data-index="5"  >		<span  ><a   href="News2.aspx?n=69&sms=8979"      title="專刊"   >專刊</a></span></li><li   data-index="6"  >		<span  ><a   href="News.aspx?n=218&sms=9045"      title="其他報告"   >其他報告</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="6"> <div class="group nav" data-index="6" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Law.aspx?n=83"      title="法規專區"   >法規專區</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="3"><li   data-index="1"  >		<span  ><a   href="Law.aspx?n=83"      title="議政法規"   >議政法規</a></span></li><li   data-index="2"  >		<span  ><a   href="https://outlaw.kcg.gov.tw/LawCategoryMain.aspx"      title="[另開新視窗]高雄市法令"   target="_blank"  >高雄市法令</a></span></li><li   data-index="3"  >		<span  ><a   href="News_Link.aspx?n=74&sms=8982"      title="法律網站"   >法律網站</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="7"> <div class="group nav" data-index="7" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"      title="便民服務"   >便民服務</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="10"><li   data-index="1"  >		<span  ><a   href="Message.aspx?n=75&sms=8983"      title="議長信箱"   >議長信箱</a></span></li><li   data-index="2"  >		<span  ><a   href="Member_Contact.aspx?n=76&sms=0"      title="議員聯絡資訊"   >議員聯絡資訊</a></span></li><li   data-index="3"  >		<span  ><a   href="cl.aspx?n=77"      title="遊說法專區"   >遊說法專區</a></span></li><li   data-index="4"  >		<span  ><a   href="News.aspx?n=211&sms=9044"      title="性平專區"   >性平專區</a></span></li><li   data-index="5"  >		<span  ><a   href="News.aspx?n=81&sms=8981"      title="申請資訊與表單"   >申請資訊與表單</a></span></li><li   data-index="6"  >		<span  ><a   href="News.aspx?n=163&sms=9041"      title="預決算資訊"   >預決算資訊</a></span></li><li   data-index="7"  >		<span  ><a   href="cl.aspx?n=187"      title="媒體政策及業務宣導經費執行情形"   >媒體政策及業務宣導經費執行情形</a></span></li><li   data-index="8"  >		<span  ><a   href="cl.aspx?n=168"      title="公職人員利益衝突迴避法專區"   >公職人員利益衝突迴避法專區</a></span></li><li   data-index="9"  >		<span  ><a   href="cl.aspx?n=192"      title="檔案閱覽"   >檔案閱覽</a></span></li><li   data-index="10"  >		<span  ><a   href="cl.aspx?n=205"      title="施政統計"   >施政統計</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li><li data-index="8"> <div class="group nav" data-index="8" data-type="3" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h3"  data-index="0"  >		<span  ><a   href="cl.aspx?n=24"      title="本會系統"   >本會系統</a></span></div></div></div><div class="ct"><div class="in"> <div class="list-text nav" data-index="1" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="https://cissearch.kcc.gov.tw/"      title="[另開新視窗]議事查詢系統"   target="_blank"  >議事查詢系統</a></span></li><li   data-index="2"  >		<span  ><a   href="https://ivod.kcc.gov.tw/"      title="[另開新視窗]影音隨選視訊系統"   target="_blank"  >影音隨選視訊系統</a></span></li><li   data-index="3"  >		<span  ><a   href="https://cip.kcc.gov.tw/"      title="[另開新視窗]議員入口網"   target="_blank"  >議員入口網</a></span></li><li   data-index="4"  >		<span  ><a   href="https://mail1.kcc.gov.tw/"      title="[另開新視窗]WebMail"   target="_blank"  >WebMail</a></span></li></ul>
+</div></div></div></div></div></div></div></div></li></ul></div></div></div></div> <div class="group default msg-tool" data-index="1" data-type="3"><div class="in"><div class="ct"><div class="in"> <div class="list-text link" data-index="1" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="下方連結"   >下方連結</a></span></div></div></div><div class="ct"><div class="in"><ul data-index="1" data-child="4"><li   data-index="1"  >		<span  ><a   href="cp.aspx?n=102"   title="隱私權宣告"   target="_self"  >隱私權宣告</a></span></li><li   data-index="2"  >		<span  ><a   href="cp.aspx?n=103"   title="資訊安全政策宣告"   target="_self"  >資訊安全政策宣告</a></span></li><li   data-index="3"  >		<span  ><a   href="cp.aspx?n=104"   title="著作權聲明"   target="_self"  >著作權聲明</a></span></li><li   data-index="4"  >		<span  ><a   href="Rss.aspx?n=136&sms=0"   title="RSS訂閱專區"   target="_self"  >RSS訂閱專區</a></span></li></ul>
+</div></div></div></div> <div class="simple-text update-time" data-index="2" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="更新日期"   >更新日期</a></span></div></div></div><div class="ct"><div class="in"><span>115-11-07</span></div></div></div></div> <div class="simple-text visit-count" data-index="3" data-type="0" data-child="1"><div class="in"><div class="hd"><div class="in"><div class="h4"  data-index="0"  >		<span  ><a    title="瀏覽人次"   >瀏覽人次</a></span></div></div></div><div class="ct"><div class="in"><span id="footer_visitcount_span">..</span></div></div></div></div> <div class="simple-text footer-Login" data-index="4" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"></div></div></div></div> <div class="area-editor address" data-func="{&#39;linkToMap&#39;:{&#39;bindClass&#39;:&#39;.map&#39;,&#39;linkClass&#39;:&#39;is-map&#39;}}" data-index="5" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><p>高雄市鳳山區國泰路二段156號&nbsp;<a href="cp.aspx?n=139">交通資訊</a><br />
+交通資訊 &nbsp; 電話：07-7470171 傳真：07-7109961<br />
+高雄市議會&copy;版權所有<br />
+為提供更為穩定的瀏覽品質與使用體驗，建議更新瀏覽器至以下版本：IE11(含)以上版本、最新版本Chrome、最新版本Firefox<br />
+最佳解析度1280*720 以上</p>
+<style type="text/css">/*.speak {display: none;}*/
+	#li_Chiefs, #li_Chiefs_2 {display:none;}
+	@media screen and (max-width: 896px) {
+		.base-footer .list-pic.icon {
+			display: block;
+		}
+		.base-footer .list-pic.icon .ct>.in{
+			position: initial;
+			margin-bottom: 20px;
+		}
+		.banner {
+			display: none;
+		}
+	}
+</style>
+</div></div></div></div></div></div></div></div> <div class="list-pic icon" data-index="3" data-type="0" data-child="1"><div class="in"><div class="ct"><div class="in"><ul data-index="1" data-child="5"><li   data-index="1"  class="E-Gov"  >		<span style="background-image: url('/images/egov.png');" ><a   href="https://www.gov.tw/"   title="[另開新視窗]我的E政府 [另開新視窗]"   target="_blank"  ><img src="/images/egov.png"  alt="我的E政府 [另開新視窗]" /></a></span></li><li   data-index="2"  class="wcag"  >		<span style="background-image: url('/images/aplus.png');" ><a   href="https://accessibility.moda.gov.tw/Applications/Detail?category=20250917141551"   title="[另開新視窗]通過AA等級無障礙網頁檢測"   target="_blank"  ><img src="/images/aplus.png"  alt="通過AA等級無障礙網頁檢測" /></a></span></li><li   data-index="3"  class="qrcode"  >		<span style="background-image: url('data:image/png;base64,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');" ><a    title="高雄市議會-FB-QRCode"   ><img src="data:image/png;base64,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"  alt="高雄市議會-FB-QRCode" /></a></span></li><li   data-index="4"  class="qrcode"  >		<span style="background-image: url('/ccmsimage/qrcode/apple.png');" ><a    title="高雄市議會-App-Ios-QRCode"   ><img src="/ccmsimage/qrcode/apple.png" style="width:80px;heigth:80px;" alt="高雄市議會-App-Ios-QRCode" /></a></span></li><li   data-index="5"  class="qrcode"  >		<span style="background-image: url('/ccmsimage/qrcode/android.png');" ><a    title="高雄市議會-App-Android-QRCode"   ><img src="/ccmsimage/qrcode/android.png" style="width:80px;heigth:80px;" alt="高雄市議會-App-Android-QRCode" /></a></span></li></ul>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A8D48675" />
+</div></form>
+    <script src="js/require.js"></script>
+    <script>        requirejs.config({ baseUrl: CCMS_WWWURL + '/js' });
+        requirejs(['main'], function (func) {
+            func();
+        });
+        //$(document).ready(function () {
+        //    var gethref = window.location.href;
+        //    if (gethref.indexOf("https://www.kcc.gov.tw") > -1) {
+        //        self.location = window.location.href.replace("https://", "http://");
+        //    }
+        //});
+    </script>
+</body>
+</html>

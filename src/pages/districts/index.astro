@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CandidateCard from '../../components/CandidateCard.astro';
+import { candidateProfiles, districts, getDistrictCandidates } from '../../data';
+import { withBase } from '../../utils/paths';
+---
+
+<BaseLayout
+  title="選舉區索引｜港都人物誌"
+  description="瀏覽 2026 高雄選舉的官方選舉區切片與明確標示的虛構示範資料。"
+>
+  <div class="page-wrap">
+    <section class="page-heading">
+      <span class="eyebrow">DISTRICT INDEX</span>
+      <h1>從選舉區開始閱讀。</h1>
+      <p>官方選舉區資料與藝術化城市場景分開保存；目前只發布已通過來源與資料檢查的切片。</p>
+      <div class="demo-notice" role="note"><span aria-hidden="true">✦</span><div><strong>資料狀態提醒</strong>市議員列名目前來自官方號次抽定表，屬預公告、非 2026-11-17 正式公告；政黨與完整人物資料尚未刊載。城市場景不代表官方選區界線。</div></div>
+    </section>
+
+    <div class="district-grid">
+      {districts.map((district) => {
+        const districtCandidates = getDistrictCandidates(district.id);
+        const demo = district.isDemo === true;
+        return (
+          <article class="district-card" id={district.slug}>
+            <div class="district-card__top">
+              <div><span class="profile-badge">{demo ? '虛構示範' : '官方資料'}</span><h2>{district.name}</h2></div>
+              <span class="status-chip">{district.districtLabel}</span>
+            </div>
+            <p>{district.description}</p>
+            <p><strong>範圍說明：</strong>{district.scopeNote}</p>
+            <p>{districtCandidates.length} 位{demo ? '示範人物' : '官方預公告人物'}・{demo ? '2026 示範資料' : '2026 官方切片'}</p>
+            <div class="route-actions">
+              <a class="primary-link" href={withBase(`/districts/${district.slug}/`)}>查看選區</a>
+              <a class="secondary-link" href={withBase(`/?district=${district.slug}`)}>回城市探索</a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <section class="content-grid" style="margin-top: 1rem;">
+      <article class="info-page-card info-page-card--wide">
+        <span class="section-kicker">candidate index</span>
+        <h2>人物索引</h2>
+        <p>人物頁面以穩定 slug 產生靜態 HTML，可直接分享或在沒有 3D 場景的情況下閱讀。</p>
+        <div class="candidate-grid">
+          {candidateProfiles.map((candidate) => <CandidateCard candidate={candidate} />)}
+        </div>
+      </article>
+    </section>
+  </div>
+</BaseLayout>

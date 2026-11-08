@@ -1,0 +1,18 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ args: ['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+const errors = [];
+page.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errors.push(m.type()+': '+m.text()); });
+page.on('pageerror', e => errors.push('PAGEERROR ' + e.message));
+const response = await page.goto('http://127.0.0.1:4321/?district=kaohsiung-council-04', { waitUntil: 'domcontentloaded' });
+console.log('status', response?.status());
+await page.waitForSelector('[data-testid="city-explorer"][data-hydrated="true"]', { timeout: 30000 });
+await page.waitForTimeout(6000);
+console.log('errors', errors.slice(0, 12));
+console.log('h1', await page.locator('h1').first().innerText());
+console.log('dock', await page.locator('.city-dock').boundingBox());
+console.log('canvas', await page.locator('canvas').count());
+const t0 = Date.now();
+await page.screenshot({ path: 'reports/visual/debug-desktop.png', timeout: 120000 });
+console.log('desktop shot ms', Date.now()-t0);
+await browser.close();

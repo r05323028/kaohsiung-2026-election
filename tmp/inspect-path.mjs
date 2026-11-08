@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ headless: true, args: ['--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const context = await browser.newContext({ reducedMotion: 'reduce', viewport: { width: 1600, height: 1000 } });
+const page = await context.newPage();
+await page.goto('http://127.0.0.1:4321/?district=kaohsiung-council-04', { waitUntil: 'domcontentloaded' });
+await page.waitForSelector('[data-testid="city-explorer"][data-hydrated="true"]', { timeout: 30000 });
+await page.locator('[aria-controls="city-admin-tray"]').click();
+await page.locator('#city-admin-tray .city-admin-chip').filter({ hasText: '左營' }).first().click();
+await page.waitForTimeout(3000);
+await page.screenshot({ path: 'reports/visual/debug-zuoying-path.png', timeout: 120000 });
+await browser.close();

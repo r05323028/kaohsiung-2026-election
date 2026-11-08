@@ -68,8 +68,7 @@ function sourceFor(id: string): ProfileSource {
     id: manifestSource.id,
     url: manifestSource.canonicalUrl,
     publisher: manifestSource.publisher,
-    publicationDate:
-      manifestSource.publicationDate ?? manifestSource.retrievalDate,
+    publicationDate: manifestSource.publicationDate,
     retrievalDate: manifestSource.retrievalDate,
     verificationStatus:
       manifestSource.verificationStatus === 'verified'
@@ -169,6 +168,7 @@ function toProfile(
       electionYear: candidate.electionYear,
       electionType: candidate.electionType,
       candidateNumber: candidate.candidateNumber,
+      ...(candidate.birthDate ? { birthDate: candidate.birthDate } : {}),
       politicalParty: candidate.politicalParty ?? '目前尚未刊載政黨資訊',
       partyStatus: candidate.partyStatus,
       currentPosition: candidate.currentPosition,

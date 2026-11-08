@@ -23,6 +23,7 @@ export type CandidateProfileView = {
     candidateNumberStatus?: 'drawn' | 'final' | 'not-published';
     publicationStatus?: 'approved' | 'pending-review' | 'unavailable' | 'demo';
     partyStatus?: 'published' | 'not-published' | 'unavailable';
+    birthDate?: string;
   };
   district: Omit<ElectoralDistrict, 'isDemo'> & { isDemo?: boolean };
   positions: Array<Omit<Position, 'isDemo'> & { isDemo?: boolean }>;

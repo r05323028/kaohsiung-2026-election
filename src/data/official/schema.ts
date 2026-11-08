@@ -22,7 +22,7 @@ export const OfficialSourceSchema = z.object({
   title: z.string().min(1),
   publisher: z.string().min(1),
   url: z.url(),
-  publicationDate: DateOnlySchema,
+  publicationDate: DateOnlySchema.nullable(),
   retrievalDate: DateOnlySchema,
   verificationStatus: z.enum([
     'Verified',
@@ -54,6 +54,7 @@ export const OfficialCandidateSchema = z.object({
   slug: SlugSchema,
   displayName: z.string().min(1),
   shortName: z.string().min(1),
+  birthDate: DateOnlySchema.optional(),
   districtId: z.string().min(1),
   electionYear: z.literal(2026),
   electionType: z.enum(['mayoral', 'city-council', 'indigenous-council']),

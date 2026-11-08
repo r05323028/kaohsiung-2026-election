@@ -114,6 +114,14 @@ test('official routes expose source references and neutral missing states', asyn
       .getByTestId('profile-tabs')
       .getByRole('link', { name: /source-cec-central-65213/ }),
   ).toHaveAttribute('href', 'https://web.cec.gov.tw/central/article/65213');
+  await expect(
+    page
+      .getByTestId('profile-tabs')
+      .getByRole('link', { name: /source-cec-vote2026-c1-64000/ }),
+  ).toHaveAttribute(
+    'href',
+    'https://info.cec.gov.tw/vote2026/static/json/cand/C1/64000.json',
+  );
   const profile = page.getByTestId('profile-tabs');
   await profile.getByRole('tab', { name: '政策主張' }).click();
   await expect(profile).toContainText('目前尚無已查證的政策主張資料');
@@ -309,6 +317,70 @@ test('selected public-record profiles expose provenance and neutral gaps', async
   await expect(
     page.getByTestId('profile-tabs').getByTestId('research-summary'),
   ).toContainText('官方來源字元差異');
+});
+
+test('all five mayor profiles expose six neutral, source-backed sections', async ({
+  page,
+}) => {
+  const candidates = [
+    {
+      slug: 'zhang-jing-2026',
+      name: '張靜',
+      party: '司法改革黨',
+      birthDate: '1956-05-27',
+    },
+    {
+      slug: 'wang-zhao-min-2026',
+      name: '王肇民',
+      party: '無',
+      birthDate: '1963-08-29',
+    },
+    {
+      slug: 'ke-zhi-en-2026',
+      name: '柯志恩',
+      party: '中國國民黨',
+      birthDate: '1962-04-29',
+    },
+    {
+      slug: 'hong-fang-long-2026',
+      name: '洪方隆',
+      party: '無',
+      birthDate: '1963-11-24',
+    },
+    {
+      slug: 'lai-rui-long-2026',
+      name: '賴瑞隆',
+      party: '民主進步黨',
+      birthDate: '1973-11-15',
+    },
+  ];
+  const tabs = [
+    '基本資料',
+    '政策主張',
+    '公共紀錄',
+    '新聞',
+    '公共關係史',
+    '政治時間軸',
+  ];
+  for (const candidate of candidates) {
+    await page.goto(`/candidates/${candidate.slug}/`);
+    const profile = page.getByTestId('profile-tabs');
+    await expect(
+      page.getByRole('heading', { name: candidate.name, exact: true }),
+    ).toBeVisible();
+    await expect(profile).toContainText(candidate.party);
+    await expect(profile).toContainText(candidate.birthDate);
+    for (const tab of tabs) {
+      const tabButton = profile.getByRole('tab', { name: tab, exact: true });
+      await tabButton.click();
+      await expect(tabButton).toHaveAttribute('aria-selected', 'true');
+      const panelId = await tabButton.getAttribute('aria-controls');
+      if (!panelId) throw new Error('Profile tab is missing aria-controls');
+      const activePanel = profile.locator(`#${panelId}`);
+      await expect(activePanel).toBeVisible();
+      await expect(activePanel.locator('h3, h4').first()).toBeVisible();
+    }
+  }
 });
 
 test('static search finds the fictional demo candidate without changing official data', async ({

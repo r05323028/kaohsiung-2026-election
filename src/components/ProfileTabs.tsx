@@ -494,6 +494,10 @@ function BasicTab({ candidate }: { candidate: CandidateProfile }) {
           <dd>{candidacy.currentPosition}</dd>
         </div>
         <div className="info-row">
+          <dt>出生日期（官方資料）</dt>
+          <dd>{candidacy.birthDate ?? '目前尚未刊載'}</dd>
+        </div>
+        <div className="info-row">
           <dt>選舉區</dt>
           <dd>
             {district.name}（{district.districtLabel}）
@@ -720,7 +724,7 @@ function HistoryTab({ candidate }: { candidate: CandidateProfile }) {
   return (
     <div className="profile-tabpanel" role="tabpanel">
       <div className="profile-section-heading">
-        <h3>公共家庭與政治歷史</h3>
+        <h3>公共關係史</h3>
         <p>
           只記錄有公共利益且有來源的關係；不推論私人家庭資訊或未證實的連結。
         </p>

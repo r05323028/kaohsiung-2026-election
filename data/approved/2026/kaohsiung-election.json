@@ -49,6 +49,16 @@
       "retrievalDate": "2026-11-05",
       "verificationStatus": "Verified",
       "note": "與 65366 使用相同檔案與 SHA-256；僅作重複公告別名，不增加獨立證據。"
+    },
+    {
+      "id": "source-cec-vote2026-c1-64000",
+      "title": "2026 選舉專區高雄市長候選人資料",
+      "publisher": "中央選舉委員會",
+      "url": "https://info.cec.gov.tw/vote2026/static/json/cand/C1/64000.json",
+      "publicationDate": null,
+      "retrievalDate": "2026-11-05",
+      "verificationStatus": "Verified",
+      "note": "中央選舉委員會選舉專區留存快照；本筆僅採用姓名、政黨、出生日期與號次欄位。頁面未標示獨立出版日期；正式候選人公告預定於 2026-11-12，肖像與空白經歷欄位未採用。"
     }
   ],
   "districts": [
@@ -307,17 +317,19 @@
       "candidateNumberIsFinal": false,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
-      "politicalParty": null,
+      "politicalParty": "司法改革黨",
       "currentPosition": "2026 高雄市長候選人（資格審定）",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名的 2026 高雄市長候選人；其他人物資料目前尚未在本資料切片完成查證。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
       "sourceIds": [
         "source-cec-central-65213",
-        "source-khec-65366"
+        "source-khec-65366",
+        "source-cec-vote2026-c1-64000"
       ],
       "candidateStatus": "qualified",
       "formalStatus": "pending-announcement",
-      "partyStatus": "not-published"
+      "partyStatus": "published",
+      "birthDate": "1956-05-27"
     },
     {
       "id": "official-mayor-wang-zhao-min-2026",
@@ -332,17 +344,19 @@
       "candidateNumberIsFinal": false,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
-      "politicalParty": null,
+      "politicalParty": "無",
       "currentPosition": "2026 高雄市長候選人（資格審定）",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名的 2026 高雄市長候選人；其他人物資料目前尚未在本資料切片完成查證。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
       "sourceIds": [
         "source-cec-central-65213",
-        "source-khec-65366"
+        "source-khec-65366",
+        "source-cec-vote2026-c1-64000"
       ],
       "candidateStatus": "qualified",
       "formalStatus": "pending-announcement",
-      "partyStatus": "not-published"
+      "partyStatus": "published",
+      "birthDate": "1963-08-29"
     },
     {
       "id": "official-mayor-ke-zhi-en-2026",
@@ -357,17 +371,19 @@
       "candidateNumberIsFinal": false,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
-      "politicalParty": null,
+      "politicalParty": "中國國民黨",
       "currentPosition": "2026 高雄市長候選人（資格審定）",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名的 2026 高雄市長候選人；其他人物資料目前尚未在本資料切片完成查證。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
       "sourceIds": [
         "source-cec-central-65213",
-        "source-khec-65366"
+        "source-khec-65366",
+        "source-cec-vote2026-c1-64000"
       ],
       "candidateStatus": "qualified",
       "formalStatus": "pending-announcement",
-      "partyStatus": "not-published"
+      "partyStatus": "published",
+      "birthDate": "1962-04-29"
     },
     {
       "id": "official-mayor-hong-fang-long-2026",
@@ -382,17 +398,19 @@
       "candidateNumberIsFinal": false,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
-      "politicalParty": null,
+      "politicalParty": "無",
       "currentPosition": "2026 高雄市長候選人（資格審定）",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名的 2026 高雄市長候選人；其他人物資料目前尚未在本資料切片完成查證。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
       "sourceIds": [
         "source-cec-central-65213",
-        "source-khec-65366"
+        "source-khec-65366",
+        "source-cec-vote2026-c1-64000"
       ],
       "candidateStatus": "qualified",
       "formalStatus": "pending-announcement",
-      "partyStatus": "not-published"
+      "partyStatus": "published",
+      "birthDate": "1963-11-24"
     },
     {
       "id": "official-mayor-lai-rui-long-2026",
@@ -407,17 +425,19 @@
       "candidateNumberIsFinal": false,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
-      "politicalParty": null,
+      "politicalParty": "民主進步黨",
       "currentPosition": "2026 高雄市長候選人（資格審定）",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名的 2026 高雄市長候選人；其他人物資料目前尚未在本資料切片完成查證。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
       "sourceIds": [
         "source-cec-central-65213",
-        "source-khec-65366"
+        "source-khec-65366",
+        "source-cec-vote2026-c1-64000"
       ],
       "candidateStatus": "qualified",
       "formalStatus": "pending-announcement",
-      "partyStatus": "not-published"
+      "partyStatus": "published",
+      "birthDate": "1973-11-15"
     },
     {
       "id": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",

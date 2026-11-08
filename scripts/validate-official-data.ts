@@ -10,8 +10,10 @@ import cecQualification from '../data/raw/official/2026/cec-central-65213.json';
 import khecDrawing from '../data/raw/official/2026/khec-65366.json';
 import khecAlias from '../data/raw/official/2026/khec-65368.json';
 import khecBulletin from '../data/raw/official/2026/khec-bulletin.json';
+import cecMayoralDirectory from '../data/raw/official/2026/research/cec-vote2026-c1-64000.json';
 import {
   parseCecArticleMetadata,
+  parseCecMayoralCandidates,
   parseCecQualifiedKaohsiungMayors,
   parseKhecBulletin,
   parseKhecDrawingMetadata,
@@ -48,6 +50,7 @@ const registrationMetadata = parseCecArticleMetadata(
 );
 const bulletinArticles = parseKhecBulletin(khecBulletin);
 const qualifiedMayors = parseCecQualifiedKaohsiungMayors(cecQualification);
+const directoryMayors = parseCecMayoralCandidates(cecMayoralDirectory);
 const drawing = parseKhecDrawingMetadata(khecDrawing);
 const aliasDrawing = parseKhecDrawingMetadata(khecAlias);
 const aliasStatus = khecAliasStatus(
@@ -96,6 +99,30 @@ if (
   JSON.stringify(approvedNames.slice().sort())
 )
   throw new Error('CEC qualified roster does not match approved mayor names.');
+const directoryByName = new Map(
+  directoryMayors.map((candidate) => [candidate.displayName, candidate]),
+);
+for (const candidate of dataset.candidates.filter(
+  (item) => item.electionType === 'mayoral',
+)) {
+  const directoryCandidate = directoryByName.get(candidate.displayName);
+  if (!directoryCandidate)
+    throw new Error(
+      `CEC directory is missing approved mayor ${candidate.displayName}.`,
+    );
+  if (
+    candidate.candidateNumber !== directoryCandidate.candidateNumber ||
+    candidate.politicalParty !== directoryCandidate.politicalParty ||
+    candidate.birthDate !== directoryCandidate.birthDate ||
+    !candidate.sourceIds.includes(directoryCandidate.sourceId) ||
+    candidate.partyStatus !== 'published'
+  )
+    throw new Error(
+      'Approved identity fields do not match CEC directory for ' +
+        candidate.displayName +
+        '.',
+    );
+}
 for (const source of manifest.sources) {
   for (const [field, expected] of [
     ['rawPath', source.sha256],

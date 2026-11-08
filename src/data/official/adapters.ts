@@ -1,4 +1,14 @@
 export type QualifiedMayor = { displayName: string; sourceId: string };
+export type CecMayoralCandidate = {
+  displayName: string;
+  candidateNumber: string;
+  politicalParty: string;
+  birthDate: string;
+  gender: string;
+  home: string;
+  portraitReference: string;
+  sourceId: 'source-cec-vote2026-c1-64000';
+};
 export type KhecDrawingMetadata = {
   title: string;
   beginDate: string;
@@ -29,6 +39,64 @@ function compactDate(value: unknown, label: string): string {
   if (typeof value !== 'string' || !/^\d{8}/.test(value))
     throw new Error(`${label} must begin with an eight-digit date.`);
   return `${value.slice(0, 4)}-${value.slice(4, 6)}-${value.slice(6, 8)}`;
+}
+
+function compactRocDate(value: unknown, label: string): string {
+  if (typeof value !== 'string' || !/^\d{7}$/.test(value))
+    throw new Error(`${label} must be a seven-digit ROC date.`);
+  const year = Number(value.slice(0, 3)) + 1911;
+  const month = Number(value.slice(3, 5));
+  const day = Number(value.slice(5, 7));
+  if (month < 1 || month > 12 || day < 1 || day > 31)
+    throw new Error(`${label} contains an invalid month or day.`);
+  return (
+    String(year).padStart(4, '0') +
+    '-' +
+    value.slice(3, 5) +
+    '-' +
+    value.slice(5, 7)
+  );
+}
+
+export function parseCecMayoralCandidates(raw: unknown): CecMayoralCandidate[] {
+  const root = asRecord(raw);
+  const candidates = root.C1;
+  if (!Array.isArray(candidates) || candidates.length !== 5)
+    throw new Error(
+      'CEC mayor candidate directory must contain exactly 5 records.',
+    );
+  return candidates.map((candidate, index) => {
+    const record = asRecord(candidate);
+    const displayName = record.name;
+    const candidateNumber = record.candNo;
+    const politicalParty = record.party;
+    const gender = record.gender;
+    const home = record.home;
+    const portraitReference = record.img;
+    if (
+      typeof displayName !== 'string' ||
+      typeof candidateNumber !== 'number' ||
+      !Number.isInteger(candidateNumber) ||
+      candidateNumber < 1 ||
+      typeof politicalParty !== 'string' ||
+      politicalParty.length === 0 ||
+      record.type !== '縣市長' ||
+      typeof gender !== 'string' ||
+      typeof home !== 'string' ||
+      typeof portraitReference !== 'string'
+    )
+      throw new Error(`CEC mayor candidate record ${index + 1} is incomplete.`);
+    return {
+      displayName,
+      candidateNumber: String(candidateNumber),
+      politicalParty,
+      birthDate: compactRocDate(record.birth, `CEC ${displayName} birth`),
+      gender,
+      home,
+      portraitReference,
+      sourceId: 'source-cec-vote2026-c1-64000',
+    };
+  });
 }
 
 export function parseCecArticleMetadata(

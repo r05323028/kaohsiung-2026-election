@@ -97,7 +97,7 @@ export const EvidenceSourceSchema = z.object({
   id: z.string().min(1),
   url: z.url(),
   publisher: z.string().min(1),
-  publicationDate: DateOnlySchema,
+  publicationDate: DateOnlySchema.nullable(),
   retrievalDate: DateOnlySchema,
   verificationStatus: VerificationStatusSchema,
   relatedEntityIds: z.array(z.string().min(1)),

@@ -7,9 +7,11 @@ import cecQualification from '../../../data/raw/official/2026/cec-central-65213.
 import khecDrawing from '../../../data/raw/official/2026/khec-65366.json';
 import khecAlias from '../../../data/raw/official/2026/khec-65368.json';
 import khecBulletin from '../../../data/raw/official/2026/khec-bulletin.json';
+import cecMayoralDirectory from '../../../data/raw/official/2026/research/cec-vote2026-c1-64000.json';
 import {
   normalizeMayorNames,
   parseCecArticleMetadata,
+  parseCecMayoralCandidates,
   parseCecQualifiedKaohsiungMayors,
   parseKhecBulletin,
   parseKhecDrawingMetadata,
@@ -31,6 +33,42 @@ describe('official source adapters', () => {
         .map((candidate) => candidate.displayName)
         .sort(),
     ).toEqual(['張靜', '王肇民', '柯志恩', '洪方隆', '賴瑞隆'].sort());
+  });
+
+  it('extracts party, number, and ROC birth dates from the retained CEC directory', () => {
+    expect(parseCecMayoralCandidates(cecMayoralDirectory)).toEqual([
+      expect.objectContaining({
+        displayName: '張靜',
+        candidateNumber: '1',
+        politicalParty: '司法改革黨',
+        birthDate: '1956-05-27',
+        sourceId: 'source-cec-vote2026-c1-64000',
+      }),
+      expect.objectContaining({
+        displayName: '王肇民',
+        candidateNumber: '2',
+        politicalParty: '無',
+        birthDate: '1963-08-29',
+      }),
+      expect.objectContaining({
+        displayName: '柯志恩',
+        candidateNumber: '3',
+        politicalParty: '中國國民黨',
+        birthDate: '1962-04-29',
+      }),
+      expect.objectContaining({
+        displayName: '洪方隆',
+        candidateNumber: '4',
+        politicalParty: '無',
+        birthDate: '1963-11-24',
+      }),
+      expect.objectContaining({
+        displayName: '賴瑞隆',
+        candidateNumber: '5',
+        politicalParty: '民主進步黨',
+        birthDate: '1973-11-15',
+      }),
+    ]);
   });
 
   it('extracts official article and bulletin metadata deterministically', () => {
@@ -126,6 +164,29 @@ describe('approved official dataset', () => {
     expect(() => validateOfficialDataset(invalid)).toThrow(
       'non-final number as final',
     );
+  });
+
+  it('publishes only the CEC-supported identity fields for mayor candidates', () => {
+    const dataset = validateOfficialDataset(approvedInput);
+    const mayors = dataset.candidates.filter(
+      (candidate) => candidate.electionType === 'mayoral',
+    );
+    expect(mayors).toHaveLength(5);
+    expect(
+      mayors.every((candidate) => candidate.partyStatus === 'published'),
+    ).toBe(true);
+    expect(
+      mayors.every((candidate) =>
+        candidate.sourceIds.includes('source-cec-vote2026-c1-64000'),
+      ),
+    ).toBe(true);
+    expect(mayors.map((candidate) => candidate.birthDate)).toEqual([
+      '1956-05-27',
+      '1963-08-29',
+      '1962-04-29',
+      '1963-11-24',
+      '1973-11-15',
+    ]);
   });
 
   it('reconciles all 101 council rows while formal announcement remains pending', () => {

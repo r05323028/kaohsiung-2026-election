@@ -1,3 +1,4 @@
+import type { CecCouncilCandidate } from './adapters';
 import type { CouncilRoster } from './council';
 import type { OfficialCandidate, OfficialDataset } from './schema';
 
@@ -18,6 +19,26 @@ export type ConstituencyReconciliation = {
   status: 'complete' | 'partial' | 'failed';
 };
 
+export type CecSourceNameConflict = {
+  districtNumber: number;
+  candidateNumber: string;
+  canonicalName: string;
+  directoryName: string;
+  candidateId?: string;
+};
+
+export type CecCouncilReconciliation = {
+  sourceId: 'source-cec-vote2026-t-64000';
+  sourceRows: number;
+  matchedRows: number;
+  missingCandidates: string[];
+  unexpectedCandidates: string[];
+  partyMismatches: string[];
+  birthDateMismatches: string[];
+  sourceNameConflicts: CecSourceNameConflict[];
+  status: 'complete' | 'partial' | 'failed';
+};
+
 export type ReconciliationReport = {
   reportVersion: '2.0.0';
   datasetId: string;
@@ -28,6 +49,7 @@ export type ReconciliationReport = {
     drawing: string;
     drawingAlias: string;
     constituency: string;
+    councilDirectory?: string;
   };
   sourceAliases: Array<{
     sourceId: string;
@@ -48,6 +70,7 @@ export type ReconciliationReport = {
   };
   mayorMatches: string[];
   councilConstituencies: ConstituencyReconciliation[];
+  cecCouncil?: CecCouncilReconciliation;
   discrepancies: string[];
   pendingReview: OfficialDataset['pendingReview'];
   publication: {
@@ -70,6 +93,7 @@ function namesByNumber(
 function reconcileConstituency(
   roster: CouncilRoster['constituencies'][number],
   candidates: OfficialCandidate[],
+  cecCandidates?: CecCouncilCandidate[],
 ): ConstituencyReconciliation {
   const approvedByNumber = namesByNumber(candidates);
   const expectedNumbers = roster.rows.map((row) => row.candidateNumber);
@@ -95,13 +119,19 @@ function reconcileConstituency(
         ]
       : [];
   });
-  const partyMismatches = candidates
-    .filter(
-      (candidate) =>
-        candidate.partyStatus === 'published' ||
-        candidate.politicalParty !== null,
-    )
-    .map((candidate) => `${candidate.displayName}: source has no party field`);
+  const partyMismatches = cecCandidates
+    ? candidates.flatMap((candidate) => {
+        const directory = cecCandidates.find(
+          (item) => item.candidateNumber === candidate.candidateNumber,
+        );
+        return directory &&
+          candidate.politicalParty !== directory.politicalParty
+          ? [
+              `${candidate.displayName}: expected ${directory.politicalParty}, got ${candidate.politicalParty ?? 'null'}`,
+            ]
+          : [];
+      })
+    : [];
   const constituencyMismatches = candidates
     .filter((candidate) => candidate.districtId !== roster.districtId)
     .map((candidate) => `${candidate.displayName}: ${candidate.districtId}`);
@@ -138,10 +168,119 @@ function reconcileConstituency(
   };
 }
 
+function councilCandidateKey(
+  districtNumber: number,
+  candidateNumber: string,
+): string {
+  return `${districtNumber}:${candidateNumber}`;
+}
+
+function reconcileCecCouncil(
+  dataset: OfficialDataset,
+  councilRoster: CouncilRoster,
+  cecCandidates: CecCouncilCandidate[],
+): CecCouncilReconciliation {
+  const districtNumberById = new Map(
+    councilRoster.constituencies.map((item) => [
+      item.districtId,
+      item.districtNumber,
+    ]),
+  );
+  const canonicalRows = new Map(
+    councilRoster.constituencies.flatMap((constituency) =>
+      constituency.rows.map((row) => [
+        councilCandidateKey(constituency.districtNumber, row.candidateNumber),
+        row,
+      ]),
+    ),
+  );
+  const approvedRows = new Map(
+    dataset.candidates
+      .filter((candidate) => candidate.electionType !== 'mayoral')
+      .flatMap((candidate) => {
+        const districtNumber = districtNumberById.get(candidate.districtId);
+        return districtNumber === undefined
+          ? []
+          : [
+              [
+                councilCandidateKey(districtNumber, candidate.candidateNumber),
+                candidate,
+              ] as const,
+            ];
+      }),
+  );
+  const directoryRows = new Map(
+    cecCandidates.map((candidate) => [
+      councilCandidateKey(
+        Number(candidate.areaCode),
+        candidate.candidateNumber,
+      ),
+      candidate,
+    ]),
+  );
+  const missingCandidates = [...directoryRows.entries()]
+    .filter(([key]) => !approvedRows.has(key))
+    .map(([key, candidate]) => `${key} ${candidate.displayName}`);
+  const unexpectedCandidates = [...approvedRows.entries()]
+    .filter(([key]) => !directoryRows.has(key))
+    .map(([key, candidate]) => `${key} ${candidate.displayName}`);
+  const partyMismatches: string[] = [];
+  const birthDateMismatches: string[] = [];
+  for (const [key, directory] of directoryRows) {
+    const candidate = approvedRows.get(key);
+    if (!candidate) continue;
+    if (candidate.politicalParty !== directory.politicalParty)
+      partyMismatches.push(
+        `${key} ${candidate.displayName}: expected ${directory.politicalParty}, got ${candidate.politicalParty ?? 'null'}`,
+      );
+    if (candidate.birthDate !== directory.birthDate)
+      birthDateMismatches.push(
+        `${key} ${candidate.displayName}: expected ${directory.birthDate}, got ${candidate.birthDate ?? 'null'}`,
+      );
+  }
+  const sourceNameConflicts: CecSourceNameConflict[] = [];
+  for (const [key, directory] of directoryRows) {
+    const canonical = canonicalRows.get(key);
+    if (!canonical || canonical.displayName === directory.displayName) continue;
+    const candidate = approvedRows.get(key);
+    sourceNameConflicts.push({
+      districtNumber: Number(directory.areaCode),
+      candidateNumber: directory.candidateNumber,
+      canonicalName: canonical.displayName,
+      directoryName: directory.displayName,
+      ...(candidate ? { candidateId: candidate.id } : {}),
+    });
+  }
+  const matchedRows = [...directoryRows.keys()].filter((key) =>
+    approvedRows.has(key),
+  ).length;
+  const hasStructuralFailure =
+    missingCandidates.length > 0 ||
+    unexpectedCandidates.length > 0 ||
+    partyMismatches.length > 0 ||
+    birthDateMismatches.length > 0;
+  return {
+    sourceId: 'source-cec-vote2026-t-64000',
+    sourceRows: cecCandidates.length,
+    matchedRows,
+    missingCandidates,
+    unexpectedCandidates,
+    partyMismatches,
+    birthDateMismatches,
+    sourceNameConflicts,
+    status: hasStructuralFailure
+      ? 'failed'
+      : sourceNameConflicts.length > 0
+        ? 'partial'
+        : 'complete',
+  };
+}
+
 export function reconcileOfficialData(
   dataset: OfficialDataset,
   cecNames: string[],
   councilRoster?: CouncilRoster,
+  cecCouncilCandidates?: CecCouncilCandidate[],
 ): ReconciliationReport {
   const approvedMayors = dataset.candidates.filter(
     (candidate) => candidate.electionType === 'mayoral',
@@ -166,6 +305,13 @@ export function reconcileOfficialData(
   const councilCandidates = dataset.candidates.filter(
     (candidate) => candidate.electionType !== 'mayoral',
   );
+  const cecByDistrict = new Map<number, CecCouncilCandidate[]>();
+  for (const candidate of cecCouncilCandidates ?? []) {
+    const district = Number(candidate.areaCode);
+    const rows = cecByDistrict.get(district) ?? [];
+    rows.push(candidate);
+    cecByDistrict.set(district, rows);
+  }
   const councilConstituencies = councilRoster
     ? councilRoster.constituencies.map((constituency) =>
         reconcileConstituency(
@@ -173,6 +319,7 @@ export function reconcileOfficialData(
           councilCandidates.filter(
             (candidate) => candidate.districtId === constituency.districtId,
           ),
+          cecByDistrict.get(constituency.districtNumber),
         ),
       )
     : [];
@@ -210,6 +357,19 @@ export function reconcileOfficialData(
     ])
       discrepancies.push(`District ${constituency.districtNumber}: ${value}`);
   }
+  const cecCouncil =
+    councilRoster && cecCouncilCandidates
+      ? reconcileCecCouncil(dataset, councilRoster, cecCouncilCandidates)
+      : undefined;
+  if (cecCouncil) {
+    for (const value of [
+      ...cecCouncil.missingCandidates,
+      ...cecCouncil.unexpectedCandidates,
+      ...cecCouncil.partyMismatches,
+      ...cecCouncil.birthDateMismatches,
+    ])
+      discrepancies.push(`CEC council directory: ${value}`);
+  }
   return {
     reportVersion: '2.0.0',
     datasetId: dataset.datasetId,
@@ -219,7 +379,8 @@ export function reconcileOfficialData(
       discrepancies.length > 0 ||
       councilConstituencies.some(
         (constituency) => constituency.status === 'failed',
-      )
+      ) ||
+      cecCouncil?.status === 'failed'
         ? 'partial'
         : 'ready',
     sources: {
@@ -227,6 +388,9 @@ export function reconcileOfficialData(
       drawing: 'source-khec-65366',
       drawingAlias: 'source-khec-65368',
       constituency: 'source-cec-central-63625',
+      ...(cecCouncil
+        ? { councilDirectory: 'source-cec-vote2026-t-64000' }
+        : {}),
     },
     sourceAliases: [
       {
@@ -261,6 +425,7 @@ export function reconcileOfficialData(
     },
     mayorMatches,
     councilConstituencies,
+    ...(cecCouncil ? { cecCouncil } : {}),
     discrepancies,
     pendingReview: dataset.pendingReview,
     publication: {
@@ -302,12 +467,39 @@ export function reconciliationMarkdown(report: ReconciliationReport): string {
         `| ${item.districtNumber} | ${item.officialSourceRows} | ${item.normalizedRows} | ${item.approvedRows} | ${item.publishedRows} | ${item.pendingRows} | ${item.status} |`,
     )
     .join('\n');
+  const cecCouncilSection = report.cecCouncil
+    ? [
+        '## CEC council directory identity comparison',
+        '',
+        `- Source: ${report.cecCouncil.sourceId}`,
+        `- Directory rows: ${report.cecCouncil.sourceRows}`,
+        `- Matched rows by district and candidate number: ${report.cecCouncil.matchedRows}`,
+        `- Missing approved rows: ${report.cecCouncil.missingCandidates.length}`,
+        `- Unexpected approved rows: ${report.cecCouncil.unexpectedCandidates.length}`,
+        `- Party mismatches: ${report.cecCouncil.partyMismatches.length}`,
+        `- Birth-date mismatches: ${report.cecCouncil.birthDateMismatches.length}`,
+        `- Source-name conflicts pending manual reconciliation: ${report.cecCouncil.sourceNameConflicts.length}`,
+        '',
+        report.cecCouncil.sourceNameConflicts.length
+          ? [
+              '| District | Number | KHEC canonical name | CEC directory name |',
+              '| ---: | ---: | --- | --- |',
+              ...report.cecCouncil.sourceNameConflicts.map(
+                (item) =>
+                  `| ${item.districtNumber} | ${item.candidateNumber} | ${item.canonicalName} | ${item.directoryName} |`,
+              ),
+            ].join('\n')
+          : '- None.',
+        '',
+      ].join('\n')
+    : '';
+
   return [
     '# 2026 高雄選舉資料 reconciliation report',
     '',
     `- Snapshot: ${report.snapshotDate}`,
     `- Status: ${report.status}`,
-    `- Sources: qualification ${report.sources.qualification}; drawing ${report.sources.drawing}; alias ${report.sources.drawingAlias}; constituency ${report.sources.constituency}`,
+    `- Sources: qualification ${report.sources.qualification}; drawing ${report.sources.drawing}; alias ${report.sources.drawingAlias}; constituency ${report.sources.constituency}${report.sources.councilDirectory ? `; council directory ${report.sources.councilDirectory}` : ''}`,
     '- Article 65368 is a duplicate bulletin alias for article 65366 and is not independent evidence.',
     '',
     '## Counts',
@@ -331,6 +523,7 @@ export function reconciliationMarkdown(report: ReconciliationReport): string {
     '| ---: | ---: | ---: | ---: | ---: | ---: | --- |',
     constituencyRows || '| — | 0 | 0 | 0 | 0 | 0 | not-published |',
     '',
+    cecCouncilSection,
     '## Publication decision',
     '',
     `The approved slice publishes ${report.publication.approvedCandidateCount} source-backed candidate profiles across ${report.publication.approvedDistrictCount} districts. The council roster is ${report.publication.councilRosterStatus}; all displayed numbers remain drawn/non-final and the formal council announcement is still pending.`,

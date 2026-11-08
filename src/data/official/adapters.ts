@@ -9,6 +9,20 @@ export type CecMayoralCandidate = {
   portraitReference: string;
   sourceId: 'source-cec-vote2026-c1-64000';
 };
+export type CecCouncilCandidate = {
+  areaCode: string;
+  areaName: string;
+  voterType: '01' | '02' | '03';
+  displayName: string;
+  candidateNumber: string;
+  politicalParty: string;
+  birthDate: string;
+  gender: string;
+  home: string;
+  portraitReference: string;
+  sourceId: 'source-cec-vote2026-t-64000';
+};
+
 export type KhecDrawingMetadata = {
   title: string;
   beginDate: string;
@@ -97,6 +111,110 @@ export function parseCecMayoralCandidates(raw: unknown): CecMayoralCandidate[] {
       sourceId: 'source-cec-vote2026-c1-64000',
     };
   });
+}
+
+export function parseCecCouncilCandidates(raw: unknown): CecCouncilCandidate[] {
+  const root = asRecord(raw);
+  const groups = root.T;
+  if (!Array.isArray(groups) || groups.length !== 15)
+    throw new Error(
+      'CEC council candidate directory must contain exactly 15 constituency groups.',
+    );
+  const sortedCodes = groups.map((group) => {
+    const record = asRecord(group);
+    return record.areaCode;
+  });
+  if (
+    sortedCodes.some(
+      (code, index) =>
+        typeof code !== 'string' ||
+        !/^\d{2}$/.test(code) ||
+        code !== String(index + 1).padStart(2, '0'),
+    )
+  )
+    throw new Error(
+      'CEC council candidate directory area codes must cover 01 through 15 in order.',
+    );
+  const candidates = groups.flatMap((group, groupIndex) => {
+    const groupRecord = asRecord(group);
+    const areaCode = groupRecord.areaCode;
+    const areaName = groupRecord.areaName;
+    const voterType = groupRecord.voterType;
+    const rows = groupRecord.cands;
+    if (
+      typeof areaCode !== 'string' ||
+      typeof areaName !== 'string' ||
+      !['01', '02', '03'].includes(String(voterType)) ||
+      !Array.isArray(rows) ||
+      rows.length === 0
+    )
+      throw new Error(
+        'CEC council constituency group ' +
+          (groupIndex + 1) +
+          ' is incomplete.',
+      );
+    return rows.map((candidate, candidateIndex) => {
+      const record = asRecord(candidate);
+      const displayName = record.name;
+      const candidateNumber = record.candNo;
+      const politicalParty = record.party;
+      const gender = record.gender;
+      const home = record.home;
+      const portraitReference = record.img;
+      if (
+        record.type !== '議員' ||
+        typeof displayName !== 'string' ||
+        displayName.length === 0 ||
+        typeof candidateNumber !== 'number' ||
+        !Number.isInteger(candidateNumber) ||
+        candidateNumber < 1 ||
+        typeof politicalParty !== 'string' ||
+        politicalParty.length === 0 ||
+        typeof gender !== 'string' ||
+        typeof home !== 'string' ||
+        typeof portraitReference !== 'string'
+      )
+        throw new Error(
+          'CEC council candidate record ' +
+            (groupIndex + 1) +
+            '/' +
+            (candidateIndex + 1) +
+            ' is incomplete.',
+        );
+      return {
+        areaCode,
+        areaName,
+        voterType: voterType as '01' | '02' | '03',
+        displayName,
+        candidateNumber: String(candidateNumber),
+        politicalParty,
+        birthDate: compactRocDate(
+          record.birth,
+          `CEC council ${displayName} birth`,
+        ),
+        gender,
+        home,
+        portraitReference,
+        sourceId: 'source-cec-vote2026-t-64000' as const,
+      };
+    });
+  });
+  if (candidates.length !== 101)
+    throw new Error(
+      'CEC council candidate directory must contain exactly 101 records, found ' +
+        candidates.length +
+        '.',
+    );
+  const keys = candidates.map(
+    (candidate) => `${candidate.areaCode}:${candidate.candidateNumber}`,
+  );
+  const duplicates = keys.filter((key, index) => keys.indexOf(key) !== index);
+  if (duplicates.length > 0)
+    throw new Error(
+      'CEC council candidate directory has duplicate rows: ' +
+        [...new Set(duplicates)].join(', '),
+    );
+  return candidates;
 }
 
 export function parseCecArticleMetadata(

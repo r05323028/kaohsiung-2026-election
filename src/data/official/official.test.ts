@@ -8,9 +8,11 @@ import khecDrawing from '../../../data/raw/official/2026/khec-65366.json';
 import khecAlias from '../../../data/raw/official/2026/khec-65368.json';
 import khecBulletin from '../../../data/raw/official/2026/khec-bulletin.json';
 import cecMayoralDirectory from '../../../data/raw/official/2026/research/cec-vote2026-c1-64000.json';
+import cecCouncilDirectory from '../../../data/raw/official/2026/research/cec-vote2026-t-64000.json';
 import {
   normalizeMayorNames,
   parseCecArticleMetadata,
+  parseCecCouncilCandidates,
   parseCecMayoralCandidates,
   parseCecQualifiedKaohsiungMayors,
   parseKhecBulletin,
@@ -69,6 +71,42 @@ describe('official source adapters', () => {
         birthDate: '1973-11-15',
       }),
     ]);
+  });
+
+  it('extracts all council directory rows and preserves constituency types', () => {
+    const candidates = parseCecCouncilCandidates(cecCouncilDirectory);
+    expect(candidates).toHaveLength(101);
+    expect(
+      candidates.reduce<Record<string, number>>((counts, candidate) => {
+        counts[candidate.voterType] = (counts[candidate.voterType] ?? 0) + 1;
+        return counts;
+      }, {}),
+    ).toEqual({ '01': 91, '02': 7, '03': 3 });
+    expect(new Set(candidates.map((candidate) => candidate.areaCode))).toEqual(
+      new Set(
+        Array.from({ length: 15 }, (_, index) =>
+          String(index + 1).padStart(2, '0'),
+        ),
+      ),
+    );
+    expect(candidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          areaCode: '14',
+          candidateNumber: '1',
+          displayName: '洪英雄 Salizan．binkinuan',
+          politicalParty: '中國國民黨',
+          birthDate: '1968-03-06',
+        }),
+        expect.objectContaining({
+          areaCode: '14',
+          candidateNumber: '3',
+          displayName: '高忠德 Takiludun．Anu',
+          politicalParty: '無',
+          birthDate: '1972-02-18',
+        }),
+      ]),
+    );
   });
 
   it('extracts official article and bulletin metadata deterministically', () => {
@@ -201,7 +239,7 @@ describe('approved official dataset', () => {
       cecQualifiedMayors: 5,
       approvedMayors: 5,
       matchedMayors: 5,
-      pendingReviewScopes: 1,
+      pendingReviewScopes: 2,
       officialDistricts: 16,
       councilConstituencies: 15,
       councilSourceRows: 101,
@@ -219,6 +257,76 @@ describe('approved official dataset', () => {
     expect(report.discrepancies).toEqual([]);
   });
 
+  it('promotes CEC council party and birth fields without changing KHEC identity', () => {
+    const dataset = validateOfficialDataset(approvedInput);
+    const councilCandidates = dataset.candidates.filter(
+      (candidate) => candidate.electionType !== 'mayoral',
+    );
+    expect(councilCandidates).toHaveLength(101);
+    expect(
+      councilCandidates.every(
+        (candidate) =>
+          candidate.partyStatus === 'published' &&
+          candidate.politicalParty !== null &&
+          candidate.birthDate &&
+          candidate.sourceIds.includes('source-cec-vote2026-t-64000'),
+      ),
+    ).toBe(true);
+    const nameConflict = councilCandidates.find(
+      (candidate) =>
+        candidate.districtId === 'district-kaohsiung-council-03' &&
+        candidate.candidateNumber === '2',
+    );
+    expect(nameConflict).toMatchObject({
+      displayName: '張驥晟',
+      cecDirectoryName: '張騏晟',
+    });
+    expect(
+      councilCandidates.some((candidate) => candidate.cecDirectoryName),
+    ).toBe(true);
+    expect(
+      councilCandidates.filter((candidate) => candidate.cecDirectoryName),
+    ).toHaveLength(9);
+  });
+
+  it('reconciles promoted council identity fields against CEC by district and number', () => {
+    const dataset = validateOfficialDataset(approvedInput);
+    const roster = validateCouncilRoster(councilRosterInput);
+    const names = parseCecQualifiedKaohsiungMayors(cecQualification).map(
+      (candidate) => candidate.displayName,
+    );
+    const directory = parseCecCouncilCandidates(cecCouncilDirectory);
+    const report = reconcileOfficialData(dataset, names, roster, directory);
+    expect(report.sources.councilDirectory).toBe('source-cec-vote2026-t-64000');
+    expect(report.cecCouncil).toMatchObject({
+      sourceRows: 101,
+      matchedRows: 101,
+      missingCandidates: [],
+      unexpectedCandidates: [],
+      partyMismatches: [],
+      birthDateMismatches: [],
+      status: 'partial',
+    });
+    expect(report.cecCouncil?.sourceNameConflicts).toHaveLength(9);
+    expect(report.cecCouncil?.sourceNameConflicts).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          districtNumber: 3,
+          candidateNumber: '2',
+          canonicalName: '張驥晟',
+          directoryName: '張騏晟',
+        }),
+        expect.objectContaining({
+          districtNumber: 14,
+          candidateNumber: '1',
+          canonicalName: '洪英雄',
+          directoryName: '洪英雄 Salizan．binkinuan',
+        }),
+      ]),
+    );
+    expect(report.discrepancies).toEqual([]);
+  });
+
   it('rejects party values, duplicate numbers, and missing source references', () => {
     const partyInvalid = structuredClone(approvedInput) as {
       candidates: Array<Record<string, unknown>>;
@@ -229,6 +337,7 @@ describe('approved official dataset', () => {
     if (!firstCouncil)
       throw new Error('Approved dataset has no council fixture.');
     firstCouncil.politicalParty = '未經來源證實的政黨';
+    firstCouncil.partyStatus = 'not-published';
     expect(() => validateOfficialDataset(partyInvalid)).toThrow(
       'includes a party value',
     );

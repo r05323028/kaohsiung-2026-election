@@ -24,6 +24,7 @@ export type CandidateProfileView = {
     publicationStatus?: 'approved' | 'pending-review' | 'unavailable' | 'demo';
     partyStatus?: 'published' | 'not-published' | 'unavailable';
     birthDate?: string;
+    cecDirectoryName?: string;
   };
   district: Omit<ElectoralDistrict, 'isDemo'> & { isDemo?: boolean };
   positions: Array<Omit<Position, 'isDemo'> & { isDemo?: boolean }>;

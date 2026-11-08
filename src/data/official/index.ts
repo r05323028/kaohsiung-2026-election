@@ -169,6 +169,9 @@ function toProfile(
       electionType: candidate.electionType,
       candidateNumber: candidate.candidateNumber,
       ...(candidate.birthDate ? { birthDate: candidate.birthDate } : {}),
+      ...(candidate.cecDirectoryName
+        ? { cecDirectoryName: candidate.cecDirectoryName }
+        : {}),
       politicalParty: candidate.politicalParty ?? '目前尚未刊載政黨資訊',
       partyStatus: candidate.partyStatus,
       currentPosition: candidate.currentPosition,

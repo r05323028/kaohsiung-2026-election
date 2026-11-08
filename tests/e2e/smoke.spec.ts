@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
 
 test('homepage renders the city explorer', async ({ page }) => {
@@ -132,7 +133,7 @@ test('official routes expose source references and neutral missing states', asyn
     page.getByRole('heading', { name: '高雄市議員第1選舉區' }),
   ).toBeVisible();
   await expect(councilPage).toContainText('李振豪');
-  await expect(councilPage).toContainText('政黨資訊尚未刊載');
+  await expect(councilPage).toContainText('中國國民黨');
   const councilCandidateLink = councilPage.locator('a.candidate-card').first();
   await expect(councilCandidateLink).toHaveAttribute('href', /\/candidates\//);
   await councilCandidateLink.click();
@@ -140,7 +141,7 @@ test('official routes expose source references and neutral missing states', asyn
     page.getByRole('heading', { name: '李振豪', exact: true }),
   ).toBeVisible();
   await expect(page.getByText('抽定，非正式公告').first()).toBeVisible();
-  await expect(page.getByText('政黨資訊尚未刊載')).toBeVisible();
+  await expect(page.getByText('中國國民黨').first()).toBeVisible();
   await expect(
     page.getByRole('link', { name: /source-khec-65366/ }).first(),
   ).toHaveAttribute('href', 'https://www.cec.gov.tw/khec/article/65366');
@@ -290,7 +291,10 @@ test('selected public-record profiles expose provenance and neutral gaps', async
   );
   await expect(
     profile.getByRole('link', { name: /source-cec-vote2026-t-64000/ }).first(),
-  ).toHaveAttribute('href', 'https://info.cec.gov.tw/vote2026/');
+  ).toHaveAttribute(
+    'href',
+    'https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json',
+  );
   await profile.getByRole('tab', { name: '公共紀錄' }).click();
   await expect(
     profile.getByRole('heading', { name: '公共紀錄與成果' }),
@@ -380,6 +384,109 @@ test('all five mayor profiles expose six neutral, source-backed sections', async
       await expect(activePanel).toBeVisible();
       await expect(activePanel.locator('h3, h4').first()).toBeVisible();
     }
+  }
+});
+
+const officialCouncilRoster = JSON.parse(
+  readFileSync(
+    new URL(
+      '../../data/approved/2026/kaohsiung-election.json',
+      import.meta.url,
+    ),
+    'utf8',
+  ),
+) as {
+  candidates: Array<{
+    electionType: string;
+    districtId: string;
+    slug: string;
+    displayName: string;
+    politicalParty: string | null;
+    birthDate?: string;
+    cecDirectoryName?: string;
+  }>;
+};
+
+test('all official council routes expose CEC identity fields and tab behavior', async ({
+  page,
+}) => {
+  const councilCandidates = officialCouncilRoster.candidates.filter(
+    (candidate) => candidate.electionType.endsWith('council'),
+  );
+  expect(councilCandidates).toHaveLength(101);
+
+  const districtRoutes = [
+    'kaohsiung-council-01',
+    'kaohsiung-council-02',
+    'kaohsiung-council-03',
+    'kaohsiung-council-04',
+    'kaohsiung-council-05',
+    'kaohsiung-council-06',
+    'kaohsiung-council-07',
+    'kaohsiung-council-08',
+    'kaohsiung-council-09',
+    'kaohsiung-council-10',
+    'kaohsiung-council-11',
+    'kaohsiung-indigenous-flat-12',
+    'kaohsiung-indigenous-mountain-13',
+    'kaohsiung-indigenous-mountain-14',
+    'kaohsiung-indigenous-mountain-15',
+  ];
+  const districtCounts = [5, 5, 8, 12, 7, 4, 12, 9, 10, 13, 6, 3, 2, 3, 2];
+
+  for (let index = 0; index < districtRoutes.length; index += 1) {
+    await page.goto(`/districts/${districtRoutes[index]}/`);
+    await expect(
+      page.getByRole('heading', { name: /高雄市議員第/ }),
+    ).toBeVisible();
+    await expect(page.locator('a.candidate-card')).toHaveCount(
+      districtCounts[index],
+    );
+  }
+
+  for (const candidate of councilCandidates) {
+    await page.goto(`/candidates/${candidate.slug}/`);
+    const profile = page.getByTestId('profile-tabs');
+    await expect(
+      page.getByRole('heading', { name: candidate.displayName, exact: true }),
+    ).toBeVisible();
+    await expect(profile).toContainText(candidate.politicalParty ?? '');
+    await expect(profile).toContainText(candidate.birthDate ?? '');
+    await expect(
+      profile.getByRole('link', { name: /source-cec-vote2026-t-64000/ }),
+    ).toBeVisible();
+  }
+
+  const conflictCandidate = councilCandidates.find(
+    (candidate) => candidate.cecDirectoryName,
+  );
+  if (!conflictCandidate) throw new Error('Missing CEC/KHEC name conflict');
+  await page.goto(`/candidates/${conflictCandidate.slug}/`);
+  const conflictProfile = page.getByTestId('profile-tabs');
+  await expect(conflictProfile).toContainText(
+    conflictCandidate.cecDirectoryName ?? '',
+  );
+  await expect(conflictProfile).toContainText('待人工比對');
+
+  for (const tab of [
+    '基本資料',
+    '政策主張',
+    '公共紀錄',
+    '新聞',
+    '公共關係史',
+    '政治時間軸',
+  ]) {
+    const tabButton = conflictProfile.getByRole('tab', {
+      name: tab,
+      exact: true,
+    });
+    await tabButton.click();
+    await expect(tabButton).toHaveAttribute('aria-selected', 'true');
+    const panelId = await tabButton.getAttribute('aria-controls');
+    if (!panelId) throw new Error('Profile tab is missing aria-controls');
+    const activePanel = conflictProfile.locator(`#${panelId}`);
+    await expect(activePanel).toBeVisible();
+    await expect(activePanel.locator('h3, h4').first()).toBeVisible();
   }
 });
 

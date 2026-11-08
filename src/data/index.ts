@@ -42,6 +42,7 @@ function required<T>(value: T | undefined, label: string): T {
 function getDemoCandidateProfile(slug: string): CandidateProfile | undefined {
   const candidacy = dataset.candidacies.find((item) => item.slug === slug);
   if (!candidacy) return undefined;
+  const { cecDirectoryName, ...candidacyWithoutDirectoryName } = candidacy;
 
   const person = required(
     peopleById.get(candidacy.personId),
@@ -85,8 +86,9 @@ function getDemoCandidateProfile(slug: string): CandidateProfile | undefined {
   return {
     person,
     candidacy: {
-      ...candidacy,
-      candidateNumberStatus: candidacy.candidateNumber
+      ...candidacyWithoutDirectoryName,
+      ...(cecDirectoryName ? { cecDirectoryName } : {}),
+      candidateNumberStatus: candidacyWithoutDirectoryName.candidateNumber
         ? 'final'
         : 'not-published',
       publicationStatus: 'demo',

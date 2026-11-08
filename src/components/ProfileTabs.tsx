@@ -487,8 +487,24 @@ function BasicTab({ candidate }: { candidate: CandidateProfile }) {
         </div>
         <div className="info-row">
           <dt>政黨／登記資訊</dt>
-          <dd>{candidacy.politicalParty}</dd>
+          <dd>
+            {candidacy.politicalParty}
+            <small className="info-note">
+              中選會選舉專區資料列之政黨／登記欄；不等同黨籍認定。
+            </small>
+          </dd>
         </div>
+        {candidacy.cecDirectoryName ? (
+          <div className="info-row">
+            <dt>中選會選舉專區列名</dt>
+            <dd>
+              {candidacy.cecDirectoryName}
+              <small className="info-note">
+                與高雄市選舉委員會號次抽定表列名有差異；正式公告前待人工比對，未靜默合併。
+              </small>
+            </dd>
+          </div>
+        ) : null}
         <div className="info-row">
           <dt>目前職務</dt>
           <dd>{candidacy.currentPosition}</dd>

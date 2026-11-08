@@ -55,6 +55,7 @@ export const OfficialCandidateSchema = z.object({
   displayName: z.string().min(1),
   shortName: z.string().min(1),
   birthDate: DateOnlySchema.optional(),
+  cecDirectoryName: z.string().min(1).optional(),
   districtId: z.string().min(1),
   electionYear: z.literal(2026),
   electionType: z.enum(['mayoral', 'city-council', 'indigenous-council']),

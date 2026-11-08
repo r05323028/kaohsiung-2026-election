@@ -88,6 +88,7 @@ export const CandidacySchema = z.object({
   electionType: ElectionTypeSchema,
   candidateNumber: z.string().min(1),
   politicalParty: z.string().min(1),
+  cecDirectoryName: z.string().min(1).optional(),
   currentPosition: z.string().min(1),
   portraitReference: z.string().min(1),
   isDemo: DemoFlagSchema,

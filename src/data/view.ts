@@ -1,6 +1,7 @@
 import type { BiographyReadModel } from './biographies';
 import type { AutomatedCandidateReadModel } from './enrichment/automated-publication';
 import type { CandidatePolicyResearchSummary } from './policy-research';
+import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { CandidateResearchSummary } from './public-records/research-index';
 import type { PublicRecordBundle } from './public-records/schema';
 import type {
@@ -40,6 +41,7 @@ export type CandidateProfileView = {
   publicRecords?: PublicRecordBundle;
   research?: CandidateResearchSummary;
   policyResearch?: CandidatePolicyResearchSummary;
+  publicRecordResearch?: CandidatePublicRecordResearchSummary;
   biography?: BiographyReadModel;
   automatedPublication?: AutomatedCandidateReadModel;
   visual: Omit<CharacterVisualConfig, 'isDemo'> & { isDemo?: boolean };

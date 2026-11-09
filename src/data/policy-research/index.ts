@@ -1,23 +1,23 @@
-import datasetInput from '../../../data/policy-research/2026/full-roster.json';
+import summaryInput from '../../../data/policy-research/2026/summary.json';
 import {
-  type CandidatePolicyOutcome,
-  type PolicyResearchDataset,
-  validatePolicyResearchDataset,
-} from './schema';
+  type PolicyResearchSummary,
+  validatePolicyResearchSummary,
+} from './summary-schema';
 
-export const policyResearchDataset: PolicyResearchDataset =
-  validatePolicyResearchDataset(datasetInput);
+// Production imports use this summary-only artifact; full research remains script/test data.
+export const policyResearchSummary: PolicyResearchSummary =
+  validatePolicyResearchSummary(summaryInput);
 
 export type CandidatePolicyResearchSummary = {
-  outcome: CandidatePolicyOutcome;
-  researchStatus: 'completed' | 'blocked' | 'identity-unresolved';
+  outcome: PolicyResearchSummary['audits'][number]['outcome'];
+  researchStatus: PolicyResearchSummary['audits'][number]['researchStatus'];
   policyCount: number;
   publishedPolicyCount: number;
   note: string;
 };
 
 const auditByCandidate = new Map(
-  policyResearchDataset.audits.map((audit) => [audit.candidateId, audit]),
+  policyResearchSummary.audits.map((audit) => [audit.candidateId, audit]),
 );
 
 export function getCandidatePolicyResearchSummary(
@@ -28,11 +28,10 @@ export function getCandidatePolicyResearchSummary(
   return {
     outcome: audit.outcome,
     researchStatus: audit.researchStatus,
-    policyCount: audit.policyIds.length,
-    publishedPolicyCount: 0,
+    policyCount: audit.policyCount,
+    publishedPolicyCount: audit.publishedPolicyCount,
     note: audit.note,
   };
 }
 
-export type { PolicyResearchDataset };
-export { validatePolicyResearchDataset };
+export type { PolicyResearchSummary };

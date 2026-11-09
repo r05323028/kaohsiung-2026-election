@@ -56,6 +56,32 @@ describe('four-section candidate profile coverage', () => {
     expect(coverageReport.individualVoteRecordCount).toBe(0);
   });
 
+  it('exposes only a status summary for pending public-record research', () => {
+    expect(
+      officialCandidateProfiles.every(
+        (candidate) => candidate.publicRecordResearch !== undefined,
+      ),
+    ).toBe(true);
+    expect(
+      officialCandidateProfiles.some(
+        (candidate) =>
+          (candidate.publicRecordResearch?.pendingRecordCount ?? 0) > 0,
+      ),
+    ).toBe(true);
+    expect(
+      officialCandidateProfiles.every(
+        (candidate) =>
+          candidate.publicRecordResearch?.publishedRecordCount === 0,
+      ),
+    ).toBe(true);
+    expect(
+      officialCandidateProfiles.every(
+        (candidate) =>
+          candidate.publicRecordResearch?.outcome !== 'identity-conflict',
+      ),
+    ).toBe(true);
+  });
+
   it('does not expose pending policy research as public policy records', () => {
     const pendingCandidates = officialCandidateProfiles.filter(
       (candidate) => (candidate.policyResearch?.policyCount ?? 0) > 0,

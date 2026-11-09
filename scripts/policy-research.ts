@@ -25,6 +25,7 @@ const TIMESTAMP = '2026-11-09T00:00:00.000Z';
 const KCC_TIMESTAMP = '2026-11-06T00:00:00.000Z';
 const ROSTER_PATH = 'data/approved/2026/kaohsiung-election.json';
 const OUTPUT_PATH = 'data/policy-research/2026/full-roster.json';
+const SUMMARY_PATH = 'data/policy-research/2026/summary.json';
 const REPORT_JSON_PATH = 'reports/2026-policy-enrichment.json';
 const REPORT_MD_PATH = 'reports/2026-policy-enrichment.md';
 
@@ -549,6 +550,23 @@ function loadRoster() {
   return validateOfficialDataset(parsed);
 }
 
+function buildSummary(dataset: PolicyResearchDataset) {
+  return {
+    datasetId: dataset.datasetId,
+    snapshotDate: dataset.snapshotDate,
+    researchCutoff: dataset.researchCutoff,
+    candidateCount: dataset.candidateCount,
+    audits: dataset.audits.map((audit) => ({
+      candidateId: audit.candidateId,
+      outcome: audit.outcome,
+      researchStatus: audit.researchStatus,
+      policyCount: audit.policyIds.length,
+      publishedPolicyCount: 0,
+      note: audit.note,
+    })),
+  };
+}
+
 function main(): void {
   const roster = loadRoster();
   if (roster.candidates.length !== 106)
@@ -969,6 +987,7 @@ function main(): void {
   });
 
   writeJson(OUTPUT_PATH, dataset);
+  writeJson(SUMMARY_PATH, buildSummary(dataset));
   writeJson(REPORT_JSON_PATH, buildReport(dataset, candidates, districts));
   writeFileSync(
     absolute(REPORT_MD_PATH),

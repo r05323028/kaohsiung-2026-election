@@ -9,6 +9,7 @@ import {
   getPublicRecordSourceIds,
   publicRecordsDataset,
 } from '../public-records';
+import { getCandidatePublicRecordResearchSummary } from '../public-records/enrichment-summary';
 
 export { publicRecordsDataset };
 
@@ -140,6 +141,9 @@ function toProfile(
   const publicSourceIds = getPublicRecordSourceIds(personId);
   const research = getCandidateResearchSummary(candidate.id);
   const policyResearch = getCandidatePolicyResearchSummary(candidate.id);
+  const publicRecordResearch = getCandidatePublicRecordResearchSummary(
+    candidate.id,
+  );
   const biography = getBiographyReadModel(candidate.id);
   const automatedPublication = getAutomatedCandidateReadModel(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
@@ -203,6 +207,7 @@ function toProfile(
     ...(publicRecords ? { publicRecords } : {}),
     ...(research ? { research } : {}),
     ...(policyResearch ? { policyResearch } : {}),
+    ...(publicRecordResearch ? { publicRecordResearch } : {}),
     ...(biography ? { biography } : {}),
     ...(automatedPublication.claims.length > 0 ? { automatedPublication } : {}),
     visual: neutralVisual(candidacyId, index),

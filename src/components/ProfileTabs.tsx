@@ -609,6 +609,43 @@ function BasicTab({ candidate }: { candidate: CandidateProfile }) {
   );
 }
 
+const policyResearchOutcomeLabels: Record<string, string> = {
+  'verified-records': '已找到候選人政策來源紀錄',
+  'current-or-historical-only': '僅找到現任／歷史服務政見',
+  'no-verifiable-policy-found': '目前沒有足夠可核實的政策紀錄',
+  'sources-unavailable': '候選人專屬來源目前無法取得',
+  'evidence-requires-review': '政策證據仍需人工查核',
+  'candidate-identity-unresolved': '候選人身分仍待釐清',
+};
+
+function PolicyResearchStatus({ candidate }: { candidate: CandidateProfile }) {
+  const research = candidate.policyResearch;
+  if (!research) return null;
+
+  const outcomeLabel =
+    policyResearchOutcomeLabels[research.outcome] ?? research.outcome;
+  const detail =
+    research.outcome === 'verified-records'
+      ? `研究找到 ${research.policyCount} 筆候選人政策紀錄；目前均尚未完成人工與編輯核准。`
+      : research.outcome === 'current-or-historical-only'
+        ? `研究找到 ${research.policyCount} 筆現任／歷史服務政見；這些內容不自動代表 2026 競選承諾。`
+        : research.outcome === 'sources-unavailable'
+          ? '已記錄限定來源研究嘗試，但目前無法取得足以核實候選人政策的候選人專屬來源。'
+          : '已完成限定來源研究，但目前沒有足以公開的政策紀錄。';
+
+  return (
+    <div className="content-card" data-testid="policy-research-status">
+      <h4>政策研究狀態：{outcomeLabel}</h4>
+      <p>{detail}</p>
+      <p>{research.note}</p>
+      <p>
+        公開政策：{research.publishedPolicyCount}{' '}
+        筆。未經人工與編輯核准的研究紀錄不會在本頁公開；資料缺少不表示候選人沒有政策。
+      </p>
+    </div>
+  );
+}
+
 function PoliciesTab({ candidate }: { candidate: CandidateProfile }) {
   const demo = isDemoProfile(candidate);
   const publicPolicies = candidate.publicRecords?.policies ?? [];
@@ -618,6 +655,7 @@ function PoliciesTab({ candidate }: { candidate: CandidateProfile }) {
         <h3>政策主張</h3>
         <p>原文與編輯整理分開標示；政策主張不等同於已完成的公共成果。</p>
       </div>
+      <PolicyResearchStatus candidate={candidate} />
       <AutomatedClaimCards
         candidate={candidate}
         categories={['policies']}

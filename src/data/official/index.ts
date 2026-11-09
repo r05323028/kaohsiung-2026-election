@@ -2,6 +2,7 @@ import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
 import manifestInput from '../../../data/official-source-manifest.json';
 import { getBiographyReadModel } from '../biographies';
 import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
+import { getCandidatePolicyResearchSummary } from '../policy-research';
 import {
   getCandidateResearchSummary,
   getPublicRecordBundle,
@@ -138,6 +139,7 @@ function toProfile(
   const publicRecords = getPublicRecordBundle(personId);
   const publicSourceIds = getPublicRecordSourceIds(personId);
   const research = getCandidateResearchSummary(candidate.id);
+  const policyResearch = getCandidatePolicyResearchSummary(candidate.id);
   const biography = getBiographyReadModel(candidate.id);
   const automatedPublication = getAutomatedCandidateReadModel(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
@@ -200,6 +202,7 @@ function toProfile(
     sources,
     ...(publicRecords ? { publicRecords } : {}),
     ...(research ? { research } : {}),
+    ...(policyResearch ? { policyResearch } : {}),
     ...(biography ? { biography } : {}),
     ...(automatedPublication.claims.length > 0 ? { automatedPublication } : {}),
     visual: neutralVisual(candidacyId, index),

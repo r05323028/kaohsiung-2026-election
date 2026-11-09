@@ -225,6 +225,27 @@ export const PositionRecordSchema = z.object({
   ...RecordReviewFields,
 });
 
+export const PolicyContextSchema = z.enum([
+  'campaign-promise',
+  'formal-proposal',
+  'legislative-proposal',
+  'implemented-policy',
+  'commentary',
+  'historical-position',
+  'unknown',
+]);
+
+export const PolicyStatusSchema = z.enum([
+  'proposed',
+  'under-review',
+  'approved',
+  'under-implementation',
+  'implemented',
+  'completed',
+  'cancelled',
+  'unknown',
+]);
+
 export const PolicyRecordSchema = z.object({
   id: z.string().min(1),
   personId: z.string().min(1),
@@ -235,6 +256,9 @@ export const PolicyRecordSchema = z.object({
   neutralSummary: z.string().nullable(),
   publicationDate: PublicDateSchema.nullable(),
   attribution: ClaimAttributionSchema,
+  policyContext: PolicyContextSchema.optional(),
+  policyStatus: PolicyStatusSchema.optional(),
+  geographicScope: z.string().min(1).optional(),
   ...RecordReviewFields,
 });
 
@@ -259,6 +283,14 @@ export const PublicActivityRecordSchema = z.object({
   ...RecordReviewFields,
 });
 
+export const NewsClassificationSchema = z.enum([
+  'positive',
+  'negative',
+  'neutral',
+  'disputed',
+  'unclassified',
+]);
+
 export const NewsRecordSchema = z.object({
   id: z.string().min(1),
   personIds: z.array(z.string().min(1)).min(1),
@@ -266,8 +298,12 @@ export const NewsRecordSchema = z.object({
   publisher: z.string().min(1),
   originalUrl: z.url(),
   publicationDate: PublicDateSchema,
+  eventDate: PublicDateSchema.nullable().optional(),
+  latestStatus: z.string().min(1).nullable().optional(),
   topicTags: z.array(z.string().min(1)).min(1),
   editorialSummary: z.string().nullable(),
+  classification: NewsClassificationSchema.optional(),
+  classificationRationale: z.string().min(1).nullable().optional(),
   contentType: z.enum([
     'reporting',
     'opinion',

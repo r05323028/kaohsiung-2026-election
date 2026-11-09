@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run validate:data && npm run validate:official && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run typecheck && astro build",
+    "build": "npm run validate:data && npm run validate:official && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:profile-coverage && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run typecheck && astro build",
     "biography:execute": "tsx scripts/execute-biography-research.ts execute",
     "biography:normalize": "tsx scripts/execute-biography-research.ts normalize",
     "biography:review": "tsx scripts/execute-biography-research.ts review",
@@ -97,7 +97,9 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "policy:research": "tsx scripts/policy-research.ts",
-    "validate:policy-research": "tsx scripts/validate-policy-research.ts"
+    "validate:policy-research": "tsx scripts/validate-policy-research.ts",
+    "profile:coverage": "tsx scripts/profile-coverage.ts",
+    "validate:profile-coverage": "tsx scripts/profile-coverage.ts --check"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.2",

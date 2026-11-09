@@ -907,18 +907,16 @@ export function buildScopedPublishedRecords(
 
 export function scopedCategoryToProfileTab(
   category: EnrichmentCategory,
-): 'basic' | 'policies' | 'records' | 'news' | 'history' | 'timeline' {
+): 'basic' | 'policies' | 'news' | 'career' {
   switch (category) {
     case 'policies':
       return 'policies';
-    case 'public-records':
-      return 'records';
     case 'news':
       return 'news';
+    case 'public-records':
     case 'relationships':
-      return 'history';
     case 'timeline':
-      return 'timeline';
+      return 'career';
     default:
       return 'basic';
   }

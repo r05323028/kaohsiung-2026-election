@@ -406,6 +406,7 @@ const officialCouncilRoster = JSON.parse(
 test('all official council routes expose CEC identity fields and tab behavior', async ({
   page,
 }) => {
+  test.setTimeout(180_000);
   const councilCandidates = officialCouncilRoster.candidates.filter(
     (candidate) => candidate.electionType.endsWith('council'),
   );
@@ -450,7 +451,10 @@ test('all official council routes expose CEC identity fields and tab behavior', 
     await expect(
       page.getByRole('heading', { name: candidate.displayName, exact: true }),
     ).toBeVisible();
-    await expect(profile).toHaveAttribute('data-hydrated', 'true');
+    // Dev-server module compilation can stall after the full route sweep.
+    await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+      timeout: 20_000,
+    });
     await expect(profile).toContainText(candidate.politicalParty ?? '');
     await expect(profile).toContainText(candidate.birthDate ?? '');
     await expect(

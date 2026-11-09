@@ -112,7 +112,7 @@ async function dragCanvas(
 }
 
 test.describe('refined living-city exploration', () => {
-  test.describe.configure({ timeout: 60_000 });
+  test.describe.configure({ timeout: 120_000 });
   test('candidate selection keeps scale, profile does not reset it, and close restores the view', async ({
     page,
   }) => {

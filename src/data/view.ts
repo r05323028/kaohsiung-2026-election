@@ -1,5 +1,8 @@
 import type { BiographyReadModel } from './biographies';
-import type { AutomatedCandidateReadModel } from './enrichment/automated-publication';
+import type {
+  AutomatedPublicClaim,
+  AutomatedPublicSource,
+} from './enrichment/automated-publication';
 import type { CandidatePolicyResearchSummary } from './policy-research';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { CandidateResearchSummary } from './public-records/research-index';
@@ -43,15 +46,355 @@ export type CandidateProfileView = {
   policyResearch?: CandidatePolicyResearchSummary;
   publicRecordResearch?: CandidatePublicRecordResearchSummary;
   biography?: BiographyReadModel;
-  automatedPublication?: AutomatedCandidateReadModel;
+  automatedPublication?: {
+    status: 'published' | 'none';
+    claims: AutomatedPublicClaim[];
+    sources: AutomatedPublicSource[];
+    note: string;
+  };
   visual: Omit<CharacterVisualConfig, 'isDemo'> & { isDemo?: boolean };
 };
 
+type PublicSource = Pick<
+  CandidateProfileView['sources'][number],
+  'id' | 'url' | 'publisher' | 'publicationDate'
+>;
+type PublicRecordClaim = Pick<
+  PublicRecordBundle['claims'][number],
+  'claimId' | 'attribution' | 'evidenceIds'
+>;
+type PublicRecordEvidence = Pick<
+  PublicRecordBundle['evidence'][number],
+  'evidenceId' | 'sourceId' | 'documentLocation' | 'quotedText'
+>;
+type PublicPositionRecord = Pick<
+  PublicRecordBundle['positions'][number],
+  | 'id'
+  | 'title'
+  | 'organization'
+  | 'startDate'
+  | 'endDate'
+  | 'currentStatus'
+  | 'claimIds'
+  | 'evidenceIds'
+>;
+type PublicPolicyRecord = Pick<
+  PublicRecordBundle['policies'][number],
+  | 'id'
+  | 'electionYear'
+  | 'title'
+  | 'category'
+  | 'originalStatement'
+  | 'neutralSummary'
+  | 'publicationDate'
+  | 'attribution'
+  | 'policyContext'
+  | 'policyStatus'
+  | 'geographicScope'
+  | 'claimIds'
+  | 'evidenceIds'
+>;
+type PublicActivityRecord = Pick<
+  PublicRecordBundle['activities'][number],
+  | 'id'
+  | 'activityType'
+  | 'title'
+  | 'eventDate'
+  | 'organization'
+  | 'role'
+  | 'description'
+  | 'documentedOutcome'
+  | 'attribution'
+  | 'claimIds'
+  | 'evidenceIds'
+>;
+type PublicNewsRecord = Pick<
+  PublicRecordBundle['news'][number],
+  | 'id'
+  | 'headline'
+  | 'publisher'
+  | 'originalUrl'
+  | 'publicationDate'
+  | 'eventDate'
+  | 'latestStatus'
+  | 'topicTags'
+  | 'editorialSummary'
+  | 'classification'
+  | 'classificationRationale'
+  | 'contentType'
+  | 'claimIds'
+  | 'evidenceIds'
+>;
+type PublicRecordsView = {
+  personId: string;
+  claims: PublicRecordClaim[];
+  evidence: PublicRecordEvidence[];
+  positions: PublicPositionRecord[];
+  policies: PublicPolicyRecord[];
+  activities: PublicActivityRecord[];
+  news: PublicNewsRecord[];
+};
+type PublicBiographyClaim = Pick<
+  BiographyReadModel['claims'][number],
+  | 'claimId'
+  | 'claimType'
+  | 'title'
+  | 'organization'
+  | 'value'
+  | 'validFrom'
+  | 'sourceIds'
+>;
+type PublicAutomatedClaim = Pick<
+  AutomatedPublicClaim,
+  | 'claimId'
+  | 'category'
+  | 'claimType'
+  | 'title'
+  | 'organization'
+  | 'value'
+  | 'sourcePublicationDate'
+  | 'sourceIds'
+>;
+type PublicAutomatedSource = Pick<
+  AutomatedPublicSource,
+  'sourceId' | 'url' | 'publisher' | 'publicationDate'
+>;
+
+export type PublicCandidateProfile = Omit<
+  CandidateProfileView,
+  | 'person'
+  | 'candidacy'
+  | 'district'
+  | 'sources'
+  | 'publicRecords'
+  | 'research'
+  | 'policyResearch'
+  | 'publicRecordResearch'
+  | 'biography'
+  | 'automatedPublication'
+> & {
+  person: CandidateProfileView['person'];
+  candidacy: Omit<
+    CandidateProfileView['candidacy'],
+    'partyStatus' | 'publicationStatus'
+  >;
+  district: CandidateProfileView['district'];
+  sources: PublicSource[];
+  publicRecords?: PublicRecordsView;
+  biography?: { claims: PublicBiographyClaim[] };
+  automatedPublication?: {
+    claims: PublicAutomatedClaim[];
+    sources: PublicAutomatedSource[];
+  };
+};
+
+function officeLabelFor(candidate: CandidateProfileView): string {
+  return candidate.candidacy.electionType === 'mayoral'
+    ? '高雄市長'
+    : candidate.candidacy.electionType === 'indigenous-council'
+      ? '原住民族區域／平地原住民議員'
+      : '高雄市議員';
+}
+
+export function toPublicCandidateProfile(
+  candidate: CandidateProfileView,
+  options: { summary?: string } = {},
+): PublicCandidateProfile {
+  const isDemo =
+    candidate.person.isDemo === true || candidate.candidacy.isDemo === true;
+  const {
+    partyStatus: _partyStatus,
+    publicationStatus: _publicationStatus,
+    ...candidacyFields
+  } = candidate.candidacy;
+  void _partyStatus;
+  void _publicationStatus;
+
+  const publicCandidacy: PublicCandidateProfile['candidacy'] = {
+    ...candidacyFields,
+    politicalParty:
+      candidate.candidacy.partyStatus === 'published'
+        ? candidate.candidacy.politicalParty
+        : '暫無資料',
+    candidateNumber:
+      candidate.candidacy.candidateNumberStatus === 'final'
+        ? candidate.candidacy.candidateNumber
+        : '待公告',
+    candidateNumberStatus:
+      candidate.candidacy.candidateNumberStatus === 'final'
+        ? 'final'
+        : 'not-published',
+  };
+
+  const publicRecords = candidate.publicRecords
+    ? {
+        personId: candidate.publicRecords.personId,
+        claims: candidate.publicRecords.claims.map((claim) => ({
+          claimId: claim.claimId,
+          attribution: claim.attribution,
+          evidenceIds: claim.evidenceIds,
+        })),
+        evidence: candidate.publicRecords.evidence.map((evidence) => ({
+          evidenceId: evidence.evidenceId,
+          sourceId: evidence.sourceId,
+          documentLocation: evidence.documentLocation,
+          quotedText: evidence.quotedText,
+        })),
+        positions: candidate.publicRecords.positions.map((position) => ({
+          id: position.id,
+          title: position.title,
+          organization: position.organization,
+          startDate: position.startDate,
+          endDate: position.endDate,
+          currentStatus: position.currentStatus,
+          claimIds: position.claimIds,
+          evidenceIds: position.evidenceIds,
+        })),
+        policies: candidate.publicRecords.policies.map((policy) => ({
+          id: policy.id,
+          electionYear: policy.electionYear,
+          title: policy.title,
+          category: policy.category,
+          originalStatement: policy.originalStatement,
+          neutralSummary: policy.neutralSummary,
+          publicationDate: policy.publicationDate,
+          attribution: policy.attribution,
+          policyContext: policy.policyContext,
+          policyStatus: policy.policyStatus,
+          geographicScope: policy.geographicScope,
+          claimIds: policy.claimIds,
+          evidenceIds: policy.evidenceIds,
+        })),
+        activities: candidate.publicRecords.activities.map((activity) => ({
+          id: activity.id,
+          activityType: activity.activityType,
+          title: activity.title,
+          eventDate: activity.eventDate,
+          organization: activity.organization,
+          role: activity.role,
+          description: activity.description,
+          documentedOutcome: activity.documentedOutcome,
+          attribution: activity.attribution,
+          claimIds: activity.claimIds,
+          evidenceIds: activity.evidenceIds,
+        })),
+        news: candidate.publicRecords.news.map((article) => ({
+          id: article.id,
+          headline: article.headline,
+          publisher: article.publisher,
+          originalUrl: article.originalUrl,
+          publicationDate: article.publicationDate,
+          eventDate: article.eventDate,
+          latestStatus: article.latestStatus,
+          topicTags: article.topicTags,
+          editorialSummary: article.editorialSummary,
+          classification: article.classification,
+          classificationRationale: article.classificationRationale,
+          contentType: article.contentType,
+          claimIds: article.claimIds,
+          evidenceIds: article.evidenceIds,
+        })),
+      }
+    : undefined;
+
+  const publicBiography = candidate.biography
+    ? {
+        claims: candidate.biography.claims.map((claim) => ({
+          claimId: claim.claimId,
+          claimType: claim.claimType,
+          title: claim.title,
+          organization: claim.organization,
+          value: claim.value,
+          validFrom: claim.validFrom,
+          sourceIds: claim.sourceIds,
+        })),
+      }
+    : undefined;
+
+  const publicAutomatedPublication = candidate.automatedPublication
+    ? {
+        claims: candidate.automatedPublication.claims.map((claim) => ({
+          claimId: claim.claimId,
+          category: claim.category,
+          claimType: claim.claimType,
+          title: claim.title,
+          organization: claim.organization,
+          value: claim.value,
+          sourcePublicationDate: claim.sourcePublicationDate,
+          sourceIds: claim.sourceIds,
+        })),
+        sources: candidate.automatedPublication.sources.map((source) => ({
+          sourceId: source.sourceId,
+          url: source.url,
+          publisher: source.publisher,
+          publicationDate: source.publicationDate,
+        })),
+      }
+    : undefined;
+
+  const publicSummary =
+    options.summary ??
+    (isDemo
+      ? candidate.person.summary
+      : officeLabelFor(candidate) + '，參選' + candidate.district.name + '。');
+  const publicDistrict = isDemo
+    ? candidate.district
+    : { ...candidate.district, description: '', scopeNote: '' };
+
+  return {
+    person: { ...candidate.person, summary: publicSummary },
+    candidacy: publicCandidacy,
+    district: publicDistrict,
+    positions: candidate.positions,
+    policies: candidate.policies,
+    records: candidate.records,
+    news: candidate.news,
+    relationships: candidate.relationships,
+    timeline: candidate.timeline,
+    sources: candidate.sources.map((source) => ({
+      id: source.id,
+      url: source.url,
+      publisher: source.publisher,
+      publicationDate: source.publicationDate,
+    })),
+    ...(publicRecords ? { publicRecords } : {}),
+    ...(publicBiography ? { biography: publicBiography } : {}),
+    ...(publicAutomatedPublication
+      ? { automatedPublication: publicAutomatedPublication }
+      : {}),
+    visual: candidate.visual,
+  };
+}
+
 export type DistrictView = CandidateProfileView['district'];
 
-export function isDemoProfile(candidate: CandidateProfileView): boolean {
+export type PublicDistrictView = Pick<
+  DistrictView,
+  | 'id'
+  | 'slug'
+  | 'name'
+  | 'electionType'
+  | 'constituencyType'
+  | 'districtLabel'
+  | 'isDemo'
+>;
+
+export function toPublicDistrict(district: DistrictView): PublicDistrictView {
+  return {
+    id: district.id,
+    slug: district.slug,
+    name: district.name,
+    electionType: district.electionType,
+    constituencyType: district.constituencyType,
+    districtLabel: district.districtLabel,
+    ...(district.isDemo !== undefined ? { isDemo: district.isDemo } : {}),
+  };
+}
+
+export function isDemoProfile(
+  candidate: Pick<CandidateProfileView, 'person' | 'candidacy'>,
+): boolean {
   return (
-    candidate.person.isDemo === true ||
-    candidate.candidacy.publicationStatus === 'demo'
+    candidate.person.isDemo === true || candidate.candidacy.isDemo === true
   );
 }

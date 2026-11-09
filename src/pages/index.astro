@@ -1,7 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CityExplorer from '../components/CityExplorer';
-import { candidateProfiles, districts } from '../data';
+import {
+  candidateProfiles,
+  districts,
+  toPublicCandidateProfile,
+  toPublicDistrict,
+} from '../data';
 import { DISTRICT_FOCUS, LANDMARKS } from '../city/layout';
 
 const landmarks = LANDMARKS.map(({ id, label, english, blurb, x, z, focus }) => ({
@@ -23,9 +28,9 @@ const landmarks = LANDMARKS.map(({ id, label, english, blurb, x, z, focus }) => 
   <h1 class="sr-only">港都人物誌</h1>
   <CityExplorer
     client:load
-    candidates={candidateProfiles}
+    candidates={candidateProfiles.map((candidate) => toPublicCandidateProfile(candidate))}
     districtFocus={DISTRICT_FOCUS}
-    districts={districts}
+    districts={districts.map((district) => toPublicDistrict(district))}
     landmarks={landmarks}
   />
 </BaseLayout>

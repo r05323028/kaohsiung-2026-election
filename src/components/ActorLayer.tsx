@@ -2,7 +2,7 @@ import { Html } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useLayoutEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
-import type { CandidateProfile } from '../data';
+import type { PublicCandidateProfile } from '../data';
 import { HERO_WORLD_BOUNDS, insideHero } from '../world/hero';
 import {
   advanceSimulation,
@@ -12,7 +12,7 @@ import {
 import CharacterAvatar from './CharacterAvatar';
 
 type ActorLayerProps = {
-  candidates: CandidateProfile[];
+  candidates: PublicCandidateProfile[];
   selectedCandidateSlug: string | null;
   focusRadius: number;
   heroVisible: boolean;
@@ -98,7 +98,7 @@ export default function ActorLayer({
     () =>
       avatarActors
         .map((actor) => candidateBySlug.get(actor.slug))
-        .filter((candidate): candidate is CandidateProfile =>
+        .filter((candidate): candidate is PublicCandidateProfile =>
           Boolean(candidate),
         ),
     [avatarActors, candidateBySlug],

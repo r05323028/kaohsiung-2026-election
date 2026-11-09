@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import { type CandidateProfile, isDemoProfile } from '../data';
-import type { PublicRecordBundle } from '../data/public-records/schema';
-import { withBase } from '../utils/paths';
+import { isDemoProfile, type PublicCandidateProfile } from '../data';
 
 export type ProfileTab = 'basic' | 'policies' | 'news' | 'career';
 type NewsFilter = 'all' | 'positive' | 'negative';
@@ -24,14 +22,7 @@ const attributionLabels: Record<string, string> = {
   'documented-participation': '公開紀錄中的參與',
   'institutional-outcome': '機關紀錄的行政結果',
   'independently-corroborated': '獨立交叉佐證',
-  'editorial-context': '編輯脈絡',
-};
-
-const reviewLabels: Record<string, string> = {
-  approved: '已核准',
-  'pending-review': '待人工審查',
-  rejected: '不予採用',
-  'needs-clarification': '需要釐清',
+  'editorial-context': '背景脈絡',
 };
 
 const policyContextLabels: Record<string, string> = {
@@ -64,21 +55,23 @@ const newsClassificationLabels: Record<NewsClassification, string> = {
 };
 
 interface Props {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   initialTab?: ProfileTab;
 }
 
-function EmptyContent({ category, demo }: { category: string; demo: boolean }) {
+type EmptyStateKey = 'basic' | 'policies' | 'news' | 'career';
+
+const emptyStateLabels: Record<EmptyStateKey, string> = {
+  basic: '基本資料：暫無資料',
+  policies: '政策主張：暫無公開政策資料',
+  news: '正負面新聞：暫無公開新聞資料',
+  career: '從政歷程：暫無公開履歷資料',
+};
+
+function EmptyContent({ category }: { category: EmptyStateKey }) {
   return (
     <div className="content-card">
-      <h4>
-        {demo ? `${category}（示範未填寫）` : `目前尚無已查證的${category}資料`}
-      </h4>
-      <p>
-        {demo
-          ? '這個虛構示範沒有填寫此分類；缺少資料不表示事件不存在。'
-          : '目前的官方核准切片尚未包含此分類。缺少資料不表示事件不存在，後續資料須經來源核對與人工審查。'}
-      </p>
+      <h4>{emptyStateLabels[category]}</h4>
     </div>
   );
 }
@@ -97,14 +90,14 @@ function SourceChips({
   candidate,
   sourceIds,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   sourceIds: string[];
 }) {
   const sources = sourceIds
     .map((sourceId) =>
       candidate.sources.find((source) => source.id === sourceId),
     )
-    .filter((source): source is CandidateProfile['sources'][number] =>
+    .filter((source): source is PublicCandidateProfile['sources'][number] =>
       Boolean(source),
     );
 
@@ -120,7 +113,7 @@ function SourceChips({
           rel="noreferrer"
           key={source.id}
         >
-          {source.publisher}・{source.id}
+          {source.publisher}
         </a>
       ))}
     </div>
@@ -131,7 +124,7 @@ function AutomatedSourceChips({
   candidate,
   sourceIds,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   sourceIds: string[];
 }) {
   const sources = candidate.automatedPublication?.sources ?? [];
@@ -147,8 +140,9 @@ function AutomatedSourceChips({
             target="_blank"
             rel="noreferrer"
             key={source.sourceId}
+            aria-label={`${source.publisher}：開啟來源`}
           >
-            {source.publisher}・來源已驗證
+            {source.publisher}
           </a>
         );
       })}
@@ -161,11 +155,11 @@ function ClaimEvidence({
   claimIds,
   evidenceIds,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   claimIds: string[];
   evidenceIds: string[];
 }) {
-  const bundle: PublicRecordBundle | undefined = candidate.publicRecords;
+  const bundle = candidate.publicRecords;
   if (!bundle) return null;
   const claims = bundle.claims.filter((claim) =>
     claimIds.includes(claim.claimId),
@@ -174,29 +168,22 @@ function ClaimEvidence({
     evidenceIds.includes(item.evidenceId),
   );
   const sourceIds = [...new Set(evidence.map((item) => item.sourceId))];
+  const attributions = [
+    ...new Set(
+      claims.map(
+        (claim) => attributionLabels[claim.attribution] ?? claim.attribution,
+      ),
+    ),
+  ];
 
   return (
     <div className="evidence-note">
-      <p>
-        <strong>資料性質：</strong>
-        {[
-          ...new Set(
-            claims.map(
-              (claim) =>
-                attributionLabels[claim.attribution] ?? claim.attribution,
-            ),
-          ),
-        ].join('、') || '來源紀錄'}
-      </p>
-      <p>
-        <strong>查核狀態：</strong>
-        {claims
-          .map(
-            (claim) =>
-              `${claim.verificationStatus}／${reviewLabels[claim.reviewStatus] ?? claim.reviewStatus}`,
-          )
-          .join('；') || '待人工審查'}
-      </p>
+      {attributions.length > 0 ? (
+        <p>
+          <strong>資料性質：</strong>
+          {attributions.join('、')}
+        </p>
+      ) : null}
       {evidence.map((item) => (
         <div key={item.evidenceId}>
           <p>{item.documentLocation}</p>
@@ -210,70 +197,12 @@ function ClaimEvidence({
   );
 }
 
-function BiographyStatusCard({ candidate }: { candidate: CandidateProfile }) {
-  const biography = candidate.biography;
-  if (!biography) return null;
-  return (
-    <div className="content-card" data-testid="biography-status">
-      <h4>履歷資料狀態</h4>
-      <p>
-        {biography.status === 'approved'
-          ? '以下僅列出已完成身分核對、人工與編輯核准的來源資料。'
-          : '目前尚無可公開的已核准履歷主張；已取得的資料仍待人工與編輯核對，空白不代表不存在。'}
-      </p>
-      <p>{biography.note}</p>
-    </div>
-  );
-}
-
-function PublicRecordResearchStatus({
-  candidate,
-}: {
-  candidate: CandidateProfile;
-}) {
-  const research = candidate.publicRecordResearch;
-  if (!research) return null;
-
-  const outcomeLabel =
-    {
-      'records-found': '已取得待人工審查的來源紀錄',
-      'policy-references-only': '目前僅有待人工審查的政策參照',
-      'sources-attempted-no-additional-records':
-        '已嘗試保留來源，尚無新增可機器驗證紀錄',
-      'sources-unavailable': '候選人專屬來源未能在保留檔案中取得',
-      'identity-conflict': '來源身分比對存在衝突，暫不採用',
-      'no-verifiable-record-found': '目前尚無可機器驗證的新增紀錄',
-    }[research.outcome] ?? research.outcome;
-
-  return (
-    <div className="content-card" data-testid="public-record-research-status">
-      <h4>公共紀錄研究狀態：{outcomeLabel}</h4>
-      <p>
-        已完成限定來源研究：保留來源 {research.retainedSourceCount} 筆，
-        來源身分已解析 {research.resolvedSourceCount}{' '}
-        筆；研究紀錄仍待人工與編輯審查。
-      </p>
-      <p>
-        待審查紀錄 {research.pendingRecordCount} 筆（職務{' '}
-        {research.pendingPositionCount}、職歷{' '}
-        {research.pendingCareerRecordCount}、 政策參照{' '}
-        {research.pendingPolicyReferenceCount}）；公開紀錄：
-        {research.publishedRecordCount} 筆。
-      </p>
-      <p>{research.note}</p>
-      <p>
-        待審查研究內容不會在本頁當作已核准事實公開；來源缺少或無法取得也不表示候選人沒有相關紀錄。
-      </p>
-    </div>
-  );
-}
-
 function AutomatedClaimCards({
   candidate,
   categories,
   heading,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   categories: string[];
   heading: string;
 }) {
@@ -287,8 +216,6 @@ function AutomatedClaimCards({
   return (
     <div className="content-card" data-testid="automated-publication">
       <h4>{heading}</h4>
-      <p>{publication?.note}</p>
-      <p>資料性質：機器政策核准；不等同人工編輯核准。</p>
       <ul className="automated-claim-list">
         {claims.map((claim) => (
           <li key={claim.claimId}>
@@ -312,56 +239,24 @@ function AutomatedClaimCards({
   );
 }
 
-function PolicyResearchStatus({ candidate }: { candidate: CandidateProfile }) {
-  const research = candidate.policyResearch;
-  if (!research) return null;
-
-  const outcomeLabel =
-    {
-      'verified-records': '已找到候選人政策來源紀錄',
-      'current-or-historical-only': '僅找到現任／歷史服務政見',
-      'no-verifiable-policy-found': '目前沒有足夠可核實的政策紀錄',
-      'sources-unavailable': '候選人專屬來源目前無法取得',
-      'evidence-requires-review': '政策證據仍需人工查核',
-      'candidate-identity-unresolved': '候選人身分仍待釐清',
-    }[research.outcome] ?? research.outcome;
-
-  return (
-    <div className="content-card" data-testid="policy-research-status">
-      <h4>政策研究狀態：{outcomeLabel}</h4>
-      <p>
-        {research.outcome === 'verified-records'
-          ? `研究找到 ${research.policyCount} 筆候選人政策紀錄；目前均尚未完成人工與編輯核准。`
-          : research.outcome === 'current-or-historical-only'
-            ? `研究找到 ${research.policyCount} 筆現任／歷史服務政見；這些內容不自動代表 2026 競選承諾。`
-            : research.outcome === 'sources-unavailable'
-              ? '已記錄限定來源研究嘗試，但目前無法取得足以核實候選人政策的候選人專屬來源。'
-              : '已完成限定來源研究，但目前沒有足以公開的政策紀錄。'}
-      </p>
-      <p>{research.note}</p>
-      <p>
-        公開政策：{research.publishedPolicyCount}{' '}
-        筆。未經人工與編輯核准的研究紀錄不會在本頁公開；資料缺少不表示候選人沒有政策。
-      </p>
-    </div>
-  );
-}
-
-function BasicTab({ candidate }: { candidate: CandidateProfile }) {
+function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const { person, candidacy, district } = candidate;
   const demo = isDemoProfile(candidate);
   const numberLabel =
-    candidacy.candidateNumberStatus === 'drawn'
-      ? `號次 ${candidacy.candidateNumber}（抽定，非正式公告）`
-      : candidacy.candidateNumber
-        ? `號次 ${candidacy.candidateNumber}`
-        : '號次尚未發布';
+    candidacy.candidateNumberStatus === 'final' && candidacy.candidateNumber
+      ? String(candidacy.candidateNumber)
+      : '正式號次待公告';
+  const roleLabel =
+    candidacy.electionType === 'mayoral'
+      ? '高雄市長'
+      : candidacy.electionType === 'indigenous-council'
+        ? '原住民族區域／平地原住民議員'
+        : '高雄市議員';
 
   return (
     <div className="profile-tab-content" data-profile-section="basic">
       <div className="profile-section-heading">
         <h3>基本資料</h3>
-        <p>身分、參選資訊與背景分開保存；每組欄位均附上名冊或機關來源。</p>
       </div>
       <dl className="info-grid">
         <div className="info-row">
@@ -369,37 +264,17 @@ function BasicTab({ candidate }: { candidate: CandidateProfile }) {
           <dd>{person.displayName}</dd>
         </div>
         <div className="info-row">
-          <dt>本次參選</dt>
-          <dd>
-            {candidacy.electionYear}年・
-            {candidacy.electionType === 'mayoral'
-              ? '高雄市長'
-              : candidacy.electionType === 'indigenous-council'
-                ? '原住民族區域／平地原住民議員'
-                : '高雄市議員'}
-            <small className="info-note">
-              本次參選身分，不等同已當選或已就任。
-            </small>
-          </dd>
+          <dt>參選職務</dt>
+          <dd>{roleLabel}</dd>
         </div>
         <div className="info-row">
-          <dt>政黨／登記資訊</dt>
-          <dd>
-            {candidacy.politicalParty}
-            <small className="info-note">
-              中選會選舉專區資料列之政黨／登記欄；不等同黨籍認定。
-            </small>
-          </dd>
+          <dt>登記政黨</dt>
+          <dd>{candidacy.politicalParty || '暫無資料'}</dd>
         </div>
         {candidacy.cecDirectoryName ? (
           <div className="info-row">
-            <dt>中選會選舉專區列名</dt>
-            <dd>
-              {candidacy.cecDirectoryName}
-              <small className="info-note">
-                與高雄市選舉委員會號次抽定表列名有差異；正式公告前待人工比對，未靜默合併。
-              </small>
-            </dd>
+            <dt>中選會列名</dt>
+            <dd>{candidacy.cecDirectoryName}</dd>
           </div>
         ) : null}
         <div className="info-row">
@@ -409,90 +284,64 @@ function BasicTab({ candidate }: { candidate: CandidateProfile }) {
           </dd>
         </div>
         <div className="info-row">
-          <dt>目前職務／公開身分</dt>
-          <dd>{candidacy.currentPosition}</dd>
+          <dt>目前職務</dt>
+          <dd>{candidacy.currentPosition || '暫無資料'}</dd>
         </div>
         <div className="info-row">
           <dt>出生日期</dt>
-          <dd>{candidacy.birthDate ?? '目前尚未刊載'}</dd>
+          <dd>{candidacy.birthDate ?? '暫無資料'}</dd>
         </div>
         <div className="info-row">
-          <dt>選舉年度／號次</dt>
-          <dd>
-            {candidacy.electionYear}・{numberLabel}
-          </dd>
+          <dt>選舉年度</dt>
+          <dd>{candidacy.electionYear}</dd>
+        </div>
+        <div className="info-row">
+          <dt>正式號次</dt>
+          <dd>{numberLabel}</dd>
         </div>
       </dl>
       <div className="content-card">
         <h4>人物摘要</h4>
-        <p>{person.summary}</p>
+        <p>{person.summary || '暫無資料'}</p>
         <SourceChips
           candidate={candidate}
-          sourceIds={
-            candidate.candidacy
-              ? candidate.sources.map((source) => source.id)
-              : []
-          }
+          sourceIds={candidate.sources.map((source) => source.id)}
         />
       </div>
       <div className="content-card">
         <h4>教育與專業背景</h4>
         <p>
           <strong>教育：</strong>
-          {person.education.length
-            ? person.education.join('、')
-            : '目前尚無已查證的資料'}
+          {person.education.length ? person.education.join('、') : '暫無資料'}
         </p>
         <p>
           <strong>專業經歷：</strong>
           {person.professionalExperience.length
             ? person.professionalExperience.join('；')
-            : '目前尚無已查證的資料'}
+            : '暫無資料'}
         </p>
         <SourceChips
           candidate={candidate}
           sourceIds={candidate.sources.map((source) => source.id)}
         />
       </div>
-      <BiographyStatusCard candidate={candidate} />
-      {candidate.research ? (
-        <div className="content-card" data-testid="research-summary">
-          <h4>公開資料研究執行狀態</h4>
-          <p>
-            本批次於 {candidate.research.snapshotDate}{' '}
-            完成機器化名冊比對；人工審查狀態：
-            {candidate.research.reviewStatus}。
-          </p>
-          <p>
-            已嘗試 {candidate.research.attemptedCategoryCount}／6 類，已取得來源{' '}
-            {candidate.research.retrievedCategoryCount}／6 類；
-            {candidate.research.identityStatus === 'conflicted'
-              ? '本人物存在官方來源字元差異，尚未裁決。'
-              : '目前身分與官方名冊列相符。'}
-          </p>
-          <p>{candidate.research.note}</p>
-        </div>
-      ) : null}
       <div className="content-card">
         <h4>基本資料來源</h4>
-        <p>
-          下列來源支援本頁的名冊身分、參選與選區欄位；不同來源的差異不會被靜默合併。
-        </p>
         <SourceChips
           candidate={candidate}
           sourceIds={candidate.sources.map((source) => source.id)}
         />
       </div>
-      {demo ? (
-        <p className="info-note">
-          此人物為虛構示範資料，僅用於展示介面與互動流程。
-        </p>
-      ) : null}
+      {demo ? <p className="info-note">虛構示範資料。</p> : null}
     </div>
   );
 }
 
-function PublicPolicyCards({ candidate }: { candidate: CandidateProfile }) {
+function PublicPolicyCards({
+  candidate,
+}: {
+  candidate: PublicCandidateProfile;
+}) {
   const policies = candidate.publicRecords?.policies ?? [];
   return (
     <>
@@ -537,21 +386,19 @@ function PublicPolicyCards({ candidate }: { candidate: CandidateProfile }) {
   );
 }
 
-function PoliciesTab({ candidate }: { candidate: CandidateProfile }) {
-  const demo = isDemoProfile(candidate);
+function PoliciesTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const publicPolicies = candidate.publicRecords?.policies ?? [];
 
   return (
     <div className="profile-tab-content" data-profile-section="policies">
       <div className="profile-section-heading">
         <h3>政策主張</h3>
-        <p>原始主張、政策性質與查核狀態分開呈現；提案不等同已完成成果。</p>
+        <p>政策性質與狀態依來源標示。</p>
       </div>
-      <PolicyResearchStatus candidate={candidate} />
       <AutomatedClaimCards
         candidate={candidate}
         categories={['policies']}
-        heading="已自動核准的歷史政策資料"
+        heading="歷史政策資料"
       />
       {publicPolicies.length > 0 ? (
         <PublicPolicyCards candidate={candidate} />
@@ -570,25 +417,29 @@ function PoliciesTab({ candidate }: { candidate: CandidateProfile }) {
             </p>
             {policy.plainLanguageSummary ? (
               <p>
-                <strong>編輯白話摘要：</strong>
+                <strong>摘要：</strong>
                 {policy.plainLanguageSummary}
               </p>
             ) : null}
             <p>
               <strong>政策狀態：</strong>
-              來源未提供執行結果，未將其標示為已完成。
+              來源未標示
             </p>
             <SourceChips candidate={candidate} sourceIds={policy.sourceIds} />
           </article>
         ))
       ) : (
-        <EmptyContent category="政策主張" demo={demo} />
+        <EmptyContent category="policies" />
       )}
     </div>
   );
 }
 
-function PublicActivityCards({ candidate }: { candidate: CandidateProfile }) {
+function PublicActivityCards({
+  candidate,
+}: {
+  candidate: PublicCandidateProfile;
+}) {
   const activities = candidate.publicRecords?.activities ?? [];
   return (
     <>
@@ -623,7 +474,7 @@ function PublicActivityCards({ candidate }: { candidate: CandidateProfile }) {
             </p>
           ) : (
             <p>
-              <strong>結果狀態：</strong>來源未記載可歸因於個人的完成結果。
+              <strong>結果狀態：</strong>來源未標示。
             </p>
           )}
           <ClaimEvidence
@@ -637,7 +488,11 @@ function PublicActivityCards({ candidate }: { candidate: CandidateProfile }) {
   );
 }
 
-function LegacyCareerCards({ candidate }: { candidate: CandidateProfile }) {
+function LegacyCareerCards({
+  candidate,
+}: {
+  candidate: PublicCandidateProfile;
+}) {
   const positionCards = candidate.positions.map((position) => (
     <article className="content-card" key={position.id}>
       <div className="content-card__meta">
@@ -668,14 +523,18 @@ function LegacyCareerCards({ candidate }: { candidate: CandidateProfile }) {
   return [...positionCards, ...timelineCards];
 }
 
-function PublicPositionCards({ candidate }: { candidate: CandidateProfile }) {
+function PublicPositionCards({
+  candidate,
+}: {
+  candidate: PublicCandidateProfile;
+}) {
   const positions = candidate.publicRecords?.positions ?? [];
   return (
     <>
       {positions.map((position) => (
         <article className="content-card" key={position.id}>
           <div className="content-card__meta">
-            <span className="status-chip">來源核對職務</span>
+            <span className="status-chip">公共職務</span>
             <span>
               {position.currentStatus === 'current'
                 ? '目前身分'
@@ -685,8 +544,8 @@ function PublicPositionCards({ candidate }: { candidate: CandidateProfile }) {
           <h4>{position.title}</h4>
           <p>{position.organization}</p>
           <p>
-            {position.startDate ?? '任期起日未在來源頁面標示'}—
-            {position.endDate ?? '任期迄日未在來源頁面標示'}
+            {position.startDate ?? '日期未標示'}—
+            {position.endDate ?? '日期未標示'}
           </p>
           <ClaimEvidence
             candidate={candidate}
@@ -699,11 +558,13 @@ function PublicPositionCards({ candidate }: { candidate: CandidateProfile }) {
   );
 }
 
-function CareerTab({ candidate }: { candidate: CandidateProfile }) {
-  const demo = isDemoProfile(candidate);
+function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const publicActivities = candidate.publicRecords?.activities ?? [];
   const publicPositions = candidate.publicRecords?.positions ?? [];
   const legacyCards = LegacyCareerCards({ candidate });
+  const proposalCount = publicActivities.filter(
+    (activity) => activity.activityType === 'legislative-proposal',
+  ).length;
   const hasCareer =
     publicActivities.length > 0 ||
     publicPositions.length > 0 ||
@@ -715,20 +576,16 @@ function CareerTab({ candidate }: { candidate: CandidateProfile }) {
     <div className="profile-tab-content" data-profile-section="career">
       <div className="profile-section-heading">
         <h3>從政歷程</h3>
-        <p>
-          依來源可確認的職務、質詢、提案與公共服務活動整理；未取得個別表決證據時不作任何推論。
-        </p>
+        <p>列出有來源的職務與公共活動。</p>
       </div>
-      <PublicRecordResearchStatus candidate={candidate} />
-      <BiographyStatusCard candidate={candidate} />
       <AutomatedClaimCards
         candidate={candidate}
         categories={['basic-biography', 'timeline']}
-        heading="已自動核准的歷史機關履歷"
+        heading="歷史履歷資料"
       />
       {candidate.biography?.claims.length ? (
         <div className="content-card" data-testid="biography-timeline">
-          <h4>已核准履歷事件</h4>
+          <h4>履歷事件</h4>
           <ol className="timeline">
             {candidate.biography.claims.map((claim) => (
               <li key={claim.claimId}>
@@ -739,13 +596,10 @@ function CareerTab({ candidate }: { candidate: CandidateProfile }) {
                 </strong>
                 <p>{claim.value}</p>
                 {claim.organization ? <p>{claim.organization}</p> : null}
-                <div className="content-card__meta">
-                  {claim.sourceIds.map((sourceId) => (
-                    <span className="source-chip" key={sourceId}>
-                      來源：{sourceId}
-                    </span>
-                  ))}
-                </div>
+                <SourceChips
+                  candidate={candidate}
+                  sourceIds={claim.sourceIds}
+                />
               </li>
             ))}
           </ol>
@@ -759,51 +613,28 @@ function CareerTab({ candidate }: { candidate: CandidateProfile }) {
       ) : null}
       {legacyCards.length > 0 ? legacyCards : null}
       <section className="content-card" data-testid="legislative-records">
-        <h4>提案與個別表決</h4>
-        <p>
-          {publicActivities.some(
-            (activity) => activity.activityType === 'legislative-proposal',
-          )
-            ? '本頁列出來源明確連結至候選人的提案紀錄；提案角色與官方狀態依來源保留。'
-            : '目前來源未取得可驗證的個人提案紀錄。'}
-        </p>
-        <p>
-          目前來源未提供可查證之個別表決紀錄；不從黨籍、公開發言或集體結果推論個人投票。
-        </p>
-      </section>
-      {!hasCareer ? <EmptyContent category="從政歷程" demo={demo} /> : null}
-      {candidate.positions.length === 0 &&
-      publicPositions.length === 0 &&
-      publicActivities.length === 0 &&
-      (candidate.biography?.claims.length ?? 0) === 0 &&
-      (candidate.automatedPublication?.claims.length ?? 0) === 0 ? (
-        <div className="content-card">
-          <h4>沒有可確認的先前公職</h4>
+        <div>
+          <h4>提案紀錄</h4>
           <p>
-            目前沒有已查證的先前公職或行政職務資料；這不代表候選人沒有其他未納入本切片的經歷。
+            {proposalCount > 0
+              ? '已公開 ' + proposalCount + ' 筆提案紀錄'
+              : '提案紀錄：暫無公開提案紀錄'}
           </p>
         </div>
-      ) : null}
+        <div>
+          <h4>表決紀錄</h4>
+          <p>表決紀錄：暫無可查證的個別表決紀錄</p>
+        </div>
+      </section>
+      {!hasCareer ? <EmptyContent category="career" /> : null}
     </div>
   );
 }
 
-function NewsEmpty({ filter, demo }: { filter: NewsFilter; demo: boolean }) {
-  const label = filter === 'positive' ? '正面新聞' : '負面新聞';
+function NewsEmpty() {
   return (
     <div className="content-card">
-      <h4>
-        {filter === 'all'
-          ? demo
-            ? '新聞（示範未填寫）'
-            : '目前尚無已查證的新聞資料'
-          : `目前尚無已查證的${label}資料`}
-      </h4>
-      <p>
-        {filter === 'all'
-          ? '缺少資料不表示事件不存在；只有通過來源、身份與出版閘門的紀錄才會顯示。'
-          : '現有資料沒有足夠證據依既定標準歸入此分類；不為平衡而製造新聞。'}
-      </p>
+      <h4>正負面新聞：暫無公開新聞資料</h4>
     </div>
   );
 }
@@ -818,7 +649,7 @@ function PublicNewsCards({
   candidate,
   filter,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   filter: NewsFilter;
 }) {
   const news = (candidate.publicRecords?.news ?? []).filter((article) => {
@@ -849,20 +680,18 @@ function PublicNewsCards({
                 ? '機關性更新'
                 : article.contentType}
             </p>
-            <p>{article.editorialSummary ?? '來源未提供編輯摘要。'}</p>
+            <p>{article.editorialSummary ?? '摘要未提供'}</p>
             <p>
               <strong>分類依據：</strong>
-              {article.classificationRationale ??
-                '現有來源未提供正負面分類；本頁不僅依標題或發布者語氣判定。'}
+              {article.classificationRationale ?? '未標示'}
             </p>
             <p>
               <strong>事件日期：</strong>
-              {article.eventDate ?? '未另行標示'}
+              {article.eventDate ?? '未標示'}
             </p>
             <p>
               <strong>後續狀態：</strong>
-              {article.latestStatus ??
-                '目前資料集未提供後續狀態；不將歷史報導改寫為現在事件。'}
+              {article.latestStatus ?? '未標示'}
             </p>
             <ClaimEvidence
               candidate={candidate}
@@ -880,7 +709,7 @@ function LegacyNewsCards({
   candidate,
   filter,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   filter: NewsFilter;
 }) {
   const news = filter === 'all' ? candidate.news : [];
@@ -899,10 +728,10 @@ function LegacyNewsCards({
             </a>
           </h4>
           <p>{article.publisher}</p>
-          <p>{article.editorialSummary ?? '來源未提供編輯摘要。'}</p>
+          <p>{article.editorialSummary ?? '摘要未提供'}</p>
           <p>
             <strong>分類依據：</strong>
-            示範資料未提供足以歸入正面或負面的獨立分類證據。
+            未標示
           </p>
           <SourceChips candidate={candidate} sourceIds={article.sourceIds} />
         </article>
@@ -911,9 +740,8 @@ function LegacyNewsCards({
   );
 }
 
-function NewsTab({ candidate }: { candidate: CandidateProfile }) {
+function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const [filter, setFilter] = useState<NewsFilter>('all');
-  const demo = isDemoProfile(candidate);
   const publicNews = candidate.publicRecords?.news ?? [];
   const legacyNews = candidate.news;
   const visibleCount =
@@ -927,9 +755,7 @@ function NewsTab({ candidate }: { candidate: CandidateProfile }) {
     <div className="profile-tab-content" data-profile-section="news">
       <div className="profile-section-heading">
         <h3>正負面新聞</h3>
-        <p>
-          新聞分類依可說明的內容與證據，不依發布者語氣；爭議、指控與法律結果必須分開呈現。
-        </p>
+        <p>新聞依分類呈現，附來源與日期。</p>
       </div>
       <fieldset className="content-card news-filter">
         <legend className="sr-only">新聞分類篩選</legend>
@@ -956,7 +782,7 @@ function NewsTab({ candidate }: { candidate: CandidateProfile }) {
       <AutomatedClaimCards
         candidate={candidate}
         categories={['news']}
-        heading="已自動核准的新聞資料"
+        heading="新聞資料"
       />
       {visibleCount > 0 ? (
         <>
@@ -964,7 +790,7 @@ function NewsTab({ candidate }: { candidate: CandidateProfile }) {
           <LegacyNewsCards candidate={candidate} filter={filter} />
         </>
       ) : (
-        <NewsEmpty filter={filter} demo={demo} />
+        <NewsEmpty />
       )}
     </div>
   );
@@ -1032,12 +858,6 @@ export default function ProfileTabs({
           {renderTab(tab.id)}
         </div>
       ))}
-      <a
-        className="secondary-link"
-        href={withBase(`/candidates/${candidate.candidacy.slug}/`)}
-      >
-        開啟完整人物頁 →
-      </a>
     </div>
   );
 }

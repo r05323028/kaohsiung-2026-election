@@ -12,7 +12,7 @@ import {
 } from 'react';
 import type { DetailLevel } from '../city/builder';
 import type { LandmarkId } from '../city/layout';
-import type { CandidateProfile, DistrictView } from '../data';
+import type { PublicCandidateProfile, PublicDistrictView } from '../data';
 import {
   electoralDistrictSlugForAdminName,
   movementScopeForCandidate,
@@ -54,8 +54,8 @@ type SceneZone = 'overview' | 'zuoying' | 'nanzih';
 type DistrictFocusView = Record<SceneZone, FocusView>;
 
 type Props = {
-  districts: DistrictView[];
-  candidates: CandidateProfile[];
+  districts: PublicDistrictView[];
+  candidates: PublicCandidateProfile[];
   landmarks: LandmarkView[];
   districtFocus: DistrictFocusView;
 };
@@ -112,7 +112,7 @@ function CandidateButton({
   onSelect,
   result = false,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   active: boolean;
   onSelect: (slug: string) => void;
   result?: boolean;
@@ -150,7 +150,7 @@ function StaticCityFallback({
   candidates,
   onSelect,
 }: {
-  candidates: CandidateProfile[];
+  candidates: PublicCandidateProfile[];
   onSelect: (slug: string) => void;
 }) {
   return (

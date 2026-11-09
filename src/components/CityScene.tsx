@@ -37,7 +37,7 @@ import {
   makePond,
   makeRiver,
 } from '../city/water';
-import type { CandidateProfile } from '../data';
+import type { PublicCandidateProfile } from '../data';
 import { WORLD_BOUNDS } from '../world/geography';
 import {
   HERO_HEIGHT_SCALE,
@@ -60,7 +60,7 @@ import WorldLayer from './WorldLayer';
 export type SceneFocus = Focus & { key: string };
 
 type CitySceneProps = {
-  candidates: CandidateProfile[];
+  candidates: PublicCandidateProfile[];
   selectedCandidateSlug: string | null;
   selectedLandmark: LandmarkId | null;
   hoveredLandmark: LandmarkId | null;

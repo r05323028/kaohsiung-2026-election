@@ -1,19 +1,13 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
-import {
-  Component,
-  type ReactNode,
-  useEffect,
-  useMemo,
-  useRef,
-} from 'react';
+import { Component, type ReactNode, useEffect, useMemo, useRef } from 'react';
 import type * as THREE from 'three';
-import type { CandidateProfile } from '../data';
+import type { PublicCandidateProfile } from '../data';
 import { resolveAvatar } from '../data/avatars';
 import { withBase } from '../utils/paths';
 
 type CharacterAvatarProps = {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   selected: boolean;
   walking?: boolean;
   reducedMotion: boolean;
@@ -49,7 +43,7 @@ function ProceduralAvatarModel({
   walking,
   reducedMotion,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   walking: boolean;
   reducedMotion: boolean;
 }) {
@@ -228,7 +222,7 @@ function AvatarModel({
   walking,
   reducedMotion,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   selected: boolean;
   walking: boolean;
   reducedMotion: boolean;

@@ -13,9 +13,9 @@ import {
 import type { DetailLevel } from '../city/builder';
 import type { LandmarkId } from '../city/layout';
 import type {
-  CandidateProfile,
   CandidateSearchRecord,
-  DistrictView,
+  PublicCandidateProfile,
+  PublicDistrictView,
 } from '../data';
 import { SITE_NAV_LINKS } from '../data/site-nav';
 import { withBase } from '../utils/paths';
@@ -60,8 +60,8 @@ type SceneZone = 'overview' | 'zuoying' | 'nanzih';
 type DistrictFocusView = Record<SceneZone, FocusView>;
 
 type Props = {
-  districts: DistrictView[];
-  candidates: CandidateProfile[];
+  districts: PublicDistrictView[];
+  candidates: PublicCandidateProfile[];
   searchIndex: CandidateSearchRecord[];
   landmarks: LandmarkView[];
   districtFocus: DistrictFocusView;
@@ -119,7 +119,7 @@ function CandidateButton({
   onSelect,
   result = false,
 }: {
-  candidate: CandidateProfile;
+  candidate: PublicCandidateProfile;
   active: boolean;
   onSelect: (slug: string) => void;
   result?: boolean;
@@ -157,7 +157,7 @@ function StaticCityFallback({
   candidates,
   onSelect,
 }: {
-  candidates: CandidateProfile[];
+  candidates: PublicCandidateProfile[];
   onSelect: (slug: string) => void;
 }) {
   return (

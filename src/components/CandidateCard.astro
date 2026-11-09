@@ -9,11 +9,10 @@ interface Props {
 const { candidate } = Astro.props;
 const { person, candidacy, district } = candidate;
 const demo = isDemoProfile(candidate);
-const numberLabel = candidacy.candidateNumberStatus === 'drawn'
-  ? `號次 ${candidacy.candidateNumber}（抽定，非正式公告）`
-  : candidacy.candidateNumber
+const numberLabel =
+  candidacy.candidateNumberStatus === 'final' && candidacy.candidateNumber
     ? `號次 ${candidacy.candidateNumber}`
-    : '號次尚未發布';
+    : '正式號次待公告';
 ---
 
 <a class="candidate-card" href={withBase(`/candidates/${candidacy.slug}/`)}>
@@ -25,6 +24,6 @@ const numberLabel = candidacy.candidateNumberStatus === 'drawn'
     <h2>{person.displayName}</h2>
     <p>{candidacy.currentPosition}</p>
   </div>
-  <p>{district.name}・{candidacy.partyStatus === 'not-published' ? '政黨資訊尚未刊載' : candidacy.politicalParty}</p>
+  <p>{district.name}・{candidacy.partyStatus === 'published' ? candidacy.politicalParty : '暫無資料'}</p>
   <span class="secondary-link">閱讀人物資料 →</span>
 </a>

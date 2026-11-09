@@ -1,4 +1,4 @@
-import type { CandidateProfile } from '../data';
+import type { PublicCandidateProfile } from '../data';
 import {
   ADMIN_DISTRICT_BY_NAME,
   ADMIN_DISTRICTS,
@@ -88,7 +88,7 @@ export function movementScopeForDistrictSlug(slug: string): MovementScope {
 }
 
 export function movementScopeForCandidate(
-  candidate: CandidateProfile,
+  candidate: PublicCandidateProfile,
 ): MovementScope {
   return movementScopeForDistrictSlug(candidate.district.slug);
 }
@@ -103,7 +103,7 @@ export function electoralDistrictSlugForAdminName(name: string): string | null {
 }
 
 export function candidateRole(
-  candidate: CandidateProfile,
+  candidate: PublicCandidateProfile,
 ): 'mayor' | 'council' | 'indigenous' | 'demo' {
   const kind = movementScopeForCandidate(candidate).kind;
   return kind === 'mayoral' ? 'mayor' : kind;

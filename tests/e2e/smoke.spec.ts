@@ -108,20 +108,22 @@ test('official routes expose source references and neutral missing states', asyn
   await expect(
     page.getByRole('heading', { name: '張靜', exact: true }),
   ).toBeVisible();
-  await expect(page.getByRole('note')).toContainText('官方資料切片');
+  await expect(page.getByRole('note')).toHaveCount(0);
   await expect(
-    page.getByTestId('profile-tabs').getByText('抽定，非正式公告'),
+    page.getByTestId('profile-tabs').getByText('正式號次待公告'),
   ).toBeVisible();
   await expect(
     page
       .getByTestId('profile-tabs')
-      .getByRole('link', { name: /source-cec-central-65213/ })
+      .locator('a[href="https://web.cec.gov.tw/central/article/65213"]')
       .first(),
   ).toHaveAttribute('href', 'https://web.cec.gov.tw/central/article/65213');
   await expect(
     page
       .getByTestId('profile-tabs')
-      .getByRole('link', { name: /source-cec-vote2026-c1-64000/ })
+      .locator(
+        'a[href="https://info.cec.gov.tw/vote2026/static/json/cand/C1/64000.json"]',
+      )
       .first(),
   ).toHaveAttribute(
     'href',
@@ -129,7 +131,7 @@ test('official routes expose source references and neutral missing states', asyn
   );
   const profile = page.getByTestId('profile-tabs');
   await profile.getByRole('tab', { name: '政策主張' }).click();
-  await expect(profile).toContainText('目前尚無已查證的政策主張資料');
+  await expect(profile).toContainText('政策主張：暫無公開政策資料');
 
   await page.goto('/districts/kaohsiung-council-01/');
   const councilPage = page.getByRole('main');
@@ -144,15 +146,15 @@ test('official routes expose source references and neutral missing states', asyn
   await expect(
     page.getByRole('heading', { name: '李振豪', exact: true }),
   ).toBeVisible();
-  await expect(page.getByText('抽定，非正式公告').first()).toBeVisible();
+  await expect(page.getByText('正式號次待公告').first()).toBeVisible();
   await expect(page.getByText('中國國民黨').first()).toBeVisible();
   await expect(
-    page.getByRole('link', { name: /source-khec-65366/ }).first(),
+    page.locator('a[href="https://www.cec.gov.tw/khec/article/65366"]').first(),
   ).toHaveAttribute('href', 'https://www.cec.gov.tw/khec/article/65366');
 
   await page.goto('/districts/kaohsiung-indigenous-flat-12/');
   await expect(page.getByText('平地原住民・第12選舉區')).toBeVisible();
-  await expect(page.getByRole('main')).toContainText('本區官方預公告人物');
+  await expect(page.getByRole('main')).toContainText('本區候選人');
 });
 
 test('automated policy publishes only an eligible scoped claim', async ({
@@ -165,9 +167,7 @@ test('automated policy publishes only an eligible scoped claim', async ({
   const publication = profile.getByTestId('automated-publication');
   await expect(publication).toBeVisible();
   await expect(publication).toContainText('三立新聞台主播');
-  await expect(publication).toContainText(
-    '資料性質：機器政策核准；不等同人工編輯核准。',
-  );
+  await expect(publication).not.toContainText('機器政策核准');
   // A page now publishes every eligible claim for the candidate, grouped by
   // claim type, so the same institutional source legitimately backs several
   // rows. The link contract is "chip points at the retained source".
@@ -196,18 +196,14 @@ test('official biography observations remain withheld pending review', async ({
   const profile = page.getByTestId('profile-tabs');
   await expect(profile).toHaveAttribute('data-hydrated', 'true');
   const basicPanel = profile.getByRole('tabpanel', { name: '基本資料' });
-  await expect(basicPanel.getByTestId('biography-status')).toContainText(
-    '目前尚無可公開的已核准履歷主張',
-  );
-  await expect(basicPanel.getByTestId('biography-status')).not.toContainText(
-    '機器化觀察待審',
-  );
+  await expect(basicPanel).not.toContainText('pending-human-review');
+  await expect(basicPanel).not.toContainText('機器化觀察待審');
   await profile.getByRole('tab', { name: '從政歷程' }).click();
   await expect(
     profile.getByRole('heading', { name: '從政歷程', exact: true }),
   ).toBeVisible();
   await expect(profile.getByTestId('biography-timeline')).toHaveCount(0);
-  await expect(profile).toContainText('目前來源未提供可查證之個別表決紀錄');
+  await expect(profile).toContainText('表決紀錄：暫無可查證的個別表決紀錄');
 });
 
 test('local editorial workspace loads only in the development review route', async ({
@@ -290,24 +286,21 @@ test('selected public-record profiles expose provenance and neutral gaps', async
   await expect(
     page.getByRole('heading', { name: '李眉蓁', exact: true }),
   ).toBeVisible();
-  await expect(profile.getByTestId('research-summary')).toContainText(
-    '已嘗試 3／6 類，已取得來源 3／6 類',
-  );
-  await expect(profile.getByTestId('research-summary')).toContainText(
-    '人工審查狀態：pending-human-review',
-  );
+  await expect(profile.getByTestId('research-summary')).toHaveCount(0);
+  await expect(profile).not.toContainText('pending-human-review');
   await expect(
-    profile.getByRole('link', { name: /source-cec-vote2026-t-64000/ }).first(),
-  ).toHaveAttribute(
-    'href',
-    'https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json',
-  );
+    profile
+      .locator(
+        'a[href="https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json"]',
+      )
+      .first(),
+  ).toBeVisible();
   await profile.getByRole('tab', { name: '從政歷程' }).click();
   await expect(
     profile.getByRole('heading', { name: '從政歷程' }),
   ).toBeVisible();
   await expect(profile).toContainText('市府應面對找得到工作卻看不到加薪');
-  await expect(profile).toContainText('待人工審查');
+  await expect(profile).not.toContainText('待人工審查');
   await expect(
     profile
       .locator(
@@ -321,13 +314,15 @@ test('selected public-record profiles expose provenance and neutral gaps', async
   await page.goto('/candidates/lai-rui-long-2026/');
   const mayorProfile = page.getByTestId('profile-tabs');
   await mayorProfile.getByRole('tab', { name: '政策主張' }).click();
-  await expect(mayorProfile).toContainText('研究找到');
-  await expect(mayorProfile).toContainText('公開政策：0 筆');
+  await expect(mayorProfile).toContainText('政策主張：暫無公開政策資料');
 
   await page.goto('/candidates/kaohsiung-council-03-e4af3760/');
   await expect(
     page.getByTestId('profile-tabs').getByTestId('research-summary'),
-  ).toContainText('官方來源字元差異');
+  ).toHaveCount(0);
+  await expect(page.getByTestId('profile-tabs')).not.toContainText(
+    '官方來源字元差異',
+  );
 });
 
 test('all five mayor profiles expose four neutral, source-backed sections', async ({
@@ -460,7 +455,9 @@ test('all official council routes expose CEC identity fields and tab behavior', 
     await expect(profile).toContainText(candidate.birthDate ?? '');
     await expect(
       profile
-        .getByRole('link', { name: /source-cec-vote2026-t-64000/ })
+        .locator(
+          'a[href="https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json"]',
+        )
         .first(),
     ).toBeVisible();
   }
@@ -474,7 +471,7 @@ test('all official council routes expose CEC identity fields and tab behavior', 
   await expect(conflictProfile).toContainText(
     conflictCandidate.cecDirectoryName ?? '',
   );
-  await expect(conflictProfile).toContainText('待人工比對');
+  await expect(conflictProfile).not.toContainText('待人工比對');
 
   for (const tab of ['基本資料', '政策主張', '正負面新聞', '從政歷程']) {
     const tabButton = conflictProfile.getByRole('tab', {

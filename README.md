@@ -119,8 +119,6 @@ BASE_PATH=/your-repository/ SITE_URL=https://example.com/ npm run build
 - `/districts/`：官方選舉區與虛構示範選區索引
 - `/districts/[slug]/`：靜態選舉區頁；市長、普通市議及原住民族 constituency 分開
 - `/candidates/[slug]/`：靜態人物頁與六個資訊分類
-- `/about/`：計畫定位與非黨派原則
-- `/sources/`：來源欄位、查核狀態與編輯政策
 - `/editorial-review/`：僅本機啟用的履歷身分／證據審查工作區，不載入公開導覽
 - `/avatar-preview/`：僅開發環境的 GLB 角色資產檢視器，不載入公開導覽
 

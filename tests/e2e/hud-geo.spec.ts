@@ -22,7 +22,7 @@ test.describe('city HUD and authoritative geography', () => {
 
     const nav = page.getByRole('navigation', { name: '主要網站導覽' });
     await expect(nav).toBeVisible();
-    await expect(nav.locator('a')).toHaveCount(4);
+    await expect(nav.locator('a')).toHaveCount(2);
     await expect(nav.getByRole('link', { name: '城市探索' })).toHaveAttribute(
       'aria-current',
       'page',
@@ -30,14 +30,6 @@ test.describe('city HUD and authoritative geography', () => {
     await expect(nav.getByRole('link', { name: '選舉區' })).toHaveAttribute(
       'href',
       '/districts/',
-    );
-    await expect(nav.getByRole('link', { name: '關於計畫' })).toHaveAttribute(
-      'href',
-      '/about/',
-    );
-    await expect(nav.getByRole('link', { name: '資料與政策' })).toHaveAttribute(
-      'href',
-      '/sources/',
     );
   });
 
@@ -112,7 +104,7 @@ test.describe('city HUD and authoritative geography', () => {
     await expect(
       menu.getByRole('navigation', { name: '網站頁面' }),
     ).toBeVisible();
-    await expect(menu.locator('nav a')).toHaveCount(4);
+    await expect(menu.locator('nav a')).toHaveCount(2);
     await expect(menu.locator('nav a[aria-current="page"]')).toContainText(
       '城市探索',
     );

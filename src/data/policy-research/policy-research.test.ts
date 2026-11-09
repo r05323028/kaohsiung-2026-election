@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import rosterInput from '../../../data/approved/2026/kaohsiung-election.json';
 import policyResearchInput from '../../../data/policy-research/2026/full-roster.json';
+import policySummaryInput from '../../../data/policy-research/2026/summary.json';
 import reportInput from '../../../reports/2026-policy-enrichment.json';
 import { getOfficialCandidateProfile } from '../official';
 import { validateOfficialDataset } from '../official/schema';
@@ -10,6 +11,7 @@ import {
   type PolicyResearchDataset,
   validatePolicyResearchDataset,
 } from './schema';
+import { validatePolicyResearchSummary } from './summary-schema';
 
 const dataset: PolicyResearchDataset =
   validatePolicyResearchDataset(policyResearchInput);
@@ -148,6 +150,26 @@ describe('full-roster policy research', () => {
       blockedExternalSources: 2,
     });
     expect(reportInput.identityOrAttributionConflicts).toEqual([]);
+  });
+
+  it('keeps the production summary free of pending record content', () => {
+    const summary = validatePolicyResearchSummary(policySummaryInput);
+    expect(summary.audits).toHaveLength(106);
+    for (const audit of summary.audits) {
+      expect(Object.keys(audit).sort()).toEqual([
+        'candidateId',
+        'note',
+        'outcome',
+        'policyCount',
+        'publishedPolicyCount',
+        'researchStatus',
+      ]);
+    }
+    expect(JSON.stringify(summary)).not.toContain('sourceSnapshots');
+    expect(JSON.stringify(summary)).not.toContain('originalStatement');
+    expect(JSON.stringify(summary)).not.toContain('quotedText');
+    expect(JSON.stringify(summary)).not.toContain('rawPath');
+    expect(JSON.stringify(summary)).not.toContain('https://');
   });
 
   it('attaches research status to official profiles without exposing pending claims', () => {

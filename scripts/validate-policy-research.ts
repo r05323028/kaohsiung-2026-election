@@ -2,14 +2,17 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import rosterInput from '../data/approved/2026/kaohsiung-election.json';
 import policyResearchInput from '../data/policy-research/2026/full-roster.json';
+import policySummaryInput from '../data/policy-research/2026/summary.json';
 import { validateOfficialDataset } from '../src/data/official/schema';
 import {
   type PolicyResearchDataset,
   validatePolicyResearchDataset,
 } from '../src/data/policy-research/schema';
+import { validatePolicyResearchSummary } from '../src/data/policy-research/summary-schema';
 
 const dataset: PolicyResearchDataset =
   validatePolicyResearchDataset(policyResearchInput);
+const summary = validatePolicyResearchSummary(policySummaryInput);
 const roster = validateOfficialDataset(rosterInput);
 const candidateById = new Map(
   roster.candidates.map((candidate) => [candidate.id, candidate]),
@@ -26,6 +29,32 @@ const evidenceById = new Map(
 
 function fail(message: string): never {
   throw new Error(`Policy research validation failed: ${message}`);
+}
+
+if (summary.datasetId !== dataset.datasetId)
+  fail('policy research summary dataset ID does not match full dataset');
+if (
+  summary.snapshotDate !== dataset.snapshotDate ||
+  summary.researchCutoff !== dataset.researchCutoff ||
+  summary.candidateCount !== dataset.candidateCount
+)
+  fail('policy research summary metadata does not match full dataset');
+for (const audit of dataset.audits) {
+  const summaryAudit = summary.audits.find(
+    (item) => item.candidateId === audit.candidateId,
+  );
+  if (!summaryAudit)
+    fail('policy research summary is missing ' + audit.candidateId);
+  const expected = {
+    candidateId: audit.candidateId,
+    outcome: audit.outcome,
+    researchStatus: audit.researchStatus,
+    policyCount: audit.policyIds.length,
+    publishedPolicyCount: 0,
+    note: audit.note,
+  };
+  if (JSON.stringify(summaryAudit) !== JSON.stringify(expected))
+    fail('policy research summary mismatch for ' + audit.candidateId);
 }
 
 if (dataset.candidateCount !== roster.candidates.length)

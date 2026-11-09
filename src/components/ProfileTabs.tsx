@@ -226,6 +226,48 @@ function BiographyStatusCard({ candidate }: { candidate: CandidateProfile }) {
   );
 }
 
+function PublicRecordResearchStatus({
+  candidate,
+}: {
+  candidate: CandidateProfile;
+}) {
+  const research = candidate.publicRecordResearch;
+  if (!research) return null;
+
+  const outcomeLabel =
+    {
+      'records-found': '已取得待人工審查的來源紀錄',
+      'policy-references-only': '目前僅有待人工審查的政策參照',
+      'sources-attempted-no-additional-records':
+        '已嘗試保留來源，尚無新增可機器驗證紀錄',
+      'sources-unavailable': '候選人專屬來源未能在保留檔案中取得',
+      'identity-conflict': '來源身分比對存在衝突，暫不採用',
+      'no-verifiable-record-found': '目前尚無可機器驗證的新增紀錄',
+    }[research.outcome] ?? research.outcome;
+
+  return (
+    <div className="content-card" data-testid="public-record-research-status">
+      <h4>公共紀錄研究狀態：{outcomeLabel}</h4>
+      <p>
+        已完成限定來源研究：保留來源 {research.retainedSourceCount} 筆，
+        來源身分已解析 {research.resolvedSourceCount}{' '}
+        筆；研究紀錄仍待人工與編輯審查。
+      </p>
+      <p>
+        待審查紀錄 {research.pendingRecordCount} 筆（職務{' '}
+        {research.pendingPositionCount}、職歷{' '}
+        {research.pendingCareerRecordCount}、 政策參照{' '}
+        {research.pendingPolicyReferenceCount}）；公開紀錄：
+        {research.publishedRecordCount} 筆。
+      </p>
+      <p>{research.note}</p>
+      <p>
+        待審查研究內容不會在本頁當作已核准事實公開；來源缺少或無法取得也不表示候選人沒有相關紀錄。
+      </p>
+    </div>
+  );
+}
+
 function AutomatedClaimCards({
   candidate,
   categories,
@@ -677,6 +719,7 @@ function CareerTab({ candidate }: { candidate: CandidateProfile }) {
           依來源可確認的職務、質詢、提案與公共服務活動整理；未取得個別表決證據時不作任何推論。
         </p>
       </div>
+      <PublicRecordResearchStatus candidate={candidate} />
       <BiographyStatusCard candidate={candidate} />
       <AutomatedClaimCards
         candidate={candidate}

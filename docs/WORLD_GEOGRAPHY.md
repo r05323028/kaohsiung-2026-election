@@ -45,7 +45,7 @@
 
 ## HUD and authoritative focus
 
-- The City Explorer restores the site identity: `港都人物誌` links home, desktop navigation exposes 城市探索 / 選舉區 / 關於計畫 / 資料與政策, and a 44×44 mobile menu provides the same links with Escape and focus restoration. Links use `withBase` for subpath deployments.
+- The City Explorer restores the site identity: `港都人物誌` links home, desktop and mobile navigation expose 城市探索 / 選舉區 with Escape and focus restoration. Links use `withBase` for subpath deployments.
 - Selecting a district computes its camera focus from the authoritative TOWNSHIP polygons, not from a bounding box or a fixed hero platform. All rings and holes are triangulated; selected fills are opaque. 桃源's two rings are kept, and 旗津's 16 remote islands remain metadata rather than walkable land.
 - The hero diorama streams in for 左營 and 楠梓 when the focus radius is at most 6.5 km. No rectangular base is rendered under the district meshes.
 - Append `?debug=boundaries` to show the 38 district labels, official gate points, hero bounds, and a walk-graph diagnostic overlay. This is opt-in and adds no production UI.

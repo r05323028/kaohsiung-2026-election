@@ -2,7 +2,7 @@ import { expect, type Page, test } from '@playwright/test';
 
 const HEADER = '[data-testid="global-header"]';
 const DESKTOP_NAV = '.global-header__nav';
-const NAV_LABELS = ['城市探索', '選舉區', '關於計畫', '資料與政策'];
+const NAV_LABELS = ['城市探索', '選舉區'];
 
 const ROUTES = [
   { path: '/', active: '城市探索', current: 'page' },
@@ -13,8 +13,6 @@ const ROUTES = [
     active: '選舉區',
     current: 'location',
   },
-  { path: '/about/', active: '關於計畫', current: 'page' },
-  { path: '/sources/', active: '資料與政策', current: 'page' },
 ] as const;
 
 const VISUAL_ROUTES = [
@@ -22,8 +20,6 @@ const VISUAL_ROUTES = [
   { name: 'districts', path: '/districts/' },
   { name: 'district-detail', path: '/districts/harbor-demo/' },
   { name: 'candidate-profile', path: '/candidates/zhang-jing-2026/' },
-  { name: 'about', path: '/about/' },
-  { name: 'sources', path: '/sources/' },
 ] as const;
 
 async function open(page: Page, path: string) {
@@ -144,7 +140,7 @@ test.describe('shared global navigation', () => {
   test('keeps candidate search available on content pages', async ({
     page,
   }) => {
-    await open(page, '/about/');
+    await open(page, '/districts/');
     const input = page.locator('#candidate-search');
     await expect(input).toBeVisible();
     const inputBox = await input.boundingBox();
@@ -188,10 +184,14 @@ test.describe('shared global navigation', () => {
     page,
   }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    for (const route of ['/districts/', '/about/', '/sources/']) {
+    for (const route of [
+      '/districts/',
+      '/districts/harbor-demo/',
+      '/candidates/zhang-jing-2026/',
+    ]) {
       await open(page, route);
       const header = await boxFor(page, '.global-header__surface');
-      const heading = await boxFor(page, '.page-heading');
+      const heading = await boxFor(page, 'main h1');
       expect(
         heading.y,
         `${route} content must clear the header`,
@@ -241,7 +241,7 @@ test.describe('shared global navigation', () => {
       const menuBox = await boxFor(page, '#global-mobile-nav');
       expect(menuBox.x).toBeGreaterThanOrEqual(0);
       expect(menuBox.x + menuBox.width).toBeLessThanOrEqual(width + 1);
-      await expect(menu.locator('nav a')).toHaveCount(4);
+      await expect(menu.locator('nav a')).toHaveCount(2);
       await expect(menu.locator('nav a[aria-current="page"]')).toContainText(
         '選舉區',
       );

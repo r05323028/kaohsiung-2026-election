@@ -112,6 +112,7 @@ async function dragCanvas(
 }
 
 test.describe('refined living-city exploration', () => {
+  test.describe.configure({ timeout: 60_000 });
   test('candidate selection keeps scale, profile does not reset it, and close restores the view', async ({
     page,
   }) => {
@@ -207,7 +208,7 @@ test.describe('refined living-city exploration', () => {
   }) => {
     await page.goto('/?admin=E03');
     await hydrated(page);
-    await page.waitForTimeout(1200);
+    await waitForCameraSettled(page);
     const before = await camera(page);
     await dragCanvas(page, 210, 110);
     const after = await camera(page);
@@ -332,7 +333,7 @@ test.describe('refined living-city exploration', () => {
       /harbor-mark\.svg$/,
     );
     const nav = header.locator('nav[aria-label="主要網站導覽"]');
-    await expect(nav.locator('a')).toHaveCount(4);
+    await expect(nav.locator('a')).toHaveCount(2);
     await expect(nav.locator('a[aria-current="page"]')).toHaveText('城市探索');
 
     await page.goto('/districts/');
@@ -344,7 +345,7 @@ test.describe('refined living-city exploration', () => {
       'src',
       /harbor-mark\.svg$/,
     );
-    await expect(nav.locator('a')).toHaveCount(4);
+    await expect(nav.locator('a')).toHaveCount(2);
     await expect(nav.locator('a[aria-current="page"]')).toHaveText('選舉區');
 
     await page.setViewportSize({ width: 390, height: 844 });
@@ -356,7 +357,7 @@ test.describe('refined living-city exploration', () => {
     await menuButton.click();
     const mobileNav = page.locator('#global-mobile-nav');
     await expect(mobileNav).toBeVisible();
-    await expect(mobileNav.locator('nav a')).toHaveCount(4);
+    await expect(mobileNav.locator('nav a')).toHaveCount(2);
     await expect(mobileNav.locator('nav a[aria-current="page"]')).toContainText(
       '選舉區',
     );

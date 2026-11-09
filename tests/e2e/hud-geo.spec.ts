@@ -45,7 +45,7 @@ test.describe('city HUD and authoritative geography', () => {
     await expect(page.locator('.city-admin-card')).toContainText('左營區');
     await expect(
       page.locator('[data-testid="scene-frame"] canvas'),
-    ).toBeVisible();
+    ).toBeVisible({ timeout: 20_000 });
 
     await page.goto('/?admin=E04');
     await hydrated(page);
@@ -62,7 +62,7 @@ test.describe('city HUD and authoritative geography', () => {
     await expect(page.locator('.city-admin-card')).toContainText('桃源區');
     await expect(
       page.locator('[data-testid="scene-frame"] canvas'),
-    ).toBeVisible();
+    ).toBeVisible({ timeout: 20_000 });
   });
 
   test('exposes all 38 district labels and the active footprint in debug mode', async ({

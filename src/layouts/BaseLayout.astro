@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-import { SITE_NAV_LINKS } from '../data/site-nav';
+import GlobalHeader from '../components/GlobalHeader';
+import { searchIndex } from '../data';
 import { withBase } from '../utils/paths';
 
 interface Props {
@@ -25,7 +26,6 @@ const basePath = import.meta.env.BASE_URL ?? '/';
 const currentPath = Astro.url.pathname.replace(basePath, '/');
 const canonical = new URL(withBase(canonicalPath ?? currentPath), siteOrigin);
 const image = new URL(withBase('/harbor-mark.svg'), siteOrigin);
-const navItems = SITE_NAV_LINKS.map((item) => ({ ...item, match: currentPath === item.href || currentPath.startsWith(item.href) && item.href !== '/' }));
 const siteStructuredData = structuredData ?? {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -58,30 +58,12 @@ const siteStructuredData = structuredData ?? {
   <body class={immersive ? 'is-immersive' : undefined}>
     <a class="skip-link" href="#main-content">跳到主要內容</a>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="topbar__inner">
-          <a class="brand-lockup" href={withBase('/')} aria-label="港都人物誌首頁">
-            <span class="brand-lockup__mark"><img src={withBase('/harbor-mark.svg')} alt="" /></span>
-            <span>
-              <span class="brand-lockup__title">港都人物誌</span>
-              <span class="brand-lockup__subtitle">KAOHSIUNG CIVIC STORIES</span>
-            </span>
-          </a>
-          <nav class="topbar__nav topbar__nav--desktop" aria-label="主要導覽">
-            {navItems.map((item) => (
-              <a href={withBase(item.href)} aria-current={item.match ? 'page' : undefined}>{item.label}</a>
-            ))}
-          </nav>
-          <details class="topbar-menu">
-            <summary aria-label="網站選單"><span aria-hidden="true">☰</span></summary>
-            <nav class="topbar-menu__nav" aria-label="主要導覽">
-              {navItems.map((item) => (
-                <a href={withBase(item.href)} aria-current={item.match ? 'page' : undefined}>{item.label}</a>
-              ))}
-            </nav>
-          </details>
-        </div>
-      </header>
+      <GlobalHeader
+        client:load
+        currentPath={currentPath}
+        immersive={immersive}
+        searchIndex={searchIndex}
+      />
       <main id="main-content"><slot /></main>
       <footer class="site-footer">
         <p>港都人物誌是非黨派的公共資訊介面。此版本混合呈現已留存的官方來源資料與明確標示的虛構示範資料；官方內容仍可能處於預公告或待人工審查狀態。</p>

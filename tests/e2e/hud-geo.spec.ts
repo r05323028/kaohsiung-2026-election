@@ -107,7 +107,7 @@ test.describe('city HUD and authoritative geography', () => {
     expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);
 
     await menuButton.click();
-    const menu = page.locator('#city-mobile-nav');
+    const menu = page.locator('#global-mobile-nav');
     await expect(menu).toBeVisible();
     await expect(
       menu.getByRole('navigation', { name: '網站頁面' }),

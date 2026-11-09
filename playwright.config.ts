@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const port = process.env.PLAYWRIGHT_PORT ?? '4321';
+
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
@@ -11,7 +13,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   reporter: 'list',
   use: {
-    baseURL: 'http://127.0.0.1:4321',
+    baseURL: `http://127.0.0.1:${port}`,
     trace: 'on-first-retry',
   },
   projects: [
@@ -29,8 +31,8 @@ export default defineConfig({
   webServer: {
     // Astro auto-backgrounds when launched by a coding agent; --ignore-lock keeps this
     // Playwright-managed process in the foreground.
-    command: 'npm run dev -- --host 127.0.0.1 --ignore-lock',
-    url: 'http://127.0.0.1:4321',
+    command: `npm run dev -- --host 127.0.0.1 --port ${port} --ignore-lock`,
+    url: `http://127.0.0.1:${port}`,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },

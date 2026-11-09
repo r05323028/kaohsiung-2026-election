@@ -501,7 +501,7 @@ test('static search finds the fictional demo candidate without changing official
   );
   await page.getByLabel('搜尋人物').fill('林海星');
   await expect(
-    page.getByRole('button', { name: /林海星/ }).first(),
+    page.getByRole('link', { name: /林海星/ }).first(),
   ).toBeVisible();
 });
 

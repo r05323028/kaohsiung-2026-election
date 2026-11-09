@@ -87,7 +87,7 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
 
   assertTargets(
     await measure(
-      '.city-search input, .city-icon-button, .city-zones button, .city-dock__toggle',
+      '.global-header__search input, .global-header__settings-button, .city-zones button, .city-dock__toggle',
     ),
     'top controls',
   );
@@ -171,8 +171,8 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
   await page.getByRole('button', { name: '關閉設定' }).click();
 
   await page.getByLabel('搜尋人物').fill('林');
-  await expect(page.locator('.city-search__clear')).toBeVisible();
-  assertTargets(await measure('.city-search__clear'), 'search clear');
+  await expect(page.locator('.global-header__search-clear')).toBeVisible();
+  assertTargets(await measure('.global-header__search-clear'), 'search clear');
   await page.getByRole('button', { name: '清除搜尋' }).click();
 
   await page.goto('/?district=kaohsiung-council-04&focus=lotus-pond');

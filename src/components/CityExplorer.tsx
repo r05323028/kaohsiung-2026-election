@@ -12,13 +12,7 @@ import {
 } from 'react';
 import type { DetailLevel } from '../city/builder';
 import type { LandmarkId } from '../city/layout';
-import type {
-  CandidateProfile,
-  CandidateSearchRecord,
-  DistrictView,
-} from '../data';
-import { SITE_NAV_LINKS } from '../data/site-nav';
-import { withBase } from '../utils/paths';
+import type { CandidateProfile, DistrictView } from '../data';
 import {
   electoralDistrictSlugForAdminName,
   movementScopeForCandidate,
@@ -62,7 +56,6 @@ type DistrictFocusView = Record<SceneZone, FocusView>;
 type Props = {
   districts: DistrictView[];
   candidates: CandidateProfile[];
-  searchIndex: CandidateSearchRecord[];
   landmarks: LandmarkView[];
   districtFocus: DistrictFocusView;
 };
@@ -232,7 +225,6 @@ function StaticCityFallback({
 export default function CityExplorer({
   districts,
   candidates,
-  searchIndex,
   landmarks,
   districtFocus,
 }: Props) {
@@ -259,9 +251,7 @@ export default function CityExplorer({
   const [worldMode, setWorldMode] = useState(true);
   const [activeZone, setActiveZone] = useState<SceneZone>('overview');
   const [viewNonce, setViewNonce] = useState(0);
-  const [query, setQuery] = useState('');
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [boundaryDebug, setBoundaryDebug] = useState(false);
   const [dockPanel, setDockPanel] = useState<
     'districts' | 'people' | 'admin' | null
@@ -270,8 +260,6 @@ export default function CityExplorer({
   const [webglSupported, setWebglSupported] = useState<boolean | null>(null);
   const [sceneReady, setSceneReady] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
-  const menuPanelRef = useRef<HTMLDivElement>(null);
   const profileCloseRef = useRef<HTMLButtonElement>(null);
   const peopleToggleRef = useRef<HTMLButtonElement>(null);
   const lastFocusedRef = useRef<HTMLElement | null>(null);
@@ -370,6 +358,21 @@ export default function CityExplorer({
   }, [candidates, districts, landmarks]);
 
   useEffect(() => {
+    const onSettingsOpenChange = (event: Event) => {
+      setSettingsOpen((event as CustomEvent<boolean>).detail);
+    };
+    window.addEventListener(
+      'kaohsiung:settings-open-change',
+      onSettingsOpenChange,
+    );
+    return () =>
+      window.removeEventListener(
+        'kaohsiung:settings-open-change',
+        onSettingsOpenChange,
+      );
+  }, []);
+
+  useEffect(() => {
     if (webglSupported === null) return;
     const params = new URLSearchParams(window.location.search);
     if (selectedDistrictSlug) params.set('district', selectedDistrictSlug);
@@ -398,14 +401,6 @@ export default function CityExplorer({
     });
     return () => window.cancelAnimationFrame(frame);
   }, [selectedCandidateSlug]);
-
-  useEffect(() => {
-    if (!menuOpen) return undefined;
-    const frame = window.requestAnimationFrame(() => {
-      menuPanelRef.current?.querySelector<HTMLAnchorElement>('a')?.focus();
-    });
-    return () => window.cancelAnimationFrame(frame);
-  }, [menuOpen]);
 
   const closeCandidate = useCallback(() => {
     restoreFocusPendingRef.current = true;
@@ -438,17 +433,11 @@ export default function CityExplorer({
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return;
-      if (menuOpen) {
-        setMenuOpen(false);
-        menuButtonRef.current?.focus();
-        return;
-      }
       if (settingsOpen) {
         setSettingsOpen(false);
-        return;
-      }
-      if (query) {
-        setQuery('');
+        window.dispatchEvent(
+          new CustomEvent('kaohsiung:settings-open-change', { detail: false }),
+        );
         return;
       }
       if (selectedCandidateSlug) {
@@ -473,8 +462,6 @@ export default function CityExplorer({
   }, [
     closeCandidate,
     dockPanel,
-    menuOpen,
-    query,
     selectedAdminId,
     selectedCandidateSlug,
     selectedLandmark,
@@ -516,19 +503,6 @@ export default function CityExplorer({
       ),
     [candidates, selectedDistrict?.slug],
   );
-
-  const searchMatches = useMemo(() => {
-    const normalizedQuery = query.trim().toLocaleLowerCase();
-    if (!normalizedQuery) return [];
-    const matchingIds = new Set(
-      searchIndex
-        .filter((record) => record.searchText.includes(normalizedQuery))
-        .map((record) => record.id),
-    );
-    return candidates.filter((candidate) =>
-      matchingIds.has(candidate.candidacy.id),
-    );
-  }, [candidates, query, searchIndex]);
 
   const selectedCandidate = candidates.find(
     (candidate) => candidate.candidacy.slug === selectedCandidateSlug,
@@ -621,36 +595,63 @@ export default function CityExplorer({
     };
   })();
 
-  const selectCandidate = (slug: string) => {
-    const candidate = candidates.find((item) => item.candidacy.slug === slug);
-    if (!candidate) return;
-    const active = document.activeElement;
-    lastFocusedRef.current =
-      active instanceof HTMLElement && active !== document.body ? active : null;
-    returnFocusRef.current = {
-      districtSlug: selectedDistrictSlug,
-      zone: activeZone,
-      landmark: selectedLandmark,
-      adminId: selectedAdminId,
+  const selectCandidate = useCallback(
+    (slug: string) => {
+      const candidate = candidates.find((item) => item.candidacy.slug === slug);
+      if (!candidate) return;
+      const active = document.activeElement;
+      lastFocusedRef.current =
+        active instanceof HTMLElement && active !== document.body
+          ? active
+          : null;
+      returnFocusRef.current = {
+        districtSlug: selectedDistrictSlug,
+        zone: activeZone,
+        landmark: selectedLandmark,
+        adminId: selectedAdminId,
+        worldMode,
+      };
+      setSelectedDistrictSlug(candidate.district.slug);
+      setSelectedCandidateSlug(slug);
+      setFollowActorSlug(slug);
+      setWorldMode(false);
+      setDockPanel(null);
+      setSelectedLandmark(null);
+      setHoveredLandmark(null);
+      setActiveZone('overview');
+      if (electionFilter !== 'all') {
+        const matchesFilter =
+          electionFilter === 'demo'
+            ? candidate.district.isDemo === true
+            : candidate.district.electionType === electionFilter;
+        if (!matchesFilter) setElectionFilter('all');
+      }
+    },
+    [
+      activeZone,
+      candidates,
+      electionFilter,
+      selectedAdminId,
+      selectedDistrictSlug,
+      selectedLandmark,
       worldMode,
+    ],
+  );
+
+  useEffect(() => {
+    const onHeaderCandidateSelect = (event: Event) => {
+      selectCandidate((event as CustomEvent<string>).detail);
     };
-    setSelectedDistrictSlug(candidate.district.slug);
-    setSelectedCandidateSlug(slug);
-    setFollowActorSlug(slug);
-    setWorldMode(false);
-    setDockPanel(null);
-    setSelectedLandmark(null);
-    setHoveredLandmark(null);
-    setActiveZone('overview');
-    setQuery('');
-    if (electionFilter !== 'all') {
-      const matchesFilter =
-        electionFilter === 'demo'
-          ? candidate.district.isDemo === true
-          : candidate.district.electionType === electionFilter;
-      if (!matchesFilter) setElectionFilter('all');
-    }
-  };
+    window.addEventListener(
+      'kaohsiung:select-candidate',
+      onHeaderCandidateSelect,
+    );
+    return () =>
+      window.removeEventListener(
+        'kaohsiung:select-candidate',
+        onHeaderCandidateSelect,
+      );
+  }, [selectCandidate]);
 
   const selectDistrict = (slug: string) => {
     returnFocusRef.current = null;
@@ -752,7 +753,6 @@ export default function CityExplorer({
     setWorldMode(true);
     setActiveZone('overview');
     setViewNonce((value) => value + 1);
-    setQuery('');
     setSettingsOpen(false);
   };
 
@@ -883,165 +883,39 @@ export default function CityExplorer({
       </div>
 
       <div className="city-hud">
-        <header className="city-topbar">
-          <a
-            aria-label="港都人物誌首頁"
-            className="city-brand brand-lockup"
-            href={withBase('/')}
-          >
-            <span className="brand-lockup__mark">
-              <img alt="" src={withBase('/harbor-mark.svg')} />
-            </span>
-            <span className="brand-lockup__copy">
-              <h1 className="brand-lockup__title">港都人物誌</h1>
-              <span className="brand-lockup__subtitle">
-                KAOHSIUNG CIVIC STORIES
-              </span>
-            </span>
-          </a>
-
-          <div className="city-scene-label">
-            <span className="city-scene-label__kicker">CURRENT DISTRICT</span>
-            <strong id="scene-heading">
-              {selectedDistrict?.name ?? '港都示範城市'}
-            </strong>
-            <span className="city-scene-label__zone">
-              {worldMode
-                ? selectedAdmin
-                  ? `行政區・${selectedAdmin.name}・藝術化量體`
-                  : '高雄市 38 行政區・全市視角'
-                : activeZone === 'overview'
-                  ? '左營 × 楠梓・高細節區'
-                  : `${ZONE_LABELS[activeZone]}視角・藝術化城市模型`}
-            </span>
-          </div>
-
-          <div className="city-actions">
-            <nav
-              aria-label="主要網站導覽"
-              className="topbar__nav city-nav city-nav--desktop"
-            >
-              {SITE_NAV_LINKS.map((link) => (
-                <a
-                  aria-current={link.href === '/' ? 'page' : undefined}
-                  href={withBase(link.href)}
-                  key={link.href}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-            <button
-              aria-controls="city-mobile-nav"
-              aria-expanded={menuOpen}
-              aria-label={menuOpen ? '關閉網站選單' : '開啟網站選單'}
-              className="city-menu-button"
-              type="button"
-              onClick={() => setMenuOpen((value) => !value)}
-              ref={menuButtonRef}
-            >
-              <span aria-hidden="true">{menuOpen ? '×' : '☰'}</span>
-            </button>
-            <div className="city-search">
-              <label className="sr-only" htmlFor="candidate-search">
-                搜尋人物
-              </label>
-              <span className="city-search__icon" aria-hidden="true">
-                ⌕
-              </span>
-              <input
-                autoComplete="off"
-                id="candidate-search"
-                placeholder="搜尋人物"
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-              />
-              {query && (
-                <>
-                  <button
-                    aria-label="清除搜尋"
-                    className="city-search__clear"
-                    type="button"
-                    onClick={() => setQuery('')}
-                  >
-                    ×
-                  </button>
-                  <div aria-live="polite" className="city-search__results">
-                    <span className="city-search__count">
-                      {searchMatches.length} 位人物
-                    </span>
-                    {searchMatches.slice(0, 8).map((candidate) => (
-                      <CandidateButton
-                        active={
-                          candidate.candidacy.slug === selectedCandidateSlug
-                        }
-                        candidate={candidate}
-                        key={candidate.candidacy.id}
-                        result
-                        onSelect={selectCandidate}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-            <button
-              aria-expanded={settingsOpen}
-              aria-label="顯示與體驗設定"
-              className={`city-icon-button${settingsOpen ? ' is-active' : ''}`}
-              type="button"
-              onClick={() => setSettingsOpen((value) => !value)}
-            >
-              ⚙
-            </button>
-          </div>
-        </header>
-
-        {menuOpen && (
-          <div
-            className="city-mobile-menu"
-            id="city-mobile-nav"
-            ref={menuPanelRef}
-          >
-            <div className="city-mobile-menu__head">
-              <strong>網站導覽</strong>
-              <button
-                aria-label="關閉網站選單"
-                type="button"
-                onClick={() => {
-                  setMenuOpen(false);
-                  menuButtonRef.current?.focus();
-                }}
-              >
-                ×
-              </button>
-            </div>
-            <nav aria-label="網站頁面">
-              {SITE_NAV_LINKS.map((link) => (
-                <a
-                  aria-current={link.href === '/' ? 'page' : undefined}
-                  href={withBase(link.href)}
-                  key={link.href}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <span>{link.label}</span>
-                  <small>{link.english}</small>
-                </a>
-              ))}
-            </nav>
-            <p>以官方資料為基礎的沉浸式城市探索。人物移動為虛構模擬。</p>
-          </div>
-        )}
+        <div className="city-scene-label">
+          <span className="city-scene-label__kicker">CURRENT DISTRICT</span>
+          <strong id="scene-heading">
+            {selectedDistrict?.name ?? '港都示範城市'}
+          </strong>
+          <span className="city-scene-label__zone">
+            {worldMode
+              ? selectedAdmin
+                ? `行政區・${selectedAdmin.name}・藝術化量體`
+                : '高雄市 38 行政區・全市視角'
+              : activeZone === 'overview'
+                ? '左營 × 楠梓・高細節區'
+                : `${ZONE_LABELS[activeZone]}視角・藝術化城市模型`}
+          </span>
+        </div>
 
         {settingsOpen && (
-          <section className="city-settings" aria-label="顯示與體驗設定">
+          <section
+            aria-label="顯示與體驗設定"
+            className="city-settings"
+            id="city-settings-panel"
+          >
             <div className="city-settings__head">
               <strong>顯示與體驗</strong>
               <button
                 aria-label="關閉設定"
                 type="button"
-                onClick={() => setSettingsOpen(false)}
+                onClick={() => {
+                  setSettingsOpen(false);
+                  window.dispatchEvent(
+                    new CustomEvent('kaohsiung:settings-closed'),
+                  );
+                }}
               >
                 ×
               </button>

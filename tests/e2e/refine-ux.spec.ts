@@ -81,7 +81,9 @@ function closeEnough(a: number[] = [], b: number[] = [], tolerance = 0.05) {
 
 async function selectMayor(page: import('@playwright/test').Page) {
   await page.locator('#candidate-search').fill('張靜');
-  const result = page.locator('.city-search__results .city-candidate').first();
+  const result = page
+    .locator('.global-header__search-results .city-candidate')
+    .first();
   await expect(result).toBeVisible();
   await result.click();
   await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
@@ -317,42 +319,46 @@ test.describe('refined living-city exploration', () => {
   }) => {
     await page.goto('/');
     await hydrated(page);
-    const explorerBrand = page.locator('.city-brand');
-    await expect(explorerBrand.locator('.brand-lockup__title')).toHaveText(
+    const header = page.getByTestId('global-header');
+    await expect(header).toBeVisible();
+    await expect(header.locator('.brand-lockup__title')).toHaveText(
       '港都人物誌',
     );
-    await expect(explorerBrand.locator('.brand-lockup__subtitle')).toHaveText(
+    await expect(header.locator('.brand-lockup__subtitle')).toHaveText(
       'KAOHSIUNG CIVIC STORIES',
     );
-    await expect(explorerBrand.locator('img')).toHaveAttribute(
+    await expect(header.locator('.brand-lockup img')).toHaveAttribute(
       'src',
       /harbor-mark\.svg$/,
     );
+    const nav = header.locator('nav[aria-label="主要網站導覽"]');
+    await expect(nav.locator('a')).toHaveCount(4);
+    await expect(nav.locator('a[aria-current="page"]')).toHaveText('城市探索');
 
     await page.goto('/districts/');
-    const infoBrand = page.locator('.topbar .brand-lockup');
-    await expect(infoBrand.locator('.brand-lockup__title')).toHaveText(
+    await expect(header).toBeVisible();
+    await expect(header.locator('.brand-lockup__title')).toHaveText(
       '港都人物誌',
     );
-    await expect(infoBrand.locator('.brand-lockup__subtitle')).toHaveText(
-      'KAOHSIUNG CIVIC STORIES',
-    );
-    await expect(infoBrand.locator('img')).toHaveAttribute(
+    await expect(header.locator('.brand-lockup img')).toHaveAttribute(
       'src',
       /harbor-mark\.svg$/,
     );
-    const nav = page.locator('.topbar__nav--desktop');
     await expect(nav.locator('a')).toHaveCount(4);
     await expect(nav.locator('a[aria-current="page"]')).toHaveText('選舉區');
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.reload();
-    await expect(page.locator('.topbar-menu')).toBeVisible();
-    await expect(page.locator('.topbar__nav--desktop')).toBeHidden();
-    await page.locator('.topbar-menu summary').click();
-    await expect(page.locator('.topbar-menu__nav a')).toHaveCount(4);
-    await expect(
-      page.locator('.topbar-menu__nav a[aria-current="page"]'),
-    ).toHaveText('選舉區');
+    await expect(header).toBeVisible();
+    const menuButton = page.locator('.global-header__menu-button');
+    await expect(menuButton).toBeVisible();
+    await expect(nav).toBeHidden();
+    await menuButton.click();
+    const mobileNav = page.locator('#global-mobile-nav');
+    await expect(mobileNav).toBeVisible();
+    await expect(mobileNav.locator('nav a')).toHaveCount(4);
+    await expect(mobileNav.locator('nav a[aria-current="page"]')).toContainText(
+      '選舉區',
+    );
   });
 });

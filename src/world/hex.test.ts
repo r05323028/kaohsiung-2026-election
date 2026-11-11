@@ -463,6 +463,7 @@ describe('candidate road movement and territory', () => {
       (second.position.z - secondStart.z) * edgeZ;
     expect(firstTravel).toBeGreaterThan(0);
     expect(secondTravel).toBeLessThan(0);
+    expect(firstTravel).toBeCloseTo(-secondTravel, 6);
     expect(first.state).toBe('walking');
     expect(second.state).toBe('walking');
     expect(first.walkPhase).toBeGreaterThan(0);
@@ -475,6 +476,60 @@ describe('candidate road movement and territory', () => {
     );
     expect(separation).toBeGreaterThan(0.05);
     expect(separation).toBeLessThan(0.2);
+    resetSimulation();
+  });
+
+  it('allows multiple candidates to occupy the same road node', () => {
+    const mayors = getActors().filter((actor) => actor.role === 'mayor');
+    expect(mayors.length).toBeGreaterThanOrEqual(2);
+    const first = mayors[0]!;
+    const second = mayors[1]!;
+    const edge = ROAD_EDGES.find(
+      (item) =>
+        item.kind === 'ring' &&
+        item.tileIds.some((tileId) => {
+          const tile = HEX_TILES.find((candidate) => candidate.id === tileId)!;
+          return (
+            first.allowedAdminIds.includes(tile.adminId) &&
+            second.allowedAdminIds.includes(tile.adminId)
+          );
+        }),
+    )!;
+    const tile = HEX_TILES.find((item) => item.id === edge.tileIds[0])!;
+
+    for (const actor of [first, second]) {
+      actor.edgeId = edge.id;
+      actor.fromNodeId = edge.from;
+      actor.destination = { x: edge.b.x, z: edge.b.z };
+      actor.pathNodeIds = [edge.from, edge.to];
+      actor.edgeProgress = 0;
+      actor.position = { x: edge.a.x, z: edge.a.z };
+      actor.currentAdminId = tile.adminId;
+      actor.walkPhase = 0;
+      actor.walkedSincePause = 0;
+      actor.nextPauseKm = 100;
+      actor.state = 'walking';
+      actor.behavior = 'walking';
+      actor.pauseRemaining = 0;
+    }
+
+    expect(
+      Math.hypot(
+        first.position.x - second.position.x,
+        first.position.z - second.position.z,
+      ),
+    ).toBeCloseTo(0, 9);
+
+    advanceSimulationSeconds(0.25);
+
+    expect(first.state).toBe('walking');
+    expect(second.state).toBe('walking');
+    expect(actorIsOnRoad(first)).toBe(true);
+    expect(actorIsOnRoad(second)).toBe(true);
+    expect(first.position.x).toBeCloseTo(second.position.x, 6);
+    expect(first.position.z).toBeCloseTo(second.position.z, 6);
+    expect(first.walkPhase).toBeGreaterThan(0);
+    expect(second.walkPhase).toBeGreaterThan(0);
     resetSimulation();
   });
 

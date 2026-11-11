@@ -35,7 +35,7 @@ type Actor = {
   routeValid: boolean;
   routeWarnings: string[];
   districtTransitions: number;
-  blockedTransitions: number;
+  territoryRejections: number;
   followingUser: boolean;
   note: string;
 };
@@ -170,7 +170,7 @@ async function boundaryAudit(page: Page) {
     actor: finalActor,
     visited: [...visited],
     unauthorized,
-    blockedTransitions: finalActor.blockedTransitions,
+    territoryRejections: finalActor.territoryRejections,
     elapsedSeconds: finalState.stats.elapsedSeconds,
   };
 }

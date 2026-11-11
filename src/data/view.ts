@@ -4,6 +4,7 @@ import type {
   AutomatedPublicClaim,
   AutomatedPublicSource,
 } from './enrichment/automated-publication';
+import { isPublishedBallotNumberStatus } from './official/ballot';
 import type { CandidatePolicyResearchSummary } from './policy-research';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { CandidateResearchSummary } from './public-records/research-index';
@@ -222,14 +223,13 @@ export function toPublicCandidateProfile(
       candidate.candidacy.partyStatus === 'published'
         ? candidate.candidacy.politicalParty
         : '暫無資料',
-    candidateNumber:
-      candidate.candidacy.candidateNumberStatus === 'final'
-        ? candidate.candidacy.candidateNumber
-        : '待公告',
+    candidateNumber: isPublishedBallotNumberStatus(
+      candidate.candidacy.candidateNumberStatus,
+    )
+      ? candidate.candidacy.candidateNumber
+      : '',
     candidateNumberStatus:
-      candidate.candidacy.candidateNumberStatus === 'final'
-        ? 'final'
-        : 'not-published',
+      candidate.candidacy.candidateNumberStatus ?? 'not-published',
   };
 
   const publicRecords = candidate.publicRecords

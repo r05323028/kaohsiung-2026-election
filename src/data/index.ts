@@ -1,4 +1,8 @@
 import { officialCandidateProfiles, officialDistricts } from './official';
+import {
+  formatBallotNumber,
+  sortCandidatesByBallotNumber,
+} from './official/ballot';
 import type { CandidateProfileView, DistrictView } from './view';
 
 export * from './constituencies';
@@ -16,6 +20,7 @@ export interface CandidateSearchRecord {
   district: string;
   party: string;
   currentPosition: string;
+  ballotNumber: string;
   searchText: string;
 }
 
@@ -40,8 +45,10 @@ export function getDistrict(slug: string): DistrictView | undefined {
 }
 
 export function getDistrictCandidates(districtId: string): CandidateProfile[] {
-  return candidateProfiles.filter(
-    (candidate) => candidate.district.id === districtId,
+  return sortCandidatesByBallotNumber(
+    candidateProfiles.filter(
+      (candidate) => candidate.district.id === districtId,
+    ),
   );
 }
 
@@ -53,6 +60,7 @@ export const searchIndex: CandidateSearchRecord[] = candidateProfiles.map(
       district.name,
       candidacy.politicalParty,
       candidacy.currentPosition,
+      formatBallotNumber(candidacy.candidateNumber),
     ]
       .join(' ')
       .toLocaleLowerCase();
@@ -63,6 +71,7 @@ export const searchIndex: CandidateSearchRecord[] = candidateProfiles.map(
       district: district.name,
       party: candidacy.politicalParty,
       currentPosition: candidacy.currentPosition,
+      ballotNumber: formatBallotNumber(candidacy.candidateNumber) ?? '',
       searchText,
     };
   },

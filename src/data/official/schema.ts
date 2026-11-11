@@ -49,6 +49,13 @@ export const OfficialDistrictSchema = z.object({
   publicationStatus: z.enum(['approved', 'pending-review', 'unavailable']),
 });
 
+export const BallotNumberSourceSchema = z.object({
+  sourceId: z.string().min(1),
+  publicationDate: DateOnlySchema,
+  page: z.number().int().positive().optional(),
+  tableReference: z.string().min(1),
+});
+
 export const OfficialCandidateSchema = z.object({
   id: z.string().min(1),
   slug: SlugSchema,
@@ -59,9 +66,10 @@ export const OfficialCandidateSchema = z.object({
   districtId: z.string().min(1),
   electionYear: z.literal(2026),
   electionType: z.enum(['mayoral', 'city-council', 'indigenous-council']),
-  candidateNumber: z.string().min(1),
+  candidateNumber: z.string(),
   candidateNumberStatus: z.enum(['drawn', 'final', 'not-published']),
   candidateNumberIsFinal: z.boolean(),
+  candidateNumberSource: BallotNumberSourceSchema.optional(),
   candidateStatus: CandidateStatusSchema.default('qualified'),
   formalStatus: FormalStatusSchema.default('pending-announcement'),
   qualificationStatus: z.enum(['approved', 'pending-review', 'unavailable']),
@@ -100,6 +108,7 @@ export const OfficialDatasetSchema = z.object({
 
 export type OfficialSource = z.infer<typeof OfficialSourceSchema>;
 export type OfficialDistrict = z.infer<typeof OfficialDistrictSchema>;
+export type BallotNumberSource = z.infer<typeof BallotNumberSourceSchema>;
 export type OfficialCandidate = z.infer<typeof OfficialCandidateSchema>;
 export type OfficialDataset = z.infer<typeof OfficialDatasetSchema>;
 
@@ -160,6 +169,7 @@ export function validateOfficialDataset(input: unknown): OfficialDataset {
       throw new Error(
         `Candidate ${candidate.id} marks a non-final number as final.`,
       );
+    enforceBallotNumber(candidate, dataset.sources);
     if (candidate.partyStatus === 'published' && !candidate.politicalParty)
       throw new Error(
         `Candidate ${candidate.id} marks party as published without a party value.`,
@@ -198,4 +208,41 @@ export function validateOfficialDataset(input: unknown): OfficialDataset {
         `Pending review ${pending.scope} references missing source ${pending.sourceId}.`,
       );
   return dataset;
+}
+
+/**
+ * Official ballot numbers are administrative facts, so they require a
+ * positive-integer value plus provenance that resolves to a dataset source.
+ * The draw date must match the cited source: a number may never float free of
+ * the document that recorded it.
+ */
+function enforceBallotNumber(
+  candidate: OfficialCandidate,
+  sources: readonly OfficialSource[],
+) {
+  if (candidate.candidateNumberStatus === 'not-published') {
+    if (candidate.candidateNumber !== '')
+      throw new Error(
+        `Candidate ${candidate.id} publishes a number while its status is not-published.`,
+      );
+    return;
+  }
+  if (!/^[1-9]\d*$/.test(candidate.candidateNumber))
+    throw new Error(
+      `Candidate ${candidate.id} has invalid ballot number "${candidate.candidateNumber}".`,
+    );
+  const provenance = candidate.candidateNumberSource;
+  if (!provenance)
+    throw new Error(
+      `Candidate ${candidate.id} has a ballot number without provenance.`,
+    );
+  const source = sources.find((item) => item.id === provenance.sourceId);
+  if (!source)
+    throw new Error(
+      `Candidate ${candidate.id} references missing ballot-number source ${provenance.sourceId}.`,
+    );
+  if (source.publicationDate !== provenance.publicationDate)
+    throw new Error(
+      `Candidate ${candidate.id} ballot-number provenance date ${provenance.publicationDate} does not match source ${provenance.sourceId}.`,
+    );
 }

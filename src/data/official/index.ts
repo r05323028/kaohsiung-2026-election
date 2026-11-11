@@ -16,6 +16,11 @@ export { publicRecordsDataset };
 
 import type { CandidateProfileView, DistrictView } from '../view';
 import {
+  compareCandidatesByBallotNumber,
+  formatBallotNumber,
+  sortCandidatesByBallotNumber,
+} from './ballot';
+import {
   type OfficialCandidate,
   type OfficialDataset,
   type OfficialDistrict,
@@ -46,6 +51,10 @@ const sourceById = new Map(
 );
 const districtById = new Map(
   officialDataset.districts.map((district) => [district.id, district]),
+);
+/** Dataset order is the official contest order: mayor, then districts 1–15. */
+const districtOrderById = new Map(
+  officialDataset.districts.map((district, index) => [district.id, index]),
 );
 
 type ProfileSource = CandidateProfileView['sources'][number];
@@ -212,10 +221,28 @@ function toProfile(
   };
 }
 
+/**
+ * Canonical display order: official contest order (mayor first, then electoral
+ * districts 1–15) and ascending ballot number inside each contest. Every view
+ * derives its ordering from this list, so no page can drift independently.
+ */
+function compareProfilesByContestAndBallot(
+  left: CandidateProfileView,
+  right: CandidateProfileView,
+): number {
+  const leftDistrict =
+    districtOrderById.get(left.district.id) ?? Number.MAX_SAFE_INTEGER;
+  const rightDistrict =
+    districtOrderById.get(right.district.id) ?? Number.MAX_SAFE_INTEGER;
+  if (leftDistrict !== rightDistrict) return leftDistrict - rightDistrict;
+  return compareCandidatesByBallotNumber(left, right);
+}
+
 export const officialCandidateProfiles: CandidateProfileView[] =
   officialDataset.candidates
     .filter((candidate) => candidate.publicationStatus === 'approved')
-    .map(toProfile);
+    .map(toProfile)
+    .sort(compareProfilesByContestAndBallot);
 
 export type OfficialSearchRecord = {
   id: string;
@@ -224,6 +251,7 @@ export type OfficialSearchRecord = {
   district: string;
   party: string;
   currentPosition: string;
+  ballotNumber: string;
   searchText: string;
 };
 
@@ -237,11 +265,13 @@ export const officialSearchIndex: OfficialSearchRecord[] =
       district: district.name,
       party: candidacy.politicalParty,
       currentPosition: candidacy.currentPosition,
+      ballotNumber: formatBallotNumber(candidacy.candidateNumber) ?? '',
       searchText: [
         person.displayName,
         district.name,
         candidacy.politicalParty,
         candidacy.currentPosition,
+        formatBallotNumber(candidacy.candidateNumber),
       ]
         .join(' ')
         .toLocaleLowerCase(),
@@ -263,7 +293,9 @@ export function getOfficialDistrict(slug: string): DistrictView | undefined {
 export function getOfficialDistrictCandidates(
   districtId: string,
 ): CandidateProfileView[] {
-  return officialCandidateProfiles.filter(
-    (candidate) => candidate.district.id === districtId,
+  return sortCandidatesByBallotNumber(
+    officialCandidateProfiles.filter(
+      (candidate) => candidate.district.id === districtId,
+    ),
   );
 }

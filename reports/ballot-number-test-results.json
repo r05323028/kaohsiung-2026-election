@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-11-11T14:27:38.053Z",
+  "command": "npm run typecheck && npx vitest run && npm run build && npx playwright test",
+  "entries": [
+    {
+      "command": "npm run typecheck",
+      "status": "pass",
+      "detail": "astro check: 186 files, 0 errors / 0 warnings / 0 hints"
+    },
+    {
+      "command": "npx vitest run",
+      "status": "pass",
+      "detail": "27 test files, 174 tests passed (includes ballot.test.ts and ballot-order.test.ts)"
+    },
+    {
+      "command": "./node_modules/.bin/biome check <changed files>",
+      "status": "pass",
+      "detail": "changed files clean; repo-wide pre-existing warnings remain in untouched files"
+    },
+    {
+      "command": "npm run build",
+      "status": "pass",
+      "detail": "validate chain (incl. validate:ballot-numbers: 106/106 candidates, 106 official rows), 126 pages built, profile copy validated for 106 pages"
+    },
+    {
+      "command": "PLAYWRIGHT_PORT=4336 npx playwright test",
+      "status": "pass",
+      "detail": "78 tests passed across chromium and mobile-chromium (includes ballot-numbers.spec.ts and mobile ballot assertion)"
+    }
+  ]
+}

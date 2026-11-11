@@ -1,6 +1,11 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import {
+  BALLOT_NUMBER_DRAW_PAGE,
+  BALLOT_NUMBER_PUBLICATION_DATE,
+  BALLOT_NUMBER_SOURCE_ID,
+} from '../src/data/official/ballot';
+import {
   councilCandidateSlug,
   councilCandidateStableId,
   validateCouncilRoster,
@@ -104,6 +109,12 @@ const mayorCandidates = approved.candidates
       formalStatus: candidate.formalStatus ?? 'pending-announcement',
       partyStatus: 'not-published',
       politicalParty: null,
+      candidateNumberSource: {
+        sourceId: BALLOT_NUMBER_SOURCE_ID,
+        publicationDate: BALLOT_NUMBER_PUBLICATION_DATE,
+        page: BALLOT_NUMBER_DRAW_PAGE,
+        tableReference: '第1頁・高雄市市長',
+      },
     }),
   );
 const councilCandidates: Candidate[] = normalized.constituencies.flatMap(
@@ -129,6 +140,12 @@ const councilCandidates: Candidate[] = normalized.constituencies.flatMap(
         candidateNumber: row.candidateNumber,
         candidateNumberStatus: 'drawn',
         candidateNumberIsFinal: false,
+        candidateNumberSource: {
+          sourceId: BALLOT_NUMBER_SOURCE_ID,
+          publicationDate: BALLOT_NUMBER_PUBLICATION_DATE,
+          page: BALLOT_NUMBER_DRAW_PAGE,
+          tableReference: `第1頁・第${constituency.districtNumber}選舉區`,
+        },
         candidateStatus: 'number-drawn',
         formalStatus: 'pending-announcement',
         qualificationStatus: 'unavailable',

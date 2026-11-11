@@ -17,6 +17,7 @@ import {
   type PublicCandidateProfile,
   type PublicDistrictView,
 } from '../data';
+import { ballotNumberText } from '../data/official/ballot';
 import { withBase } from '../utils/paths';
 import {
   ALL_CANDIDATE_VISIBILITY,
@@ -113,7 +114,12 @@ function CandidateButton({
         {candidate.person.shortName.slice(0, 1)}
       </span>
       <span className="candidate-list__copy">
-        <strong>{candidate.person.displayName}</strong>
+        <span className="candidate-list__name">
+          <strong>{candidate.person.displayName}</strong>
+          <span className="candidate-list__ballot">
+            {ballotNumberText(candidate.candidacy)}
+          </span>
+        </span>
         <small>
           {result
             ? candidate.district.name

@@ -98,7 +98,7 @@ test('official election filters expose mayor, council, and indigenous districts'
   await councilDistrict.click();
   await explorer.locator('[aria-controls="city-people-tray"]').click();
   await expect(
-    explorer.getByRole('button', { name: /李 李振豪 2026/ }),
+    explorer.getByRole('button', { name: /李 李振豪 1 號/ }),
   ).toBeVisible();
 
   await explorer.locator('[aria-controls="city-district-tray"]').click();
@@ -119,7 +119,7 @@ test('official routes expose source references and neutral missing states', asyn
   ).toBeVisible();
   await expect(page.getByRole('note')).toHaveCount(0);
   await expect(
-    page.getByTestId('profile-tabs').getByText('正式號次待公告'),
+    page.getByTestId('profile-tabs').getByText('選票號次', { exact: true }),
   ).toBeVisible();
   await expect(
     page
@@ -155,7 +155,7 @@ test('official routes expose source references and neutral missing states', asyn
   await expect(
     page.getByRole('heading', { name: '李振豪', exact: true }),
   ).toBeVisible();
-  await expect(page.getByText('正式號次待公告').first()).toBeVisible();
+  await expect(page.getByText('選票號次：1 號').first()).toBeVisible();
   await expect(page.getByText('中國國民黨').first()).toBeVisible();
   await expect(
     page.locator('a[href="https://www.cec.gov.tw/khec/article/65366"]').first(),

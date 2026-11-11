@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run validate:data && npm run validate:constituencies && npm run validate:official && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run validate:public-records-coverage && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run typecheck && astro build && npm run validate:profile-copy",
+    "build": "npm run validate:data && npm run validate:constituencies && npm run validate:official && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run validate:public-records-coverage && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run typecheck && astro build && npm run validate:profile-copy",
     "biography:execute": "tsx scripts/execute-biography-research.ts execute",
     "biography:normalize": "tsx scripts/execute-biography-research.ts normalize",
     "biography:review": "tsx scripts/execute-biography-research.ts review",
@@ -80,6 +80,7 @@
     "typecheck": "astro check",
     "validate:data": "tsx scripts/validate-data.ts",
     "validate:official": "tsx scripts/validate-official-data.ts",
+  "validate:ballot-numbers": "tsx scripts/validate-ballot-numbers.ts",
     "validate:public-records": "tsx scripts/validate-public-records.ts",
     "records:discover": "tsx scripts/public-records-coverage.ts discover",
     "records:ingest": "tsx scripts/public-records-coverage.ts ingest",

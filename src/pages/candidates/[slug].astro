@@ -7,6 +7,7 @@ import {
   isDemoProfile,
   toPublicCandidateProfile,
 } from '../../data';
+import { ballotNumberText } from '../../data/official/ballot';
 import { withBase } from '../../utils/paths';
 
 export function getStaticPaths() {
@@ -31,11 +32,7 @@ const officeLabel =
 const publicSummary = demo
   ? candidate.person.summary
   : officeLabel + '，參選' + candidate.district.name + '。';
-const numberLabel =
-  candidate.candidacy.candidateNumberStatus === 'final' &&
-  candidate.candidacy.candidateNumber
-    ? `正式號次：${candidate.candidacy.candidateNumber}`
-    : '正式號次待公告';
+const numberLabel = `選票號次：${ballotNumberText(candidate.candidacy)}`;
 const partyLabel =
   candidate.candidacy.partyStatus === 'published'
     ? candidate.candidacy.politicalParty

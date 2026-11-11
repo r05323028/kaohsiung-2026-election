@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { isDemoProfile, type PublicCandidateProfile } from '../data';
+import { ballotNumberText } from '../data/official/ballot';
 
 export type ProfileTab = 'basic' | 'policies' | 'news' | 'career';
 type NewsFilter = 'all' | 'positive' | 'negative';
@@ -242,10 +243,7 @@ function AutomatedClaimCards({
 function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const { person, candidacy, district } = candidate;
   const demo = isDemoProfile(candidate);
-  const numberLabel =
-    candidacy.candidateNumberStatus === 'final' && candidacy.candidateNumber
-      ? String(candidacy.candidateNumber)
-      : '正式號次待公告';
+  const numberLabel = ballotNumberText(candidacy);
   const roleLabel =
     candidacy.electionType === 'mayoral'
       ? '高雄市長'
@@ -296,7 +294,7 @@ function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
           <dd>{candidacy.electionYear}</dd>
         </div>
         <div className="info-row">
-          <dt>正式號次</dt>
+          <dt>選票號次</dt>
           <dd>{numberLabel}</dd>
         </div>
       </dl>

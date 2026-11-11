@@ -206,7 +206,14 @@ export default function GlobalHeader({
                       }
                     >
                       <span className="candidate-list__copy">
-                        <strong>{candidate.name}</strong>
+                        <span className="candidate-list__name">
+                          <strong>{candidate.name}</strong>
+                          {candidate.ballotNumber && (
+                            <span className="candidate-list__ballot">
+                              {candidate.ballotNumber}
+                            </span>
+                          )}
+                        </span>
                         <small>{candidate.district}</small>
                       </span>
                     </a>

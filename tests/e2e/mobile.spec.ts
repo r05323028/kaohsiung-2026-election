@@ -216,3 +216,19 @@ test('mobile constituency coverage fits the viewport and links to admin focus', 
   await expect(page.locator('.city-admin-card')).toContainText('左營區');
   await expect(page.locator('.city-admin-card')).toContainText('第4選舉區');
 });
+
+test('mobile profile panel keeps the official ballot number visible', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+    'data-hydrated',
+    'true',
+  );
+  await page.locator('[aria-controls="city-people-tray"]').click();
+  await page.getByRole('button', { name: /張靜/ }).first().click();
+  const panel = page.locator('.profile-panel.is-open');
+  await expect(panel).toBeVisible();
+  await expect(panel).toContainText('選票號次');
+  await expect(panel).toContainText('1 號');
+});

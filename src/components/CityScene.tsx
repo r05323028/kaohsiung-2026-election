@@ -483,11 +483,11 @@ function CityWorld({
       <color attach="background" args={['#dff1f0']} />
       <fog attach="fog" args={['#dff1f0', 88, 270]} />
 
-      <hemisphereLight args={['#fff4df', '#8cb3a1', 1.25]} />
-      <ambientLight intensity={0.4} />
+      <hemisphereLight args={['#fff4df', '#8cb3a1', 1.35]} />
+      <ambientLight intensity={0.5} />
       <directionalLight
-        position={[22, 34, 18]}
-        intensity={2.05}
+        position={[27, 33, 5]}
+        intensity={1.45}
         color="#fff0d6"
         castShadow={detail !== 'low'}
         shadow-mapSize-width={shadowSize}
@@ -525,6 +525,7 @@ function CityWorld({
         selectedAdminId={selectedAdminId}
         hoveredAdminId={hoveredAdminId}
         showLabels={showLabels}
+        detail={detail}
         onSelectAdmin={onSelectAdmin}
         onHoverAdmin={onHoverAdmin}
       />
@@ -560,7 +561,7 @@ export default function CityScene(props: CitySceneProps) {
       }}
       onCreated={({ gl }) => {
         gl.toneMapping = THREE.ACESFilmicToneMapping;
-        gl.toneMappingExposure = 1.06;
+        gl.toneMappingExposure = 1.03;
         gl.shadowMap.type = THREE.PCFShadowMap;
         onReady?.();
       }}

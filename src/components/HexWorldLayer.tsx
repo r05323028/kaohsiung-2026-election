@@ -15,12 +15,18 @@ import {
   landmarkWorldPosition,
 } from '../world/hex-landmarks';
 import { HEX_ROAD_GRAPH, ROAD_EDGES, roadNode } from '../world/road-graph';
+import {
+  TREE_RING_RADIUS,
+  landmarkFootprints,
+} from '../world/buildings';
+import HexBuildings from './HexBuildings';
 import HeroLandmarkModel from './HeroLandmarks';
 
 type HexWorldLayerProps = {
   selectedAdminId: string | null;
   hoveredAdminId: string | null;
   showLabels: boolean;
+  detail: 'low' | 'medium' | 'high';
   onSelectAdmin: (adminId: string | null) => void;
   onHoverAdmin: (adminId: string | null) => void;
 };
@@ -1038,18 +1044,28 @@ function Landmarks() {
 
 const treePositions = HEX_TILES.flatMap((tile, tileIndex) => {
   const count = 2 + (tileIndex % 2);
+  const footprints = landmarkFootprints(tile);
   return Array.from({ length: count }, (_, index) => {
     const angle = tileIndex * 0.7 + index * 2.1 + 0.5;
-    const radius = 1.18 + (index % 3) * 0.12;
+    const radius = TREE_RING_RADIUS + 0.04 + (index % 3) * 0.05;
     return {
       id: `${tile.id}-tree-${index}`,
+      angle,
+      radius,
       x: tile.center.x + Math.cos(angle) * radius,
       z: tile.center.z + Math.sin(angle) * radius,
-      scale: 0.52 + ((tileIndex + index) % 3) * 0.08,
+      footprints,
+      scale: 0.44 + ((tileIndex + index) % 3) * 0.07,
       hue: (tileIndex + index) % 2,
     };
   });
-});
+}).filter((tree) =>
+  tree.footprints.every(
+    (footprint) =>
+      Math.hypot(tree.x - footprint.x, tree.z - footprint.z) >
+      footprint.radius + 0.16,
+  ),
+);
 
 const TREE_CROWN_GEOMETRY = new THREE.IcosahedronGeometry(0.42, 0);
 const TREE_TRUNK_GEOMETRY = new THREE.CylinderGeometry(0.055, 0.07, 0.24, 6);
@@ -1139,6 +1155,7 @@ export default function HexWorldLayer({
   selectedAdminId,
   hoveredAdminId,
   showLabels,
+  detail,
   onSelectAdmin,
   onHoverAdmin,
 }: HexWorldLayerProps) {
@@ -1279,6 +1296,7 @@ export default function HexWorldLayer({
         raycast={() => {}}
       />
 
+      <HexBuildings detail={detail} />
       <Trees />
       <Landmarks />
 

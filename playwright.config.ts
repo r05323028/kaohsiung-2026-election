@@ -9,15 +9,18 @@ export default defineConfig({
   // and click actionability beyond Playwright's 30s defaults.
   timeout: 90_000,
   expect: { timeout: 30_000 },
-  // The unified world renders a large WebGL scene per page. Running several
-  // SwiftShader contexts at once starves the browser and turns otherwise
-  // deterministic camera/hydration assertions into timeouts.
-  workers: 1,
+  // Headless Chromium falls back to SwiftShader on macOS, which makes every
+  // WebGL-heavy test 4-6x slower. A headed local browser uses the GPU and can
+  // safely run two workers; CI stays headless and serial for reproducibility.
+  workers: Number(process.env.PLAYWRIGHT_WORKERS ?? (process.env.CI ? 1 : 2)),
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
   reporter: 'list',
   use: {
     baseURL: `http://127.0.0.1:${port}`,
+    // Set PLAYWRIGHT_HEADLESS=1 when running on a display-less machine.
+    headless:
+      Boolean(process.env.CI) || process.env.PLAYWRIGHT_HEADLESS === '1',
     trace: 'on-first-retry',
   },
   projects: [

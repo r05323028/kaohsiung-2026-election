@@ -72,30 +72,91 @@ test.describe('unified Kaohsiung world', () => {
   test('every one of the 38 administrative districts can be focused', async ({
     page,
   }) => {
-    test.setTimeout(900_000);
+    test.setTimeout(180_000);
     await page.goto('/?district=kaohsiung-council-04');
     await explorer(page);
 
-    const toggle = page.locator('[aria-controls="city-admin-tray"]');
-    const card = page.locator('.city-admin-card');
-    await toggle.click();
-    const chips = page.locator('#city-admin-tray .city-admin-chip');
-    await expect(chips).toHaveCount(38);
-    const names = await chips.locator('strong').allInnerTexts();
+    await page.locator('[aria-controls="city-admin-tray"]').click();
+    await expect(page.locator('#city-admin-tray .city-admin-chip')).toHaveCount(
+      38,
+    );
 
-    for (let index = 0; index < names.length; index += 1) {
-      if (!(await page.locator('#city-admin-tray').isVisible())) {
-        await toggle.click();
-        await expect(page.locator('#city-admin-tray')).toBeVisible();
+    // Drive the real chips from one page. Playwright's per-click actionability
+    // checks add several seconds per district and made this loop dominate the
+    // whole suite; the chip handlers and card updates are still the production
+    // ones. Each selection closes the tray, so reopen it before the next chip.
+    const results = await page.evaluate(async () => {
+      const nextFrame = () =>
+        new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        );
+      const waitFor = async (check: () => boolean, timeoutMs = 5_000) => {
+        const deadline = performance.now() + timeoutMs;
+        while (performance.now() < deadline) {
+          if (check()) return true;
+          await nextFrame();
+        }
+        return check();
+      };
+      const toggle = document.querySelector<HTMLElement>(
+        '[aria-controls="city-admin-tray"]',
+      );
+      if (!toggle) throw new Error('admin tray toggle is missing');
+      const chips = [
+        ...document.querySelectorAll<HTMLElement>(
+          '#city-admin-tray .city-admin-chip',
+        ),
+      ];
+      const names = chips.map(
+        (chip) => chip.querySelector('strong')?.textContent?.trim() ?? '',
+      );
+      const failures: string[] = [];
+      for (const name of names) {
+        if (!document.querySelector('#city-admin-tray')) {
+          toggle.click();
+          if (
+            !(await waitFor(() =>
+              Boolean(document.querySelector('#city-admin-tray')),
+            ))
+          ) {
+            failures.push(`${name}: tray did not reopen`);
+            continue;
+          }
+        }
+        const chip = [
+          ...document.querySelectorAll<HTMLElement>(
+            '#city-admin-tray .city-admin-chip',
+          ),
+        ].find(
+          (item) => item.querySelector('strong')?.textContent?.trim() === name,
+        );
+        if (!chip) {
+          failures.push(`${name}: chip disappeared`);
+          continue;
+        }
+        chip.click();
+        const focused = await waitFor(
+          () =>
+            document
+              .querySelector('.city-admin-card h2')
+              ?.textContent?.trim() === `${name}區`,
+        );
+        if (!focused) {
+          failures.push(
+            `${name}: card showed ${
+              document
+                .querySelector('.city-admin-card h2')
+                ?.textContent?.trim() ?? 'nothing'
+            }`,
+          );
+        }
       }
-      await chips.nth(index).click();
-      await expect(card.locator('h2')).toHaveText(`${names[index]}區`, {
-        timeout: 30_000,
-      });
-      await expect(card).toBeVisible();
-    }
+      return { names, failures };
+    });
 
-    await expect(card).toContainText('藝術化示意');
+    expect(results.names).toHaveLength(38);
+    expect(results.failures).toEqual([]);
+    await expect(page.locator('.city-admin-card')).toContainText('藝術化示意');
   });
 
   test('council-04 simulation stays inside Zuoying and Nanzih while following', async ({

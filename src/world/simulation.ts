@@ -71,7 +71,7 @@ export type WorldActor = {
   followingUser: boolean;
   transitionTimer: number;
   districtTransitions: number;
-  blockedTransitions: number;
+  territoryRejections: number;
   spawnAdminId: string | null;
   spawnAdminName: string | null;
   rngState: number;
@@ -82,9 +82,6 @@ export type WorldActor = {
   edgeProgress: number;
   fromNodeId: string;
   pauseRemaining: number;
-  /** Waiting for another candidate to clear the road ahead. */
-  blocked: boolean;
-  blockedTimer: number;
 };
 
 type SimulationState = {
@@ -182,85 +179,6 @@ function ringEdgesFor(adminId: string): RoadEdge[] {
   );
 }
 
-const MIN_ACTOR_SEPARATION = 0.24;
-/** Idle checks a slightly wider ring than the movement threshold so a
- *  blocked actor does not immediately "clear" at the edge of separation. */
-const CROWD_AWARENESS = MIN_ACTOR_SEPARATION + 0.1;
-
-function actorHasCloseNeighbour(actor: WorldActor): boolean {
-  for (const other of state.actors) {
-    if (other === actor) continue;
-    const dx = other.position.x - actor.position.x;
-    const dz = other.position.z - actor.position.z;
-    if (dx * dx + dz * dz < CROWD_AWARENESS * CROWD_AWARENESS) return true;
-  }
-  return false;
-}
-
-function movementWouldCrowd(actor: WorldActor, next: WorldPoint): boolean {
-  for (const other of state.actors) {
-    if (other === actor) continue;
-    const currentDx = other.position.x - actor.position.x;
-    const currentDz = other.position.z - actor.position.z;
-    const nextDx = other.position.x - next.x;
-    const nextDz = other.position.z - next.z;
-    const currentDistance = currentDx * currentDx + currentDz * currentDz;
-    const nextDistance = nextDx * nextDx + nextDz * nextDz;
-    if (
-      nextDistance < MIN_ACTOR_SEPARATION * MIN_ACTOR_SEPARATION &&
-      nextDistance < currentDistance
-    )
-      return true;
-  }
-  return false;
-}
-
-/**
- * Nudge initial ring-road positions apart deterministically. This avoids
- * spawning several candidates on top of one another without changing edges.
- */
-function spaceOutSpawns(actors: WorldActor[]): void {
-  actors.forEach((actor, index) => {
-    const edge = currentEdge(actor);
-    if (!edge) return;
-    const tooClose = () => {
-      for (let otherIndex = 0; otherIndex < index; otherIndex += 1) {
-        const other = actors[otherIndex]!;
-        const dx = other.position.x - actor.position.x;
-        const dz = other.position.z - actor.position.z;
-        if (dx * dx + dz * dz < MIN_ACTOR_SEPARATION * MIN_ACTOR_SEPARATION)
-          return true;
-      }
-      return false;
-    };
-    if (!tooClose()) return;
-    const original = actor.edgeProgress;
-    for (let offset = 0.04; offset <= 0.96; offset += 0.04) {
-      for (const candidateProgress of [original + offset, original - offset]) {
-        if (candidateProgress <= 0 || candidateProgress >= 1) continue;
-        const candidate = pointOnEdge(edge, candidateProgress);
-        const dx = candidate.x - actor.position.x;
-        const dz = candidate.z - actor.position.z;
-        if (dx * dx + dz * dz < 0.0001) continue;
-        let clear = true;
-        for (let otherIndex = 0; otherIndex < index; otherIndex += 1) {
-          const other = actors[otherIndex]!;
-          const ox = other.position.x - candidate.x;
-          const oz = other.position.z - candidate.z;
-          if (ox * ox + oz * oz < MIN_ACTOR_SEPARATION * MIN_ACTOR_SEPARATION) {
-            clear = false;
-            break;
-          }
-        }
-        if (!clear) continue;
-        actor.edgeProgress = candidateProgress;
-        actor.position = candidate;
-        return;
-      }
-    }
-  });
-}
-
 function spawnActor(candidate: CandidateProfile, index: number): WorldActor {
   const scope = movementScopeForCandidate(candidate);
   const role = candidateRole(candidate);
@@ -325,7 +243,7 @@ function spawnActor(candidate: CandidateProfile, index: number): WorldActor {
     followingUser: false,
     transitionTimer: 0,
     districtTransitions: 0,
-    blockedTransitions: 0,
+    territoryRejections: 0,
     spawnAdminId: district?.id ?? null,
     spawnAdminName: district?.name ?? null,
     rngState: (seed ^ 0x9e3779b9) >>> 0,
@@ -335,8 +253,6 @@ function spawnActor(candidate: CandidateProfile, index: number): WorldActor {
     edgeProgress: progress,
     fromNodeId: edge.from,
     pauseRemaining: 0,
-    blocked: false,
-    blockedTimer: 0,
   };
 }
 
@@ -344,7 +260,6 @@ function buildState(): SimulationState {
   const actors = candidateProfiles
     .filter((candidate) => !candidate.candidacy.isDemo)
     .map((candidate, index) => spawnActor(candidate, index));
-  spaceOutSpawns(actors);
   return {
     actors,
     selectedSlug: null,
@@ -438,7 +353,6 @@ function arrive(actor: WorldActor, nodeId: string): boolean {
   actor.position = node.point;
   actor.currentNodeId = nodeId;
   actor.edgeProgress = 1;
-  actor.blockedTimer = 0;
   const priorAdminId = actor.currentAdminId;
   actor.currentAdminId = node.adminId;
   actor.currentAdminName = node.districtId
@@ -469,7 +383,7 @@ function arrive(actor: WorldActor, nodeId: string): boolean {
   const nextNodeId = next.from === nodeId ? next.to : next.from;
   const nextAdminId = roadNode(nextNodeId).adminId;
   if (!actor.allowedAdminIds.includes(nextAdminId)) {
-    actor.blockedTransitions += 1;
+    actor.territoryRejections += 1;
     actor.state = 'idle';
     actor.behavior = 'idle';
     return true;
@@ -480,47 +394,11 @@ function arrive(actor: WorldActor, nodeId: string): boolean {
   return false;
 }
 
-function reverseActor(actor: WorldActor): void {
-  const edge = currentEdge(actor);
-  if (!edge) return;
-  const fromNodeId = actor.pathNodeIds[0] ?? edge.from;
-  const toNodeId = actor.pathNodeIds[1] ?? edge.to;
-  actor.fromNodeId = toNodeId;
-  actor.pathNodeIds = [toNodeId, fromNodeId];
-  actor.edgeProgress = 1 - actor.edgeProgress;
-  actor.destination = roadNode(fromNodeId).point;
-  actor.desiredHeading = headingBetween(
-    roadNode(toNodeId).point,
-    actor.destination,
-  );
-  actor.position = pointOnActorEdge(actor);
-}
-
 function walk(actor: WorldActor, deltaSeconds: number): void {
   if (actor.state === 'idle') {
     actor.behaviorTimer += deltaSeconds;
     actor.pauseRemaining -= deltaSeconds;
     if (actor.pauseRemaining > 0) return;
-    if (actor.blocked) {
-      actor.blockedTimer += deltaSeconds;
-      if (!actorHasCloseNeighbour(actor)) {
-        actor.blocked = false;
-        actor.blockedTimer = 0;
-        actor.state = 'walking';
-        actor.behavior = 'walking';
-        return;
-      }
-      if (actor.blockedTimer > 2.2) {
-        actor.blocked = false;
-        actor.blockedTimer = 0;
-        actor.state = 'walking';
-        actor.behavior = 'turning';
-        reverseActor(actor);
-        return;
-      }
-      actor.pauseRemaining = 0.1;
-      return;
-    }
     const nodeId = actor.currentNodeId;
     if (!nodeId) {
       actor.state = 'walking';
@@ -554,14 +432,6 @@ function walk(actor: WorldActor, deltaSeconds: number): void {
     const step = Math.min(remaining, remainingOnEdge);
     const nextProgress =
       actor.edgeProgress + step / Math.max(edge.lengthKm, 0.0001);
-    if (movementWouldCrowd(actor, pointOnActorEdge(actor, nextProgress))) {
-      actor.blocked = true;
-      actor.blockedTimer += deltaSeconds;
-      actor.state = 'idle';
-      actor.behavior = 'pausing';
-      actor.pauseRemaining = 0.12;
-      return;
-    }
     actor.edgeProgress = nextProgress;
     actor.progressKm += step;
     remaining -= step;
@@ -748,7 +618,7 @@ export function simulationStats() {
   let invalidRoutes = 0;
   let idle = 0;
   let walking = 0;
-  let blocked = 0;
+  let territoryRejections = 0;
   let transitions = 0;
   for (const actor of state.actors) {
     byRole.set(actor.role, (byRole.get(actor.role) ?? 0) + 1);
@@ -756,7 +626,7 @@ export function simulationStats() {
     if (!actor.routeValid) invalidRoutes += 1;
     if (actor.state === 'idle') idle += 1;
     else walking += 1;
-    blocked += actor.blockedTransitions;
+    territoryRejections += actor.territoryRejections;
     transitions += actor.districtTransitions;
     if (actor.currentAdminName) {
       byDistrict.set(
@@ -770,7 +640,7 @@ export function simulationStats() {
     invalidRoutes,
     idle,
     walking,
-    blockedTransitions: blocked,
+    territoryRejections,
     districtTransitions: transitions,
     byRole: Object.fromEntries(byRole),
     byBehavior: Object.fromEntries(byBehavior),

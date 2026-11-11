@@ -14,6 +14,21 @@ type WorldWindow = Window & {
   __kaohsiungActorLod?: () => ActorLod;
   __kaohsiungActorScale?: (slug: string) => number | null;
   __kaohsiungActorMarker?: () => { uuid: string; count: number } | null;
+  __kaohsiungActorOverviewLimb?: (
+    pivot: 'leftArm' | 'rightArm' | 'leftLeg' | 'rightLeg' | 'head',
+    slug: string,
+  ) => number[] | null;
+  __kaohsiungActorDetailLimb?: (
+    pivot: 'leftArm' | 'rightArm' | 'leftLeg' | 'rightLeg' | 'head',
+    slug: string,
+  ) => number[] | null;
+  __kaohsiungActorPose?: (slug: string) => {
+    x: number;
+    z: number;
+    heading: number;
+    walkPhase: number;
+    walking: boolean;
+  } | null;
   __kaohsiungCandidateVisibility?: () => {
     scope: 'all' | 'admin-district' | 'constituency';
     count: number;
@@ -65,7 +80,21 @@ test.describe('GLB candidate models', () => {
     page.on('pageerror', (error) => pageErrors.push(error.message));
 
     await openModels(page, '/');
-    await page.waitForTimeout(8000);
+    await expect
+      .poll(
+        async () => {
+          const value = await lod(page);
+          return (
+            value.model === 'glb' &&
+            value.mode === 'overview' &&
+            value.overviewCount === 106 &&
+            value.detailCount === 0 &&
+            value.screenPx < value.enterPx
+          );
+        },
+        { timeout: 30_000 },
+      )
+      .toBe(true);
     const value = await lod(page);
     expect(value.model).toBe('glb');
     expect(value.mode).toBe('overview');
@@ -90,12 +119,54 @@ test.describe('GLB candidate models', () => {
     ).toBeVisible();
   });
 
+  test('animates overview limb pivots while candidates walk', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openModels(page, '/');
+    await page.waitForTimeout(6000);
+
+    const sample = () =>
+      page.evaluate(() => {
+        const bridge = window as WorldWindow;
+        const visibility = bridge.__kaohsiungCandidateVisibility?.();
+        const limbs: Record<string, string> = {};
+        for (const slug of visibility?.slugs ?? []) {
+          const matrix = bridge.__kaohsiungActorOverviewLimb?.('leftLeg', slug);
+          if (matrix)
+            limbs[slug] = matrix.map((value) => value.toFixed(5)).join(',');
+        }
+        return limbs;
+      });
+
+    const before = await sample();
+    expect(Object.keys(before).length).toBe(106);
+    await page.waitForTimeout(400);
+    const after = await sample();
+    const animated = Object.keys(before).filter(
+      (slug) => before[slug] !== after[slug],
+    );
+    expect(animated.length).toBeGreaterThan(20);
+  });
+
   test('forces the detailed model for a selected candidate at overview zoom', async ({
     page,
   }) => {
     test.setTimeout(120_000);
     await openModels(page, '/?candidate=zhang-jing-2026');
-    await page.waitForTimeout(8000);
+    await expect
+      .poll(
+        async () => {
+          const value = await lod(page);
+          return (
+            value.model === 'glb' &&
+            value.detailCount >= 1 &&
+            value.detailCount + value.overviewCount === 106
+          );
+        },
+        { timeout: 30_000 },
+      )
+      .toBe(true);
     const value = await lod(page);
     expect(value.model).toBe('glb');
     expect(value.detailCount).toBeGreaterThanOrEqual(1);
@@ -107,12 +178,137 @@ test.describe('GLB candidate models', () => {
     await expect(page.locator('.profile-panel')).toBeVisible();
   });
 
+  test('animates detailed GLB limb pivots while candidates walk', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openModels(page, '/?admin=E03');
+    await page.waitForTimeout(3000);
+
+    const slug = await page.evaluate(() => {
+      const bridge = window as WorldWindow;
+      for (const candidate of bridge.__kaohsiungCandidateVisibility?.().slugs ??
+        []) {
+        if (bridge.__kaohsiungActorDetailLimb?.('leftLeg', candidate)) {
+          return candidate;
+        }
+      }
+      return null;
+    });
+    expect(slug).toBeTruthy();
+
+    const frames = await page.evaluate(async (candidate) => {
+      const bridge = window as WorldWindow;
+      const samples: {
+        leg: number;
+        arm: number;
+        phase: number;
+      }[] = [];
+      for (let frame = 0; frame < 12; frame += 1) {
+        await new Promise<void>((resolve) =>
+          requestAnimationFrame(() => resolve()),
+        );
+        const leg = bridge.__kaohsiungActorDetailLimb?.('leftLeg', candidate);
+        const arm = bridge.__kaohsiungActorDetailLimb?.('leftArm', candidate);
+        const pose = bridge.__kaohsiungActorPose?.(candidate);
+        if (leg && arm && pose) {
+          samples.push({ leg: leg[0]!, arm: arm[0]!, phase: pose.walkPhase });
+        }
+      }
+      return samples;
+    }, slug!);
+
+    expect(frames).toHaveLength(12);
+    expect(
+      new Set(frames.map((frame) => frame.leg.toFixed(4))).size,
+    ).toBeGreaterThan(4);
+    expect(
+      new Set(frames.map((frame) => frame.arm.toFixed(4))).size,
+    ).toBeGreaterThan(4);
+    expect(
+      frames.every(
+        (frame, index) =>
+          index === 0 || frame.phase >= frames[index - 1]!.phase - 1e-6,
+      ),
+    ).toBe(true);
+  });
+
+  test('freezes limb pivots but keeps actors moving under reduced motion', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openModels(page, '/');
+    await page.waitForTimeout(6000);
+    await page.locator('.global-header__settings-button').click();
+    const toggle = page.locator('.city-settings__toggle input');
+    await expect(toggle).toBeVisible();
+    await toggle.check();
+    await page.waitForTimeout(2400);
+
+    const sample = () =>
+      page.evaluate(() => {
+        const bridge = window as WorldWindow;
+        const visibility = bridge.__kaohsiungCandidateVisibility?.();
+        const limbs: Record<string, string> = {};
+        const positions: Record<string, string> = {};
+        for (const slug of visibility?.slugs ?? []) {
+          const matrix = bridge.__kaohsiungActorOverviewLimb?.('leftLeg', slug);
+          if (matrix) {
+            // Compare the rotation block only; the body-relative translation
+            // can carry harmless sub-pixel float noise between frames.
+            limbs[slug] = [1, 2, 4, 6, 8, 9]
+              .map((index) =>
+                (Math.abs(matrix[index]!) < 1e-5 ? 0 : matrix[index]!).toFixed(
+                  6,
+                ),
+              )
+              .join(',');
+          }
+          const pose = bridge.__kaohsiungActorPose?.(slug);
+          if (pose)
+            positions[slug] = `${pose.x.toFixed(4)},${pose.z.toFixed(4)}`;
+        }
+        return { limbs, positions };
+      });
+
+    const before = await sample();
+    expect(Object.keys(before.limbs)).toHaveLength(106);
+    await page.waitForTimeout(500);
+    const after = await sample();
+    const moving = Object.keys(before.positions).filter(
+      (slug) => before.positions[slug] !== after.positions[slug],
+    );
+    const movingLimbs = Object.keys(before.limbs).filter(
+      (slug) => before.limbs[slug] !== after.limbs[slug],
+    );
+    expect(moving.length).toBeGreaterThan(20);
+    expect(movingLimbs).toHaveLength(0);
+  });
+
   test('mounts detailed models and keeps scale consistent in a district focus', async ({
     page,
   }) => {
     test.setTimeout(120_000);
     await openModels(page, '/?admin=E03');
-    await page.waitForTimeout(8000);
+    await expect
+      .poll(
+        async () => {
+          const value = await lod(page);
+          const visibility = await page.evaluate(() =>
+            (window as WorldWindow).__kaohsiungCandidateVisibility?.(),
+          );
+          return (
+            value.model === 'glb' &&
+            value.mode === 'detail' &&
+            value.screenPx > value.enterPx &&
+            visibility?.scope === 'admin-district' &&
+            visibility.count === 22 &&
+            value.detailCount + value.overviewCount === 22
+          );
+        },
+        { timeout: 30_000 },
+      )
+      .toBe(true);
     const value = await lod(page);
     expect(value.model).toBe('glb');
     expect(value.mode).toBe('detail');

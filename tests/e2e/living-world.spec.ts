@@ -21,7 +21,7 @@ type WorldBridge = {
     actors: number;
     invalidRoutes: number;
     elapsedSeconds: number;
-    blockedTransitions: number;
+    territoryRejections: number;
     byBehavior: Record<string, number>;
   };
   camera: () => { position: [number, number, number]; zoom: number };

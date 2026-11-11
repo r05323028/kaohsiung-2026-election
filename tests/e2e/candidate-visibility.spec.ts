@@ -27,7 +27,16 @@ type WorldWindow = Window & {
     overviewCount: number;
   };
   __kaohsiungWorld?: {
-    actors: () => { slug: string; displayName?: string }[];
+    actors: () => {
+      slug: string;
+      displayName?: string;
+      role: 'mayor' | 'council' | 'indigenous' | 'demo';
+      allowedAdminIds: string[];
+      currentAdminId: string | null;
+      state: 'walking' | 'idle';
+      walkPhase: number;
+      position: { x: number; z: number };
+    }[];
     stats: () => { elapsedSeconds: number };
   };
 };
@@ -181,6 +190,80 @@ test.describe('district-focused candidate visibility', () => {
     );
     expect(statsAfter?.elapsedSeconds).toBeGreaterThanOrEqual(
       statsBefore?.elapsedSeconds ?? 0,
+    );
+  });
+
+  test('keeps mayors walking citywide across district focus changes', async ({
+    page,
+  }) => {
+    test.setTimeout(180_000);
+    await openFocus(page, '/?admin=E03');
+
+    const readMayors = () =>
+      page.evaluate(() => {
+        const bridge = window as WorldWindow;
+        const visible = bridge.__kaohsiungCandidateVisibility?.();
+        return (bridge.__kaohsiungWorld?.actors() ?? [])
+          .filter((actor) => actor.role === 'mayor')
+          .map((actor) => ({
+            ...actor,
+            visible: visible?.slugs.includes(actor.slug) ?? false,
+          }));
+      });
+
+    const before = await readMayors();
+    expect(before.length).toBeGreaterThan(0);
+    for (const mayor of before) {
+      expect(mayor.allowedAdminIds).toHaveLength(38);
+      expect(mayor.visible).toBe(true);
+    }
+    const roamingMayor = before.find(
+      (mayor) => mayor.state === 'walking' && mayor.currentAdminId !== 'E03',
+    );
+    expect(roamingMayor).toBeTruthy();
+
+    for (const district of ['楠梓', '三民']) {
+      await focusAdmin(page, district);
+      await page.waitForTimeout(900);
+      const after = await readMayors();
+      expect(after).toHaveLength(before.length);
+      for (const mayor of after) {
+        const previous = before.find((item) => item.slug === mayor.slug);
+        expect(previous).toBeTruthy();
+        expect(mayor.allowedAdminIds).toEqual(previous!.allowedAdminIds);
+        expect(mayor.visible).toBe(true);
+        expect(mayor.walkPhase).toBeGreaterThanOrEqual(
+          previous!.walkPhase - 1e-6,
+        );
+        expect(
+          Math.hypot(
+            mayor.position.x - previous!.position.x,
+            mayor.position.z - previous!.position.z,
+          ),
+        ).toBeLessThan(4);
+      }
+      const moved = after.find((mayor) => mayor.slug === roamingMayor!.slug)!;
+      expect(
+        Math.hypot(
+          moved.position.x - roamingMayor!.position.x,
+          moved.position.z - roamingMayor!.position.z,
+        ),
+      ).toBeGreaterThan(0);
+      expect(moved.walkPhase).toBeGreaterThan(roamingMayor!.walkPhase);
+    }
+
+    await page
+      .locator('.city-admin-card .city-landmark-card__actions button')
+      .filter({ hasText: '回到全市' })
+      .click();
+    await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+      'data-candidate-scope',
+      'all',
+      { timeout: 20_000 },
+    );
+    await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+      'data-candidate-count',
+      '106',
     );
   });
 

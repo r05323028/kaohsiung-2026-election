@@ -397,23 +397,84 @@ describe('candidate road movement and territory', () => {
     expect(SIMULATION_META.actorCount()).toBe(official.length);
   });
 
-  it('keeps candidate bodies from stacking while walking', () => {
-    const closestPair = () => {
-      const actors = getActors();
-      let closest = Number.POSITIVE_INFINITY;
-      for (let index = 0; index < actors.length; index += 1) {
-        for (let other = index + 1; other < actors.length; other += 1) {
-          const dx = actors[index]!.position.x - actors[other]!.position.x;
-          const dz = actors[index]!.position.z - actors[other]!.position.z;
-          closest = Math.min(closest, Math.hypot(dx, dz));
-        }
-      }
-      return closest;
+  it('lets candidates pass through each other without blocking or reversal', () => {
+    const mayors = getActors().filter((actor) => actor.role === 'mayor');
+    expect(mayors.length).toBeGreaterThanOrEqual(2);
+    const first = mayors[0]!;
+    const second = mayors[1]!;
+    const edge = ROAD_EDGES.find(
+      (item) =>
+        item.kind === 'ring' &&
+        item.tileIds.some((tileId) => {
+          const tile = HEX_TILES.find((candidate) => candidate.id === tileId)!;
+          return (
+            first.allowedAdminIds.includes(tile.adminId) &&
+            second.allowedAdminIds.includes(tile.adminId)
+          );
+        }),
+    )!;
+    const tile = HEX_TILES.find((item) => item.id === edge.tileIds[0])!;
+
+    const place = (
+      actor: (typeof mayors)[number],
+      reverse: boolean,
+      progress: number,
+    ) => {
+      const from = reverse ? edge.b : edge.a;
+      const to = reverse ? edge.a : edge.b;
+      actor.edgeId = edge.id;
+      actor.fromNodeId = reverse ? edge.to : edge.from;
+      actor.destination = { x: to.x, z: to.z };
+      actor.pathNodeIds = [actor.fromNodeId, reverse ? edge.from : edge.to];
+      actor.edgeProgress = progress;
+      actor.position = {
+        x: from.x + (to.x - from.x) * progress,
+        z: from.z + (to.z - from.z) * progress,
+      };
+      actor.currentAdminId = tile.adminId;
+      actor.walkPhase = 0;
+      actor.walkedSincePause = 0;
+      actor.nextPauseKm = 100;
+      actor.state = 'walking';
+      actor.behavior = 'walking';
+      actor.pauseRemaining = 0;
     };
-    resetSimulation();
-    expect(closestPair()).toBeGreaterThanOrEqual(0.2);
-    advanceSimulationSeconds(120);
-    expect(closestPair()).toBeGreaterThanOrEqual(0.2);
+    place(first, false, 0.5);
+    place(second, true, 0.5);
+    expect(
+      Math.hypot(
+        first.position.x - second.position.x,
+        first.position.z - second.position.z,
+      ),
+    ).toBeCloseTo(0, 9);
+    const firstStart = { ...first.position };
+    const secondStart = { ...second.position };
+    const edgeX = edge.b.x - edge.a.x;
+    const edgeZ = edge.b.z - edge.a.z;
+
+    advanceSimulationSeconds(0.25);
+
+    // Both kept their own direction and speed; neither waited or reversed.
+    const firstTravel =
+      (first.position.x - firstStart.x) * edgeX +
+      (first.position.z - firstStart.z) * edgeZ;
+    const secondTravel =
+      (second.position.x - secondStart.x) * edgeX +
+      (second.position.z - secondStart.z) * edgeZ;
+    expect(firstTravel).toBeGreaterThan(0);
+    expect(secondTravel).toBeLessThan(0);
+    expect(first.state).toBe('walking');
+    expect(second.state).toBe('walking');
+    expect(first.walkPhase).toBeGreaterThan(0);
+    expect(second.walkPhase).toBeGreaterThan(0);
+    expect(actorIsOnRoad(first)).toBe(true);
+    expect(actorIsOnRoad(second)).toBe(true);
+    const separation = Math.hypot(
+      first.position.x - second.position.x,
+      first.position.z - second.position.z,
+    );
+    expect(separation).toBeGreaterThan(0.05);
+    expect(separation).toBeLessThan(0.2);
     resetSimulation();
   });
 

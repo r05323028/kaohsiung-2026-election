@@ -1,5 +1,9 @@
 import { expect, type Page, test } from '@playwright/test';
 
+// Header screenshot baselines are captured headlessly; headed Chromium uses
+// different font rasterisation and GPU antialiasing, so force this spec headless.
+test.use({ headless: true });
+
 const HEADER = '[data-testid="global-header"]';
 const DESKTOP_NAV = '.global-header__nav';
 const NAV_LABELS = ['城市探索', '選舉區'];

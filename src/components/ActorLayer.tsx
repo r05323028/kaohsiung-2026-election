@@ -2,6 +2,7 @@ import { Html, useGLTF } from '@react-three/drei';
 import { type ThreeEvent, useFrame } from '@react-three/fiber';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import type { PublicCandidateProfile } from '../data';
 import { withBase } from '../utils/paths';
 import {
@@ -56,58 +57,266 @@ const SHADOW_MATERIAL = new THREE.MeshBasicMaterial({
   depthWrite: false,
 });
 
+type OverviewPivot =
+  | 'body'
+  | 'head'
+  | 'leftArm'
+  | 'rightArm'
+  | 'leftLeg'
+  | 'rightLeg';
+
 type OverviewPart = {
+  pivot: OverviewPivot;
   role: OverviewRole;
   geometry: THREE.BufferGeometry;
   material: THREE.MeshStandardMaterial;
 };
 
-function buildOverviewParts(source: THREE.Group): {
+type ArticulatedOverview = {
   parts: OverviewPart[];
   scale: number;
-} {
+  pivots: Record<OverviewPivot, THREE.Vector3>;
+};
+
+const OVERVIEW_PIVOT_ORDER: readonly OverviewPivot[] = [
+  'body',
+  'head',
+  'leftArm',
+  'rightArm',
+  'leftLeg',
+  'rightLeg',
+];
+const OVERVIEW_ROLE_ORDER: readonly OverviewRole[] = [
+  'skin',
+  'shirt',
+  'jacket',
+  'shoeToe',
+  'shoe',
+  'sole',
+  'trousers',
+  'cuff',
+  'eye',
+  'hair',
+];
+
+type GeometryComponent = {
+  geometry: THREE.BufferGeometry;
+  center: THREE.Vector3;
+};
+
+function positionKey(attribute: THREE.BufferAttribute, index: number): string {
+  const scale = 1000;
+  return (
+    Math.round(attribute.getX(index) * scale) +
+    '|' +
+    Math.round(attribute.getY(index) * scale) +
+    '|' +
+    Math.round(attribute.getZ(index) * scale)
+  );
+}
+
+/**
+ * The overview asset was authored as merged material meshes. To animate the
+ * limbs without regenerating the GLB, split each material mesh into connected
+ * components and group them by the matching detailed-model pivot.
+ */
+function splitGeometryComponents(
+  source: THREE.BufferGeometry,
+): GeometryComponent[] {
+  const geometry = source.index ? source.toNonIndexed() : source.clone();
+  if (!geometry.attributes.normal) geometry.computeVertexNormals();
+  const position = geometry.getAttribute('position') as THREE.BufferAttribute;
+  const normal = geometry.getAttribute('normal') as THREE.BufferAttribute;
+  const triangleCount = Math.floor(position.count / 3);
+  const parent = Array.from({ length: triangleCount }, (_, index) => index);
+
+  const find = (index: number): number => {
+    let current = index;
+    while (parent[current] !== current) {
+      parent[current] = parent[parent[current]!]!;
+      current = parent[current]!;
+    }
+    return current;
+  };
+  const union = (left: number, right: number) => {
+    const a = find(left);
+    const b = find(right);
+    if (a !== b) parent[b] = a;
+  };
+
+  const firstTriangleByPosition = new Map<string, number>();
+  for (let triangle = 0; triangle < triangleCount; triangle += 1) {
+    for (let corner = 0; corner < 3; corner += 1) {
+      const key = positionKey(position, triangle * 3 + corner);
+      const owner = firstTriangleByPosition.get(key);
+      if (owner === undefined) firstTriangleByPosition.set(key, triangle);
+      else union(triangle, owner);
+    }
+  }
+
+  const trianglesByComponent = new Map<number, number[]>();
+  for (let triangle = 0; triangle < triangleCount; triangle += 1) {
+    const root = find(triangle);
+    const list = trianglesByComponent.get(root);
+    if (list) list.push(triangle);
+    else trianglesByComponent.set(root, [triangle]);
+  }
+
+  const components: GeometryComponent[] = [];
+  for (const triangles of trianglesByComponent.values()) {
+    const positions: number[] = [];
+    const normals: number[] = [];
+    const min = new THREE.Vector3(
+      Number.POSITIVE_INFINITY,
+      Number.POSITIVE_INFINITY,
+      Number.POSITIVE_INFINITY,
+    );
+    const max = new THREE.Vector3(
+      Number.NEGATIVE_INFINITY,
+      Number.NEGATIVE_INFINITY,
+      Number.NEGATIVE_INFINITY,
+    );
+    for (const triangle of triangles) {
+      for (let corner = 0; corner < 3; corner += 1) {
+        const index = triangle * 3 + corner;
+        const x = position.getX(index);
+        const y = position.getY(index);
+        const z = position.getZ(index);
+        positions.push(x, y, z);
+        normals.push(
+          normal.getX(index),
+          normal.getY(index),
+          normal.getZ(index),
+        );
+        min.min(new THREE.Vector3(x, y, z));
+        max.max(new THREE.Vector3(x, y, z));
+      }
+    }
+    const component = new THREE.BufferGeometry();
+    component.setAttribute(
+      'position',
+      new THREE.Float32BufferAttribute(positions, 3),
+    );
+    component.setAttribute(
+      'normal',
+      new THREE.Float32BufferAttribute(normals, 3),
+    );
+    component.computeBoundingSphere();
+    components.push({
+      geometry: component,
+      center: min.clone().add(max).multiplyScalar(0.5),
+    });
+  }
+  geometry.dispose();
+  return components;
+}
+
+function classifyOverviewPivot(
+  role: OverviewRole,
+  center: THREE.Vector3,
+  height: number,
+  width: number,
+): OverviewPivot {
+  if (role === 'hair' || role === 'eye') return 'head';
+  if (center.y > height * 0.6) {
+    const isNeck =
+      role === 'skin' &&
+      center.y < height * 0.66 &&
+      Math.abs(center.x) < width * 0.08;
+    if (!isNeck) return 'head';
+  }
+  if (center.y > height * 0.36 && Math.abs(center.x) > width * 0.25) {
+    return center.x < 0 ? 'leftArm' : 'rightArm';
+  }
+  if (center.y <= height * 0.36 && Math.abs(center.x) > width * 0.05) {
+    return center.x < 0 ? 'leftLeg' : 'rightLeg';
+  }
+  return 'body';
+}
+
+function overviewPivots(minY: number): Record<OverviewPivot, THREE.Vector3> {
+  return {
+    body: new THREE.Vector3(0, 0, 0),
+    head: new THREE.Vector3(0, 2.035 - minY, 0),
+    leftArm: new THREE.Vector3(-0.373, 1.788 - minY, 0),
+    rightArm: new THREE.Vector3(0.373, 1.788 - minY, 0),
+    leftLeg: new THREE.Vector3(-0.152, 1.084 - minY, 0),
+    rightLeg: new THREE.Vector3(0.152, 1.084 - minY, 0),
+  };
+}
+
+function buildArticulatedOverview(source: THREE.Group): ArticulatedOverview {
   source.updateMatrixWorld(true);
   const bounds = new THREE.Box3().setFromObject(source);
   const height = Math.max(bounds.max.y - bounds.min.y, 0.0001);
-  const parts: OverviewPart[] = [];
+  const width = Math.max(bounds.max.x - bounds.min.x, 0.0001);
+  const pivots = overviewPivots(bounds.min.y);
+  const groups = new Map<
+    string,
+    {
+      pivot: OverviewPivot;
+      role: OverviewRole;
+      geometries: THREE.BufferGeometry[];
+    }
+  >();
+
   source.traverse((object) => {
     if (!(object instanceof THREE.Mesh)) return;
     const role = overviewRole(object.name);
     if (!role) return;
-    if (!object.geometry.attributes.normal) {
-      object.geometry.computeVertexNormals();
-    }
     const geometry = object.geometry.clone();
     geometry.applyMatrix4(object.matrixWorld);
     geometry.translate(0, -bounds.min.y, 0);
+    for (const component of splitGeometryComponents(geometry)) {
+      const pivot = classifyOverviewPivot(
+        role,
+        component.center,
+        height,
+        width,
+      );
+      const pivotPosition = pivots[pivot];
+      component.geometry.translate(
+        -pivotPosition.x,
+        -pivotPosition.y,
+        -pivotPosition.z,
+      );
+      const key = pivot + '|' + role;
+      const group = groups.get(key);
+      if (group) group.geometries.push(component.geometry);
+      else groups.set(key, { pivot, role, geometries: [component.geometry] });
+    }
+    geometry.dispose();
+  });
+
+  const parts: OverviewPart[] = [];
+  for (const { pivot, role, geometries } of groups.values()) {
+    const geometry = mergeGeometries(geometries, false);
+    if (!geometry) throw new Error('Unable to merge overview geometry');
     geometry.computeBoundingSphere();
-    const material = new THREE.MeshStandardMaterial({
-      color: '#ffffff',
-      roughness: 0.86,
-      metalness: 0,
-      side: THREE.DoubleSide,
+    for (const item of geometries) item.dispose();
+    parts.push({
+      pivot,
+      role,
+      geometry,
+      material: new THREE.MeshStandardMaterial({
+        color: '#ffffff',
+        roughness: 0.86,
+        metalness: 0,
+        side: THREE.DoubleSide,
+      }),
     });
-    parts.push({ role, geometry, material });
-  });
-  parts.sort((a, b) => {
-    const order = (role: OverviewRole) =>
-      [
-        'skin',
-        'shirt',
-        'jacket',
-        'shoeToe',
-        'shoe',
-        'sole',
-        'trousers',
-        'cuff',
-        'eye',
-        'hair',
-      ].indexOf(role);
-    return order(a.role) - order(b.role);
-  });
+  }
+  parts.sort(
+    (a, b) =>
+      OVERVIEW_PIVOT_ORDER.indexOf(a.pivot) -
+        OVERVIEW_PIVOT_ORDER.indexOf(b.pivot) ||
+      OVERVIEW_ROLE_ORDER.indexOf(a.role) - OVERVIEW_ROLE_ORDER.indexOf(b.role),
+  );
+
   return {
     parts,
     scale: (CANDIDATE_MODEL_HEIGHT / height) * ACTOR_AVATAR_SCALE,
+    pivots,
   };
 }
 
@@ -135,7 +344,7 @@ export default function ActorLayer({
   const actors = getActors();
   const overviewGltf = useGLTF(withBase(CANDIDATE_MODEL.overviewPath));
   const overview = useMemo(
-    () => buildOverviewParts(overviewGltf.scene),
+    () => buildArticulatedOverview(overviewGltf.scene),
     [overviewGltf.scene],
   );
   const overviewRefs = useRef<Array<THREE.InstancedMesh | null>>([]);
@@ -156,6 +365,22 @@ export default function ActorLayer({
   const avatarMotion = useRef(
     new Map<string, { walkPhase: number; walking: boolean }>(),
   );
+  const overviewBlend = useRef(new Map<string, number>());
+  const pivotMatrices = useMemo(() => {
+    const matrices = {} as Record<OverviewPivot, THREE.Matrix4>;
+    for (const pivot of OVERVIEW_PIVOT_ORDER) {
+      const position = overview.pivots[pivot];
+      matrices[pivot] = new THREE.Matrix4().makeTranslation(
+        position.x,
+        position.y,
+        position.z,
+      );
+    }
+    return matrices;
+  }, [overview.pivots]);
+  const partMatrix = useRef(new THREE.Matrix4());
+  const pivotRotation = useRef(new THREE.Matrix4());
+  const partEuler = useRef(new THREE.Euler());
 
   const candidateBySlug = useMemo(
     () =>
@@ -284,6 +509,14 @@ export default function ActorLayer({
       __kaohsiungActorScreenPosition?: (
         slug: string,
       ) => { x: number; y: number } | null;
+      __kaohsiungActorOverviewLimb?: (
+        pivot: OverviewPivot,
+        slug: string,
+      ) => number[] | null;
+      __kaohsiungActorDetailLimb?: (
+        pivot: Exclude<OverviewPivot, 'body'>,
+        slug: string,
+      ) => number[] | null;
     };
     bridge.__kaohsiungActorScale = (slug: string) =>
       avatarRefs.current.get(slug)?.scale.x ?? null;
@@ -322,6 +555,47 @@ export default function ActorLayer({
     };
     bridge.__kaohsiungActorInstance = (index: number) =>
       visibleActors[index]?.slug ?? null;
+    bridge.__kaohsiungActorOverviewLimb = (
+      pivot: OverviewPivot,
+      slug: string,
+    ) => {
+      if (fullAvatarSlugs.current.has(slug)) return null;
+      const index = visibleActors.findIndex((actor) => actor.slug === slug);
+      const partIndex = overview.parts.findIndex(
+        (part) => part.pivot === pivot,
+      );
+      const bodyIndex = overview.parts.findIndex(
+        (part) => part.pivot === 'body',
+      );
+      const mesh = overviewRefs.current[partIndex];
+      const bodyMesh = overviewRefs.current[bodyIndex];
+      if (index < 0 || partIndex < 0 || !mesh || !bodyMesh) return null;
+      const matrix = new THREE.Matrix4();
+      const body = new THREE.Matrix4();
+      mesh.getMatrixAt(index, matrix);
+      bodyMesh.getMatrixAt(index, body);
+      return [...body.invert().multiply(matrix).elements];
+    };
+    bridge.__kaohsiungActorDetailLimb = (
+      pivot: Exclude<OverviewPivot, 'body'>,
+      slug: string,
+    ) => {
+      const group = avatarRefs.current.get(slug);
+      if (!group) return null;
+      const nodeName =
+        pivot === 'head'
+          ? 'HeadPivot'
+          : pivot === 'leftArm'
+            ? 'LeftArmPivot'
+            : pivot === 'rightArm'
+              ? 'RightArmPivot'
+              : pivot === 'leftLeg'
+                ? 'LeftLegPivot'
+                : 'RightLegPivot';
+      const node = group.getObjectByName(nodeName);
+      if (!node) return null;
+      return [node.rotation.x, node.rotation.y, node.rotation.z];
+    };
     bridge.__kaohsiungActorScreenPosition = (slug: string) => {
       if (!visibleSlugSet.has(slug)) return null;
       const actor = actorBySlug.get(slug);
@@ -348,8 +622,10 @@ export default function ActorLayer({
       delete bridge.__kaohsiungActorPose;
       delete bridge.__kaohsiungActorInstance;
       delete bridge.__kaohsiungActorScreenPosition;
+      delete bridge.__kaohsiungActorOverviewLimb;
+      delete bridge.__kaohsiungActorDetailLimb;
     };
-  }, [actorBySlug, visibleActors, visibleSlugSet, visibilityScope]);
+  }, [actorBySlug, overview, visibleActors, visibleSlugSet, visibilityScope]);
 
   const selectedActor = selectedCandidateSlug
     ? actorBySlug.get(selectedCandidateSlug)
@@ -420,15 +696,57 @@ export default function ActorLayer({
 
     // The overview GLB is instanced but matrices are updated every rendered
     // frame. Pose interpolation is visual-only; actor.position stays
-    // authoritative for navigation and electoral checks.
+    // authoritative for navigation and electoral checks. The overview asset
+    // has no pivots, so each connected component is rotated around the
+    // matching detailed-model pivot.
+    const blendSpeed = Math.min(1, delta * 9);
     visibleActors.forEach((actor, index) => {
       const pose = actorRenderPose(actor, alpha);
       const hidden = avatars.has(actor.slug);
+      const targetBlend = pose.walking && !reducedMotion ? 1 : 0;
+      const currentBlend = overviewBlend.current.get(actor.slug) ?? 0;
+      const blend = currentBlend + (targetBlend - currentBlend) * blendSpeed;
+      overviewBlend.current.set(actor.slug, blend);
+
       helper.position.set(pose.position.x, MARKER_GROUND_Y, pose.position.z);
       helper.rotation.set(0, pose.heading, 0);
       helper.scale.setScalar(hidden ? 0 : overview.scale);
       helper.updateMatrix();
-      for (const mesh of meshes) mesh?.setMatrixAt(index, helper.matrix);
+
+      const phase = pose.walkPhase * Math.PI * 4;
+      const stride = Math.sin(phase) * 0.5 * blend;
+      const armSwing = Math.cos(phase) * 0.34 * blend;
+      const idle = 1 - blend;
+      const headYaw = Math.sin(state.clock.elapsedTime * 0.55) * 0.05 * idle;
+      const headPitch = Math.sin(state.clock.elapsedTime * 0.8) * 0.025 * idle;
+
+      for (
+        let partIndex = 0;
+        partIndex < overview.parts.length;
+        partIndex += 1
+      ) {
+        const part = overview.parts[partIndex]!;
+        let rotationX = 0;
+        let rotationY = 0;
+        if (part.pivot === 'leftArm') rotationX = -armSwing;
+        else if (part.pivot === 'rightArm') rotationX = armSwing;
+        else if (part.pivot === 'leftLeg') rotationX = stride;
+        else if (part.pivot === 'rightLeg') rotationX = -stride;
+        else if (part.pivot === 'head') {
+          rotationX = headPitch;
+          rotationY = headYaw;
+        }
+        partMatrix.current
+          .copy(helper.matrix)
+          .multiply(pivotMatrices[part.pivot]);
+        if (rotationX !== 0 || rotationY !== 0) {
+          pivotRotation.current.makeRotationFromEuler(
+            partEuler.current.set(rotationX, rotationY, 0),
+          );
+          partMatrix.current.multiply(pivotRotation.current);
+        }
+        meshes[partIndex]?.setMatrixAt(index, partMatrix.current);
+      }
 
       shadowHelper.position.set(
         pose.position.x,
@@ -520,7 +838,7 @@ export default function ActorLayer({
       />
       {overview.parts.map((part, index) => (
         <instancedMesh
-          key={part.role}
+          key={part.pivot + '-' + part.role}
           ref={(node) => {
             overviewRefs.current[index] = node;
           }}

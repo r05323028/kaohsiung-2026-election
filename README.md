@@ -1,6 +1,6 @@
 # 港都人物誌 Kaohsiung Civic Stories
 
-港都人物誌是 2026 高雄市長與市議選舉的**非黨派、來源導向互動政治百科**。網站以原創迷你城市作為閱讀入口，但城市場景不代表官方地圖或選舉區界線。
+港都人物誌是 2026 高雄市長與市議選舉的**非黨派、來源導向互動政治百科**。網站以原創迷你城市作為閱讀入口；城市幾何仍是原創視覺化，不代表官方地圖或選舉區界線，但選區的行政區涵蓋範圍與行政區名稱使用官方選舉區資料。
 
 目前發布兩種明確分層的資料：
 
@@ -33,6 +33,7 @@ npm run dev
 
 ```bash
 npm run validate:data       # 虛構 fixture schema/reference gate
+npm run validate:constituencies # 15 個市議選舉區與 38 個行政區的涵蓋範圍 gate
 npm run validate:official   # official snapshot/checksum/approval/reconciliation gate
 npm run validate:public-records # KCC public-record checksums, evidence, review gate, reports
 npm run validate:full-roster  # 106-candidate × 6-category audit and reports
@@ -117,7 +118,7 @@ BASE_PATH=/your-repository/ SITE_URL=https://example.com/ npm run build
 
 - `/`：官方/示範資料共用的城市探索、選舉類型與選區切換、搜尋、角色選擇
 - `/districts/`：官方選舉區與虛構示範選區索引
-- `/districts/[slug]/`：靜態選舉區頁；市長、普通市議及原住民族 constituency 分開
+- `/districts/[slug]/`：靜態選舉區頁；市長、普通市議及原住民族 constituency 分開，並列出官方行政區涵蓋範圍與可點擊的行政區連結
 - `/candidates/[slug]/`：靜態人物頁與六個資訊分類
 - `/editorial-review/`：僅本機啟用的履歷身分／證據審查工作區，不載入公開導覽
 - `/avatar-preview/`：僅開發環境的 GLB 角色資產檢視器，不載入公開導覽
@@ -136,6 +137,7 @@ reports/               deterministic reconciliation, research and biography repo
 src/data/
   fixtures.ts          fictional demo input (kept isolated)
   schema.ts            demo/content schemas
+  constituencies.ts    canonical 15-constituency to 38-district coverage model
   official/            official election schema, adapters, reconciliation, mapper, tests
   public-records/      claim/evidence/coverage/research schemas, KCC/CEC adapters, offline CLIs, bundle API, tests
   biographies/         multi-source biography schemas, adapters, publication-only read model, tests
@@ -192,6 +194,14 @@ docs/                  architecture, ingestion, provenance, reconciliation, poli
 `execute-semantic-evidence-adjudication` 是後續的真正模型語意審查流程：每筆 claim 先以 checksum 固定 packet，再由 Reviewer A/B 分開執行結構化判讀，引用必須是 packet 中的精確連續文字，失敗與 unavailable attempts 原樣記錄。它只能產生 local semantic findings/comparisons，不能取代真人 reviewer、既有 publication gate 或 `data/enrichment/published/`；詳見 `docs/SEMANTIC_EVIDENCE_ADJUDICATION.md`。
 
 `autonomous-candidate-content-publication` 另建立版本化 `automated-editorial-policy-v1` 的 fail-closed machine path。143 筆 scoped claims 目前產生 1 筆 machine-approved/public record、142 筆 rejected；71 個 disagreement、25 個 correction targets 與 wrong-subject `enrich-claim-0111` 都維持阻擋或記錄未套用。唯一公開 claim 是白喬茵的 KCC 歷史專業經驗，日期仍 unknown；human/editorial approval 仍為 0。這條 path 不改既有 gates，也不把 machine provenance 當成真人核准。詳見 `docs/AUTOMATED_PUBLICATION.md`。
+
+## 市議選舉區行政區涵蓋範圍（2026-11-10）
+
+`src/data/constituencies.ts` 是 15 個高雄市議員選舉區與 38 個行政區關係的唯一 canonical 模組。每筆選區記錄以既有 `E01`–`E38` 行政區 ID 儲存 `adminDistrictIds`，並以 `coverageKind` 區分 `geographic`（第 1–11 選區）、`citywide-indigenous`（第 12 平地原住民選區）與 `indigenous-eligible-districts`（第 13–15 山地原住民選區）。行政區名稱、幾何與互動 id 仍由 `src/data/geography/kaohsiung-districts.json` 與 `src/world/geography.ts` 提供，不建立第二套行政區定義。
+
+第 1–11 選區是 38 個行政區的互斥分區；第 4 選區為左營區、楠梓區。第 12 選區是全市平地原住民選舉區，不以 38 個行政區邊界界定，介面因此標示「全市 38 個行政區（互動移動範圍）」，不是一般地理選區。第 13–15 選區依中選會公告列出山地原住民設籍範圍；這些範圍可與普通選區重疊，不構成互斥地理分區，介面以「設籍範圍」與原住民族選舉區標籤區隔。
+
+來源為 `source-cec-central-63625`（中選會 115 年選舉區劃分公告）與 `source-cec-vote2026-prvCityDept`（2026 選舉專區選舉區參照資料）；`npm run validate:constituencies` 檢查 15 個選區、38 個行政區 ID、各選區行政區數量、第 4 選區內容、原住民族選區標示、來源 manifest 參照與無 runtime API。選區頁、選區索引、候選人頁、首頁選區資訊卡、行政區焦點卡與行動版資訊列共用同一份資料。常用別名（例如「左楠選區」）目前沒有可獨立查證的來源，因此不刊載，避免把非官方暱稱當成選舉區名稱。
 
 ## 重要限制與未完成項目
 

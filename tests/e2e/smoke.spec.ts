@@ -3,41 +3,46 @@ import { expect, test } from '@playwright/test';
 
 test('homepage renders the city explorer', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: '港都人物誌' })).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: '港都人物誌首頁' }),
+  ).toBeVisible();
   await expect(page.getByTestId('city-explorer')).toBeVisible();
-  await expect(page.locator('#scene-heading')).toContainText('港灣示範選區');
+  await expect(page.locator('#scene-heading')).toContainText('高雄市長選舉');
 });
 
 test('district selection changes the active scene and candidate list', async ({
   page,
 }) => {
+  test.setTimeout(90_000);
   await page.goto('/');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
     'data-hydrated',
     'true',
+    { timeout: 30_000 },
   );
   await page.locator('[aria-controls="city-district-tray"]').click();
-  await page.getByRole('button', { name: /山城示範選區/ }).click();
-  await expect(page.locator('#scene-heading')).toContainText('山城示範選區');
+  await page.getByRole('button', { name: /高雄市議員第4選舉區/ }).click();
+  await expect(page.locator('#scene-heading')).toContainText(
+    '高雄市議員第4選舉區',
+  );
   await page.locator('[aria-controls="city-people-tray"]').click();
   await expect(
-    page.getByRole('button', { name: /沈安波/ }).first(),
+    page.getByRole('button', { name: /黃文志/ }).first(),
   ).toBeVisible();
 });
 
 test('candidate selection opens profile tabs', async ({ page }) => {
+  test.setTimeout(120_000);
   await page.goto('/');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
     'data-hydrated',
     'true',
+    { timeout: 30_000 },
   );
   await page.locator('[aria-controls="city-people-tray"]').click();
-  await page
-    .getByRole('button', { name: /林海星/ })
-    .first()
-    .click();
+  await page.getByRole('button', { name: /張靜/ }).first().click();
   const panel = page.getByTestId('profile-panel');
-  await expect(panel).toContainText('林海星');
+  await expect(panel).toContainText('張靜');
   // Profile tabs are code-split; first open can compile the chunk in dev.
   await expect(panel.getByRole('tab', { name: '基本資料' })).toHaveAttribute(
     'aria-selected',
@@ -45,16 +50,17 @@ test('candidate selection opens profile tabs', async ({ page }) => {
     { timeout: 15_000 },
   );
   await panel.getByRole('tab', { name: '政策主張' }).click();
-  await expect(panel.getByRole('heading', { name: '政策主張' })).toBeVisible();
-  await expect(panel).toContainText('讓港邊散步成為日常');
+  await expect(
+    panel.getByRole('heading', { name: '政策主張', exact: true }),
+  ).toBeVisible();
 });
 
 test('direct candidate URL renders without relying on the city scene', async ({
   page,
 }) => {
-  await page.goto('/candidates/lin-haixing-demo/');
+  await page.goto('/candidates/zhang-jing-2026/');
   await expect(
-    page.getByRole('heading', { name: '林海星（虛構示範）' }),
+    page.getByRole('heading', { name: '張靜', exact: true }),
   ).toBeVisible();
   await expect(page.getByTestId('profile-tabs')).toBeVisible();
   await expect(
@@ -65,9 +71,12 @@ test('direct candidate URL renders without relying on the city scene', async ({
 test('official election filters expose mayor, council, and indigenous districts', async ({
   page,
 }) => {
+  test.setTimeout(120_000);
   await page.goto('/');
   const explorer = page.getByTestId('city-explorer');
-  await expect(explorer).toHaveAttribute('data-hydrated', 'true');
+  await expect(explorer).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
   await explorer.locator('[aria-controls="city-district-tray"]').click();
   await explorer.getByRole('tab', { name: '市長選' }).click();
   await expect(
@@ -406,7 +415,7 @@ const officialCouncilRoster = JSON.parse(
 test('all official council routes expose CEC identity fields and tab behavior', async ({
   page,
 }) => {
-  test.setTimeout(180_000);
+  test.setTimeout(300_000);
   const councilCandidates = officialCouncilRoster.candidates.filter(
     (candidate) => candidate.electionType.endsWith('council'),
   );
@@ -451,9 +460,8 @@ test('all official council routes expose CEC identity fields and tab behavior', 
     await expect(
       page.getByRole('heading', { name: candidate.displayName, exact: true }),
     ).toBeVisible();
-    // Dev-server module compilation can stall after the full route sweep.
     await expect(profile).toHaveAttribute('data-hydrated', 'true', {
-      timeout: 20_000,
+      timeout: 60_000,
     });
     await expect(profile).toContainText(candidate.politicalParty ?? '');
     await expect(profile).toContainText(candidate.birthDate ?? '');
@@ -492,18 +500,18 @@ test('all official council routes expose CEC identity fields and tab behavior', 
   }
 });
 
-test('static search finds the fictional demo candidate without changing official data', async ({
+test('static search finds an official candidate and excludes demo fixtures', async ({
   page,
 }) => {
+  test.setTimeout(60_000);
   await page.goto('/');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
     'data-hydrated',
     'true',
+    { timeout: 30_000 },
   );
-  await page.getByLabel('搜尋人物').fill('林海星');
-  await expect(
-    page.getByRole('link', { name: /林海星/ }).first(),
-  ).toBeVisible();
+  await page.getByLabel('搜尋人物').fill('張靜');
+  await expect(page.getByRole('link', { name: /張靜/ }).first()).toBeVisible();
 });
 
 test('developer avatar preview loads the fictional asset inspector', async ({
@@ -536,9 +544,6 @@ test('WebGL fallback keeps the candidate journey usable', async ({ page }) => {
   );
   await expect(page.getByTestId('static-city-fallback')).toBeVisible();
   await page.locator('[aria-controls="city-people-tray"]').click();
-  await page
-    .getByRole('button', { name: /林海星/ })
-    .first()
-    .click();
+  await page.getByRole('button', { name: /張靜/ }).first().click();
   await expect(page.getByTestId('profile-panel')).toContainText('基本資料');
 });

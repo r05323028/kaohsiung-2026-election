@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AvatarPreviewApp from '../components/AvatarPreviewApp';
+import AssetQualityInspector from '../components/AssetQualityInspector';
 import { validateAvatarManifest } from '../data/avatars/schema';
+import { candidateProfiles, toPublicCandidateProfile } from '../data';
 
 const previewEnabled = import.meta.env.DEV || process.env.AVATAR_PREVIEW === 'true';
 const manifest = previewEnabled
@@ -10,18 +12,24 @@ const manifest = previewEnabled
 ---
 
 <BaseLayout
-  title="角色資產預覽｜港都人物誌"
-  description="僅供本機開發檢查原創虛構角色資產的預覽工作區。"
+  title="角色與地標資產預覽｜港都人物誌"
+  description="僅供本機開發檢查原創角色與地標模型品質的預覽工作區。"
   noindex
 >
   <div class="page-wrap avatar-preview-page">
     <section class="page-heading">
       <span class="eyebrow">DEVELOPER PREVIEW</span>
-      <h1>原創角色資產預覽</h1>
-      <p>這是本機開發用的 GLB 檢查頁，不是候選人 likeness 審查，也不提供公共人物的視覺核准。</p>
+      <h1>角色與地標資產預覽</h1>
+      <p>本機開發用的模型檢查頁：七座一級地標、完整候選人模型、行走與待機動畫，以及固定前／側／三視角。</p>
     </section>
     {previewEnabled && manifest ? (
       <AvatarPreviewApp client:load manifest={manifest} />
+      <AssetQualityInspector
+        client:only="react"
+        candidates={candidateProfiles.map((candidate) =>
+          toPublicCandidateProfile(candidate),
+        )}
+      />
     ) : (
       <section class="content-card" data-testid="avatar-preview-disabled">
         <h2>角色預覽未啟用</h2>

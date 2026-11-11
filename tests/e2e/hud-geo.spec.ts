@@ -33,7 +33,7 @@ test.describe('city HUD and authoritative geography', () => {
     );
   });
 
-  test('frames authoritative district polygons at different zooms', async ({
+  test('frames hexagonal district platforms at different zooms', async ({
     page,
   }) => {
     await page.goto('/?admin=E03');
@@ -45,7 +45,7 @@ test.describe('city HUD and authoritative geography', () => {
     await expect(page.locator('.city-admin-card')).toContainText('左營區');
     await expect(
       page.locator('[data-testid="scene-frame"] canvas'),
-    ).toBeVisible({ timeout: 20_000 });
+    ).toBeVisible();
 
     await page.goto('/?admin=E04');
     await hydrated(page);
@@ -62,24 +62,49 @@ test.describe('city HUD and authoritative geography', () => {
     await expect(page.locator('.city-admin-card')).toContainText('桃源區');
     await expect(
       page.locator('[data-testid="scene-frame"] canvas'),
-    ).toBeVisible({ timeout: 20_000 });
+    ).toBeVisible();
   });
 
-  test('exposes all 38 district labels and the active footprint in debug mode', async ({
+  test('overview exposes the complete hex world and every district', async ({
     page,
   }) => {
-    await page.goto('/?debug=boundaries&admin=E03');
+    await page.goto('/');
     await hydrated(page);
+    await page.waitForFunction(() =>
+      Boolean(
+        (
+          window as unknown as {
+            __kaohsiungWorld?: { hex?: () => { tiles: number } };
+          }
+        ).__kaohsiungWorld?.hex,
+      ),
+    );
+    const hex = await page.evaluate(() => {
+      const world = (
+        window as unknown as {
+          __kaohsiungWorld?: {
+            hex: () => {
+              tiles: number;
+              roadNodes: number;
+              roadEdges: number;
+              connectors: number;
+            };
+          };
+        }
+      ).__kaohsiungWorld!;
+      return world.hex();
+    });
+    expect(hex.tiles).toBe(40);
+    expect(hex.roadNodes).toBe(480);
+    expect(hex.roadEdges).toBe(523);
+    expect(hex.connectors).toBe(43);
     await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
       'data-scene-focus',
-      'admin-E03-0',
-      { timeout: 20_000 },
+      /^world-overview-/,
     );
-    await expect(page.locator('.world-debug-label')).toHaveCount(38, {
-      timeout: 20_000,
-    });
-    await expect(page.locator('.world-debug-label.is-active')).toHaveText(
-      'E03·左營',
+    await page.locator('[aria-controls="city-admin-tray"]').click();
+    await expect(page.locator('#city-admin-tray .city-admin-chip')).toHaveCount(
+      38,
     );
   });
 

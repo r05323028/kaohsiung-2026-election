@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProfileTabs from '../../components/ProfileTabs';
+import ConstituencyCoverage from '../../components/ConstituencyCoverage.astro';
 import {
   candidateProfiles,
   isDemoProfile,
@@ -96,6 +97,12 @@ const structuredData = {
           <p>參選職務：{officeLabel}</p>
           <p>{numberLabel}</p>
         </div>
+        {candidate.district.constituencyCoverage && (
+          <ConstituencyCoverage
+            coverage={candidate.district.constituencyCoverage}
+            variant="compact"
+          />
+        )}
         <div class="profile-page__aside-card">
           <h3>來源</h3>
           <ul>

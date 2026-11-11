@@ -3257,3 +3257,119 @@ body.is-immersive .site-footer {
     width: 5rem;
   }
 }
+
+.hex-district-label {
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(41, 72, 88, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 248, 232, 0.94);
+  box-shadow: 0 2px 0 rgba(41, 72, 88, 0.1);
+  color: #294858;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hex-district-label.is-selected {
+  background: #294858;
+  color: #fff8e8;
+  font-size: 0.72rem;
+}
+
+.asset-inspector {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #d9d0c0;
+  border-radius: 1.2rem;
+  background: #fffaf0;
+}
+
+.asset-inspector .avatar-preview-app__canvas {
+  height: min(62vh, 620px);
+}
+
+.asset-inspector__canvas {
+  margin-top: 0.8rem;
+}
+
+.constituency-coverage {
+  margin: 1.1rem 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(41, 72, 88, 0.12);
+  border-radius: 1.15rem;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.constituency-coverage__head h3 {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.constituency-coverage__head p,
+.constituency-coverage__note,
+.constituency-coverage__source,
+.constituency-coverage__hint,
+.constituency-coverage__citywide {
+  margin: 0.35rem 0;
+  color: rgba(41, 72, 88, 0.72);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.constituency-coverage__note {
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.65rem;
+  background: rgba(233, 150, 121, 0.12);
+}
+
+.constituency-coverage__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.65rem 0;
+}
+
+.constituency-coverage__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.05rem;
+  padding: 0.32rem 0.68rem;
+  border: 1px solid rgba(41, 72, 88, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 249, 240, 0.9);
+  color: #294858;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.constituency-coverage__chip:hover {
+  border-color: rgba(233, 150, 121, 0.75);
+  background: rgba(233, 150, 121, 0.16);
+}
+
+.constituency-coverage__details summary {
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.constituency-coverage__source a {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+@media (max-width: 760px) {
+  .constituency-coverage {
+    padding: 0.85rem 0.8rem;
+  }
+
+  .constituency-coverage__chip {
+    min-height: 2.75rem;
+    padding: 0.48rem 0.82rem;
+  }
+}

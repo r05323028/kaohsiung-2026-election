@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
 
+test.describe.configure({ timeout: 120_000 });
+
 type CameraView = {
   position: [number, number, number];
   target?: [number, number, number];
@@ -106,13 +108,12 @@ async function dragCanvas(
   const y = box.y + box.height * 0.55;
   await page.mouse.move(x, y);
   await page.mouse.down({ button: 'left' });
-  await page.mouse.move(x + dx, y + dy, { steps: 12 });
+  await page.mouse.move(x + dx, y + dy, { steps: 4 });
   await page.mouse.up({ button: 'left' });
   await page.waitForTimeout(900);
 }
 
 test.describe('refined living-city exploration', () => {
-  test.describe.configure({ timeout: 120_000 });
   test('candidate selection keeps scale, profile does not reset it, and close restores the view', async ({
     page,
   }) => {
@@ -122,6 +123,7 @@ test.describe('refined living-city exploration', () => {
     const before = await camera(page);
 
     await selectMayor(page);
+    await waitForCandidateFramed(page, 'zhang-jing-2026');
     const after = await camera(page);
 
     expect(after.zoom).toBeCloseTo(before.zoom, 3);
@@ -138,7 +140,8 @@ test.describe('refined living-city exploration', () => {
     await page.waitForTimeout(900);
     const withProfile = await camera(page);
     expect(withProfile.zoom).toBeCloseTo(after.zoom, 3);
-    closeEnough(withProfile.position, after.position);
+    // Follow mode deliberately tracks the walking actor; allow one stride of drift.
+    closeEnough(withProfile.position, after.position, 0.6);
 
     await page.getByRole('button', { name: '關閉人物資料' }).click();
     await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
@@ -172,6 +175,7 @@ test.describe('refined living-city exploration', () => {
     await hydrated(page);
     await waitForCameraSettled(page);
     await selectMayor(page);
+    await waitForCandidateFramed(page, 'zhang-jing-2026');
 
     await dragCanvas(page, 170, 90);
     const manual = await camera(page);
@@ -199,8 +203,9 @@ test.describe('refined living-city exploration', () => {
     await page.waitForTimeout(1200);
     const afterClose = await camera(page);
     expect(afterClose.zoom).toBeCloseTo(manual.zoom, 3);
-    closeEnough(afterClose.position, manual.position, 0.3);
-    closeEnough(afterClose.target, manual.target, 0.3);
+    // Follow mode may advance one stride while the profile closes.
+    closeEnough(afterClose.position, manual.position, 0.6);
+    closeEnough(afterClose.target, manual.target, 0.6);
   });
 
   test('mouse drag pans without rotating or selecting; wheel zooms', async ({
@@ -243,6 +248,31 @@ test.describe('refined living-city exploration', () => {
     await page.waitForTimeout(1000);
     const zoomed = await camera(page);
     expect(zoomed.zoom).toBeGreaterThan(after.zoom);
+  });
+
+  test('vertical mouse drag pans on the ground without sinking the target', async ({
+    page,
+  }) => {
+    await page.goto('/?admin=E03');
+    await hydrated(page);
+    await waitForCameraSettled(page);
+    const before = await camera(page);
+    await dragCanvas(page, 0, -120);
+    const after = await camera(page);
+
+    expect(after.zoom).toBeCloseTo(before.zoom, 3);
+    const beforeTarget = before.target;
+    const afterTarget = after.target;
+    if (!beforeTarget || !afterTarget) throw new Error('camera target missing');
+    // screenSpacePanning would move target Y to -5.4 for this drag.
+    expect(Math.abs(afterTarget[1] - beforeTarget[1])).toBeLessThan(0.05);
+    expect(afterTarget[1]).toBeGreaterThan(-0.05);
+    expect(
+      Math.hypot(
+        afterTarget[0] - beforeTarget[0],
+        afterTarget[2] - beforeTarget[2],
+      ),
+    ).toBeGreaterThan(1);
   });
 
   test('mobile touch pans and pinches the map', async ({ browser }) => {
@@ -320,46 +350,155 @@ test.describe('refined living-city exploration', () => {
   }) => {
     await page.goto('/');
     await hydrated(page);
-    const header = page.getByTestId('global-header');
-    await expect(header).toBeVisible();
-    await expect(header.locator('.brand-lockup__title')).toHaveText(
+    const explorerBrand = page.locator('.global-header__brand');
+    await expect(explorerBrand.locator('.brand-lockup__title')).toHaveText(
       '港都人物誌',
     );
-    await expect(header.locator('.brand-lockup__subtitle')).toHaveText(
+    await expect(explorerBrand.locator('.brand-lockup__subtitle')).toHaveText(
       'KAOHSIUNG CIVIC STORIES',
     );
-    await expect(header.locator('.brand-lockup img')).toHaveAttribute(
+    await expect(explorerBrand.locator('img')).toHaveAttribute(
       'src',
       /harbor-mark\.svg$/,
     );
-    const nav = header.locator('nav[aria-label="主要網站導覽"]');
-    await expect(nav.locator('a')).toHaveCount(2);
-    await expect(nav.locator('a[aria-current="page"]')).toHaveText('城市探索');
 
     await page.goto('/districts/');
-    await expect(header).toBeVisible();
-    await expect(header.locator('.brand-lockup__title')).toHaveText(
+    const infoBrand = page.locator('.global-header__brand');
+    await expect(infoBrand.locator('.brand-lockup__title')).toHaveText(
       '港都人物誌',
     );
-    await expect(header.locator('.brand-lockup img')).toHaveAttribute(
+    await expect(infoBrand.locator('.brand-lockup__subtitle')).toHaveText(
+      'KAOHSIUNG CIVIC STORIES',
+    );
+    await expect(infoBrand.locator('img')).toHaveAttribute(
       'src',
       /harbor-mark\.svg$/,
     );
+    const nav = page.locator('.global-header__nav');
     await expect(nav.locator('a')).toHaveCount(2);
     await expect(nav.locator('a[aria-current="page"]')).toHaveText('選舉區');
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.reload();
-    await expect(header).toBeVisible();
-    const menuButton = page.locator('.global-header__menu-button');
-    await expect(menuButton).toBeVisible();
-    await expect(nav).toBeHidden();
-    await menuButton.click();
-    const mobileNav = page.locator('#global-mobile-nav');
-    await expect(mobileNav).toBeVisible();
-    await expect(mobileNav.locator('nav a')).toHaveCount(2);
-    await expect(mobileNav.locator('nav a[aria-current="page"]')).toContainText(
-      '選舉區',
-    );
+    await expect(page.locator('.global-header__menu-button')).toBeVisible();
+    await expect(page.locator('.global-header__nav')).toBeHidden();
+    await page.locator('.global-header__menu-button').click();
+    await expect(page.locator('.global-header__mobile-menu a')).toHaveCount(2);
+    await expect(
+      page.locator('.global-header__mobile-menu a[aria-current="page"]'),
+    ).toContainText('選舉區');
   });
 });
+
+test.describe('candidate focus and miniature scale', () => {
+  test('candidate selection keeps the miniature scale and camera zoom', async ({
+    page,
+  }) => {
+    await page.goto('/?admin=E03');
+    await hydrated(page);
+    await waitForCameraSettled(page);
+    const before = await camera(page);
+
+    await selectMayor(page);
+    const after = await camera(page);
+    expect(after.zoom).toBeCloseTo(before.zoom, 3);
+    expect(await actorScale(page, 'zhang-jing-2026')).toBeCloseTo(0.42, 3);
+    await expect(page.locator('[data-testid="profile-panel"]')).toBeVisible();
+    await expect(page.locator('.city-landmark-card')).toHaveCount(0);
+
+    await page.waitForTimeout(900);
+    expect(await actorScale(page, 'zhang-jing-2026')).toBeCloseTo(0.42, 3);
+  });
+
+  test('a selected walking mayor stays framed without changing zoom', async ({
+    page,
+  }) => {
+    await page.goto('/?admin=E03');
+    await hydrated(page);
+    await waitForCameraSettled(page);
+    const before = await camera(page);
+    await page.evaluate(() => {
+      (
+        window as unknown as {
+          __kaohsiungWorld?: { advance?: (seconds: number) => void };
+        }
+      ).__kaohsiungWorld?.advance?.(7200);
+    });
+    await page.waitForTimeout(1000);
+
+    await page.locator('#candidate-search').fill('賴瑞隆');
+    const result = page
+      .locator('.global-header__search-results .city-candidate')
+      .first();
+    await expect(result).toBeVisible();
+    await result.click();
+    await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
+      'data-scene-focus',
+      'candidate-lai-rui-long-2026',
+      { timeout: 20_000 },
+    );
+    await waitForCandidateFramed(page, 'lai-rui-long-2026');
+    await page.waitForTimeout(800);
+    await waitForZoomStable(page);
+
+    const after = await camera(page);
+    expect(after.zoom).toBeCloseTo(before.zoom, 3);
+    const actor = await page.evaluate(() => {
+      const world = (
+        window as unknown as {
+          __kaohsiungWorld?: {
+            actors: () => Array<{
+              slug: string;
+              position: { x: number; z: number };
+            }>;
+          };
+        }
+      ).__kaohsiungWorld;
+      return world?.actors().find((item) => item.slug === 'lai-rui-long-2026');
+    });
+    const target = after.target;
+    if (!target || !actor) throw new Error('camera target or actor missing');
+    expect(Math.abs(target[0] - actor.position.x)).toBeLessThan(1);
+    expect(Math.abs(target[2] - actor.position.z)).toBeLessThan(1);
+    await expect(page.locator('[data-testid="profile-panel"]')).toBeVisible();
+  });
+});
+
+async function waitForCandidateFramed(
+  page: import('@playwright/test').Page,
+  slug: string,
+) {
+  await page.waitForFunction(
+    (id) => {
+      const world = (
+        window as unknown as {
+          __kaohsiungWorld?: {
+            actors?: () => Array<{
+              slug: string;
+              position: { x: number; z: number };
+            }>;
+            camera?: () => CameraView;
+          };
+        }
+      ).__kaohsiungWorld;
+      const actor = world?.actors?.().find((item) => item.slug === id);
+      const target = world?.camera?.().target;
+      if (!actor || !target) return false;
+      return (
+        Math.hypot(target[0] - actor.position.x, target[2] - actor.position.z) <
+        1
+      );
+    },
+    slug,
+    { timeout: 30_000 },
+  );
+}
+
+async function actorScale(page: import('@playwright/test').Page, slug: string) {
+  return page.evaluate((id) => {
+    const bridge = window as unknown as {
+      __kaohsiungActorScale?: (slug: string) => number | null;
+    };
+    return bridge.__kaohsiungActorScale?.(id) ?? null;
+  }, slug);
+}

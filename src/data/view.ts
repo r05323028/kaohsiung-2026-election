@@ -1,4 +1,5 @@
 import type { BiographyReadModel } from './biographies';
+import type { CouncilConstituencyCoverage } from './constituencies';
 import type {
   AutomatedPublicClaim,
   AutomatedPublicSource,
@@ -21,6 +22,11 @@ import type {
   TimelineEvent,
 } from './schema';
 
+export type DistrictView = Omit<ElectoralDistrict, 'isDemo'> & {
+  isDemo?: boolean;
+  constituencyCoverage?: CouncilConstituencyCoverage;
+};
+
 export type CandidateProfileView = {
   person: Omit<Person, 'isDemo'> & { isDemo?: boolean };
   candidacy: Omit<Candidacy, 'isDemo'> & {
@@ -31,7 +37,7 @@ export type CandidateProfileView = {
     birthDate?: string;
     cecDirectoryName?: string;
   };
-  district: Omit<ElectoralDistrict, 'isDemo'> & { isDemo?: boolean };
+  district: DistrictView;
   positions: Array<Omit<Position, 'isDemo'> & { isDemo?: boolean }>;
   policies: Array<Omit<Policy, 'isDemo'> & { isDemo?: boolean }>;
   records: Array<Omit<PublicRecord, 'isDemo'> & { isDemo?: boolean }>;
@@ -366,8 +372,6 @@ export function toPublicCandidateProfile(
   };
 }
 
-export type DistrictView = CandidateProfileView['district'];
-
 export type PublicDistrictView = Pick<
   DistrictView,
   | 'id'
@@ -377,6 +381,7 @@ export type PublicDistrictView = Pick<
   | 'constituencyType'
   | 'districtLabel'
   | 'isDemo'
+  | 'constituencyCoverage'
 >;
 
 export function toPublicDistrict(district: DistrictView): PublicDistrictView {
@@ -388,6 +393,9 @@ export function toPublicDistrict(district: DistrictView): PublicDistrictView {
     constituencyType: district.constituencyType,
     districtLabel: district.districtLabel,
     ...(district.isDemo !== undefined ? { isDemo: district.isDemo } : {}),
+    ...(district.constituencyCoverage
+      ? { constituencyCoverage: district.constituencyCoverage }
+      : {}),
   };
 }
 

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { demoCandidateProfiles } from './demo';
 import { candidateProfiles, districts } from './index';
 import { toPublicCandidateProfile, toPublicDistrict } from './view';
 
@@ -40,8 +41,8 @@ function collectKeys(value: unknown): string[] {
 
 describe('public candidate profile props', () => {
   it('sanitizes every roster and demo candidate before hydration', () => {
-    const publicProfiles = candidateProfiles.map((candidate) =>
-      toPublicCandidateProfile(candidate),
+    const publicProfiles = [...candidateProfiles, ...demoCandidateProfiles].map(
+      (candidate) => toPublicCandidateProfile(candidate),
     );
     const serialized = JSON.stringify(publicProfiles);
     const keys = collectKeys(publicProfiles);
@@ -74,7 +75,13 @@ describe('public candidate profile props', () => {
     }
   });
   it('sanitizes district props used by the city explorer', () => {
-    const publicDistricts = districts.map((district) =>
+    const demoDistricts = demoCandidateProfiles
+      .map((candidate) => candidate.district)
+      .filter(
+        (district, index, all) =>
+          all.findIndex((item) => item.id === district.id) === index,
+      );
+    const publicDistricts = [...districts, ...demoDistricts].map((district) =>
       toPublicDistrict(district),
     );
     const serialized = JSON.stringify(publicDistricts);

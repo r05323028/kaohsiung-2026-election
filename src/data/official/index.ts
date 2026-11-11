@@ -1,6 +1,7 @@
 import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
 import manifestInput from '../../../data/official-source-manifest.json';
 import { getBiographyReadModel } from '../biographies';
+import { coverageForDistrictSlug } from '../constituencies';
 import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
 import { getCandidatePolicyResearchSummary } from '../policy-research';
 import {
@@ -17,6 +18,7 @@ import type { CandidateProfileView, DistrictView } from '../view';
 import {
   type OfficialCandidate,
   type OfficialDataset,
+  type OfficialDistrict,
   validateOfficialDataset,
 } from './schema';
 
@@ -84,9 +86,9 @@ function sourceFor(id: string): ProfileSource {
   };
 }
 
-export const officialDistricts: DistrictView[] = officialDataset.districts
-  .filter((district) => district.publicationStatus === 'approved')
-  .map((district) => ({
+function toDistrictView(district: OfficialDistrict): DistrictView {
+  const constituencyCoverage = coverageForDistrictSlug(district.slug);
+  return {
     id: district.id,
     slug: district.slug,
     name: district.name,
@@ -96,7 +98,13 @@ export const officialDistricts: DistrictView[] = officialDataset.districts
     description: district.description,
     scopeNote: district.scopeNote,
     isDemo: false,
-  }));
+    ...(constituencyCoverage ? { constituencyCoverage } : {}),
+  };
+}
+
+export const officialDistricts: DistrictView[] = officialDataset.districts
+  .filter((district) => district.publicationStatus === 'approved')
+  .map(toDistrictView);
 
 function neutralVisual(candidacyId: string, index: number) {
   return {
@@ -186,17 +194,7 @@ function toProfile(
       candidateNumberStatus: candidate.candidateNumberStatus,
       publicationStatus: candidate.publicationStatus,
     },
-    district: {
-      id: district.id,
-      slug: district.slug,
-      name: district.name,
-      electionType: district.electionType,
-      constituencyType: district.constituencyType,
-      districtLabel: district.districtLabel,
-      description: district.description,
-      scopeNote: district.scopeNote,
-      isDemo: false,
-    },
+    district: toDistrictView(district),
     positions: [],
     policies: [],
     records: [],

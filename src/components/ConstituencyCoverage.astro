@@ -1,0 +1,96 @@
+---
+import type { CouncilConstituencyCoverage } from '../data';
+import {
+  adminDistrictsForCoverage,
+  coverageSummary,
+} from '../data/constituencies';
+import { withBase } from '../utils/paths';
+
+interface Props {
+  coverage: CouncilConstituencyCoverage;
+  variant?: 'full' | 'compact';
+}
+
+const { coverage, variant = 'full' } = Astro.props;
+const districts = adminDistrictsForCoverage(coverage);
+const compact = variant === 'compact';
+const citywide = coverage.coverageKind === 'citywide-indigenous';
+const coverageHref = (adminId: string) =>
+  withBase(`/?district=${coverage.slug}&admin=${adminId}`);
+---
+
+<section
+  class:list={[
+    'constituency-coverage',
+    `constituency-coverage--${variant}`,
+    `constituency-coverage--${coverage.kind}`,
+  ]}
+  data-testid="constituency-coverage"
+  data-constituency-number={coverage.number}
+  data-coverage-kind={coverage.coverageKind}
+  aria-labelledby={`constituency-coverage-${coverage.number}-heading`}
+>
+  <div class="constituency-coverage__head">
+    <span class="section-kicker">選區範圍 / COVERAGE</span>
+    <h3 id={`constituency-coverage-${coverage.number}-heading`}>
+      第{coverage.number}選舉區・{coverage.coverageLabel}
+    </h3>
+    <p data-testid="coverage-summary">{coverageSummary(coverage)}</p>
+  </div>
+
+  {coverage.eligibilityNote && (
+    <p class="constituency-coverage__note" role="note">
+      {coverage.eligibilityNote}
+    </p>
+  )}
+
+  {citywide ? (
+    <>
+      <p class="constituency-coverage__citywide">
+        全市 38 個行政區（互動移動範圍）
+      </p>
+      <details class="constituency-coverage__details" open={!compact}>
+        <summary>查看 38 個行政區</summary>
+        <div class="constituency-coverage__chips" aria-label="互動移動範圍行政區">
+          {districts.map((district) => (
+            <a
+              class="constituency-coverage__chip"
+              data-admin-id={district.id}
+              href={coverageHref(district.id)}
+            >
+              {district.name}
+            </a>
+          ))}
+        </div>
+      </details>
+    </>
+  ) : (
+    <div class="constituency-coverage__chips" aria-label="選舉區涵蓋行政區">
+      {districts.map((district) => (
+        <a
+          class="constituency-coverage__chip"
+          data-admin-id={district.id}
+          href={coverageHref(district.id)}
+        >
+          {district.name}
+        </a>
+      ))}
+    </div>
+  )}
+
+  <p class="constituency-coverage__source">
+    資料來源：
+    <a href={withBase('/sources/#source-cec-central-63625')}>
+      中選會 115 年選舉區劃分公告
+    </a>
+    ・
+    <a href={withBase('/sources/#source-cec-vote2026-prvCityDept')}>
+      2026 選舉區參照資料
+    </a>
+  </p>
+  <p class="constituency-coverage__hint">
+    {citywide
+      ? '行政區名稱可開啟城市探索並聚焦該區；此移動範圍不代表地理選區邊界。'
+      : '點選行政區名稱可開啟城市探索並聚焦該區。'}
+  </p>
+</section>

@@ -7,30 +7,16 @@ import {
   toPublicCandidateProfile,
   toPublicDistrict,
 } from '../data';
-import { DISTRICT_FOCUS, LANDMARKS } from '../city/layout';
-
-const landmarks = LANDMARKS.map(({ id, label, english, blurb, x, z, focus }) => ({
-  id,
-  label,
-  english,
-  blurb,
-  x,
-  z,
-  focus,
-}));
 ---
 
 <BaseLayout
   immersive
-  title="港都人物誌｜左營・楠梓 迷你城市"
-  description="以原創迷你城市探索 2026 高雄選舉的官方核准切片與虛構介面示範資料。非黨派、來源導向、完全靜態。"
+  title="港都人物誌｜高雄六角迷你城市"
+  description="以原創六角迷你城市探索 2026 高雄選舉的官方核准切片。非黨派、來源導向、完全靜態。"
 >
-  <h1 class="sr-only">港都人物誌</h1>
   <CityExplorer
     client:load
     candidates={candidateProfiles.map((candidate) => toPublicCandidateProfile(candidate))}
-    districtFocus={DISTRICT_FOCUS}
-    districts={districts.map((district) => toPublicDistrict(district))}
-    landmarks={landmarks}
+    districts={districts.map(toPublicDistrict)}
   />
 </BaseLayout>

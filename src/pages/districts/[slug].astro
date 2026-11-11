@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CandidateCard from '../../components/CandidateCard.astro';
+import ConstituencyCoverage from '../../components/ConstituencyCoverage.astro';
 import { candidateProfiles, districts, getDistrictCandidates } from '../../data';
 import { withBase } from '../../utils/paths';
 
@@ -40,6 +41,10 @@ const publicDistrictScopeNote = demo
         <a class="secondary-link" href={withBase('/districts/')}>回選區索引</a>
       </div>
     </section>
+
+    {district.constituencyCoverage && (
+      <ConstituencyCoverage coverage={district.constituencyCoverage} />
+    )}
 
     <section aria-labelledby="district-candidates-heading">
       <div class="profile-section-heading" style="margin-bottom: 1rem;">

@@ -66,10 +66,11 @@ test.describe('living-world simulation', () => {
         if (!actor) break;
         behaviors.add(actor.behavior);
         if (previousHeading !== null) {
-          maxHeadingStep = Math.max(
-            maxHeadingStep,
-            Math.abs(actor.heading - previousHeading),
+          const delta = Math.atan2(
+            Math.sin(actor.heading - previousHeading),
+            Math.cos(actor.heading - previousHeading),
           );
+          maxHeadingStep = Math.max(maxHeadingStep, Math.abs(delta));
         }
         previousHeading = actor.heading;
         if (last) {
@@ -113,7 +114,18 @@ test.describe('living-world simulation', () => {
 
     const result = await page.evaluate(() => {
       const world = (window as WorldWindow).__kaohsiungWorld as WorldBridge;
-      world.advance(1800);
+      const visited = new Set<string>();
+      for (let step = 0; step < 60; step += 1) {
+        world.advance(30);
+        for (const actor of world.actors()) {
+          if (
+            actor.electoralDistrictSlug === 'kaohsiung-council-04' &&
+            actor.currentAdminId
+          ) {
+            visited.add(actor.currentAdminId);
+          }
+        }
+      }
       const council = world
         .actors()
         .filter(
@@ -124,7 +136,7 @@ test.describe('living-world simulation', () => {
         allowed: [
           ...new Set(council.flatMap((actor) => actor.allowedAdminIds)),
         ],
-        visited: [...new Set(council.map((actor) => actor.currentAdminId))],
+        visited: [...visited],
         duplicates:
           world.actors().length -
           new Set(world.actors().map((actor) => actor.slug)).size,

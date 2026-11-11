@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CandidateCard from '../../components/CandidateCard.astro';
+import ConstituencyCoverage from '../../components/ConstituencyCoverage.astro';
 import { candidateProfiles, districts, getDistrictCandidates } from '../../data';
 import { withBase } from '../../utils/paths';
 ---
@@ -29,6 +30,12 @@ import { withBase } from '../../utils/paths';
             </div>
             <p>{demo ? district.description : '高雄市選舉區資料。'}</p>
             <p><strong>範圍說明：</strong>{demo ? district.scopeNote : '候選人資料附來源連結。'}</p>
+            {district.constituencyCoverage && (
+              <ConstituencyCoverage
+                coverage={district.constituencyCoverage}
+                variant="compact"
+              />
+            )}
             <p>{districtCandidates.length} 位{demo ? '示範人物' : '候選人'}・{demo ? '2026 示範資料' : '2026 選舉資料'}</p>
             <div class="route-actions">
               <a class="primary-link" href={withBase(`/districts/${district.slug}/`)}>查看選區</a>

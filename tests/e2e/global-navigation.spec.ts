@@ -7,7 +7,11 @@ const NAV_LABELS = ['城市探索', '選舉區'];
 const ROUTES = [
   { path: '/', active: '城市探索', current: 'page' },
   { path: '/districts/', active: '選舉區', current: 'page' },
-  { path: '/districts/harbor-demo/', active: '選舉區', current: 'location' },
+  {
+    path: '/districts/kaohsiung-council-04/',
+    active: '選舉區',
+    current: 'location',
+  },
   {
     path: '/candidates/zhang-jing-2026/',
     active: '選舉區',
@@ -18,7 +22,7 @@ const ROUTES = [
 const VISUAL_ROUTES = [
   { name: 'explorer', path: '/' },
   { name: 'districts', path: '/districts/' },
-  { name: 'district-detail', path: '/districts/harbor-demo/' },
+  { name: 'district-detail', path: '/districts/kaohsiung-council-04/' },
   { name: 'candidate-profile', path: '/candidates/zhang-jing-2026/' },
 ] as const;
 
@@ -186,7 +190,7 @@ test.describe('shared global navigation', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     for (const route of [
       '/districts/',
-      '/districts/harbor-demo/',
+      '/districts/kaohsiung-council-04/',
       '/candidates/zhang-jing-2026/',
     ]) {
       await open(page, route);

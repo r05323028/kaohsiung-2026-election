@@ -1,31 +1,23 @@
 import { type CandidateProfile, candidateProfiles } from '../data';
-import {
-  candidateRole,
-  constituencyNumberForSlug,
-  movementScopeForCandidate,
-} from './constituencies';
-import {
-  ADMIN_DISTRICT_BY_ID,
-  districtAtWorld,
-  districtIdAtWorldTolerant,
-  WORLD_DISTRICT_BY_ID,
-  type WorldDistrict,
-} from './geography';
-import { worldToHeroLocal } from './hero';
-import {
-  COUNCIL_04_ROUTE,
-  routeForCandidate,
-  sampleRoute,
-  type WorldRoute,
-} from './navigation';
+import { candidateRole, movementScopeForCandidate } from './constituencies';
+import { ADMIN_DISTRICT_BY_ID, type DistrictRecord } from './geography';
+import { HEX_TILES_BY_DISTRICT, type HexPoint } from './hex';
 import { distanceKm, type WorldPoint } from './projection';
 import {
-  HERO_WALK_GRAPH,
-  heroObstacleAt,
-  shortestWalkPath,
-  type WalkGraph,
-  type WalkNode,
-} from './walk-graph';
+  type ActorRenderPose,
+  type ActorRenderTransition,
+  type InterpolatedActorPose,
+  interpolateActorPose,
+} from './render-interpolation';
+import {
+  allowedEdge,
+  edgesAtNode,
+  edgesForTile,
+  HEX_ROAD_GRAPH,
+  type RoadEdge,
+  type RoadGraph,
+  roadNode,
+} from './road-graph';
 
 export type ActorRole = 'mayor' | 'council' | 'indigenous' | 'demo';
 export type ActorState = 'walking' | 'idle';
@@ -85,6 +77,14 @@ export type WorldActor = {
   rngState: number;
   simulated: true;
   note: string;
+  /** Current navigable edge and progress along it (0..1). */
+  edgeId: string;
+  edgeProgress: number;
+  fromNodeId: string;
+  pauseRemaining: number;
+  /** Waiting for another candidate to clear the road ahead. */
+  blocked: boolean;
+  blockedTimer: number;
 };
 
 type SimulationState = {
@@ -95,14 +95,20 @@ type SimulationState = {
   revision: number;
 };
 
-const TIME_SCALE = 4;
+const TIME_SCALE = 3;
 const SPEEDS: Record<ActorRole, number> = {
-  mayor: 0.0024,
-  council: 0.0013,
-  indigenous: 0.0016,
+  mayor: 0.055,
+  council: 0.045,
+  indigenous: 0.05,
   demo: 0,
 };
-const TURN_RATE = 2.8;
+const BASE_TURN_RATE = 2.8;
+/**
+ * The simulation walks in fixed visual ticks. Rendering interpolates between
+ * the poses on either side of each tick, so display refresh rate and walking
+ * animation speed are independent of the simulation step.
+ */
+export const VISUAL_STEP_SECONDS = 1 / 60;
 const FICTIONAL_NOTE = '此為虛構互動模擬，不代表真實所在地、行程或競選活動。';
 
 function hashString(value: string): number {
@@ -112,10 +118,6 @@ function hashString(value: string): number {
     hash = Math.imul(hash, 16777619);
   }
   return hash >>> 0;
-}
-
-function mulberrySeed(value: string): number {
-  return (hashString(value) ^ 0x9e3779b9) >>> 0;
 }
 
 function nextRandom(actor: WorldActor): number {
@@ -130,166 +132,162 @@ function normalizeAngle(value: number): number {
   return angle;
 }
 
-function angleDelta(from: number, to: number): number {
-  return normalizeAngle(to - from);
+function headingBetween(a: HexPoint, b: HexPoint): number {
+  return Math.atan2(b.x - a.x, b.z - a.z);
 }
 
-function turnToward(actor: WorldActor, target: number, maxStep: number): void {
-  actor.desiredHeading = target;
-  const delta = angleDelta(actor.heading, target);
-  actor.heading = normalizeAngle(
-    actor.heading + Math.max(-maxStep, Math.min(maxStep, delta)),
+function pointOnEdge(edge: RoadEdge, progress: number): WorldPoint {
+  const t = Math.max(0, Math.min(1, progress));
+  return {
+    x: edge.a.x + (edge.b.x - edge.a.x) * t,
+    z: edge.a.z + (edge.b.z - edge.a.z) * t,
+  };
+}
+
+/** Interpolate from the node the actor entered to the node it is walking to. */
+function pointOnActorEdge(
+  actor: WorldActor,
+  progress = actor.edgeProgress,
+): WorldPoint {
+  const start = actor.fromNodeId
+    ? roadNode(actor.fromNodeId).point
+    : { x: 0, z: 0 };
+  const t = Math.max(0, Math.min(1, progress));
+  return {
+    x: start.x + (actor.destination.x - start.x) * t,
+    z: start.z + (actor.destination.z - start.z) * t,
+  };
+}
+
+function allowedSet(actor: WorldActor): Set<string> {
+  return new Set(actor.allowedAdminIds);
+}
+
+function chooseAdminId(
+  role: ActorRole,
+  allowedAdminIds: string[],
+  seed: number,
+): string | null {
+  if (allowedAdminIds.length === 0) return null;
+  const pool =
+    role === 'council'
+      ? allowedAdminIds
+      : allowedAdminIds.filter((id) => HEX_TILES_BY_DISTRICT.has(id));
+  return pool[seed % pool.length] ?? allowedAdminIds[0] ?? null;
+}
+
+function ringEdgesFor(adminId: string): RoadEdge[] {
+  return (HEX_TILES_BY_DISTRICT.get(adminId) ?? []).flatMap((tile) =>
+    edgesForTile(tile.id).filter((edge) => edge.kind === 'ring'),
   );
 }
 
-function headingFor(actor: WorldActor, target: WorldPoint): number {
-  return Math.atan2(target.x - actor.position.x, target.z - actor.position.z);
+const MIN_ACTOR_SEPARATION = 0.24;
+/** Idle checks a slightly wider ring than the movement threshold so a
+ *  blocked actor does not immediately "clear" at the edge of separation. */
+const CROWD_AWARENESS = MIN_ACTOR_SEPARATION + 0.1;
+
+function actorHasCloseNeighbour(actor: WorldActor): boolean {
+  for (const other of state.actors) {
+    if (other === actor) continue;
+    const dx = other.position.x - actor.position.x;
+    const dz = other.position.z - actor.position.z;
+    if (dx * dx + dz * dz < CROWD_AWARENESS * CROWD_AWARENESS) return true;
+  }
+  return false;
 }
 
-function fallbackPoint(allowedAdminIds: string[]): WorldPoint {
-  for (const id of allowedAdminIds) {
-    const district = ADMIN_DISTRICT_BY_ID.get(id);
-    if (district) {
-      return {
-        x: (district.labelPoint[0] - 120.3) * 102.7,
-        z: -(district.labelPoint[1] - 22.7) * 110.57,
-      };
+function movementWouldCrowd(actor: WorldActor, next: WorldPoint): boolean {
+  for (const other of state.actors) {
+    if (other === actor) continue;
+    const currentDx = other.position.x - actor.position.x;
+    const currentDz = other.position.z - actor.position.z;
+    const nextDx = other.position.x - next.x;
+    const nextDz = other.position.z - next.z;
+    const currentDistance = currentDx * currentDx + currentDz * currentDz;
+    const nextDistance = nextDx * nextDx + nextDz * nextDz;
+    if (
+      nextDistance < MIN_ACTOR_SEPARATION * MIN_ACTOR_SEPARATION &&
+      nextDistance < currentDistance
+    )
+      return true;
+  }
+  return false;
+}
+
+/**
+ * Nudge initial ring-road positions apart deterministically. This avoids
+ * spawning several candidates on top of one another without changing edges.
+ */
+function spaceOutSpawns(actors: WorldActor[]): void {
+  actors.forEach((actor, index) => {
+    const edge = currentEdge(actor);
+    if (!edge) return;
+    const tooClose = () => {
+      for (let otherIndex = 0; otherIndex < index; otherIndex += 1) {
+        const other = actors[otherIndex]!;
+        const dx = other.position.x - actor.position.x;
+        const dz = other.position.z - actor.position.z;
+        if (dx * dx + dz * dz < MIN_ACTOR_SEPARATION * MIN_ACTOR_SEPARATION)
+          return true;
+      }
+      return false;
+    };
+    if (!tooClose()) return;
+    const original = actor.edgeProgress;
+    for (let offset = 0.04; offset <= 0.96; offset += 0.04) {
+      for (const candidateProgress of [original + offset, original - offset]) {
+        if (candidateProgress <= 0 || candidateProgress >= 1) continue;
+        const candidate = pointOnEdge(edge, candidateProgress);
+        const dx = candidate.x - actor.position.x;
+        const dz = candidate.z - actor.position.z;
+        if (dx * dx + dz * dz < 0.0001) continue;
+        let clear = true;
+        for (let otherIndex = 0; otherIndex < index; otherIndex += 1) {
+          const other = actors[otherIndex]!;
+          const ox = other.position.x - candidate.x;
+          const oz = other.position.z - candidate.z;
+          if (ox * ox + oz * oz < MIN_ACTOR_SEPARATION * MIN_ACTOR_SEPARATION) {
+            clear = false;
+            break;
+          }
+        }
+        if (!clear) continue;
+        actor.edgeProgress = candidateProgress;
+        actor.position = candidate;
+        return;
+      }
     }
-  }
-  return { x: 0, z: 0 };
+  });
 }
 
-function safeGraphNode(actor: WorldActor, node: WalkNode): boolean {
-  if (node.kind === 'gate') return false;
-  if (node.adminId && !actor.allowedAdminIds.includes(node.adminId)) {
-    return false;
-  }
-  if (actor.routeId === HERO_WALK_GRAPH.id) {
-    return heroObstacleAt(worldToHeroLocal(node.point)) === 'none';
-  }
-  return true;
-}
-
-function graphNodesForActor(actor: WorldActor): WalkNode[] {
-  return HERO_WALK_GRAPH.nodes.filter((node) => safeGraphNode(actor, node));
-}
-
-function isCouncil04(candidate: CandidateProfile): boolean {
-  return (
-    candidateRole(candidate) === 'council' &&
-    constituencyNumberForSlug(candidate.district.slug) === 4
-  );
-}
-
-function chooseGraphPath(
-  actor: WorldActor,
-  startId: string,
-  random: number,
-): string[] {
-  const nodes = graphNodesForActor(actor);
-  if (nodes.length < 2) return [startId];
-  const first = Math.floor(random * nodes.length);
-  for (let attempt = 0; attempt < nodes.length; attempt += 1) {
-    const target = nodes[(first + attempt) % nodes.length];
-    if (!target || target.id === startId) continue;
-    const path = shortestWalkPath(HERO_WALK_GRAPH, startId, target.id);
-    if (path.length > 1) return path;
-  }
-  return [startId];
-}
-
-function initialGraphActor(
-  actor: WorldActor,
-  candidate: CandidateProfile,
-  index: number,
-  usedNodes: Set<string>,
-): void {
-  const nodes = graphNodesForActor(actor);
-  if (nodes.length === 0) {
-    actor.behavior = 'idle';
-    actor.state = 'idle';
-    return;
-  }
-  const seedIndex =
-    (hashString(candidate.candidacy.slug) + index * 11) % nodes.length;
-  let start = nodes[seedIndex] ?? nodes[0];
-  for (let attempt = 0; attempt < nodes.length && start; attempt += 1) {
-    if (!usedNodes.has(start.id)) break;
-    start = nodes[(seedIndex + attempt + 1) % nodes.length];
-  }
-  if (!start) return;
-  usedNodes.add(start.id);
-  const path = chooseGraphPath(
-    actor,
-    start.id,
-    (hashString(actor.slug) % 1000) / 1000,
-  );
-  actor.graphId = HERO_WALK_GRAPH.id;
-  actor.currentNodeId = start.id;
-  actor.pathNodeIds = path;
-  actor.pathIndex = path.length > 1 ? 1 : 0;
-  actor.position = start.point;
-  actor.currentAdminId = start.adminId;
-  actor.currentAdminName = start.adminId
-    ? (ADMIN_DISTRICT_BY_ID.get(start.adminId)?.name ?? null)
-    : null;
-  actor.spawnAdminId = start.adminId;
-  actor.spawnAdminName = actor.currentAdminName;
-  const nextId = path[1];
-  const nextNode = nextId ? HERO_WALK_GRAPH.nodeById.get(nextId) : undefined;
-  actor.destination = nextNode?.point ?? start.point;
-  actor.heading = headingFor(actor, actor.destination);
-  actor.desiredHeading = actor.heading;
-  actor.behavior = path.length > 1 ? 'walking' : 'pausing';
-  actor.behaviorTimer = path.length > 1 ? 0 : 1.5;
-  actor.state = path.length > 1 ? 'walking' : 'idle';
-  actor.nextPauseKm = 0.28 + (hashString(actor.slug) % 80) / 100;
-  actor.walkedSincePause = 0;
-}
-
-function initialRouteActor(
-  actor: WorldActor,
-  candidate: CandidateProfile,
-  route: WorldRoute,
-  index: number,
-): void {
-  const hash = hashString(candidate.candidacy.slug);
-  const offsetRatio = ((hash + index * 97) % 1000) / 1000;
-  const initialProgress = route.lengthKm * offsetRatio;
-  const position = route.valid
-    ? sampleRoute(route, initialProgress)
-    : fallbackPoint(actor.allowedAdminIds);
-  const district = districtAtWorld(position);
-  actor.progressKm = initialProgress;
-  actor.position = position;
-  actor.direction = 1;
-  actor.destination = route.valid
-    ? sampleRoute(route, initialProgress + 0.22)
-    : position;
-  actor.currentAdminId = district?.id ?? null;
-  actor.currentAdminName = district?.name ?? null;
-  actor.spawnAdminId = actor.currentAdminId;
-  actor.spawnAdminName = actor.currentAdminName;
-  actor.heading = headingFor(actor, actor.destination);
-  actor.desiredHeading = actor.heading;
-  actor.behavior = route.valid ? 'walking' : 'idle';
-  actor.state = route.valid ? 'walking' : 'idle';
-  actor.behaviorTimer = 0;
-  actor.nextPauseKm = 0.3 + (hash % 90) / 100;
-  actor.walkedSincePause = 0;
-}
-
-function actorForCandidate(
-  candidate: CandidateProfile,
-  index: number,
-  usedNodes: Set<string>,
-): WorldActor {
+function spawnActor(candidate: CandidateProfile, index: number): WorldActor {
   const scope = movementScopeForCandidate(candidate);
-  const role = candidateRole(candidate) as ActorRole;
-  const route: WorldRoute = routeForCandidate(candidate);
-  const baseSpeed = SPEEDS[role];
-  const variance = 0.82 + (hashString(candidate.candidacy.slug) % 17) / 100;
-  const actor: WorldActor = {
+  const role = candidateRole(candidate);
+  const allowedAdminIds = [...scope.allowedAdminIds];
+  const seed = hashString(candidate.candidacy.slug);
+  const adminId = chooseAdminId(role, allowedAdminIds, seed + index * 17);
+  const district = adminId ? ADMIN_DISTRICT_BY_ID.get(adminId) : undefined;
+  const edges = adminId ? ringEdgesFor(adminId) : [];
+  const fallbackEdge = edges.length > 0 ? edges[seed % edges.length]! : null;
+  const edge = fallbackEdge ?? {
+    id: '',
+    kind: 'ring' as const,
+    from: '',
+    to: '',
+    a: { x: 0, z: 0 },
+    b: { x: 0, z: 0 },
+    lengthKm: 0,
+    tileIds: [],
+    adminIds: [],
+  };
+  const progress = ((seed >>> 8) % 1000) / 1000;
+  const fromNode = edge.from ? roadNode(edge.from) : null;
+  const toNode = edge.to ? roadNode(edge.to) : null;
+  const position = pointOnEdge(edge, progress);
+  const heading = headingBetween(edge.a, edge.b);
+
+  return {
     id: candidate.candidacy.id,
     slug: candidate.candidacy.slug,
     candidateId: candidate.candidacy.id,
@@ -297,73 +295,56 @@ function actorForCandidate(
     shortName: candidate.person.shortName,
     role,
     electoralDistrictSlug: candidate.district.slug,
-    allowedAdminIds: scope.allowedAdminIds,
-    allowedAdminNames: scope.allowedAdminNames,
-    routeId: route.id,
-    routeLabel: route.label,
-    routeValid: route.valid,
-    routeLengthKm: route.lengthKm,
-    routeWarnings: route.warnings,
-    speedKmPerSec: baseSpeed * variance,
+    allowedAdminIds,
+    allowedAdminNames: [...scope.allowedAdminNames],
+    routeId: 'hex-road-graph',
+    routeLabel: district ? `${district.shortName}環路` : '高雄環路',
+    routeValid: Boolean(edge.id),
+    routeLengthKm: edges.reduce((sum, item) => sum + item.lengthKm, 0),
+    routeWarnings: [],
+    speedKmPerSec: SPEEDS[role],
     progressKm: 0,
-    position: { x: 0, z: 0 },
-    destination: { x: 0, z: 0 },
-    currentAdminId: null,
-    currentAdminName: null,
-    state: 'idle',
-    behavior: 'idle',
-    pathMode: 'route',
-    graphId: null,
-    currentNodeId: null,
-    pathNodeIds: [],
+    position,
+    destination: toNode?.point ?? position,
+    currentAdminId: district?.id ?? null,
+    currentAdminName: district?.name ?? null,
+    state: 'walking',
+    behavior: 'walking',
+    pathMode: 'graph',
+    graphId: 'hex-road-graph',
+    currentNodeId: fromNode?.id ?? null,
+    pathNodeIds: edge.from && edge.to ? [edge.from, edge.to] : [],
     pathIndex: 0,
-    heading: 0,
-    desiredHeading: 0,
+    heading,
+    desiredHeading: heading,
     behaviorTimer: 0,
-    walkPhase: 0,
+    walkPhase: (seed % 628) / 100,
     walkedSincePause: 0,
-    nextPauseKm: 0.4,
+    nextPauseKm: 1.1 + ((seed >>> 12) % 240) / 100,
     direction: 1,
     followingUser: false,
     transitionTimer: 0,
     districtTransitions: 0,
     blockedTransitions: 0,
-    spawnAdminId: null,
-    spawnAdminName: null,
-    rngState: mulberrySeed(candidate.candidacy.slug),
+    spawnAdminId: district?.id ?? null,
+    spawnAdminName: district?.name ?? null,
+    rngState: (seed ^ 0x9e3779b9) >>> 0,
     simulated: true,
     note: FICTIONAL_NOTE,
+    edgeId: edge.id,
+    edgeProgress: progress,
+    fromNodeId: edge.from,
+    pauseRemaining: 0,
+    blocked: false,
+    blockedTimer: 0,
   };
-
-  if (isCouncil04(candidate)) {
-    actor.pathMode = 'graph';
-    actor.routeId = HERO_WALK_GRAPH.id;
-    actor.routeLabel = '左營・楠梓局部步行網路';
-    actor.routeValid = HERO_WALK_GRAPH.valid;
-    actor.routeLengthKm = COUNCIL_04_ROUTE.lengthKm;
-    actor.routeWarnings = [
-      ...HERO_WALK_GRAPH.warnings,
-      '角色在局部已驗證步行網路上自行選點，不代表完整人行道測繪。',
-    ];
-    initialGraphActor(actor, candidate, index, usedNodes);
-    return actor;
-  }
-
-  initialRouteActor(actor, candidate, route, index);
-  return actor;
 }
 
-function createState(): SimulationState {
-  const usedNodes = new Set<string>();
-  const seen = new Set<string>();
-  const actors: WorldActor[] = [];
-  for (const candidate of candidateProfiles) {
-    if (candidate.person.isDemo || candidateRole(candidate) === 'demo')
-      continue;
-    if (seen.has(candidate.candidacy.slug)) continue;
-    seen.add(candidate.candidacy.slug);
-    actors.push(actorForCandidate(candidate, actors.length, usedNodes));
-  }
+function buildState(): SimulationState {
+  const actors = candidateProfiles
+    .filter((candidate) => !candidate.candidacy.isDemo)
+    .map((candidate, index) => spawnActor(candidate, index));
+  spaceOutSpawns(actors);
   return {
     actors,
     selectedSlug: null,
@@ -373,275 +354,311 @@ function createState(): SimulationState {
   };
 }
 
-let state = createState();
+const state: SimulationState = buildState();
+const renderTransitions = new Map<string, ActorRenderTransition>();
+let renderAccumulator = 0;
 
-function setBehavior(
-  actor: WorldActor,
-  behavior: ActorBehavior,
-  timer: number,
-): void {
-  actor.behavior = behavior;
-  actor.behaviorTimer = Math.max(0, timer);
-  actor.state =
-    behavior === 'walking' || behavior === 'transitioning' ? 'walking' : 'idle';
-}
-
-function applyNextPosition(actor: WorldActor, next: WorldPoint): boolean {
-  const districtId = districtIdAtWorldTolerant(next);
-  if (!districtId) {
-    actor.blockedTransitions += 1;
-    setBehavior(actor, 'idle', 0.8);
-    return false;
-  }
-  if (!actor.allowedAdminIds.includes(districtId)) {
-    actor.blockedTransitions += 1;
-    setBehavior(actor, 'idle', 1.2);
-    return false;
-  }
-  actor.position = next;
-  if (districtId !== actor.currentAdminId) {
-    actor.districtTransitions += 1;
-    actor.currentAdminId = districtId;
-    actor.currentAdminName = ADMIN_DISTRICT_BY_ID.get(districtId)?.name ?? null;
-    actor.transitionTimer = 0.8;
-    if (actor.behavior !== 'arriving') {
-      setBehavior(actor, 'transitioning', 0.8);
-    }
-  }
-  return true;
-}
-
-function updateRouteDestination(actor: WorldActor): void {
-  actor.destination = sampleRoute(
-    routeForCandidateBySlug(actor.slug) ?? COUNCIL_04_ROUTE,
-    actor.progressKm + actor.direction * 0.22,
-  );
-  actor.desiredHeading = headingFor(actor, actor.destination);
-}
-
-function pauseThenChoose(actor: WorldActor): void {
-  const roll = nextRandom(actor);
-  if (roll < 0.28) {
-    setBehavior(actor, 'observing', 2.2 + nextRandom(actor) * 3.6);
-    return;
-  }
-  setBehavior(actor, 'pausing', 1.2 + nextRandom(actor) * 3.4);
-}
-
-function chooseGraphDestination(actor: WorldActor): void {
-  const startId = actor.currentNodeId;
-  if (!startId) {
-    setBehavior(actor, 'idle', 1);
-    return;
-  }
-  const path = chooseGraphPath(actor, startId, nextRandom(actor));
-  if (path.length < 2) {
-    setBehavior(actor, 'pausing', 2);
-    return;
-  }
-  actor.pathNodeIds = path;
-  actor.pathIndex = 1;
-  const nextId = path[1];
-  const nextNode = nextId ? HERO_WALK_GRAPH.nodeById.get(nextId) : undefined;
-  actor.destination = nextNode?.point ?? actor.position;
-  actor.walkedSincePause = 0;
-  actor.nextPauseKm = 0.24 + nextRandom(actor) * 0.75;
-  const targetHeading = headingFor(actor, actor.destination);
-  const turn = Math.abs(angleDelta(actor.heading, targetHeading));
-  if (turn > 0.35) {
-    setBehavior(actor, 'turning', Math.min(1.4, turn / TURN_RATE + 0.18));
-    actor.desiredHeading = targetHeading;
-  } else {
-    setBehavior(actor, 'walking', 0);
-  }
-}
-
-function stepGraphActor(actor: WorldActor, deltaSeconds: number): void {
-  const delta = deltaSeconds;
-  if (actor.behavior === 'transitioning') {
-    actor.transitionTimer -= delta;
-    if (actor.transitionTimer <= 0) setBehavior(actor, 'walking', 0);
-  }
-  if (
-    actor.behavior === 'idle' ||
-    actor.behavior === 'choosing' ||
-    actor.behavior === 'pausing' ||
-    actor.behavior === 'observing' ||
-    actor.behavior === 'arriving'
-  ) {
-    actor.state = 'idle';
-    actor.behaviorTimer -= delta;
-    if (actor.behaviorTimer <= 0) {
-      const nextId = actor.pathNodeIds[actor.pathIndex];
-      if (nextId) {
-        // Resume the interrupted edge instead of walking back to the last node.
-        actor.walkedSincePause = 0;
-        actor.nextPauseKm = 0.24 + nextRandom(actor) * 0.75;
-        setBehavior(actor, 'walking', 0);
-      } else {
-        chooseGraphDestination(actor);
-      }
-    }
-    return;
-  }
-  if (actor.behavior === 'turning') {
-    actor.state = 'idle';
-    actor.behaviorTimer -= delta;
-    turnToward(actor, actor.desiredHeading, TURN_RATE * delta);
-    if (actor.behaviorTimer <= 0) setBehavior(actor, 'walking', 0);
-    return;
-  }
-  if (actor.behavior !== 'walking' && actor.behavior !== 'transitioning')
-    return;
-
-  const nextId = actor.pathNodeIds[actor.pathIndex];
-  const nextNode = nextId ? HERO_WALK_GRAPH.nodeById.get(nextId) : undefined;
-  if (!nextNode) {
-    setBehavior(actor, 'arriving', 0.8);
-    actor.state = 'idle';
-    return;
-  }
-  const remaining = distanceKm(actor.position, nextNode.point);
-  const stepDistance = Math.max(0, actor.speedKmPerSec * TIME_SCALE * delta);
-  const targetHeading = headingFor(actor, nextNode.point);
-  if (remaining <= stepDistance + 1e-6) {
-    if (!applyNextPosition(actor, nextNode.point)) return;
-    actor.currentNodeId = nextNode.id;
-    actor.pathIndex += 1;
-    actor.walkPhase += Math.max(0.08, remaining) * 9;
-    actor.walkedSincePause += remaining;
-    const followingId = actor.pathNodeIds[actor.pathIndex];
-    if (!followingId) {
-      actor.currentNodeId = nextNode.id;
-      setBehavior(actor, 'arriving', 0.75);
-      actor.state = 'idle';
-      return;
-    }
-    const followingNode = HERO_WALK_GRAPH.nodeById.get(followingId);
-    actor.destination = followingNode?.point ?? nextNode.point;
-    actor.desiredHeading = headingFor(actor, actor.destination);
-    if (actor.behavior !== 'transitioning') setBehavior(actor, 'walking', 0);
-    return;
-  }
-  const ratio = stepDistance / Math.max(remaining, 1e-9);
-  const nextPoint = {
-    x: actor.position.x + (nextNode.point.x - actor.position.x) * ratio,
-    z: actor.position.z + (nextNode.point.z - actor.position.z) * ratio,
+function captureRenderPose(actor: WorldActor): ActorRenderPose {
+  return {
+    position: { x: actor.position.x, z: actor.position.z },
+    heading: actor.heading,
+    walkPhase: actor.walkPhase,
+    walking: actor.state === 'walking',
+    edgeId: actor.edgeId,
+    fromNodeId: actor.fromNodeId,
+    pathNodeIds: [...actor.pathNodeIds],
+    destination: { x: actor.destination.x, z: actor.destination.z },
   };
-  if (!applyNextPosition(actor, nextPoint)) return;
-  turnToward(actor, targetHeading, TURN_RATE * delta);
-  actor.walkPhase += stepDistance * 9;
-  actor.walkedSincePause += stepDistance;
-  actor.state = 'walking';
-  if (actor.walkedSincePause >= actor.nextPauseKm) {
-    pauseThenChoose(actor);
-  }
 }
 
-function stepRouteActor(actor: WorldActor, deltaSeconds: number): void {
-  const route = routeForCandidateBySlug(actor.slug);
-  if (!route?.valid || route.lengthKm <= 0.05) {
+function primeRenderState(): void {
+  renderTransitions.clear();
+  for (const actor of state.actors) {
+    const pose = captureRenderPose(actor);
+    renderTransitions.set(actor.slug, {
+      from: pose,
+      to: pose,
+      at: state.elapsedSeconds,
+    });
+  }
+  renderAccumulator = 0;
+}
+
+primeRenderState();
+
+function currentEdge(actor: WorldActor): RoadEdge | null {
+  return actor.edgeId ? (HEX_ROAD_GRAPH.edges.get(actor.edgeId) ?? null) : null;
+}
+
+function pickNextEdge(actor: WorldActor, arrivingAt: string): RoadEdge | null {
+  const options = edgesAtNode(arrivingAt).filter((edge) => {
+    if (edge.id === actor.edgeId) return false;
+    return allowedEdge(edge, allowedSet(actor));
+  });
+  const pool =
+    options.length > 0
+      ? options
+      : edgesAtNode(arrivingAt).filter((edge) =>
+          allowedEdge(edge, allowedSet(actor)),
+        );
+  if (pool.length === 0) return null;
+  const totalWeight = pool.reduce(
+    (sum, edge) => sum + (edge.kind === 'connector' ? 2 : 5),
+    0,
+  );
+  let roll = nextRandom(actor) * totalWeight;
+  for (const edge of pool) {
+    roll -= edge.kind === 'connector' ? 2 : 5;
+    if (roll <= 0) return edge;
+  }
+  return pool[pool.length - 1] ?? null;
+}
+
+function beginEdge(
+  actor: WorldActor,
+  edge: RoadEdge,
+  fromNodeId: string,
+): void {
+  const from = fromNodeId === edge.to ? edge.to : edge.from;
+  const to = from === edge.from ? edge.to : edge.from;
+  actor.edgeId = edge.id;
+  actor.edgeProgress = 0;
+  actor.fromNodeId = from;
+  actor.pathNodeIds = [from, to];
+  actor.pathIndex = 0;
+  actor.destination = roadNode(to).point;
+  actor.desiredHeading = headingBetween(
+    roadNode(from).point,
+    roadNode(to).point,
+  );
+}
+
+function arrive(actor: WorldActor, nodeId: string): boolean {
+  const node = roadNode(nodeId);
+  actor.position = node.point;
+  actor.currentNodeId = nodeId;
+  actor.edgeProgress = 1;
+  actor.blockedTimer = 0;
+  const priorAdminId = actor.currentAdminId;
+  actor.currentAdminId = node.adminId;
+  actor.currentAdminName = node.districtId
+    ? (ADMIN_DISTRICT_BY_ID.get(node.districtId)?.name ?? null)
+    : null;
+  if (priorAdminId && priorAdminId !== node.adminId)
+    actor.districtTransitions += 1;
+
+  const traversedKm = currentEdge(actor)?.lengthKm ?? 0;
+  actor.walkedSincePause += traversedKm;
+  actor.nextPauseKm -= traversedKm;
+  if (actor.nextPauseKm <= 0) {
+    actor.nextPauseKm = 1.6 + nextRandom(actor) * 2.4;
+    if (nextRandom(actor) < 0.35) {
+      actor.state = 'idle';
+      actor.behavior = 'pausing';
+      actor.pauseRemaining = 1.2 + nextRandom(actor) * 2.2;
+      return true;
+    }
+  }
+
+  const next = pickNextEdge(actor, nodeId);
+  if (!next) {
     actor.state = 'idle';
     actor.behavior = 'idle';
-    return;
+    return true;
   }
-  if (actor.behavior === 'transitioning') {
-    actor.transitionTimer -= deltaSeconds;
-    if (actor.transitionTimer <= 0) setBehavior(actor, 'walking', 0);
-  }
-  if (
-    actor.behavior === 'idle' ||
-    actor.behavior === 'choosing' ||
-    actor.behavior === 'pausing' ||
-    actor.behavior === 'observing' ||
-    actor.behavior === 'arriving'
-  ) {
+  const nextNodeId = next.from === nodeId ? next.to : next.from;
+  const nextAdminId = roadNode(nextNodeId).adminId;
+  if (!actor.allowedAdminIds.includes(nextAdminId)) {
+    actor.blockedTransitions += 1;
     actor.state = 'idle';
-    actor.behaviorTimer -= deltaSeconds;
-    if (actor.behaviorTimer <= 0) {
-      if (nextRandom(actor) < 0.24)
-        actor.direction = actor.direction === 1 ? -1 : 1;
-      actor.walkedSincePause = 0;
-      actor.nextPauseKm = 0.3 + nextRandom(actor) * 0.9;
-      const target = sampleRoute(
-        route,
-        actor.progressKm + actor.direction * 0.22,
-      );
-      const targetHeading = headingFor(actor, target);
-      actor.desiredHeading = targetHeading;
-      if (Math.abs(angleDelta(actor.heading, targetHeading)) > 0.35) {
-        setBehavior(actor, 'turning', 0.35);
-      } else {
-        setBehavior(actor, 'walking', 0);
-      }
-    }
-    return;
+    actor.behavior = 'idle';
+    return true;
   }
-  if (actor.behavior === 'turning') {
-    actor.state = 'idle';
-    actor.behaviorTimer -= deltaSeconds;
-    turnToward(actor, actor.desiredHeading, TURN_RATE * deltaSeconds);
-    if (actor.behaviorTimer <= 0) setBehavior(actor, 'walking', 0);
-    return;
-  }
-  if (actor.behavior !== 'walking' && actor.behavior !== 'transitioning')
-    return;
-  const step =
-    actor.speedKmPerSec * TIME_SCALE * deltaSeconds * actor.direction;
-  const nextProgress =
-    (actor.progressKm + step + route.lengthKm) % route.lengthKm;
-  const nextPosition = sampleRoute(route, nextProgress);
-  if (!applyNextPosition(actor, nextPosition)) return;
-  actor.progressKm = nextProgress;
-  actor.walkPhase += Math.abs(step) * 9;
-  actor.walkedSincePause += Math.abs(step);
-  updateRouteDestination(actor);
-  turnToward(actor, actor.desiredHeading, TURN_RATE * deltaSeconds);
   actor.state = 'walking';
-  if (actor.walkedSincePause >= actor.nextPauseKm) {
-    pauseThenChoose(actor);
-  }
+  actor.behavior = 'walking';
+  beginEdge(actor, next, nodeId);
+  return false;
 }
 
-function stepActor(actor: WorldActor, deltaSeconds: number): void {
-  if (actor.pathMode === 'graph') {
-    stepGraphActor(actor, deltaSeconds);
+function reverseActor(actor: WorldActor): void {
+  const edge = currentEdge(actor);
+  if (!edge) return;
+  const fromNodeId = actor.pathNodeIds[0] ?? edge.from;
+  const toNodeId = actor.pathNodeIds[1] ?? edge.to;
+  actor.fromNodeId = toNodeId;
+  actor.pathNodeIds = [toNodeId, fromNodeId];
+  actor.edgeProgress = 1 - actor.edgeProgress;
+  actor.destination = roadNode(fromNodeId).point;
+  actor.desiredHeading = headingBetween(
+    roadNode(toNodeId).point,
+    actor.destination,
+  );
+  actor.position = pointOnActorEdge(actor);
+}
+
+function walk(actor: WorldActor, deltaSeconds: number): void {
+  if (actor.state === 'idle') {
+    actor.behaviorTimer += deltaSeconds;
+    actor.pauseRemaining -= deltaSeconds;
+    if (actor.pauseRemaining > 0) return;
+    if (actor.blocked) {
+      actor.blockedTimer += deltaSeconds;
+      if (!actorHasCloseNeighbour(actor)) {
+        actor.blocked = false;
+        actor.blockedTimer = 0;
+        actor.state = 'walking';
+        actor.behavior = 'walking';
+        return;
+      }
+      if (actor.blockedTimer > 2.2) {
+        actor.blocked = false;
+        actor.blockedTimer = 0;
+        actor.state = 'walking';
+        actor.behavior = 'turning';
+        reverseActor(actor);
+        return;
+      }
+      actor.pauseRemaining = 0.1;
+      return;
+    }
+    const nodeId = actor.currentNodeId;
+    if (!nodeId) {
+      actor.state = 'walking';
+      actor.behavior = 'walking';
+      return;
+    }
+    const next = pickNextEdge(actor, nodeId);
+    if (!next) return;
+    actor.state = 'walking';
+    actor.behavior = 'walking';
+    actor.behaviorTimer = 0;
+    beginEdge(actor, next, nodeId);
     return;
   }
-  stepRouteActor(actor, deltaSeconds);
-}
 
-const actorRouteCache = new Map<string, WorldRoute>();
-function routeForCandidateBySlug(slug: string): WorldRoute | null {
-  const cached = actorRouteCache.get(slug);
-  if (cached) return cached;
-  const candidate = candidateProfiles.find(
-    (item) => item.candidacy.slug === slug,
-  );
-  if (!candidate) return null;
-  const route = routeForCandidate(candidate);
-  actorRouteCache.set(slug, route);
-  return route;
+  let remaining = actor.speedKmPerSec * TIME_SCALE * deltaSeconds;
+  if (remaining <= 0) return;
+  let guard = 0;
+  while (remaining > 0 && guard < 8) {
+    guard += 1;
+    const edge = currentEdge(actor);
+    if (!edge) {
+      const fallback = actor.currentNodeId
+        ? pickNextEdge(actor, actor.currentNodeId)
+        : null;
+      if (!fallback || !actor.currentNodeId) return;
+      beginEdge(actor, fallback, actor.currentNodeId);
+      continue;
+    }
+    const remainingOnEdge = (1 - actor.edgeProgress) * edge.lengthKm;
+    const step = Math.min(remaining, remainingOnEdge);
+    const nextProgress =
+      actor.edgeProgress + step / Math.max(edge.lengthKm, 0.0001);
+    if (movementWouldCrowd(actor, pointOnActorEdge(actor, nextProgress))) {
+      actor.blocked = true;
+      actor.blockedTimer += deltaSeconds;
+      actor.state = 'idle';
+      actor.behavior = 'pausing';
+      actor.pauseRemaining = 0.12;
+      return;
+    }
+    actor.edgeProgress = nextProgress;
+    actor.progressKm += step;
+    remaining -= step;
+    actor.walkPhase += step * 3.4;
+    actor.position = pointOnActorEdge(actor);
+    actor.desiredHeading = headingBetween(
+      actor.fromNodeId ? roadNode(actor.fromNodeId).point : edge.a,
+      actor.destination,
+    );
+    const turnStep = BASE_TURN_RATE * deltaSeconds;
+    actor.heading = normalizeAngle(
+      actor.heading +
+        Math.max(
+          -turnStep,
+          Math.min(
+            turnStep,
+            normalizeAngle(actor.desiredHeading - actor.heading),
+          ),
+        ),
+    );
+    if (actor.edgeProgress >= 0.9999) {
+      const arrivalNodeId = actor.pathNodeIds[1] ?? edge.to;
+      actor.edgeProgress = 1;
+      const paused = arrive(actor, arrivalNodeId);
+      if (paused) return;
+    }
+  }
 }
 
 export function advanceSimulation(deltaSeconds: number): void {
   if (!Number.isFinite(deltaSeconds) || deltaSeconds <= 0) return;
-  const total = Math.min(deltaSeconds, 2);
-  state.elapsedSeconds += total;
+  const clamped = Math.min(deltaSeconds, 1.5);
+  for (const actor of state.actors) walk(actor, clamped);
+  state.elapsedSeconds += clamped;
   state.revision += 1;
-  for (const actor of state.actors) stepActor(actor, total);
 }
 
-/** Deterministic test helper: advance in one-second steps without frame clamping. */
 export function advanceSimulationSeconds(seconds: number): void {
   let remaining = Math.max(0, seconds);
   while (remaining > 0) {
-    const step = Math.min(1, remaining);
-    state.elapsedSeconds += step;
-    for (const actor of state.actors) stepActor(actor, step);
+    const step = Math.min(remaining, 0.25);
+    advanceSimulation(step);
     remaining -= step;
   }
-  state.revision += 1;
+}
+
+/**
+ * Advance the authoritative graph simulation in fixed ticks and leave a
+ * visual interpolation transition for the renderer. Returns the interpolation
+ * alpha (0..1) within the most recent tick.
+ *
+ * Direct calls to advanceSimulation stay available for deterministic tests and
+ * tools that do not render. This function is the only path used by the scene.
+ */
+export function advanceSimulationFrame(deltaSeconds: number): number {
+  if (!Number.isFinite(deltaSeconds) || deltaSeconds <= 0) {
+    return Math.max(0, Math.min(1, renderAccumulator / VISUAL_STEP_SECONDS));
+  }
+  renderAccumulator += Math.min(deltaSeconds, 1.5);
+  let steps = 0;
+  while (renderAccumulator >= VISUAL_STEP_SECONDS && steps < 12) {
+    const previous = new Map<string, ActorRenderPose>();
+    for (const actor of state.actors) {
+      previous.set(
+        actor.slug,
+        renderTransitions.get(actor.slug)?.to ?? captureRenderPose(actor),
+      );
+    }
+    advanceSimulation(VISUAL_STEP_SECONDS);
+    for (const actor of state.actors) {
+      renderTransitions.set(actor.slug, {
+        from: previous.get(actor.slug)!,
+        to: captureRenderPose(actor),
+        at: state.elapsedSeconds,
+      });
+    }
+    renderAccumulator -= VISUAL_STEP_SECONDS;
+    steps += 1;
+  }
+  return Math.max(0, Math.min(1, renderAccumulator / VISUAL_STEP_SECONDS));
+}
+
+/** Purely visual pose, interpolated on the authoritative road segment. */
+export function actorRenderPose(
+  actor: WorldActor,
+  alpha: number,
+): InterpolatedActorPose {
+  const transition = renderTransitions.get(actor.slug);
+  if (!transition) {
+    return {
+      position: { x: actor.position.x, z: actor.position.z },
+      heading: actor.heading,
+      walkPhase: actor.walkPhase,
+      walking: actor.state === 'walking',
+    };
+  }
+  return interpolateActorPose(transition, alpha);
 }
 
 export function getSimulationSnapshot(): SimulationState {
@@ -662,12 +679,16 @@ export function selectActor(slug: string | null): void {
 
 export function followActor(slug: string | null): void {
   state.followSlug = slug;
-  for (const actor of state.actors) actor.followingUser = actor.slug === slug;
 }
 
 export function resetSimulation(): void {
-  actorRouteCache.clear();
-  state = createState();
+  const next = buildState();
+  state.actors = next.actors;
+  state.selectedSlug = null;
+  state.followSlug = null;
+  state.elapsedSeconds = 0;
+  state.revision = 0;
+  primeRenderState();
 }
 
 export function canActorEnterDistrict(
@@ -677,13 +698,21 @@ export function canActorEnterDistrict(
   return actor.allowedAdminIds.includes(adminId);
 }
 
-export function graphForActor(actor: WorldActor): WalkGraph | null {
-  return actor.pathMode === 'graph' ? HERO_WALK_GRAPH : null;
+export function graphForActor(_actor: WorldActor): RoadGraph {
+  return HEX_ROAD_GRAPH;
 }
 
-export function actorDistrict(actor: WorldActor): WorldDistrict | null {
-  if (!actor.currentAdminId) return null;
-  return WORLD_DISTRICT_BY_ID.get(actor.currentAdminId) ?? null;
+export function actorDistrict(actor: WorldActor): DistrictRecord | null {
+  return actor.currentAdminId
+    ? (ADMIN_DISTRICT_BY_ID.get(actor.currentAdminId) ?? null)
+    : null;
+}
+
+export function actorIsOnRoad(actor: WorldActor): boolean {
+  const edge = currentEdge(actor);
+  if (!edge) return false;
+  const point = pointOnActorEdge(actor);
+  return distanceKm(point, actor.position) < 0.001;
 }
 
 export function actorsInWorldBounds(
@@ -750,6 +779,9 @@ export function simulationStats() {
     elapsedSeconds: state.elapsedSeconds,
     timeScale: TIME_SCALE,
     demoActors: 0,
+    roadNodes: HEX_ROAD_GRAPH.nodes.size,
+    roadEdges: HEX_ROAD_GRAPH.edges.size,
+    onRoad: state.actors.filter(actorIsOnRoad).length,
   };
 }
 

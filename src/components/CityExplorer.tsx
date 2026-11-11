@@ -10,54 +10,38 @@ import {
   useRef,
   useState,
 } from 'react';
-import type { DetailLevel } from '../city/builder';
-import type { LandmarkId } from '../city/layout';
-import type { PublicCandidateProfile, PublicDistrictView } from '../data';
 import {
-  electoralDistrictSlugForAdminName,
-  movementScopeForCandidate,
-  movementScopeForDistrictSlug,
-} from '../world/constituencies';
-import { worldDistrictFocus } from '../world/district-geometry';
-import { WORLD_DISTRICT_BY_ID } from '../world/geography';
-import { heroFocusToWorld } from '../world/hero';
+  coverageCompactSummary,
+  coveragesForAdminDistrictId,
+  coverageTypeLabel,
+  type PublicCandidateProfile,
+  type PublicDistrictView,
+} from '../data';
+import { withBase } from '../utils/paths';
+import {
+  ALL_CANDIDATE_VISIBILITY,
+  adminDistrictVisibilityScope,
+  type CandidateVisibilityScope,
+  constituencyVisibilityScope,
+  visibleCandidatesForFocus,
+} from '../world/candidate-visibility';
+import { electoralDistrictSlugForAdminName } from '../world/constituencies';
+import { ADMIN_DISTRICT_BY_ID } from '../world/geography';
+import { HEX_WORLD_FOCUS, hexFocusForDistrictIds } from '../world/hex';
+import { getActor } from '../world/simulation';
 import {
   ADMIN_ADJACENCY,
   ADMIN_SUMMARY,
   ADMIN_SUMMARY_BY_ID,
-  focusForWorldSummary,
-  summaryFocusForNames,
-  summaryWorldFocus,
 } from '../world/summary';
-import type { SceneFocus } from './CityScene';
+import type { DetailLevel, SceneFocus } from './CityScene';
 
 const CityScene = lazy(() => import('./CityScene'));
 const ProfileTabs = lazy(() => import('./ProfileTabs'));
 
-type FocusView = {
-  target: [number, number, number];
-  offset: [number, number, number];
-  radius: number;
-};
-
-export type LandmarkView = {
-  id: LandmarkId;
-  label: string;
-  english: string;
-  blurb: string;
-  x: number;
-  z: number;
-  focus: FocusView;
-};
-
-type SceneZone = 'overview' | 'zuoying' | 'nanzih';
-type DistrictFocusView = Record<SceneZone, FocusView>;
-
 type Props = {
   districts: PublicDistrictView[];
   candidates: PublicCandidateProfile[];
-  landmarks: LandmarkView[];
-  districtFocus: DistrictFocusView;
 };
 
 type ErrorBoundaryProps = { children: ReactNode; fallback: ReactNode };
@@ -77,12 +61,6 @@ class SceneErrorBoundary extends Component<
     return this.state.hasError ? this.props.fallback : this.props.children;
   }
 }
-
-const ZONE_LABELS: Record<SceneZone, string> = {
-  overview: '全城',
-  zuoying: '左營',
-  nanzih: '楠梓',
-};
 
 const TERRAIN_LABELS: Record<string, string> = {
   urban: '都市',
@@ -222,37 +200,23 @@ function StaticCityFallback({
   );
 }
 
-export default function CityExplorer({
-  districts,
-  candidates,
-  landmarks,
-  districtFocus,
-}: Props) {
-  const firstDistrict =
-    districts.find((district) => district.isDemo === true) ?? districts[0];
+export default function CityExplorer({ districts, candidates }: Props) {
+  const firstDistrict = districts[0];
   const [selectedDistrictSlug, setSelectedDistrictSlug] = useState(
     firstDistrict?.slug ?? '',
   );
   const [electionFilter, setElectionFilter] = useState<
-    'all' | 'mayoral' | 'city-council' | 'indigenous-council' | 'demo'
+    'all' | 'mayoral' | 'city-council' | 'indigenous-council'
   >('all');
   const [selectedCandidateSlug, setSelectedCandidateSlug] = useState<
     string | null
   >(null);
-  const [selectedLandmark, setSelectedLandmark] = useState<LandmarkId | null>(
-    null,
-  );
-  const [hoveredLandmark, setHoveredLandmark] = useState<LandmarkId | null>(
-    null,
-  );
   const [selectedAdminId, setSelectedAdminId] = useState<string | null>(null);
   const [hoveredAdminId, setHoveredAdminId] = useState<string | null>(null);
   const [followActorSlug, setFollowActorSlug] = useState<string | null>(null);
-  const [worldMode, setWorldMode] = useState(true);
-  const [activeZone, setActiveZone] = useState<SceneZone>('overview');
+  const [overview, setOverview] = useState(true);
   const [viewNonce, setViewNonce] = useState(0);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [boundaryDebug, setBoundaryDebug] = useState(false);
   const [dockPanel, setDockPanel] = useState<
     'districts' | 'people' | 'admin' | null
   >(null);
@@ -266,10 +230,8 @@ export default function CityExplorer({
   const restoreFocusPendingRef = useRef(false);
   const returnFocusRef = useRef<{
     districtSlug: string;
-    zone: SceneZone;
-    landmark: LandmarkId | null;
     adminId: string | null;
-    worldMode: boolean;
+    overview: boolean;
   } | null>(null);
 
   useEffect(() => {
@@ -277,16 +239,15 @@ export default function CityExplorer({
     if (window.matchMedia('(min-width: 1024px)').matches) setDetail('high');
 
     const params = new URLSearchParams(window.location.search);
-    if (params.get('debug') === 'boundaries') setBoundaryDebug(true);
-    let hasUrlFocus = false;
+    let hasExplicitDistrict = false;
     const districtFromUrl = params.get('district');
     if (
       districtFromUrl &&
       districts.some((district) => district.slug === districtFromUrl)
     ) {
       setSelectedDistrictSlug(districtFromUrl);
-      setWorldMode(false);
-      hasUrlFocus = true;
+      setOverview(false);
+      hasExplicitDistrict = true;
     }
 
     const adminFromUrl = params.get('admin');
@@ -294,37 +255,14 @@ export default function CityExplorer({
       ? ADMIN_SUMMARY_BY_ID.get(adminFromUrl)
       : undefined;
     if (admin) {
-      hasUrlFocus = true;
       setSelectedAdminId(admin.id);
-      setWorldMode(true);
-      setActiveZone(
-        admin.shortName === '左營'
-          ? 'zuoying'
-          : admin.shortName === '楠梓'
-            ? 'nanzih'
-            : 'overview',
-      );
-      const electoral = electoralDistrictSlugForAdminName(admin.shortName);
-      if (electoral && districts.some((item) => item.slug === electoral)) {
-        setSelectedDistrictSlug(electoral);
+      setOverview(false);
+      if (!hasExplicitDistrict) {
+        const electoral = electoralDistrictSlugForAdminName(admin.shortName);
+        if (electoral && districts.some((item) => item.slug === electoral)) {
+          setSelectedDistrictSlug(electoral);
+        }
       }
-    }
-
-    const focusFromUrl = params.get('focus');
-    const landmarkFromUrl = landmarks.find(
-      (landmark) => landmark.id === focusFromUrl,
-    );
-    if (landmarkFromUrl) {
-      hasUrlFocus = true;
-      setWorldMode(false);
-      setSelectedLandmark(landmarkFromUrl.id);
-      setActiveZone(
-        landmarkFromUrl.id === 'harbor-front'
-          ? 'overview'
-          : landmarkFromUrl.x > 4
-            ? 'nanzih'
-            : 'zuoying',
-      );
     }
 
     const candidateFromUrl = params.get('candidate');
@@ -333,21 +271,11 @@ export default function CityExplorer({
         (item) => item.candidacy.slug === candidateFromUrl,
       );
       if (candidate) {
-        hasUrlFocus = true;
-        setWorldMode(false);
+        setOverview(false);
         setSelectedCandidateSlug(candidateFromUrl);
         setFollowActorSlug(candidateFromUrl);
         setSelectedDistrictSlug(candidate.district.slug);
-        setSelectedLandmark(null);
-        setActiveZone('overview');
       }
-    }
-
-    // On a portrait phone an all-district overview is too small to explore,
-    // so open on the Zuoying side of the diorama unless a URL names a focus.
-    if (!hasUrlFocus && window.matchMedia('(max-width: 760px)').matches) {
-      setWorldMode(false);
-      setActiveZone('zuoying');
     }
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -355,30 +283,14 @@ export default function CityExplorer({
     updateMotion();
     mediaQuery.addEventListener('change', updateMotion);
     return () => mediaQuery.removeEventListener('change', updateMotion);
-  }, [candidates, districts, landmarks]);
-
-  useEffect(() => {
-    const onSettingsOpenChange = (event: Event) => {
-      setSettingsOpen((event as CustomEvent<boolean>).detail);
-    };
-    window.addEventListener(
-      'kaohsiung:settings-open-change',
-      onSettingsOpenChange,
-    );
-    return () =>
-      window.removeEventListener(
-        'kaohsiung:settings-open-change',
-        onSettingsOpenChange,
-      );
-  }, []);
+  }, [candidates, districts]);
 
   useEffect(() => {
     if (webglSupported === null) return;
     const params = new URLSearchParams(window.location.search);
     if (selectedDistrictSlug) params.set('district', selectedDistrictSlug);
     else params.delete('district');
-    if (selectedLandmark) params.set('focus', selectedLandmark);
-    else params.delete('focus');
+    params.delete('focus');
     if (selectedCandidateSlug) params.set('candidate', selectedCandidateSlug);
     else params.delete('candidate');
     if (selectedAdminId) params.set('admin', selectedAdminId);
@@ -390,7 +302,6 @@ export default function CityExplorer({
     selectedAdminId,
     selectedCandidateSlug,
     selectedDistrictSlug,
-    selectedLandmark,
     webglSupported,
   ]);
 
@@ -410,11 +321,8 @@ export default function CityExplorer({
     returnFocusRef.current = null;
     if (origin) {
       setSelectedDistrictSlug(origin.districtSlug);
-      setActiveZone(origin.zone);
-      setSelectedLandmark(origin.landmark);
       setSelectedAdminId(origin.adminId);
-      setWorldMode(origin.worldMode);
-      if (origin.landmark) setHoveredLandmark(null);
+      setOverview(origin.overview);
     }
   }, []);
 
@@ -435,9 +343,7 @@ export default function CityExplorer({
       if (event.key !== 'Escape') return;
       if (settingsOpen) {
         setSettingsOpen(false);
-        window.dispatchEvent(
-          new CustomEvent('kaohsiung:settings-open-change', { detail: false }),
-        );
+        window.dispatchEvent(new CustomEvent('kaohsiung:settings-closed'));
         return;
       }
       if (selectedCandidateSlug) {
@@ -448,14 +354,12 @@ export default function CityExplorer({
         setDockPanel(null);
         return;
       }
-      if (selectedLandmark) {
-        setSelectedLandmark(null);
-        return;
-      }
       if (selectedAdminId) {
         setSelectedAdminId(null);
-        setWorldMode(true);
+        setOverview(true);
+        return;
       }
+      if (!overview) setOverview(true);
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
@@ -464,14 +368,12 @@ export default function CityExplorer({
     dockPanel,
     selectedAdminId,
     selectedCandidateSlug,
-    selectedLandmark,
+    overview,
     settingsOpen,
   ]);
 
   const filteredDistricts = useMemo(() => {
     if (electionFilter === 'all') return districts;
-    if (electionFilter === 'demo')
-      return districts.filter((district) => district.isDemo === true);
     return districts.filter(
       (district) => district.electionType === electionFilter,
     );
@@ -496,102 +398,85 @@ export default function CityExplorer({
     filteredDistricts[0] ??
     firstDistrict;
 
-  const visibleCandidates = useMemo(
-    () =>
-      candidates.filter(
-        (candidate) => candidate.district.slug === selectedDistrict?.slug,
-      ),
-    [candidates, selectedDistrict?.slug],
-  );
-
   const selectedCandidate = candidates.find(
     (candidate) => candidate.candidacy.slug === selectedCandidateSlug,
-  );
-  const selectedLandmarkSpec = landmarks.find(
-    (landmark) => landmark.id === selectedLandmark,
-  );
-  const hoveredLandmarkSpec = landmarks.find(
-    (landmark) => landmark.id === hoveredLandmark,
   );
   const selectedAdmin = selectedAdminId
     ? (ADMIN_SUMMARY_BY_ID.get(selectedAdminId) ?? null)
     : null;
-  const selectedAdminWorld = selectedAdminId
-    ? (WORLD_DISTRICT_BY_ID.get(selectedAdminId) ?? null)
-    : null;
   const selectedAdminNeighbours = selectedAdmin
     ? (ADMIN_ADJACENCY[selectedAdmin.shortName] ?? [])
     : [];
+  const selectedAdminCoverages = selectedAdmin
+    ? coveragesForAdminDistrictId(selectedAdmin.id)
+    : [];
+  const selectedCoverage = selectedDistrict?.constituencyCoverage;
+  const candidateVisibilityScope = useMemo<CandidateVisibilityScope>(() => {
+    if (selectedCandidate) {
+      return selectedDistrict?.constituencyCoverage
+        ? constituencyVisibilityScope(selectedDistrict.slug)
+        : ALL_CANDIDATE_VISIBILITY;
+    }
+    if (selectedAdminId) {
+      return adminDistrictVisibilityScope([selectedAdminId]);
+    }
+    if (!overview && selectedDistrict?.constituencyCoverage) {
+      return constituencyVisibilityScope(selectedDistrict.slug);
+    }
+    return ALL_CANDIDATE_VISIBILITY;
+  }, [
+    overview,
+    selectedAdminId,
+    selectedCandidate,
+    selectedDistrict?.constituencyCoverage,
+    selectedDistrict?.slug,
+  ]);
+  const visibleCandidates = useMemo(
+    () => visibleCandidatesForFocus(candidates, candidateVisibilityScope),
+    [candidates, candidateVisibilityScope],
+  );
+  const candidateActor = selectedCandidate
+    ? getActor(selectedCandidate.candidacy.slug)
+    : null;
 
   const sceneFocus: SceneFocus = (() => {
     if (selectedCandidate) {
-      const scope = movementScopeForCandidate(selectedCandidate);
-      const heroConstituency =
-        scope.allowedAdminNames.includes('左營') &&
-        scope.allowedAdminNames.includes('楠梓');
-      const base = heroConstituency
-        ? heroFocusToWorld(districtFocus.overview)
-        : (summaryFocusForNames(scope.allowedAdminNames) ??
-          focusForWorldSummary());
-      // A citywide candidate needs district context; a council candidate
-      // moving inside the hero diorama needs the plaza and streets.
-      const followRadius =
-        scope.kind === 'mayoral' || scope.kind === 'indigenous' ? 8.4 : 1.8;
       return {
-        key: `candidate-${selectedCandidate.candidacy.slug}`,
-        target: base.target,
-        offset: [4.6, 6.2, 4.6] as [number, number, number],
-        radius: followRadius,
-      };
-    }
-    if (selectedLandmarkSpec) {
-      return {
-        key: `landmark-${selectedLandmarkSpec.id}`,
-        ...heroFocusToWorld(selectedLandmarkSpec.focus),
+        key: 'candidate-' + selectedCandidate.candidacy.slug,
+        target: candidateActor
+          ? [candidateActor.position.x, 0, candidateActor.position.z]
+          : HEX_WORLD_FOCUS.target,
+        offset: [4.6, 6.2, 4.6],
+        // Candidate framing preserves the current zoom; this radius only
+        // decides which nearby avatars get their full character model.
+        radius: 4.0,
       };
     }
     if (selectedAdmin) {
+      const adminFocus =
+        hexFocusForDistrictIds([selectedAdmin.id], 1.25) ?? HEX_WORLD_FOCUS;
       return {
-        key: `admin-${selectedAdmin.id}-${viewNonce}`,
-        ...(selectedAdminWorld
-          ? worldDistrictFocus(selectedAdminWorld)
-          : summaryWorldFocus(selectedAdmin)),
+        key: 'admin-' + selectedAdmin.id + '-' + String(viewNonce),
+        ...adminFocus,
       };
     }
-    if (worldMode) {
+    if (!overview) {
+      const ids = selectedCoverage?.adminDistrictIds ?? [];
+      const scopeFocus =
+        (ids.length ? hexFocusForDistrictIds(ids, 1.12) : null) ??
+        HEX_WORLD_FOCUS;
       return {
-        key: `world-overview-${viewNonce}`,
-        ...focusForWorldSummary(),
+        key:
+          'scope-' +
+          (selectedDistrict?.slug ?? 'none') +
+          '-' +
+          String(viewNonce),
+        ...scopeFocus,
       };
-    }
-    if (activeZone === 'zuoying' || activeZone === 'nanzih') {
-      return {
-        key: `zone-${activeZone}-${viewNonce}`,
-        ...heroFocusToWorld(districtFocus[activeZone]),
-      };
-    }
-    const scope = movementScopeForDistrictSlug(selectedDistrict?.slug ?? '');
-    if (scope.kind !== 'mayoral' && scope.kind !== 'indigenous') {
-      if (
-        scope.allowedAdminNames.includes('左營') &&
-        scope.allowedAdminNames.includes('楠梓')
-      ) {
-        return {
-          key: `hero-overview-${viewNonce}`,
-          ...heroFocusToWorld(districtFocus.overview),
-        };
-      }
-      const scopeFocus = summaryFocusForNames(scope.allowedAdminNames);
-      if (scopeFocus) {
-        return {
-          key: `scope-${selectedDistrict?.slug ?? 'none'}-${viewNonce}`,
-          ...scopeFocus,
-        };
-      }
     }
     return {
-      key: `world-overview-${viewNonce}`,
-      ...focusForWorldSummary(),
+      key: 'world-overview-' + String(viewNonce),
+      ...HEX_WORLD_FOCUS,
     };
   })();
 
@@ -606,35 +491,25 @@ export default function CityExplorer({
           : null;
       returnFocusRef.current = {
         districtSlug: selectedDistrictSlug,
-        zone: activeZone,
-        landmark: selectedLandmark,
         adminId: selectedAdminId,
-        worldMode,
+        overview,
       };
       setSelectedDistrictSlug(candidate.district.slug);
       setSelectedCandidateSlug(slug);
       setFollowActorSlug(slug);
-      setWorldMode(false);
+      setOverview(false);
       setDockPanel(null);
-      setSelectedLandmark(null);
-      setHoveredLandmark(null);
-      setActiveZone('overview');
       if (electionFilter !== 'all') {
-        const matchesFilter =
-          electionFilter === 'demo'
-            ? candidate.district.isDemo === true
-            : candidate.district.electionType === electionFilter;
-        if (!matchesFilter) setElectionFilter('all');
+        if (candidate.district.electionType !== electionFilter)
+          setElectionFilter('all');
       }
     },
     [
-      activeZone,
       candidates,
       electionFilter,
+      overview,
       selectedAdminId,
       selectedDistrictSlug,
-      selectedLandmark,
-      worldMode,
     ],
   );
 
@@ -653,64 +528,38 @@ export default function CityExplorer({
       );
   }, [selectCandidate]);
 
+  useEffect(() => {
+    const onSettingsOpenChange = (event: Event) => {
+      setSettingsOpen((event as CustomEvent<boolean>).detail);
+    };
+    window.addEventListener(
+      'kaohsiung:settings-open-change',
+      onSettingsOpenChange,
+    );
+    return () =>
+      window.removeEventListener(
+        'kaohsiung:settings-open-change',
+        onSettingsOpenChange,
+      );
+  }, []);
+
   const selectDistrict = (slug: string) => {
     returnFocusRef.current = null;
     setSelectedDistrictSlug(slug);
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
-    setSelectedLandmark(null);
-    setHoveredLandmark(null);
     setSelectedAdminId(null);
-    setWorldMode(false);
-    setActiveZone('overview');
+    setOverview(false);
     setViewNonce((value) => value + 1);
   };
 
-  const selectLandmark = (id: LandmarkId | null) => {
-    returnFocusRef.current = null;
-    if (!id) {
-      setSelectedLandmark(null);
-      return;
-    }
-    const spec = landmarks.find((landmark) => landmark.id === id);
-    if (!spec) return;
-    if (selectedLandmark === id) {
-      setSelectedLandmark(null);
-      return;
-    }
-    setSelectedLandmark(id);
-    setSelectedCandidateSlug(null);
-    setSelectedAdminId(null);
-    setFollowActorSlug(null);
-    setWorldMode(false);
-    setHoveredLandmark(null);
-    setActiveZone(
-      id === 'harbor-front' ? 'overview' : spec.x > 4 ? 'nanzih' : 'zuoying',
-    );
-  };
-
-  const changeZone = (zone: SceneZone) => {
-    returnFocusRef.current = null;
-    setActiveZone(zone);
-    setSelectedCandidateSlug(null);
-    setFollowActorSlug(null);
-    setSelectedLandmark(null);
-    setHoveredLandmark(null);
-    setSelectedAdminId(null);
-    setWorldMode(zone === 'overview');
-    if (zone !== 'overview') {
-      const council04 = districts.find(
-        (district) => district.slug === 'kaohsiung-council-04',
-      );
-      if (council04) setSelectedDistrictSlug(council04.slug);
-    }
-    setViewNonce((value) => value + 1);
-  };
-
-  const selectAdmin = (id: string | null) => {
+  const selectAdmin = (
+    id: string | null,
+    options: { syncConstituency?: boolean } = {},
+  ) => {
     if (!id) {
       setSelectedAdminId(null);
-      setWorldMode(true);
+      setOverview(true);
       setViewNonce((value) => value + 1);
       return;
     }
@@ -720,40 +569,52 @@ export default function CityExplorer({
     setSelectedAdminId(id);
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
-    setSelectedLandmark(null);
-    setHoveredLandmark(null);
-    setWorldMode(true);
     setDockPanel(null);
-    setActiveZone(
-      district.shortName === '左營'
-        ? 'zuoying'
-        : district.shortName === '楠梓'
-          ? 'nanzih'
-          : 'overview',
-    );
-    const electoral = electoralDistrictSlugForAdminName(district.shortName);
-    if (electoral && districts.some((item) => item.slug === electoral)) {
-      setSelectedDistrictSlug(electoral);
+    setOverview(false);
+    if (options.syncConstituency !== false) {
+      const electoral = electoralDistrictSlugForAdminName(district.shortName);
+      if (electoral && districts.some((item) => item.slug === electoral)) {
+        setSelectedDistrictSlug(electoral);
+      }
     }
     setViewNonce((value) => value + 1);
   };
 
+  const coverageAdminButtons = selectedCoverage
+    ? selectedCoverage.adminDistrictIds.map((id) => {
+        const district = ADMIN_DISTRICT_BY_ID.get(id);
+        if (!district) return null;
+        return (
+          <button
+            className="city-coverage-card__chip"
+            data-admin-id={id}
+            key={id}
+            type="button"
+            onClick={() => selectAdmin(id, { syncConstituency: false })}
+          >
+            {district.name}
+          </button>
+        );
+      })
+    : null;
+
   const backToWorld = () => {
+    returnFocusRef.current = null;
     setSelectedAdminId(null);
-    setWorldMode(true);
+    setSelectedCandidateSlug(null);
+    setFollowActorSlug(null);
+    setOverview(true);
     setViewNonce((value) => value + 1);
   };
 
   const resetView = () => {
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
-    setSelectedLandmark(null);
-    setHoveredLandmark(null);
     setSelectedAdminId(null);
-    setWorldMode(true);
-    setActiveZone('overview');
+    setOverview(true);
     setViewNonce((value) => value + 1);
     setSettingsOpen(false);
+    window.dispatchEvent(new CustomEvent('kaohsiung:settings-closed'));
   };
 
   const sceneFallback = (
@@ -768,6 +629,8 @@ export default function CityExplorer({
       className={`city-app${selectedCandidate ? ' is-profile-open' : ''}`}
       data-testid="city-explorer"
       data-scene-focus={sceneFocus.key}
+      data-candidate-scope={candidateVisibilityScope.kind}
+      data-candidate-count={visibleCandidates.length}
       data-hydrated={webglSupported === null ? 'false' : 'true'}
     >
       <div className="city-stage" data-testid="scene-frame">
@@ -787,25 +650,21 @@ export default function CityExplorer({
                   focus={sceneFocus}
                   followActorSlug={followActorSlug}
                   hoveredAdminId={hoveredAdminId}
-                  hoveredLandmark={hoveredLandmark}
-                  boundaryDebug={boundaryDebug}
                   reducedMotion={reducedMotion}
                   selectedAdminId={selectedAdminId}
                   selectedCandidateSlug={selectedCandidateSlug}
-                  selectedLandmark={selectedLandmark}
+                  visibilityScope={candidateVisibilityScope}
                   onHoverAdmin={setHoveredAdminId}
-                  onHoverLandmark={setHoveredLandmark}
                   onManualCamera={() => setFollowActorSlug(null)}
                   onReady={() => setSceneReady(true)}
                   onSelectAdmin={selectAdmin}
                   onSelectCandidate={selectCandidate}
-                  onSelectLandmark={selectLandmark}
                 />
               </Suspense>
             </SceneErrorBoundary>
             {!sceneReady && (
               <div className="scene-loading city-loading" role="status">
-                正在準備左營・楠梓迷你城市…
+                正在準備高雄六角迷你城市…
               </div>
             )}
           </div>
@@ -819,33 +678,7 @@ export default function CityExplorer({
 
         <div className="city-vignette" aria-hidden="true" />
 
-        {hoveredLandmarkSpec && hoveredLandmark !== selectedLandmark && (
-          <div className="city-hover-card" aria-hidden="true">
-            <strong>{hoveredLandmarkSpec.label}</strong>
-            <span>{hoveredLandmarkSpec.english}</span>
-          </div>
-        )}
-
-        {selectedLandmarkSpec && !selectedCandidate && (
-          <article
-            className="city-landmark-card"
-            aria-label={`${selectedLandmarkSpec.label} 地標資訊`}
-          >
-            <span className="city-card__kicker">LANDMARK</span>
-            <h2>{selectedLandmarkSpec.label}</h2>
-            <span className="city-landmark-card__english">
-              {selectedLandmarkSpec.english}
-            </span>
-            <p>{selectedLandmarkSpec.blurb}</p>
-            <div className="city-landmark-card__actions">
-              <button type="button" onClick={() => selectLandmark(null)}>
-                返回城市
-              </button>
-            </div>
-          </article>
-        )}
-
-        {selectedAdmin && !selectedCandidate && !selectedLandmarkSpec && (
+        {selectedAdmin && !selectedCandidate && (
           <article
             className="city-admin-card"
             aria-label={`${selectedAdmin.name} 行政區資訊`}
@@ -870,8 +703,25 @@ export default function CityExplorer({
                 ? selectedAdminNeighbours.join('、')
                 : '無資料'}
             </p>
+            {selectedAdminCoverages.length > 0 && (
+              <div className="city-admin-card__constituencies">
+                <span>所屬選舉區</span>
+                <div>
+                  {selectedAdminCoverages.map((coverage) => (
+                    <button
+                      key={coverage.number}
+                      type="button"
+                      onClick={() => selectDistrict(coverage.slug)}
+                    >
+                      第{coverage.number}選舉區・
+                      {coverageTypeLabel(coverage.kind)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             <p className="city-admin-card__note">
-              邊界依官方圖資簡化；城市量體與街景為藝術化示意。
+              行政區界線依官方圖資簡化；六角平台、地標與街景為藝術化示意。
             </p>
             <div className="city-landmark-card__actions">
               <button type="button" onClick={backToWorld}>
@@ -880,31 +730,74 @@ export default function CityExplorer({
             </div>
           </article>
         )}
+
+        {selectedCoverage && !selectedCandidate && !selectedAdmin && (
+          <article
+            aria-label={(selectedDistrict?.name ?? '') + ' 選區範圍'}
+            className="city-coverage-card"
+            data-testid="city-coverage-card"
+          >
+            <span className="city-card__kicker">CONSTITUENCY COVERAGE</span>
+            <h2>{selectedDistrict?.name}</h2>
+            <p className="city-coverage-card__type">
+              {selectedCoverage.coverageLabel}
+            </p>
+            {selectedCoverage.coverageKind === 'citywide-indigenous' ? (
+              <details className="city-coverage-card__details">
+                <summary>全市 38 個行政區（互動移動範圍）</summary>
+                <div className="city-coverage-card__chips">
+                  {coverageAdminButtons}
+                </div>
+              </details>
+            ) : (
+              <div className="city-coverage-card__chips">
+                {coverageAdminButtons}
+              </div>
+            )}
+            <p className="city-coverage-card__note">
+              {selectedCoverage.coverageKind === 'citywide-indigenous'
+                ? '平地原住民選舉區依身分與選舉資格認定；行政區僅作互動移動範圍。'
+                : selectedCoverage.coverageKind ===
+                    'indigenous-eligible-districts'
+                  ? '上述行政區為山地原住民選舉區的設籍範圍，不是一般地理選區。'
+                  : '點選行政區可聚焦該區，不會切換目前選舉區。'}
+            </p>
+            <a
+              className="secondary-link"
+              href={withBase('/districts/' + selectedCoverage.slug + '/')}
+            >
+              查看選區頁 →
+            </a>
+          </article>
+        )}
       </div>
 
       <div className="city-hud">
         <div className="city-scene-label">
-          <span className="city-scene-label__kicker">CURRENT DISTRICT</span>
+          <span className="city-scene-label__kicker">選舉區・CURRENT RACE</span>
           <strong id="scene-heading">
-            {selectedDistrict?.name ?? '港都示範城市'}
+            {selectedDistrict?.name ?? '港都城市'}
           </strong>
           <span className="city-scene-label__zone">
-            {worldMode
-              ? selectedAdmin
-                ? `行政區・${selectedAdmin.name}・藝術化量體`
-                : '高雄市 38 行政區・全市視角'
-              : activeZone === 'overview'
-                ? '左營 × 楠梓・高細節區'
-                : `${ZONE_LABELS[activeZone]}視角・藝術化城市模型`}
+            {selectedAdmin
+              ? '行政區：' + selectedAdmin.name + '・六角迷你模型'
+              : selectedCandidate
+                ? '追蹤人物：' +
+                  selectedCandidate.person.displayName +
+                  '・沿道路行走'
+                : !overview && selectedDistrict
+                  ? '選區：' + selectedDistrict.name + '・道路移動範圍'
+                  : '高雄市 38 行政區・六角迷你城市'}
           </span>
+          {selectedCoverage && (
+            <span className="city-scene-label__coverage">
+              {coverageCompactSummary(selectedCoverage)}
+            </span>
+          )}
         </div>
 
         {settingsOpen && (
-          <section
-            aria-label="顯示與體驗設定"
-            className="city-settings"
-            id="city-settings-panel"
-          >
+          <section className="city-settings" aria-label="顯示與體驗設定">
             <div className="city-settings__head">
               <strong>顯示與體驗</strong>
               <button
@@ -950,7 +843,7 @@ export default function CityExplorer({
               重設城市視角
             </button>
             <p className="city-settings__note">
-              精緻模式保留完整街道細節與樹木；較低階模式會減少裝飾物件以維持流暢度。
+              精緻模式保留完整六角平台、地標與樹木；較低階模式會減少裝飾物件以維持流暢度。
             </p>
           </section>
         )}
@@ -959,17 +852,14 @@ export default function CityExplorer({
           <div className="city-dock__bar">
             <fieldset className="city-zones">
               <legend className="sr-only">城市視角</legend>
-              {(Object.keys(ZONE_LABELS) as SceneZone[]).map((zone) => (
-                <button
-                  aria-pressed={activeZone === zone}
-                  className={activeZone === zone ? 'is-active' : ''}
-                  key={zone}
-                  type="button"
-                  onClick={() => changeZone(zone)}
-                >
-                  {ZONE_LABELS[zone]}
-                </button>
-              ))}
+              <button
+                aria-pressed={overview}
+                className={overview ? 'is-active' : ''}
+                type="button"
+                onClick={backToWorld}
+              >
+                全市
+              </button>
             </fieldset>
 
             <button
@@ -1036,7 +926,6 @@ export default function CityExplorer({
                     ['mayoral', '市長選'],
                     ['city-council', '市議選'],
                     ['indigenous-council', '原住民族'],
-                    ['demo', '示範資料'],
                   ].map(([value, label]) => (
                     <button
                       aria-selected={electionFilter === value}
@@ -1081,10 +970,12 @@ export default function CityExplorer({
                     onClick={() => selectDistrict(district.slug)}
                   >
                     <strong>{district.name}</strong>
-                    <small>
-                      {district.districtLabel}・
-                      {district.isDemo ? '示範' : '官方切片'}
-                    </small>
+                    <small>{district.districtLabel}・官方切片</small>
+                    {district.constituencyCoverage && (
+                      <small className="city-district__coverage">
+                        {coverageCompactSummary(district.constituencyCoverage)}
+                      </small>
+                    )}
                   </button>
                 ))}
               </fieldset>
@@ -1175,11 +1066,7 @@ export default function CityExplorer({
         >
           <div className="profile-panel__top">
             <div className="profile-panel__identity">
-              <span className="profile-badge">
-                {selectedCandidate.person.isDemo === true
-                  ? '虛構示範人物'
-                  : '官方資料'}
-              </span>
+              <span className="profile-badge">官方資料</span>
               <h2>{selectedCandidate.person.displayName}</h2>
               <p>
                 {selectedCandidate.candidacy.currentPosition}・

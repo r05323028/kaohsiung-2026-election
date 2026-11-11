@@ -32,7 +32,7 @@ src/data/official/adapters.ts
 Astro getStaticPaths() -> dist/ static HTML
 ```
 
-`npm run build` 依序執行 demo、official、selected public-record、full-roster coverage、candidate-research、biography validation、editorial publication-gate validation 與 bounded release verification，再執行 `astro check` 與 `astro build`。所有建置驗證不連線，確保同一組快照可重現同一組 HTML/report。
+`npm run build` 依序執行 demo、constituency coverage、official、selected public-record、full-roster coverage、candidate-research、biography validation、editorial publication-gate validation 與 bounded release verification，再執行 `astro check` 與 `astro build`。所有建置驗證不連線，確保同一組快照可重現同一組 HTML/report。
 
 ## Data boundaries
 
@@ -40,6 +40,7 @@ Astro getStaticPaths() -> dist/ static HTML
 - `data/approved/2026/kaohsiung-election.json` 是官方選舉頁面的 canonical input；`data/approved/2026/kaohsiung-public-records.json` 是選定人物公共紀錄的 canonical input；`data/approved/2026/candidate-public-record-research.json` 是完整名冊研究執行的靜態 read model，仍標示人工審查 pending；`data/approved/2026/biographies.json` 是相容投影，目前為空集合；真正通過人工、編輯與 publication gate 的 claims 才能由 `editorial:publish` 寫入 `data/published/2026/candidate-biographies.json`。
 - `src/data/index.ts` 只在最後組合 `officialCandidateProfiles`、`officialDistricts` 與 demo views；資料內容不互相 fallback。
 - `src/data/public-records/index.ts` 先以 manifest source IDs 驗證 public-record dataset，再按 person ID 建立 bundle；沒有 bundle 的官方人物不會 fallback 到 demo records。`src/data/biographies/index.ts` 只讀並驗證 `data/published/2026/candidate-biographies.json`；未出版的 claims、review packet 與 pending 數量永遠不會流入頁面、search index、metadata 或 WebGL。
+- `src/data/constituencies.ts` 是 15 個市議員選舉區與 38 個行政區關係的 canonical model。它以既有 `E01`–`E38` IDs 表達 `adminDistrictIds`，用 `coverageKind` 區分普通地理選區（1–11）、全市平地原住民選區（12）與山地原住民設籍範圍（13–15）。`DistrictView.constituencyCoverage` 由 `src/data/official/index.ts` 注入，元件只讀此模型，不重複硬編碼選區行政區清單，也不建立第二套行政區定義。
 - `CandidateProfileView` 以可選 `isDemo`/`publicationStatus` 支援共用視覺元件，但公開 copy 依資料來源分層。
 
 ## Runtime regions
@@ -50,17 +51,17 @@ Astro getStaticPaths() -> dist/ static HTML
 
 ### Homepage explorer
 
-`src/components/CityExplorer.tsx` 提供選舉類型/資料層篩選、選舉區、靜態搜尋、鍵盤可用人物清單、角色選擇、profile panel、loading/error 與 WebGL fallback。市長、普通市議、原住民族選區使用 official district metadata；示範資料保留獨立 filter。
+`src/components/CityExplorer.tsx` 提供選舉類型/資料層篩選、選舉區、靜態搜尋、鍵盤可用人物清單、角色選擇、profile panel、loading/error 與 WebGL fallback。市長、普通市議、原住民族選區使用 official district metadata；示範資料保留獨立 filter。選區涵蓋範圍卡以 canonical coverage model 顯示行政區，點擊行政區只移動/admin focus，不覆寫目前選區；行政區焦點卡反向列出所屬選舉區。
 
 `MiniCityScene` 以 `React.lazy` 延後載入 R3F，使用 orthographic camera、demand frame loop、有限 OrbitControls、DPR 上限與 reduced-motion。所有關鍵事實在 canvas 外的 HTML。
 
 ### Static pages
 
-`src/pages/districts/[slug].astro` 與 `src/pages/candidates/[slug].astro` 對 combined validated views 執行 `getStaticPaths()`。直接開啟/重新整理不依賴 runtime router；每個候選人與選舉區都有 HTML。
+`src/pages/districts/[slug].astro` 與 `src/pages/candidates/[slug].astro` 對 combined validated views 執行 `getStaticPaths()`。選區頁、選區索引與候選人頁以共用 `ConstituencyCoverage.astro` 呈現行政區；所有行政區連結指向靜態首頁查詢參數，直接開啟/重新整理不依賴 runtime router。每個候選人與選舉區都有 HTML。
 
 ## Publication gate
 
-`validateOfficialDataset()` 驗證 Zod shape、唯一 IDs、source/district references、approved qualification，以及 `drawn/not-published` 不得宣稱 final。`scripts/validate-official-data.ts` 額外驗證原始快照 checksum、CEC 五人資格名冊、KHEC PDF metadata、approved roster order 與 reconciliation。`scripts/validate-public-records.ts` 另外驗證 KCC 快照 checksum、claim/evidence/record references、selected-person identity resolution、review gate 與 coverage/quality reports；`scripts/public-records-coverage.ts` 對 106 位官方候選人建立 6 類別 audit、source checksum、checkpoint、review queue 與 full-roster report；`scripts/execute-candidate-public-record-research.ts` 重新解析保留的 CEC C1/T 快照，檢查 636 格研究審計、來源 checksum、保守姓名衝突、review packet 與獨立抽樣報告。所有 validator、research command 與 coverage command 都是 offline-only。
+`validateOfficialDataset()` 驗證 Zod shape、唯一 IDs、source/district references、approved qualification，以及 `drawn/not-published` 不得宣稱 final。`scripts/validate-official-data.ts` 額外驗證原始快照 checksum、CEC 五人資格名冊、KHEC PDF metadata、approved roster order 與 reconciliation。`scripts/validate-public-records.ts` 另外驗證 KCC 快照 checksum、claim/evidence/record references、selected-person identity resolution、review gate 與 coverage/quality reports；`scripts/public-records-coverage.ts` 對 106 位官方候選人建立 6 類別 audit、source checksum、checkpoint、review queue 與 full-roster report；`scripts/execute-candidate-public-record-research.ts` 重新解析保留的 CEC C1/T 快照，檢查 636 格研究審計、來源 checksum、保守姓名衝突、review packet 與獨立抽樣報告。`scripts/validate-constituency-coverage.ts` 另外驗證 15 個選區、38 個既有行政區 ID、公告行政區數量、第 4 選區、原住民族選區語意、來源 manifest 參照與無 runtime API。所有 validator、research command 與 coverage command 都是 offline-only。
 
 ## Biography research boundary
 

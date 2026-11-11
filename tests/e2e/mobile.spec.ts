@@ -12,13 +12,10 @@ test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet
   await expect(
     page.getByRole('heading', { name: '不用 3D 也能選擇人物' }),
   ).toBeVisible();
-  await page
-    .getByRole('button', { name: /林海星/ })
-    .first()
-    .click();
+  await page.getByRole('button', { name: /張靜/ }).first().click();
   await expect(page.locator('.profile-panel.is-open')).toBeVisible();
   await expect(page.locator('.profile-panel.is-open')).toContainText(
-    '虛構示範人物',
+    '官方資料',
   );
 });
 
@@ -40,7 +37,7 @@ test('mobile avatar preview stays within the touch viewport', async ({
 test('mobile essential controls meet a 44px touch target at 390x844', async ({
   page,
 }) => {
-  test.setTimeout(180_000);
+  test.setTimeout(90_000);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
@@ -148,12 +145,15 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
   await peopleTray.locator('.city-candidate').first().click();
   const profile = page.locator('.profile-panel.is-open');
   await expect(profile).toBeVisible();
-  await expect(profile.locator('[role="tab"]')).toHaveCount(4, {
-    timeout: 15_000,
-  });
+  await expect(profile.locator('.profile-tabs__list [role="tab"]')).toHaveCount(
+    4,
+    {
+      timeout: 15_000,
+    },
+  );
   assertTargets(
     await measure(
-      '.profile-panel.is-open .profile-panel__close, .profile-panel.is-open [role="tab"]',
+      '.profile-panel.is-open .profile-panel__close, .profile-panel.is-open .profile-tabs__list .tab-button',
     ),
     'profile panel',
   );
@@ -180,9 +180,39 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
     'data-hydrated',
     'true',
   );
-  await expect(page.locator('.city-landmark-card')).toBeVisible();
-  assertTargets(
-    await measure('.city-landmark-card__actions button'),
-    'landmark card',
+  await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
+    'data-scene-focus',
+    /^scope-/,
+    { timeout: 20_000 },
   );
+  await expect(page.locator('.city-landmark-card')).toHaveCount(0);
+  await expect(page.getByTestId('scene-frame').locator('canvas')).toBeVisible();
+});
+
+test('mobile constituency coverage fits the viewport and links to admin focus', async ({
+  page,
+}) => {
+  await page.goto('/districts/kaohsiung-council-04/');
+  const coverage = page.getByTestId('constituency-coverage');
+  await expect(coverage).toBeVisible();
+  const sectionBox = await coverage.boundingBox();
+  const viewport = page.viewportSize();
+  expect(sectionBox).not.toBeNull();
+  expect(viewport).not.toBeNull();
+  expect((sectionBox?.x ?? 0) + (sectionBox?.width ?? 0)).toBeLessThanOrEqual(
+    viewport?.width ?? 0,
+  );
+
+  const chip = coverage.getByRole('link', { name: '左營區', exact: true });
+  const chipBox = await chip.boundingBox();
+  expect(chipBox?.height ?? 0).toBeGreaterThanOrEqual(43.5);
+  await chip.click();
+  await expect(page).toHaveURL(/district=kaohsiung-council-04/);
+  await expect(page).toHaveURL(/admin=E03/);
+  await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+    'data-hydrated',
+    'true',
+  );
+  await expect(page.locator('.city-admin-card')).toContainText('左營區');
+  await expect(page.locator('.city-admin-card')).toContainText('第4選舉區');
 });

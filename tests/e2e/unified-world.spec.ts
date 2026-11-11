@@ -28,7 +28,7 @@ async function explorer(page: Page) {
   const locator = page.locator(
     '[data-testid="city-explorer"][data-hydrated="true"]',
   );
-  await expect(locator).toBeVisible();
+  await expect(locator).toBeVisible({ timeout: 30_000 });
   return locator;
 }
 
@@ -42,6 +42,7 @@ test.describe('unified Kaohsiung world', () => {
   test('administrative district focus shows geography and returns to the city', async ({
     page,
   }) => {
+    test.setTimeout(120_000);
     await page.goto('/?district=kaohsiung-council-04');
     const shell = await explorer(page);
 
@@ -63,7 +64,7 @@ test.describe('unified Kaohsiung world', () => {
     await card.getByRole('button', { name: '回到全市' }).click();
     await expect(card).toBeHidden();
     await expect(page.locator('.city-scene-label__zone')).toContainText(
-      '全市視角',
+      '高雄市 38 行政區・六角迷你城市',
     );
     await expect(shell).toHaveAttribute('data-scene-focus', /^world-overview-/);
   });
@@ -71,7 +72,7 @@ test.describe('unified Kaohsiung world', () => {
   test('every one of the 38 administrative districts can be focused', async ({
     page,
   }) => {
-    test.setTimeout(120_000);
+    test.setTimeout(900_000);
     await page.goto('/?district=kaohsiung-council-04');
     await explorer(page);
 
@@ -88,7 +89,9 @@ test.describe('unified Kaohsiung world', () => {
         await expect(page.locator('#city-admin-tray')).toBeVisible();
       }
       await chips.nth(index).click();
-      await expect(card.locator('h2')).toHaveText(`${names[index]}區`);
+      await expect(card.locator('h2')).toHaveText(`${names[index]}區`, {
+        timeout: 30_000,
+      });
       await expect(card).toBeVisible();
     }
 

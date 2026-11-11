@@ -29,7 +29,7 @@ test.describe('immersive city exploration', () => {
     await expect(page.locator('#city-people-tray')).toBeHidden();
   });
 
-  test('landmark URL focus is dismissible and restores a city view', async ({
+  test('ignores removed landmark focus and keeps the hexagonal city', async ({
     page,
   }) => {
     await page.goto(
@@ -39,18 +39,14 @@ test.describe('immersive city exploration', () => {
       '[data-testid="city-explorer"][data-hydrated="true"]',
     );
     await expect(explorer).toBeVisible();
-    await expect(explorer).toHaveAttribute(
-      'data-scene-focus',
-      'landmark-dragon-tiger-pagodas',
-      { timeout: 15_000 },
-    );
-
-    const card = page.locator('.city-landmark-card');
-    await expect(card.getByRole('heading', { name: '龍虎塔' })).toBeVisible();
-    await expect(card).toContainText('藝術化重建');
-    await card.getByRole('button', { name: '返回城市' }).click();
-    await expect(card).toBeHidden();
-    await expect(explorer).toHaveAttribute('data-scene-focus', /^zone-/);
+    await expect(explorer).toHaveAttribute('data-scene-focus', /^scope-/, {
+      timeout: 15_000,
+    });
+    await expect(page).not.toHaveURL(/focus=/);
+    await expect(page.locator('.city-landmark-card')).toHaveCount(0);
+    await expect(
+      page.getByTestId('scene-frame').locator('canvas'),
+    ).toBeVisible();
   });
 
   test('candidate overlay closes with Escape and clears the URL selection', async ({
@@ -90,7 +86,7 @@ test('candidate profile moves focus in and restores it on close', async ({
   await peopleToggle.click();
   await page
     .locator('#city-people-tray')
-    .getByRole('button', { name: /林海星/ })
+    .getByRole('button', { name: /張靜/ })
     .first()
     .click();
 

@@ -124,12 +124,12 @@ const missingSlugs = expectedSlugs.filter(
 if (
   missingSlugs.length > 0 ||
   unexpectedSlugs.length > 0 ||
-  demoSlugs.length !== 4
+  (demoSlugs.length !== 0 && demoSlugs.length !== 0)
 ) {
   throw new Error(
     'Expected ' +
       expectedSlugs.length +
-      ' roster pages and four demo pages; found ' +
+      ' roster pages and zero or four demo pages; found ' +
       pageEntries.length +
       '. Missing: ' +
       (missingSlugs.join(', ') || 'none') +

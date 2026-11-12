@@ -44,15 +44,22 @@ describe('four-section candidate profile coverage', () => {
     expect(coverageReport.profileTabs).toEqual([
       '基本資料',
       '政策主張',
-      '正負面新聞',
+      '相關新聞',
       '從政歷程',
     ]);
     expect(coverageReport.candidatesWithVerifiedPolicyStatements).toBe(0);
     expect(coverageReport.candidatesWithPendingPolicyResearch).toBeGreaterThan(
       0,
     );
-    expect(coverageReport.candidatesWithPositiveNews).toBe(0);
-    expect(coverageReport.candidatesWithNegativeNews).toBe(0);
+    expect(coverageReport).not.toHaveProperty('candidatesWithPositiveNews');
+    expect(coverageReport).not.toHaveProperty('candidatesWithNegativeNews');
+    expect(
+      coverageReport.candidateInventory.every(
+        (candidate) =>
+          !('positiveNewsCount' in candidate) &&
+          !('negativeNewsCount' in candidate),
+      ),
+    ).toBe(true);
     expect(coverageReport.individualVoteRecordCount).toBe(0);
   });
 

@@ -1,0 +1,2128 @@
+{
+  "batchId": "batch-03",
+  "generatedAt": "2026-11-12T01:20:33Z",
+  "verifier": "candidate-verifier",
+  "decisions": [
+    {
+      "decisionId": "vd-bp-7bbe90e6-edu-1",
+      "claimId": "bp-7bbe90e6-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「高雄市私立國際商工畢」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市私立國際商工畢",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-pub-2",
+      "claimId": "bp-7bbe90e6-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「高雄市縣市合併後第3屆議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-pub-3",
+      "claimId": "bp-7bbe90e6-pub-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「立法委員黃昭順辦公室助理」逐字出現在「經歷：」欄，屬民間團體之公益職務（理事長）；列為公共服務經歷與其他社團職務列為專業與工作經歷之處理未盡一致，屬欄位判斷問題而非事實錯誤，事實本身逐字可稽。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-4",
+      "claimId": "bp-7bbe90e6-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「高雄市義勇消防防火宣導大隊新莊分隊顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-5",
+      "claimId": "bp-7bbe90e6-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「高雄市善心慈善會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-6",
+      "claimId": "bp-7bbe90e6-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「社團法人高雄市青少年服務協會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-7",
+      "claimId": "bp-7bbe90e6-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「高雄市楠陽桌球聯誼會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-8",
+      "claimId": "bp-7bbe90e6-exp-8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「國立高雄科技大學校友總會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-9",
+      "claimId": "bp-7bbe90e6-exp-9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「高雄市救國團楠梓區團委會會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-exp-10",
+      "claimId": "bp-7bbe90e6-exp-10",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「中國國民黨第19、20、21屆全國代表」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-cur-11",
+      "claimId": "bp-7bbe90e6-cur-11",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-李雅芬｜所屬政黨：中國國民黨｜通訊地址：811楠梓區加昌路725-5號",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-7bbe90e6-bio-12",
+      "claimId": "bp-7bbe90e6-bio-12",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2187.html（我自行重算 SHA-256 = 072f3b6082f4a6046b5d11f201ba582c…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅芬」，載明所屬政黨：中國國民黨、通訊地址：811楠梓區加昌路725-5號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1970-06-25、號次 2）相符，姓名非同名他人。 「雅芬是五個孩子的母親」逐字出現在議員簡介「服務政見」欄（「為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。」[...]），屬候選人自述（attribution=candidate-statement），未被升級為獨立事實；status=unknown 與自述性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "服務政見：建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-edu-12",
+      "claimId": "bp-765aa196-edu-12",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「台中二中」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：台中二中 世新大學新聞系",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-edu-13",
+      "claimId": "bp-765aa196-edu-13",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「世新大學新聞系」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：台中二中 世新大學新聞系",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-pub-14",
+      "claimId": "bp-765aa196-pub-14",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「國民黨發言人」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-pub-15",
+      "claimId": "bp-765aa196-pub-15",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「高雄市府副發言人」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-pub-16",
+      "claimId": "bp-765aa196-pub-16",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「高雄市府參議」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-pub-17",
+      "claimId": "bp-765aa196-pub-17",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「高雄市府新聞局機要秘書」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-exp-18",
+      "claimId": "bp-765aa196-exp-18",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「三立新聞台主播」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-exp-19",
+      "claimId": "bp-765aa196-exp-19",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「聯合報記者」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-exp-20",
+      "claimId": "bp-765aa196-exp-20",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「好茵果小農平台創辦人」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-edu-21",
+      "claimId": "bp-765aa196-edu-21",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 「倫敦城市大學肄業」逐字出現在該頁「經歷：」欄（末項），內容實為學校就讀紀錄；docs/BASIC_PROFILE_PUBLICATION.md:77 要求議會簡介「經歷」欄須逐行分類、查核者拒絕錯置，故研究者改列學歷並以 detail 標明「肄業（未完成學業）」符合政策，非錯置；status=historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-765aa196-cur-22",
+      "claimId": "bp-765aa196-cur-22",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2181.html（我自行重算 SHA-256 = 03ed977e8b16fbc87b9abadfd8757909…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-白喬茵」，載明所屬政黨：中國國民黨、通訊地址：813左營區文康路42號，與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1987-10-28、號次 3）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-白喬茵｜所屬政黨：中國國民黨｜通訊地址：813左營區文康路42號",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-619c7aa1-edu-1",
+      "claimId": "bp-619c7aa1-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained PDF data/research/2026/basic-profiles/artifacts/cec-bulletin-2022/d4.pdf（我自行重算 SHA-256 = 737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755，與 claim 的 snapshotSha256 一致），第3頁（頁標籤起於 d4.pdf.xml:1730）該列為「柳淑芳／14號／女／無／民國49年」，出生年 49 年（1960）與名冊 1960-08-30、第4選區無黨籍相符。公報第4選區第3頁該列「學歷」欄首行即為此三校，OCR 換行處為「岡山／農工化工科」，與 claim 值一致。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "左營國小、左營國中、岡山\n農工化工科",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-619c7aa1-edu-2",
+      "claimId": "bp-619c7aa1-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained PDF data/research/2026/basic-profiles/artifacts/cec-bulletin-2022/d4.pdf（我自行重算 SHA-256 = 737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755，與 claim 的 snapshotSha256 一致），第3頁（頁標籤起於 d4.pdf.xml:1730）該列為「柳淑芳／14號／女／無／民國49年」，出生年 49 年（1960）與名冊 1960-08-30、第4選區無黨籍相符。公報「經歷」欄自述「國小全班第一名、國中英文不及格、中山大學公務人員進修班英文會話ㄧ百分…」；本項為其中之進修課程，研究者依 docs/BASIC_PROFILE_PUBLICATION.md:77 逐行分類原則改列學歷並在 detail 註明「非學位」，未誇大為學位；status=historical 合理。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "格、中山大學公務人員進修班英\n文會話ㄧ百分",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-619c7aa1-exp-3",
+      "claimId": "bp-619c7aa1-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained PDF data/research/2026/basic-profiles/artifacts/cec-bulletin-2022/d4.pdf（我自行重算 SHA-256 = 737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755，與 claim 的 snapshotSha256 一致），第3頁（頁標籤起於 d4.pdf.xml:1730）該列為「柳淑芳／14號／女／無／民國49年」，出生年 49 年（1960）與名冊 1960-08-30、第4選區無黨籍相符。同段落自述「曾任英文家庭教師」，claim 值與公報用語一致，歸類專業與工作經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "文會話ㄧ百分、曾任英文家庭教\n師、現任台灣中油公司圖書管理\n員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-619c7aa1-exp-4",
+      "claimId": "bp-619c7aa1-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained PDF data/research/2026/basic-profiles/artifacts/cec-bulletin-2022/d4.pdf（我自行重算 SHA-256 = 737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755，與 claim 的 snapshotSha256 一致），第3頁（頁標籤起於 d4.pdf.xml:1730）該列為「柳淑芳／14號／女／無／民國49年」，出生年 49 年（1960）與名冊 1960-08-30、第4選區無黨籍相符。公報（2022-11-26）自述「現任台灣中油公司圖書管理員」；研究者以 2026 年是否仍在職未經查證為由記為 currentStatus=unknown，是保守且正確的處理（未把 2022 年的「現任」直接當成 2026 年現職），org 亦與公報一致。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "師、現任台灣中油公司圖書管理\n員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-619c7aa1-pub-5",
+      "claimId": "bp-619c7aa1-pub-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained PDF data/research/2026/basic-profiles/artifacts/cec-bulletin-2022/d4.pdf（我自行重算 SHA-256 = 737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755，與 claim 的 snapshotSha256 一致），第3頁（頁標籤起於 d4.pdf.xml:1730）該列為「柳淑芳／14號／女／無／民國49年」，出生年 49 年（1960）與名冊 1960-08-30、第4選區無黨籍相符。公報「經歷」欄自述「參選里長、市議員、立委奮鬥不懈」；此為參選紀錄而非當選任職，claim 的 detail 已明示「均為參選紀錄，公報未載明當選與否」，未把參選寫成公職，故不構成 misleading；attribution 亦為 candidate-statement。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "參選里長\n、市議員、立委奮鬥不懈",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-619c7aa1-bio-6",
+      "claimId": "bp-619c7aa1-bio-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained PDF data/research/2026/basic-profiles/artifacts/cec-bulletin-2022/d4.pdf（我自行重算 SHA-256 = 737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755，與 claim 的 snapshotSha256 一致），第3頁（頁標籤起於 d4.pdf.xml:1730）該列為「柳淑芳／14號／女／無／民國49年」，出生年 49 年（1960）與名冊 1960-08-30、第4選區無黨籍相符。公報「經歷」欄自述宣傳語句，逐字相符；detail 一併保留同段「高雄第一人：倒馬遊行、全國第一人：罷免空心蔡大陸妹遊行」，屬候選人自我描述，status=unknown 恰當（無從查證之宣稱）。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "楠梓\n第一人：西青埔垃圾場抗爭、高\n雄第一人：倒馬遊行、全國第一\n人：罷免空心蔡大陸妹遊行",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-edu-34",
+      "claimId": "bp-bcf19712-edu-34",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「正修科技大學化妝品與時尚彩妝系碩士畢業」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：正修科技大學化妝品與時尚彩妝系碩士畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-pub-35",
+      "claimId": "bp-bcf19712-pub-35",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「高雄市第1、2、3 屆市議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-exp-36",
+      "claimId": "bp-bcf19712-exp-36",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「國民黨改革委員會委員」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-pub-37",
+      "claimId": "bp-bcf19712-pub-37",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「國民黨高雄市黨部副主任委員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-exp-38",
+      "claimId": "bp-bcf19712-exp-38",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「國民黨高雄市青工總會會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-exp-39",
+      "claimId": "bp-bcf19712-exp-39",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「高雄市正友獅子會會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-exp-40",
+      "claimId": "bp-bcf19712-exp-40",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 「正修校友會化工系會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-bcf19712-cur-41",
+      "claimId": "bp-bcf19712-cur-41",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2186.html（我自行重算 SHA-256 = ab133d8169199b9a2b363729ab31142d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李眉蓁」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1979-03-21、號次 5）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-李眉蓁｜所屬政黨：中國國民黨｜通訊地址：813（左營區）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-edu-42",
+      "claimId": "bp-faf1e53c-edu-42",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「高雄市左營區勝利國小」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-edu-43",
+      "claimId": "bp-faf1e53c-edu-43",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「高雄市立左營國民中學」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-edu-44",
+      "claimId": "bp-faf1e53c-edu-44",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「高雄市私立立志高級中學」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-edu-45",
+      "claimId": "bp-faf1e53c-edu-45",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「嘉南藥理大學」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-edu-46",
+      "claimId": "bp-faf1e53c-edu-46",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「高雄師範大學成人教育研究所碩士」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-exp-47",
+      "claimId": "bp-faf1e53c-exp-47",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「日本慶應大學醫學部訪問研究員」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-exp-48",
+      "claimId": "bp-faf1e53c-exp-48",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「立法委員趙天麟辦公室藝文部執行長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-pub-49",
+      "claimId": "bp-faf1e53c-pub-49",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 「高雄市第三屆市議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-faf1e53c-cur-50",
+      "claimId": "bp-faf1e53c-cur-50",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2188.html（我自行重算 SHA-256 = fae3bd42c1f829df40c5f3050be228c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-李雅慧」，載明所屬政黨：民主進步黨、通訊地址：813左營區文學路281號，與名冊（第4選區（左營、楠梓）、民主進步黨、生日 1975-08-30、號次 6）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-李雅慧｜所屬政黨：民主進步黨｜通訊地址：813左營區文學路281號",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-edu-51",
+      "claimId": "bp-a391c4db-edu-51",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「舊城國小」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-edu-52",
+      "claimId": "bp-a391c4db-edu-52",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「大義國中」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-edu-53",
+      "claimId": "bp-a391c4db-edu-53",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「道明高中」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-edu-54",
+      "claimId": "bp-a391c4db-edu-54",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「日本東洋大學」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-edu-55",
+      "claimId": "bp-a391c4db-edu-55",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「美國威斯頓大學企業管理碩士」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-pub-56",
+      "claimId": "bp-a391c4db-pub-56",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市縣市合併後第1、2、3屆議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-pub-57",
+      "claimId": "bp-a391c4db-pub-57",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市議會第6、7屆市議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市20",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-59",
+      "claimId": "bp-a391c4db-exp-59",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「日本亞細亞航空公司」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-60",
+      "claimId": "bp-a391c4db-exp-60",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「立委黃昭順及侯彩鳳服務處特別助理」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-61",
+      "claimId": "bp-a391c4db-exp-61",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市千禧國際同濟會創會會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-62",
+      "claimId": "bp-a391c4db-exp-62",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市2007女國際青商會特友會主席」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-63",
+      "claimId": "bp-a391c4db-exp-63",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「國民黨高雄青工會前副總會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-64",
+      "claimId": "bp-a391c4db-exp-64",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市清玉文教發展協會理事長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-65",
+      "claimId": "bp-a391c4db-exp-65",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市滑水、排舞委員會主委」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-exp-66",
+      "claimId": "bp-a391c4db-exp-66",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 「高雄市國劇研究會理事長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-a391c4db-cur-67",
+      "claimId": "bp-a391c4db-cur-67",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2189.html（我自行重算 SHA-256 = b608dc62367f364b610e5e86809466c4…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳玫娟」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1962-12-14、號次 7）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-陳玫娟｜所屬政黨：中國國民黨｜通訊地址：813（左營區）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4c6bef68-pub-1",
+      "claimId": "bp-4c6bef68-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "verdict": "verified",
+      "rationale": "重新抓取自由時報 2025-02-16 報導（本次 fetch 成功；因頁面含輪播廣告，重抓快照 SHA-256 與研究者當時不同，屬正常變動，引文本身已逐字比對）。報導載其辭職投入民進黨左楠區初選、「將於明天（17日）正式卸任」、「於2020年8月24日上任，在青年局服務1638個日子」；5516898（2026-07-24）並列民進黨左楠提名新人張以理，與名冊第4選區、民進黨相符。validFrom 2020-08／validTo 2025-02 與報導一致；currentStatus=historical 正確（已辭職，未誤植為現職）；attribution 為新聞人事紀錄，非候選人自述。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/4953171",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "高雄市青年局長張以理準備投入左楠區高雄市議員選舉，向市長陳其邁提出辭呈獲准，將於明天（17日）正式卸任 … 張以理是於在2020年8月24日上任，在青年局服務1638個日子",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4c6bef68-bio-2",
+      "claimId": "bp-4c6bef68-bio-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "verdict": "verified",
+      "rationale": "引文逐字相符。value 保留引述框架（「陳其邁也稱讚…是『點子王』」），為市長評價之轉述而非把評價當成客觀事實，故未被升級；detail「辭職後投入左楠區（第4選區）市議員選舉」亦與同篇報導相符。currentStatus=unknown 對無期間之評價合理。提醒：屬讚美性描述（非政績或學經歷），發布前可依編輯偏好斟酌是否保留，但不構成事實錯誤。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/4953171",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "陳其邁也稱讚張以理是「點子王」，發想許多優秀創新想法",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-2df974a4-exp-1",
+      "claimId": "bp-2df974a4-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "verdict": "verified",
+      "rationale": "引文逐字相符；該句主體為陳善慧服務團隊助理之陳述，value 擷取句中逐字片段「跟隨父親服務地方多年」，detail 亦註明係團隊助理說法。另有 5535017（2026-08-10）獨立記載陳善慧「交給在身邊歷練多年的兒子陳冠宇」，且陳冠宇受訪自述多年助理經歷，兩篇互證，supportsField 成立。identity 由陳善慧之子＋左楠第4選區＋無黨籍與名冊相符。currentStatus=unknown 恰當（無起訖年）。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5516898",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "其團隊助理則說沒聽到相關訊息，卻也同時強調陳冠宇已經跟隨父親服務地方多年",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-2df974a4-bio-2",
+      "claimId": "bp-2df974a4-bio-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "verdict": "partially-supported",
+      "rationale": "原文為「無黨籍高市議員陳善慧今正式宣布將交棒兒子陳冠宇，希望左楠鄉親繼續支持，陳冠宇則爆料是他主動爭取接棒…」，另有另一句「高雄第4選區（左營、楠梓）現任無黨籍議員陳善慧深耕地方多年」。研究者 excerpt 把兩處拼接成一句（前 24 字相符後即跳接，中間省略「陳冠宇則爆料是他主動爭取接棒」），非連續引文，不符合 excerpt 須逐字連續的要求，故 matchesClaim=false。事實本身（交棒兒子陳冠宇、左楠第4選區、陳善慧為現任無黨籍議員）在原文均可查，故僅為 partially-supported；2026-07-24 報導亦已預告同一交棒安排。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5535017",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "無黨籍高市議員陳善慧今正式宣布將交棒兒子陳冠宇，希望左楠鄉親繼續支持 … 高雄第4選區（左營、楠梓）現任無黨籍議員陳善慧深耕地方多年",
+        "matchesClaim": false
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": "excerpt 應改為連續原文「無黨籍高市議員陳善慧今正式宣布將交棒兒子陳冠宇，希望左楠鄉親繼續支持」；如需選區資訊，另引「高雄第4選區（左營、楠梓）現任無黨籍議員陳善慧深耕地方多年」，兩句之間不得省略文字。"
+    },
+    {
+      "decisionId": "vd-bp-8e055419-edu-68",
+      "claimId": "bp-8e055419-edu-68",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「義守大學管理學學士」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：義守大學管理學學士 國立高雄師範大學教育學碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-edu-69",
+      "claimId": "bp-8e055419-edu-69",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「國立高雄師範大學教育學碩士」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：義守大學管理學學士 國立高雄師範大學教育學碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-pub-70",
+      "claimId": "bp-8e055419-pub-70",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「高雄市第一、二、三屆議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-pub-71",
+      "claimId": "bp-8e055419-pub-71",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「高雄市第七屆議員」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-pub-72",
+      "claimId": "bp-8e055419-pub-72",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「左營區新下里里長」逐字出現在「經歷：」欄，內容屬公職、政黨或選舉職務，歸類公共服務經歷合理。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-73",
+      "claimId": "bp-8e055419-exp-73",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「十七全黨代表」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-74",
+      "claimId": "bp-8e055419-exp-74",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「婦聯會楠梓支會主委」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-75",
+      "claimId": "bp-8e055419-exp-75",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「左營救國團會長」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-76",
+      "claimId": "bp-8e055419-exp-76",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「楠梓社會教育站顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-77",
+      "claimId": "bp-8e055419-exp-77",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「高雄市龍舟委員會主委」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-78",
+      "claimId": "bp-8e055419-exp-78",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「博仁慈善會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-79",
+      "claimId": "bp-8e055419-exp-79",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「嘉義同鄉會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-exp-80",
+      "claimId": "bp-8e055419-exp-80",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 「雲林同鄉會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-8e055419-cur-81",
+      "claimId": "bp-8e055419-cur-81",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2184.html（我自行重算 SHA-256 = 70dcabafe411608c1c3ad9fe60baf13d…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-陳麗珍」，載明所屬政黨：中國國民黨、通訊地址：813（左營區），與名冊（第4選區（左營、楠梓）、中國國民黨、生日 1966-03-23、號次 10）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-陳麗珍｜所屬政黨：中國國民黨｜通訊地址：813（左營區）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-10ad99ed-pub-1",
+      "claimId": "bp-10ad99ed-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "verdict": "verified",
+      "rationale": "引文（兩處）逐字相符。5465924（2026-06-09）另載其「曾任…葉菊蘭代理市長辦公室主任」，兩篇不同時間互證。identity：報導以其在高雄左楠成立民進黨初選競辦為主軸，並載其自稱 57 歲（2025 年，與名冊 1968-11-30 推算相符），名稱、選區一致。validFrom 2005 與報導「2005年放棄參選議員後轉任」一致；validTo=null 合理（卸任年未載）；currentStatus=historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5089483",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "2005年放棄參選議員，轉任葉菊蘭代理市長辦公室主任，後雖無重要職務，卻始終留在高雄 … 前高雄市長葉菊蘭辦公室主任薛兆基",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-10ad99ed-exp-2",
+      "claimId": "bp-10ad99ed-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "verdict": "partially-supported",
+      "rationale": "引文逐字相符，但該句出自 5465924 對「台灣前進陣線」第四波提名記者會的報導，內容即提名方提供之參選人背景（候選方文宣性質），全篇以其「曾任…」直述而未標明消息來源；「謝長廷市長機要秘書」僅此單一來源，無獨立機構紀錄互證（同段之葉菊蘭辦公室主任另有 5089483 佐證，此項則無）。依 docs/BASIC_PROFILE_PUBLICATION.md 對僅有競選文宣或新聞報導之候選人「這些欄位會保持未知」之原則，不宜以 independently-corroborated 發布。identity 與職稱本身無誤。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5465924",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "高雄市左楠第四選區市議員參選人薛兆基，曾任謝長廷市長機要秘書及葉菊蘭代理市長辦公室主任，歷經逾二十年市政實務後重返選場",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": "value 建議改為「台灣前進陣線提名資料稱曾任謝長廷市長機要秘書」，attribution 由 independently-corroborated 改為 candidate-statement，或待取得高雄市政府人事紀錄後再恢復發布。"
+    },
+    {
+      "decisionId": "vd-bp-10ad99ed-exp-3",
+      "claimId": "bp-10ad99ed-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "verdict": "verified",
+      "rationale": "引文逐字相符；value「長期擔任幕僚、輔選角色」為句中逐字詞組，detail 完整保留同句之團隊名單與「近30場選戰經驗」，未誇大。同篇報導主題為其在高雄左楠成立民進黨初選競辦並載其自稱 57 歲，identity 成立。currentStatus=unknown（無起訖年）合理；attribution 為新聞直述，屬獨立媒體報導。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5089483",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "薛兆基長期擔任幕僚、輔選角色，陸續參與過張俊雄、余政憲、謝長廷、陳菊等綠營大咖團隊，至今累積近30場選戰經驗",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-10ad99ed-bio-4",
+      "claimId": "bp-10ad99ed-bio-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "verdict": "verified",
+      "rationale": "引文逐字相符，標題亦為「看著蓮池潭50年」（2026-08-20）。value 為句中逐字片段，attribution=candidate-statement 正確（受訪自述），未升級為獨立事實。detail 之「2026年獲台灣前進陣線推薦參選左楠第4選區」由 5465924 佐證。與名冊 1968-11-30（2026 年約 57 歲）不衝突，50 年生活工作可追溯至 1970 年代。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5546440",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "在高雄左營生活、工作逾50年的高市議員參選人薛兆基，對於蓮池潭提出「十全十美」計畫",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-94f45410-pub-1",
+      "claimId": "bp-94f45410-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "verdict": "verified",
+      "rationale": "引文（兩處）逐字相符。validTo=2018-11 與報導日（2018-11-07）宣布請辭一致；validFrom=null 誠實（就任年未載）；currentStatus=historical 正確，未把 2018 年職務誤植為現職。identity：5089483（2025-06-28）載「前高市文化局長尹立…盛傳有意參選」於左楠、5516898（2026-07-24）列民進黨左楠提名新人尹立，與名冊第4選區、民進黨、1975-10-17 相符。detail 有異體字「当日」，建議改「當日」，不影響事實。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/2604464",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "高市文化局長尹立近日因在臉書發表多篇「挺高雄」的文章 … 今天將辭去文化局長職務，轉投入民間發起的「We Care高雄」行動",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-94f45410-exp-2",
+      "claimId": "bp-94f45410-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "verdict": "verified",
+      "rationale": "引文逐字相符。報導於 2018-11 稱「2年前」被陳菊自該職借調，validTo=2016 之推估合理，研究者亦已在 notes 說明推估依據；validFrom=null（任系主任起始年未載）與 currentStatus=historical 均正確（借調即離開該職）。identity 同 pub-1（左楠民進黨提名、前文化局長）。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/2604464",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "讓駁二成為南台灣設計重鎮的尹立，2年前被前市長陳菊從樹德科技大學動畫與遊戲設計系系主任借調，是來自設計領域的文化局長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-94f45410-exp-3",
+      "claimId": "bp-94f45410-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "verdict": "verified",
+      "rationale": "引文逐字相符。同段另稱其「曾在公部門歷練的他，年紀最長」，並載四君子「年齡介於20幾至40幾歲」，與名冊 1975-10-17（2020 年 44-45 歲、四人中最年長）相符，identity 成立。currentStatus=unknown 恰當（報導時為助理教授，2026 年是否仍在職未載）；organization 樹德科技大學與引文一致。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/3189760",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "「Wecare高雄」發起人、樹德科大助理教授尹立加入",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-94f45410-bio-4",
+      "claimId": "bp-94f45410-bio-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "verdict": "verified",
+      "rationale": "引文逐字相符，value「WeCare高雄發起人」為句中逐字詞組。detail「2018年11月辭文化局長後投入『We Care高雄』行動」由 2604464 佐證（該報導明載辭職後轉投入 We Care 高雄）。currentStatus=unknown 合理（運動角色，無起訖）；attribution 為新聞直述。identity 同上（2020 年罷韓四君子之一即本名冊 94f45410 尹立）。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/3189760",
+        "retrievedAt": "2026-11-12T01:20:26Z",
+        "accessible": true,
+        "excerpt": "罷韓四君子包括罷韓提案領銜人陳冠榮、WeCare高雄發起人尹立、公民割草行動發言人李佾潔，及台灣基進黨新聞輿情部副主任張博洋",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-edu-82",
+      "claimId": "bp-4a79e857-edu-82",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「高雄市大樹區水寮國民小學」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-edu-83",
+      "claimId": "bp-4a79e857-edu-83",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「高雄市立大樹國民中學」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-edu-84",
+      "claimId": "bp-4a79e857-edu-84",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「私立大同商業專科學校會計統計科」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-edu-85",
+      "claimId": "bp-4a79e857-edu-85",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「美國國家大學大眾傳播系」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-edu-86",
+      "claimId": "bp-4a79e857-edu-86",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「義守大學管理學院碩士」逐字出現在「學歷：」欄，未混入經歷或政見文字；status=historical 與學歷已完成之性質相符。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "學歷：高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-exp-87",
+      "claimId": "bp-4a79e857-exp-87",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「水寮國小家長會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-exp-88",
+      "claimId": "bp-4a79e857-exp-88",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「大樹國中家長會顧問」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-pub-89",
+      "claimId": "bp-4a79e857-pub-89",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「台灣薪火傳愛關懷協會理事長」逐字出現在「經歷：」欄，屬民間團體之公益職務（理事長）；列為公共服務經歷與其他社團職務列為專業與工作經歷之處理未盡一致，屬欄位判斷問題而非事實錯誤，事實本身逐字可稽。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-exp-90",
+      "claimId": "bp-4a79e857-exp-90",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「澳洲科技公司總經理特助」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-exp-91",
+      "claimId": "bp-4a79e857-exp-91",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「台灣外銷產業國貿部經理」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-exp-92",
+      "claimId": "bp-4a79e857-exp-92",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「電腦及半導體雜誌採訪編輯」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-exp-93",
+      "claimId": "bp-4a79e857-exp-93",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 「電台媒體公關」逐字出現在「經歷：」欄，內容為具體職務（公司、聘任或社團職務），歸類專業與工作經歷可接受。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "經歷：會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a79e857-cur-94",
+      "claimId": "bp-4a79e857-cur-94",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "verdict": "verified",
+      "rationale": "重新開啟 retained snapshot data/biographies/raw/2026-11-06/kcc/profiles/2194.html（我自行重算 SHA-256 = 0f8d78eade8808dbfa7ccda6461557c2…，與 seed 記錄一致）；KCC 頁面為「高雄市議會全球網-中文網-本屆議員-黃飛鳳」，載明所屬政黨：民主進步黨、通訊地址：840大樹區井腳路120號，與名冊（第5選區（大樹等）、民主進步黨、生日 1965-10-19、號次 1）相符，姓名非同名他人。 頁面標題與內文均為「本屆議員」之現任議員簡介；2022-2026 任期於查核日（2026-11-12）尚未屆滿，故 currentStatus=current 正確；主張只寫現任市議員，未宣稱 2026 當選。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+        "retrievedAt": "2026-11-12T01:18:47.000Z",
+        "accessible": true,
+        "excerpt": "本屆議員-黃飛鳳｜所屬政黨：民主進步黨｜通訊地址：840大樹區井腳路120號",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    }
+  ]
+}

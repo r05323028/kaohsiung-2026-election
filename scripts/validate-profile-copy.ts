@@ -24,16 +24,24 @@ const roster = loadRoster();
 const expectedSlugs = roster.candidates.map((candidate) => candidate.slug);
 const expectedSlugSet = new Set(expectedSlugs);
 
-const requiredTabs = ['基本資料', '政策主張', '正負面新聞', '從政歷程'];
+const requiredTabs = ['基本資料', '政策主張', '相關新聞', '從政歷程'];
 const emptyStates = [
   '基本資料：暫無資料',
   '政策主張：暫無公開政策資料',
-  '正負面新聞：暫無公開新聞資料',
+  '相關新聞：暫無公開新聞資料',
   '從政歷程：暫無公開履歷資料',
   '提案紀錄：暫無公開提案紀錄',
   '表決紀錄：暫無可查證的個別表決紀錄',
 ];
 const forbiddenVisibleText = [
+  '正負面新聞',
+  '正面新聞',
+  '負面新聞',
+  '新聞分類',
+  '分類依據',
+  '未分類',
+  '中性脈絡',
+  '爭議／待釐清',
   'pending-human-review',
   'machine-validated',
   'withheld-pending-review',
@@ -59,6 +67,9 @@ const forbiddenVisibleText = [
   '資料狀態',
 ];
 const forbiddenSerializedKeys = [
+  'classification',
+  'classificationRationale',
+  'sentiment',
   'research',
   'policyResearch',
   'publicRecordResearch',

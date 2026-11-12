@@ -1,0 +1,2195 @@
+{
+  "datasetId": "kaohsiung-2026-basic-profile-seed-cec-bulletin",
+  "source": "2022 年中華民國地方公職人員選舉高雄市選舉公報",
+  "electionDate": "2022-11-26",
+  "retrievedAt": "2026-11-12T00:39:22.360Z",
+  "note": "Extracted from official CEC bulletin PDFs. Only exact roster-name matches inside the matching electoral district are retained. The PDFs and extracted rows are historical candidate-filled statements, not independent verification.",
+  "files": [
+    {
+      "key": "d1",
+      "districtId": "district-kaohsiung-council-01",
+      "filename": "高雄市第1選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC1%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "13d98d3897822d0ca5de04681a42337d7d3dc84443f965ae1d8f388f4692ecf0",
+      "rowCount": 4
+    },
+    {
+      "key": "d2",
+      "districtId": "district-kaohsiung-council-02",
+      "filename": "高雄市第2選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC2%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9427a9b23315effeada0c78fbfc63d55d4823e2d9b462dca0e7e96ccd6daf54d",
+      "rowCount": 5
+    },
+    {
+      "key": "d3",
+      "districtId": "district-kaohsiung-council-03",
+      "filename": "高雄市第3選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC3%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "4e519da34385295bfafaca582389baf7eb286b314ad60025e43337f121f00366",
+      "rowCount": 8
+    },
+    {
+      "key": "d4",
+      "districtId": "district-kaohsiung-council-04",
+      "filename": "高雄市第4選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "rowCount": 20
+    },
+    {
+      "key": "d5",
+      "districtId": "district-kaohsiung-council-05",
+      "filename": "高雄市第5選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "rowCount": 13
+    },
+    {
+      "key": "d6",
+      "districtId": "district-kaohsiung-council-06",
+      "filename": "高雄市第6選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC6%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "7bc295d09134d2dd4aae2c909552003b4e394cdcc165e9de38d2b2d7e9aa365b",
+      "rowCount": 5
+    },
+    {
+      "key": "d7",
+      "districtId": "district-kaohsiung-council-07",
+      "filename": "高雄市第7選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "rowCount": 13
+    },
+    {
+      "key": "d8",
+      "districtId": "district-kaohsiung-council-08",
+      "filename": "高雄市第8選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "f235d01f3f55f226a269fe4fa002bd2ad068b00d2d34e6c7a97d963e6fa552e5",
+      "rowCount": 8
+    },
+    {
+      "key": "d9",
+      "districtId": "district-kaohsiung-council-09",
+      "filename": "高雄市第9選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "rowCount": 15
+    },
+    {
+      "key": "d10",
+      "districtId": "district-kaohsiung-council-10",
+      "filename": "高雄市第10選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "rowCount": 17
+    },
+    {
+      "key": "d11",
+      "districtId": "district-kaohsiung-council-11",
+      "filename": "高雄市第11選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC11%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "d6386bdde3161f2247a2e6337aac62b40926e609f7476801b3dbf95dfe3a90b8",
+      "rowCount": 10
+    },
+    {
+      "key": "d12-15",
+      "districtId": null,
+      "filename": "高雄市第12.13.14.15選區.pdf",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC12.13.14.15%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "ba9a3887bee3f731b69f8a20cab45fd79dd216a3636e5e8b3ca7ba04a7411766",
+      "rowCount": 9
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "displayName": "林義迪",
+      "districtId": "district-kaohsiung-council-01",
+      "districtLabel": "高雄市議員第1選舉區",
+      "file": "d1",
+      "page": 1,
+      "education": [
+        "內門鄉西門國小畢業。內門",
+        "鄉內門國中畢業。高美醫專",
+        "二專畢業。"
+      ],
+      "experience": [
+        "1.前立委鍾紹和服務處旗山區主任",
+        "2.旗山鎮大德里第15、16、17屆里",
+        "長3.高雄縣縫紉商業同業公會理事",
+        "長4.高雄縣旗山鎮鎮長5.高雄市旗",
+        "山區區長6.高雄市第六大隊義消大",
+        "隊長7.高雄市議會第1、3屆市議員",
+        "8.旗山天后宮副主任委員9.三農宮",
+        "委員10.興南宮副主任委員"
+      ],
+      "excerpt": "內門鄉西門國小畢業。內門\n鄉內門國中畢業。高美醫專\n二專畢業。\n1.前立委鍾紹和服務處旗山區主任\n2.旗山鎮大德里第15、16、17屆里\n長3.高雄縣縫紉商業同業公會理事\n長4.高雄縣旗山鎮鎮長5.高雄市旗\n山區區長6.高雄市第六大隊義消大\n隊長7.高雄市議會第1、3屆市議員\n8.旗山天后宮副主任委員9.三農宮\n委員10.興南宮副主任委員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC1%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "13d98d3897822d0ca5de04681a42337d7d3dc84443f965ae1d8f388f4692ecf0",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "displayName": "林慧欣",
+      "districtId": "district-kaohsiung-council-01",
+      "districtLabel": "高雄市議員第1選舉區",
+      "file": "d1",
+      "page": 1,
+      "education": [
+        "國立高雄師範大學客家文化",
+        "研究所"
+      ],
+      "experience": [
+        "高雄市政府陳其邁市長秘書",
+        "高雄市國小教師客語教師",
+        "立法委員邱議瑩助理",
+        "客家委員會客語薪傳師",
+        "客家電視台節目主持人"
+      ],
+      "excerpt": "國立高雄師範大學客家文化\n研究所\n高雄市政府陳其邁市長秘書\n高雄市國小教師客語教師\n立法委員邱議瑩助理\n客家委員會客語薪傳師\n客家電視台節目主持人",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC1%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "13d98d3897822d0ca5de04681a42337d7d3dc84443f965ae1d8f388f4692ecf0",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "displayName": "林富寶",
+      "districtId": "district-kaohsiung-council-01",
+      "districtLabel": "高雄市議員第1選舉區",
+      "file": "d1",
+      "page": 1,
+      "education": [
+        "鼓山國小畢業",
+        "旗山中學初中部畢業",
+        "省立高雄高工畢業",
+        "高雄市立空大法學學士畢業",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "現任",
+        "高雄市議員",
+        "旗山天后宮副主任委員",
+        "北高雄家扶中心扶幼委員",
+        "曾任",
+        "光陽工業公司從業員",
+        "民進黨四屆選任全國黨代表",
+        "旗山地區機關聯合員工消費合作",
+        "社經理",
+        "旗山東區扶輪社社員",
+        "高雄市議會民進黨團副總召",
+        "高雄縣第十五、十六屆議員",
+        "高雄市第一、二屆議員",
+        "宏揚法治精神"
+      ],
+      "excerpt": "鼓山國小畢業\n旗山中學初中部畢業\n省立高雄高工畢業\n高雄市立空大法學學士畢業\n遵守選舉法令\n現任\n高雄市議員\n旗山天后宮副主任委員\n北高雄家扶中心扶幼委員\n曾任\n光陽工業公司從業員\n民進黨四屆選任全國黨代表\n旗山地區機關聯合員工消費合作\n社經理\n旗山東區扶輪社社員\n高雄市議會民進黨團副總召\n高雄縣第十五、十六屆議員\n高雄市第一、二屆議員\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC1%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "13d98d3897822d0ca5de04681a42337d7d3dc84443f965ae1d8f388f4692ecf0",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "displayName": "李亞築",
+      "districtId": "district-kaohsiung-council-02",
+      "districtLabel": "高雄市議員第2選舉區",
+      "file": "d2",
+      "page": 1,
+      "education": [
+        "阿蓮國小",
+        "阿蓮國中",
+        "台南女中",
+        "東吳大學法律系"
+      ],
+      "experience": [
+        "高雄市第三屆議員",
+        "高雄市農會代表"
+      ],
+      "excerpt": "阿蓮國小\n阿蓮國中\n台南女中\n東吳大學法律系\n高雄市第三屆議員\n高雄市農會代表",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC2%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9427a9b23315effeada0c78fbfc63d55d4823e2d9b462dca0e7e96ccd6daf54d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "displayName": "鄭東元",
+      "districtId": "district-kaohsiung-council-02",
+      "districtLabel": "高雄市議員第2選舉區",
+      "file": "d2",
+      "page": 1,
+      "education": [
+        "國立高雄大學經濟管理碩士",
+        "正修科技大學專科部土木工",
+        "程畢業"
+      ],
+      "experience": [
+        "高雄應用科技大學國企系代課講",
+        "師",
+        "中山大學環工所碩博士班專題演",
+        "講",
+        "正修科技大學畢業班生涯規劃演",
+        "講",
+        "高雄市路竹高級中學家長會顧問",
+        "高雄市茄萣鄭氏宗親會副理事長"
+      ],
+      "excerpt": "國立高雄大學經濟管理碩士\n正修科技大學專科部土木工\n程畢業\n高雄應用科技大學國企系代課講\n師\n中山大學環工所碩博士班專題演\n講\n正修科技大學畢業班生涯規劃演\n講\n高雄市路竹高級中學家長會顧問\n高雄市茄萣鄭氏宗親會副理事長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC2%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9427a9b23315effeada0c78fbfc63d55d4823e2d9b462dca0e7e96ccd6daf54d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "displayName": "李柏融",
+      "districtId": "district-kaohsiung-council-02",
+      "districtLabel": "高雄市議員第2選舉區",
+      "file": "d2",
+      "page": 1,
+      "education": [
+        "臺南市六信高級中學"
+      ],
+      "experience": [
+        "前茄萣鄉第十四屆鄉民代表",
+        "茄萣國中家長會兩屆會長",
+        "茄萣鄉調解委員",
+        "茄萣台電回饋金審查委員",
+        "立法委員候選人"
+      ],
+      "excerpt": "臺南市六信高級中學\n前茄萣鄉第十四屆鄉民代表\n茄萣國中家長會兩屆會長\n茄萣鄉調解委員\n茄萣台電回饋金審查委員\n立法委員候選人",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC2%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9427a9b23315effeada0c78fbfc63d55d4823e2d9b462dca0e7e96ccd6daf54d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "displayName": "黃明太",
+      "districtId": "district-kaohsiung-council-02",
+      "districtLabel": "高雄市議員第2選舉區",
+      "file": "d2",
+      "page": 1,
+      "education": [
+        "下坑國小",
+        "大社國小",
+        "瀛海中學初中部",
+        "台南二中",
+        "逢甲大學機械系畢",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "長興材料工業股份有限公司工程",
+        "師",
+        "永紘工程有限公司總經理",
+        "財團法人楊學周機械基金會董事",
+        "長",
+        "高雄市第三屆市議員",
+        "宏揚法治精神"
+      ],
+      "excerpt": "下坑國小\n大社國小\n瀛海中學初中部\n台南二中\n逢甲大學機械系畢\n遵守選舉法令\n長興材料工業股份有限公司工程\n師\n永紘工程有限公司總經理\n財團法人楊學周機械基金會董事\n長\n高雄市第三屆市議員\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC2%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9427a9b23315effeada0c78fbfc63d55d4823e2d9b462dca0e7e96ccd6daf54d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "displayName": "方信淵",
+      "districtId": "district-kaohsiung-council-03",
+      "districtLabel": "高雄市議員第3選舉區",
+      "file": "d3",
+      "page": 1,
+      "education": [
+        "國立中山大學高階公共政策",
+        "碩士",
+        "聯合工專畢業",
+        "市立高雄高工畢業"
+      ],
+      "experience": [
+        "高雄縣第15、16屆縣議員",
+        "救國團橋頭鄉團委會會長",
+        "高雄縣青工總會會長",
+        "高雄市農會理事",
+        "高雄市議會1∼3屆議員(現任)"
+      ],
+      "excerpt": "國立中山大學高階公共政策\n碩士\n聯合工專畢業\n市立高雄高工畢業\n高雄縣第15、16屆縣議員\n救國團橋頭鄉團委會會長\n高雄縣青工總會會長\n高雄市農會理事\n高雄市議會1∼3屆議員(現任)",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC3%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "4e519da34385295bfafaca582389baf7eb286b314ad60025e43337f121f00366",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "displayName": "林志誠",
+      "districtId": "district-kaohsiung-council-03",
+      "districtLabel": "高雄市議員第3選舉區",
+      "file": "d3",
+      "page": 1,
+      "education": [
+        "國立中山大學中國與亞太區",
+        "域研究所碩士"
+      ],
+      "experience": [
+        "民進黨高雄市黨部執行長",
+        "立法委員趙天麟服務處執行長",
+        "陳其邁市長競選總部副總幹事",
+        "市議員林瑩蓉服務處副主任",
+        "民進黨第18、19、20屆全國黨",
+        "代表"
+      ],
+      "excerpt": "國立中山大學中國與亞太區\n域研究所碩士\n民進黨高雄市黨部執行長\n立法委員趙天麟服務處執行長\n陳其邁市長競選總部副總幹事\n市議員林瑩蓉服務處副主任\n民進黨第18、19、20屆全國黨\n代表",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC3%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "4e519da34385295bfafaca582389baf7eb286b314ad60025e43337f121f00366",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "displayName": "宋立彬",
+      "districtId": "district-kaohsiung-council-03",
+      "districtLabel": "高雄市議員第3選舉區",
+      "file": "d3",
+      "page": 1,
+      "education": [
+        "樹德科技大學休閒與觀光管",
+        "理系"
+      ],
+      "experience": [
+        "中國國民黨20、21屆黨代表",
+        "梓官國際同濟會顧問",
+        "高雄市三山退休消防人員協會顧",
+        "問",
+        "高雄市後備指揮部委顧團組訓顧",
+        "問",
+        "梓官城隍廟常務監察"
+      ],
+      "excerpt": "樹德科技大學休閒與觀光管\n理系\n中國國民黨20、21屆黨代表\n梓官國際同濟會顧問\n高雄市三山退休消防人員協會顧\n問\n高雄市後備指揮部委顧團組訓顧\n問\n梓官城隍廟常務監察",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC3%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "4e519da34385295bfafaca582389baf7eb286b314ad60025e43337f121f00366",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "displayName": "白喬茵",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 1,
+      "education": [
+        "台中二中",
+        "世新大學新聞系"
+      ],
+      "experience": [
+        "倫敦城市大學肄業",
+        "國民黨發言人",
+        "高雄市府副發言人",
+        "高雄市府參議",
+        "高雄市府新聞局機要秘書",
+        "三立新聞台主播",
+        "聯合報記者",
+        "好茵果小農平台創辦人"
+      ],
+      "excerpt": "台中二中\n世新大學新聞系\n倫敦城市大學肄業\n國民黨發言人\n高雄市府副發言人\n高雄市府參議\n高雄市府新聞局機要秘書\n三立新聞台主播\n聯合報記者\n好茵果小農平台創辦人",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "displayName": "李眉蓁",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 2,
+      "education": [
+        "正修技術學院附設專科部伍",
+        "年制化學工程科畢業。"
+      ],
+      "experience": [
+        "高雄市第1、2、3",
+        "屆市議員。國",
+        "民黨改革委員會委員。國民黨高",
+        "雄市黨部副主任委員。國民黨高",
+        "雄市青工總會會長。高雄市正友",
+        "獅子會會長。正修校友會化工系",
+        "會長。"
+      ],
+      "excerpt": "正修技術學院附設專科部伍\n年制化學工程科畢業。\n高雄市第1、2、3\n屆市議員。國\n民黨改革委員會委員。國民黨高\n雄市黨部副主任委員。國民黨高\n雄市青工總會會長。高雄市正友\n獅子會會長。正修校友會化工系\n會長。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "displayName": "李雅慧",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 2,
+      "education": [
+        "高雄市左營區勝利國民小學",
+        "高雄市立左營國民中學",
+        "高雄市私立立志高級中學",
+        "嘉南藥理大學",
+        "高雄師範大學成人教育研究",
+        "所碩士"
+      ],
+      "experience": [
+        "日本慶應大學醫學部訪問研究員",
+        "立法委員趙天麟辦公室藝文部執",
+        "行長",
+        "高雄市第三屆市議員"
+      ],
+      "excerpt": "高雄市左營區勝利國民小學\n高雄市立左營國民中學\n高雄市私立立志高級中學\n嘉南藥理大學\n高雄師範大學成人教育研究\n所碩士\n日本慶應大學醫學部訪問研究員\n立法委員趙天麟辦公室藝文部執\n行長\n高雄市第三屆市議員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "displayName": "李雅芬",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 2,
+      "education": [
+        "高雄市私立國際商工畢",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "立法委員黃昭順辦公室助理",
+        "高雄市義勇消防防火宣導大隊新",
+        "莊分隊顧問、高雄市善心慈善會",
+        "顧問、社團法人高雄市青少年服",
+        "務協會顧問、高雄市楠陽桌球聯",
+        "誼會顧問、國立高雄科技大學校",
+        "友總會顧問、高雄市救國團楠梓",
+        "區團委會會長、中國國民黨第19",
+        "、20、21屆全國代表",
+        "宏揚法治精神"
+      ],
+      "excerpt": "高雄市私立國際商工畢\n遵守選舉法令\n立法委員黃昭順辦公室助理\n高雄市義勇消防防火宣導大隊新\n莊分隊顧問、高雄市善心慈善會\n顧問、社團法人高雄市青少年服\n務協會顧問、高雄市楠陽桌球聯\n誼會顧問、國立高雄科技大學校\n友總會顧問、高雄市救國團楠梓\n區團委會會長、中國國民黨第19\n、20、21屆全國代表\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "displayName": "陳麗珍",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 3,
+      "education": [
+        "義守大學管理系學士",
+        "高雄師範大學教育學碩士"
+      ],
+      "experience": [
+        "高雄市第一、二、三屆議員、高",
+        "雄市第七屆議員、左營區新下里",
+        "里長、十七全黨代表、婦聯會楠",
+        "梓支會主委、左營救國團會長、",
+        "楠梓社會教育站顧問、高雄市龍",
+        "舟委員會主委、博仁慈善會顧問",
+        "、嘉義同鄉會顧問、雲林同鄉會",
+        "顧問。"
+      ],
+      "excerpt": "義守大學管理系學士\n高雄師範大學教育學碩士\n高雄市第一、二、三屆議員、高\n雄市第七屆議員、左營區新下里\n里長、十七全黨代表、婦聯會楠\n梓支會主委、左營救國團會長、\n楠梓社會教育站顧問、高雄市龍\n舟委員會主委、博仁慈善會顧問\n、嘉義同鄉會顧問、雲林同鄉會\n顧問。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "displayName": "柳淑芳",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 3,
+      "education": [
+        "左營國小、左營國中、岡山",
+        "農工化工科"
+      ],
+      "experience": [
+        "國小全班第一名、國中英文不及",
+        "格、中山大學公務人員進修班英",
+        "文會話ㄧ百分、曾任英文家庭教",
+        "師、現任台灣中油公司圖書管理",
+        "員、散文紀念感恩我的父親及我",
+        "的母親被刊載獲佳評、參選里長",
+        "、市議員、立委奮鬥不懈、楠梓",
+        "第一人：西青埔垃圾場抗爭、高",
+        "雄第一人：倒馬遊行、全國第一",
+        "人：罷免空心蔡大陸妹遊行"
+      ],
+      "excerpt": "左營國小、左營國中、岡山\n農工化工科\n國小全班第一名、國中英文不及\n格、中山大學公務人員進修班英\n文會話ㄧ百分、曾任英文家庭教\n師、現任台灣中油公司圖書管理\n員、散文紀念感恩我的父親及我\n的母親被刊載獲佳評、參選里長\n、市議員、立委奮鬥不懈、楠梓\n第一人：西青埔垃圾場抗爭、高\n雄第一人：倒馬遊行、全國第一\n人：罷免空心蔡大陸妹遊行",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "displayName": "黃文志",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 4,
+      "education": [
+        "高雄市立後勁國小",
+        "高雄市立後勁國中",
+        "高雄市立海青工商",
+        "私立樹德科技大學",
+        "英國基爾大學碩士"
+      ],
+      "experience": [
+        "高雄市第三屆市議員",
+        "高雄市議會民進黨團書記長",
+        "蔡英文總統高雄市競選總部副總",
+        "幹事",
+        "高雄市射箭委員會副主任委員"
+      ],
+      "excerpt": "高雄市立後勁國小\n高雄市立後勁國中\n高雄市立海青工商\n私立樹德科技大學\n英國基爾大學碩士\n高雄市第三屆市議員\n高雄市議會民進黨團書記長\n蔡英文總統高雄市競選總部副總\n幹事\n高雄市射箭委員會副主任委員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "displayName": "陳玫娟",
+      "districtId": "district-kaohsiung-council-04",
+      "districtLabel": "高雄市議員第4選舉區",
+      "file": "d4",
+      "page": 4,
+      "education": [
+        "舊城國小、大義國中、道明",
+        "中學、美國威斯頓大學企管",
+        "碩士"
+      ],
+      "experience": [
+        "日本東洋大學、日本亞細亞航空",
+        "公司、立委黃昭順及侯彩鳳服務",
+        "處特別助理、高雄市千禧國際同",
+        "濟會創會會長、高雄市2007女國",
+        "際青商會特友會主席、高雄青工",
+        "會前副總會長、高雄市清玉文教",
+        "發展協會理事長、高雄市滑水、",
+        "排舞委員會主委、高雄市國劇研",
+        "究會理事長",
+        "。"
+      ],
+      "excerpt": "舊城國小、大義國中、道明\n中學、美國威斯頓大學企管\n碩士\n日本東洋大學、日本亞細亞航空\n公司、立委黃昭順及侯彩鳳服務\n處特別助理、高雄市千禧國際同\n濟會創會會長、高雄市2007女國\n際青商會特友會主席、高雄青工\n會前副總會長、高雄市清玉文教\n發展協會理事長、高雄市滑水、\n排舞委員會主委、高雄市國劇研\n究會理事長\n。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "displayName": "黃飛鳳",
+      "districtId": "district-kaohsiung-council-05",
+      "districtLabel": "高雄市議員第5選舉區",
+      "file": "d5",
+      "page": 1,
+      "education": [
+        "高雄市大樹區水寮國民小學",
+        "高雄市立大樹國民中學",
+        "私立大同商業專科學校會計",
+        "統計科",
+        "美國國家大學大眾傳播系",
+        "義守大學管理學院碩士"
+      ],
+      "experience": [
+        "水寮國小家長會顧問",
+        "大樹國中家長會顧問",
+        "台灣薪火傳愛關懷協會理事長",
+        "澳洲科技公司總經理特助",
+        "台灣外銷產業國貿部經理",
+        "電腦及半導體雜誌採訪編輯",
+        "電台媒體公關"
+      ],
+      "excerpt": "高雄市大樹區水寮國民小學\n高雄市立大樹國民中學\n私立大同商業專科學校會計\n統計科\n美國國家大學大眾傳播系\n義守大學管理學院碩士\n水寮國小家長會顧問\n大樹國中家長會顧問\n台灣薪火傳愛關懷協會理事長\n澳洲科技公司總經理特助\n台灣外銷產業國貿部經理\n電腦及半導體雜誌採訪編輯\n電台媒體公關",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "displayName": "吳利成",
+      "districtId": "district-kaohsiung-council-05",
+      "districtLabel": "高雄市議員第5選舉區",
+      "file": "d5",
+      "page": 1,
+      "education": [
+        "大樹國小畢業",
+        "大樹國中畢業",
+        "嘉義師專畢業",
+        "嘉義師院畢業",
+        "高雄師範大學成教所碩士畢"
+      ],
+      "experience": [
+        "嘉義縣竹崎國小教師",
+        "國立嘉師實小教師",
+        "行政院南服中心副執行長",
+        "高雄縣議員(第14、15、16屆)",
+        "高雄市議員(第1、3屆)"
+      ],
+      "excerpt": "大樹國小畢業\n大樹國中畢業\n嘉義師專畢業\n嘉義師院畢業\n高雄師範大學成教所碩士畢\n嘉義縣竹崎國小教師\n國立嘉師實小教師\n行政院南服中心副執行長\n高雄縣議員(第14、15、16屆)\n高雄市議員(第1、3屆)",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "displayName": "江瑞鴻",
+      "districtId": "district-kaohsiung-council-05",
+      "districtLabel": "高雄市議員第5選舉區",
+      "file": "d5",
+      "page": 2,
+      "education": [
+        "國立中山大學高階公共政策",
+        "碩士畢業"
+      ],
+      "experience": [
+        "議會民進黨團副總召",
+        "仁武區福清宮主任委員",
+        "仁武分局民防中隊長",
+        "仁武區派出所警友站站長、仁武",
+        "義消分隊顧問團長",
+        "仁武國小志工隊大隊長",
+        "仁武區農會理事長、仁武區農會",
+        "常務監事",
+        "仁武里里長(第1-2屆)",
+        "仁武鄉鄉民代表(第14-15屆)",
+        "仁武同心慈善會理事長、仁武體",
+        "育會理事長"
+      ],
+      "excerpt": "國立中山大學高階公共政策\n碩士畢業\n議會民進黨團副總召\n仁武區福清宮主任委員\n仁武分局民防中隊長\n仁武區派出所警友站站長、仁武\n義消分隊顧問團長\n仁武國小志工隊大隊長\n仁武區農會理事長、仁武區農會\n常務監事\n仁武里里長(第1-2屆)\n仁武鄉鄉民代表(第14-15屆)\n仁武同心慈善會理事長、仁武體\n育會理事長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "displayName": "張勝富",
+      "districtId": "district-kaohsiung-council-05",
+      "districtLabel": "高雄市議員第5選舉區",
+      "file": "d5",
+      "page": 2,
+      "education": [
+        "國立中山大學高階公共政策",
+        "碩士"
+      ],
+      "experience": [
+        "1.第十四、十五屆大社鄉民代表",
+        "2.第十五屆大社鄉鄉長",
+        "3.高雄市第一二三屆市議員",
+        "4.民進黨第十、十一屆全國黨代表",
+        "5.民進黨高雄縣黨部評委召集人",
+        "6.民進黨第十七屆中央執行委員",
+        "7.觀音國小第六、七屆家長會長",
+        "8.大社國中第三十一、三十二屆家",
+        "長會長",
+        "9.高雄市義消總隊義消第四大隊大",
+        "隊長",
+        "10.市議會民進黨團總召"
+      ],
+      "excerpt": "國立中山大學高階公共政策\n碩士\n1.第十四、十五屆大社鄉民代表\n2.第十五屆大社鄉鄉長\n3.高雄市第一二三屆市議員\n4.民進黨第十、十一屆全國黨代表\n5.民進黨高雄縣黨部評委召集人\n6.民進黨第十七屆中央執行委員\n7.觀音國小第六、七屆家長會長\n8.大社國中第三十一、三十二屆家\n長會長\n9.高雄市義消總隊義消第四大隊大\n隊長\n10.市議會民進黨團總召",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "displayName": "邱俊憲",
+      "districtId": "district-kaohsiung-council-05",
+      "districtLabel": "高雄市議員第5選舉區",
+      "file": "d5",
+      "page": 2,
+      "education": [
+        "國立中山大學海洋事務研究",
+        "所管理碩士",
+        "國立中山大學海洋環境及工",
+        "程學系工學學士",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "社團評鑑高雄市優質議員",
+        "高雄市議會民進黨團副總召",
+        "陳菊秘書",
+        "陳其邁發言人",
+        "蔡英文高雄市競選總部副總幹事",
+        "立委李昆澤國會辦公室執行長",
+        "台灣海洋治理策進學會理事長",
+        "國立中山大學校友總會理事",
+        "全國大專院校優秀青年代表",
+        "行政院青年國是會議全國代表",
+        "宏揚法治精神"
+      ],
+      "excerpt": "國立中山大學海洋事務研究\n所管理碩士\n國立中山大學海洋環境及工\n程學系工學學士\n遵守選舉法令\n社團評鑑高雄市優質議員\n高雄市議會民進黨團副總召\n陳菊秘書\n陳其邁發言人\n蔡英文高雄市競選總部副總幹事\n立委李昆澤國會辦公室執行長\n台灣海洋治理策進學會理事長\n國立中山大學校友總會理事\n全國大專院校優秀青年代表\n行政院青年國是會議全國代表\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "displayName": "陳惠君",
+      "districtId": "district-kaohsiung-council-05",
+      "districtLabel": "高雄市議員第5選舉區",
+      "file": "d5",
+      "page": 3,
+      "education": [
+        "1.五權國小(高雄市)畢",
+        "2.高雄市立五福國中畢",
+        "3.高雄市立高雄女中畢",
+        "4.國立臺灣師範大學音樂系",
+        "畢業",
+        "5.國立臺灣師範大學音樂系",
+        "碩士班畢",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "※五福國中、和平國中、",
+        "三信家",
+        "商專任音樂教師，民國85年調",
+        "任到高雄市立中正高中任職專",
+        "任音樂教師至民國110年2月退",
+        "休。",
+        "※曾兼職信義鹽埕前金國小、道",
+        "明、樂育高中、前金國中音樂",
+        "班鋼琴教師",
+        "宏揚法治精神"
+      ],
+      "excerpt": "1.五權國小(高雄市)畢\n2.高雄市立五福國中畢\n3.高雄市立高雄女中畢\n4.國立臺灣師範大學音樂系\n畢業\n5.國立臺灣師範大學音樂系\n碩士班畢\n遵守選舉法令\n※五福國中、和平國中、\n三信家\n商專任音樂教師，民國85年調\n任到高雄市立中正高中任職專\n任音樂教師至民國110年2月退\n休。\n※曾兼職信義鹽埕前金國小、道\n明、樂育高中、前金國中音樂\n班鋼琴教師\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "6b80caadfefe6397e93270e076ea99f7d4cbd175a54fc6aecbb726e215c53d9d",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "displayName": "蔡金晏",
+      "districtId": "district-kaohsiung-council-06",
+      "districtLabel": "高雄市議員第6選舉區",
+      "file": "d6",
+      "page": 1,
+      "education": [
+        "國立成功大學水利及海洋工",
+        "程工學博士",
+        "私立道明中學"
+      ],
+      "experience": [
+        "1．正修科技大學助理教授2．高",
+        "雄市議會第1－3屆議員3．國民",
+        "黨青年部副主任4．高雄市體育",
+        "會第1、2屆理事5．高雄市柯蔡",
+        "宗親會第12屆顧問6．高雄市議",
+        "會前副議長蔡松雄服務處助理7",
+        "．國民黨第18屆中央委員"
+      ],
+      "excerpt": "國立成功大學水利及海洋工\n程工學博士\n私立道明中學\n1．正修科技大學助理教授2．高\n雄市議會第1－3屆議員3．國民\n黨青年部副主任4．高雄市體育\n會第1、2屆理事5．高雄市柯蔡\n宗親會第12屆顧問6．高雄市議\n會前副議長蔡松雄服務處助理7\n．國民黨第18屆中央委員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC6%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "7bc295d09134d2dd4aae2c909552003b4e394cdcc165e9de38d2b2d7e9aa365b",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "displayName": "陳美雅",
+      "districtId": "district-kaohsiung-council-06",
+      "districtLabel": "高雄市議員第6選舉區",
+      "file": "d6",
+      "page": 1,
+      "education": [
+        "道明幼稚園、中山國小、大",
+        "義國中、高雄高商、日本明",
+        "治大學法學學士、日本早稻",
+        "田大學法學碩士、日本早稻",
+        "田大學法學博士。"
+      ],
+      "experience": [
+        "高雄市議員、臺灣高等法院高雄",
+        "分院法官助理、市立空大法政學",
+        "系助理教授、文藻外語大學日文",
+        "講師、國民黨文傳會副主委、體",
+        "育會理事、婦女會理事、日本台",
+        "灣交流協會邀請以意見領袖赴日",
+        "交流、台南同鄉會顧問、澎湖同",
+        "鄉會、雲林同鄉會、屏東同鄉會",
+        "。"
+      ],
+      "excerpt": "道明幼稚園、中山國小、大\n義國中、高雄高商、日本明\n治大學法學學士、日本早稻\n田大學法學碩士、日本早稻\n田大學法學博士。\n高雄市議員、臺灣高等法院高雄\n分院法官助理、市立空大法政學\n系助理教授、文藻外語大學日文\n講師、國民黨文傳會副主委、體\n育會理事、婦女會理事、日本台\n灣交流協會邀請以意見領袖赴日\n交流、台南同鄉會顧問、澎湖同\n鄉會、雲林同鄉會、屏東同鄉會\n。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC6%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "7bc295d09134d2dd4aae2c909552003b4e394cdcc165e9de38d2b2d7e9aa365b",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "displayName": "簡煥宗",
+      "districtId": "district-kaohsiung-council-06",
+      "districtLabel": "高雄市議員第6選舉區",
+      "file": "d6",
+      "page": 1,
+      "education": [
+        "中山大學人力資源管理研究",
+        "所碩士",
+        "東海大學哲學系畢業"
+      ],
+      "experience": [
+        "現任高雄市議員",
+        "現任民主進步黨中央執行委員",
+        "正修科技大學講師",
+        "高雄市公共事務發展協會執行長",
+        "高雄國際郵輪協會總幹事",
+        "高雄市政府民政局主任秘書",
+        "高雄市長陳菊辦公室秘書",
+        "行政院勞委會陳菊主委辦公室秘",
+        "書",
+        "立法委員邱太三國會辦公室主任"
+      ],
+      "excerpt": "中山大學人力資源管理研究\n所碩士\n東海大學哲學系畢業\n現任高雄市議員\n現任民主進步黨中央執行委員\n正修科技大學講師\n高雄市公共事務發展協會執行長\n高雄國際郵輪協會總幹事\n高雄市政府民政局主任秘書\n高雄市長陳菊辦公室秘書\n行政院勞委會陳菊主委辦公室秘\n書\n立法委員邱太三國會辦公室主任",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC6%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "7bc295d09134d2dd4aae2c909552003b4e394cdcc165e9de38d2b2d7e9aa365b",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "displayName": "李喬如",
+      "districtId": "district-kaohsiung-council-06",
+      "districtLabel": "高雄市議員第6選舉區",
+      "file": "d6",
+      "page": 1,
+      "education": [
+        "國立中山大學高階公共政策",
+        "研究所碩士"
+      ],
+      "experience": [
+        "高雄市議會民政委員會召集人、",
+        "高雄市議會教育小組召集人、高",
+        "雄市議會法規委員、高雄市議會",
+        "衛環委員、高雄市兒童福利協會",
+        "創辦人、高雄市議會民進黨團總",
+        "召集人。"
+      ],
+      "excerpt": "國立中山大學高階公共政策\n研究所碩士\n高雄市議會民政委員會召集人、\n高雄市議會教育小組召集人、高\n雄市議會法規委員、高雄市議會\n衛環委員、高雄市兒童福利協會\n創辦人、高雄市議會民進黨團總\n召集人。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC6%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "7bc295d09134d2dd4aae2c909552003b4e394cdcc165e9de38d2b2d7e9aa365b",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "displayName": "何權峰",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 1,
+      "education": [
+        "高雄市三民區莊敬國小",
+        "高雄市三民區陽明國中",
+        "高雄市立新莊高中",
+        "東海大學政治學、法學學士"
+      ],
+      "experience": [
+        "立法委員蔡其昌辦公室主任",
+        "高雄市政府教育局機要秘書",
+        "高雄市政府陳菊市長秘書",
+        "高雄市體育會手球委員會主任委",
+        "員",
+        "高雄市第",
+        "2、3屆議員"
+      ],
+      "excerpt": "高雄市三民區莊敬國小\n高雄市三民區陽明國中\n高雄市立新莊高中\n東海大學政治學、法學學士\n立法委員蔡其昌辦公室主任\n高雄市政府教育局機要秘書\n高雄市政府陳菊市長秘書\n高雄市體育會手球委員會主任委\n員\n高雄市第\n2、3屆議員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "displayName": "林于凱",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 1,
+      "education": [
+        "國立中山大學生物科學系碩",
+        "士",
+        "國立中山大學機械與機電工",
+        "程學系",
+        "新竹科學園區實驗高中",
+        "高雄市三民國中",
+        "高雄市河濱國小",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "高雄市議會第三屆議員",
+        "時代力量高雄黨部執行長、主委",
+        "立法委員黃國昌法案助理",
+        "高雄市政府環保局機械工程技士",
+        "農委會漁業署自然保育技士",
+        "宏揚法治精神"
+      ],
+      "excerpt": "國立中山大學生物科學系碩\n士\n國立中山大學機械與機電工\n程學系\n新竹科學園區實驗高中\n高雄市三民國中\n高雄市河濱國小\n遵守選舉法令\n高雄市議會第三屆議員\n時代力量高雄黨部執行長、主委\n立法委員黃國昌法案助理\n高雄市政府環保局機械工程技士\n農委會漁業署自然保育技士\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "displayName": "張博洋",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 2,
+      "education": [
+        "國立高雄應用科技大學模具",
+        "工程系"
+      ],
+      "experience": [
+        "罷韓四君子",
+        "快樂電台主持",
+        "機械設計工程師",
+        "台灣基進新聞部主任"
+      ],
+      "excerpt": "國立高雄應用科技大學模具\n工程系\n罷韓四君子\n快樂電台主持\n機械設計工程師\n台灣基進新聞部主任",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "displayName": "曾俊傑",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 2,
+      "education": [
+        "高雄市立十全國小畢業、高",
+        "雄市立七賢國中畢業、屏東",
+        "永達技術學院五專部畢業、",
+        "澳洲昆士蘭中央大學IT系畢",
+        "業"
+      ],
+      "experience": [
+        "高雄市第八屆議員。大高雄第一",
+        "、二、三屆議員。中國國民黨中",
+        "央評議委員。高雄市三民區國民",
+        "黨部副主委。高雄市議會國民黨",
+        "團總召。高雄市三民區後備輔導",
+        "中心主任。"
+      ],
+      "excerpt": "高雄市立十全國小畢業、高\n雄市立七賢國中畢業、屏東\n永達技術學院五專部畢業、\n澳洲昆士蘭中央大學IT系畢\n業\n高雄市第八屆議員。大高雄第一\n、二、三屆議員。中國國民黨中\n央評議委員。高雄市三民區國民\n黨部副主委。高雄市議會國民黨\n團總召。高雄市三民區後備輔導\n中心主任。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "displayName": "童燕珍",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 2,
+      "education": [
+        "一國立高雄師範大學碩士",
+        "二美國舊金山NHU大學",
+        "三台灣省立師範學院",
+        "(二年制)",
+        "四台灣省立嘉義女中",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "一高雄市第一至第三屆市議員",
+        "二改制前高雄市第六、七屆市議",
+        "員",
+        "三高雄市議會教育委員會召集人",
+        "四國民黨高雄市議會黨團總召",
+        "五高雄市婦幼同心會理事長",
+        "六高雄市幼兒教育協會理事長",
+        "宏揚法治精神"
+      ],
+      "excerpt": "一國立高雄師範大學碩士\n二美國舊金山NHU大學\n三台灣省立師範學院\n(二年制)\n四台灣省立嘉義女中\n遵守選舉法令\n一高雄市第一至第三屆市議員\n二改制前高雄市第六、七屆市議\n員\n三高雄市議會教育委員會召集人\n四國民黨高雄市議會黨團總召\n五高雄市婦幼同心會理事長\n六高雄市幼兒教育協會理事長\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "displayName": "康裕成",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 3,
+      "education": [
+        "北一女中",
+        "臺灣大學法律系",
+        "中山大學政治學研究所碩士"
+      ],
+      "experience": [
+        "•執業律師(律師高考及格)",
+        "•民進黨發言人(2011年-2012年)",
+        "•高雄市議會第2屆議長",
+        "•高雄市議員(2002年迄今)",
+        "•高雄縣議員(1998年-2002年)"
+      ],
+      "excerpt": "北一女中\n臺灣大學法律系\n中山大學政治學研究所碩士\n•執業律師(律師高考及格)\n•民進黨發言人(2011年-2012年)\n•高雄市議會第2屆議長\n•高雄市議員(2002年迄今)\n•高雄縣議員(1998年-2002年)",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "displayName": "黃柏霖",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 3,
+      "education": [
+        "正興國小、道明中學、正修",
+        "工專土木工程科、國立中山",
+        "大學人力資源管理研究所碩",
+        "士、國立中山大學公共事務",
+        "管理研究所博士。"
+      ],
+      "experience": [
+        "高雄市第一•二屆市議員、正修",
+        "科技大學助理教授、中國國民黨",
+        "高雄市市黨部主任委員、中國國",
+        "民黨中央組織發展委員會青年部",
+        "主任、高雄市正忠文教協會理事",
+        "長、高雄市政府公務人力發展中",
+        "心講師。"
+      ],
+      "excerpt": "正興國小、道明中學、正修\n工專土木工程科、國立中山\n大學人力資源管理研究所碩\n士、國立中山大學公共事務\n管理研究所博士。\n高雄市第一•二屆市議員、正修\n科技大學助理教授、中國國民黨\n高雄市市黨部主任委員、中國國\n民黨中央組織發展委員會青年部\n主任、高雄市正忠文教協會理事\n長、高雄市政府公務人力發展中\n心講師。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "displayName": "黃香菽",
+      "districtId": "district-kaohsiung-council-07",
+      "districtLabel": "高雄市議員第7選舉區",
+      "file": "d7",
+      "page": 3,
+      "education": [
+        "正興國小、道明中學國中部",
+        "、台南女子技術學院五專部",
+        "室內設計科、正修科技大學",
+        "經營管理研究所碩士",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "高雄市第2、3屆議員",
+        "立委侯彩鳳服務處主任",
+        "財團法人大揚教育基金會執行長",
+        "高雄市體育會電子競技委員會主",
+        "委",
+        "正修科技大學兼職講師",
+        "正修科技大學校友會副總會長",
+        "高雄區勞工總工會常務理事",
+        "宏揚法治精神"
+      ],
+      "excerpt": "正興國小、道明中學國中部\n、台南女子技術學院五專部\n室內設計科、正修科技大學\n經營管理研究所碩士\n遵守選舉法令\n高雄市第2、3屆議員\n立委侯彩鳳服務處主任\n財團法人大揚教育基金會執行長\n高雄市體育會電子競技委員會主\n委\n正修科技大學兼職講師\n正修科技大學校友會副總會長\n高雄區勞工總工會常務理事\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "displayName": "郭建盟",
+      "districtId": "district-kaohsiung-council-08",
+      "districtLabel": "高雄市議員第8選舉區",
+      "file": "d8",
+      "page": 1,
+      "education": [
+        "輔仁大學經濟學士",
+        "高雄大學經管碩士"
+      ],
+      "experience": [
+        "1.燒肉粽歌王郭金發ㄟ囝。",
+        "2.關懷生命協會副執行長。",
+        "3.高市府民政局主任秘書。",
+        "4.陳菊市長辦公室副主任。",
+        "5.合併前第六屆市議員、合併後",
+        "第一、二及三屆高雄市議員。"
+      ],
+      "excerpt": "輔仁大學經濟學士\n高雄大學經管碩士\n1.燒肉粽歌王郭金發ㄟ囝。\n2.關懷生命協會副執行長。\n3.高市府民政局主任秘書。\n4.陳菊市長辦公室副主任。\n5.合併前第六屆市議員、合併後\n第一、二及三屆高雄市議員。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "f235d01f3f55f226a269fe4fa002bd2ad068b00d2d34e6c7a97d963e6fa552e5",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "displayName": "許采蓁",
+      "districtId": "district-kaohsiung-council-08",
+      "districtLabel": "高雄市議員第8選舉區",
+      "file": "d8",
+      "page": 1,
+      "education": [
+        "親民技術學院幼兒保育系學",
+        "士學位"
+      ],
+      "experience": [
+        "許崑源愛心慈善秘書長"
+      ],
+      "excerpt": "親民技術學院幼兒保育系學\n士學位\n許崑源愛心慈善秘書長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "f235d01f3f55f226a269fe4fa002bd2ad068b00d2d34e6c7a97d963e6fa552e5",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "displayName": "湯詠瑜",
+      "districtId": "district-kaohsiung-council-08",
+      "districtLabel": "高雄市議員第8選舉區",
+      "file": "d8",
+      "page": 1,
+      "education": [
+        "七賢國小",
+        "五福國中",
+        "高雄女中",
+        "臺灣大學法學士",
+        "紐約大學(NYU)法學碩士",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "國際通商法律事務所合夥律師、",
+        "高雄市職業總工會法律顧問、高",
+        "雄市集中市場零售攤販職業工會",
+        "法律顧問、高雄市縫紉業職業工",
+        "會法律顧問、高雄郵政工會法律",
+        "顧問",
+        "宏揚法治精神"
+      ],
+      "excerpt": "七賢國小\n五福國中\n高雄女中\n臺灣大學法學士\n紐約大學(NYU)法學碩士\n遵守選舉法令\n國際通商法律事務所合夥律師、\n高雄市職業總工會法律顧問、高\n雄市集中市場零售攤販職業工會\n法律顧問、高雄市縫紉業職業工\n會法律顧問、高雄郵政工會法律\n顧問\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "f235d01f3f55f226a269fe4fa002bd2ad068b00d2d34e6c7a97d963e6fa552e5",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "displayName": "黃文益",
+      "districtId": "district-kaohsiung-council-08",
+      "districtLabel": "高雄市議員第8選舉區",
+      "file": "d8",
+      "page": 2,
+      "education": [
+        "大同國小、前金國中",
+        "高師大附中、中山醫學院",
+        "國立高雄大學碩士",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "高雄市議會第三屆議員、國立高",
+        "雄師範大學博士班(博士候選人)",
+        "、2020高雄市長補選陳其邁競選",
+        "總部發言人、高雄市議會民進黨",
+        "團幹事長、高雄市嘉義同鄉會副",
+        "總幹事、高師大附中校友會創會",
+        "理事長、立法委員國會助理、立",
+        "委趙天麟服務處執行長",
+        "宏揚法治精神"
+      ],
+      "excerpt": "大同國小、前金國中\n高師大附中、中山醫學院\n國立高雄大學碩士\n遵守選舉法令\n高雄市議會第三屆議員、國立高\n雄師範大學博士班(博士候選人)\n、2020高雄市長補選陳其邁競選\n總部發言人、高雄市議會民進黨\n團幹事長、高雄市嘉義同鄉會副\n總幹事、高師大附中校友會創會\n理事長、立法委員國會助理、立\n委趙天麟服務處執行長\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "f235d01f3f55f226a269fe4fa002bd2ad068b00d2d34e6c7a97d963e6fa552e5",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+      "displayName": "李雅靜",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 1,
+      "education": [
+        "中山大學公共事務管理研究",
+        "所碩士、輔英技術學院環境",
+        "工程衛生系、大仁藥專工業",
+        "安全衛生科、鳳西國中、鳳",
+        "山國小"
+      ],
+      "experience": [
+        "高雄市議會第1至3屆議員、國民",
+        "黨團副總召、書記長、全國青工",
+        "會總會長、中常委、文傳會副主",
+        "委、輔英科大校友會理事長、大",
+        "仁及正修科大校友會顧問、中山",
+        "大學環工所博士候選人、鳳西扶",
+        "輪社社長"
+      ],
+      "excerpt": "中山大學公共事務管理研究\n所碩士、輔英技術學院環境\n工程衛生系、大仁藥專工業\n安全衛生科、鳳西國中、鳳\n山國小\n高雄市議會第1至3屆議員、國民\n黨團副總召、書記長、全國青工\n會總會長、中常委、文傳會副主\n委、輔英科大校友會理事長、大\n仁及正修科大校友會顧問、中山\n大學環工所博士候選人、鳳西扶\n輪社社長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "displayName": "鍾易仲",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 1,
+      "education": [
+        "義守大學管理學碩士"
+      ],
+      "experience": [
+        "立法委員鍾紹和國會辦公室助理",
+        "高美醫護管理專科學校副校長",
+        "中國國民黨中央委員",
+        "中國國民黨高雄市黨部副主委",
+        "高雄市青年工作委員總會總會長",
+        "大高雄嘉義同鄉會顧問",
+        "高雄市客屬美濃同鄉會榮譽顧問",
+        "高雄市鐘錶眼鏡商業同業公會會",
+        "務顧問",
+        "高雄市社福慈善總會顧問",
+        "正修科技大學校友會會務顧問",
+        "高雄市議員"
+      ],
+      "excerpt": "義守大學管理學碩士\n立法委員鍾紹和國會辦公室助理\n高美醫護管理專科學校副校長\n中國國民黨中央委員\n中國國民黨高雄市黨部副主委\n高雄市青年工作委員總會總會長\n大高雄嘉義同鄉會顧問\n高雄市客屬美濃同鄉會榮譽顧問\n高雄市鐘錶眼鏡商業同業公會會\n務顧問\n高雄市社福慈善總會顧問\n正修科技大學校友會會務顧問\n高雄市議員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+      "displayName": "劉德林",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 2,
+      "education": [
+        "和春技術學院附設進修學院",
+        "企業管理系。"
+      ],
+      "experience": [
+        "1.高雄市高縣退伍軍人協會榮譽",
+        "理事長。2.高雄市高縣眷村文化",
+        "發展協會榮譽理事長。3.高雄市",
+        "高縣山東同鄉會榮譽理事長。4.",
+        "高雄市關懷公教退休人員協會顧",
+        "問。5.高雄市黃國山黨部委員。",
+        "6.高雄市黃山埔黨部常委。"
+      ],
+      "excerpt": "和春技術學院附設進修學院\n企業管理系。\n1.高雄市高縣退伍軍人協會榮譽\n理事長。2.高雄市高縣眷村文化\n發展協會榮譽理事長。3.高雄市\n高縣山東同鄉會榮譽理事長。4.\n高雄市關懷公教退休人員協會顧\n問。5.高雄市黃國山黨部委員。\n6.高雄市黃山埔黨部常委。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "displayName": "鄭安秝",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 2,
+      "education": [
+        "正修科技大學創意產業經營",
+        "學位學程管理學士、高雄高",
+        "商、鳳西國中、正義中學附",
+        "設國中部、鳳西國小"
+      ],
+      "experience": [
+        "國民黨高雄市議會黨團副總召",
+        "國民黨21屆中央委員、高雄青工",
+        "總會副總會長、高雄市鳳山區農",
+        "會理事、台灣黃埔眷村協會理事",
+        "、正修科大校友會會務顧問、商",
+        "科聯誼會副會長、鳳邑開漳聖王",
+        "廟管理委員會秘書長"
+      ],
+      "excerpt": "正修科技大學創意產業經營\n學位學程管理學士、高雄高\n商、鳳西國中、正義中學附\n設國中部、鳳西國小\n國民黨高雄市議會黨團副總召\n國民黨21屆中央委員、高雄青工\n總會副總會長、高雄市鳳山區農\n會理事、台灣黃埔眷村協會理事\n、正修科大校友會會務顧問、商\n科聯誼會副會長、鳳邑開漳聖王\n廟管理委員會秘書長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "displayName": "陳慧文",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 2,
+      "education": [
+        "1國立高雄應用科技大學工",
+        "業工程與管理系碩士班。2",
+        "國立高雄工專電子科。3高",
+        "雄市瑞祥國中。4高雄縣立",
+        "五甲國小。"
+      ],
+      "experience": [
+        "一第3屆高雄市議員二高雄市運",
+        "動健康休閒體驗協會理事長三大",
+        "高雄不動產開發商業同業公會顧",
+        "問四高雄市真善美中小企業跨業",
+        "交流協會顧問五第1、2屆高雄市",
+        "議員六第15、16屆高雄縣議員七",
+        "第8屆鳳山市民代表"
+      ],
+      "excerpt": "1國立高雄應用科技大學工\n業工程與管理系碩士班。2\n國立高雄工專電子科。3高\n雄市瑞祥國中。4高雄縣立\n五甲國小。\n一第3屆高雄市議員二高雄市運\n動健康休閒體驗協會理事長三大\n高雄不動產開發商業同業公會顧\n問四高雄市真善美中小企業跨業\n交流協會顧問五第1、2屆高雄市\n議員六第15、16屆高雄縣議員七\n第8屆鳳山市民代表",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "displayName": "蘇致榮",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 3,
+      "education": [
+        "臺北市立大學運動教育碩士",
+        "、輔仁大學體育學系、高英",
+        "工商、鳳山國中、大東國小"
+      ],
+      "experience": [
+        "高雄市政府秘書、前議員蘇炎城",
+        "服務處主任、高雄縣職業總工會",
+        "理事長、高雄市攤販協進會理事",
+        "長、高雄縣家事服務職業工會理",
+        "事長、第一勞資關係協進會常務",
+        "理事、中華男子壘球代表隊資深",
+        "選手、北體校友會高雄分會長、",
+        "教育部審定講師",
+        "高雄市議會特色公園小組召集人"
+      ],
+      "excerpt": "臺北市立大學運動教育碩士\n、輔仁大學體育學系、高英\n工商、鳳山國中、大東國小\n高雄市政府秘書、前議員蘇炎城\n服務處主任、高雄縣職業總工會\n理事長、高雄市攤販協進會理事\n長、高雄縣家事服務職業工會理\n事長、第一勞資關係協進會常務\n理事、中華男子壘球代表隊資深\n選手、北體校友會高雄分會長、\n教育部審定講師\n高雄市議會特色公園小組召集人",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "displayName": "林智鴻",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 3,
+      "education": [
+        "國立中山大學海事所碩士",
+        "國立中山大學海資系"
+      ],
+      "experience": [
+        "高雄市議會國民外交促進會副會",
+        "長",
+        "高雄市議會民進黨團書記長",
+        "高雄市政府新聞局主秘",
+        "陳菊市長辦公室副主任",
+        "立委趙天麟國會執行長",
+        "謝長廷秘書",
+        "高雄市游泳委員會副主委",
+        "高雄市鳳美客家事務協會顧問",
+        "高雄市台東同鄉會理事",
+        "高雄市屏東同鄉會理事",
+        "新高雄嘉義同鄉會顧問"
+      ],
+      "excerpt": "國立中山大學海事所碩士\n國立中山大學海資系\n高雄市議會國民外交促進會副會\n長\n高雄市議會民進黨團書記長\n高雄市政府新聞局主秘\n陳菊市長辦公室副主任\n立委趙天麟國會執行長\n謝長廷秘書\n高雄市游泳委員會副主委\n高雄市鳳美客家事務協會顧問\n高雄市台東同鄉會理事\n高雄市屏東同鄉會理事\n新高雄嘉義同鄉會顧問",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "displayName": "徐尚賢",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 3,
+      "education": [
+        "義守大學管理學碩士"
+      ],
+      "experience": [
+        "罷免黃捷總部發言人",
+        "反空污反萊毒顧健康全民聯盟發",
+        "言人",
+        "民間鬥士團體總召"
+      ],
+      "excerpt": "義守大學管理學碩士\n罷免黃捷總部發言人\n反空污反萊毒顧健康全民聯盟發\n言人\n民間鬥士團體總召",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "displayName": "張漢忠",
+      "districtId": "district-kaohsiung-council-09",
+      "districtLabel": "高雄市議員第9選舉區",
+      "file": "d9",
+      "page": 3,
+      "education": [
+        "仁德醫護管理專科學校。三",
+        "信家商。中正高工。忠孝國",
+        "中。梓官國小",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "第一二三屆高雄市議員。第十六",
+        "屆高雄縣議員。慶忠機車行負責",
+        "人。高雄市羽球委員會主任委員",
+        "。高雄市交通義勇警察副大隊長",
+        "。高縣機動車修理工會理事長。",
+        "鳳山滑輪溜冰推廣協會理事長。",
+        "鳳山區保興宮管委會常務監事。",
+        "鳳山慈福宮副主任委員。和春技",
+        "術學院肄業。",
+        "宏揚法治精神"
+      ],
+      "excerpt": "仁德醫護管理專科學校。三\n信家商。中正高工。忠孝國\n中。梓官國小\n遵守選舉法令\n第一二三屆高雄市議員。第十六\n屆高雄縣議員。慶忠機車行負責\n人。高雄市羽球委員會主任委員\n。高雄市交通義勇警察副大隊長\n。高縣機動車修理工會理事長。\n鳳山滑輪溜冰推廣協會理事長。\n鳳山區保興宮管委會常務監事。\n鳳山慈福宮副主任委員。和春技\n術學院肄業。\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "cca6001d013006d5274f2d4b5e867ba45f9ebda586fbe3291ee20f2810ca2d57",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "displayName": "鄭光峰",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 1,
+      "education": [
+        "嘉義高中畢",
+        "中山醫學大學復健醫學系畢",
+        "高雄醫學大學醫學研究所畢",
+        "高雄科技大學國際企業系管",
+        "理學博士班畢"
+      ],
+      "experience": [
+        "民進黨高市黨部主委",
+        "嘉義同鄉會顧問",
+        "南區家扶中心委員",
+        "高科大兼任助理教授",
+        "現任高雄市議員"
+      ],
+      "excerpt": "嘉義高中畢\n中山醫學大學復健醫學系畢\n高雄醫學大學醫學研究所畢\n高雄科技大學國際企業系管\n理學博士班畢\n民進黨高市黨部主委\n嘉義同鄉會顧問\n南區家扶中心委員\n高科大兼任助理教授\n現任高雄市議員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "displayName": "于仙玲",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 2,
+      "education": [
+        "高雄市漢民國小",
+        "高雄市立中山國民中學",
+        "國立鳳山高級中學",
+        "國立成功大學醫學院護理學",
+        "系"
+      ],
+      "experience": [
+        "高雄市第3屆議員候選人",
+        "小民參政歐巴桑聯盟推薦候選人",
+        "高雄榮民總醫院病房護理師",
+        "阮綜合醫院門診護理師",
+        "ABC牙醫聯盟植牙中心開刀房護",
+        "理師"
+      ],
+      "excerpt": "高雄市漢民國小\n高雄市立中山國民中學\n國立鳳山高級中學\n國立成功大學醫學院護理學\n系\n高雄市第3屆議員候選人\n小民參政歐巴桑聯盟推薦候選人\n高雄榮民總醫院病房護理師\n阮綜合醫院門診護理師\nABC牙醫聯盟植牙中心開刀房護\n理師",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "displayName": "黃敬雅",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 2,
+      "education": [
+        "高雄市私立樂仁幼兒園",
+        "高雄市新興區七賢國民小學",
+        "國立高雄師範大學附屬高級",
+        "中學",
+        "國立中山大學附屬國光高級",
+        "中學",
+        "國立臺東大學華語文學系"
+      ],
+      "experience": [
+        "復興航空運輸股份有限公司"
+      ],
+      "excerpt": "高雄市私立樂仁幼兒園\n高雄市新興區七賢國民小學\n國立高雄師範大學附屬高級\n中學\n國立中山大學附屬國光高級\n中學\n國立臺東大學華語文學系\n復興航空運輸股份有限公司",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "displayName": "吳銘賜",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 3,
+      "education": [
+        "和春技術學院附設進修學院"
+      ],
+      "experience": [
+        "凱達格蘭學校國家策略領導班11",
+        "期。",
+        "前鎮區振興里第5至7屆里長。",
+        "前鎮區里長聯誼會主席。",
+        "合併前第7屆合併後第2、3屆議",
+        "員。",
+        "財團法人高雄市廣濟宮董事長。"
+      ],
+      "excerpt": "和春技術學院附設進修學院\n凱達格蘭學校國家策略領導班11\n期。\n前鎮區振興里第5至7屆里長。\n前鎮區里長聯誼會主席。\n合併前第7屆合併後第2、3屆議\n員。\n財團法人高雄市廣濟宮董事長。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "displayName": "蔡武宏",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 3,
+      "education": [
+        "高雄市立空中大學大眾傳播",
+        "學系畢",
+        "高雄市國際商工資訊科",
+        "高雄市瑞祥國中",
+        "高雄市大同國小"
+      ],
+      "experience": [
+        "高雄市議會議員",
+        "高雄市議會國民黨團總召",
+        "高雄市議員蔡慶源服務處主任",
+        "高雄市政府財政局辦事員",
+        "高雄市政府捷運工程局辦事員"
+      ],
+      "excerpt": "高雄市立空中大學大眾傳播\n學系畢\n高雄市國際商工資訊科\n高雄市瑞祥國中\n高雄市大同國小\n高雄市議會議員\n高雄市議會國民黨團總召\n高雄市議員蔡慶源服務處主任\n高雄市政府財政局辦事員\n高雄市政府捷運工程局辦事員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "displayName": "湯茹婷",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 3,
+      "education": [
+        "國立中山大學中國與亞太區",
+        "域研究所碩士畢。",
+        "國立嘉義大學數位學習設計",
+        "與管理學系。",
+        "國立鳳新高中。"
+      ],
+      "experience": [
+        "立法委員陳椒華高雄服務處主任",
+        "時代力量高雄黨部辦公室主任",
+        "高雄市政府勞工局",
+        "勞動部勞動力發展署高屏澎東分",
+        "署",
+        "日月光半導體股份有限公司人力",
+        "資源處"
+      ],
+      "excerpt": "國立中山大學中國與亞太區\n域研究所碩士畢。\n國立嘉義大學數位學習設計\n與管理學系。\n國立鳳新高中。\n立法委員陳椒華高雄服務處主任\n時代力量高雄黨部辦公室主任\n高雄市政府勞工局\n勞動部勞動力發展署高屏澎東分\n署\n日月光半導體股份有限公司人力\n資源處",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "displayName": "陳麗娜",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 3,
+      "education": [
+        "國立高雄餐旅大學餐旅教育",
+        "研究所碩士"
+      ],
+      "experience": [
+        "中國國民黨高雄市黨部副主委、",
+        "高雄市婦女會理事長、高雄市前",
+        "鎮區婦聯會主委、高雄市小港區",
+        "婦女會理事長、高雄市紅毛港文",
+        "化協會顧問"
+      ],
+      "excerpt": "國立高雄餐旅大學餐旅教育\n研究所碩士\n中國國民黨高雄市黨部副主委、\n高雄市婦女會理事長、高雄市前\n鎮區婦聯會主委、高雄市小港區\n婦女會理事長、高雄市紅毛港文\n化協會顧問",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "displayName": "李順進",
+      "districtId": "district-kaohsiung-council-10",
+      "districtLabel": "高雄市議員第10選舉區",
+      "file": "d10",
+      "page": 4,
+      "education": [
+        "國立中山大學社會科學院高",
+        "階公共政策碩士",
+        "私立東方工業專科學校",
+        "小港國中國小",
+        "海汕國小"
+      ],
+      "experience": [
+        "合併前六七屆合併後一二三屆議",
+        "員",
+        "小港區濟南里長",
+        "高雄市議會保安小組召集人",
+        "市議會國民外交委員會副會長",
+        "社政交通小組副召集人",
+        "農水利海洋小組副召集人",
+        "環保督導專案小組委員",
+        "地政士公會顧問",
+        "港安關懷協會榮譽理事長",
+        "身心障礙權益保障推動小組委員"
+      ],
+      "excerpt": "國立中山大學社會科學院高\n階公共政策碩士\n私立東方工業專科學校\n小港國中國小\n海汕國小\n合併前六七屆合併後一二三屆議\n員\n小港區濟南里長\n高雄市議會保安小組召集人\n市議會國民外交委員會副會長\n社政交通小組副召集人\n農水利海洋小組副召集人\n環保督導專案小組委員\n地政士公會顧問\n港安關懷協會榮譽理事長\n身心障礙權益保障推動小組委員",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC10%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "9c8499711889138b7a5a83daa96c78d98a19a97db16cee8709f9d84dd1b60018",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "displayName": "李雨庭",
+      "districtId": "district-kaohsiung-council-11",
+      "districtLabel": "高雄市議員第11選舉區",
+      "file": "d11",
+      "page": 1,
+      "education": [
+        "高雄市普門高級中學。高雄",
+        "市立空中大學科技管理學系",
+        "。國立高雄科技大學財政稅",
+        "務系碩士。"
+      ],
+      "experience": [
+        "高雄市第2屆市議員。中殼潤滑油",
+        "股份有限公司董事長。民主進步",
+        "黨第17至20屆全國黨代表。凱達",
+        "格蘭學校第13期國家領導發展策",
+        "略班。澳洲國際商業學院。林園",
+        "環保促進會理事長。林園頂厝社",
+        "區發展協會理事長。林園游泳協",
+        "會理事長。林園國小家長委員會",
+        "會長。"
+      ],
+      "excerpt": "高雄市普門高級中學。高雄\n市立空中大學科技管理學系\n。國立高雄科技大學財政稅\n務系碩士。\n高雄市第2屆市議員。中殼潤滑油\n股份有限公司董事長。民主進步\n黨第17至20屆全國黨代表。凱達\n格蘭學校第13期國家領導發展策\n略班。澳洲國際商業學院。林園\n環保促進會理事長。林園頂厝社\n區發展協會理事長。林園游泳協\n會理事長。林園國小家長委員會\n會長。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC11%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "d6386bdde3161f2247a2e6337aac62b40926e609f7476801b3dbf95dfe3a90b8",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "displayName": "洪村銘",
+      "districtId": "district-kaohsiung-council-11",
+      "districtLabel": "高雄市議員第11選舉區",
+      "file": "d11",
+      "page": 1,
+      "education": [
+        "逢甲大學財稅學系學士",
+        "國立中山大學中國與亞太區",
+        "域研究所碩士"
+      ],
+      "experience": [
+        "行政院南部聯合服務中心執行長",
+        "高雄市政府民政局、觀光局秘書",
+        "民進黨中央黨部社運部副主任",
+        "民進黨高雄市黨部執行長",
+        "大寮鄉鄉民代表"
+      ],
+      "excerpt": "逢甲大學財稅學系學士\n國立中山大學中國與亞太區\n域研究所碩士\n行政院南部聯合服務中心執行長\n高雄市政府民政局、觀光局秘書\n民進黨中央黨部社運部副主任\n民進黨高雄市黨部執行長\n大寮鄉鄉民代表",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC11%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "d6386bdde3161f2247a2e6337aac62b40926e609f7476801b3dbf95dfe3a90b8",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "displayName": "邱于軒",
+      "districtId": "district-kaohsiung-council-11",
+      "districtLabel": "高雄市議員第11選舉區",
+      "file": "d11",
+      "page": 1,
+      "education": [
+        "美國密西根州立大學廣告公",
+        "關與行銷碩士",
+        "高雄醫學大學高齡長照碩士"
+      ],
+      "experience": [
+        "台新銀行行銷傳播處襄理",
+        "中央廣播電台公關專員",
+        "張簡秋風社福基金會附設松喬老",
+        "人養護中心主任",
+        "輔英科技大學業界講師",
+        "元智大學資訊傳播學系"
+      ],
+      "excerpt": "美國密西根州立大學廣告公\n關與行銷碩士\n高雄醫學大學高齡長照碩士\n台新銀行行銷傳播處襄理\n中央廣播電台公關專員\n張簡秋風社福基金會附設松喬老\n人養護中心主任\n輔英科技大學業界講師\n元智大學資訊傳播學系",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC11%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "d6386bdde3161f2247a2e6337aac62b40926e609f7476801b3dbf95dfe3a90b8",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "displayName": "王耀裕",
+      "districtId": "district-kaohsiung-council-11",
+      "districtLabel": "高雄市議員第11選舉區",
+      "file": "d11",
+      "page": 2,
+      "education": [
+        "國立高雄師範大學成教所碩",
+        "士。",
+        "國立高雄工專土木工程科。"
+      ],
+      "experience": [
+        "高雄市議員、高雄縣議員、林園",
+        "鄉民代表會16、17屆副主席、",
+        "林園鄉11、12屆鄉長王方員特",
+        "助、高雄市水上安全救生協會理",
+        "事長、林園體育會理事長、林園",
+        "籃球協會理事長"
+      ],
+      "excerpt": "國立高雄師範大學成教所碩\n士。\n國立高雄工專土木工程科。\n高雄市議員、高雄縣議員、林園\n鄉民代表會16、17屆副主席、\n林園鄉11、12屆鄉長王方員特\n助、高雄市水上安全救生協會理\n事長、林園體育會理事長、林園\n籃球協會理事長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC11%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "d6386bdde3161f2247a2e6337aac62b40926e609f7476801b3dbf95dfe3a90b8",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "displayName": "黃天煌",
+      "districtId": "district-kaohsiung-council-11",
+      "districtLabel": "高雄市議員第11選舉區",
+      "file": "d11",
+      "page": 2,
+      "education": [
+        "大寮區潮寮國小、鳳山區鳳",
+        "西國中、大寮區中山工商、",
+        "和春技術學院(二專部)"
+      ],
+      "experience": [
+        "大寮鄉第十四屆鄉民代表副主席",
+        "、大寮鄉第十五屆鄉民代表、高",
+        "雄縣第十四屆縣議員、第十四屆",
+        "、第十五屆大寮鄉長、高雄市第",
+        "一屆、第二屆、第三屆市議員。"
+      ],
+      "excerpt": "大寮區潮寮國小、鳳山區鳳\n西國中、大寮區中山工商、\n和春技術學院(二專部)\n大寮鄉第十四屆鄉民代表副主席\n、大寮鄉第十五屆鄉民代表、高\n雄縣第十四屆縣議員、第十四屆\n、第十五屆大寮鄉長、高雄市第\n一屆、第二屆、第三屆市議員。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC11%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "d6386bdde3161f2247a2e6337aac62b40926e609f7476801b3dbf95dfe3a90b8",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "displayName": "王義雄",
+      "districtId": "district-kaohsiung-indigenous-flat-12",
+      "districtLabel": "高雄市議員第12選舉區",
+      "file": "d12-15",
+      "page": 1,
+      "education": [
+        "一臺東縣東河鄉隆昌國小",
+        "二都蘭國中",
+        "三臺南縣陽明商工",
+        "四政治作戰學專69年班"
+      ],
+      "experience": [
+        "一高雄市第三屆平地原住民市議",
+        "員",
+        "二中國國民黨原住民族委員會委",
+        "員",
+        "三高雄市黨部原住民工作會長、",
+        "副會長",
+        "四左楠區黨部委員、小組長、志",
+        "工團副團長"
+      ],
+      "excerpt": "一臺東縣東河鄉隆昌國小\n二都蘭國中\n三臺南縣陽明商工\n四政治作戰學專69年班\n一高雄市第三屆平地原住民市議\n員\n二中國國民黨原住民族委員會委\n員\n三高雄市黨部原住民工作會長、\n副會長\n四左楠區黨部委員、小組長、志\n工團副團長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC12.13.14.15%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "ba9a3887bee3f731b69f8a20cab45fd79dd216a3636e5e8b3ca7ba04a7411766",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+      "displayName": "巫振興",
+      "districtId": "district-kaohsiung-indigenous-flat-12",
+      "districtLabel": "高雄市議員第12選舉區",
+      "file": "d12-15",
+      "page": 1,
+      "education": [
+        "和春技術學院行銷與流通管",
+        "理系畢業"
+      ],
+      "experience": [
+        "KOLASYOTAKA立法委員南區辦",
+        "公室主任、伍麗華立法委員特別",
+        "助理、俄鄧殷艾議員助理、范織",
+        "欽議員助理。高雄市前鎮區調解",
+        "委員、高雄市原住民事務委員會",
+        "委員、高雄市公益彩券盈餘基金",
+        "管理會委員、高雄市勞工局勞資",
+        "糾紛調解委員、高雄市勞工局就",
+        "業歧視評議委員。"
+      ],
+      "excerpt": "和春技術學院行銷與流通管\n理系畢業\nKOLASYOTAKA立法委員南區辦\n公室主任、伍麗華立法委員特別\n助理、俄鄧殷艾議員助理、范織\n欽議員助理。高雄市前鎮區調解\n委員、高雄市原住民事務委員會\n委員、高雄市公益彩券盈餘基金\n管理會委員、高雄市勞工局勞資\n糾紛調解委員、高雄市勞工局就\n業歧視評議委員。",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC12.13.14.15%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "ba9a3887bee3f731b69f8a20cab45fd79dd216a3636e5e8b3ca7ba04a7411766",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "displayName": "陳幸富",
+      "districtId": "district-kaohsiung-indigenous-mountain-13",
+      "districtLabel": "高雄市議員第13選舉區",
+      "file": "d12-15",
+      "page": 1,
+      "education": [
+        "那瑪夏民權國小",
+        "前金國中",
+        "復華中學",
+        "遵守選舉法令"
+      ],
+      "experience": [
+        "警察專科學校警員班134期",
+        "臺北縣板橋分局",
+        "高雄縣仁武分局",
+        "高雄市保安大隊",
+        "高雄市第3屆市議員",
+        "宏揚法治精神"
+      ],
+      "excerpt": "那瑪夏民權國小\n前金國中\n復華中學\n遵守選舉法令\n警察專科學校警員班134期\n臺北縣板橋分局\n高雄縣仁武分局\n高雄市保安大隊\n高雄市第3屆市議員\n宏揚法治精神",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC12.13.14.15%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "ba9a3887bee3f731b69f8a20cab45fd79dd216a3636e5e8b3ca7ba04a7411766",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "displayName": "林錫閔",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "districtLabel": "高雄市議員第14選舉區",
+      "file": "d12-15",
+      "page": 2,
+      "education": [
+        "陸軍官校管理科學系理學士",
+        "國立中山大學公共事務管理",
+        "研究所碩士",
+        "國立高雄師範學院教育系夜",
+        "間部畢業",
+        "省立屏東師範專科學校畢業"
+      ],
+      "experience": [
+        "陸軍備役上校",
+        "後備動員管理學校校長",
+        "臺南官田新訓旅旅長",
+        "國防大學戰略學部92年班",
+        "國立中山大學社會系原碩專班",
+        "原住民族委員會族群委員",
+        "高雄市政府原住民事務委員會主",
+        "任委員",
+        "高雄縣興中國小校長、茂林國小",
+        "校長、多納國小校長"
+      ],
+      "excerpt": "陸軍官校管理科學系理學士\n國立中山大學公共事務管理\n研究所碩士\n國立高雄師範學院教育系夜\n間部畢業\n省立屏東師範專科學校畢業\n陸軍備役上校\n後備動員管理學校校長\n臺南官田新訓旅旅長\n國防大學戰略學部92年班\n國立中山大學社會系原碩專班\n原住民族委員會族群委員\n高雄市政府原住民事務委員會主\n任委員\n高雄縣興中國小校長、茂林國小\n校長、多納國小校長",
+      "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC12.13.14.15%E9%81%B8%E5%8D%80.pdf",
+      "sha256": "ba9a3887bee3f731b69f8a20cab45fd79dd216a3636e5e8b3ca7ba04a7411766",
+      "note": "2022-11-26 地方公職人員選舉選舉公報；學歷與經歷由候選人自行填列，屬歷史資料。"
+    }
+  ],
+  "districtMismatches": [
+    {
+      "name": "陳若翠",
+      "rosterDistrictId": "district-kaohsiung-council-05",
+      "bulletinDistrictId": "district-kaohsiung-council-08",
+      "file": "d8"
+    }
+  ],
+  "unmatched": [
+    {
+      "name": "朱信強",
+      "file": "d1",
+      "page": 1
+    },
+    {
+      "name": "陳明澤",
+      "file": "d2",
+      "page": 1
+    },
+    {
+      "name": "劉航遠",
+      "file": "d3",
+      "page": 1
+    },
+    {
+      "name": "黃思學",
+      "file": "d3",
+      "page": 1
+    },
+    {
+      "name": "黃秋",
+      "file": "d3",
+      "page": 2
+    },
+    {
+      "name": "陸淑美",
+      "file": "d3",
+      "page": 2
+    },
+    {
+      "name": "陳慶鴻",
+      "file": "d3",
+      "page": 2
+    },
+    {
+      "name": "劉文晏",
+      "file": "d4",
+      "page": 1
+    },
+    {
+      "name": "李柏毅",
+      "file": "d4",
+      "page": 1
+    },
+    {
+      "name": "陳善慧",
+      "file": "d4",
+      "page": 1
+    },
+    {
+      "name": "吳佩蓉",
+      "file": "d4",
+      "page": 1
+    },
+    {
+      "name": "劉宥廷",
+      "file": "d4",
+      "page": 2
+    },
+    {
+      "name": "謝天助",
+      "file": "d4",
+      "page": 2
+    },
+    {
+      "name": "蘇博廷",
+      "file": "d4",
+      "page": 3
+    },
+    {
+      "name": "鄭侑青",
+      "file": "d4",
+      "page": 3
+    },
+    {
+      "name": "莊貽量",
+      "file": "d4",
+      "page": 3
+    },
+    {
+      "name": "黃偵琳",
+      "file": "d4",
+      "page": 4
+    },
+    {
+      "name": "陳子瑜",
+      "file": "d4",
+      "page": 4
+    },
+    {
+      "name": "蘇柏銓",
+      "file": "d4",
+      "page": 4
+    },
+    {
+      "name": "謝誌峰",
+      "file": "d5",
+      "page": 1
+    },
+    {
+      "name": "張惟晴",
+      "file": "d5",
+      "page": 1
+    },
+    {
+      "name": "劉佳達",
+      "file": "d5",
+      "page": 1
+    },
+    {
+      "name": "陳清茂",
+      "file": "d5",
+      "page": 2
+    },
+    {
+      "name": "王齡嬌",
+      "file": "d5",
+      "page": 2
+    },
+    {
+      "name": "張婷婷",
+      "file": "d5",
+      "page": 3
+    },
+    {
+      "name": "吳彥輝",
+      "file": "d5",
+      "page": 3
+    },
+    {
+      "name": "劉家榮",
+      "file": "d6",
+      "page": 1
+    },
+    {
+      "name": "李佳玲",
+      "file": "d7",
+      "page": 1
+    },
+    {
+      "name": "陳建良",
+      "file": "d7",
+      "page": 1
+    },
+    {
+      "name": "王文心",
+      "file": "d7",
+      "page": 1
+    },
+    {
+      "name": "鄭孟洳",
+      "file": "d7",
+      "page": 2
+    },
+    {
+      "name": "林武忠",
+      "file": "d7",
+      "page": 2
+    },
+    {
+      "name": "劉景裕",
+      "file": "d8",
+      "page": 1
+    },
+    {
+      "name": "吳益政",
+      "file": "d8",
+      "page": 2
+    },
+    {
+      "name": "黃紹庭",
+      "file": "d8",
+      "page": 2
+    },
+    {
+      "name": "李雨蓁",
+      "file": "d9",
+      "page": 1
+    },
+    {
+      "name": "羅章譽",
+      "file": "d9",
+      "page": 1
+    },
+    {
+      "name": "陳妙真",
+      "file": "d9",
+      "page": 1
+    },
+    {
+      "name": "黃捷",
+      "file": "d9",
+      "page": 2
+    },
+    {
+      "name": "廖國誌",
+      "file": "d9",
+      "page": 2
+    },
+    {
+      "name": "顧崇德",
+      "file": "d9",
+      "page": 3
+    },
+    {
+      "name": "顏坤泉",
+      "file": "d10",
+      "page": 1
+    },
+    {
+      "name": "朱挺玗",
+      "file": "d10",
+      "page": 1
+    },
+    {
+      "name": "黃雍琇",
+      "file": "d10",
+      "page": 1
+    },
+    {
+      "name": "陳致中",
+      "file": "d10",
+      "page": 1
+    },
+    {
+      "name": "余宗熹",
+      "file": "d10",
+      "page": 2
+    },
+    {
+      "name": "曾麗燕",
+      "file": "d10",
+      "page": 2
+    },
+    {
+      "name": "黃彥毓",
+      "file": "d10",
+      "page": 2
+    },
+    {
+      "name": "陳識明",
+      "file": "d10",
+      "page": 3
+    },
+    {
+      "name": "蔡媽福",
+      "file": "d10",
+      "page": 4
+    },
+    {
+      "name": "張雨柔",
+      "file": "d11",
+      "page": 1
+    },
+    {
+      "name": "蔡永晶",
+      "file": "d11",
+      "page": 1
+    },
+    {
+      "name": "楊佩樺",
+      "file": "d11",
+      "page": 2
+    },
+    {
+      "name": "李建輝",
+      "file": "d11",
+      "page": 2
+    },
+    {
+      "name": "韓賜村",
+      "file": "d11",
+      "page": 2
+    },
+    {
+      "name": "余葆FotoI祈kila",
+      "file": "d12-15",
+      "page": 1
+    },
+    {
+      "name": "葛姵瑩",
+      "file": "d12-15",
+      "page": 1
+    },
+    {
+      "name": "高Taki忠ludun德．Anu",
+      "file": "d12-15",
+      "page": 2
+    },
+    {
+      "name": "賴文德",
+      "file": "d12-15",
+      "page": 2
+    },
+    {
+      "name": "林榮昊",
+      "file": "d12-15",
+      "page": 2
+    }
+  ]
+}

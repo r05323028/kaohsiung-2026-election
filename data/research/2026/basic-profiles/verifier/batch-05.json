@@ -1,0 +1,1624 @@
+{
+  "batchId": "batch-05",
+  "generatedAt": "2026-11-12T01:30:00.000Z",
+  "verifier": "candidate-verifier",
+  "decisions": [
+    {
+      "decisionId": "vd-bp-1a2b3c4d-note-1",
+      "claimId": "bp-1a2b3c4d-note-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "verdict": "verified",
+      "rationale": "以 curl 重取宣稱網址（HTTP 200），並與 2026-11-12 保留快照 sha256 51471881… 逐字比對：報導（記者任義宇，2026 年 10 月 27 日 13:44）原文即「前民進黨主席許信良外甥、高雄市三民區（第七選區）市議員候選人林彥」，並載「抽到3號」。身分由 2026 中選會名冊（第7選舉區、號次3、政黨欄「無」）交叉確認，號次 3 與報導相符，無同名混淆。內容屬親屬關係與參選事實，列 biographical-note 妥適，報導為媒體獨立陳述而非候選人自述。",
+      "reopenedEvidence": {
+        "url": "https://tw.news.yahoo.com/%E8%A8%B1%E4%BF%A1%E8%89%AF%E5%A4%96%E7%94%A5%E6%8A%BD%E7%B1%A4%E6%97%A5%E6%94%B6%E5%8F%8B%E9%82%A6%E8%AB%8B%E8%A8%97%E8%A6%81%E8%A6%8B%E7%B8%BD%E7%B5%B1-%E8%AB%87%E9%81%B8%E6%83%85%E6%89%B9%E7%AB%B6%E9%81%B8%E6%97%97%E5%B9%9F%E9%81%AD%E6%83%A1%E6%84%8F%E9%98%BB%E6%93%8B-054431193.html",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "今（27）日為11月28日九合一選舉號次抽籤日，前民進黨主席許信良外甥、高雄市三民區（第七選區）市議員候選人林彥，今日在完成號次抽籤後透露…林彥今日上午完成號次抽籤，抽到3號後於現場受訪時指出…",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-edu-1",
+      "claimId": "bp-fdc85adf-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「正興國小。」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「正興國小。」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-edu-2",
+      "claimId": "bp-fdc85adf-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「道明中學國中部。」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「道明中學國中部。」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-edu-3",
+      "claimId": "bp-fdc85adf-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「台南女子技術學院五專部室內設計科。」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「台南女子技術學院五專部室內設計科。」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-edu-4",
+      "claimId": "bp-fdc85adf-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「正修科技大學經營管理研究所碩士。」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「正修科技大學經營管理研究所碩士。」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-pub-5",
+      "claimId": "bp-fdc85adf-pub-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市第2、3屆議員」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市第2、3屆議員」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-exp-6",
+      "claimId": "bp-fdc85adf-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「立委侯彩鳳服務處主任」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「立委侯彩鳳服務處主任」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-exp-7",
+      "claimId": "bp-fdc85adf-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「財團法人大揚教育基金會執行長」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「財團法人大揚教育基金會執行長」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-exp-8",
+      "claimId": "bp-fdc85adf-exp-8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市體育會電子競技委員會主委」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市體育會電子競技委員會主委」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-exp-9",
+      "claimId": "bp-fdc85adf-exp-9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「正修科技大學兼職講師」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「正修科技大學兼職講師」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-exp-10",
+      "claimId": "bp-fdc85adf-exp-10",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「正修科技大學校友會副總會長」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「正修科技大學校友會副總會長」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-exp-11",
+      "claimId": "bp-fdc85adf-exp-11",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄區勞工總工會常務理事」，與宣稱一致；2026-11-06 快照 sha256 3a2a7673fec7e241… 內容相同。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄區勞工總工會常務理事」（頁面標題「本屆議員-黃香菽」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 3a2a7673fec7e241… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-fdc85adf-cur-12",
+      "claimId": "bp-fdc85adf-cur-12",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：頁面標題「本屆議員-黃香菽」，學歷、經歷與服務政見完整，屬第4屆（2022-12-25 起）本屆議員簡介，2026-11-06 快照 sha256 3a2a7673fec7e241… 與線上內容一致，故 current 成立；同日重取之頁面新聞列表亦有「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」。身分由 2026 中選會市議員名冊（第7選舉區、號次4、中國國民黨）與 2022 年高雄市第4屆議員選舉公報（第7選區號次13，學歷、經歷逐字相同） 交叉確認。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2200",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "頁面標題「高雄市議會全球網-中文網-本屆議員-黃香菽」；學歷與經歷欄完整列出，另含服務政見與新聞列表（含「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」）。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-edu-13",
+      "claimId": "bp-cf0b1a37-edu-13",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「高雄市立十全國小畢業。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「高雄市立十全國小畢業。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-edu-14",
+      "claimId": "bp-cf0b1a37-edu-14",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「高雄市立七賢國中畢業。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「高雄市立七賢國中畢業。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-edu-15",
+      "claimId": "bp-cf0b1a37-edu-15",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「屏東永達技術學院五專部畢業。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「屏東永達技術學院五專部畢業。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-edu-16",
+      "claimId": "bp-cf0b1a37-edu-16",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「澳洲昆士蘭中央大學IT系畢。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「澳洲昆士蘭中央大學IT系畢。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-pub-17",
+      "claimId": "bp-cf0b1a37-pub-17",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "conflicting-evidence",
+      "rationale": "市議會官網（2026-11-12 重取 msn=2205，頁標題「本屆議員-曾俊傑」，與快照 sha256 cf3f4704… 相同）經歷欄作「高雄市第七屆議員。」，與宣稱一致；但我另行重開 2022 年高雄市第4屆議員選舉公報第 2 頁（sha256 fc917d51…），同一候選人（號次7、中國國民黨）經歷欄作「高雄市第八屆議員。大高雄第一、二、三屆議員。」兩份官方文件對改制前屆次記載互相矛盾（合併後並無「第八屆」編號，公報該行疑為誤植），宣稱未反映此衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "高雄市議會 2205 頁「經歷」欄：「高雄市第七屆議員。高雄縣市合併後第一、二、三屆議員。中國國民黨中央評議委員。…」；2022 年公報第2頁同人「經歷」欄：「高雄市第八屆議員。大高雄第一、二、三屆議員。」",
+        "matchesClaim": false
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": false,
+        "currentStatusCorrect": true
+      },
+      "correction": "保留官網用語並註明差異：「高雄市第七屆議員（市議會官網；2022 年選舉公報同欄作『第八屆』）」；或改寫為「改制前高雄市議員（官網列第七屆、公報列第八屆，來源不一致）」。"
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-pub-18",
+      "claimId": "bp-cf0b1a37-pub-18",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄縣市合併後第一、二、三屆議員。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄縣市合併後第一、二、三屆議員。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-exp-19",
+      "claimId": "bp-cf0b1a37-exp-19",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「中國國民黨中央評議委員。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「中國國民黨中央評議委員。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-exp-20",
+      "claimId": "bp-cf0b1a37-exp-20",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市三民區國民黨部副主委。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市三民區國民黨部副主委。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-pub-21",
+      "claimId": "bp-cf0b1a37-pub-21",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市議會國民黨團總召。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市議會國民黨團總召。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-exp-22",
+      "claimId": "bp-cf0b1a37-exp-22",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市三民區後備輔導中心主任。」，與宣稱一致；2026-11-06 快照 sha256 cf3f47043bfecb15… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市三民區後備輔導中心主任。」（頁面標題「本屆議員-曾俊傑」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 cf3f47043bfecb15… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-cf0b1a37-cur-23",
+      "claimId": "bp-cf0b1a37-cur-23",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：頁面標題「本屆議員-曾俊傑」，學歷、經歷與服務政見完整，屬第4屆（2022-12-25 起）本屆議員簡介，2026-11-06 快照 sha256 cf3f47043bfecb15… 與線上內容一致，故 current 成立；同日重取之頁面新聞列表亦有「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」。身分由 2026 中選會名冊（第7選舉區、號次5、政黨欄「無」）與 2022 年公報（第7選區號次7、中國國民黨），姓名、選區、性別一致 交叉確認。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "頁面標題「高雄市議會全球網-中文網-本屆議員-曾俊傑」；學歷與經歷欄完整列出，另含服務政見與新聞列表（含「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」）。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-edu-24",
+      "claimId": "bp-c3ecc324-edu-24",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「國立高雄應用科技大學模具工程系。」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「國立高雄應用科技大學模具工程系。」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-edu-25",
+      "claimId": "bp-c3ecc324-edu-25",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「屏榮高中普通科。」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「屏榮高中普通科。」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-edu-26",
+      "claimId": "bp-c3ecc324-edu-26",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「竹田國中。」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「竹田國中。」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-edu-27",
+      "claimId": "bp-c3ecc324-edu-27",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「竹田國小。」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「竹田國小。」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-exp-28",
+      "claimId": "bp-c3ecc324-exp-28",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「罷韓四君子」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「罷韓四君子」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-exp-29",
+      "claimId": "bp-c3ecc324-exp-29",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「快樂電台主持」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「快樂電台主持」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-exp-30",
+      "claimId": "bp-c3ecc324-exp-30",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「機械設計工程師」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「機械設計工程師」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-exp-31",
+      "claimId": "bp-c3ecc324-exp-31",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「台灣基進新聞部主任」，與宣稱一致；2026-11-06 快照 sha256 e0d0d6515246bec3… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「台灣基進新聞部主任」（頁面標題「本屆議員-張博洋」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 e0d0d6515246bec3… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-c3ecc324-cur-32",
+      "claimId": "bp-c3ecc324-cur-32",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：頁面標題「本屆議員-張博洋」，學歷、經歷與服務政見完整，屬第4屆（2022-12-25 起）本屆議員簡介，2026-11-06 快照 sha256 e0d0d6515246bec3… 與線上內容一致，故 current 成立；同日重取之頁面新聞列表亦有「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」。身分由 2026 中選會名冊（第7選舉區、號次6、政黨欄「無」）與 2022 年公報（第7選區號次6、台灣基進） 交叉確認。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2202",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "頁面標題「高雄市議會全球網-中文網-本屆議員-張博洋」；學歷與經歷欄完整列出，另含服務政見與新聞列表（含「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」）。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-edu-1",
+      "claimId": "bp-65c7f54b-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）學歷欄逐字列有「國立中山大學生物科學系碩士」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）學歷欄：國立中山大學生物科學系碩士／國立中山大學機械與機電工程學系／新竹科學園區實驗高中／高雄市三民國中／高雄市河濱國小（同欄末尾另有口號行「遵守選舉法令」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-edu-2",
+      "claimId": "bp-65c7f54b-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）學歷欄逐字列有「國立中山大學機械與機電工程學系」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）學歷欄：國立中山大學生物科學系碩士／國立中山大學機械與機電工程學系／新竹科學園區實驗高中／高雄市三民國中／高雄市河濱國小（同欄末尾另有口號行「遵守選舉法令」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-edu-3",
+      "claimId": "bp-65c7f54b-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）學歷欄逐字列有「新竹科學園區實驗高中」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）學歷欄：國立中山大學生物科學系碩士／國立中山大學機械與機電工程學系／新竹科學園區實驗高中／高雄市三民國中／高雄市河濱國小（同欄末尾另有口號行「遵守選舉法令」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-edu-4",
+      "claimId": "bp-65c7f54b-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）學歷欄逐字列有「高雄市三民國中」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）學歷欄：國立中山大學生物科學系碩士／國立中山大學機械與機電工程學系／新竹科學園區實驗高中／高雄市三民國中／高雄市河濱國小（同欄末尾另有口號行「遵守選舉法令」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-edu-5",
+      "claimId": "bp-65c7f54b-edu-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）學歷欄逐字列有「高雄市河濱國小」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）學歷欄：國立中山大學生物科學系碩士／國立中山大學機械與機電工程學系／新竹科學園區實驗高中／高雄市三民國中／高雄市河濱國小（同欄末尾另有口號行「遵守選舉法令」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-pub-6",
+      "claimId": "bp-65c7f54b-pub-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）經歷欄逐字列有「高雄市議會第三屆議員」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）經歷欄：高雄市議會第三屆議員／時代力量高雄黨部執行長、主委／立法委員黃國昌法案助理／高雄市政府環保局機械工程技士／農委會漁業署自然保育技士（同欄末尾另有口號行「宏揚法治精神」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-exp-7",
+      "claimId": "bp-65c7f54b-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）經歷欄逐字列有「時代力量高雄黨部執行長、主委」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）經歷欄：高雄市議會第三屆議員／時代力量高雄黨部執行長、主委／立法委員黃國昌法案助理／高雄市政府環保局機械工程技士／農委會漁業署自然保育技士（同欄末尾另有口號行「宏揚法治精神」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-exp-8",
+      "claimId": "bp-65c7f54b-exp-8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）經歷欄逐字列有「立法委員黃國昌法案助理」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）經歷欄：高雄市議會第三屆議員／時代力量高雄黨部執行長、主委／立法委員黃國昌法案助理／高雄市政府環保局機械工程技士／農委會漁業署自然保育技士（同欄末尾另有口號行「宏揚法治精神」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-exp-9",
+      "claimId": "bp-65c7f54b-exp-9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）經歷欄逐字列有「高雄市政府環保局機械工程技士」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）經歷欄：高雄市議會第三屆議員／時代力量高雄黨部執行長、主委／立法委員黃國昌法案助理／高雄市政府環保局機械工程技士／農委會漁業署自然保育技士（同欄末尾另有口號行「宏揚法治精神」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-exp-10",
+      "claimId": "bp-65c7f54b-exp-10",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重開宣稱的中選會公報 PDF（https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf，HTTP 200、5,484,328 bytes），sha256 fc917d512e7aa3c652fb4dae815311f054fc6ea91ac31583d8e72e68f9d616bc 與 2026-11-12 保留檔相同；第1頁林于凱（號次5、男、臺北市、推薦政黨時代力量）經歷欄逐字列有「農委會漁業署自然保育技士」，經 pdftotext 取文比對確認為同一欄位文字。公報明載個人資料係依候選人自行填列，attribution 列 candidate-statement 正確；currentStatus 記為 unknown 係因公報未載該職務迄日，非與來源矛盾。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "d7.pdf 第1頁（第7選舉區：三民區）經歷欄：高雄市議會第三屆議員／時代力量高雄黨部執行長、主委／立法委員黃國昌法案助理／高雄市政府環保局機械工程技士／農委會漁業署自然保育技士（同欄末尾另有口號行「宏揚法治精神」，研究者已剔除）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-65c7f54b-note-11",
+      "claimId": "bp-65c7f54b-note-11",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "verdict": "verified",
+      "rationale": "重新下載 https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json（HTTP 200、54,281 bytes），sha256 738bc63436cfd7095bc0f2ad21e29c5e06e91ad3b06716fd015e6d14cedca78a 與 2026-11-05 保留快照完全相同；該物件為 {\"area\":\"高雄市第7選舉區\",\"candNo\":7,\"name\":\"林于凱\",\"party\":\"台灣民眾黨\",\"birth\":\"0700412\"}，號次與政黨欄與宣稱一致，且與 2022 年公報同一人（時代力量，2026 年改掛民眾黨）之姓名、出生月日相符。",
+      "reopenedEvidence": {
+        "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "{\"area\":\"高雄市第7選舉區\",\"politics\":\"\",\"img\":\"/json/portrait/cand/T/64000/64000000000077.jpg\",\"educ\":\"\",\"gender\":\"男\",\"politicsUrl\":\"\",\"birth\":\"0700412\",\"type\":\"議員\",\"candNo\":7,\"home\":\"臺北市\",\"victor\":false,\"name\":\"林于凱\",\"exp\":\"\",\"party\":\"台灣民眾黨\"}",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-edu-40",
+      "claimId": "bp-69c03972-edu-40",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「台灣大學法律系畢業。」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「台灣大學法律系畢業。」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-edu-41",
+      "claimId": "bp-69c03972-edu-41",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「北一女中。」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「北一女中。」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-exp-42",
+      "claimId": "bp-69c03972-exp-42",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「執業律師(律師高考及格)」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「執業律師(律師高考及格)」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-pub-43",
+      "claimId": "bp-69c03972-pub-43",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "partially-supported",
+      "rationale": "事實與日期均獲雙重佐證（市議會 2201 頁與 2022 年公報第3頁同載「民進黨發言人(2011年-2012年)」），惟民進黨發言人屬政黨職務而非公職，列為 public-service 與本批其他政黨職務的處理不一致：曾俊傑「中國國民黨中央評議委員」、「三民區國民黨部副主委」及黃柏霖「中央組織發展委員會青年部主任」皆列 professional-experience。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "市議會 2201 頁「經歷」欄：「執業律師(律師高考及格) 民進黨發言人(2011年-2012年) 高雄縣市合併後第2屆議長 …」；2022 年公報第3頁同欄：「•民進黨發言人(2011年-2012年)」。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": false,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": "改列 professional-experience；若擬保留於公共服務，應於 value 明示「政黨職務」。"
+    },
+    {
+      "decisionId": "vd-bp-69c03972-pub-44",
+      "claimId": "bp-69c03972-pub-44",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄縣市合併後第2屆議長」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄縣市合併後第2屆議長」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-pub-45",
+      "claimId": "bp-69c03972-pub-45",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄縣市合併後第1、2、3屆議員」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄縣市合併後第1、2、3屆議員」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-pub-46",
+      "claimId": "bp-69c03972-pub-46",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市議會第6、7屆市議員」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市議會第6、7屆市議員」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-pub-47",
+      "claimId": "bp-69c03972-pub-47",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄縣議會第十四屆縣議員」，與宣稱一致；2026-11-06 快照 sha256 54f51892445c9491… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄縣議會第十四屆縣議員」（頁面標題「本屆議員-康裕成」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 54f51892445c9491… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-69c03972-cur-48",
+      "claimId": "bp-69c03972-cur-48",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：頁面標題「本屆議員-康裕成」，學歷、經歷與服務政見完整，屬第4屆（2022-12-25 起）本屆議員簡介，2026-11-06 快照 sha256 54f51892445c9491… 與線上內容一致，故 current 成立；同日重取之頁面新聞列表亦有「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」。身分由 2026 中選會名冊（第7選舉區、號次8、民主進步黨、出生 45 年 3 月 4 日）與 2022 年公報（第7選區號次11，學經歷同文） 交叉確認。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2201",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "頁面標題「高雄市議會全球網-中文網-本屆議員-康裕成」；學歷與經歷欄完整列出，另含服務政見與新聞列表（含「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」）。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-edu-49",
+      "claimId": "bp-938e0f2f-edu-49",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「正興國小。」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「正興國小。」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-edu-50",
+      "claimId": "bp-938e0f2f-edu-50",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「道明中學。」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「道明中學。」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-edu-51",
+      "claimId": "bp-938e0f2f-edu-51",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「正修工專五專部土木工程科。」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「正修工專五專部土木工程科。」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-edu-52",
+      "claimId": "bp-938e0f2f-edu-52",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：學歷欄逐字列有「國立中山大學人力資源管理研究所碩士。」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "學歷欄原文：「國立中山大學人力資源管理研究所碩士。」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-edu-53",
+      "claimId": "bp-938e0f2f-edu-53",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "conflicting-evidence",
+      "rationale": "市議會官網（2026-11-12 重取 msn=2199，頁標題「本屆議員-黃柏霖」）學歷欄仍列「國立中山大學公共事務管理研究所博士生」，與宣稱一致；但 2022 年選舉公報第 3 頁（sha256 fc917d51…）同一候選人（號次12）學歷欄作「…國立中山大學公共事務管理研究所博士。」已載為取得學位。官網與公報對是否已完成博士學位說法不同，宣稱僅取其一且未標註。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "市議會 2199 頁「學歷」欄：「正興國小 道明中學 正修工專五專部土木工程科 國立中山大學人力資源管理研究所碩士 國立中山大學公共事務管理研究所博士生」；2022 年公報第3頁：「…國立中山大學公共事務管理研究所博士。」",
+        "matchesClaim": false
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": false,
+        "currentStatusCorrect": true
+      },
+      "correction": "改寫為「國立中山大學公共事務管理研究所博士（2022 年選舉公報）／博士生（高雄市議會官網）」並註明來源差異，或改用中性敘述「國立中山大學公共事務管理研究所博士班」。"
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-pub-54",
+      "claimId": "bp-938e0f2f-pub-54",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市縣市合併後第1、2、3屆議員」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市縣市合併後第1、2、3屆議員」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-pub-55",
+      "claimId": "bp-938e0f2f-pub-55",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市議會第6、7屆市議員」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市議會第6、7屆市議員」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-exp-56",
+      "claimId": "bp-938e0f2f-exp-56",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「正修科技大學助理教授」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「正修科技大學助理教授」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-pub-57",
+      "claimId": "bp-938e0f2f-pub-57",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "partially-supported",
+      "rationale": "市議會 2199 頁與 2022 年公報第3頁均載「中國國民黨高雄市市黨部主任委員」，文字無誤；但市黨部主委屬政黨職務而非公職，且同批黃柏霖「中國國民黨中央組織發展委員會青年部主任」(exp-58) 列為 professional-experience，同一類職務分列兩個欄位，屬欄位歸類不一致。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "市議會 2199 頁「經歷」欄：「…正修科技大學助理教授 中國國民黨高雄市市黨部主任委員 中國國民黨中央組織發展委員會青年部主任 …」；2022 年公報第3頁同欄亦載「中國國民黨高雄市市黨部主任委員」。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": false,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": "改列 professional-experience 以與 exp-58 一致；或於 value 註明「政黨職務」。"
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-exp-58",
+      "claimId": "bp-938e0f2f-exp-58",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「中國國民黨中央組織發展委員會青年部主任」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「中國國民黨中央組織發展委員會青年部主任」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-exp-59",
+      "claimId": "bp-938e0f2f-exp-59",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市正忠文教協會理事長」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市正忠文教協會理事長」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-exp-60",
+      "claimId": "bp-938e0f2f-exp-60",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：經歷欄逐字列有「高雄市政府公務人力發展中心講師」，與宣稱一致；2026-11-06 快照 sha256 d3498c86e58e095e… 內容相同。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認，且 2022 年公報同一人學經歷與官網同文，排除同名混淆。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "經歷欄原文：「高雄市政府公務人力發展中心講師」（頁面標題「本屆議員-黃柏霖」；2026-11-12 重取線上頁面與 2026-11-06 快照 sha256 d3498c86e58e095e… 一致）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-938e0f2f-cur-61",
+      "claimId": "bp-938e0f2f-cur-61",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "verdict": "verified",
+      "rationale": "重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199（2026-11-12 以 curl 重取同一網址，HTTP 200，內容與快照相同）：頁面標題「本屆議員-黃柏霖」，學歷、經歷與服務政見完整，屬第4屆（2022-12-25 起）本屆議員簡介，2026-11-06 快照 sha256 d3498c86e58e095e… 與線上內容一致，故 current 成立；同日重取之頁面新聞列表亦有「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」。身分由 2026 中選會名冊（第7選舉區、號次10、中國國民黨）與 2022 年公報（第7選區號次12，學經歷同文） 交叉確認。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2199",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "頁面標題「高雄市議會全球網-中文網-本屆議員-黃柏霖」；學歷與經歷欄完整列出，另含服務政見與新聞列表（含「本會舉行第4屆成立大會，康裕成、曾俊傑當選正副議長」）。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-3f5a6b7c-note-1",
+      "claimId": "bp-3f5a6b7c-note-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "verdict": "verified",
+      "rationale": "同一份 2026 中選會名冊（HTTP 200，sha256 738bc634… 與保留快照相同）該物件為 {\"area\":\"高雄市第7選舉區\",\"candNo\":11,\"name\":\"余聖明\",\"party\":\"無\",\"birth\":\"0610228\"}，號次 11 與政黨欄「無」與宣稱一致；第7選舉區即三民區（2022 年公報標題「第7選舉區：三民區」），宣稱括註正確。身分訊號為姓名、選舉區、號次、性別與出生月日。",
+      "reopenedEvidence": {
+        "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "{\"area\":\"高雄市第7選舉區\",\"politics\":\"\",\"img\":\"/json/portrait/cand/T/64000/640000000000711.jpg\",\"educ\":\"\",\"gender\":\"男\",\"politicsUrl\":\"\",\"birth\":\"0610228\",\"type\":\"議員\",\"candNo\":11,\"home\":\"高雄市\",\"victor\":false,\"name\":\"余聖明\",\"exp\":\"\",\"party\":\"無\"}",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-edu-1",
+      "claimId": "bp-4a6b7c8d-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：ETtoday 報導原文即「學歷為國立中山大學碩士」，並無加註系所；宣稱照錄未超譯。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "黃淑美的政治資歷其實不短，她曾任改制前高雄市第6、7屆議員，以及縣市合併後第1、2屆高雄市議員，學歷為國立中山大學碩士，也曾任高雄市選舉委員會委員、高雄市人道關懷協會理事長等職；2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。2018年落選後…轉往高雄市輪船公司服務。2021年起即曾擔任高雄市輪船公司負責人…直到2024年卸任（ETtoday，記者吳奕靖／高雄報導，2026年10月01日 13:29）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-pub-2",
+      "claimId": "bp-4a6b7c8d-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：報導原文「她曾任改制前高雄市第6、7屆議員」與宣稱一致。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "黃淑美的政治資歷其實不短，她曾任改制前高雄市第6、7屆議員，以及縣市合併後第1、2屆高雄市議員，學歷為國立中山大學碩士，也曾任高雄市選舉委員會委員、高雄市人道關懷協會理事長等職，2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-pub-3",
+      "claimId": "bp-4a6b7c8d-pub-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：報導原文「以及縣市合併後第1、2屆高雄市議員」與宣稱一致。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "黃淑美的政治資歷其實不短，她曾任改制前高雄市第6、7屆議員，以及縣市合併後第1、2屆高雄市議員，學歷為國立中山大學碩士，也曾任高雄市選舉委員會委員、高雄市人道關懷協會理事長等職，2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-pub-4",
+      "claimId": "bp-4a6b7c8d-pub-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：報導原文「也曾任高雄市選舉委員會委員」；選委會委員屬法定委員會職務，列 public-service 妥適。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "黃淑美的政治資歷其實不短，她曾任改制前高雄市第6、7屆議員，以及縣市合併後第1、2屆高雄市議員，學歷為國立中山大學碩士，也曾任高雄市選舉委員會委員、高雄市人道關懷協會理事長等職，2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-exp-5",
+      "claimId": "bp-4a6b7c8d-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：報導原文「高雄市人道關懷協會理事長等職」與宣稱一致。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "黃淑美的政治資歷其實不短，她曾任改制前高雄市第6、7屆議員，以及縣市合併後第1、2屆高雄市議員，學歷為國立中山大學碩士，也曾任高雄市選舉委員會委員、高雄市人道關懷協會理事長等職，2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-exp-6",
+      "claimId": "bp-4a6b7c8d-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：報導原文「2021年起即曾擔任高雄市輪船公司負責人，之後持續任職，直到2024年卸任」，與宣稱及 2021~2024 起訖年一致；職稱「負責人」照錄報導用語，未升級為董事長。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "2018年落選後，她沒有再進議會，之後轉往高雄市輪船公司服務。2021年起即曾擔任高雄市輪船公司負責人，之後持續任職，直到2024年卸任",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-4a6b7c8d-note-7",
+      "claimId": "bp-4a6b7c8d-note-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.ettoday.net/news/20261001/3247128.htm，HTTP 200 / 依保留快照 sha256 3f42327b37b1bac2… 逐字比對）：報導原文「2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。」與宣稱數字、年份逐一相符。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃淑美）。",
+      "reopenedEvidence": {
+        "url": "https://www.ettoday.net/news/20261001/3247128.htm",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "黃淑美的政治資歷其實不短，她曾任改制前高雄市第6、7屆議員，以及縣市合併後第1、2屆高雄市議員，學歷為國立中山大學碩士，也曾任高雄市選舉委員會委員、高雄市人道關懷協會理事長等職，2014年她以台灣團結聯盟身分在三民區拿下1萬1899票當選；2018年尋求連任時獲9932票，最終落選。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-5b7c8d9e-note-1",
+      "claimId": "bp-5b7c8d9e-note-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://n.yam.com/Article/20260910194065，HTTP 200 / 依保留快照 sha256 e2d8a608bfbfc8fb… 逐字比對）：蕃新聞（品觀點南部編輯中心，2026/09/10 18:34）原文「從小看著曾任高雄縣杉林鄉鄉長的阿公熱心地方、為民服務，耳濡目染之下…」，屬候選人受訪自述，attribution 列 candidate-statement 正確，未升級為獨立事實。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃舜杰）。",
+      "reopenedEvidence": {
+        "url": "https://n.yam.com/Article/20260910194065",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "2026年高雄市長市議員選舉進入倒數80天，幾個市議員選區競爭特別激烈，其中就包括舊市中心的前金新興苓選區，總共出現9位參選人共同角逐5席，其中投入前金、新興、苓雅選區市議員選舉的黃舜杰表示，決定踏入政治並非一時起意。從小看著曾任高雄縣杉林鄉鄉長的阿公熱心地方、為民服務，耳濡目染之下，「服務人民」這四個字，早已在自己心中埋下一顆種子。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-6c8d9ea0-pub-1",
+      "claimId": "bp-6c8d9ea0-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.yesmedia.com.tw/%e5%8d%97%e6%96%b9%e8%a6%96%e8%a7%92%e5%b0%88%e8%a8%aa%e5%be%9e121%e9%87%8c%e9%a8%8e%e8%a1%8c%e5%88%b0%e7%ab%b6%e7%b8%bd%e6%88%90%e7%ab%8b%e3%80%80%e9%bb%83%e8%a3%95%e5%ba%ad%ef%bc%9a%e6%8a%8a/，HTTP 200 / 依保留快照 sha256 6af98fabef3e96f0… 逐字比對）：YesMedia（記者蘇莉湘，2026 年 11 月 1 日）原文「從連任兩屆里長、騎著自行車走進前金、新興、苓雅121個里…」及「八年里長任期」，支持「連任兩屆里長」；報導未載里別與起訖年份，claim 亦未補寫，detail 說明正確。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃裕庭）。",
+      "reopenedEvidence": {
+        "url": "https://www.yesmedia.com.tw/%e5%8d%97%e6%96%b9%e8%a6%96%e8%a7%92%e5%b0%88%e8%a8%aa%e5%be%9e121%e9%87%8c%e9%a8%8e%e8%a1%8c%e5%88%b0%e7%ab%b6%e7%b8%bd%e6%88%90%e7%ab%8b%e3%80%80%e9%bb%83%e8%a3%95%e5%ba%ad%ef%bc%9a%e6%8a%8a/",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "【記者蘇莉湘 ／ 高雄報導】 從連任兩屆里長、騎著自行車走進前金、新興、苓雅121個里，到10月31日成立競選總部，國民黨正式提名、登記2號的高雄市議員第八選區候選人黃裕庭，選戰腳步逐步加快。黃裕庭接受《南方視角》專訪時表示，自己投入市議員選舉，不只是希望將服務範圍擴大，更要把八年里長任內聽見的基層聲音帶進議會。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-bp-6c8d9ea0-note-2",
+      "claimId": "bp-6c8d9ea0-note-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "verdict": "verified",
+      "rationale": "重開宣稱報導（https://www.yesmedia.com.tw/%e5%8d%97%e6%96%b9%e8%a6%96%e8%a7%92%e5%b0%88%e8%a8%aa%e5%be%9e121%e9%87%8c%e9%a8%8e%e8%a1%8c%e5%88%b0%e7%ab%b6%e7%b8%bd%e6%88%90%e7%ab%8b%e3%80%80%e9%bb%83%e8%a3%95%e5%ba%ad%ef%bc%9a%e6%8a%8a/，HTTP 200 / 依保留快照 sha256 6af98fabef3e96f0… 逐字比對）：同篇原文「到10月31日成立競選總部，國民黨正式提名、登記2號的高雄市議員第八選區候選人黃裕庭」；號次 2 另由 2026 中選會名冊（第8選舉區、candNo 2、中國國民黨）獨立確認，報導所稱 9 人競逐 5 席亦與名冊 9 名候選人相符。 身分訊號：姓名、選區與 2026 中選會名冊相符（黃裕庭）。",
+      "reopenedEvidence": {
+        "url": "https://www.yesmedia.com.tw/%e5%8d%97%e6%96%b9%e8%a6%96%e8%a7%92%e5%b0%88%e8%a8%aa%e5%be%9e121%e9%87%8c%e9%a8%8e%e8%a1%8c%e5%88%b0%e7%ab%b6%e7%b8%bd%e6%88%90%e7%ab%8b%e3%80%80%e9%bb%83%e8%a3%95%e5%ba%ad%ef%bc%9a%e6%8a%8a/",
+        "retrievedAt": "2026-11-12T01:30:00.000Z",
+        "accessible": true,
+        "excerpt": "【記者蘇莉湘 ／ 高雄報導】 從連任兩屆里長、騎著自行車走進前金、新興、苓雅121個里，到10月31日成立競選總部，國民黨正式提名、登記2號的高雄市議員第八選區候選人黃裕庭，選戰腳步逐步加快。黃裕庭接受《南方視角》專訪時表示，自己投入市議員選舉，不只是希望將服務範圍擴大，更要把八年里長任內聽見的基層聲音帶進議會。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    }
+  ]
+}

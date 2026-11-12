@@ -1,3 +1,4 @@
+import type { BasicProfileReadModel } from './basic-profiles';
 import type { BiographyReadModel } from './biographies';
 import type { CouncilConstituencyCoverage } from './constituencies';
 import type {
@@ -53,6 +54,7 @@ export type CandidateProfileView = {
   policyResearch?: CandidatePolicyResearchSummary;
   publicRecordResearch?: CandidatePublicRecordResearchSummary;
   biography?: BiographyReadModel;
+  basicProfile?: BasicProfileReadModel;
   automatedPublication?: {
     status: 'published' | 'none';
     claims: AutomatedPublicClaim[];
@@ -126,8 +128,6 @@ type PublicNewsRecord = Pick<
   | 'latestStatus'
   | 'topicTags'
   | 'editorialSummary'
-  | 'classification'
-  | 'classificationRationale'
   | 'contentType'
   | 'claimIds'
   | 'evidenceIds'
@@ -178,6 +178,7 @@ export type PublicCandidateProfile = Omit<
   | 'policyResearch'
   | 'publicRecordResearch'
   | 'biography'
+  | 'basicProfile'
   | 'automatedPublication'
 > & {
   person: CandidateProfileView['person'];
@@ -189,6 +190,7 @@ export type PublicCandidateProfile = Omit<
   sources: PublicSource[];
   publicRecords?: PublicRecordsView;
   biography?: { claims: PublicBiographyClaim[] };
+  basicProfile?: Pick<BasicProfileReadModel, 'claims' | 'note'>;
   automatedPublication?: {
     claims: PublicAutomatedClaim[];
     sources: PublicAutomatedSource[];
@@ -294,8 +296,6 @@ export function toPublicCandidateProfile(
           latestStatus: article.latestStatus,
           topicTags: article.topicTags,
           editorialSummary: article.editorialSummary,
-          classification: article.classification,
-          classificationRationale: article.classificationRationale,
           contentType: article.contentType,
           claimIds: article.claimIds,
           evidenceIds: article.evidenceIds,
@@ -316,6 +316,8 @@ export function toPublicCandidateProfile(
         })),
       }
     : undefined;
+
+  const publicBasicProfile = candidate.basicProfile;
 
   const publicAutomatedPublication = candidate.automatedPublication
     ? {
@@ -365,6 +367,7 @@ export function toPublicCandidateProfile(
     })),
     ...(publicRecords ? { publicRecords } : {}),
     ...(publicBiography ? { biography: publicBiography } : {}),
+    ...(publicBasicProfile ? { basicProfile: publicBasicProfile } : {}),
     ...(publicAutomatedPublication
       ? { automatedPublication: publicAutomatedPublication }
       : {}),

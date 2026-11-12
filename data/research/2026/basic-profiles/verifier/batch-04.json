@@ -1,0 +1,3073 @@
+{
+  "batchId": "batch-04",
+  "generatedAt": "2026-11-12T01:26:32.592Z",
+  "verifier": "candidate-verifier",
+  "decisions": [
+    {
+      "decisionId": "vd-batch-04-001",
+      "claimId": "bp-147ddb97-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第5選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第3頁 陳惠君 號次13、出生57年9月4日（=1968-09-04，與名冊相符）、推薦政黨台灣民眾黨；學歷欄逐字含「國立臺灣師範大學音樂系碩士班畢」。身分：2022 公報推薦政黨為台灣民眾黨，2026 名冊記為「無」（政黨歸屬變更，生日與選區不變，非同一性衝突）。學歷無現時狀態問題，狀態欄與證據不衝突。公報載明「候選人個人資料係依據候選人所填列資料刊登，如有不實，由候選人自行負責」，故維持 candidate-statement 而不升格為獨立事實；公報頁首署「高雄市選舉委員會 編印」，來源 publisher 記為中央選舉委員會係依 portal 主機，屬標註細節。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第5選舉區公報第3頁｜陳惠君｜號次13｜出生57年9月4日｜推薦政黨台灣民眾黨｜學歷欄：1.五權國小(高雄市)畢 2.高雄市立五福國中畢 3.高雄市立高雄女中畢 4.國立臺灣師範大學音樂系畢業 5.國立臺灣師範大學音樂系碩士班畢",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-002",
+      "claimId": "bp-147ddb97-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第5選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第3頁 陳惠君 號次13、出生57年9月4日（=1968-09-04，與名冊相符）、推薦政黨台灣民眾黨；學歷欄逐字含「國立臺灣師範大學音樂系畢業」。身分：2022 公報推薦政黨為台灣民眾黨，2026 名冊記為「無」（政黨歸屬變更，生日與選區不變，非同一性衝突）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第5選舉區公報第3頁｜陳惠君｜號次13｜出生57年9月4日｜推薦政黨台灣民眾黨｜學歷欄：1.五權國小(高雄市)畢 2.高雄市立五福國中畢 3.高雄市立高雄女中畢 4.國立臺灣師範大學音樂系畢業 5.國立臺灣師範大學音樂系碩士班畢",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-003",
+      "claimId": "bp-147ddb97-exp-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第5選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第3頁 陳惠君 號次13、出生57年9月4日（=1968-09-04，與名冊相符）、推薦政黨台灣民眾黨；經歷欄逐字含「五福國中、和平國中、三信家商專任音樂教師」。身分：2022 公報推薦政黨為台灣民眾黨，2026 名冊記為「無」（政黨歸屬變更，生日與選區不變，非同一性衝突）。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第5選舉區公報第3頁｜陳惠君｜號次13｜出生57年9月4日｜推薦政黨台灣民眾黨｜經歷欄：※五福國中、和平國中、三信家商專任音樂教師，民國85年調任到高雄市立中正高中任職專任音樂教師至民國110年2月退休。※曾兼職信義鹽埕前金國小、道明、樂育高中、前金國中音樂班鋼琴教師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-004",
+      "claimId": "bp-147ddb97-exp-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第5選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第3頁 陳惠君 號次13、出生57年9月4日（=1968-09-04，與名冊相符）、推薦政黨台灣民眾黨；經歷欄逐字含「高雄市立中正高中任職專任音樂教師」。身分：2022 公報推薦政黨為台灣民眾黨，2026 名冊記為「無」（政黨歸屬變更，生日與選區不變，非同一性衝突）。日期：1996-2021 由公報原文「民國85年調任…至民國110年2月退休」換算（民國85→1996、民國110年2月→2021），一致。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第5選舉區公報第3頁｜陳惠君｜號次13｜出生57年9月4日｜推薦政黨台灣民眾黨｜經歷欄：※五福國中、和平國中、三信家商專任音樂教師，民國85年調任到高雄市立中正高中任職專任音樂教師至民國110年2月退休。※曾兼職信義鹽埕前金國小、道明、樂育高中、前金國中音樂班鋼琴教師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-005",
+      "claimId": "bp-147ddb97-exp-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第5選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第3頁 陳惠君 號次13、出生57年9月4日（=1968-09-04，與名冊相符）、推薦政黨台灣民眾黨；經歷欄逐字含「曾兼職信義鹽埕前金國小、道明、樂育高中、前金國中音樂班鋼琴教師」。身分：2022 公報推薦政黨為台灣民眾黨，2026 名冊記為「無」（政黨歸屬變更，生日與選區不變，非同一性衝突）。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC5%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第5選舉區公報第3頁｜陳惠君｜號次13｜出生57年9月4日｜推薦政黨台灣民眾黨｜經歷欄：※五福國中、和平國中、三信家商專任音樂教師，民國85年調任到高雄市立中正高中任職專任音樂教師至民國110年2月退休。※曾兼職信義鹽埕前金國小、道明、樂育高中、前金國中音樂班鋼琴教師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-006",
+      "claimId": "bp-5abfec11-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「國立中山大學高階公共政策碩士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜學歷：國立中山大學高階公共政策碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-007",
+      "claimId": "bp-5abfec11-pub-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「第十四、十五屆大社鄉民代表」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：第十四、十五屆大社鄉民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-008",
+      "claimId": "bp-5abfec11-pub-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「第十五屆大社鄉鄉長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：第十五屆大社鄉鄉長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-009",
+      "claimId": "bp-5abfec11-pub-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市第一二三屆市議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。日期：2010-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：高雄市第一二三屆市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-010",
+      "claimId": "bp-5abfec11-exp-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「民進黨第十、十一屆全國黨代表」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：民進黨第十、十一屆全國黨代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-011",
+      "claimId": "bp-5abfec11-exp-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「民進黨高雄縣黨部評委召集人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：民進黨高雄縣黨部評委召集人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-012",
+      "claimId": "bp-5abfec11-exp-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「民進黨第十七屆中央執行委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：民進黨第十七屆中央執行委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-013",
+      "claimId": "bp-5abfec11-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「觀音國小第六、七屆家長會長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：觀音國小第六、七屆家長會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-014",
+      "claimId": "bp-5abfec11-pub-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「大社國中第三十一、三十二屆家長會長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：大社國中第三十一、三十二屆家長會長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-015",
+      "claimId": "bp-5abfec11-pub-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市義消總隊義消第四大隊大隊長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：高雄市義消總隊義消第四大隊大隊長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-016",
+      "claimId": "bp-5abfec11-pub-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「市議會民進黨團總召」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述大社鄉公所職務與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜經歷：市議會民進黨團總召",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-017",
+      "claimId": "bp-5abfec11-cur-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-張勝富」、所屬政黨民主進步黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第5選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-018",
+      "claimId": "bp-5abfec11-web-113",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-張勝富」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2192 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨民主進步黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2192",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張勝富｜所屬政黨：民主進步黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-019",
+      "claimId": "bp-f0652f41-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「國立中山大學高階公共政策碩士畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜學歷：國立中山大學高階公共政策碩士畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-020",
+      "claimId": "bp-f0652f41-pub-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「第三屆高雄市議會議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。日期：2018-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：第三屆高雄市議會議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-021",
+      "claimId": "bp-f0652f41-pub-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會民進黨團副總召」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：高雄市議會民進黨團副總召",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-022",
+      "claimId": "bp-f0652f41-pub-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武區福清宮主任委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武區福清宮主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-023",
+      "claimId": "bp-f0652f41-pub-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武分局民防中隊長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武分局民防中隊長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-024",
+      "claimId": "bp-f0652f41-pub-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武區派出所警友站站長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武區派出所警友站站長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-025",
+      "claimId": "bp-f0652f41-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武義消分隊顧問團長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武義消分隊顧問團長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-026",
+      "claimId": "bp-f0652f41-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武國小志工隊大隊長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武國小志工隊大隊長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-027",
+      "claimId": "bp-f0652f41-exp-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武區農會理事長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武區農會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-028",
+      "claimId": "bp-f0652f41-exp-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武區農會常務監事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武區農會常務監事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-029",
+      "claimId": "bp-f0652f41-pub-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武里里長(第1-2屆)」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武里里長(第1-2屆)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-030",
+      "claimId": "bp-f0652f41-pub-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武鄉鄉民代表(第14-15屆)」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武鄉鄉民代表(第14-15屆)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-031",
+      "claimId": "bp-f0652f41-exp-113",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武同心慈善會理事長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武同心慈善會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-032",
+      "claimId": "bp-f0652f41-exp-114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「仁武體育會理事長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應），且經歷所述仁武里里長／仁武區農會與第5選區地緣相符。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜經歷：仁武體育會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-033",
+      "claimId": "bp-f0652f41-cur-115",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-江瑞鴻」、所屬政黨民主進步黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第5選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-034",
+      "claimId": "bp-f0652f41-web-116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-江瑞鴻」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2190 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨民主進步黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2190",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-江瑞鴻｜所屬政黨：民主進步黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-035",
+      "claimId": "bp-9a56fce0-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「國立中山大學海洋事務研究所管理碩士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜學歷：國立中山大學海洋事務研究所管理碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-036",
+      "claimId": "bp-9a56fce0-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「國立中山大學海洋環境及工程學系工學學士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜學歷：國立中山大學海洋環境及工程學系工學學士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-037",
+      "claimId": "bp-9a56fce0-pub-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市縣市合併後第2、3屆議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。日期：2014-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：高雄市縣市合併後第2、3屆議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-038",
+      "claimId": "bp-9a56fce0-bio-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「社團評鑑高雄市議會優質議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：社團評鑑高雄市議會優質議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-039",
+      "claimId": "bp-9a56fce0-pub-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會民進黨團副總召集人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：高雄市議會民進黨團副總召集人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-040",
+      "claimId": "bp-9a56fce0-pub-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「陳菊市長機要秘書」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：陳菊市長機要秘書",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-041",
+      "claimId": "bp-9a56fce0-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「陳其邁競選總部發言人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：陳其邁競選總部發言人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-042",
+      "claimId": "bp-9a56fce0-exp-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「蔡英文高雄市競選總部副總幹事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：蔡英文高雄市競選總部副總幹事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-043",
+      "claimId": "bp-9a56fce0-exp-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「立委李昆澤國會辦公室執行長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：立委李昆澤國會辦公室執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-044",
+      "claimId": "bp-9a56fce0-exp-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「台灣海洋治理策進學會理事長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：台灣海洋治理策進學會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-045",
+      "claimId": "bp-9a56fce0-pub-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「國立中山大學校友總會理事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：國立中山大學校友總會理事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-046",
+      "claimId": "bp-9a56fce0-bio-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「全國大專院校優秀青年代表」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：全國大專院校優秀青年代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-047",
+      "claimId": "bp-9a56fce0-pub-113",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「行政院青年國事會議全國代表」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜經歷：行政院青年國事會議全國代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-048",
+      "claimId": "bp-9a56fce0-cur-114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-邱俊憲」、所屬政黨民主進步黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第5選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-049",
+      "claimId": "bp-9a56fce0-web-115",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-邱俊憲」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2193 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨民主進步黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2193",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-邱俊憲｜所屬政黨：民主進步黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-050",
+      "claimId": "bp-aa51d7ef-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「高雄師範大學教育學院碩士」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。學歷無現時狀態問題，狀態欄與證據不衝突。公報載明「候選人個人資料係依據候選人所填列資料刊登，如有不實，由候選人自行負責」，故維持 candidate-statement 而不升格為獨立事實；公報頁首署「高雄市選舉委員會 編印」，來源 publisher 記為中央選舉委員會係依 portal 主機，屬標註細節。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜學歷欄：復興國小、獅甲國中、台南家專（現改制台南應用科技大學）、高雄師範大學教育學院碩士。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-051",
+      "claimId": "bp-aa51d7ef-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「台南家專（現改制台南應用科技大學）」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜學歷欄：復興國小、獅甲國中、台南家專（現改制台南應用科技大學）、高雄師範大學教育學院碩士。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-052",
+      "claimId": "bp-aa51d7ef-edu-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「復興國小、獅甲國中」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜學歷欄：復興國小、獅甲國中、台南家專（現改制台南應用科技大學）、高雄師範大學教育學院碩士。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-053",
+      "claimId": "bp-aa51d7ef-pub-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市議員」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。當事人未列於高雄市議會本屆議員名錄（51 筆議員簡介中無此人），historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-054",
+      "claimId": "bp-aa51d7ef-pub-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「苓雅民眾服務社理事長」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-055",
+      "claimId": "bp-aa51d7ef-pub-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市後備指揮部委顧團顧問」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-056",
+      "claimId": "bp-aa51d7ef-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「新住民女性關懷協會顧問」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-057",
+      "claimId": "bp-aa51d7ef-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市救國團團友會理事」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-058",
+      "claimId": "bp-aa51d7ef-exp-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「仁愛扶輪社社長」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-059",
+      "claimId": "bp-aa51d7ef-exp-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「柴山青商會會長」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-060",
+      "claimId": "bp-aa51d7ef-exp-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市雲林同鄉會理事」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-061",
+      "claimId": "bp-aa51d7ef-exp-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第8選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第1頁 陳若翠 號次2、出生58年4月29日（=1969-04-29，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄師範大學校友會暨雄大會理事」。身分：公報所屬為第8選舉區（前金、新興、苓雅），2026 名冊列第5選舉區（選區變更），身分由姓名＋生日1969-04-29＋政黨三重比對確認。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC8%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第8選舉區公報第1頁｜陳若翠｜號次2｜出生58年4月29日｜推薦政黨中國國民黨｜經歷欄：高雄市議員、高雄市雲林同鄉會理事、高雄師範大學校友會暨雄大會理事、仁愛扶輪社社長、柴山青商會會長、高雄市救國團團友會理事、苓雅民眾服務社理事長、高雄市後備指揮部委顧團顧問、新住民女性關懷協會顧問。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-062",
+      "claimId": "bp-e6c05223-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「大樹國小畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜學歷：大樹國小畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-063",
+      "claimId": "bp-e6c05223-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「大樹國中畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜學歷：大樹國中畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-064",
+      "claimId": "bp-e6c05223-edu-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「嘉義師專畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜學歷：嘉義師專畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-065",
+      "claimId": "bp-e6c05223-edu-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「嘉義師範學院畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜學歷：嘉義師範學院畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-066",
+      "claimId": "bp-e6c05223-edu-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「高雄師範大學成教所碩士畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜學歷：高雄師範大學成教所碩士畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-067",
+      "claimId": "bp-e6c05223-exp-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「嘉義縣竹崎國小教師」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜經歷：嘉義縣竹崎國小教師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-068",
+      "claimId": "bp-e6c05223-exp-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「國立嘉師實小教師」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜經歷：國立嘉師實小教師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-069",
+      "claimId": "bp-e6c05223-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「行政院南服中心副執行長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜經歷：行政院南服中心副執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-070",
+      "claimId": "bp-e6c05223-pub-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄縣議員(第14、15、16屆)」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜經歷：高雄縣議員(第14、15、16屆)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-071",
+      "claimId": "bp-e6c05223-pub-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄市議員(第1、3屆)」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第5選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜經歷：高雄市議員(第1、3屆)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-072",
+      "claimId": "bp-e6c05223-cur-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-吳利成」、所屬政黨中國國民黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第5選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-073",
+      "claimId": "bp-e6c05223-web-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-吳利成」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2191 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨中國國民黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2191",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-吳利成｜所屬政黨：中國國民黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-074",
+      "claimId": "bp-5fb70691-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「中山大學人力資源管理研究所碩士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜學歷：中山大學人力資源管理研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-075",
+      "claimId": "bp-5fb70691-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「東海大學哲學系畢業」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜學歷：東海大學哲學系畢業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-076",
+      "claimId": "bp-5fb70691-pub-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市縣市合併後第2、3屆議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。日期：2014-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：高雄市縣市合併後第2、3屆議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-077",
+      "claimId": "bp-5fb70691-exp-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「民主進步黨中央執行委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：民主進步黨中央執行委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-078",
+      "claimId": "bp-5fb70691-exp-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「正修科技大學講師」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：正修科技大學講師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-079",
+      "claimId": "bp-5fb70691-exp-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市公共事務發展協會執行長」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：高雄市公共事務發展協會執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-080",
+      "claimId": "bp-5fb70691-exp-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄國際郵輪協會總幹事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：高雄國際郵輪協會總幹事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-081",
+      "claimId": "bp-5fb70691-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市政府民政局主任秘書」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：高雄市政府民政局主任秘書",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-082",
+      "claimId": "bp-5fb70691-pub-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市長陳菊辦公室秘書」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：高雄市長陳菊辦公室秘書",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-083",
+      "claimId": "bp-5fb70691-pub-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「行政院勞委會陳菊主委辦公室秘書」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：行政院勞委會陳菊主委辦公室秘書",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-084",
+      "claimId": "bp-5fb70691-pub-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「立法委員邱太三國會辦公室主任」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜經歷：立法委員邱太三國會辦公室主任",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-085",
+      "claimId": "bp-5fb70691-cur-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-簡煥宗」、所屬政黨民主進步黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第6選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-086",
+      "claimId": "bp-5fb70691-web-113",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-簡煥宗」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2197 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨民主進步黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2197",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-簡煥宗｜所屬政黨：民主進步黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-087",
+      "claimId": "bp-68517ae6-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「國立中山大學高階公共政策研究所碩士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜學歷：國立中山大學高階公共政策研究所碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-088",
+      "claimId": "bp-68517ae6-pub-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市縣市合併後第1、2、3屆議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。日期：2010-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市縣市合併後第1、2、3屆議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-089",
+      "claimId": "bp-68517ae6-pub-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會第4、5、6、7屆市議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。日期：1994-2010 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市議會第4、5、6、7屆市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-090",
+      "claimId": "bp-68517ae6-pub-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會民政委員會召集人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市議會民政委員會召集人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-091",
+      "claimId": "bp-68517ae6-pub-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會教育委員會召集人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市議會教育委員會召集人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-092",
+      "claimId": "bp-68517ae6-pub-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會法規委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市議會法規委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-093",
+      "claimId": "bp-68517ae6-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會衛環委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市議會衛環委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-094",
+      "claimId": "bp-68517ae6-exp-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市兒童福利協會創辦人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市兒童福利協會創辦人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-095",
+      "claimId": "bp-68517ae6-pub-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市議會民進黨團總召集人」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜經歷：高雄市議會民進黨團總召集人",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-096",
+      "claimId": "bp-68517ae6-cur-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-李喬如」、所屬政黨民主進步黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第6選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-097",
+      "claimId": "bp-68517ae6-web-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-李喬如」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2195 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨民主進步黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-李喬如｜所屬政黨：民主進步黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-098",
+      "claimId": "bp-48b16c5d-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「國立成功大學水利及海洋工程工學博士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜學歷：國立成功大學水利及海洋工程工學博士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-099",
+      "claimId": "bp-48b16c5d-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「私立道明中學」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜學歷：私立道明中學",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-100",
+      "claimId": "bp-48b16c5d-exp-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「正修科技大學助理教授」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：正修科技大學助理教授",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-101",
+      "claimId": "bp-48b16c5d-pub-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄市議會第1－3屆議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。日期：2010-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：高雄市議會第1－3屆議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-102",
+      "claimId": "bp-48b16c5d-exp-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「國民黨青年部副主任」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：國民黨青年部副主任",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-103",
+      "claimId": "bp-48b16c5d-exp-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄市體育會第1、2屆理事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：高雄市體育會第1、2屆理事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-104",
+      "claimId": "bp-48b16c5d-exp-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄市柯蔡宗親會第12屆顧問」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：高雄市柯蔡宗親會第12屆顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-105",
+      "claimId": "bp-48b16c5d-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄市議會前副議長蔡松雄服務處助理」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：高雄市議會前副議長蔡松雄服務處助理",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-106",
+      "claimId": "bp-48b16c5d-exp-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「國民黨第18屆中央委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜經歷：國民黨第18屆中央委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-107",
+      "claimId": "bp-48b16c5d-cur-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-蔡金晏」、所屬政黨中國國民黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第6選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-108",
+      "claimId": "bp-48b16c5d-web-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-蔡金晏」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2198 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨中國國民黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2198",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-蔡金晏｜所屬政黨：中國國民黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-109",
+      "claimId": "bp-b48fe8fe-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「中山國小」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜學歷：中山國小",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-110",
+      "claimId": "bp-b48fe8fe-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「大義國中」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜學歷：大義國中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-111",
+      "claimId": "bp-b48fe8fe-edu-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「高雄高商」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜學歷：高雄高商",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-112",
+      "claimId": "bp-b48fe8fe-edu-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「日本明治大學法律學士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜學歷：日本明治大學法律學士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-113",
+      "claimId": "bp-b48fe8fe-edu-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「日本早稻田大學法律碩士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜學歷：日本早稻田大學法律碩士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-114",
+      "claimId": "bp-b48fe8fe-edu-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；學歷欄逐字出現「日本早稻田大學法學博士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜學歷：日本早稻田大學法學博士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-115",
+      "claimId": "bp-b48fe8fe-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「高雄市議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。此筆與 cur-116 併存：當事人現仍在任，本筆 historical 係指經歷欄所列之過往屆次，不與 cur-116 之 current 衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-116",
+      "claimId": "bp-b48fe8fe-exp-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「臺灣高等法院高雄分院法官助理」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：臺灣高等法院高雄分院法官助理",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-117",
+      "claimId": "bp-b48fe8fe-exp-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「市立空大法政學系助理教授」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：市立空大法政學系助理教授",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-118",
+      "claimId": "bp-b48fe8fe-exp-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「文藻外語大學日文講師」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：文藻外語大學日文講師",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-119",
+      "claimId": "bp-b48fe8fe-exp-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「國民黨文傳會副主委」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：國民黨文傳會副主委",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-120",
+      "claimId": "bp-b48fe8fe-exp-112",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「體育會理事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：體育會理事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-121",
+      "claimId": "bp-b48fe8fe-exp-113",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「婦女會理事」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：婦女會理事",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-122",
+      "claimId": "bp-b48fe8fe-bio-114",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「日本台灣交流協會邀請以意見領袖赴日交流」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：日本台灣交流協會邀請以意見領袖赴日交流",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-123",
+      "claimId": "bp-b48fe8fe-exp-115",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨與名冊一致；經歷欄逐字出現「台南同鄉會顧問」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨中國國民黨與名冊一致（KCC 頁未載生日／選區，以名冊第6選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜經歷：台南同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-124",
+      "claimId": "bp-b48fe8fe-cur-116",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-陳美雅」、所屬政黨中國國民黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第6選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-125",
+      "claimId": "bp-b48fe8fe-web-117",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-陳美雅」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2196 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨中國國民黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2196",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳美雅｜所屬政黨：中國國民黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-126",
+      "claimId": "bp-c4c45f4c-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「高雄市三民區莊敬國小」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜學歷：高雄市三民區莊敬國小",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-127",
+      "claimId": "bp-c4c45f4c-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「高雄市三民區陽明國中」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜學歷：高雄市三民區陽明國中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-128",
+      "claimId": "bp-c4c45f4c-edu-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「高雄市立新莊高中」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜學歷：高雄市立新莊高中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-129",
+      "claimId": "bp-c4c45f4c-edu-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；學歷欄逐字出現「東海大學政治學、法學學士」，確位於學歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜學歷：東海大學政治學、法學學士",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-130",
+      "claimId": "bp-c4c45f4c-pub-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「立法委員蔡其昌辦公室主任」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜經歷：立法委員蔡其昌辦公室主任",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-131",
+      "claimId": "bp-c4c45f4c-pub-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市政府教育局機要秘書」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜經歷：高雄市政府教育局機要秘書",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-132",
+      "claimId": "bp-c4c45f4c-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市政府陳菊市長秘書」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜經歷：高雄市政府陳菊市長秘書",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-133",
+      "claimId": "bp-c4c45f4c-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市體育會手球委員會主任委員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜經歷：高雄市體育會手球委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-134",
+      "claimId": "bp-c4c45f4c-pub-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重抓線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨與名冊一致；經歷欄逐字出現「高雄市第 2、3屆議員」，確位於經歷區段（非服務政見欄）。身分：姓名列於議會「本屆議員」名錄＋所屬政黨民主進步黨與名冊一致（KCC 頁未載生日／選區，以名冊第7選區對應）。日期：2014-2022 依屆次行事曆換算（第1屆自2010-12-25起、第3屆至2022-12-25），與頁面所述屆次一致。此項為已結束或歷史性職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜經歷：高雄市第 2、3屆議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-135",
+      "claimId": "bp-c4c45f4c-cur-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "重開 2026-11-06 KCC 快照（SHA-256 相符）並於 2026-11-12 重新抓取線上頁（HTTP 200）：標題「本屆議員-何權峰」、所屬政黨民主進步黨。身分：姓名列於議會「本屆議員」名錄＋政黨與名冊一致；KCC 頁未載生日與選區，故以名冊第7選區對應，兩項訊號相符。值「高雄市議員（本屆）」係自「本屆議員」目錄歸納之標籤而非頁面逐字字串，故不改寫；detail「第4屆（2022-2026）」另有頁內『本會定12月25日舉行第4屆成立大會』『公告高雄市第4屆議員當選人名單』佐證。線上頁仍在「本屆議員」而非「歷屆議員」，current 正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜頁面列於「本屆議員」名錄",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-136",
+      "claimId": "bp-c4c45f4c-web-111",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "verdict": "verified",
+      "rationale": "以 fetch 重開 https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204：HTTP 200，回應頁標題即「高雄市議會全球網-中文網-本屆議員-何權峰」，確為該議員之官方簡介頁（value 為頁面網址本身，非頁內文字，屬官方公開頁面欄位）。sourceId kccweb-2204 與來源類別 kcc-member-profile 相符；身分以姓名＋所屬政黨民主進步黨＋名冊選區比對通過。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-何權峰｜所屬政黨：民主進步黨｜URL 回應 200",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-137",
+      "claimId": "bp-abeadb8c-edu-101",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「國立高雄師範大學碩士」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。學歷無現時狀態問題，狀態欄與證據不衝突。公報載明「候選人個人資料係依據候選人所填列資料刊登，如有不實，由候選人自行負責」，故維持 candidate-statement 而不升格為獨立事實；公報頁首署「高雄市選舉委員會 編印」，來源 publisher 記為中央選舉委員會係依 portal 主機，屬標註細節。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜學歷欄：一國立高雄師範大學碩士 二美國舊金山NHU大學 三台灣省立師範學院(二年制) 四台灣省立嘉義女中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-138",
+      "claimId": "bp-abeadb8c-edu-102",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「美國舊金山NHU大學」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜學歷欄：一國立高雄師範大學碩士 二美國舊金山NHU大學 三台灣省立師範學院(二年制) 四台灣省立嘉義女中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-139",
+      "claimId": "bp-abeadb8c-edu-103",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「台灣省立師範學院(二年制)」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜學歷欄：一國立高雄師範大學碩士 二美國舊金山NHU大學 三台灣省立師範學院(二年制) 四台灣省立嘉義女中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-140",
+      "claimId": "bp-abeadb8c-edu-104",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；學歷欄逐字含「台灣省立嘉義女中」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。學歷無現時狀態問題，狀態欄與證據不衝突。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜學歷欄：一國立高雄師範大學碩士 二美國舊金山NHU大學 三台灣省立師範學院(二年制) 四台灣省立嘉義女中",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-141",
+      "claimId": "bp-abeadb8c-pub-105",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市第一至第三屆市議員」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。日期：2010-2022 由公報原文「民國85年調任…至民國110年2月退休」換算（民國85→1996、民國110年2月→2021），一致。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜經歷欄：一高雄市第一至第三屆市議員 二改制前高雄市第六、七屆市議員 三高雄市議會教育委員會召集人 四國民黨高雄市議會黨團總召 五高雄市婦幼同心會理事長 六高雄市幼兒教育協會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-142",
+      "claimId": "bp-abeadb8c-pub-106",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「改制前高雄市第六、七屆市議員」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜經歷欄：一高雄市第一至第三屆市議員 二改制前高雄市第六、七屆市議員 三高雄市議會教育委員會召集人 四國民黨高雄市議會黨團總召 五高雄市婦幼同心會理事長 六高雄市幼兒教育協會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-143",
+      "claimId": "bp-abeadb8c-pub-107",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市議會教育委員會召集人」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜經歷欄：一高雄市第一至第三屆市議員 二改制前高雄市第六、七屆市議員 三高雄市議會教育委員會召集人 四國民黨高雄市議會黨團總召 五高雄市婦幼同心會理事長 六高雄市幼兒教育協會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-144",
+      "claimId": "bp-abeadb8c-pub-108",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「國民黨高雄市議會黨團總召」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜經歷欄：一高雄市第一至第三屆市議員 二改制前高雄市第六、七屆市議員 三高雄市議會教育委員會召集人 四國民黨高雄市議會黨團總召 五高雄市婦幼同心會理事長 六高雄市幼兒教育協會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-145",
+      "claimId": "bp-abeadb8c-exp-109",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市婦幼同心會理事長」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜經歷欄：一高雄市第一至第三屆市議員 二改制前高雄市第六、七屆市議員 三高雄市議會教育委員會召集人 四國民黨高雄市議會黨團總召 五高雄市婦幼同心會理事長 六高雄市幼兒教育協會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-04-146",
+      "claimId": "bp-abeadb8c-exp-110",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "verdict": "verified",
+      "rationale": "重開 111 年高雄市第7選舉區選舉公報 PDF（與線上 bulletin.cec.gov.tw 檔案 SHA-256 位元相同）：第2頁 童燕珍 號次10、出生42年11月2日（=1953-11-02，與名冊相符）、推薦政黨中國國民黨；經歷欄逐字含「高雄市幼兒教育協會理事長」。身分：姓名＋生日1953-11-02＋政黨與名冊一致，公報屬第7選舉區（三民區）與名冊相符。屬歷史性或已結束職務，historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC7%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:26:32.592Z",
+        "accessible": true,
+        "excerpt": "111年高雄市第7選舉區公報第2頁｜童燕珍｜號次10｜出生42年11月2日｜推薦政黨中國國民黨｜經歷欄：一高雄市第一至第三屆市議員 二改制前高雄市第六、七屆市議員 三高雄市議會教育委員會召集人 四國民黨高雄市議會黨團總召 五高雄市婦幼同心會理事長 六高雄市幼兒教育協會理事長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    }
+  ]
+}

@@ -283,6 +283,12 @@ export const PublicActivityRecordSchema = z.object({
   ...RecordReviewFields,
 });
 
+/**
+ * Legacy sentiment classification retained only so historical raw records keep
+ * validating. It is not read by the public view model, the profile UI, filters,
+ * or coverage metrics, and must never be reintroduced as a presentation or
+ * inclusion rule.
+ */
 export const NewsClassificationSchema = z.enum([
   'positive',
   'negative',
@@ -302,7 +308,9 @@ export const NewsRecordSchema = z.object({
   latestStatus: z.string().min(1).nullable().optional(),
   topicTags: z.array(z.string().min(1)).min(1),
   editorialSummary: z.string().nullable(),
+  /** @deprecated Historical sentiment field; not used for public UI or filtering. */
   classification: NewsClassificationSchema.optional(),
+  /** @deprecated Historical sentiment rationale; not used for public UI. */
   classificationRationale: z.string().min(1).nullable().optional(),
   contentType: z.enum([
     'reporting',

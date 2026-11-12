@@ -21,7 +21,7 @@ const SOURCE_MARKDOWN_PATH = resolve(
 const PROFILE_TAB_LABELS = [
   '基本資料',
   '政策主張',
-  '正負面新聞',
+  '相關新聞',
   '從政歷程',
 ] as const;
 
@@ -37,8 +37,6 @@ type CandidateInventory = {
   publishedPolicyCount: number;
   pendingPolicyCount: number;
   publishedNewsCount: number;
-  positiveNewsCount: number;
-  negativeNewsCount: number;
   publishedCareerRecordCount: number;
   publishedPositionCount: number;
   publishedActivityCount: number;
@@ -63,8 +61,6 @@ type CoverageReport = {
   candidatesWithVerifiedPolicyStatements: number;
   candidatesWithPendingPolicyResearch: number;
   candidatesWithVerifiedNews: number;
-  candidatesWithPositiveNews: number;
-  candidatesWithNegativeNews: number;
   formerLegislatorsWithVerifiedProposals: number;
   formerLegislatorsWithVerifiedIndividualVotingRecords: number;
   formerExecutivesWithVerifiedPolicyInitiatives: number;
@@ -192,10 +188,6 @@ function profileInventory(candidate: CandidateProfileView): CandidateInventory {
     publishedPolicyCount: policies.length,
     pendingPolicyCount,
     publishedNewsCount: news.length,
-    positiveNewsCount: news.filter((item) => item.classification === 'positive')
-      .length,
-    negativeNewsCount: news.filter((item) => item.classification === 'negative')
-      .length,
     publishedCareerRecordCount: publicCareerRecordCount(candidate),
     publishedPositionCount: positions.length,
     publishedActivityCount: activities.length,
@@ -387,12 +379,6 @@ function buildReports() {
     candidatesWithVerifiedNews: inventories.filter(
       (item) => item.publishedNewsCount > 0,
     ).length,
-    candidatesWithPositiveNews: inventories.filter(
-      (item) => item.positiveNewsCount > 0,
-    ).length,
-    candidatesWithNegativeNews: inventories.filter(
-      (item) => item.negativeNewsCount > 0,
-    ).length,
     formerLegislatorsWithVerifiedProposals: inventories.filter(
       (item) => item.hasVerifiedProposal,
     ).length,
@@ -420,7 +406,7 @@ function buildReports() {
     limitations: [
       '政策研究與候選人傳記讀模型中的待審紀錄未進入公開內容；pending count 只用於覆蓋報告。',
       '現有公開資料集沒有可查證的個別點名表決紀錄；未由黨籍、發言或集體結果推論投票。',
-      '正負面新聞分類只採用已驗證的明確分類；未分類紀錄不會被強行歸入正面或負面。',
+      '相關新聞僅呈現已核准的公開新聞，依發布日期排序，不標示正負面或做編輯評價。',
       '候選人特定來源缺漏、無法取得或未完成身份核對時，報告保留缺口，不將缺口解讀為沒有相關事實。',
       '現有 production roster 的基本資料來源與公共紀錄來源分屬不同驗證層級；本報告不將候選人自述當作履行成效。',
     ],
@@ -473,8 +459,7 @@ function markdownCoverage(report: CoverageReport): string {
 - 有來源的基本資料：${report.candidatesWithVerifiedBasicInformation}
 - 已核准政策紀錄：${report.publishedPolicyCount} 筆／${report.candidatesWithVerifiedPolicyStatements} 位
 - 待審政策研究：${report.pendingPolicyCount} 筆／${report.candidatesWithPendingPolicyResearch} 位
-- 已核准新聞：${report.publishedNewsCount} 筆／${report.candidatesWithVerifiedNews} 位
-- 正面新聞：${report.candidatesWithPositiveNews} 位；負面新聞：${report.candidatesWithNegativeNews} 位
+- 已核准新聞：${report.publishedNewsCount} 筆／${report.candidatesWithVerifiedNews} 位（依發布日期排序）
 - 有查證提案的前立法者：${report.formerLegislatorsWithVerifiedProposals} 位
 - 有查證個別表決紀錄：${report.formerLegislatorsWithVerifiedIndividualVotingRecords} 位
 - 有查證行政政策推動：${report.formerExecutivesWithVerifiedPolicyInitiatives} 位

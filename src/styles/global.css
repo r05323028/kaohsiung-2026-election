@@ -1038,6 +1038,47 @@ body:not(.is-immersive) #main-content {
   text-underline-offset: 0.15em;
 }
 
+.basic-profile-group {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.basic-profile-group h5 {
+  margin: 0;
+  color: rgba(41, 72, 88, 0.62);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.basic-profile-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.basic-profile-item {
+  display: grid;
+  gap: 0.25rem;
+  border-left: 2px solid rgba(47, 129, 126, 0.35);
+  padding-left: 0.55rem;
+}
+
+.basic-profile-item__value {
+  color: #294858;
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.basic-profile-item__value a {
+  color: #2f817e;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
 .timeline {
   display: grid;
   gap: 0.7rem;

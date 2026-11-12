@@ -369,7 +369,7 @@ test('all five mayor profiles expose four neutral, source-backed sections', asyn
       birthDate: '1973-11-15',
     },
   ];
-  const tabs = ['基本資料', '政策主張', '正負面新聞', '從政歷程'];
+  const tabs = ['基本資料', '政策主張', '相關新聞', '從政歷程'];
   for (const candidate of candidates) {
     await page.goto(`/candidates/${candidate.slug}/`);
     const profile = page.getByTestId('profile-tabs');
@@ -485,7 +485,7 @@ test('all official council routes expose CEC identity fields and tab behavior', 
   );
   await expect(conflictProfile).not.toContainText('待人工比對');
 
-  for (const tab of ['基本資料', '政策主張', '正負面新聞', '從政歷程']) {
+  for (const tab of ['基本資料', '政策主張', '相關新聞', '從政歷程']) {
     const tabButton = conflictProfile.getByRole('tab', {
       name: tab,
       exact: true,

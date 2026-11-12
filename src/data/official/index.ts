@@ -1,5 +1,6 @@
 import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
 import manifestInput from '../../../data/official-source-manifest.json';
+import { getBasicProfileReadModel } from '../basic-profiles';
 import { getBiographyReadModel } from '../biographies';
 import { coverageForDistrictSlug } from '../constituencies';
 import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
@@ -162,6 +163,7 @@ function toProfile(
     candidate.id,
   );
   const biography = getBiographyReadModel(candidate.id);
+  const basicProfile = getBasicProfileReadModel(candidate.id);
   const automatedPublication = getAutomatedCandidateReadModel(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
   const sources = [
@@ -216,6 +218,7 @@ function toProfile(
     ...(policyResearch ? { policyResearch } : {}),
     ...(publicRecordResearch ? { publicRecordResearch } : {}),
     ...(biography ? { biography } : {}),
+    ...(basicProfile ? { basicProfile } : {}),
     ...(automatedPublication.claims.length > 0 ? { automatedPublication } : {}),
     visual: neutralVisual(candidacyId, index),
   };

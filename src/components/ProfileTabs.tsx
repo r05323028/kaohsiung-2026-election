@@ -1,20 +1,18 @@
 import { useEffect, useState } from 'react';
 import { isDemoProfile, type PublicCandidateProfile } from '../data';
+import type { BasicProfilePublicClaim } from '../data/basic-profiles';
+import {
+  BASIC_PROFILE_ATTRIBUTION_LABELS,
+  BasicProfileFieldLabels,
+} from '../data/basic-profiles/schema';
 import { ballotNumberText } from '../data/official/ballot';
 
 export type ProfileTab = 'basic' | 'policies' | 'news' | 'career';
-type NewsFilter = 'all' | 'positive' | 'negative';
-type NewsClassification =
-  | 'positive'
-  | 'negative'
-  | 'neutral'
-  | 'disputed'
-  | 'unclassified';
 
 export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
   { id: 'basic', label: '基本資料' },
   { id: 'policies', label: '政策主張' },
-  { id: 'news', label: '正負面新聞' },
+  { id: 'news', label: '相關新聞' },
   { id: 'career', label: '從政歷程' },
 ];
 
@@ -47,14 +45,6 @@ const policyStatusLabels: Record<string, string> = {
   unknown: '狀態未標示',
 };
 
-const newsClassificationLabels: Record<NewsClassification, string> = {
-  positive: '正面',
-  negative: '負面',
-  neutral: '中性脈絡',
-  disputed: '爭議／待釐清',
-  unclassified: '未分類',
-};
-
 interface Props {
   candidate: PublicCandidateProfile;
   initialTab?: ProfileTab;
@@ -65,7 +55,7 @@ type EmptyStateKey = 'basic' | 'policies' | 'news' | 'career';
 const emptyStateLabels: Record<EmptyStateKey, string> = {
   basic: '基本資料：暫無資料',
   policies: '政策主張：暫無公開政策資料',
-  news: '正負面新聞：暫無公開新聞資料',
+  news: '相關新聞：暫無公開新聞資料',
   career: '從政歷程：暫無公開履歷資料',
 };
 
@@ -240,6 +230,118 @@ function AutomatedClaimCards({
   );
 }
 
+function basicProfileDateLabel(claim: BasicProfilePublicClaim): string {
+  const start = claim.validFrom ?? null;
+  const end = claim.validTo ?? null;
+  if (!start && !end) return '日期未標示';
+  if (claim.currentStatus === 'current') return start ? start + ' 起' : '目前';
+  return (start ?? '年份未標示') + '–' + (end ?? '迄今');
+}
+
+function BasicProfileSection({
+  candidate,
+}: {
+  candidate: PublicCandidateProfile;
+}) {
+  const profile = candidate.basicProfile;
+  if (!profile) {
+    return (
+      <div className="content-card" data-testid="basic-profile-empty">
+        <h4>學歷與經歷</h4>
+        <p>目前尚無可公開的查證資料；空白不代表候選人沒有相關經歷。</p>
+      </div>
+    );
+  }
+  const fieldOrder = [
+    'current-position',
+    'public-service',
+    'professional-experience',
+    'education',
+    'official-website',
+    'biographical-note',
+  ] as const;
+  const groups = fieldOrder
+    .map((field) => ({
+      field,
+      claims: profile.claims.filter((claim) => claim.field === field),
+    }))
+    .filter((group) => group.claims.length > 0);
+  return (
+    <div className="content-card" data-testid="basic-profile-verified">
+      <h4>公開來源基本資料</h4>
+      <p className="info-note">{profile.note}</p>
+      {profile.claims.some(
+        (claim) => claim.attribution === 'candidate-statement',
+      ) ? (
+        <p className="info-note">
+          「候選人自行填列」表示內容取自選舉公報或議員簡介等候選人提供資料，未另取得獨立佐證。
+        </p>
+      ) : null}
+      {groups.map((group) => (
+        <section className="basic-profile-group" key={group.field}>
+          <h5>{BasicProfileFieldLabels[group.field]}</h5>
+          <ul className="basic-profile-list">
+            {group.claims.map((claim) => {
+              const isRole =
+                claim.field === 'current-position' ||
+                claim.field === 'professional-experience' ||
+                claim.field === 'public-service';
+              const hasDates = Boolean(claim.validFrom || claim.validTo);
+              return (
+                <li className="basic-profile-item" key={claim.claimId}>
+                  <div className="basic-profile-item__value">
+                    {claim.field === 'official-website' ? (
+                      <a href={claim.value} target="_blank" rel="noreferrer">
+                        {claim.value}
+                      </a>
+                    ) : (
+                      <strong>{claim.value}</strong>
+                    )}
+                  </div>
+                  {claim.detail ? <p>{claim.detail}</p> : null}
+                  <div className="content-card__meta">
+                    {claim.organization ? (
+                      <span>{claim.organization}</span>
+                    ) : null}
+                    {isRole || hasDates ? (
+                      <span>{basicProfileDateLabel(claim)}</span>
+                    ) : null}
+                    {isRole ? (
+                      <span className="status-chip">
+                        {claim.currentStatus === 'current'
+                          ? '現任'
+                          : claim.currentStatus === 'historical'
+                            ? '歷史'
+                            : '狀態未確認'}
+                      </span>
+                    ) : null}
+                    <span>
+                      {BASIC_PROFILE_ATTRIBUTION_LABELS[claim.attribution]}
+                    </span>
+                    <a
+                      href={claim.evidence.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {claim.evidence.publisher}
+                    </a>
+                    {claim.evidence.publishedAt ? (
+                      <span>{claim.evidence.publishedAt}</span>
+                    ) : null}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
+      <p className="info-note">
+        本頁未列出之欄位，代表目前尚無可公開的查證資料。
+      </p>
+    </div>
+  );
+}
+
 function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const { person, candidacy, district } = candidate;
   const demo = isDemoProfile(candidate);
@@ -306,23 +408,24 @@ function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
           sourceIds={candidate.sources.map((source) => source.id)}
         />
       </div>
-      <div className="content-card">
-        <h4>教育與專業背景</h4>
-        <p>
-          <strong>教育：</strong>
-          {person.education.length ? person.education.join('、') : '暫無資料'}
-        </p>
-        <p>
-          <strong>專業經歷：</strong>
-          {person.professionalExperience.length
-            ? person.professionalExperience.join('；')
-            : '暫無資料'}
-        </p>
-        <SourceChips
-          candidate={candidate}
-          sourceIds={candidate.sources.map((source) => source.id)}
-        />
-      </div>
+      <BasicProfileSection candidate={candidate} />
+      {demo &&
+      (person.education.length > 0 ||
+        person.professionalExperience.length > 0) ? (
+        <div className="content-card">
+          <h4>教育與專業背景</h4>
+          <p>
+            <strong>教育：</strong>
+            {person.education.length ? person.education.join('、') : '暫無資料'}
+          </p>
+          <p>
+            <strong>專業經歷：</strong>
+            {person.professionalExperience.length
+              ? person.professionalExperience.join('；')
+              : '暫無資料'}
+          </p>
+        </div>
+      ) : null}
       <div className="content-card">
         <h4>基本資料來源</h4>
         <SourceChips
@@ -629,109 +732,128 @@ function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
   );
 }
 
-function NewsEmpty() {
-  return (
-    <div className="content-card">
-      <h4>正負面新聞：暫無公開新聞資料</h4>
-    </div>
+type NewsCardModel = {
+  id: string;
+  headline: string;
+  publisher: string;
+  url: string;
+  publicationDate: string;
+  topicTags: string[];
+  contentType:
+    | 'reporting'
+    | 'opinion'
+    | 'institutional-update'
+    | 'unknown'
+    | null;
+  summary: string | null;
+  eventDate: string | null;
+  latestStatus: string | null;
+  claimIds: string[];
+  evidenceIds: string[];
+  sourceIds: string[];
+};
+
+const contentTypeLabels: Record<string, string> = {
+  reporting: '新聞報導',
+  opinion: '評論',
+  'institutional-update': '機關性更新',
+  unknown: '內容類型未標示',
+};
+
+/**
+ * News is presented as neutral coverage: no sentiment score, label, filter or
+ * inclusion rule is derived from coverage tone. Both the approved public-record
+ * layer and the legacy profile layer are merged and ordered by publication date.
+ */
+export function collectNewsCards(
+  candidate: PublicCandidateProfile,
+): NewsCardModel[] {
+  const publicNews: NewsCardModel[] = (candidate.publicRecords?.news ?? []).map(
+    (article) => ({
+      id: article.id,
+      headline: article.headline,
+      publisher: article.publisher,
+      url: article.originalUrl,
+      publicationDate: article.publicationDate,
+      topicTags: article.topicTags,
+      contentType: article.contentType,
+      summary: article.editorialSummary,
+      eventDate: article.eventDate ?? null,
+      latestStatus: article.latestStatus ?? null,
+      claimIds: article.claimIds,
+      evidenceIds: article.evidenceIds,
+      sourceIds: [],
+    }),
+  );
+  const legacyNews: NewsCardModel[] = candidate.news.map((article) => ({
+    id: article.id,
+    headline: article.title,
+    publisher: article.publisher,
+    url: article.url,
+    publicationDate: article.publicationDate,
+    topicTags: [article.topic],
+    contentType: null,
+    summary: article.editorialSummary ?? null,
+    eventDate: null,
+    latestStatus: null,
+    claimIds: [],
+    evidenceIds: [],
+    sourceIds: article.sourceIds,
+  }));
+  return [...publicNews, ...legacyNews].sort(
+    (left, right) =>
+      right.publicationDate.localeCompare(left.publicationDate) ||
+      left.headline.localeCompare(right.headline),
   );
 }
 
-function getNewsClassification(article: {
-  classification?: NewsClassification | undefined;
-}): NewsClassification {
-  return article.classification ?? 'unclassified';
-}
-
-function PublicNewsCards({
+function NewsCards({
   candidate,
-  filter,
+  news,
 }: {
   candidate: PublicCandidateProfile;
-  filter: NewsFilter;
+  news: NewsCardModel[];
 }) {
-  const news = (candidate.publicRecords?.news ?? []).filter((article) => {
-    const classification = getNewsClassification(article);
-    return filter === 'all' || classification === filter;
-  });
-  return (
-    <>
-      {news.map((article) => {
-        const classification = getNewsClassification(article);
-        return (
-          <article className="content-card" key={article.id}>
-            <div className="content-card__meta">
-              <span className="status-chip">
-                {newsClassificationLabels[classification]}
-              </span>
-              <span>{article.publicationDate}</span>
-              <span>{article.topicTags.join('・')}</span>
-            </div>
-            <h4>
-              <a href={article.originalUrl} target="_blank" rel="noreferrer">
-                {article.headline}
-              </a>
-            </h4>
-            <p>
-              {article.publisher}・
-              {article.contentType === 'institutional-update'
-                ? '機關性更新'
-                : article.contentType}
-            </p>
-            <p>{article.editorialSummary ?? '摘要未提供'}</p>
-            <p>
-              <strong>分類依據：</strong>
-              {article.classificationRationale ?? '未標示'}
-            </p>
-            <p>
-              <strong>事件日期：</strong>
-              {article.eventDate ?? '未標示'}
-            </p>
-            <p>
-              <strong>後續狀態：</strong>
-              {article.latestStatus ?? '未標示'}
-            </p>
-            <ClaimEvidence
-              candidate={candidate}
-              claimIds={article.claimIds}
-              evidenceIds={article.evidenceIds}
-            />
-          </article>
-        );
-      })}
-    </>
-  );
-}
-
-function LegacyNewsCards({
-  candidate,
-  filter,
-}: {
-  candidate: PublicCandidateProfile;
-  filter: NewsFilter;
-}) {
-  const news = filter === 'all' ? candidate.news : [];
   return (
     <>
       {news.map((article) => (
         <article className="content-card" key={article.id}>
           <div className="content-card__meta">
-            <span className="status-chip">未分類</span>
             <span>{article.publicationDate}</span>
-            <span>{article.topic}</span>
+            <span>{article.topicTags.join('・')}</span>
+            {article.contentType ? (
+              <span>{contentTypeLabels[article.contentType]}</span>
+            ) : null}
           </div>
           <h4>
             <a href={article.url} target="_blank" rel="noreferrer">
-              {article.title}
+              {article.headline}
             </a>
           </h4>
           <p>{article.publisher}</p>
-          <p>{article.editorialSummary ?? '摘要未提供'}</p>
-          <p>
-            <strong>分類依據：</strong>
-            未標示
-          </p>
-          <SourceChips candidate={candidate} sourceIds={article.sourceIds} />
+          <p>{article.summary ?? '摘要未提供'}</p>
+          {article.eventDate ? (
+            <p>
+              <strong>事件日期：</strong>
+              {article.eventDate}
+            </p>
+          ) : null}
+          {article.latestStatus ? (
+            <p>
+              <strong>後續狀態：</strong>
+              {article.latestStatus}
+            </p>
+          ) : null}
+          {article.claimIds.length > 0 || article.evidenceIds.length > 0 ? (
+            <ClaimEvidence
+              candidate={candidate}
+              claimIds={article.claimIds}
+              evidenceIds={article.evidenceIds}
+            />
+          ) : null}
+          {article.sourceIds.length > 0 ? (
+            <SourceChips candidate={candidate} sourceIds={article.sourceIds} />
+          ) : null}
         </article>
       ))}
     </>
@@ -739,56 +861,23 @@ function LegacyNewsCards({
 }
 
 function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
-  const [filter, setFilter] = useState<NewsFilter>('all');
-  const publicNews = candidate.publicRecords?.news ?? [];
-  const legacyNews = candidate.news;
-  const visibleCount =
-    filter === 'all'
-      ? publicNews.length + legacyNews.length
-      : publicNews.filter(
-          (article) => getNewsClassification(article) === filter,
-        ).length;
+  const news = collectNewsCards(candidate);
 
   return (
     <div className="profile-tab-content" data-profile-section="news">
       <div className="profile-section-heading">
-        <h3>正負面新聞</h3>
-        <p>新聞依分類呈現，附來源與日期。</p>
+        <h3>相關新聞</h3>
+        <p>依發布日期由新至舊呈現，附來源與日期。</p>
       </div>
-      <fieldset className="content-card news-filter">
-        <legend className="sr-only">新聞分類篩選</legend>
-        {(['all', 'positive', 'negative'] as const).map((option) => (
-          <button
-            className="tab-button"
-            data-testid={`news-filter-${option}`}
-            key={option}
-            type="button"
-            aria-pressed={filter === option}
-            onClick={() => setFilter(option)}
-          >
-            {option === 'all'
-              ? '全部'
-              : option === 'positive'
-                ? '正面'
-                : '負面'}
-          </button>
-        ))}
-        <span className="info-note">
-          目前顯示 {visibleCount} 筆；未分類紀錄只在「全部」中呈現。
-        </span>
-      </fieldset>
       <AutomatedClaimCards
         candidate={candidate}
         categories={['news']}
         heading="新聞資料"
       />
-      {visibleCount > 0 ? (
-        <>
-          <PublicNewsCards candidate={candidate} filter={filter} />
-          <LegacyNewsCards candidate={candidate} filter={filter} />
-        </>
+      {news.length > 0 ? (
+        <NewsCards candidate={candidate} news={news} />
       ) : (
-        <NewsEmpty />
+        <EmptyContent category="news" />
       )}
     </div>
   );

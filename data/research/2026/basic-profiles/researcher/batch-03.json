@@ -1,0 +1,2848 @@
+{
+  "batchId": "batch-03",
+  "generatedAt": "2026-11-12T01:06:10.013460Z",
+  "researcher": "candidate-researcher",
+  "candidates": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "displayName": "李雅芬",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "李雅芬",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1970-06-25",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2187）",
+          "sourceId": "kcc-2187"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-7bbe90e6-edu-1",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "education",
+          "value": "高雄市私立國際商工畢。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-pub-2",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "public-service",
+          "value": "高雄市縣市合併後第3屆議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-pub-3",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "public-service",
+          "value": "立法委員黃昭順辦公室助理",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-4",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "高雄市義勇消防防火宣導大隊新莊分隊顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-5",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "高雄市善心慈善會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-6",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "社團法人高雄市青少年服務協會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-7",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "高雄市楠陽桌球聯誼會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-8",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "國立高雄科技大學校友總會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "議會簡介列於經歷欄，屬社團顧問職務，非學歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-9",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "高雄市救國團楠梓區團委會會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-exp-10",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "professional-experience",
+          "value": "中國國民黨第19、20、21屆全國代表",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-cur-11",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李雅芬",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        },
+        {
+          "claimId": "bp-7bbe90e6-bio-12",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+          "field": "biographical-note",
+          "value": "雅芬是五個孩子的母親",
+          "detail": "政見欄自述；同段另自述「雅芬是警眷」",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "kcc-2187",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2187",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市私立國際商工畢 經歷： 高雄市縣市合併後第3屆議員 立法委員黃昭順辦公室助理 高雄市義勇消防防火宣導大隊新莊分隊顧問 高雄市善心慈善會顧問 社團法人高雄市青少年服務協會顧問 高雄市楠陽桌球聯誼會顧問 國立高雄科技大學校友總會顧問 高雄市救國團楠梓區團委會會長 中國國民黨第19、20、21屆全國代表 服務政見： 雅芬當選議員即努力爭取重大建設，左楠要成為優質生活圈，建設仍有許多需要補強之處。雅芬期待您的支持，繼續為鄉親幸福+芬。 為主婦安心加分：雅芬是五個孩子的母親，最了解婦女需求。左楠托兒、日照據點必須大幅增加；多數長輩仍有社會餐與能力，設長青局推動高齡友善樂活事務。 為青年成家",
+            "page": null,
+            "snapshotSha256": "072f3b6082f4a6046b5d11f201ba582c45e2e89e382874d1d22c0012740efcd1"
+          },
+          "notes": "議會簡介政見欄為候選人自述文字。"
+        }
+      ],
+      "gaps": [
+        "official-website"
+      ],
+      "notes": "身分由名冊姓名、選區、生日與議會本屆議員簡介比對。學歷、經歷、現職均取自議會簡介；政見欄自述另列為傳記註記。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/liyafn0625），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "displayName": "白喬茵",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "白喬茵",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1987-10-28",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2181）",
+          "sourceId": "kcc-2181"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-765aa196-edu-12",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "education",
+          "value": "台中二中。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-765aa196-edu-13",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "education",
+          "value": "世新大學新聞系。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-765aa196-pub-14",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "public-service",
+          "value": "國民黨發言人",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-pub-15",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "public-service",
+          "value": "高雄市府副發言人",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-pub-16",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "public-service",
+          "value": "高雄市府參議",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-pub-17",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "public-service",
+          "value": "高雄市府新聞局機要秘書",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-exp-18",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "professional-experience",
+          "value": "三立新聞台主播",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-exp-19",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "professional-experience",
+          "value": "聯合報記者",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-exp-20",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "professional-experience",
+          "value": "好茵果小農平台創辦人",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-765aa196-edu-21",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "education",
+          "value": "倫敦城市大學肄業",
+          "detail": "肄業（未完成學業）",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 台中二中 世新大學新聞系 經歷： 國民黨發言人 高雄市府副發言人 高雄市府參議 高雄市府新聞局機要秘書 三立新聞台主播 聯合報記者 好茵果小農平台創辦人 倫敦城市大學肄業 服務政見： 城市新聲音從這一票開啟 ▶ 陪你長大 增設0~2歲公托、0~6歲公幼及非營利幼兒園；增設特色公園；爭取高雄兒童樂園；提供新手媽媽一周到府保母補貼；公有市場增設兒童遊戲專區並聘請陪玩照護員 ▶ 校園安全 增加反霸凌獨立式課程；小學雙語教育爭取一校一外師並保障三年教學；市府半額補助營養午餐並增加有機蔬果 ▶ 婦女春天 設計夜歸女性安全通報APP；就業服務擴大納入二度就業婦女；開設職業",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "議會簡介列於經歷欄，實為未完成之學業，改列學歷。"
+        },
+        {
+          "claimId": "bp-765aa196-cur-22",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2181",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-白喬茵",
+            "page": null,
+            "snapshotSha256": "03ed977e8b16fbc87b9abadfd8757909bbcf64b96f06044c6bcb3efa8f0c2ba0"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        }
+      ],
+      "gaps": [
+        "official-website",
+        "biographical-note"
+      ],
+      "notes": "學歷、經歷取自議會簡介；「倫敦城市大學肄業」由經歷欄改列學歷。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/chiaoyinpai），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "displayName": "柳淑芳",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "柳淑芳",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1960-08-30",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "election-bulletin",
+          "value": "2022 年選舉公報同名同選區（d4 第 3 頁）",
+          "sourceId": "cec-bulletin-2022-d4"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-619c7aa1-edu-1",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+          "field": "education",
+          "value": "左營國小、左營國中、岡山農工化工科",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "cec-bulletin-2022-d4",
+            "sourceClass": "cec-election-bulletin",
+            "publisher": "中央選舉委員會",
+            "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+            "publishedAt": "2022-11-26",
+            "retrievedAt": "2026-11-12T00:00:00.000Z",
+            "excerpt": "左營國小、左營國中、岡山\n農工化工科",
+            "page": 3,
+            "snapshotSha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755"
+          },
+          "notes": "2022年選舉公報學歷欄，為候選人自行填載。"
+        },
+        {
+          "claimId": "bp-619c7aa1-edu-2",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+          "field": "education",
+          "value": "中山大學公務人員進修班英文會話",
+          "detail": "公務人員進修班，非學位",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "cec-bulletin-2022-d4",
+            "sourceClass": "cec-election-bulletin",
+            "publisher": "中央選舉委員會",
+            "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+            "publishedAt": "2022-11-26",
+            "retrievedAt": "2026-11-12T00:00:00.000Z",
+            "excerpt": "格、中山大學公務人員進修班英\n文會話ㄧ百分",
+            "page": 3,
+            "snapshotSha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755"
+          },
+          "notes": "2022年選舉公報經歷欄自述之進修課程。"
+        },
+        {
+          "claimId": "bp-619c7aa1-exp-3",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+          "field": "professional-experience",
+          "value": "曾任英文家庭教師",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "cec-bulletin-2022-d4",
+            "sourceClass": "cec-election-bulletin",
+            "publisher": "中央選舉委員會",
+            "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+            "publishedAt": "2022-11-26",
+            "retrievedAt": "2026-11-12T00:00:00.000Z",
+            "excerpt": "文會話ㄧ百分、曾任英文家庭教\n師、現任台灣中油公司圖書管理\n員",
+            "page": 3,
+            "snapshotSha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755"
+          },
+          "notes": "2022年選舉公報經歷欄自述。"
+        },
+        {
+          "claimId": "bp-619c7aa1-exp-4",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+          "field": "professional-experience",
+          "value": "台灣中油公司圖書管理員",
+          "detail": null,
+          "organization": "台灣中油公司",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "cec-bulletin-2022-d4",
+            "sourceClass": "cec-election-bulletin",
+            "publisher": "中央選舉委員會",
+            "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+            "publishedAt": "2022-11-26",
+            "retrievedAt": "2026-11-12T00:00:00.000Z",
+            "excerpt": "師、現任台灣中油公司圖書管理\n員",
+            "page": 3,
+            "snapshotSha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755"
+          },
+          "notes": "2022年選舉公報載為「現任」；2026年是否仍在職未經查證，故列為未知。"
+        },
+        {
+          "claimId": "bp-619c7aa1-pub-5",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+          "field": "public-service",
+          "value": "參選里長、市議員、立委",
+          "detail": "均為參選紀錄，公報未載明當選與否",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "cec-bulletin-2022-d4",
+            "sourceClass": "cec-election-bulletin",
+            "publisher": "中央選舉委員會",
+            "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+            "publishedAt": "2022-11-26",
+            "retrievedAt": "2026-11-12T00:00:00.000Z",
+            "excerpt": "參選里長\n、市議員、立委奮鬥不懈",
+            "page": 3,
+            "snapshotSha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755"
+          },
+          "notes": "2022年選舉公報經歷欄自述之參選紀錄。"
+        },
+        {
+          "claimId": "bp-619c7aa1-bio-6",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+          "field": "biographical-note",
+          "value": "楠梓第一人：西青埔垃圾場抗爭",
+          "detail": "同段自述「高雄第一人：倒馬遊行、全國第一人：罷免空心蔡大陸妹遊行」",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "cec-bulletin-2022-d4",
+            "sourceClass": "cec-election-bulletin",
+            "publisher": "中央選舉委員會",
+            "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC4%E9%81%B8%E5%8D%80.pdf",
+            "publishedAt": "2022-11-26",
+            "retrievedAt": "2026-11-12T00:00:00.000Z",
+            "excerpt": "楠梓\n第一人：西青埔垃圾場抗爭、高\n雄第一人：倒馬遊行、全國第一\n人：罷免空心蔡大陸妹遊行",
+            "page": 3,
+            "snapshotSha256": "737d6a547b3012138fccb0e2d1375aea3415d7128d5842ef3f795f28f0bc5755"
+          },
+          "notes": "2022年選舉公報經歷欄自述，屬候選人自我描述。"
+        }
+      ],
+      "gaps": [
+        "current-position",
+        "official-website"
+      ],
+      "notes": "原種子將2022年選舉公報單一自述段落切成11筆片段，已整併為6筆可對應欄位的陳述；內容全為候選人自述。自由時報2026-07-24報導稱其為「高雄十大傳奇之一的舉牌姊柳淑芳」。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "displayName": "李眉蓁",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "李眉蓁",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1979-03-21",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2186）",
+          "sourceId": "kcc-2186"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-bcf19712-edu-34",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "education",
+          "value": "正修科技大學化妝品與時尚彩妝系碩士畢業。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-pub-35",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "public-service",
+          "value": "高雄市第1、2、3 屆市議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-exp-36",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "professional-experience",
+          "value": "國民黨改革委員會委員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-pub-37",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "public-service",
+          "value": "國民黨高雄市黨部副主任委員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-exp-38",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "professional-experience",
+          "value": "國民黨高雄市青工總會會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-exp-39",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "professional-experience",
+          "value": "高雄市正友獅子會會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-exp-40",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "professional-experience",
+          "value": "正修校友會化工系會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 正修科技大學化妝品與時尚彩妝系碩士畢業 經歷： 高雄市第1、2、3 屆市議員 國民黨改革委員會委員 國民黨高雄市黨部副主任委員 國民黨高雄市青工總會會長 高雄市正友獅子會會長 正修校友會化工系會長 服務政見： 一、老人小孩國家養，婚後孕前健康檢查補助，提高生育補助，增設公共托嬰及育兒資源中心。 二、推動平價優質幼稚園，增設公立與公辦民營幼兒園，減輕家長負擔，提升幼兒教育品質。 三、關懷橘世代、銀髮世代，落實長照關懷，推動全齡化公園，興建加速「北高雄長青中心」。 四、整合左營楠梓族群、宗教、自然、文化觀光資源，引進文創設計產業，提升區域經濟發展。 五、新台十七線如如質完工，改善台積電楠梓產業國區聯外交通。 六、捷運高雄學園線、右昌高鐵線、燕巢高鐵線合併，列為優先路線，北環圈一次到位。 七、配合2030雙語國家政策、實現「校校有雙語」，重視學生品德教育，強化反毒宣傳，拒絕校園",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-bcf19712-cur-41",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2186",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2186",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李眉蓁",
+            "page": null,
+            "snapshotSha256": "ab133d8169199b9a2b363729ab31142d59f65546425dc1cfb10e7d06b8f8577a"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        }
+      ],
+      "gaps": [
+        "official-website",
+        "biographical-note"
+      ],
+      "notes": "學歷、經歷取自議會簡介；現職取自本屆議員名錄。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/kandesnwin2010/），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "displayName": "李雅慧",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "李雅慧",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1975-08-30",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2188）",
+          "sourceId": "kcc-2188"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-faf1e53c-edu-42",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "education",
+          "value": "高雄市左營區勝利國小。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-faf1e53c-edu-43",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "education",
+          "value": "高雄市立左營國民中學。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-faf1e53c-edu-44",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "education",
+          "value": "高雄市私立立志高級中學。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-faf1e53c-edu-45",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "education",
+          "value": "嘉南藥理大學。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-faf1e53c-edu-46",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "education",
+          "value": "高雄師範大學成人教育研究所碩士。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-faf1e53c-exp-47",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "professional-experience",
+          "value": "日本慶應大學醫學部訪問研究員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "訪問研究員屬經歷，非學歷，改列。"
+        },
+        {
+          "claimId": "bp-faf1e53c-exp-48",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "professional-experience",
+          "value": "立法委員趙天麟辦公室藝文部執行長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "立委辦公室職務屬經歷，改列。"
+        },
+        {
+          "claimId": "bp-faf1e53c-pub-49",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "public-service",
+          "value": "高雄市第三屆市議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市左營區勝利國小 高雄市立左營國民中學 高雄市私立立志高級中學 嘉南藥理大學 高雄師範大學成人教育研究所碩士 經歷： 日本慶應大學醫學部訪問研究員 立法委員趙天麟辦公室藝文部執行長 高雄市第三屆市議員 服務政見： 左營上水：文化門戶，大高雄觀光第一站 楠梓上水：科技新城，半導體國際新重鎮 招商引資上水：左營高鐵之星、楠梓台積電，帶動產業轉型。 交通改善上水：打破交通瓶頸，完善道路安全整體規劃。 國際教育上水：落實2030雙語國家政策，強化本市教學環境。 婚育友善上水：強化青年婚孕政策，敢愛、敢婚、敢生養。 運動城市上水：廣設國民運動中心，促進友善便利健康環境。 青年發展上水：擴大推動青年志工參與，與國際接軌 氫能環境上水：氫能轉動新城市，減碳淨零。 城市美學上水：實踐特色公",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-faf1e53c-cur-50",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2188",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-李雅慧",
+            "page": null,
+            "snapshotSha256": "fae3bd42c1f829df40c5f3050be228c2a0c19119655db66a94dec501ceefed16"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        }
+      ],
+      "gaps": [
+        "official-website",
+        "biographical-note"
+      ],
+      "notes": "議會簡介學歷5項、經歷3項；「日本慶應大學醫學部訪問研究員」與「立法委員趙天麟辦公室藝文部執行長」由學歷／公共服務改列經歷。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/liyahui0830/），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "displayName": "陳玫娟",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "陳玫娟",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1962-12-14",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2189）",
+          "sourceId": "kcc-2189"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-a391c4db-edu-51",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "education",
+          "value": "舊城國小。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-edu-52",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "education",
+          "value": "大義國中。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-edu-53",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "education",
+          "value": "道明高中。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-edu-54",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "education",
+          "value": "日本東洋大學。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-edu-55",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "education",
+          "value": "美國威斯頓大學企業管理碩士。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-pub-56",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "public-service",
+          "value": "高雄市縣市合併後第1、2、3屆議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-pub-57",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "public-service",
+          "value": "高雄市議會第6、7屆市議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-59",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "日本亞細亞航空公司",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-60",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "立委黃昭順及侯彩鳳服務處特別助理",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-61",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "高雄市千禧國際同濟會創會會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-62",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "高雄市2007女國際青商會特友會主席",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-63",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "國民黨高雄青工會前副總會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-64",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "高雄市清玉文教發展協會理事長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-65",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "高雄市滑水、排舞委員會主委",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-exp-66",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "professional-experience",
+          "value": "高雄市國劇研究會理事長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 舊城國小 大義國中 道明高中 日本東洋大學 美國威斯頓大學企業管理碩士 經歷： 高雄市縣市合併後第1、2、3屆議員 高雄市議會第6、7屆市議員 日本東洋大學 日本亞細亞航空公司 立委黃昭順及侯彩鳳服務處特別助理 高雄市千禧國際同濟會創會會長 高雄市2007女國際青商會特友會主席 國民黨高雄青工會前副總會長 高雄市清玉文教發展協會理事長 高雄市滑水、排舞委員會主委 高雄市國劇研究會理事長",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-a391c4db-cur-67",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2189",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2189",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-陳玫娟",
+            "page": null,
+            "snapshotSha256": "b608dc62367f364b610e5e86809466c46faab4dcbd6b6869442f297fc57d449f"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        }
+      ],
+      "gaps": [
+        "official-website",
+        "biographical-note"
+      ],
+      "notes": "議會簡介將「日本東洋大學」同時列於學歷與經歷，已刪除經歷欄重複項，僅保留學歷。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/may5858586/），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "displayName": "張以理",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "張以理",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1987-11-09",
+          "sourceId": "approved-roster-2026"
+        }
+      ],
+      "status": "needs-additional-evidence",
+      "claims": [
+        {
+          "claimId": "bp-4c6bef68-pub-1",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+          "field": "public-service",
+          "value": "高雄市青年局長",
+          "detail": "2020年8月24日上任，2025年2月17日卸任，報導稱在青年局服務1638個日子",
+          "organization": "高雄市政府青年局",
+          "validFrom": "2020-08",
+          "validTo": "2025-02",
+          "currentStatus": "historical",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-4953171",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4953171",
+            "publishedAt": "2025-02-16",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "高雄市青年局長張以理準備投入左楠區高雄市議員選舉，向市長陳其邁提出辭呈獲准，將於明天（17日）正式卸任",
+            "page": null,
+            "snapshotSha256": "3c0eb8c1d1879130629f7bdc794a888c5a66c134fde78dfe50e96283142a8f6a"
+          },
+          "notes": "自由時報報導市府人事；職務已隨辭職結束。"
+        },
+        {
+          "claimId": "bp-4c6bef68-bio-2",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+          "field": "biographical-note",
+          "value": "陳其邁也稱讚張以理是「點子王」",
+          "detail": "市長對其評價；辭職後投入左楠區（第4選區）市議員選舉",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-4953171",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4953171",
+            "publishedAt": "2025-02-16",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "陳其邁也稱讚張以理是「點子王」",
+            "page": null,
+            "snapshotSha256": "3c0eb8c1d1879130629f7bdc794a888c5a66c134fde78dfe50e96283142a8f6a"
+          },
+          "notes": "媒體引述市長評價，非候選人自述。"
+        }
+      ],
+      "gaps": [
+        "education",
+        "professional-experience",
+        "current-position",
+        "official-website"
+      ],
+      "notes": "僅取得青年局長職務與辭職參選之事實；學歷與其他經歷尚無可引用來源。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "displayName": "陳冠宇",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "陳冠宇",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1996-03-25",
+          "sourceId": "approved-roster-2026"
+        }
+      ],
+      "status": "needs-additional-evidence",
+      "claims": [
+        {
+          "claimId": "bp-2df974a4-exp-1",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+          "field": "professional-experience",
+          "value": "跟隨父親服務地方多年",
+          "detail": "服務團隊助理表示其已跟隨父親陳善慧服務地方多年",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-5516898",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5516898",
+            "publishedAt": "2026-07-24",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "其團隊助理則說沒聽到相關訊息，卻也同時強調陳冠宇已經跟隨父親服務地方多年",
+            "page": null,
+            "snapshotSha256": "b7d39197943dc1becda3d3362eaef0e1bd6920b1061e0d8851266b9be5166171"
+          },
+          "notes": "自由時報引述陳善慧服務團隊助理說法。"
+        },
+        {
+          "claimId": "bp-2df974a4-bio-2",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+          "field": "biographical-note",
+          "value": "將交棒兒子陳冠宇",
+          "detail": "無黨籍高雄市議員陳善慧宣布交棒其子陳冠宇，投入左楠（第4選區）市議員選舉",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-5535017",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5535017",
+            "publishedAt": "2026-08-10",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "無黨籍高市議員陳善慧今正式宣布將交棒兒子陳冠宇，高雄第4選區（左營、楠梓）現任無黨籍議員陳善慧深耕地方多年",
+            "page": null,
+            "snapshotSha256": "341015260234a00c353aa393489fed000fc787aa80d9dbd6e4537514fa2d6671"
+          },
+          "notes": "自由時報2026-08-10報導；交棒屬政治宣布，非選舉結果。"
+        }
+      ],
+      "gaps": [
+        "education",
+        "public-service",
+        "current-position",
+        "official-website"
+      ],
+      "notes": "為現任議員陳善慧之子；公開來源僅載其長期擔任父親服務團隊助理，學歷尚無來源。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "displayName": "陳麗珍",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "陳麗珍",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1966-03-23",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2184）",
+          "sourceId": "kcc-2184"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-8e055419-edu-68",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "education",
+          "value": "義守大學管理學學士。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-8e055419-edu-69",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "education",
+          "value": "國立高雄師範大學教育學碩士。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-8e055419-pub-70",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "public-service",
+          "value": "高雄市第一、二、三屆議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-pub-71",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "public-service",
+          "value": "高雄市第七屆議員",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-pub-72",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "public-service",
+          "value": "左營區新下里里長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-73",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "十七全黨代表",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-74",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "婦聯會楠梓支會主委",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-75",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "左營救國團會長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-76",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "楠梓社會教育站顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-77",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "高雄市龍舟委員會主委",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-78",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "博仁慈善會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-79",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "嘉義同鄉會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-exp-80",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "professional-experience",
+          "value": "雲林同鄉會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 義守大學管理學學士 國立高雄師範大學教育學碩士 經歷： 高雄市第一、二、三屆議員 高雄市第七屆議員 左營區新下里里長 十七全黨代表 婦聯會楠梓支會主委 左營救國團會長 楠梓社會教育站顧問 高雄市龍舟委員會主委 博仁慈善會顧問 嘉義同鄉會顧問 雲林同鄉會顧問 服務政見： 一、楠梓科技產業園區設置，推動專業進修產學合作，聘用在地人才，增加青年就業，加強周圍建設及生活機能。振興高雄經濟，市",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-8e055419-cur-81",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2184",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-陳麗珍",
+            "page": null,
+            "snapshotSha256": "70dcabafe411608c1c3ad9fe60baf13d871299d1a04985e3f16b175f689bcf1a"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        }
+      ],
+      "gaps": [
+        "official-website",
+        "biographical-note"
+      ],
+      "notes": "學歷、經歷取自議會簡介；現職取自本屆議員名錄。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/e533323），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "displayName": "薛兆基",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "薛兆基",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1968-11-30",
+          "sourceId": "approved-roster-2026"
+        }
+      ],
+      "status": "needs-additional-evidence",
+      "claims": [
+        {
+          "claimId": "bp-10ad99ed-pub-1",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+          "field": "public-service",
+          "value": "葉菊蘭代理市長辦公室主任",
+          "detail": "2005年放棄參選議員後轉任",
+          "organization": "高雄市政府",
+          "validFrom": "2005",
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-5089483",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5089483",
+            "publishedAt": "2025-06-28",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "2005年放棄參選議員，轉任葉菊蘭代理市長辦公室主任，後雖無重要職務，卻始終留在高雄",
+            "page": null,
+            "snapshotSha256": "bb8b373cef373b8fde9ff3a9ffe5935c6b24f7a110d18d3ceb2c33e3789989dd"
+          },
+          "notes": "自由時報報導其幕僚經歷；卸任年份未載明。"
+        },
+        {
+          "claimId": "bp-10ad99ed-exp-2",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+          "field": "professional-experience",
+          "value": "謝長廷市長機要秘書",
+          "detail": "同段並載其曾任葉菊蘭代理市長辦公室主任",
+          "organization": "高雄市政府",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-5465924",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5465924",
+            "publishedAt": "2026-06-09",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "曾任謝長廷市長機要秘書及葉菊蘭代理市長辦公室主任，歷經逾二十年市政實務後重返選場",
+            "page": null,
+            "snapshotSha256": "b4767b22f60856f1aa083c1bd10f032bef8fef68d0d2bf16efb6f1ff4e7069c2"
+          },
+          "notes": "自由時報引述台灣前進陣線提名資料。"
+        },
+        {
+          "claimId": "bp-10ad99ed-exp-3",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+          "field": "professional-experience",
+          "value": "長期擔任幕僚、輔選角色",
+          "detail": "參與張俊雄、余政憲、謝長廷、陳菊等團隊，累積近30場選戰經驗",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-5089483",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5089483",
+            "publishedAt": "2025-06-28",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "薛兆基長期擔任幕僚、輔選角色，陸續參與過張俊雄、余政憲、謝長廷、陳菊等綠營大咖團隊，至今累積近30場選戰經驗",
+            "page": null,
+            "snapshotSha256": "bb8b373cef373b8fde9ff3a9ffe5935c6b24f7a110d18d3ceb2c33e3789989dd"
+          },
+          "notes": "自由時報報導。"
+        },
+        {
+          "claimId": "bp-10ad99ed-bio-4",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+          "field": "biographical-note",
+          "value": "在高雄左營生活、工作逾50年",
+          "detail": "受訪自述；2026年獲台灣前進陣線推薦參選左楠第4選區",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "candidate-statement",
+          "source": {
+            "sourceId": "ltn-5546440",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5546440",
+            "publishedAt": "2026-08-20",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "在高雄左營生活、工作逾50年的高市議員參選人薛兆基，對於蓮池潭提出「十全十美」計畫",
+            "page": null,
+            "snapshotSha256": "85442d7e209c680784a61d85bb6a64798cd8662d49852e7be33febf429fcb0e6"
+          },
+          "notes": "媒體引述其受訪自述。"
+        }
+      ],
+      "gaps": [
+        "education",
+        "current-position",
+        "official-website"
+      ],
+      "notes": "長期民進黨幕僚出身，2025年參與民進黨左楠初選，後以無黨籍獲台灣前進陣線推薦參選；學歷尚無可引用來源。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "displayName": "尹立",
+      "districtId": "district-kaohsiung-council-04",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "尹立",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第4選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1975-10-17",
+          "sourceId": "approved-roster-2026"
+        }
+      ],
+      "status": "needs-additional-evidence",
+      "claims": [
+        {
+          "claimId": "bp-94f45410-pub-1",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+          "field": "public-service",
+          "value": "高市文化局長",
+          "detail": "由樹德科技大學借調出任；2018年11月7日報導当日辭職",
+          "organization": "高雄市政府文化局",
+          "validFrom": null,
+          "validTo": "2018-11",
+          "currentStatus": "historical",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-2604464",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/2604464",
+            "publishedAt": "2018-11-07",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "高市文化局長尹立近日因在臉書發表多篇「挺高雄」的文章",
+            "page": null,
+            "snapshotSha256": "62ac9a940b0f721b46847a5d381b5b7e42e4723fdd26d109083c432cd3b50268"
+          },
+          "notes": "自由時報2018-11-07報導其當日辭去文化局長職務；就任年份未載明。"
+        },
+        {
+          "claimId": "bp-94f45410-exp-2",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+          "field": "professional-experience",
+          "value": "樹德科技大學動畫與遊戲設計系系主任",
+          "detail": "2016年由陳菊自該職借調出任文化局長",
+          "organization": null,
+          "validFrom": null,
+          "validTo": "2016",
+          "currentStatus": "historical",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-2604464",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/2604464",
+            "publishedAt": "2018-11-07",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "讓駁二成為南台灣設計重鎮的尹立，2年前被前市長陳菊從樹德科技大學動畫與遊戲設計系系主任借調，是來自設計領域的文化局長",
+            "page": null,
+            "snapshotSha256": "62ac9a940b0f721b46847a5d381b5b7e42e4723fdd26d109083c432cd3b50268"
+          },
+          "notes": "報導稱「2年前」借調，據以推估2016年。"
+        },
+        {
+          "claimId": "bp-94f45410-exp-3",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+          "field": "professional-experience",
+          "value": "樹德科大助理教授",
+          "detail": null,
+          "organization": "樹德科技大學",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-3189760",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3189760",
+            "publishedAt": "2020-06-06",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "「Wecare高雄」發起人、樹德科大助理教授尹立加入",
+            "page": null,
+            "snapshotSha256": "4f433b60e57750cef8aaad5f265d74491f13a08f1ee42a45ddf75b4e8ff52b30"
+          },
+          "notes": "2020年罷韓期間報導所載身分。"
+        },
+        {
+          "claimId": "bp-94f45410-bio-4",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+          "field": "biographical-note",
+          "value": "WeCare高雄發起人",
+          "detail": "罷韓四君子之一；2018年11月辭文化局長後投入「We Care高雄」行動",
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "unknown",
+          "attribution": "independently-corroborated",
+          "source": {
+            "sourceId": "ltn-3189760",
+            "sourceClass": "reputable-news",
+            "publisher": "自由時報",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3189760",
+            "publishedAt": "2020-06-06",
+            "retrievedAt": "2026-11-12T01:06:10.013460Z",
+            "excerpt": "罷韓四君子包括罷韓提案領銜人陳冠榮、WeCare高雄發起人尹立、公民割草行動發言人李佾潔，及台灣基進黨新聞輿情部副主任張博洋",
+            "page": null,
+            "snapshotSha256": "4f433b60e57750cef8aaad5f265d74491f13a08f1ee42a45ddf75b4e8ff52b30"
+          },
+          "notes": "自由時報報導。"
+        }
+      ],
+      "gaps": [
+        "education",
+        "current-position",
+        "official-website"
+      ],
+      "notes": "曾任高雄市政府文化局長、樹德科大教職，為罷韓行動「四君子」之一；學歷僅見於維基百科（僅供探索），未取得可引用之主要來源。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "displayName": "黃飛鳳",
+      "districtId": "district-kaohsiung-council-05",
+      "identityStatus": "resolved",
+      "identitySignals": [
+        {
+          "type": "official-roster-name",
+          "value": "黃飛鳳",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-district",
+          "value": "高雄市議員第5選舉區",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "official-roster-birth-date",
+          "value": "1965-10-19",
+          "sourceId": "approved-roster-2026"
+        },
+        {
+          "type": "institutional-biographical-record",
+          "value": "高雄市議會本屆議員簡介（msn 2194）",
+          "sourceId": "kcc-2194"
+        }
+      ],
+      "status": "research-completed",
+      "claims": [
+        {
+          "claimId": "bp-4a79e857-edu-82",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "education",
+          "value": "高雄市大樹區水寮國民小學。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-edu-83",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "education",
+          "value": "高雄市立大樹國民中學。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-edu-84",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "education",
+          "value": "私立大同商業專科學校會計統計科。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-edu-85",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "education",
+          "value": "美國國家大學大眾傳播系。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-edu-86",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "education",
+          "value": "義守大學管理學院碩士。",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列學歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-exp-87",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "professional-experience",
+          "value": "水寮國小家長會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "家長會顧問屬經歷，非學歷，改列。"
+        },
+        {
+          "claimId": "bp-4a79e857-exp-88",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "professional-experience",
+          "value": "大樹國中家長會顧問",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "家長會顧問屬經歷，非學歷，改列。"
+        },
+        {
+          "claimId": "bp-4a79e857-pub-89",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "public-service",
+          "value": "台灣薪火傳愛關懷協會理事長",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "社團理事長屬公共服務性質職務。"
+        },
+        {
+          "claimId": "bp-4a79e857-exp-90",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "professional-experience",
+          "value": "澳洲科技公司總經理特助",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-exp-91",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "professional-experience",
+          "value": "台灣外銷產業國貿部經理",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-exp-92",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "professional-experience",
+          "value": "電腦及半導體雜誌採訪編輯",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-exp-93",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "professional-experience",
+          "value": "電台媒體公關",
+          "detail": null,
+          "organization": null,
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "historical",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "學經歷與政見 當屆議事資料 歷屆議事資料 議員個人總質詢 學歷： 高雄市大樹區水寮國民小學 高雄市立大樹國民中學 私立大同商業專科學校會計統計科 美國國家大學大眾傳播系 義守大學管理學院碩士 經歷： 水寮國小家長會顧問 大樹國中家長會顧問 台灣薪火傳愛關懷協會理事長 澳洲科技公司總經理特助 台灣外銷產業國貿部經理 電腦及半導體雜誌採訪編輯 電台媒體公關 服務政見： 幸福家鄉，鄉親共好 1.監督市政 2.社區關懷據點，資源整合與運用，長輩在地樂活學習（長輩開心晚輩放心） 3.學前教育、公托資源彈性",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "高雄市議會本屆議員簡介所列經歷。"
+        },
+        {
+          "claimId": "bp-4a79e857-cur-94",
+          "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+          "field": "current-position",
+          "value": "高雄市議員（本屆）",
+          "detail": "高雄市議會本屆議員簡介所列現任議員。",
+          "organization": "高雄市議會",
+          "validFrom": null,
+          "validTo": null,
+          "currentStatus": "current",
+          "attribution": "institutional-record",
+          "source": {
+            "sourceId": "kcc-2194",
+            "sourceClass": "kcc-member-profile",
+            "publisher": "高雄市議會",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+            "publishedAt": null,
+            "retrievedAt": "2026-11-06T00:00:00.000Z",
+            "excerpt": "高雄市議會全球網-中文網-本屆議員-黃飛鳳",
+            "page": null,
+            "snapshotSha256": "0f8d78eade8808dbfa7ccda6461557c2fdb6c87e158259db6926f3db60f9b524"
+          },
+          "notes": "以高雄市議會本屆議員名錄認定現任職務。"
+        }
+      ],
+      "gaps": [
+        "official-website",
+        "biographical-note"
+      ],
+      "notes": "學歷5項取自議會簡介；「水寮國小家長會顧問」「大樹國中家長會顧問」由學歷改列經歷，「台灣薪火傳愛關懷協會理事長」由經歷改列公共服務。議會簡介頁另嵌入臉書專頁連結（https://www.facebook.com/feifeng.justdoit），因未取得該頁可引用文字，官方網站欄暫列缺口。"
+    }
+  ]
+}

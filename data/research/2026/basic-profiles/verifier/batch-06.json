@@ -1,0 +1,2611 @@
+{
+  "batchId": "batch-06",
+  "generatedAt": "2026-11-12T01:23:34Z",
+  "verifier": "candidate-verifier",
+  "decisions": [
+    {
+      "decisionId": "vd-batch-06-001",
+      "claimId": "bp-672c71fb-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2206.html（SHA-256 a583ce4b354c377e… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-許采蓁」，msn 2206，與許采蓁（第8選舉區）身分相符。「學歷：」區塊逐字列出「親民技術學院幼兒保育系學士學位」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2206",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：親民技術學院幼兒保育系學士學位　經歷：許崑源愛心慈善秘書長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-002",
+      "claimId": "bp-672c71fb-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2206.html（SHA-256 a583ce4b354c377e… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-許采蓁」，msn 2206，與許采蓁（第8選舉區）身分相符。「經歷：」區塊逐字列出「許崑源愛心慈善秘書長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2206",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：親民技術學院幼兒保育系學士學位　經歷：許崑源愛心慈善秘書長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-003",
+      "claimId": "bp-672c71fb-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2206.html（SHA-256 a583ce4b354c377e… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-許采蓁」，msn 2206，與許采蓁（第8選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-許采蓁」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2206",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-許采蓁　｜　頁內導覽「本屆議員-許采蓁」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-004",
+      "claimId": "bp-440e3b8d-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「學歷：」區塊逐字列出「七賢國小」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-005",
+      "claimId": "bp-440e3b8d-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「學歷：」區塊逐字列出「五福國中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-006",
+      "claimId": "bp-440e3b8d-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「學歷：」區塊逐字列出「高雄女中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-007",
+      "claimId": "bp-440e3b8d-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「學歷：」區塊逐字列出「臺灣大學法學士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-008",
+      "claimId": "bp-440e3b8d-edu-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「學歷：」區塊逐字列出「紐約大學(NYU)法學碩士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-009",
+      "claimId": "bp-440e3b8d-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「經歷：」區塊逐字列出「國際通商法律事務所合夥律師」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-010",
+      "claimId": "bp-440e3b8d-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄市職業總工會法律顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-011",
+      "claimId": "bp-440e3b8d-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄市集中市場零售攤販職業工會法律顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-012",
+      "claimId": "bp-440e3b8d-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄市縫紉業職業工會法律顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-013",
+      "claimId": "bp-440e3b8d-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄郵政工會法律顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：七賢國小；五福國中；高雄女中；臺灣大學法學士；紐約大學(NYU)法學碩士　經歷：國際通商法律事務所合夥律師；高雄市職業總工會法律顧問；高雄市集中市場零售攤販職業工會法律顧問；高雄市縫紉業職業工會法律顧問；高雄郵政工會法律顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-014",
+      "claimId": "bp-440e3b8d-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2208.html（SHA-256 ffa93de1352dcffa… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-湯詠瑜」，msn 2208，與湯詠瑜（第8選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-湯詠瑜」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2208",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-湯詠瑜　｜　頁內導覽「本屆議員-湯詠瑜」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-015",
+      "claimId": "bp-3c0e0184-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「學歷：」區塊逐字列出「大同國小」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-016",
+      "claimId": "bp-3c0e0184-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「學歷：」區塊逐字列出「前金國中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-017",
+      "claimId": "bp-3c0e0184-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「學歷：」區塊逐字列出「高師大附中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-018",
+      "claimId": "bp-3c0e0184-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「學歷：」區塊逐字列出「中山醫學院」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-019",
+      "claimId": "bp-3c0e0184-edu-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「學歷：」區塊逐字列出「國立高雄大學碩士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-020",
+      "claimId": "bp-3c0e0184-edu-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "partially-supported",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。條目文字逐字相符（「國立高雄師範大學博士班(博士候選人)」），但位於「經歷：」區塊，不在「學歷：」區塊；KCC 頁面自身把它歸在經歷。內容雖屬就學資訊，來源分類與 claims 之 education 欄位不一致，故不予 verified。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": false,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": "bp-3c0e0184-edu-6：來源將「國立高雄師範大學博士班(博士候選人)」列於「經歷」欄而非「學歷」欄；建議在 detail 註明「KCC 簡介列於經歷欄」，或改列 professional-experience，勿預設為學歷。"
+    },
+    {
+      "decisionId": "vd-batch-06-021",
+      "claimId": "bp-3c0e0184-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會第三屆議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-022",
+      "claimId": "bp-3c0e0184-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會民進黨團幹事長」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-023",
+      "claimId": "bp-3c0e0184-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「2020高雄市長補選陳其邁競選總部發言人」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-024",
+      "claimId": "bp-3c0e0184-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「高雄市嘉義同鄉會副總幹事」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-025",
+      "claimId": "bp-3c0e0184-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「高師大附中校友會創會理事長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-026",
+      "claimId": "bp-3c0e0184-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「立法委員國會助理」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-027",
+      "claimId": "bp-3c0e0184-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。「經歷：」區塊逐字列出「立委趙天麟服務處執行長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：大同國小；前金國中；高師大附中；中山醫學院；國立高雄大學碩士　經歷：高雄市議會第三屆議員；國立高雄師範大學博士班(博士候選人)；2020高雄市長補選陳其邁競選總部發言人；高雄市議會民進黨團幹事長；高雄市嘉義同鄉會副總幹事；高師大附中校友會創會理事長；立法委員國會助理；立委趙天麟服務處執行長",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-028",
+      "claimId": "bp-3c0e0184-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2207.html（SHA-256 86efdc0cf9bccda4… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-黃文益」，msn 2207，與黃文益（第8選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-黃文益」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2207",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-黃文益　｜　頁內導覽「本屆議員-黃文益」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-029",
+      "claimId": "bp-6164dd2e-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5563213（HTTP 200）並比對留存快照（SHA-256 b0b23aff6f19da07… 一致）。「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」（自由時報，2026-09-04）逐字載明「黃鈺婷今年55歲，日本東京農業大學博士，學成歸國即返回老家高雄，在義守大學任教20年，目前在高雄市立空中大學擔任教職，對高雄發展相當熟悉。」；身分訊號：黃鈺婷、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。同內容另由太報同日報導「曾赴日本取得東京農業大學食品營養學博士，返台後在義守大學營養學系任教約20年」，與自由時報一致。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "黃鈺婷今年55歲，日本東京農業大學博士，學成歸國即返回老家高雄，在義守大學任教20年，目前在高雄市立空中大學擔任教職，對高雄發展相當熟悉。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-030",
+      "claimId": "bp-6164dd2e-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5563213（HTTP 200）並比對留存快照（SHA-256 b0b23aff6f19da07… 一致）。「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」（自由時報，2026-09-04）逐字載明「黃鈺婷今年55歲，日本東京農業大學博士，學成歸國即返回老家高雄，在義守大學任教20年，目前在高雄市立空中大學擔任教職，對高雄發展相當熟悉。」；身分訊號：黃鈺婷、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。太報同日報導「在義守大學營養學系任教約20年」，與 claims 之「任教20年」一致。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "黃鈺婷今年55歲，日本東京農業大學博士，學成歸國即返回老家高雄，在義守大學任教20年，目前在高雄市立空中大學擔任教職，對高雄發展相當熟悉。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-031",
+      "claimId": "bp-6164dd2e-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5563213（HTTP 200）並比對留存快照（SHA-256 b0b23aff6f19da07… 一致）。「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」（自由時報，2026-09-04）逐字載明「黃鈺婷今年55歲，日本東京農業大學博士，學成歸國即返回老家高雄，在義守大學任教20年，目前在高雄市立空中大學擔任教職，對高雄發展相當熟悉。」；身分訊號：黃鈺婷、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。太報同日報導補充現職為「高雄市立空中大學健康管理與促進學系」，claims 僅記「教職」未載職稱，屬保守寫法，不構成錯誤。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "黃鈺婷今年55歲，日本東京農業大學博士，學成歸國即返回老家高雄，在義守大學任教20年，目前在高雄市立空中大學擔任教職，對高雄發展相當熟悉。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-032",
+      "claimId": "bp-6164dd2e-bio-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5563213（HTTP 200）並比對留存快照（SHA-256 b0b23aff6f19da07… 一致）。「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」（自由時報，2026-09-04）逐字載明「國民黨前高市議員黃紹庭因案停職後，今由妹妹黃鈺婷接棒、向國民黨報准參選高市第8選區議員並完成登記，特別的是「黃鈺婷」與同黨同選區的參選人「黃裕庭」撞名，成為地方話題。」；身分訊號：黃鈺婷、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（independently-corroborated）與原文性質一致。兄妹關係另由太報（國民黨8選區議員選戰添變數）、聯合報兩篇報導分別以「胞妹黃鈺婷接棒」、「改由妹妹黃鈺婷以報准參選投入選戰」描述，故 independently-corroborated 之標註成立。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "國民黨前高市議員黃紹庭因案停職後，今由妹妹黃鈺婷接棒、向國民黨報准參選高市第8選區議員並完成登記，特別的是「黃鈺婷」與同黨同選區的參選人「黃裕庭」撞名，成為地方話題。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-033",
+      "claimId": "bp-c9cc4aad-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://www.cdns.com.tw/articles/1444838（HTTP 200）並比對留存快照（SHA-256 fc5eb84d6d755690… 一致）。吳益政籲選擇陳雅敏當議員 讚其長期在第一線為地方做事（中華日報，2026-08-15）逐字載明「陳雅敏具備廿五年地方服務資歷，日本文化學園大學研究所碩士，曾任已故高雄市議長許崑源服務處主任、議長室秘書及專委、市議員朱信強助理，熟悉地方事務與議會生態，今年以無黨籍投入高雄市第八選區(前金、新興、苓雅)市議員選舉。」；身分訊號：陳雅敏、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。",
+      "reopenedEvidence": {
+        "url": "https://www.cdns.com.tw/articles/1444838",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "陳雅敏具備廿五年地方服務資歷，日本文化學園大學研究所碩士，曾任已故高雄市議長許崑源服務處主任、議長室秘書及專委、市議員朱信強助理，熟悉地方事務與議會生態，今年以無黨籍投入高雄市第八選區(前金、新興、苓雅)市議員選舉。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-034",
+      "claimId": "bp-c9cc4aad-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5148870（HTTP 200）並比對留存快照（SHA-256 7fe9187dc126d503… 一致）。高市議員選戰「新」新人輩出 人生「初」選累計已8位（自由時報，2025-08-19）逐字載明「八選區陳雅敏（朱信強議員助理/前議長許崑源助理）」；身分訊號：陳雅敏、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。同文照片說明另稱其為「前高市議長許崑源服務處主任」，兩者為不同職稱並存，claims 分列為兩項，未互相取代。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5148870",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "八選區陳雅敏（朱信強議員助理/前議長許崑源助理）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-035",
+      "claimId": "bp-c9cc4aad-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5148870（HTTP 200）並比對留存快照（SHA-256 7fe9187dc126d503… 一致）。高市議員選戰「新」新人輩出 人生「初」選累計已8位（自由時報，2025-08-19）逐字載明「八選區陳雅敏（朱信強議員助理/前議長許崑源助理）」；身分訊號：陳雅敏、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5148870",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "八選區陳雅敏（朱信強議員助理/前議長許崑源助理）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-036",
+      "claimId": "bp-c9cc4aad-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5148870（HTTP 200）並比對留存快照（SHA-256 7fe9187dc126d503… 一致）。高市議員選戰「新」新人輩出 人生「初」選累計已8位（自由時報，2025-08-19）逐字載明「前高市議長許崑源服務處主任陳雅敏首次參選議員。（記者王榮祥攝）」；身分訊號：陳雅敏、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。該句為同文照片說明（記者王榮祥攝）；另一來源中華日報 2026-08-15 亦載「曾任已故高雄市議長許崑源服務處主任」，可互相印證。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5148870",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "前高市議長許崑源服務處主任陳雅敏首次參選議員。（記者王榮祥攝）",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-037",
+      "claimId": "bp-c9cc4aad-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://www.cdns.com.tw/articles/1479503（HTTP 200）並比對留存快照（SHA-256 05b35969f76020ad… 一致）。要把25年服務經驗帶進議會 陳雅敏承諾說出口就負責做到（中華日報，2026-10-24）逐字載明「陳雅敏指出，25年來，她一直都在地方服務。從議員助理、服務處主任，到議長室秘書專委，她長期站在第一線，處理鄉親大大小小的事情。」；身分訊號：陳雅敏、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。此為候選人自述引句，attribution 標為 candidate-statement 恰當，未升級為獨立事實。",
+      "reopenedEvidence": {
+        "url": "https://www.cdns.com.tw/articles/1479503",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "陳雅敏指出，25年來，她一直都在地方服務。從議員助理、服務處主任，到議長室秘書專委，她長期站在第一線，處理鄉親大大小小的事情。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-038",
+      "claimId": "bp-c9cc4aad-bio-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://www.cdns.com.tw/articles/1444838（HTTP 200）並比對留存快照（SHA-256 fc5eb84d6d755690… 一致）。吳益政籲選擇陳雅敏當議員 讚其長期在第一線為地方做事（中華日報，2026-08-15）逐字載明「陳雅敏具備廿五年地方服務資歷，日本文化學園大學研究所碩士，曾任已故高雄市議長許崑源服務處主任、議長室秘書及專委、市議員朱信強助理，熟悉地方事務與議會生態，今年以無黨籍投入高雄市第八選區(前金、新興、苓雅)市議員選舉。」；身分訊號：陳雅敏、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。「無黨籍」與「第八選區（前金、新興、苓雅）」均由報導文字直接支持。",
+      "reopenedEvidence": {
+        "url": "https://www.cdns.com.tw/articles/1444838",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "陳雅敏具備廿五年地方服務資歷，日本文化學園大學研究所碩士，曾任已故高雄市議長許崑源服務處主任、議長室秘書及專委、市議員朱信強助理，熟悉地方事務與議會生態，今年以無黨籍投入高雄市第八選區(前金、新興、苓雅)市議員選舉。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-039",
+      "claimId": "bp-4a8b9046-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5562721（HTTP 200）並比對留存快照（SHA-256 1647ba6e90c42ded… 一致）。參選高市議員 公民老師張藝璉學習增閱歷、退役軍官鄒約翰為勞工發聲（自由時報，2026-09-04）逐字載明「今年68歲的鄒約翰是退役軍官，曾參與第5屆高雄區域立委選舉，他退役後長期投入勞工權益，強烈反對企業高薪低報，認為此舉會損害基層勞工勞保與退休權益。」；身分訊號：鄒約翰、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562721",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "今年68歲的鄒約翰是退役軍官，曾參與第5屆高雄區域立委選舉，他退役後長期投入勞工權益，強烈反對企業高薪低報，認為此舉會損害基層勞工勞保與退休權益。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-040",
+      "claimId": "bp-4a8b9046-bio-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5562721（HTTP 200）並比對留存快照（SHA-256 1647ba6e90c42ded… 一致）。參選高市議員 公民老師張藝璉學習增閱歷、退役軍官鄒約翰為勞工發聲（自由時報，2026-09-04）逐字載明「今年68歲的鄒約翰是退役軍官，曾參與第5屆高雄區域立委選舉，他退役後長期投入勞工權益，強烈反對企業高薪低報，認為此舉會損害基層勞工勞保與退休權益。」；身分訊號：鄒約翰、第8選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562721",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "今年68歲的鄒約翰是退役軍官，曾參與第5屆高雄區域立委選舉，他退役後長期投入勞工權益，強烈反對企業高薪低報，認為此舉會損害基層勞工勞保與退休權益。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-041",
+      "claimId": "bp-fc0812f4-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「學歷：」區塊逐字列出「輔仁大學經濟學士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-042",
+      "claimId": "bp-fc0812f4-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「學歷：」區塊逐字列出「高雄大學經管碩士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-043",
+      "claimId": "bp-fc0812f4-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「經歷：」區塊逐字列出「高市府民政局主任秘書」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-044",
+      "claimId": "bp-fc0812f4-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「經歷：」區塊逐字列出「陳菊市長辦公室副主任」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-045",
+      "claimId": "bp-fc0812f4-pub-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「經歷：」區塊逐字列出「合併前第六屆高雄市議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-046",
+      "claimId": "bp-fc0812f4-pub-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「經歷：」區塊逐字列出「合併後第一、二及三屆高雄市議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-047",
+      "claimId": "bp-fc0812f4-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。「經歷：」區塊逐字列出「關懷生命協會副執行長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-048",
+      "claimId": "bp-fc0812f4-bio-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。claims 以引號引用「經歷：」首項逐字文字「燒肉粽歌王郭金發ㄟ囝」，「自述為」框架對應此欄為候選人自填背景；該句非職務，改列 biographical-note 合理，attribution candidate-statement 恰當。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：輔仁大學經濟學士；高雄大學經管碩士　經歷：燒肉粽歌王郭金發ㄟ囝；關懷生命協會副執行長；高市府民政局主任秘書；陳菊市長辦公室副主任；合併前第六屆高雄市議員；合併後第一、二及三屆高雄市議員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-049",
+      "claimId": "bp-fc0812f4-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2209.html（SHA-256 7fc1eb5b1de89194… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-郭建盟」，msn 2209，與郭建盟（第8選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-郭建盟」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2209",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-郭建盟　｜　頁內導覽「本屆議員-郭建盟」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-050",
+      "claimId": "bp-7a196bc1-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「學歷：」區塊逐字列出「國立中山大學海事所碩士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-051",
+      "claimId": "bp-7a196bc1-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「學歷：」區塊逐字列出「國立中山大學海資系」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-052",
+      "claimId": "bp-7a196bc1-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市縣市合併後第3屆議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-053",
+      "claimId": "bp-7a196bc1-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會特色公園小組召集人」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-054",
+      "claimId": "bp-7a196bc1-pub-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會國民外交促進會副會長」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-055",
+      "claimId": "bp-7a196bc1-pub-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會民進黨團書記長」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-056",
+      "claimId": "bp-7a196bc1-pub-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市政府新聞局主秘」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-057",
+      "claimId": "bp-7a196bc1-pub-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「陳菊市長辦公室副主任」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-058",
+      "claimId": "bp-7a196bc1-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市社福慈善總會榮譽志工」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-059",
+      "claimId": "bp-7a196bc1-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「立委趙天麟國會執行長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-060",
+      "claimId": "bp-7a196bc1-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「謝長廷秘書」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-061",
+      "claimId": "bp-7a196bc1-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市游泳委員會副主委」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-062",
+      "claimId": "bp-7a196bc1-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市鳳美客家事務協會顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-063",
+      "claimId": "bp-7a196bc1-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市台東同鄉會理事」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-064",
+      "claimId": "bp-7a196bc1-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市屏東同鄉會理事」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-065",
+      "claimId": "bp-7a196bc1-exp-8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。「經歷：」區塊逐字列出「新高雄嘉義同鄉會顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學海事所碩士；國立中山大學海資系　經歷：高雄市縣市合併後第3屆議員；高雄市社福慈善總會榮譽志工；高雄市議會特色公園小組召集人；高雄市議會國民外交促進會副會長；高雄市議會民進黨團書記長；高雄市政府新聞局主秘；陳菊市長辦公室副主任；立委趙天麟國會執行長；謝長廷秘書；高雄市游泳委員會副主委；高雄市鳳美客家事務協會顧問；高雄市台東同鄉會理事；高雄市屏東同鄉會理事；新高雄嘉義同鄉會顧問",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-066",
+      "claimId": "bp-7a196bc1-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2216.html（SHA-256 fd63de5eff7e9385… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-林智鴻」，msn 2216，與林智鴻（第9選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-林智鴻」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2216",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-林智鴻　｜　頁內導覽「本屆議員-林智鴻」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-067",
+      "claimId": "bp-722c1206-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「學歷：」區塊逐字列出「仁德醫護管理專科學校」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-068",
+      "claimId": "bp-722c1206-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「學歷：」區塊逐字列出「三信家商」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-069",
+      "claimId": "bp-722c1206-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「學歷：」區塊逐字列出「中正高工」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-070",
+      "claimId": "bp-722c1206-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「學歷：」區塊逐字列出「忠孝國中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-071",
+      "claimId": "bp-722c1206-edu-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「學歷：」區塊逐字列出「梓官國小」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-072",
+      "claimId": "bp-722c1206-edu-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "partially-supported",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。條目文字逐字相符（「和春技術學院肄業」），但位於「經歷：」區塊，不在「學歷：」區塊；KCC 頁面自身把它歸在經歷。內容雖屬就學資訊，來源分類與 claims 之 education 欄位不一致，故不予 verified。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": false,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": "bp-722c1206-edu-6：來源將「和春技術學院肄業」列於「經歷」欄而非「學歷」欄；建議在 detail 註明「KCC 簡介列於經歷欄」，或改列 professional-experience，勿預設為學歷。"
+    },
+    {
+      "decisionId": "vd-batch-06-073",
+      "claimId": "bp-722c1206-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「第一二三屆高雄市議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-074",
+      "claimId": "bp-722c1206-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「第十六屆高雄縣議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-075",
+      "claimId": "bp-722c1206-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「慶忠機車行負責人」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-076",
+      "claimId": "bp-722c1206-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市羽球委員會主任委員」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-077",
+      "claimId": "bp-722c1206-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市交通義勇警察副大隊長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-078",
+      "claimId": "bp-722c1206-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「高縣機動車修理工會理事長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-079",
+      "claimId": "bp-722c1206-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「鳳山滑輪溜冰推廣協會理事長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-080",
+      "claimId": "bp-722c1206-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「鳳山區保興宮管委會常務監事」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-081",
+      "claimId": "bp-722c1206-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。「經歷：」區塊逐字列出「鳳山慈福宮副主任委員」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：仁德醫護管理專科學校；三信家商；中正高工；忠孝國中；梓官國小　經歷：第一二三屆高雄市議員；第十六屆高雄縣議員；慶忠機車行負責人；高雄市羽球委員會主任委員；高雄市交通義勇警察副大隊長；高縣機動車修理工會理事長；鳳山滑輪溜冰推廣協會理事長；鳳山區保興宮管委會常務監事；鳳山慈福宮副主任委員；和春技術學院肄業",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-082",
+      "claimId": "bp-722c1206-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2217.html（SHA-256 7dfbfd4c438a0555… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-張漢忠」，msn 2217，與張漢忠（第9選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-張漢忠」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2217",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-張漢忠　｜　頁內導覽「本屆議員-張漢忠」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-083",
+      "claimId": "bp-3ee328a6-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「學歷：」區塊逐字列出「國立中山大學高階公共政策碩士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-084",
+      "claimId": "bp-3ee328a6-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「學歷：」區塊逐字列出「正修科技大學創意產業經營學位學程管理學士」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-085",
+      "claimId": "bp-3ee328a6-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「學歷：」區塊逐字列出「高雄高商」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-086",
+      "claimId": "bp-3ee328a6-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「學歷：」區塊逐字列出「鳳西國中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-087",
+      "claimId": "bp-3ee328a6-edu-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「學歷：」區塊逐字列出「正義中學附設國中部」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-088",
+      "claimId": "bp-3ee328a6-edu-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「學歷：」區塊逐字列出「鳳西國小」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-089",
+      "claimId": "bp-3ee328a6-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市縣市合併後第3屆議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-090",
+      "claimId": "bp-3ee328a6-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會黨團副總召集人」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-091",
+      "claimId": "bp-3ee328a6-pub-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市議會法規委員會第二召集人」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-092",
+      "claimId": "bp-3ee328a6-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「國民黨21屆中央委員」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-093",
+      "claimId": "bp-3ee328a6-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「國民黨高雄青工總會總會長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-094",
+      "claimId": "bp-3ee328a6-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市鳳山區農會理事」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-095",
+      "claimId": "bp-3ee328a6-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「台灣黃埔眷村協會理事」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-096",
+      "claimId": "bp-3ee328a6-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「正修科技大學校友會會務顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-097",
+      "claimId": "bp-3ee328a6-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「正修科技大學校友會商科聯誼會副會長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-098",
+      "claimId": "bp-3ee328a6-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。「經歷：」區塊逐字列出「鳳邑開漳聖王廟管理委員會主任委員」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立中山大學高階公共政策碩士；正修科技大學創意產業經營學位學程管理學士；高雄高商；鳳西國中；正義中學附設國中部；鳳西國小　經歷：高雄市縣市合併後第3屆議員；高雄市議會黨團副總召集人；高雄市議會法規委員會第二召集人；國民黨21屆中央委員；國民黨高雄青工總會總會長；高雄市鳳山區農會理事；台灣黃埔眷村協會理事；正修科技大學校友會會務顧問；正修科技大學校友會商科聯誼會副會長；鳳邑開漳聖王廟管理委員會主任委員",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-099",
+      "claimId": "bp-3ee328a6-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2218.html（SHA-256 f97f42bd0ac8dfa0… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-鄭安秝」，msn 2218，與鄭安秝（第9選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-鄭安秝」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2218",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-鄭安秝　｜　頁內導覽「本屆議員-鄭安秝」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-100",
+      "claimId": "bp-663696bc-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之學歷欄逐字載明「臺北市立大學運動教育碩士、輔仁大學體育學系」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-101",
+      "claimId": "bp-663696bc-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之學歷欄逐字載明「高英工商、鳳山國中、大東國小」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-102",
+      "claimId": "bp-663696bc-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「高雄市政府秘書」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-103",
+      "claimId": "bp-663696bc-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「高雄市議會特色公園小組召集人」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-104",
+      "claimId": "bp-663696bc-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「前議員蘇炎城服務處主任」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-105",
+      "claimId": "bp-663696bc-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「高雄縣職業總工會理事長」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-106",
+      "claimId": "bp-663696bc-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「高雄市攤販協進會理事長」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-107",
+      "claimId": "bp-663696bc-exp-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「高雄縣家事服務職業工會理事長」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-108",
+      "claimId": "bp-663696bc-exp-5",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「第一勞資關係協進會常務理事」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-109",
+      "claimId": "bp-663696bc-exp-6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「中華男子壘球代表隊資深選手」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-110",
+      "claimId": "bp-663696bc-exp-7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「北體校友會高雄分會長」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-111",
+      "claimId": "bp-663696bc-exp-8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "重開 cec-bulletin-2022 d9.pdf（SHA-256 cca6001d013006d5… 與來源一致，頁尾「第3頁(共3頁)」，標題「第9選舉區：鳳山區」），號次11 蘇致榮（66年10月29日生）之經歷欄逐字載明「教育部審定講師」；名冊生日 1977-10-29、第9選舉區相符。公報為 2022-11-26 投票之第4屆議員選舉公報（PDF 編印日 2022-10-27），標為 historical 正確。",
+      "reopenedEvidence": {
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/05%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1/111%E5%B9%B4/06%E9%AB%98%E9%9B%84%E5%B8%82/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AC%AC9%E9%81%B8%E5%8D%80.pdf",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會第4屆議員選舉第9選舉區選舉公報　第9選舉區：鳳山區　號次11 蘇致榮（66年10月29日生，民主進步黨）　學歷：臺北市立大學運動教育碩士、輔仁大學體育學系、高英工商、鳳山國中、大東國小　經歷：高雄市政府秘書、前議員蘇炎城服務處主任、高雄縣職業總工會理事長、高雄市攤販協進會理事長、高雄縣家事服務職業工會理事長、第一勞資關係協進會常務理事、中華男子壘球代表隊資深選手、北體校友會高雄分會長、教育部審定講師、高雄市議會特色公園小組召集人　第3頁(共3頁)",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-112",
+      "claimId": "bp-663696bc-exp-9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "verdict": "verified",
+      "rationale": "今日重新抓取 https://news.ltn.com.tw/news/politics/breakingnews/5224608（HTTP 200）並比對留存快照（SHA-256 a05aaea048a54212… 一致）。抬轎變坐轎！下屆高市議員選戰已17名「前助理」躍躍欲試（自由時報，2025-10-27）逐字載明「九選區（鳳山區）民進黨蘇致榮曾任立委許智傑服務處副主任，民進黨鄧巧珮曾任前立委趙天麟服務處執行長。」；身分訊號：蘇致榮、第9選舉區、報導年齡與名冊生日相符。欄位與 attribution（candidate-statement）與原文性質一致。報導以「曾任」敘述，claims 亦標為 historical，未誤植為現職。",
+      "reopenedEvidence": {
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5224608",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "九選區（鳳山區）民進黨蘇致榮曾任立委許智傑服務處副主任，民進黨鄧巧珮曾任前立委趙天麟服務處執行長。",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-113",
+      "claimId": "bp-10ba5344-edu-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「學歷：」區塊逐字列出「國立高雄應用科技大學工業工程與管理系碩士班」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-114",
+      "claimId": "bp-10ba5344-edu-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「學歷：」區塊逐字列出「國立高雄工專電子科」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-115",
+      "claimId": "bp-10ba5344-edu-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「學歷：」區塊逐字列出「高雄市瑞祥國中」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-116",
+      "claimId": "bp-10ba5344-edu-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「學歷：」區塊逐字列出「高雄縣立五甲國小」，屬學歷項目，支持 education 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-117",
+      "claimId": "bp-10ba5344-pub-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「第3屆高雄市議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-118",
+      "claimId": "bp-10ba5344-pub-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「第1、2屆高雄市議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-119",
+      "claimId": "bp-10ba5344-pub-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「第15、16屆高雄縣議員」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-120",
+      "claimId": "bp-10ba5344-pub-4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「第8屆鳳山市民代表」，內容屬經歷/職務，支持 public-service 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-121",
+      "claimId": "bp-10ba5344-exp-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市運動健康休閒體驗協會理事長」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-122",
+      "claimId": "bp-10ba5344-exp-2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「大高雄不動產開發商業同業公會顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-123",
+      "claimId": "bp-10ba5344-exp-3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。「經歷：」區塊逐字列出「高雄市真善美中小企業跨業交流協會顧問」，內容屬經歷/職務，支持 professional-experience 欄位。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "學歷：國立高雄應用科技大學工業工程與管理系碩士班。；國立高雄工專電子科。；高雄市瑞祥國中。；高雄縣立五甲國小。　經歷：第3屆高雄市議員；高雄市運動健康休閒體驗協會理事長；大高雄不動產開發商業同業公會顧問；高雄市真善美中小企業跨業交流協會顧問；第1、2屆高雄市議員；第15、16屆高雄縣議員；第8屆鳳山市民代表",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    },
+    {
+      "decisionId": "vd-batch-06-124",
+      "claimId": "bp-10ba5344-pos-1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "verdict": "verified",
+      "rationale": "重開 KCC 議員簡介快照 data/biographies/raw/2026-11-06/kcc/profiles/2215.html（SHA-256 6e36fd90dfe771df… 與來源記載一致），頁面標題「高雄市議會全球網-中文網-本屆議員-陳慧文」，msn 2215，與陳慧文（第9選舉區）身分相符。claims 值「高雄市議員（本屆）」為頁面「本屆議員-陳慧文」名錄狀態之正規化改寫，非頁面逐字句；官方名錄將該人列為本屆（第4屆）議員，故 supportsField 成立。快照 2026-11-06 取得，第4屆任期至 2026-12-25，current 狀態正確。",
+      "reopenedEvidence": {
+        "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2215",
+        "retrievedAt": "2026-11-12T01:23:34Z",
+        "accessible": true,
+        "excerpt": "高雄市議會全球網-中文網-本屆議員-陳慧文　｜　頁內導覽「本屆議員-陳慧文」",
+        "matchesClaim": true
+      },
+      "checks": {
+        "identityMatch": true,
+        "supportsField": true,
+        "dateConsistent": true,
+        "currentStatusCorrect": true
+      },
+      "correction": null
+    }
+  ]
+}

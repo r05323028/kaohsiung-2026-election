@@ -1,0 +1,574 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+  "candidateName": "童燕珍",
+  "verifiedAt": "2026-11-12T16:28:32.408Z",
+  "articles": [
+    {
+      "articleId": "news-167f102b",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+      ],
+      "headline": "高雄三民區議員選戰藍白合 童燕珍估國民黨有3席半空間",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5411911",
+      "publicationDate": "2026-04-22",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-04-22",
+      "retrievedAt": "2026-11-12T16:28:27.356Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄三民區議員選戰藍白合童燕珍估國民黨有3席半空間@2026-04-22",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高市議員第七選區（三民區）今（22）日公布結果，捲土重來的老將童燕珍以極大差距勝出，成為國民黨提名第3席，該區藍白合「3+1」；童燕珍強調，三民區是艱難選區，目前浮出檯面的是泛綠6席對上泛藍4席，10人搶8席，她評估國民黨在三民區應有3席半的空間。談及這次勝出之後，未來選戰要怎麼打？童燕珍說，說是責任的開始，三民區是很艱難地區，必須花更多力量，相信自己過去對選民的服務，盡心盡力沒有疏忽過，這段時間雖然沒有當議員，她一直在服務，找她服務的人還是很多。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 童燕珍強調，這段時間，她看到的視野更廣，也看到更多高雄市需要建設的地方，交通、衛生、教育、環境等，「當然現在高雄市政府也不是做得不錯，但很多地方還是要加強」。針對三民區的選情詭譎，藍綠都沒有提滿，都各自有盟軍；童燕珍說，這一次確實如此，民進黨除了提名3席外，還有3席（指曾俊傑、張博洋、黃淑美）是無黨的，也是屬於民進黨系統；國民黨是提名3席、「3+1，另外1席是藍白合」，是民眾黨（指林于凱），她認為只要保持初心合作團結，跟隨柯志恩團",
+        "excerptSha256": "2ae5835d5e56b4762fd1472bdf435fc9e64646bbb5c8ee42e09a8da69b5b6a06",
+        "documentSha256": "5087f0190ceb407b707a2c851bb63475c5b2f230923f8871d734050ce3437053",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:27.356Z"
+      },
+      "identity": {
+        "matchedName": "童燕珍",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第七選區",
+          "三民",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:27.356Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5411911"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄三民區議員選戰藍白合 童燕珍估國民黨有3席半空間 fetched=高雄三民區議員選戰藍白合 童燕珍估國民黨有3席半空間"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-04-22 fetched=2026-04-22"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第七選區、三民、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-aee7ce35",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+      ],
+      "headline": "國民黨高市議員三民區初選結果揭曉 73歲童燕珍贏了",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5411838",
+      "publicationDate": "2026-04-22",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-04-22",
+      "retrievedAt": "2026-11-12T16:28:28.079Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "國民黨高市議員三民區初選結果揭曉73歲童燕珍贏了@2026-04-22",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高市議員第七選區（三民區）從4月19日起進行初選民調，兩位競爭者為前資深議員童燕珍與中央委員孫健萍，市黨部今（22）日公布結果，捲土重來的老將童燕珍以極大差距，擊敗國民黨中常委孫健萍，成為國民黨該區第三席。國民黨高雄市議員第七選區（三民區）原預計提名3席，共有現任議員黃柏霖、黃香菽，及捲土重來的童燕珍、中央委員孫健萍等4人完成登記。依黨內選舉辦法，由另外2位非現任同志，依相關辦法爭取第3席提名席次。經邀集孫健萍、童燕珍召開協調會，共同決議將以電話民調進行初選，於4月19至21日進行民調作業。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 市黨部今天上午公布民調結果，根據兩家民調公司tvbs、全國公信力民調公司的平均，童燕珍為82.821、孫健萍經3成加權後為22.332，差距相當大。73歲的童燕珍自2002年起參選高雄市議員從未敗戰，創下5連霸紀錄，曾任國民黨高雄市議會黨團總召，用心推廣幼教服務，但於2022年競選連任失利。此次捲土重來，將代表國民黨在三民區爭取第三席。52歲的孫健萍是國民黨中央委員會第21屆第二任中央常務委員，曾任中",
+        "excerptSha256": "6b00ce8acaadedf58a6308de625a968a6ade9157a2f9330a20598d35abe7baa4",
+        "documentSha256": "1b5dcd7d81f507329fafe6a14a4d203fd6c91662e84fc67c5220598a6cab3990",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:28.079Z"
+      },
+      "identity": {
+        "matchedName": "童燕珍",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第七選區",
+          "三民",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:28.079Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5411838"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=國民黨高市議員三民區初選結果揭曉 73歲童燕珍贏了 fetched=國民黨高市議員三民區初選結果揭曉 73歲童燕珍贏了"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-04-22 fetched=2026-04-22"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第七選區、三民、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-bea6cf17",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+      ],
+      "headline": "童燕珍VS孫健萍 國民黨高雄市議員唯一初選民調4月19日展開",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5397956",
+      "publicationDate": "2026-04-09",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-04-09",
+      "retrievedAt": "2026-11-12T16:28:28.767Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "童燕珍vs孫健萍國民黨高雄市議員唯一初選民調4月19日展開@2026-04-09",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高市黨部今宣布，高市議員第七選區（三民區）提名出現競爭，將於4月19日進行初選民調，兩位競爭者為前資深議員童燕珍與中央委員孫健萍。市黨部說明，上月底辦理第一梯次市議員提名登記作業，經各選區有意參選同志登記後，最終第七選區（三民區）出現提名競爭；三民區原預計提名3席，最終有4人完成登記，其中兩位現任，依黨內選舉辦法，將由另外2位非現任同志、依相關辦法爭取第3席的提名席次。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 市黨部指出，針對三民區第3席提名席次，日前邀集孫健萍、童燕珍兩人召開協調會，共同決議將以電話民調進行初選，預定4月19至4月21日進行民調作業，因兩位參選人皆有參選經驗，初選民調將不適用相關加權規定。市黨部轉述兩人說法，無論最終民調結果由誰勝出，都會團結一致、傾全力輔選，讓國民黨在議會席次最大化，共同贏得年底選戰。",
+        "excerptSha256": "d0cc8cc3098bae5f9df1d9fcaf378381bd108600e477d3273ca9b019ab445a1c",
+        "documentSha256": "6b55b8a1062342bc478f3cdcb6db4a85558d14f6f034d543633806fc53f8aea3",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:28.767Z"
+      },
+      "identity": {
+        "matchedName": "童燕珍",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第七選區",
+          "三民",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:28.767Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5397956"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=童燕珍VS孫健萍 國民黨高雄市議員唯一初選民調4月19日展開 fetched=童燕珍VS孫健萍 國民黨高雄市議員唯一初選民調4月19日展開"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-04-09 fetched=2026-04-09"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第七選區、三民、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-835f1567",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+      ],
+      "headline": "「綠友友」張博洋拚連任 老對手童燕珍、林于凱全殺回來",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20260423/3154133.htm",
+      "publicationDate": "2026-04-23",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-04-23",
+      "retrievedAt": "2026-11-12T16:28:31.446Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "綠友友張博洋拚連任老對手童燕珍林于凱全殺回來@2026-04-23",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲張博洋跟議長康裕成等人在路口迎接台鋼雄鷹的車隊 。（圖／記者吳奕靖翻攝） 高雄市三民區議員選戰再度狹路相逢。2022年選舉時，當時代表台灣基進出戰的張博洋，挾著新人姿態與罷韓浪潮突圍，拿下三民區關鍵一席，不只擊敗時代力量的林于凱，也讓已連霸5屆的國民黨資深議員童燕珍意外落馬，成為當年地方選戰最受矚目的黑馬之一。 時隔3年後，三民區政治版圖早已不同。張博洋如今以無黨籍議員身分備戰連任，林于凱則轉披民眾黨戰袍再戰，童燕珍也捲土重來。加上三民區席次已由上屆7席恢復為8席，讓原本就競爭激烈的選區，提前升高成高雄年底地方選戰的激戰熱區。 ▲高雄市三民區參選初步情況 。（AI協作圖／記者吳奕靖製作，經編輯審核） 這場選戰之所以受矚目，關鍵就在於3人的政治位置與時代氣氛都變了。張博洋2022年是以挑戰者身分，搭上罷韓後的政治氛圍，以「新人對老將」姿態殺出重圍；如今3年過去，他已從挑戰者變成現任者，得面對基層經營、問政成績與連任壓力的全面檢驗。另一頭，現年73歲的童燕珍則再度回到戰場，這位曾5連霸的老將，如今選擇再戰，也讓三民區多了濃厚的世代對決意味。 而林于凱的角色同樣敏感。當年他代表時代力量參戰，如今則改以民眾黨身分重返三民區，等於3年前同場對決的3名主要人物，如今各自站在完全不同的政治座標上，讓這場選戰不只是單純回鍋再戰，更像是一次地方第三勢力重組、藍綠白板塊重排後的再對決。 值得注意的是，雖然張博洋現在已是無",
+        "excerptSha256": "f1c0e4831a355577457954277963d4da7514d2435d39f5b74598ab2e65eba729",
+        "documentSha256": "1614149607e22a17a8dfabb57e46a7afe3e01688ff9abd3abcc15bfef208d8a7",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:31.446Z"
+      },
+      "identity": {
+        "matchedName": "童燕珍",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "三民",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:31.446Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20260423/3154133.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=「綠友友」張博洋拚連任 老對手童燕珍、林于凱全殺回來 fetched=「綠友友」張博洋拚連任 老對手童燕珍、林于凱全殺回來"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-04-23 fetched=2026-04-23"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 三民、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-ec5adcea",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+      ],
+      "headline": "藍高雄議員三民區2搶1！老將童燕珍回鍋勝出 同志之爭落幕",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20260422/3153480.htm",
+      "publicationDate": "2026-04-22",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-04-22",
+      "retrievedAt": "2026-11-12T16:28:31.920Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "藍高雄議員三民區2搶1老將童燕珍回鍋勝出同志之爭落幕@2026-04-22",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲國民黨中央委員孫健萍（右）、前國民黨高雄市議員童燕珍（左）爭取三民區議員席次。（圖／記者賴文萱翻攝） 國民黨高雄市黨部近期辦理第一梯次市議員提名登記作業，最終第七選區（三民區）出現提名競爭，成了唯一要進行初選的選區。市黨部22日上午公佈初選民調結果，由前議員童燕珍以82.821%勝出中央委員孫健萍的22.332%，後續將依民調結果提報中央提名人選。 今日在市黨部副主委王月足、選監小組委員、民調專家、民調機構及2位初選同志的見證下，民調結果經在場出席人員確認無誤。此次初選由童燕珍勝出，市黨部表示此次民調秉持著公平、公正、公開的方式進行，所有程序皆依照黨內相關初選規定辦理，將依民調結果提報中央提名人選。 ▲▼前國民黨高雄市議員童燕珍民調勝出，回鍋再戰三民區。（圖／記者賴文萱翻攝） 市黨部表示，經2位登記參選同志所選擇的兩家民調機構分別為TVBS、全國公信力，民調由市黨部選舉監察小組代表將三日民調統計結果密封信封拆封後，交由市黨部副主委王月足公佈民調結果成績。兩家民調合計結果排序為：童燕珍82.821%、孫健萍22.332%。 市黨部指出，本次辦理初選民意調查皆秉持著公平、公正、公開的方式進行，所",
+        "excerptSha256": "23439a81b23831bf87c9bb9e39b20e1de7356c85d76571ed338e1956db8e6fb1",
+        "documentSha256": "d2c1a0f63a177504e15e0cf33a146cfb693c486d489a6a73a038890b7377949e",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:31.920Z"
+      },
+      "identity": {
+        "matchedName": "童燕珍",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第七選區",
+          "三民",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:31.920Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20260422/3153480.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=藍高雄議員三民區2搶1！老將童燕珍回鍋勝出 同志之爭落幕 fetched=藍高雄議員三民區2搶1！老將童燕珍回鍋勝出 同志之爭落幕"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-04-22 fetched=2026-04-22"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第七選區、三民、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5625446",
+      "headline": "高雄藍白合 韓國瑜、柯文哲今高雄合體",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5592933",
+      "headline": "市場掃街被一路「餵食」 柯志恩：這下不怕餓肚子",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5494097",
+      "headline": "柯志恩出席國民黨小組長座談：三民贏 高雄就贏",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5437037",
+      "headline": "柯志恩率高市議員訪新北公托取經 侯友宜讚最敢扛責好立委",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5383664",
+      "headline": "國民黨高市議員第一批次提名共29人登記 僅三民區4搶3有競爭",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5377705",
+      "headline": "高雄市議員選舉5位老將表態回鍋再戰 其中3人鎖定「這區」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/paper/1686601",
+      "headline": "串連後驛商圈與科工館 高市九如一路人行道翻新",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

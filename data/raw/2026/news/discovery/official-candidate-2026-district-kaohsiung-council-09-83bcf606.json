@@ -1,0 +1,67 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+  "candidateName": "劉德林",
+  "researchedAt": "2026-11-12T16:22:22.549Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "劉德林",
+      "fetchedAt": "2026-11-12T16:22:20.513Z",
+      "httpStatus": 200,
+      "documentSha256": "55c4871b647483a37e50a3d381be1e6e8ded1dd59a3a7fb0a794a33133fd6b02",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "劉德林",
+      "fetchedAt": "2026-11-12T16:22:21.294Z",
+      "httpStatus": 200,
+      "documentSha256": "1ac5ba5e6dcf26b63432e33d8454ab68c5043e62201f1c0b4252a995f4e730c9",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "劉德林",
+      "fetchedAt": "2026-11-12T16:22:22.038Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5626136",
+      "headline": "獨家》台糖讓步！高雄誠義里抗爭落幕 冷凍倉儲退出社區",
+      "publicationDate": "2026-11-02",
+      "query": "劉德林"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
+      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "publicationDate": "2026-10-07",
+      "query": "劉德林"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5545238",
+      "headline": "高市議會開議前辦普渡 議長康裕成：願高雄平安順利、好運接棒",
+      "publicationDate": "2026-08-19",
+      "query": "劉德林"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1761600",
+      "headline": "聚焦鳳山 賴瑞隆市場拜票 柯志恩組後援會",
+      "publicationDate": "2026-07-06",
+      "query": "劉德林"
+    }
+  ]
+}

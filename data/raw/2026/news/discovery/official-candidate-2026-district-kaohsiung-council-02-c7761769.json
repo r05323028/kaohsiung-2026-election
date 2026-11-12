@@ -1,0 +1,88 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+  "candidateName": "鄭東元",
+  "researchedAt": "2026-11-12T16:21:54.250Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "鄭東元",
+      "fetchedAt": "2026-11-12T16:21:52.293Z",
+      "httpStatus": 200,
+      "documentSha256": "a18aed5a694f0dad9f86e11c16ba7b61be0e5a24ea5aed23a385d5bc3383f1bd",
+      "status": "results",
+      "resultCount": 7,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "鄭東元",
+      "fetchedAt": "2026-11-12T16:21:52.966Z",
+      "httpStatus": 200,
+      "documentSha256": "f192b7683b85d6664a5e964aa2d2a25f779074d1f22126628571096ecb810de5",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "鄭東元",
+      "fetchedAt": "2026-11-12T16:21:53.778Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "publicationDate": "2026-10-27",
+      "query": "鄭東元"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/4712095",
+      "headline": "高市挺韓市議員選將鄭東元餐會涉賄 判無罪",
+      "publicationDate": "2024-06-21",
+      "query": "鄭東元"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4127920",
+      "headline": "國民黨議員餐會起訴 柯志恩團隊曾提醒恐被質疑賄選",
+      "publicationDate": "2022-11-18",
+      "query": "鄭東元"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4008813",
+      "headline": "被指欺騙和媽祖同天生日 柯志恩批：連「晚報戶口」常識都沒有",
+      "publicationDate": "2022-07-30",
+      "query": "鄭東元"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/3005308",
+      "headline": "韓國瑜挖網軍南下？ 高市府顧問曾曝：潘恒旭也是台北的網軍",
+      "publicationDate": "2019-12-11",
+      "query": "鄭東元"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/focus/paper/1297503",
+      "headline": "夏昭麗：看得懂財報 不會辭監察人",
+      "publicationDate": "2019-06-21",
+      "query": "鄭東元"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/2828639",
+      "headline": "議員批韓國瑜酬庸 再爆高捷新監察人夏昭麗曾在酒店上班",
+      "publicationDate": "2019-06-20",
+      "query": "鄭東元"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+  "candidateName": "郭建盟",
+  "researchedAt": "2026-11-12T16:22:20.464Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "郭建盟",
+      "fetchedAt": "2026-11-12T16:22:18.356Z",
+      "httpStatus": 200,
+      "documentSha256": "32b6b3b3e3f0ba2e8ff37e9afb5b7da4fce373342e3d79c42f02f5b0a3fbca8c",
+      "status": "results",
+      "resultCount": 5,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "郭建盟",
+      "fetchedAt": "2026-11-12T16:22:19.196Z",
+      "httpStatus": 200,
+      "documentSha256": "c043478149d3bd6a69f76f3f982eb14d17ee72e24d600bd0a4a213d286f9d24d",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "郭建盟",
+      "fetchedAt": "2026-11-12T16:22:19.994Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5621500",
+      "headline": "高捷美麗島站鋼琴也能自由彈 陳其邁 ：高雄有非常多高手",
+      "publicationDate": "2026-10-28",
+      "query": "郭建盟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
+      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "publicationDate": "2026-10-07",
+      "query": "郭建盟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5591809",
+      "headline": "拆舊大統蓋停車場好可惜 陳其邁：卸任前會約地主談談",
+      "publicationDate": "2026-10-01",
+      "query": "郭建盟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5570327",
+      "headline": "高雄科技紅利共享 議員推成立「薪資升級基金」",
+      "publicationDate": "2026-09-11",
+      "query": "郭建盟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5459243",
+      "headline": "台股創高 高雄前議長夫妻持股市值破7億",
+      "publicationDate": "2026-06-03",
+      "query": "郭建盟"
+    }
+  ]
+}

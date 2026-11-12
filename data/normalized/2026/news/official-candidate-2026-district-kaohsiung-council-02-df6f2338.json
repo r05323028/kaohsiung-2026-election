@@ -1,0 +1,253 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+  "candidateName": "李柏融",
+  "verifiedAt": "2026-11-12T16:27:52.780Z",
+  "articles": [
+    {
+      "articleId": "news-99359ffc",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-02-df6f2338"
+      ],
+      "headline": "立委敗選人李柏融找韓國瑜抗議不成 揚言絕食、自焚遭逮",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/society/breakingnews/3045545",
+      "publicationDate": "2020-01-20",
+      "dateStatus": "confirmed",
+      "updatedDate": "2020-01-20",
+      "retrievedAt": "2026-11-12T16:27:48.977Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "立委敗選人李柏融找韓國瑜抗議不成揚言絕食自焚遭逮@2020-01-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "首次上稿 11:18更新時間 22:44參選高市立委選舉失利的李柏融今暗藏裝有500CC汽油的保特瓶及打火機，手持「霸權政府草菅人命，不顧百姓死活」白布條，二度到市府鳳山行政中心，要找市長韓國瑜陳情抗議，警方當場制止，見他情緒激動，要拿身上汽油瓶，當場將他逮捕架離，警訊後依法送辦。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 李柏融（70歲）過去是高雄縣茄萣鄉鄉民代表，他不滿茄萣大排加蓋變成集合住宅，質疑工程污染水源，陳情抗議已10多年，市長韓國瑜上任後，他多次到四維行政中心陳情抗議未果，去年12月27日改到鳳山行政中心陳情抗議。經發、水利等局處今年1月初，陪同李柏融現地會勘，強調高縣府早期有核發建照，地上物為合法建築物領有使用執照跟建物權狀（為私有產權），土地為經發局出租給民眾訂有租約，非現任市府任內所為，將會協調處理。不過李柏融認為未獲市府回應，今上午8時許手持「霸權政府草菅人命，不顧百姓死活」白布條，二度到市府鳳山行政中心，要找市長韓國瑜陳情抗議，警方早已監控他的行蹤，阻擋他上樓找韓國瑜，由水利局出面處理，但李柏",
+        "excerptSha256": "9337038f5c917e26bd2e68feafdaae302e11066ed7c6fecb0c0ff05a25c20067",
+        "documentSha256": "8ddbafd3afedd24235c33916ef01a8cd0d551c9cddaf87eba5b930324f893604",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:48.977Z"
+      },
+      "identity": {
+        "matchedName": "李柏融",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "茄萣",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:48.977Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/society/breakingnews/3045545"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=立委敗選人李柏融找韓國瑜抗議不成 揚言絕食、自焚遭逮 fetched=立委敗選人李柏融找韓國瑜抗議不成 揚言絕食、自焚遭逮"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2020-01-20 fetched=2020-01-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 茄萣、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-3b63796e",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-02-df6f2338"
+      ],
+      "headline": "獨家》疑帶汽油到高市府抗議 立委敗選人李柏融遭逮捕偵訊",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/society/breakingnews/3045451",
+      "publicationDate": "2020-01-20",
+      "dateStatus": "confirmed",
+      "updatedDate": "2020-01-20",
+      "retrievedAt": "2026-11-12T16:27:49.846Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "獨家》疑帶汽油到高市府抗議立委敗選人李柏融遭逮捕偵訊@2020-01-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "參選高市立委失利的李柏融今天上午8時許，攜帶汽油到市府鳳山行政中心，要向市長韓國瑜陳情茄萣大排，過程中他自稱身上有帶汽油，當場掏出裝有汽油的寶特瓶，警方當場將他依公共危險罪嫌逮捕，目前人在警局偵訊中。李柏融今天上午8時許，帶白條到市府鳳山行政中心，稱要向市長韓國瑜陳情，整個人直接坐在草地上，將白布條舖在地上，抗議茄萣大排工程。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 李柏融不滿茄萣大排加蓋，被當成集合住宅污染水源，水利局出面向他說明，強調是早期縣府有核發建照，地上物為合法建築物領有使用執照跟建物權狀（為私有產權），土地為經發局出租給民眾訂有租約，非現任市府任內所為，李柏融仍不願接受。過程中李自稱身上有汽油，行政國際處請他移到他處，李稱不要動他，從口袋中掏出1瓶礦泉水瓶，裡面裝有疑似汽油，警方認定涉及公共危險罪嫌，當場將他依法逮捕，目前人在警局偵訊中。（10:01更新）",
+        "excerptSha256": "9e519d288346877957de6cdc81bfc3093544438d8f61dc74dd9aa0bc4c92bea9",
+        "documentSha256": "3a971d20e0be236f32fa8e9af6669488ecbf772cbf9b35fb28049d8a11527595",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:49.846Z"
+      },
+      "identity": {
+        "matchedName": "李柏融",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "茄萣"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:49.846Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/society/breakingnews/3045451"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=獨家》疑帶汽油到高市府抗議 立委敗選人李柏融遭逮捕偵訊 fetched=獨家》疑帶汽油到高市府抗議 立委敗選人李柏融遭逮捕偵訊"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2020-01-20 fetched=2020-01-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 茄萣"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5558551",
+      "headline": "高雄市議員登記首日13人完成 邱俊憲搶得頭香",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/society/paper/1347491",
+      "headline": "《高雄》立委敗選人 攜汽油抗議遭送辦",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/3012616",
+      "headline": "高市立委選舉8區、48選將各擁幸運號碼",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1334048",
+      "headline": "高市立委選舉51人登記 左楠參選爆炸",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/2986569",
+      "headline": "高雄市立委登記結束 左楠區11搶1超激烈",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

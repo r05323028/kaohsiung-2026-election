@@ -1,0 +1,209 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+  "candidateName": "林義迪",
+  "verifiedAt": "2026-11-12T16:27:47.513Z",
+  "articles": [
+    {
+      "articleId": "news-cd2b9178",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-01-b7b307c1"
+      ],
+      "headline": "議員參選人林義迪拚連任展基層實力 旗山老街封街湧千人",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5602596",
+      "publicationDate": "2026-10-11",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-11",
+      "retrievedAt": "2026-11-12T16:27:40.355Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "議員參選人林義迪拚連任展基層實力旗山老街封街湧千人@2026-10-11",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高市議員第一選區參選人林義迪今（11）日上午熱鬧舉辦競選總部成立大會，旗山老街封街，湧入上千名支持者，展現林義迪的地方基層實力。高市議員第一選區涵蓋旗山、美濃、甲仙、六龜、杉林、內門、桃源、那瑪夏、茂林等9區，應選3席，國民黨提名現任議員林義迪及新人李振豪，民進黨提名現任議員林富寶及林慧欣，另有無黨籍鍾炳光、公民黨林榮傑登記參選，呈現6搶3局面。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 林義迪從政資歷近30年，歷任旗山鎮大德里第15、16、17屆里長，前立委鍾紹和旗山區服務處主任、旗山鎮長及旗山區長，縣市合併後高市議會第1屆、第3屆和第4屆市議員，同時具有豐富基層服務經驗及地方行政首長經歷，議會質詢或選民服務都有口碑，基本盤穩固。今日競選總部成立大會，由國民黨高雄市長參選人柯志恩授戰旗，包括前立委鍾紹和、黃昭順、前旗山鎮長陳鋕成和全國農會理事長蕭漢俊等人均站台力挺，現場湧入上千名支持者熱鬧滾滾。",
+        "excerptSha256": "d69eb67ebdb2648a9ca54ccd7a21450b335bd63ebdbf31fb06adcebebeba377d",
+        "documentSha256": "cec60196c8bc220ecd8b343a74c322b6accc7f76f9300734e688f75b661daf1e",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:40.355Z"
+      },
+      "identity": {
+        "matchedName": "林義迪",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第一選區",
+          "桃源",
+          "那瑪夏",
+          "甲仙",
+          "六龜",
+          "杉林",
+          "內門",
+          "旗山",
+          "美濃",
+          "茂林",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:40.355Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5602596"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=議員參選人林義迪拚連任展基層實力 旗山老街封街湧千人 fetched=議員參選人林義迪拚連任展基層實力 旗山老街封街湧千人"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-11 fetched=2026-10-11"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第一選區、桃源、那瑪夏、甲仙、六龜、杉林、內門、旗山、美濃、茂林、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5586617",
+      "headline": "復刻韓流三山造勢？柯志恩：「韓院長」會給大家「surprise」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5545238",
+      "headline": "高市議會開議前辦普渡 議長康裕成：願高雄平安順利、好運接棒",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5484186",
+      "headline": "大雨狂炸高雄 柯志恩：協助災民爭取災損補助",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5433861",
+      "headline": "議員質疑高雄山區幸福小黃一人不載 陳其邁：羅列標準、該載就載",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5395378",
+      "headline": "高雄第一季雜草與公墓火警增「兩倍」! 消防局長：多管道加強宣導",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5383664",
+      "headline": "國民黨高市議員第一批次提名共29人登記 僅三民區4搶3有競爭",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5176767",
+      "headline": "揭美濃大峽谷案被當「棋子」？柯志恩回應了",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5033778",
+      "headline": "高市議員建議馬頭山納入國家自然公園 林欽榮：可推進",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/4997021",
+      "headline": "電網檔不住獼猴採果 高市農業局長：猴已成精、想其他辦法",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/4871540",
+      "headline": "台86線延伸內門 高市交通局長稱台南關廟龍崎意見多、估2033才完工",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

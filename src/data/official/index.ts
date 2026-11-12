@@ -4,6 +4,7 @@ import { getBasicProfileReadModel } from '../basic-profiles';
 import { getBiographyReadModel } from '../biographies';
 import { coverageForDistrictSlug } from '../constituencies';
 import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
+import { getCandidatePublishedNews } from '../news';
 import { getCandidatePolicyResearchSummary } from '../policy-research';
 import { getPublishedCandidatePolicies } from '../policy-research/public-index';
 import { getPoliticalFamilyReadModel } from '../political-family';
@@ -169,6 +170,7 @@ function toProfile(
   const basicProfile = getBasicProfileReadModel(candidate.id);
   const politicalFamily = getPoliticalFamilyReadModel(candidate.id);
   const automatedPublication = getAutomatedCandidateReadModel(candidate.id);
+  const publishedNews = getCandidatePublishedNews(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
   const sources = [
     ...new Set([
@@ -214,6 +216,7 @@ function toProfile(
     policies: [],
     records: [],
     news: [],
+    ...(publishedNews.length > 0 ? { publishedNews } : {}),
     relationships: [],
     timeline: [],
     sources,

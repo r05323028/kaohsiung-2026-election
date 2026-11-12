@@ -1,0 +1,67 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+  "candidateName": "鄭安秝",
+  "researchedAt": "2026-11-12T16:22:21.500Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "鄭安秝",
+      "fetchedAt": "2026-11-12T16:22:19.426Z",
+      "httpStatus": 200,
+      "documentSha256": "cd80ef522f3b6d56a85659eea591dfa7d5a04e4c96e9b30afa0cde9ac58d144d",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "鄭安秝",
+      "fetchedAt": "2026-11-12T16:22:20.342Z",
+      "httpStatus": 200,
+      "documentSha256": "bd827660cde6d5f86829bc0f008ee7ee13414d90d78824c1c7b2874bbd9ab681",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "鄭安秝",
+      "fetchedAt": "2026-11-12T16:22:20.998Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1761600",
+      "headline": "聚焦鳳山 賴瑞隆市場拜票 柯志恩組後援會",
+      "publicationDate": "2026-07-06",
+      "query": "鄭安秝"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5448952",
+      "headline": "議員鄭安秝質問官員被罵三字經是否霸凌？ 陳其邁：要看個案",
+      "publicationDate": "2026-05-25",
+      "query": "鄭安秝"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5405034",
+      "headline": "高雄鳳山里民大會少、民意難反映 民政局長：由里長依需求召開",
+      "publicationDate": "2026-04-15",
+      "query": "鄭安秝"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5266590",
+      "headline": "高市藍營議員索資不順逼問局外處對局長認同度？ 楊欽富:非常高",
+      "publicationDate": "2025-12-03",
+      "query": "鄭安秝"
+    }
+  ]
+}

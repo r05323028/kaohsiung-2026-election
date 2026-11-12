@@ -1,0 +1,109 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+  "candidateName": "陳惠君",
+  "researchedAt": "2026-11-12T16:22:05.466Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "陳惠君",
+      "fetchedAt": "2026-11-12T16:22:03.567Z",
+      "httpStatus": 200,
+      "documentSha256": "855cd0fe8b0c999435bea2572d564ba7a8c5828c046058f65106c7c4b12f88db",
+      "status": "results",
+      "resultCount": 10,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "陳惠君",
+      "fetchedAt": "2026-11-12T16:22:04.313Z",
+      "httpStatus": 200,
+      "documentSha256": "862c38f164e66d3ff8e23dedcc4adb3057b8e4fe1de888ea1fe6a52614a85eae",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "陳惠君",
+      "fetchedAt": "2026-11-12T16:22:04.980Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1618490",
+      "headline": "湊數充場面 民眾黨選將涉賄無罪",
+      "publicationDate": "2023-12-02",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4507261",
+      "headline": "民眾黨議員落選人陳惠君募款餐會被控賄選 法院判決曝難堪真相",
+      "publicationDate": "2023-12-01",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1563575",
+      "headline": "涉無償宴請選民 民眾黨候選人陳惠君起訴",
+      "publicationDate": "2023-01-19",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/4188678",
+      "headline": "無償宴請選民 民眾黨高市議員落選人陳惠君涉賄選起訴",
+      "publicationDate": "2023-01-18",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1559377",
+      "headline": "議員落選人 被控積欠輔選工資",
+      "publicationDate": "2022-12-27",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4165945",
+      "headline": "民眾黨高市議員落選人被控欠薪 黨部主委：已協助聯繫處理",
+      "publicationDate": "2022-12-26",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4129497",
+      "headline": "民眾黨候選人遭查賄 要求啟動調查「違反偵查不公開」並將提告",
+      "publicationDate": "2022-11-20",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1552335",
+      "headline": "餐會無償宴請選民// 民眾黨、國民黨候選人 1交保1起訴",
+      "publicationDate": "2022-11-19",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4031508",
+      "headline": "民眾黨高市議員造勢 提名採5+1模式",
+      "publicationDate": "2022-08-20",
+      "query": "陳惠君"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4003976",
+      "headline": "民眾黨報准藝人安定亞參選高市議員 提名將採5+3或6+2模式",
+      "publicationDate": "2022-07-26",
+      "query": "陳惠君"
+    }
+  ]
+}

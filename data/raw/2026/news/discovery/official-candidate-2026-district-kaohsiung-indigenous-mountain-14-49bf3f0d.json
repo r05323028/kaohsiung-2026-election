@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+  "candidateName": "林錫閔",
+  "researchedAt": "2026-11-12T16:22:37.227Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "林錫閔",
+      "fetchedAt": "2026-11-12T16:22:35.334Z",
+      "httpStatus": 200,
+      "documentSha256": "edd59a6bdc489477ff8a3845825add0f89e93202f07aaf70c6c33e063f8e044c",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "林錫閔",
+      "fetchedAt": "2026-11-12T16:22:36.078Z",
+      "httpStatus": 200,
+      "documentSha256": "c2ecbd9526d54269752599d3679d9e99085dc56135c1acf5e265c73bf9906bd1",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "林錫閔",
+      "fetchedAt": "2026-11-12T16:22:36.705Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

@@ -1,0 +1,81 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+  "candidateName": "宋立彬",
+  "researchedAt": "2026-11-12T16:21:56.029Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "宋立彬",
+      "fetchedAt": "2026-11-12T16:21:54.133Z",
+      "httpStatus": 200,
+      "documentSha256": "293d3bba9b99a2672242ecca34851efd5756bc6b207c443ca7684b2fc7304094",
+      "status": "results",
+      "resultCount": 6,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "宋立彬",
+      "fetchedAt": "2026-11-12T16:21:55.020Z",
+      "httpStatus": 200,
+      "documentSha256": "2c7212a76c8d6c26023a3cb21e6c4a24c4dfbe1d7b1ad33e12df0b7bf14ff8cf",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "宋立彬",
+      "fetchedAt": "2026-11-12T16:21:55.559Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5603525",
+      "headline": "比大支麥克風還大！ 藍營議員送陳其邁「大張院長名片」",
+      "publicationDate": "2026-10-12",
+      "query": "宋立彬"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5591488",
+      "headline": "凌晨4點掃市場！ 柯志恩啟動「市場陸戰日」全力拚搏",
+      "publicationDate": "2026-10-01",
+      "query": "宋立彬"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573221",
+      "headline": "高雄市議員陸淑美從政40年交棒 6區6場感恩晚會謝鄉親",
+      "publicationDate": "2026-09-14",
+      "query": "宋立彬"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5559380",
+      "headline": "藍營議員「宋」救生圈給陳其邁 怨淹水只能自保",
+      "publicationDate": "2026-09-01",
+      "query": "宋立彬"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5404762",
+      "headline": "撥打高雄1999聊天、謾罵 每月無效來電約700通",
+      "publicationDate": "2026-04-15",
+      "query": "宋立彬"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5390118",
+      "headline": "議員送超大麥克風籲2028挑戰總統 陳其邁：會努力練歌",
+      "publicationDate": "2026-04-01",
+      "query": "宋立彬"
+    }
+  ]
+}

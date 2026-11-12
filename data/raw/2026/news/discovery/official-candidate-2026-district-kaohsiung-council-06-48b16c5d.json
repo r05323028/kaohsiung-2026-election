@@ -1,0 +1,67 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+  "candidateName": "蔡金晏",
+  "researchedAt": "2026-11-12T16:22:09.100Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "蔡金晏",
+      "fetchedAt": "2026-11-12T16:22:07.242Z",
+      "httpStatus": 200,
+      "documentSha256": "4b0fd95b110cd5f0de42671a47d506e56e8334c2d974186efd80318d4616a531",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "蔡金晏",
+      "fetchedAt": "2026-11-12T16:22:08.055Z",
+      "httpStatus": 200,
+      "documentSha256": "0311b9a2000f96913df98af9d187256051f6e25eb5030ac5a87df440635d6c83",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "蔡金晏",
+      "fetchedAt": "2026-11-12T16:22:08.632Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5565365",
+      "headline": "高市議員「同額」選區照站路口拜票 簡煥宗：戰戰兢兢",
+      "publicationDate": "2026-09-07",
+      "query": "蔡金晏"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562987",
+      "headline": "前高市副議長交棒女兒 黃韻涵成國民黨團KK連線「準」成員",
+      "publicationDate": "2026-09-04",
+      "query": "蔡金晏"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5437037",
+      "headline": "柯志恩率高市議員訪新北公托取經 侯友宜讚最敢扛責好立委",
+      "publicationDate": "2026-05-14",
+      "query": "蔡金晏"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1745626",
+      "headline": "民進黨高市六區議員初選 李喬如、簡煥宗勝出",
+      "publicationDate": "2026-03-05",
+      "query": "蔡金晏"
+    }
+  ]
+}

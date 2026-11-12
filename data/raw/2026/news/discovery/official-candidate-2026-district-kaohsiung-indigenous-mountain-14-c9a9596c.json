@@ -1,0 +1,53 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+  "candidateName": "洪英雄",
+  "researchedAt": "2026-11-12T16:22:37.118Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "洪英雄",
+      "fetchedAt": "2026-11-12T16:22:35.019Z",
+      "httpStatus": 200,
+      "documentSha256": "81a3dd49085d4986e8c15265d956586098e69dc26c6d32009ad5b47eae7ea185",
+      "status": "results",
+      "resultCount": 2,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "洪英雄",
+      "fetchedAt": "2026-11-12T16:22:35.772Z",
+      "httpStatus": 200,
+      "documentSha256": "f3b654ca426a76818d98bf03cd85f3edda4fca6d78557896e52783674d03c41d",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "洪英雄",
+      "fetchedAt": "2026-11-12T16:22:36.599Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/1779563",
+      "headline": "屏市表揚模範父親 洪英雄三喜臨門",
+      "publicationDate": "2016-07-30",
+      "query": "洪英雄"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/331810",
+      "headline": "3災生淪人球 校長嗆燒醫院",
+      "publicationDate": "2009-09-02",
+      "query": "洪英雄"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+  "candidateName": "陳玫娟",
+  "verifiedAt": "2026-11-12T16:28:10.508Z",
+  "articles": [
+    {
+      "articleId": "news-b8c0bb6c",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-61d1909b"
+      ],
+      "headline": "6連霸國民黨議員傳跳票、疑涉簽賭糾紛 陳玫娟急喊冤強調是選民服務",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5309103",
+      "publicationDate": "2026-01-14",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-01-14",
+      "retrievedAt": "2026-11-12T16:28:08.292Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "6連霸國民黨議員傳跳票疑涉簽賭糾紛陳玫娟急喊冤強調是選民服務@2026-01-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "首次上稿 07:47更新時間 12:56（陳玫娟委託律師發聲明）高雄6連霸的國民黨議員陳玫娟，去年底才傳出一件「借票」2千萬的債務糾紛對簿公堂，今（14日）又遭週刊爆料疑似簽賭賴帳。對此，陳玫娟再度否認，強調她從未簽賭，當初是出於好意答應王姓婦人「借名登記」辦房貸，卻害自己惹一身腥，覺得很無奈。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 今天中午，陳玫娟委託律師事務所發表聲明，駁斥週刊引述所謂知情人士A先生說法，純屬捕風捉影、惡意中傷，強調陳玫娟議員從政20多年來，兢兢業業、全心為民服務，居然遭人惡意操作，將單純的選民服務和基於朋友情誼的互助，醜化為涉及組頭簽賭，意圖抹黑中傷其個人形象。面對此不實指控，已委託律師事務所蒐集證據，依法追究其法律責任，以正視聽。陳玫娟澄清「借票」、「借名登記」 提告詐欺嘆好人難為去年底陳玫娟傳出一件訴訟兩年的債務糾紛，她的女助理當初以陳承攬工程急需調頭寸為由，多次以陳玫娟名下支票借高利周轉，後來陳名下40張支票在一個月內全跳票，總金額逾2千萬元；陳玫娟對此大聲喊冤，否",
+        "excerptSha256": "68f120c34523375a076f75b88c82d293717dad93b4c0db2db948e67995813720",
+        "documentSha256": "c16e060742be60361842c03f9619bca16b341732643eb19e67d79c116d2b8a8a",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:08.292Z"
+      },
+      "identity": {
+        "matchedName": "陳玫娟",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "左營",
+          "楠梓",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:08.292Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5309103"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=6連霸國民黨議員傳跳票、疑涉簽賭糾紛 陳玫娟急喊冤強調是選民服務 fetched=6連霸國民黨議員傳跳票、疑涉簽賭糾紛 陳玫娟急喊冤強調是選民服務"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-01-14 fetched=2026-01-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 左營、楠梓、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/life/paper/1770489",
+      "headline": "左營高鐵二樓車道 轉角軟管將修復",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5571295",
+      "headline": "左營高鐵2樓車道像在考汽車駕照！議員現勘 高鐵、台鐵說話了",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5463424",
+      "headline": "高市議會出訪澳洲提台積電 曾俊傑：歡迎投資高雄",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5144367",
+      "headline": "核三公投藍白合 柯志恩：高雄要創造823奇蹟打臉錯誤能源政策",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5040087",
+      "headline": "議員關切高雄左營「市4」開發案 陳其邁：5議員7意見、很為難",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+  "candidateName": "陳幸富",
+  "verifiedAt": "2026-11-12T16:29:20.283Z",
+  "articles": [
+    {
+      "articleId": "news-85998f44",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f"
+      ],
+      "headline": "農用搬運車補助 高市議員陳幸富爭取",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/life/breakingnews/4993506",
+      "publicationDate": "2025-03-27",
+      "dateStatus": "confirmed",
+      "updatedDate": "2025-03-27",
+      "retrievedAt": "2026-11-12T16:29:18.752Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "policy",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "農用搬運車補助高市議員陳幸富爭取@2025-03-27",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市政府去年採購203台農用搬運車，補助茂林、桃源和那瑪夏等3原民區族人，每台只需自付原價格3分之1；高市原住民議員陳幸富訴求今年繼續推行，新任農業局長姚志旺答詢時允諾會跟市長報告，積極爭取補助協助原住民地區。高雄原鄉山區近年每逢颱風夾帶暴雨影響，動輒導致交通受阻，影響農民採收及輸出農產，有族人提出農用搬運車需求，以便汛期間可運輸農作物。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳其邁了解地方需求後，去年向中央爭取農用搬運車經費，由農糧署與市府各分擔3分之一，補助茂林、桃源、那瑪夏等3原民區族人，共採購203台農用搬運車，總計3248萬元，換算每台16萬元，族人每台只需自付約5萬3千多元，減輕不小負擔。陳幸富今在議會質詢時爭取市府今年續辦農業搬運車補助，祕書長郭添貴答詢表示，今年會繼續向農糧署爭取；新任農業局長姚志旺也說，去年不餘遺力支持，今年來到高市府也會跟市長報告，積極爭取補助幫助原民地區。",
+        "excerptSha256": "f0e6808fbfdce17e670ef122474bcd0c4050d0827d2f7f15cf4071644f8b7799",
+        "documentSha256": "a55817a18e1257a3a1823523927ea99dcff86d8d77528ccb6dcebcf2c5309cee",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:18.752Z"
+      },
+      "identity": {
+        "matchedName": "陳幸富",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "原住民",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:18.752Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/life/breakingnews/4993506"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=農用搬運車補助 高市議員陳幸富爭取 fetched=農用搬運車補助 高市議員陳幸富爭取"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2025-03-27 fetched=2025-03-27"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 原住民、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5575769",
+      "headline": "「牛奶會」挺高雄原鄉學童每週3瓶鮮奶 康裕成：感謝企業「阿莎力」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5552731",
+      "headline": "高市議會勘災農損 康裕成：市府應留意菜價波動",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5450170",
+      "headline": "高雄柔道隊全國賽奪佳績 議長康裕成偕原民議員慰勉原民小將",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5372079",
+      "headline": "第4屆高市議會最後一次大會日程出爐 8/20至10/28共計70天",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5341347",
+      "headline": "熊本縣議會訪高雄 康裕成:像老朋友重逢",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5322491",
+      "headline": "2次臨時會審不完總預算 高市議會程委會：2/4~12加開第10次",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5131621",
+      "headline": "高雄原區傳嬰孩缺牛奶尿布 高市議會緊急募集物資今急送上山",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5048877",
+      "headline": "這款水蜜桃來自神仙住的地方 高市府會聯手力推",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4993194",
+      "headline": "高雄無盟爭取東高雄設棒球場 陳其邁允諾卸任前整建美濃國中球場",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

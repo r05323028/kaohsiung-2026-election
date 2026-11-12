@@ -1,0 +1,479 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+  "candidateName": "蘇致榮",
+  "verifiedAt": "2026-11-12T16:28:52.488Z",
+  "articles": [
+    {
+      "articleId": "news-0a71e348",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-663696bc"
+      ],
+      "headline": "「戒慎恐懼」鳳山分會長林智鴻攜手蘇致榮 喊「5席都過關」議會過半",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5627342",
+      "publicationDate": "2026-11-03",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-11-03",
+      "retrievedAt": "2026-11-12T16:28:44.008Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "戒慎恐懼鳳山分會長林智鴻攜手蘇致榮喊5席都過關議會過半@2026-11-03",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰進入最後關鍵時刻，民進黨鳳山區市議員選舉提名5人參戰，議員林智鴻接任由立委林俊憲發起「戒慎恐懼協會」鳳山分會長，立即「恪守職責」拜訪同黨市議員候選人蘇致榮，攜手喊出「5席都過關，議會就過半！」林智鴻呼籲民進黨支持者一定要戒慎恐懼，集中選票，保護民進黨高雄市長，候選人賴瑞隆一定要勝選，更要讓優秀的民進黨議員候選人全數過關，揮出「全壘打」，讓議會過半、府會繼續合作，不要讓「藍白亂國會」在高雄上演。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 蘇致榮感謝林智鴻前來加油打氣，他說，鳳山是高雄重要的發展核心，面對未來城市建設、交通路網、地方產業及民生需求，需要更多議員共同投入爭取建設，這次鳳山5席共同承擔責任，不只是個別候選人的選舉，更是整個團隊對地方發展共同承諾。蘇致榮指出，自己在鳳山出生、成長、生活超過40年，長期在立委許智傑服務團隊深耕基層，累積超過千件民眾陳情服務經驗，對鳳山交通、道路、公共設施及地方發展需求都有深刻體會，未來希望將這些服務經驗帶進議會，持續推動市場活化、捷運路網升級及舊聚落再生，帶動鳳山發展。蘇致榮表示，他與林智鴻議員有不少共同點，2人曾任市府幕僚歷練，對市政運作及地方行政事務相當熟稔；",
+        "excerptSha256": "5aa93b5f8cce490bc97f260749ee17a582bb4f21100aea24d39d5484a549689d",
+        "documentSha256": "7f9af032dc0e0120504a90310b6c1b8288f452ca911fb5a34e34c362b9dc2836",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:44.008Z"
+      },
+      "identity": {
+        "matchedName": "蘇致榮",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:44.008Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5627342"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=「戒慎恐懼」鳳山分會長林智鴻攜手蘇致榮 喊「5席都過關」議會過半 fetched=「戒慎恐懼」鳳山分會長林智鴻攜手蘇致榮 喊「5席都過關」議會過半"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-03 fetched=2026-11-03"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-baa3a220",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-663696bc"
+      ],
+      "headline": "蘇致榮成立競總 拚高雄市議會過半關鍵一席",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5579766",
+      "publicationDate": "2026-09-19",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-19",
+      "retrievedAt": "2026-11-12T16:28:47.476Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "蘇致榮成立競總拚高雄市議會過半關鍵一席@2026-09-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰倒數70天，民進黨高雄市議員參選人蘇致榮今天（19日）成立競選總部，爭取議會過半關鍵一席。高雄市長參選人賴瑞隆、立委許智傑、邱志偉、李昆澤、李柏毅、邱議瑩站台，議長康裕成也帶領議會團隊助陣，還有鳳山近50名里長力挺，4千多人擠爆會場蘇致榮說，他是土生土長「在地囡仔」，深知地方對交通、居住、育兒、運動、文化與生活品質的期待，他參選為鳳山、高雄爭取更多建設與發展機會，更是高雄市議會泛綠過半關鍵一席，希望大家全力支持他過關，民進黨就能延續高雄議會過半優勢。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 蘇致榮提出以「青年安居、交通順暢、運動健康、文化再發展」為主要政見，爭取新型態社會住宅，讓青年安心成家；推動捷運黃線、捷運青線、國道七號、88快速道路拓寬及高屏二快等交通建設，完善鳳山生活路網。他也將爭取北鳳山及五甲國民運動中心，打造運動大鎮，串聯鳳山古蹟、文史、商圈與地方產業，結合LaLaport高雄發展契機，活化鳳山文化與商業。蘇致榮說，未來進入議會將以「青年住得安心、交通行得順暢、老幼照顧放心、",
+        "excerptSha256": "0b692dead44ea7bc3e7659540d26da559b4e5cd6f4cc235b270371d44f8db67b",
+        "documentSha256": "4575d09ceb7f5c871bc9368ac93f70b4a35e795d08fab0b056d2275b623e3152",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:47.476Z"
+      },
+      "identity": {
+        "matchedName": "蘇致榮",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:47.476Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5579766"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=蘇致榮成立競總 拚高雄市議會過半關鍵一席 fetched=蘇致榮成立競總 拚高雄市議會過半關鍵一席"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-19 fetched=2026-09-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-d385b039",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-663696bc"
+      ],
+      "headline": "高雄毒駕增 蘇致榮提四管齊下防制",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5535259",
+      "publicationDate": "2026-08-10",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-08-10",
+      "retrievedAt": "2026-11-12T16:28:50.648Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄毒駕增蘇致榮提四管齊下防制@2026-08-10",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市近7月毒駕事故比去年同期增加44件、酒駕事故則比去年同期減少60件，民進黨議員參選人蘇致榮提出「執法、教育、科技、輔導」四管齊下，從事前預防、事中攔阻到事後輔導，從源頭預防降低風險，建立完整防線。根據市府統計，高雄今年1至7月毒駕事故發生87件，造成4人死亡、76人受傷，比去年同期增加44件、死亡增加2人、受傷增加33人；酒駕事故發生363件、1人死亡、287人受傷，比去年同期減少60件、死亡減少2人、受傷減少57人。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 蘇致榮表示，高市近期酒駕、毒駕案件頻傳，造成民眾生命安全受到威脅，他認為拒絕毒駕不能靠運氣，預防教育才是核心，市府應從源頭建立防制網絡，唯有從源頭降低風險，才能真正守護高雄用路人安全。蘇致榮提出5項防範重點，強化警方攔查與高風險路段執法，提升毒駕篩檢與辨識能力，加強科技防制精準執法，從校園及駕訓教育扎根，建立夜間娛樂場所防酒駕機制。尤以科技防制應導入智慧交通監測、AI影像辨識及事故熱點分析，掌握高風險時段與路段，讓警力與稽查資源能夠精準配置，從被動查緝轉向主動預防。警方針對深夜、夜",
+        "excerptSha256": "056005ef09a49bfe6bf20d5f89ae0e1c4175fa073d64ddfe735d57fe21b50f74",
+        "documentSha256": "7d910a21a4a36374e90a6cbc13cbdebb654380908c97a3f123161000b0888970",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:50.648Z"
+      },
+      "identity": {
+        "matchedName": "蘇致榮",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:50.648Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5535259"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄毒駕增 蘇致榮提四管齊下防制 fetched=高雄毒駕增 蘇致榮提四管齊下防制"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-08-10 fetched=2026-08-10"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-1d03b1ae",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-663696bc"
+      ],
+      "headline": "最穩可能最危險！李眉蓁急喊搶救 上屆落選頭蘇致榮再拼翻轉 | ETtoday政治新聞 | ETtoday新聞雲",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261027/3261554.htm",
+      "publicationDate": "2026-10-27",
+      "dateStatus": "confirmed",
+      "updatedDate": null,
+      "retrievedAt": "2026-11-12T16:28:52.079Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "最穩可能最危險李眉蓁急喊搶救上屆落選頭蘇致榮再拼翻轉ettoday政治新聞ettoday新聞雲@2026-10-27",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市議員候選人今（27）日抽號次，左營楠梓區李眉蓁抽中5號，開心喊「跟蔣萬安一樣」，但話鋒一轉卻自曝選情不能大意，直言「最穩的可能最危險」，還預告將搬出重量級神秘人物搶救；另一頭，2022年鳳山「落選頭」蘇致榮再戰，抽完號次直接喊：「四年前有個遺憾，今年要翻轉這個遺憾！」 ▲左楠區市議員李眉蓁抽中5號，高喊搶救 。（圖／記者吳奕靖攝） 李眉蓁今天在支持者高喊「左楠有靠山，李眉蓁」聲中完成抽籤，抽到5號後明顯相當滿意，她笑說，自己本來就希望抽到個位數，因為對長輩來說比較容易記，「五號又是跟台北蔣萬安一樣，所以五號我很喜歡！」不過比號碼更有戲的，是李眉蓁接下來突然再喊「搶救」。 被問到近日是否有神秘人物準備來助陣，李眉蓁證實，「因為要搶救李眉蓁啊」，已經邀請一位重量級貴賓替她加油打氣，如今又剛好抽到5號，讓選民更容易記住。記者追問，外界不是一直認為她選情很穩，為什麼反而在這個時候喊搶救？李眉蓁直言：「其實選舉喔，如果最穩的，就是可能會最危險的。」 ▲鳳山區市議員參選人蘇致榮，可以說是2022年選舉當中的苦情得主 。（圖／記者吳奕靖攝） 她表示，這次選舉氣氛「比較詭異」，因此自己還是決定搬出大咖搶救，也再度提到先前在臉書寫下的心情，「不要讓最勇敢的人，最後變成最危險的人」，希望這次不只當選，還能拚出高票。 而今天另一名帶著「悲情歷史」來抽號次的，則是鳳",
+        "excerptSha256": "7d36897677f8d7f51cba8ba9679ef1e19222282368007fe3e3e236639848fdc7",
+        "documentSha256": "84a0b43e16fab4f2c3a40fc7f80df86f43801e5db884f64658f4ccd94b4e3564",
+        "metadataSource": "open-graph",
+        "capturedAt": "2026-11-12T16:28:52.079Z"
+      },
+      "identity": {
+        "matchedName": "蘇致榮",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:52.079Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261027/3261554.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=最穩可能最危險！李眉蓁急喊搶救 上屆落選頭蘇致榮再拼翻轉 fetched=最穩可能最危險！李眉蓁急喊搶救 上屆落選頭蘇致榮再拼翻轉 | ETtoday政治新聞 | ETtoday新聞雲"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-27 fetched=2026-10-27"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5623957",
+      "headline": "許智傑、邱議瑩獻唱為他加油 力拚民進黨鳳山5席全上",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5606185",
+      "headline": "綠選將巧遇亞運總教練湯登凱 提「澄清湖棒球村」願景",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5591907",
+      "headline": "不只「洋流外溢」 高雄鳳山選將看板合體新北蘇巧慧",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5580760",
+      "headline": "選前68天 高雄綠營「七隆珠」集結左營創意拜票",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5575445",
+      "headline": "綠營高雄市議員參選人催生新型態社宅 主打樂園、公園、新家園",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573318",
+      "headline": "高雄市長「大小聯盟」之爭 前國手回嗆柯志恩上小聯盟都很勉強",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5535427",
+      "headline": "台日友好景點互惠！高雄人旅日5大景點免費 參選人爭取納入熊本、釜山",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5450485",
+      "headline": "民進黨高市黨職改選公告 黃捷接主委、完整名單看這裡",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

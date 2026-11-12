@@ -1,0 +1,88 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+  "candidateName": "黃柏霖",
+  "researchedAt": "2026-11-12T16:22:15.096Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "黃柏霖",
+      "fetchedAt": "2026-11-12T16:22:13.111Z",
+      "httpStatus": 200,
+      "documentSha256": "e1d4eeb2659be535d84719e6be8cc420251937a3f805266e2c77d0fb50179c0c",
+      "status": "results",
+      "resultCount": 7,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "黃柏霖",
+      "fetchedAt": "2026-11-12T16:22:14.082Z",
+      "httpStatus": 200,
+      "documentSha256": "0276ee0983028a7a1647d0fd4721d8e38f771d6a311afd27f4ff79a375def0ee",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "黃柏霖",
+      "fetchedAt": "2026-11-12T16:22:14.615Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5625446",
+      "headline": "高雄藍白合 韓國瑜、柯文哲今高雄合體",
+      "publicationDate": "2026-11-01",
+      "query": "黃柏霖"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5592933",
+      "headline": "市場掃街被一路「餵食」 柯志恩：這下不怕餓肚子",
+      "publicationDate": "2026-10-02",
+      "query": "黃柏霖"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5576723",
+      "headline": "好大官威？為不穿制服找議員施壓 家長道歉了",
+      "publicationDate": "2026-09-17",
+      "query": "黃柏霖"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5494097",
+      "headline": "柯志恩出席國民黨小組長座談：三民贏 高雄就贏",
+      "publicationDate": "2026-07-04",
+      "query": "黃柏霖"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5433233",
+      "headline": "藍營議員肯定更新電腦說到做到 陳其邁：投資數位升級不會手軟",
+      "publicationDate": "2026-05-11",
+      "query": "黃柏霖"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5411838",
+      "headline": "國民黨高市議員三民區初選結果揭曉 73歲童燕珍贏了",
+      "publicationDate": "2026-04-22",
+      "query": "黃柏霖"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5408560",
+      "headline": "智慧光明燈串接西非！高市議員黃柏霖：200組電腦運抵奈及利亞",
+      "publicationDate": "2026-04-19",
+      "query": "黃柏霖"
+    }
+  ]
+}

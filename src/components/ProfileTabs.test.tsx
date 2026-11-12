@@ -68,7 +68,11 @@ describe('neutral candidate news presentation', () => {
     expect(candidate).toBeDefined();
     if (!candidate) return;
     const cards = collectNewsCards(candidate);
-    expect(cards).toHaveLength(candidate.publicRecords?.news.length ?? 0);
+    const expected =
+      (candidate.publicRecords?.news.length ?? 0) +
+      (candidate.publishedNews?.length ?? 0) +
+      candidate.news.length;
+    expect(cards).toHaveLength(expected);
     const dates = cards.map((card) => card.publicationDate);
     expect(dates).toEqual([...dates].sort((a, b) => b.localeCompare(a)));
   });

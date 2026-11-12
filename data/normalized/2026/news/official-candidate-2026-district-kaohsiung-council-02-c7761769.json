@@ -1,0 +1,159 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+  "candidateName": "鄭東元",
+  "verifiedAt": "2026-11-12T16:27:54.735Z",
+  "articles": [
+    {
+      "articleId": "news-475b4ed4",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-02-c7761769"
+      ],
+      "headline": "高市挺韓市議員選將鄭東元餐會涉賄 判無罪",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/society/breakingnews/4712095",
+      "publicationDate": "2024-06-21",
+      "dateStatus": "confirmed",
+      "updatedDate": "2024-06-21",
+      "retrievedAt": "2026-11-12T16:27:50.066Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legal"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高市挺韓市議員選將鄭東元餐會涉賄判無罪@2024-06-21",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨提名參選高雄市議員第二選區候選人鄭東元，前年 8 月在海鮮餐廳席開19桌辦問政說明會造勢，遭檢舉涉嫌賄選，橋頭地院審理認為出席者多非選區選民、且對餐會能否左右選民投票行為有疑，判鄭東元及萬姓、白姓競選幹部無罪。可上訴。出身茄萣的鄭東元為韓國瑜當選高雄市長時的挺韓大將，前年獲得國民黨提名參選第二選區市議員。被控與萬姓、白姓競選幹部於前年 8 月 26 日利用所屬金蘭兄弟會聚會，在高市茄定區一家海鮮餐廳席開19桌，召開「柯志恩市長與市政顧問鄭東元問政說明會」名目造勢。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 每桌餐費 4500 元，當天有人高喊「鄭東元、凍蒜」、「凍蒜、凍蒜」等口號，鄭男也與助選團隊逐桌拜票請求選民投票支持涉嫌賄選，被橋頭地檢署依違反選罷法起訴。橋頭地院審理認為，當天宴請人數約200人，但實際到場該選區有投票權的選民僅17人，多數非該選區選民，平均每人用餐費用約450元，就一般社會認知，是否因此影響投票行為難做認定。檢察官所舉證資料，經逐一調查，仍未獲被告鄭東元等人有罪之確",
+        "excerptSha256": "a2e3455d50bc5320a1e601dc2e720788c5285aeb5324ac8f6c0f8a6251ae917f",
+        "documentSha256": "3aa2361e3dcb93a94337e5867c3af2b1c803cd5c45ea80e50e4feced9020d31e",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:50.066Z"
+      },
+      "identity": {
+        "matchedName": "鄭東元",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第二選區",
+          "茄萣",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:50.066Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/society/breakingnews/4712095"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高市挺韓市議員選將鄭東元餐會涉賄 判無罪 fetched=高市挺韓市議員選將鄭東元餐會涉賄 判無罪"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2024-06-21 fetched=2024-06-21"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第二選區、茄萣、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4127920",
+      "headline": "國民黨議員餐會起訴 柯志恩團隊曾提醒恐被質疑賄選",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4008813",
+      "headline": "被指欺騙和媽祖同天生日 柯志恩批：連「晚報戶口」常識都沒有",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/3005308",
+      "headline": "韓國瑜挖網軍南下？ 高市府顧問曾曝：潘恒旭也是台北的網軍",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/focus/paper/1297503",
+      "headline": "夏昭麗：看得懂財報 不會辭監察人",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/2828639",
+      "headline": "議員批韓國瑜酬庸 再爆高捷新監察人夏昭麗曾在酒店上班",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

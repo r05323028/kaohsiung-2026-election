@@ -1,0 +1,74 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+  "candidateName": "王義雄",
+  "researchedAt": "2026-11-12T16:22:35.332Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "王義雄",
+      "fetchedAt": "2026-11-12T16:22:33.561Z",
+      "httpStatus": 200,
+      "documentSha256": "274811ae7e6f9dd867567ecfbe3aabffe87d4206a2b0172a5a42f7cc86521158",
+      "status": "results",
+      "resultCount": 5,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "王義雄",
+      "fetchedAt": "2026-11-12T16:22:34.314Z",
+      "httpStatus": 200,
+      "documentSha256": "73d285955aa6a725e1fd9288605ac36f68734c2387c5a730e27fae66dbf96ce2",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "王義雄",
+      "fetchedAt": "2026-11-12T16:22:34.864Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5581877",
+      "headline": "高市議員建議汽機車「總量管制」 交通局長：持有運具是人民自由",
+      "publicationDate": "2026-09-22",
+      "query": "王義雄"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5434731",
+      "headline": "官員解釋壘球場旁不設網球場理由！高市原民議員：不想再聽安全問題",
+      "publicationDate": "2026-05-12",
+      "query": "王義雄"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5210467",
+      "headline": "高市議員跳針要市府參考基隆設防撞監控 交通局長:高雄比基隆早",
+      "publicationDate": "2025-10-14",
+      "query": "王義雄"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5048963",
+      "headline": "高市議員要求原民會設「農政組」 陳其邁：六都連屏縣皆無",
+      "publicationDate": "2025-05-20",
+      "query": "王義雄"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/4800335",
+      "headline": "高雄警長帶團與原民親子交流 提醒原鄉祭儀可請公假返鄉",
+      "publicationDate": "2024-09-14",
+      "query": "王義雄"
+    }
+  ]
+}

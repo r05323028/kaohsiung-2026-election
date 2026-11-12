@@ -1,0 +1,330 @@
+{
+  "batchId": "news-batch-01",
+  "verifiedAt": "2026-11-13T00:42:02+08:00",
+  "records": [
+    {
+      "articleId": "news-96ecce4c",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T23:54:44+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 柯志恩 as 國民黨高雄市長候選人 answering 黃國昌 in a 直播 about 「這柯不一樣」 and saying she differs from 4 years ago."
+    },
+    {
+      "articleId": "news-f3a0fe0e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T08:36:03+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 賴瑞隆 in the matching role and context; body has 賴瑞隆 醫師節 post on 提升醫護勞動條件 and his wife having been an 加護病房護理師."
+    },
+    {
+      "articleId": "news-b036dd5c",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T11:09:59+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 賴瑞隆 in the matching role and context; body has 賴瑞隆 launching 「大港政策島」 3D policy map with 21 主題政見 across 11 選區, rotatable and zoomable."
+    },
+    {
+      "articleId": "news-c43db89d",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T11:57:24+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 王金平 saying 空戰差不多、陸戰決勝負 and that 高雄選民愈來愈接受柯志恩, citing 內參民調「沒有輸」."
+    },
+    {
+      "articleId": "news-51a1e828",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T12:24:53+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 臉書社群「高雄好過日」 digging up 柯志恩 2016 remarks and 陳其邁 saying 「不懂她的邏輯」."
+    },
+    {
+      "articleId": "news-fbe38995",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T16:45:53+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩/賴瑞隆 in the matching role and context; body has 賴瑞隆 accusing 柯志恩 of 說一套做一套 and 柯競辦 citing his past 高雄直航北京 and 海峽論壇 attendance."
+    },
+    {
+      "articleId": "news-925fcc31",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T14:27:29+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 柯志恩 in 澎湖 北辰市場 with 陳振中 discussing 醫療綠色通道、空運機票、焚化爐共識."
+    },
+    {
+      "articleId": "news-bd3dad98",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T12:10:04+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 黃文志 in the matching role and context; body has 陳其邁 naming 黃文志 as the 議員 who asks for 經費 most, plus 左營楠梓建設 and 台積電-related new residents."
+    },
+    {
+      "articleId": "news-c5ee2592",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T17:08:14+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 賴瑞隆 in the matching role and context; body has 隆隆志工團誓師 with 團長何美惠 and 「未來5你5我」 for 5號."
+    },
+    {
+      "articleId": "news-c5f06429",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T17:16:31+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 柯志恩 at 斗六 教育座談 with 張嘉郡 on 雙語/AI/品德/友善校園, then 車隊掃街."
+    },
+    {
+      "articleId": "news-6bc097a1",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T20:55:11+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 柯志恩, before 黃國昌 直播, expressing confidence in 李四川 政見會 and citing 實務經驗."
+    },
+    {
+      "articleId": "news-6cc51662",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T21:46:01+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩/賴瑞隆 in the matching role and context; body attributes 疑涉貪 to 媒體報導 (後援會榮譽總會長蘇方誠, 動保處貪汙案) and the 用人標準 criticism to 柯志恩."
+    },
+    {
+      "articleId": "news-409b6b5f",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T05:30:00+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩/賴瑞隆 in the matching role and context; body has 賴瑞隆 signing 「挺社工」承諾書 across 改善待遇、行政減壓、專業保障、執業安全、制度參與 and 柯志恩 market walk plus 澎湖/雲林 trips."
+    },
+    {
+      "articleId": "news-13e0c720",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T22:37:05+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 柯志恩 saying 國民黨資源比民眾黨多, so 「適度的釋放出更多的善意跟空間」 for 藍白合."
+    },
+    {
+      "articleId": "news-8e50bb5b",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-12T13:16:05+08:00 matches publicationDate 2026-11-12; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 鄧巧佩 in the matching role and context; body has 民進黨高雄市鳳山區議員候選人鄧巧佩 responding to 羅大佑 and saying 對下一代的責任，從來無關結婚生子."
+    },
+    {
+      "articleId": "news-696d4c8e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-11T09:32:11+08:00 matches publicationDate 2026-11-11; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 賴瑞隆 in the matching role and context; body has 柯志恩 on 205兵工廠 and 演唱會優先購票 rebuttals, quoting 「陳市長可以幫你輔選，但他沒有辦法幫你當市長」."
+    },
+    {
+      "articleId": "news-f4cd6990",
+      "httpStatus": 200,
+      "verdict": "wrong-identity",
+      "rationale": "HTTP 200; headline and JSON-LD datePublished 2026-11-11T14:27:53+08:00 match, but the page is about 新竹市議員林彥甫 and 高虹安市府 (南寮漁港竹風漁市). Record maps to official-candidate-2026-district-kaohsiung-council-07-f42af7ef (approved displayName 林彥, 三民區, 無黨籍), a different person who never appears in the article."
+    },
+    {
+      "articleId": "news-7ed97bc1",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-11T13:30:14+08:00 matches publicationDate 2026-11-11; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 柯志恩 in the matching role and context; body has 陳其邁 criticising 柯志恩 for not knowing 市政 and saying 「我忙得要命，真的是會累死市長！」; 柯 replies 對手是賴瑞隆."
+    },
+    {
+      "articleId": "news-e41583db",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-11T05:30:00+08:00 matches publicationDate 2026-11-11; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 賴瑞隆 in the matching role and context; body has 賴瑞隆 at 三民區中華、建國路口 then 三民市場 with 李昆澤、康裕成、何權峰、鄭孟洳、張博洋."
+    },
+    {
+      "articleId": "news-6fe1f0b5",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-11T10:42:10+08:00 matches publicationDate 2026-11-11; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 賴瑞隆 in the matching role and context; body has 賴瑞隆 at 社福客廳會 with 康裕成、張博洋 signing the 五大面向 承諾書; 周姿廷、孫學展 give 挺社工T-Shirt."
+    },
+    {
+      "articleId": "news-21137780",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-11T18:51:45+08:00 matches publicationDate 2026-11-11; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 陳慧文 in the matching role and context; body describes 陳慧文 as 同樣未婚無子女的高雄市議員 with 20-plus years in 鳳山, saying 守護下一代 is 日常、責任."
+    },
+    {
+      "articleId": "news-a1b16276",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-11T18:59:14+08:00 matches publicationDate 2026-11-11; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林智鴻 in the matching role and context; body has 林智鴻 saying 羅大佑 remarks are 誤導下一代、歧視沒有小孩的人."
+    },
+    {
+      "articleId": "news-722120f8",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-10T13:33:04+08:00 matches publicationDate 2026-11-10; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張博洋 in the matching role and context; body has 張博洋 noting 一心路 is followed by 瑞隆路 and citing 衛武營/鳳山人口/鼎山夜市 misstatements."
+    },
+    {
+      "articleId": "news-3e1a76fa",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-10T13:02:51+08:00 matches publicationDate 2026-11-10; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張耀中 in the matching role and context; body has 第11選區（大寮、林園）六人角逐四席, with 張耀中 saying he led polls but risks falling out under 分票 and 派系夾殺."
+    },
+    {
+      "articleId": "news-2d645761",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-10T21:40:44+08:00 matches publicationDate 2026-11-10; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張博洋 in the matching role and context; body has 柯志恩 posting 「因為，我很有心啊！」 about 一心路 and 張博洋 rebutting that the east side connects 瑞隆路."
+    },
+    {
+      "articleId": "news-e8174d5e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-10T14:00:15+08:00 matches publicationDate 2026-11-10; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 鄧巧佩 in the matching role and context; body has 吳沛憶、黃捷 first joint 鳳山 appearance for 鄧巧佩, with 張以理 joining the 吃播 and 車隊掃街."
+    },
+    {
+      "articleId": "news-aebf0485",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-10T13:26:00+08:00 matches publicationDate 2026-11-10; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 黃韻涵 in the matching role and context; body has 黃韻涵 proposing 合理電價、開放傳產移工配額、實質轉型資源 for 大岡山 傳產."
+    },
+    {
+      "articleId": "news-d6dc650f",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-09T20:37:59+08:00 matches publicationDate 2026-11-09; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張以理 in the matching role and context; body has 張以理 handing out 煎餃飄帶 near 漢神巨蛋 and 邱議瑩 queueing to give a cake and 8 bags of 雞蛋糕."
+    },
+    {
+      "articleId": "news-becd773b",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-09T16:59:00+08:00 matches publicationDate 2026-11-09; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 邱于軒 in the matching role and context; body has 邱于軒 criticising 民進黨 over 居民優先購票 and records 賴瑞隆 saying it could 助長黃牛、衝擊外地旅客消費."
+    },
+    {
+      "articleId": "news-b356e16e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-09T09:07:17+08:00 matches publicationDate 2026-11-09; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張以理 in the matching role and context; body has 林俊憲 presenting the 「分會長證書」 to 張以理 and noting his 5 years as 青年局長 under 陳其邁."
+    },
+    {
+      "articleId": "news-2b35783b",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-08T16:36:30+08:00 matches publicationDate 2026-11-08; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 邱于軒 in the matching role and context; body has 公督盟執行長張宏林 using 「聽話的狗」 and 邱于軒 attacking the wording as 貶抑女性從政者 while questioning the ratings."
+    },
+    {
+      "articleId": "news-bccf3859",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-08T13:20:00+08:00 matches publicationDate 2026-11-08; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 李眉蓁 in the matching role and context; body has 李眉蓁 at her 競總成立大會 citing 市議員、市長補選、立委、議員補選 over 6 years and warning about 分票, quoting 「不要讓勇敢的人孤單！」."
+    },
+    {
+      "articleId": "news-24eb97c4",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-08T14:07:00+08:00 matches publicationDate 2026-11-08; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 林于凱 in the matching role and context; body has the 三民區 鼎力路/天祥一路 crash, 林于凱 fetching 三角錐 and the team removing an LED from the 燈箱 as a 指揮棒."
+    },
+    {
+      "articleId": "news-67469dc5",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-07T18:18:25+08:00 matches publicationDate 2026-11-07; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張博洋 in the matching role and context; body has the 「三民隆總洋」 joint 競總 with 陳其邁 calling 張博洋 a 溫暖的「洋流」, plus 康裕成、賴瑞隆 and a 戰旗 handover."
+    },
+    {
+      "articleId": "news-f04a342a",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-06T11:12:43+08:00 matches publicationDate 2026-11-06; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張以理 in the matching role and context; body has 張以理 saying 網路聲量 conversion is unknown and 「選票上沒印煎餃啦」."
+    },
+    {
+      "articleId": "news-caf6bba6",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-05T23:21:23+08:00 matches publicationDate 2026-11-05; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 白喬茵 in the matching role and context; body has 白喬茵 saying 4號 then correcting to 4選區的3號 while filming with 林于凱, with 柳淑芳 responding."
+    },
+    {
+      "articleId": "news-0a71e348",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-03T09:32:38+08:00 matches publicationDate 2026-11-03; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 蘇致榮/林智鴻 in the matching role and context; body has 林智鴻 as 「戒慎恐懼協會」鳳山分會長 visiting 蘇致榮 and both calling 「5席都過關，議會就過半！」."
+    },
+    {
+      "articleId": "news-12c3f853",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-02T20:22:01+08:00 matches publicationDate 2026-11-02; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 黃裕庭 in the matching role and context; body has 黃裕庭 (第八選區 前金、苓雅、新興) filing a 按鈴申告 at 高雄地檢署 over a 維基百科 page mixing him with 黃紹庭."
+    },
+    {
+      "articleId": "news-a9cba1cd",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-02T19:09:58+08:00 matches publicationDate 2026-11-02; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 尹立 in the matching role and context; body has 柯文哲 at the 柯志恩 rally mentioning 雲豹 donations and 司法 cases, and 尹立 responding with 「不要把高雄當成你轉移司法焦點的表演場」."
+    },
+    {
+      "articleId": "news-e2fb5526",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-02T05:30:00+08:00 matches publicationDate 2026-11-02; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林智鴻 in the matching role and context; body has 林智鴻 競總成立 with 逾二千人 and the 眼癌學童范小弟 阿嬤 thanking him, plus 范小弟 錄音."
+    },
+    {
+      "articleId": "news-b315819f",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-02T10:12:48+08:00 matches publicationDate 2026-11-02; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林智鴻 in the matching role and context; body has 林俊憲 presenting 林智鴻 the 「鳳山分會長」 certificate and 林智鴻 saying he will 向林俊憲、沈伯洋看齊."
+    },
+    {
+      "articleId": "news-14e68a05",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-02T18:16:27+08:00 matches publicationDate 2026-11-02; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林于凱 in the matching role and context; body has 柯文哲 accompanying 林于凱 at 自由黃昏市場 with 白喬茵 joining and raising both hands to shout 凍蒜."
+    },
+    {
+      "articleId": "news-62ed0ccd",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-01T17:27:25+08:00 matches publicationDate 2026-11-01; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林志誠 in the matching role and context; body has 林志誠 and 賴瑞隆 聯合競總 at 岡山河堤公園 with 超過5000名 supporters and calls not to 分票."
+    },
+    {
+      "articleId": "news-e0186d69",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-01T20:08:59+08:00 matches publicationDate 2026-11-01; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 李雅靜 in the matching role and context; body has chairs from the 賴瑞隆/張漢忠 rally spilling in front of the 柯志恩/李雅靜 競總 and 市府 saying 道路臨時使用申請不分藍綠."
+    },
+    {
+      "articleId": "news-55f7c37e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-01T11:13:10+08:00 matches publicationDate 2026-11-01; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林智鴻 in the matching role and context; body has 陳其邁 at 林智鴻 競總 presenting a 大紅簽名戰袍."
+    },
+    {
+      "articleId": "news-00b373bd",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-01T20:44:00+08:00 matches publicationDate 2026-11-01; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 許采蓁 in the matching role and context; body has the 許采蓁 campaign event where 韓國瑜 hands over a 戰旗 and 柯志恩 drapes a 彩帶."
+    },
+    {
+      "articleId": "news-b99ce094",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-01T20:47:00+08:00 matches publicationDate 2026-11-01; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 許采蓁 in the matching role and context; body has 韓國瑜 saying the 最有錢的城市 should be 高雄."
+    },
+    {
+      "articleId": "news-fc67d076",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-11-01T15:00:00+08:00 matches publicationDate 2026-11-01; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 李眉蓁 in the matching role and context; body has 李眉蓁 called 「壓不扁的玫瑰」 and urging 新北 support for 李四川."
+    },
+    {
+      "articleId": "news-23504bad",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-10-31T06:56:52+08:00 matches publicationDate 2026-10-31; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張博洋 in the matching role and context; body has 張博洋 describing 柯志恩 as 「尖酸刻薄、傲慢囂張」."
+    },
+    {
+      "articleId": "news-734fe043",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-10-31T19:04:10+08:00 matches publicationDate 2026-10-31; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 黃裕庭 in the matching role and context; body has 蔡令怡 standing in for 吳敦義 to drape a 彩帶 on 黃裕庭, citing a 36-year friendship."
+    },
+    {
+      "articleId": "news-762ac4c3",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-10-30T23:45:00+08:00 matches publicationDate 2026-10-30; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲 (自由時報電子報 is the same outlet's site name); body names 李眉蓁 in the matching role and context; body has 李眉蓁 attacking 賴瑞隆 for 閃躲."
+    },
+    {
+      "articleId": "news-2564a08a",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-10-30T13:35:09+08:00 matches publicationDate 2026-10-30; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 鍾易仲 in the matching role and context; body has 鍾易仲 putting up a 國道10號 billboard referencing 337億 and 555億."
+    },
+    {
+      "articleId": "news-47b2c149",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-10-29T13:11:43+08:00 matches publicationDate 2026-10-29; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 張以理 in the matching role and context; body has 張以理 車掃 with 美食 content and the 煎餃 meme."
+    },
+    {
+      "articleId": "news-6b2c1045",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; <title> carries the record headline; JSON-LD datePublished 2026-10-29T09:38:39+08:00 matches publicationDate 2026-10-29; publisher 自由時報電子報 matches record publisher 自由時報 (自由時報電子報 is the same outlet's site name); body names 林智鴻 in the matching role and context; body has 林智鴻 lending his 競總 venue to 「高雄小水滴」 with a 200吋 screen supporting 沈伯洋."
+    }
+  ]
+}

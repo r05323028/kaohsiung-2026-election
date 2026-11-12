@@ -203,6 +203,14 @@ docs/                  architecture, ingestion, provenance, reconciliation, poli
 
 來源為 `source-cec-central-63625`（中選會 115 年選舉區劃分公告）與 `source-cec-vote2026-prvCityDept`（2026 選舉專區選舉區參照資料）；`npm run validate:constituencies` 檢查 15 個選區、38 個行政區 ID、各選區行政區數量、第 4 選區內容、原住民族選區標示、來源 manifest 參照與無 runtime API。選區頁、選區索引、候選人頁、首頁選區資訊卡、行政區焦點卡與行動版資訊列共用同一份資料。常用別名（例如「左楠選區」）目前沒有可獨立查證的來源，因此不刊載，避免把非官方暱稱當成選舉區名稱。
 
+## 候選人新聞覆蓋（2026-11-12）
+
+106 位候選人全部完成一次來源查詢，涵蓋自由時報、ETtoday 與中央社。流程為離線、檔案式、可續跑：`npm run news:discover`、`npm run news:verify`、`npm run news:build`，`npm run validate:news` 已納入 `npm run build` 驗證鏈。
+
+216 篇通過自動驗證的報導，交由獨立 `news-verifier` 子代理逐篇重新抓取原文複驗（標題、媒體、日期、身分、摘要忠實度、中性用語）；最終發布 213 篇於 67 位候選人頁面，另 3 篇列入編輯排除（2 篇同名誤配、1 篇跨縣市同名），2 篇摘要改寫後複驗。每張新聞卡固定顯示標題、媒體、日期、中性摘要與原文連結。
+
+系統不建模、不計算也不顯示情緒、好感度、聲量或正負面評分；姓名辨識僅有 `low`／`medium`／`high` 三級風險，且只有 `low` 可通過自動出版。逐位候選人狀態與 blocker 見 `reports/news-coverage.md`，完整方法與限制見 `docs/NEWS_COVERAGE.md`。
+
 ## 重要限制與未完成項目
 
 目前沒有真實人物 likeness 或 visual approval；目前 GLB 只包含原創、明確標示為虛構示範的 Three.js primitive avatars。完整高雄地理或 2026-11-17 正式市議員候選人公告資料也尚未完成。

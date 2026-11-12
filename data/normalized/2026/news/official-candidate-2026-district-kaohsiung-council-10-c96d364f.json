@@ -1,0 +1,383 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+  "candidateName": "黃敬雅",
+  "verifiedAt": "2026-11-12T16:29:10.678Z",
+  "articles": [
+    {
+      "articleId": "news-8ae19fb9",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-c96d364f"
+      ],
+      "headline": "柯志恩罵綠選民「幹譙國民黨是什麼意思」 黃敬雅：別選比較快活",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5619612",
+      "publicationDate": "2026-10-26",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-26",
+      "retrievedAt": "2026-11-12T16:29:06.142Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "柯志恩罵綠選民幹譙國民黨是什麼意思黃敬雅別選比較快活@2026-10-26",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市長候選人柯志恩今晚在前鎮廟口開講，指前鎮與小港的綠營支持者看到她就說「國民黨的車輪牌妳不用來、妳們賣台灣啦!」時，竟脫口「幹譙國民黨是在幹譙什麼意思的」、「沒在跟他們客氣啦!」；引起網友怒批是在檢討選民，「是輸到崩潰了嗎？」；民進黨前鎮小港區市議員候選人黃敬雅則勸柯志恩若要選到這麼煽動仇恨，乾脆就別選了，會比較快活一點。柯志恩晚間在前鎮區籬仔內路的憲德宮五府千歲，舉辦廟口音樂會，邀請前立委林國慶助講，吸引數百支持者到場。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 輪到柯志恩上台時，她情緒略有激動，以台語表示，剛剛林國慶講的，前鎮跟小港是綠到爆炸的地方，有時候妳去公園和歐巴桑、歐吉桑在那邊下棋，看到妳來就說「看到妳來齁，這樣氣噗噗，說國民黨的車輪牌妳不用來、妳們賣台灣啦!」柯志恩激動說「你問說30年來，你生活有過的比較好嗎 ？」他說就差不多啊，我說「你差不多，你是幹譙國民黨是在幹譙什麼意思的 !」大家說對不對 ？「 你生活沒過比較好，你是幹嘛罵我們國民黨，所以齁沒在跟他們客氣啦!不用客氣啦!」這段影片被PO到脆平台，引起大批網友撻伐，批評柯志恩「現在是在檢討選民嗎？」、「對高雄市民這種態度，怎麼當市長？」、「是輸到崩潰了嗎？」民進黨前鎮小港區市議員候選人黃敬雅也留言「嚴正抗議柯志恩所說的這番話」，她指出，每",
+        "excerptSha256": "8937292d7f2f3691af13eda469856b38c49ab72a1c8cc1576c3239438c679770",
+        "documentSha256": "1a01570d4c860160e1d3b966cbd1a877362041dffc906249df32e271d79a0e79",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:06.142Z"
+      },
+      "identity": {
+        "matchedName": "黃敬雅",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:06.142Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5619612"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=柯志恩罵綠選民「幹譙國民黨是什麼意思」 黃敬雅：別選比較快活 fetched=柯志恩罵綠選民「幹譙國民黨是什麼意思」 黃敬雅：別選比較快活"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-26 fetched=2026-10-26"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-e5a9b739",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-c96d364f"
+      ],
+      "headline": "柯志恩脫口「要吃屏東香蕉」 黃敬雅解析︰心不在高雄",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5587571",
+      "publicationDate": "2026-09-27",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-27",
+      "retrievedAt": "2026-11-12T16:29:08.753Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "柯志恩脫口要吃屏東香蕉黃敬雅解析︰心不在高雄@2026-09-27",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市長參選人柯志恩昨（26）日到旗山參加「2026夏祭新鮮市」活動，離開前幕僚追問要不要吃（旗山）香蕉？她卻回說要吃「屏東香蕉」，遭網友嗆「回屏東選吧！」；對此，民進黨高雄市議員參選人黃敬雅諷柯志恩說「心不在高雄、缺乏在地認同！」黃敬雅指出，旗山香蕉是高雄傲視全台的農業品牌與文化資產，市府團隊與在地農會更是齊心拓銷海內外市場。柯志恩既然來參加農產推廣活動，理應以政策牛肉爭取鄉親認同，結果只因發現旗山農會與鄉親力挺延續陳其邁市政的賴瑞隆，自感被冷落成「局外人」，離場時竟脫口指名要吃鄰縣香蕉。即便藍營幕僚事後搬出「屏東老家」解套，依然掩飾不了其被冷落後的失態，以及高雄歸屬感的匱乏。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 黃敬雅進一步梳理柯志恩的從政足跡，自2020年角逐新北板橋立委失利，隨後轉戰高雄參選市長，平日言必稱深耕在地，到了產地卻因討不到掌聲就下意識排斥在地特產。黃敬雅並質疑，「一下板橋、一下高雄、一下屏東」，柯志恩的心到底定在哪裡？「一個連親臨產地推廣，都能因個人情緒賭氣回絕的人，如何具備扎實的農業產銷藍圖與產業轉型願景？」黃敬雅強調，市政推動需要的是扎實的產業政策研究、對地方脈絡的深刻理解，及長期深耕的誠意。她呼籲柯志恩應回",
+        "excerptSha256": "aae2b54fdc40b7d17be4c42f863fc5a907264760fe259a6f1bd76b91423ee1d6",
+        "documentSha256": "81146e012b1cda1da49a8388a9eb6da1341ace52a9bba8c6504b6580315566ce",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:08.753Z"
+      },
+      "identity": {
+        "matchedName": "黃敬雅",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:08.753Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5587571"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=柯志恩脫口「要吃屏東香蕉」 黃敬雅解析︰心不在高雄 fetched=柯志恩脫口「要吃屏東香蕉」 黃敬雅解析︰心不在高雄"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-27 fetched=2026-09-27"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-879e7f89",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-c96d364f"
+      ],
+      "headline": "高雄選戰號次抽籤！許采蓁3號與柯志恩「33合體」 黃敬雅13號",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261027/3261436.htm",
+      "publicationDate": "2026-10-27",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-27",
+      "retrievedAt": "2026-11-12T16:29:10.149Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄選戰號次抽籤許采蓁3號與柯志恩33合體黃敬雅13號@2026-10-27",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市選委會今（27）日上午辦理市長、市議員候選人號次抽籤，國民黨議員許采蓁今年號次抽到3號，跟市長候選人柯志恩一樣都抽中3號，「33合體」讓她直呼很好，「3號是很好的數字，而且上次她是3號，我也是3號，這次也一樣」。至於民進黨高雄市議員候選人黃敬雅則是抽到13號，笑說是「1313（一閃一閃）亮晶晶」，一定會力拚到底、贏得勝選。 許采蓁父親許崑源先前跟前高雄市長韓國瑜關係很好，11月1日晚上韓國瑜也將出席她的競選晚會再次現身力挺。 過去許崑源力挺韓國瑜，如今換女兒力挺柯志恩。許說，她跟爸爸個性很像，挺一個人就會挺到底，她從4年前開始就跟柯志恩一起揭弊、一起作戰，她對柯志恩很有信心。 ▲▼高雄選戰號次抽籤！黃敬雅抽13號，笑說是「1313（一閃一閃）亮晶晶，問政服務最用心！」。（圖／記者吳奕靖攝） 民進黨市議員候選人黃敬雅是賴瑞隆子弟兵，今日號次抽中13號，她笑說是「1313（一閃一閃）亮晶晶，問政服務最用心！」。對於這次參戰前鎮小港賴瑞隆本命區，她坦言壓力很大，但這些壓力是來自於鄉親的託付，所以她一定會力拚到底、贏得勝選。 被問及「賴瑞隆有沒有發揮母雞帶小雞的效應？」黃敬雅說，當然有！目前高雄選情就是穩紮穩打，賴瑞隆一定會當選，民進黨一定會議會過半。 ※本文版權所有，非經授權，不得轉載。 [ ETtoday著作權聲明 ] ※ 台北市長蔣萬安昨日舉行競選總部成立大會，嗆爆民進黨台北市長候",
+        "excerptSha256": "e5162e7ed931400d88c6e608ea398bacb24593159451c27e058348d985200f5a",
+        "documentSha256": "bf5633a1e5cd98b076445ef3807e0eb40b0caa494654ef8f06ac7d333943bb12",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:10.149Z"
+      },
+      "identity": {
+        "matchedName": "黃敬雅",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:10.149Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261027/3261436.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄選戰號次抽籤！許采蓁3號與柯志恩「33合體」 黃敬雅13號 fetched=高雄選戰號次抽籤！許采蓁3號與柯志恩「33合體」 黃敬雅13號"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-27 fetched=2026-10-27"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5637186",
+      "headline": "羅大佑嗆小英「不為下一代著想」 綠營女將：父權刻板、抹殺女性奉獻",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5632544",
+      "headline": "陳其邁穿外套助講不流汗 鄭運鵬虧：難怪打電話騷擾長官臉不紅氣不喘",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5624504",
+      "headline": "高雄市長辯論》柯志恩譏賴瑞隆二軍 她反諷柯是準備被釋出的外援投手",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5609430",
+      "headline": "柯志恩今晚邀韓國瑜站台 綠選將批「怎麼還敢回來？」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5603868",
+      "headline": "賴瑞隆幼教後援會長惹議 藍營問「她」白眼翻到後腦勺沒?",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5602820",
+      "headline": "被迫「挺柯」民進黨議員喊詐騙 柯志恩回擊：和他們同看板我會掉票",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598046",
+      "headline": "贏過死亡的人！復興空難倖存前空姐已是2寶媽 再度角逐高市議員",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
+      "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5580760",
+      "headline": "選前68天 高雄綠營「七隆珠」集結左營創意拜票",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

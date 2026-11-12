@@ -1,0 +1,88 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+  "candidateName": "湯詠瑜",
+  "researchedAt": "2026-11-12T16:22:17.458Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "湯詠瑜",
+      "fetchedAt": "2026-11-12T16:22:15.737Z",
+      "httpStatus": 200,
+      "documentSha256": "6bf8998dc485e7e14da6acc6549e58a7d82152320eacc349fbe1ff754b87c083",
+      "status": "results",
+      "resultCount": 7,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "湯詠瑜",
+      "fetchedAt": "2026-11-12T16:22:16.514Z",
+      "httpStatus": 200,
+      "documentSha256": "1e1b4c8100b7663832092fe97a918f3375425b45205e96b651045816389cdfcd",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "湯詠瑜",
+      "fetchedAt": "2026-11-12T16:22:16.991Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5602820",
+      "headline": "被迫「挺柯」民進黨議員喊詐騙 柯志恩回擊：和他們同看板我會掉票",
+      "publicationDate": "2026-10-11",
+      "query": "湯詠瑜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
+      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "publicationDate": "2026-10-07",
+      "query": "湯詠瑜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5590408",
+      "headline": "最後一回質詢陳其邁後送「茄冬樹苗」 湯詠瑜：盼扎根高雄到綠蔭台灣",
+      "publicationDate": "2026-09-30",
+      "query": "湯詠瑜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
+      "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "publicationDate": "2026-09-22",
+      "query": "湯詠瑜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5575016",
+      "headline": "守護特教兒！高市議員陳慧文、湯詠瑜為特教學校需求接力發聲",
+      "publicationDate": "2026-09-15",
+      "query": "湯詠瑜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5570929",
+      "headline": "把握選前質詢機會 高市議員湯詠瑜財經部門提五建言",
+      "publicationDate": "2026-09-11",
+      "query": "湯詠瑜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5558438",
+      "headline": "高雄特教課後照顧鐘點費偏低 陳其邁：研討調升待遇",
+      "publicationDate": "2026-08-31",
+      "query": "湯詠瑜"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+  "candidateName": "黃秋媛",
+  "researchedAt": "2026-11-12T16:21:57.413Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "黃秋媛",
+      "fetchedAt": "2026-11-12T16:21:55.702Z",
+      "httpStatus": 404,
+      "documentSha256": "43295576c4ac9d9fe99ae75028672a54fe7fb5274ca2dcd2c1ee22e6f38667c7",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "黃秋媛",
+      "fetchedAt": "2026-11-12T16:21:56.461Z",
+      "httpStatus": 200,
+      "documentSha256": "9a4bda571e4059ec15b17f19a027c33abf67fdf5911311b048fe9bee3d603689",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "黃秋媛",
+      "fetchedAt": "2026-11-12T16:21:56.947Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

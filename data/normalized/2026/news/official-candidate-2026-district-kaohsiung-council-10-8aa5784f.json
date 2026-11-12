@@ -1,0 +1,464 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+  "candidateName": "鄭光峰",
+  "verifiedAt": "2026-11-12T16:29:05.035Z",
+  "articles": [
+    {
+      "articleId": "news-d37e2d3c",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5511593",
+      "publicationDate": "2026-07-20",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-07-20",
+      "retrievedAt": "2026-11-12T16:28:59.782Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "食安太依賴末端抽驗鄭光峰應建立原料到成品三級管理@2026-07-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "近日食用油檢出苯駢芘，引發外界聯想起多年前頂新劣油事件；民進黨高市議員鄭光峰認為台灣食安過度依賴末端抽驗，應建立原料、製程與成品三級管理。鄭光峰說明，苯駢芘是有機物高溫裂解或不完全燃燒時可能產生的污染物，食用油超標可能與原料乾燥、焙炒、燃燒煙氣或製程溫度控制不當有關；頂新劣油案則涉及不具供人食用品質的油脂原料，被當作食用油原料使用。前者是化學污染與製程管理問題，後者涉及原料資格、供應鏈追溯與蓄意假冒，兩者不一樣。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他進一步提及健康危害方面，苯駢芘被國際癌症研究機構列為第一級致癌物，長期、反覆暴露確實可能增加癌症風險，但「檢出」或「超標」不等於吃一次便會罹癌，實際風險仍取決於污染濃度、食用量、體重及暴露時間。他提醒政府除公布檢驗數字，更應以一般民眾能理解的方式說明暴露程度，而不是一味強調「不必恐慌」或「一級致癌物」。鄭光峰認為，2起油品事件都暴露出台灣食安管理過度依賴末端抽驗的問題，成品抽驗固然重要，卻只能檢查事先列出的項目，無法涵蓋所有未知污染物，也很難回答污染究竟發生在哪一階段；依",
+        "excerptSha256": "ee5e37ab60dd061b278ed7cc317a3dc8fa5fece1e07ead4df5022cea8bed1fca",
+        "documentSha256": "72deac1c7e7c79c533d6e1da5367a7c5d2d81f235ed6defe29d0d75ff32f1144",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:59.782Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:59.782Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5511593"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理 fetched=食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-07-20 fetched=2026-07-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-a0119433",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "鳳林國小動土！大林蒲遷村落實「先建後遷」 鄭光峰曝關鍵內幕",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261029/3262983.htm",
+      "publicationDate": "2026-10-29",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-29",
+      "retrievedAt": "2026-11-12T16:29:03.572Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "鳳林國小動土大林蒲遷村落實先建後遷鄭光峰曝關鍵內幕@2026-10-29",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲陳其邁在28日進行鳳林國小的興建動土典禮 。（圖／記者吳奕靖翻攝） 配合大林蒲遷村，高雄市鳳林國小新校區28日正式動土，市長陳其邁直言，這不只是一所學校開工，更象徵大林蒲遷村進入實質推動階段。長期投入遷村議題的民進黨前鎮小港市議員參選人鄭光峰也表示，從遷村條件、個案陳情到土地持分問題一路陪居民走來，如今看到學校先蓋，代表「先建後遷」終於從承諾變成看得見的工程。 鳳林國小新校區位於鳳山區，配合大林蒲遷村安置規劃興建，陳其邁28日親自出席動土。他表示，大林蒲遷村歷經多年協調，從來不只是把居民從一個地方搬到另一個地方，背後牽涉居住權、教育權、文化保存及生活方式延續，其中孩子搬遷後「到哪裡上學」，更一直是地方最關心的事情之一。 也因此，市府採取「先建後遷」，鳳林國小、鳳林國中等公共設施陸續先行動工，希望居民真正搬遷前，新的生活環境與教育資源就已經準備好。大林蒲安置地道路工程也已提前進場，市府規劃116年啟動抽籤配地及補償費發價，整體遷村工作逐步進入實作階段。 新鳳林國小規劃18班、約可容納540名學生，校園除了國小教學空間，也納入幼兒園、托育功能，並規劃沉浸式雙語教學空間、智慧閱讀站，預計119年2月完工、同年9月招生。校園設計也將大林蒲文史、海洋文化帶進新校舍，希望學生搬了家，地方記憶不要跟著消失。 ▲市議員鄭光峰表示非常興奮，這對大林蒲居民來說是個歷史重點里程播 。（圖／記者吳奕靖",
+        "excerptSha256": "85783e2ef6a93e62564aaec724750f792e9fed365c48c6bd0491080a58dd458a",
+        "documentSha256": "9dda923ffa6f73dec1bf45d9e1f7cef7e409540f0be043984113a7d35542735f",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:03.572Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:03.572Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261029/3262983.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=鳳林國小動土！大林蒲遷村落實「先建後遷」 鄭光峰曝關鍵內幕 fetched=鳳林國小動土！大林蒲遷村落實「先建後遷」 鄭光峰曝關鍵內幕"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-29 fetched=2026-10-29"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-d7fd2c47",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "獨／清新校園女神照曝光！ 高雄議員鄭光峰醫科女兒赴美實習",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20260808/3215509.htm",
+      "publicationDate": "2026-08-08",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-08-08",
+      "retrievedAt": "2026-11-12T16:29:04.016Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "清新校園女神照曝光高雄議員鄭光峰醫科女兒赴美實習@2026-08-08",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市議員鄭光峰過去曾因一張與獨生女鄭潔安的合照，在網路上意外引發討論，當時鄭潔安考進高雄醫學大學後醫學系，成為父親的學妹，讓鄭光峰笑說女兒人氣比自己還高，還忍不住拜託女兒讓爸爸「蹭一下熱度」。如今鄭潔安變化更大，不只在醫學養成路上持續前進，去年還曾赴美實習，讓鄭光峰感觸更深，直呼孩子真的長大了。 從照片中可以看到，鄭潔安站在車站月台，留著一頭自然披肩長髮，穿著簡約白色上衣搭配黑色外套，手上拿著手機，面對鏡頭露出自然笑容，氣質清新大方。她站在父親鄭光峰身旁，父女倆同框笑得燦爛，畫面充滿日常溫度，也能看出鄭潔安從昔日被爸爸接送上下學的小女孩，已經蛻變成成熟、自信的醫學系學生。 事實上，鄭潔安是在2022年進入高雄醫學大學後醫學系就讀，一路朝醫學專業努力，去年更曾赴美實習，接觸不同醫療環境與學習視野。對鄭光峰來說，女兒的成長除了讓他驕傲，也讓他回頭想起自己曾經因投入公共事務，而錯過不少陪伴孩子的時刻。 ▲鄭潔安在2025年前往在 美國 Meharry Medical College 的第 3 階段臨床實習 。（圖／翻攝高雄醫學大學醫學院） ▲鄭潔安在2025年",
+        "excerptSha256": "9a3dd05aeae4483a5a0276b4c0c8d23b45b2b775d28e80450540025ca3ca1e32",
+        "documentSha256": "ab686ce5fd4896c955d28452dded3463eab7f2cc57c4a485df520cd544ea4f8c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:04.016Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:04.016Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20260808/3215509.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=獨／清新校園女神照曝光！ 高雄議員鄭光峰醫科女兒赴美實習 fetched=獨／清新校園女神照曝光！ 高雄議員鄭光峰醫科女兒赴美實習"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-08-08 fetched=2026-08-08"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-94c4b0a3",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "上市營建公司捐300萬助百年媽祖廟 議員鄭光峰讚老董「孟嘗君」",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20260806/3214489.htm",
+      "publicationDate": "2026-08-06",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-08-06",
+      "retrievedAt": "2026-11-12T16:29:04.512Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "上市營建公司捐300萬助百年媽祖廟議員鄭光峰讚老董孟嘗君@2026-08-06",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "後都有許多地方人士及信眾共同協助，是大家一點一滴努力累積而成。 黃主委表示，陳武聰此次捐贈300萬元，對慈明宮後續發展提供相當大的幫助，也展現企業回饋地方的善心。他同時感謝廟內多位委員長期出錢出力，共同支持宮務及地方事務。「陳董事長這300萬元對我們幫助很大，他真的是一位很有善心的人。」黃主委說，慈明宮能夠走到今天，是許多人共同付出的成果，此次捐贈也是一份難得的緣分，「這都是天意，也是緣分」，並感謝所有曾為慈明宮投入心力的人。 ▲市議員鄭光峰（左三）稱陳武聰為「孟嘗君」 。（圖／記者吳奕靖翻攝） 高雄市議員鄭光峰也到場致意。他表示，陳武聰長期熱心公益、關心地方，就像古代孟嘗君一樣富有俠義精神；慈明宮相關土地的取得及發展過程，自己一路都有參與及見證，最終能夠促成這段緣分，彷彿冥冥之中自有安排。鄭光峰說：「陳董事長就像孟嘗君一樣，非常有俠義精神。這塊土地的來源與整個過程，我都見證了，最後能夠促成這段緣分，我認為都是天意。」 鄭光峰也肯定慈明宮主委及委員長期投入地方事務，形容此次捐贈是企業與地方締結的一段良緣，並祝福隆大建設未來能在當地打造具有代表性的優質建築，與社區及地方共同成長。 慈明宮奉祀主神正二聖母，信仰淵源可追溯至明清時期。相傳最初由福建省莆田縣先民恭請大聖母渡海來台，於嘉義笨港一帶登陸，後來信徒依循聖母指示，於現址建廟奉祀。 慈明宮歷經300餘年發展，並於民國47年進行重建，長期護佑高雄南部地區信眾，成為地方居民祈求平安、健康的重要信仰中心。除了宗教功能外，慈明宮也長期參與地方文化及社區活動，成為凝聚地方情感的重要場所。 廟方表示，感謝隆大營建慷慨捐款，相關經費將妥善運用",
+        "excerptSha256": "21c979757a7feba65cc23ad9903e588f41feb249ea8437fc03968d79ef0c19aa",
+        "documentSha256": "e5cbed900bd5aa8b9d05feeabb0c54f285a391a7068f058872c66685ab89b46b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:04.512Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:04.512Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20260806/3214489.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=上市營建公司捐300萬助百年媽祖廟 議員鄭光峰讚老董「孟嘗君」 fetched=上市營建公司捐300萬助百年媽祖廟 議員鄭光峰讚老董「孟嘗君」"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-08-06 fetched=2026-08-06"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598890",
+      "headline": "高市議員贈「AI詩」 陳其邁笑說：還以為是哪間廟宇籤詩",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5589192",
+      "headline": "高雄這位里長當10屆40年 未登記選連任卻「悄悄走了」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5559046",
+      "headline": "卸任市長前對高雄還有願景 陳其邁：南部24小時國際機場",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5510698",
+      "headline": "民進黨11席中評委出爐！ 邱志偉當選主委",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5398098",
+      "headline": "高雄親子遊樂園何時開園?公園處長：預計今年7、8月間",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/paper/1745718",
+      "headline": "民進黨高市第10選區初選民調出爐 黃彥毓落榜",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5359613",
+      "headline": "民進黨高市議員第十選區初選民調放榜 跌破眼鏡",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

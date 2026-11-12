@@ -1,0 +1,67 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+  "candidateName": "張勝富",
+  "researchedAt": "2026-11-12T16:22:05.499Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "張勝富",
+      "fetchedAt": "2026-11-12T16:22:03.567Z",
+      "httpStatus": 200,
+      "documentSha256": "0c1c5e4cddb66be8fad44988575d210c3214ec766b95728572c81a02a238a71f",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "張勝富",
+      "fetchedAt": "2026-11-12T16:22:04.325Z",
+      "httpStatus": 200,
+      "documentSha256": "88cb414b2dd2458d2cc4d8027c91a110bcf87f2eeb458eb46a27f51d03c8c4f5",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "張勝富",
+      "fetchedAt": "2026-11-12T16:22:05.029Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5609278",
+      "headline": "韓國瑜今晚攻小港本命區 賴瑞隆回應了",
+      "publicationDate": "2026-10-17",
+      "query": "張勝富"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5552549",
+      "headline": "高雄大社中圳溪溝堤防坍塌近百米 前鎮公車陷入坑洞",
+      "publicationDate": "2026-08-26",
+      "query": "張勝富"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5426443",
+      "headline": "高雄仁武多一處特色+寵物公園 3議員會勘：可邀特公盟壓力測試",
+      "publicationDate": "2026-05-05",
+      "query": "張勝富"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5337918",
+      "headline": "民進黨高市議員初選累計30人登記 2/10截止",
+      "publicationDate": "2026-02-09",
+      "query": "張勝富"
+    }
+  ]
+}

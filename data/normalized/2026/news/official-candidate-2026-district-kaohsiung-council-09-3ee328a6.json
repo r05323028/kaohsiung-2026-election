@@ -1,0 +1,132 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+  "candidateName": "鄭安秝",
+  "verifiedAt": "2026-11-12T16:28:46.562Z",
+  "articles": [
+    {
+      "articleId": "news-8a9c8540",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-3ee328a6"
+      ],
+      "headline": "議員鄭安秝質問官員被罵三字經是否霸凌？ 陳其邁：要看個案",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5448952",
+      "publicationDate": "2026-05-25",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-05-25",
+      "retrievedAt": "2026-11-12T16:28:44.327Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "議員鄭安秝質問官員被罵三字經是否霸凌陳其邁要看個案@2026-05-25",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高市議員鄭安秝今質詢時，詢問全場官員如果同仁被罵三字經算霸凌嗎？認為是的請舉手!結果官員無人舉手，讓鄭安秝怒問「為什麼沒人舉手」？點名市長陳其邁回應，陳其邁答詢強調要看個案，霸凌有霸凌成立的條件。鄭安秝今引述相關訊息指出，市府有同仁被罵三字經，她當場詢問全場官員，認為是霸凌的請舉手？結果現場官員無人舉手，讓鄭安秝相當不以為然，接著要求市長陳其邁表態。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳其邁強調，這要看個案，霸凌有霸凌成立的條件，滿足這些條件才能被認為是霸凌；隨後被點名的人事處長康人方答詢內容與陳其邁一致，認為要看實際情況。鄭安秝反嗆被罵三字經你會接受嗎？可以罵嗎？就算私下可以這樣罵嗎？ 「為什麼沒有舉手」？她要求市府別再強辯，還質疑高雄已成為外縣市口中的霸凌城市。鄭安秝進一步表示，這些字眼很難聽，沒有人想被罵，心裡會受傷，也會讓人有心理疾病上升的可能，且高雄自殺率也讓人汗顏，「努力一下好不好」。鄭安秝顯然對一開始詢問官員、被罵三字經算不算霸凌的反應感到不",
+        "excerptSha256": "86856f340191fa32aa8480e2269197d81645f21d4a95f67faa54d52086b85aae",
+        "documentSha256": "5fd342e22e1f4a9c9bb8be34755cb922a50e53bc66aa15f6c82cf75dd938557d",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:44.327Z"
+      },
+      "identity": {
+        "matchedName": "鄭安秝",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:44.327Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5448952"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=議員鄭安秝質問官員被罵三字經是否霸凌？ 陳其邁：要看個案 fetched=議員鄭安秝質問官員被罵三字經是否霸凌？ 陳其邁：要看個案"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-05-25 fetched=2026-05-25"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1761600",
+      "headline": "聚焦鳳山 賴瑞隆市場拜票 柯志恩組後援會",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5405034",
+      "headline": "高雄鳳山里民大會少、民意難反映 民政局長：由里長依需求召開",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5266590",
+      "headline": "高市藍營議員索資不順逼問局外處對局長認同度？ 楊欽富:非常高",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

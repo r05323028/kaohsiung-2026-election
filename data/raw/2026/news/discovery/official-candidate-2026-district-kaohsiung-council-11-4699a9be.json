@@ -1,0 +1,74 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+  "candidateName": "張耀中",
+  "researchedAt": "2026-11-12T16:22:33.971Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "張耀中",
+      "fetchedAt": "2026-11-12T16:22:31.876Z",
+      "httpStatus": 200,
+      "documentSha256": "5cc3eee02262ba3c70a8dbcf2f077289df6f857bfb8cd68648e18e5476eb99c5",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "張耀中",
+      "fetchedAt": "2026-11-12T16:22:32.675Z",
+      "httpStatus": 200,
+      "documentSha256": "b3f26bbebcc5dafce4d6ef3b7136ded69dc4513d5c24aa452338d4fce5ca5fff",
+      "status": "results",
+      "resultCount": 1,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "張耀中",
+      "fetchedAt": "2026-11-12T16:22:33.450Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5635570",
+      "headline": "高雄死亡之組激戰 綠營新人張耀中喊告急搶救",
+      "publicationDate": null,
+      "query": "張耀中"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5628508",
+      "headline": "台中南屯議員5搶4激戰 綠連霸議員陷苦戰",
+      "publicationDate": "2026-11-04",
+      "query": "張耀中"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776843",
+      "headline": "海空雙港位置優 何欣純打造明星城市",
+      "publicationDate": "2026-11-02",
+      "query": "張耀中"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5610319",
+      "headline": "子弟兵張耀中競總成立 陳其邁：請支持「其邁的分身」",
+      "publicationDate": "2026-10-18",
+      "query": "張耀中"
+    },
+    {
+      "sourceId": "ettoday",
+      "url": "https://www.ettoday.net/news/20261018/3256866.htm",
+      "headline": "貼身跟2526天！陳其邁挺「分身」張耀中：保證精心嚴選",
+      "publicationDate": "2026-10-18",
+      "query": "張耀中"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+  "candidateName": "劉仙娥",
+  "researchedAt": "2026-11-12T16:22:26.399Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "劉仙娥",
+      "fetchedAt": "2026-11-12T16:22:24.278Z",
+      "httpStatus": 200,
+      "documentSha256": "bfe1fc44d34942196f84f1fba8165ee7f4069116b1568517e4a6a98478c418e2",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "劉仙娥",
+      "fetchedAt": "2026-11-12T16:22:25.060Z",
+      "httpStatus": 200,
+      "documentSha256": "db5b473275c6473d3bd5d417b07dd8f215f20d7cece70507fe04d833b5f02f61",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "劉仙娥",
+      "fetchedAt": "2026-11-12T16:22:25.930Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

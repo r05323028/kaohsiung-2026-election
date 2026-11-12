@@ -1,0 +1,372 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+  "candidateName": "陳慧文",
+  "verifiedAt": "2026-11-12T16:28:51.688Z",
+  "articles": [
+    {
+      "articleId": "news-21137780",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-10ba5344"
+      ],
+      "headline": "羅大佑開酸蔡英文3人未婚無子 陳慧文反擊：守護下一代是日常、責任",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5637387",
+      "publicationDate": "2026-11-11",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-11",
+      "retrievedAt": "2026-11-12T16:28:45.550Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "羅大佑開酸蔡英文3人未婚無子陳慧文反擊守護下一代是日常責任@2026-11-11",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "針對資深音樂人羅大佑近日點名蔡英文、蕭美琴與陳菊未婚無子女，並稱沒有孩子的人「對下一代不會想太多」；同樣未婚無子女的高雄市議員陳慧文今天反擊，女性政治人物為公共事務的付出，不該以婚育來衡量，強調守護下一代是日常、責任。資深音樂人羅大佑近日於廣播節目點名蔡英文、蕭美琴與陳菊「沒有結婚、沒有子女」，並稱沒有孩子的人「對下一代不會想太多」；同樣未婚、無子女的高雄市議員陳慧文今天聽聞後，直言很難想像現在還有這樣的言論。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳慧文今天表示，女性政治人物為公共事務的付出，不應再被「結婚了沒、有沒有生小孩」這把尺來衡量；而對下一代的牽掛，看的從來不是身分證上的欄位，每一位女性的人生價值，也不該由婚育來定義。陳慧文指出，自己也沒有孩子，但在鳳山服務20多年，每天勤跑基層，走進學校與社區，接觸過無數個家庭，「守護每一位孩子就是我們的日常、我們的責任」。",
+        "excerptSha256": "cfaf552dd7b645d74dc9b3cd74ea75ca2cafe2e18a3ede88345af918df7f4822",
+        "documentSha256": "fac5b47aa3615bcf5deeafaaf37840a65fadde1d42a67da575a6e196e82cb9a6",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:45.550Z"
+      },
+      "identity": {
+        "matchedName": "陳慧文",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:45.550Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5637387"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=羅大佑開酸蔡英文3人未婚無子 陳慧文反擊：守護下一代是日常、責任 fetched=羅大佑開酸蔡英文3人未婚無子 陳慧文反擊：守護下一代是日常、責任"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-11"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-82831226",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-10ba5344"
+      ],
+      "headline": "守護特教兒！高市議員陳慧文、湯詠瑜為特教學校需求接力發聲",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5575016",
+      "publicationDate": "2026-09-15",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-15",
+      "retrievedAt": "2026-11-12T16:28:49.573Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "守護特教兒高市議員陳慧文湯詠瑜為特教學校需求接力發聲@2026-09-15",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高市議員陳慧文、湯詠瑜今在教育部門質詢時，為特教兒需求接力發聲，陳慧文訴求以合理待遇留住特教學校專案護理師，湯詠瑜則要求研議幼兒園「園內均化、一班二師優先」。陳慧文今指出，特教學校專案護理師的調薪案延宕近10個月，市長「薪資一定要高於業界平均」的裁示至今未見具體數字，導致好不容易爭取到的特校案護理師已提出辭呈、9月30日將離職，中重度身心障礙學生的在校醫療照護面臨空窗。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 教育局長吳立森答詢，成特專案護理師確定於9月30日異動離職，教育局正積極處理臨時護理人力；薪資部分目前正在簽核，擬將標準表七職等月薪調整至薪點328至344、約4萬5千至4萬7千元區間，希望兩個月內完成。湯詠瑜今於教育部門業務質詢，聚焦學前融合教育、公幼延長照顧及高中職校安人力三大問題，她提到高雄市學前特殊教育幼兒從2021年2636人、增加至2025的3801人，四年成長44.2%；市府推動融合教育的同時，部分公幼卻因招生人數下降，出現「半班一師」情況。",
+        "excerptSha256": "763cbc98fc99ff39c1b74f2ccd6c2bc708a6c202b5adc06e4049f4d4e3574ad4",
+        "documentSha256": "4eb4c6854b0a2255782f9d61992a4ed78feb1e0877fc4741f555bd102b854075",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:49.573Z"
+      },
+      "identity": {
+        "matchedName": "陳慧文",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:49.573Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5575016"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=守護特教兒！高市議員陳慧文、湯詠瑜為特教學校需求接力發聲 fetched=守護特教兒！高市議員陳慧文、湯詠瑜為特教學校需求接力發聲"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-15 fetched=2026-09-15"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-be84b632",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-10ba5344"
+      ],
+      "headline": "高雄跨區女力攜手爭取支持 陳慧文偕黃敬雅媽祖港橋拜票",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5565497",
+      "publicationDate": "2026-09-07",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-07",
+      "retrievedAt": "2026-11-12T16:28:49.943Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄跨區女力攜手爭取支持陳慧文偕黃敬雅媽祖港橋拜票@2026-09-07",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "九合一選舉登記參選後上班首日，高雄市鳳山區民進黨議員陳慧文今日與前鎮小港區民進黨議員參選人黃敬雅合體，於鳳山、前鎮區交界處的媽祖港橋站路口拜票，跨區聯手爭取選民認同。陳慧文表示，媽祖港橋為橫跨鳳山區與前鎮區交通要道，許多通勤族每天往返兩地，選在第一個上班日，與黃敬雅一起站路口，象徵相鄰選區攜手向前、一起為高雄努力；隨著選戰進入倒數，參選人面對愈來愈多考驗，尤其新人需要一步一腳印走進基層，讓鄉親認識、檢驗，她肯定黃敬雅投入選戰的努力，也期待兩人在不同選區各自扎根、彼此加油。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 談到這次跨區合體，陳慧文表示，鳳山與前鎮小港生活圈往來密切，交通、通勤與日常生活跨越行政區界線，兩人一起站上媽祖港橋路口，希望展現不只是選舉團結，更是相鄰選區彼此合作，共同為高雄建設與民眾服務努力的態度。黃敬雅則表示，陳慧文長期深耕鳳山，重視教育與親子議題，問政經驗豐富，一直是她學習的女力榜樣，這次兩人攜手同行，希望能一起打拚、一起爭取勝選，發揮一加一大於二的力量。",
+        "excerptSha256": "fca13f5fe746613e79d6dc256f74620f521a446b59f0950117acaf96c44b6fc2",
+        "documentSha256": "c88f567e71517ca463c352d9b7d7dc6bda778d7225be7908354997eebd2c7ada",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:49.943Z"
+      },
+      "identity": {
+        "matchedName": "陳慧文",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:49.943Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5565497"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄跨區女力攜手爭取支持 陳慧文偕黃敬雅媽祖港橋拜票 fetched=高雄跨區女力攜手爭取支持 陳慧文偕黃敬雅媽祖港橋拜票"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-07 fetched=2026-09-07"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5631377",
+      "headline": "半年前預言沈伯洋民調追平、當選市長！陳水扁自嘲：神預測還是大槓龜？",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5630274",
+      "headline": "陳水扁看好沈伯洋 有機會成為第二位綠營台北市長",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5630056",
+      "headline": "越資深越危險！陳水扁贈「五羊開泰」墨寶挺她拚五連霸",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618919",
+      "headline": "致敬沈伯洋政策島 高市議員推「政績島」16個「百變隆隆」在島上巡邏",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
+      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
+      "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5523074",
+      "headline": "高雄國中身障生課後照顧要靠運氣 教育局允2個月內訂行政規則",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5520748",
+      "headline": "新九如橋7/31上午11點通車 輕軌第86個路口現身",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

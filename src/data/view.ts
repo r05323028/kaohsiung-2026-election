@@ -10,6 +10,7 @@ import type { CandidatePolicyResearchSummary } from './policy-research';
 import type { PublishedPolicy } from './policy-research/published-schema';
 import type { PoliticalFamilyReadModel } from './political-family';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
+import type { PublishedNewsItem } from './news';
 import type { CandidateResearchSummary } from './public-records/research-index';
 import type { PublicRecordBundle } from './public-records/schema';
 import type {
@@ -52,6 +53,7 @@ export type CandidateProfileView = {
   timeline: Array<Omit<TimelineEvent, 'isDemo'> & { isDemo?: boolean }>;
   sources: Array<Omit<EvidenceSource, 'isDemo'> & { isDemo?: boolean }>;
   publicRecords?: PublicRecordBundle;
+  publishedNews?: PublishedNewsItem[];
   research?: CandidateResearchSummary;
   policyResearch?: CandidatePolicyResearchSummary;
   publishedPolicies?: PublishedPolicy[];
@@ -372,6 +374,7 @@ export function toPublicCandidateProfile(
       publicationDate: source.publicationDate,
     })),
     ...(publicRecords ? { publicRecords } : {}),
+    ...(candidate.publishedNews ? { publishedNews: candidate.publishedNews } : {}),
     ...(candidate.publishedPolicies
       ? { publishedPolicies: candidate.publishedPolicies }
       : {}),

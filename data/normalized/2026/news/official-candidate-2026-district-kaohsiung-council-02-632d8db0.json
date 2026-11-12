@@ -1,0 +1,286 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+  "candidateName": "陳琳潔",
+  "verifiedAt": "2026-11-12T16:27:53.342Z",
+  "articles": [
+    {
+      "articleId": "news-82529ee1",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-02-632d8db0"
+      ],
+      "headline": "「台美雙會計師」陳琳潔選高市議員 賴瑞隆：讓人才進議會",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5617517",
+      "publicationDate": "2026-10-24",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-24",
+      "retrievedAt": "2026-11-12T16:27:47.946Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "台美雙會計師陳琳潔選高市議員賴瑞隆讓人才進議會@2026-10-24",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高市九合一選戰中，唯一具「台美雙會計師」資格的民進黨籍市議員候選人陳琳潔競選總部今成立，市長候選人賴瑞隆專程到場站台，喊話鄉親讓好人才進議會。賴瑞隆介紹陳琳潔是英國倫敦大學公共行政碩士，也是台、美雙會計師，無論在哪裡都能有好發展，但她卻選擇回到家鄉，推動兒童程式和AI教育，未來更要帶著會計師的專業與嚴謹走進議會，一定會替大家精打細算。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆說，接下來他會推動捷運路竹延伸線延伸到湖內，推動路竹扣件產業升級、茄萣防潮閘門和抽水站，讓北高雄子弟的家鄉生活環境更優質、在家鄉就有好頭路。他強調，自己要接棒市長陳其邁推動建設，陳琳潔更要當選市議員，民進黨在高市議會才能過半；倒數35天，拜託大家支持賴瑞隆、支持陳琳潔，11月28日，讓北高雄穩穩向前。",
+        "excerptSha256": "9ce7840d3622189858f82f3981ec717051c489f21f924ca2eddf7027789c98bf",
+        "documentSha256": "30ccfe81d5760e03ae144878bad5822392f29c20210d661f63fd7d8b27ef57d8",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:47.946Z"
+      },
+      "identity": {
+        "matchedName": "陳琳潔",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "茄萣",
+          "湖內",
+          "路竹",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:47.946Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5617517"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=「台美雙會計師」陳琳潔選高市議員 賴瑞隆：讓人才進議會 fetched=「台美雙會計師」陳琳潔選高市議員 賴瑞隆：讓人才進議會"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-24 fetched=2026-10-24"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 茄萣、湖內、路竹、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-b2a302dd",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-02-632d8db0"
+      ],
+      "headline": "民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+      "publicationDate": "2026-02-06",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-02-06",
+      "retrievedAt": "2026-11-12T16:27:52.667Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "民進黨高市議員初選首見交棒陳明澤陪女兒陳琳潔登記@2026-02-06",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民進黨高市6連霸議員陳明澤交棒女兒陳琳潔參選第二選區議員，今上午陪她到市黨部完成登記，這也是民進黨高市議員黨內初選第一例「交棒」，可能也是唯一。陳琳潔擁有台灣、美國雙會計師資格，長期投入公共事務，她期盼以年輕世代的力量，承擔守護民主、服務鄉親的責任，延續父親多年來為民服務的精神。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 立委王義川是陳琳潔親表哥，王義川推薦陳琳潔時提到，琳潔是英國倫敦大學公共行政碩士畢業，並擁有台灣、美國雙會計師，回國後即跟著爸爸陳明澤在地服務，懇請各位鄉親支持表妹順利當選議員。6屆議員陳明澤深耕在地，他感謝鄉親20多年來不離不棄的支持，強調民主需要傳承，民進黨需要年輕新血，懇請各位鄉親長輩全力、唯一支持陳琳潔。民進黨預計在第二選區（路竹等5區）提名兩席，現任議員黃明太爭取連任、陳明澤則交棒女兒參選，暫時沒出現其他挑戰者。",
+        "excerptSha256": "4b00d5261c567ae6d294b4c0123bb6255be2f4a8237d43d6bc9e6f3e1f96e611",
+        "documentSha256": "16164dc7ff588133fe9af70e35de8b062fa2a3b9840a4fec2c6e11fffb5b1d12",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:52.667Z"
+      },
+      "identity": {
+        "matchedName": "陳琳潔",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第二選區",
+          "路竹",
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:52.667Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5334889"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記 fetched=民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-02-06 fetched=2026-02-06"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第二選區、路竹、市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
+      "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5580760",
+      "headline": "選前68天 高雄綠營「七隆珠」集結左營創意拜票",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5556794",
+      "headline": "年底選舉8/31起登記 高雄議員第2、6選區可能同額",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5450485",
+      "headline": "民進黨高市黨職改選公告 黃捷接主委、完整名單看這裡",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5440677",
+      "headline": "高市議員肯定南部科技S廊帶 陳其邁：沒提嘉義、翁縣長會抗議的",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/paper/1743498",
+      "headline": "民進黨高市議員初選42人登記 6區超額",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5339186",
+      "headline": "民進黨高市議員黨內初選登記截止 5天共42人報名",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5335326",
+      "headline": "民進黨高雄市議員初選 已25人登記",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

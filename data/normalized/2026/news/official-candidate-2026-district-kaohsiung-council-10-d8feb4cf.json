@@ -1,0 +1,174 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+  "candidateName": "吳昱鋒",
+  "verifiedAt": "2026-11-12T16:29:06.846Z",
+  "articles": [
+    {
+      "articleId": "news-d2365a3a",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf"
+      ],
+      "headline": "高雄發展「無人船」 吳昱鋒：前鎮、小港具產官學關鍵動能",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5497433",
+      "publicationDate": "2026-07-07",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-07-07",
+      "retrievedAt": "2026-11-12T16:29:04.432Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄發展無人船吳昱鋒前鎮小港具產官學關鍵動能@2026-07-07",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "無人機話題正夯，民進黨高市議員參選人吳昱鋒則認為高雄還發展無人「船」，並指出前鎮、小港在產官學等層面都具備關鍵動能，是高雄獨特優勢。吳昱鋒說明，許多人誤以為無人載具、無人船舶是高不可攀的太空科幻，或僅能由國營企業、跨國巨頭壟斷，事實上一台無人船所需的浮力控制系統、推進系統、精密機械加工、機艙水密艙、電力系統及複合材料等，這些核心製造工藝早就深深內建在前鎮、小港無數個在地工廠與黑手師傅的 DNA 之中。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他詳細盤點高雄獨特優勢，強調打造無人船所需關鍵動能、近乎一半都高度集中在高雄，「產」的層面有中鋼、中油、台船等重工業與能源巨頭齊聚，提供高強度潛艦級鋼材及先進材料；「官」的層面是最高主管機關海洋委員會坐鎮高雄，正積極規劃無人載具的長遠法規與系統整合。「學」與「研」的研發能量更是強大後盾，國立中山大學已成功研發科研用潛水無人載具，國立高雄科技大學則深耕智慧輪機與電能動力系統；加上金屬工業研究發展中心、國家海洋研究院、國家實驗研究院海洋中心等國家級智庫全力",
+        "excerptSha256": "07776fc46d0ff2fd6bedfbb4a89bf51685467a0e54e5116038ba0a0b20c9b4f7",
+        "documentSha256": "ca0a7d398a8cb8894d47cd4d0098896f7355dc25992475787dbba48588e74d16",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:04.432Z"
+      },
+      "identity": {
+        "matchedName": "吳昱鋒",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:04.432Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5497433"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄發展「無人船」 吳昱鋒：前鎮、小港具產官學關鍵動能 fetched=高雄發展「無人船」 吳昱鋒：前鎮、小港具產官學關鍵動能"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-07-07 fetched=2026-07-07"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5617873",
+      "headline": "高雄選將直擊台灣工廠 洋流飄帶產地曝光真相",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5602820",
+      "headline": "被迫「挺柯」民進黨議員喊詐騙 柯志恩回擊：和他們同看板我會掉票",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573411",
+      "headline": "為高雄體操選手打造一個家 賴瑞隆推城市級體操訓練館",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5564073",
+      "headline": "綠營素人挑戰高雄第10選區今成立競總 潘孟安、鄭英耀都來力薦",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563985",
+      "headline": "社福慈善身障團體後援會成立 賴瑞隆：選舉補助款全捐作弱勢獎學金",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5427133",
+      "headline": "柯志恩挺8000億軍購摃上鄭麗文？綠小將送暖送「勇氣」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/paper/1745718",
+      "headline": "民進黨高市第10選區初選民調出爐 黃彥毓落榜",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5359613",
+      "headline": "民進黨高市議員第十選區初選民調放榜 跌破眼鏡",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+  "candidateName": "黃文益",
+  "verifiedAt": "2026-11-12T16:28:43.728Z",
+  "articles": [
+    {
+      "articleId": "news-067af0a8",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-08-3c0e0184"
+      ],
+      "headline": "高雄私校傳偷拍 黃文益：應加強反偷拍稽查頻率",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/life/breakingnews/5575709",
+      "publicationDate": "2026-09-16",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-16",
+      "retrievedAt": "2026-11-12T16:28:40.384Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "legislative",
+        "legal"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄私校傳偷拍黃文益應加強反偷拍稽查頻率@2026-09-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民進黨籍高市議員黃文益今質詢時、關切某私立學校傳出男生到女廁所偷拍事件?建議加強反偷拍稽查偵測頻率，校方也應儘早說明釐清外界疑慮；教育局長吳立森答詢，校方已通報並調查中、今天可能說明，教育局則會協同專業廠商落實反偷拍偵測，到今年6月已完成80校稽查。黃文益說，昨晚脆上傳出高雄某私立高中、有男生到女生廁所偷拍，連老師事後處理方式都被非議，在網路上引發熱烈討論，也讓家長不安。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 吳立森答詢指出，局端跟學校對此情況已有掌握，校方也已完成校安通報，目前持續釐清網路相關訊息與必要處理，同時也會保護個資，包括當事人或行為人，確保不違反個資法、兒少法。黃文益建議學校應該即早對外說明，避免錯誤訊息傳開，同時應說清楚如何處置 以及未來對類似事件有何防範機制？?吳立森說明，校方正在研擬回應內容，今天應該可對外說明，反偷拍則是教育局推動重點政策，會結合專業廠商每個月針對高市所有學校稽查抽測，今年到6月已完成80校稽查，後續國教署還未推出監測器需求專案補助",
+        "excerptSha256": "0589365600a7a82187fd1f96cd7927ebbc87a5c075263392be4659c3a72ccd7d",
+        "documentSha256": "90b6981ac7b3f70218ee30f11f6c22ceba74f786d3348d9ddc10d4c2d7134d72",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:40.384Z"
+      },
+      "identity": {
+        "matchedName": "黃文益",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:40.384Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/life/breakingnews/5575709"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄私校傳偷拍 黃文益：應加強反偷拍稽查頻率 fetched=高雄私校傳偷拍 黃文益：應加強反偷拍稽查頻率"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-16 fetched=2026-09-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-caff5422",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-08-3c0e0184"
+      ],
+      "headline": "黨職改選投票前夕 民進黨高市主委黃文益棄選原因曝",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5447223",
+      "publicationDate": "2026-05-23",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-05-23",
+      "retrievedAt": "2026-11-12T16:28:43.028Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "黨職改選投票前夕民進黨高市主委黃文益棄選原因曝@2026-05-23",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "明天（24日）是民進黨黨職改選投票日，高市主委黃文益投票前夕發文感謝兩年來所有黨員同志支持，強調民進黨會繼續守護台灣，同時也說明「不競選原因」。黃文益指出，身兼高市議員及高市黨部主委，經過審慎思考與整體選戰布局考量，決定不競選下一屆民進黨高雄市黨部主委。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 做出這項決定最主要原因，是今年底自己將繼續投入前金、新興、苓雅區的市議員連任選戰，守住市議會關鍵一席，而市黨部在未來階段將扮演重要的輔選角色，須全力整合資源、發揮最大功能，協助市長候選人賴瑞隆順利勝選，延續陳其邁市長的施政建設與高雄的進步發展。因此，黨部應該讓能全心投入輔選工作的團隊接棒，對於整體選戰布局更為有利，也更符合黨的整體利益。他進一步提及，兩年來與所有夥伴一同經歷多場重要戰役，從「反濫權護民主」政治宣講行動開始，在三民公園舉辦「人民是頭家」的大型宣講場到全大罷免。組織經營方面，市黨部啟動兩大加值服務，提供黨員服務及律師服務，同時持續推動黨務革新與基層經營，積極招募新血、推動青年營跟里長海選，達成黨員",
+        "excerptSha256": "fef890acca91876c9e3b13b7599ce338f500f8013f88a3cbe09ef9bbb82e7727",
+        "documentSha256": "0ce6e85af279b6f2cebc865ca9ad290be3dee63e5d1e35d121fc015f230f1264",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:43.028Z"
+      },
+      "identity": {
+        "matchedName": "黃文益",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "新興",
+          "前金",
+          "苓雅",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:43.028Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5447223"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=黨職改選投票前夕 民進黨高市主委黃文益棄選原因曝 fetched=黨職改選投票前夕 民進黨高市主委黃文益棄選原因曝"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-05-23 fetched=2026-05-23"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 新興、前金、苓雅、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5595710",
+      "headline": "議員質疑公園遊具身障不友善 陳其邁：14個新公園整體考量",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5595690",
+      "headline": "高市議員酸爆蔣市長 送「甘蔗」給陳其邁喊記得帶回去",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5577162",
+      "headline": "柯志恩團隊在告別式發名片拉票 綠議員：在家屬傷口上撒鹽",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1758087",
+      "headline": "民進黨高市黨部最年輕主委黃捷 拚年底選戰",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5464451",
+      "headline": "民進黨最大地方黨部最年輕主委上任 黃捷：全力輔選賴瑞隆",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5448102",
+      "headline": "26381票當選民進黨高市黨部下屆主委 黃捷： 以後會1天當3天用",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

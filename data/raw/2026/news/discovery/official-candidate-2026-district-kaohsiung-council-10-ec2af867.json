@@ -1,0 +1,95 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+  "candidateName": "陳麗娜",
+  "researchedAt": "2026-11-12T16:22:28.504Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "陳麗娜",
+      "fetchedAt": "2026-11-12T16:22:26.636Z",
+      "httpStatus": 200,
+      "documentSha256": "243ed0045ca0ca1ab63e6b1bbb4e0cf916dd1033d7e72dacbe7a3dad652fd25e",
+      "status": "results",
+      "resultCount": 8,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "陳麗娜",
+      "fetchedAt": "2026-11-12T16:22:27.336Z",
+      "httpStatus": 200,
+      "documentSha256": "604ea7803c8ca833cdb9edd9052b70c5cfff0621bfcb28b51eeaf1491c13fe73",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "陳麗娜",
+      "fetchedAt": "2026-11-12T16:22:28.033Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5626530",
+      "headline": "把王金平「請下台」惹風波 柯志恩批綠營見縫插針",
+      "publicationDate": "2026-11-02",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5626308",
+      "headline": "義消晚宴高歌被柯志恩請下台 王金平今說「不委屈」",
+      "publicationDate": "2026-11-02",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5605789",
+      "headline": "蔡英文vs韓國瑜 賴瑞隆、柯志恩10月17日再次尬場",
+      "publicationDate": "2026-10-14",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573830",
+      "headline": "陳麗娜指陳其邁任內每人負債增加 高市府批政治操作、人均負債減少1萬元",
+      "publicationDate": "2026-09-14",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5560558",
+      "headline": "陳其邁任內在205兵工廠蓋大巨蛋無望 林欽榮：留給下任市長決定",
+      "publicationDate": "2026-09-02",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5558989",
+      "headline": "高雄小港擋土牆又倒一塊 陳其邁：先確保安全、再全面檢修",
+      "publicationDate": "2026-09-01",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5538220",
+      "headline": "藍營讚柯志恩逼出土方解方 邱俊憲譏「這故事太過頭」",
+      "publicationDate": "2026-08-13",
+      "query": "陳麗娜"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5533972",
+      "headline": "陳麗娜接國民黨文傳會發言人 黃敬雅：「正義」兩字變廉價",
+      "publicationDate": "2026-08-09",
+      "query": "陳麗娜"
+    }
+  ]
+}

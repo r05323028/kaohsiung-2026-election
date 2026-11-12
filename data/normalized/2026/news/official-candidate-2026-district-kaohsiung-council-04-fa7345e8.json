@@ -1,0 +1,660 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+  "candidateName": "李眉蓁",
+  "verifiedAt": "2026-11-12T16:28:10.802Z",
+  "articles": [
+    {
+      "articleId": "news-9f7a25b1",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "李眉蓁嗆卓榮泰卡高捷紫線 陳其邁：財劃法修法致軌道建設延後",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5596924",
+      "publicationDate": "2026-10-06",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-06",
+      "retrievedAt": "2026-11-12T16:28:03.254Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "policy",
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "李眉蓁嗆卓榮泰卡高捷紫線陳其邁財劃法修法致軌道建設延後@2026-10-06",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高市議員李眉蓁關切高捷紫線規劃進度，點名行政院長卓榮泰卡高雄，市長陳其邁答詢指出，問題主要源自財政收支劃分法修法導致中央補助減少，軌道建設進度多會往後移。李眉蓁指出，她於2017年3月質詢時就要求改善北高雄大學交通、特別是當初規劃的學園線（後併入紫線）；市府在2022年12月啟動紫線可行性評估，2024年9月送交通部、2025年10月初審、2026年3月修正後再提出，9月開始二次審查。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 李眉蓁舉小港林園線進度做比較，認為紫線整體規劃進度太慢，可能距今10年後才能完工，質疑為何整個計畫還躺在交通部?點名行政院長卓榮泰卡高雄，期許陳其邁發揮緊緊緊精神，讓紫線加快腳步。陳其邁答詢說明，高捷紫線可行性評估已通過交通部初審，目前已針對審查委員意見修正後、再送專案審查，屬於可行性審議階段，市府會加速整體行政作業與報編程序。他進一步表示，坦率地講、很大問題源自財政收支劃分法修法後排擠到地方捷運建設、中央對地方的補助，高雄今年就少了103",
+        "excerptSha256": "163601cd63000407e08dcc8a2d6de8dbee4fa948e3a3e6129d05d84ac4c9cf58",
+        "documentSha256": "3d1c77e9fad3508c70d345c4fabc7da280b884a5a146915c938be30daa08fcd3",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:03.254Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:03.254Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5596924"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=李眉蓁嗆卓榮泰卡高捷紫線 陳其邁：財劃法修法致軌道建設延後 fetched=李眉蓁嗆卓榮泰卡高捷紫線 陳其邁：財劃法修法致軌道建設延後"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-06 fetched=2026-10-06"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-b8ea5560",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "李眉蓁追高捷紫線進度 陳其邁：立院審總預算也要快過",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/life/breakingnews/5558911",
+      "publicationDate": "2026-09-01",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-01",
+      "retrievedAt": "2026-11-12T16:28:04.423Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "policy",
+        "legislative",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "李眉蓁追高捷紫線進度陳其邁立院審總預算也要快過@2026-09-01",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高市議員李眉蓁追蹤高雄捷運紫線進度，質疑從計畫啟動到可行性評估已4年、到底卡在哪裡？市長陳其邁答詢指出，目前進度應還算順利，市府會再跟交通部協調，但計畫在走、立法院總預算也要快過。李眉蓁今質詢指出，高雄捷運紫線可行性評估已將近2年進度如何？從原本36公里29站縮減到25公里23站，是否規劃不成熟？擔心跟不上北高雄產業轉型，要求陳其邁任期結束前應設法爭取到一個具體結果。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳其邁答詢說明，重大建設可行性評估後，還有綜合規劃、環評等程序，目前在可行性評估審議時，市府已同步開始啟動綜合規劃平行作業，進度應還算順利。他同時提到，這部分會再跟交通部協調，爭取儘快召開審查會，但計畫在走，立法院總預算也要快過啊，也拜託議員碰到國民黨籍立委幫忙溝通、一起努力。",
+        "excerptSha256": "c7238a559e7717aac0267b99f2597f79a8b415e226def2c534fcfa4775abf6d0",
+        "documentSha256": "8177cb1fd4463dd0416683c02a70dd14b8d0165a8c709de3cf18af5c1b67e197",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:04.423Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:04.423Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/life/breakingnews/5558911"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=李眉蓁追高捷紫線進度 陳其邁：立院審總預算也要快過 fetched=李眉蓁追高捷紫線進度 陳其邁：立院審總預算也要快過"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-01 fetched=2026-09-01"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-df97dc56",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "李眉蓁PO高雄老鼠逛街片喊「跟上潮流」惹議 網砲轟：很光榮嗎？",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5427364",
+      "publicationDate": "2026-05-06",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-05-06",
+      "retrievedAt": "2026-11-12T16:28:06.437Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "李眉蓁po高雄老鼠逛街片喊跟上潮流惹議網砲轟很光榮嗎@2026-05-06",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "台北市近來鼠患頻傳被戲稱「安鼠之亂」，面對北市環境衛生破功，部分藍白支持者試圖將砲火引向高雄市，稱南部也曾發生嚴重鼠患。國民黨高雄市議員李眉蓁今日於社群平台發布影片，並附上「鼠鼠來襲」影片，她稱「誰說只有台北街頭有老鼠？我們高雄絕對跟得上潮流！」貼文曝光湧入大量網友砲轟，有網友酸說「有這個是很光榮嗎？」李眉蓁今日發文指出，「誰說只有台北街頭有老鼠？我們高雄絕對跟得上潮流！左營區大中路的福山國中、新莊高中外牆，老鼠逛大街，最後跳進福山國中」。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 不少網友於李眉蓁貼文下方紛紛留言開酸，「過不久他就被送去台北了，南鼠北送」、「跟什麼潮流，是不會去處理嗎？在那邊嗨什麼？妳是很想看到高雄爛掉是不是？」、「可以講一下怎麼解決，而不是在哪邊說高雄也有，有這個是很光榮嗎？」臉書粉專「Mr.柯學先生」今日也發文狠酸，直指高雄鼠患最嚴重的2020年，時任市長正是韓國瑜、時任副市長為李四川。另，高市府昨（5）日市政會議中，市長陳其邁指示加強滅鼠，環保局統計老鼠防治藥劑半年來已發放逾2200箱，目前尚無漢他病毒確診案例。 在 Threads 查看相關新聞請見︰台北鬧「安鼠之",
+        "excerptSha256": "e7929ef579a8a51c645c46f4572943b18fc0836d84f2d1a6d7d74b9b9bf75ab5",
+        "documentSha256": "298da77d64df7ae274b9ab819c9eb8fc59d5e82205e175110e11c1f8bb0c466b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:06.437Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "左營",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:06.437Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5427364"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=李眉蓁PO高雄老鼠逛街片喊「跟上潮流」惹議 網砲轟：很光榮嗎？ fetched=李眉蓁PO高雄老鼠逛街片喊「跟上潮流」惹議 網砲轟：很光榮嗎？"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-05-06 fetched=2026-05-06"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 左營、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-bccf3859",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "獨／6年什麼都選過！選情吊車尾 李眉蓁哽咽：別讓勇敢的人孤單",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261108/3268422.htm",
+      "publicationDate": "2026-11-08",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-11-08",
+      "retrievedAt": "2026-11-12T16:28:09.400Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "6年什麼都選過選情吊車尾李眉蓁哽咽別讓勇敢的人孤單@2026-11-08",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市議員李眉蓁昨（7）日舉辦競選總部成立大會，致詞時數度淚崩，感嘆過去6年從市議員、市長補選、立委到議員補選，幾乎什麼選舉都選過，光是競選總部就成立五、六次。沒想到這次選情卻陷入「吊車尾」危機，因為支持者認為她知名度高、當選很穩，反而把票分給別人，讓她哽咽喊話：「不要讓勇敢的人孤單！」柯志恩也到場力挺，形容李眉蓁是「壓不扁的玫瑰」，呼籲支持者力挺她完成五連霸。 ▲國民黨高雄市議員參選人李眉蓁跟柯志恩合體。（圖／記者吳奕靖攝） 李眉蓁站上舞台，看見熟悉的里長、長輩及支持者，突然情緒激動、數度拭淚。她坦言，過去6年經歷太多場選舉，連競選總部成立大會都辦了五、六次，「我看到我們各位里長站上台上，還有我們各位長輩，還有我們各位大哥大姐，我每一次的總部成立，你們都在耶！」看到每次都到場的熟悉面孔，讓她既感動又不好意思。 李眉蓁感嘆，自己從市議員選舉、高雄市長補選、立委選舉，再到議員補選，短短6年幾乎把各種選舉都選了一遍，「沒有人像我這樣選這麼多次的」，甚至當場向支持者致歉，「真的很抱歉造成大家的麻煩」，沒想到自己會在這麼短的時間內經歷這麼多場選戰。 ▲國民黨高雄市",
+        "excerptSha256": "0b18d99a92491da3ff04a9be6ee5ea25f8fd8620331a77ddc7bcf66ce42f1e35",
+        "documentSha256": "402ac3bd402bb86ba51a570afe01c72e2a4bc18cf6d9d10ecfff28f954f7fd2c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:09.400Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "左營",
+          "楠梓",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:09.400Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261108/3268422.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=獨／6年什麼都選過！選情吊車尾 李眉蓁哽咽：別讓勇敢的人孤單 fetched=獨／6年什麼都選過！選情吊車尾 李眉蓁哽咽：別讓勇敢的人孤單"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-08 fetched=2026-11-08"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 左營、楠梓、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-fc67d076",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "韓國瑜輔選丟金句！讚李眉蓁「壓不扁的玫瑰」 喊高雄可選2市長",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261101/3264390.htm",
+      "publicationDate": "2026-11-01",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-11-01",
+      "retrievedAt": "2026-11-12T16:28:09.876Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "韓國瑜輔選丟金句讚李眉蓁壓不扁的玫瑰喊高雄可選2市長@2026-11-01",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "九合一選戰進入超級星期天，立法院長韓國瑜今（1）日南下高雄助選，公開行程第一站就替左楠區議員參選人李眉蓁站台。他致詞時突然把戰線拉到新北，喊出「今年全國每個人只能選一個市長，只有高雄可以選兩個」，除了支持柯志恩，更號召高雄鄉親動員新北親友「搶救李四川」。 ▲11月1日立法院長韓國瑜南下高雄首站，幫李眉蓁站台。（圖／記者陳宏瑞攝） 韓國瑜今天替李眉蓁催票時，也罕見回頭談起她6年多來的政治低潮。他表示，當年高雄歷經市長罷免、議長許崑源離世，藍營士氣跌到谷底，最後願意跳出來承擔市長補選的就是李眉蓁，「這六年多來受了很多委屈，都是含著眼淚自己把它熬過去」，但如今仍像一朵「壓不扁的玫瑰」，保持正能量替選民奔跑服務，因此拜託左營、楠梓選民集中選票，全力支持5號李眉蓁。 韓國瑜口中的「壓不扁」，其實也呼應李眉蓁這幾年反覆出現的一個政治意象「光」。2020年高雄市長補選，李眉蓁在罷韓後臨危受命，短短不到兩個月迎戰陳其邁，期間又爆發論文爭議，她最後承認錯誤，之後重新回到校園攻讀碩士，到了2022年，藍營政治人物洪孟楷就曾以「把自己活成一道光！妳就是最耀眼的光芒」形容李眉蓁，並稱她是自己心目中「最勇敢的女孩」，肯定她選擇重新面對學位問題，在公務、家庭與學生多重身",
+        "excerptSha256": "7e68b0682d2d402b7032945b350f0c226bd384fcf39e1026cc0e8a401727e2ae",
+        "documentSha256": "8076b9e362a79ecc1347cade52142282d344955d4e28958a644e8f678a54017b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:09.876Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "左營",
+          "楠梓",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:09.876Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261101/3264390.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=韓國瑜輔選丟金句！讚李眉蓁「壓不扁的玫瑰」 喊高雄可選2市長 fetched=韓國瑜輔選丟金句！讚李眉蓁「壓不扁的玫瑰」 喊高雄可選2市長"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-01 fetched=2026-11-01"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 左營、楠梓、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-762ac4c3",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "高雄辯論場外小雞幫開戰！李眉蓁轟賴瑞隆閃躲 林于凱：主客易位",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261030/3263700.htm",
+      "publicationDate": "2026-10-30",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-30",
+      "retrievedAt": "2026-11-12T16:28:10.389Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄辯論場外小雞幫開戰李眉蓁轟賴瑞隆閃躲林于凱主客易位@2026-10-30",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲2026高雄市長辯論會。（圖／民視、中天新聞、公視台語台提供） 高雄市長首場電視辯論落幕，場外評論也隨即開戰，國民黨市議員左楠區參選人李眉蓁直指，賴瑞隆面對雲豹、政治獻金、新潮流等問題多次閃躲，甚至連演唱會經濟的「送分題」都沒有切中核心，反問「不敢直球對決，怎麼當市長？」民眾黨市議員候選人林于凱則以「主客易位」形容整場辯論，認為想延續執政的賴瑞隆花較多時間攻擊對手，反而是挑戰者柯志恩提出更多具體政策。 李眉蓁表示，賴瑞隆整場辯論不斷強調自己熟悉高雄、長期參與市政，但真正進入具體問題時卻多次避重就輕。她以捷運發展為例指出，高雄捷運紅、橘線在吳敦義任內即獲行政院核定，後續才在謝長廷任內動工，若把整個高雄城市發展都切割成民進黨歷任市長的「第一棒、第二棒、第三棒」，等於抹去前面不同執政者的投入。 她也點名媒體提問的「低薪、缺工與產業困境」，認為這本來是賴瑞隆最容易發揮的題目，最後卻仍回到台積電、高科技及既有建設，沒有正面處理傳產缺工、薪資偏低問題，甚至被柯志恩當場提醒「要針對問題回答」，讓這一題顯得格外尷尬。 李眉蓁也把矛頭對準賴瑞隆的新潮流背景。她表示，賴瑞隆反覆強調「不要用派系框住我」，卻沒有具體回答如果當選後，市府人事、預算及公共資源要如何避免派系介入；至於雲豹、政治獻金等爭議，",
+        "excerptSha256": "24f8111d0b57109521517f456674488ad3e5adb1f696cc22f9f7c00238cf43e9",
+        "documentSha256": "098b5a57ad0c309e6c5b76c9e94bb5d2bd2de5bcf277bb9cc44bf04d02608c7c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:10.389Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:10.389Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261030/3263700.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄辯論場外小雞幫開戰！李眉蓁轟賴瑞隆閃躲 林于凱：主客易位 fetched=高雄辯論場外小雞幫開戰！李眉蓁轟賴瑞隆閃躲 林于凱：主客易位"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-30 fetched=2026-10-30"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562987",
+      "headline": "前高市副議長交棒女兒 黃韻涵成國民黨團KK連線「準」成員",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5445692",
+      "headline": "議員提高雄市區設預辦登機中心 陳其邁允評估",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5445561",
+      "headline": "高捷紫線仍停留在可行性研究階段 陳其邁曝原因",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5406423",
+      "headline": "高雄交通事故死亡數連7年居冠 交通局：較6年前減少44人",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5404354",
+      "headline": "高雄市警察局訴願與撤銷案件暴增 法制局長：因為洗錢防制法",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5399647",
+      "headline": "中央老宅延壽計畫高雄3億元 工務局長：預計6月受理申請",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

@@ -894,6 +894,23 @@ export function collectNewsCards(
       sourceIds: [],
     }),
   );
+  const publishedNews: NewsCardModel[] = (candidate.publishedNews ?? []).map(
+    (article) => ({
+      id: article.articleId,
+      headline: article.headline,
+      publisher: article.publisher,
+      url: article.url,
+      publicationDate: article.publicationDate,
+      topicTags: article.topicTags,
+      contentType: article.contentType,
+      summary: article.summary,
+      eventDate: null,
+      latestStatus: null,
+      claimIds: [],
+      evidenceIds: [],
+      sourceIds: [],
+    }),
+  );
   const legacyNews: NewsCardModel[] = candidate.news.map((article) => ({
     id: article.id,
     headline: article.title,
@@ -909,7 +926,7 @@ export function collectNewsCards(
     evidenceIds: [],
     sourceIds: article.sourceIds,
   }));
-  return [...publicNews, ...legacyNews].sort(
+  return [...publicNews, ...publishedNews, ...legacyNews].sort(
     (left, right) =>
       right.publicationDate.localeCompare(left.publicationDate) ||
       left.headline.localeCompare(right.headline),
@@ -975,12 +992,21 @@ function FamilyTab({ candidate }: { candidate: PublicCandidateProfile }) {
 
 function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const news = collectNewsCards(candidate);
+  const [publisher, setPublisher] = useState('all');
+  const [topic, setTopic] = useState('all');
+  const publishers = [...new Set(news.map((article) => article.publisher))];
+  const topics = [...new Set(news.flatMap((article) => article.topicTags))];
+  const visible = news.filter(
+    (article) =>
+      (publisher === 'all' || article.publisher === publisher) &&
+      (topic === 'all' || article.topicTags.includes(topic)),
+  );
 
   return (
     <div className="profile-tab-content" data-profile-section="news">
       <div className="profile-section-heading">
         <h3>相關新聞</h3>
-        <p>依發布日期由新至舊呈現，附來源與日期。</p>
+        <p>依發布日期由新至舊呈現，附來源與日期；僅列出已完成驗證與編輯審核的報導。</p>
       </div>
       <AutomatedClaimCards
         candidate={candidate}
@@ -988,7 +1014,40 @@ function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
         heading="新聞資料"
       />
       {news.length > 0 ? (
-        <NewsCards candidate={candidate} news={news} />
+        <>
+          <div className="news-filters" data-testid="news-filters">
+            <label>
+              媒體
+              <select
+                value={publisher}
+                onChange={(event) => setPublisher(event.target.value)}
+              >
+                <option value="all">全部</option>
+                {publishers.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              主題
+              <select value={topic} onChange={(event) => setTopic(event.target.value)}>
+                <option value="all">全部</option>
+                {topics.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          {visible.length > 0 ? (
+            <NewsCards candidate={candidate} news={visible} />
+          ) : (
+            <p className="profile-empty">目前篩選條件沒有符合的新聞。</p>
+          )}
+        </>
       ) : (
         <EmptyContent category="news" />
       )}

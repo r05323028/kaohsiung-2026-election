@@ -1,0 +1,149 @@
+{
+  "candidateId": "official-mayor-hong-fang-long-2026",
+  "candidateName": "洪方隆",
+  "verifiedAt": "2026-11-12T16:27:39.128Z",
+  "articles": [
+    {
+      "articleId": "news-916940e0",
+      "candidateIds": [
+        "official-mayor-hong-fang-long-2026"
+      ],
+      "headline": "高雄市長選舉第五人登記 洪方隆：政治責任化、政見要檢驗",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5563088",
+      "publicationDate": "2026-09-04",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-04",
+      "retrievedAt": "2026-11-12T16:27:38.413Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長選舉第五人登記洪方隆政治責任化政見要檢驗@2026-09-04",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "下屆高雄市長選舉今出現第五位參選者洪方隆，他提出台灣面臨的七大核心問題，並疾呼政治應該責任化，所有政見都應檢驗，沒做到就該有懲罰機制。洪方隆今年63歲、中興大學環境工程系畢業，曾至美國哥倫比亞大學深造，對社會發展感到憂心，決定參選市長表述理念，也希望拋磚引玉、盼更多人關注。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他提到台灣目前面臨七大核心議題，分別是政治透明度、詐騙、低薪、淹水與環境、食安、少子化、以及公務人員改革與政黨化問題。他認為政見應提出責任制與罰則，要求候選人對提出的政見負責、並設置未達成的懲罰機制，並以實際成效為評估標準；這部分從高雄開始推動，進而要求全台候選人在提出政見時，須承諾並接受監督與落實，避免選前空談與選後失責的現象。洪方隆也強調政治體制改革之外的創新路徑，認為公民社會與社會創新、可在現有體制外推動實際改變，特別在低薪、社工、護理等領域。",
+        "excerptSha256": "5d535b903cbcdf7e9db7e8e394b0d8843267e6f5994dc390fea4add242bf97c5",
+        "documentSha256": "9816ebba124217a4d8bd3c1607bc8e264d3882d0f436d0d24ef49aa0451df057",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:38.413Z"
+      },
+      "identity": {
+        "matchedName": "洪方隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:38.413Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5563088"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長選舉第五人登記 洪方隆：政治責任化、政見要檢驗 fetched=高雄市長選舉第五人登記 洪方隆：政治責任化、政見要檢驗"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-04 fetched=2026-09-04"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
+      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
+      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
+      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
+      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
+      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

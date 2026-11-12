@@ -1,0 +1,81 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+  "candidateName": "陳玫娟",
+  "researchedAt": "2026-11-12T16:22:01.261Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "陳玫娟",
+      "fetchedAt": "2026-11-12T16:21:59.513Z",
+      "httpStatus": 200,
+      "documentSha256": "4e0a414b2ea99077f1678cd54e070ca7f192b6e87b42fd9af08285176e347eaf",
+      "status": "results",
+      "resultCount": 6,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "陳玫娟",
+      "fetchedAt": "2026-11-12T16:22:00.264Z",
+      "httpStatus": 200,
+      "documentSha256": "fcf3c0232c6681c260f8467061caaec517e3d7d30fb908b97ef1ad6afd87254f",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "陳玫娟",
+      "fetchedAt": "2026-11-12T16:22:00.790Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1770489",
+      "headline": "左營高鐵二樓車道 轉角軟管將修復",
+      "publicationDate": "2026-09-13",
+      "query": "陳玫娟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5571295",
+      "headline": "左營高鐵2樓車道像在考汽車駕照！議員現勘 高鐵、台鐵說話了",
+      "publicationDate": "2026-09-12",
+      "query": "陳玫娟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5463424",
+      "headline": "高市議會出訪澳洲提台積電 曾俊傑：歡迎投資高雄",
+      "publicationDate": "2026-06-07",
+      "query": "陳玫娟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5309103",
+      "headline": "6連霸國民黨議員傳跳票、疑涉簽賭糾紛 陳玫娟急喊冤強調是選民服務",
+      "publicationDate": "2026-01-14",
+      "query": "陳玫娟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5144367",
+      "headline": "核三公投藍白合 柯志恩：高雄要創造823奇蹟打臉錯誤能源政策",
+      "publicationDate": "2025-08-14",
+      "query": "陳玫娟"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5040087",
+      "headline": "議員關切高雄左營「市4」開發案 陳其邁：5議員7意見、很為難",
+      "publicationDate": "2025-05-12",
+      "query": "陳玫娟"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "batchId": "news-batch-02",
+  "verifiedAt": "2026-11-13T00:50:00+08:00",
+  "records": [
+    {
+      "articleId": "news-a0119433",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"鳳林國小動土！大林蒲遷村落實「先建後遷」　鄭光峰曝關鍵內幕\" matches record headline; JSON-LD datePublished 2026-10-29T17:11:00+08:00 matches publicationDate 2026-10-29; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 鄭光峰 appears in role/district context (\"鳳林國小動土！大林蒲遷村落實「先建後遷」　鄭光峰曝關鍵內幕\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-6160381e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩同框黃國昌、林于凱  體驗手作鳳梨酥 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-28T13:31:01+08:00 matches publicationDate 2026-10-28; publisher 自由時報電子報 matches record publisher 自由時報; candidate 林于凱 appears in role/district context (\"柯志恩同框黃國昌、林于凱 體驗手作鳳梨酥 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-80a8cd5c",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"黃捷陪同綠營選將鳳山車掃  支持者贈「洋流號」應援沈伯洋與鄧巧佩 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-28T08:57:29+08:00 matches publicationDate 2026-10-28; publisher 自由時報電子報 matches record publisher 自由時報; candidate 鄧巧佩 appears in role/district context (\"黃捷陪同綠營選將鳳山車掃 支持者贈「洋流號」應援沈伯洋與鄧巧佩 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-01cff230",
+      "httpStatus": 200,
+      "verdict": "wrong-identity",
+      "rationale": "HTTP 200; page is about 新竹市議員林彥甫 criticising Hsinchu baseball stadium 50th-anniversary opener (3千萬活動、交通管制牌面未上); 新竹 content only, no Kaohsiung role or district; record candidate 林彥 (無黨籍, 高雄市議員第7選舉區) matches only as the substring inside 林彥甫 — different person."
+    },
+    {
+      "articleId": "news-8fcbe149",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"今抽籤保證「不會脫」！高雄「舉牌姊」柳淑芳：別違法拖我下台 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-27T07:47:55+08:00 matches publicationDate 2026-10-27; publisher 自由時報電子報 matches record publisher 自由時報; candidate 柳淑芳 appears in role/district context (\"今抽籤保證「不會脫」！高雄「舉牌姊」柳淑芳：別違法拖我下台 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-aa12dd74",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"司改黨高雄3位候選人都抽到「1號」 張靜：好兆頭 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-27T18:02:57+08:00 matches publicationDate 2026-10-27; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張靜 appears in role/district context (\"司改黨高雄3位候選人都抽到「1號」 張靜：好兆頭 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-f7722dc9",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩廟口開講飆罵選民 張博洋酸爆：顯然自認很大尾 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-27T10:28:05+08:00 matches publicationDate 2026-10-27; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張博洋 appears in role/district context (\"柯志恩廟口開講飆罵選民 張博洋酸爆：顯然自認很大尾 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-43b54370",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"候選人抽籤突忘詞！張以理抽中8號大喊「八包煎餃拼到底」網笑翻 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-27T16:25:30+08:00 matches publicationDate 2026-10-27; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張以理 appears in role/district context (\"候選人抽籤突忘詞！張以理抽中8號大喊「八包煎餃拼到底」網笑翻 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-e996250f",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高市鳳山議員20年1號皆落選！綠議員林智鴻今抽中直呼戒慎恐懼 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-27T13:19:12+08:00 matches publicationDate 2026-10-27; publisher 自由時報電子報 matches record publisher 自由時報; candidate 林智鴻 appears in role/district context (\"高市鳳山議員20年1號皆落選！綠議員林智鴻今抽中直呼戒慎恐懼 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-5946da24",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高雄市議員101候選人號次全出爐　議長康裕成抽中8號拚8連霸\" matches record headline; JSON-LD datePublished 2026-10-27T12:59:00+08:00 matches publicationDate 2026-10-27; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 康裕成 appears in role/district context (\"高雄市議員101候選人號次全出爐　議長康裕成抽中8號拚8連霸\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-879e7f89",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高雄選戰號次抽籤！許采蓁3號與柯志恩「33合體」　黃敬雅13號\" matches record headline; JSON-LD datePublished 2026-10-27T11:10:00+08:00 matches publicationDate 2026-10-27; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 許采蓁 appears in role/district context (\"高雄選戰號次抽籤！許采蓁3號與柯志恩「33合體」　黃敬雅13號\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-1d03b1ae",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"最穩可能最危險！李眉蓁急喊搶救　上屆落選頭蘇致榮再拼翻轉\" matches record headline; JSON-LD datePublished 2026-10-27T13:29:00+08:00 matches publicationDate 2026-10-27; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 蘇致榮 appears in role/district context (\"最穩可能最危險！李眉蓁急喊搶救　上屆落選頭蘇致榮再拼翻轉\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-0113da98",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"王義川南下高雄力挺張以理  喊出搶救新兵 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-26T14:26:04+08:00 matches publicationDate 2026-10-26; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張以理 appears in role/district context (\"王義川南下高雄力挺張以理 喊出搶救新兵 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-46a6037e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"民進黨高雄市議員邱俊憲拚四連任  競總成立高雄隊大集結 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-26T11:06:23+08:00 matches publicationDate 2026-10-26; publisher 自由時報電子報 matches record publisher 自由時報; candidate 邱俊憲 appears in role/district context (\"民進黨高雄市議員邱俊憲拚四連任 競總成立高雄隊大集結 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-8ae19fb9",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩罵綠選民「幹譙國民黨是什麼意思」 黃敬雅：別選比較快活 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-26T23:59:30+08:00 matches publicationDate 2026-10-26; publisher 自由時報電子報 matches record publisher 自由時報; candidate 黃敬雅 appears in role/district context (\"柯志恩罵綠選民「幹譙國民黨是什麼意思」 黃敬雅：別選比較快活 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-cd0a9ae6",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"王金平站台李雅靜！高喊「唯一支持」　她端90億成績單拚連任\" matches record headline; JSON-LD datePublished 2026-10-25T13:15:00+08:00 matches publicationDate 2026-10-25; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 李雅靜 appears in role/district context (\"王金平站台李雅靜！高喊「唯一支持」　她端90億成績單拚連任\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-1589f969",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"只要還能呼吸就投妳！催淚真情告白　百歲人瑞挺柯志恩、陳美雅\" matches record headline; JSON-LD datePublished 2026-10-25T13:20:00+08:00 matches publicationDate 2026-10-25; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 陳美雅 appears in role/district context (\"只要還能呼吸就投妳！催淚真情告白　百歲人瑞挺柯志恩、陳美雅\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-2e4232a7",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高市議員李雅靜競總成立  柯志恩、王金平力挺 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-25T13:36:14+08:00 matches publicationDate 2026-10-25; publisher 自由時報電子報 matches record publisher 自由時報; candidate 李雅靜 appears in role/district context (\"高市議員李雅靜競總成立 柯志恩、王金平力挺 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-64c18637",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高市議員黃香菽力拚4連霸 柯志恩站台大讚「俠女精神」 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-25T21:04:12+08:00 matches publicationDate 2026-10-25; publisher 自由時報電子報 matches record publisher 自由時報; candidate 黃香菽 appears in role/district context (\"高市議員黃香菽力拚4連霸 柯志恩站台大讚「俠女精神」 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-d33b74c7",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"薔琵剛過很有感！林智鴻鳳山滯洪池旁成立後援總會  逾千人到場 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-25T17:54:03+08:00 matches publicationDate 2026-10-25; publisher 自由時報電子報 matches record publisher 自由時報; candidate 林智鴻 appears in role/district context (\"薔琵剛過很有感！林智鴻鳳山滯洪池旁成立後援總會 逾千人到場 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-82529ee1",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"「台美雙會計師」陳琳潔選高市議員 賴瑞隆：讓人才進議會 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-24T17:23:22+08:00 matches publicationDate 2026-10-24; publisher 自由時報電子報 matches record publisher 自由時報; candidate 陳琳潔 appears in role/district context (\"「台美雙會計師」陳琳潔選高市議員 賴瑞隆：讓人才進議會 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-5b39754e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高雄唯一「五寶媽」議員李雅芬競總成立  柯志恩：佩服 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-19T09:52:17+08:00 matches publicationDate 2026-10-19; publisher 自由時報電子報 matches record publisher 自由時報; candidate 李雅芬 appears in role/district context (\"高雄唯一「五寶媽」議員李雅芬競總成立 柯志恩：佩服 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-288fa07e",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"子弟兵張耀中競總成立   陳其邁：請支持「其邁的分身」 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-18T14:30:47+08:00 matches publicationDate 2026-10-18; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張耀中 appears in role/district context (\"子弟兵張耀中競總成立 陳其邁：請支持「其邁的分身」 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-1f8d53bc",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩找韓國瑜站台  尹立：94萬人的答案還不夠清楚？ - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-18T14:20:09+08:00 matches publicationDate 2026-10-18; publisher 自由時報電子報 matches record publisher 自由時報; candidate 尹立 appears in role/district context (\"柯志恩找韓國瑜站台 尹立：94萬人的答案還不夠清楚？ - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-3ddbf7c4",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"貼身跟2526天！陳其邁挺「分身」張耀中：保證精心嚴選\" matches record headline; JSON-LD datePublished 2026-10-18T17:19:00+08:00 matches publicationDate 2026-10-18; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 張耀中 appears in role/district context (\"貼身跟2526天！陳其邁挺「分身」張耀中：保證精心嚴選\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-42ba80f0",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"贈張以理「天翻地覆」中堂 陳其邁撂話：他當選、我唱歌 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-18T21:45:22+08:00 matches publicationDate 2026-10-18; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張以理 appears in role/district context (\"贈張以理「天翻地覆」中堂 陳其邁撂話：他當選、我唱歌 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-00e36546",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"二連霸國民黨市議員鍾易仲成立總部  柯志恩、王金平到場力挺 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-17T16:57:43+08:00 matches publicationDate 2026-10-17; publisher 自由時報電子報 matches record publisher 自由時報; candidate 鍾易仲 appears in role/district context (\"二連霸國民黨市議員鍾易仲成立總部 柯志恩、王金平到場力挺 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-2dba29a2",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"推動高雄「降溫城市」 林于凱提公園、人行道、候車亭優先 - 生活 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-16T13:28:23+08:00 matches publicationDate 2026-10-16; publisher 自由時報電子報 matches record publisher 自由時報; candidate 林于凱 appears in role/district context (\"推動高雄「降溫城市」 林于凱提公園、人行道、候車亭優先 - 生活 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-4a7df78d",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩出席青年論壇被問「遵從黨意」 尹立批難道高雄發展要排在「黨意」之後？ - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-15T10:04:24+08:00 matches publicationDate 2026-10-15; publisher 自由時報電子報 matches record publisher 自由時報; candidate 尹立 appears in role/district context (\"柯志恩出席青年論壇被問「遵從黨意」 尹立批難道高雄發展要排在「黨意」之後？ - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-773cb993",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"白喬茵總質詢為同婚發聲  陳其邁肯定：國民黨議員很少碰這題 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-14T11:21:18+08:00 matches publicationDate 2026-10-14; publisher 自由時報電子報 matches record publisher 自由時報; candidate 白喬茵 appears in role/district context (\"白喬茵總質詢為同婚發聲 陳其邁肯定：國民黨議員很少碰這題 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-73a4e3e5",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"韓國瑜將到高雄站台 尹立：恐把柯志恩鎖死在同溫層 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-14T22:55:45+08:00 matches publicationDate 2026-10-14; publisher 自由時報電子報 matches record publisher 自由時報; candidate 尹立 appears in role/district context (\"韓國瑜將到高雄站台 尹立：恐把柯志恩鎖死在同溫層 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-dece8467",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"陳其邁稱議員李雅芬不會作秀 給100分再扣11分 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-12T11:02:24+08:00 matches publicationDate 2026-10-12; publisher 自由時報電子報 matches record publisher 自由時報; candidate 李雅芬 appears in role/district context (\"陳其邁稱議員李雅芬不會作秀 給100分再扣11分 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-5cc27ece",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"陳其邁總質詢又獲禮物  邱于軒送「多啦A夢」籲重視兒虐 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-12T11:44:12+08:00 matches publicationDate 2026-10-12; publisher 自由時報電子報 matches record publisher 自由時報; candidate 邱于軒 appears in role/district context (\"陳其邁總質詢又獲禮物 邱于軒送「多啦A夢」籲重視兒虐 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-a4469a44",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"上屆差1501票落選高市議員  林慧欣再戰山城議席 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-11T15:19:18+08:00 matches publicationDate 2026-10-11; publisher 自由時報電子報 matches record publisher 自由時報; candidate 林慧欣 appears in role/district context (\"上屆差1501票落選高市議員 林慧欣再戰山城議席 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-beac535d",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"挺柯看板列綠營民代惹議 邱于軒：綠營未查證抹黑大翻車 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-11T14:51:47+08:00 matches publicationDate 2026-10-11; publisher 自由時報電子報 matches record publisher 自由時報; candidate 邱于軒 appears in role/district context (\"挺柯看板列綠營民代惹議 邱于軒：綠營未查證抹黑大翻車 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-cd2b9178",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"議員參選人林義迪拚連任展基層實力  旗山老街封街湧千人 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-11T12:57:50+08:00 matches publicationDate 2026-10-11; publisher 自由時報電子報 matches record publisher 自由時報; candidate 林義迪 appears in role/district context (\"議員參選人林義迪拚連任展基層實力 旗山老街封街湧千人 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-277ae20b",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩嗆賴瑞隆是新潮流乖寶寶 尹立：柯志恩是傅崐萁的乖寶寶 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-10T09:26:13+08:00 matches publicationDate 2026-10-10; publisher 自由時報電子報 matches record publisher 自由時報; candidate 尹立 appears in role/district context (\"柯志恩嗆賴瑞隆是新潮流乖寶寶 尹立：柯志恩是傅崐萁的乖寶寶 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-8feb03cc",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"「洋流飄帶」成高雄最夯競選小物  張以理：一手「洋流」、一手「隆捲風」 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-09T10:57:01+08:00 matches publicationDate 2026-10-09; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張以理 appears in role/district context (\"「洋流飄帶」成高雄最夯競選小物 張以理：一手「洋流」、一手「隆捲風」 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-08885649",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高市議員邱于軒宣傳車   擦撞路邊汽車原因曝 - 社會 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-07T11:39:04+08:00 matches publicationDate 2026-10-07; publisher 自由時報電子報 matches record publisher 自由時報; candidate 邱于軒 appears in role/district context (\"高市議員邱于軒宣傳車 擦撞路邊汽車原因曝 - 社會 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-81bbc198",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"緊急到醫院吊點滴  高市議員邱于軒：真的累了 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-07T10:52:07+08:00 matches publicationDate 2026-10-07; publisher 自由時報電子報 matches record publisher 自由時報; candidate 邱于軒 appears in role/district context (\"緊急到醫院吊點滴 高市議員邱于軒：真的累了 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-9f7a25b1",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"李眉蓁嗆卓榮泰卡高捷紫線 陳其邁：財劃法修法致軌道建設延後 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-06T12:02:23+08:00 matches publicationDate 2026-10-06; publisher 自由時報電子報 matches record publisher 自由時報; candidate 李眉蓁 appears in role/district context (\"李眉蓁嗆卓榮泰卡高捷紫線 陳其邁：財劃法修法致軌道建設延後 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-a1ec84f5",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"藍營議員黃香菽讚陳其邁守諾做好做滿  給四肯定一期許 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-06T10:29:16+08:00 matches publicationDate 2026-10-06; publisher 自由時報電子報 matches record publisher 自由時報; candidate 黃香菽 appears in role/district context (\"藍營議員黃香菽讚陳其邁守諾做好做滿 給四肯定一期許 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-3fce4524",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"知名度高不代表選票  尹立吐選情「真的不穩」 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-10-04T09:16:23+08:00 matches publicationDate 2026-10-04; publisher 自由時報電子報 matches record publisher 自由時報; candidate 尹立 appears in role/district context (\"知名度高不代表選票 尹立吐選情「真的不穩」 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-b5599c4d",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"黃淑美再戰市議員！「超敢」拔輪船公司蛀牙　自認服務從沒斷\" matches record headline; JSON-LD datePublished 2026-10-01T13:29:00+08:00 matches publicationDate 2026-10-01; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 黃淑美 appears in role/district context (\"黃淑美再戰市議員！「超敢」拔輪船公司蛀牙　自認服務從沒斷\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-ece09ec6",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"最後一回質詢陳其邁後送「茄冬樹苗」  湯詠瑜：盼扎根高雄到綠蔭台灣 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-30T11:29:21+08:00 matches publicationDate 2026-09-30; publisher 自由時報電子報 matches record publisher 自由時報; candidate 湯詠瑜 appears in role/district context (\"最後一回質詢陳其邁後送「茄冬樹苗」 湯詠瑜：盼扎根高雄到綠蔭台灣 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-e5a9b739",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"柯志恩脫口「要吃屏東香蕉」 黃敬雅解析︰心不在高雄 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-27T13:47:00+08:00 matches publicationDate 2026-09-27; publisher 自由時報電子報 matches record publisher 自由時報; candidate 黃敬雅 appears in role/district context (\"柯志恩脫口「要吃屏東香蕉」 黃敬雅解析︰心不在高雄 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-5aa5ac37",
+      "httpStatus": 200,
+      "verdict": "summary-unsupported",
+      "rationale": "HTTP 200, headline/publisher/date match and 邱俊憲 is correctly 高市議員 (第5選舉區). But summary says 邱俊憲表示「去年底已處理並移送司法」; the article states 去年底環保局才主動展開調查 and 移送司法偵辦 was 今年2月/今年初 — the summary moves the 移送 date to 去年底, a claim the article does not make."
+    },
+    {
+      "articleId": "news-d46a4aa3",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"許采蓁批高雄永安農地驚見「廢柴山」 環局︰已掌握、年底前改善 - 生活 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-23T13:00:55+08:00 matches publicationDate 2026-09-23; publisher 自由時報電子報 matches record publisher 自由時報; candidate 許采蓁 appears in role/district context (\"許采蓁批高雄永安農地驚見「廢柴山」 環局︰已掌握、年底前改善 - 生活 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-c58d9ad5",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"搶下高雄第一面！李雅靜合體蔣萬安掛看板　盼借鏡台北經驗\" matches record headline; JSON-LD datePublished 2026-09-23T17:26:00+08:00 matches publicationDate 2026-09-23; publisher ETtoday新聞雲 matches record publisher ETtoday新聞雲; candidate 李雅靜 appears in role/district context (\"搶下高雄第一面！李雅靜合體蔣萬安掛看板　盼借鏡台北經驗\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-40235ca0",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"蔣萬安高雄首面看板在鳳山 李雅靜：盼打造北高連線讓青年不北漂 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-23T16:16:15+08:00 matches publicationDate 2026-09-23; publisher 自由時報電子報 matches record publisher 自由時報; candidate 李雅靜 appears in role/district context (\"蔣萬安高雄首面看板在鳳山 李雅靜：盼打造北高連線讓青年不北漂 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-be512430",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"同音參選撞名！黃裕庭拜票救人 籲認清選區藍營唯一提名男性 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-22T23:27:50+08:00 matches publicationDate 2026-09-22; publisher 自由時報電子報 matches record publisher 自由時報; candidate 黃裕庭 appears in role/district context (\"同音參選撞名！黃裕庭拜票救人 籲認清選區藍營唯一提名男性 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-ed7d12f1",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"司改黨高雄市長參選人提交通三箭  張靜： 拆除或遷移「舊願景館」 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-19T12:31:57+08:00 matches publicationDate 2026-09-19; publisher 自由時報電子報 matches record publisher 自由時報; candidate 張靜 appears in role/district context (\"司改黨高雄市長參選人提交通三箭 張靜： 拆除或遷移「舊願景館」 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-b3b69eb0",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"四重奏音樂會搬進廟埕   賴瑞隆、黃文志用歌聲call「他」（影音） - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-19T09:09:00+08:00 matches publicationDate 2026-09-19; publisher 自由時報電子報 matches record publisher 自由時報; candidate 黃文志 appears in role/district context (\"四重奏音樂會搬進廟埕 賴瑞隆、黃文志用歌聲call「他」（影音） - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    },
+    {
+      "articleId": "news-b7c5af86",
+      "httpStatus": 200,
+      "verdict": "verified",
+      "rationale": "HTTP 200; page title \"高雄18.7億治水預算   藍市議員鍾易仲質疑表決當天賴瑞隆落跑 - 政治 - 自由時報電子報\" matches record headline; JSON-LD datePublished 2026-09-19T09:28:06+08:00 matches publicationDate 2026-09-19; publisher 自由時報電子報 matches record publisher 自由時報; candidate 鍾易仲 appears in role/district context (\"高雄18.7億治水預算 藍市議員鍾易仲質疑表決當天賴瑞隆落跑 - 政治 - 自由時報電子報\"); every factual assertion in the summary is stated in the body and the summary wording is neutral (no 痛批/砲轟/大勝/醜聞/黑馬 style terms)."
+    }
+  ]
+}

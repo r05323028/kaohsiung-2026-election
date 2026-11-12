@@ -1,0 +1,368 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+  "candidateName": "陳惠君",
+  "verifiedAt": "2026-11-12T16:28:20.585Z",
+  "articles": [
+    {
+      "articleId": "news-3d850072",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-05-147ddb97"
+      ],
+      "headline": "民眾黨議員落選人陳惠君募款餐會被控賄選 法院判決曝難堪真相",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/4507261",
+      "publicationDate": "2023-12-01",
+      "dateStatus": "confirmed",
+      "updatedDate": "2023-12-01",
+      "retrievedAt": "2026-11-12T16:28:14.371Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legal"
+      ],
+      "contentType": "reporting",
+      "eventKey": "民眾黨議員落選人陳惠君募款餐會被控賄選法院判決曝難堪真相@2023-12-01",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市民眾黨提名落選市議員候選人陳惠君，去年選前被查獲涉嫌以舉辦募款餐會為名，實為無償宴請選民被控賄選起訴。不過，法院查出陳原計劃席開90桌，一路降到只開13桌，連親友只能湊成1桌，必須臨時拉人湊數充場面，參與餐會者多數為親友、工作人員、以及無選舉權者，未達賄選對價關係，判陳等3人無罪，可上訴。橋檢指控陳惠君以募款餐會為名，去年10月28日在仁武區以外燴方式舉辦募款餐會，名義上參加餐會民眾須預繳認購餐券，但實際上卻是以每桌8000元代價，無償宴請13桌具有投票權之選民，席間還進行選舉活動。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 餐會由龔姓競選總幹事策劃，透過蔡姓樁腳邀請選民出席餐會，但出席者得知需繳5000元「贊助金」多打退堂鼓，陳最後授意龔得免費招待其與其邀約之選民至餐會用餐。橋頭地院審理時，陳惠君自陳因為募款餐會邀約不利，人數太少會很冷清，需要找人湊數充場面，才請蔡姓樁腳找人湊數就好，沒有一定要約選區的選民。法官還查出，募款餐會原計劃席開90桌，卻一路調降到60桌、30桌最後只開",
+        "excerptSha256": "265d2a46e027cde674fe5f2c7b61a9272252c4037c89b3efdf38f849e8334fb7",
+        "documentSha256": "8addd439927673c62701324af4ac4ae3c8a2a9a9d1a0d4abb2a52fe690f850d5",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:14.371Z"
+      },
+      "identity": {
+        "matchedName": "陳惠君",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "仁武",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:14.371Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/4507261"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=民眾黨議員落選人陳惠君募款餐會被控賄選 法院判決曝難堪真相 fetched=民眾黨議員落選人陳惠君募款餐會被控賄選 法院判決曝難堪真相"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2023-12-01 fetched=2023-12-01"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 仁武、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-f39311a6",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-05-147ddb97"
+      ],
+      "headline": "涉無償宴請選民 民眾黨候選人陳惠君起訴",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/life/paper/1563575",
+      "publicationDate": "2023-01-19",
+      "dateStatus": "confirmed",
+      "updatedDate": "2023-01-19",
+      "retrievedAt": "2026-11-12T16:28:15.102Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legal"
+      ],
+      "contentType": "reporting",
+      "eventKey": "涉無償宴請選民民眾黨候選人陳惠君起訴@2023-01-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民眾黨提名高雄市議員候選人陳惠君，選前被查獲涉嫌以舉辦募款餐會為名，實為無償宴請選民，陳未當選，橋頭地檢署昨依違反選罷法提起公訴。橋檢調查，陳惠君去年十月廿八日在仁武區以外燴方式舉辦募款餐會，名義上參加民眾須預繳認購餐券，實際上卻是以每桌八千元代價，無償宴請十三桌具有投票權之選民，席間還進行選舉活動。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); 陳惠君到案後否認犯行，稱募款餐會的桌次，均另有支持者捐款認座，但檢方查出部分捐款雖有存入政治獻金專戶，但相關姓名未見於「募款餐會認座表」上，且均未出席餐會。全案餐會共認座九十三位，但餐會當日實際席開十三桌共一百卅人，實際出席人數多於認座數量，所辯不足採信。",
+        "excerptSha256": "fe7a63f001bc25aa2d4542e40dcc95c98ae49b65ea752cc2b1cefe05be1f1a7f",
+        "documentSha256": "4e59b51c5780114e6755537abc58ceb1f7f61494de6bd2da89d6e099fc329fd3",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:15.102Z"
+      },
+      "identity": {
+        "matchedName": "陳惠君",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "仁武",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:15.102Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/life/paper/1563575"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=涉無償宴請選民 民眾黨候選人陳惠君起訴 fetched=涉無償宴請選民 民眾黨候選人陳惠君起訴"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2023-01-19 fetched=2023-01-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 仁武、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-463bc2ec",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-05-147ddb97"
+      ],
+      "headline": "無償宴請選民 民眾黨高市議員落選人陳惠君涉賄選起訴",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/society/breakingnews/4188678",
+      "publicationDate": "2023-01-18",
+      "dateStatus": "confirmed",
+      "updatedDate": "2023-01-18",
+      "retrievedAt": "2026-11-12T16:28:15.687Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legal"
+      ],
+      "contentType": "reporting",
+      "eventKey": "無償宴請選民民眾黨高市議員落選人陳惠君涉賄選起訴@2023-01-18",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市民眾黨提名市議員候選人陳惠君，選前被查獲涉嫌以舉辦募款餐會為名，實為無償宴請選民，陳未獲當選，橋頭地檢署今仍依違反選罷法提起公訴。橋檢調查，陳惠君以募款餐會為名，去年10月28日在仁武區以外燴方式舉辦募款餐會，名義上參加餐會民眾須預繳認購餐券，但實際上卻是以每桌8000元代價，無償宴請13桌具有投票權之選民，席間還進行選舉活動。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 此次餐會由陳委由龔姓競選總幹事策劃，競選團隊透過蔡姓樁腳邀請選民出席餐會，但出席者得知需繳5000元「贊助金」多打退堂鼓，蔡要求陳妥善處理此事，否則會影響到其選票。陳最後授意龔於去年10月26日告知蔡得免費招待其與其邀約之選民至餐會用餐。陳惠君到案後否認犯行，稱募款餐會的桌次座位，均另有支持者捐款認座，但檢方查出部份捐款雖有存入政治獻金專戶，但其等之姓名並未見於「募款餐會認座表」上，且均未出席餐會。全案餐會共認座93位，但餐會當日實際席開13桌共130人，餐會實際出席人數多於認座數量，所辯不足採信。",
+        "excerptSha256": "cba4262ce4adec6b304c49d45fc12904c5704208b5ea882c8a945c0fae231729",
+        "documentSha256": "10b92977b318b0bb7daba02f7cff56fc5531bb4bfd8aaca4a4dc0f8112bb0542",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:15.687Z"
+      },
+      "identity": {
+        "matchedName": "陳惠君",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "仁武",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:15.687Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/society/breakingnews/4188678"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=無償宴請選民 民眾黨高市議員落選人陳惠君涉賄選起訴 fetched=無償宴請選民 民眾黨高市議員落選人陳惠君涉賄選起訴"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2023-01-18 fetched=2023-01-18"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 仁武、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/life/paper/1618490",
+      "headline": "湊數充場面 民眾黨選將涉賄無罪",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1559377",
+      "headline": "議員落選人 被控積欠輔選工資",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4165945",
+      "headline": "民眾黨高市議員落選人被控欠薪 黨部主委：已協助聯繫處理",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4129497",
+      "headline": "民眾黨候選人遭查賄 要求啟動調查「違反偵查不公開」並將提告",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1552335",
+      "headline": "餐會無償宴請選民// 民眾黨、國民黨候選人 1交保1起訴",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4031508",
+      "headline": "民眾黨高市議員造勢 提名採5+1模式",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4003976",
+      "headline": "民眾黨報准藝人安定亞參選高市議員 提名將採5+3或6+2模式",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

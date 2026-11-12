@@ -1,0 +1,198 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+  "candidateName": "康裕成",
+  "verifiedAt": "2026-11-12T16:28:38.321Z",
+  "articles": [
+    {
+      "articleId": "news-5946da24",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-afc23f7d"
+      ],
+      "headline": "高雄市議員101候選人號次全出爐 議長康裕成抽中8號拚8連霸",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261027/3261509.htm",
+      "publicationDate": "2026-10-27",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-27",
+      "retrievedAt": "2026-11-12T16:28:37.835Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市議員101候選人號次全出爐議長康裕成抽中8號拚8連霸@2026-10-27",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲高雄議長康裕成（中）抽中8號，力拚8連霸。（圖／記者賴文萱翻攝） 2026年九合一大選將至，高雄市選委會今（27）日辦理市長、市議員候選人號次抽籤，15選區101位候選人抽籤結果也全數出爐。其中，高雄市議長、民進黨市議員康裕成抽中8號，她表示，這次目標是拚第8次連任，並喊話「拜託祝福我8連霸」。被稱為「森林阿嬤」的83歲無黨籍高雄市議員候選人蔣黃女，今天在兒子陪同下前往抽籤，抽中4號，笑稱是「四四順利」。 國民黨高雄市議員白喬茵抽中3號，開心表示，四年前第一次參選抽到3號，四年後競選連任又是3號，直呼「太巧」，強調將不忘初心，繼續當左楠及市民的靠山。國民黨市議員邱于軒同樣也抽中3號，直呼「于軒和柯志恩市長同樣抽到3號歐！」 無黨籍高雄市議員張博洋則抽中6號，笑說自己早就知道會抽到這個號次，因為四年前也是6號，更喊出「66大順」，期盼台北順起來、高雄繼續順下去，並懇請選民支持「有盼望的高雄」。 高雄市議長、民進黨市議員康裕成抽中8號，她表示，這次目標是拚第8次連任，並喊話「拜託祝福我8連霸」。同樣是三民區的國民黨市議員黃柏霖則抽中10號，以「翻轉高雄，十全",
+        "excerptSha256": "4616a36be002f34cf0b6c320d1dcbe144116ea5b027b9624bf9afba7c4c11ffc",
+        "documentSha256": "3998557f0e283a212f221f6ae7792893639c30314f523af1ee2e8042a8b5032b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:37.835Z"
+      },
+      "identity": {
+        "matchedName": "康裕成",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "三民",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:37.835Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261027/3261509.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市議員101候選人號次全出爐 議長康裕成抽中8號拚8連霸 fetched=高雄市議員101候選人號次全出爐 議長康裕成抽中8號拚8連霸"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-27 fetched=2026-10-27"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 三民、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5638178",
+      "headline": "訪高雄觀摩選舉 橫濱市議會前副議長森敏明：為台灣民主加油",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5636642",
+      "headline": "賴瑞隆與社工座談 提五大承諾：打造最挺社工的城市",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1778054",
+      "headline": "賴瑞隆強化陸戰 站路口、市場掃街",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5632938",
+      "headline": "張博洋競總成立綠營大咖站台 陳其邁：高雄溫暖的洋流",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776871",
+      "headline": "三民大拚場》賴瑞隆延續陳其邁路線 藍白合挺柯志恩",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5626063",
+      "headline": "賴瑞隆要拚一點！陳其邁：蘇巧慧、沈伯洋選上「事情會很大條」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5621290",
+      "headline": "我沒走音！ 陳其邁畢業作 議會飆高音唱《紅豆》",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618898",
+      "headline": "三張邀請卡同個時間地點 高雄三民區綠營3議員將舉辦競總聯合成立大會",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618867",
+      "headline": "民進黨高雄市議員邱俊憲拚四連任 競總成立高雄隊大集結",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618530",
+      "headline": "蔡秉璁競總成立 陳其邁、邱志偉催票：大岡山3席全上",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1775862",
+      "headline": "三民區激戰 陳其邁領軍11/1對戰韓、柯",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

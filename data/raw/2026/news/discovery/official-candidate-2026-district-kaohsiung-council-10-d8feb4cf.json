@@ -1,0 +1,102 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+  "candidateName": "吳昱鋒",
+  "researchedAt": "2026-11-12T16:22:30.414Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "吳昱鋒",
+      "fetchedAt": "2026-11-12T16:22:28.504Z",
+      "httpStatus": 200,
+      "documentSha256": "acf0b871fc006c326868fc56102c77342358a37475c2818354aaaa5958d53c84",
+      "status": "results",
+      "resultCount": 9,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "吳昱鋒",
+      "fetchedAt": "2026-11-12T16:22:29.274Z",
+      "httpStatus": 200,
+      "documentSha256": "b67c7cc46ee5a5ada1b30e00d5b1dad4cc0ada7f79ada4df2703c7612b7cff08",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "吳昱鋒",
+      "fetchedAt": "2026-11-12T16:22:29.909Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5617873",
+      "headline": "高雄選將直擊台灣工廠 洋流飄帶產地曝光真相",
+      "publicationDate": "2026-10-25",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5602820",
+      "headline": "被迫「挺柯」民進黨議員喊詐騙 柯志恩回擊：和他們同看板我會掉票",
+      "publicationDate": "2026-10-11",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573411",
+      "headline": "為高雄體操選手打造一個家 賴瑞隆推城市級體操訓練館",
+      "publicationDate": "2026-09-14",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5564073",
+      "headline": "綠營素人挑戰高雄第10選區今成立競總 潘孟安、鄭英耀都來力薦",
+      "publicationDate": "2026-09-05",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563985",
+      "headline": "社福慈善身障團體後援會成立 賴瑞隆：選舉補助款全捐作弱勢獎學金",
+      "publicationDate": "2026-09-05",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5497433",
+      "headline": "高雄發展「無人船」 吳昱鋒：前鎮、小港具產官學關鍵動能",
+      "publicationDate": "2026-07-07",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5427133",
+      "headline": "柯志恩挺8000億軍購摃上鄭麗文？綠小將送暖送「勇氣」",
+      "publicationDate": "2026-05-06",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1745718",
+      "headline": "民進黨高市第10選區初選民調出爐 黃彥毓落榜",
+      "publicationDate": "2026-03-06",
+      "query": "吳昱鋒"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5359613",
+      "headline": "民進黨高市議員第十選區初選民調放榜 跌破眼鏡",
+      "publicationDate": "2026-03-05",
+      "query": "吳昱鋒"
+    }
+  ]
+}

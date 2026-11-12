@@ -1,0 +1,675 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+  "candidateName": "黃韻涵",
+  "verifiedAt": "2026-11-12T16:28:03.250Z",
+  "articles": [
+    {
+      "articleId": "news-aebf0485",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+      ],
+      "headline": "螺絲業苦撐、缺工又缺錢！黃韻涵提三箭救大岡山傳產",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5635287",
+      "publicationDate": "2026-11-10",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-10",
+      "retrievedAt": "2026-11-12T16:27:55.782Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "螺絲業苦撐缺工又缺錢黃韻涵提三箭救大岡山傳產@2026-11-10",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "大岡山地區為傳產重鎮，就業人口眾多，但目前包括螺絲等傳產小企業主和員工深陷生存困境，苦不堪言，國民黨高市議員第三選區候選人黃韻涵呼籲政府正視傳產目前的艱困處境，並提出合理電費、開放移工配額及實質輔導轉型救傳產三箭。黃韻涵指出，政府多聚焦在高科技與智慧科技產業，誇言多少科技大廠進駐高雄，但對於高雄就業人口最大宗的傳統產業，卻坐視其自生自滅，許多傳產小企業主與員工正為公司營運與生計硬撐、苦不堪言。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 她提出幫助傳產的政策三箭，包括一、實施分類電價：明確區分 AI 產業、傳統產業與民生用電，針對毛利率較低的傳產，制定合理電價標準，以紓解企業經營壓力；二、開放傳產移工配額限制：針對本地勞工缺乏從事意願的工作崗位，適度開放傳產移工配額限制，解決傳產長期面臨的缺工危機。三、對傳統產業挹注實質轉型資源：避免讓「智慧轉型」淪為空中樓閣與空頭支票，政府應直接對傳產挹注實質資源，加速推動產業的實質轉型與升級。",
+        "excerptSha256": "537341a6f938629234d76815f8e8743a666561fabe80d3b04a97c486a2d7693f",
+        "documentSha256": "8c6dc46d841c016f30b410d85e9f3f0e28282c5247fc5d379935ef597151ad41",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:55.782Z"
+      },
+      "identity": {
+        "matchedName": "黃韻涵",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第三選區",
+          "岡山",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:55.782Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5635287"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=螺絲業苦撐、缺工又缺錢！黃韻涵提三箭救大岡山傳產 fetched=螺絲業苦撐、缺工又缺錢！黃韻涵提三箭救大岡山傳產"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-10"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第三選區、岡山、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-27e6039f",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+      ],
+      "headline": "前高市副議長交棒女兒 黃韻涵成國民黨團KK連線「準」成員",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5562987",
+      "publicationDate": "2026-09-04",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-04",
+      "retrievedAt": "2026-11-12T16:27:57.969Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "前高市副議長交棒女兒黃韻涵成國民黨團kk連線準成員@2026-09-04",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "8連霸高市議員、前高市副議長陸淑美下屆不再拚連任，交棒女兒黃韻涵繼續服務大岡山鄉親，黃韻涵今在國民黨團KK連線陪同下完成登記，也成為KK連線「準」成員。KK連線是高市議會國民黨團中生代跨選區議員次團，成立於2021年，成員包含前副議長陸淑美、李眉蓁、鍾易仲、黃香菽、蔡金晏、李亞築、蔡武宏等，政治主張與特點強調在地優先，關注議題包括全齡化公園、老人與小孩福利、楠梓中油場址整治監督，擅長打團體戰。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 本週為市議員登記時段，KK連線每位成員登記時，其他成員幾乎全數到齊相挺、展現團結態勢，也是登記時段最常出現的團體；今天最後一天登記，左楠區李眉蓁及陸淑美的女兒黃韻涵上午到場，KK連線循例全部到場聲援，也代表黃韻涵選前已經是KK連線「準」成員。",
+        "excerptSha256": "4ce7e021e1891fc3f7415cf89620207faec24b72dd81cac20e4d96c11437d726",
+        "documentSha256": "8746b0a2dfeaa5ef3030fa970632288bfbf86ca3d79063436f06d4c9a49b95c2",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:57.969Z"
+      },
+      "identity": {
+        "matchedName": "黃韻涵",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "岡山",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:57.969Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5562987"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=前高市副議長交棒女兒 黃韻涵成國民黨團KK連線「準」成員 fetched=前高市副議長交棒女兒 黃韻涵成國民黨團KK連線「準」成員"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-04 fetched=2026-09-04"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 岡山、市議員、議員、市議會、議會"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-887e281b",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+      ],
+      "headline": "藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+      "publicationDate": "2026-06-14",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-06-14",
+      "retrievedAt": "2026-11-12T16:27:58.336Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "藍前高雄副議長陸淑美交棒女兒黃韻涵成立競選總部@2026-06-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市第三選區大岡山區市議員參選人黃韻涵今日搶頭香，成立各區第一個競選總部，市長參選人柯志恩為黃披掛競選綵帶，黃韻涵的母親、前副議長陸淑美象徵性「交棒」，懇請鄉親繼續支持。高市議員選舉第三選區（包含岡山、橋頭、燕巢、梓官、彌陀、永安6區）應選5席，目前呈現綠2藍3局面，包括綠營現任議員黃秋媖、林志誠和藍營宋立彬、方信淵均將尋求競選連任，而從政長達40年的前副議長陸淑美則宣布放棄連任，交棒給女兒黃韻涵參選。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 民進黨立委邱志偉團隊執行長蔡秉璁，去年8月也宣布投入第三選區議員選戰，蔡秉璁80年次，台大電機系轉讀社會系畢業，再取得清華大學社會所碩士學位，畢業後投入政治工作，歷任前立委劉世芳助理、總統府前秘書長陳菊秘書，並在陸委會、經濟部與台電等重要部會工作；另擁有高雄科技大學水產科技產業博士學位、前高雄市府海洋局長張漢雄之子張騏晟，則將以無黨籍身分參選。外型亮麗的黃韻涵，畢業於美國德州休士頓大學、義守大學管理碩士，曾任國民黨高市黨部副主委、國民黨文傳會副主",
+        "excerptSha256": "077f7c86998aebb63c1ad9c2011fe840acc9f56cb0114c05fd61cd4ad29627eb",
+        "documentSha256": "abe980b799886cf186b172210ce980d56b15c1bf67859198b5f7084947a040dc",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:58.336Z"
+      },
+      "identity": {
+        "matchedName": "黃韻涵",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第三選區",
+          "岡山",
+          "橋頭",
+          "燕巢",
+          "梓官",
+          "彌陀",
+          "永安",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:58.336Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5472000"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部 fetched=藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-06-14 fetched=2026-06-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第三選區、岡山、橋頭、燕巢、梓官、彌陀、永安、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-94fb560e",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+      ],
+      "headline": "藍營拚高雄議會過半 黃韻涵籲藍白合與高額提名",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5396527",
+      "publicationDate": "2026-04-08",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-04-08",
+      "retrievedAt": "2026-11-12T16:27:59.266Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "藍營拚高雄議會過半黃韻涵籲藍白合與高額提名@2026-04-08",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高市議員選舉民進黨已確定將提名34席，國民黨則尚未定案，藍營議員參選人黃韻涵今天疾呼，國民黨要有議會過半的大格局，藍白一定要合，議員應採高額提名，且對有案在身的人選更應採取比民進黨更高的標準，惟有以高標準自我期許，才能令選民耳目一新。從政40年、曾擔任高雄縣市議會副議長的陸淑美，下屆交棒給正妹女兒黃韻涵參選高市議員第3選區（大岡山地區）；黃韻涵，畢業於美國德州休士頓大學、義守大學管理碩士，曾任國民黨高市黨部副主委、國民黨文傳會副主委、國民黨高雄青工總會長等職。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 黃韻涵今天發文指出，國民黨自1998年吳敦義敗給謝長廷之後，高雄市長就長期為民進黨把持，歷經黃俊英副市長、黃昭順立委敗選，直至韓國瑜市長2018年策略運用成功，市議員採高提名，一舉贏得市長與議長之位，府會均由國民黨執政，後因罷免讓民進黨取得市長之位，但議會仍為國民黨執政，2022年卻因黨內勢力與外勾結，國民黨在府會雙雙淪為在野黨。她表示，議會現有65席次，國民黨雖為單一最大黨占28席，但未單獨過半，表決時往往不敵綠營聯軍票數，",
+        "excerptSha256": "329231d7ed9fc0fbd4195b0736b41a98935c48a8cb838fb0b9915e83b63626b0",
+        "documentSha256": "14552b79ffc37738b6cb66d178e8420765df04bf7d3bed39021348491e2a9a70",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:59.266Z"
+      },
+      "identity": {
+        "matchedName": "黃韻涵",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第3選區",
+          "岡山",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:59.266Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5396527"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=藍營拚高雄議會過半 黃韻涵籲藍白合與高額提名 fetched=藍營拚高雄議會過半 黃韻涵籲藍白合與高額提名"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-04-08 fetched=2026-04-08"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第3選區、岡山、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-d9850cf5",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+      ],
+      "headline": "藍營高雄前副議長陸淑美不選了 交棒正妹女兒黃韻涵",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5051733",
+      "publicationDate": "2025-05-22",
+      "dateStatus": "confirmed",
+      "updatedDate": "2025-05-22",
+      "retrievedAt": "2026-11-12T16:27:59.906Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "藍營高雄前副議長陸淑美不選了交棒正妹女兒黃韻涵@2025-05-22",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "從政40年、曾擔任過副議長的國民黨高雄市議員陸淑美，今天（22日）宣布下屆不選了，將交棒給正妹女兒黃韻涵。陸淑美從23歲參選高雄縣岡山鎮的鎮民代表開始，歷經高雄縣議員、高雄縣議會副議長，2010年縣市合併後，擔任高雄市議員、高雄市議會副議長、代理議長等職。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 被視為前立法院長王金平愛將的陸淑美，今天宣布交棒給女兒黃韻涵，主因是要給年輕人機會，有兩個考量，一是有能力，二是能勝選，要為國民黨在高雄市議員第3選區（岡山、橋頭、燕巢、梓官、彌陀、永安）保住這一席市議員。她說，首先是要有能力，她相信黃韻涵有能力接棒，把服務地方、為民喉舌的工作做好，當年國民黨在綠油油的北高雄找不到人參選立委，黃韻涵義無反顧代表國民黨參選，也擔任過國民黨文傳會副主委，持續深耕地方。陸淑美表示，第二個考量是要能夠贏，目前第3選區5位市議員，國民黨與民進黨是3：2，優勢一定要保持下去，現任國民黨議員方信淵、宋立彬實力堅強，她退休後，一定要找一個有能力可以勝選的接棒者，黃韻涵主動願意接受挑戰，因此才決定交棒給女兒。外型亮麗的黃韻涵，畢業於美國德州休",
+        "excerptSha256": "3865708e36f6d70246b6c58e9b5e606dad370793955338ea7f46f42d612e5ed9",
+        "documentSha256": "b2ed7ec209573114b9cff1684c7490ba81d0d9fde8c0375e0a2ea1f198f66ac6",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:59.906Z"
+      },
+      "identity": {
+        "matchedName": "黃韻涵",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第3選區",
+          "岡山",
+          "橋頭",
+          "燕巢",
+          "梓官",
+          "彌陀",
+          "永安",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:59.906Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5051733"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=藍營高雄前副議長陸淑美不選了 交棒正妹女兒黃韻涵 fetched=藍營高雄前副議長陸淑美不選了 交棒正妹女兒黃韻涵"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2025-05-22 fetched=2025-05-22"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第3選區、岡山、橋頭、燕巢、梓官、彌陀、永安、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-e5134ce7",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+      ],
+      "headline": "王金平子弟兵、高雄8連霸 藍營戰將陸淑美將交棒女兒黃韻涵",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/4945170",
+      "publicationDate": "2025-02-08",
+      "dateStatus": "confirmed",
+      "updatedDate": "2025-02-08",
+      "retrievedAt": "2026-11-12T16:28:01.379Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative"
+      ],
+      "contentType": "reporting",
+      "eventKey": "王金平子弟兵高雄8連霸藍營戰將陸淑美將交棒女兒黃韻涵@2025-02-08",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "王金平子弟兵、高雄縣白派代表人物之一，擁有高雄縣與縣市合併後、合計8連霸紀錄的前高市代理議長陸淑美，傳出將交棒女兒黃韻涵；黃韻涵今證實，將挑戰下屆高市議員選舉。陸淑美今年63歲，從原高縣13到16屆議員、高雄縣市合併後的第1到4屆，與民進黨李喬如同為高市議會最資深、8連霸議員，她被視為前立法院長王金平子弟兵、白派地方代表人物之一，在大岡山區（北高雄）經營許久、根基深厚。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陸淑美曾任原高縣第15、16屆副議長，也投入縣市合併後、2010高雄市首屆副議長選舉，因抽籤敗給民進黨副議長蔡昌達而未能連任，2018回鍋再任副議長，2020因議長許崑源辭世而暫代議長。陸淑美20多歲即投入地方選舉，當年因外型亮麗、選舉旗幟還傳出被民眾偷回家收藏，她在大岡山地區用心經營、紮根深厚，加上王金平相挺，在前議長許崑源過世後，一度可望問鼎高市議長，可惜最終仍無法如願。陸淑美的女兒黃韻涵，長期跟著母親參與、學習地方服務，很早就被看好將接下陸淑美的政治資產，被形容為「最美母女檔」；黃韻涵曾於2016年與2020年兩度參選立委，唯均不敵民進黨邱志偉，但她並沒",
+        "excerptSha256": "44c87be65eaa88b3127638669d478ef84ae0555ae30b1e0acf8b4e2535e6d908",
+        "documentSha256": "495b70166d0f7f535a2591a604a0d96e2eb7d92f6feb04ea5510ee8bf49f336e",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:01.379Z"
+      },
+      "identity": {
+        "matchedName": "黃韻涵",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "岡山",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:01.379Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/4945170"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=王金平子弟兵、高雄8連霸 藍營戰將陸淑美將交棒女兒黃韻涵 fetched=王金平子弟兵、高雄8連霸 藍營戰將陸淑美將交棒女兒黃韻涵"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2025-02-08 fetched=2025-02-08"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 岡山、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5607505",
+      "headline": "高雄8連霸議員陸淑美最後一次總質詢 交棒給女兒",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5591488",
+      "headline": "凌晨4點掃市場！ 柯志恩啟動「市場陸戰日」全力拚搏",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573221",
+      "headline": "高雄市議員陸淑美從政40年交棒 6區6場感恩晚會謝鄉親",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5018808",
+      "headline": "8連霸高市議員陸淑美質詢中高齡就業難 自嘲退休可能找不到工作",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4566875",
+      "headline": "國民黨高雄青工總會長改選 李昶志︰盼與黃昭順主委一起打拚",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

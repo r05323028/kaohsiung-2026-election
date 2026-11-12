@@ -1,0 +1,292 @@
+{
+  "candidateId": "official-mayor-zhang-jing-2026",
+  "candidateName": "張靜",
+  "verifiedAt": "2026-11-12T16:27:41.287Z",
+  "articles": [
+    {
+      "articleId": "news-aa12dd74",
+      "candidateIds": [
+        "official-mayor-zhang-jing-2026"
+      ],
+      "headline": "司改黨高雄3位候選人都抽到「1號」 張靜：好兆頭",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5620545",
+      "publicationDate": "2026-10-27",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-27",
+      "retrievedAt": "2026-11-12T16:27:36.214Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "司改黨高雄3位候選人都抽到1號張靜好兆頭@2026-10-27",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "司法改革黨3位候選人分別投入高雄市長、議員、里長選舉，今號次抽籤結果全都是「1號」，身兼黨主席的市長參選人張靜認為，這是選戰好兆頭。司改黨高雄3位候選人，分別是黨主席張靜參選市長、前鎮與小港區市議員候選人李政憲、鹽埕區府北里長候選人葉傑成。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 張靜表示，3人同時抽中1號，對團隊而言是值得關注的巧合，也為接下來的選戰帶來好兆頭，不過選舉最終仍須回歸候選人理念、政見與實際行動，如何將抽籤帶來的話題轉化為選民認同，並提出符合市民需求的政策，才是參選團隊接下來的重要課題。除號次抽籤的好運，司改黨今也宣布政黨合作，原先已與台灣工黨及左翼聯盟展開合作，再邀請全民健康黨主席簡明廉出席，正式公布雙方合作方向，盼整合不同政黨的理念與資源，共同投入公共議題及選舉工作。簡明廉強調健康黨以「反針害、反藥害、反毒害」為主要主張，關注民眾健康、安全及相關公共政策議題，並宣布將全力支持張靜主席及司法改革黨所有候選人，希望透過政黨合作，讓相關理念獲得更多社會關注。",
+        "excerptSha256": "d622076ea7dc0361e9e7c5065ee49e269d47fdfeae2723bd83ff0cd1ab317a1e",
+        "documentSha256": "f1669f94a9dc72a1021a44b3550a8e0c4f71669631153fa658ee3b1a40d6503a",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:36.214Z"
+      },
+      "identity": {
+        "matchedName": "張靜",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "市議員",
+          "議員",
+          "司法改革黨"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:36.214Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5620545"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=司改黨高雄3位候選人都抽到「1號」 張靜：好兆頭 fetched=司改黨高雄3位候選人都抽到「1號」 張靜：好兆頭"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-27 fetched=2026-10-27"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、市議員、議員、司法改革黨"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    },
+    {
+      "articleId": "news-ed7d12f1",
+      "candidateIds": [
+        "official-mayor-zhang-jing-2026"
+      ],
+      "headline": "司改黨高雄市長參選人提交通三箭 張靜： 拆除或遷移「舊願景館」",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5579163",
+      "publicationDate": "2026-09-19",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-19",
+      "retrievedAt": "2026-11-12T16:27:38.016Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "司改黨高雄市長參選人提交通三箭張靜拆除或遷移舊願景館@2026-09-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "司法改革黨高雄市長參選人張靜今發表三公一體政見，其中交通三箭提到、拆除或遷移高雄火車站擋在馬路中間的舊願景館（帝冠車站），打通貫穿高雄南北大動脈的中博大道。張靜提出「三公一體」市政主張，以關公、包公、土地公分別對應安全、公平與財富，首場政見聚焦高雄土地公，以「開源節流、藏富於民」為核心，從增加市民收入、降低家庭支出、弱勢照顧、交通成本、居住負擔到產業發展等面向提出10項政策。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他的政見主張市府所屬公共運輸全面免費，包括捷運、輕軌、公車及船舶，市府所屬景點也主張免收門票，並提出「交通三箭」，一、拆除或遷移高雄火車站擋在馬路中間的舊願景館，打通貫穿高雄南北大動脈的「中博大道」；二、將原鐵路地下化後的現有路廊，改建為東西向的高雄市民大道；三、將高雄輕軌予以地下化成為高雄捷運環狀路線，原輕軌路面改為平面道路，減少市區平面交通瓶頸。交通執法方面，張靜提出應檢討檢舉及科技執法所產生的罰單制度，主張取消相關處罰，以降低市民申訴及訴訟成本；但這項主張涉及",
+        "excerptSha256": "f8dff90db0a6de5ab47db3ed57431e8cfbe3ae75c11a23922f0b9f559da6f9b8",
+        "documentSha256": "30b5723e3c1f3bc209ed3038e08bf7a5de626d581b2e7c05a602ee1a23d4464a",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:27:38.016Z"
+      },
+      "identity": {
+        "matchedName": "張靜",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "司法改革黨"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:27:38.016Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5579163"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=司改黨高雄市長參選人提交通三箭 張靜： 拆除或遷移「舊願景館」 fetched=司改黨高雄市長參選人提交通三箭 張靜： 拆除或遷移「舊願景館」"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-09-19 fetched=2026-09-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、司法改革黨"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "pending-review",
+        "policyVersion": "news-publication-policy-v1",
+        "decisionId": null,
+        "decidedAt": null,
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ],
+        "origin": null
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5627376",
+      "headline": "11/14高雄市長選舉公辦政見發表會 無提問無辯論",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
+      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
+      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
+      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
+      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1769401",
+      "headline": "高雄市長5搶1 賴瑞隆、柯志恩對決",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
+      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562588",
+      "headline": "下屆高雄市長已4人參戰 議員選舉累計90人登記",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5561125",
+      "headline": "2024擬參選正副總統 高雄市長選舉殺出第4人",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5557822",
+      "headline": "高雄市長選舉搶頭香的不是賴瑞隆、柯志恩 「他」由張俊宏陪同登記",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    }
+  ]
+}

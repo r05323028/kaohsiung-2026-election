@@ -273,7 +273,6 @@ export default function PoliticalFamilyGraph({
   const [selectedRelationshipId, setSelectedRelationshipId] = useState<
     string | null
   >(null);
-  const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState<Point>({ x: 0, y: 0 });
   const dragRef = useRef<DragState | null>(null);
   const familyResetKey = `${family?.people.map((person) => person.id).join(',') ?? ''}|${family?.relationships.map((relationship) => relationship.id).join(',') ?? ''}`;
@@ -282,7 +281,6 @@ export default function PoliticalFamilyGraph({
     void familyResetKey;
     setSelectedId(candidate.person.id);
     setSelectedRelationshipId(null);
-    setZoom(1);
     setPan({ x: 0, y: 0 });
     dragRef.current = null;
   }, [candidate.person.id, familyResetKey]);
@@ -383,8 +381,8 @@ export default function PoliticalFamilyGraph({
     const drag = dragRef.current;
     if (!drag) return;
     setPan({
-      x: drag.panX + (event.clientX - drag.x) / zoom,
-      y: drag.panY + (event.clientY - drag.y) / zoom,
+      x: drag.panX + (event.clientX - drag.x),
+      y: drag.panY + (event.clientY - drag.y),
     });
   };
   const endPan = (event: ReactPointerEvent<SVGSVGElement>) => {
@@ -420,28 +418,13 @@ export default function PoliticalFamilyGraph({
         <button
           type="button"
           className="tab-button"
-          onClick={() => setZoom((value) => Math.min(2, value + 0.15))}
-        >
-          放大
-        </button>
-        <button
-          type="button"
-          className="tab-button"
-          onClick={() => setZoom((value) => Math.max(0.65, value - 0.15))}
-        >
-          縮小
-        </button>
-        <button
-          type="button"
-          className="tab-button"
           onClick={() => {
-            setZoom(1);
             setPan({ x: 0, y: 0 });
           }}
         >
           符合視圖
         </button>
-        <span className="info-note">可拖曳、滾輪縮放，選取節點查看資料。</span>
+        <span className="info-note">可拖曳，選取節點查看資料。</span>
       </fieldset>
       <div className="political-family-canvas">
         <svg
@@ -452,18 +435,9 @@ export default function PoliticalFamilyGraph({
           onPointerMove={onPointerMove}
           onPointerUp={endPan}
           onPointerCancel={endPan}
-          onWheel={(event) => {
-            event.preventDefault();
-            setZoom((value) =>
-              Math.min(
-                2,
-                Math.max(0.65, value + (event.deltaY < 0 ? 0.1 : -0.1)),
-              ),
-            );
-          }}
         >
           <title id="political-family-graph-title">候選人家族從政關係圖</title>
-          <g transform={`translate(${pan.x} ${pan.y}) scale(${zoom})`}>
+          <g transform={`translate(${pan.x} ${pan.y})`}>
             {family.relationships.map((relationship) => {
               const pointA = layout.points.get(relationship.personAId);
               const pointB = layout.points.get(relationship.personBId);

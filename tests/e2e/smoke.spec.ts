@@ -81,6 +81,12 @@ test('candidate family tab shows verified graph details and sources', async ({
   ).toBeVisible();
   await profile.getByRole('tab', { name: '家族從政關係', exact: true }).click();
   await expect(profile.getByTestId('political-family-graph')).toBeVisible();
+  await expect(
+    profile.getByRole('button', { name: '放大', exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    profile.getByRole('button', { name: '縮小', exact: true }),
+  ).toHaveCount(0);
   const relative = profile
     .locator('.political-family-node__button')
     .filter({ hasText: '柯文福' });

@@ -1,0 +1,671 @@
+{
+  "datasetId": "kaohsiung-2026-political-family-research",
+  "generatedAt": "2026-11-12T00:00:00.000Z",
+  "snapshotDate": "2026-11-05",
+  "sources": [
+    {
+      "id": "tvbs-lee-meizhen",
+      "publisher": "TVBS",
+      "title": "三連霸議員披掛上陣 李眉蓁父親：這仗不好打",
+      "url": "https://news.tvbs.com.tw/politics/1343968",
+      "publicationDate": "2020-06-23",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-6484c551e366",
+        "claim-family-relation-6aff8df8d856-kinship"
+      ]
+    },
+    {
+      "id": "kcc-s907",
+      "publisher": "高雄市議會",
+      "title": "李榮宗議員總質詢摘要",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=907",
+      "publicationDate": "2005-06-07",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-6484c551e366",
+        "claim-family-relation-6aff8df8d856-kinship"
+      ]
+    },
+    {
+      "id": "kcc-pn4",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員名錄",
+      "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-17d6231c3a66",
+        "claim-career-3a5d3f55e9de",
+        "claim-career-6484c551e366",
+        "claim-career-a42095f52680",
+        "claim-career-d3f6a8bdbfa4",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-36ecb8363f0a-kinship",
+        "claim-family-relation-4217d77d4e13-kinship",
+        "claim-family-relation-6aff8df8d856-kinship",
+        "claim-family-relation-af1a86b13206-kinship",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "family-politics-yahoo",
+      "publisher": "Yahoo奇摩／新頭殼",
+      "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+      "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+      "publicationDate": "2022-05-18",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-17d6231c3a66",
+        "claim-career-3a5d3f55e9de",
+        "claim-career-d3f6a8bdbfa4",
+        "claim-family-relation-36ecb8363f0a-kinship",
+        "claim-family-relation-4217d77d4e13-kinship",
+        "claim-family-relation-af1a86b13206-kinship"
+      ]
+    },
+    {
+      "id": "ct-chen-guan-yu",
+      "publisher": "中國時報",
+      "title": "高市左楠區議員選戰震撼彈 無黨籍陳善慧交棒兒子陳冠宇",
+      "url": "https://www.chinatimes.com/realtimenews/20260810003330-260407",
+      "publicationDate": "2026-08-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-f921f2da2e57",
+        "claim-family-relation-a2e1a7508e41-kinship"
+      ]
+    },
+    {
+      "id": "cdn-chen-guan-yu",
+      "publisher": "中華日報",
+      "title": "陳善慧交棒兒子陳冠宇 兩代攜手持續深耕左楠",
+      "url": "https://www.cdns.com.tw/articles/1442238",
+      "publicationDate": "2026-08-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-f921f2da2e57",
+        "claim-family-relation-a2e1a7508e41-kinship"
+      ]
+    },
+    {
+      "id": "kcc-chen-shan-hui",
+      "publisher": "高雄市議會",
+      "title": "Kaohsiung City Council-Councilors-陳善慧",
+      "url": "https://www.kcc.gov.tw/en/MemberInfo_New.aspx?n=10&sms=0&msn=2248",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-f921f2da2e57",
+        "claim-family-relation-a2e1a7508e41-kinship"
+      ]
+    },
+    {
+      "id": "ltn-cai-jinyan",
+      "publisher": "自由時報",
+      "title": "《博士代父出征》蔡松雄之子蔡金晏 吳敦義背書",
+      "url": "https://news.ltn.com.tw/news/local/paper/402524",
+      "publicationDate": "2010-06-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-a42095f52680",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "kcc-s376",
+      "publisher": "高雄市議會",
+      "title": "副議長蔡松雄探視因公殉職員警家屬",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=376",
+      "publicationDate": "2003-11-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-a42095f52680",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "kcc-pn6",
+      "publisher": "高雄市議會",
+      "title": "智慧的傳承",
+      "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-a42095f52680",
+        "claim-career-bd782e3279e4",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-e6e4bc080be7-kinship",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "setn-huang",
+      "publisher": "三立新聞網",
+      "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+      "url": "https://www.setn.com/news/166101",
+      "publicationDate": "2016-07-20",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-4325a4ababed",
+        "claim-career-bd782e3279e4",
+        "claim-family-relation-210f4307be00-kinship",
+        "claim-family-relation-e6e4bc080be7-kinship"
+      ]
+    },
+    {
+      "id": "kcc-s3443",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員回娘家，六位議長首度齊聚",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=3443",
+      "publicationDate": "2015-11-19",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-bd782e3279e4",
+        "claim-family-relation-e6e4bc080be7-kinship"
+      ]
+    },
+    {
+      "id": "ly-hou",
+      "publisher": "立法院",
+      "title": "Legislative Yuan -侯彩鳳委員",
+      "url": "https://www.ly.gov.tw/EngPages/List.aspx?nodeid=1403",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-4325a4ababed",
+        "claim-family-relation-210f4307be00-kinship"
+      ]
+    },
+    {
+      "id": "ly-pdf",
+      "publisher": "立法院",
+      "title": "立法委員名錄",
+      "url": "https://data.ly.gov.tw/legislator.pdf",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-4325a4ababed",
+        "claim-family-relation-210f4307be00-kinship"
+      ]
+    },
+    {
+      "id": "kcc-liyahui",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-李雅慧",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ltn-zhang-yili",
+      "publisher": "自由時報",
+      "title": "高雄出現首面蕭美琴助選看板 助選對象是這位「青年」",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5324730",
+      "publicationDate": "2026-01-28",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "mirror-zhang-yili",
+      "publisher": "鏡週刊／三立",
+      "title": "八包煎餃張以理親弟竟是超大咖樂團貝斯手",
+      "url": "https://www.mirrormedia.mg/external/setn_1930767",
+      "publicationDate": "2026-10-30",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-chenlizhen",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-陳麗珍",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-huangfeifeng",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-黃飛鳳",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "cdns-ruocui",
+      "publisher": "中華日報",
+      "title": "同鄉會力挺雲林女兒 理事長李樑堅籲將陳若翠送進國會",
+      "url": "https://www.cdns.com.tw/articles/842244",
+      "publicationDate": "2023-07-25",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-liqiaoru",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-李喬如",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ltn-liqiaoru",
+      "publisher": "自由時報",
+      "title": "李喬如退會與綠營派系有關？湧言會：對姐姐尊敬不變",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4138047",
+      "publicationDate": "2022-11-28",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-tong",
+      "publisher": "高雄市議會",
+      "title": "市議員童燕珍父親與世長辭",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=769",
+      "publicationDate": "2005-02-21",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ct-zhang-boyang",
+      "publisher": "中國時報",
+      "title": "他挺罷韓 爸爸卻戴一頂「穿雲箭」帽子",
+      "url": "https://www.chinatimes.com/realtimenews/20200524004245-260407",
+      "publicationDate": "2020-05-24",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ct-cai-family-403",
+      "publisher": "中國時報",
+      "title": "都會人物－服務選民 蔡金晏跟隨父親腳步",
+      "url": "https://www.chinatimes.com/newspapers/20100611000522-260107",
+      "publicationDate": "2010-06-11",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-LTN",
+      "publisher": "自由時報搜尋",
+      "title": "公開政治資料",
+      "url": "https://search.ltn.com.tw/list?keyword={candidate}",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-ET",
+      "publisher": "ETtoday搜尋",
+      "title": "公開政治資料",
+      "url": "https://www.ettoday.net/news_search/doSearch.php?keywords={candidate}",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-GNEWS",
+      "publisher": "Google News RSS",
+      "title": "公開政治資料",
+      "url": "https://news.google.com/rss/search?q={candidate}+親屬",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-BING",
+      "publisher": "Bing RSS",
+      "title": "公開政治資料",
+      "url": "https://www.bing.com/search?format=rss&q={candidate}+親屬",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-KCC",
+      "publisher": "高雄市議會",
+      "title": "公開政治資料",
+      "url": "https://www.kcc.gov.tw/Member_List3.aspx?n=39&sms=9028",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-KCC-S34",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-2368f9ecdf7d",
+        "claim-career-eae378523f1b",
+        "claim-family-relation-ee71b14063dd-kinship",
+        "claim-family-relation-f244c50b3a12-kinship"
+      ]
+    },
+    {
+      "id": "S-KCC-S32",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-160e87f95877",
+        "claim-family-relation-8eb9afeeeda1-kinship"
+      ]
+    },
+    {
+      "id": "S-CAI-KIN",
+      "publisher": "ETtoday新聞雲",
+      "title": "議員變小王！蔡武宏政二代出身　搭上韓流列車再翻身",
+      "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+      "publicationDate": "2021-12-02",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-eae378523f1b",
+        "claim-family-relation-ee71b14063dd-kinship"
+      ]
+    },
+    {
+      "id": "S-CHEN-KIN",
+      "publisher": "Newtalk新聞",
+      "title": "立委選情初探》高市第八選區在地「揭弊大將」挑戰花媽子弟兵",
+      "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+      "publicationDate": "2019-09-07",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-160e87f95877",
+        "claim-career-2368f9ecdf7d",
+        "claim-family-relation-8eb9afeeeda1-kinship",
+        "claim-family-relation-f244c50b3a12-kinship"
+      ]
+    },
+    {
+      "id": "S-CHEN-KIN2",
+      "publisher": "自由時報",
+      "title": "曾引藍營風暴！高雄女議員又傳離婚 與夫熱吻闢謠",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4116913",
+      "publicationDate": "2022-11-09",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-2368f9ecdf7d",
+        "claim-family-relation-f244c50b3a12-kinship"
+      ]
+    },
+    {
+      "id": "S-WANG",
+      "publisher": "自由時報",
+      "title": "打造林園「王家班」王國發病逝",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+      "publicationDate": "2016-01-06",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-174aebfb193a",
+        "claim-career-82b2a7cb3cf8",
+        "claim-career-ae360531d447",
+        "claim-family-relation-242df6a1eed4-kinship",
+        "claim-family-relation-a6fb10f6525c-kinship",
+        "claim-family-relation-ab081ea17938-kinship"
+      ]
+    },
+    {
+      "id": "S-ZHENG-REJECT",
+      "publisher": "民視/Yahoo新聞",
+      "title": "女兒人氣比爸旺！高雄市議員鄭光峰欣慰",
+      "url": "https://tw.news.yahoo.com/%E5%A5%B3%E5%85%92%E4%BA%BA%E6%B0%A3%E6%AF%94%E7%88%B8%E6%97%BA-%E9%AB%98%E9%9B%84%E5%B8%82%E8%AD%B0%E5%93%A1%E9%84%AD%E5%85%89%E5%B3%B0%E6%AC%A3%E6%85%B0-102521666.html",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-GAO-REJECT",
+      "publisher": "自由時報",
+      "title": "高市議員高忠德證實外孫姪女遇劫",
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5127455",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-JIN-REJECT",
+      "publisher": "自由時報",
+      "title": "高雄原民議員范織欽不選了　推薦原民女歌手接棒",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5549492",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "source-cna-20220807-aipl-202208070082",
+      "publisher": "中央社 CNA",
+      "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽 | 政治 | 中央社 CNA",
+      "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+      "publicationDate": "2022-08-07",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-1c344783a9bb",
+        "claim-career-867e717d1843",
+        "claim-career-e08640f82858",
+        "claim-family-relation-22f595914bcb-kinship"
+      ]
+    },
+    {
+      "id": "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+      "publisher": "壹蘋新聞網",
+      "title": "政壇二代拚接班！年輕高學歷來勢洶洶　高雄政壇年底再洗牌｜壹蘋新聞網",
+      "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+      "publicationDate": "2026-06-08",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-138a562cf646",
+        "claim-career-8a82e2ac8612",
+        "claim-family-relation-6ae7bea727b5-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-history-36",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-138a562cf646",
+        "claim-career-8a82e2ac8612",
+        "claim-career-ce74a1d61c38",
+        "claim-family-relation-6ae7bea727b5-kinship",
+        "claim-family-relation-70b55a776537-kinship"
+      ]
+    },
+    {
+      "id": "source-newtalk-20220518-756501",
+      "publisher": "Newtalk新聞",
+      "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+      "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+      "publicationDate": "2022-05-18",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-141636f2738a",
+        "claim-career-2436047ecdf7",
+        "claim-career-4d85f4208f72",
+        "claim-career-7289b0c387b4",
+        "claim-career-830d49f80859",
+        "claim-career-dee563838d85",
+        "claim-career-e78ba1b4eba2",
+        "claim-family-relation-164537f443ae-kinship",
+        "claim-family-relation-7d04ca773aab-kinship",
+        "claim-family-relation-80f4968123d8-kinship",
+        "claim-family-relation-e60cca817792-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-history-37",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-141636f2738a",
+        "claim-career-2436047ecdf7",
+        "claim-career-4d85f4208f72",
+        "claim-career-830d49f80859",
+        "claim-career-e78ba1b4eba2",
+        "claim-family-relation-80f4968123d8-kinship",
+        "claim-family-relation-e60cca817792-kinship"
+      ]
+    },
+    {
+      "id": "source-udn-20260807-9676613",
+      "publisher": "聯合新聞網",
+      "title": "高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+      "url": "https://udn.com/news/story/124652/9676613",
+      "publicationDate": "2026-08-07",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-a285dada8322",
+        "claim-career-bb1ecf9499de",
+        "claim-career-cdbaa8dfd913",
+        "claim-career-dc5b95f4c263",
+        "claim-career-ea149203e096",
+        "claim-career-fe68fd492bb7",
+        "claim-family-relation-33a6d10c9017-kinship",
+        "claim-family-relation-f5bb917c6f5d-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-profile-2176",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "本屆議員-陳明澤",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-a285dada8322",
+        "claim-career-bb1ecf9499de",
+        "claim-family-relation-33a6d10c9017-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-profile-2180",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "本屆議員-陸淑美",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-cdbaa8dfd913",
+        "claim-career-dc5b95f4c263",
+        "claim-career-ea149203e096",
+        "claim-career-fe68fd492bb7",
+        "claim-family-relation-f5bb917c6f5d-kinship"
+      ]
+    },
+    {
+      "id": "source-chinatimes-20220919-260407",
+      "publisher": "中時新聞網",
+      "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+      "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+      "publicationDate": "2022-09-19",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-ce74a1d61c38",
+        "claim-family-relation-70b55a776537-kinship"
+      ]
+    },
+    {
+      "id": "source-chinatimes-20221125-260407",
+      "publisher": "中時新聞網",
+      "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+      "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+      "publicationDate": "2022-11-25",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-09a7ec658f10",
+        "claim-family-relation-5c384c5d1a36-kinship"
+      ]
+    },
+    {
+      "id": "source-ltn-20260904-5563213",
+      "publisher": "自由時報電子報",
+      "title": "「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+      "publicationDate": "2026-09-04",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-eea9d035cef5",
+        "claim-family-relation-ec9a32792e1b-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-member-2210",
+      "publisher": "高雄市議會",
+      "title": "高雄市議會全球網-中文網-本屆議員-黃紹庭",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2210",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-eea9d035cef5",
+        "claim-family-relation-ec9a32792e1b-kinship"
+      ]
+    }
+  ]
+}

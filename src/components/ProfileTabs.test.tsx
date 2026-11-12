@@ -5,12 +5,13 @@ import { officialCandidateProfiles } from '../data/official';
 import { collectNewsCards, PROFILE_TABS } from './ProfileTabs';
 
 describe('candidate profile section structure', () => {
-  it('exposes exactly the four production sections in Traditional Chinese', () => {
+  it('exposes exactly the five production sections in Traditional Chinese', () => {
     expect(PROFILE_TABS).toEqual([
       { id: 'basic', label: '基本資料' },
       { id: 'policies', label: '政策主張' },
       { id: 'news', label: '相關新聞' },
       { id: 'career', label: '從政歷程' },
+      { id: 'family', label: '家族從政關係' },
     ]);
   });
 

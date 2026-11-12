@@ -1,0 +1,6132 @@
+{
+  "generatedAt": "2026-11-12T00:00:00.000Z",
+  "researchers": [
+    "researcher-a1.json",
+    "researcher-a2.json",
+    "researcher-a3.json",
+    "researcher-a4.json"
+  ],
+  "rows": [
+    {
+      "sequence": 1,
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "displayName": "張靜",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"張靜\" 政治世家",
+        "\"張靜\" 父親 議員",
+        "\"張靜\" 母親 議員",
+        "\"張靜\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E5%BC%B5%E9%9D%9C%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E5%BC%B5%E9%9D%9C%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 2,
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "displayName": "王肇民",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"王肇民\" 政治世家",
+        "\"王肇民\" 父親 議員",
+        "\"王肇民\" 母親 議員",
+        "\"王肇民\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E7%8E%8B%E8%82%87%E6%B0%91%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E7%8E%8B%E8%82%87%E6%B0%91%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://news.ebc.net.tw/news/politics/579444"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 3,
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "displayName": "柯志恩",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"柯志恩\" 政治世家",
+        "\"柯志恩\" 父親 議員",
+        "\"柯志恩\" 母親 議員",
+        "\"柯志恩\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9F%AF%E5%BF%97%E6%81%A9%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9F%AF%E5%BF%97%E6%81%A9%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://www.cna.com.tw/news/aipl/202208070082.aspx"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:ke-wen-fu",
+          "relativeName": "柯文福",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "屏東縣長",
+              "organization": "屏東縣",
+              "status": "former",
+              "start": "第7屆",
+              "end": "第8屆"
+            },
+            {
+              "officeTitle": "台灣省政府委員",
+              "organization": "台灣省政府",
+              "status": "former",
+              "start": null,
+              "end": null
+            },
+            {
+              "officeTitle": "僑委會副委員長",
+              "organization": "僑務委員會",
+              "status": "former",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-cna-20220807-aipl-202208070082"
+          ],
+          "careerSourceIds": [
+            "source-cna-20220807-aipl-202208070082"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-cna-20220807-aipl-202208070082",
+              "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽 | 政治 | 中央社 CNA",
+              "publisher": "中央社 CNA",
+              "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+              "publicationDate": "2022-08-07T13:49:00+08:00",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 4,
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "displayName": "洪方隆",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"洪方隆\" 政治世家",
+        "\"洪方隆\" 父親 議員",
+        "\"洪方隆\" 母親 議員",
+        "\"洪方隆\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%B4%AA%E6%96%B9%E9%9A%86%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%B4%AA%E6%96%B9%E9%9A%86%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 5,
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "displayName": "賴瑞隆",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"賴瑞隆\" 政治世家",
+        "\"賴瑞隆\" 父親 議員",
+        "\"賴瑞隆\" 母親 議員",
+        "\"賴瑞隆\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E8%B3%B4%E7%91%9E%E9%9A%86%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E8%B3%B4%E7%91%9E%E9%9A%86%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 6,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "displayName": "李振豪",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"李振豪\" 政治世家",
+        "\"李振豪\" 父親 議員",
+        "\"李振豪\" 母親 議員",
+        "\"李振豪\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E6%8C%AF%E8%B1%AA%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E6%8C%AF%E8%B1%AA%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:li-hong-jun",
+          "relativeName": "李鴻鈞",
+          "relation": "兒子",
+          "career": [
+            {
+              "officeTitle": "議員",
+              "organization": "高雄縣議會",
+              "status": "former",
+              "start": "第15屆",
+              "end": "第16屆"
+            },
+            {
+              "officeTitle": "議員",
+              "organization": "高雄市議會",
+              "status": "former／已解職",
+              "start": "第1屆",
+              "end": "第1屆（101.6.21解職）"
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3"
+          ],
+          "careerSourceIds": [
+            "source-kcc-history-36"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+              "title": "政壇二代拚接班！年輕高學歷來勢洶洶　高雄政壇年底再洗牌｜壹蘋新聞網",
+              "publisher": "壹蘋新聞網",
+              "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+              "publicationDate": "2026-06-08T17:37:00+08:00",
+              "retrievedAt": "2026-11-12"
+            },
+            {
+              "sourceId": "source-kcc-history-36",
+              "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+              "publisher": "高雄市議會全球網-中文網",
+              "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+              "publicationDate": "2019-02-27",
+              "retrievedAt": "2026-11-06"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 7,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "displayName": "林義迪",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"林義迪\" 政治世家",
+        "\"林義迪\" 父親 議員",
+        "\"林義迪\" 母親 議員",
+        "\"林義迪\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9E%97%E7%BE%A9%E8%BF%AA%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9E%97%E7%BE%A9%E8%BF%AA%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 8,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "displayName": "林慧欣",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"林慧欣\" 政治世家",
+        "\"林慧欣\" 父親 議員",
+        "\"林慧欣\" 母親 議員",
+        "\"林慧欣\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9E%97%E6%85%A7%E6%AC%A3%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9E%97%E6%85%A7%E6%AC%A3%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:lu-tian-lin",
+          "relativeName": "盧天麟",
+          "relation": "外甥女（舅舅）",
+          "career": [
+            {
+              "officeTitle": "立法委員／立委",
+              "organization": null,
+              "status": "not-stated",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-newtalk-20220518-756501"
+          ],
+          "careerSourceIds": [
+            "source-newtalk-20220518-756501"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-newtalk-20220518-756501",
+              "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+              "publisher": "Newtalk新聞",
+              "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+              "publicationDate": "2022-05-18T01:35:44.000Z",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 9,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "displayName": "鍾炳光",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"鍾炳光\" 政治世家",
+        "\"鍾炳光\" 父親 議員",
+        "\"鍾炳光\" 母親 議員",
+        "\"鍾炳光\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%8D%BE%E7%82%B3%E5%85%89%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%8D%BE%E7%82%B3%E5%85%89%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 10,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "displayName": "林富寶",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"林富寶\" 政治世家",
+        "\"林富寶\" 父親 議員",
+        "\"林富寶\" 母親 議員",
+        "\"林富寶\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9E%97%E5%AF%8C%E5%AF%B6%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9E%97%E5%AF%8C%E5%AF%B6%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": []
+    },
+    {
+      "sequence": 11,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "displayName": "李柏融",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"李柏融\" 政治世家",
+        "\"李柏融\" 父親 議員",
+        "\"李柏融\" 母親 議員",
+        "\"李柏融\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E6%9F%8F%E8%9E%8D%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E6%9F%8F%E8%9E%8D%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": []
+    },
+    {
+      "sequence": 12,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "displayName": "李亞築",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"李亞築\" 政治世家",
+        "\"李亞築\" 父親 議員",
+        "\"李亞築\" 母親 議員",
+        "\"李亞築\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E4%BA%9E%E7%AF%89%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E4%BA%9E%E7%AF%89%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://newtalk.tw/news/view/2022-05-18/756501",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:li-chang-sheng",
+          "relativeName": "李長生",
+          "relation": "女兒",
+          "career": [
+            {
+              "officeTitle": "議員",
+              "organization": "高雄縣議會",
+              "status": "former",
+              "start": "第13屆",
+              "end": "第16屆"
+            },
+            {
+              "officeTitle": "議員",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "第1屆",
+              "end": "第2屆"
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-newtalk-20220518-756501"
+          ],
+          "careerSourceIds": [
+            "source-kcc-history-37"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-newtalk-20220518-756501",
+              "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+              "publisher": "Newtalk新聞",
+              "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+              "publicationDate": "2022-05-18T01:35:44.000Z",
+              "retrievedAt": "2026-11-12"
+            },
+            {
+              "sourceId": "source-kcc-history-37",
+              "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+              "publisher": "高雄市議會全球網-中文網",
+              "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+              "publicationDate": "2019-02-27",
+              "retrievedAt": "2026-11-06"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 13,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "displayName": "黃明太",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"黃明太\" 政治世家",
+        "\"黃明太\" 父親 議員",
+        "\"黃明太\" 母親 議員",
+        "\"黃明太\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%BB%83%E6%98%8E%E5%A4%AA%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%BB%83%E6%98%8E%E5%A4%AA%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": []
+    },
+    {
+      "sequence": 14,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "displayName": "陳琳潔",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"陳琳潔\" 政治世家",
+        "\"陳琳潔\" 父親 議員",
+        "\"陳琳潔\" 母親 議員",
+        "\"陳琳潔\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%99%B3%E7%90%B3%E6%BD%94%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%99%B3%E7%90%B3%E6%BD%94%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://udn.com/news/story/124652/9676613",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:chen-ming-ze",
+          "relativeName": "陳明澤",
+          "relation": "女兒",
+          "career": [
+            {
+              "officeTitle": "議員",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "第1屆",
+              "end": "第3屆"
+            },
+            {
+              "officeTitle": "議員",
+              "organization": "高雄縣議會",
+              "status": "former",
+              "start": "第15屆",
+              "end": "第16屆"
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-udn-20260807-9676613"
+          ],
+          "careerSourceIds": [
+            "source-kcc-profile-2176"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-udn-20260807-9676613",
+              "title": "高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+              "publisher": "聯合新聞網",
+              "url": "https://udn.com/news/story/124652/9676613",
+              "publicationDate": "2026-08-07T10:29:48+08:00",
+              "retrievedAt": "2026-11-06"
+            },
+            {
+              "sourceId": "source-kcc-profile-2176",
+              "title": "本屆議員-陳明澤",
+              "publisher": "高雄市議會全球網-中文網",
+              "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176",
+              "publicationDate": "2019-02-27",
+              "retrievedAt": "2026-11-06"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 15,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "displayName": "鄭東元",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"鄭東元\" 政治世家",
+        "\"鄭東元\" 父親 議員",
+        "\"鄭東元\" 母親 議員",
+        "\"鄭東元\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%84%AD%E6%9D%B1%E5%85%83%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%84%AD%E6%9D%B1%E5%85%83%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": []
+    },
+    {
+      "sequence": 16,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "displayName": "方信淵",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"方信淵\" 政治世家",
+        "\"方信淵\" 父親 議員",
+        "\"方信淵\" 母親 議員",
+        "\"方信淵\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%96%B9%E4%BF%A1%E6%B7%B5%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%96%B9%E4%BF%A1%E6%B7%B5%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": []
+    },
+    {
+      "sequence": 17,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "displayName": "張驥晟",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"張驥晟\" 政治世家",
+        "\"張驥晟\" 父親 議員",
+        "\"張驥晟\" 母親 議員",
+        "\"張驥晟\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E5%BC%B5%E9%A9%A5%E6%99%9F%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E5%BC%B5%E9%A9%A5%E6%99%9F%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://www.cna.com.tw/news/asoc/202610130013.aspx",
+        "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3"
+      ],
+      "outcome": "unresolved",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "claim": "張騏晟是張漢雄之子；張漢雄為前高雄市海洋局長",
+          "status": "ambiguous-not-linked",
+          "stablePersonKeySuggestion": "person:zhang-han-xiong",
+          "relation": "兒子",
+          "career": [
+            {
+              "officeTitle": "局長",
+              "organization": "高雄市海洋局",
+              "status": "former",
+              "start": null,
+              "end": null
+            }
+          ],
+          "sourceIds": [
+            "source-cna-20261013-asoc-202610130013",
+            "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-cna-20261013-asoc-202610130013",
+              "title": "高雄議員參選人張騏晟涉賄選 前海洋局長張漢雄父子3人聲押 | 社會 | 中央社 CNA",
+              "publisher": "中央社 CNA",
+              "url": "https://www.cna.com.tw/news/asoc/202610130013.aspx",
+              "publicationDate": "2026-10-13T08:18:00+08:00",
+              "retrievedAt": "2026-11-12"
+            },
+            {
+              "sourceId": "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+              "title": "政壇二代拚接班！年輕高學歷來勢洶洶　高雄政壇年底再洗牌｜壹蘋新聞網",
+              "publisher": "壹蘋新聞網",
+              "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+              "publicationDate": "2026-06-08T17:37:00+08:00",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "reason": "候選人名冊為「張驥晟」，兩篇來源均為「張騏晟」；尚無來源協調此字形差異，故不連結。"
+        }
+      ]
+    },
+    {
+      "sequence": 18,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "displayName": "宋立彬",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"宋立彬\" 政治世家",
+        "\"宋立彬\" 父親 議員",
+        "\"宋立彬\" 母親 議員",
+        "\"宋立彬\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E5%AE%8B%E7%AB%8B%E5%BD%AC%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E5%AE%8B%E7%AB%8B%E5%BD%AC%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "claim": "「從父親服務鄉親」未具名敘述",
+          "status": "rejected",
+          "sourceIds": [],
+          "reason": "父親姓名與政治職務均未明示；搜尋摘要不作證據。"
+        }
+      ]
+    },
+    {
+      "sequence": 19,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "displayName": "蔣黃女",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"蔣黃女\" 政治世家",
+        "\"蔣黃女\" 父親 議員",
+        "\"蔣黃女\" 母親 議員",
+        "\"蔣黃女\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E8%94%A3%E9%BB%83%E5%A5%B3%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E8%94%A3%E9%BB%83%E5%A5%B3%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "claim": "發現親屬陪同相關敘述",
+          "status": "rejected",
+          "sourceIds": [],
+          "reason": "未取得具名親屬的政治職務／政治生涯證據；搜尋摘要不作證據。"
+        }
+      ]
+    },
+    {
+      "sequence": 20,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "displayName": "黃秋媛",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"黃秋媛\" 政治世家",
+        "\"黃秋媛\" 父親 議員",
+        "\"黃秋媛\" 母親 議員",
+        "\"黃秋媛\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%BB%83%E7%A7%8B%E5%AA%9B%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%BB%83%E7%A7%8B%E5%AA%9B%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [],
+      "notes": "KCC／CEC另見黃秋媖，名冊為黃秋媛；未找到合格親屬關係。"
+    },
+    {
+      "sequence": 21,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "displayName": "林志誠",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"林志誠\" 政治世家",
+        "\"林志誠\" 父親 議員",
+        "\"林志誠\" 母親 議員",
+        "\"林志誠\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9E%97%E5%BF%97%E8%AA%A0%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9E%97%E5%BF%97%E8%AA%A0%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": []
+    },
+    {
+      "sequence": 22,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "displayName": "黃韻涵",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"黃韻涵\" 政治世家",
+        "\"黃韻涵\" 父親 議員",
+        "\"黃韻涵\" 母親 議員",
+        "\"黃韻涵\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%BB%83%E9%9F%BB%E6%B6%B5%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%BB%83%E9%9F%BB%E6%B6%B5%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://udn.com/news/story/124652/9676613",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:lu-shu-mei",
+          "relativeName": "陸淑美",
+          "relation": "女兒",
+          "career": [
+            {
+              "officeTitle": "副議長",
+              "organization": "高雄市",
+              "status": "former",
+              "start": "第3屆",
+              "end": "第3屆"
+            },
+            {
+              "officeTitle": "市議員",
+              "organization": "高雄市",
+              "status": "former",
+              "start": "第1屆",
+              "end": "第3屆"
+            },
+            {
+              "officeTitle": "副議長",
+              "organization": "高雄縣",
+              "status": "former",
+              "start": "第15屆",
+              "end": "第16屆"
+            },
+            {
+              "officeTitle": "縣議員",
+              "organization": "高雄縣",
+              "status": "former",
+              "start": "第13屆",
+              "end": "第16屆"
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-udn-20260807-9676613"
+          ],
+          "careerSourceIds": [
+            "source-kcc-profile-2180"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-udn-20260807-9676613",
+              "title": "高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+              "publisher": "聯合新聞網",
+              "url": "https://udn.com/news/story/124652/9676613",
+              "publicationDate": "2026-08-07T10:29:48+08:00",
+              "retrievedAt": "2026-11-06"
+            },
+            {
+              "sourceId": "source-kcc-profile-2180",
+              "title": "本屆議員-陸淑美",
+              "publisher": "高雄市議會全球網-中文網",
+              "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+              "publicationDate": "2019-02-27",
+              "retrievedAt": "2026-11-06"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 23,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+      "displayName": "蔡秉穎",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"蔡秉穎\" 政治世家",
+        "\"蔡秉穎\" 父親 議員",
+        "\"蔡秉穎\" 母親 議員",
+        "\"蔡秉穎\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E8%94%A1%E7%A7%89%E7%A9%8E%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E8%94%A1%E7%A7%89%E7%A9%8E%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [],
+      "notes": "CEC／新聞另見蔡秉璁，名冊為蔡秉穎；未找到合格親屬關係。"
+    },
+    {
+      "sequence": 24,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "displayName": "黃文志",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"黃文志\" 政治世家",
+        "\"黃文志\" 父親 議員",
+        "\"黃文志\" 母親 議員",
+        "\"黃文志\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%BB%83%E6%96%87%E5%BF%97%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E9%BB%83%E6%96%87%E5%BF%97%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://newtalk.tw/news/view/2022-05-18/756501",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:huang-shi-long",
+          "relativeName": "黃石龍",
+          "relation": "兒子",
+          "career": [
+            {
+              "officeTitle": "副議長",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": null,
+              "end": null
+            },
+            {
+              "officeTitle": "議員",
+              "organization": "合併前高雄市議會",
+              "status": "former",
+              "start": "第5屆",
+              "end": "第7屆"
+            },
+            {
+              "officeTitle": "議員",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "第1屆",
+              "end": "第2屆"
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-newtalk-20220518-756501"
+          ],
+          "careerSourceIds": [
+            "source-newtalk-20220518-756501",
+            "source-kcc-history-37"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-newtalk-20220518-756501",
+              "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+              "publisher": "Newtalk新聞",
+              "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+              "publicationDate": "2022-05-18T01:35:44.000Z",
+              "retrievedAt": "2026-11-12"
+            },
+            {
+              "sourceId": "source-kcc-history-37",
+              "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+              "publisher": "高雄市議會全球網-中文網",
+              "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+              "publicationDate": "2019-02-27",
+              "retrievedAt": "2026-11-06"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 25,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "displayName": "李雅芬",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"李雅芬\" 政治世家",
+        "\"李雅芬\" 父親 議員",
+        "\"李雅芬\" 母親 議員",
+        "\"李雅芬\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E9%9B%85%E8%8A%AC%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9D%8E%E9%9B%85%E8%8A%AC%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:li-shui-shu",
+          "relativeName": "李水樹",
+          "relation": "女兒",
+          "career": [
+            {
+              "officeTitle": "里長",
+              "organization": "楠梓區中和里",
+              "status": "not-stated",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-newtalk-20220518-756501"
+          ],
+          "careerSourceIds": [
+            "source-newtalk-20220518-756501"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-newtalk-20220518-756501",
+              "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+              "publisher": "Newtalk新聞",
+              "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+              "publicationDate": "2022-05-18T01:35:44.000Z",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "confidence": "medium-high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 26,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "displayName": "白喬茵",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"白喬茵\" 政治世家",
+        "\"白喬茵\" 父親 議員",
+        "\"白喬茵\" 母親 議員",
+        "\"白喬茵\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E7%99%BD%E5%96%AC%E8%8C%B5%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E7%99%BD%E5%96%AC%E8%8C%B5%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "claim": "家庭／配偶相關搜尋結果",
+          "status": "rejected",
+          "sourceIds": [],
+          "reason": "未取得具名親屬及其政治生涯的合格來源；搜尋摘要不作證據。"
+        }
+      ]
+    },
+    {
+      "sequence": 27,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "displayName": "柳淑芳",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "\"柳淑芳\" 政治世家",
+        "\"柳淑芳\" 父親 議員",
+        "\"柳淑芳\" 母親 議員",
+        "\"柳淑芳\" 接棒"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E6%9F%B3%E6%B7%91%E8%8A%B3%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6",
+        "https://www.bing.com/search?q=%22%E6%9F%B3%E6%B7%91%E8%8A%B3%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1",
+        "https://udn.com/vote2026/story/124652/9839460"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 28,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "displayName": "李眉蓁",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "李眉蓁 父親 議員",
+        "李榮宗 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://news.tvbs.com.tw/politics/1343968",
+        "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=907",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "李榮宗",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議員",
+              "organization": "高雄市議會",
+              "status": "former; official list marks 解職",
+              "start": "2002-12-25",
+              "end": "2006-12-24"
+            }
+          ],
+          "kinshipSourceIds": [
+            "tvbs-lee-meizhen"
+          ],
+          "careerSourceIds": [
+            "kcc-s907",
+            "kcc-pn4"
+          ]
+        }
+      ],
+      "rejectedClaims": []
+    },
+    {
+      "sequence": 29,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "displayName": "李雅慧",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "李雅慧 父親 議員",
+        "李雅慧 親屬 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "未具名親屬具有政治職涯",
+          "reason": "官方頁面僅記載候選人自身議員資料，未找到具名且政治職涯明確的親屬。",
+          "sourceIds": [
+            "kcc-liyahui"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 30,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "displayName": "陳玫娟",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "陳玫娟 父親 陳清玉",
+        "陳清玉 高雄市議會"
+      ],
+      "urlsAttempted": [
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "陳清玉",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議會副議長",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "1977-12-30",
+              "end": "1981-12-24"
+            }
+          ],
+          "kinshipSourceIds": [
+            "family-politics-yahoo"
+          ],
+          "careerSourceIds": [
+            "kcc-pn4"
+          ]
+        }
+      ],
+      "rejectedClaims": [
+        {
+          "claim": "陳清玉僅為國民黨高雄市黨部副主委",
+          "reason": "親屬來源使用黨職描述；官方議會資料另明確記載其副議長任期，兩者未混為同一職務。",
+          "sourceIds": [
+            "family-politics-yahoo",
+            "kcc-pn4"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 31,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "displayName": "張以理",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "張以理 父親 議員",
+        "張以理 張以諾 政治"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5324730",
+        "https://www.mirrormedia.mg/external/setn_1930767"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "未具名父親為政治人物",
+          "reason": "來源僅稱父親為長老教會牧者，未支持政治職涯。",
+          "sourceIds": [
+            "ltn-zhang-yili"
+          ]
+        },
+        {
+          "relativeName": "張以諾",
+          "claim": "弟弟為政治人物",
+          "reason": "來源稱其為樂團貝斯手，非政治職涯。",
+          "sourceIds": [
+            "mirror-zhang-yili"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 32,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "displayName": "陳冠宇",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "陳冠宇 父親 陳善慧",
+        "陳善慧 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://www.chinatimes.com/realtimenews/20260810003330-260407",
+        "https://www.cdns.com.tw/articles/1442238",
+        "https://www.kcc.gov.tw/en/MemberInfo_New.aspx?n=10&sms=0&msn=2248"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "陳善慧",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議員",
+              "organization": "高雄市議會",
+              "status": "incumbent as reported on 2026-08-10",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "ct-chen-guan-yu",
+            "cdn-chen-guan-yu"
+          ],
+          "careerSourceIds": [
+            "ct-chen-guan-yu",
+            "kcc-chen-shan-hui"
+          ]
+        }
+      ],
+      "rejectedClaims": [
+        {
+          "claim": "陳善慧確切任期日期",
+          "reason": "現有來源支持議員身分及第三屆經歷，但未提供可安全正規化的完整起訖日期。",
+          "sourceIds": [
+            "kcc-chen-shan-hui",
+            "ct-chen-guan-yu"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 33,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "displayName": "陳麗珍",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "陳麗珍 父親 議員",
+        "陳麗珍 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "陳麗珍具有已證實的政治親屬",
+          "reason": "官方頁面僅記載其自身議員經歷，未找到具名且職涯明確的親屬。",
+          "sourceIds": [
+            "kcc-chenlizhen"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 34,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "displayName": "薛兆基",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "薛兆基 父親 議員",
+        "薛兆基 政治世家"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [],
+      "notes": "定向查找未取得同時明確支持親屬關係及政治職涯的來源；不將缺乏資料解讀為不存在。"
+    },
+    {
+      "sequence": 35,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "displayName": "尹立",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "尹立 父親 母親 議員",
+        "尹立 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "父母具有政治職涯",
+          "reason": "搜尋材料僅描述退休軍人及清潔工作，未支持政治職務。",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "sequence": 36,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "displayName": "黃飛鳳",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "黃飛鳳 父親 議員",
+        "黃飛鳳 政治世家"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "「大樹女兒」表示具有政治親屬",
+          "reason": "僅為地域或家鄉表述，未指名政治親屬。",
+          "sourceIds": [
+            "kcc-huangfeifeng"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 37,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "displayName": "陳惠君",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "陳惠君 父親 議員",
+        "陳惠君 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [],
+      "notes": "定向查找未取得同時明確支持親屬關係及政治職涯的來源；不將缺乏資料解讀為不存在。"
+    },
+    {
+      "sequence": 38,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "displayName": "張勝富",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "張勝富 父親 議員",
+        "張勝富 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [],
+      "notes": "定向查找未取得同時明確支持親屬關係及政治職涯的來源；不將缺乏資料解讀為不存在。"
+    },
+    {
+      "sequence": 39,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "displayName": "江瑞鴻",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "江瑞鴻 父親 議員",
+        "江瑞鴻 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [],
+      "notes": "定向查找未取得同時明確支持親屬關係及政治職涯的來源；不將缺乏資料解讀為不存在。"
+    },
+    {
+      "sequence": 40,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "displayName": "邱俊憲",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "邱俊憲 親屬 議員",
+        "邱俊憲 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "婚宴來賓或政治人物幕僚為政治親屬",
+          "reason": "社交出席及工作關係不是親屬關係，且未有明確親屬證據。",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "sequence": 41,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "displayName": "陳若翠",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "陳若翠 父親 議員",
+        "陳若翠 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.cdns.com.tw/articles/842244"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "陳若翠父母具有政治職涯",
+          "reason": "來源僅稱父親來自斗六、母親來自斗南，未具名或支持政治職務。",
+          "sourceIds": [
+            "cdns-ruocui"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 42,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "displayName": "吳利成",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "吳利成 父親 議員",
+        "吳利成 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [],
+      "notes": "定向查找未取得同時明確支持親屬關係及政治職涯的來源；不將缺乏資料解讀為不存在。"
+    },
+    {
+      "sequence": 43,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "displayName": "簡煥宗",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "簡煥宗 親屬 議員",
+        "簡煥宗 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "政治人物幕僚或秘書為政治親屬",
+          "reason": "職務關係不是親屬關係，未找到明確親屬證據。",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "sequence": 44,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "displayName": "李喬如",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "李喬如 親屬 議員",
+        "李喬如 李昆澤 親戚"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+        "https://news.ltn.com.tw/news/politics/breakingnews/4138047"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "relativeName": "李昆澤",
+          "claim": "李喬如與李昆澤具有親屬關係",
+          "reason": "競選或派系關係及「姐姐／姊姊」稱呼不構成親屬證據；李昆澤與陳菊的親屬關係也不能推導李喬如的關係。",
+          "sourceIds": [
+            "kcc-liqiaoru",
+            "ltn-liqiaoru"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 45,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "displayName": "蔡金晏",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "蔡金晏 父親 蔡松雄",
+        "蔡松雄 副議長 高雄"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/local/paper/402524",
+        "https://www.chinatimes.com/newspapers/20100611000522-260107",
+        "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=376",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=6"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "蔡松雄",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議員",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "1994-12-25",
+              "end": "1998-12-24"
+            },
+            {
+              "officeTitle": "高雄市議會副議長",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "1998-12-25",
+              "end": "2006-12-24"
+            }
+          ],
+          "kinshipSourceIds": [
+            "ltn-cai-jinyan"
+          ],
+          "careerSourceIds": [
+            "kcc-s376",
+            "kcc-pn4",
+            "kcc-pn6"
+          ]
+        }
+      ],
+      "rejectedClaims": [
+        {
+          "claim": "中國時報報紙頁面的補充說法",
+          "reason": "HTTP 403，未作為證據。",
+          "sourceIds": [
+            "ct-cai-family-403"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 46,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "displayName": "陳美雅",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "陳美雅 父親 陳明吉",
+        "陳明吉 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "陳明吉",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議員",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "1994-12-25",
+              "end": "1998-12-24"
+            }
+          ],
+          "kinshipSourceIds": [
+            "family-politics-yahoo"
+          ],
+          "careerSourceIds": [
+            "kcc-pn4"
+          ]
+        }
+      ],
+      "rejectedClaims": []
+    },
+    {
+      "sequence": 47,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "displayName": "何權峰",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "何權峰 父親 里長 議員",
+        "何權峰 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "relativeName": "未具名父親",
+          "claim": "何權峰具有可核實的政治親屬",
+          "reason": "來源只稱其父親為三民區里長，未提供姓名； exact-relative identity requirement 未達成。",
+          "sourceIds": [
+            "family-politics-yahoo"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 48,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "displayName": "童燕珍",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "童燕珍 父親 童文貞 議員",
+        "童燕珍 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=769"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "relativeName": "童文貞",
+          "claim": "父親具有政治職涯",
+          "reason": "官方訃聞僅描述電氣專業及公共服務，未支持政治職務。",
+          "sourceIds": [
+            "kcc-tong"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 49,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "displayName": "林彥",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "林彥 叔叔 許信良",
+        "林彥 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "relativeName": "許信良",
+          "claim": "林彥叔叔為許信良",
+          "reason": "僅見候選人自行社群說法，未取得獨立可信來源核實。",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "sequence": 50,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "displayName": "黃香菽",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "黃香菽 父親 黃啟川 母親 侯彩鳳",
+        "黃啟川 議長 侯彩鳳 立委"
+      ],
+      "urlsAttempted": [
+        "https://www.setn.com/news/166101",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+        "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=3443",
+        "https://www.ly.gov.tw/EngPages/List.aspx?nodeid=1403",
+        "https://data.ly.gov.tw/legislator.pdf"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "黃啟川",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議員／高雄市議會議長",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": "1977",
+              "end": "2002"
+            }
+          ],
+          "kinshipSourceIds": [
+            "setn-huang"
+          ],
+          "careerSourceIds": [
+            "kcc-pn6",
+            "kcc-s3443"
+          ]
+        },
+        {
+          "relativeName": "侯彩鳳",
+          "relation": "母親",
+          "career": [
+            {
+              "officeTitle": "立法委員",
+              "organization": "立法院",
+              "status": "former",
+              "start": "2002-02-01",
+              "end": "2012-01-31"
+            }
+          ],
+          "kinshipSourceIds": [
+            "setn-huang"
+          ],
+          "careerSourceIds": [
+            "ly-hou",
+            "ly-pdf"
+          ]
+        }
+      ],
+      "rejectedClaims": [
+        {
+          "claim": "侯彩鳳曾任四屆立法委員",
+          "reason": "SETN metadata 使用四屆說法；官方立法院資料支持第五至第七屆三屆立法委員，另列第三屆國民大會代表，故未採四屆立委。",
+          "sourceIds": [
+            "setn-huang",
+            "ly-hou",
+            "ly-pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 51,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "displayName": "曾俊傑",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "曾俊傑 父親 曾長發",
+        "曾長發 副議長 高雄"
+      ],
+      "urlsAttempted": [
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "曾長發",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市副議長／市議員",
+              "organization": "高雄市議會",
+              "status": "former; final visible term marked 解職",
+              "start": "1977-12-30",
+              "end": "2006-12-24"
+            }
+          ],
+          "kinshipSourceIds": [
+            "family-politics-yahoo"
+          ],
+          "careerSourceIds": [
+            "kcc-pn4"
+          ]
+        }
+      ],
+      "rejectedClaims": [
+        {
+          "claim": "官方歷屆名錄本身完整顯示副議長職稱",
+          "reason": "官方可見條目主要列曾長發為議員並提供任期；副議長職稱由親屬報導支持，未將官方條目誤寫為直接顯示副議長。",
+          "sourceIds": [
+            "family-politics-yahoo",
+            "kcc-pn4"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 52,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "displayName": "張博洋",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "張博洋 父親 議員",
+        "張博洋 爸爸 政治"
+      ],
+      "urlsAttempted": [
+        "https://www.chinatimes.com/realtimenews/20200524004245-260407"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [
+        {
+          "claim": "父親具有可核實的政治職涯",
+          "reason": "來源僅稱父親為政治支持者或具有政治立場，未指明公職、黨職或其他政治職涯。",
+          "sourceIds": [
+            "ct-zhang-boyang"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": 53,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "displayName": "林于凱",
+      "searchedAt": "2026-11-12T09:20:00+08:00",
+      "queries": [
+        "林于凱 親屬 議員",
+        "林于凱 政治家族"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedClaims": [],
+      "notes": "定向查找未取得同時明確支持親屬關係及政治職涯的來源；不將缺乏資料解讀為不存在。"
+    },
+    {
+      "sequence": 54,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "displayName": "康裕成",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "康裕成 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=康裕成+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 55,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "displayName": "鄭孟洽",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "鄭孟洽 鄭孟洳 身分"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=鄭孟洽+鄭孟洳+身分"
+      ],
+      "outcome": "unresolved",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "claim": "鄭孟洽與鄭孟洳可能為同一候選人或不同字形身分",
+          "status": "ambiguous-not-linked",
+          "sourceIds": [],
+          "reason": "名冊為鄭孟洽；字形與身分衝突未解，未附加鄭孟洳事實。"
+        }
+      ]
+    },
+    {
+      "sequence": 56,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "displayName": "黃柏霖",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "黃柏霖 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=黃柏霖+政治家族",
+        "https://www.setn.com/news/166101"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 57,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "displayName": "余聖明",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "余聖明 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=余聖明+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 58,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "displayName": "黃淑美",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "黃淑美 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=黃淑美+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 59,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "displayName": "黃舜杰",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "黃舜杰 阿公 鄉長"
+      ],
+      "urlsAttempted": [
+        "https://life.tw/article/%E6%89%BF%E8%A5%B2%E9%84%89%E9%95%B7%E9%98%BF%E5%85%AC%E7%82%BA%E6%B0%91%E6%9C%8D%E5%8B%99%E5%88%9D%E5%BF%83-%E9%BB%83%E舜%E6%9D%B0%E8%AA%93%E4%BB%A5-%E4%BF%A0%E5%AE%A2%E7%B2%BE%E7%A5%9E%E6%8A%95%E5%85%A5%E9%AB%98%E9%9B%84%E8%AD%B0%E5%93%A1-3145326"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "relativeName": "未具名祖父",
+          "claim": "黃舜杰承襲阿公服務初心；阿公曾任高雄縣杉林鄉鄉長",
+          "status": "rejected",
+          "sourceIds": [],
+          "reason": "來源未提供祖父姓名，未達可識別親屬要求。"
+        }
+      ]
+    },
+    {
+      "sequence": 60,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "displayName": "黃裕庭",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "黃裕庭 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=黃裕庭+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 61,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "displayName": "許采蓁",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "許采蓁 許崑源"
+      ],
+      "urlsAttempted": [
+        "https://www.chinatimes.com/realtimenews/20220919004382-260407"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:xu-kun-yuan",
+          "relativeName": "許崑源",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市議會議長",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-chinatimes-20220919-260407"
+          ],
+          "careerSourceIds": [
+            "source-chinatimes-20220919-260407"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-chinatimes-20220919-260407",
+              "publisher": "中時新聞網",
+              "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+              "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+              "publicationDate": "2022-09-19T19:12:00+08:00",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 62,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "displayName": "湯詠瑜",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "湯詠瑜 湯金全"
+      ],
+      "urlsAttempted": [
+        "https://www.chinatimes.com/realtimenews/20221125002927-260407"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:tang-jin-quan",
+          "relativeName": "湯金全",
+          "relation": "父親",
+          "career": [
+            {
+              "officeTitle": "高雄市副市長",
+              "organization": "高雄市政府",
+              "status": "former",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-chinatimes-20221125-260407"
+          ],
+          "careerSourceIds": [
+            "source-chinatimes-20221125-260407"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-chinatimes-20221125-260407",
+              "publisher": "中時新聞網",
+              "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+              "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+              "publicationDate": "2022-11-25T14:49:00+08:00",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 63,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "displayName": "黃文益",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "黃文益 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=黃文益+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 64,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "displayName": "黃鈺婷",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "黃鈺婷 黃紹庭 妹妹"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5563213"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "stablePersonKeySuggestion": "person:huang-shao-ting",
+          "relativeName": "黃紹庭",
+          "relation": "哥哥",
+          "career": [
+            {
+              "officeTitle": "高雄市議員",
+              "organization": "高雄市議會",
+              "status": "former",
+              "start": null,
+              "end": null
+            }
+          ],
+          "kinshipSourceIds": [
+            "source-ltn-20260904-5563213"
+          ],
+          "careerSourceIds": [
+            "source-ltn-20260904-5563213"
+          ],
+          "sources": [
+            {
+              "sourceId": "source-ltn-20260904-5563213",
+              "publisher": "自由時報電子報",
+              "title": "「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」",
+              "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+              "publicationDate": "2026-09-04T16:10:00+08:00",
+              "retrievedAt": "2026-11-12"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 65,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "displayName": "陳雅敏",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "陳雅敏 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=陳雅敏+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 66,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "displayName": "鄒約翰",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "鄒約翰 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=鄒約翰+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 67,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "displayName": "郭建盟",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "郭建盟 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=郭建盟+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 68,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "displayName": "林智鴻",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "林智鴻 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=林智鴻+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 69,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "displayName": "張漢忠",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "張漢忠 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=張漢忠+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 70,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "displayName": "鄭安秝",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "鄭安秝 父親 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=鄭安秝+父親+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 71,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "displayName": "蘇致榮",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "蘇致榮 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=蘇致榮+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 72,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "displayName": "陳慧文",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "陳慧文 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=陳慧文+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 73,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+      "displayName": "劉德林",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "劉德林 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=劉德林+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 74,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+      "displayName": "李雅靜",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "李雅靜 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=李雅靜+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 75,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "displayName": "徐尚賢",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "徐尚賢 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=徐尚賢+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 76,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "displayName": "鍾易仲",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "鍾易仲 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=鍾易仲+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 77,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+      "displayName": "鄧巧佩",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "鄧巧佩 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=鄧巧佩+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 78,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+      "displayName": "李政憲",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "李政憲 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=李政憲+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 79,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "displayName": "湯茹婷",
+      "searchedAt": "2026-11-12",
+      "queries": [
+        "湯茹婷 政治家族"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=湯茹婷+政治家族"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 80,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+      "displayName": "劉仙娥",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 80 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "劉仙娥 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "劉仙娥 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 81,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "displayName": "蔡武宏",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 81 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "蔡武宏 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "qualified evidence found in direct sources"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "蔡武宏 + kinship terms",
+          "result": "blocked/noise"
+        },
+        {
+          "sourceIds": [
+            "S-CAI-KIN",
+            "S-KCC-S34"
+          ],
+          "query": "蔡武宏 蔡慶源",
+          "result": "explicit father and career corroboration"
+        }
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "蔡慶源",
+          "relation": "father",
+          "career": {
+            "office": "市議員",
+            "title": "前國民黨市議員；第1至6屆",
+            "organization": "合併前高雄市議會",
+            "status": "前議員；第6屆解職",
+            "start": "民國70（1981）",
+            "end": "民國95（2006；第6屆解職）"
+          },
+          "kinshipSourceIds": [
+            "S-CAI-KIN"
+          ],
+          "careerSourceIds": [
+            "S-KCC-S34"
+          ],
+          "contradictions": [
+            "ETtoday稱六連霸；KCC列六屆且第6屆解職，採六屆及解職記載。"
+          ]
+        }
+      ],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 82,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+      "displayName": "張藝瑾",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 82 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "張藝瑾 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "張藝瑾 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 83,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "displayName": "于仙玲",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 83 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "于仙玲 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "于仙玲 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 84,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "displayName": "鄭光峰",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 84 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "鄭光峰 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified political relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "鄭光峰 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": [
+        {
+          "sourceId": "S-ZHENG-REJECT",
+          "finding": "女兒醫學系/醫師方向，未具政治職歷，不符合條件。"
+        }
+      ]
+    },
+    {
+      "sequence": 85,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "displayName": "陳麗娜",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 85 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "陳麗娜 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "qualified evidence found in direct sources"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "陳麗娜 + kinship terms",
+          "result": "blocked/noise"
+        },
+        {
+          "sourceIds": [
+            "S-CHEN-KIN",
+            "S-CHEN-KIN2",
+            "S-KCC-S34",
+            "S-KCC-S32"
+          ],
+          "query": "陳麗娜 楊敏郎 楊振添",
+          "result": "explicit kinship and career"
+        }
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "楊敏郎",
+          "relation": "husband",
+          "career": {
+            "office": "市議員",
+            "title": "第5、6屆",
+            "organization": "合併前高雄市議會",
+            "status": "前議員；第6屆解職",
+            "start": "民國87（1998）",
+            "end": "民國95（2006；第6屆解職）"
+          },
+          "kinshipSourceIds": [
+            "S-CHEN-KIN",
+            "S-CHEN-KIN2"
+          ],
+          "careerSourceIds": [
+            "S-KCC-S34"
+          ],
+          "contradictions": [
+            "Newtalk稱2004喪失議員資格；KCC標示第6屆解職，視為同一終止事件。"
+          ]
+        },
+        {
+          "relativeName": "楊振添",
+          "relation": "father-in-law",
+          "career": {
+            "office": "市議員",
+            "title": "第1至4屆",
+            "organization": "合併前高雄市議會",
+            "status": "前議員",
+            "start": "民國70（1981）",
+            "end": "民國87（1998）"
+          },
+          "kinshipSourceIds": [
+            "S-CHEN-KIN"
+          ],
+          "careerSourceIds": [
+            "S-KCC-S32"
+          ],
+          "contradictions": []
+        }
+      ],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 86,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "displayName": "李順進",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 86 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "李順進 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "李順進 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 87,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+      "displayName": "李絃毅",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 87 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "李絃毅 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "李絃毅 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 88,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "displayName": "吳銘賜",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 88 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "吳銘賜 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "吳銘賜 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 89,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "displayName": "吳昱鋒",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 89 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "吳昱鋒 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "吳昱鋒 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 90,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "displayName": "黃敬雅",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 90 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "黃敬雅 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "黃敬雅 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 91,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "displayName": "洪村銘",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 91 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "洪村銘 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "洪村銘 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 92,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "displayName": "黃天煌",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 92 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "黃天煌 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "黃天煌 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 93,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "displayName": "邱于軒",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 93 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "邱于軒 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified political relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "邱于軒 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 94,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "displayName": "王耀裕",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 94 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "王耀裕 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "qualified evidence found in direct source"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "王耀裕 + kinship terms",
+          "result": "blocked/noise"
+        },
+        {
+          "sourceIds": [
+            "S-WANG"
+          ],
+          "query": "王耀裕 王國發 王南榮 王方員",
+          "result": "explicit kinship chain and political careers"
+        }
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "王國發",
+          "relation": "father",
+          "career": {
+            "office": "未載正式民選公職",
+            "title": "地方政治組織者；打造林園「王家班」",
+            "organization": "林園地方政壇／王家班",
+            "status": "已故；來源另載曾任前高雄縣政府工務局職員",
+            "start": null,
+            "end": null
+          },
+          "kinshipSourceIds": [
+            "S-WANG"
+          ],
+          "careerSourceIds": [
+            "S-WANG"
+          ],
+          "contradictions": [
+            "來源未載王國發正式議員職位；不將其表述為前議員。"
+          ]
+        },
+        {
+          "relativeName": "王南榮",
+          "relation": "paternal uncle",
+          "career": {
+            "office": "林園鄉民代表",
+            "title": "2屆",
+            "organization": "林園鄉民代表會",
+            "status": "前代表",
+            "start": null,
+            "end": null
+          },
+          "kinshipSourceIds": [
+            "S-WANG"
+          ],
+          "careerSourceIds": [
+            "S-WANG"
+          ],
+          "contradictions": [
+            "任期年份未載。"
+          ]
+        },
+        {
+          "relativeName": "王方員",
+          "relation": "paternal uncle",
+          "career": {
+            "office": "高雄縣議員、林園鄉長",
+            "title": "縣議員；鄉長2屆",
+            "organization": "高雄縣議會、林園鄉公所",
+            "status": "前議員、前鄉長",
+            "start": null,
+            "end": null
+          },
+          "kinshipSourceIds": [
+            "S-WANG"
+          ],
+          "careerSourceIds": [
+            "S-WANG"
+          ],
+          "contradictions": [
+            "任期年份未載。"
+          ]
+        }
+      ],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 95,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "displayName": "李雨庭",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 95 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "李雨庭 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "李雨庭 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 96,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+      "displayName": "張耀中",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 96 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "張耀中 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "張耀中 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 97,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+      "displayName": "巫振興",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 97 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "巫振興 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "巫振興 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 98,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+      "displayName": "宋紹銘",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 98 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "宋紹銘 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "宋紹銘 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 99,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "displayName": "王義雄",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 99 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "王義雄 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "王義雄 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 100,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "displayName": "陳幸富",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 100 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "陳幸富 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "陳幸富 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 101,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+      "displayName": "葛娜瑩",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 101 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "葛娜瑩 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "葛娜瑩 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 102,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+      "displayName": "洪英雄",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 102 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "洪英雄 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "洪英雄 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 103,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "displayName": "林錫閔",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 103 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "林錫閔 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "林錫閔 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    },
+    {
+      "sequence": 104,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+      "displayName": "高忠德",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 104 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "高忠德 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified political relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "高忠德 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": [
+        {
+          "sourceId": "S-GAO-REJECT",
+          "finding": "報導僅涉及非政治親屬，未證實親屬具有政治職歷。"
+        }
+      ]
+    },
+    {
+      "sequence": 105,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+      "displayName": "金禾雅",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 105 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "金禾雅 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "金禾雅 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": [
+        {
+          "sourceId": "S-JIN-REJECT",
+          "finding": "范織欽推薦接棒不等於親屬關係，未採納。"
+        }
+      ]
+    },
+    {
+      "sequence": 106,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+      "displayName": "陳奕蓁",
+      "searchedAt": "2026-11-12",
+      "attempted": [
+        {
+          "sourceIds": [
+            "S-ROSTER"
+          ],
+          "query": "sequence 106 identity"
+        },
+        {
+          "sourceIds": [
+            "S-LTN",
+            "S-ET",
+            "S-KCC"
+          ],
+          "query": "陳奕蓁 父親/母親/兄弟/姊妹/配偶/子女/家族/政二代",
+          "result": "no qualified relation"
+        },
+        {
+          "sourceIds": [
+            "S-GNEWS",
+            "S-BING"
+          ],
+          "query": "陳奕蓁 + kinship terms",
+          "result": "blocked/noise"
+        }
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedFindings": []
+    }
+  ],
+  "relations": [
+    {
+      "stablePersonKeySuggestion": "person:ke-wen-fu",
+      "relativeName": "柯文福",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "屏東縣長",
+          "organization": "屏東縣",
+          "status": "former",
+          "start": "第7屆",
+          "end": "第8屆"
+        },
+        {
+          "officeTitle": "台灣省政府委員",
+          "organization": "台灣省政府",
+          "status": "former",
+          "start": null,
+          "end": null
+        },
+        {
+          "officeTitle": "僑委會副委員長",
+          "organization": "僑務委員會",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-cna-20220807-aipl-202208070082"
+      ],
+      "careerSourceIds": [
+        "source-cna-20220807-aipl-202208070082"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-cna-20220807-aipl-202208070082",
+          "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽 | 政治 | 中央社 CNA",
+          "publisher": "中央社 CNA",
+          "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+          "publicationDate": "2022-08-07T13:49:00+08:00",
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-mayor-ke-zhi-en-2026"
+    },
+    {
+      "stablePersonKeySuggestion": "person:li-hong-jun",
+      "relativeName": "李鴻鈞",
+      "relation": "兒子",
+      "career": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "start": "第15屆",
+          "end": "第16屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former／已解職",
+          "start": "第1屆",
+          "end": "第1屆（101.6.21解職）"
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3"
+      ],
+      "careerSourceIds": [
+        "source-kcc-history-36"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+          "title": "政壇二代拚接班！年輕高學歷來勢洶洶　高雄政壇年底再洗牌｜壹蘋新聞網",
+          "publisher": "壹蘋新聞網",
+          "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+          "publicationDate": "2026-06-08T17:37:00+08:00",
+          "retrievedAt": "2026-11-12"
+        },
+        {
+          "sourceId": "source-kcc-history-36",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+          "publisher": "高雄市議會全球網-中文網",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publicationDate": "2019-02-27",
+          "retrievedAt": "2026-11-06"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74"
+    },
+    {
+      "stablePersonKeySuggestion": "person:lu-tian-lin",
+      "relativeName": "盧天麟",
+      "relation": "外甥女（舅舅）",
+      "career": [
+        {
+          "officeTitle": "立法委員／立委",
+          "organization": null,
+          "status": "not-stated",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-newtalk-20220518-756501",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+          "publisher": "Newtalk新聞",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publicationDate": "2022-05-18T01:35:44.000Z",
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854"
+    },
+    {
+      "stablePersonKeySuggestion": "person:li-chang-sheng",
+      "relativeName": "李長生",
+      "relation": "女兒",
+      "career": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "start": "第13屆",
+          "end": "第16屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第2屆"
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-kcc-history-37"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-newtalk-20220518-756501",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+          "publisher": "Newtalk新聞",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publicationDate": "2022-05-18T01:35:44.000Z",
+          "retrievedAt": "2026-11-12"
+        },
+        {
+          "sourceId": "source-kcc-history-37",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+          "publisher": "高雄市議會全球網-中文網",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publicationDate": "2019-02-27",
+          "retrievedAt": "2026-11-06"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651"
+    },
+    {
+      "stablePersonKeySuggestion": "person:chen-ming-ze",
+      "relativeName": "陳明澤",
+      "relation": "女兒",
+      "career": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第3屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "start": "第15屆",
+          "end": "第16屆"
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-udn-20260807-9676613"
+      ],
+      "careerSourceIds": [
+        "source-kcc-profile-2176"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-udn-20260807-9676613",
+          "title": "高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+          "publisher": "聯合新聞網",
+          "url": "https://udn.com/news/story/124652/9676613",
+          "publicationDate": "2026-08-07T10:29:48+08:00",
+          "retrievedAt": "2026-11-06"
+        },
+        {
+          "sourceId": "source-kcc-profile-2176",
+          "title": "本屆議員-陳明澤",
+          "publisher": "高雄市議會全球網-中文網",
+          "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176",
+          "publicationDate": "2019-02-27",
+          "retrievedAt": "2026-11-06"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0"
+    },
+    {
+      "stablePersonKeySuggestion": "person:lu-shu-mei",
+      "relativeName": "陸淑美",
+      "relation": "女兒",
+      "career": [
+        {
+          "officeTitle": "副議長",
+          "organization": "高雄市",
+          "status": "former",
+          "start": "第3屆",
+          "end": "第3屆"
+        },
+        {
+          "officeTitle": "市議員",
+          "organization": "高雄市",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第3屆"
+        },
+        {
+          "officeTitle": "副議長",
+          "organization": "高雄縣",
+          "status": "former",
+          "start": "第15屆",
+          "end": "第16屆"
+        },
+        {
+          "officeTitle": "縣議員",
+          "organization": "高雄縣",
+          "status": "former",
+          "start": "第13屆",
+          "end": "第16屆"
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-udn-20260807-9676613"
+      ],
+      "careerSourceIds": [
+        "source-kcc-profile-2180"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-udn-20260807-9676613",
+          "title": "高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+          "publisher": "聯合新聞網",
+          "url": "https://udn.com/news/story/124652/9676613",
+          "publicationDate": "2026-08-07T10:29:48+08:00",
+          "retrievedAt": "2026-11-06"
+        },
+        {
+          "sourceId": "source-kcc-profile-2180",
+          "title": "本屆議員-陸淑美",
+          "publisher": "高雄市議會全球網-中文網",
+          "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+          "publicationDate": "2019-02-27",
+          "retrievedAt": "2026-11-06"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
+    },
+    {
+      "stablePersonKeySuggestion": "person:huang-shi-long",
+      "relativeName": "黃石龍",
+      "relation": "兒子",
+      "career": [
+        {
+          "officeTitle": "副議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": null,
+          "end": null
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "合併前高雄市議會",
+          "status": "former",
+          "start": "第5屆",
+          "end": "第7屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第2屆"
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-newtalk-20220518-756501",
+        "source-kcc-history-37"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-newtalk-20220518-756501",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+          "publisher": "Newtalk新聞",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publicationDate": "2022-05-18T01:35:44.000Z",
+          "retrievedAt": "2026-11-12"
+        },
+        {
+          "sourceId": "source-kcc-history-37",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+          "publisher": "高雄市議會全球網-中文網",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publicationDate": "2019-02-27",
+          "retrievedAt": "2026-11-06"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7"
+    },
+    {
+      "stablePersonKeySuggestion": "person:li-shui-shu",
+      "relativeName": "李水樹",
+      "relation": "女兒",
+      "career": [
+        {
+          "officeTitle": "里長",
+          "organization": "楠梓區中和里",
+          "status": "not-stated",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-newtalk-20220518-756501",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+          "publisher": "Newtalk新聞",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publicationDate": "2022-05-18T01:35:44.000Z",
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "confidence": "medium-high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3"
+    },
+    {
+      "relativeName": "李榮宗",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former; official list marks 解職",
+          "start": "2002-12-25",
+          "end": "2006-12-24"
+        }
+      ],
+      "kinshipSourceIds": [
+        "tvbs-lee-meizhen"
+      ],
+      "careerSourceIds": [
+        "kcc-s907",
+        "kcc-pn4"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+    },
+    {
+      "relativeName": "陳清玉",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議會副議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1977-12-30",
+          "end": "1981-12-24"
+        }
+      ],
+      "kinshipSourceIds": [
+        "family-politics-yahoo"
+      ],
+      "careerSourceIds": [
+        "kcc-pn4"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b"
+    },
+    {
+      "relativeName": "陳善慧",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "incumbent as reported on 2026-08-10",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "ct-chen-guan-yu",
+        "cdn-chen-guan-yu"
+      ],
+      "careerSourceIds": [
+        "ct-chen-guan-yu",
+        "kcc-chen-shan-hui"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4"
+    },
+    {
+      "relativeName": "蔡松雄",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1994-12-25",
+          "end": "1998-12-24"
+        },
+        {
+          "officeTitle": "高雄市議會副議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1998-12-25",
+          "end": "2006-12-24"
+        }
+      ],
+      "kinshipSourceIds": [
+        "ltn-cai-jinyan"
+      ],
+      "careerSourceIds": [
+        "kcc-s376",
+        "kcc-pn4",
+        "kcc-pn6"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d"
+    },
+    {
+      "relativeName": "陳明吉",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1994-12-25",
+          "end": "1998-12-24"
+        }
+      ],
+      "kinshipSourceIds": [
+        "family-politics-yahoo"
+      ],
+      "careerSourceIds": [
+        "kcc-pn4"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe"
+    },
+    {
+      "relativeName": "黃啟川",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議員／高雄市議會議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1977",
+          "end": "2002"
+        }
+      ],
+      "kinshipSourceIds": [
+        "setn-huang"
+      ],
+      "careerSourceIds": [
+        "kcc-pn6",
+        "kcc-s3443"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56"
+    },
+    {
+      "relativeName": "侯彩鳳",
+      "relation": "母親",
+      "career": [
+        {
+          "officeTitle": "立法委員",
+          "organization": "立法院",
+          "status": "former",
+          "start": "2002-02-01",
+          "end": "2012-01-31"
+        }
+      ],
+      "kinshipSourceIds": [
+        "setn-huang"
+      ],
+      "careerSourceIds": [
+        "ly-hou",
+        "ly-pdf"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56"
+    },
+    {
+      "relativeName": "曾長發",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市副議長／市議員",
+          "organization": "高雄市議會",
+          "status": "former; final visible term marked 解職",
+          "start": "1977-12-30",
+          "end": "2006-12-24"
+        }
+      ],
+      "kinshipSourceIds": [
+        "family-politics-yahoo"
+      ],
+      "careerSourceIds": [
+        "kcc-pn4"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16"
+    },
+    {
+      "stablePersonKeySuggestion": "person:xu-kun-yuan",
+      "relativeName": "許崑源",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市議會議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-chinatimes-20220919-260407"
+      ],
+      "careerSourceIds": [
+        "source-chinatimes-20220919-260407"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-chinatimes-20220919-260407",
+          "publisher": "中時新聞網",
+          "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+          "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+          "publicationDate": "2022-09-19T19:12:00+08:00",
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb"
+    },
+    {
+      "stablePersonKeySuggestion": "person:tang-jin-quan",
+      "relativeName": "湯金全",
+      "relation": "父親",
+      "career": [
+        {
+          "officeTitle": "高雄市副市長",
+          "organization": "高雄市政府",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-chinatimes-20221125-260407"
+      ],
+      "careerSourceIds": [
+        "source-chinatimes-20221125-260407"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-chinatimes-20221125-260407",
+          "publisher": "中時新聞網",
+          "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+          "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+          "publicationDate": "2022-11-25T14:49:00+08:00",
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d"
+    },
+    {
+      "stablePersonKeySuggestion": "person:huang-shao-ting",
+      "relativeName": "黃紹庭",
+      "relation": "哥哥",
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "kinshipSourceIds": [
+        "source-ltn-20260904-5563213"
+      ],
+      "careerSourceIds": [
+        "source-ltn-20260904-5563213"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-ltn-20260904-5563213",
+          "publisher": "自由時報電子報",
+          "title": "「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+          "publicationDate": "2026-09-04T16:10:00+08:00",
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "confidence": "high",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e"
+    },
+    {
+      "relativeName": "蔡慶源",
+      "relation": "father",
+      "career": {
+        "office": "市議員",
+        "title": "前國民黨市議員；第1至6屆",
+        "organization": "合併前高雄市議會",
+        "status": "前議員；第6屆解職",
+        "start": "民國70（1981）",
+        "end": "民國95（2006；第6屆解職）"
+      },
+      "kinshipSourceIds": [
+        "S-CAI-KIN"
+      ],
+      "careerSourceIds": [
+        "S-KCC-S34"
+      ],
+      "contradictions": [
+        "ETtoday稱六連霸；KCC列六屆且第6屆解職，採六屆及解職記載。"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579"
+    },
+    {
+      "relativeName": "楊敏郎",
+      "relation": "husband",
+      "career": {
+        "office": "市議員",
+        "title": "第5、6屆",
+        "organization": "合併前高雄市議會",
+        "status": "前議員；第6屆解職",
+        "start": "民國87（1998）",
+        "end": "民國95（2006；第6屆解職）"
+      },
+      "kinshipSourceIds": [
+        "S-CHEN-KIN",
+        "S-CHEN-KIN2"
+      ],
+      "careerSourceIds": [
+        "S-KCC-S34"
+      ],
+      "contradictions": [
+        "Newtalk稱2004喪失議員資格；KCC標示第6屆解職，視為同一終止事件。"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867"
+    },
+    {
+      "relativeName": "楊振添",
+      "relation": "father-in-law",
+      "career": {
+        "office": "市議員",
+        "title": "第1至4屆",
+        "organization": "合併前高雄市議會",
+        "status": "前議員",
+        "start": "民國70（1981）",
+        "end": "民國87（1998）"
+      },
+      "kinshipSourceIds": [
+        "S-CHEN-KIN"
+      ],
+      "careerSourceIds": [
+        "S-KCC-S32"
+      ],
+      "contradictions": [],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867"
+    },
+    {
+      "relativeName": "王國發",
+      "relation": "father",
+      "career": {
+        "office": "未載正式民選公職",
+        "title": "地方政治組織者；打造林園「王家班」",
+        "organization": "林園地方政壇／王家班",
+        "status": "已故；來源另載曾任前高雄縣政府工務局職員",
+        "start": null,
+        "end": null
+      },
+      "kinshipSourceIds": [
+        "S-WANG"
+      ],
+      "careerSourceIds": [
+        "S-WANG"
+      ],
+      "contradictions": [
+        "來源未載王國發正式議員職位；不將其表述為前議員。"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4"
+    },
+    {
+      "relativeName": "王南榮",
+      "relation": "paternal uncle",
+      "career": {
+        "office": "林園鄉民代表",
+        "title": "2屆",
+        "organization": "林園鄉民代表會",
+        "status": "前代表",
+        "start": null,
+        "end": null
+      },
+      "kinshipSourceIds": [
+        "S-WANG"
+      ],
+      "careerSourceIds": [
+        "S-WANG"
+      ],
+      "contradictions": [
+        "任期年份未載。"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4"
+    },
+    {
+      "relativeName": "王方員",
+      "relation": "paternal uncle",
+      "career": {
+        "office": "高雄縣議員、林園鄉長",
+        "title": "縣議員；鄉長2屆",
+        "organization": "高雄縣議會、林園鄉公所",
+        "status": "前議員、前鄉長",
+        "start": null,
+        "end": null
+      },
+      "kinshipSourceIds": [
+        "S-WANG"
+      ],
+      "careerSourceIds": [
+        "S-WANG"
+      ],
+      "contradictions": [
+        "任期年份未載。"
+      ],
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4"
+    }
+  ],
+  "verification": [
+    {
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "relativeName": "柯文福",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-cna-20220807-aipl-202208070082"
+      ],
+      "kinshipSourceIds": [
+        "source-cna-20220807-aipl-202208070082"
+      ],
+      "careerSourceIds": [
+        "source-cna-20220807-aipl-202208070082"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "屏東縣長",
+          "organization": "屏東縣",
+          "status": "former",
+          "start": "第7屆",
+          "end": "第8屆"
+        },
+        {
+          "officeTitle": "台灣省政府委員",
+          "organization": "台灣省政府",
+          "status": "former",
+          "start": null,
+          "end": null
+        },
+        {
+          "officeTitle": "僑委會副委員長",
+          "organization": "僑務委員會",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-cna-20220807-aipl-202208070082",
+            "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+            "httpExitCode": 0,
+            "byteCount": 124928,
+            "nameHits": {
+              "柯志恩": true,
+              "柯文福": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "relativeName": "李鴻鈞",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+        "source-kcc-history-36"
+      ],
+      "kinshipSourceIds": [
+        "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3"
+      ],
+      "careerSourceIds": [
+        "source-kcc-history-36"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "start": "第15屆",
+          "end": "第16屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former／已解職",
+          "start": "第1屆",
+          "end": "第1屆（101.6.21解職）"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+            "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+            "httpExitCode": 0,
+            "byteCount": 144594,
+            "nameHits": {
+              "李振豪": true,
+              "李鴻鈞": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-history-36",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 0,
+            "byteCount": 243878,
+            "nameHits": {
+              "李振豪": false,
+              "李鴻鈞": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "relativeName": "盧天麟",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "立法委員／立委",
+          "organization": null,
+          "status": "not-stated",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-newtalk-20220518-756501",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 0,
+            "byteCount": 207228,
+            "nameHits": {
+              "林慧欣": true,
+              "盧天麟": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "relativeName": "李長生",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-newtalk-20220518-756501",
+        "source-kcc-history-37"
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-kcc-history-37"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "start": "第13屆",
+          "end": "第16屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第2屆"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-newtalk-20220518-756501",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 0,
+            "byteCount": 207228,
+            "nameHits": {
+              "李亞築": true,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-history-37",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 0,
+            "byteCount": 240690,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "relativeName": "陳明澤",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-udn-20260807-9676613",
+        "source-kcc-profile-2176"
+      ],
+      "kinshipSourceIds": [
+        "source-udn-20260807-9676613"
+      ],
+      "careerSourceIds": [
+        "source-kcc-profile-2176"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第3屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "start": "第15屆",
+          "end": "第16屆"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-udn-20260807-9676613",
+            "url": "https://udn.com/news/story/124652/9676613",
+            "httpExitCode": 0,
+            "byteCount": 191269,
+            "nameHits": {
+              "陳琳潔": true,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-profile-2176",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176",
+            "httpExitCode": 0,
+            "byteCount": 144711,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "relativeName": "陸淑美",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-udn-20260807-9676613",
+        "source-kcc-profile-2180"
+      ],
+      "kinshipSourceIds": [
+        "source-udn-20260807-9676613"
+      ],
+      "careerSourceIds": [
+        "source-kcc-profile-2180"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "副議長",
+          "organization": "高雄市",
+          "status": "former",
+          "start": "第3屆",
+          "end": "第3屆"
+        },
+        {
+          "officeTitle": "市議員",
+          "organization": "高雄市",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第3屆"
+        },
+        {
+          "officeTitle": "副議長",
+          "organization": "高雄縣",
+          "status": "former",
+          "start": "第15屆",
+          "end": "第16屆"
+        },
+        {
+          "officeTitle": "縣議員",
+          "organization": "高雄縣",
+          "status": "former",
+          "start": "第13屆",
+          "end": "第16屆"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-udn-20260807-9676613",
+            "url": "https://udn.com/news/story/124652/9676613",
+            "httpExitCode": 0,
+            "byteCount": 191269,
+            "nameHits": {
+              "黃韻涵": true,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-profile-2180",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+            "httpExitCode": 0,
+            "byteCount": 125754,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "relativeName": "黃石龍",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-newtalk-20220518-756501",
+        "source-kcc-history-37"
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-newtalk-20220518-756501",
+        "source-kcc-history-37"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "副議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": null,
+          "end": null
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "合併前高雄市議會",
+          "status": "former",
+          "start": "第5屆",
+          "end": "第7屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "第1屆",
+          "end": "第2屆"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-newtalk-20220518-756501",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 0,
+            "byteCount": 207228,
+            "nameHits": {
+              "黃文志": true,
+              "黃石龍": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-history-37",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 0,
+            "byteCount": 240690,
+            "nameHits": {
+              "黃文志": false,
+              "黃石龍": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "relativeName": "李水樹",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "kinshipSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "careerSourceIds": [
+        "source-newtalk-20220518-756501"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "里長",
+          "organization": "楠梓區中和里",
+          "status": "not-stated",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-newtalk-20220518-756501",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 0,
+            "byteCount": 207228,
+            "nameHits": {
+              "李雅芬": true,
+              "李水樹": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "relativeName": "李榮宗",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "tvbs-lee-meizhen",
+        "kcc-s907",
+        "kcc-pn4"
+      ],
+      "kinshipSourceIds": [
+        "tvbs-lee-meizhen"
+      ],
+      "careerSourceIds": [
+        "kcc-s907",
+        "kcc-pn4"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former; official list marks 解職",
+          "start": "2002-12-25",
+          "end": "2006-12-24"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "tvbs-lee-meizhen",
+            "url": "https://news.tvbs.com.tw/politics/1343968",
+            "httpExitCode": 0,
+            "byteCount": 226416,
+            "nameHits": {
+              "李眉蓁": true,
+              "李榮宗": true
+            }
+          },
+          {
+            "sourceId": "kcc-s907",
+            "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=907",
+            "httpExitCode": 0,
+            "byteCount": 90303,
+            "nameHits": {
+              "李眉蓁": false,
+              "李榮宗": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn4",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+            "httpExitCode": 0,
+            "byteCount": 28631,
+            "nameHits": {
+              "李眉蓁": false,
+              "李榮宗": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "relativeName": "陳清玉",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "family-politics-yahoo",
+        "kcc-pn4"
+      ],
+      "kinshipSourceIds": [
+        "family-politics-yahoo"
+      ],
+      "careerSourceIds": [
+        "kcc-pn4"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議會副議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1977-12-30",
+          "end": "1981-12-24"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "family-politics-yahoo",
+            "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+            "httpExitCode": 0,
+            "byteCount": 585327,
+            "nameHits": {
+              "陳玫娟": true,
+              "陳清玉": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn4",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+            "httpExitCode": 0,
+            "byteCount": 28631,
+            "nameHits": {
+              "陳玫娟": true,
+              "陳清玉": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "relativeName": "陳善慧",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "ct-chen-guan-yu",
+        "cdn-chen-guan-yu",
+        "kcc-chen-shan-hui"
+      ],
+      "kinshipSourceIds": [
+        "ct-chen-guan-yu",
+        "cdn-chen-guan-yu"
+      ],
+      "careerSourceIds": [
+        "ct-chen-guan-yu",
+        "kcc-chen-shan-hui"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "incumbent as reported on 2026-08-10",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "ct-chen-guan-yu",
+            "url": "https://www.chinatimes.com/realtimenews/20260810003330-260407",
+            "httpExitCode": 0,
+            "byteCount": 138975,
+            "nameHits": {
+              "陳冠宇": true,
+              "陳善慧": true
+            }
+          },
+          {
+            "sourceId": "cdn-chen-guan-yu",
+            "url": "https://www.cdns.com.tw/articles/1442238",
+            "httpExitCode": 0,
+            "byteCount": 84908,
+            "nameHits": {
+              "陳冠宇": true,
+              "陳善慧": true
+            }
+          },
+          {
+            "sourceId": "kcc-chen-shan-hui",
+            "url": "https://www.kcc.gov.tw/en/MemberInfo_New.aspx?n=10&sms=0&msn=2248",
+            "httpExitCode": 0,
+            "byteCount": 55205,
+            "nameHits": {
+              "陳冠宇": false,
+              "陳善慧": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "relativeName": "蔡松雄",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "ltn-cai-jinyan",
+        "kcc-s376",
+        "kcc-pn4",
+        "kcc-pn6"
+      ],
+      "kinshipSourceIds": [
+        "ltn-cai-jinyan"
+      ],
+      "careerSourceIds": [
+        "kcc-s376",
+        "kcc-pn4",
+        "kcc-pn6"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1994-12-25",
+          "end": "1998-12-24"
+        },
+        {
+          "officeTitle": "高雄市議會副議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1998-12-25",
+          "end": "2006-12-24"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "ltn-cai-jinyan",
+            "url": "https://news.ltn.com.tw/news/local/paper/402524",
+            "httpExitCode": 0,
+            "byteCount": 229771,
+            "nameHits": {
+              "蔡金晏": true,
+              "蔡松雄": true
+            }
+          },
+          {
+            "sourceId": "kcc-s376",
+            "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=376",
+            "httpExitCode": 0,
+            "byteCount": 87960,
+            "nameHits": {
+              "蔡金晏": false,
+              "蔡松雄": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn4",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+            "httpExitCode": 0,
+            "byteCount": 28631,
+            "nameHits": {
+              "蔡金晏": false,
+              "蔡松雄": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn6",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+            "httpExitCode": 0,
+            "byteCount": 62757,
+            "nameHits": {
+              "蔡金晏": true,
+              "蔡松雄": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "relativeName": "陳明吉",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "family-politics-yahoo",
+        "kcc-pn4"
+      ],
+      "kinshipSourceIds": [
+        "family-politics-yahoo"
+      ],
+      "careerSourceIds": [
+        "kcc-pn4"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1994-12-25",
+          "end": "1998-12-24"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "family-politics-yahoo",
+            "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+            "httpExitCode": 0,
+            "byteCount": 585327,
+            "nameHits": {
+              "陳美雅": true,
+              "陳明吉": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn4",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+            "httpExitCode": 0,
+            "byteCount": 28631,
+            "nameHits": {
+              "陳美雅": true,
+              "陳明吉": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "relativeName": "黃啟川",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "setn-huang",
+        "kcc-pn6",
+        "kcc-s3443"
+      ],
+      "kinshipSourceIds": [
+        "setn-huang"
+      ],
+      "careerSourceIds": [
+        "kcc-pn6",
+        "kcc-s3443"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議員／高雄市議會議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": "1977",
+          "end": "2002"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "setn-huang",
+            "url": "https://www.setn.com/news/166101",
+            "httpExitCode": 0,
+            "byteCount": 159059,
+            "nameHits": {
+              "黃香菽": true,
+              "黃啟川": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn6",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+            "httpExitCode": 0,
+            "byteCount": 62757,
+            "nameHits": {
+              "黃香菽": false,
+              "黃啟川": true
+            }
+          },
+          {
+            "sourceId": "kcc-s3443",
+            "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=3443",
+            "httpExitCode": 0,
+            "byteCount": 90199,
+            "nameHits": {
+              "黃香菽": false,
+              "黃啟川": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "relativeName": "侯彩鳳",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "setn-huang",
+        "ly-hou",
+        "ly-pdf"
+      ],
+      "kinshipSourceIds": [
+        "setn-huang"
+      ],
+      "careerSourceIds": [
+        "ly-hou",
+        "ly-pdf"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "立法委員",
+          "organization": "立法院",
+          "status": "former",
+          "start": "2002-02-01",
+          "end": "2012-01-31"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "setn-huang",
+            "url": "https://www.setn.com/news/166101",
+            "httpExitCode": 0,
+            "byteCount": 159059,
+            "nameHits": {
+              "黃香菽": true,
+              "侯彩鳳": true
+            }
+          },
+          {
+            "sourceId": "ly-hou",
+            "url": "https://www.ly.gov.tw/EngPages/List.aspx?nodeid=1403",
+            "httpExitCode": 0,
+            "byteCount": 29566,
+            "nameHits": {
+              "黃香菽": false,
+              "侯彩鳳": true
+            }
+          },
+          {
+            "sourceId": "ly-pdf",
+            "url": "https://data.ly.gov.tw/legislator.pdf",
+            "httpExitCode": 0,
+            "byteCount": 475705,
+            "nameHits": {
+              "黃香菽": false,
+              "侯彩鳳": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "relativeName": "曾長發",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "family-politics-yahoo",
+        "kcc-pn4"
+      ],
+      "kinshipSourceIds": [
+        "family-politics-yahoo"
+      ],
+      "careerSourceIds": [
+        "kcc-pn4"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市副議長／市議員",
+          "organization": "高雄市議會",
+          "status": "former; final visible term marked 解職",
+          "start": "1977-12-30",
+          "end": "2006-12-24"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "family-politics-yahoo",
+            "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+            "httpExitCode": 0,
+            "byteCount": 585327,
+            "nameHits": {
+              "曾俊傑": true,
+              "曾長發": true
+            }
+          },
+          {
+            "sourceId": "kcc-pn4",
+            "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+            "httpExitCode": 0,
+            "byteCount": 28631,
+            "nameHits": {
+              "曾俊傑": true,
+              "曾長發": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "relativeName": "蔡慶源",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "S-CAI-KIN",
+        "S-KCC-S34"
+      ],
+      "kinshipSourceIds": [
+        "S-CAI-KIN"
+      ],
+      "careerSourceIds": [
+        "S-KCC-S34"
+      ],
+      "sources": [],
+      "career": {
+        "office": "市議員",
+        "title": "前國民黨市議員；第1至6屆",
+        "organization": "合併前高雄市議會",
+        "status": "前議員；第6屆解職",
+        "start": "民國70（1981）",
+        "end": "民國95（2006；第6屆解職）"
+      },
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "S-CAI-KIN",
+            "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+            "httpExitCode": 0,
+            "byteCount": 121706,
+            "nameHits": {
+              "蔡武宏": true,
+              "蔡慶源": true
+            }
+          },
+          {
+            "sourceId": "S-KCC-S34",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 0,
+            "byteCount": 199225,
+            "nameHits": {
+              "蔡武宏": false,
+              "蔡慶源": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "relativeName": "楊敏郎",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "S-CHEN-KIN",
+        "S-CHEN-KIN2",
+        "S-KCC-S34"
+      ],
+      "kinshipSourceIds": [
+        "S-CHEN-KIN",
+        "S-CHEN-KIN2"
+      ],
+      "careerSourceIds": [
+        "S-KCC-S34"
+      ],
+      "sources": [],
+      "career": {
+        "office": "市議員",
+        "title": "第5、6屆",
+        "organization": "合併前高雄市議會",
+        "status": "前議員；第6屆解職",
+        "start": "民國87（1998）",
+        "end": "民國95（2006；第6屆解職）"
+      },
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "S-CHEN-KIN",
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "httpExitCode": 0,
+            "byteCount": 186145,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊敏郎": true
+            }
+          },
+          {
+            "sourceId": "S-CHEN-KIN2",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4116913",
+            "httpExitCode": 0,
+            "byteCount": 234556,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊敏郎": true
+            }
+          },
+          {
+            "sourceId": "S-KCC-S34",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 0,
+            "byteCount": 199225,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊敏郎": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "relativeName": "楊振添",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "S-CHEN-KIN",
+        "S-KCC-S32"
+      ],
+      "kinshipSourceIds": [
+        "S-CHEN-KIN"
+      ],
+      "careerSourceIds": [
+        "S-KCC-S32"
+      ],
+      "sources": [],
+      "career": {
+        "office": "市議員",
+        "title": "第1至4屆",
+        "organization": "合併前高雄市議會",
+        "status": "前議員",
+        "start": "民國70（1981）",
+        "end": "民國87（1998）"
+      },
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "S-CHEN-KIN",
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "httpExitCode": 0,
+            "byteCount": 186145,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊振添": true
+            }
+          },
+          {
+            "sourceId": "S-KCC-S32",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 0,
+            "byteCount": 176197,
+            "nameHits": {
+              "陳麗娜": false,
+              "楊振添": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "relativeName": "王國發",
+      "status": "rejected",
+      "rationale": "獨立檢視來源可支持親屬敘述，但只記載地方政治組織活動，未支持符合本資料集定義的民選公職、參選、政治任命或正式政黨職務；不發布政治經歷關係。",
+      "sourceIds": [
+        "S-WANG"
+      ],
+      "kinshipSourceIds": [
+        "S-WANG"
+      ],
+      "careerSourceIds": [
+        "S-WANG"
+      ],
+      "sources": [],
+      "career": {
+        "office": "未載正式民選公職",
+        "title": "地方政治組織者；打造林園「王家班」",
+        "organization": "林園地方政壇／王家班",
+        "status": "已故；來源另載曾任前高雄縣政府工務局職員",
+        "start": null,
+        "end": null
+      },
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "S-WANG",
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "httpExitCode": 0,
+            "byteCount": 230623,
+            "nameHits": {
+              "王耀裕": true,
+              "王國發": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "relativeName": "王南榮",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "S-WANG"
+      ],
+      "kinshipSourceIds": [
+        "S-WANG"
+      ],
+      "careerSourceIds": [
+        "S-WANG"
+      ],
+      "sources": [],
+      "career": {
+        "office": "林園鄉民代表",
+        "title": "2屆",
+        "organization": "林園鄉民代表會",
+        "status": "前代表",
+        "start": null,
+        "end": null
+      },
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "S-WANG",
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "httpExitCode": 0,
+            "byteCount": 230623,
+            "nameHits": {
+              "王耀裕": true,
+              "王南榮": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "relativeName": "王方員",
+      "status": "verified",
+      "rationale": "整合查核者於 2026-11-12 重新擷取所列來源；親屬來源明確描述兩人關係，政治經歷來源明確記載親屬的公職或參選，且未發現同名身分衝突。",
+      "sourceIds": [
+        "S-WANG"
+      ],
+      "kinshipSourceIds": [
+        "S-WANG"
+      ],
+      "careerSourceIds": [
+        "S-WANG"
+      ],
+      "sources": [],
+      "career": {
+        "office": "高雄縣議員、林園鄉長",
+        "title": "縣議員；鄉長2屆",
+        "organization": "高雄縣議會、林園鄉公所",
+        "status": "前議員、前鄉長",
+        "start": null,
+        "end": null
+      },
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "S-WANG",
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "httpExitCode": 0,
+            "byteCount": 230623,
+            "nameHits": {
+              "王耀裕": true,
+              "王方員": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "relativeName": "許崑源",
+      "status": "verified",
+      "rationale": "獨立取得的中時新聞明確支持父女關係及前高市議長職務；高雄市議會歷屆資料另佐證許崑源的議長身分，未發現同名身分衝突。",
+      "sourceIds": [
+        "source-chinatimes-20220919-260407",
+        "source-kcc-history-36"
+      ],
+      "kinshipSourceIds": [
+        "source-chinatimes-20220919-260407"
+      ],
+      "careerSourceIds": [
+        "source-chinatimes-20220919-260407",
+        "source-kcc-history-36"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市議會議長",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-chinatimes-20220919-260407",
+            "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+            "httpExitCode": 200,
+            "byteCount": null,
+            "nameHits": {
+              "許采蓁": true,
+              "許崑源": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-history-36",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 200,
+            "byteCount": null,
+            "nameHits": {
+              "許崑源": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "relativeName": "湯金全",
+      "status": "verified",
+      "rationale": "獨立取得的中時新聞明確記載湯詠瑜為湯金全女兒，並明確記載湯金全曾任高雄市副市長；未找到可靠的任期日期，故不擴張職務期間。",
+      "sourceIds": [
+        "source-chinatimes-20221125-260407"
+      ],
+      "kinshipSourceIds": [
+        "source-chinatimes-20221125-260407"
+      ],
+      "careerSourceIds": [
+        "source-chinatimes-20221125-260407"
+      ],
+      "sources": [],
+      "career": [
+        {
+          "officeTitle": "高雄市副市長",
+          "organization": "高雄市政府",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-chinatimes-20221125-260407",
+            "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+            "httpExitCode": 200,
+            "byteCount": null,
+            "nameHits": {
+              "湯詠瑜": true,
+              "湯金全": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "relativeName": "黃紹庭",
+      "status": "verified",
+      "rationale": "自由時報明確支持黃鈺婷為黃紹庭妹妹及黃紹庭為前高市議員；高雄市議會官方議員頁另佐證其市議員經歷，並記載解職，故僅表述為曾任／前市議員。",
+      "sourceIds": [
+        "source-ltn-20260904-5563213",
+        "source-kcc-member-2210"
+      ],
+      "kinshipSourceIds": [
+        "source-ltn-20260904-5563213"
+      ],
+      "careerSourceIds": [
+        "source-ltn-20260904-5563213",
+        "source-kcc-member-2210"
+      ],
+      "sources": [
+        {
+          "sourceId": "source-ltn-20260904-5563213",
+          "publisher": "自由時報電子報",
+          "title": "「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+          "publicationDate": "2026-09-04T16:10:00+08:00",
+          "retrievedAt": "2026-11-12"
+        },
+        {
+          "sourceId": "source-kcc-member-2210",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-本屆議員-黃紹庭",
+          "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2210",
+          "publicationDate": null,
+          "retrievedAt": "2026-11-12"
+        }
+      ],
+      "career": [
+        {
+          "officeTitle": "高雄市議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "start": null,
+          "end": null
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-12",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-ltn-20260904-5563213",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+            "httpExitCode": 200,
+            "byteCount": null,
+            "nameHits": {
+              "黃鈺婷": true,
+              "黃紹庭": true
+            }
+          },
+          {
+            "sourceId": "source-kcc-member-2210",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2210",
+            "httpExitCode": 200,
+            "byteCount": null,
+            "nameHits": {
+              "黃紹庭": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "tvbs-lee-meizhen",
+      "publisher": "TVBS",
+      "title": "三連霸議員披掛上陣 李眉蓁父親：這仗不好打",
+      "url": "https://news.tvbs.com.tw/politics/1343968",
+      "publicationDate": "2020-06-23",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-6484c551e366",
+        "claim-family-relation-6aff8df8d856-kinship"
+      ]
+    },
+    {
+      "id": "kcc-s907",
+      "publisher": "高雄市議會",
+      "title": "李榮宗議員總質詢摘要",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=907",
+      "publicationDate": "2005-06-07",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-6484c551e366",
+        "claim-family-relation-6aff8df8d856-kinship"
+      ]
+    },
+    {
+      "id": "kcc-pn4",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員名錄",
+      "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-17d6231c3a66",
+        "claim-career-3a5d3f55e9de",
+        "claim-career-6484c551e366",
+        "claim-career-a42095f52680",
+        "claim-career-d3f6a8bdbfa4",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-36ecb8363f0a-kinship",
+        "claim-family-relation-4217d77d4e13-kinship",
+        "claim-family-relation-6aff8df8d856-kinship",
+        "claim-family-relation-af1a86b13206-kinship",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "family-politics-yahoo",
+      "publisher": "Yahoo奇摩／新頭殼",
+      "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+      "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+      "publicationDate": "2022-05-18",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-17d6231c3a66",
+        "claim-career-3a5d3f55e9de",
+        "claim-career-d3f6a8bdbfa4",
+        "claim-family-relation-36ecb8363f0a-kinship",
+        "claim-family-relation-4217d77d4e13-kinship",
+        "claim-family-relation-af1a86b13206-kinship"
+      ]
+    },
+    {
+      "id": "ct-chen-guan-yu",
+      "publisher": "中國時報",
+      "title": "高市左楠區議員選戰震撼彈 無黨籍陳善慧交棒兒子陳冠宇",
+      "url": "https://www.chinatimes.com/realtimenews/20260810003330-260407",
+      "publicationDate": "2026-08-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-f921f2da2e57",
+        "claim-family-relation-a2e1a7508e41-kinship"
+      ]
+    },
+    {
+      "id": "cdn-chen-guan-yu",
+      "publisher": "中華日報",
+      "title": "陳善慧交棒兒子陳冠宇 兩代攜手持續深耕左楠",
+      "url": "https://www.cdns.com.tw/articles/1442238",
+      "publicationDate": "2026-08-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-f921f2da2e57",
+        "claim-family-relation-a2e1a7508e41-kinship"
+      ]
+    },
+    {
+      "id": "kcc-chen-shan-hui",
+      "publisher": "高雄市議會",
+      "title": "Kaohsiung City Council-Councilors-陳善慧",
+      "url": "https://www.kcc.gov.tw/en/MemberInfo_New.aspx?n=10&sms=0&msn=2248",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-f921f2da2e57",
+        "claim-family-relation-a2e1a7508e41-kinship"
+      ]
+    },
+    {
+      "id": "ltn-cai-jinyan",
+      "publisher": "自由時報",
+      "title": "《博士代父出征》蔡松雄之子蔡金晏 吳敦義背書",
+      "url": "https://news.ltn.com.tw/news/local/paper/402524",
+      "publicationDate": "2010-06-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-a42095f52680",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "kcc-s376",
+      "publisher": "高雄市議會",
+      "title": "副議長蔡松雄探視因公殉職員警家屬",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=376",
+      "publicationDate": "2003-11-10",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-a42095f52680",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "kcc-pn6",
+      "publisher": "高雄市議會",
+      "title": "智慧的傳承",
+      "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-a42095f52680",
+        "claim-career-bd782e3279e4",
+        "claim-career-ed9c61edaed0",
+        "claim-family-relation-e6e4bc080be7-kinship",
+        "claim-family-relation-f9b277a8e374-kinship"
+      ]
+    },
+    {
+      "id": "setn-huang",
+      "publisher": "三立新聞網",
+      "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+      "url": "https://www.setn.com/news/166101",
+      "publicationDate": "2016-07-20",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-4325a4ababed",
+        "claim-career-bd782e3279e4",
+        "claim-family-relation-210f4307be00-kinship",
+        "claim-family-relation-e6e4bc080be7-kinship"
+      ]
+    },
+    {
+      "id": "kcc-s3443",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員回娘家，六位議長首度齊聚",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=3443",
+      "publicationDate": "2015-11-19",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-bd782e3279e4",
+        "claim-family-relation-e6e4bc080be7-kinship"
+      ]
+    },
+    {
+      "id": "ly-hou",
+      "publisher": "立法院",
+      "title": "Legislative Yuan -侯彩鳳委員",
+      "url": "https://www.ly.gov.tw/EngPages/List.aspx?nodeid=1403",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-4325a4ababed",
+        "claim-family-relation-210f4307be00-kinship"
+      ]
+    },
+    {
+      "id": "ly-pdf",
+      "publisher": "立法院",
+      "title": "立法委員名錄",
+      "url": "https://data.ly.gov.tw/legislator.pdf",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-4325a4ababed",
+        "claim-family-relation-210f4307be00-kinship"
+      ]
+    },
+    {
+      "id": "kcc-liyahui",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-李雅慧",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2188",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ltn-zhang-yili",
+      "publisher": "自由時報",
+      "title": "高雄出現首面蕭美琴助選看板 助選對象是這位「青年」",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5324730",
+      "publicationDate": "2026-01-28",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "mirror-zhang-yili",
+      "publisher": "鏡週刊／三立",
+      "title": "八包煎餃張以理親弟竟是超大咖樂團貝斯手",
+      "url": "https://www.mirrormedia.mg/external/setn_1930767",
+      "publicationDate": "2026-10-30",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-chenlizhen",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-陳麗珍",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2184",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-huangfeifeng",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-黃飛鳳",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2194",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "cdns-ruocui",
+      "publisher": "中華日報",
+      "title": "同鄉會力挺雲林女兒 理事長李樑堅籲將陳若翠送進國會",
+      "url": "https://www.cdns.com.tw/articles/842244",
+      "publicationDate": "2023-07-25",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-liqiaoru",
+      "publisher": "高雄市議會",
+      "title": "本屆議員-李喬如",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2195",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ltn-liqiaoru",
+      "publisher": "自由時報",
+      "title": "李喬如退會與綠營派系有關？湧言會：對姐姐尊敬不變",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4138047",
+      "publicationDate": "2022-11-28",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "kcc-tong",
+      "publisher": "高雄市議會",
+      "title": "市議員童燕珍父親與世長辭",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=769",
+      "publicationDate": "2005-02-21",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ct-zhang-boyang",
+      "publisher": "中國時報",
+      "title": "他挺罷韓 爸爸卻戴一頂「穿雲箭」帽子",
+      "url": "https://www.chinatimes.com/realtimenews/20200524004245-260407",
+      "publicationDate": "2020-05-24",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "ct-cai-family-403",
+      "publisher": "中國時報",
+      "title": "都會人物－服務選民 蔡金晏跟隨父親腳步",
+      "url": "https://www.chinatimes.com/newspapers/20100611000522-260107",
+      "publicationDate": "2010-06-11",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-LTN",
+      "publisher": "自由時報搜尋",
+      "title": "公開政治資料",
+      "url": "https://search.ltn.com.tw/list?keyword={candidate}",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-ET",
+      "publisher": "ETtoday搜尋",
+      "title": "公開政治資料",
+      "url": "https://www.ettoday.net/news_search/doSearch.php?keywords={candidate}",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-GNEWS",
+      "publisher": "Google News RSS",
+      "title": "公開政治資料",
+      "url": "https://news.google.com/rss/search?q={candidate}+親屬",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-BING",
+      "publisher": "Bing RSS",
+      "title": "公開政治資料",
+      "url": "https://www.bing.com/search?format=rss&q={candidate}+親屬",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-KCC",
+      "publisher": "高雄市議會",
+      "title": "公開政治資料",
+      "url": "https://www.kcc.gov.tw/Member_List3.aspx?n=39&sms=9028",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-KCC-S34",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-2368f9ecdf7d",
+        "claim-career-eae378523f1b",
+        "claim-family-relation-ee71b14063dd-kinship",
+        "claim-family-relation-f244c50b3a12-kinship"
+      ]
+    },
+    {
+      "id": "S-KCC-S32",
+      "publisher": "高雄市議會",
+      "title": "歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-160e87f95877",
+        "claim-family-relation-8eb9afeeeda1-kinship"
+      ]
+    },
+    {
+      "id": "S-CAI-KIN",
+      "publisher": "ETtoday新聞雲",
+      "title": "議員變小王！蔡武宏政二代出身　搭上韓流列車再翻身",
+      "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+      "publicationDate": "2021-12-02",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-eae378523f1b",
+        "claim-family-relation-ee71b14063dd-kinship"
+      ]
+    },
+    {
+      "id": "S-CHEN-KIN",
+      "publisher": "Newtalk新聞",
+      "title": "立委選情初探》高市第八選區在地「揭弊大將」挑戰花媽子弟兵",
+      "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+      "publicationDate": "2019-09-07",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-160e87f95877",
+        "claim-career-2368f9ecdf7d",
+        "claim-family-relation-8eb9afeeeda1-kinship",
+        "claim-family-relation-f244c50b3a12-kinship"
+      ]
+    },
+    {
+      "id": "S-CHEN-KIN2",
+      "publisher": "自由時報",
+      "title": "曾引藍營風暴！高雄女議員又傳離婚 與夫熱吻闢謠",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4116913",
+      "publicationDate": "2022-11-09",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-2368f9ecdf7d",
+        "claim-family-relation-f244c50b3a12-kinship"
+      ]
+    },
+    {
+      "id": "S-WANG",
+      "publisher": "自由時報",
+      "title": "打造林園「王家班」王國發病逝",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+      "publicationDate": "2016-01-06",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-174aebfb193a",
+        "claim-career-82b2a7cb3cf8",
+        "claim-career-ae360531d447",
+        "claim-family-relation-242df6a1eed4-kinship",
+        "claim-family-relation-a6fb10f6525c-kinship",
+        "claim-family-relation-ab081ea17938-kinship"
+      ]
+    },
+    {
+      "id": "S-ZHENG-REJECT",
+      "publisher": "民視/Yahoo新聞",
+      "title": "女兒人氣比爸旺！高雄市議員鄭光峰欣慰",
+      "url": "https://tw.news.yahoo.com/%E5%A5%B3%E5%85%92%E4%BA%BA%E6%B0%A3%E6%AF%94%E7%88%B8%E6%97%BA-%E9%AB%98%E9%9B%84%E5%B8%82%E8%AD%B0%E5%93%A1%E9%84%AD%E5%85%89%E5%B3%B0%E6%AC%A3%E6%85%B0-102521666.html",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-GAO-REJECT",
+      "publisher": "自由時報",
+      "title": "高市議員高忠德證實外孫姪女遇劫",
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5127455",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "S-JIN-REJECT",
+      "publisher": "自由時報",
+      "title": "高雄原民議員范織欽不選了　推薦原民女歌手接棒",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5549492",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": []
+    },
+    {
+      "id": "source-cna-20220807-aipl-202208070082",
+      "publisher": "中央社 CNA",
+      "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽 | 政治 | 中央社 CNA",
+      "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+      "publicationDate": "2022-08-07",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-1c344783a9bb",
+        "claim-career-867e717d1843",
+        "claim-career-e08640f82858",
+        "claim-family-relation-22f595914bcb-kinship"
+      ]
+    },
+    {
+      "id": "source-nextapple-20260608-b485a89fab2004e629689ecc192302a3",
+      "publisher": "壹蘋新聞網",
+      "title": "政壇二代拚接班！年輕高學歷來勢洶洶　高雄政壇年底再洗牌｜壹蘋新聞網",
+      "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+      "publicationDate": "2026-06-08",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-138a562cf646",
+        "claim-career-8a82e2ac8612",
+        "claim-family-relation-6ae7bea727b5-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-history-36",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-138a562cf646",
+        "claim-career-8a82e2ac8612",
+        "claim-career-ce74a1d61c38",
+        "claim-family-relation-6ae7bea727b5-kinship",
+        "claim-family-relation-70b55a776537-kinship"
+      ]
+    },
+    {
+      "id": "source-newtalk-20220518-756501",
+      "publisher": "Newtalk新聞",
+      "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家 | 政治 | Newtalk新聞",
+      "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+      "publicationDate": "2022-05-18",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-141636f2738a",
+        "claim-career-2436047ecdf7",
+        "claim-career-4d85f4208f72",
+        "claim-career-7289b0c387b4",
+        "claim-career-830d49f80859",
+        "claim-career-dee563838d85",
+        "claim-career-e78ba1b4eba2",
+        "claim-family-relation-164537f443ae-kinship",
+        "claim-family-relation-7d04ca773aab-kinship",
+        "claim-family-relation-80f4968123d8-kinship",
+        "claim-family-relation-e60cca817792-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-history-37",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+      "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-141636f2738a",
+        "claim-career-2436047ecdf7",
+        "claim-career-4d85f4208f72",
+        "claim-career-830d49f80859",
+        "claim-career-e78ba1b4eba2",
+        "claim-family-relation-80f4968123d8-kinship",
+        "claim-family-relation-e60cca817792-kinship"
+      ]
+    },
+    {
+      "id": "source-udn-20260807-9676613",
+      "publisher": "聯合新聞網",
+      "title": "高雄市又一議員宣布交棒 陳善慧推薦兒子角逐左楠區席次 | 縣市長議員選戰 | 要聞 | 聯合新聞網",
+      "url": "https://udn.com/news/story/124652/9676613",
+      "publicationDate": "2026-08-07",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-a285dada8322",
+        "claim-career-bb1ecf9499de",
+        "claim-career-cdbaa8dfd913",
+        "claim-career-dc5b95f4c263",
+        "claim-career-ea149203e096",
+        "claim-career-fe68fd492bb7",
+        "claim-family-relation-33a6d10c9017-kinship",
+        "claim-family-relation-f5bb917c6f5d-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-profile-2176",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "本屆議員-陳明澤",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-a285dada8322",
+        "claim-career-bb1ecf9499de",
+        "claim-family-relation-33a6d10c9017-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-profile-2180",
+      "publisher": "高雄市議會全球網-中文網",
+      "title": "本屆議員-陸淑美",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+      "publicationDate": "2019-02-27",
+      "retrievedAt": "2026-11-06",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-cdbaa8dfd913",
+        "claim-career-dc5b95f4c263",
+        "claim-career-ea149203e096",
+        "claim-career-fe68fd492bb7",
+        "claim-family-relation-f5bb917c6f5d-kinship"
+      ]
+    },
+    {
+      "id": "source-chinatimes-20220919-260407",
+      "publisher": "中時新聞網",
+      "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+      "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+      "publicationDate": "2022-09-19",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-ce74a1d61c38",
+        "claim-family-relation-70b55a776537-kinship"
+      ]
+    },
+    {
+      "id": "source-chinatimes-20221125-260407",
+      "publisher": "中時新聞網",
+      "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+      "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+      "publicationDate": "2022-11-25",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "other-public-record",
+      "supportedClaimIds": [
+        "claim-career-09a7ec658f10",
+        "claim-family-relation-5c384c5d1a36-kinship"
+      ]
+    },
+    {
+      "id": "source-ltn-20260904-5563213",
+      "publisher": "自由時報電子報",
+      "title": "「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+      "publicationDate": "2026-09-04",
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "established-news",
+      "supportedClaimIds": [
+        "claim-career-eea9d035cef5",
+        "claim-family-relation-ec9a32792e1b-kinship"
+      ]
+    },
+    {
+      "id": "source-kcc-member-2210",
+      "publisher": "高雄市議會",
+      "title": "高雄市議會全球網-中文網-本屆議員-黃紹庭",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2210",
+      "publicationDate": null,
+      "retrievedAt": "2026-11-12",
+      "sourceKind": "official-record",
+      "supportedClaimIds": [
+        "claim-career-eea9d035cef5",
+        "claim-family-relation-ec9a32792e1b-kinship"
+      ]
+    }
+  ]
+}

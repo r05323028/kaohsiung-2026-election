@@ -3441,3 +3441,218 @@ body.is-immersive .site-footer {
     padding: 0.48rem 0.82rem;
   }
 }
+
+.political-family-graph {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.political-family-empty {
+  min-height: 8rem;
+  align-content: center;
+}
+
+.political-family-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.political-family-toolbar .info-note {
+  margin-left: 0.25rem;
+}
+
+.political-family-canvas {
+  overflow: hidden;
+  border: 1px solid rgba(41, 72, 88, 0.12);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 249, 240, 0.9), transparent 52%),
+    rgba(245, 232, 212, 0.34);
+}
+
+.political-family-svg {
+  display: block;
+  width: 100%;
+  min-height: 19rem;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.political-family-svg:active {
+  cursor: grabbing;
+}
+
+.political-family-edge line {
+  stroke: rgba(76, 175, 168, 0.58);
+  stroke-width: 2.5;
+}
+
+.political-family-edge text {
+  fill: #2f817e;
+  font-size: 12px;
+  font-weight: 850;
+  paint-order: stroke;
+  stroke: rgba(255, 249, 240, 0.94);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.political-family-node__button {
+  display: grid;
+  width: 184px;
+  height: 84px;
+  align-content: center;
+  gap: 0.12rem;
+  border: 1px solid rgba(41, 72, 88, 0.2);
+  border-radius: 14px;
+  background: rgba(255, 249, 240, 0.96);
+  color: #294858;
+  padding: 0.45rem 0.6rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(41, 72, 88, 0.08);
+  cursor: pointer;
+}
+
+.political-family-node__button:hover,
+.political-family-node__button:focus-visible {
+  border-color: #2f817e;
+  outline: 3px solid rgba(233, 150, 121, 0.45);
+  outline-offset: 2px;
+}
+
+.political-family-node.is-candidate .political-family-node__button {
+  border: 2px solid #e99679;
+  background: #fff4e8;
+}
+
+.political-family-node.is-selected .political-family-node__button {
+  box-shadow: 0 0 0 3px rgba(76, 175, 168, 0.25), 0 4px 12px rgba(41, 72, 88, 0.08);
+}
+
+.political-family-node__name,
+.political-family-node__career,
+.political-family-node__status {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.political-family-node__name {
+  font-size: 0.82rem;
+  font-weight: 950;
+}
+
+.political-family-node__career {
+  color: rgba(41, 72, 88, 0.78);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.political-family-node__status {
+  color: #2f817e;
+  font-size: 0.6rem;
+  font-weight: 850;
+}
+
+.political-family-selection {
+  min-width: 0;
+}
+
+.political-family-details {
+  display: grid;
+  gap: 0.45rem;
+  border: 1px solid rgba(41, 72, 88, 0.1);
+  border-radius: 0.95rem;
+  background: rgba(245, 232, 212, 0.38);
+  padding: 0.75rem;
+}
+
+.political-family-details h4 {
+  margin: 0.15rem 0 0;
+  color: #294858;
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.political-family-details p {
+  margin: 0;
+  color: rgba(41, 72, 88, 0.78);
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.political-family-careers,
+.political-family-sources,
+.political-family-text ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.political-family-careers li {
+  display: grid;
+  gap: 0.08rem;
+  color: rgba(41, 72, 88, 0.78);
+  font-size: 0.7rem;
+  line-height: 1.45;
+}
+
+.political-family-careers li strong {
+  color: #294858;
+}
+
+.political-family-sources li,
+.political-family-sources a {
+  color: #2f817e;
+  font-size: 0.7rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.political-family-text {
+  border-top: 1px solid rgba(41, 72, 88, 0.1);
+  padding-top: 0.65rem;
+}
+
+.political-family-text summary {
+  color: #294858;
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.political-family-text li {
+  display: grid;
+  gap: 0.15rem;
+  color: rgba(41, 72, 88, 0.78);
+  font-size: 0.7rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 560px) {
+  .political-family-svg {
+    min-height: 15rem;
+  }
+
+  .political-family-toolbar .info-note {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .political-family-svg,
+  .political-family-node__button {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}

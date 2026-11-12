@@ -56,7 +56,7 @@ const structuredData = {
 
 <BaseLayout
   title={`${candidate.person.displayName}｜港都人物誌`}
-  description={`${candidate.person.displayName}的${demo ? '虛構示範人物' : '候選人'}頁，包含基本資料、政策主張、相關新聞與從政歷程。`}
+  description={`${candidate.person.displayName}的${demo ? '虛構示範人物' : '候選人'}頁，包含基本資料、政策主張、相關新聞、從政歷程與家族從政關係。`}
   canonicalPath={`/candidates/${candidate.candidacy.slug}/`}
   structuredData={structuredData}
 >
@@ -81,7 +81,7 @@ const structuredData = {
         <ProfileTabs client:load candidate={publicCandidate} />
         <noscript>
           <p class="demo-notice" style="margin-top: 1rem;">
-            請啟用 JavaScript 查看四個資料分頁。
+            請啟用 JavaScript 查看五個資料分頁。
           </p>
         </noscript>
       </main>

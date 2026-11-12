@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import coverageReport from '../../reports/candidate-profile-coverage.json';
 import sourceQualityReport from '../../reports/candidate-profile-source-quality.json';
 import { scopedCategoryToProfileTab } from './enrichment/review-publication';
+import { candidateProfiles } from './index';
 import { officialCandidateProfiles } from './official';
 
 const publicRecords = (
@@ -18,11 +19,13 @@ const publicRecords = (
       ]
     : [];
 
-describe('four-section candidate profile coverage', () => {
-  it('covers the unchanged 106-candidate production roster', () => {
-    expect(officialCandidateProfiles).toHaveLength(106);
-    expect(coverageReport.totalCandidates).toBe(106);
-    expect(coverageReport.candidatesStructurallySupported).toBe(106);
+describe('five-section candidate profile coverage', () => {
+  it('covers the current canonical candidate roster', () => {
+    expect(officialCandidateProfiles).toHaveLength(candidateProfiles.length);
+    expect(coverageReport.totalCandidates).toBe(candidateProfiles.length);
+    expect(coverageReport.candidatesStructurallySupported).toBe(
+      candidateProfiles.length,
+    );
 
     const profileIds = new Set(
       officialCandidateProfiles.map((candidate) => candidate.candidacy.id),
@@ -40,12 +43,13 @@ describe('four-section candidate profile coverage', () => {
     ).toBe(true);
   });
 
-  it('keeps the four section contract and reports explicit content gaps', () => {
+  it('keeps the five section contract and reports explicit content gaps', () => {
     expect(coverageReport.profileTabs).toEqual([
       '基本資料',
       '政策主張',
       '相關新聞',
       '從政歷程',
+      '家族從政關係',
     ]);
     expect(coverageReport.candidatesWithVerifiedPolicyStatements).toBe(0);
     expect(coverageReport.candidatesWithPendingPolicyResearch).toBeGreaterThan(
@@ -140,7 +144,7 @@ describe('four-section candidate profile coverage', () => {
     );
   });
 
-  it('maps legacy record categories into the four-section career tab', () => {
+  it('maps legacy record categories into the career tab', () => {
     expect(scopedCategoryToProfileTab('public-records')).toBe('career');
     expect(scopedCategoryToProfileTab('relationships')).toBe('career');
     expect(scopedCategoryToProfileTab('timeline')).toBe('career');

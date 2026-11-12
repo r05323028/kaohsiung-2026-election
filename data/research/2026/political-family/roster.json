@@ -1,0 +1,961 @@
+{
+  "datasetId": "kaohsiung-2026-local-election",
+  "snapshotDate": "2026-11-05",
+  "candidateCount": 106,
+  "candidates": [
+    {
+      "sequence": 1,
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "slug": "zhang-jing-2026",
+      "displayName": "張靜",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "politicalParty": "司法改革黨"
+    },
+    {
+      "sequence": 2,
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "slug": "wang-zhao-min-2026",
+      "displayName": "王肇民",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 3,
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "slug": "ke-zhi-en-2026",
+      "displayName": "柯志恩",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 4,
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "slug": "hong-fang-long-2026",
+      "displayName": "洪方隆",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 5,
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "slug": "lai-rui-long-2026",
+      "displayName": "賴瑞隆",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 6,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "slug": "kaohsiung-council-01-eacf5d92",
+      "displayName": "李振豪",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 7,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "slug": "kaohsiung-council-01-a038ab23",
+      "displayName": "林義迪",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 8,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "slug": "kaohsiung-council-01-3a8398e2",
+      "displayName": "林慧欣",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 9,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "slug": "kaohsiung-council-01-ee1634c3",
+      "displayName": "鍾炳光",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 10,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "slug": "kaohsiung-council-01-d01a31e6",
+      "displayName": "林富寶",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 11,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "slug": "kaohsiung-council-02-e5d525b6",
+      "displayName": "李柏融",
+      "districtId": "district-kaohsiung-council-02",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 12,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "slug": "kaohsiung-council-02-200bb44f",
+      "displayName": "李亞築",
+      "districtId": "district-kaohsiung-council-02",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 13,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "slug": "kaohsiung-council-02-49795f4d",
+      "displayName": "黃明太",
+      "districtId": "district-kaohsiung-council-02",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 14,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "slug": "kaohsiung-council-02-0e4dd20e",
+      "displayName": "陳琳潔",
+      "districtId": "district-kaohsiung-council-02",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 15,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "slug": "kaohsiung-council-02-2f6b9ce3",
+      "displayName": "鄭東元",
+      "districtId": "district-kaohsiung-council-02",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 16,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "slug": "kaohsiung-council-03-34aafd1e",
+      "displayName": "方信淵",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 17,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "slug": "kaohsiung-council-03-e4af3760",
+      "displayName": "張驥晟",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 18,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "slug": "kaohsiung-council-03-4fb9f93d",
+      "displayName": "宋立彬",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 19,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "slug": "kaohsiung-council-03-03c229c0",
+      "displayName": "蔣黃女",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 20,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "slug": "kaohsiung-council-03-794f0a10",
+      "displayName": "黃秋媛",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 21,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "slug": "kaohsiung-council-03-49f94419",
+      "displayName": "林志誠",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 22,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "slug": "kaohsiung-council-03-c5a8db0a",
+      "displayName": "黃韻涵",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 23,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+      "slug": "kaohsiung-council-03-dc57c1f3",
+      "displayName": "蔡秉穎",
+      "districtId": "district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 24,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "slug": "kaohsiung-council-04-712cf4dd",
+      "displayName": "黃文志",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 25,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "slug": "kaohsiung-council-04-23bd0041",
+      "displayName": "李雅芬",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 26,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "slug": "kaohsiung-council-04-e810f056",
+      "displayName": "白喬茵",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 27,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "slug": "kaohsiung-council-04-d7b1335b",
+      "displayName": "柳淑芳",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 28,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "slug": "kaohsiung-council-04-a7ed58d6",
+      "displayName": "李眉蓁",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 29,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "slug": "kaohsiung-council-04-58eafab0",
+      "displayName": "李雅慧",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 30,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "slug": "kaohsiung-council-04-29138ad9",
+      "displayName": "陳玫娟",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 31,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "slug": "kaohsiung-council-04-77e78bf6",
+      "displayName": "張以理",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 32,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "slug": "kaohsiung-council-04-16f09b7e",
+      "displayName": "陳冠宇",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 33,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "slug": "kaohsiung-council-04-6c3e756f",
+      "displayName": "陳麗珍",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 34,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "slug": "kaohsiung-council-04-7594fe5b",
+      "displayName": "薛兆基",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 35,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "slug": "kaohsiung-council-04-7287e742",
+      "displayName": "尹立",
+      "districtId": "district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 36,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "slug": "kaohsiung-council-05-69c3f3e6",
+      "displayName": "黃飛鳳",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 37,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "slug": "kaohsiung-council-05-87745ac1",
+      "displayName": "陳惠君",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 38,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "slug": "kaohsiung-council-05-4c43ff03",
+      "displayName": "張勝富",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 39,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "slug": "kaohsiung-council-05-5580756f",
+      "displayName": "江瑞鴻",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 40,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "slug": "kaohsiung-council-05-9f8096a2",
+      "displayName": "邱俊憲",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 41,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "slug": "kaohsiung-council-05-78dc48ed",
+      "displayName": "陳若翠",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 42,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "slug": "kaohsiung-council-05-ab8f44a1",
+      "displayName": "吳利成",
+      "districtId": "district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 43,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "slug": "kaohsiung-council-06-02e9b103",
+      "displayName": "簡煥宗",
+      "districtId": "district-kaohsiung-council-06",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 44,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "slug": "kaohsiung-council-06-0644fda4",
+      "displayName": "李喬如",
+      "districtId": "district-kaohsiung-council-06",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 45,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "slug": "kaohsiung-council-06-8a4e2657",
+      "displayName": "蔡金晏",
+      "districtId": "district-kaohsiung-council-06",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 46,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "slug": "kaohsiung-council-06-845d8f64",
+      "displayName": "陳美雅",
+      "districtId": "district-kaohsiung-council-06",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 47,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "slug": "kaohsiung-council-07-6b7a49b6",
+      "displayName": "何權峰",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 48,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "slug": "kaohsiung-council-07-18990102",
+      "displayName": "童燕珍",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 49,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "slug": "kaohsiung-council-07-034b7985",
+      "displayName": "林彥",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 50,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "slug": "kaohsiung-council-07-e0956970",
+      "displayName": "黃香菽",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 51,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "slug": "kaohsiung-council-07-ce1bd95c",
+      "displayName": "曾俊傑",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 52,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "slug": "kaohsiung-council-07-b1cd243b",
+      "displayName": "張博洋",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 53,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "slug": "kaohsiung-council-07-c87108af",
+      "displayName": "林于凱",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "台灣民眾黨"
+    },
+    {
+      "sequence": 54,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "slug": "kaohsiung-council-07-eec9e2bf",
+      "displayName": "康裕成",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 55,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "slug": "kaohsiung-council-07-8f9a3634",
+      "displayName": "鄭孟洽",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 56,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "slug": "kaohsiung-council-07-2a964067",
+      "displayName": "黃柏霖",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 57,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "slug": "kaohsiung-council-07-88ecce5c",
+      "displayName": "余聖明",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 58,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "slug": "kaohsiung-council-07-a3f462c1",
+      "displayName": "黃淑美",
+      "districtId": "district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 59,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "slug": "kaohsiung-council-08-aecfd707",
+      "displayName": "黃舜杰",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 60,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "slug": "kaohsiung-council-08-6ecb36dd",
+      "displayName": "黃裕庭",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 61,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "slug": "kaohsiung-council-08-6c5507e1",
+      "displayName": "許采蓁",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 62,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "slug": "kaohsiung-council-08-ccbf37bb",
+      "displayName": "湯詠瑜",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 63,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "slug": "kaohsiung-council-08-7b3ae9f2",
+      "displayName": "黃文益",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 64,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "slug": "kaohsiung-council-08-84ba32a4",
+      "displayName": "黃鈺婷",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 65,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "slug": "kaohsiung-council-08-9a658777",
+      "displayName": "陳雅敏",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 66,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "slug": "kaohsiung-council-08-8b2a5074",
+      "displayName": "鄒約翰",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 67,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "slug": "kaohsiung-council-08-0e49fc5e",
+      "displayName": "郭建盟",
+      "districtId": "district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 68,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "slug": "kaohsiung-council-09-7ada4337",
+      "displayName": "林智鴻",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 69,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "slug": "kaohsiung-council-09-1c7a332c",
+      "displayName": "張漢忠",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 70,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "slug": "kaohsiung-council-09-07bd8300",
+      "displayName": "鄭安秝",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 71,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "slug": "kaohsiung-council-09-423384de",
+      "displayName": "蘇致榮",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 72,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "slug": "kaohsiung-council-09-02facf2a",
+      "displayName": "陳慧文",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 73,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+      "slug": "kaohsiung-council-09-913eba58",
+      "displayName": "劉德林",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 74,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+      "slug": "kaohsiung-council-09-a1a5e49a",
+      "displayName": "李雅靜",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 75,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "slug": "kaohsiung-council-09-c423cf75",
+      "displayName": "徐尚賢",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 76,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "slug": "kaohsiung-council-09-5303e646",
+      "displayName": "鍾易仲",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 77,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+      "slug": "kaohsiung-council-09-094736ec",
+      "displayName": "鄧巧佩",
+      "districtId": "district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 78,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+      "slug": "kaohsiung-council-10-228f04d0",
+      "displayName": "李政憲",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "司法改革黨"
+    },
+    {
+      "sequence": 79,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "slug": "kaohsiung-council-10-1c0d4a7e",
+      "displayName": "湯茹婷",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 80,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+      "slug": "kaohsiung-council-10-ef2910ce",
+      "displayName": "劉仙娥",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "勞動黨"
+    },
+    {
+      "sequence": 81,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "slug": "kaohsiung-council-10-da29eabb",
+      "displayName": "蔡武宏",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 82,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+      "slug": "kaohsiung-council-10-39da3c73",
+      "displayName": "張藝瑾",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 83,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "slug": "kaohsiung-council-10-8206c866",
+      "displayName": "于仙玲",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "小民參政歐巴桑聯盟"
+    },
+    {
+      "sequence": 84,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "slug": "kaohsiung-council-10-f1f8ec11",
+      "displayName": "鄭光峰",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 85,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "slug": "kaohsiung-council-10-b6784261",
+      "displayName": "陳麗娜",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 86,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "slug": "kaohsiung-council-10-da0bb13d",
+      "displayName": "李順進",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 87,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+      "slug": "kaohsiung-council-10-63a20221",
+      "displayName": "李絃毅",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 88,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "slug": "kaohsiung-council-10-6712147e",
+      "displayName": "吳銘賜",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 89,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "slug": "kaohsiung-council-10-19864409",
+      "displayName": "吳昱鋒",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 90,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "slug": "kaohsiung-council-10-356b5985",
+      "displayName": "黃敬雅",
+      "districtId": "district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 91,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "slug": "kaohsiung-council-11-58589937",
+      "displayName": "洪村銘",
+      "districtId": "district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 92,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "slug": "kaohsiung-council-11-6fa8608c",
+      "displayName": "黃天煌",
+      "districtId": "district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 93,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "slug": "kaohsiung-council-11-6db9e527",
+      "displayName": "邱于軒",
+      "districtId": "district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 94,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "slug": "kaohsiung-council-11-ec23428a",
+      "displayName": "王耀裕",
+      "districtId": "district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 95,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "slug": "kaohsiung-council-11-fc9ac319",
+      "displayName": "李雨庭",
+      "districtId": "district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 96,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+      "slug": "kaohsiung-council-11-defd1858",
+      "displayName": "張耀中",
+      "districtId": "district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 97,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+      "slug": "kaohsiung-council-12-c93e50a3",
+      "displayName": "巫振興",
+      "districtId": "district-kaohsiung-indigenous-flat-12",
+      "electionType": "indigenous-council",
+      "politicalParty": "民主進步黨"
+    },
+    {
+      "sequence": 98,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+      "slug": "kaohsiung-council-12-1aabe755",
+      "displayName": "宋紹銘",
+      "districtId": "district-kaohsiung-indigenous-flat-12",
+      "electionType": "indigenous-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 99,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "slug": "kaohsiung-council-12-1a977b21",
+      "displayName": "王義雄",
+      "districtId": "district-kaohsiung-indigenous-flat-12",
+      "electionType": "indigenous-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 100,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "slug": "kaohsiung-council-13-8ca21ce7",
+      "displayName": "陳幸富",
+      "districtId": "district-kaohsiung-indigenous-mountain-13",
+      "electionType": "indigenous-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 101,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+      "slug": "kaohsiung-council-13-b6ae8174",
+      "displayName": "葛娜瑩",
+      "districtId": "district-kaohsiung-indigenous-mountain-13",
+      "electionType": "indigenous-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 102,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+      "slug": "kaohsiung-council-14-2e144b34",
+      "displayName": "洪英雄",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "electionType": "indigenous-council",
+      "politicalParty": "中國國民黨"
+    },
+    {
+      "sequence": 103,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "slug": "kaohsiung-council-14-c66852f5",
+      "displayName": "林錫閔",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "electionType": "indigenous-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 104,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+      "slug": "kaohsiung-council-14-f0f2e32a",
+      "displayName": "高忠德",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "electionType": "indigenous-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 105,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+      "slug": "kaohsiung-council-15-7e4c5eb2",
+      "displayName": "金禾雅",
+      "districtId": "district-kaohsiung-indigenous-mountain-15",
+      "electionType": "indigenous-council",
+      "politicalParty": "無"
+    },
+    {
+      "sequence": 106,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+      "slug": "kaohsiung-council-15-0bab53b3",
+      "displayName": "陳奕蓁",
+      "districtId": "district-kaohsiung-indigenous-mountain-15",
+      "electionType": "indigenous-council",
+      "politicalParty": "中國國民黨"
+    }
+  ]
+}

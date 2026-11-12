@@ -1,3 +1,4 @@
+import type { KeyboardEvent } from 'react';
 import { useEffect, useState } from 'react';
 import { isDemoProfile, type PublicCandidateProfile } from '../data';
 import type { BasicProfilePublicClaim } from '../data/basic-profiles';
@@ -6,14 +7,16 @@ import {
   BasicProfileFieldLabels,
 } from '../data/basic-profiles/schema';
 import { ballotNumberText } from '../data/official/ballot';
+import PoliticalFamilyGraph from './PoliticalFamilyGraph';
 
-export type ProfileTab = 'basic' | 'policies' | 'news' | 'career';
+export type ProfileTab = 'basic' | 'policies' | 'news' | 'career' | 'family';
 
 export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
   { id: 'basic', label: '基本資料' },
   { id: 'policies', label: '政策主張' },
   { id: 'news', label: '相關新聞' },
   { id: 'career', label: '從政歷程' },
+  { id: 'family', label: '家族從政關係' },
 ];
 
 const attributionLabels: Record<string, string> = {
@@ -860,6 +863,10 @@ function NewsCards({
   );
 }
 
+function FamilyTab({ candidate }: { candidate: PublicCandidateProfile }) {
+  return <PoliticalFamilyGraph candidate={candidate} />;
+}
+
 function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const news = collectNewsCards(candidate);
 
@@ -894,6 +901,33 @@ export default function ProfileTabs({
     setHydrated(true);
   }, []);
 
+  const focusTab = (tab: ProfileTab) => {
+    setActiveTab(tab);
+    document.getElementById(`tab-${candidate.candidacy.slug}-${tab}`)?.focus();
+  };
+
+  const handleTabKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    currentTab: ProfileTab,
+  ) => {
+    const currentIndex = PROFILE_TABS.findIndex((tab) => tab.id === currentTab);
+    let nextIndex: number | undefined;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      nextIndex = (currentIndex + 1) % PROFILE_TABS.length;
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      nextIndex =
+        (currentIndex - 1 + PROFILE_TABS.length) % PROFILE_TABS.length;
+    } else if (event.key === 'Home') {
+      nextIndex = 0;
+    } else if (event.key === 'End') {
+      nextIndex = PROFILE_TABS.length - 1;
+    }
+    if (nextIndex === undefined) return;
+    event.preventDefault();
+    const nextTab = PROFILE_TABS[nextIndex];
+    if (nextTab) focusTab(nextTab.id);
+  };
+
   const renderTab = (tab: ProfileTab) => {
     switch (tab) {
       case 'policies':
@@ -902,6 +936,8 @@ export default function ProfileTabs({
         return <NewsTab candidate={candidate} />;
       case 'career':
         return <CareerTab candidate={candidate} />;
+      case 'family':
+        return <FamilyTab candidate={candidate} />;
       default:
         return <BasicTab candidate={candidate} />;
     }
@@ -927,7 +963,9 @@ export default function ProfileTabs({
             type="button"
             aria-selected={activeTab === tab.id}
             aria-controls={`panel-${candidate.candidacy.slug}-${tab.id}`}
+            tabIndex={activeTab === tab.id ? 0 : -1}
             onClick={() => setActiveTab(tab.id)}
+            onKeyDown={(event) => handleTabKeyDown(event, tab.id)}
           >
             {tab.label}
           </button>

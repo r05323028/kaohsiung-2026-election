@@ -1,0 +1,387 @@
+[
+  {
+    "sequence": 54,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+    "displayName": "康裕成",
+    "searchedAt": "2026-11-12",
+    "queries": ["康裕成 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=康裕成+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 55,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+    "displayName": "鄭孟洽",
+    "searchedAt": "2026-11-12",
+    "queries": ["鄭孟洽 鄭孟洳 身分"],
+    "urlsAttempted": ["https://www.bing.com/search?q=鄭孟洽+鄭孟洳+身分"],
+    "outcome": "unresolved",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": [
+      {
+        "claim": "鄭孟洽與鄭孟洳可能為同一候選人或不同字形身分",
+        "status": "ambiguous-not-linked",
+        "sourceIds": [],
+        "reason": "名冊為鄭孟洽；字形與身分衝突未解，未附加鄭孟洳事實。"
+      }
+    ]
+  },
+  {
+    "sequence": 56,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+    "displayName": "黃柏霖",
+    "searchedAt": "2026-11-12",
+    "queries": ["黃柏霖 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=黃柏霖+政治家族", "https://www.setn.com/news/166101"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 57,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+    "displayName": "余聖明",
+    "searchedAt": "2026-11-12",
+    "queries": ["余聖明 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=余聖明+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 58,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+    "displayName": "黃淑美",
+    "searchedAt": "2026-11-12",
+    "queries": ["黃淑美 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=黃淑美+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 59,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+    "displayName": "黃舜杰",
+    "searchedAt": "2026-11-12",
+    "queries": ["黃舜杰 阿公 鄉長"],
+    "urlsAttempted": ["https://life.tw/article/%E6%89%BF%E8%A5%B2%E9%84%89%E9%95%B7%E9%98%BF%E5%85%AC%E7%82%BA%E6%B0%91%E6%9C%8D%E5%8B%99%E5%88%9D%E5%BF%83-%E9%BB%83%E舜%E6%9D%B0%E8%AA%93%E4%BB%A5-%E4%BF%A0%E5%AE%A2%E7%B2%BE%E7%A5%9E%E6%8A%95%E5%85%A5%E9%AB%98%E9%9B%84%E8%AD%B0%E5%93%A1-3145326"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": [
+      {
+        "relativeName": "未具名祖父",
+        "claim": "黃舜杰承襲阿公服務初心；阿公曾任高雄縣杉林鄉鄉長",
+        "status": "rejected",
+        "sourceIds": [],
+        "reason": "來源未提供祖父姓名，未達可識別親屬要求。"
+      }
+    ]
+  },
+  {
+    "sequence": 60,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+    "displayName": "黃裕庭",
+    "searchedAt": "2026-11-12",
+    "queries": ["黃裕庭 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=黃裕庭+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 61,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+    "displayName": "許采蓁",
+    "searchedAt": "2026-11-12",
+    "queries": ["許采蓁 許崑源"],
+    "urlsAttempted": ["https://www.chinatimes.com/realtimenews/20220919004382-260407"],
+    "outcome": "verified-relations-found",
+    "relations": [
+      {
+        "stablePersonKeySuggestion": "person:xu-kun-yuan",
+        "relativeName": "許崑源",
+        "relation": "父親",
+        "career": [
+          {
+            "officeTitle": "高雄市議會議長",
+            "organization": "高雄市議會",
+            "status": "former",
+            "start": null,
+            "end": null
+          }
+        ],
+        "kinshipSourceIds": ["source-chinatimes-20220919-260407"],
+        "careerSourceIds": ["source-chinatimes-20220919-260407"],
+        "sources": [
+          {
+            "sourceId": "source-chinatimes-20220919-260407",
+            "publisher": "中時新聞網",
+            "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+            "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+            "publicationDate": "2022-09-19T19:12:00+08:00",
+            "retrievedAt": "2026-11-12"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 62,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+    "displayName": "湯詠瑜",
+    "searchedAt": "2026-11-12",
+    "queries": ["湯詠瑜 湯金全"],
+    "urlsAttempted": ["https://www.chinatimes.com/realtimenews/20221125002927-260407"],
+    "outcome": "verified-relations-found",
+    "relations": [
+      {
+        "stablePersonKeySuggestion": "person:tang-jin-quan",
+        "relativeName": "湯金全",
+        "relation": "父親",
+        "career": [
+          {
+            "officeTitle": "高雄市副市長",
+            "organization": "高雄市政府",
+            "status": "former",
+            "start": null,
+            "end": null
+          }
+        ],
+        "kinshipSourceIds": ["source-chinatimes-20221125-260407"],
+        "careerSourceIds": ["source-chinatimes-20221125-260407"],
+        "sources": [
+          {
+            "sourceId": "source-chinatimes-20221125-260407",
+            "publisher": "中時新聞網",
+            "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+            "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+            "publicationDate": "2022-11-25T14:49:00+08:00",
+            "retrievedAt": "2026-11-12"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 63,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+    "displayName": "黃文益",
+    "searchedAt": "2026-11-12",
+    "queries": ["黃文益 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=黃文益+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 64,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+    "displayName": "黃鈺婷",
+    "searchedAt": "2026-11-12",
+    "queries": ["黃鈺婷 黃紹庭 妹妹"],
+    "urlsAttempted": ["https://news.ltn.com.tw/news/politics/breakingnews/5563213"],
+    "outcome": "verified-relations-found",
+    "relations": [
+      {
+        "stablePersonKeySuggestion": "person:huang-shao-ting",
+        "relativeName": "黃紹庭",
+        "relation": "哥哥",
+        "career": [
+          {
+            "officeTitle": "高雄市議員",
+            "organization": "高雄市議會",
+            "status": "former",
+            "start": null,
+            "end": null
+          }
+        ],
+        "kinshipSourceIds": ["source-ltn-20260904-5563213"],
+        "careerSourceIds": ["source-ltn-20260904-5563213"],
+        "sources": [
+          {
+            "sourceId": "source-ltn-20260904-5563213",
+            "publisher": "自由時報電子報",
+            "title": "「黃鈺婷」代表國民黨參選高市第8選區議員 撞名同黨同區「黃裕庭」",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563213",
+            "publicationDate": "2026-09-04T16:10:00+08:00",
+            "retrievedAt": "2026-11-12"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 65,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+    "displayName": "陳雅敏",
+    "searchedAt": "2026-11-12",
+    "queries": ["陳雅敏 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=陳雅敏+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 66,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+    "displayName": "鄒約翰",
+    "searchedAt": "2026-11-12",
+    "queries": ["鄒約翰 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=鄒約翰+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 67,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+    "displayName": "郭建盟",
+    "searchedAt": "2026-11-12",
+    "queries": ["郭建盟 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=郭建盟+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 68,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+    "displayName": "林智鴻",
+    "searchedAt": "2026-11-12",
+    "queries": ["林智鴻 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=林智鴻+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 69,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+    "displayName": "張漢忠",
+    "searchedAt": "2026-11-12",
+    "queries": ["張漢忠 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=張漢忠+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 70,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+    "displayName": "鄭安秝",
+    "searchedAt": "2026-11-12",
+    "queries": ["鄭安秝 父親 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=鄭安秝+父親+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 71,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+    "displayName": "蘇致榮",
+    "searchedAt": "2026-11-12",
+    "queries": ["蘇致榮 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=蘇致榮+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 72,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+    "displayName": "陳慧文",
+    "searchedAt": "2026-11-12",
+    "queries": ["陳慧文 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=陳慧文+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 73,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+    "displayName": "劉德林",
+    "searchedAt": "2026-11-12",
+    "queries": ["劉德林 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=劉德林+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 74,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+    "displayName": "李雅靜",
+    "searchedAt": "2026-11-12",
+    "queries": ["李雅靜 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=李雅靜+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 75,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+    "displayName": "徐尚賢",
+    "searchedAt": "2026-11-12",
+    "queries": ["徐尚賢 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=徐尚賢+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 76,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+    "displayName": "鍾易仲",
+    "searchedAt": "2026-11-12",
+    "queries": ["鍾易仲 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=鍾易仲+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 77,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+    "displayName": "鄧巧佩",
+    "searchedAt": "2026-11-12",
+    "queries": ["鄧巧佩 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=鄧巧佩+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 78,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+    "displayName": "李政憲",
+    "searchedAt": "2026-11-12",
+    "queries": ["李政憲 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=李政憲+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  },
+  {
+    "sequence": 79,
+    "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+    "displayName": "湯茹婷",
+    "searchedAt": "2026-11-12",
+    "queries": ["湯茹婷 政治家族"],
+    "urlsAttempted": ["https://www.bing.com/search?q=湯茹婷+政治家族"],
+    "outcome": "searched-no-verified-relations",
+    "relations": [],
+    "rejectedOrAmbiguousClaims": []
+  }
+]

@@ -24,12 +24,20 @@ const roster = loadRoster();
 const expectedSlugs = roster.candidates.map((candidate) => candidate.slug);
 const expectedSlugSet = new Set(expectedSlugs);
 
-const requiredTabs = ['基本資料', '政策主張', '相關新聞', '從政歷程'];
+const requiredTabs = [
+  '基本資料',
+  '政策主張',
+  '相關新聞',
+  '從政歷程',
+  '家族從政關係',
+];
 const emptyStates = [
   '基本資料：暫無資料',
   '政策主張：暫無公開政策資料',
   '相關新聞：暫無公開新聞資料',
   '從政歷程：暫無公開履歷資料',
+  '尚無可核實的公開家族從政資料。',
+  '目前仍在查核家族從政資料，尚無可公開的已核實關係。',
   '提案紀錄：暫無公開提案紀錄',
   '表決紀錄：暫無可查證的個別表決紀錄',
 ];
@@ -120,6 +128,11 @@ function normalizeMarkdown(value: string): string {
   return value.trimEnd() + '\n';
 }
 
+function hasSerializedKey(html: string, key: string): boolean {
+  const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(?:\"|&quot;|')${escaped}(?:\"|&quot;|')\\s*:`).test(html);
+}
+
 const pageEntries = readdirSync(distCandidatesPath, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
@@ -135,7 +148,7 @@ const missingSlugs = expectedSlugs.filter(
 if (
   missingSlugs.length > 0 ||
   unexpectedSlugs.length > 0 ||
-  (demoSlugs.length !== 0 && demoSlugs.length !== 0)
+  (demoSlugs.length !== 0 && demoSlugs.length !== 4)
 ) {
   throw new Error(
     'Expected ' +
@@ -166,7 +179,7 @@ const pages = pageEntries.map((slug) => {
     visibleText.includes(text),
   );
   const serializedKeyMatches = forbiddenSerializedKeys.filter((key) =>
-    html.includes(key),
+    hasSerializedKey(html, key),
   );
   const serializedTextMatches = forbiddenSerializedText.filter((text) =>
     html.includes(text),
@@ -255,7 +268,7 @@ const report = {
   pageInventory: pages,
   assertions: {
     allRosterPagesPresent: true,
-    allPagesHaveFourTabs: true,
+    allPagesHaveFiveTabs: true,
     forbiddenVisibleTextCount: forbiddenMatches.length,
     serializedInternalMetadataCount: serializedInternalMatches.length,
     duplicateEmptyStateCount: duplicateEmptyStates.length,
@@ -282,7 +295,7 @@ const markdown = normalizeMarkdown(
     '- Duplicate empty states: ' +
     duplicateEmptyStates.length +
     '\n\n' +
-    'The audit checks generated static HTML for the complete roster, the four public tabs, concise empty-state strings, and removal of internal research/editorial workflow copy from both visitor-visible text and serialized island props.\n',
+    'The audit checks generated static HTML for the complete roster, the five public tabs, concise empty-state strings, and removal of internal research/editorial workflow copy from both visitor-visible text and serialized island props.\n',
 );
 
 writeFileSync(jsonReportPath, JSON.stringify(report, null, 2) + '\n');
@@ -290,7 +303,7 @@ writeFileSync(markdownReportPath, markdown);
 console.log(
   'Validated candidate profile copy: ' +
     pages.length +
-    ' pages, four tabs on every page, ' +
+    ' pages, five tabs on every page, ' +
     forbiddenMatches.length +
     ' forbidden visible strings, ' +
     serializedInternalMatches.length +

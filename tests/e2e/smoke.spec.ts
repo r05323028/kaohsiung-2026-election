@@ -68,6 +68,82 @@ test('direct candidate URL renders without relying on the city scene', async ({
   ).toBeVisible();
 });
 
+test('candidate family tab shows verified graph details and sources', async ({
+  page,
+}) => {
+  await page.goto('/candidates/ke-zhi-en-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await expect(
+    profile.getByRole('tab', { name: '家族從政關係', exact: true }),
+  ).toBeVisible();
+  await profile.getByRole('tab', { name: '家族從政關係', exact: true }).click();
+  await expect(profile.getByTestId('political-family-graph')).toBeVisible();
+  const relative = profile
+    .locator('.political-family-node__button')
+    .filter({ hasText: '柯文福' });
+  await expect(relative).toBeVisible();
+  await relative.click();
+  const details = profile.getByTestId('family-details');
+  await expect(details).toContainText('柯文福');
+  await expect(details.locator('a')).toHaveCount(2);
+
+  const relationship = profile
+    .locator('[data-testid^="family-relationship-"]')
+    .first();
+  await expect(relationship).toBeVisible();
+  await relationship.click();
+  await expect(details).toContainText('所選關係');
+  await expect(details).toContainText('柯志恩');
+  await expect(details).toContainText('柯文福');
+  await expect(details).toContainText('親屬關係來源');
+  await expect(details).toContainText('政治經歷來源');
+  expect(await details.locator('a').count()).toBeGreaterThanOrEqual(2);
+});
+
+test('candidate family tab uses a neutral empty state when no relation is published', async ({
+  page,
+}) => {
+  await page.goto('/candidates/zhang-jing-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '家族從政關係', exact: true }).click();
+  await expect(profile.getByTestId('political-family-empty')).toContainText(
+    '尚無可核實的公開家族從政資料。',
+  );
+  await expect(profile).not.toContainText('沒有政治背景');
+});
+
+test('candidate profile tabs support roving keyboard navigation', async ({
+  page,
+}) => {
+  await page.goto('/candidates/ke-zhi-en-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  const basicTab = profile.getByRole('tab', { name: '基本資料', exact: true });
+  await basicTab.focus();
+  await basicTab.press('End');
+  const familyTab = profile.getByRole('tab', {
+    name: '家族從政關係',
+    exact: true,
+  });
+  await expect(familyTab).toHaveAttribute('aria-selected', 'true');
+  await expect(familyTab).toHaveAttribute('tabindex', '0');
+  await expect(familyTab).toBeFocused();
+  await familyTab.press('Home');
+  await expect(basicTab).toHaveAttribute('aria-selected', 'true');
+  await basicTab.press('ArrowRight');
+  await expect(
+    profile.getByRole('tab', { name: '政策主張', exact: true }),
+  ).toHaveAttribute('aria-selected', 'true');
+});
+
 test('official election filters expose mayor, council, and indigenous districts', async ({
   page,
 }) => {
@@ -334,7 +410,7 @@ test('selected public-record profiles expose provenance and neutral gaps', async
   );
 });
 
-test('all five mayor profiles expose four neutral, source-backed sections', async ({
+test('all five mayor profiles expose five neutral, source-backed sections', async ({
   page,
 }) => {
   const candidates = [
@@ -369,7 +445,7 @@ test('all five mayor profiles expose four neutral, source-backed sections', asyn
       birthDate: '1973-11-15',
     },
   ];
-  const tabs = ['基本資料', '政策主張', '相關新聞', '從政歷程'];
+  const tabs = ['基本資料', '政策主張', '相關新聞', '從政歷程', '家族從政關係'];
   for (const candidate of candidates) {
     await page.goto(`/candidates/${candidate.slug}/`);
     const profile = page.getByTestId('profile-tabs');
@@ -485,7 +561,13 @@ test('all official council routes expose CEC identity fields and tab behavior', 
   );
   await expect(conflictProfile).not.toContainText('待人工比對');
 
-  for (const tab of ['基本資料', '政策主張', '相關新聞', '從政歷程']) {
+  for (const tab of [
+    '基本資料',
+    '政策主張',
+    '相關新聞',
+    '從政歷程',
+    '家族從政關係',
+  ]) {
     const tabButton = conflictProfile.getByRole('tab', {
       name: tab,
       exact: true,

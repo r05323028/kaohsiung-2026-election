@@ -7,6 +7,7 @@ import type {
 } from './enrichment/automated-publication';
 import { isPublishedBallotNumberStatus } from './official/ballot';
 import type { CandidatePolicyResearchSummary } from './policy-research';
+import type { PoliticalFamilyReadModel } from './political-family';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { CandidateResearchSummary } from './public-records/research-index';
 import type { PublicRecordBundle } from './public-records/schema';
@@ -55,6 +56,7 @@ export type CandidateProfileView = {
   publicRecordResearch?: CandidatePublicRecordResearchSummary;
   biography?: BiographyReadModel;
   basicProfile?: BasicProfileReadModel;
+  politicalFamily?: PoliticalFamilyReadModel;
   automatedPublication?: {
     status: 'published' | 'none';
     claims: AutomatedPublicClaim[];
@@ -368,6 +370,9 @@ export function toPublicCandidateProfile(
     ...(publicRecords ? { publicRecords } : {}),
     ...(publicBiography ? { biography: publicBiography } : {}),
     ...(publicBasicProfile ? { basicProfile: publicBasicProfile } : {}),
+    ...(candidate.politicalFamily
+      ? { politicalFamily: candidate.politicalFamily }
+      : {}),
     ...(publicAutomatedPublication
       ? { automatedPublication: publicAutomatedPublication }
       : {}),

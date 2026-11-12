@@ -146,7 +146,7 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
   const profile = page.locator('.profile-panel.is-open');
   await expect(profile).toBeVisible();
   await expect(profile.locator('.profile-tabs__list [role="tab"]')).toHaveCount(
-    4,
+    5,
     {
       timeout: 15_000,
     },

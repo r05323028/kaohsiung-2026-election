@@ -5,6 +5,7 @@ import { getBiographyReadModel } from '../biographies';
 import { coverageForDistrictSlug } from '../constituencies';
 import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
 import { getCandidatePolicyResearchSummary } from '../policy-research';
+import { getPoliticalFamilyReadModel } from '../political-family';
 import {
   getCandidateResearchSummary,
   getPublicRecordBundle,
@@ -164,6 +165,7 @@ function toProfile(
   );
   const biography = getBiographyReadModel(candidate.id);
   const basicProfile = getBasicProfileReadModel(candidate.id);
+  const politicalFamily = getPoliticalFamilyReadModel(candidate.id);
   const automatedPublication = getAutomatedCandidateReadModel(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
   const sources = [
@@ -219,6 +221,7 @@ function toProfile(
     ...(publicRecordResearch ? { publicRecordResearch } : {}),
     ...(biography ? { biography } : {}),
     ...(basicProfile ? { basicProfile } : {}),
+    ...(politicalFamily ? { politicalFamily } : {}),
     ...(automatedPublication.claims.length > 0 ? { automatedPublication } : {}),
     visual: neutralVisual(candidacyId, index),
   };

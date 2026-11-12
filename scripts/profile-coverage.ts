@@ -23,6 +23,7 @@ const PROFILE_TAB_LABELS = [
   '政策主張',
   '相關新聞',
   '從政歷程',
+  '家族從政關係',
 ] as const;
 
 type CandidateInventory = {
@@ -52,7 +53,7 @@ type CandidateInventory = {
 };
 
 type CoverageReport = {
-  reportId: 'candidate-profile-four-section-coverage';
+  reportId: 'candidate-profile-five-section-coverage';
   snapshotDate: string;
   profileTabs: readonly string[];
   totalCandidates: number;
@@ -360,7 +361,7 @@ function buildReports() {
   }
 
   const coverage: CoverageReport = {
-    reportId: 'candidate-profile-four-section-coverage',
+    reportId: 'candidate-profile-five-section-coverage',
     snapshotDate: '2026-11-09',
     profileTabs: PROFILE_TAB_LABELS,
     totalCandidates,
@@ -451,11 +452,11 @@ function markdownCoverage(report: CoverageReport): string {
         `| ${item.name} | ${item.district} | ${item.verifiedBasicInfo ? '是' : '否'} | ${item.publishedPolicyCount} | ${item.pendingPolicyCount} | ${item.publishedNewsCount} | ${item.publishedCareerRecordCount} | ${item.policyResearchOutcome} |`,
     )
     .join('\n');
-  return `# 候選人四區塊覆蓋報告
+  return `# 候選人五區塊覆蓋報告
 
 - 快照日期：${report.snapshotDate}
 - 候選人總數：${report.totalCandidates}
-- 四區塊結構完整：${report.candidatesStructurallySupported}
+- 五區塊結構完整：${report.candidatesStructurallySupported}
 - 有來源的基本資料：${report.candidatesWithVerifiedBasicInformation}
 - 已核准政策紀錄：${report.publishedPolicyCount} 筆／${report.candidatesWithVerifiedPolicyStatements} 位
 - 待審政策研究：${report.pendingPolicyCount} 筆／${report.candidatesWithPendingPolicyResearch} 位
@@ -501,7 +502,7 @@ function markdownSourceQuality(report: SourceQualityReport): string {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([key, value]) => `| ${key} | ${value} |`)
     .join('\n');
-  return `# 候選人四區塊來源品質報告
+  return `# 候選人五區塊來源品質報告
 
 - 快照日期：${report.snapshotDate}
 - 候選人總數：${report.totalCandidates}

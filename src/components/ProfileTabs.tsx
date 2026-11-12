@@ -37,6 +37,102 @@ const policyContextLabels: Record<string, string> = {
   unknown: '政策性質未標示',
 };
 
+const policyCategoryLabels: Record<string, string> = {
+  'transportation-and-mobility': '交通與運輸',
+  'housing-and-urban-development': '居住與都市發展',
+  'economic-development-and-industry': '經濟與產業',
+  education: '教育',
+  'childcare-and-family-support': '托育與家庭支持',
+  healthcare: '醫療與健康',
+  'social-welfare-and-long-term-care': '社會福利與長照',
+  'environment-and-sustainability': '環境與永續',
+  'public-safety-and-disaster-preparedness': '公共安全與防災',
+  'youth-and-employment': '青年與就業',
+  'agriculture-and-fisheries': '農業與漁業',
+  'culture-tourism-and-sports': '文化、觀光與體育',
+  'digital-governance-and-technology': '數位治理與科技',
+  'indigenous-affairs': '原住民族事務',
+  'government-transparency-and-administration': '政府透明與行政',
+  other: '其他',
+};
+
+const policyTypeLabels: Record<string, string> = {
+  manifesto: '正式政見',
+  campaign_proposal: '競選主張',
+  issue_position: '議題立場',
+  public_statement: '公開發言',
+  historical_proposal: '歷史政策主張',
+};
+
+const policyCategoryOrder = Object.keys(policyCategoryLabels);
+
+function PublishedPolicyCards({
+  policies,
+}: {
+  policies: NonNullable<PublicCandidateProfile['publishedPolicies']>;
+}) {
+  const groups = new Map<string, typeof policies>();
+  for (const policy of policies) {
+    const list = groups.get(policy.category) ?? [];
+    list.push(policy);
+    groups.set(policy.category, list);
+  }
+  const ordered = [...groups.entries()].sort(
+    (a, b) =>
+      policyCategoryOrder.indexOf(a[0]) - policyCategoryOrder.indexOf(b[0]),
+  );
+
+  return (
+    <div className="policy-groups">
+      {ordered.map(([category, items]) => (
+        <section className="policy-group" key={category}>
+          <h4 className="policy-group__title">
+            {policyCategoryLabels[category] ?? category}
+          </h4>
+          {items.map((policy) => (
+            <article className="content-card" key={policy.policyId}>
+              <div className="content-card__meta">
+                <span className="status-chip">
+                  {policyTypeLabels[policy.type] ?? policy.type}
+                </span>
+                {policy.announcedAt ? <span>{policy.announcedAt}</span> : null}
+                {policy.scope ? <span>{policy.scope}</span> : null}
+              </div>
+              <h5>{policy.title}</h5>
+              <p>{policy.summary}</p>
+              <details className="policy-card__details">
+                <summary>查看政策細節</summary>
+                {policy.details ? <p>{policy.details}</p> : null}
+                {policy.implementationDetails.length > 0 ? (
+                  <ul>
+                    {policy.implementationDetails.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                <blockquote>{policy.originalStatement}</blockquote>
+                <p className="policy-card__sources">
+                  <strong>來源：</strong>
+                  {policy.sources.map((source) => (
+                    <a
+                      key={source.url}
+                      href={source.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {source.publisher}｜{source.title}
+                    </a>
+                  ))}
+                </p>
+              </details>
+            </article>
+          ))}
+        </section>
+      ))}
+    </div>
+  );
+}
+
 const policyStatusLabels: Record<string, string> = {
   proposed: '提案中',
   'under-review': '審議中',
@@ -57,7 +153,7 @@ type EmptyStateKey = 'basic' | 'policies' | 'news' | 'career';
 
 const emptyStateLabels: Record<EmptyStateKey, string> = {
   basic: '基本資料：暫無資料',
-  policies: '政策主張：暫無公開政策資料',
+  policies: '目前尚未找到可核實的公開政策主張。',
   news: '相關新聞：暫無公開新聞資料',
   career: '從政歷程：暫無公開履歷資料',
 };
@@ -66,6 +162,9 @@ function EmptyContent({ category }: { category: EmptyStateKey }) {
   return (
     <div className="content-card">
       <h4>{emptyStateLabels[category]}</h4>
+      {category === 'policies' ? (
+        <p>缺少公開紀錄不代表候選人沒有相關主張。</p>
+      ) : null}
     </div>
   );
 }
@@ -491,49 +590,56 @@ function PublicPolicyCards({
 }
 
 function PoliciesTab({ candidate }: { candidate: PublicCandidateProfile }) {
+  const publishedPolicies = candidate.publishedPolicies ?? [];
   const publicPolicies = candidate.publicRecords?.policies ?? [];
 
   return (
     <div className="profile-tab-content" data-profile-section="policies">
       <div className="profile-section-heading">
         <h3>政策主張</h3>
-        <p>政策性質與狀態依來源標示。</p>
+        <p>依政策類別整理，並標示來源與提出時間。</p>
       </div>
-      <AutomatedClaimCards
-        candidate={candidate}
-        categories={['policies']}
-        heading="歷史政策資料"
-      />
-      {publicPolicies.length > 0 ? (
-        <PublicPolicyCards candidate={candidate} />
-      ) : candidate.policies.length > 0 ? (
-        candidate.policies.map((policy) => (
-          <article className="content-card" key={policy.id}>
-            <div className="content-card__meta">
-              <span className="status-chip">{policy.category}</span>
-              <span>候選人／示範資料陳述</span>
-              <span>{policy.publicationDate}</span>
-            </div>
-            <h4>{policy.title}</h4>
-            <p>
-              <strong>候選人原文：</strong>
-              {policy.originalStatement}
-            </p>
-            {policy.plainLanguageSummary ? (
-              <p>
-                <strong>摘要：</strong>
-                {policy.plainLanguageSummary}
-              </p>
-            ) : null}
-            <p>
-              <strong>政策狀態：</strong>
-              來源未標示
-            </p>
-            <SourceChips candidate={candidate} sourceIds={policy.sourceIds} />
-          </article>
-        ))
+      {publishedPolicies.length > 0 ? (
+        <PublishedPolicyCards policies={publishedPolicies} />
       ) : (
-        <EmptyContent category="policies" />
+        <>
+          <AutomatedClaimCards
+            candidate={candidate}
+            categories={['policies']}
+            heading="歷史政策資料"
+          />
+          {publicPolicies.length > 0 ? (
+            <PublicPolicyCards candidate={candidate} />
+          ) : candidate.policies.length > 0 ? (
+            candidate.policies.map((policy) => (
+              <article className="content-card" key={policy.id}>
+                <div className="content-card__meta">
+                  <span className="status-chip">{policy.category}</span>
+                  <span>候選人／示範資料陳述</span>
+                  <span>{policy.publicationDate}</span>
+                </div>
+                <h4>{policy.title}</h4>
+                <p>
+                  <strong>候選人原文：</strong>
+                  {policy.originalStatement}
+                </p>
+                {policy.plainLanguageSummary ? (
+                  <p>
+                    <strong>摘要：</strong>
+                    {policy.plainLanguageSummary}
+                  </p>
+                ) : null}
+                <p>
+                  <strong>政策狀態：</strong>
+                  來源未標示
+                </p>
+                <SourceChips candidate={candidate} sourceIds={policy.sourceIds} />
+              </article>
+            ))
+          ) : (
+            <EmptyContent category="policies" />
+          )}
+        </>
       )}
     </div>
   );

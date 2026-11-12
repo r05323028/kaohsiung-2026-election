@@ -1,0 +1,270 @@
+{
+  "batchId": "verify-16",
+  "verifierRole": "independent-verifier",
+  "decisions": [
+    {
+      "researchId": "su-zhi-rong-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 c455e658a379cbc4.txt 專訪；文中稱其為民進黨高雄市鳳山區議員參選人，歸屬明確；2026-09-01 與來源日期相符。"
+    },
+    {
+      "researchId": "su-zhi-rong-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文見於 930f27565f2acf21.txt，僅『新型態 社會住宅』中間有空格，屬空白正規化；文中稱其為鳳山區市議員候選人，2026-09-11 日期相符。"
+    },
+    {
+      "researchId": "su-zhi-rong-04",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 3cc2d12236df8693.txt；PChome 2026-10-13 21:09 報導，文中稱其為高雄市議員候選人蘇致榮，歸屬明確。"
+    },
+    {
+      "researchId": "chen-hui-wen-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 f487590dc6134dab.txt；Life 生活網 2026-10-27 報導『今（27）日』，文中稱陳慧文為鳳山區市議員，歸屬明確。"
+    },
+    {
+      "researchId": "chen-hui-wen-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇 f487590dc6134dab.txt；振興商圈、市場現代化與市場用地轉型、文史觀光廊帶及青年創業均保留，2026-10-27 日期相符。"
+    },
+    {
+      "researchId": "chen-hui-wen-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇 2026-10-27 報導；擴大延長托育、中高齡就業、照顧不離職、身障者權益與寵物友善城市均保留。"
+    },
+    {
+      "researchId": "chen-hui-wen-04",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇 2026-10-27 報導；900 點與折抵復康巴士車資條件均保留，原文為『已提案爭取』，摘要未寫成已定案。"
+    },
+    {
+      "researchId": "chen-hui-wen-05",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇 2026-10-27 報導；AI 假影片、兒少保護與平台緊急下架綠色通道均保留，歸屬陳慧文明確。"
+    },
+    {
+      "researchId": "chen-hui-wen-06",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 f464218cbad8c8db.txt；taidaily 2026-05-13 報導『今(13)日』，陳慧文為鳳山區市議員；教育分類相符。"
+    },
+    {
+      "researchId": "chen-hui-wen-07",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 145685b18f4a149b.txt；自由時報/LINE TODAY 2026-09-15 報導『今』，陳慧文為鳳山區市議員；特教護理師訴求屬教育。"
+    },
+    {
+      "researchId": "liu-de-lin-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 ed53e3361f9234e7.txt；自由時報 2026/05/13 09:58，劉德林為鳳山區市議員；『生三胎送房子』為建議，非已定案。"
+    },
+    {
+      "researchId": "liu-de-lin-02",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": false
+      },
+      "note": "引文逐字見於 f0fb50bfb7b23a8d.txt，歸屬劉德林明確；但內文兩處稱『30日』總質詢，extraction details 亦記為 2026-09-30，announcedAt 卻沿用 publishedAt 2026-09-29，日期不一致，需人工確認。"
+    },
+    {
+      "researchId": "liu-de-lin-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 ed9ca69672c9d222.txt；2026-10-18 競總成立大會，劉德林為鳳山區市議員；7,200 點與『持續爭取擴大』均保留。"
+    },
+    {
+      "researchId": "liu-de-lin-04",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 a796a1d320d1dce6.txt；2026-09-30 總質詢，跨運具/跨系統/跨縣市與向中央倡議均保留。摘要『要求』較原文『期盼、呼籲』略強，但核心訴求一致；與 liu-de-lin-03 的點數擴大不構成重複。"
+    },
+    {
+      "researchId": "liu-de-lin-05",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇 2026-09-30 報導；中重症住宿補助每月 1.5 萬元與爭取減輕輕度負擔均保留，歸屬明確。"
+    },
+    {
+      "researchId": "liu-de-lin-06",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇 2026-09-30 報導；流感重症、基層藥物儲備與疫苗接種率三項要求均保留。"
+    },
+    {
+      "researchId": "liu-de-lin-07",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 aed83c94c29896be.txt；2026-08-04 公聽會，劉德林與黃柏霖共同主持並共同呼籲，將主張歸於劉德林可成立，惟屬共同發聲。"
+    },
+    {
+      "researchId": "liu-de-lin-08",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 d4152f5be248d7f7.txt；Yahoo 2026-11-01 報導山仔頂溝污染，劉德林為鳳山區市議員；要求查明來源、路徑、範圍並防止再發生均保留。"
+    },
+    {
+      "researchId": "liu-de-lin-09",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 9ef519149a86175d.txt；2026-03-09 會勘報導稱其奔走三年，都委會通過變更公園用地；核准時點為去年 12 月，public-record-achievement 仍成立。"
+    },
+    {
+      "researchId": "li-ya-jing-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 1885b6e3dbfc7f4e.txt；2026-10-25 聯合競總成立，李雅靜為鳳山區市議員；七大面向僅列名稱，摘要稱『政見架構』而未虛構細節，other 分類可接受。"
+    },
+    {
+      "researchId": "li-ya-jing-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 3625c6a23d3b0754.txt；風傳媒 2026-04-16 報導『今（16）』，李雅靜為鳳山區市議員；夜市券數位化、高雄幣發放與串聯交通/在地產業均保留。"
+    },
+    {
+      "researchId": "li-ya-jing-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 e1a29e89798ca146.txt；風傳媒 2026-04-09 報導『今（9）』，李雅靜為鳳山區市議員；納入整體/遷村計畫、中央專案經費與明確時程均保留。"
+    },
+    {
+      "researchId": "zhong-yi-zhong-01",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 6390d9e1954951f2.txt，歸屬鍾易仲明確，2026-10-31 日期相符；惟摘要末句『促市長候選人表態支持』與原文不符：原文只要求賴瑞隆說明青線立場，並明言不能因辯論未提及就認定不支持，屬表述/條件強化，需人工修正。"
+    },
+    {
+      "researchId": "zhong-yi-zhong-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 cd3c745892c82450.txt；自由時報 2026/09/02 17:19 報導『今（2）日』，副市長林欽榮明確肯定鍾易仲促成政策轉彎，public-record-achievement 有依據。"
+    }
+  ]
+}

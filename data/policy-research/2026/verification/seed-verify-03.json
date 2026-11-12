@@ -1,0 +1,710 @@
+{
+  "batchId": "seed-verify-03",
+  "verifierRole": "independent-verifier",
+  "decisions": [
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-1",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-黃柏霖」及「服務政見」區塊均指向黃柏霖；第1項引文逐字相符，無數字或條件誤植。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-2",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "同一服務政見區塊第2項，引文「救空汙!儘力推動…無煤家園。」逐字相符，歸屬明確。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-3",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "同一服務政見區塊第3項，ESG 引文逐字相符，數字與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-4",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": false,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "歸屬正確，惟引文把下一段標題「問政與公益志業進度報告:」併入；raw HTML 分段使連續字串比對失敗，僅首句可確認逐字，範圍邊界待人工確認。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-5",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "引文逐字存在但止於「培育超過」，同項後半「3.7 萬位科丁學童、十種學程、再成長 100%」未收錄，數字與條件不完整。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-6",
+      "decision": "rejected",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "來源為「3.7 萬位科丁學童」，紀錄漏掉整數「3.」成「7 萬位」，基礎人數嚴重失真；標題亦誤標為服務政見第3項。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-7",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "引文止於「已培育」，同項「1.2 萬名合格志工、再增 50%」未收錄，目標與條件不完整。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-8",
+      "decision": "rejected",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "來源「1.2 萬名合格志工」漏掉「1.」成「2 萬名」，基礎人數錯誤，僅 50% 目標保留。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-9",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "引文止於「已有」，同項「2.1 萬名學童上課、再成長 50%」未收錄，數字與條件不完整。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-10",
+      "decision": "rejected",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "來源「2.1 萬名學童」漏掉「2.」成「1 萬名」，基礎人數錯誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-11",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "「跳跳屋」整項引文逐字相符：8 場次、3 萬人、持續辦理中均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-12",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "引文止於「目前已達」，同項「5.5 萬人納保…12.6 萬人集體納保」未收錄，關鍵數字與條件不完整。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-13",
+      "decision": "rejected",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "來源「5.5 萬人納保」漏掉「5.」成「5 萬人」，且 12.6 萬人目標未保留，數字失真。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-14",
+      "decision": "rejected",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "來源「12.6 萬人集體納保」漏掉「12.」成「6 萬人」，數字嚴重失真；標題誤標為第12項。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-15",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "「廣徵民意」整項引文逐字相符：202 場公聽會、持續辦理中，均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-16",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "「監督財政紀律」整項引文逐字相符：8 年、減債 432 億元，均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-17",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "「加強土地活化」整項引文逐字相符：公共設施保留地解編、近千億負擔，均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-1",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第1項台61線延伸永安、彌陀、梓官，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-2",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第2項橋頭科學園區交流道延伸海線，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-3",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第3項路平、燈亮、水溝清，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-4",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第4項因應極端氣候要求完善保險補助，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-5",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第5項加速智慧農漁業補助，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-6",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第6項大岡山商圈活化，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-7",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第7項增設漁業博物館，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-8",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第8項公有市場改建更新，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-9",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第9項空屋率、一區一社宅、配對租屋獎勵，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-10",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第10項危老建築補助及都更，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-11",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第11項生育津貼與托育補助加碼，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-12",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第12項單親家庭優先入住社宅，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-13",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第13項高齡長者居家安全補助，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-14",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第14項親子共融式公園，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-15",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第15項社區及里民活動中心設備維護，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-16",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-宋立彬」及服務政見區塊歸屬明確；第16項海線海岸觀光開發，逐字相符。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-1",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第1項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-2",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第2項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-3",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第3項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-4",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第4項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-5",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第5項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-6",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第6項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-7",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第7項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-8",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第8項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-9",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第9項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-10",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第10項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-11",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第11項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-12",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第12項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-13",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第13項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-14",
+      "decision": "rejected",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": false
+      },
+      "note": "來源確有「2025 年落實」字樣，惟 2025 已過、2026 選舉時屬舊屆期承諾，紀錄以 current-position、statementDate null 收錄，將歷史期限當成現行主張。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-15",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第15項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-16",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-李喬如」及服務政見區塊歸屬明確；第16項引文逐字相符，數字、地點與條件均與來源一致。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-1",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第一項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-2",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第二項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-3",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第三項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-4",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第四項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-5",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第五項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-6",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第六項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-7",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第七項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-8",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第八項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-9",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第九項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-10",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第十項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-11",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第十一項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-12",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第十二項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-13",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第十三項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-14",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第十四項引文逐字相符，地點與條件無誤。"
+    },
+    {
+      "policyId": "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-15",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "來源頁標題「本屆議員-江瑞鴻」及服務政見區塊歸屬明確；第十五項引文逐字相符，地點與條件無誤。"
+    }
+  ]
+}

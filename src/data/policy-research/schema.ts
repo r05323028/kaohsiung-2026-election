@@ -31,6 +31,39 @@ export const PolicyContextSchema = z.enum([
 ]);
 export type PolicyContext = z.infer<typeof PolicyContextSchema>;
 
+export const PolicyRecordTypeSchema = z.enum([
+  'manifesto',
+  'campaign_proposal',
+  'issue_position',
+  'public_statement',
+  'historical_proposal',
+]);
+export type PolicyRecordType = z.infer<typeof PolicyRecordTypeSchema>;
+
+export const POLICY_TYPES_BY_CONTEXT: Record<
+  PolicyContext,
+  readonly PolicyRecordType[]
+> = {
+  '2026-election-commitment': ['manifesto', 'campaign_proposal'],
+  'current-position': ['issue_position', 'public_statement'],
+  'historical-position': ['historical_proposal'],
+  'public-record-achievement': ['public_statement'],
+  'context-unknown': ['public_statement'],
+};
+
+export function policyTypeForContext(
+  context: PolicyContext,
+  title: string,
+): PolicyRecordType {
+  if (context === '2026-election-commitment') {
+    return /政見|白皮書|政策主張|共同政見|宣言/.test(title)
+      ? 'manifesto'
+      : 'campaign_proposal';
+  }
+  const allowed = POLICY_TYPES_BY_CONTEXT[context];
+  return (allowed[0] ?? 'public_statement') as PolicyRecordType;
+}
+
 export const SourceTierSchema = z.enum([
   'tier-1-primary',
   'tier-2-authoritative',
@@ -92,6 +125,7 @@ export const PolicySourceSnapshotSchema = z.object({
     'institutional-member-profile',
     'roster-context',
     'discovery-only',
+    'news-report',
   ]),
   tier: SourceTierSchema,
   retrievalStatus: SourceRetrievalStatusSchema,
@@ -152,6 +186,7 @@ export const PolicyRecordSchema = z.object({
   title: z.string().min(1),
   neutralSummary: z.string().min(1),
   originalStatement: z.string().min(1),
+  type: PolicyRecordTypeSchema,
   categories: z.array(PolicyCategorySchema).min(1),
   geographicScope: z.enum(['citywide', 'district', 'community', 'unknown']),
   geographicLabel: z.string().min(1),
@@ -214,12 +249,33 @@ export const PolicyResearchConflictSchema = z.object({
   resolution: z.string().nullable(),
 });
 
+export const PolicyVerificationDecisionSchema = z.object({
+  policyId: z.string().min(1),
+  decision: z.enum(['verified', 'rejected', 'unresolved']),
+  verifierRole: z.literal('independent-verifier'),
+  checkedAt: TimestampSchema,
+  checks: z.object({
+    attributionResolved: z.boolean(),
+    excerptPresentInSource: z.boolean(),
+    figuresPreserved: z.boolean(),
+    dateConsistent: z.boolean(),
+  }),
+  note: z.string().min(1),
+});
+
+export type PolicyVerificationDecision = z.infer<
+  typeof PolicyVerificationDecisionSchema
+>;
+
 export const PolicyResearchReviewSchema = z.object({
-  status: z.literal('pending-human-review'),
+  // Machine gate: an independent verifier decided every record, and the
+  // deterministic publication gate released only supported records.
+  status: z.enum(['pending-human-review', 'automated-verified']),
+  method: z.literal('automated-verification-gate-v1'),
   reviewerId: z.null(),
   reviewedAt: z.null(),
-  approvedPolicyCount: z.literal(0),
-  publishedPolicyCount: z.literal(0),
+  approvedPolicyCount: z.number().int().nonnegative(),
+  publishedPolicyCount: z.number().int().nonnegative(),
 });
 
 export const PolicyResearchDatasetSchema = z.object({
@@ -233,6 +289,7 @@ export const PolicyResearchDatasetSchema = z.object({
   sourceAttempts: z.array(PolicySourceAttemptSchema),
   policies: z.array(PolicyRecordSchema),
   evidence: z.array(PolicyEvidenceSchema),
+  verification: z.array(PolicyVerificationDecisionSchema),
   audits: z.array(CandidatePolicyAuditSchema).length(106),
   conflicts: z.array(PolicyResearchConflictSchema),
   review: PolicyResearchReviewSchema,
@@ -288,6 +345,19 @@ export function validatePolicyResearchDataset(
   const evidenceIds = new Set(
     dataset.evidence.map((evidence) => evidence.evidenceId),
   );
+  const decisions = new Map(
+    dataset.verification.map((item) => [item.policyId, item.decision]),
+  );
+  unique(
+    'verification decisions',
+    dataset.verification.map((item) => item.policyId),
+  );
+  for (const item of dataset.verification) {
+    if (!policyIds.has(item.policyId))
+      throw new Error(
+        'Verification ' + item.policyId + ' references a missing policy.',
+      );
+  }
   const attemptIds = new Set(
     dataset.sourceAttempts.map((attempt) => attempt.attemptId),
   );
@@ -317,12 +387,36 @@ export function validatePolicyResearchDataset(
       throw new Error(
         `Policy ${policy.policyId} references missing evidence ${policy.evidenceId}.`,
       );
+    if (!POLICY_TYPES_BY_CONTEXT[policy.policyContext].includes(policy.type))
+      throw new Error(
+        'Policy ' + policy.policyId + ' has a record type inconsistent with its context.',
+      );
+    const decision = decisions.get(policy.policyId);
+    if (!decision)
+      throw new Error(
+        'Policy ' + policy.policyId + ' has no independent verification decision.',
+      );
+    if (policy.publicationStatus === 'approved-source-backed') {
+      if (policy.reviewStatus !== 'editorially-approved')
+        throw new Error(
+          'Policy ' + policy.policyId + ' is published without editorial approval.',
+        );
+      if (decision !== 'verified')
+        throw new Error(
+          'Policy ' + policy.policyId + ' is published without a verified decision.',
+        );
+    }
     if (
-      policy.reviewStatus !== 'pending-human-review' ||
-      policy.publicationStatus !== 'withheld-pending-review'
+      decision !== 'verified' &&
+      policy.publicationStatus !== 'withheld-pending-review' &&
+      policy.publicationStatus !== 'rejected'
     )
       throw new Error(
-        `Policy ${policy.policyId} crosses the pending review boundary.`,
+        'Policy ' + policy.policyId + ' cannot be published on an unverified decision.',
+      );
+    if (decision === 'rejected' && policy.publicationStatus !== 'rejected')
+      throw new Error(
+        'Policy ' + policy.policyId + ' was rejected but is not withheld.',
       );
     if (policy.duplicateOf && !policyIds.has(policy.duplicateOf))
       throw new Error(
@@ -353,5 +447,16 @@ export function validatePolicyResearchDataset(
         `Audit ${audit.candidateId} policy inventory is incomplete.`,
       );
   }
+  const approvedCount = dataset.policies.filter(
+    (policy) => policy.publicationStatus === 'approved-source-backed',
+  ).length;
+  if (dataset.review.approvedPolicyCount !== approvedCount)
+    throw new Error(
+      'Review approvedPolicyCount does not match the policy inventory.',
+    );
+  if (dataset.review.publishedPolicyCount !== approvedCount)
+    throw new Error(
+      'Review publishedPolicyCount does not match the published inventory.',
+    );
   return dataset;
 }

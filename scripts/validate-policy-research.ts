@@ -50,7 +50,11 @@ for (const audit of dataset.audits) {
     outcome: audit.outcome,
     researchStatus: audit.researchStatus,
     policyCount: audit.policyIds.length,
-    publishedPolicyCount: 0,
+    publishedPolicyCount: dataset.policies.filter(
+      (policy) =>
+        policy.candidateId === audit.candidateId &&
+        policy.publicationStatus === 'approved-source-backed',
+    ).length,
     note: audit.note,
   };
   if (JSON.stringify(summaryAudit) !== JSON.stringify(expected))
@@ -164,10 +168,32 @@ for (const policy of dataset.policies) {
     fail(
       `non-2026 policy ${policy.policyId} has electionYear ${policy.electionYear}`,
     );
-  if (policy.reviewStatus !== 'pending-human-review')
-    fail(`policy ${policy.policyId} crossed human review boundary`);
-  if (policy.publicationStatus !== 'withheld-pending-review')
-    fail(`policy ${policy.policyId} crossed publication boundary`);
+  const decision = dataset.verification.find(
+    (item) => item.policyId === policy.policyId,
+  );
+  if (policy.publicationStatus === 'approved-source-backed') {
+    if (policy.reviewStatus !== 'editorially-approved')
+      fail(`published policy ${policy.policyId} is not editorially approved`);
+    if (decision?.decision !== 'verified')
+      fail(`published policy ${policy.policyId} lacks a verified decision`);
+    if (source.retrievalStatus !== 'retrieved')
+      fail(`published policy ${policy.policyId} source was not retrieved`);
+    const evidence = evidenceById.get(policy.evidenceId);
+    if (!evidence) fail(`published policy ${policy.policyId} has no evidence`);
+    if (!source.rawPath)
+      fail(`published policy ${policy.policyId} has no retained source text`);
+    const raw = readFileSync(source.rawPath, 'utf8');
+    const normalized = (value: string) =>
+      value.normalize('NFKC').replace(/\s+/g, '');
+    if (!normalized(raw).includes(normalized(evidence.quotedText)))
+      fail(`published policy ${policy.policyId} quote is absent from source`);
+  }
+  if (
+    policy.publicationStatus !== 'approved-source-backed' &&
+    policy.publicationStatus !== 'withheld-pending-review' &&
+    policy.publicationStatus !== 'rejected'
+  )
+    fail(`policy ${policy.policyId} has invalid publication status`);
   if (!evidenceById.has(policy.evidenceId))
     fail(
       `policy ${policy.policyId} references missing evidence ${policy.evidenceId}`,
@@ -209,18 +235,16 @@ for (const audit of dataset.audits) {
     fail(`audit ${audit.candidateId} references missing evidence`);
 }
 
-if (dataset.review.status !== 'pending-human-review')
+if (dataset.review.status !== 'automated-verified')
   fail(`dataset review status is ${dataset.review.status}`);
 if (dataset.review.reviewerId !== null || dataset.review.reviewedAt !== null)
   fail('dataset contains invented reviewer metadata');
-if (
-  dataset.review.approvedPolicyCount !== 0 ||
-  dataset.review.publishedPolicyCount !== 0
-)
-  fail(
-    'dataset reports approved or published policy records despite pending review',
-  );
+const publishedCount = dataset.policies.filter(
+  (policy) => policy.publicationStatus === 'approved-source-backed',
+).length;
+if (dataset.review.publishedPolicyCount !== publishedCount)
+  fail('dataset review published count does not match policy inventory');
 
 console.log(
-  `Validated 106 candidate audits, ${dataset.policies.length} pending policy records, ${dataset.sourceSnapshots.length} retained sources, and 0 published policies.`,
+  `Validated 106 candidate audits, ${dataset.policies.length} policy records, ${dataset.sourceSnapshots.length} retained sources, and ${publishedCount} published policies.`,
 );

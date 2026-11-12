@@ -1,4 +1,8 @@
 import { z } from 'zod';
+import {
+  PolicyPublicationStatusSchema,
+  PolicyReviewStatusSchema,
+} from '../policy-research/schema';
 
 const DateOnlySchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const IsoTimestampSchema = z
@@ -16,6 +20,7 @@ const TierSchema = z.enum([
   'tier-1-primary',
   'tier-2-authoritative',
   'tier-3-secondary',
+  'tier-3-reporting',
   'tier-4-discovery',
 ]);
 const RetrievalSchema = z.enum([
@@ -144,8 +149,8 @@ export const EnrichmentPolicyReferenceSchema = z.object({
     'context-unknown',
   ]),
   verificationStatus: z.literal('machine-validated'),
-  reviewStatus: z.literal('pending-human-review'),
-  publicationStatus: z.literal('withheld-pending-review'),
+  reviewStatus: PolicyReviewStatusSchema,
+  publicationStatus: PolicyPublicationStatusSchema,
 });
 
 export const EnrichmentCandidateAuditSchema = z.object({

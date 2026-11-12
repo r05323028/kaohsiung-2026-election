@@ -1,0 +1,270 @@
+{
+  "batchId": "verify-21",
+  "verifierRole": "independent-verifier",
+  "decisions": [
+    {
+      "researchId": "wang-yao-yu-04",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於樂上新聞網 5/19 報導林園建設段，前文為「王耀裕表示」；龔厝路2號至153號、港子埔J幹線新建箱涵均保留，日期相符。"
+    },
+    {
+      "researchId": "wang-yao-yu-05",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導漁業與觀光段，前文為「王耀裕關心林園區漁會中芸魚市場新建工程」；中芸至小琉球航線復航保留，日期相符。"
+    },
+    {
+      "researchId": "wang-yao-yu-06",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前句為「他也建議」；明年度、城鎮風貌及創生環境營造計畫、內政部經費均保留，日期相符。"
+    },
+    {
+      "researchId": "wang-yao-yu-07",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": false,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": false
+      },
+      "note": "引文逐字存在，但 raw 檔僅出現「王耀裕」，未出現 identitySignal「高雄市議員王耀裕」，無法確認是同一候選人；raw 檔本身無日期，相關報導 5280dd7d0fb43e4f.txt 將同篇列為 2026-04-14，與 announcedAt/publishedAt 2026-09-19 不符，內容也指向 4 月鄭麗文和平之旅。建議人工確認身分與日期。"
+    },
+    {
+      "researchId": "wang-yao-yu-08",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於臺灣導報 10/14 報導，前文為「王耀裕議員先關切石化區安全」；10月、中油林園廠、燃燒塔跳車、改善後才可申請開爐均保留。"
+    },
+    {
+      "researchId": "wang-yao-yu-09",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，主詞為「王議員」；進貨驗收、有效日期、來源紀錄、資訊公開均保留，日期相符。"
+    },
+    {
+      "researchId": "li-yu-ting-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於今傳媒 5/16 報導，文章明確稱「高雄市議員李雨庭15日於高雄市議會市政總質詢」；非山非市、交通資源不足、差異化補助均保留；announcedAt 5/15 為質詢日，與報導相符。"
+    },
+    {
+      "researchId": "li-yu-ting-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前文為「她也建議」；旅遊、健康促進、串聯中央高齡政策均保留；日期相符。"
+    },
+    {
+      "researchId": "li-yu-ting-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於行銷人 4/17 報導，文章稱「高雄市議員李雨庭今日於社政部門質詢」；1200點、樂齡學習課程、關懷據點學費餐費、文化觀光走讀均保留。"
+    },
+    {
+      "researchId": "li-yu-ting-04",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於今傳媒報導，前文為「她認為」；觀光、文化、城市IP、商業機能、外觀動線燈光與沉浸式體驗均保留；日期相符。"
+    },
+    {
+      "researchId": "li-yu-ting-05",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前文為「李雨庭則主張」；海洋教育、觀光導覽、親子體驗、團客機能均保留，日期相符。"
+    },
+    {
+      "researchId": "li-yu-ting-06",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前文為「她指出」；13縣市、弱勢與高風險長者、加速研議均保留，未寫成已定案。"
+    },
+    {
+      "researchId": "zhang-yao-zhong-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於壹蘋 10/18 競總報導，文章明確稱「林園大寮市議員候選人張耀中」；台鐵、公車、YouBike、中型接駁巴士、捷運延伸均保留。"
+    },
+    {
+      "researchId": "zhang-yao-zhong-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前文為「張耀中指出」；大寮人口約11萬、捷運站旁兒童遊樂園均保留，日期相符。"
+    },
+    {
+      "researchId": "zhang-yao-zhong-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前文為「第三，在產業發展方面」；和發產業園區、大發工業區、在地就業均保留。"
+    },
+    {
+      "researchId": "wang-yi-xiong-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於 Yahoo 10/13 報導，文章明確稱「高雄市議員王義雄十三日總質詢」；南北區託管中心、社工護理、照護3.0均保留；policyContext 已標 historical-position。"
+    },
+    {
+      "researchId": "wang-yi-xiong-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，前文為「他也曾爭取」；前鎮興邦段國產署土地、原住民專屬社宅均保留；摘要另提鳳山中厝里拉瓦克安置社宅，同段後句有據。"
+    },
+    {
+      "researchId": "wang-yi-xiong-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，主詞為王義雄；前鎮花卉市場、豐年祭、傳統弓箭、槌球、歌舞、雜草叢生均保留。"
+    },
+    {
+      "researchId": "chen-xing-fu-01",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於樂上 5/18 報導，開頭即「高雄市議員陳幸富18日總質詢」；瑪雅里環鄉道路、達卡努瓦秀嶺巷排水、錫安山後山替代路邊坡復建均保留。"
+    },
+    {
+      "researchId": "chen-xing-fu-02",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，主詞為陳幸富；農用搬運車補助、林業用地、林下經濟、非原住民農友均保留。"
+    },
+    {
+      "researchId": "chen-xing-fu-03",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，主詞為陳幸富；兩座公廁、年底前完工均保留。摘要另提孩童遊憩設施，見同候選人同日 748639573884aa41.txt「建議於舊民權國小槌球場增設孩童遊憩設施」，非無據。"
+    },
+    {
+      "researchId": "chen-xing-fu-04",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，主詞為陳幸富；大愛貓頭鷹館、巴楠花部落小學、遮陽棚停車場均保留。"
+    },
+    {
+      "researchId": "chen-xing-fu-05",
+      "decision": "unresolved",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": false,
+        "dateConsistent": true
+      },
+      "note": "引文逐字存在，歸屬陳幸富明確；惟摘要末句「要求市府爭取經費」原文未見，報導是「衛生局回應，目前正積極向衛福部爭取相關經費與支持」，屬行動主體與條件之延伸，建議人工复核。"
+    },
+    {
+      "researchId": "chen-xing-fu-06",
+      "decision": "verified",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "引文逐字見於同篇報導，主詞為陳幸富；回歸原露營場管理要點、取消過度行政限縮、結構與簡易消防安全證明替代使用執照均保留。"
+    }
+  ]
+}

@@ -256,8 +256,8 @@ function validateUpstream(
     );
     assertCondition(
       reference.verificationStatus === 'machine-validated' &&
-        reference.reviewStatus === 'pending-human-review' &&
-        reference.publicationStatus === 'withheld-pending-review',
+        reference.reviewStatus === policy.reviewStatus &&
+        reference.publicationStatus === policy.publicationStatus,
       'Policy reference is not withheld ' + reference.policyId,
     );
   }
@@ -383,7 +383,6 @@ function validatePublications(dataset: PublicRecordsEnrichmentDataset): void {
     ...dataset.claims,
     ...dataset.positions,
     ...dataset.careerRecords,
-    ...dataset.policyReferences,
   ];
   for (const record of pendingRecords) {
     assertCondition(

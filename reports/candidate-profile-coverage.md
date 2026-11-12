@@ -5,13 +5,13 @@
 - 五區塊結構完整：106
 - 有來源的基本資料：106
 - 已核准政策紀錄：0 筆／0 位
-- 待審政策研究：668 筆／53 位
+- 待審政策研究：1189 筆／89 位
 - 已核准新聞：4 筆／2 位（依發布日期排序）
 - 有查證提案的前立法者：0 位
 - 有查證個別表決紀錄：0 位
 - 有查證行政政策推動：0 位
 - 已核准從政紀錄：12 筆
-- 來源不足／不可用的候選人研究：42 位
+- 來源不足／不可用的候選人研究：17 位
 - 因證據不足拒絕的紀錄：0 筆
 - 待人工審查紀錄：16 筆
 - 身份／歸屬衝突：0 筆
@@ -20,133 +20,133 @@
 
 | 選區 | 候選人 | 基本資料 | 已核准政策 | 待審政策 | 已核准新聞 | 已核准從政紀錄 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 高雄市長選舉 | 5 | 5 | 0 | 245 | 0 | 0 |
-| 高雄市議員第10選舉區 | 13 | 13 | 0 | 31 | 0 | 0 |
-| 高雄市議員第11選舉區 | 6 | 6 | 0 | 36 | 0 | 0 |
-| 高雄市議員第12選舉區 | 3 | 3 | 0 | 7 | 2 | 6 |
-| 高雄市議員第13選舉區 | 2 | 2 | 0 | 10 | 0 | 0 |
-| 高雄市議員第14選舉區 | 3 | 3 | 0 | 0 | 0 | 0 |
-| 高雄市議員第15選舉區 | 2 | 2 | 0 | 0 | 0 | 0 |
-| 高雄市議員第1選舉區 | 5 | 5 | 0 | 17 | 0 | 0 |
-| 高雄市議員第2選舉區 | 5 | 5 | 0 | 7 | 0 | 0 |
-| 高雄市議員第3選舉區 | 8 | 8 | 0 | 34 | 0 | 0 |
-| 高雄市議員第4選舉區 | 12 | 12 | 0 | 37 | 2 | 6 |
-| 高雄市議員第5選舉區 | 7 | 7 | 0 | 57 | 0 | 0 |
-| 高雄市議員第6選舉區 | 4 | 4 | 0 | 37 | 0 | 0 |
-| 高雄市議員第7選舉區 | 12 | 12 | 0 | 59 | 0 | 0 |
-| 高雄市議員第8選舉區 | 9 | 9 | 0 | 57 | 0 | 0 |
-| 高雄市議員第9選舉區 | 10 | 10 | 0 | 34 | 0 | 0 |
+| 高雄市長選舉 | 5 | 5 | 0 | 268 | 0 | 0 |
+| 高雄市議員第10選舉區 | 13 | 13 | 0 | 101 | 0 | 0 |
+| 高雄市議員第11選舉區 | 6 | 6 | 0 | 71 | 0 | 0 |
+| 高雄市議員第12選舉區 | 3 | 3 | 0 | 10 | 2 | 6 |
+| 高雄市議員第13選舉區 | 2 | 2 | 0 | 22 | 0 | 0 |
+| 高雄市議員第14選舉區 | 3 | 3 | 0 | 1 | 0 | 0 |
+| 高雄市議員第15選舉區 | 2 | 2 | 0 | 10 | 0 | 0 |
+| 高雄市議員第1選舉區 | 5 | 5 | 0 | 43 | 0 | 0 |
+| 高雄市議員第2選舉區 | 5 | 5 | 0 | 33 | 0 | 0 |
+| 高雄市議員第3選舉區 | 8 | 8 | 0 | 63 | 0 | 0 |
+| 高雄市議員第4選舉區 | 12 | 12 | 0 | 101 | 2 | 6 |
+| 高雄市議員第5選舉區 | 7 | 7 | 0 | 108 | 0 | 0 |
+| 高雄市議員第6選舉區 | 4 | 4 | 0 | 59 | 0 | 0 |
+| 高雄市議員第7選舉區 | 12 | 12 | 0 | 97 | 0 | 0 |
+| 高雄市議員第8選舉區 | 9 | 9 | 0 | 114 | 0 | 0 |
+| 高雄市議員第9選舉區 | 10 | 10 | 0 | 88 | 0 | 0 |
 
 ## 候選人明細
 
 | 候選人 | 選區 | 基本資料 | 已核准政策 | 待審政策 | 已核准新聞 | 從政紀錄 | 政策研究結果 |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 鍾炳光 | 高雄市議員第1選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 林慧欣 | 高雄市議員第1選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 林富寶 | 高雄市議員第1選舉區 | 是 | 0 | 8 | 0 | 0 | current-or-historical-only |
-| 林義迪 | 高雄市議員第1選舉區 | 是 | 0 | 9 | 0 | 0 | current-or-historical-only |
-| 李振豪 | 高雄市議員第1選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 李亞築 | 高雄市議員第2選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 陳琳潔 | 高雄市議員第2選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 鄭東元 | 高雄市議員第2選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 李柏融 | 高雄市議員第2選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 黃明太 | 高雄市議員第2選舉區 | 是 | 0 | 6 | 0 | 0 | current-or-historical-only |
+| 鍾炳光 | 高雄市議員第1選舉區 | 是 | 0 | 5 | 0 | 0 | verified-records |
+| 林慧欣 | 高雄市議員第1選舉區 | 是 | 0 | 2 | 0 | 0 | verified-records |
+| 林富寶 | 高雄市議員第1選舉區 | 是 | 0 | 15 | 0 | 0 | verified-records |
+| 林義迪 | 高雄市議員第1選舉區 | 是 | 0 | 16 | 0 | 0 | verified-records |
+| 李振豪 | 高雄市議員第1選舉區 | 是 | 0 | 5 | 0 | 0 | verified-records |
+| 李亞築 | 高雄市議員第2選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
+| 陳琳潔 | 高雄市議員第2選舉區 | 是 | 0 | 4 | 0 | 0 | verified-records |
+| 鄭東元 | 高雄市議員第2選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
+| 李柏融 | 高雄市議員第2選舉區 | 是 | 0 | 1 | 0 | 0 | verified-records |
+| 黃明太 | 高雄市議員第2選舉區 | 是 | 0 | 14 | 0 | 0 | verified-records |
 | 張驥晟 | 高雄市議員第3選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 黃韻涵 | 高雄市議員第3選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
+| 黃韻涵 | 高雄市議員第3選舉區 | 是 | 0 | 8 | 0 | 0 | verified-records |
 | 蔡秉穎 | 高雄市議員第3選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 蔣黃女 | 高雄市議員第3選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 方信淵 | 高雄市議員第3選舉區 | 是 | 0 | 17 | 0 | 0 | current-or-historical-only |
-| 宋立彬 | 高雄市議員第3選舉區 | 是 | 0 | 16 | 0 | 0 | current-or-historical-only |
+| 蔣黃女 | 高雄市議員第3選舉區 | 是 | 0 | 4 | 0 | 0 | verified-records |
+| 方信淵 | 高雄市議員第3選舉區 | 是 | 0 | 24 | 0 | 0 | verified-records |
+| 宋立彬 | 高雄市議員第3選舉區 | 是 | 0 | 23 | 0 | 0 | verified-records |
 | 黃秋媛 | 高雄市議員第3選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 林志誠 | 高雄市議員第3選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 薛兆基 | 高雄市議員第4選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 李雅芬 | 高雄市議員第4選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 陳冠宇 | 高雄市議員第4選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 張以理 | 高雄市議員第4選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 柳淑芳 | 高雄市議員第4選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 陳玫娟 | 高雄市議員第4選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 白喬茵 | 高雄市議員第4選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 李雅慧 | 高雄市議員第4選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 尹立 | 高雄市議員第4選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 陳麗珍 | 高雄市議員第4選舉區 | 是 | 0 | 13 | 0 | 0 | current-or-historical-only |
-| 黃文志 | 高雄市議員第4選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 李眉蓁 | 高雄市議員第4選舉區 | 是 | 0 | 10 | 2 | 6 | current-or-historical-only |
-| 陳惠君 | 高雄市議員第5選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 黃飛鳳 | 高雄市議員第5選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 張勝富 | 高雄市議員第5選舉區 | 是 | 0 | 15 | 0 | 0 | current-or-historical-only |
-| 邱俊憲 | 高雄市議員第5選舉區 | 是 | 0 | 9 | 0 | 0 | current-or-historical-only |
-| 陳若翠 | 高雄市議員第5選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 吳利成 | 高雄市議員第5選舉區 | 是 | 0 | 8 | 0 | 0 | current-or-historical-only |
-| 江瑞鴻 | 高雄市議員第5選舉區 | 是 | 0 | 15 | 0 | 0 | current-or-historical-only |
-| 蔡金晏 | 高雄市議員第6選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 簡煥宗 | 高雄市議員第6選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 李喬如 | 高雄市議員第6選舉區 | 是 | 0 | 16 | 0 | 0 | current-or-historical-only |
-| 陳美雅 | 高雄市議員第6選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 黃淑美 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 林于凱 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 林志誠 | 高雄市議員第3選舉區 | 是 | 0 | 4 | 0 | 0 | verified-records |
+| 薛兆基 | 高雄市議員第4選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
+| 李雅芬 | 高雄市議員第4選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
+| 陳冠宇 | 高雄市議員第4選舉區 | 是 | 0 | 1 | 0 | 0 | verified-records |
+| 張以理 | 高雄市議員第4選舉區 | 是 | 0 | 6 | 0 | 0 | verified-records |
+| 柳淑芳 | 高雄市議員第4選舉區 | 是 | 0 | 1 | 0 | 0 | verified-records |
+| 陳玫娟 | 高雄市議員第4選舉區 | 是 | 0 | 5 | 0 | 0 | verified-records |
+| 白喬茵 | 高雄市議員第4選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
+| 李雅慧 | 高雄市議員第4選舉區 | 是 | 0 | 9 | 0 | 0 | verified-records |
+| 尹立 | 高雄市議員第4選舉區 | 是 | 0 | 5 | 0 | 0 | verified-records |
+| 陳麗珍 | 高雄市議員第4選舉區 | 是 | 0 | 24 | 0 | 0 | verified-records |
+| 黃文志 | 高雄市議員第4選舉區 | 是 | 0 | 13 | 0 | 0 | verified-records |
+| 李眉蓁 | 高雄市議員第4選舉區 | 是 | 0 | 16 | 2 | 6 | verified-records |
+| 陳惠君 | 高雄市議員第5選舉區 | 是 | 0 | 11 | 0 | 0 | verified-records |
+| 黃飛鳳 | 高雄市議員第5選舉區 | 是 | 0 | 15 | 0 | 0 | verified-records |
+| 張勝富 | 高雄市議員第5選舉區 | 是 | 0 | 21 | 0 | 0 | verified-records |
+| 邱俊憲 | 高雄市議員第5選舉區 | 是 | 0 | 18 | 0 | 0 | verified-records |
+| 陳若翠 | 高雄市議員第5選舉區 | 是 | 0 | 9 | 0 | 0 | verified-records |
+| 吳利成 | 高雄市議員第5選舉區 | 是 | 0 | 13 | 0 | 0 | verified-records |
+| 江瑞鴻 | 高雄市議員第5選舉區 | 是 | 0 | 21 | 0 | 0 | verified-records |
+| 蔡金晏 | 高雄市議員第6選舉區 | 是 | 0 | 15 | 0 | 0 | verified-records |
+| 簡煥宗 | 高雄市議員第6選舉區 | 是 | 0 | 11 | 0 | 0 | verified-records |
+| 李喬如 | 高雄市議員第6選舉區 | 是 | 0 | 23 | 0 | 0 | verified-records |
+| 陳美雅 | 高雄市議員第6選舉區 | 是 | 0 | 10 | 0 | 0 | verified-records |
+| 黃淑美 | 高雄市議員第7選舉區 | 是 | 0 | 9 | 0 | 0 | verified-records |
+| 林于凱 | 高雄市議員第7選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
 | 余聖明 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 曾俊傑 | 高雄市議員第7選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 童燕珍 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 康裕成 | 高雄市議員第7選舉區 | 是 | 0 | 7 | 0 | 0 | current-or-historical-only |
+| 曾俊傑 | 高雄市議員第7選舉區 | 是 | 0 | 17 | 0 | 0 | verified-records |
+| 童燕珍 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 康裕成 | 高雄市議員第7選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
 | 鄭孟洽 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 張博洋 | 高雄市議員第7選舉區 | 是 | 0 | 14 | 0 | 0 | current-or-historical-only |
-| 黃柏霖 | 高雄市議員第7選舉區 | 是 | 0 | 17 | 0 | 0 | current-or-historical-only |
+| 張博洋 | 高雄市議員第7選舉區 | 是 | 0 | 16 | 0 | 0 | verified-records |
+| 黃柏霖 | 高雄市議員第7選舉區 | 是 | 0 | 27 | 0 | 0 | verified-records |
 | 何權峰 | 高雄市議員第7選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 黃香菽 | 高雄市議員第7選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
+| 黃香菽 | 高雄市議員第7選舉區 | 是 | 0 | 13 | 0 | 0 | verified-records |
 | 林彥 | 高雄市議員第7選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 黃文益 | 高雄市議員第8選舉區 | 是 | 0 | 11 | 0 | 0 | current-or-historical-only |
-| 湯詠瑜 | 高雄市議員第8選舉區 | 是 | 0 | 9 | 0 | 0 | current-or-historical-only |
-| 鄒約翰 | 高雄市議員第8選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 黃鈺婷 | 高雄市議員第8選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 許采蓁 | 高雄市議員第8選舉區 | 是 | 0 | 11 | 0 | 0 | current-or-historical-only |
-| 黃裕庭 | 高雄市議員第8選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 黃舜杰 | 高雄市議員第8選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 陳雅敏 | 高雄市議員第8選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 郭建盟 | 高雄市議員第8選舉區 | 是 | 0 | 26 | 0 | 0 | current-or-historical-only |
-| 陳慧文 | 高雄市議員第9選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 鄭安秝 | 高雄市議員第9選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 李雅靜 | 高雄市議員第9選舉區 | 是 | 0 | 9 | 0 | 0 | current-or-historical-only |
-| 蘇致榮 | 高雄市議員第9選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 張漢忠 | 高雄市議員第9選舉區 | 是 | 0 | 7 | 0 | 0 | current-or-historical-only |
-| 林智鴻 | 高雄市議員第9選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 劉德林 | 高雄市議員第9選舉區 | 是 | 0 | 5 | 0 | 0 | current-or-historical-only |
+| 黃文益 | 高雄市議員第8選舉區 | 是 | 0 | 18 | 0 | 0 | verified-records |
+| 湯詠瑜 | 高雄市議員第8選舉區 | 是 | 0 | 21 | 0 | 0 | verified-records |
+| 鄒約翰 | 高雄市議員第8選舉區 | 是 | 0 | 2 | 0 | 0 | verified-records |
+| 黃鈺婷 | 高雄市議員第8選舉區 | 是 | 0 | 2 | 0 | 0 | verified-records |
+| 許采蓁 | 高雄市議員第8選舉區 | 是 | 0 | 21 | 0 | 0 | verified-records |
+| 黃裕庭 | 高雄市議員第8選舉區 | 是 | 0 | 8 | 0 | 0 | verified-records |
+| 黃舜杰 | 高雄市議員第8選舉區 | 是 | 0 | 5 | 0 | 0 | verified-records |
+| 陳雅敏 | 高雄市議員第8選舉區 | 是 | 0 | 4 | 0 | 0 | verified-records |
+| 郭建盟 | 高雄市議員第8選舉區 | 是 | 0 | 33 | 0 | 0 | verified-records |
+| 陳慧文 | 高雄市議員第9選舉區 | 是 | 0 | 8 | 0 | 0 | verified-records |
+| 鄭安秝 | 高雄市議員第9選舉區 | 是 | 0 | 13 | 0 | 0 | verified-records |
+| 李雅靜 | 高雄市議員第9選舉區 | 是 | 0 | 12 | 0 | 0 | verified-records |
+| 蘇致榮 | 高雄市議員第9選舉區 | 是 | 0 | 4 | 0 | 0 | verified-records |
+| 張漢忠 | 高雄市議員第9選舉區 | 是 | 0 | 16 | 0 | 0 | verified-records |
+| 林智鴻 | 高雄市議員第9選舉區 | 是 | 0 | 3 | 0 | 0 | verified-records |
+| 劉德林 | 高雄市議員第9選舉區 | 是 | 0 | 14 | 0 | 0 | verified-records |
 | 徐尚賢 | 高雄市議員第9選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 鍾易仲 | 高雄市議員第9選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 鄧巧佩 | 高雄市議員第9選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 劉仙娥 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 吳銘賜 | 高雄市議員第10選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 于仙玲 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 鄭光峰 | 高雄市議員第10選舉區 | 是 | 0 | 8 | 0 | 0 | current-or-historical-only |
-| 湯茹婷 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 蔡武宏 | 高雄市議員第10選舉區 | 是 | 0 | 9 | 0 | 0 | current-or-historical-only |
-| 李順進 | 高雄市議員第10選舉區 | 是 | 0 | 1 | 0 | 0 | current-or-historical-only |
-| 黃敬雅 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 吳昱鋒 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 李政憲 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 鍾易仲 | 高雄市議員第9選舉區 | 是 | 0 | 15 | 0 | 0 | verified-records |
+| 鄧巧佩 | 高雄市議員第9選舉區 | 是 | 0 | 3 | 0 | 0 | verified-records |
+| 劉仙娥 | 高雄市議員第10選舉區 | 是 | 0 | 2 | 0 | 0 | verified-records |
+| 吳銘賜 | 高雄市議員第10選舉區 | 是 | 0 | 7 | 0 | 0 | verified-records |
+| 于仙玲 | 高雄市議員第10選舉區 | 是 | 0 | 8 | 0 | 0 | verified-records |
+| 鄭光峰 | 高雄市議員第10選舉區 | 是 | 0 | 19 | 0 | 0 | verified-records |
+| 湯茹婷 | 高雄市議員第10選舉區 | 是 | 0 | 3 | 0 | 0 | verified-records |
+| 蔡武宏 | 高雄市議員第10選舉區 | 是 | 0 | 15 | 0 | 0 | verified-records |
+| 李順進 | 高雄市議員第10選舉區 | 是 | 0 | 9 | 0 | 0 | verified-records |
+| 黃敬雅 | 高雄市議員第10選舉區 | 是 | 0 | 12 | 0 | 0 | verified-records |
+| 吳昱鋒 | 高雄市議員第10選舉區 | 是 | 0 | 3 | 0 | 0 | verified-records |
+| 李政憲 | 高雄市議員第10選舉區 | 是 | 0 | 3 | 0 | 0 | verified-records |
 | 張藝瑾 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
 | 李絃毅 | 高雄市議員第10選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 陳麗娜 | 高雄市議員第10選舉區 | 是 | 0 | 12 | 0 | 0 | current-or-historical-only |
-| 黃天煌 | 高雄市議員第11選舉區 | 是 | 0 | 7 | 0 | 0 | current-or-historical-only |
-| 張耀中 | 高雄市議員第11選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 洪村銘 | 高雄市議員第11選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 邱于軒 | 高雄市議員第11選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
-| 王耀裕 | 高雄市議員第11選舉區 | 是 | 0 | 11 | 0 | 0 | current-or-historical-only |
-| 李雨庭 | 高雄市議員第11選舉區 | 是 | 0 | 8 | 0 | 0 | current-or-historical-only |
-| 王義雄 | 高雄市議員第12選舉區 | 是 | 0 | 7 | 2 | 6 | current-or-historical-only |
-| 宋紹銘 | 高雄市議員第12選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
+| 陳麗娜 | 高雄市議員第10選舉區 | 是 | 0 | 20 | 0 | 0 | verified-records |
+| 黃天煌 | 高雄市議員第11選舉區 | 是 | 0 | 12 | 0 | 0 | verified-records |
+| 張耀中 | 高雄市議員第11選舉區 | 是 | 0 | 3 | 0 | 0 | verified-records |
+| 洪村銘 | 高雄市議員第11選舉區 | 是 | 0 | 8 | 0 | 0 | verified-records |
+| 邱于軒 | 高雄市議員第11選舉區 | 是 | 0 | 14 | 0 | 0 | verified-records |
+| 王耀裕 | 高雄市議員第11選舉區 | 是 | 0 | 20 | 0 | 0 | verified-records |
+| 李雨庭 | 高雄市議員第11選舉區 | 是 | 0 | 14 | 0 | 0 | verified-records |
+| 王義雄 | 高雄市議員第12選舉區 | 是 | 0 | 10 | 2 | 6 | verified-records |
+| 宋紹銘 | 高雄市議員第12選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
 | 巫振興 | 高雄市議員第12選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 葛娜瑩 | 高雄市議員第13選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 陳幸富 | 高雄市議員第13選舉區 | 是 | 0 | 10 | 0 | 0 | current-or-historical-only |
+| 葛娜瑩 | 高雄市議員第13選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 陳幸富 | 高雄市議員第13選舉區 | 是 | 0 | 22 | 0 | 0 | verified-records |
 | 林錫閔 | 高雄市議員第14選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 洪英雄 | 高雄市議員第14選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 高忠德 | 高雄市議員第14選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 金禾雅 | 高雄市議員第15選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 陳奕蓁 | 高雄市議員第15選舉區 | 是 | 0 | 0 | 0 | 0 | no-verifiable-policy-found |
-| 洪方隆 | 高雄市長選舉 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 柯志恩 | 高雄市長選舉 | 是 | 0 | 153 | 0 | 0 | verified-records |
-| 賴瑞隆 | 高雄市長選舉 | 是 | 0 | 92 | 0 | 0 | verified-records |
+| 洪英雄 | 高雄市議員第14選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 高忠德 | 高雄市議員第14選舉區 | 是 | 0 | 1 | 0 | 0 | verified-records |
+| 金禾雅 | 高雄市議員第15選舉區 | 是 | 0 | 10 | 0 | 0 | verified-records |
+| 陳奕蓁 | 高雄市議員第15選舉區 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 洪方隆 | 高雄市長選舉 | 是 | 0 | 1 | 0 | 0 | verified-records |
+| 柯志恩 | 高雄市長選舉 | 是 | 0 | 156 | 0 | 0 | verified-records |
+| 賴瑞隆 | 高雄市長選舉 | 是 | 0 | 99 | 0 | 0 | verified-records |
 | 王肇民 | 高雄市長選舉 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 張靜 | 高雄市長選舉 | 是 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 張靜 | 高雄市長選舉 | 是 | 0 | 12 | 0 | 0 | verified-records |
 
 ## 限制與缺口
 

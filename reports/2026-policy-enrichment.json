@@ -1,159 +1,151 @@
 {
   "reportType": "full-roster-policy-enrichment",
-  "generatedAt": "2026-11-09T00:00:00.000Z",
-  "researchCutoff": "2026-11-09",
+  "generatedAt": "2026-11-12T00:00:00.000Z",
+  "researchCutoff": "2026-11-12",
   "totalCandidatesInvestigated": 106,
-  "candidatesWithVerified2026Policies": 2,
-  "candidatesWithOnlyCurrentOrHistoricalPositions": 51,
-  "candidatesWithNoVerifiablePolicyFound": 11,
-  "candidatesWithSourcesUnavailable": 42,
+  "candidatesWithVerified2026Policies": 88,
+  "candidatesWithOnlyCurrentOrHistoricalPositions": 1,
+  "candidatesWithNoVerifiablePolicyFound": 0,
+  "candidatesWithSourcesUnavailable": 17,
   "outcomeCounts": {
-    "sources-unavailable": 42,
-    "verified-records": 2,
-    "no-verifiable-policy-found": 11,
-    "current-or-historical-only": 51
+    "verified-records": 88,
+    "sources-unavailable": 17,
+    "current-or-historical-only": 1
   },
-  "totalPolicyRecordsDiscovered": 668,
-  "machineValidatedPolicyCount": 668,
-  "pendingHumanReviewPolicyCount": 668,
-  "approvedPolicyCount": 0,
-  "publishedPolicyCount": 0,
-  "rejectedPolicyCount": 0,
-  "unresolvedPolicyCount": 0,
-  "sourceSnapshotCount": 127,
-  "sourceAttemptCount": 151,
+  "totalPolicyRecordsDiscovered": 1189,
+  "machineValidatedPolicyCount": 1189,
+  "pendingHumanReviewPolicyCount": 166,
+  "approvedPolicyCount": 998,
+  "publishedPolicyCount": 998,
+  "rejectedPolicyCount": 25,
+  "unresolvedPolicyCount": 166,
+  "sourceSnapshotCount": 1061,
+  "sourceAttemptCount": 1111,
   "sourceDistributionByTier": {
-    "tier-1-primary": 60,
+    "tier-1-primary": 62,
     "tier-2-authoritative": 65,
-    "tier-3-reporting": 0,
-    "tier-4-discovery": 0
-  },
-  "missingSourceReasons": {
-    "noRetainedCandidateSpecificSource": 42,
-    "retrievedCandidateSourceWithoutVerifiablePolicy": 11,
-    "blockedExternalSources": 2
+    "tier-3-reporting": 934
   },
   "policyCountByCategory": {
-    "transportation-and-mobility": 151,
-    "housing-and-urban-development": 58,
-    "economic-development-and-industry": 143,
-    "education": 76,
-    "childcare-and-family-support": 64,
-    "healthcare": 41,
-    "social-welfare-and-long-term-care": 80,
-    "environment-and-sustainability": 127,
-    "public-safety-and-disaster-preparedness": 88,
-    "youth-and-employment": 84,
-    "agriculture-and-fisheries": 37,
-    "culture-tourism-and-sports": 130,
-    "digital-governance-and-technology": 58,
-    "indigenous-affairs": 26,
-    "government-transparency-and-administration": 97,
-    "other": 87
+    "transportation-and-mobility": 233,
+    "housing-and-urban-development": 106,
+    "economic-development-and-industry": 177,
+    "education": 127,
+    "childcare-and-family-support": 97,
+    "healthcare": 67,
+    "social-welfare-and-long-term-care": 146,
+    "environment-and-sustainability": 163,
+    "public-safety-and-disaster-preparedness": 119,
+    "youth-and-employment": 101,
+    "agriculture-and-fisheries": 52,
+    "culture-tourism-and-sports": 177,
+    "digital-governance-and-technology": 63,
+    "indigenous-affairs": 29,
+    "government-transparency-and-administration": 111,
+    "other": 100
   },
   "policyCountByContext": {
-    "2026-election-commitment": 245,
-    "current-position": 423,
-    "historical-position": 0,
-    "public-record-achievement": 0,
-    "context-unknown": 0
+    "2026-election-commitment": 528,
+    "current-position": 652,
+    "public-record-achievement": 7,
+    "historical-position": 2
   },
   "coverageByDistrict": {
     "district-kaohsiung-mayor-2026": {
       "districtLabel": "全市・市長",
       "candidateCount": 5,
       "investigatedCount": 5,
-      "policyRecordCount": 245
+      "policyRecordCount": 268
     },
     "district-kaohsiung-council-01": {
       "districtLabel": "普通・第1選舉區",
       "candidateCount": 5,
       "investigatedCount": 5,
-      "policyRecordCount": 17
+      "policyRecordCount": 43
     },
     "district-kaohsiung-council-02": {
       "districtLabel": "普通・第2選舉區",
       "candidateCount": 5,
       "investigatedCount": 5,
-      "policyRecordCount": 7
+      "policyRecordCount": 33
     },
     "district-kaohsiung-council-03": {
       "districtLabel": "普通・第3選舉區",
       "candidateCount": 8,
       "investigatedCount": 8,
-      "policyRecordCount": 34
+      "policyRecordCount": 63
     },
     "district-kaohsiung-council-04": {
       "districtLabel": "普通・第4選舉區",
       "candidateCount": 12,
       "investigatedCount": 12,
-      "policyRecordCount": 37
+      "policyRecordCount": 101
     },
     "district-kaohsiung-council-05": {
       "districtLabel": "普通・第5選舉區",
       "candidateCount": 7,
       "investigatedCount": 7,
-      "policyRecordCount": 57
+      "policyRecordCount": 108
     },
     "district-kaohsiung-council-06": {
       "districtLabel": "普通・第6選舉區",
       "candidateCount": 4,
       "investigatedCount": 4,
-      "policyRecordCount": 37
+      "policyRecordCount": 59
     },
     "district-kaohsiung-council-07": {
       "districtLabel": "普通・第7選舉區",
       "candidateCount": 12,
       "investigatedCount": 12,
-      "policyRecordCount": 59
+      "policyRecordCount": 97
     },
     "district-kaohsiung-council-08": {
       "districtLabel": "普通・第8選舉區",
       "candidateCount": 9,
       "investigatedCount": 9,
-      "policyRecordCount": 57
+      "policyRecordCount": 114
     },
     "district-kaohsiung-council-09": {
       "districtLabel": "普通・第9選舉區",
       "candidateCount": 10,
       "investigatedCount": 10,
-      "policyRecordCount": 34
+      "policyRecordCount": 88
     },
     "district-kaohsiung-council-10": {
       "districtLabel": "普通・第10選舉區",
       "candidateCount": 13,
       "investigatedCount": 13,
-      "policyRecordCount": 31
+      "policyRecordCount": 101
     },
     "district-kaohsiung-council-11": {
       "districtLabel": "普通・第11選舉區",
       "candidateCount": 6,
       "investigatedCount": 6,
-      "policyRecordCount": 36
+      "policyRecordCount": 71
     },
     "district-kaohsiung-indigenous-flat-12": {
       "districtLabel": "平地原住民・第12選舉區",
       "candidateCount": 3,
       "investigatedCount": 3,
-      "policyRecordCount": 7
+      "policyRecordCount": 10
     },
     "district-kaohsiung-indigenous-mountain-13": {
       "districtLabel": "山地原住民・第13選舉區",
       "candidateCount": 2,
       "investigatedCount": 2,
-      "policyRecordCount": 10
+      "policyRecordCount": 22
     },
     "district-kaohsiung-indigenous-mountain-14": {
       "districtLabel": "山地原住民・第14選舉區",
       "candidateCount": 3,
       "investigatedCount": 3,
-      "policyRecordCount": 0
+      "policyRecordCount": 1
     },
     "district-kaohsiung-indigenous-mountain-15": {
       "districtLabel": "山地原住民・第15選舉區",
       "candidateCount": 2,
       "investigatedCount": 2,
-      "policyRecordCount": 0
+      "policyRecordCount": 10
     }
   },
   "candidateInventory": [
@@ -164,10 +156,10 @@
       "districtId": "district-kaohsiung-mayor-2026",
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 12,
+      "sourceCount": 29,
+      "note": "已發布 11 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-mayor-wang-zhao-min-2026",
@@ -178,8 +170,8 @@
       "electionType": "mayoral",
       "outcome": "sources-unavailable",
       "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "sourceCount": 6,
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-mayor-ke-zhi-en-2026",
@@ -189,9 +181,9 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "verified-records",
-      "policyCount": 153,
-      "sourceCount": 1,
-      "note": "已取得 153 筆候選人／政黨直接政策原文；全部仍為 pending-human-review，未進入公開核准資料。"
+      "policyCount": 156,
+      "sourceCount": 29,
+      "note": "已發布 59 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-mayor-hong-fang-long-2026",
@@ -200,10 +192,10 @@
       "districtId": "district-kaohsiung-mayor-2026",
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 1,
+      "sourceCount": 6,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-mayor-lai-rui-long-2026",
@@ -213,9 +205,9 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "verified-records",
-      "policyCount": 92,
-      "sourceCount": 21,
-      "note": "已取得 92 筆候選人／政黨直接政策原文；全部仍為 pending-human-review，未進入公開核准資料。"
+      "policyCount": 99,
+      "sourceCount": 48,
+      "note": "已發布 62 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
@@ -224,10 +216,10 @@
       "districtId": "district-kaohsiung-council-01",
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "outcome": "verified-records",
+      "policyCount": 5,
+      "sourceCount": 11,
+      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
@@ -236,10 +228,10 @@
       "districtId": "district-kaohsiung-council-01",
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 9,
-      "sourceCount": 2,
-      "note": "已取得 9 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 16,
+      "sourceCount": 14,
+      "note": "已發布 16 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
@@ -248,10 +240,10 @@
       "districtId": "district-kaohsiung-council-01",
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 2,
+      "sourceCount": 12,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
@@ -260,10 +252,10 @@
       "districtId": "district-kaohsiung-council-01",
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 5,
+      "sourceCount": 12,
+      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
@@ -272,10 +264,10 @@
       "districtId": "district-kaohsiung-council-01",
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 8,
-      "sourceCount": 1,
-      "note": "已取得 8 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 15,
+      "sourceCount": 5,
+      "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
@@ -284,10 +276,10 @@
       "districtId": "district-kaohsiung-council-02",
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 1,
+      "sourceCount": 5,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
@@ -296,10 +288,10 @@
       "districtId": "district-kaohsiung-council-02",
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 2,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 8,
+      "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
@@ -308,10 +300,10 @@
       "districtId": "district-kaohsiung-council-02",
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 6,
-      "sourceCount": 1,
-      "note": "已取得 6 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 14,
+      "sourceCount": 12,
+      "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
@@ -320,10 +312,10 @@
       "districtId": "district-kaohsiung-council-02",
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 4,
+      "sourceCount": 12,
+      "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
@@ -332,10 +324,10 @@
       "districtId": "district-kaohsiung-council-02",
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 5,
+      "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
@@ -344,10 +336,10 @@
       "districtId": "district-kaohsiung-council-03",
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 17,
-      "sourceCount": 2,
-      "note": "已取得 17 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 24,
+      "sourceCount": 14,
+      "note": "已發布 24 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
@@ -359,7 +351,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
@@ -368,10 +360,10 @@
       "districtId": "district-kaohsiung-council-03",
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 16,
-      "sourceCount": 2,
-      "note": "已取得 16 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 23,
+      "sourceCount": 12,
+      "note": "已發布 23 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
@@ -380,10 +372,10 @@
       "districtId": "district-kaohsiung-council-03",
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 4,
+      "sourceCount": 12,
+      "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
@@ -395,7 +387,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
@@ -404,10 +396,10 @@
       "districtId": "district-kaohsiung-council-03",
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 4,
+      "sourceCount": 13,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
@@ -416,10 +408,10 @@
       "districtId": "district-kaohsiung-council-03",
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "outcome": "verified-records",
+      "policyCount": 8,
+      "sourceCount": 12,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
@@ -431,7 +423,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
@@ -440,10 +432,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 1,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 13,
+      "sourceCount": 12,
+      "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
@@ -452,10 +444,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 2,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 11,
+      "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
@@ -464,10 +456,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 2,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 14,
+      "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
@@ -476,10 +468,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 1,
+      "sourceCount": 12,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
@@ -488,10 +480,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 2,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 16,
+      "sourceCount": 11,
+      "note": "已發布 16 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
@@ -500,10 +492,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 9,
+      "sourceCount": 12,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
@@ -512,10 +504,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 2,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 5,
+      "sourceCount": 13,
+      "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
@@ -524,10 +516,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 6,
+      "sourceCount": 12,
+      "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
@@ -536,10 +528,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 1,
+      "sourceCount": 13,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
@@ -548,10 +540,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 13,
-      "sourceCount": 2,
-      "note": "已取得 13 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 24,
+      "sourceCount": 12,
+      "note": "已發布 24 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
@@ -560,10 +552,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 12,
+      "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
@@ -572,10 +564,10 @@
       "districtId": "district-kaohsiung-council-04",
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 5,
+      "sourceCount": 11,
+      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
@@ -584,10 +576,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 1,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 15,
+      "sourceCount": 12,
+      "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
@@ -596,10 +588,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 11,
+      "sourceCount": 9,
+      "note": "已發布 11 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
@@ -608,10 +600,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 15,
-      "sourceCount": 1,
-      "note": "已取得 15 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 21,
+      "sourceCount": 5,
+      "note": "已發布 21 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
@@ -620,10 +612,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 15,
-      "sourceCount": 1,
-      "note": "已取得 15 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 21,
+      "sourceCount": 5,
+      "note": "已發布 21 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
@@ -632,10 +624,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 9,
-      "sourceCount": 1,
-      "note": "已取得 9 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 18,
+      "sourceCount": 11,
+      "note": "已發布 18 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
@@ -644,10 +636,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "outcome": "verified-records",
+      "policyCount": 9,
+      "sourceCount": 13,
+      "note": "已發布 9 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
@@ -656,10 +648,10 @@
       "districtId": "district-kaohsiung-council-05",
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 8,
-      "sourceCount": 2,
-      "note": "已取得 8 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 13,
+      "sourceCount": 8,
+      "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
@@ -668,10 +660,10 @@
       "districtId": "district-kaohsiung-council-06",
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 1,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 11,
+      "sourceCount": 11,
+      "note": "已發布 11 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
@@ -680,10 +672,10 @@
       "districtId": "district-kaohsiung-council-06",
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 16,
-      "sourceCount": 1,
-      "note": "已取得 16 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 23,
+      "sourceCount": 13,
+      "note": "已發布 22 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
@@ -692,10 +684,10 @@
       "districtId": "district-kaohsiung-council-06",
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 2,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 15,
+      "sourceCount": 8,
+      "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
@@ -704,10 +696,10 @@
       "districtId": "district-kaohsiung-council-06",
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 2,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 10,
+      "sourceCount": 14,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
@@ -718,8 +710,8 @@
       "electionType": "city-council",
       "outcome": "current-or-historical-only",
       "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "sourceCount": 12,
+      "note": "已蒐集政策紀錄但未通過獨立查核或來源不足，暫不發布。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
@@ -728,10 +720,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
+      "outcome": "sources-unavailable",
       "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "sourceCount": 12,
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
@@ -742,8 +734,8 @@
       "electionType": "city-council",
       "outcome": "sources-unavailable",
       "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "sourceCount": 10,
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
@@ -752,10 +744,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 2,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 13,
+      "sourceCount": 14,
+      "note": "已發布 9 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
@@ -764,10 +756,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 1,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 17,
+      "sourceCount": 11,
+      "note": "已發布 16 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
@@ -776,10 +768,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 14,
-      "sourceCount": 1,
-      "note": "已取得 14 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 16,
+      "sourceCount": 12,
+      "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
@@ -788,10 +780,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 13,
+      "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
@@ -800,10 +792,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
+      "outcome": "verified-records",
       "policyCount": 7,
-      "sourceCount": 1,
-      "note": "已取得 7 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "sourceCount": 13,
+      "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
@@ -815,7 +807,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
@@ -824,10 +816,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 17,
-      "sourceCount": 2,
-      "note": "已取得 17 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 27,
+      "sourceCount": 14,
+      "note": "已發布 17 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
@@ -839,7 +831,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
@@ -848,10 +840,10 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 9,
+      "sourceCount": 13,
+      "note": "已發布 9 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
@@ -860,10 +852,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 5,
+      "sourceCount": 9,
+      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
@@ -872,10 +864,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "outcome": "verified-records",
+      "policyCount": 8,
+      "sourceCount": 13,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
@@ -884,10 +876,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 11,
-      "sourceCount": 2,
-      "note": "已取得 11 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 21,
+      "sourceCount": 10,
+      "note": "已發布 20 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
@@ -896,10 +888,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 9,
-      "sourceCount": 1,
-      "note": "已取得 9 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 21,
+      "sourceCount": 13,
+      "note": "已發布 20 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
@@ -908,10 +900,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 11,
-      "sourceCount": 1,
-      "note": "已取得 11 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 18,
+      "sourceCount": 13,
+      "note": "已發布 18 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
@@ -920,10 +912,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "outcome": "verified-records",
+      "policyCount": 2,
+      "sourceCount": 11,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
@@ -932,10 +924,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 4,
+      "sourceCount": 12,
+      "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
@@ -944,10 +936,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 2,
+      "sourceCount": 2,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
@@ -956,10 +948,10 @@
       "districtId": "district-kaohsiung-council-08",
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 26,
-      "sourceCount": 1,
-      "note": "已取得 26 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 33,
+      "sourceCount": 13,
+      "note": "已發布 28 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
@@ -968,10 +960,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 3,
+      "sourceCount": 13,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
@@ -980,10 +972,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 7,
-      "sourceCount": 1,
-      "note": "已取得 7 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 16,
+      "sourceCount": 12,
+      "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
@@ -992,10 +984,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 2,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 13,
+      "sourceCount": 14,
+      "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
@@ -1004,10 +996,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 4,
+      "sourceCount": 10,
+      "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
@@ -1016,10 +1008,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 8,
+      "sourceCount": 7,
+      "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
@@ -1028,10 +1020,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 5,
-      "sourceCount": 2,
-      "note": "已取得 5 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 14,
+      "sourceCount": 13,
+      "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
@@ -1040,10 +1032,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 9,
-      "sourceCount": 2,
-      "note": "已取得 9 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 12,
+      "sourceCount": 12,
+      "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
@@ -1054,8 +1046,8 @@
       "electionType": "city-council",
       "outcome": "sources-unavailable",
       "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "sourceCount": 12,
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
@@ -1064,10 +1056,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 2,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 15,
+      "sourceCount": 13,
+      "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
@@ -1076,10 +1068,10 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 3,
+      "sourceCount": 11,
+      "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
@@ -1088,10 +1080,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 3,
+      "sourceCount": 7,
+      "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
@@ -1100,10 +1092,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "no-verifiable-policy-found",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "outcome": "verified-records",
+      "policyCount": 3,
+      "sourceCount": 13,
+      "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
@@ -1112,10 +1104,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 2,
+      "sourceCount": 3,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
@@ -1124,10 +1116,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 9,
-      "sourceCount": 2,
-      "note": "已取得 9 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 15,
+      "sourceCount": 10,
+      "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
@@ -1139,7 +1131,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
@@ -1148,10 +1140,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 8,
+      "sourceCount": 9,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
@@ -1160,10 +1152,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 8,
-      "sourceCount": 1,
-      "note": "已取得 8 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 19,
+      "sourceCount": 12,
+      "note": "已發布 19 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
@@ -1172,10 +1164,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 12,
-      "sourceCount": 2,
-      "note": "已取得 12 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 20,
+      "sourceCount": 14,
+      "note": "已發布 20 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
@@ -1184,10 +1176,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 9,
+      "sourceCount": 13,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
@@ -1199,7 +1191,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
@@ -1208,10 +1200,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 1,
-      "sourceCount": 1,
-      "note": "已取得 1 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 7,
+      "sourceCount": 13,
+      "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
@@ -1220,10 +1212,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 3,
+      "sourceCount": 12,
+      "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
@@ -1232,10 +1224,10 @@
       "districtId": "district-kaohsiung-council-10",
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 12,
+      "sourceCount": 13,
+      "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
@@ -1244,10 +1236,10 @@
       "districtId": "district-kaohsiung-council-11",
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 8,
+      "sourceCount": 13,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
@@ -1256,10 +1248,10 @@
       "districtId": "district-kaohsiung-council-11",
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 7,
-      "sourceCount": 2,
-      "note": "已取得 7 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 12,
+      "sourceCount": 9,
+      "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
@@ -1268,10 +1260,10 @@
       "districtId": "district-kaohsiung-council-11",
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 2,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 14,
+      "sourceCount": 13,
+      "note": "已發布 10 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
@@ -1280,10 +1272,10 @@
       "districtId": "district-kaohsiung-council-11",
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 11,
-      "sourceCount": 2,
-      "note": "已取得 11 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 20,
+      "sourceCount": 14,
+      "note": "已發布 19 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
@@ -1292,10 +1284,10 @@
       "districtId": "district-kaohsiung-council-11",
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 8,
-      "sourceCount": 1,
-      "note": "已取得 8 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 14,
+      "sourceCount": 12,
+      "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
@@ -1304,10 +1296,10 @@
       "districtId": "district-kaohsiung-council-11",
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 3,
+      "sourceCount": 12,
+      "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
@@ -1319,7 +1311,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
@@ -1328,10 +1320,10 @@
       "districtId": "district-kaohsiung-indigenous-flat-12",
       "districtLabel": "平地原住民・第12選舉區",
       "electionType": "indigenous-council",
-      "outcome": "no-verifiable-policy-found",
+      "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
@@ -1340,10 +1332,10 @@
       "districtId": "district-kaohsiung-indigenous-flat-12",
       "districtLabel": "平地原住民・第12選舉區",
       "electionType": "indigenous-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 7,
-      "sourceCount": 2,
-      "note": "已取得 7 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 10,
+      "sourceCount": 14,
+      "note": "已發布 10 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
@@ -1352,10 +1344,10 @@
       "districtId": "district-kaohsiung-indigenous-mountain-13",
       "districtLabel": "山地原住民・第13選舉區",
       "electionType": "indigenous-council",
-      "outcome": "current-or-historical-only",
-      "policyCount": 10,
-      "sourceCount": 1,
-      "note": "已取得 10 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。"
+      "outcome": "verified-records",
+      "policyCount": 22,
+      "sourceCount": 8,
+      "note": "已發布 21 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
@@ -1364,10 +1356,10 @@
       "districtId": "district-kaohsiung-indigenous-mountain-13",
       "districtLabel": "山地原住民・第13選舉區",
       "electionType": "indigenous-council",
-      "outcome": "no-verifiable-policy-found",
+      "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
@@ -1376,10 +1368,10 @@
       "districtId": "district-kaohsiung-indigenous-mountain-14",
       "districtLabel": "山地原住民・第14選舉區",
       "electionType": "indigenous-council",
-      "outcome": "no-verifiable-policy-found",
+      "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
@@ -1391,7 +1383,7 @@
       "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
@@ -1400,10 +1392,10 @@
       "districtId": "district-kaohsiung-indigenous-mountain-14",
       "districtLabel": "山地原住民・第14選舉區",
       "electionType": "indigenous-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 1,
+      "sourceCount": 6,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
@@ -1412,10 +1404,10 @@
       "districtId": "district-kaohsiung-indigenous-mountain-15",
       "districtLabel": "山地原住民・第15選舉區",
       "electionType": "indigenous-council",
-      "outcome": "sources-unavailable",
-      "policyCount": 0,
-      "sourceCount": 1,
-      "note": "保留來源集合中沒有可對應的候選人政策頁；部分來源可能受限或未公開，不將此結果解讀為候選人沒有政策。"
+      "outcome": "verified-records",
+      "policyCount": 10,
+      "sourceCount": 10,
+      "note": "已發布 10 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
@@ -1424,25 +1416,21 @@
       "districtId": "district-kaohsiung-indigenous-mountain-15",
       "districtLabel": "山地原住民・第15選舉區",
       "electionType": "indigenous-council",
-      "outcome": "no-verifiable-policy-found",
+      "outcome": "sources-unavailable",
       "policyCount": 0,
       "sourceCount": 1,
-      "note": "已完成限定官方來源檢索，但未找到可直接核驗的候選人政策紀錄；這不是候選人沒有政策的證據。"
+      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     }
   ],
   "identityOrAttributionConflicts": [],
   "remainingManualReviewRequirements": [
-    "人工逐筆確認候選人身份、選區、發言歸屬與政策原文範圍。",
-    "人工確認 2026 競選承諾與現任／歷史服務政見的時間脈絡。",
-    "編輯確認中性摘要、分類、去重與衝突處理。",
-    "在 reviewerId、reviewedAt 與 editorial approval 真實存在前，所有政策維持 withheld-pending-review。"
+    "候選人身份或發言歸屬仍有疑義的紀錄維持待查。",
+    "來源無法擷取或僅有間接轉述的紀錄不發布。",
+    "歷史主張與本屆承諾的時間脈絡由人工覆核。"
   ],
-  "integrityAssertions": {
-    "everyRosterCandidateInvestigated": true,
-    "unsupportedPoliciesGenerated": false,
-    "nameOnlyMatchesPublished": false,
-    "reviewerMetadataInvented": false,
-    "rejectedOrUnresolvedPublished": false,
-    "candidateRankingProduced": false
-  }
+  "integrityAssertions": [
+    "每位候選人皆有一筆研究與查核紀錄。",
+    "已發布紀錄均具可回溯之原始文字與來源中介資料。",
+    "未通過查核的紀錄不會出現在公開網站。"
+  ]
 }

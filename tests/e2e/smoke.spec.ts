@@ -221,8 +221,12 @@ test('official routes expose source references and neutral missing states', asyn
     'https://info.cec.gov.tw/vote2026/static/json/cand/C1/64000.json',
   );
   const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
   await profile.getByRole('tab', { name: '政策主張' }).click();
-  await expect(profile).toContainText('政策主張：暫無公開政策資料');
+  await expect(profile.locator('.policy-group').first()).toBeVisible();
+  await expect(profile.getByText('查看政策細節').first()).toBeVisible();
 
   await page.goto('/districts/kaohsiung-council-01/');
   const councilPage = page.getByRole('main');
@@ -404,8 +408,12 @@ test('selected public-record profiles expose provenance and neutral gaps', async
 
   await page.goto('/candidates/lai-rui-long-2026/');
   const mayorProfile = page.getByTestId('profile-tabs');
+  await expect(mayorProfile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
   await mayorProfile.getByRole('tab', { name: '政策主張' }).click();
-  await expect(mayorProfile).toContainText('政策主張：暫無公開政策資料');
+  await expect(mayorProfile.locator('.policy-group').first()).toBeVisible();
+  await expect(mayorProfile.getByText('查看政策細節').first()).toBeVisible();
 
   await page.goto('/candidates/kaohsiung-council-03-e4af3760/');
   await expect(
@@ -634,4 +642,21 @@ test('WebGL fallback keeps the candidate journey usable', async ({ page }) => {
   await page.locator('[aria-controls="city-people-tray"]').click();
   await page.getByRole('button', { name: /張靜/ }).first().click();
   await expect(page.getByTestId('profile-panel')).toContainText('基本資料');
+});
+
+test('candidate without verified policies shows neutral empty state', async ({
+  page,
+}) => {
+  await page.goto('/candidates/wang-zhao-min-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '政策主張' }).click();
+  await expect(
+    profile.getByText('目前尚未找到可核實的公開政策主張。'),
+  ).toBeVisible();
+  await expect(
+    profile.getByText('缺少公開紀錄不代表候選人沒有相關主張。'),
+  ).toBeVisible();
 });

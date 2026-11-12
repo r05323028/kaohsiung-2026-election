@@ -5,6 +5,7 @@ import { getBiographyReadModel } from '../biographies';
 import { coverageForDistrictSlug } from '../constituencies';
 import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
 import { getCandidatePolicyResearchSummary } from '../policy-research';
+import { getPublishedCandidatePolicies } from '../policy-research/public-index';
 import { getPoliticalFamilyReadModel } from '../political-family';
 import {
   getCandidateResearchSummary,
@@ -160,6 +161,7 @@ function toProfile(
   const publicSourceIds = getPublicRecordSourceIds(personId);
   const research = getCandidateResearchSummary(candidate.id);
   const policyResearch = getCandidatePolicyResearchSummary(candidate.id);
+  const publishedPolicies = getPublishedCandidatePolicies(candidate.id);
   const publicRecordResearch = getCandidatePublicRecordResearchSummary(
     candidate.id,
   );
@@ -218,6 +220,7 @@ function toProfile(
     ...(publicRecords ? { publicRecords } : {}),
     ...(research ? { research } : {}),
     ...(policyResearch ? { policyResearch } : {}),
+    ...(publishedPolicies.length > 0 ? { publishedPolicies } : {}),
     ...(publicRecordResearch ? { publicRecordResearch } : {}),
     ...(biography ? { biography } : {}),
     ...(basicProfile ? { basicProfile } : {}),

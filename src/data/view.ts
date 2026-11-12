@@ -7,6 +7,7 @@ import type {
 } from './enrichment/automated-publication';
 import { isPublishedBallotNumberStatus } from './official/ballot';
 import type { CandidatePolicyResearchSummary } from './policy-research';
+import type { PublishedPolicy } from './policy-research/published-schema';
 import type { PoliticalFamilyReadModel } from './political-family';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { CandidateResearchSummary } from './public-records/research-index';
@@ -53,6 +54,7 @@ export type CandidateProfileView = {
   publicRecords?: PublicRecordBundle;
   research?: CandidateResearchSummary;
   policyResearch?: CandidatePolicyResearchSummary;
+  publishedPolicies?: PublishedPolicy[];
   publicRecordResearch?: CandidatePublicRecordResearchSummary;
   biography?: BiographyReadModel;
   basicProfile?: BasicProfileReadModel;
@@ -178,6 +180,7 @@ export type PublicCandidateProfile = Omit<
   | 'publicRecords'
   | 'research'
   | 'policyResearch'
+  | 'publishedPolicies'
   | 'publicRecordResearch'
   | 'biography'
   | 'basicProfile'
@@ -191,6 +194,7 @@ export type PublicCandidateProfile = Omit<
   district: CandidateProfileView['district'];
   sources: PublicSource[];
   publicRecords?: PublicRecordsView;
+  publishedPolicies?: PublishedPolicy[];
   biography?: { claims: PublicBiographyClaim[] };
   basicProfile?: Pick<BasicProfileReadModel, 'claims' | 'note'>;
   automatedPublication?: {
@@ -368,6 +372,9 @@ export function toPublicCandidateProfile(
       publicationDate: source.publicationDate,
     })),
     ...(publicRecords ? { publicRecords } : {}),
+    ...(candidate.publishedPolicies
+      ? { publishedPolicies: candidate.publishedPolicies }
+      : {}),
     ...(publicBiography ? { biography: publicBiography } : {}),
     ...(publicBasicProfile ? { basicProfile: publicBasicProfile } : {}),
     ...(candidate.politicalFamily

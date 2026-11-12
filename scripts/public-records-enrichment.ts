@@ -358,8 +358,8 @@ function policyReferences(
         evidenceId: policy.evidenceId,
         policyContext: policy.policyContext,
         verificationStatus: 'machine-validated' as const,
-        reviewStatus: 'pending-human-review' as const,
-        publicationStatus: 'withheld-pending-review' as const,
+        reviewStatus: policy.reviewStatus,
+        publicationStatus: policy.publicationStatus,
       },
     ];
   });
@@ -434,7 +434,7 @@ function makeAudits(
       note = `已由保留的高雄市議會個人頁取得 ${candidatePositions.length + candidateCareers.length} 筆待人工審查的基本／從政歷程紀錄；不含個別表決推論。`;
     } else if (refs.length > 0) {
       outcome = 'policy-references-only';
-      note = `已保留 ${refs.length} 筆上游政策研究參照；原文仍為 pending-human-review，未轉為公開公共紀錄。`;
+      note = `已保留 ${refs.length} 筆上游政策研究參照；公開狀態沿用上游政策研究發布閘門。`;
     } else if (hasRetrievedSource) {
       outcome = 'sources-attempted-no-additional-records';
       note =

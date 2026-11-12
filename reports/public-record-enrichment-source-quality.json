@@ -3,27 +3,104 @@
   "snapshotDate": "2026-11-10",
   "researchCutoff": "2026-11-09",
   "candidateCount": 106,
-  "candidatesWithResolvedSources": 64,
-  "sourceSnapshotCount": 127,
+  "candidatesWithResolvedSources": 97,
+  "sourceSnapshotCount": 1061,
   "sourceRetrievalStatusCounts": {
     "blocked": 2,
-    "retrieved": 125
+    "retrieved": 1059
   },
   "sourceTierCounts": {
     "tier-1-primary": 62,
-    "tier-2-authoritative": 65
+    "tier-2-authoritative": 65,
+    "tier-3-reporting": 934
   },
   "sourceIdentityStatusCounts": {
     "not-applicable": 3,
-    "resolved": 109,
+    "resolved": 1043,
     "unresolved": 15
   },
   "sourcePublisherCounts": {
+    "三立新聞網SETN.com": 3,
+    "三星傳媒": 3,
+    "大公文匯網": 1,
+    "大成報": 1,
+    "大紀元": 3,
+    "中天新聞網": 3,
+    "中央社 CNA": 3,
+    "中時新聞網": 6,
+    "中國國民黨全球資訊網": 1,
     "中國國民黨高雄市選舉資訊網": 39,
+    "中國評論新聞": 1,
+    "中華新聞雲": 1,
+    "中華新聞雲／中華日報": 70,
+    "互傳媒": 1,
+    "今傳媒 JNEWS": 65,
+    "天地傳媒": 1,
+    "天晴報媒體": 2,
+    "太報 TaiSounds": 2,
+    "巴士的報": 1,
+    "世界新聞網": 1,
+    "台灣中評網": 7,
+    "台灣民眾電子報": 12,
     "台灣民眾黨": 1,
+    "台灣華報": 11,
+    "台灣新聞雲": 1,
+    "台灣新聞雲報": 6,
+    "自由時報": 40,
+    "行銷人": 9,
+    "沃草": 1,
+    "放言Fount Media": 1,
+    "東森新聞": 1,
+    "波新聞": 3,
+    "知新聞": 1,
+    "信傳媒": 1,
+    "品觀點": 2,
+    "很角色時報": 6,
     "柯志恩競選／候選人網站": 1,
+    "風火輪傳媒有限公司": 1,
+    "風傳媒": 43,
     "高雄市議會": 65,
-    "賴瑞隆競選總部": 21
+    "視傳媒": 1,
+    "創新聞": 6,
+    "報新聞 Mega News": 2,
+    "壹蘋新聞網": 5,
+    "短新聞SHOTNEWS": 1,
+    "華視新聞網": 1,
+    "匯流新聞網": 1,
+    "新華報導": 3,
+    "新頭條": 5,
+    "睿傳媒 Rightmedia": 2,
+    "福爾摩沙時報": 1,
+    "臺灣導報": 22,
+    "樂上新聞網": 75,
+    "樂聯網": 4,
+    "墨新聞-MORE News": 12,
+    "蕃新聞": 39,
+    "賴瑞隆競選總部": 21,
+    "環球日報社": 5,
+    "聯合影音": 1,
+    "翻爆": 2,
+    "鏡週刊Mirror Media": 4,
+    "鏡新聞": 1,
+    "觀傳媒": 1,
+    "chtime.ikh.tw": 2,
+    "CNMA新聞聯合網": 4,
+    "CTWANT": 2,
+    "ETtoday新聞雲": 6,
+    "FTNN 新聞網": 1,
+    "https://www.yesmedia.com.tw/": 1,
+    "Life 生活網": 47,
+    "LINE TODAY": 47,
+    "Newtalk新聞": 24,
+    "NOWnews今日新聞": 8,
+    "PChome Online 新聞": 36,
+    "PeoPo 公民新聞": 1,
+    "taidaily.com": 6,
+    "Taiwan News": 1,
+    "TVBS新聞網": 2,
+    "udn": 4,
+    "UDN": 22,
+    "Yahoo新聞": 211
   },
   "sourceAttemptCount": 151,
   "sourceAttemptStatusCounts": {
@@ -34,24 +111,24 @@
     "tier-1-primary": 100,
     "tier-2-authoritative": 51
   },
-  "retainedByteCount": 10978064,
+  "retainedByteCount": 18587297,
   "retainedSourceHashValidation": {
     "validatedBy": "scripts/validate-public-records-enrichment.ts",
-    "retrievedSourceCount": 125,
+    "retrievedSourceCount": 1059,
     "allRetrievedSourcesHaveMatchingSizeAndSha256": true
   },
-  "sourceReferenceCount": 1832,
+  "sourceReferenceCount": 2353,
   "evidenceRecordCount": 582,
   "pendingReviewCounts": {
     "claims": 582,
     "positions": 51,
     "careerRecords": 531,
-    "policyReferences": 668,
+    "policyReferences": 1189,
     "publishedRecords": 0
   },
   "missingReasonCounts": {
-    "retrieved-without-machine-verifiable-record": 11,
-    "sources-unavailable": 42
+    "retrieved-without-machine-verifiable-record": 5,
+    "sources-unavailable": 12
   },
   "identityOrAttributionConflicts": [],
   "candidateSourceInventory": [
@@ -60,8 +137,8 @@
       "displayName": "鍾炳光",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -69,8 +146,8 @@
       "displayName": "林慧欣",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -78,8 +155,8 @@
       "displayName": "林富寶",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 5,
+      "resolvedSourceCount": 5,
       "sourceUnavailable": false
     },
     {
@@ -87,8 +164,8 @@
       "displayName": "林義迪",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -96,8 +173,8 @@
       "displayName": "李振豪",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -105,8 +182,8 @@
       "displayName": "李亞築",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": false
     },
     {
@@ -114,8 +191,8 @@
       "displayName": "陳琳潔",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -123,8 +200,8 @@
       "displayName": "鄭東元",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 4,
+      "resolvedSourceCount": 4,
       "sourceUnavailable": true
     },
     {
@@ -132,8 +209,8 @@
       "displayName": "李柏融",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 4,
+      "resolvedSourceCount": 4,
       "sourceUnavailable": true
     },
     {
@@ -141,8 +218,8 @@
       "displayName": "黃明太",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -159,8 +236,8 @@
       "displayName": "黃韻涵",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -177,8 +254,8 @@
       "displayName": "蔣黃女",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -186,8 +263,8 @@
       "displayName": "方信淵",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -195,8 +272,8 @@
       "displayName": "宋立彬",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -213,8 +290,8 @@
       "displayName": "林志誠",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -222,8 +299,8 @@
       "displayName": "薛兆基",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -231,8 +308,8 @@
       "displayName": "李雅芬",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -240,8 +317,8 @@
       "displayName": "陳冠宇",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": true
     },
     {
@@ -249,8 +326,8 @@
       "displayName": "張以理",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -258,8 +335,8 @@
       "displayName": "柳淑芳",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -267,8 +344,8 @@
       "displayName": "陳玫娟",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -276,8 +353,8 @@
       "displayName": "白喬茵",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -285,8 +362,8 @@
       "displayName": "李雅慧",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -294,8 +371,8 @@
       "displayName": "尹立",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 10,
+      "resolvedSourceCount": 10,
       "sourceUnavailable": true
     },
     {
@@ -303,8 +380,8 @@
       "displayName": "陳麗珍",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -312,8 +389,8 @@
       "displayName": "黃文志",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -321,8 +398,8 @@
       "displayName": "李眉蓁",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -330,8 +407,8 @@
       "displayName": "陳惠君",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": true
     },
     {
@@ -339,8 +416,8 @@
       "displayName": "黃飛鳳",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -348,8 +425,8 @@
       "displayName": "張勝富",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 5,
+      "resolvedSourceCount": 5,
       "sourceUnavailable": false
     },
     {
@@ -357,8 +434,8 @@
       "displayName": "邱俊憲",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -366,8 +443,8 @@
       "displayName": "陳若翠",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -375,8 +452,8 @@
       "displayName": "吳利成",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": false
     },
     {
@@ -384,8 +461,8 @@
       "displayName": "江瑞鴻",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 5,
+      "resolvedSourceCount": 5,
       "sourceUnavailable": false
     },
     {
@@ -393,8 +470,8 @@
       "displayName": "蔡金晏",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": false
     },
     {
@@ -402,8 +479,8 @@
       "displayName": "簡煥宗",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -411,8 +488,8 @@
       "displayName": "李喬如",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -420,8 +497,8 @@
       "displayName": "陳美雅",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -429,8 +506,8 @@
       "displayName": "黃淑美",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": true
     },
     {
@@ -438,8 +515,8 @@
       "displayName": "林于凱",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": true
     },
     {
@@ -456,8 +533,8 @@
       "displayName": "曾俊傑",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -465,8 +542,8 @@
       "displayName": "童燕珍",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -474,8 +551,8 @@
       "displayName": "康裕成",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -492,8 +569,8 @@
       "displayName": "張博洋",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -501,8 +578,8 @@
       "displayName": "黃柏霖",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -510,8 +587,8 @@
       "displayName": "何權峰",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -519,8 +596,8 @@
       "displayName": "黃香菽",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -528,8 +605,8 @@
       "displayName": "林彥",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 9,
+      "resolvedSourceCount": 9,
       "sourceUnavailable": true
     },
     {
@@ -537,8 +614,8 @@
       "displayName": "黃文益",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -546,8 +623,8 @@
       "displayName": "湯詠瑜",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -555,8 +632,8 @@
       "displayName": "鄒約翰",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 1,
+      "resolvedSourceCount": 1,
       "sourceUnavailable": true
     },
     {
@@ -564,8 +641,8 @@
       "displayName": "黃鈺婷",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": false
     },
     {
@@ -573,8 +650,8 @@
       "displayName": "許采蓁",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 10,
+      "resolvedSourceCount": 10,
       "sourceUnavailable": false
     },
     {
@@ -582,8 +659,8 @@
       "displayName": "黃裕庭",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -591,8 +668,8 @@
       "displayName": "黃舜杰",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": true
     },
     {
@@ -600,8 +677,8 @@
       "displayName": "陳雅敏",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -609,8 +686,8 @@
       "displayName": "郭建盟",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -618,8 +695,8 @@
       "displayName": "陳慧文",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 7,
+      "resolvedSourceCount": 7,
       "sourceUnavailable": false
     },
     {
@@ -627,8 +704,8 @@
       "displayName": "鄭安秝",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -636,8 +713,8 @@
       "displayName": "李雅靜",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -645,8 +722,8 @@
       "displayName": "蘇致榮",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 9,
+      "resolvedSourceCount": 9,
       "sourceUnavailable": true
     },
     {
@@ -654,8 +731,8 @@
       "displayName": "張漢忠",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -663,8 +740,8 @@
       "displayName": "林智鴻",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -672,8 +749,8 @@
       "displayName": "劉德林",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -681,8 +758,8 @@
       "displayName": "徐尚賢",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -690,8 +767,8 @@
       "displayName": "鍾易仲",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -699,8 +776,8 @@
       "displayName": "鄧巧佩",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 10,
+      "resolvedSourceCount": 10,
       "sourceUnavailable": true
     },
     {
@@ -708,8 +785,8 @@
       "displayName": "劉仙娥",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 2,
+      "resolvedSourceCount": 2,
       "sourceUnavailable": true
     },
     {
@@ -717,8 +794,8 @@
       "displayName": "吳銘賜",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -726,8 +803,8 @@
       "displayName": "于仙玲",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": true
     },
     {
@@ -735,8 +812,8 @@
       "displayName": "鄭光峰",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -744,8 +821,8 @@
       "displayName": "湯茹婷",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -753,8 +830,8 @@
       "displayName": "蔡武宏",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 10,
+      "resolvedSourceCount": 10,
       "sourceUnavailable": false
     },
     {
@@ -762,8 +839,8 @@
       "displayName": "李順進",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -771,8 +848,8 @@
       "displayName": "黃敬雅",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": true
     },
     {
@@ -780,8 +857,8 @@
       "displayName": "吳昱鋒",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -789,8 +866,8 @@
       "displayName": "李政憲",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 6,
+      "resolvedSourceCount": 6,
       "sourceUnavailable": true
     },
     {
@@ -816,8 +893,8 @@
       "displayName": "陳麗娜",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -825,8 +902,8 @@
       "displayName": "黃天煌",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 9,
+      "resolvedSourceCount": 9,
       "sourceUnavailable": false
     },
     {
@@ -834,8 +911,8 @@
       "displayName": "張耀中",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 11,
+      "resolvedSourceCount": 11,
       "sourceUnavailable": true
     },
     {
@@ -843,8 +920,8 @@
       "displayName": "洪村銘",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": true
     },
     {
@@ -852,8 +929,8 @@
       "displayName": "邱于軒",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
@@ -861,8 +938,8 @@
       "displayName": "王耀裕",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -870,8 +947,8 @@
       "displayName": "李雨庭",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
@@ -879,8 +956,8 @@
       "displayName": "王義雄",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
@@ -915,8 +992,8 @@
       "displayName": "陳幸富",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 8,
+      "resolvedSourceCount": 8,
       "sourceUnavailable": false
     },
     {
@@ -942,8 +1019,8 @@
       "displayName": "高忠德",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 5,
+      "resolvedSourceCount": 5,
       "sourceUnavailable": true
     },
     {
@@ -951,8 +1028,8 @@
       "displayName": "金禾雅",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 9,
+      "resolvedSourceCount": 9,
       "sourceUnavailable": true
     },
     {
@@ -969,8 +1046,8 @@
       "displayName": "洪方隆",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 5,
+      "resolvedSourceCount": 5,
       "sourceUnavailable": true
     },
     {
@@ -978,8 +1055,8 @@
       "displayName": "柯志恩",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 1,
-      "retainedSourceCount": 1,
-      "resolvedSourceCount": 1,
+      "retainedSourceCount": 29,
+      "resolvedSourceCount": 29,
       "sourceUnavailable": false
     },
     {
@@ -987,8 +1064,8 @@
       "displayName": "賴瑞隆",
       "sourceAttemptCount": 21,
       "retrievedAttemptCount": 21,
-      "retainedSourceCount": 21,
-      "resolvedSourceCount": 21,
+      "retainedSourceCount": 48,
+      "resolvedSourceCount": 48,
       "sourceUnavailable": false
     },
     {
@@ -996,8 +1073,8 @@
       "displayName": "王肇民",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 5,
+      "resolvedSourceCount": 5,
       "sourceUnavailable": true
     },
     {
@@ -1005,8 +1082,8 @@
       "displayName": "張靜",
       "sourceAttemptCount": 1,
       "retrievedAttemptCount": 0,
-      "retainedSourceCount": 0,
-      "resolvedSourceCount": 0,
+      "retainedSourceCount": 28,
+      "resolvedSourceCount": 28,
       "sourceUnavailable": true
     }
   ],

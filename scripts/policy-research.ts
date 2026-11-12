@@ -1,3 +1,4 @@
+import { policyTypeForContext } from '../src/data/policy-research/schema';
 import { createHash } from 'node:crypto';
 import {
   existsSync,
@@ -496,6 +497,7 @@ function makePolicy(
     sourceId: source.sourceId,
     evidenceId,
     evidenceType,
+    type: policyTypeForContext(context, parsed.title),
     verificationStatus: 'machine-validated' as const,
     reviewStatus: 'pending-human-review' as const,
     publicationStatus: 'withheld-pending-review' as const,

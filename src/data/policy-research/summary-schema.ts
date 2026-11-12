@@ -23,7 +23,7 @@ export const PolicyResearchSummaryAuditSchema = z
     outcome: CandidatePolicyOutcomeSummarySchema,
     researchStatus: ResearchStatusSchema,
     policyCount: z.number().int().nonnegative(),
-    publishedPolicyCount: z.literal(0),
+    publishedPolicyCount: z.number().int().nonnegative(),
     note: z.string().min(1),
   })
   .strict();

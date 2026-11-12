@@ -44,8 +44,8 @@ describe('full-roster public-record enrichment', () => {
       expect(reference.candidateId).toBe(policy?.candidateId);
       expect(reference.sourceId).toBe(policy?.sourceId);
       expect(reference.evidenceId).toBe(policy?.evidenceId);
-      expect(reference.reviewStatus).toBe('pending-human-review');
-      expect(reference.publicationStatus).toBe('withheld-pending-review');
+      expect(reference.reviewStatus).toBe(policy?.reviewStatus);
+      expect(reference.publicationStatus).toBe(policy?.publicationStatus);
     }
 
     expect(publicRecordsEnrichment.review.reviewerId).toBeNull();
@@ -149,9 +149,9 @@ describe('full-roster public-record enrichment', () => {
     expect(coverageReport.candidateInventory).toHaveLength(106);
     expect(coverageReport.outcomeCounts).toMatchObject({
       'records-found': 51,
-      'policy-references-only': 2,
-      'sources-attempted-no-additional-records': 11,
-      'sources-unavailable': 42,
+      'policy-references-only': 38,
+      'sources-attempted-no-additional-records': 5,
+      'sources-unavailable': 12,
     });
     expect(sourceQualityReport.retainedSourceHashValidation).toMatchObject({
       allRetrievedSourcesHaveMatchingSizeAndSha256: true,

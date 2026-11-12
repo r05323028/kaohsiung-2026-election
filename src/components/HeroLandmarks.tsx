@@ -1,19 +1,41 @@
-import { useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import { HERO_ASSET_BY_FEATURE } from '../world/hero-landmarks';
 import type { DedicatedFeature } from '../world/hex-landmarks';
 import {
-  makeArchRoofGeometry,
-  makeFlowingRoofGeometry,
-  makeFlowingRoofRimCurve,
+  HSR_CANOPY,
+  STADIUM_ROOF_START,
+  STADIUM_ROOF_SWEEP,
+  STADIUM_SQUASH_Z,
+  WEIWUYING_ROOF,
+  WEIWUYING_WELLS,
+  hsrCanopyHeight,
+  hsrCanopyUnderside,
+  isInsideWeiwuyingWell,
+  makeBoxClusterGeometry,
+  makeCurvedFacadeGeometry,
+  makeCurvedFacadeTopCurve,
+  makeFlaredCrownGeometry,
   makeGableRoofGeometry,
-  makePagodaRoofGeometry,
+  makePagodaTierRoofGeometry,
+  makeRadialShellGeometry,
+  makeRibbonRoofGeometry,
   makeStadiumBowlGeometry,
-  makeStadiumRoofGeometry,
-  makeStadiumRoofInnerRimCurve,
-  makeStadiumRoofRimCurve,
+  makeStrutGeometry,
+  stadiumRoofInnerLift,
+  stadiumRoofInnerRadius,
+  stadiumRoofOuterLift,
+  stadiumRoofOuterRadius,
+  stadiumRibbonPoint,
+  superellipseRadius,
+  weiwuyingRadiusAt,
+  weiwuyingRoofHeight,
+  weiwuyingRoofUnderside,
+  wheelCabinPose,
 } from './hero-geometry';
+import type { BoxSpec, StrutSpec, Vec3 } from './hero-geometry';
 
 /* ------------------------------------------------------------------ */
 /* Shared authored materials and geometry                              */
@@ -42,6 +64,7 @@ const HERO_MAT = {
   darkStone: mat('#747d79', 0.86),
   steel: mat('#81969c', 0.38, 0.55),
   steelLight: mat('#c3d3d1', 0.42, 0.35),
+  maroon: mat('#7d4f47', 0.6, 0.2),
   dark: mat('#364b50', 0.72),
   glass: mat('#88c9d5', 0.18, 0.28, {
     transparent: true,
@@ -70,8 +93,21 @@ const HERO_MAT = {
   wood: mat('#8b654c', 0.9),
   pink: mat('#eda8b2', 0.84),
   track: mat('#59666a', 0.78, 0.2),
+  trackBlue: mat('#5f93b8', 0.82),
   roofGreen: mat('#6b9180', 0.72),
+  shell: mat('#f6f2e8', 0.5, 0.08, { side: THREE.DoubleSide }),
+  shellEdge: mat('#ddd3c2', 0.62, 0.04, { side: THREE.DoubleSide }),
+  lattice: mat('#eef1ec', 0.5, 0.15, { side: THREE.DoubleSide }),
+  cabinWhite: mat('#ffffff', 0.65, 0.1),
+  well: mat('#2f5560', 0.34, 0.22),
 };
+
+const DOUBLE_ROOF = new THREE.MeshStandardMaterial({
+  color: '#c4644c',
+  roughness: 0.78,
+  metalness: 0.04,
+  side: THREE.DoubleSide,
+});
 
 const G = {
   box: new THREE.BoxGeometry(1, 1, 1),
@@ -89,56 +125,90 @@ const G = {
   torus: new THREE.TorusGeometry(0.5, 0.06, 10, 40),
   torusThin: new THREE.TorusGeometry(0.5, 0.018, 6, 48),
   disc: new THREE.CylinderGeometry(1, 1, 1, 48),
+  ring: new THREE.RingGeometry(0.9, 1, 48),
   frustum: new THREE.CylinderGeometry(1, 1.22, 1, 4),
   frustumSlim: new THREE.CylinderGeometry(1, 1.12, 1, 4),
+  octagon: new THREE.CylinderGeometry(1, 1, 1, 8),
+  octagonTaper: new THREE.CylinderGeometry(1, 1.06, 1, 8),
   gable: makeGableRoofGeometry(),
-  flowRoof: makeFlowingRoofGeometry(),
   bowl: makeStadiumBowlGeometry(),
-  canopy: makeStadiumRoofGeometry(),
-  stadiumRim: new THREE.TubeGeometry(
-    makeStadiumRoofRimCurve(),
-    96,
-    0.024,
-    6,
-    false,
-  ),
-  stadiumInnerRim: new THREE.TubeGeometry(
-    makeStadiumRoofInnerRimCurve(),
-    96,
-    0.02,
-    6,
-    false,
-  ),
-  pagodaRoof: makePagodaRoofGeometry(),
-  arch: makeArchRoofGeometry(),
-  flowRim: new THREE.TubeGeometry(
-    makeFlowingRoofRimCurve(),
-    96,
-    0.016,
-    6,
-    true,
-  ),
+  stadiumRibbon: makeRibbonRoofGeometry({
+    startAngle: STADIUM_ROOF_START,
+    sweep: STADIUM_ROOF_SWEEP,
+    segments: 72,
+    thickness: 0.03,
+    innerRadius: stadiumRoofInnerRadius,
+    outerRadius: stadiumRoofOuterRadius,
+    innerLift: stadiumRoofInnerLift,
+    outerLift: stadiumRoofOuterLift,
+    squashZ: STADIUM_SQUASH_Z,
+  }),
+  hsrCanopy: makeRadialShellGeometry({
+    radiusX: HSR_CANOPY.radiusX,
+    radiusZ: HSR_CANOPY.radiusZ,
+    radiusAt: (angle) => superellipseRadius(angle, 6),
+    heightAt: hsrCanopyHeight,
+    thickness: HSR_CANOPY.thickness,
+    segments: 48,
+    rings: 6,
+  }),
+  weiwuyingShell: makeRadialShellGeometry({
+    radiusX: WEIWUYING_ROOF.radiusX,
+    radiusZ: WEIWUYING_ROOF.radiusZ,
+    radiusAt: weiwuyingRadiusAt,
+    heightAt: weiwuyingRoofHeight,
+    thickness: WEIWUYING_ROOF.thickness,
+    segments: 88,
+    rings: 16,
+    holeAt: isInsideWeiwuyingWell,
+  }),
+  crown: makeFlaredCrownGeometry({
+    baseRadius: 0.134,
+    topRadius: 0.178,
+    height: 0.13,
+    notch: 0.055,
+  }),
 };
 
-const DOUBLE_ROOF = new THREE.MeshStandardMaterial({
-  color: '#f8f3e5',
-  roughness: 0.46,
-  metalness: 0.12,
-  side: THREE.DoubleSide,
-});
-const DOUBLE_CANOPY = new THREE.MeshStandardMaterial({
-  color: '#fbf7ed',
-  roughness: 0.4,
-  metalness: 0.18,
-  side: THREE.DoubleSide,
-});
+/* ------------------------------------------------------------------ */
+/* Detail level + reduced motion                                       */
+/* ------------------------------------------------------------------ */
+
+type Detail = 'near' | 'far';
+
+/**
+ * Hero models keep their full trim only when the camera is close enough to
+ * resolve it. The city view stays at the silhouette-only budget.
+ */
+function useLandmarkDetail(): Detail {
+  const camera = useThree((state) => state.camera);
+  const [detail, setDetail] = useState<Detail>('far');
+  useFrame(() => {
+    const zoom = (camera as THREE.OrthographicCamera).zoom ?? 0;
+    const next: Detail = zoom >= 55 ? 'near' : 'far';
+    setDetail((current) => (current === next ? current : next));
+  });
+  return detail;
+}
+
+function usePrefersReducedMotion(): boolean {
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduced(query.matches);
+    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
+    query.addEventListener('change', onChange);
+    return () => query.removeEventListener('change', onChange);
+  }, []);
+  return reduced;
+}
 
 type HeroPartProps = {
   geometry: THREE.BufferGeometry;
   material: THREE.Material;
-  scale?: [number, number, number];
-  position?: [number, number, number];
-  rotation?: [number, number, number];
+  scale?: Vec3;
+  position?: Vec3;
+  rotation?: Vec3;
   receiveShadow?: boolean;
 };
 
@@ -186,219 +256,173 @@ function ContactShadow({ radius }: { radius: number }) {
 /* HSR Zuoying Station                                                 */
 /* ------------------------------------------------------------------ */
 
+const HSR_HALL_TOP = 0.375;
+
+const HSR_FRAME = (() => {
+  const struts: StrutSpec[] = [];
+  const columns = 9;
+  for (let index = 0; index < columns; index += 1) {
+    const x = -0.56 + (index / (columns - 1)) * 1.12;
+    struts.push({
+      from: [x, 0.06, 0.19],
+      to: [x, HSR_HALL_TOP, 0.19],
+      width: 0.03,
+    });
+    struts.push({
+      from: [x, HSR_HALL_TOP, 0.19],
+      to: [x, hsrCanopyUnderside(x, 0.33), 0.33],
+      width: 0.016,
+    });
+    struts.push({
+      from: [x, HSR_HALL_TOP, 0.19],
+      to: [x, hsrCanopyUnderside(x, 0.03), 0.03],
+      width: 0.016,
+    });
+  }
+  struts.push({
+    from: [-0.56, HSR_HALL_TOP, 0.19],
+    to: [0.56, HSR_HALL_TOP, 0.19],
+    width: 0.018,
+  });
+  return makeStrutGeometry(struts);
+})();
+
+const HSR_SLEEPERS = makeBoxClusterGeometry(
+  Array.from({ length: 13 }, (_, index) => ({
+    position: [-0.6 + index * 0.1, 0.062, 0.33] as Vec3,
+    scale: [0.05, 0.014, 0.14] as Vec3,
+  })),
+);
+
 function HsrStation() {
+  const detail = useLandmarkDetail();
   return (
     <group>
-      <ContactShadow radius={0.98} />
+      <ContactShadow radius={0.92} />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.concrete}
-        scale={[1.66, 0.07, 1.0]}
-        position={[0, 0.045, 0]}
+        scale={[1.72, 0.06, 0.98]}
+        position={[0, 0.03, 0]}
       />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.cream}
-        scale={[1.34, 0.09, 0.66]}
-        position={[-0.05, 0.12, -0.12]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.glass}
-        scale={[1.16, 0.25, 0.5]}
-        position={[-0.06, 0.27, -0.16]}
+        scale={[1.34, 0.28, 0.52]}
+        position={[0, 0.2, -0.1]}
       />
       <HeroPart
         geometry={G.box}
-        material={HERO_MAT.cream}
-        scale={[1.22, 0.045, 0.55]}
-        position={[-0.06, 0.395, -0.16]}
+        material={HERO_MAT.dark}
+        scale={[1.36, 0.06, 0.53]}
+        position={[0, 0.35, -0.1]}
       />
-      {Array.from({ length: 7 }, (_, index) => (
+      <HeroPart
+        geometry={G.box}
+        material={HERO_MAT.glassGreen}
+        scale={[1.2, 0.14, 0.02]}
+        position={[0, 0.2, 0.165]}
+      />
+      {detail === 'near' ? (
         <HeroPart
-          key={`mullion-${(-0.52 + index * 0.155).toFixed(3)}`}
           geometry={G.box}
           material={HERO_MAT.steelLight}
-          scale={[0.025, 0.24, 0.025]}
-          position={[-0.52 + index * 0.155, 0.275, 0.095]}
+          scale={[1.24, 0.02, 0.03]}
+          position={[0, 0.29, 0.166]}
         />
-      ))}
+      ) : null}
+      <HeroPart geometry={HSR_FRAME} material={HERO_MAT.white} />
       <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.dark}
-        scale={[0.18, 0.19, 0.025]}
-        position={[-0.16, 0.24, 0.1]}
+        geometry={G.hsrCanopy}
+        material={HERO_MAT.shell}
+        position={[0, 0, -0.02]}
       />
       <HeroPart
         geometry={G.box}
-        material={HERO_MAT.dark}
-        scale={[0.18, 0.19, 0.025]}
-        position={[0.08, 0.24, 0.1]}
+        material={HERO_MAT.track}
+        scale={[1.5, 0.02, 0.2]}
+        position={[0, 0.068, 0.33]}
       />
-      <HeroPart
-        geometry={G.arch}
-        material={DOUBLE_ROOF}
-        scale={[1.2, 0.36, 0.5]}
-        position={[-0.04, 0.38, -0.17]}
-      />
-      <HeroPart
-        geometry={G.arch}
-        material={HERO_MAT.tealDeep}
-        scale={[1.0, 0.375, 0.53]}
-        position={[-0.04, 0.385, -0.17]}
-      />
-      <HeroPart
-        geometry={G.arch}
-        material={DOUBLE_ROOF}
-        scale={[1.04, 0.39, 0.55]}
-        position={[-0.04, 0.39, -0.17]}
-      />
-      {[-0.62, 0.54].map((x) => (
-        <group key={`station-end-${x}`}>
-          <HeroPart
-            geometry={G.box}
-            material={HERO_MAT.glassDeep}
-            scale={[0.024, 0.24, 0.4]}
-            position={[x, 0.48, -0.17]}
-          />
-          <HeroPart
-            geometry={G.box}
-            material={HERO_MAT.cream}
-            scale={[0.05, 0.06, 0.55]}
-            position={[x, 0.67, -0.17]}
-          />
-        </group>
-      ))}
-      {[-0.52, -0.26, 0, 0.26, 0.52].map((x) => (
-        <HeroPart
-          key={`platform-column-${x}`}
-          geometry={G.cylinder8}
-          material={HERO_MAT.steel}
-          scale={[0.022, 0.4, 0.022]}
-          position={[x, 0.35, 0.23]}
-        />
-      ))}
       <HeroPart
         geometry={G.box}
-        material={HERO_MAT.steelLight}
-        scale={[1.14, 0.018, 0.03]}
-        position={[-0.04, 0.63, 0.23]}
+        material={HERO_MAT.steel}
+        scale={[1.5, 0.014, 0.02]}
+        position={[0, 0.076, 0.29]}
       />
+      <HeroPart
+        geometry={G.box}
+        material={HERO_MAT.steel}
+        scale={[1.5, 0.014, 0.02]}
+        position={[0, 0.076, 0.37]}
+      />
+      {detail === 'near' ? (
+        <HeroPart geometry={HSR_SLEEPERS} material={HERO_MAT.wood} />
+      ) : null}
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.cream}
-        scale={[1.42, 0.14, 0.2]}
-        position={[0, 0.13, 0.4]}
+        scale={[1.42, 0.1, 0.16]}
+        position={[0, 0.11, 0.13]}
       />
       <HeroPart
         geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.42, 0.14, 0.16]}
-        position={[0, 0.13, 0.22]}
+        material={HERO_MAT.teal}
+        scale={[1.06, 0.15, 0.14]}
+        position={[0, 0.2, 0.33]}
       />
-      {[-0.65, -0.52, -0.39, -0.26, -0.13, 0, 0.13, 0.26, 0.39, 0.52, 0.65].map(
-        (x) => (
-          <HeroPart
-            key={`sleeper-${x}`}
-            geometry={G.box}
-            material={HERO_MAT.wood}
-            scale={[0.045, 0.012, 0.19]}
-            position={[x, 0.214, 0.42]}
-          />
-        ),
-      )}
+      <HeroPart
+        geometry={G.rounded}
+        material={HERO_MAT.paper}
+        scale={[1.04, 0.045, 0.145]}
+        position={[0, 0.283, 0.33]}
+      />
       <HeroPart
         geometry={G.box}
-        material={HERO_MAT.yellow}
-        scale={[1.3, 0.012, 0.025]}
-        position={[0, 0.222, 0.27]}
+        material={HERO_MAT.glassDeep}
+        scale={[0.98, 0.055, 0.146]}
+        position={[0, 0.222, 0.33]}
       />
-      {[0.31, 0.49].map((z) => (
-        <HeroPart
-          key={`rail-${z}`}
-          geometry={G.box}
-          material={HERO_MAT.track}
-          scale={[1.3, 0.018, 0.025]}
-          position={[0, 0.226, z]}
-        />
-      ))}
-      <group position={[0.02, 0.28, 0.42]}>
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.teal}
-          scale={[1.02, 0.17, 0.15]}
-          position={[0, 0, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.paper}
-          scale={[1.0, 0.055, 0.155]}
-          position={[0, 0.105, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.glassDeep}
-          scale={[0.78, 0.065, 0.158]}
-          position={[0.02, 0.025, 0]}
-        />
-        {[-0.32, 0.02, 0.36].map((x) => (
-          <HeroPart
-            key={`train-door-${x}`}
-            geometry={G.box}
-            material={HERO_MAT.dark}
-            scale={[0.08, 0.11, 0.004]}
-            position={[x, -0.005, 0.082]}
-          />
-        ))}
-        <HeroPart
-          geometry={G.cone}
-          material={HERO_MAT.paper}
-          scale={[0.16, 0.2, 0.15]}
-          position={[0.57, 0, 0]}
-          rotation={[0, 0, -Math.PI / 2]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.orange}
-          scale={[0.9, 0.02, 0.158]}
-          position={[-0.02, -0.088, 0]}
-        />
-        {[-0.32, 0.28].map((x) => (
-          <HeroPart
-            key={`train-wheel-${x}`}
-            geometry={G.cylinder}
-            material={HERO_MAT.dark}
-            scale={[0.06, 0.03, 0.06]}
-            position={[x, -0.105, 0]}
-            rotation={[Math.PI / 2, 0, 0]}
-          />
-        ))}
-      </group>
+      <HeroPart
+        geometry={G.cone}
+        material={HERO_MAT.teal}
+        scale={[0.14, 0.16, 0.14]}
+        position={[0.6, 0.2, 0.33]}
+        rotation={[0, 0, -Math.PI / 2]}
+      />
+      <HeroPart
+        geometry={G.box}
+        material={HERO_MAT.orange}
+        scale={[1.02, 0.035, 0.15]}
+        position={[0, 0.135, 0.33]}
+      />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.orange}
-        scale={[0.22, 0.19, 0.05]}
-        position={[0.55, 0.31, 0.1]}
+        scale={[0.18, 0.16, 0.08]}
+        position={[0.62, 0.19, 0.13]}
       />
       <HeroPart
         geometry={G.box}
         material={HERO_MAT.paper}
-        scale={[0.16, 0.1, 0.055]}
-        position={[0.55, 0.31, 0.108]}
+        scale={[0.16, 0.05, 0.012]}
+        position={[0.62, 0.25, 0.172]}
       />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.teal}
-        scale={[1.18, 0.03, 0.04]}
-        position={[-0.06, 0.44, 0.115]}
-      />
-      {[-0.7, 0.53].map((x) => (
+      {[-0.34, -0.1].map((x) => (
         <HeroPart
-          key={`side-bench-${x}`}
+          key={x}
           geometry={G.rounded}
           material={HERO_MAT.sage}
-          scale={[0.16, 0.045, 0.12]}
-          position={[x, 0.1, 0.46]}
+          scale={[0.14, 0.035, 0.06]}
+          position={[x, 0.178, 0.13]}
+        />
+      ))}
+      {[-0.78, 0.78].map((x) => (
+        <HeroPart
+          key={x}
+          geometry={G.cylinder8}
+          material={HERO_MAT.concrete}
+          scale={[0.12, 0.05, 0.12]}
+          position={[x, 0.085, -0.36]}
         />
       ))}
     </group>
@@ -409,546 +433,590 @@ function HsrStation() {
 /* World Games Stadium                                                 */
 /* ------------------------------------------------------------------ */
 
-function WorldGamesStadium() {
-  const supportAngles = Array.from(
-    { length: 9 },
-    (_, index) => -Math.PI * 0.2 + (index / 8) * Math.PI * 1.52,
+const STADIUM_TRUSS = (() => {
+  const struts: StrutSpec[] = [];
+  const bays = 16;
+  const angles = Array.from({ length: bays }, (_, index) =>
+    STADIUM_ROOF_START + (index / bays) * STADIUM_ROOF_SWEEP,
   );
+  const tops = angles.map((angle) => {
+    const point = stadiumRibbonPoint(
+      angle,
+      stadiumRoofOuterRadius,
+      stadiumRoofOuterLift,
+    );
+    return [point[0], point[1] - 0.032, point[2]] as Vec3;
+  });
+  angles.forEach((angle, index) => {
+    const top = tops[index];
+    if (!top) return;
+    const base: Vec3 = [
+      Math.cos(angle) * 1.0,
+      0.05,
+      Math.sin(angle) * 1.0 * STADIUM_SQUASH_Z,
+    ];
+    struts.push({ from: base, to: top, width: 0.024 });
+    const next = tops[(index + 1) % bays];
+    if (next) {
+      struts.push({ from: top, to: next, width: 0.016 });
+      struts.push({ from: base, to: next, width: 0.014 });
+    }
+  });
+  return makeStrutGeometry(struts);
+})();
+
+const STADIUM_SEAT_BANDS = [
+  { radius: 0.55, y: 0.105, material: HERO_MAT.teal },
+  { radius: 0.67, y: 0.165, material: HERO_MAT.orange },
+  { radius: 0.8, y: 0.225, material: HERO_MAT.yellow },
+];
+
+function WorldGamesStadium() {
   return (
     <group>
-      <ContactShadow radius={1.04} />
+      <ContactShadow radius={1.02} />
       <HeroPart
         geometry={G.disc}
         material={HERO_MAT.concrete}
-        scale={[1.06, 0.07, 0.82]}
-        position={[0, 0.045, 0]}
+        scale={[1.0, 0.05, 0.72]}
+        position={[0, 0.035, 0]}
       />
+      <HeroPart geometry={G.bowl} material={HERO_MAT.cream} />
       <HeroPart
-        geometry={G.bowl}
-        material={HERO_MAT.cream}
-        scale={[0.94, 0.82, 0.94]}
-        position={[0, 0.03, 0]}
+        geometry={G.disc}
+        material={HERO_MAT.trackBlue}
+        scale={[0.43, 0.012, 0.31]}
+        position={[0, 0.068, 0]}
       />
-      {[
-        [0.72, 0.17, HERO_MAT.teal],
-        [0.83, 0.26, HERO_MAT.orange],
-        [0.92, 0.35, HERO_MAT.yellow],
-      ].map(([radius, y, material]) => (
-        <HeroPart
-          key={`seat-band-${String(y)}`}
-          geometry={G.torusThin}
-          material={material as THREE.Material}
-          scale={[radius as number, radius as number, 0.54]}
-          position={[0, y as number, 0]}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
-      ))}
       <HeroPart
         geometry={G.disc}
         material={HERO_MAT.green}
-        scale={[0.56, 0.024, 0.4]}
-        position={[0, 0.086, 0]}
+        scale={[0.28, 0.02, 0.2]}
+        position={[0, 0.075, 0]}
       />
       <HeroPart
-        geometry={G.torusThin}
+        geometry={G.ring}
         material={HERO_MAT.paper}
-        scale={[0.55, 0.55, 0.18]}
-        position={[0, 0.1, 0]}
-        rotation={[Math.PI / 2, 0, 0]}
+        scale={[0.33, 0.238, 1]}
+        position={[0, 0.09, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
       />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.track}
-        scale={[0.46, 0.012, 0.32]}
-        position={[0, 0.099, 0]}
-      />
-      <HeroPart
-        geometry={G.canopy}
-        material={DOUBLE_CANOPY}
-        scale={[1, 1, 1]}
-        position={[0, 0.02, 0]}
-      />
-      <HeroPart
-        geometry={G.stadiumRim}
-        material={HERO_MAT.steelLight}
-        scale={[1, 1, 1]}
-        position={[0, 0.02, 0]}
-      />
-      <HeroPart
-        geometry={G.stadiumInnerRim}
-        material={HERO_MAT.paper}
-        scale={[1, 1, 1]}
-        position={[0, 0.02, 0]}
-      />
-      {supportAngles.map((angle) => (
-        <group key={`support-${angle.toFixed(3)}`} rotation={[0, -angle, 0]}>
-          <HeroPart
-            geometry={G.cylinder8}
-            material={HERO_MAT.steel}
-            scale={[0.026, 0.34, 0.026]}
-            position={[0.94, 0.3, 0]}
-          />
-          <HeroPart
-            geometry={G.box}
-            material={HERO_MAT.steelLight}
-            scale={[0.3, 0.014, 0.016]}
-            position={[0.8, 0.45, 0]}
-            rotation={[0, 0, 0.35]}
-          />
-        </group>
+      {STADIUM_SEAT_BANDS.map((band) => (
+        <HeroPart
+          key={band.radius}
+          geometry={G.ring}
+          material={band.material}
+          scale={[band.radius, band.radius * STADIUM_SQUASH_Z, 1]}
+          position={[0, band.y, 0]}
+          rotation={[-Math.PI / 2, 0, 0]}
+        />
       ))}
+      <HeroPart geometry={G.stadiumRibbon} material={HERO_MAT.shell} />
+      <HeroPart geometry={STADIUM_TRUSS} material={HERO_MAT.lattice} />
       <HeroPart
-        geometry={G.rounded}
+        geometry={G.box}
         material={HERO_MAT.concrete}
-        scale={[0.42, 0.045, 0.24]}
-        position={[0, 0.11, 0.67]}
+        scale={[0.2, 0.12, 0.1]}
+        position={[-0.2, 0.1, -0.66]}
       />
       <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.terracotta}
-        scale={[0.26, 0.075, 0.16]}
-        position={[-0.34, 0.16, 0.64]}
+        geometry={G.box}
+        material={HERO_MAT.dark}
+        scale={[0.3, 0.14, 0.02]}
+        position={[-0.2, 0.24, -0.66]}
       />
       <HeroPart
         geometry={G.box}
         material={HERO_MAT.paper}
-        scale={[0.36, 0.24, 0.035]}
-        position={[0.36, 0.25, 0.6]}
-        rotation={[0, 0.48, 0]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.teal}
-        scale={[0.26, 0.035, 0.012]}
-        position={[0.36, 0.3, 0.62]}
-        rotation={[0, 0.48, 0]}
+        scale={[0.28, 0.03, 0.022]}
+        position={[-0.2, 0.32, -0.66]}
       />
     </group>
   );
 }
 
 /* ------------------------------------------------------------------ */
-/* Lotus Pond and Dragon/Tiger Pagodas                                 */
+/* Dragon and Tiger Pagodas                                            */
 /* ------------------------------------------------------------------ */
 
-function PagodaRoof({
-  width,
-  height,
-  material,
-}: {
-  width: number;
-  height: number;
-  material: THREE.Material;
-}) {
-  return (
-    <HeroPart
-      geometry={G.pagodaRoof}
-      material={material}
-      scale={[width / 1.44, height / 0.9, width / 1.44]}
-    />
-  );
+const PAGODA_TIERS = 7;
+
+type PagodaTier = {
+  bodyHalf: number;
+  bodyHeight: number;
+  base: number;
+  rise: number;
+};
+
+function pagodaTiers(): PagodaTier[] {
+  const tiers: PagodaTier[] = [];
+  let base = 0.15;
+  for (let level = 0; level < PAGODA_TIERS; level += 1) {
+    const bodyHalf = 0.115 - level * 0.008;
+    const bodyHeight = 0.098 - level * 0.004;
+    const rise = 0.058 - level * 0.002;
+    tiers.push({ bodyHalf, bodyHeight, base, rise });
+    base += bodyHeight + rise * 0.7;
+  }
+  return tiers;
 }
 
-function PagodaHero({
-  roofMaterial,
-  accentMaterial,
-}: {
-  roofMaterial: THREE.Material;
-  accentMaterial: THREE.Material;
-}) {
-  const levels = [0, 1, 2, 3, 4];
-  let y = 0.06;
+const PAGODA_TIER_DATA = pagodaTiers();
+const PAGODA_TOP_TIER = PAGODA_TIER_DATA[PAGODA_TIER_DATA.length - 1];
+const PAGODA_FINIAL_Y = PAGODA_TOP_TIER
+  ? PAGODA_TOP_TIER.base + PAGODA_TOP_TIER.bodyHeight + PAGODA_TOP_TIER.rise
+  : 1.02;
+
+const PAGODA_BODIES = makeBoxClusterGeometry(
+  PAGODA_TIER_DATA.map((tier) => ({
+    position: [0, tier.base + tier.bodyHeight / 2, 0] as Vec3,
+    scale: [tier.bodyHalf * 2, tier.bodyHeight, tier.bodyHalf * 2] as Vec3,
+  })),
+);
+
+const PAGODA_ROOFS = PAGODA_TIER_DATA.map((tier) =>
+  makePagodaTierRoofGeometry({
+    halfWidth: tier.bodyHalf * 1.45,
+    rise: tier.rise,
+    upturn: 0.022,
+    thickness: 0.012,
+    segments: 24,
+    rings: 4,
+  }),
+);
+
+const PAGODA_REDWORK = (() => {
+  const boxes: BoxSpec[] = [];
+  for (const tier of PAGODA_TIER_DATA) {
+    const half = tier.bodyHalf;
+    const top = tier.base + tier.bodyHeight;
+    for (const sx of [-1, 1]) {
+      for (const sz of [-1, 1]) {
+        boxes.push({
+          position: [
+            sx * half * 0.86,
+            tier.base + tier.bodyHeight / 2,
+            sz * half * 0.86,
+          ] as Vec3,
+          scale: [0.014, tier.bodyHeight, 0.014] as Vec3,
+        });
+      }
+    }
+    boxes.push({
+      position: [0, tier.base + 0.004, 0] as Vec3,
+      scale: [half * 2 + 0.03, 0.008, half * 2 + 0.03] as Vec3,
+    });
+    for (const side of [-1, 1]) {
+      boxes.push({
+        position: [0, tier.base + 0.026, side * (half + 0.012)] as Vec3,
+        scale: [half * 2 + 0.03, 0.008, 0.008] as Vec3,
+      });
+      boxes.push({
+        position: [side * (half + 0.012), tier.base + 0.026, 0] as Vec3,
+        scale: [0.008, 0.008, half * 2 + 0.03] as Vec3,
+      });
+    }
+    boxes.push({
+      position: [0, top - 0.008, 0] as Vec3,
+      scale: [half * 2 + 0.012, 0.012, half * 2 + 0.012] as Vec3,
+    });
+  }
+  for (let index = 0; index < 8; index += 1) {
+    const angle = (index / 8) * Math.PI * 2 + Math.PI / 8;
+    boxes.push({
+      position: [Math.cos(angle) * 0.13, 0.09, Math.sin(angle) * 0.13] as Vec3,
+      scale: [0.014, 0.1, 0.014] as Vec3,
+    });
+  }
+  return makeBoxClusterGeometry(boxes);
+})();
+
+function PagodaHero() {
   return (
     <group>
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.stone}
-        scale={[0.34, 0.07, 0.34]}
-        position={[0, 0.035, 0]}
+        scale={[0.32, 0.05, 0.32]}
+        position={[0, 0.05, 0]}
       />
-      {levels.map((level) => {
-        const bodyWidth = 0.26 - level * 0.036;
-        const bodyHeight = 0.115 - level * 0.008;
-        const baseY = y;
-        y += bodyHeight + 0.075;
+      <HeroPart
+        geometry={G.rounded}
+        material={HERO_MAT.cream}
+        scale={[0.3, 0.02, 0.3]}
+        position={[0, 0.135, 0]}
+      />
+      <HeroPart geometry={PAGODA_BODIES} material={HERO_MAT.cream} />
+      <HeroPart geometry={PAGODA_REDWORK} material={HERO_MAT.red} />
+      {PAGODA_ROOFS.map((geometry, index) => {
+        const tier = PAGODA_TIER_DATA[index];
+        if (!tier) return null;
         return (
-          <group key={level} position={[0, baseY, 0]}>
-            <HeroPart
-              geometry={G.box}
-              material={HERO_MAT.cream}
-              scale={[bodyWidth, bodyHeight, bodyWidth]}
-              position={[0, bodyHeight / 2, 0]}
-            />
-            {[-1, 1].flatMap((sx) =>
-              [-1, 1].map((sz) => (
-                <HeroPart
-                  key={`column-${sx}-${sz}`}
-                  geometry={G.box}
-                  material={HERO_MAT.red}
-                  scale={[0.018, bodyHeight, 0.018]}
-                  position={[
-                    sx * bodyWidth * 0.44,
-                    bodyHeight / 2,
-                    sz * bodyWidth * 0.44,
-                  ]}
-                />
-              )),
-            )}
-            <HeroPart
-              geometry={G.box}
-              material={HERO_MAT.wood}
-              scale={[bodyWidth + 0.02, 0.018, bodyWidth + 0.02]}
-              position={[0, 0.008, 0]}
-            />
-            <group position={[0, bodyHeight, 0]}>
-              <PagodaRoof
-                width={bodyWidth * 1.72}
-                height={0.1}
-                material={level % 2 === 0 ? roofMaterial : accentMaterial}
-              />
-              {[-1, 1].flatMap((sx) =>
-                [-1, 1].map((sz) => (
-                  <HeroPart
-                    key={`eave-tip-${sx}-${sz}`}
-                    geometry={G.cone6}
-                    material={HERO_MAT.gold}
-                    scale={[0.024, 0.06, 0.024]}
-                    position={[
-                      sx * bodyWidth * 0.79,
-                      0.105,
-                      sz * bodyWidth * 0.79,
-                    ]}
-                    rotation={[sx * 0.3, 0, sz * 0.3]}
-                  />
-                )),
-              )}
-            </group>
-          </group>
+          <HeroPart
+            key={tier.base}
+            geometry={geometry}
+            material={DOUBLE_ROOF}
+            position={[0, tier.base + tier.bodyHeight - 0.004, 0]}
+          />
         );
       })}
       <HeroPart
         geometry={G.cylinder8}
         material={HERO_MAT.gold}
-        scale={[0.018, 0.16, 0.018]}
-        position={[0, y + 0.05, 0]}
+        scale={[0.03, 0.03, 0.03]}
+        position={[0, PAGODA_FINIAL_Y + 0.012, 0]}
+      />
+      <HeroPart
+        geometry={G.sphereLow}
+        material={HERO_MAT.gold}
+        scale={[0.026, 0.05, 0.026]}
+        position={[0, PAGODA_FINIAL_Y + 0.045, 0]}
       />
       <HeroPart
         geometry={G.cone6}
         material={HERO_MAT.gold}
-        scale={[0.055, 0.13, 0.055]}
-        position={[0, y + 0.16, 0]}
+        scale={[0.03, 0.05, 0.03]}
+        position={[0, PAGODA_FINIAL_Y + 0.08, 0]}
       />
     </group>
   );
 }
 
 function BeastHead({ kind }: { kind: 'dragon' | 'tiger' }) {
-  const body = kind === 'dragon' ? HERO_MAT.greenDeep : HERO_MAT.orange;
-  const mane = kind === 'dragon' ? HERO_MAT.gold : HERO_MAT.yellow;
+  const isDragon = kind === 'dragon';
+  const skin = isDragon ? HERO_MAT.greenDeep : HERO_MAT.orange;
+  const stripe = isDragon ? HERO_MAT.green : HERO_MAT.dark;
   return (
     <group>
       <HeroPart
         geometry={G.rounded}
-        material={body}
+        material={skin}
         scale={[0.19, 0.17, 0.18]}
-        position={[0, 0.16, 0]}
+        position={[0, 0.13, 0]}
       />
       <HeroPart
         geometry={G.rounded}
-        material={body}
-        scale={[0.16, 0.09, 0.2]}
-        position={[0, 0.12, 0.12]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.paper}
-        scale={[0.065, 0.065, 0.065]}
-        position={[-0.07, 0.21, 0.12]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.paper}
-        scale={[0.065, 0.065, 0.065]}
-        position={[0.07, 0.21, 0.12]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.dark}
-        scale={[0.028, 0.028, 0.02]}
-        position={[-0.07, 0.21, 0.155]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.dark}
-        scale={[0.028, 0.028, 0.02]}
-        position={[0.07, 0.21, 0.155]}
-      />
-      <HeroPart
-        geometry={G.cone6}
-        material={mane}
-        scale={[0.04, 0.15, 0.04]}
-        position={[-0.09, 0.3, -0.02]}
-        rotation={[0, 0, 0.4]}
-      />
-      <HeroPart
-        geometry={G.cone6}
-        material={mane}
-        scale={[0.04, 0.15, 0.04]}
-        position={[0.09, 0.3, -0.02]}
-        rotation={[0, 0, -0.4]}
+        material={skin}
+        scale={[0.13, 0.09, 0.13]}
+        position={[0, 0.11, 0.13]}
       />
       <HeroPart
         geometry={G.box}
         material={HERO_MAT.paper}
-        scale={[0.13, 0.018, 0.04]}
-        position={[0, 0.075, 0.2]}
+        scale={[0.12, 0.045, 0.1]}
+        position={[0, 0.075, 0.15]}
       />
-      {[-0.05, 0.05].map((x) => (
+      {[-0.045, 0.045].map((x) => (
+        <group key={x}>
+          <HeroPart
+            geometry={G.sphereLow}
+            material={HERO_MAT.paper}
+            scale={[0.05, 0.05, 0.03]}
+            position={[x, 0.2, 0.1]}
+          />
+          <HeroPart
+            geometry={G.sphereLow}
+            material={HERO_MAT.dark}
+            scale={[0.022, 0.026, 0.016]}
+            position={[x, 0.2, 0.118]}
+          />
+        </group>
+      ))}
+      <HeroPart
+        geometry={G.cone6}
+        material={skin}
+        scale={[0.045, 0.1, 0.045]}
+        position={[-0.06, 0.235, -0.04]}
+        rotation={[0, 0, 0.35]}
+      />
+      <HeroPart
+        geometry={G.cone6}
+        material={skin}
+        scale={[0.045, 0.1, 0.045]}
+        position={[0.06, 0.235, -0.04]}
+        rotation={[0, 0, -0.35]}
+      />
+      <HeroPart
+        geometry={G.box}
+        material={stripe}
+        scale={[0.14, 0.012, 0.09]}
+        position={[0, 0.155, 0.1]}
+      />
+      {[-0.035, 0.035].map((x) => (
         <HeroPart
-          key={`tooth-${x}`}
+          key={x}
           geometry={G.cone4}
           material={HERO_MAT.paper}
-          scale={[0.018, 0.05, 0.018]}
-          position={[x, 0.065, 0.2]}
+          scale={[0.018, 0.03, 0.018]}
+          position={[x, 0.055, 0.16]}
           rotation={[Math.PI, 0, 0]}
         />
       ))}
-      <HeroPart
-        geometry={G.rounded}
-        material={body}
-        scale={[0.07, 0.045, 0.09]}
-        position={[0, 0.21, 0.18]}
-      />
     </group>
   );
 }
 
+const LOTUS_PADS = makeBoxClusterGeometry(
+  Array.from({ length: 9 }, (_, index) => {
+    const angle = (index / 9) * Math.PI * 2 + 0.4;
+    const radius = 0.22 + (index % 3) * 0.09;
+    return {
+      position: [
+        Math.cos(angle) * radius * 1.3,
+        0.05,
+        Math.sin(angle) * radius,
+      ] as Vec3,
+      scale: [0.11 + (index % 2) * 0.03, 0.012, 0.1] as Vec3,
+      rotation: [0, angle, 0] as Vec3,
+    };
+  }),
+);
+
+const LOTUS_BRIDGE_DECKS = makeBoxClusterGeometry(
+  [-0.46, 0.46].flatMap((x) =>
+    Array.from({ length: 6 }, (_, index) => ({
+      position: [x, 0.066, 0.17 + index * 0.07] as Vec3,
+      scale: [0.12, 0.018, 0.074] as Vec3,
+      rotation: [0, index % 2 === 0 ? 0.09 : -0.09, 0] as Vec3,
+    })),
+  ),
+);
+
+const LOTUS_BRIDGE_POSTS = makeBoxClusterGeometry(
+  [-0.46, 0.46].flatMap((x) =>
+    Array.from({ length: 6 }, (_, index) => ({
+      position: [x, 0.05, 0.17 + index * 0.07] as Vec3,
+      scale: [0.012, 0.05, 0.012] as Vec3,
+    })),
+  ),
+);
+
 function LotusPagodas() {
+  const detail = useLandmarkDetail();
   return (
     <group>
-      <ContactShadow radius={1.02} />
+      <ContactShadow radius={0.98} />
       <HeroPart
         geometry={G.disc}
         material={HERO_MAT.water}
         scale={[1.0, 0.045, 0.78]}
-        position={[0, 0.025, 0]}
+        position={[0, 0.02, 0]}
       />
       <HeroPart
         geometry={G.disc}
         material={HERO_MAT.waterDeep}
         scale={[0.86, 0.038, 0.64]}
-        position={[0, 0.034, 0]}
+        position={[0, 0.028, 0]}
       />
-      {[
-        [-0.48, 0.25],
-        [-0.24, 0.31],
-        [0.02, 0.27],
-        [0.3, 0.24],
-        [0.47, -0.28],
-        [0.19, -0.31],
-        [-0.15, -0.28],
-        [-0.42, -0.16],
-        [0.62, 0.03],
-        [-0.64, 0.06],
-      ].map(([x, z], index) => (
-        <group key={`leaf-${x}-${z}`} position={[x!, 0.058, z!]}>
-          <HeroPart
-            geometry={G.disc}
-            material={HERO_MAT.green}
-            scale={[0.11 + (index % 3) * 0.012, 0.012, 0.09]}
-          />
-          {index % 3 === 0 && (
-            <HeroPart
-              geometry={G.sphereLow}
-              material={HERO_MAT.pink}
-              scale={[0.06, 0.075, 0.06]}
-              position={[0, 0.055, 0]}
-            />
-          )}
-        </group>
+      <HeroPart geometry={LOTUS_PADS} material={HERO_MAT.sage} />
+      {[-0.34, 0.28].map((x) => (
+        <HeroPart
+          key={x}
+          geometry={G.sphereLow}
+          material={HERO_MAT.pink}
+          scale={[0.05, 0.09, 0.05]}
+          position={[x, 0.075, 0.24]}
+        />
       ))}
-      <group position={[-0.48, 0.05, -0.1]} scale={0.9}>
-        <PagodaHero
-          roofMaterial={HERO_MAT.teal}
-          accentMaterial={HERO_MAT.red}
-        />
-      </group>
-      <group position={[0.5, 0.05, 0.04]} scale={0.9}>
-        <PagodaHero
-          roofMaterial={HERO_MAT.red}
-          accentMaterial={HERO_MAT.teal}
-        />
-      </group>
-      <group position={[0, 0.07, 0.46]}>
-        {[-0.66, -0.44, -0.22, 0, 0.22, 0.44, 0.66].map((x, index) => (
-          <group
-            key={`bridge-${x}`}
-            position={[x, 0, index % 2 === 0 ? -0.035 : 0.035]}
-          >
-            <HeroPart
-              geometry={G.rounded}
-              material={HERO_MAT.cream}
-              scale={[0.25, 0.025, 0.1]}
-            />
-            <HeroPart
-              geometry={G.box}
-              material={HERO_MAT.red}
-              scale={[0.018, 0.075, 0.018]}
-              position={[-0.08, 0.05, 0.04]}
-            />
-            <HeroPart
-              geometry={G.box}
-              material={HERO_MAT.red}
-              scale={[0.018, 0.075, 0.018]}
-              position={[0.08, 0.05, 0.04]}
-            />
-          </group>
-        ))}
-      </group>
-      <group position={[-0.86, 0.06, 0.46]} rotation={[0, Math.PI / 2, 0]}>
-        <BeastHead kind="dragon" />
-      </group>
-      <group position={[0.86, 0.06, 0.46]} rotation={[0, -Math.PI / 2, 0]}>
-        <BeastHead kind="tiger" />
-      </group>
       <HeroPart
         geometry={G.rounded}
-        material={HERO_MAT.concrete}
-        scale={[1.34, 0.045, 0.13]}
-        position={[0, 0.05, -0.52]}
+        material={HERO_MAT.stone}
+        scale={[1.32, 0.05, 0.16]}
+        position={[0, 0.045, 0.6]}
       />
+      <HeroPart geometry={LOTUS_BRIDGE_DECKS} material={HERO_MAT.wood} />
+      <HeroPart geometry={LOTUS_BRIDGE_POSTS} material={HERO_MAT.red} />
+      {[-0.46, 0.46].map((x, index) => (
+        <group key={x} position={[x, 0.06, -0.12]}>
+          <group scale={0.92}>
+            <PagodaHero />
+          </group>
+          <group position={[0, 0.005, 0.13]} scale={0.72}>
+            <BeastHead kind={index === 0 ? 'dragon' : 'tiger'} />
+          </group>
+        </group>
+      ))}
+      {detail === 'near' ? (
+        <HeroPart
+          geometry={G.rounded}
+          material={HERO_MAT.cream}
+          scale={[1.26, 0.02, 0.1]}
+          position={[0, 0.078, 0.6]}
+        />
+      ) : null}
     </group>
   );
 }
 
 /* ------------------------------------------------------------------ */
-/* Weiwuying                                                           */
+/* National Kaohsiung Center for the Arts (Weiwuying)                  */
 /* ------------------------------------------------------------------ */
 
+/** Lowest point of the roof over a courtyard, so its floor always sits below. */
+function wellRoofFloor(well: {
+  x: number;
+  z: number;
+  width: number;
+  depth: number;
+}) {
+  let height = Infinity;
+  for (const dx of [-0.5, 0, 0.5]) {
+    for (const dz of [-0.5, 0, 0.5]) {
+      height = Math.min(
+        height,
+        weiwuyingRoofHeight(well.x + dx * well.width, well.z + dz * well.depth),
+      );
+    }
+  }
+  return height;
+}
+
+const WEIWUYING_COLUMNS = (() => {
+  const struts: StrutSpec[] = [];
+  const rings = [
+    { rx: 0.8, rz: 0.58, count: 12 },
+    { rx: 0.42, rz: 0.32, count: 6 },
+  ];
+  for (const ring of rings) {
+    const points = Array.from({ length: ring.count }, (_, index) => {
+      const angle = (index / ring.count) * Math.PI * 2;
+      const x = Math.cos(angle) * ring.rx;
+      const z = Math.sin(angle) * ring.rz;
+      return [x, weiwuyingRoofUnderside(x, z) - 0.004, z] as Vec3;
+    });
+    points.forEach((point, index) => {
+      struts.push({
+        from: [point[0], 0.1, point[2]],
+        to: point,
+        width: 0.028,
+      });
+      const next = points[(index + 1) % ring.count];
+      if (next) struts.push({ from: point, to: next, width: 0.02 });
+    });
+  }
+  return makeStrutGeometry(struts);
+})();
+
+const WEIWUYING_RIM = makeStrutGeometry(
+  Array.from({ length: 88 }, (_, index) => {
+    const angle = (index / 88) * Math.PI * 2;
+    const nextAngle = ((index + 1) / 88) * Math.PI * 2;
+    const at = (a: number): Vec3 => {
+      const radius = weiwuyingRadiusAt(a);
+      const x = Math.cos(a) * radius * WEIWUYING_ROOF.radiusX;
+      const z = Math.sin(a) * radius * WEIWUYING_ROOF.radiusZ;
+      return [x, weiwuyingRoofHeight(x, z) - WEIWUYING_ROOF.thickness * 0.5, z];
+    };
+    return { from: at(angle), to: at(nextAngle), width: 0.022 };
+  }),
+);
+
+const WEIWUYING_MULLIONS = makeBoxClusterGeometry([
+  ...Array.from({ length: 11 }, (_, index) => {
+    const x = -0.6 + index * 0.12;
+    return [
+      { position: [x, 0.2, 0.482] as Vec3, scale: [0.014, 0.26, 0.01] as Vec3 },
+      { position: [x, 0.2, -0.482] as Vec3, scale: [0.014, 0.26, 0.01] as Vec3 },
+    ];
+  }).flat(),
+  ...Array.from({ length: 9 }, (_, index) => {
+    const z = -0.4 + index * 0.1;
+    return [
+      { position: [0.642, 0.2, z] as Vec3, scale: [0.01, 0.26, 0.014] as Vec3 },
+      { position: [-0.642, 0.2, z] as Vec3, scale: [0.01, 0.26, 0.014] as Vec3 },
+    ];
+  }).flat(),
+]);
+
 function Weiwuying() {
+  const detail = useLandmarkDetail();
   return (
     <group>
       <ContactShadow radius={1.0} />
       <HeroPart
         geometry={G.disc}
         material={HERO_MAT.concrete}
-        scale={[1.0, 0.06, 0.84]}
-        position={[0, 0.04, 0]}
+        scale={[1.04, 0.05, 0.84]}
+        position={[0, 0.025, 0]}
       />
       <HeroPart
         geometry={G.disc}
         material={HERO_MAT.sage}
-        scale={[0.76, 0.05, 0.6]}
-        position={[0, 0.065, 0.02]}
+        scale={[0.94, 0.045, 0.74]}
+        position={[0, 0.03, 0]}
       />
-      <group position={[0, 0.17, 0]}>
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.glass}
-          scale={[0.9, 0.2, 0.48]}
-          position={[0, 0, -0.02]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.glassDeep}
-          scale={[0.28, 0.17, 0.5]}
-          position={[-0.34, 0, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.glassGreen}
-          scale={[0.22, 0.16, 0.44]}
-          position={[0.36, 0.01, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.glassGreen}
-          scale={[0.7, 0.11, 0.26]}
-          position={[0, 0.14, -0.02]}
-        />
-        {[-0.44, -0.22, 0, 0.22, 0.44].map((x) => (
-          <HeroPart
-            key={`facade-mullion-${x}`}
-            geometry={G.box}
-            material={HERO_MAT.steelLight}
-            scale={[0.018, 0.21, 0.018]}
-            position={[x, 0, 0.24]}
-          />
-        ))}
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.cream}
-          scale={[0.045, 0.24, 0.055]}
-          position={[-0.56, 0.02, 0.12]}
-          rotation={[0, 0, -0.16]}
-        />
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.cream}
-          scale={[0.045, 0.22, 0.055]}
-          position={[0.55, 0.02, -0.1]}
-          rotation={[0, 0, 0.14]}
-        />
-      </group>
-      <group position={[0, 0.16, 0]}>
-        <HeroPart
-          geometry={G.flowRoof}
-          material={DOUBLE_ROOF}
-          scale={[0.99, 0.97, 0.99]}
-        />
-        <HeroPart
-          geometry={G.flowRim}
-          material={HERO_MAT.steelLight}
-          scale={[0.995, 0.985, 0.995]}
-        />
-        <HeroPart
-          geometry={G.flowRim}
-          material={HERO_MAT.cream}
-          scale={[0.97, 0.96, 0.97]}
-          position={[0, -0.018, 0]}
-        />
-      </group>
-      {[
-        [-0.46, -0.24],
-        [0.46, -0.24],
-        [-0.3, 0.26],
-        [0.3, 0.26],
-        [0, -0.32],
-      ].map(([x, z]) => (
-        <HeroPart
-          key={`roof-column-${x}-${z}`}
-          geometry={G.cylinder8}
-          material={HERO_MAT.steel}
-          scale={[0.03, 0.26, 0.03]}
-          position={[x!, 0.27, z!]}
-        />
-      ))}
+      <HeroPart
+        geometry={G.disc}
+        material={HERO_MAT.cream}
+        scale={[0.88, 0.05, 0.72]}
+        position={[0, 0.075, 0]}
+      />
+      <HeroPart
+        geometry={G.rounded}
+        material={HERO_MAT.glassDeep}
+        scale={[1.28, 0.26, 0.96]}
+        position={[0, 0.2, 0]}
+      />
+      {detail === 'near' ? (
+        <HeroPart geometry={WEIWUYING_MULLIONS} material={HERO_MAT.steelLight} />
+      ) : null}
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.cream}
-        scale={[0.4, 0.05, 0.24]}
-        position={[0, 0.15, 0.56]}
+        scale={[1.34, 0.04, 1.02]}
+        position={[0, 0.345, 0]}
       />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.orange}
-        scale={[0.23, 0.32, 0.035]}
-        position={[-0.62, 0.32, 0.2]}
-        rotation={[0, 0.4, 0.12]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.teal}
-        scale={[0.07, 0.07, 0.07]}
-        position={[0.72, 0.06, 0.46]}
-      />
+      <HeroPart geometry={G.weiwuyingShell} material={HERO_MAT.shell} />
+      <HeroPart geometry={WEIWUYING_COLUMNS} material={HERO_MAT.white} />
+      {WEIWUYING_WELLS.map((well) => (
+        <HeroPart
+          key={String(well.x) + '-' + String(well.z)}
+          geometry={G.box}
+          material={HERO_MAT.well}
+          scale={[well.width + 0.05, 0.14, well.depth + 0.05]}
+          position={[well.x, wellRoofFloor(well) - 0.085, well.z]}
+        />
+      ))}
+      <HeroPart geometry={WEIWUYING_RIM} material={HERO_MAT.shellEdge} />
+      {[
+        [-0.86, -0.58],
+        [0.88, -0.52],
+        [0.92, 0.52],
+        [-0.9, 0.54],
+      ].map(([x, z]) => (
+        <group
+          key={String(x) + '-' + String(z)}
+          position={[x ?? 0, 0.06, z ?? 0]}
+        >
+          <HeroPart
+            geometry={G.cylinder8}
+            material={HERO_MAT.concrete}
+            scale={[0.14, 0.06, 0.14]}
+          />
+          <HeroPart
+            geometry={G.ico}
+            material={HERO_MAT.greenDeep}
+            scale={[0.16, 0.18, 0.16]}
+            position={[0, 0.11, 0]}
+          />
+        </group>
+      ))}
     </group>
   );
 }
 
 /* ------------------------------------------------------------------ */
-/* Pier-2 Art Center                                                   */
+/* Pier-2 Warehouses                                                   */
 /* ------------------------------------------------------------------ */
+
+type WarehouseProps = {
+  position: Vec3;
+  width: number;
+  depth: number;
+  wall: THREE.Material;
+  roof: THREE.Material;
+  door?: boolean;
+};
 
 function Warehouse({
   position,
@@ -957,14 +1025,8 @@ function Warehouse({
   wall,
   roof,
   door,
-}: {
-  position: [number, number, number];
-  width: number;
-  depth: number;
-  wall: THREE.Material;
-  roof: THREE.Material;
-  door: boolean;
-}) {
+}: WarehouseProps) {
+  const detail = useLandmarkDetail();
   return (
     <group position={position}>
       <HeroPart
@@ -973,13 +1035,17 @@ function Warehouse({
         scale={[width, 0.3, depth]}
         position={[0, 0.15, 0]}
       />
-      {[-0.42, -0.26, -0.1, 0.06, 0.22, 0.38].map((x) => (
+      {Array.from({ length: 6 }, (_, index) => (
         <HeroPart
-          key={`wall-rib-${x}`}
+          key={index}
           geometry={G.box}
           material={HERO_MAT.paper}
-          scale={[0.012, 0.27, 0.012]}
-          position={[x * width, 0.16, depth / 2 + 0.004]}
+          scale={[0.012, 0.26, 0.014]}
+          position={[
+            -width / 2 + 0.03 + index * ((width - 0.06) / 5),
+            0.16,
+            depth / 2 + 0.006,
+          ]}
         />
       ))}
       <HeroPart
@@ -991,48 +1057,64 @@ function Warehouse({
       <HeroPart
         geometry={G.box}
         material={HERO_MAT.steel}
-        scale={[width + 0.05, 0.018, 0.022]}
-        position={[0, 0.472, 0]}
+        scale={[width + 0.04, 0.014, 0.03]}
+        position={[0, 0.47, 0]}
       />
-      {[-1, 1].map((side) => (
+      <HeroPart
+        geometry={G.box}
+        material={roof}
+        scale={[width + 0.05, 0.02, 0.05]}
+        position={[0, 0.297, depth / 2 + 0.01]}
+      />
+      {Array.from({ length: 3 }, (_, index) => (
         <HeroPart
-          key={`eave-${side}`}
+          key={index}
           geometry={G.box}
-          material={HERO_MAT.steelLight}
-          scale={[width + 0.05, 0.02, 0.018]}
-          position={[0, 0.299, side * (depth / 2 + 0.012)]}
-        />
-      ))}
-      {[-0.23, 0, 0.23].map((x) => (
-        <HeroPart
-          key={`window-${x}`}
-          geometry={G.rounded}
-          material={HERO_MAT.glassDeep}
+          material={HERO_MAT.glass}
           scale={[0.1, 0.1, 0.025]}
-          position={[x, 0.21, depth / 2 + 0.006]}
+          position={[
+            -width * 0.24 + index * width * 0.24,
+            0.21,
+            depth / 2 + 0.008,
+          ]}
         />
       ))}
-      {door && (
+      {door ? (
         <HeroPart
-          geometry={G.rounded}
+          geometry={G.box}
           material={HERO_MAT.dark}
-          scale={[0.16, 0.19, 0.025]}
-          position={[0, 0.105, depth / 2 + 0.009]}
+          scale={[0.12, 0.16, 0.025]}
+          position={[width * 0.34, 0.1, depth / 2 + 0.008]}
         />
-      )}
+      ) : null}
+      {detail === 'near' ? (
+        <HeroPart
+          geometry={G.box}
+          material={HERO_MAT.steel}
+          scale={[width + 0.02, 0.014, 0.02]}
+          position={[0, 0.36, depth / 2 + 0.004]}
+        />
+      ) : null}
     </group>
   );
 }
 
+const PIER2_TRACK = makeBoxClusterGeometry(
+  Array.from({ length: 13 }, (_, index) => ({
+    position: [-0.56 + index * 0.095, 0.064, 0.56] as Vec3,
+    scale: [0.05, 0.012, 0.12] as Vec3,
+  })),
+);
+
 function Pier2() {
   return (
     <group>
-      <ContactShadow radius={0.9} />
+      <ContactShadow radius={0.96} />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.concrete}
         scale={[1.52, 0.06, 0.92]}
-        position={[0, 0.04, 0]}
+        position={[0, 0.03, 0]}
       />
       <Warehouse
         position={[-0.42, 0.05, -0.08]}
@@ -1040,7 +1122,6 @@ function Pier2() {
         depth={0.5}
         wall={HERO_MAT.brickLight}
         roof={HERO_MAT.roofGreen}
-        door
       />
       <Warehouse
         position={[0.04, 0.05, -0.04]}
@@ -1056,87 +1137,75 @@ function Pier2() {
         depth={0.46}
         wall={HERO_MAT.brick}
         roof={HERO_MAT.steel}
-        door={false}
       />
       <HeroPart
         geometry={G.box}
-        material={HERO_MAT.track}
-        scale={[1.38, 0.018, 0.028]}
-        position={[0, 0.083, 0.56]}
+        material={HERO_MAT.steel}
+        scale={[1.4, 0.012, 0.014]}
+        position={[0, 0.062, 0.52]}
       />
-      {Array.from({ length: 11 }, (_, index) => (
+      <HeroPart
+        geometry={G.box}
+        material={HERO_MAT.steel}
+        scale={[1.4, 0.012, 0.014]}
+        position={[0, 0.062, 0.6]}
+      />
+      <HeroPart geometry={PIER2_TRACK} material={HERO_MAT.wood} />
+      {[
+        {
+          position: [-0.66, 0.11, 0.24] as Vec3,
+          scale: [0.2, 0.1, 0.16] as Vec3,
+          material: HERO_MAT.orange,
+        },
+        {
+          position: [-0.66, 0.19, 0.24] as Vec3,
+          scale: [0.16, 0.08, 0.14] as Vec3,
+          material: HERO_MAT.teal,
+        },
+        {
+          position: [-0.66, 0.25, 0.24] as Vec3,
+          scale: [0.12, 0.06, 0.12] as Vec3,
+          material: HERO_MAT.red,
+        },
+      ].map((crate) => (
         <HeroPart
-          key={`rail-sleeper-${(-0.65 + index * 0.13).toFixed(2)}`}
-          geometry={G.box}
-          material={HERO_MAT.wood}
-          scale={[0.035, 0.012, 0.12]}
-          position={[-0.65 + index * 0.13, 0.08, 0.56]}
+          key={String(crate.position[1])}
+          geometry={G.rounded}
+          material={crate.material}
+          position={crate.position}
+          scale={crate.scale}
         />
       ))}
-      <group position={[-0.66, 0.11, 0.24]}>
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.orange}
-          scale={[0.23, 0.15, 0.16]}
-          position={[0, 0.075, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.teal}
-          scale={[0.23, 0.15, 0.16]}
-          position={[0, 0.22, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.red}
-          scale={[0.23, 0.15, 0.16]}
-          position={[0, 0.365, 0]}
-        />
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.steel}
-          scale={[0.25, 0.012, 0.17]}
-          position={[0, 0.16, 0]}
-        />
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.steel}
-          scale={[0.25, 0.012, 0.17]}
-          position={[0, 0.305, 0]}
-        />
-      </group>
       <HeroPart
-        geometry={G.cylinder8}
+        geometry={G.box}
         material={HERO_MAT.steel}
-        scale={[0.045, 0.4, 0.045]}
-        position={[0.74, 0.25, 0.24]}
+        scale={[0.02, 0.12, 0.02]}
+        position={[0.18, 0.53, 0.06]}
       />
       <HeroPart
-        geometry={G.sphere}
-        material={HERO_MAT.orange}
-        scale={[0.19, 0.19, 0.19]}
-        position={[0.74, 0.49, 0.24]}
+        geometry={G.box}
+        material={HERO_MAT.steel}
+        scale={[0.02, 0.12, 0.02]}
+        position={[0.3, 0.53, 0.06]}
       />
       <HeroPart
-        geometry={G.torus}
-        material={HERO_MAT.gold}
-        scale={[0.3, 0.3, 0.3]}
-        position={[0.74, 0.49, 0.24]}
-        rotation={[0, 0.35, 0]}
+        geometry={G.box}
+        material={HERO_MAT.paper}
+        scale={[0.24, 0.06, 0.014]}
+        position={[0.24, 0.6, 0.06]}
       />
-      {[-0.15, 0.05].map((x) => (
-        <group key={`tree-${x}`} position={[x, 0.1, 0.44]}>
+      {[-0.28, 0.3].map((x) => (
+        <group key={x} position={[x, 0.06, 0.34]}>
           <HeroPart
             geometry={G.cylinder8}
             material={HERO_MAT.wood}
-            scale={[0.045, 0.18, 0.045]}
-            position={[0, 0.09, 0]}
+            scale={[0.02, 0.1, 0.02]}
           />
           <HeroPart
             geometry={G.ico}
             material={HERO_MAT.green}
-            scale={[0.23, 0.25, 0.23]}
-            position={[0, 0.29, 0]}
+            scale={[0.13, 0.14, 0.13]}
+            position={[0, 0.14, 0]}
           />
         </group>
       ))}
@@ -1145,259 +1214,298 @@ function Pier2() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Dream Mall and Ferris wheel                                         */
+/* Kaohsiung Eye: ferris wheel as one mechanical assembly               */
 /* ------------------------------------------------------------------ */
+
+const WHEEL_RADIUS = 0.4;
+const WHEEL_CABINS = 16;
+const WHEEL_HALF_DEPTH = 0.055;
+const WHEEL_COLORS = ['#c98b6b', '#6fa8a0', '#d9b56a', '#b8726a'];
+
+const WHEEL_RIM_GEOMETRY = new THREE.TorusGeometry(
+  WHEEL_RADIUS,
+  0.016,
+  8,
+  72,
+);
+
+const WHEEL_SPOKES = (() => {
+  const struts: StrutSpec[] = [];
+  const spokes = 20;
+  for (let index = 0; index < spokes; index += 1) {
+    const angle = (index / spokes) * Math.PI * 2;
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    for (const z of [-WHEEL_HALF_DEPTH, WHEEL_HALF_DEPTH]) {
+      struts.push({
+        from: [cos * 0.045, sin * 0.045, z],
+        to: [cos * WHEEL_RADIUS, sin * WHEEL_RADIUS, z],
+        width: 0.008,
+      });
+    }
+    struts.push({
+      from: [cos * WHEEL_RADIUS, sin * WHEEL_RADIUS, -WHEEL_HALF_DEPTH],
+      to: [cos * WHEEL_RADIUS, sin * WHEEL_RADIUS, WHEEL_HALF_DEPTH],
+      width: 0.007,
+    });
+  }
+  return makeStrutGeometry(struts);
+})();
+
+const WHEEL_BRACKETS = makeBoxClusterGeometry(
+  Array.from({ length: 20 }, (_, index) => {
+    const angle = (index / 20) * Math.PI * 2;
+    return {
+      position: [
+        Math.cos(angle) * WHEEL_RADIUS,
+        Math.sin(angle) * WHEEL_RADIUS,
+        0,
+      ] as Vec3,
+      scale: [0.03, 0.03, WHEEL_HALF_DEPTH * 2 + 0.02] as Vec3,
+    };
+  }),
+);
+
+const WHEEL_LEGS = (() => {
+  const struts: StrutSpec[] = [];
+  for (const z of [-0.075, 0.075]) {
+    struts.push({ from: [-0.26, -0.44, z], to: [-0.03, 0, z], width: 0.026 });
+    struts.push({ from: [0.26, -0.44, z], to: [0.03, 0, z], width: 0.026 });
+    struts.push({ from: [-0.26, -0.44, z], to: [0.26, -0.44, z], width: 0.03 });
+    struts.push({ from: [-0.16, -0.24, z], to: [0.16, -0.24, z], width: 0.016 });
+  }
+  for (const x of [-0.26, 0.26]) {
+    struts.push({ from: [x, -0.44, -0.075], to: [x, -0.44, 0.075], width: 0.03 });
+  }
+  return makeStrutGeometry(struts);
+})();
+
+const WHEEL_CABIN_BODY = makeBoxClusterGeometry([
+  { position: [0, -0.012, 0], scale: [0.012, 0.026, 0.012] },
+  { position: [0, -0.03, 0], scale: [0.009, 0.036, 0.009] },
+  { position: [0, -0.082, 0], scale: [0.078, 0.088, 0.075] },
+  { position: [0, -0.031, 0], scale: [0.086, 0.014, 0.083] },
+  { position: [0, -0.133, 0], scale: [0.07, 0.012, 0.068] },
+]);
+
+const WHEEL_CABIN_GLASS = makeBoxClusterGeometry([
+  { position: [0, -0.082, 0], scale: [0.08, 0.04, 0.077] },
+]);
 
 function FerrisWheel() {
-  const cabins = Array.from({ length: 12 }, (_, index) => {
-    const angle = (index / 12) * Math.PI * 2;
-    const colors = [
-      HERO_MAT.terracotta,
-      HERO_MAT.teal,
-      HERO_MAT.gold,
-      HERO_MAT.red,
-    ];
-    return {
-      angle,
-      material: colors[index % colors.length]!,
-    };
+  const rotating = useRef<THREE.Group>(null);
+  const bodies = useRef<THREE.InstancedMesh>(null);
+  const glass = useRef<THREE.InstancedMesh>(null);
+  const wheelAngle = useRef(0);
+  const reducedMotion = usePrefersReducedMotion();
+  const dummy = useMemo(() => new THREE.Object3D(), []);
+
+  const applyPoses = useCallback(
+    (angle: number) => {
+      const bodyMesh = bodies.current;
+      const glassMesh = glass.current;
+      if (!bodyMesh || !glassMesh) return;
+      for (let index = 0; index < WHEEL_CABINS; index += 1) {
+        const pose = wheelCabinPose(index, WHEEL_CABINS, WHEEL_RADIUS, angle);
+        dummy.position.set(pose.x, pose.y, 0);
+        dummy.rotation.set(0, 0, pose.counterRotation);
+        dummy.updateMatrix();
+        bodyMesh.setMatrixAt(index, dummy.matrix);
+        glassMesh.setMatrixAt(index, dummy.matrix);
+      }
+      bodyMesh.instanceMatrix.needsUpdate = true;
+      glassMesh.instanceMatrix.needsUpdate = true;
+    },
+    [dummy],
+  );
+
+  useEffect(() => {
+    const bodyMesh = bodies.current;
+    if (!bodyMesh) return;
+    bodyMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    glass.current?.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    const color = new THREE.Color();
+    for (let index = 0; index < WHEEL_CABINS; index += 1) {
+      color.set(WHEEL_COLORS[index % WHEEL_COLORS.length] ?? '#cf7a51');
+      bodyMesh.setColorAt(index, color);
+    }
+    if (bodyMesh.instanceColor) bodyMesh.instanceColor.needsUpdate = true;
+    applyPoses(0);
+  }, [applyPoses]);
+
+  useFrame((_, delta) => {
+    if (reducedMotion) return;
+    wheelAngle.current = (wheelAngle.current + delta * 0.12) % (Math.PI * 2);
+    if (rotating.current) rotating.current.rotation.z = wheelAngle.current;
+    applyPoses(wheelAngle.current);
   });
+
   return (
-    <group position={[0.38, 1.08, -0.04]} rotation={[0, Math.PI / 4, 0]}>
-      <HeroPart
-        geometry={G.torus}
-        material={HERO_MAT.steelLight}
-        scale={[0.76, 0.76, 0.88]}
-      />
-      <HeroPart
-        geometry={G.torusThin}
-        material={HERO_MAT.tealDeep}
-        scale={[0.82, 0.82, 0.86]}
-        position={[0, 0, 0.012]}
-      />
-      <HeroPart
-        geometry={G.torusThin}
-        material={HERO_MAT.steelLight}
-        scale={[0.43, 0.43, 0.5]}
-        position={[0, 0, 0.004]}
-      />
-      {Array.from({ length: 16 }, (_, index) => {
-        const angle = (index / 16) * Math.PI * 2;
-        return (
-          <HeroPart
-            key={`spoke-${angle.toFixed(3)}`}
-            geometry={G.box}
-            material={HERO_MAT.steelLight}
-            scale={[0.39, 0.011, 0.011]}
-            position={[Math.cos(angle) * 0.2, Math.sin(angle) * 0.2, 0.006]}
-            rotation={[0, 0, angle]}
-          />
-        );
-      })}
-      {Array.from({ length: 12 }, (_, index) => {
-        const angle = (index / 12) * Math.PI * 2 + Math.PI / 12;
-        return (
-          <HeroPart
-            key={`brace-${angle.toFixed(3)}`}
-            geometry={G.box}
-            material={HERO_MAT.steel}
-            scale={[0.2, 0.008, 0.008]}
-            position={[Math.cos(angle) * 0.55, Math.sin(angle) * 0.55, 0.004]}
-            rotation={[0, 0, angle + 0.9]}
-          />
-        );
-      })}
-      <HeroPart
-        geometry={G.cylinder}
-        material={HERO_MAT.gold}
-        scale={[0.11, 0.1, 0.11]}
-        position={[0, 0, 0.01]}
-        rotation={[Math.PI / 2, 0, 0]}
-      />
-      {cabins.map(({ angle, material }) => (
-        <group
-          key={`cabin-${angle.toFixed(3)}`}
-          position={[Math.cos(angle) * 0.79, Math.sin(angle) * 0.79, 0.048]}
-        >
-          <HeroPart
-            geometry={G.box}
-            material={HERO_MAT.dark}
-            scale={[0.01, 0.055, 0.01]}
-            position={[0, -0.027, 0]}
-          />
-          <HeroPart
-            geometry={G.rounded}
-            material={material}
-            scale={[0.095, 0.105, 0.075]}
-            position={[0, -0.09, 0]}
-          />
-          <HeroPart
-            geometry={G.rounded}
-            material={HERO_MAT.glassDeep}
-            scale={[0.052, 0.036, 0.078]}
-            position={[0, -0.088, 0.002]}
-          />
-          <HeroPart
-            geometry={G.box}
-            material={HERO_MAT.paper}
-            scale={[0.1, 0.012, 0.078]}
-            position={[0, -0.042, 0]}
-          />
-        </group>
-      ))}
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[0.045, 0.62, 0.045]}
-        position={[-0.16, -0.3, -0.03]}
-        rotation={[0, 0, 0.25]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[0.045, 0.62, 0.045]}
-        position={[0.16, -0.3, -0.03]}
-        rotation={[0, 0, -0.25]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steelLight}
-        scale={[0.32, 0.028, 0.04]}
-        position={[0, -0.59, -0.03]}
-      />
+    <group>
+      <HeroPart geometry={WHEEL_LEGS} material={HERO_MAT.white} />
+      <group ref={rotating}>
+        <HeroPart
+          geometry={WHEEL_RIM_GEOMETRY}
+          material={HERO_MAT.white}
+          position={[0, 0, WHEEL_HALF_DEPTH]}
+        />
+        <HeroPart
+          geometry={WHEEL_RIM_GEOMETRY}
+          material={HERO_MAT.white}
+          position={[0, 0, -WHEEL_HALF_DEPTH]}
+        />
+        <HeroPart geometry={WHEEL_SPOKES} material={HERO_MAT.steelLight} />
+        <HeroPart geometry={WHEEL_BRACKETS} material={HERO_MAT.steel} />
+        <HeroPart
+          geometry={G.cylinder}
+          material={HERO_MAT.gold}
+          scale={[0.1, 0.2, 0.1]}
+          rotation={[Math.PI / 2, 0, 0]}
+        />
+        <instancedMesh
+          ref={bodies}
+          args={[WHEEL_CABIN_BODY, HERO_MAT.cabinWhite, WHEEL_CABINS]}
+          castShadow
+          frustumCulled={false}
+        />
+        <instancedMesh
+          ref={glass}
+          args={[WHEEL_CABIN_GLASS, HERO_MAT.glassDeep, WHEEL_CABINS]}
+          frustumCulled={false}
+        />
+      </group>
     </group>
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* Dream Mall                                                          */
+/* ------------------------------------------------------------------ */
+
+const MALL_FACADE_START = Math.PI * 0.12;
+const MALL_FACADE_LENGTH = Math.PI * 0.76;
+const MALL_FACADE_RADIUS = 0.62;
+const MALL_FACADE_SQUASH = 0.61;
+
+const mallFacadeHeight = (angle: number) => {
+  const progress = (angle - MALL_FACADE_START) / MALL_FACADE_LENGTH;
+  return 0.34 + 0.2 * Math.max(0, Math.min(1, progress)) ** 0.85;
+};
+
+const MALL_FACADE = makeCurvedFacadeGeometry({
+  radius: MALL_FACADE_RADIUS,
+  heightAt: mallFacadeHeight,
+  thetaStart: MALL_FACADE_START,
+  thetaLength: MALL_FACADE_LENGTH,
+  segments: 40,
+  squashZ: MALL_FACADE_SQUASH,
+});
+
+const MALL_FASCIA = new THREE.TubeGeometry(
+  makeCurvedFacadeTopCurve({
+    radius: MALL_FACADE_RADIUS,
+    heightAt: mallFacadeHeight,
+    thetaStart: MALL_FACADE_START,
+    thetaLength: MALL_FACADE_LENGTH,
+    segments: 40,
+    squashZ: MALL_FACADE_SQUASH,
+  }),
+  48,
+  0.014,
+  6,
+  false,
+);
+
+const MALL_MULLIONS = makeBoxClusterGeometry(
+  Array.from({ length: 11 }, (_, index) => {
+    const angle = MALL_FACADE_START + (index / 10) * MALL_FACADE_LENGTH;
+    const height = mallFacadeHeight(angle);
+    return {
+      position: [
+        Math.cos(angle) * MALL_FACADE_RADIUS,
+        0.1 + height / 2,
+        Math.sin(angle) * MALL_FACADE_RADIUS * MALL_FACADE_SQUASH,
+      ] as Vec3,
+      scale: [0.012, height, 0.012] as Vec3,
+    };
+  }),
+);
+
 function DreamMall() {
+  const detail = useLandmarkDetail();
   return (
     <group>
-      <ContactShadow radius={1.02} />
+      <ContactShadow radius={1.0} />
       <HeroPart
         geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.56, 0.08, 0.9]}
-        position={[0, 0.05, 0]}
+        material={HERO_MAT.concrete}
+        scale={[1.56, 0.07, 0.9]}
+        position={[0, 0.035, 0]}
       />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.cream}
-        scale={[1.32, 0.23, 0.72]}
-        position={[0, 0.19, 0]}
+        scale={[1.32, 0.34, 0.6]}
+        position={[0, 0.26, -0.2]}
       />
       <HeroPart
         geometry={G.rounded}
-        material={HERO_MAT.glassDeep}
-        scale={[1.18, 0.1, 0.735]}
-        position={[0, 0.24, 0]}
+        material={HERO_MAT.cream}
+        scale={[1.2, 0.18, 0.44]}
+        position={[0, 0.52, -0.2]}
+      />
+      <HeroPart
+        geometry={MALL_FACADE}
+        material={HERO_MAT.glassGreen}
+        position={[0, 0.07, 0]}
+      />
+      <HeroPart geometry={MALL_FASCIA} material={HERO_MAT.paper} />
+      {detail === 'near' ? (
+        <HeroPart geometry={MALL_MULLIONS} material={HERO_MAT.steelLight} />
+      ) : null}
+      <HeroPart
+        geometry={G.rounded}
+        material={HERO_MAT.steelLight}
+        scale={[1.06, 0.03, 0.72]}
+        position={[0, 0.625, -0.1]}
       />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.paper}
-        scale={[1.06, 0.26, 0.6]}
-        position={[0, 0.39, 0]}
+        scale={[0.34, 0.15, 0.022]}
+        position={[0.1, 0.42, 0.39]}
       />
       <HeroPart
         geometry={G.rounded}
-        material={HERO_MAT.glass}
-        scale={[0.9, 0.07, 0.615]}
-        position={[0, 0.41, 0]}
+        material={HERO_MAT.glassBlue}
+        scale={[0.16, 0.06, 0.014]}
+        position={[0.1, 0.42, 0.4]}
       />
       <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.13, 0.035, 0.66]}
-        position={[0, 0.515, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.terracotta}
-        scale={[1.1, 0.055, 0.63]}
-        position={[0, 0.555, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.glassDeep}
-        scale={[0.34, 0.17, 0.03]}
-        position={[0.22, 0.2, 0.37]}
+        geometry={G.cone4}
+        material={HERO_MAT.glassBlue}
+        scale={[0.05, 0.06, 0.014]}
+        position={[0.02, 0.44, 0.41]}
+        rotation={[0, 0, -0.5]}
       />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.paper}
-        scale={[0.16, 0.26, 0.03]}
-        position={[-0.34, 0.24, 0.365]}
+        scale={[0.38, 0.05, 0.24]}
+        position={[0, 0.22, 0.4]}
       />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.orange}
-        scale={[0.13, 0.3, 0.03]}
-        position={[-0.5, 0.38, 0.325]}
-      />
-      {[-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7].map((x) => (
+      {[-0.12, 0.12].map((x) => (
         <HeroPart
-          key={`mall-mullion-${x}`}
-          geometry={G.box}
+          key={x}
+          geometry={G.cylinder8}
           material={HERO_MAT.steelLight}
-          scale={[0.012, 0.22, 0.012]}
-          position={[x, 0.23, 0.37]}
+          scale={[0.02, 0.18, 0.02]}
+          position={[x, 0.13, 0.46]}
         />
       ))}
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[0.46, 0.06, 0.28]}
-        position={[0, 0.15, 0.52]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.green}
-        scale={[0.34, 0.025, 0.2]}
-        position={[-0.3, 0.59, 0.04]}
-      />
-      <group position={[-0.64, 0.44, 0.16]}>
-        <HeroPart
-          geometry={G.sphere}
-          material={HERO_MAT.glassBlue}
-          scale={[0.46, 0.22, 0.3]}
-        />
-        <HeroPart
-          geometry={G.sphere}
-          material={HERO_MAT.paper}
-          scale={[0.36, 0.095, 0.22]}
-          position={[0.01, -0.075, 0.02]}
-        />
-        <HeroPart
-          geometry={G.cone}
-          material={HERO_MAT.glassBlue}
-          scale={[0.14, 0.24, 0.1]}
-          position={[-0.3, 0.02, 0]}
-          rotation={[0, 0, Math.PI / 2]}
-        />
-        <HeroPart
-          geometry={G.cone}
-          material={HERO_MAT.glassBlue}
-          scale={[0.1, 0.19, 0.07]}
-          position={[-0.32, 0.12, 0]}
-          rotation={[0, 0, Math.PI / 2.8]}
-        />
-        <HeroPart
-          geometry={G.sphereLow}
-          material={HERO_MAT.dark}
-          scale={[0.022, 0.026, 0.022]}
-          position={[0.14, 0.045, 0.135]}
-        />
-        {[-0.18, 0, 0.18].map((x) => (
-          <HeroPart
-            key={`whale-rib-${x}`}
-            geometry={G.box}
-            material={HERO_MAT.paper}
-            scale={[0.012, 0.12, 0.22]}
-            position={[x, 0.015, 0.1]}
-            rotation={[0.18, 0, 0]}
-          />
-        ))}
+      <group position={[0.34, 1.075, -0.1]} rotation={[0, 0.5, 0]}>
+        <FerrisWheel />
       </group>
-      <FerrisWheel />
     </group>
   );
 }
@@ -1406,128 +1514,142 @@ function DreamMall() {
 /* 85 Sky Tower                                                        */
 /* ------------------------------------------------------------------ */
 
+const TOWER_BANDS = makeBoxClusterGeometry(
+  Array.from({ length: 9 }, (_, index) => {
+    const y = 0.22 + index * 0.1;
+    return [-1, 1].map((side) => ({
+      position: [side * 0.072, y, 0] as Vec3,
+      scale: [0.126, 0.007, 0.112] as Vec3,
+    }));
+  }).flat(),
+);
+
+// Fins stand just proud of the band boxes so they read as unbroken mullions.
+const TOWER_FINS = makeBoxClusterGeometry([
+  ...[-1, 1].map((side) => ({
+    position: [side * 0.14, 0.63, 0] as Vec3,
+    scale: [0.01, 0.98, 0.03] as Vec3,
+  })),
+  ...[-1, 1].flatMap((side) =>
+    [-1, 1].map((depth) => ({
+      position: [side * 0.072, 0.63, depth * 0.061] as Vec3,
+      scale: [0.03, 0.98, 0.01] as Vec3,
+    })),
+  ),
+]);
+
+const SHAFT_BANDS = makeBoxClusterGeometry(
+  Array.from({ length: 7 }, (_, index) => ({
+    position: [0, 1.2 + index * 0.085, 0] as Vec3,
+    scale: [0.272, 0.007, 0.238] as Vec3,
+  })),
+);
+
+const SHAFT_FINS = makeBoxClusterGeometry([
+  ...[-1, 1].map((side) => ({
+    position: [side * 0.141, 1.44, 0] as Vec3,
+    scale: [0.01, 0.62, 0.03] as Vec3,
+  })),
+  ...[-1, 1].map((side) => ({
+    position: [0, 1.44, side * 0.124] as Vec3,
+    scale: [0.03, 0.62, 0.01] as Vec3,
+  })),
+]);
+
 function SkyTower85() {
-  const bands = Array.from({ length: 9 }, (_, index) => 0.26 + index * 0.13);
   return (
     <group>
-      <ContactShadow radius={0.58} />
+      <ContactShadow radius={0.44} />
       <HeroPart
-        geometry={G.rounded}
+        geometry={G.box}
         material={HERO_MAT.concrete}
-        scale={[0.62, 0.07, 0.62]}
-        position={[0, 0.045, 0]}
+        scale={[0.5, 0.06, 0.5]}
+        position={[0, 0.03, 0]}
       />
       <HeroPart
         geometry={G.rounded}
         material={HERO_MAT.cream}
-        scale={[0.52, 0.12, 0.46]}
-        position={[0, 0.12, 0]}
+        scale={[0.42, 0.1, 0.4]}
+        position={[0, 0.09, 0]}
       />
-      <group position={[0, 0, 0]}>
+      {[-1, 1].map((side) => (
         <HeroPart
-          geometry={G.frustum}
+          key={side}
+          geometry={G.octagon}
           material={HERO_MAT.glassBlue}
-          scale={[0.15, 0.66, 0.14]}
-          position={[-0.16, 0.47, 0]}
-          rotation={[0, Math.PI / 4, 0]}
+          scale={[0.062, 0.98, 0.054]}
+          position={[side * 0.072, 0.63, 0]}
+          rotation={[0, Math.PI / 8, 0]}
         />
-        <HeroPart
-          geometry={G.frustum}
-          material={HERO_MAT.glassBlue}
-          scale={[0.15, 0.66, 0.14]}
-          position={[0.16, 0.47, 0]}
-          rotation={[0, Math.PI / 4, 0]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.steelLight}
-          scale={[0.46, 0.035, 0.2]}
-          position={[0, 0.62, 0]}
-        />
-        <HeroPart
-          geometry={G.frustumSlim}
-          material={HERO_MAT.glassDeep}
-          scale={[0.17, 0.78, 0.16]}
-          position={[0, 0.98, 0]}
-          rotation={[0, Math.PI / 4, 0]}
-        />
-        <HeroPart
-          geometry={G.frustumSlim}
-          material={HERO_MAT.glassBlue}
-          scale={[0.145, 0.42, 0.14]}
-          position={[0, 1.48, 0]}
-          rotation={[0, Math.PI / 4, 0]}
-        />
-        <HeroPart
-          geometry={G.frustumSlim}
-          material={HERO_MAT.glassDeep}
-          scale={[0.11, 0.28, 0.105]}
-          position={[0, 1.76, 0]}
-          rotation={[0, Math.PI / 4, 0]}
-        />
-        {bands.map((y) => (
-          <HeroPart
-            key={`tower-band-${y}`}
-            geometry={G.box}
-            material={HERO_MAT.steelLight}
-            scale={[
-              0.31 - (y - 0.26) * 0.075,
-              0.012,
-              0.31 - (y - 0.26) * 0.075,
-            ]}
-            position={[0, y, 0]}
-          />
-        ))}
-        {[-0.16, 0.16].map((x) => (
-          <HeroPart
-            key={`leg-window-${x}`}
-            geometry={G.box}
-            material={HERO_MAT.steelLight}
-            scale={[0.012, 0.5, 0.014]}
-            position={[x, 0.42, 0.075]}
-          />
-        ))}
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.steelLight}
-          scale={[0.28, 0.018, 0.018]}
-          position={[0, 0.35, 0.08]}
-        />
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.cream}
-          scale={[0.19, 0.045, 0.18]}
-          position={[0, 1.93, 0]}
-        />
+      ))}
+      <HeroPart
+        geometry={G.box}
+        material={HERO_MAT.dark}
+        scale={[0.022, 0.96, 0.09]}
+        position={[0, 0.62, -0.01]}
+      />
+      <HeroPart geometry={TOWER_BANDS} material={HERO_MAT.steelLight} />
+      <HeroPart geometry={TOWER_FINS} material={HERO_MAT.maroon} />
+      <HeroPart
+        geometry={G.rounded}
+        material={HERO_MAT.cream}
+        scale={[0.31, 0.03, 0.14]}
+        position={[0, 1.13, 0]}
+      />
+      <HeroPart
+        geometry={G.octagonTaper}
+        material={HERO_MAT.glassDeep}
+        scale={[0.134, 0.62, 0.116]}
+        position={[0, 1.44, 0]}
+        rotation={[0, Math.PI / 8, 0]}
+      />
+      <HeroPart geometry={SHAFT_BANDS} material={HERO_MAT.steelLight} />
+      <HeroPart geometry={SHAFT_FINS} material={HERO_MAT.maroon} />
+      <HeroPart
+        geometry={G.crown}
+        material={HERO_MAT.glassBlue}
+        position={[0, 1.75, 0]}
+        rotation={[0, Math.PI / 8, 0]}
+      />
+      <HeroPart
+        geometry={G.octagon}
+        material={HERO_MAT.cream}
+        scale={[0.09, 0.028, 0.078]}
+        position={[0, 1.885, 0]}
+        rotation={[0, Math.PI / 8, 0]}
+      />
+      <HeroPart
+        geometry={G.octagonTaper}
+        material={HERO_MAT.steelLight}
+        scale={[0.056, 0.07, 0.05]}
+        position={[0, 1.93, 0]}
+        rotation={[0, Math.PI / 8, 0]}
+      />
+      <HeroPart
+        geometry={G.cylinder8}
+        material={HERO_MAT.steelLight}
+        scale={[0.01, 0.1, 0.01]}
+        position={[0, 1.99, 0]}
+      />
+      <HeroPart
+        geometry={G.sphereLow}
+        material={HERO_MAT.orange}
+        scale={[0.02, 0.02, 0.02]}
+        position={[0, 2.04, 0]}
+      />
+      <group position={[0.3, 0.06, 0.24]}>
         <HeroPart
           geometry={G.cylinder8}
-          material={HERO_MAT.steelLight}
-          scale={[0.012, 0.16, 0.012]}
-          position={[0, 2.05, 0]}
+          material={HERO_MAT.concrete}
+          scale={[0.1, 0.05, 0.1]}
         />
         <HeroPart
-          geometry={G.sphereLow}
-          material={HERO_MAT.orange}
-          scale={[0.03, 0.03, 0.03]}
-          position={[0, 2.14, 0]}
+          geometry={G.ico}
+          material={HERO_MAT.green}
+          scale={[0.12, 0.14, 0.12]}
+          position={[0, 0.1, 0]}
         />
       </group>
-      {[-0.48, 0.48].map((x) => (
-        <group key={`plaza-tree-${x}`} position={[x, 0.1, 0.36]}>
-          <HeroPart
-            geometry={G.cylinder8}
-            material={HERO_MAT.wood}
-            scale={[0.035, 0.14, 0.035]}
-            position={[0, 0.07, 0]}
-          />
-          <HeroPart
-            geometry={G.ico}
-            material={HERO_MAT.green}
-            scale={[0.17, 0.18, 0.17]}
-            position={[0, 0.22, 0]}
-          />
-        </group>
-      ))}
     </group>
   );
 }
@@ -1564,7 +1686,7 @@ export default function HeroLandmarkModel({
   }, [feature]);
   return (
     <group
-      name={`hero-${feature}`}
+      name={'hero-' + feature}
       userData={{ feature, label: spec?.label ?? feature }}
     >
       {model}

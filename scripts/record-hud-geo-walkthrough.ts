@@ -11,6 +11,8 @@ import { mkdirSync, renameSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium } from '@playwright/test';
 
+import { focusAdmin } from './lib/city-ui';
+
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const outDir = join(process.cwd(), 'reports', 'visual', 'hud-geo', 'after');
 mkdirSync(outDir, { recursive: true });
@@ -56,14 +58,7 @@ await ready(desktop, '/');
 await desktop.waitForTimeout(2_000);
 
 for (const district of ['左營', '楠梓']) {
-  await desktop.locator('[aria-controls="city-admin-tray"]').click();
-  await desktop.locator('#city-admin-tray').waitFor({ state: 'visible' });
-  await desktop.waitForTimeout(800);
-  await desktop
-    .locator('#city-admin-tray .city-admin-chip')
-    .filter({ hasText: district })
-    .first()
-    .click();
+  await focusAdmin(desktop, district);
   await desktop.waitForTimeout(8_000);
 }
 

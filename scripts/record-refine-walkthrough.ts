@@ -10,6 +10,7 @@
 import { mkdirSync, renameSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium } from '@playwright/test';
+import { focusAdmin } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const outDir = join(process.cwd(), 'reports', 'visual', 'refine', 'after');
@@ -101,14 +102,8 @@ if (box) {
 }
 const afterCitywideZoom = await camera(desktop);
 
-await desktop.locator('[aria-controls="city-admin-tray"]').click();
-await desktop.locator('#city-admin-tray').waitFor({ state: 'visible' });
 await desktop.waitForTimeout(700);
-await desktop
-  .locator('#city-admin-tray .city-admin-chip')
-  .filter({ hasText: '左營' })
-  .first()
-  .click();
+await focusAdmin(desktop, '左營');
 await desktop.waitForTimeout(7_000);
 const zuoying = await camera(desktop);
 
@@ -173,14 +168,8 @@ await mobile.waitForTimeout(2_000);
 await mobile.keyboard.press('Escape');
 await mobile.waitForTimeout(900);
 
-await mobile.locator('[aria-controls="city-admin-tray"]').click();
-await mobile.locator('#city-admin-tray').waitFor({ state: 'visible' });
 await mobile.waitForTimeout(700);
-await mobile
-  .locator('#city-admin-tray .city-admin-chip')
-  .filter({ hasText: '左營' })
-  .first()
-  .click();
+await focusAdmin(mobile, '左營');
 await mobile.waitForTimeout(7_000);
 const mobileZuoying = await camera(mobile);
 

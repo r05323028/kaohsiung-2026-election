@@ -15,6 +15,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { cpus, platform, release, totalmem } from 'node:os';
 import { join } from 'node:path';
 import { chromium, type Page } from '@playwright/test';
+import { returnToWorld } from './lib/city-ui';
 
 const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'perf')
@@ -87,10 +88,7 @@ async function profile(
   // Portrait entry is zone-first; explicitly choose 全城 so the mobile
   // citywide measurement is the citywide view rather than the hero.
   if (scenario.id === 'world-overview' && viewport.width < 600) {
-    await page
-      .locator('.city-dock__bar .city-zones button')
-      .filter({ hasText: '全城' })
-      .click();
+    await returnToWorld(page);
     await page.waitForTimeout(1_200);
   }
 

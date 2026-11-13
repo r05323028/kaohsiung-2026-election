@@ -123,11 +123,20 @@ test.describe('hex district integrity', () => {
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
     await page.waitForTimeout(200);
 
-    await page.locator('[aria-controls="city-admin-tray"]').click();
-    await page
-      .locator('#city-admin-tray .city-admin-chip')
-      .filter({ hasText: '楠梓' })
-      .click();
+    const backToCity = page.getByRole('button', { name: '回到全市' });
+    if (await backToCity.isVisible()) {
+      await backToCity.click();
+      await expect(page.locator('.city-admin-card')).toBeHidden();
+    }
+    const nanzihLabel = page
+      .locator('.hex-district-label', { hasText: '楠梓' })
+      .first();
+    const nanzihBox = await nanzihLabel.boundingBox();
+    if (!nanzihBox) throw new Error('楠梓 district label is not visible');
+    await page.mouse.click(
+      nanzihBox.x + nanzihBox.width / 2,
+      nanzihBox.y + nanzihBox.height / 2,
+    );
     await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
       'data-scene-focus',
       /^admin-E04-/,

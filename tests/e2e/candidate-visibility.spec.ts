@@ -67,12 +67,18 @@ async function visibility(page: Page): Promise<Visibility> {
 }
 
 async function focusAdmin(page: Page, name: string) {
-  const tray = page.locator('#city-admin-tray');
-  if (!(await tray.isVisible())) {
-    await page.locator('[aria-controls="city-admin-tray"]').click();
+  // District labels only render in the city overview, so return to the world
+  // before focusing another district from the map.
+  const backToCity = page.getByRole('button', { name: '回到全市' });
+  if (await backToCity.isVisible()) {
+    await backToCity.click();
+    await expect(page.locator('.city-admin-card')).toBeHidden();
   }
-  await expect(tray).toBeVisible();
-  await tray.locator('.city-admin-chip').filter({ hasText: name }).click();
+  const label = page.locator('.hex-district-label', { hasText: name }).first();
+  const box = await label.boundingBox();
+  if (!box) throw new Error(`${name} district label is not visible`);
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await expect(page.locator('.city-admin-card')).toBeVisible();
 }
 
 test.describe('district-focused candidate visibility', () => {

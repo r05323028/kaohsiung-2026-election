@@ -208,7 +208,7 @@ export default function CandidateBottomSheet({
           <h2 id="candidate-sheet-heading">所有候選人</h2>
           <button
             aria-label="關閉所有候選人"
-            className="candidate-sheet__close city-tray__close"
+            className="candidate-sheet__close"
             type="button"
             onPointerDown={(event) => event.stopPropagation()}
             onClick={onClose}

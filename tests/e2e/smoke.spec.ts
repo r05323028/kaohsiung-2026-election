@@ -10,18 +10,16 @@ test('homepage renders the city explorer', async ({ page }) => {
   await expect(page.locator('#scene-heading')).toContainText('高雄市長選舉');
 });
 
-test('district selection changes the active scene and candidate list', async ({
+test('district focus changes the active scene and candidate list', async ({
   page,
 }) => {
   test.setTimeout(90_000);
-  await page.goto('/');
+  await page.goto('/?district=kaohsiung-council-04');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
     'data-hydrated',
     'true',
     { timeout: 30_000 },
   );
-  await page.locator('[aria-controls="city-district-tray"]').click();
-  await page.getByRole('button', { name: /高雄市議員第4選舉區/ }).click();
   await expect(page.locator('#scene-heading')).toContainText(
     '高雄市議員第4選舉區',
   );
@@ -150,48 +148,6 @@ test('candidate profile tabs support roving keyboard navigation', async ({
   ).toHaveAttribute('aria-selected', 'true');
 });
 
-test('official election filters expose mayor, council, and indigenous districts', async ({
-  page,
-}) => {
-  test.setTimeout(120_000);
-  await page.goto('/');
-  const explorer = page.getByTestId('city-explorer');
-  await expect(explorer).toHaveAttribute('data-hydrated', 'true', {
-    timeout: 30_000,
-  });
-  await explorer.locator('[aria-controls="city-district-tray"]').click();
-  await explorer.getByRole('tab', { name: '市長選' }).click();
-  await expect(
-    explorer
-      .locator('#city-district-tray')
-      .getByRole('button', { name: /高雄市長選舉/ }),
-  ).toBeVisible();
-  await explorer
-    .locator('#city-district-tray')
-    .getByRole('button', { name: /高雄市長選舉/ })
-    .click();
-  await expect(page.locator('#scene-heading')).toContainText('高雄市長選舉');
-
-  await explorer.getByRole('tab', { name: '市議選' }).click();
-  const councilDistrict = explorer
-    .locator('#city-district-tray')
-    .getByRole('button', { name: /高雄市議員第1選舉區/ });
-  await expect(councilDistrict).toBeVisible();
-  await councilDistrict.click();
-  await explorer.locator('[aria-controls="city-people-tray"]').click();
-  await expect(
-    explorer.getByRole('button', { name: /李 李振豪 1 號/ }),
-  ).toBeVisible();
-
-  await explorer.locator('[aria-controls="city-district-tray"]').click();
-  await explorer.getByRole('tab', { name: '原住民族' }).click();
-  await expect(
-    explorer
-      .locator('#city-district-tray')
-      .getByRole('button', { name: /高雄市議員第12選舉區/ }),
-  ).toBeVisible();
-});
-
 test('official routes expose source references and neutral missing states', async ({
   page,
 }) => {
@@ -225,8 +181,12 @@ test('official routes expose source references and neutral missing states', asyn
     timeout: 30_000,
   });
   await profile.getByRole('tab', { name: '政策主張' }).click();
-  await expect(profile.locator('.policy-group').first()).toBeVisible();
-  await expect(profile.getByText('查看政策細節').first()).toBeVisible();
+  const firstPolicyGroup = profile.locator('.policy-group').first();
+  await expect(firstPolicyGroup).toBeVisible();
+  await firstPolicyGroup.locator('summary').first().click();
+  await expect(
+    firstPolicyGroup.getByText('查看政策細節').first(),
+  ).toBeVisible();
 
   await page.goto('/districts/kaohsiung-council-01/');
   const councilPage = page.getByRole('main');
@@ -412,8 +372,12 @@ test('selected public-record profiles expose provenance and neutral gaps', async
     timeout: 30_000,
   });
   await mayorProfile.getByRole('tab', { name: '政策主張' }).click();
-  await expect(mayorProfile.locator('.policy-group').first()).toBeVisible();
-  await expect(mayorProfile.getByText('查看政策細節').first()).toBeVisible();
+  const mayorPolicyGroup = mayorProfile.locator('.policy-group').first();
+  await expect(mayorPolicyGroup).toBeVisible();
+  await mayorPolicyGroup.locator('summary').first().click();
+  await expect(
+    mayorPolicyGroup.getByText('查看政策細節').first(),
+  ).toBeVisible();
 
   await page.goto('/candidates/kaohsiung-council-03-e4af3760/');
   await expect(
@@ -640,7 +604,9 @@ test('WebGL fallback keeps the candidate journey usable', async ({ page }) => {
   );
   await expect(page.getByTestId('static-city-fallback')).toBeVisible();
   await page.locator('[aria-controls="city-people-tray"]').click();
-  await page.getByRole('button', { name: /張靜/ }).first().click();
+  const sheet = page.locator('#city-people-tray');
+  await expect(sheet).toBeVisible();
+  await sheet.getByRole('button', { name: /張靜/ }).first().click();
   await expect(page.getByTestId('profile-panel')).toContainText('基本資料');
 });
 

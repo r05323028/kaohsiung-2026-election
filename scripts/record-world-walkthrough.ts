@@ -10,6 +10,7 @@
 import { mkdirSync, renameSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium } from '@playwright/test';
+import { focusAdmin } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const outDir = join(process.cwd(), 'reports', 'visual', 'world');
@@ -36,14 +37,8 @@ await page
 await page.locator('canvas').waitFor({ timeout: 30_000 });
 await page.waitForTimeout(4_000);
 
-await page.locator('[aria-controls="city-admin-tray"]').click();
-await page.locator('#city-admin-tray').waitFor({ state: 'visible' });
 await page.waitForTimeout(2_000);
-await page
-  .locator('#city-admin-tray .city-admin-chip')
-  .filter({ hasText: '左營' })
-  .first()
-  .click();
+await focusAdmin(page, '左營');
 await page.waitForTimeout(15_000);
 
 await page.locator('[aria-controls="city-people-tray"]').click();
@@ -66,13 +61,8 @@ await page.waitForTimeout(7_000);
 
 await page.keyboard.press('Escape');
 await page.waitForTimeout(3_000);
-await page.locator('[aria-controls="city-admin-tray"]').click();
 await page.waitForTimeout(1_500);
-await page
-  .locator('#city-admin-tray .city-admin-chip')
-  .filter({ hasText: '桃源' })
-  .first()
-  .click();
+await focusAdmin(page, '桃源');
 await page.waitForTimeout(15_000);
 
 await context.close();

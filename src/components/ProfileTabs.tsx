@@ -82,53 +82,87 @@ function PublishedPolicyCards({
       policyCategoryOrder.indexOf(a[0]) - policyCategoryOrder.indexOf(b[0]),
   );
 
+  const [activeCategory, setActiveCategory] = useState('all');
+  const visible =
+    activeCategory === 'all'
+      ? ordered
+      : ordered.filter(([category]) => category === activeCategory);
+
   return (
-    <div className="policy-groups">
-      {ordered.map(([category, items]) => (
-        <section className="policy-group" key={category}>
-          <h4 className="policy-group__title">
+    <div className="policy-archive">
+      <fieldset className="policy-filter">
+        <legend className="sr-only">依政策類別篩選</legend>
+        <button
+          type="button"
+          aria-pressed={activeCategory === 'all'}
+          onClick={() => setActiveCategory('all')}
+        >
+          全部<span>{policies.length}</span>
+        </button>
+        {ordered.map(([category, items]) => (
+          <button
+            key={category}
+            type="button"
+            aria-pressed={activeCategory === category}
+            onClick={() => setActiveCategory(category)}
+          >
             {policyCategoryLabels[category] ?? category}
-          </h4>
-          {items.map((policy) => (
-            <article className="content-card" key={policy.policyId}>
-              <div className="content-card__meta">
-                <span className="status-chip">
-                  {policyTypeLabels[policy.type] ?? policy.type}
-                </span>
-                {policy.announcedAt ? <span>{policy.announcedAt}</span> : null}
-                {policy.scope ? <span>{policy.scope}</span> : null}
-              </div>
-              <h5>{policy.title}</h5>
-              <p>{policy.summary}</p>
-              <details className="policy-card__details">
-                <summary>查看政策細節</summary>
-                {policy.details ? <p>{policy.details}</p> : null}
-                {policy.implementationDetails.length > 0 ? (
-                  <ul>
-                    {policy.implementationDetails.map((detail) => (
-                      <li key={detail}>{detail}</li>
+            <span>{items.length}</span>
+          </button>
+        ))}
+      </fieldset>
+      <div className="policy-groups">
+        {visible.map(([category, items]) => (
+          <details
+            className="policy-group"
+            key={category}
+            open={activeCategory === category || undefined}
+          >
+            <summary className="policy-group__title">
+              <span>{policyCategoryLabels[category] ?? category}</span>
+              <span className="policy-group__count">{items.length} 項</span>
+            </summary>
+            {items.map((policy) => (
+              <article className="content-card" key={policy.policyId}>
+                <div className="content-card__meta">
+                  <span className="status-chip">
+                    {policyTypeLabels[policy.type] ?? policy.type}
+                  </span>
+                  {policy.announcedAt ? <span>{policy.announcedAt}</span> : null}
+                  {policy.scope ? <span>{policy.scope}</span> : null}
+                </div>
+                <h5>{policy.title}</h5>
+                <p>{policy.summary}</p>
+                <details className="policy-card__details">
+                  <summary>查看政策細節</summary>
+                  {policy.details ? <p>{policy.details}</p> : null}
+                  {policy.implementationDetails.length > 0 ? (
+                    <ul>
+                      {policy.implementationDetails.map((detail) => (
+                        <li key={detail}>{detail}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  <blockquote>{policy.originalStatement}</blockquote>
+                  <p className="policy-card__sources">
+                    <strong>來源：</strong>
+                    {policy.sources.map((source) => (
+                      <a
+                        key={source.url}
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.publisher}｜{source.title}
+                      </a>
                     ))}
-                  </ul>
-                ) : null}
-                <blockquote>{policy.originalStatement}</blockquote>
-                <p className="policy-card__sources">
-                  <strong>來源：</strong>
-                  {policy.sources.map((source) => (
-                    <a
-                      key={source.url}
-                      href={source.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {source.publisher}｜{source.title}
-                    </a>
-                  ))}
-                </p>
-              </details>
-            </article>
-          ))}
-        </section>
-      ))}
+                  </p>
+                </details>
+              </article>
+            ))}
+          </details>
+        ))}
+      </div>
     </div>
   );
 }
@@ -926,11 +960,15 @@ export function collectNewsCards(
     evidenceIds: [],
     sourceIds: article.sourceIds,
   }));
-  return [...publicNews, ...publishedNews, ...legacyNews].sort(
-    (left, right) =>
-      right.publicationDate.localeCompare(left.publicationDate) ||
-      left.headline.localeCompare(right.headline),
-  );
+  // Code-unit compare, not localeCompare: Node ICU and browsers can collate
+  // zh-Hant headlines differently, which changes the SSR/client order.
+  return [...publicNews, ...publishedNews, ...legacyNews].sort((left, right) => {
+    if (left.publicationDate !== right.publicationDate) {
+      return left.publicationDate < right.publicationDate ? 1 : -1;
+    }
+    if (left.headline === right.headline) return 0;
+    return left.headline < right.headline ? -1 : 1;
+  });
 }
 
 function NewsCards({

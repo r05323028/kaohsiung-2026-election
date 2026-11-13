@@ -10,6 +10,7 @@
 import { mkdirSync, renameSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { type BrowserContext, chromium, type Page } from '@playwright/test';
+import { focusAdmin } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const outDir = join(
@@ -182,14 +183,8 @@ const citywide = await camera(desktop);
 await dragCanvas(desktop, 160, 80);
 await desktop.waitForTimeout(900);
 
-await desktop.locator('[aria-controls="city-admin-tray"]').click();
-await desktop.locator('#city-admin-tray').waitFor({ state: 'visible' });
 await desktop.waitForTimeout(800);
-await desktop
-  .locator('#city-admin-tray .city-admin-chip')
-  .filter({ hasText: '左營' })
-  .first()
-  .click();
+await focusAdmin(desktop, '左營');
 await desktop.waitForTimeout(8_000);
 await waitForCameraSettled(desktop);
 const zuoying = await camera(desktop);

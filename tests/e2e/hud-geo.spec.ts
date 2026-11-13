@@ -102,10 +102,7 @@ test.describe('city HUD and authoritative geography', () => {
       'data-scene-focus',
       /^world-overview-/,
     );
-    await page.locator('[aria-controls="city-admin-tray"]').click();
-    await expect(page.locator('#city-admin-tray .city-admin-chip')).toHaveCount(
-      38,
-    );
+    await expect(page.locator('.hex-district-label')).toHaveCount(38);
   });
 
   test('mobile menu is touch-sized, closes with Escape, and restores focus', async ({

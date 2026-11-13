@@ -11,6 +11,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium, type Page } from '@playwright/test';
+import { focusAdmin } from './lib/city-ui';
 
 const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'after')
@@ -39,13 +40,8 @@ async function open(page: Page, path = '/') {
 }
 
 async function selectDistrict(page: Page, name: string) {
-  await page.locator('[aria-controls="city-admin-tray"]').click();
   await page.waitForTimeout(500);
-  await page
-    .locator('#city-admin-tray .city-admin-chip')
-    .filter({ hasText: name })
-    .first()
-    .click();
+  await focusAdmin(page, name);
   await page.waitForTimeout(3500);
   await page.evaluate(() => {
     for (const card of document.querySelectorAll('.city-admin-card')) {

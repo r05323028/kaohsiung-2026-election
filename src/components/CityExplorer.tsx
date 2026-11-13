@@ -29,11 +29,7 @@ import { electoralDistrictSlugForAdminName } from '../world/constituencies';
 import { ADMIN_DISTRICT_BY_ID } from '../world/geography';
 import { HEX_WORLD_FOCUS, hexFocusForDistrictIds } from '../world/hex';
 import { getActor } from '../world/simulation';
-import {
-  ADMIN_ADJACENCY,
-  ADMIN_SUMMARY,
-  ADMIN_SUMMARY_BY_ID,
-} from '../world/summary';
+import { ADMIN_ADJACENCY, ADMIN_SUMMARY_BY_ID } from '../world/summary';
 import CandidateBottomSheet from './CandidateBottomSheet';
 import type { DetailLevel, SceneFocus } from './CityScene';
 
@@ -166,9 +162,6 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const [selectedDistrictSlug, setSelectedDistrictSlug] = useState(
     firstDistrict?.slug ?? '',
   );
-  const [electionFilter, setElectionFilter] = useState<
-    'all' | 'mayoral' | 'city-council' | 'indigenous-council'
-  >('all');
   const [selectedCandidateSlug, setSelectedCandidateSlug] = useState<
     string | null
   >(null);
@@ -178,9 +171,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const [overview, setOverview] = useState(true);
   const [viewNonce, setViewNonce] = useState(0);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [dockPanel, setDockPanel] = useState<
-    'districts' | 'people' | 'admin' | null
-  >(null);
+  const [sheetOpen, setSheetOpen] = useState(false);
   const [detail, setDetail] = useState<DetailLevel>('medium');
   const [webglSupported, setWebglSupported] = useState<boolean | null>(null);
   const [sceneReady, setSceneReady] = useState(false);
@@ -311,8 +302,8 @@ export default function CityExplorer({ districts, candidates }: Props) {
         closeCandidate();
         return;
       }
-      if (dockPanel) {
-        setDockPanel(null);
+      if (sheetOpen) {
+        setSheetOpen(false);
         return;
       }
       if (selectedAdminId) {
@@ -326,37 +317,15 @@ export default function CityExplorer({ districts, candidates }: Props) {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [
     closeCandidate,
-    dockPanel,
     selectedAdminId,
     selectedCandidateSlug,
     overview,
     settingsOpen,
+    sheetOpen,
   ]);
 
-  const filteredDistricts = useMemo(() => {
-    if (electionFilter === 'all') return districts;
-    return districts.filter(
-      (district) => district.electionType === electionFilter,
-    );
-  }, [districts, electionFilter]);
-
-  useEffect(() => {
-    if (dockPanel !== 'districts') return;
-    // On narrow screens the tray itself scrolls; scrollIntoView would push the
-    // election tabs and close control out of view. Desktop can scroll the
-    // horizontal district rail instead.
-    if (window.matchMedia('(max-width: 760px)').matches) return;
-    const active = document.querySelector<HTMLElement>(
-      '#city-district-tray .city-district[aria-current="true"]',
-    );
-    active?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-  }, [dockPanel]);
-
   const selectedDistrict =
-    filteredDistricts.find(
-      (district) => district.slug === selectedDistrictSlug,
-    ) ??
-    filteredDistricts[0] ??
+    districts.find((district) => district.slug === selectedDistrictSlug) ??
     firstDistrict;
 
   const selectedCandidate = candidates.find(
@@ -459,19 +428,9 @@ export default function CityExplorer({ districts, candidates }: Props) {
       setSelectedCandidateSlug(slug);
       setFollowActorSlug(slug);
       setOverview(false);
-      setDockPanel(null);
-      if (electionFilter !== 'all') {
-        if (candidate.district.electionType !== electionFilter)
-          setElectionFilter('all');
-      }
+      setSheetOpen(false);
     },
-    [
-      candidates,
-      electionFilter,
-      overview,
-      selectedAdminId,
-      selectedDistrictSlug,
-    ],
+    [candidates, overview, selectedAdminId, selectedDistrictSlug],
   );
 
   const selectCandidateById = useCallback(
@@ -540,7 +499,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setSelectedAdminId(id);
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
-    setDockPanel(null);
+    setSheetOpen(false);
     setOverview(false);
     if (options.syncConstituency !== false) {
       const electoral = electoralDistrictSlugForAdminName(district.shortName);
@@ -819,175 +778,14 @@ export default function CityExplorer({ districts, candidates }: Props) {
           </section>
         )}
 
-        <div className="city-dock city-dock--map-controls">
-          <div className="city-dock__bar">
-            <fieldset className="city-zones">
-              <legend className="sr-only">城市視角</legend>
-              <button
-                aria-pressed={overview}
-                className={overview ? 'is-active' : ''}
-                type="button"
-                onClick={backToWorld}
-              >
-                全市
-              </button>
-            </fieldset>
-
-            <button
-              aria-controls="city-admin-tray"
-              aria-expanded={dockPanel === 'admin'}
-              className="city-dock__toggle"
-              type="button"
-              onClick={() =>
-                setDockPanel((current) =>
-                  current === 'admin' ? null : 'admin',
-                )
-              }
-            >
-              <span className="city-dock__toggle-kicker">行政區</span>
-              <strong>{selectedAdmin?.shortName ?? '38 區'}</strong>
-            </button>
-
-            <button
-              aria-controls="city-district-tray"
-              aria-expanded={dockPanel === 'districts'}
-              className="city-dock__toggle"
-              type="button"
-              onClick={() =>
-                setDockPanel((current) =>
-                  current === 'districts' ? null : 'districts',
-                )
-              }
-            >
-              <span className="city-dock__toggle-kicker">選區</span>
-              <strong>{selectedDistrict?.name ?? '選擇選舉區'}</strong>
-            </button>
-          </div>
-
-          {dockPanel === 'districts' && (
-            <section
-              aria-label="選舉區與選舉類型"
-              className="city-tray city-tray--districts"
-              id="city-district-tray"
-            >
-              <div className="city-tray__head">
-                <div
-                  aria-label="選舉類型"
-                  className="segmented-control city-tabs"
-                  role="tablist"
-                >
-                  {[
-                    ['all', '全部'],
-                    ['mayoral', '市長選'],
-                    ['city-council', '市議選'],
-                    ['indigenous-council', '原住民族'],
-                  ].map(([value, label]) => (
-                    <button
-                      aria-selected={electionFilter === value}
-                      key={value}
-                      role="tab"
-                      type="button"
-                      onClick={() => {
-                        setElectionFilter(value as typeof electionFilter);
-                        setSelectedCandidateSlug(null);
-                      }}
-                    >
-                      {label}
-                    </button>
-                  ))}
-                </div>
-                <button
-                  aria-label="關閉選區列表"
-                  className="city-tray__close"
-                  type="button"
-                  onClick={() => setDockPanel(null)}
-                >
-                  ×
-                </button>
-              </div>
-              <fieldset className="city-districts">
-                <legend className="sr-only">選舉區</legend>
-                {filteredDistricts.map((district) => (
-                  <button
-                    aria-current={
-                      selectedDistrict?.slug === district.slug
-                        ? 'true'
-                        : undefined
-                    }
-                    className={
-                      'district-button city-district' +
-                      (selectedDistrict?.slug === district.slug
-                        ? ' is-active'
-                        : '')
-                    }
-                    key={district.id}
-                    type="button"
-                    onClick={() => selectDistrict(district.slug)}
-                  >
-                    <strong>{district.name}</strong>
-                    <small>{district.districtLabel}・官方切片</small>
-                    {district.constituencyCoverage && (
-                      <small className="city-district__coverage">
-                        {coverageCompactSummary(district.constituencyCoverage)}
-                      </small>
-                    )}
-                  </button>
-                ))}
-              </fieldset>
-            </section>
-          )}
-
-          {dockPanel === 'admin' && (
-            <section
-              aria-label="高雄市行政區"
-              className="city-tray city-tray--admin"
-              id="city-admin-tray"
-            >
-              <div className="city-tray__head">
-                <h3>高雄市 38 行政區</h3>
-                <span>官方界線・藝術化量體</span>
-                <button
-                  aria-label="關閉行政區列表"
-                  className="city-tray__close"
-                  type="button"
-                  onClick={() => setDockPanel(null)}
-                >
-                  ×
-                </button>
-              </div>
-              <div className="city-admin-grid">
-                {ADMIN_SUMMARY.map((district) => (
-                  <button
-                    aria-current={
-                      selectedAdminId === district.id ? 'true' : undefined
-                    }
-                    className={
-                      'city-admin-chip' +
-                      (selectedAdminId === district.id ? ' is-active' : '')
-                    }
-                    key={district.id}
-                    type="button"
-                    onClick={() => selectAdmin(district.id)}
-                  >
-                    <strong>{district.shortName}</strong>
-                    <small>
-                      {TERRAIN_LABELS[district.terrain] ?? district.terrain}
-                    </small>
-                  </button>
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-
         <CandidateBottomSheet
           candidates={candidates}
           districts={districts}
-          open={dockPanel === 'people'}
+          open={sheetOpen}
           reducedMotion={reducedMotion}
           triggerRef={peopleToggleRef}
-          onClose={() => setDockPanel(null)}
-          onOpen={() => setDockPanel('people')}
+          onClose={() => setSheetOpen(false)}
+          onOpen={() => setSheetOpen(true)}
           onSelectCandidate={selectCandidateById}
         />
       </div>

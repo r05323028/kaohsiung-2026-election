@@ -89,7 +89,7 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
 
   assertTargets(
     await measure(
-      '.global-header__search input, .global-header__settings-button, .city-zones button, .city-dock__toggle',
+      '.global-header__search input, .global-header__settings-button, .candidate-sheet__handle',
     ),
     'top controls',
   );
@@ -97,37 +97,15 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
   await page.evaluate(() =>
     document.querySelector('astro-dev-toolbar')?.remove(),
   );
-  const districtToggle = page.locator('[aria-controls="city-district-tray"]');
-  await districtToggle.click();
-  const districtTray = page.locator('#city-district-tray');
-  await expect(districtTray).toBeVisible();
-  await expect(districtTray.locator('.city-tray__head')).toBeInViewport();
-  expect(await districtTray.evaluate((element) => element.scrollTop)).toBe(0);
-  assertTargets(
-    await measure(
-      '#city-district-tray .city-tray__close, #city-district-tray .city-tabs button, #city-district-tray .city-district',
-    ),
-    'district tray',
+  const zuoyingLabel = page
+    .locator('.hex-district-label', { hasText: '左營' })
+    .first();
+  const zuoyingBox = await zuoyingLabel.boundingBox();
+  if (!zuoyingBox) throw new Error('左營 district label is not visible');
+  await page.mouse.click(
+    zuoyingBox.x + zuoyingBox.width / 2,
+    zuoyingBox.y + zuoyingBox.height / 2,
   );
-
-  await districtToggle.click();
-  await expect(districtTray).toBeHidden();
-
-  const adminToggle = page.locator('[aria-controls="city-admin-tray"]');
-  await adminToggle.click();
-  const adminTray = page.locator('#city-admin-tray');
-  await expect(adminTray).toBeVisible();
-  await expect(adminTray.locator('.city-admin-chip')).toHaveCount(38);
-  assertTargets(
-    await measure(
-      '#city-admin-tray .city-tray__close, #city-admin-tray .city-admin-chip',
-    ),
-    'admin tray',
-  );
-  await adminTray
-    .locator('.city-admin-chip')
-    .filter({ hasText: '左營' })
-    .click();
   const adminCard = page.locator('.city-admin-card');
   await expect(adminCard).toBeVisible();
   assertTargets(
@@ -142,7 +120,7 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
   await expect(peopleTray).toBeVisible();
   assertTargets(
     await measure(
-      '#city-people-tray .city-tray__close, #city-people-tray .city-candidate',
+      '#city-people-tray .candidate-sheet__close, #city-people-tray .city-candidate',
     ),
     'people tray',
   );

@@ -43,15 +43,8 @@ test.describe('unified Kaohsiung world', () => {
     page,
   }) => {
     test.setTimeout(120_000);
-    await page.goto('/?district=kaohsiung-council-04');
+    await page.goto('/?admin=E03');
     const shell = await explorer(page);
-
-    await page.locator('[aria-controls="city-admin-tray"]').click();
-    const tray = page.locator('#city-admin-tray');
-    await expect(tray).toBeVisible();
-    await expect(tray.locator('.city-admin-chip')).toHaveCount(38);
-
-    await tray.locator('.city-admin-chip').filter({ hasText: '左營' }).click();
 
     const card = page.locator('.city-admin-card');
     await expect(card).toBeVisible();
@@ -69,93 +62,34 @@ test.describe('unified Kaohsiung world', () => {
     await expect(shell).toHaveAttribute('data-scene-focus', /^world-overview-/);
   });
 
-  test('every one of the 38 administrative districts can be focused', async ({
+  test('the 38 administrative districts are labelled and focusable on the map', async ({
     page,
   }) => {
     test.setTimeout(180_000);
-    await page.goto('/?district=kaohsiung-council-04');
+    await page.goto('/');
     await explorer(page);
 
-    await page.locator('[aria-controls="city-admin-tray"]').click();
-    await expect(page.locator('#city-admin-tray .city-admin-chip')).toHaveCount(
-      38,
-    );
+    await expect(page.locator('.hex-district-label')).toHaveCount(38);
 
-    // Drive the real chips from one page. Playwright's per-click actionability
-    // checks add several seconds per district and made this loop dominate the
-    // whole suite; the chip handlers and card updates are still the production
-    // ones. Each selection closes the tray, so reopen it before the next chip.
-    const results = await page.evaluate(async () => {
-      const nextFrame = () =>
-        new Promise<void>((resolve) =>
-          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
-        );
-      const waitFor = async (check: () => boolean, timeoutMs = 5_000) => {
-        const deadline = performance.now() + timeoutMs;
-        while (performance.now() < deadline) {
-          if (check()) return true;
-          await nextFrame();
-        }
-        return check();
-      };
-      const toggle = document.querySelector<HTMLElement>(
-        '[aria-controls="city-admin-tray"]',
-      );
-      if (!toggle) throw new Error('admin tray toggle is missing');
-      const chips = [
-        ...document.querySelectorAll<HTMLElement>(
-          '#city-admin-tray .city-admin-chip',
-        ),
-      ];
-      const names = chips.map(
-        (chip) => chip.querySelector('strong')?.textContent?.trim() ?? '',
-      );
-      const failures: string[] = [];
-      for (const name of names) {
-        if (!document.querySelector('#city-admin-tray')) {
-          toggle.click();
-          if (
-            !(await waitFor(() =>
-              Boolean(document.querySelector('#city-admin-tray')),
-            ))
-          ) {
-            failures.push(`${name}: tray did not reopen`);
-            continue;
-          }
-        }
-        const chip = [
-          ...document.querySelectorAll<HTMLElement>(
-            '#city-admin-tray .city-admin-chip',
-          ),
-        ].find(
-          (item) => item.querySelector('strong')?.textContent?.trim() === name,
-        );
-        if (!chip) {
-          failures.push(`${name}: chip disappeared`);
-          continue;
-        }
-        chip.click();
-        const focused = await waitFor(
-          () =>
-            document
-              .querySelector('.city-admin-card h2')
-              ?.textContent?.trim() === `${name}區`,
-        );
-        if (!focused) {
-          failures.push(
-            `${name}: card showed ${
-              document
-                .querySelector('.city-admin-card h2')
-                ?.textContent?.trim() ?? 'nothing'
-            }`,
-          );
-        }
+    for (const name of ['楠梓', '左營', '三民', '美濃']) {
+      if (await page.locator('.city-admin-card').isVisible()) {
+        await page.getByRole('button', { name: '回到全市' }).click();
+        await expect(page.locator('.city-admin-card')).toBeHidden();
       }
-      return { names, failures };
-    });
-
-    expect(results.names).toHaveLength(38);
-    expect(results.failures).toEqual([]);
+      const label = page
+        .locator('.hex-district-label', { hasText: name })
+        .first();
+      const box = await label.boundingBox();
+      if (!box) throw new Error(`${name} district label is not visible`);
+      await page.mouse.click(
+        box.x + box.width / 2,
+        box.y + box.height / 2,
+      );
+      await expect(page.locator('.city-admin-card h2')).toHaveText(
+        `${name}區`,
+        { timeout: 15_000 },
+      );
+    }
     await expect(page.locator('.city-admin-card')).toContainText('藝術化示意');
   });
 
@@ -224,12 +158,19 @@ test.describe('unified Kaohsiung world', () => {
 
     await page.getByRole('button', { name: '關閉人物資料' }).click();
     await expect(page.locator('.profile-panel')).toBeHidden();
-    await page.waitForTimeout(300);
-    await page.locator('[aria-controls="city-admin-tray"]').click();
-    await page
-      .locator('#city-admin-tray .city-admin-chip')
-      .filter({ hasText: '楠梓' })
-      .click();
+    // Closing the profile keeps the district focus; Escape returns to the
+    // city overview where the district labels are interactive again.
+    await page.keyboard.press('Escape');
+    await expect(page.locator('.hex-district-label')).toHaveCount(38);
+    const nanzihLabel = page
+      .locator('.hex-district-label', { hasText: '楠梓' })
+      .first();
+    const nanzihBox = await nanzihLabel.boundingBox();
+    if (!nanzihBox) throw new Error('楠梓 district label is not visible');
+    await page.mouse.click(
+      nanzihBox.x + nanzihBox.width / 2,
+      nanzihBox.y + nanzihBox.height / 2,
+    );
     await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
       'data-scene-focus',
       /^admin-E04-/,

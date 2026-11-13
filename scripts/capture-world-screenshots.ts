@@ -8,6 +8,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium, type Page } from '@playwright/test';
+import { focusAdmin, returnToWorld } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const label = process.argv.includes('--label')
@@ -43,20 +44,9 @@ async function settle(page: Page, delay = 3000) {
   );
 }
 
-async function openAdminTray(page: Page) {
-  await page.locator('[aria-controls="city-admin-tray"]').click();
-  await page.locator('#city-admin-tray').waitFor({ state: 'visible' });
-  await settle(page, 1500);
-}
-
 async function selectAdmin(page: Page, name: string) {
-  await openAdminTray(page);
-  await page
-    .locator('#city-admin-tray .city-admin-chip')
-    .filter({ hasText: name })
-    .first()
-    .click();
-  await page.locator('.city-admin-card').waitFor({ state: 'visible' });
+  await settle(page, 1500);
+  await focusAdmin(page, name);
   await settle(page, name === '左營' ? 10_000 : 3000);
 }
 
@@ -66,13 +56,6 @@ const shots: Shot[] = [
     path: '/',
     viewport: { width: 1600, height: 1000 },
     note: 'Desktop citywide overview with all 38 districts, labels and low-detail massing.',
-  },
-  {
-    name: '02-admin-tray',
-    path: '/',
-    viewport: { width: 1600, height: 1000 },
-    action: openAdminTray,
-    note: 'Administrative district tray listing all 38 districts.',
   },
   {
     name: '03-admin-zuoying',
@@ -145,20 +128,10 @@ const shots: Shot[] = [
     path: '/',
     viewport: { width: 390, height: 844 },
     action: async (page) => {
-      await page
-        .locator('.city-dock__bar .city-zones button')
-        .filter({ hasText: '全城' })
-        .click();
+      await returnToWorld(page);
       await settle(page, 3000);
     },
     note: 'Mobile citywide overview after choosing 全城.',
-  },
-  {
-    name: '10-mobile-admin-tray',
-    path: '/',
-    viewport: { width: 390, height: 844 },
-    action: openAdminTray,
-    note: 'Mobile administrative district tray with 44px district targets.',
   },
 ];
 

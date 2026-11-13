@@ -11,6 +11,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { type Browser, chromium, type Page } from '@playwright/test';
 
+import { focusAdmin, returnToWorld } from './lib/city-ui';
+
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'living-world')
@@ -280,10 +282,8 @@ async function persistenceAudit(page: Page) {
   const initialActor = initial.actors.find((item) => item.slug === COUNCIL);
   if (!initialActor)
     throw new Error('council actor missing before persistence audit');
-  await page.locator('.city-zones button').filter({ hasText: '全城' }).click();
-  await page.waitForTimeout(2_500);
-  await page.locator('.city-zones button').filter({ hasText: '左營' }).click();
-  await page.waitForTimeout(3_000);
+  await returnToWorld(page);
+  await focusAdmin(page, '左營');
   // Re-open the same profile after the district switch to show that the actor
   // survived the scene transition and kept its simulation state.
   await page.locator('#candidate-search').fill(initialActor.displayName);
@@ -415,10 +415,7 @@ const shots: Shot[] = [
     viewport: { width: 1600, height: 1000 },
     note: 'World-to-hero streaming transition after choosing the 左營 zone.',
     action: async (page) => {
-      await page
-        .locator('.city-zones button')
-        .filter({ hasText: '左營' })
-        .click();
+      await focusAdmin(page, '左營');
       await page.waitForTimeout(10_000);
       const state = await bridgeState(page);
       return { stats: state.stats };

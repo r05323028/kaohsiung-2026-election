@@ -11,6 +11,7 @@
 import { mkdirSync, renameSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium } from '@playwright/test';
+import { focusAdmin, returnToWorld } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const outDir = join(process.cwd(), 'reports', 'visual', 'living-world');
@@ -57,9 +58,9 @@ await page.waitForTimeout(6_000);
 // Close the profile and show the world-to-hero streaming transition.
 await page.keyboard.press('Escape');
 await page.waitForTimeout(2_000);
-await page.locator('.city-zones button').filter({ hasText: '全城' }).click();
+await returnToWorld(page);
 await page.waitForTimeout(4_000);
-await page.locator('.city-zones button').filter({ hasText: '左營' }).click();
+await focusAdmin(page, '左營');
 await page.waitForTimeout(6_000);
 
 // Re-open the same actor after the scene switch to show persistence.

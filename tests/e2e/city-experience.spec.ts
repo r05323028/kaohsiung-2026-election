@@ -1,9 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('immersive city exploration', () => {
-  test('Escape closes settings and progressive-disclosure trays', async ({
-    page,
-  }) => {
+  test('Escape closes settings and the candidate sheet', async ({ page }) => {
     await page.goto('/');
     const explorer = page.locator(
       '[data-testid="city-explorer"][data-hydrated="true"]',
@@ -15,12 +13,6 @@ test.describe('immersive city exploration', () => {
     await expect(settings).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(settings).toBeHidden();
-
-    const districtToggle = page.locator('[aria-controls="city-district-tray"]');
-    await districtToggle.click();
-    await expect(page.locator('#city-district-tray')).toBeVisible();
-    await page.keyboard.press('Escape');
-    await expect(page.locator('#city-district-tray')).toBeHidden();
 
     const peopleToggle = page.locator('[aria-controls="city-people-tray"]');
     await peopleToggle.click();

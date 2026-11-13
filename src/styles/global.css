@@ -3687,3 +3687,369 @@ body.is-immersive .site-footer {
     transition: none;
   }
 }
+
+/* Candidate roster sheet: candidate-only surface with map-safe drag regions. */
+.city-dock--map-controls {
+  margin-bottom: clamp(4rem, 7vh, 5.5rem);
+}
+
+.candidate-sheet {
+  position: absolute;
+  z-index: 60;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.candidate-sheet--collapsed {
+  padding: 0 clamp(0.6rem, 2vw, 1.4rem)
+    max(0.55rem, env(safe-area-inset-bottom));
+}
+
+.candidate-sheet__handle {
+  display: grid;
+  grid-template-columns: 1.9rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
+  width: min(100%, 31rem);
+  min-height: 3.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 1.2rem;
+  background: rgba(255, 249, 240, 0.92);
+  box-shadow: 0 14px 42px rgba(17, 48, 60, 0.25);
+  color: #294858;
+  padding: 0.45rem 0.75rem;
+  cursor: grab;
+  pointer-events: auto;
+  text-align: left;
+  touch-action: none;
+  backdrop-filter: blur(22px);
+}
+
+.candidate-sheet__handle:active,
+.candidate-sheet__header:active {
+  cursor: grabbing;
+}
+
+.candidate-sheet__drag-indicator {
+  display: block;
+  width: 1.6rem;
+  height: 0.25rem;
+  border-radius: 999px;
+  background: rgba(41, 72, 88, 0.28);
+}
+
+.candidate-sheet__handle-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.08rem;
+}
+
+.candidate-sheet__handle-copy strong {
+  overflow: hidden;
+  color: #203f4e;
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.candidate-sheet__handle-copy small {
+  color: rgba(41, 72, 88, 0.58);
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.candidate-sheet__chevron {
+  color: #4cafa8;
+  font-size: 1.25rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.candidate-sheet--open {
+  align-items: stretch;
+  padding: max(0.45rem, env(safe-area-inset-top))
+    clamp(0.45rem, 1.5vw, 1.25rem)
+    max(0.45rem, env(safe-area-inset-bottom));
+  background: rgba(17, 48, 60, 0.18);
+  pointer-events: auto;
+  backdrop-filter: blur(2px);
+}
+
+.candidate-sheet__surface {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(100%, 92rem);
+  height: min(94dvh, 68rem);
+  max-height: 100%;
+  margin: auto auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 1.45rem 1.45rem 0.9rem 0.9rem;
+  background: rgba(255, 249, 240, 0.97);
+  box-shadow: 0 28px 90px rgba(17, 48, 60, 0.34);
+  animation: candidate-sheet-rise 320ms cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+  backdrop-filter: blur(26px);
+}
+
+@keyframes candidate-sheet-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.candidate-sheet__header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 3.7rem;
+  border-bottom: 1px solid rgba(41, 72, 88, 0.1);
+  padding: 0.65rem 0.85rem;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.candidate-sheet__header h2 {
+  flex: 1 1 auto;
+  margin: 0;
+  color: #203f4e;
+  font-size: 1rem;
+  font-weight: 950;
+  letter-spacing: -0.02em;
+}
+
+.candidate-sheet__close {
+  display: grid;
+  flex: 0 0 auto;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(41, 72, 88, 0.08);
+  color: #294858;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.candidate-sheet__close:hover,
+.candidate-sheet__close:focus-visible {
+  background: rgba(233, 150, 121, 0.28);
+}
+
+.candidate-sheet__scroll {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.85rem clamp(0.7rem, 1.8vw, 1.35rem)
+    max(1rem, env(safe-area-inset-bottom));
+  scrollbar-width: thin;
+  touch-action: pan-y;
+}
+
+.candidate-sheet__group {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.15rem 0 1rem;
+}
+
+.candidate-sheet__group + .candidate-sheet__group {
+  border-top: 1px solid rgba(41, 72, 88, 0.1);
+  padding-top: 1rem;
+}
+
+.candidate-sheet__group-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.candidate-sheet__group-heading h3 {
+  margin: 0;
+  color: #294858;
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.candidate-sheet__group-heading span {
+  flex: 0 0 auto;
+  color: rgba(41, 72, 88, 0.56);
+  font-size: 0.65rem;
+  font-weight: 850;
+}
+
+.candidate-sheet__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 0.55rem;
+}
+
+.candidate-sheet__card.city-candidate {
+  display: grid;
+  grid-template-columns: 2.55rem minmax(0, 1fr);
+  align-items: center;
+  width: auto;
+  min-height: 5.2rem;
+  border: 1px solid rgba(41, 72, 88, 0.1);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 4px 14px rgba(17, 48, 60, 0.06);
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  transition: border-color 180ms ease, background 180ms ease,
+    transform 180ms ease, box-shadow 180ms ease;
+}
+
+.candidate-sheet__card.city-candidate:hover,
+.candidate-sheet__card.city-candidate:focus-visible {
+  border-color: rgba(76, 175, 168, 0.62);
+  background: rgba(76, 175, 168, 0.12);
+  box-shadow: 0 8px 20px rgba(17, 48, 60, 0.12);
+  transform: translateY(-1px);
+}
+
+.candidate-sheet__avatar {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border: 2px solid rgba(255, 249, 240, 0.82);
+  border-radius: 0.78rem;
+  background: var(--candidate-avatar-color);
+  box-shadow: 0 3px 10px rgba(17, 48, 60, 0.14);
+  color: #fff9f0;
+  font-size: 0.95rem;
+  font-weight: 950;
+}
+
+.candidate-sheet__copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.12rem;
+}
+
+.candidate-sheet__copy strong {
+  overflow: hidden;
+  color: #294858;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.candidate-sheet__copy small {
+  overflow: hidden;
+  color: rgba(41, 72, 88, 0.58);
+  font-size: 0.59rem;
+  font-weight: 750;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.candidate-sheet__copy .candidate-list__ballot {
+  color: #d9775b;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .city-dock--map-controls {
+    margin-bottom: 4.4rem;
+  }
+
+  .candidate-sheet--collapsed {
+    padding-right: 0.42rem;
+    padding-left: 0.42rem;
+  }
+
+  .candidate-sheet__handle {
+    min-height: 3.5rem;
+    border-radius: 1rem;
+  }
+
+  .candidate-sheet--open {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .candidate-sheet__surface {
+    width: 100%;
+    height: calc(100dvh - max(0.45rem, env(safe-area-inset-top)));
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 1.15rem 1.15rem 0 0;
+  }
+
+  .candidate-sheet__header {
+    min-height: 3.8rem;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+  }
+
+  .candidate-sheet__scroll {
+    padding-right: 0.55rem;
+    padding-left: 0.55rem;
+  }
+
+  .candidate-sheet__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+  }
+
+  .candidate-sheet__card.city-candidate {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    min-height: 4.7rem;
+    padding: 0.45rem;
+  }
+
+  .candidate-sheet__avatar {
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 0.62rem;
+    font-size: 0.78rem;
+  }
+
+  .candidate-sheet__copy strong {
+    font-size: 0.68rem;
+  }
+
+  .candidate-sheet__copy small {
+    font-size: 0.52rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 760px) {
+  .candidate-sheet__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candidate-sheet *,
+  .candidate-sheet {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.candidate-sheet.prefers-reduced-motion *,
+.candidate-sheet.prefers-reduced-motion {
+  animation: none;
+  transition: none;
+}

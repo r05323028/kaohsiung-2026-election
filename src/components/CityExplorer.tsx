@@ -17,7 +17,6 @@ import {
   type PublicCandidateProfile,
   type PublicDistrictView,
 } from '../data';
-import { ballotNumberText } from '../data/official/ballot';
 import { withBase } from '../utils/paths';
 import {
   ALL_CANDIDATE_VISIBILITY,
@@ -35,6 +34,7 @@ import {
   ADMIN_SUMMARY,
   ADMIN_SUMMARY_BY_ID,
 } from '../world/summary';
+import CandidateBottomSheet from './CandidateBottomSheet';
 import type { DetailLevel, SceneFocus } from './CityScene';
 
 const CityScene = lazy(() => import('./CityScene'));
@@ -83,51 +83,6 @@ function supportsWebGL() {
   } catch {
     return false;
   }
-}
-
-function CandidateButton({
-  candidate,
-  active,
-  onSelect,
-  result = false,
-}: {
-  candidate: PublicCandidateProfile;
-  active: boolean;
-  onSelect: (slug: string) => void;
-  result?: boolean;
-}) {
-  return (
-    <button
-      aria-current={active ? 'true' : undefined}
-      className={`candidate-list__item city-candidate${active ? ' is-active' : ''}${result ? ' city-candidate--result' : ''}`}
-      type="button"
-      onClick={() => onSelect(candidate.candidacy.slug)}
-    >
-      <span
-        className="candidate-list__avatar"
-        style={
-          {
-            '--avatar-color': candidate.visual.palette.top,
-          } as CSSProperties
-        }
-      >
-        {candidate.person.shortName.slice(0, 1)}
-      </span>
-      <span className="candidate-list__copy">
-        <span className="candidate-list__name">
-          <strong>{candidate.person.displayName}</strong>
-          <span className="candidate-list__ballot">
-            {ballotNumberText(candidate.candidacy)}
-          </span>
-        </span>
-        <small>
-          {result
-            ? candidate.district.name
-            : candidate.candidacy.currentPosition}
-        </small>
-      </span>
-    </button>
-  );
 }
 
 function StaticCityFallback({
@@ -448,7 +403,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const sceneFocus: SceneFocus = (() => {
     if (selectedCandidate) {
       return {
-        key: 'candidate-' + selectedCandidate.candidacy.slug,
+        key: `candidate-${selectedCandidate.candidacy.slug}`,
         target: candidateActor
           ? [candidateActor.position.x, 0, candidateActor.position.z]
           : HEX_WORLD_FOCUS.target,
@@ -462,7 +417,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
       const adminFocus =
         hexFocusForDistrictIds([selectedAdmin.id], 1.25) ?? HEX_WORLD_FOCUS;
       return {
-        key: 'admin-' + selectedAdmin.id + '-' + String(viewNonce),
+        key: `admin-${selectedAdmin.id}-${String(viewNonce)}`,
         ...adminFocus,
       };
     }
@@ -481,7 +436,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
       };
     }
     return {
-      key: 'world-overview-' + String(viewNonce),
+      key: `world-overview-${String(viewNonce)}`,
       ...HEX_WORLD_FOCUS,
     };
   })();
@@ -517,6 +472,16 @@ export default function CityExplorer({ districts, candidates }: Props) {
       selectedAdminId,
       selectedDistrictSlug,
     ],
+  );
+
+  const selectCandidateById = useCallback(
+    (candidateId: string) => {
+      const candidate = candidates.find(
+        (item) => item.candidacy.id === candidateId,
+      );
+      if (candidate) selectCandidate(candidate.candidacy.slug);
+    },
+    [candidates, selectCandidate],
   );
 
   useEffect(() => {
@@ -739,7 +704,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
 
         {selectedCoverage && !selectedCandidate && !selectedAdmin && (
           <article
-            aria-label={(selectedDistrict?.name ?? '') + ' 選區範圍'}
+            aria-label={`${selectedDistrict?.name ?? ''} 選區範圍`}
             className="city-coverage-card"
             data-testid="city-coverage-card"
           >
@@ -770,7 +735,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
             </p>
             <a
               className="secondary-link"
-              href={withBase('/districts/' + selectedCoverage.slug + '/')}
+              href={withBase(`/districts/${selectedCoverage.slug}/`)}
             >
               查看選區頁 →
             </a>
@@ -786,13 +751,13 @@ export default function CityExplorer({ districts, candidates }: Props) {
           </strong>
           <span className="city-scene-label__zone">
             {selectedAdmin
-              ? '行政區：' + selectedAdmin.name + '・六角迷你模型'
+              ? `行政區：${selectedAdmin.name}・六角迷你模型`
               : selectedCandidate
                 ? '追蹤人物：' +
                   selectedCandidate.person.displayName +
                   '・沿道路行走'
                 : !overview && selectedDistrict
-                  ? '選區：' + selectedDistrict.name + '・道路移動範圍'
+                  ? `選區：${selectedDistrict.name}・道路移動範圍`
                   : '高雄市 38 行政區・六角迷你城市'}
           </span>
           {selectedCoverage && (
@@ -854,7 +819,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
           </section>
         )}
 
-        <div className="city-dock">
+        <div className="city-dock city-dock--map-controls">
           <div className="city-dock__bar">
             <fieldset className="city-zones">
               <legend className="sr-only">城市視角</legend>
@@ -896,22 +861,6 @@ export default function CityExplorer({ districts, candidates }: Props) {
             >
               <span className="city-dock__toggle-kicker">選區</span>
               <strong>{selectedDistrict?.name ?? '選擇選舉區'}</strong>
-            </button>
-
-            <button
-              aria-controls="city-people-tray"
-              ref={peopleToggleRef}
-              aria-expanded={dockPanel === 'people'}
-              className="city-dock__toggle"
-              type="button"
-              onClick={() =>
-                setDockPanel((current) =>
-                  current === 'people' ? null : 'people',
-                )
-              }
-            >
-              <span className="city-dock__toggle-kicker">人物</span>
-              <strong>{visibleCandidates.length} 位</strong>
             </button>
           </div>
 
@@ -1029,38 +978,18 @@ export default function CityExplorer({ districts, candidates }: Props) {
               </div>
             </section>
           )}
-
-          {dockPanel === 'people' && (
-            <section
-              aria-labelledby="accessible-candidates-heading"
-              className="city-tray city-tray--people"
-              id="city-people-tray"
-            >
-              <div className="city-tray__head city-candidates__head">
-                <h3 id="accessible-candidates-heading">不用 3D 也能選擇人物</h3>
-                <span>{visibleCandidates.length} 位</span>
-                <button
-                  aria-label="關閉人物列表"
-                  className="city-tray__close"
-                  type="button"
-                  onClick={() => setDockPanel(null)}
-                >
-                  ×
-                </button>
-              </div>
-              <div className="accessible-candidates__list city-candidates__list">
-                {visibleCandidates.map((candidate) => (
-                  <CandidateButton
-                    active={candidate.candidacy.slug === selectedCandidateSlug}
-                    candidate={candidate}
-                    key={candidate.candidacy.id}
-                    onSelect={selectCandidate}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
         </div>
+
+        <CandidateBottomSheet
+          candidates={candidates}
+          districts={districts}
+          open={dockPanel === 'people'}
+          reducedMotion={reducedMotion}
+          triggerRef={peopleToggleRef}
+          onClose={() => setDockPanel(null)}
+          onOpen={() => setDockPanel('people')}
+          onSelectCandidate={selectCandidateById}
+        />
       </div>
 
       {selectedCandidate && (

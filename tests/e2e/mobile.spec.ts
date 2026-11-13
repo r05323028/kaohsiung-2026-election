@@ -9,9 +9,14 @@ test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet
     'true',
   );
   await page.locator('[aria-controls="city-people-tray"]').click();
-  await expect(
-    page.getByRole('heading', { name: '不用 3D 也能選擇人物' }),
-  ).toBeVisible();
+  await expect(page.getByRole('heading', { name: '所有候選人' })).toBeVisible();
+  const candidateSheet = page.locator('#city-people-tray');
+  await expect(candidateSheet.locator('.candidate-sheet__group')).toHaveCount(
+    16,
+  );
+  await expect(candidateSheet.locator('.candidate-sheet__card')).toHaveCount(
+    106,
+  );
   await page.getByRole('button', { name: /張靜/ }).first().click();
   await expect(page.locator('.profile-panel.is-open')).toBeVisible();
   await expect(page.locator('.profile-panel.is-open')).toContainText(

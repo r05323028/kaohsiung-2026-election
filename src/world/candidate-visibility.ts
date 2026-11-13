@@ -14,11 +14,16 @@ export type CandidateVisibilitySubject = Pick<
  */
 export type CandidateVisibilityScope =
   | { kind: 'all' }
+  | { kind: 'mayoral' }
   | { kind: 'admin-district'; adminDistrictIds: readonly string[] }
   | { kind: 'constituency'; districtSlug: string };
 
 export const ALL_CANDIDATE_VISIBILITY: CandidateVisibilityScope = {
   kind: 'all',
+};
+
+export const MAYORAL_CANDIDATE_VISIBILITY: CandidateVisibilityScope = {
+  kind: 'mayoral',
 };
 
 export function adminDistrictVisibilityScope(
@@ -80,6 +85,7 @@ export function isCandidateVisibleInFocus(
   scope: CandidateVisibilityScope,
 ): boolean {
   if (scope.kind === 'all') return true;
+  if (scope.kind === 'mayoral') return isMayoral(candidate);
   if (scope.kind === 'constituency') {
     return isCandidateVisibleInConstituencyFocus(candidate, scope.districtSlug);
   }

@@ -4,6 +4,7 @@ import {
   ALL_CANDIDATE_VISIBILITY,
   adminDistrictVisibilityScope,
   constituencyVisibilityScope,
+  MAYORAL_CANDIDATE_VISIBILITY,
   visibleCandidatesForFocus,
 } from './candidate-visibility';
 import { ADMIN_DISTRICTS } from './geography';
@@ -20,6 +21,7 @@ const official = candidateProfiles.filter(
   (candidate) => !candidate.candidacy.isDemo,
 );
 const scopes = [
+  MAYORAL_CANDIDATE_VISIBILITY,
   ALL_CANDIDATE_VISIBILITY,
   adminDistrictVisibilityScope(['E03']),
   adminDistrictVisibilityScope(['E04']),

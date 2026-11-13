@@ -402,14 +402,13 @@ export default function ActorLayer({
   );
   const visibleActors = useMemo(() => {
     const list = actors.filter((actor) => {
-      if (actor.slug === selectedCandidateSlug) return true;
       const candidate = candidateBySlug.get(actor.slug);
       return candidate
         ? isCandidateVisibleInFocus(candidate, visibilityScope)
         : false;
     });
     return list;
-  }, [actors, candidateBySlug, selectedCandidateSlug, visibilityScope]);
+  }, [actors, candidateBySlug, visibilityScope]);
   const actorStyles = useMemo(
     () =>
       new Map(
@@ -453,6 +452,7 @@ export default function ActorLayer({
     if (
       selected &&
       candidateBySlug.has(selected.slug) &&
+      visibleSlugSet.has(selected.slug) &&
       !list.includes(selected)
     ) {
       list.push(selected);
@@ -643,9 +643,10 @@ export default function ActorLayer({
     };
   }, [actorBySlug, overview, visibleActors, visibleSlugSet, visibilityScope]);
 
-  const selectedActor = selectedCandidateSlug
-    ? actorBySlug.get(selectedCandidateSlug)
-    : undefined;
+  const selectedActor =
+    selectedCandidateSlug && visibleSlugSet.has(selectedCandidateSlug)
+      ? actorBySlug.get(selectedCandidateSlug)
+      : undefined;
 
   useLayoutEffect(() => {
     fullAvatarSlugs.current = new Set(avatarActors.map((actor) => actor.slug));
@@ -785,9 +786,10 @@ export default function ActorLayer({
       shadows.instanceMatrix.needsUpdate = true;
     }
 
-    const selected = selectedCandidateSlug
-      ? actorBySlug.get(selectedCandidateSlug)
-      : undefined;
+    const selected =
+      selectedCandidateSlug && visibleSlugSet.has(selectedCandidateSlug)
+        ? actorBySlug.get(selectedCandidateSlug)
+        : undefined;
     const selectedPose = selected ? actorRenderPose(selected, alpha) : null;
     if (selectedRing.current && selectedPose) {
       selectedRing.current.position.set(

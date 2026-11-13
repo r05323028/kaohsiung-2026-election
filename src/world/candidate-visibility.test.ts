@@ -6,6 +6,7 @@ import {
   adminDistrictVisibilityScope,
   constituencyVisibilityScope,
   isCandidateVisibleInFocus,
+  MAYORAL_CANDIDATE_VISIBILITY,
   visibleCandidatesForFocus,
 } from './candidate-visibility';
 import { ADMIN_DISTRICTS } from './geography';
@@ -19,10 +20,34 @@ function candidatesFor(slug: string) {
 }
 
 describe('candidate visibility', () => {
-  it('keeps every official candidate visible in the full-city view', () => {
+  it('keeps every official candidate visible in the all-candidate scope', () => {
     expect(
       visibleCandidatesForFocus(official, ALL_CANDIDATE_VISIBILITY),
     ).toHaveLength(official.length);
+  });
+
+  it('shows only mayors in the city overview scope', () => {
+    const visible = visibleCandidatesForFocus(
+      official,
+      MAYORAL_CANDIDATE_VISIBILITY,
+    );
+    expect(visible).toHaveLength(
+      official.filter(
+        (candidate) => candidate.candidacy.electionType === 'mayoral',
+      ).length,
+    );
+    expect(
+      visible.every(
+        (candidate) => candidate.candidacy.electionType === 'mayoral',
+      ),
+    ).toBe(true);
+    expect(
+      official
+        .filter((candidate) => candidate.candidacy.electionType !== 'mayoral')
+        .every((candidate) =>
+          isCandidateVisibleInFocus(candidate, MAYORAL_CANDIDATE_VISIBILITY),
+        ),
+    ).toBe(false);
   });
 
   it('keeps the mayors and the fourth constituency in Zuoying focus', () => {

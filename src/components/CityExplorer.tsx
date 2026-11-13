@@ -19,10 +19,10 @@ import {
 } from '../data';
 import { withBase } from '../utils/paths';
 import {
-  ALL_CANDIDATE_VISIBILITY,
   adminDistrictVisibilityScope,
   type CandidateVisibilityScope,
   constituencyVisibilityScope,
+  MAYORAL_CANDIDATE_VISIBILITY,
   visibleCandidatesForFocus,
 } from '../world/candidate-visibility';
 import { electoralDistrictSlugForAdminName } from '../world/constituencies';
@@ -345,7 +345,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     if (selectedCandidate) {
       return selectedDistrict?.constituencyCoverage
         ? constituencyVisibilityScope(selectedDistrict.slug)
-        : ALL_CANDIDATE_VISIBILITY;
+        : MAYORAL_CANDIDATE_VISIBILITY;
     }
     if (selectedAdminId) {
       return adminDistrictVisibilityScope([selectedAdminId]);
@@ -353,7 +353,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     if (!overview && selectedDistrict?.constituencyCoverage) {
       return constituencyVisibilityScope(selectedDistrict.slug);
     }
-    return ALL_CANDIDATE_VISIBILITY;
+    return MAYORAL_CANDIDATE_VISIBILITY;
   }, [
     overview,
     selectedAdminId,

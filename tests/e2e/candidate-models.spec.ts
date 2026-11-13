@@ -30,7 +30,7 @@ type WorldWindow = Window & {
     walking: boolean;
   } | null;
   __kaohsiungCandidateVisibility?: () => {
-    scope: 'all' | 'admin-district' | 'constituency';
+    scope: 'all' | 'mayoral' | 'admin-district' | 'constituency';
     count: number;
     slugs: string[];
   };
@@ -87,7 +87,7 @@ test.describe('GLB candidate models', () => {
           return (
             value.model === 'glb' &&
             value.mode === 'overview' &&
-            value.overviewCount === 106 &&
+            value.overviewCount === 5 &&
             value.detailCount === 0 &&
             value.screenPx < value.enterPx
           );
@@ -98,7 +98,7 @@ test.describe('GLB candidate models', () => {
     const value = await lod(page);
     expect(value.model).toBe('glb');
     expect(value.mode).toBe('overview');
-    expect(value.overviewCount).toBe(106);
+    expect(value.overviewCount).toBe(5);
     expect(value.detailCount).toBe(0);
     expect(value.screenPx).toBeLessThan(value.enterPx);
     expect(value.enterPx).toBeGreaterThan(value.exitPx);
@@ -106,7 +106,7 @@ test.describe('GLB candidate models', () => {
     const marker = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungActorMarker?.(),
     );
-    expect(marker?.count).toBe(106);
+    expect(marker?.count).toBe(5);
     expect(
       modelResponses.some(
         (response) =>
@@ -140,13 +140,13 @@ test.describe('GLB candidate models', () => {
       });
 
     const before = await sample();
-    expect(Object.keys(before).length).toBe(106);
+    expect(Object.keys(before).length).toBe(5);
     await page.waitForTimeout(400);
     const after = await sample();
     const animated = Object.keys(before).filter(
       (slug) => before[slug] !== after[slug],
     );
-    expect(animated.length).toBeGreaterThan(20);
+    expect(animated.length).toBeGreaterThan(0);
   });
 
   test('forces the detailed model for a selected candidate at overview zoom', async ({
@@ -161,7 +161,7 @@ test.describe('GLB candidate models', () => {
           return (
             value.model === 'glb' &&
             value.detailCount >= 1 &&
-            value.detailCount + value.overviewCount === 106
+            value.detailCount + value.overviewCount === 5
           );
         },
         { timeout: 30_000 },
@@ -170,7 +170,7 @@ test.describe('GLB candidate models', () => {
     const value = await lod(page);
     expect(value.model).toBe('glb');
     expect(value.detailCount).toBeGreaterThanOrEqual(1);
-    expect(value.detailCount + value.overviewCount).toBe(106);
+    expect(value.detailCount + value.overviewCount).toBe(5);
     const scale = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungActorScale?.('zhang-jing-2026'),
     );
@@ -272,7 +272,7 @@ test.describe('GLB candidate models', () => {
       });
 
     const before = await sample();
-    expect(Object.keys(before.limbs)).toHaveLength(106);
+    expect(Object.keys(before.limbs)).toHaveLength(5);
     await page.waitForTimeout(500);
     const after = await sample();
     const moving = Object.keys(before.positions).filter(
@@ -281,7 +281,7 @@ test.describe('GLB candidate models', () => {
     const movingLimbs = Object.keys(before.limbs).filter(
       (slug) => before.limbs[slug] !== after.limbs[slug],
     );
-    expect(moving.length).toBeGreaterThan(20);
+    expect(moving.length).toBeGreaterThan(0);
     expect(movingLimbs).toHaveLength(0);
   });
 

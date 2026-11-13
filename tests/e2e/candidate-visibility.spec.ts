@@ -1,7 +1,7 @@
 import { expect, type Page, test } from '@playwright/test';
 
 type Visibility = {
-  scope: 'all' | 'admin-district' | 'constituency';
+  scope: 'all' | 'mayoral' | 'admin-district' | 'constituency';
   count: number;
   slugs: string[];
 };
@@ -82,6 +82,77 @@ async function focusAdmin(page: Page, name: string) {
 }
 
 test.describe('district-focused candidate visibility', () => {
+  test('transitions from the mayor-only overview to district focus and back', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openFocus(page, '/');
+
+    const explorer = page.getByTestId('city-explorer');
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'mayoral');
+    await expect(explorer).toHaveAttribute('data-candidate-count', '5');
+
+    const overview = await visibility(page);
+    expect(overview.scope).toBe('mayoral');
+    expect(overview.count).toBe(5);
+    expect(
+      overview.slugs.every(
+        (slug) =>
+          !slug.startsWith('kaohsiung-council-') &&
+          !slug.startsWith('kaohsiung-indigenous-'),
+      ),
+    ).toBe(true);
+
+    const hidden = await page.evaluate(() => {
+      const actor = (window as WorldWindow).__kaohsiungWorld
+        ?.actors()
+        .find((candidate) => candidate.role !== 'mayor');
+      return actor
+        ? {
+            slug: actor.slug,
+            screen: (window as WorldWindow).__kaohsiungActorScreenPosition?.(
+              actor.slug,
+            ),
+          }
+        : null;
+    });
+    expect(hidden?.slug).toBeTruthy();
+    expect(hidden?.screen).toBeNull();
+
+    await focusAdmin(page, '左營');
+    await expect(explorer).toHaveAttribute('data-scene-focus', /^admin-E03-/, {
+      timeout: 20_000,
+    });
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-scope',
+      'admin-district',
+    );
+    await expect(explorer).toHaveAttribute('data-candidate-count', '22');
+
+    await page
+      .locator('.city-admin-card .city-landmark-card__actions button')
+      .filter({ hasText: '回到全市' })
+      .click();
+    await expect(explorer).toHaveAttribute(
+      'data-scene-focus',
+      /^world-overview-/,
+      { timeout: 20_000 },
+    );
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'mayoral');
+    await expect(explorer).toHaveAttribute('data-candidate-count', '5');
+
+    const restored = await visibility(page);
+    expect(restored.scope).toBe('mayoral');
+    expect(restored.count).toBe(5);
+    expect(
+      restored.slugs.every(
+        (slug) =>
+          !slug.startsWith('kaohsiung-council-') &&
+          !slug.startsWith('kaohsiung-indigenous-'),
+      ),
+    ).toBe(true);
+  });
+
   test('uses official electoral scope across district focus and restores the full city', async ({
     page,
   }) => {
@@ -172,25 +243,23 @@ test.describe('district-focused candidate visibility', () => {
         timeout: 20_000,
       },
     );
-    await expect(explorer).toHaveAttribute('data-candidate-scope', 'all');
-    await expect(explorer).toHaveAttribute('data-candidate-count', '106');
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'mayoral');
+    await expect(explorer).toHaveAttribute('data-candidate-count', '5');
     await page.waitForTimeout(800);
 
     const fullCity = await visibility(page);
-    expect(fullCity.count).toBe(106);
+    expect(fullCity.count).toBe(5);
     expect(
-      fullCity.slugs.some((slug) => slug.startsWith('kaohsiung-council-01-')),
-    ).toBe(true);
-    expect(
-      fullCity.slugs.some((slug) => slug.startsWith('kaohsiung-council-04-')),
-    ).toBe(true);
-    expect(
-      fullCity.slugs.some((slug) => slug.startsWith('kaohsiung-council-07-')),
+      fullCity.slugs.every(
+        (slug) =>
+          !slug.startsWith('kaohsiung-council-') &&
+          !slug.startsWith('kaohsiung-indigenous-'),
+      ),
     ).toBe(true);
     const restoredMarker = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungActorMarker?.(),
     );
-    expect(restoredMarker?.count).toBe(106);
+    expect(restoredMarker?.count).toBe(5);
     const statsAfter = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungWorld?.stats(),
     );
@@ -264,12 +333,12 @@ test.describe('district-focused candidate visibility', () => {
       .click();
     await expect(page.getByTestId('city-explorer')).toHaveAttribute(
       'data-candidate-scope',
-      'all',
+      'mayoral',
       { timeout: 20_000 },
     );
     await expect(page.getByTestId('city-explorer')).toHaveAttribute(
       'data-candidate-count',
-      '106',
+      '5',
     );
   });
 

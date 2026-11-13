@@ -3894,7 +3894,7 @@ body.is-immersive .site-footer {
 
 .candidate-sheet__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 0.55rem;
 }
 

@@ -19,6 +19,7 @@ import {
 import CharacterAvatar from './CharacterAvatar';
 import {
   CANDIDATE_ACTOR_SCALE,
+  CANDIDATE_HEAD_TOP_WORLD,
   CANDIDATE_LOD,
   CANDIDATE_MODEL,
   CANDIDATE_MODEL_HEIGHT,
@@ -43,6 +44,12 @@ type ActorLayerProps = {
 /** World-space height of a full avatar (~0.46 units, toy scale). */
 export const ACTOR_AVATAR_SCALE = CANDIDATE_ACTOR_SCALE;
 const MARKER_GROUND_Y = 0.47;
+/**
+ * Anchor for the selected candidate's name badge: the crown of the normalized
+ * chibi. The badge itself is lifted off this point in CSS pixels so the gap
+ * stays constant at every orthographic zoom level.
+ */
+const MARKER_HEAD_TOP_Y = MARKER_GROUND_Y + CANDIDATE_HEAD_TOP_WORLD;
 // District focus can gather every candidate in a district. Ten full GLB
 // bodies keep the scene inside the software-WebGL test budget while the
 // overview GLB still renders a complete figure for everyone else.
@@ -508,6 +515,7 @@ export default function ActorLayer({
       __kaohsiungActorInstance?: (index: number) => string | null;
       __kaohsiungActorScreenPosition?: (
         slug: string,
+        anchor?: 'center' | 'head',
       ) => { x: number; y: number } | null;
       __kaohsiungActorOverviewLimb?: (
         pivot: OverviewPivot,
@@ -596,16 +604,24 @@ export default function ActorLayer({
       if (!node) return null;
       return [node.rotation.x, node.rotation.y, node.rotation.z];
     };
-    bridge.__kaohsiungActorScreenPosition = (slug: string) => {
+    bridge.__kaohsiungActorScreenPosition = (
+      slug: string,
+      anchor: 'center' | 'head' = 'center',
+    ) => {
       if (!visibleSlugSet.has(slug)) return null;
       const actor = actorBySlug.get(slug);
       const camera = cameraRef.current;
       const canvas = canvasRef.current;
       if (!actor || !camera || !canvas) return null;
       const pose = actorRenderPose(actor, frameAlpha.current);
+      const y =
+        anchor === 'head'
+          ? MARKER_HEAD_TOP_Y
+          : MARKER_GROUND_Y +
+            CANDIDATE_MODEL_HEIGHT * CANDIDATE_ACTOR_SCALE * 0.55;
       const screen = new THREE.Vector3(
         pose.position.x,
-        MARKER_GROUND_Y + CANDIDATE_MODEL_HEIGHT * CANDIDATE_ACTOR_SCALE * 0.55,
+        y,
         pose.position.z,
       ).project(camera);
       const rect = canvas.getBoundingClientRect();
@@ -786,7 +802,7 @@ export default function ActorLayer({
     if (selectedTag.current && selectedPose) {
       selectedTag.current.position.set(
         selectedPose.position.x,
-        0.8,
+        MARKER_HEAD_TOP_Y,
         selectedPose.position.z,
       );
     }
@@ -863,14 +879,12 @@ export default function ActorLayer({
       {selectedActor && (
         <group ref={selectedTag}>
           <Html
-            center
             position={[0, 0, 0]}
-            style={{ pointerEvents: 'none' }}
+            style={{ pointerEvents: 'none', display: 'flex' }}
             zIndexRange={[8, 0]}
           >
             <span className="actor-name-tag is-world">
               {selectedActor.displayName}
-              <small>模擬移動</small>
             </span>
           </Html>
         </group>

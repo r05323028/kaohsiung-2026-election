@@ -13,6 +13,15 @@ export const CANDIDATE_MODEL_HEIGHT = 1.1;
  */
 export const CANDIDATE_ACTOR_SCALE = 0.42;
 
+/**
+ * World-space height of a candidate's crown above the actor's ground plane.
+ * Every GLB is normalized to `CANDIDATE_MODEL_HEIGHT` and then scaled by
+ * `CANDIDATE_ACTOR_SCALE`, so a badge anchored here clears the head of every
+ * candidate without a per-model magic offset.
+ */
+export const CANDIDATE_HEAD_TOP_WORLD =
+  CANDIDATE_MODEL_HEIGHT * CANDIDATE_ACTOR_SCALE;
+
 export const CANDIDATE_MODEL = {
   basePath: '/models/kaohsiung_chibi_base.glb',
   overviewPath: '/models/kaohsiung_chibi_overview.glb',

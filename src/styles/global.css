@@ -3179,38 +3179,37 @@ body.is-immersive .site-footer {
 
 
 
-/* Selected simulated candidate tag. */
+/* Name badge for the selected candidate.
+   Html anchors the wrapper on the crown of the chibi, and this transform lifts
+   the pill off that anchor: -100% clears the badge's own height and the fixed
+   gap keeps the head edge readable at every zoom level. */
 .actor-name-tag {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.24rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  align-items: center;
+  border: 1px solid rgba(41, 72, 88, 0.16);
   border-radius: 999px;
-  background: rgba(41, 72, 88, 0.94);
-  box-shadow: 0 4px 12px rgba(41, 72, 88, 0.22);
-  color: #fff9f0;
-  padding: 0.22rem 0.5rem;
-  font-size: 0.65rem;
+  background: rgba(255, 252, 246, 0.96);
+  box-shadow: 0 3px 10px rgba(41, 72, 88, 0.2);
+  color: #294858;
+  padding: 0.24rem 0.56rem;
+  font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.02em;
-  line-height: 1.25;
+  line-height: 1.2;
   white-space: nowrap;
-  transform: translateY(-0.2rem);
-}
-
-.actor-name-tag small {
-  color: rgba(255, 249, 240, 0.66);
-  font-size: 0.48rem;
-  font-weight: 700;
+  transform: translate(-50%, calc(-100% - 0.5rem));
 }
 
 .actor-name-tag.is-world {
-  background: rgba(255, 252, 246, 0.94);
+  background: rgba(255, 252, 246, 0.96);
   color: #294858;
 }
 
-.actor-name-tag.is-world small {
-  color: rgba(41, 72, 88, 0.55);
+@media (max-width: 760px) {
+  .actor-name-tag {
+    padding: 0.22rem 0.5rem;
+    font-size: 0.64rem;
+  }
 }
 
 

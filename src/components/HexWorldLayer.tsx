@@ -15,10 +15,7 @@ import {
   landmarkWorldPosition,
 } from '../world/hex-landmarks';
 import { HEX_ROAD_GRAPH, ROAD_EDGES, roadNode } from '../world/road-graph';
-import {
-  TREE_RING_RADIUS,
-  landmarkFootprints,
-} from '../world/buildings';
+import { TREE_RING_RADIUS, landmarkFootprints } from '../world/buildings';
 import HexBuildings from './HexBuildings';
 import HeroLandmarkModel from './HeroLandmarks';
 

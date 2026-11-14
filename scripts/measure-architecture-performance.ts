@@ -110,10 +110,9 @@ for (const scenario of scenarios) {
       summary:
         samples.length > 0
           ? {
-              fpsMedian:
-                samples.map((s) => s.fps).sort((a, b) => a - b)[
-                  Math.floor(samples.length / 2)
-                ],
+              fpsMedian: samples.map((s) => s.fps).sort((a, b) => a - b)[
+                Math.floor(samples.length / 2)
+              ],
               fpsLow: Math.min(...samples.map((s) => s.fps)),
               drawCalls: samples[0]!.drawCalls,
               triangles: samples[0]!.triangles,
@@ -139,5 +138,8 @@ const output = {
     'Headless Chromium in this environment renders WebGL in software (SwiftShader). FPS is a lower-bound smoke measurement, not target-hardware performance.',
   profiles,
 };
-writeFileSync(join(outDir, label + '.json'), JSON.stringify(output, null, 2) + '\n');
+writeFileSync(
+  join(outDir, label + '.json'),
+  JSON.stringify(output, null, 2) + '\n',
+);
 console.log('wrote', join(outDir, label + '.json'));

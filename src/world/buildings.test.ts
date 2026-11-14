@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from 'vitest';
 import {
   BUILDING_BASE_Y,
   BUILDING_DETAIL_ZOOM,
@@ -13,22 +13,22 @@ import {
   landmarkFootprints,
   layoutTileBuildings,
   maxSilhouetteHeight,
-} from "./buildings";
-import { HEX_TILES } from "./hex";
+} from './buildings';
+import { HEX_TILES } from './hex';
 
 const buildings = generateCityBuildings();
 const tilesById = new Map(HEX_TILES.map((tile) => [tile.id, tile]));
 const ARCHETYPES = [
-  "townhouse",
-  "arcadeShophouse",
-  "apartment",
-  "cornerCommercial",
-  "modernBlock",
-  "warehouse",
+  'townhouse',
+  'arcadeShophouse',
+  'apartment',
+  'cornerCommercial',
+  'modernBlock',
+  'warehouse',
 ] as const;
 
-describe("city building layout", () => {
-  it("is deterministic across generations", () => {
+describe('city building layout', () => {
+  it('is deterministic across generations', () => {
     expect(generateCityBuildings()).toEqual(buildings);
     for (const tile of HEX_TILES) {
       expect(buildingsForTile(tile)).toEqual(layoutTileBuildings(tile));
@@ -56,7 +56,7 @@ describe("city building layout", () => {
     }
   });
 
-  it("keeps every silhouette below the far ring road", () => {
+  it('keeps every silhouette below the far ring road', () => {
     for (const spec of buildings) {
       const limit = maxSilhouetteHeight(spec.radius + spec.depth / 2);
       expect(spec.height, spec.id).toBeLessThanOrEqual(limit + 0.001);
@@ -70,7 +70,7 @@ describe("city building layout", () => {
     }
   });
 
-  it("supports all six archetypes with valid variants", () => {
+  it('supports all six archetypes with valid variants', () => {
     const stats = cityBuildingStats(buildings);
     for (const archetype of ARCHETYPES) {
       expect(stats.byArchetype[archetype], archetype).toBeGreaterThan(0);
@@ -78,10 +78,10 @@ describe("city building layout", () => {
     expect(stats.total).toBe(buildings.length);
     for (const spec of buildings) {
       expect(ARCHETYPES).toContain(spec.archetype);
-      expect(["gable", "hip", "flat", "sawtooth"]).toContain(spec.roof);
+      expect(['gable', 'hip', 'flat', 'sawtooth']).toContain(spec.roof);
       expect(spec.windowColumns).toBeGreaterThanOrEqual(1);
       expect(spec.windowColumns).toBeLessThanOrEqual(5);
-      if (spec.archetype === "warehouse") {
+      if (spec.archetype === 'warehouse') {
         expect(spec.floors).toBe(1);
         expect(spec.floorHeight).toBeGreaterThanOrEqual(0.34);
       }
@@ -104,28 +104,32 @@ describe("city building layout", () => {
               },
               blocker,
             ),
-            spec.id + " vs " + blocker.landmarkId,
+            spec.id + ' vs ' + blocker.landmarkId,
           ).toBe(false);
         }
       }
     }
   });
 
-  it("gives Zuoying and Nanzih distinct architectural characters", () => {
-    expect(buildingProfileForDistrict("E03").character).toBe("historic");
-    expect(buildingProfileForDistrict("E04").character).toBe("industrial");
+  it('gives Zuoying and Nanzih distinct architectural characters', () => {
+    expect(buildingProfileForDistrict('E03').character).toBe('historic');
+    expect(buildingProfileForDistrict('E04').character).toBe('industrial');
 
-    const zuoying = buildings.filter((spec) => spec.districtId === "E03");
-    const nanzih = buildings.filter((spec) => spec.districtId === "E04");
+    const zuoying = buildings.filter((spec) => spec.districtId === 'E03');
+    const nanzih = buildings.filter((spec) => spec.districtId === 'E04');
     expect(zuoying.length).toBeGreaterThan(0);
     expect(nanzih.length).toBeGreaterThan(0);
-    expect(zuoying.some((spec) => spec.archetype === "townhouse")).toBe(true);
-    expect(zuoying.some((spec) => spec.archetype === "arcadeShophouse")).toBe(true);
-    expect(nanzih.some((spec) => spec.archetype === "warehouse")).toBe(true);
-    expect(nanzih.some((spec) => spec.roof === "sawtooth" || spec.roof === "flat")).toBe(true);
+    expect(zuoying.some((spec) => spec.archetype === 'townhouse')).toBe(true);
+    expect(zuoying.some((spec) => spec.archetype === 'arcadeShophouse')).toBe(
+      true,
+    );
+    expect(nanzih.some((spec) => spec.archetype === 'warehouse')).toBe(true);
+    expect(
+      nanzih.some((spec) => spec.roof === 'sawtooth' || spec.roof === 'flat'),
+    ).toBe(true);
   });
 
-  it("keeps the camera-facing arc open so landmarks stay readable", () => {
+  it('keeps the camera-facing arc open so landmarks stay readable', () => {
     const cameraAzimuth = Math.atan2(18, 22);
     const angleGap = (angle: number) => {
       const wrapped = Math.atan2(
@@ -144,20 +148,20 @@ describe("city building layout", () => {
   });
 });
 
-describe("building detail selection", () => {
-  it("Selects LOD by projected zoom, not camera distance", () => {
-    expect(buildingDetailForZoom(Number.NaN)).toBe("low");
-    expect(buildingDetailForZoom(0)).toBe("low");
-    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.medium - 1)).toBe("low");
-    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.medium)).toBe("medium");
-    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.high - 1)).toBe("medium");
-    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.high)).toBe("high");
+describe('building detail selection', () => {
+  it('Selects LOD by projected zoom, not camera distance', () => {
+    expect(buildingDetailForZoom(Number.NaN)).toBe('low');
+    expect(buildingDetailForZoom(0)).toBe('low');
+    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.medium - 1)).toBe('low');
+    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.medium)).toBe('medium');
+    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.high - 1)).toBe('medium');
+    expect(buildingDetailForZoom(BUILDING_DETAIL_ZOOM.high)).toBe('high');
   });
 
-  it("caps fine detail on low-quality hardware but keeps facades when close", () => {
-    expect(buildingDetailForZoom(20, "low")).toBe("low");
-    expect(buildingDetailForZoom(100, "low")).toBe("medium");
-    expect(buildingDetailForZoom(400, "low")).toBe("medium");
-    expect(buildingDetailForZoom(400, "medium")).toBe("high");
+  it('caps fine detail on low-quality hardware but keeps facades when close', () => {
+    expect(buildingDetailForZoom(20, 'low')).toBe('low');
+    expect(buildingDetailForZoom(100, 'low')).toBe('medium');
+    expect(buildingDetailForZoom(400, 'low')).toBe('medium');
+    expect(buildingDetailForZoom(400, 'medium')).toBe('high');
   });
 });

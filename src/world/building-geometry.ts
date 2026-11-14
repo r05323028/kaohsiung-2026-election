@@ -148,9 +148,11 @@ class Frame {
 
   toWorld(localX: number, localY: number, localZ: number): Vec3 {
     return {
-      x: this.spec.originX + this.spec.x + localX * this.cos + localZ * this.sin,
+      x:
+        this.spec.originX + this.spec.x + localX * this.cos + localZ * this.sin,
       y: this.spec.baseY + localY,
-      z: this.spec.originZ + this.spec.z - localX * this.sin + localZ * this.cos,
+      z:
+        this.spec.originZ + this.spec.z - localX * this.sin + localZ * this.cos,
     };
   }
 
@@ -214,7 +216,13 @@ class Frame {
     }
     for (let index = 0; index < segments; index += 1) {
       const next = (index + 1) % segments;
-      batch.addQuad(bottom[index]!, bottom[next]!, top[next]!, top[index]!, color);
+      batch.addQuad(
+        bottom[index]!,
+        bottom[next]!,
+        top[next]!,
+        top[index]!,
+        color,
+      );
     }
     const center = this.toWorld(x, y + height, z);
     for (let index = 0; index < segments; index += 1) {
@@ -292,8 +300,18 @@ class Frame {
     const backLeft = this.toWorld(x - w, y + rise, z - d);
     const backRight = this.toWorld(x + w, y + rise, z - d);
     batch.addQuad(frontRight, frontLeft, backLeft, backRight, color);
-    batch.addTriangle(frontLeft, backLeft, this.toWorld(x - w, y, z - d), color);
-    batch.addTriangle(frontRight, this.toWorld(x + w, y, z - d), backRight, color);
+    batch.addTriangle(
+      frontLeft,
+      backLeft,
+      this.toWorld(x - w, y, z - d),
+      color,
+    );
+    batch.addTriangle(
+      frontRight,
+      this.toWorld(x + w, y, z - d),
+      backRight,
+      color,
+    );
   }
 }
 
@@ -371,9 +389,29 @@ function addWindow(
     return [-spec.width / 2 - outward, centerY, centerX];
   };
   const reveal = surface(offset);
-  put(context, 'wall', trim, width + 0.024, height + 0.022, 0.012, ...reveal, 0, yaw);
+  put(
+    context,
+    'wall',
+    trim,
+    width + 0.024,
+    height + 0.022,
+    0.012,
+    ...reveal,
+    0,
+    yaw,
+  );
   const shadow = surface(offset + 0.006);
-  put(context, 'wall', '#6d6a60', width + 0.008, height + 0.006, 0.01, ...shadow, 0, yaw);
+  put(
+    context,
+    'wall',
+    '#6d6a60',
+    width + 0.008,
+    height + 0.006,
+    0.01,
+    ...shadow,
+    0,
+    yaw,
+  );
   const pane = surface(offset + 0.01);
   put(context, 'glass', glass, width, height, 0.008, ...pane, 0, yaw);
   if (context.phase === 2) {
@@ -426,10 +464,50 @@ function addParapet(context: DetailContext, hex: string): void {
   const height = 0.032;
   const thickness = 0.02;
   const top = spec.bodyHeight + height / 2;
-  put(context, 'wall', hex, w, height, thickness, 0, top, mass.offsetZ - mass.depth / 2);
-  put(context, 'wall', hex, w, height, thickness, 0, top, mass.offsetZ + mass.depth / 2);
-  put(context, 'wall', hex, thickness, height, d, -mass.width / 2, top, mass.offsetZ);
-  put(context, 'wall', hex, thickness, height, d, mass.width / 2, top, mass.offsetZ);
+  put(
+    context,
+    'wall',
+    hex,
+    w,
+    height,
+    thickness,
+    0,
+    top,
+    mass.offsetZ - mass.depth / 2,
+  );
+  put(
+    context,
+    'wall',
+    hex,
+    w,
+    height,
+    thickness,
+    0,
+    top,
+    mass.offsetZ + mass.depth / 2,
+  );
+  put(
+    context,
+    'wall',
+    hex,
+    thickness,
+    height,
+    d,
+    -mass.width / 2,
+    top,
+    mass.offsetZ,
+  );
+  put(
+    context,
+    'wall',
+    hex,
+    thickness,
+    height,
+    d,
+    mass.width / 2,
+    top,
+    mass.offsetZ,
+  );
 }
 
 function addRoof(context: DetailContext): void {
@@ -712,7 +790,17 @@ function addGroundFloor(context: DetailContext): void {
     );
   }
   // Door.
-  put(context, 'wall', '#5c5950', 0.075, 0.165, 0.018, doorX, 0.085, fz - 0.006);
+  put(
+    context,
+    'wall',
+    '#5c5950',
+    0.075,
+    0.165,
+    0.018,
+    doorX,
+    0.085,
+    fz - 0.006,
+  );
   if (context.phase === 2) {
     put(
       context,
@@ -947,11 +1035,17 @@ function addFacadeDetail(context: DetailContext): void {
 
   // Side windows only on the camera-facing side: the other side is never seen.
   const sideColumns = Math.max(1, Math.round(spec.depth / 0.09));
-  const sideWindowWidth = Math.min((spec.depth - 0.05) / sideColumns * 0.55, 0.075);
+  const sideWindowWidth = Math.min(
+    ((spec.depth - 0.05) / sideColumns) * 0.55,
+    0.075,
+  );
   for (let floor = 1; floor < topFloor; floor += 1) {
     const y = floor * fh + fh * 0.55;
     for (let column = 0; column < Math.min(sideColumns, 3); column += 1) {
-      const z = -spec.depth / 2 + 0.02 + (spec.depth - 0.04) * ((column + 0.5) / Math.min(sideColumns, 3));
+      const z =
+        -spec.depth / 2 +
+        0.02 +
+        (spec.depth - 0.04) * ((column + 0.5) / Math.min(sideColumns, 3));
       addWindow(
         context,
         visibleSide,
@@ -1140,7 +1234,8 @@ function addBalconyRailings(context: DetailContext): void {
   const fh = spec.floorHeight;
   const frontZ = -spec.depth / 2;
   const cell = (spec.width - 0.06) / spec.windowColumns;
-  const x = -spec.width / 2 + 0.03 + cell * (Math.floor(spec.windowColumns / 2) + 0.5);
+  const x =
+    -spec.width / 2 + 0.03 + cell * (Math.floor(spec.windowColumns / 2) + 0.5);
   const topFloor = spec.setback ? spec.floors - 1 : spec.floors;
   for (let floor = 1; floor < topFloor; floor += 1) {
     put(

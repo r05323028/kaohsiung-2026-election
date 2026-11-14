@@ -113,9 +113,25 @@ const HISTORIC: BuildingProfile = {
   balconyChance: 0.35,
   signChance: 0.5,
   waterTankChance: 0.72,
-  wallColors: ['#e9cda1', '#e5c194', '#ddc9a9', '#e8d8bd', '#cfe0c9', '#cfdde2', '#e9d2c8', '#d8bf9f'],
+  wallColors: [
+    '#e9cda1',
+    '#e5c194',
+    '#ddc9a9',
+    '#e8d8bd',
+    '#cfe0c9',
+    '#cfdde2',
+    '#e9d2c8',
+    '#d8bf9f',
+  ],
   trimColors: ['#f3e9d6', '#dfd0b8', '#c4ab8a', '#b0977c'],
-  roofColors: ['#b96a52', '#c47c5e', '#a9614d', '#8f9a94', '#7d9290', '#a08575'],
+  roofColors: [
+    '#b96a52',
+    '#c47c5e',
+    '#a9614d',
+    '#8f9a94',
+    '#7d9290',
+    '#a08575',
+  ],
   glassColors: ['#6f9297', '#7ba0a2', '#5f8189'],
   metalColors: ['#b3b3a6', '#9aa198', '#8b9490'],
   signColors: ['#b8574a', '#3f7f7a', '#c99346', '#5b7396', '#e6ddc9'],
@@ -139,9 +155,25 @@ const DENSE_URBAN: BuildingProfile = {
   balconyChance: 0.6,
   signChance: 0.55,
   waterTankChance: 0.6,
-  wallColors: ['#e9dfc9', '#ded9cb', '#d7d2c4', '#eee6d6', '#d2cec0', '#e2d3bd', '#dfe4dc', '#e6dadd'],
+  wallColors: [
+    '#e9dfc9',
+    '#ded9cb',
+    '#d7d2c4',
+    '#eee6d6',
+    '#d2cec0',
+    '#e2d3bd',
+    '#dfe4dc',
+    '#e6dadd',
+  ],
   trimColors: ['#f2ebdd', '#dcd6c8', '#c7c1b2', '#bcae98'],
-  roofColors: ['#9a9c94', '#8c918c', '#b06e57', '#a4a79f', '#7f8783', '#8c9ba0'],
+  roofColors: [
+    '#9a9c94',
+    '#8c918c',
+    '#b06e57',
+    '#a4a79f',
+    '#7f8783',
+    '#8c9ba0',
+  ],
   glassColors: ['#71949c', '#658791', '#84a4ab'],
   metalColors: ['#b6b9b3', '#9ba19e', '#8e9794'],
   signColors: ['#c06050', '#4a837e', '#c79a51', '#5b7ba0', '#f0e7d5'],
@@ -165,9 +197,24 @@ const INDUSTRIAL: BuildingProfile = {
   balconyChance: 0.4,
   signChance: 0.35,
   waterTankChance: 0.45,
-  wallColors: ['#d9dad2', '#ced2cd', '#c8d2d4', '#dfe0d6', '#c3cecc', '#e4e0d3', '#d8cdbd'],
+  wallColors: [
+    '#d9dad2',
+    '#ced2cd',
+    '#c8d2d4',
+    '#dfe0d6',
+    '#c3cecc',
+    '#e4e0d3',
+    '#d8cdbd',
+  ],
   trimColors: ['#e9ece6', '#c9cfca', '#b9c1bd', '#a8b0ad'],
-  roofColors: ['#8fa2a6', '#7d9298', '#9aa89f', '#b0b6ae', '#8d8579', '#b9765c'],
+  roofColors: [
+    '#8fa2a6',
+    '#7d9298',
+    '#9aa89f',
+    '#b0b6ae',
+    '#8d8579',
+    '#b9765c',
+  ],
   glassColors: ['#748f96', '#66828b', '#86a1a6'],
   metalColors: ['#8fa4a8', '#7c9298', '#9aa8a4', '#b6b9b0'],
   signColors: ['#587f83', '#c08a4e', '#5a7392', '#a9b0a6', '#ece6d6'],
@@ -191,9 +238,23 @@ const HARBOR: BuildingProfile = {
   balconyChance: 0.3,
   signChance: 0.35,
   waterTankChance: 0.7,
-  wallColors: ['#ecdfc2', '#e3d1b2', '#dacdb4', '#e6ddcb', '#d1c3a9', '#dfe4dd'],
+  wallColors: [
+    '#ecdfc2',
+    '#e3d1b2',
+    '#dacdb4',
+    '#e6ddcb',
+    '#d1c3a9',
+    '#dfe4dd',
+  ],
   trimColors: ['#f2e8d5', '#ddd0b9', '#c0af94'],
-  roofColors: ['#7d949b', '#8ea6a6', '#b06a55', '#9aa9a0', '#a97a5f', '#6f858c'],
+  roofColors: [
+    '#7d949b',
+    '#8ea6a6',
+    '#b06a55',
+    '#9aa9a0',
+    '#a97a5f',
+    '#6f858c',
+  ],
   glassColors: ['#71959a', '#83a5a7', '#64878f'],
   metalColors: ['#8ea3a6', '#7c9295', '#a9b3ac'],
   signColors: ['#c26a52', '#4d8387', '#c79b55', '#6b86a5', '#eee4d0'],
@@ -217,9 +278,23 @@ const RURAL: BuildingProfile = {
   balconyChance: 0.18,
   signChance: 0.22,
   waterTankChance: 0.65,
-  wallColors: ['#ecdcbe', '#e2ceaa', '#d9c29c', '#efe5d0', '#d6c5a9', '#cfa98d'],
+  wallColors: [
+    '#ecdcbe',
+    '#e2ceaa',
+    '#d9c29c',
+    '#efe5d0',
+    '#d6c5a9',
+    '#cfa98d',
+  ],
   trimColors: ['#f2e9d7', '#ded1ba', '#c2b093'],
-  roofColors: ['#a9614d', '#b7705a', '#8b7a6b', '#9c6f58', '#7f8478', '#98705c'],
+  roofColors: [
+    '#a9614d',
+    '#b7705a',
+    '#8b7a6b',
+    '#9c6f58',
+    '#7f8478',
+    '#98705c',
+  ],
   glassColors: ['#78999a', '#89a6a3', '#68878a'],
   metalColors: ['#a8aea6', '#8e9892', '#b3b5a9'],
   signColors: ['#b96b52', '#4c7f72', '#c39a55', '#6d8197'],
@@ -291,7 +366,9 @@ const PROFILE_BY_DISTRICT: Record<string, BuildingProfile> = {
   E38: MOUNTAIN,
 };
 
-export function buildingProfileForDistrict(districtId: string): BuildingProfile {
+export function buildingProfileForDistrict(
+  districtId: string,
+): BuildingProfile {
   return PROFILE_BY_DISTRICT[districtId] ?? DENSE_URBAN;
 }
 
@@ -417,7 +494,12 @@ const ARCHETYPE_DEPTH: Record<BuildingArchetype, readonly [number, number]> = {
  */
 const SIGNATURE_ARCHETYPES: Record<UrbanCharacter, BuildingArchetype[]> = {
   historic: ['townhouse', 'arcadeShophouse', 'townhouse', 'apartment'],
-  denseUrban: ['arcadeShophouse', 'apartment', 'cornerCommercial', 'modernBlock'],
+  denseUrban: [
+    'arcadeShophouse',
+    'apartment',
+    'cornerCommercial',
+    'modernBlock',
+  ],
   industrial: ['warehouse', 'modernBlock', 'warehouse', 'apartment'],
   harbor: ['warehouse', 'townhouse', 'arcadeShophouse', 'cornerCommercial'],
   rural: ['townhouse', 'townhouse', 'warehouse', 'arcadeShophouse'],
@@ -435,8 +517,14 @@ export function footprintIntersectsCircle(
   const sin = Math.sin(building.rotationY);
   const localX = dx * cos - dz * sin;
   const localZ = dx * sin + dz * cos;
-  const clampedX = Math.max(-building.width / 2, Math.min(building.width / 2, localX));
-  const clampedZ = Math.max(-building.depth / 2, Math.min(building.depth / 2, localZ));
+  const clampedX = Math.max(
+    -building.width / 2,
+    Math.min(building.width / 2, localX),
+  );
+  const clampedZ = Math.max(
+    -building.depth / 2,
+    Math.min(building.depth / 2, localZ),
+  );
   return Math.hypot(localX - clampedX, localZ - clampedZ) < circle.radius;
 }
 
@@ -444,7 +532,10 @@ function pickRoof(
   random: () => number,
   archetype: BuildingArchetype,
 ): BuildingRoofKind {
-  const options: Record<BuildingArchetype, ReadonlyArray<readonly [BuildingRoofKind, number]>> = {
+  const options: Record<
+    BuildingArchetype,
+    ReadonlyArray<readonly [BuildingRoofKind, number]>
+  > = {
     townhouse: [
       ['gable', 0.55],
       ['hip', 0.22],
@@ -601,7 +692,9 @@ export function layoutTileBuildings(tile: HexTile): BuildingSpec[] {
   const front = CAMERA_AZIMUTH;
   const start = front + FRONT_CLEARING_RADIANS;
   const end = front + Math.PI * 2 - FRONT_CLEARING_RADIANS;
-  const targetCount = Math.round((6 + profile.density * 6) * (0.85 + random() * 0.3));
+  const targetCount = Math.round(
+    (6 + profile.density * 6) * (0.85 + random() * 0.3),
+  );
 
   let angle = start + between(random, 0, 0.05);
   let attempts = 0;

@@ -33,7 +33,10 @@ const BUCKET_MATERIALS = {
   }),
 } as const;
 
-const INDEX_COUNT: Record<BuildingDetail, (bucket: keyof typeof BUCKET_MATERIALS) => number> = {
+const INDEX_COUNT: Record<
+  BuildingDetail,
+  (bucket: keyof typeof BUCKET_MATERIALS) => number
+> = {
   low: (bucket) => BUILDINGS.buckets[bucket].lowIndexCount,
   medium: (bucket) => BUILDINGS.buckets[bucket].mediumIndexCount,
   high: (bucket) => BUILDINGS.buckets[bucket].highIndexCount,

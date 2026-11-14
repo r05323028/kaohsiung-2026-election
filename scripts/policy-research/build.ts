@@ -18,7 +18,8 @@ const SUMMARY_PATH = 'data/policy-research/2026/summary.json';
 const PUBLISHED_PATH = 'data/published/2026/candidate-policies.json';
 const EXTRACTION_DIR = 'data/policy-research/2026/extraction';
 const VERIFICATION_DIR = 'data/policy-research/2026/verification';
-const ENRICHMENT_PATH = 'data/policy-research/2026/enrichment/verified-enrichment.json';
+const ENRICHMENT_PATH =
+  'data/policy-research/2026/enrichment/verified-enrichment.json';
 
 type RosterCandidate = {
   id: string;
@@ -90,7 +91,6 @@ type EnrichmentDataset = {
   verificationDecisions: Record<string, unknown>[];
 };
 
-
 function readJson<T>(relative: string): T {
   try {
     return JSON.parse(readFileSync(path.join(ROOT, relative), 'utf8')) as T;
@@ -131,7 +131,9 @@ function normalizeContext(value: string): SeedPolicy['policyContext'] {
     'public-record-achievement',
     'context-unknown',
   ];
-  return (allowed.includes(value) ? value : 'context-unknown') as SeedPolicy['policyContext'];
+  return (
+    allowed.includes(value) ? value : 'context-unknown'
+  ) as SeedPolicy['policyContext'];
 }
 
 function main(): void {
@@ -149,7 +151,9 @@ function main(): void {
         roster.candidates.length,
     );
   }
-  const rosterById = new Map(roster.candidates.map((candidate) => [candidate.id, candidate]));
+  const rosterById = new Map(
+    roster.candidates.map((candidate) => [candidate.id, candidate]),
+  );
   for (const row of enrichment.candidates) {
     const candidate = rosterById.get(String(row['candidateId']));
     if (
@@ -157,9 +161,12 @@ function main(): void {
       row['displayName'] !== candidate.displayName ||
       row['districtId'] !== candidate.districtId ||
       row['electionType'] !== candidate.electionType ||
-      row['politicalParty'] !== (candidate as { politicalParty?: string }).politicalParty
+      row['politicalParty'] !==
+        (candidate as { politicalParty?: string }).politicalParty
     ) {
-      throw new Error('Enrichment candidate identity mismatch: ' + String(row['candidateId']));
+      throw new Error(
+        'Enrichment candidate identity mismatch: ' + String(row['candidateId']),
+      );
     }
   }
 
@@ -167,15 +174,27 @@ function main(): void {
   const sources: Record<string, unknown>[] = [...seed.sourceSnapshots];
   const newsSourceByRawPath = new Map<string, string>();
   for (const item of news.items) {
-    if (item.retrievalStatus !== 'retrieved' || !item.rawPath || !item.resolvedUrl) continue;
+    if (
+      item.retrievalStatus !== 'retrieved' ||
+      !item.rawPath ||
+      !item.resolvedUrl
+    )
+      continue;
     const sourceId = 'policy-source-news-' + slugFor(item.rawPath);
     const existingSourceId = newsSourceByRawPath.get(item.rawPath);
     if (existingSourceId) {
       const existing = sources.find(
-        (source) => (source as { sourceId?: string }).sourceId === existingSourceId,
+        (source) =>
+          (source as { sourceId?: string }).sourceId === existingSourceId,
       ) as { candidateIds?: string[] } | undefined;
-      if (existing && !(existing.candidateIds ?? []).includes(item.candidateId)) {
-        existing.candidateIds = [...(existing.candidateIds ?? []), item.candidateId];
+      if (
+        existing &&
+        !(existing.candidateIds ?? []).includes(item.candidateId)
+      ) {
+        existing.candidateIds = [
+          ...(existing.candidateIds ?? []),
+          item.candidateId,
+        ];
       }
       continue;
     }
@@ -196,7 +215,9 @@ function main(): void {
       retrievedAt: '2026-11-12T00:00:00.000Z',
       candidateIds: [item.candidateId],
       identityStatus: 'resolved',
-      identityBasis: ['新聞報導以姓名指稱候選人，選區與職稱由報導內容確認為高雄市選舉候選人。'],
+      identityBasis: [
+        '新聞報導以姓名指稱候選人，選區與職稱由報導內容確認為高雄市選舉候選人。',
+      ],
       note: '新聞全文以公開網址擷取並保留原始內容；作為候選人表態之報導來源。',
     });
   }
@@ -228,23 +249,34 @@ function main(): void {
       claimIds: ['claim-' + policy.policyId],
       evidenceIds: [policy.evidenceId],
     });
-    const seedEvidence = seed.evidence.find((item) => item.policyId === policy.policyId);
+    const seedEvidence = seed.evidence.find(
+      (item) => item.policyId === policy.policyId,
+    );
     if (seedEvidence) evidence.push(seedEvidence);
     policyIdByKey.set(policy.policyId, policy.policyId);
   }
 
   // ---- extracted policies ------------------------------------------------
   const extractionFiles = listJson(EXTRACTION_DIR, /^batch-\d+\.json$/);
-  const candidateById = new Map(roster.candidates.map((candidate) => [candidate.id, candidate]));
+  const candidateById = new Map(
+    roster.candidates.map((candidate) => [candidate.id, candidate]),
+  );
   const districtLabel = new Map<string, string>();
   for (const district of roster.districts) {
-    districtLabel.set(district.id, district.label ?? district.name ?? district.id);
+    districtLabel.set(
+      district.id,
+      district.label ?? district.name ?? district.id,
+    );
   }
 
-  type ExtractionRecord = ReturnType<typeof validateExtractionBatch>['records'][number];
+  type ExtractionRecord = ReturnType<
+    typeof validateExtractionBatch
+  >['records'][number];
   const extracted: ExtractionRecord[] = [];
   for (const file of extractionFiles) {
-    const batch = validateExtractionBatch(readJson<unknown>(EXTRACTION_DIR + '/' + file));
+    const batch = validateExtractionBatch(
+      readJson<unknown>(EXTRACTION_DIR + '/' + file),
+    );
     for (const record of batch.records) extracted.push(record);
   }
 
@@ -265,11 +297,14 @@ function main(): void {
     }
     usedResearchIds.add(record.researchId);
     const sourceId = newsSourceByRawPath.get(record.excerptSourcePath);
-    if (!sourceId) throw new Error('Missing news source for ' + record.excerptSourcePath);
+    if (!sourceId)
+      throw new Error('Missing news source for ' + record.excerptSourcePath);
     const policyId = 'policy-2026-' + record.researchId;
     const evidenceId = 'evidence-2026-' + record.researchId;
     const context = record.policyContext;
-    const category = categorySet.has(record.category) ? record.category : 'other';
+    const category = categorySet.has(record.category)
+      ? record.category
+      : 'other';
     policies.push({
       policyId,
       candidateId: record.candidateId,
@@ -314,7 +349,10 @@ function main(): void {
   // ---- independently audited enrichment policies ------------------------
   for (const record of enrichment.newPolicies) {
     const candidate = candidateById.get(String(record['candidateId']));
-    if (!candidate) throw new Error('Unknown enrichment candidate ' + String(record['candidateId']));
+    if (!candidate)
+      throw new Error(
+        'Unknown enrichment candidate ' + String(record['candidateId']),
+      );
     const policyId = String(record['policyId']);
     if (policies.some((policy) => String(policy['policyId']) === policyId)) {
       throw new Error('Duplicate enrichment policy ' + policyId);
@@ -322,9 +360,10 @@ function main(): void {
     const evidenceId = String(record['evidenceId']);
     const sourceId = String(record['sourceId']);
     const categories = record['categories'];
-    const category = Array.isArray(categories) && categorySet.has(String(categories[0]))
-      ? String(categories[0])
-      : 'other';
+    const category =
+      Array.isArray(categories) && categorySet.has(String(categories[0]))
+        ? String(categories[0])
+        : 'other';
     const context = normalizeContext(String(record['policyContext']));
     policies.push({
       policyId,
@@ -351,7 +390,9 @@ function main(): void {
       duplicateOf: null,
       conflictIds: [],
     });
-    const source = sources.find((item) => String(item['sourceId']) === sourceId);
+    const source = sources.find(
+      (item) => String(item['sourceId']) === sourceId,
+    );
     evidence.push({
       evidenceId,
       policyId,
@@ -369,7 +410,9 @@ function main(): void {
   const verificationFiles = listJson(VERIFICATION_DIR, /^verify-\d+\.json$/);
   const decisions = new Map<string, Record<string, unknown>>();
   for (const file of verificationFiles) {
-    const batch = validateVerificationBatch(readJson<unknown>(VERIFICATION_DIR + '/' + file));
+    const batch = validateVerificationBatch(
+      readJson<unknown>(VERIFICATION_DIR + '/' + file),
+    );
     for (const decision of batch.decisions) {
       const policyId =
         'policyId' in decision && typeof decision.policyId === 'string'
@@ -380,19 +423,27 @@ function main(): void {
     }
   }
 
-  const seedVerificationFiles = listJson(VERIFICATION_DIR, /^seed-verify-\d+\.json$/);
+  const seedVerificationFiles = listJson(
+    VERIFICATION_DIR,
+    /^seed-verify-\d+\.json$/,
+  );
   for (const file of seedVerificationFiles) {
-    const batch = validateVerificationBatch(readJson<unknown>(VERIFICATION_DIR + '/' + file));
+    const batch = validateVerificationBatch(
+      readJson<unknown>(VERIFICATION_DIR + '/' + file),
+    );
     for (const decision of batch.decisions) {
       if (!decision.policyId) continue;
-      if (!policies.some((policy) => policy.policyId === decision.policyId)) continue;
+      if (!policies.some((policy) => policy.policyId === decision.policyId))
+        continue;
       decisions.set(decision.policyId, decision);
     }
   }
   for (const decision of enrichment.verificationDecisions) {
     const policyId = String(decision['policyId']);
     if (!policies.some((policy) => String(policy['policyId']) === policyId)) {
-      throw new Error('Enrichment verification references missing policy ' + policyId);
+      throw new Error(
+        'Enrichment verification references missing policy ' + policyId,
+      );
     }
     decisions.set(policyId, decision);
   }
@@ -402,7 +453,10 @@ function main(): void {
     evidence.map((item) => [String(item.evidenceId), item]),
   );
   const sourceById = new Map<string, Record<string, unknown>>(
-    sources.map((source) => [String((source as { sourceId: string }).sourceId), source as Record<string, unknown>]),
+    sources.map((source) => [
+      String((source as { sourceId: string }).sourceId),
+      source as Record<string, unknown>,
+    ]),
   );
 
   let approved = 0;
@@ -413,8 +467,12 @@ function main(): void {
     const decision = decisions.get(policyId);
     const decisionOk = decision?.['decision'] === 'verified';
     const checks = (decision?.['checks'] ?? {}) as Record<string, unknown>;
-    const rawPath = typeof source?.['rawPath'] === 'string' ? source['rawPath'] : null;
-    const quote = typeof evidenceItem?.['quotedText'] === 'string' ? evidenceItem['quotedText'] : '';
+    const rawPath =
+      typeof source?.['rawPath'] === 'string' ? source['rawPath'] : null;
+    const quote =
+      typeof evidenceItem?.['quotedText'] === 'string'
+        ? evidenceItem['quotedText']
+        : '';
     const deterministic = rawPath
       ? quotePresent(readFileSync(path.join(ROOT, rawPath), 'utf8'), quote)
       : false;
@@ -445,7 +503,10 @@ function main(): void {
         policyId,
         decision: decision['decision'],
         verifierRole: 'independent-verifier',
-        checkedAt: typeof decision['checkedAt'] === 'string' ? decision['checkedAt'] : CUTOFF + 'T00:00:00.000Z',
+        checkedAt:
+          typeof decision['checkedAt'] === 'string'
+            ? decision['checkedAt']
+            : CUTOFF + 'T00:00:00.000Z',
         checks: decision['checks'],
         note: decision['note'],
       });
@@ -480,28 +541,34 @@ function main(): void {
     const candidateAttempts = attempts.filter(
       (attempt) => attempt['candidateId'] === candidate.id,
     );
-    const outcome = published.length > 0
-      ? 'verified-records'
-      : candidatePolicies.length > 0
-        ? 'current-or-historical-only'
-        : candidateAttempts.length > 0
-          ? 'sources-unavailable'
-          : 'no-verifiable-policy-found';
+    const outcome =
+      published.length > 0
+        ? 'verified-records'
+        : candidatePolicies.length > 0
+          ? 'current-or-historical-only'
+          : candidateAttempts.length > 0
+            ? 'sources-unavailable'
+            : 'no-verifiable-policy-found';
     return {
       candidateId: candidate.id,
       personId: 'person-' + candidate.slug,
       displayName: candidate.displayName,
       districtId: candidate.districtId,
-      districtLabel: districtLabel.get(candidate.districtId) ?? candidate.districtId,
+      districtLabel:
+        districtLabel.get(candidate.districtId) ?? candidate.districtId,
       electionType: candidate.electionType,
-      sourceAttemptIds: candidateAttempts.map((attempt) => String(attempt['attemptId'])),
+      sourceAttemptIds: candidateAttempts.map((attempt) =>
+        String(attempt['attemptId']),
+      ),
       policyIds: candidatePolicies.map((policy) => String(policy.policyId)),
       evidenceIds: candidatePolicies.map((policy) => String(policy.evidenceId)),
       outcome,
       researchStatus: 'completed',
       note:
         published.length > 0
-          ? '已發布 ' + published.length + ' 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。'
+          ? '已發布 ' +
+            published.length +
+            ' 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。'
           : candidatePolicies.length > 0
             ? '已蒐集政策紀錄但未通過獨立查核或來源不足，暫不發布。'
             : '已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。',
@@ -593,10 +660,19 @@ function main(): void {
     policies: publishedPolicies,
   });
 
-  const withPolicies = new Set(publishedPolicies.map((policy) => policy.candidateId)).size;
+  const withPolicies = new Set(
+    publishedPolicies.map((policy) => policy.candidateId),
+  ).size;
   process.stdout.write(
-    'policies ' + policies.length + ', published ' + publishedPolicies.length +
-      ', candidates with published policies ' + withPolicies + '/' + roster.candidates.length + '\n',
+    'policies ' +
+      policies.length +
+      ', published ' +
+      publishedPolicies.length +
+      ', candidates with published policies ' +
+      withPolicies +
+      '/' +
+      roster.candidates.length +
+      '\n',
   );
 }
 

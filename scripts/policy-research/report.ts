@@ -5,7 +5,8 @@ import { validateOfficialDataset } from '../../src/data/official/schema';
 const CUTOFF = '2026-11-14';
 const DATASET = 'data/policy-research/2026/full-roster.json';
 const NEWS = 'data/policy-research/2026/discovery/news-discovery.json';
-const ENRICHMENT = 'data/policy-research/2026/enrichment/verified-enrichment.json';
+const ENRICHMENT =
+  'data/policy-research/2026/enrichment/verified-enrichment.json';
 
 function parseJson<T>(text: string, relative: string): T {
   let parsed: unknown;
@@ -152,8 +153,9 @@ const rows = roster.candidates.map((candidate) => {
     searchedSourceCategories: research.searchedCategories,
     foundSourceCategories: research.foundSourceCategories,
     sourceUrlCount: sourceUrls.size,
-    newPolicyCount: policies.filter((policy) => newPolicyIds.has(policy.policyId))
-      .length,
+    newPolicyCount: policies.filter((policy) =>
+      newPolicyIds.has(policy.policyId),
+    ).length,
   };
 });
 
@@ -215,7 +217,11 @@ const statusCounts = Object.fromEntries(
 );
 const sourceCategoryCoverage: Record<
   string,
-  { sourceCount: number; candidateCount: number; searchedCandidateCount: number }
+  {
+    sourceCount: number;
+    candidateCount: number;
+    searchedCandidateCount: number;
+  }
 > = {};
 for (const row of enrichment.candidates) {
   for (const category of row.searchedCategories) {
@@ -278,7 +284,8 @@ const researchCoverage = {
   candidatesWithSourceUnavailable: statusCounts.source_unavailable,
   candidatesWithAttributionUncertain: statusCounts.attribution_uncertain,
   candidatesAwaitingVerification: statusCounts.awaiting_verification,
-  candidatesWithHistoricalOrCurrentOnly: statusCounts['historical/current-only'],
+  candidatesWithHistoricalOrCurrentOnly:
+    statusCounts['historical/current-only'],
   acceptedClaims: claimDecisionCounts.accepted,
   rejectedClaims: claimDecisionCounts.rejected,
   unresolvedClaims: claimDecisionCounts.unresolved,
@@ -316,8 +323,9 @@ const totals = {
 
 const publicationCoverage = {
   totalPolicyEntries: dataset.policies.length,
-  distinctSourceUrls: new Set(dataset.sourceSnapshots.map((source) => source.url))
-    .size,
+  distinctSourceUrls: new Set(
+    dataset.sourceSnapshots.map((source) => source.url),
+  ).size,
   publishedPolicyEntries: totals.publishedPolicies,
   candidatesWithPublishedPolicies: totals.candidatesWithPublishedPolicies,
   rejectedPolicyEntries: totals.rejectedPolicies,
@@ -377,20 +385,45 @@ md.push('## 研究覆蓋與發布覆蓋');
 md.push('');
 md.push('研究覆蓋與公開發布覆蓋是不同指標；not_found 不表示候選人沒有政策。');
 md.push('- 可發布研究結果：' + researchCoverage.candidatesWithVerifiedPolicy);
-md.push('- 僅歷史／目前立場：' + researchCoverage.candidatesWithHistoricalOrCurrentOnly);
-md.push('- 未找到政策資訊：' + researchCoverage.candidatesWithNoPolicyInformation);
+md.push(
+  '- 僅歷史／目前立場：' +
+    researchCoverage.candidatesWithHistoricalOrCurrentOnly,
+);
+md.push(
+  '- 未找到政策資訊：' + researchCoverage.candidatesWithNoPolicyInformation,
+);
 md.push('- 來源無法取得：' + researchCoverage.candidatesWithSourceUnavailable);
 md.push('- 歸屬不確定：' + researchCoverage.candidatesWithAttributionUncertain);
 md.push('- 等待核實：' + researchCoverage.candidatesAwaitingVerification);
-md.push('- accepted／rejected／unresolved claims：' + claimDecisionCounts.accepted + '／' + claimDecisionCounts.rejected + '／' + claimDecisionCounts.unresolved);
-md.push('- 新增且發布的候選人：' + improvedCandidates.map((item) => item.displayName).join('、'));
+md.push(
+  '- accepted／rejected／unresolved claims：' +
+    claimDecisionCounts.accepted +
+    '／' +
+    claimDecisionCounts.rejected +
+    '／' +
+    claimDecisionCounts.unresolved,
+);
+md.push(
+  '- 新增且發布的候選人：' +
+    improvedCandidates.map((item) => item.displayName).join('、'),
+);
 md.push('');
 md.push('## 來源類別覆蓋');
 md.push('');
 md.push('| 類別 | 來源快照 | 涉及候選人 | 曾檢索候選人 |');
 md.push('|---|---:|---:|---:|');
 for (const [category, value] of Object.entries(sourceCategoryCoverage)) {
-  md.push('| ' + category + ' | ' + value.sourceCount + ' | ' + value.candidateCount + ' | ' + value.searchedCandidateCount + ' |');
+  md.push(
+    '| ' +
+      category +
+      ' | ' +
+      value.sourceCount +
+      ' | ' +
+      value.candidateCount +
+      ' | ' +
+      value.searchedCandidateCount +
+      ' |',
+  );
 }
 md.push('');
 md.push('## 各選區覆蓋');
@@ -458,11 +491,33 @@ md.push('');
 md.push('## 研究缺口與驗證規則');
 md.push('');
 for (const row of rows.filter((row) => row.researchStatus !== 'verified')) {
-  md.push('- ' + row.displayName + '：' + row.researchStatus + '；' + row.researchReason);
+  md.push(
+    '- ' +
+      row.displayName +
+      '：' +
+      row.researchStatus +
+      '；' +
+      row.researchReason,
+  );
 }
 for (const change of enrichment.validationRuleChanges) {
-  const item = change as { rule?: string; before?: string; after?: string; integrity?: string };
-  md.push('- 規則 ' + (item.rule ?? 'unknown') + '：' + (item.before ?? '') + ' → ' + (item.after ?? '') + '（' + (item.integrity ?? '') + '）');
+  const item = change as {
+    rule?: string;
+    before?: string;
+    after?: string;
+    integrity?: string;
+  };
+  md.push(
+    '- 規則 ' +
+      (item.rule ?? 'unknown') +
+      '：' +
+      (item.before ?? '') +
+      ' → ' +
+      (item.after ?? '') +
+      '（' +
+      (item.integrity ?? '') +
+      '）',
+  );
 }
 md.push('');
 md.push('## 判讀說明');

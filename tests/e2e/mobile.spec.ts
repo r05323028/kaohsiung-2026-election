@@ -113,7 +113,19 @@ test('mobile essential controls meet a 44px touch target at 390x844', {
   await adminCard.getByRole('button', { name: '回到全市' }).click();
   await expect(adminCard).toBeHidden();
 
-  await page.locator('[aria-controls="city-people-tray"]').click();
+  // Returning from an admin focus re-renders the collapsed sheet trigger with
+  // the citywide roster. Wait for that authoritative state before clicking so
+  // the pointer sequence cannot straddle the 17 -> 5 candidate re-render.
+  const explorer = page.getByTestId('city-explorer');
+  await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
+  await expect(explorer).toHaveAttribute('data-candidate-count', '5');
+  await expect(explorer).toHaveAttribute(
+    'data-scene-focus',
+    /^world-overview-/,
+  );
+  const peopleTrigger = page.locator('[aria-controls="city-people-tray"]');
+  await expect(peopleTrigger).toContainText('5 位');
+  await peopleTrigger.click();
   const peopleTray = page.locator('#city-people-tray');
   await expect(peopleTray).toBeVisible();
   // Wait for the rise animation: mid-flight composited transforms report

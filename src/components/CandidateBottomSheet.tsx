@@ -168,7 +168,7 @@ export default function CandidateBottomSheet({
             className="candidate-sheet__drag-indicator"
           />
           <span className="candidate-sheet__handle-copy">
-            <strong>查看所有候選人</strong>
+            <strong>查看候選人</strong>
             <small>{candidates.length} 位</small>
           </span>
           <span aria-hidden="true" className="candidate-sheet__chevron">

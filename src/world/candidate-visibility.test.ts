@@ -1,12 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import { candidateProfiles } from '../data';
 import { COUNCIL_CONSTITUENCIES } from '../data/constituencies';
+import type { CandidateVisibilityScope } from './candidate-visibility';
 import {
-  ALL_CANDIDATE_VISIBILITY,
   adminDistrictVisibilityScope,
+  CITYWIDE_OVERVIEW_VISIBILITY,
   constituencyVisibilityScope,
   isCandidateVisibleInFocus,
-  MAYORAL_CANDIDATE_VISIBILITY,
+  isMayoralCandidate,
+  ordinaryConstituencySlugForAdminDistrict,
+  visibilityScopeForFocus,
   visibleCandidatesForFocus,
 } from './candidate-visibility';
 import { ADMIN_DISTRICTS } from './geography';
@@ -14,137 +17,203 @@ import { ADMIN_DISTRICTS } from './geography';
 const official = candidateProfiles.filter(
   (candidate) => !candidate.candidacy.isDemo,
 );
+const mayors = official.filter(isMayoralCandidate);
+const mayorSlugs = new Set(mayors.map((candidate) => candidate.candidacy.slug));
 
 function candidatesFor(slug: string) {
   return official.filter((candidate) => candidate.district.slug === slug);
 }
 
-describe('candidate visibility', () => {
-  it('keeps every official candidate visible in the all-candidate scope', () => {
-    expect(
-      visibleCandidatesForFocus(official, ALL_CANDIDATE_VISIBILITY),
-    ).toHaveLength(official.length);
-  });
+function visibleSlugs(scope: CandidateVisibilityScope): string[] {
+  return visibleCandidatesForFocus(official, scope)
+    .map((candidate) => candidate.candidacy.slug)
+    .sort();
+}
 
-  it('shows only mayors in the city overview scope', () => {
+function expectedSlugs(constituencySlug: string): string[] {
+  return [
+    ...mayorSlugs,
+    ...candidatesFor(constituencySlug).map(
+      (candidate) => candidate.candidacy.slug,
+    ),
+  ].sort();
+}
+
+describe('citywide overview visibility', () => {
+  it('shows mayoral candidates only', () => {
+    expect(mayors.length).toBeGreaterThan(0);
     const visible = visibleCandidatesForFocus(
       official,
-      MAYORAL_CANDIDATE_VISIBILITY,
+      CITYWIDE_OVERVIEW_VISIBILITY,
     );
-    expect(visible).toHaveLength(
-      official.filter(
-        (candidate) => candidate.candidacy.electionType === 'mayoral',
-      ).length,
+    expect(visible).toHaveLength(mayors.length);
+    expect(visible.every(isMayoralCandidate)).toBe(true);
+    expect(visibleSlugs(CITYWIDE_OVERVIEW_VISIBILITY)).toEqual(
+      [...mayorSlugs].sort(),
     );
-    expect(
-      visible.every(
-        (candidate) => candidate.candidacy.electionType === 'mayoral',
-      ),
-    ).toBe(true);
-    expect(
-      official
-        .filter((candidate) => candidate.candidacy.electionType !== 'mayoral')
-        .every((candidate) =>
-          isCandidateVisibleInFocus(candidate, MAYORAL_CANDIDATE_VISIBILITY),
-        ),
-    ).toBe(false);
+
+    for (const candidate of official.filter(
+      (item) => !isMayoralCandidate(item),
+    )) {
+      expect(
+        isCandidateVisibleInFocus(candidate, CITYWIDE_OVERVIEW_VISIBILITY),
+      ).toBe(false);
+    }
+  });
+});
+
+describe('constituency focus visibility', () => {
+  it('shows exactly that constituency plus the mayors for all 15 constituencies', () => {
+    expect(COUNCIL_CONSTITUENCIES).toHaveLength(15);
+    for (const coverage of COUNCIL_CONSTITUENCIES) {
+      const own = candidatesFor(coverage.slug);
+      expect(own.length, coverage.slug).toBeGreaterThan(0);
+      const slugs = visibleSlugs(constituencyVisibilityScope(coverage.slug));
+      expect(slugs, coverage.slug).toEqual(expectedSlugs(coverage.slug));
+      for (const slug of slugs) {
+        expect(
+          mayorSlugs.has(slug) ||
+            own.some((candidate) => candidate.candidacy.slug === slug),
+          `${coverage.slug} leaked ${slug}`,
+        ).toBe(true);
+      }
+    }
   });
 
-  it('keeps the mayors and the fourth constituency in Zuoying focus', () => {
-    const visible = visibleCandidatesForFocus(
-      official,
-      adminDistrictVisibilityScope(['E03']),
+  it('keeps indigenous candidates inside their own selected constituency', () => {
+    const indigenous = official.filter((candidate) =>
+      candidate.district.slug.includes('-indigenous-'),
     );
-    const council04 = candidatesFor('kaohsiung-council-04');
-    expect(visible).toEqual(
-      expect.arrayContaining([
-        ...candidatesFor('kaohsiung-mayor-2026'),
-        ...council04,
-      ]),
-    );
-    expect(council04.length).toBeGreaterThan(0);
-    expect(
-      visible.some(
-        (candidate) =>
-          candidate.candidacy.electionType === 'city-council' &&
-          candidate.district.slug === 'kaohsiung-council-01',
-      ),
-    ).toBe(false);
-    expect(
-      visible.some(
-        (candidate) => candidate.district.slug === 'kaohsiung-council-05',
-      ),
-    ).toBe(false);
+    expect(indigenous.length).toBeGreaterThan(0);
+    for (const coverage of COUNCIL_CONSTITUENCIES.filter(
+      (item) => item.kind !== 'ordinary',
+    )) {
+      const scope = constituencyVisibilityScope(coverage.slug);
+      const own = candidatesFor(coverage.slug);
+      expect(own.length).toBeGreaterThan(0);
+      for (const candidate of indigenous) {
+        const isOwn = candidate.district.slug === coverage.slug;
+        expect(
+          isCandidateVisibleInFocus(candidate, scope),
+          `${candidate.candidacy.slug} under ${coverage.slug}`,
+        ).toBe(isOwn);
+      }
+    }
   });
+});
 
-  it('hides every council candidate outside the focused ordinary constituency for all 38 districts', () => {
+describe('administrative district focus visibility', () => {
+  it('maps all 38 administrative districts to exactly one ordinary constituency', () => {
+    expect(ADMIN_DISTRICTS).toHaveLength(38);
     for (const district of ADMIN_DISTRICTS) {
+      const slug = ordinaryConstituencySlugForAdminDistrict(district.id);
+      expect(slug, district.id).not.toBeNull();
+      const coverage = COUNCIL_CONSTITUENCIES.find(
+        (item) => item.slug === slug,
+      );
+      expect(coverage?.kind, district.id).toBe('ordinary');
+      expect(coverage?.adminDistrictIds, district.id).toContain(district.id);
+    }
+  });
+
+  it('shows mayors plus the district ordinary constituency only for all 38 districts', () => {
+    for (const district of ADMIN_DISTRICTS) {
+      const slug = ordinaryConstituencySlugForAdminDistrict(district.id)!;
       const visible = visibleCandidatesForFocus(
         official,
         adminDistrictVisibilityScope([district.id]),
       );
-      const allowedOrdinary = new Set(
-        COUNCIL_CONSTITUENCIES.filter(
-          (coverage) =>
-            coverage.kind === 'ordinary' &&
-            coverage.adminDistrictIds.includes(district.id),
-        ).map((coverage) => coverage.slug),
-      );
+      expect(
+        visible.map((candidate) => candidate.candidacy.slug).sort(),
+        district.id,
+      ).toEqual(expectedSlugs(slug));
       for (const candidate of visible) {
-        if (candidate.candidacy.electionType === 'mayoral') continue;
-        const coverage = COUNCIL_CONSTITUENCIES.find(
-          (item) => item.slug === candidate.district.slug,
-        );
-        expect(coverage).toBeDefined();
-        if (coverage?.kind === 'ordinary') {
-          expect(allowedOrdinary.has(candidate.district.slug)).toBe(true);
-        }
+        if (isMayoralCandidate(candidate)) continue;
+        expect(candidate.district.slug, district.id).toBe(slug);
       }
-      expect(visible.length).toBeGreaterThan(0);
+      for (const candidate of candidatesFor(slug)) {
+        expect(
+          isCandidateVisibleInFocus(
+            candidate,
+            adminDistrictVisibilityScope([district.id]),
+          ),
+        ).toBe(true);
+      }
     }
   });
 
-  it('applies the authoritative indigenous coverage instead of a geographic guess', () => {
-    const plainsSlug = 'kaohsiung-indigenous-flat-12';
-    const mountainSlug = 'kaohsiung-indigenous-mountain-13';
-    const plains = candidatesFor(plainsSlug);
-    const mountain = candidatesFor(mountainSlug);
-    expect(plains.length).toBeGreaterThan(0);
-    expect(mountain.length).toBeGreaterThan(0);
-
+  it('never leaks indigenous candidates through administrative coverage', () => {
+    const indigenous = official.filter((candidate) =>
+      candidate.district.slug.includes('-indigenous-'),
+    );
+    expect(indigenous.length).toBeGreaterThan(0);
     for (const district of ADMIN_DISTRICTS) {
       const scope = adminDistrictVisibilityScope([district.id]);
-      for (const candidate of plains) {
-        expect(isCandidateVisibleInFocus(candidate, scope)).toBe(true);
-      }
-      const mountainCoverage = COUNCIL_CONSTITUENCIES.find(
-        (coverage) => coverage.slug === mountainSlug,
-      );
-      const mountainRelevant = mountainCoverage?.adminDistrictIds.includes(
-        district.id,
-      );
-      for (const candidate of mountain) {
-        expect(isCandidateVisibleInFocus(candidate, scope)).toBe(
-          Boolean(mountainRelevant),
-        );
+      for (const candidate of indigenous) {
+        expect(
+          isCandidateVisibleInFocus(candidate, scope),
+          `${candidate.candidacy.slug} in ${district.id}`,
+        ).toBe(false);
       }
     }
   });
 
-  it('scopes an electoral-district focus to that constituency and the mayors', () => {
-    const visible = visibleCandidatesForFocus(
-      official,
-      constituencyVisibilityScope('kaohsiung-council-04'),
+  it('matches the ordinary constituency set for every administrative district', () => {
+    for (const district of ADMIN_DISTRICTS) {
+      const slug = ordinaryConstituencySlugForAdminDistrict(district.id)!;
+      expect(
+        visibleSlugs(adminDistrictVisibilityScope([district.id])),
+        district.id,
+      ).toEqual(visibleSlugs(constituencyVisibilityScope(slug)));
+    }
+  });
+});
+
+describe('visibility scope resolution', () => {
+  it('resolves the three UI focus modes explicitly', () => {
+    expect(visibilityScopeForFocus({ kind: 'citywide' })).toEqual(
+      CITYWIDE_OVERVIEW_VISIBILITY,
     );
     expect(
-      visible.every(
-        (candidate) =>
-          candidate.candidacy.electionType === 'mayoral' ||
-          candidate.district.slug === 'kaohsiung-council-04',
-      ),
-    ).toBe(true);
+      visibilityScopeForFocus({
+        kind: 'constituency',
+        districtSlug: 'kaohsiung-council-04',
+      }),
+    ).toEqual(constituencyVisibilityScope('kaohsiung-council-04'));
     expect(
-      new Set(visible.map((candidate) => candidate.district.slug)),
-    ).toEqual(new Set(['kaohsiung-mayor-2026', 'kaohsiung-council-04']));
+      visibilityScopeForFocus({
+        kind: 'administrative',
+        adminDistrictId: 'E03',
+      }),
+    ).toEqual(adminDistrictVisibilityScope(['E03']));
+  });
+
+  it('uses the candidate own electoral district and never reveals unrelated candidates', () => {
+    for (const candidate of official) {
+      const scope = visibilityScopeForFocus({ kind: 'candidate', candidate });
+      const visible = visibleCandidatesForFocus(official, scope);
+      expect(
+        visible.some(
+          (item) => item.candidacy.slug === candidate.candidacy.slug,
+        ),
+        candidate.candidacy.slug,
+      ).toBe(true);
+
+      if (isMayoralCandidate(candidate)) {
+        expect(scope.kind).toBe('citywide');
+        expect(visible.every(isMayoralCandidate)).toBe(true);
+        continue;
+      }
+
+      expect(scope).toEqual(
+        constituencyVisibilityScope(candidate.district.slug),
+      );
+      for (const item of visible) {
+        if (isMayoralCandidate(item)) continue;
+        expect(item.district.slug, candidate.candidacy.slug).toBe(
+          candidate.district.slug,
+        );
+      }
+    }
   });
 });

@@ -30,7 +30,7 @@ type WorldWindow = Window & {
     walking: boolean;
   } | null;
   __kaohsiungCandidateVisibility?: () => {
-    scope: 'all' | 'mayoral' | 'admin-district' | 'constituency';
+    scope: 'citywide' | 'admin-district' | 'constituency';
     count: number;
     slugs: string[];
   };
@@ -302,8 +302,8 @@ test.describe('GLB candidate models', () => {
             value.mode === 'detail' &&
             value.screenPx > value.enterPx &&
             visibility?.scope === 'admin-district' &&
-            visibility.count === 22 &&
-            value.detailCount + value.overviewCount === 22
+            visibility.count === 17 &&
+            value.detailCount + value.overviewCount === 17
           );
         },
         { timeout: 30_000 },
@@ -318,7 +318,7 @@ test.describe('GLB candidate models', () => {
       (window as WorldWindow).__kaohsiungCandidateVisibility?.(),
     );
     expect(visibility?.scope).toBe('admin-district');
-    expect(visibility?.count).toBe(22);
+    expect(visibility?.count).toBe(17);
     expect(value.detailCount + value.overviewCount).toBe(visibility?.count);
     expect(value.screenPx).toBeGreaterThan(value.enterPx);
 

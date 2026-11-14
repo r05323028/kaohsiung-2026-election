@@ -10,6 +10,7 @@ import {
   ADMIN_DISTRICTS,
   type DistrictRecord,
 } from './geography';
+import { adminDistrictConnectivity } from './road-graph';
 
 /**
  * Official 高雄市議會 constituency mapping derived from the canonical coverage
@@ -81,14 +82,25 @@ export function movementScopeForDistrictSlug(slug: string): MovementScope {
           '平地原住民選舉區依身分與選舉資格認定，不是行政區地理邊界。',
       };
     }
+    // Mountain Indigenous coverage is an eligibility list, not one contiguous
+    // geographic constituency: the hex road graph has several disconnected
+    // components. Simulated movement therefore uses the largest connected
+    // component of the canonical coverage (deterministic tie-break by smallest
+    // district id) instead of silently granting all 38 districts.
+    const connectivity = adminDistrictConnectivity(coverage.adminDistrictIds);
+    const allowedAdminIds = connectivity.largestComponent;
+    const allowedAdminNames = allowedAdminIds.map(
+      (id) => ADMIN_DISTRICT_BY_ID.get(id)?.shortName ?? id,
+    );
+    const detachedNote = connectivity.detached.length
+      ? `；${connectivity.detached.length} 個未連通行政區不納入模擬移動範圍`
+      : '';
     return {
       kind: 'indigenous',
-      allowedAdminIds: ALL_ADMIN_IDS,
-      allowedAdminNames: MAYORAL_NAMES,
-      label: `山地原住民選舉區（第${coverage.number}選舉區）・全市移動範圍`,
-      eligibilityNote:
-        coverage.eligibilityNote ??
-        '山地原住民選舉區依身分與設籍資格認定，不是一般地理選區。',
+      allowedAdminIds,
+      allowedAdminNames,
+      label: `山地原住民選舉區（第${coverage.number}選舉區）・${allowedAdminIds.length} 區移動範圍`,
+      eligibilityNote: `${coverage.eligibilityNote ?? '山地原住民選舉區依身分與設籍資格認定，不是一般地理選區。'} 模擬移動範圍取候選資格覆蓋區中道路網最大連通區塊${detachedNote}；官方選舉資格範圍不變。`,
     };
   }
 

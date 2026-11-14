@@ -22,7 +22,7 @@ type WorldWindow = Window & {
     anchor?: 'center' | 'head',
   ) => { x: number; y: number } | null;
   __kaohsiungCandidateVisibility?: () => {
-    scope: 'all' | 'admin-district' | 'constituency';
+    scope: 'citywide' | 'admin-district' | 'constituency';
     count: number;
     slugs: string[];
   };

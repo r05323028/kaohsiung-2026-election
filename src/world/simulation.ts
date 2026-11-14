@@ -16,6 +16,7 @@ import {
   HEX_ROAD_GRAPH,
   type RoadEdge,
   type RoadGraph,
+  type RoadNode,
   roadNode,
 } from './road-graph';
 
@@ -348,6 +349,32 @@ function beginEdge(
   );
 }
 
+/**
+ * Enter an edge only when its far endpoint stays inside the actor's movement
+ * territory. Filtering the candidate edge set is not sufficient on every path:
+ * idle resume used to call beginEdge directly, so a stale destination could
+ * leave the permitted administrative territory.
+ */
+function beginEdgeIfAllowed(
+  actor: WorldActor,
+  edge: RoadEdge,
+  fromNodeId: string,
+): boolean {
+  const toNodeId = edge.from === fromNodeId ? edge.to : edge.from;
+  const destinationAdminId = roadNode(toNodeId).adminId;
+  if (!actor.allowedAdminIds.includes(destinationAdminId)) {
+    actor.territoryRejections += 1;
+    actor.state = 'idle';
+    actor.behavior = 'idle';
+    actor.pauseRemaining = Math.max(actor.pauseRemaining, 0.5);
+    return false;
+  }
+  actor.state = 'walking';
+  actor.behavior = 'walking';
+  beginEdge(actor, edge, fromNodeId);
+  return true;
+}
+
 function arrive(actor: WorldActor, nodeId: string): boolean {
   const node = roadNode(nodeId);
   actor.position = node.point;
@@ -380,17 +407,7 @@ function arrive(actor: WorldActor, nodeId: string): boolean {
     actor.behavior = 'idle';
     return true;
   }
-  const nextNodeId = next.from === nodeId ? next.to : next.from;
-  const nextAdminId = roadNode(nextNodeId).adminId;
-  if (!actor.allowedAdminIds.includes(nextAdminId)) {
-    actor.territoryRejections += 1;
-    actor.state = 'idle';
-    actor.behavior = 'idle';
-    return true;
-  }
-  actor.state = 'walking';
-  actor.behavior = 'walking';
-  beginEdge(actor, next, nodeId);
+  if (!beginEdgeIfAllowed(actor, next, nodeId)) return true;
   return false;
 }
 
@@ -407,10 +424,8 @@ function walk(actor: WorldActor, deltaSeconds: number): void {
     }
     const next = pickNextEdge(actor, nodeId);
     if (!next) return;
-    actor.state = 'walking';
-    actor.behavior = 'walking';
     actor.behaviorTimer = 0;
-    beginEdge(actor, next, nodeId);
+    beginEdgeIfAllowed(actor, next, nodeId);
     return;
   }
 
@@ -425,7 +440,7 @@ function walk(actor: WorldActor, deltaSeconds: number): void {
         ? pickNextEdge(actor, actor.currentNodeId)
         : null;
       if (!fallback || !actor.currentNodeId) return;
-      beginEdge(actor, fallback, actor.currentNodeId);
+      if (!beginEdgeIfAllowed(actor, fallback, actor.currentNodeId)) return;
       continue;
     }
     const remainingOnEdge = (1 - actor.edgeProgress) * edge.lengthKm;
@@ -568,8 +583,38 @@ export function canActorEnterDistrict(
   return actor.allowedAdminIds.includes(adminId);
 }
 
-export function graphForActor(_actor: WorldActor): RoadGraph {
-  return HEX_ROAD_GRAPH;
+/**
+ * The road graph an actor may actually use. Filtering both endpoints' edges and
+ * rebuilding adjacency keeps movement consumers from exploring connectors that
+ * leave the actor's territory even if they iterate the global graph.
+ */
+export function graphForActor(actor: WorldActor): RoadGraph {
+  const allowed = new Set(actor.allowedAdminIds);
+  const edges = new Map<string, RoadEdge>();
+  const nodes = new Map<string, RoadNode>();
+  const neighbourEdges = new Map<string, string[]>();
+  const ringNodeIds = new Map<string, string[]>();
+  const connectorEdgeIds: string[] = [];
+
+  for (const [id, edge] of HEX_ROAD_GRAPH.edges) {
+    if (!allowedEdge(edge, allowed)) continue;
+    edges.set(id, edge);
+    if (edge.kind === 'connector') connectorEdgeIds.push(id);
+    for (const nodeId of [edge.from, edge.to]) {
+      const node = HEX_ROAD_GRAPH.nodes.get(nodeId);
+      if (!node) continue;
+      nodes.set(nodeId, node);
+      const linked = neighbourEdges.get(nodeId) ?? [];
+      linked.push(id);
+      neighbourEdges.set(nodeId, linked);
+    }
+  }
+  for (const [tileId, ids] of HEX_ROAD_GRAPH.ringNodeIds) {
+    const present = ids.filter((nodeId) => nodes.has(nodeId));
+    if (present.length > 0) ringNodeIds.set(tileId, present);
+  }
+
+  return { nodes, edges, neighbourEdges, ringNodeIds, connectorEdgeIds };
 }
 
 export function actorDistrict(actor: WorldActor): DistrictRecord | null {

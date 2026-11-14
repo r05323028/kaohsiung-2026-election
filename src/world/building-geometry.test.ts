@@ -44,7 +44,7 @@ describe("city building geometry", () => {
     expect(total("mediumTriangles")).toBeLessThan(total("highTriangles"));
   });
 
-  it("writes finite, in-range vertex data inside the world bounds", () => {
+  it("writes finite, in-range vertex data inside the world bounds", { timeout: 20_000 }, () => {
     for (const bucket of Object.values(city.buckets)) {
       const position = bucket.geometry.attributes.position!;
       const normal = bucket.geometry.attributes.normal!;

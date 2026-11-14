@@ -251,6 +251,71 @@ export function allowedEdge(
   );
 }
 
+/**
+ * Movement territory is simulation-space, not electoral, data. Group the
+ * requested administrative districts by road connectivity so callers can pick a
+ * traversable territory without ever adding a district that official coverage
+ * excludes.
+ */
+export type AdminDistrictConnectivity = {
+  components: string[][];
+  largestComponent: string[];
+  detached: string[];
+};
+
+export function adminDistrictConnectivity(
+  adminDistrictIds: readonly string[],
+): AdminDistrictConnectivity {
+  const ids = [...new Set(adminDistrictIds)].sort();
+  const parent = new Map(ids.map((id) => [id, id]));
+
+  const find = (id: string): string => {
+    let cursor = id;
+    for (;;) {
+      const next = parent.get(cursor);
+      if (!next || next === cursor) return cursor;
+      parent.set(cursor, next);
+      cursor = next;
+    }
+  };
+  const union = (a: string, b: string) => {
+    const rootA = find(a);
+    const rootB = find(b);
+    if (rootA === rootB) return;
+    // Keep the lexicographically smaller id as the root for deterministic output.
+    if (rootA < rootB) parent.set(rootB, rootA);
+    else parent.set(rootA, rootB);
+  };
+
+  for (const edge of ROAD_EDGES) {
+    if (edge.kind !== 'connector') continue;
+    const [first, second] = edge.adminIds;
+    if (!first || !second || first === second) continue;
+    if (!parent.has(first) || !parent.has(second)) continue;
+    union(first, second);
+  }
+
+  const grouped = new Map<string, string[]>();
+  for (const id of ids) {
+    const rootId = find(id);
+    const members = grouped.get(rootId);
+    if (members) members.push(id);
+    else grouped.set(rootId, [id]);
+  }
+
+  const components = [...grouped.values()]
+    .map((members) => members.sort())
+    .sort((a, b) => b.length - a.length || (a[0]! < b[0]! ? -1 : 1));
+  const largestComponent = components[0] ?? [];
+  const largest = new Set(largestComponent);
+
+  return {
+    components,
+    largestComponent,
+    detached: ids.filter((id) => !largest.has(id)),
+  };
+}
+
 export function nearestRoadNode(
   point: HexPoint,
   allowedAdminIds: ReadonlySet<string> | null = null,

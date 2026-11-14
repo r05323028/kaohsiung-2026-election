@@ -1,7 +1,7 @@
 import { expect, type Page, test } from '@playwright/test';
 
 type Visibility = {
-  scope: 'all' | 'mayoral' | 'admin-district' | 'constituency';
+  scope: 'citywide' | 'admin-district' | 'constituency';
   count: number;
   slugs: string[];
 };
@@ -21,6 +21,7 @@ type WorldWindow = Window & {
     slug: string,
   ) => { x: number; y: number } | null;
   __kaohsiungActorPose?: (slug: string) => ActorPose | null;
+  __kaohsiungSelectDistrict?: (slug: string) => void;
   __kaohsiungActorMarker?: () => { uuid: string; count: number } | null;
   __kaohsiungActorLod?: () => {
     detailCount: number;
@@ -73,8 +74,12 @@ async function focusAdmin(page: Page, name: string) {
   if (await backToCity.isVisible()) {
     await backToCity.click();
     await expect(page.locator('.city-admin-card')).toBeHidden();
+    // The camera eases back to the overview, so wait for district labels to
+    // settle before measuring their click target.
+    await page.waitForTimeout(1600);
   }
   const label = page.locator('.hex-district-label', { hasText: name }).first();
+  await expect(label).toBeVisible();
   const box = await label.boundingBox();
   if (!box) throw new Error(`${name} district label is not visible`);
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
@@ -89,11 +94,11 @@ test.describe('district-focused candidate visibility', () => {
     await openFocus(page, '/');
 
     const explorer = page.getByTestId('city-explorer');
-    await expect(explorer).toHaveAttribute('data-candidate-scope', 'mayoral');
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
     await expect(explorer).toHaveAttribute('data-candidate-count', '5');
 
     const overview = await visibility(page);
-    expect(overview.scope).toBe('mayoral');
+    expect(overview.scope).toBe('citywide');
     expect(overview.count).toBe(5);
     expect(
       overview.slugs.every(
@@ -127,7 +132,7 @@ test.describe('district-focused candidate visibility', () => {
       'data-candidate-scope',
       'admin-district',
     );
-    await expect(explorer).toHaveAttribute('data-candidate-count', '22');
+    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
 
     await page
       .locator('.city-admin-card .city-landmark-card__actions button')
@@ -138,11 +143,11 @@ test.describe('district-focused candidate visibility', () => {
       /^world-overview-/,
       { timeout: 20_000 },
     );
-    await expect(explorer).toHaveAttribute('data-candidate-scope', 'mayoral');
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
     await expect(explorer).toHaveAttribute('data-candidate-count', '5');
 
     const restored = await visibility(page);
-    expect(restored.scope).toBe('mayoral');
+    expect(restored.scope).toBe('citywide');
     expect(restored.count).toBe(5);
     expect(
       restored.slugs.every(
@@ -164,11 +169,11 @@ test.describe('district-focused candidate visibility', () => {
       'data-candidate-scope',
       'admin-district',
     );
-    await expect(explorer).toHaveAttribute('data-candidate-count', '22');
+    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
 
     const zuoying = await visibility(page);
     expect(zuoying.scope).toBe('admin-district');
-    expect(zuoying.count).toBe(22);
+    expect(zuoying.count).toBe(17);
     const zuoyingSlugs = new Set(zuoying.slugs);
     expect(
       [...zuoyingSlugs].some((slug) =>
@@ -194,11 +199,11 @@ test.describe('district-focused candidate visibility', () => {
     const marker = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungActorMarker?.(),
     );
-    expect(marker?.count).toBe(22);
+    expect(marker?.count).toBe(17);
     const lod = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungActorLod?.(),
     );
-    expect((lod?.detailCount ?? 0) + (lod?.overviewCount ?? 0)).toBe(22);
+    expect((lod?.detailCount ?? 0) + (lod?.overviewCount ?? 0)).toBe(17);
 
     const statsBefore = await page.evaluate(() =>
       (window as WorldWindow).__kaohsiungWorld?.stats(),
@@ -210,7 +215,7 @@ test.describe('district-focused candidate visibility', () => {
     });
     await page.waitForTimeout(800);
     const nanzih = await visibility(page);
-    expect(nanzih.count).toBe(22);
+    expect(nanzih.count).toBe(17);
     expect(nanzih.slugs).toContain('kaohsiung-council-04-712cf4dd');
     expect(
       nanzih.slugs.some((slug) => slug.startsWith('kaohsiung-council-07-')),
@@ -223,7 +228,7 @@ test.describe('district-focused candidate visibility', () => {
     await page.waitForTimeout(800);
     const sanmin = await visibility(page);
     expect(sanmin.scope).toBe('admin-district');
-    expect(sanmin.count).toBe(22);
+    expect(sanmin.count).toBe(17);
     expect(
       sanmin.slugs.some((slug) => slug.startsWith('kaohsiung-council-07-')),
     ).toBe(true);
@@ -243,7 +248,7 @@ test.describe('district-focused candidate visibility', () => {
         timeout: 20_000,
       },
     );
-    await expect(explorer).toHaveAttribute('data-candidate-scope', 'mayoral');
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
     await expect(explorer).toHaveAttribute('data-candidate-count', '5');
     await page.waitForTimeout(800);
 
@@ -333,7 +338,7 @@ test.describe('district-focused candidate visibility', () => {
       .click();
     await expect(page.getByTestId('city-explorer')).toHaveAttribute(
       'data-candidate-scope',
-      'mayoral',
+      'citywide',
       { timeout: 20_000 },
     );
     await expect(page.getByTestId('city-explorer')).toHaveAttribute(
@@ -450,7 +455,7 @@ test.describe('district-focused candidate visibility', () => {
     );
     await expect(page.getByTestId('city-explorer')).toHaveAttribute(
       'data-candidate-count',
-      '22',
+      '17',
     );
     expect(
       await page.evaluate(
@@ -459,6 +464,227 @@ test.describe('district-focused candidate visibility', () => {
         mapping.hiddenSlug ?? '',
       ),
     ).toBeNull();
+  });
+
+  test('switches constituencies rapidly without leaking candidates or selection', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openFocus(page, '/');
+    const explorer = page.getByTestId('city-explorer');
+
+    const focusDistrict = (slug: string) =>
+      page.evaluate(
+        (next: string) =>
+          (window as WorldWindow).__kaohsiungSelectDistrict?.(next),
+        slug,
+      );
+
+    const expectScope = async (scope: Visibility['scope'], count: number) => {
+      await expect(explorer).toHaveAttribute('data-candidate-scope', scope);
+      await expect(explorer).toHaveAttribute(
+        'data-candidate-count',
+        String(count),
+      );
+      const snapshot = await visibility(page);
+      expect(snapshot.scope).toBe(scope);
+      expect(snapshot.count).toBe(count);
+      const rendered = await page.evaluate(() => {
+        const bridge = window as WorldWindow;
+        const value = bridge.__kaohsiungCandidateVisibility?.();
+        return {
+          markerCount: bridge.__kaohsiungActorMarker?.()?.count ?? -1,
+          indexed: (value?.slugs ?? []).map((slug, index) => ({
+            slug,
+            indexSlug: bridge.__kaohsiungActorInstance?.(index),
+          })),
+        };
+      });
+      expect(rendered.markerCount).toBe(count);
+      expect(
+        rendered.indexed.every((entry) => entry.slug === entry.indexSlug),
+      ).toBe(true);
+      return snapshot;
+    };
+
+    await expectScope('citywide', 5);
+    const parked = await page.evaluate(() => {
+      const bridge = window as WorldWindow;
+      const council = (bridge.__kaohsiungWorld?.actors() ?? []).find(
+        (actor) => actor.role === 'council',
+      );
+      return {
+        slug: council?.slug ?? null,
+        screen: council
+          ? (bridge.__kaohsiungActorScreenPosition?.(council.slug) ?? null)
+          : null,
+      };
+    });
+    expect(parked.slug).toBeTruthy();
+    expect(parked.screen).toBeNull();
+
+    await focusDistrict('kaohsiung-council-04');
+    await page.waitForTimeout(80);
+    const c04 = await expectScope('constituency', 17);
+    expect(
+      c04.slugs.some((slug) => slug.startsWith('kaohsiung-council-04-')),
+    ).toBe(true);
+    const selectedSlug = c04.slugs.find((slug) =>
+      slug.startsWith('kaohsiung-council-04-'),
+    );
+    if (!selectedSlug) throw new Error('council-04 candidate is missing');
+
+    await page.evaluate((slug: string) => {
+      window.dispatchEvent(
+        new CustomEvent('kaohsiung:select-candidate', { detail: slug }),
+      );
+    }, selectedSlug);
+    await expect(page.getByTestId('profile-panel')).toBeVisible({
+      timeout: 20_000,
+    });
+    await expectScope('constituency', 17);
+
+    await focusDistrict('kaohsiung-council-05');
+    await page.waitForTimeout(80);
+    const c05 = await expectScope('constituency', 12);
+    expect(
+      c05.slugs.some((slug) => slug.startsWith('kaohsiung-council-05-')),
+    ).toBe(true);
+    expect(
+      c05.slugs.some((slug) => slug.startsWith('kaohsiung-council-04-')),
+    ).toBe(false);
+    await expect(page.getByTestId('profile-panel')).toHaveCount(0);
+    expect(
+      await page.evaluate(
+        (slug: string) =>
+          (window as WorldWindow).__kaohsiungActorScreenPosition?.(slug) ??
+          null,
+        selectedSlug,
+      ),
+    ).toBeNull();
+
+    await focusDistrict('kaohsiung-council-01');
+    await page.waitForTimeout(80);
+    const c01 = await expectScope('constituency', 10);
+    expect(
+      c01.slugs.some((slug) => slug.startsWith('kaohsiung-council-01-')),
+    ).toBe(true);
+    expect(
+      c01.slugs.some(
+        (slug) =>
+          slug.startsWith('kaohsiung-council-04-') ||
+          slug.startsWith('kaohsiung-council-05-'),
+      ),
+    ).toBe(false);
+
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(80);
+    await expect(explorer).toHaveAttribute(
+      'data-scene-focus',
+      /^world-overview-/,
+      { timeout: 20_000 },
+    );
+    const citywide = await expectScope('citywide', 5);
+    expect(
+      citywide.slugs.every(
+        (slug) =>
+          !slug.startsWith('kaohsiung-council-') &&
+          !slug.startsWith('kaohsiung-indigenous-'),
+      ),
+    ).toBe(true);
+    const restored = await page.evaluate(() => {
+      const bridge = window as WorldWindow;
+      return (bridge.__kaohsiungWorld?.actors() ?? [])
+        .filter((actor) => actor.role !== 'mayor')
+        .every(
+          (actor) =>
+            (bridge.__kaohsiungActorScreenPosition?.(actor.slug) ?? null) ===
+            null,
+        );
+    });
+    expect(restored).toBe(true);
+  });
+
+  test('initializes and closes a direct candidate URL consistently', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openFocus(page, '/?candidate=kaohsiung-council-04-712cf4dd');
+    const explorer = page.getByTestId('city-explorer');
+
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-scope',
+      'constituency',
+    );
+    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+    const focused = await visibility(page);
+    expect(focused.slugs).toContain('kaohsiung-council-04-712cf4dd');
+    expect(
+      focused.slugs.some((slug) => slug.startsWith('kaohsiung-council-05-')),
+    ).toBe(false);
+    await expect(page.getByTestId('profile-panel')).toBeVisible({
+      timeout: 20_000,
+    });
+    expect(
+      await page.evaluate(() =>
+        (window as WorldWindow).__kaohsiungActorScreenPosition?.(
+          'kaohsiung-council-04-712cf4dd',
+        ),
+      ),
+    ).not.toBeNull();
+
+    await page.locator('[aria-label="關閉人物資料"]').click();
+    await expect(page.getByTestId('profile-panel')).toHaveCount(0);
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-scope',
+      'constituency',
+    );
+    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+    const after = await visibility(page);
+    expect(after.slugs).toContain('kaohsiung-council-04-712cf4dd');
+    expect(
+      after.slugs.some((slug) => slug.startsWith('kaohsiung-council-05-')),
+    ).toBe(false);
+  });
+
+  test('normalizes conflicting direct-URL focus parameters', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await openFocus(
+      page,
+      '/?candidate=kaohsiung-council-04-712cf4dd&admin=E05',
+    );
+    const explorer = page.getByTestId('city-explorer');
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-scope',
+      'constituency',
+    );
+    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+    await expect(explorer).toHaveAttribute(
+      'data-scene-focus',
+      /^candidate-kaohsiung-council-04-712cf4dd$/,
+    );
+    await expect(page.locator('.city-admin-card')).toHaveCount(0);
+    await expect(page.getByTestId('profile-panel')).toBeVisible({
+      timeout: 20_000,
+    });
+
+    await page.locator('[aria-label="關閉人物資料"]').click();
+    await expect(page.getByTestId('profile-panel')).toHaveCount(0);
+    await expect(explorer).toHaveAttribute(
+      'data-scene-focus',
+      /^scope-kaohsiung-council-04-/,
+    );
+    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+
+    await openFocus(page, '/?admin=E05&district=kaohsiung-council-04');
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-scope',
+      'admin-district',
+    );
+    await expect(explorer).toHaveAttribute('data-scene-focus', /^admin-E05-/);
+    await expect(page.locator('.city-admin-card')).toContainText('三民區');
   });
 
   test('samples continuously changing interpolated walking while rendered', async ({

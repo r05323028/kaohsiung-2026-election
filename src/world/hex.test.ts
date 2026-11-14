@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { candidateProfiles } from '../data';
+import { COUNCIL_CONSTITUENCIES } from '../data/constituencies';
 import { movementScopeForCandidate } from './constituencies';
 import { ADMIN_DISTRICTS } from './geography';
 import { HERO_LANDMARK_SPECS } from './hero-landmarks';
@@ -24,6 +25,7 @@ import {
   landmarkWorldPosition,
 } from './hex-landmarks';
 import {
+  adminDistrictConnectivity,
   allowedEdge,
   connectorEndpointsMatchEdges,
   edgesAtNode,
@@ -607,35 +609,66 @@ describe('candidate road movement and territory', () => {
     }
   });
 
-  it('preserves indigenous eligibility as identity-based citywide movement', () => {
+  it('derives indigenous movement from canonical coverage and road connectivity', () => {
     const indigenousProfiles = candidateProfiles.filter(
       (candidate) =>
         !candidate.candidacy.isDemo &&
         movementScopeForCandidate(candidate).kind === 'indigenous',
     );
     expect(indigenousProfiles.length).toBeGreaterThan(0);
+
     for (const candidate of indigenousProfiles) {
       const scope = movementScopeForCandidate(candidate);
-      expect(scope.allowedAdminIds).toHaveLength(38);
+      const coverage = COUNCIL_CONSTITUENCIES.find(
+        (item) => item.slug === candidate.district.slug,
+      )!;
+      expect(coverage).toBeDefined();
       expect(scope.eligibilityNote?.length ?? 0).toBeGreaterThan(0);
       const actor = getActors().find(
         (item) => item.slug === candidate.candidacy.slug,
       )!;
       expect(actor.role).toBe('indigenous');
-      const start = nearestRoadNode(
-        actor.position,
-        new Set(actor.allowedAdminIds),
-      )!;
-      for (const tile of HEX_TILES) {
-        expect(
-          shortestRoadPath(
-            start.id,
-            ringNodeIdsForTile(tile.id)[0]!,
-            new Set(actor.allowedAdminIds),
-          ),
-          tile.id,
-        ).not.toBeNull();
+      expect(new Set(actor.allowedAdminIds)).toEqual(
+        new Set(scope.allowedAdminIds),
+      );
+
+      const allowed = new Set(actor.allowedAdminIds);
+      if (coverage.kind === 'plains-indigenous') {
+        // Constituency 12 is the documented citywide Plains Indigenous seat.
+        expect(scope.allowedAdminIds).toHaveLength(38);
+        expect(scope.label).toContain('全市');
+      } else {
+        // Constituencies 13-15 are eligibility lists, not one contiguous
+        // geography: movement uses the largest connected component only.
+        const connectivity = adminDistrictConnectivity(
+          coverage.adminDistrictIds,
+        );
+        expect(scope.allowedAdminIds).toEqual(connectivity.largestComponent);
+        expect(scope.allowedAdminIds.length).toBeLessThan(38);
+        expect(scope.label).toContain('區移動範圍');
+        for (const detachedId of connectivity.detached) {
+          expect(allowed.has(detachedId)).toBe(false);
+          expect(coverage.adminDistrictIds).toContain(detachedId);
+        }
       }
+
+      const start = nearestRoadNode(actor.position, allowed)!;
+      for (const tile of HEX_TILES) {
+        const path = shortestRoadPath(
+          start.id,
+          ringNodeIdsForTile(tile.id)[0]!,
+          allowed,
+        );
+        if (allowed.has(tile.adminId)) expect(path, tile.id).not.toBeNull();
+        else expect(path, tile.id).toBeNull();
+      }
+
+      advanceSimulationSeconds(300);
+      expect(actor.allowedAdminIds).toContain(actor.currentAdminId);
+      expect(
+        allowedEdge(roadEdge(actor.edgeId), new Set(actor.allowedAdminIds)),
+      ).toBe(true);
+      expect(actorIsOnRoad(actor)).toBe(true);
     }
   });
 });

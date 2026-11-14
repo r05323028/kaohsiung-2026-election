@@ -1,10 +1,9 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { candidateProfiles } from '../data';
 import {
-  ALL_CANDIDATE_VISIBILITY,
   adminDistrictVisibilityScope,
+  CITYWIDE_OVERVIEW_VISIBILITY,
   constituencyVisibilityScope,
-  MAYORAL_CANDIDATE_VISIBILITY,
   visibleCandidatesForFocus,
 } from './candidate-visibility';
 import { ADMIN_DISTRICTS } from './geography';
@@ -21,12 +20,12 @@ const official = candidateProfiles.filter(
   (candidate) => !candidate.candidacy.isDemo,
 );
 const scopes = [
-  MAYORAL_CANDIDATE_VISIBILITY,
-  ALL_CANDIDATE_VISIBILITY,
+  CITYWIDE_OVERVIEW_VISIBILITY,
   adminDistrictVisibilityScope(['E03']),
   adminDistrictVisibilityScope(['E04']),
   adminDistrictVisibilityScope(['E05']),
   constituencyVisibilityScope('kaohsiung-council-04'),
+  constituencyVisibilityScope('kaohsiung-indigenous-flat-12'),
 ];
 
 function mayors() {

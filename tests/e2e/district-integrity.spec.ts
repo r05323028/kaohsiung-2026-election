@@ -114,7 +114,7 @@ test.describe('hex district integrity', () => {
       { timeout: 30_000 },
     );
     const before = await actorMarker(page);
-    expect(before?.count).toBe(22);
+    expect(before?.count).toBe(17);
     if (!before) throw new Error('actor marker bridge is unavailable');
 
     const canvas = page.locator('canvas').first();
@@ -146,7 +146,7 @@ test.describe('hex district integrity', () => {
 
     const after = await actorMarker(page);
     expect(after?.uuid).toBe(before.uuid);
-    expect(after?.count).toBe(22);
+    expect(after?.count).toBe(17);
     await expect(page.locator('.city-admin-card')).toContainText('楠梓區');
   });
 

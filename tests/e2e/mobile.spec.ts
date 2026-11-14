@@ -12,12 +12,10 @@ test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet
   await expect(page.getByRole('heading', { name: '所有候選人' })).toBeVisible();
   const candidateSheet = page.locator('#city-people-tray');
   await expect(candidateSheet.locator('.candidate-sheet__group')).toHaveCount(
-    16,
+    1,
   );
-  await expect(candidateSheet.locator('.candidate-sheet__card')).toHaveCount(
-    106,
-  );
-  await page.getByRole('button', { name: /張靜/ }).first().click();
+  await expect(candidateSheet.locator('.candidate-sheet__card')).toHaveCount(5);
+  await page.locator('.candidate-sheet__card').first().click();
   await expect(page.locator('.profile-panel.is-open')).toBeVisible();
   await expect(page.locator('.profile-panel.is-open')).toContainText(
     '官方資料',

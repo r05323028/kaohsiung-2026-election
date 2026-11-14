@@ -19,10 +19,9 @@ import {
 } from '../data';
 import { withBase } from '../utils/paths';
 import {
-  adminDistrictVisibilityScope,
   type CandidateVisibilityScope,
-  constituencyVisibilityScope,
-  MAYORAL_CANDIDATE_VISIBILITY,
+  CITYWIDE_OVERVIEW_VISIBILITY,
+  visibilityScopeForFocus,
   visibleCandidatesForFocus,
 } from '../world/candidate-visibility';
 import { electoralDistrictSlugForAdminName } from '../world/constituencies';
@@ -191,43 +190,43 @@ export default function CityExplorer({ districts, candidates }: Props) {
     if (window.matchMedia('(min-width: 1024px)').matches) setDetail('high');
 
     const params = new URLSearchParams(window.location.search);
-    let hasExplicitDistrict = false;
     const districtFromUrl = params.get('district');
-    if (
+    const validDistrictSlug =
       districtFromUrl &&
       districts.some((district) => district.slug === districtFromUrl)
-    ) {
-      setSelectedDistrictSlug(districtFromUrl);
-      setOverview(false);
-      hasExplicitDistrict = true;
-    }
-
+        ? districtFromUrl
+        : null;
     const adminFromUrl = params.get('admin');
     const admin = adminFromUrl
       ? ADMIN_SUMMARY_BY_ID.get(adminFromUrl)
       : undefined;
-    if (admin) {
+    const candidateFromUrl = params.get('candidate');
+    const candidate = candidateFromUrl
+      ? candidates.find((item) => item.candidacy.slug === candidateFromUrl)
+      : undefined;
+
+    if (candidate) {
+      // A candidate route is the most specific focus: it defines the electoral
+      // district and must not inherit an unrelated administrative focus from a
+      // hand-edited URL. Closing the profile then keeps one consistent scope.
+      setOverview(false);
+      setSelectedCandidateSlug(candidate.candidacy.slug);
+      setFollowActorSlug(candidate.candidacy.slug);
+      setSelectedDistrictSlug(candidate.district.slug);
+      setSelectedAdminId(null);
+    } else if (admin) {
+      // An administrative focus resolves to exactly one ordinary constituency.
+      // Always synchronize the electoral district, so ?admin=&district= cannot
+      // initialize contradictory administrative and constituency focus.
       setSelectedAdminId(admin.id);
       setOverview(false);
-      if (!hasExplicitDistrict) {
-        const electoral = electoralDistrictSlugForAdminName(admin.shortName);
-        if (electoral && districts.some((item) => item.slug === electoral)) {
-          setSelectedDistrictSlug(electoral);
-        }
+      const electoral = electoralDistrictSlugForAdminName(admin.shortName);
+      if (electoral && districts.some((item) => item.slug === electoral)) {
+        setSelectedDistrictSlug(electoral);
       }
-    }
-
-    const candidateFromUrl = params.get('candidate');
-    if (candidateFromUrl) {
-      const candidate = candidates.find(
-        (item) => item.candidacy.slug === candidateFromUrl,
-      );
-      if (candidate) {
-        setOverview(false);
-        setSelectedCandidateSlug(candidateFromUrl);
-        setFollowActorSlug(candidateFromUrl);
-        setSelectedDistrictSlug(candidate.district.slug);
-      }
+    } else if (validDistrictSlug) {
+      setSelectedDistrictSlug(validDistrictSlug);
+      setOverview(false);
     }
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -343,17 +342,24 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const selectedCoverage = selectedDistrict?.constituencyCoverage;
   const candidateVisibilityScope = useMemo<CandidateVisibilityScope>(() => {
     if (selectedCandidate) {
-      return selectedDistrict?.constituencyCoverage
-        ? constituencyVisibilityScope(selectedDistrict.slug)
-        : MAYORAL_CANDIDATE_VISIBILITY;
+      return visibilityScopeForFocus({
+        kind: 'candidate',
+        candidate: selectedCandidate,
+      });
     }
     if (selectedAdminId) {
-      return adminDistrictVisibilityScope([selectedAdminId]);
+      return visibilityScopeForFocus({
+        kind: 'administrative',
+        adminDistrictId: selectedAdminId,
+      });
     }
     if (!overview && selectedDistrict?.constituencyCoverage) {
-      return constituencyVisibilityScope(selectedDistrict.slug);
+      return visibilityScopeForFocus({
+        kind: 'constituency',
+        districtSlug: selectedDistrict.slug,
+      });
     }
-    return MAYORAL_CANDIDATE_VISIBILITY;
+    return CITYWIDE_OVERVIEW_VISIBILITY;
   }, [
     overview,
     selectedAdminId,
@@ -473,7 +479,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
       );
   }, []);
 
-  const selectDistrict = (slug: string) => {
+  const selectDistrict = useCallback((slug: string) => {
     returnFocusRef.current = null;
     setSelectedDistrictSlug(slug);
     setSelectedCandidateSlug(null);
@@ -481,7 +487,27 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setSelectedAdminId(null);
     setOverview(false);
     setViewNonce((value) => value + 1);
-  };
+  }, []);
+
+  useEffect(() => {
+    const bridge = window as unknown as {
+      __kaohsiungSelectDistrict?: (slug: string) => void;
+    };
+    bridge.__kaohsiungSelectDistrict = selectDistrict;
+    return () => {
+      delete bridge.__kaohsiungSelectDistrict;
+    };
+  }, [selectDistrict]);
+
+  useEffect(() => {
+    if (!selectedCandidateSlug) return;
+    const stillVisible = visibleCandidates.some(
+      (candidate) => candidate.candidacy.slug === selectedCandidateSlug,
+    );
+    if (stillVisible) return;
+    setSelectedCandidateSlug(null);
+    setFollowActorSlug(null);
+  }, [selectedCandidateSlug, visibleCandidates]);
 
   const selectAdmin = (
     id: string | null,
@@ -790,7 +816,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
         )}
 
         <CandidateBottomSheet
-          candidates={candidates}
+          candidates={visibleCandidates}
           districts={districts}
           open={sheetOpen}
           reducedMotion={reducedMotion}

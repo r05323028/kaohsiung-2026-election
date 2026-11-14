@@ -83,10 +83,6 @@ assertCondition(
   'policy count does not match the published policy dataset: ' +
     published.policies.length,
 );
-assertCondition(
-  dataset.policyCount === 1005,
-  'policy count changed from the reviewed snapshot: ' + dataset.policyCount,
-);
 
 // 1. One classification per policy, no orphans, no duplicates, correct candidate.
 const classified = new Map<

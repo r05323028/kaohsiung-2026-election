@@ -1,7 +1,7 @@
 # 政策主張與從政歷程分區遷移報告
 
 - 日期：2026-11-14
-- 範圍：106 位市長與市議員候選人、1005 筆已發布政策紀錄（`data/published/2026/candidate-policies.json`）
+- 範圍：106 位市長與市議員候選人、1017 筆已發布政策紀錄（`data/published/2026/candidate-policies.json`）
 - 產物：`data/approved/2026/policy-career-separation.json`、`data/policy-career/2026/curation.json`
 - 規則文件：`docs/POLICY_CAREER_SEPARATION.md`
 - 審核者：editorial-research（本報告描述機器分流結果與人工覆核項目，不改變既有發布授權）
@@ -10,12 +10,12 @@
 
 | 項目 | 數量 |
 | --- | --- |
-| 已發布政策 | 1005 |
-| 留在政策主張（`policy-commitments`） | 999 |
-| 移入從政歷程（`political-career`） | 6 |
+| 已發布政策 | 1017 |
+| 留在政策主張（`policy-commitments`） | 1010 |
+| 移入從政歷程（`political-career`） | 7 |
 | 拆分（`split-record`） | 3 |
-| 從政歷程新增的歷史紀錄（含拆分後的歷史半） | 8 |
-| 跨區連結 | 19（自動 14、人工 5；`same-event` 2、`related-topic` 17） |
+| 從政歷程新增的歷史紀錄（含拆分後的歷史半） | 9 |
+| 跨區連結 | 21（自動 15、人工 6；`same-event` 2、`related-topic` 19） |
 | 初篩標記但覆核後保留為承諾 | 5 |
 | 待審（`review-required`） | 0 |
 
@@ -28,10 +28,11 @@
 3. 人工覆核後給定 `ownership`、`temporalBasis`、`basis`（`policy-type`／`tense-marker`／`editorial-review`）與 `note`；需要改寫時提供承諾半的標題、摘要與逐字證據。
 4. `src/data/policy-career/similarity.ts` 以 3-gram（df ≤ 4、至少 2 個共同詞）計算政策與活動的相似度；≥ 0.3 產生 `related-topic`，來源同日且 ≥ 0.45 產生 `same-event`，每筆政策最多 3 條。
 
-## 移入從政歷程（6 筆）
+## 移入從政歷程（7 筆）
 
 | 候選人 | 政策紀錄 | 原標題 | 歷史紀錄（類別／行動／日期／結果狀態） |
 | --- | --- | --- | --- |
+| 何權峰 | `policy-2026-he-quan-feng-enrichment-station-development-01` | 高雄車站周邊開發與交通銜接 | 高雄車站周邊開發與交通銜接（council-interpellation／interpellate／2026-10-14／institutional-response） |
 | 黃柏霖 | `policy-2026-huang-bo-lin-07` | 微型保險納保年齡提高至70歲 | 提案修正微型保險自治條例放寬納保年齡（council-proposal／propose／日期未載明／documented-outcome） |
 | 林智鴻 | `policy-2026-lin-zhi-hong-02` | 爭取近3億元改造台鐵機廠 | 爭取台鐵機廠轉型親子休閒園區經費（municipal-governance／public-affairs-participation／日期未載明／documented-outcome） |
 | 劉德林 | `policy-2026-liu-de-lin-09` | 鳳山軍方閒地變公園 | 爭取軍方閒置土地變更為公園用地（municipal-governance／public-affairs-participation／日期未載明／institutional-response） |
@@ -63,14 +64,14 @@
 
 ## 保留未變更
 
-- 其餘 994 筆政策留在政策主張，標題、摘要、來源與分類未改；僅拆分紀錄改寫承諾半的措辭。
+- 其餘 1007 筆政策留在政策主張，標題、摘要、來源與分類未改；僅拆分紀錄改寫承諾半的措辭。
 - 從政歷程原有的 1045 筆政治活動、103 筆公職任期與 643 筆來源全部保留，活動 id 與來源 id 未變。
 - 候選人 id、政策 id、活動 id、來源 URL、擷取時間與發布欄位皆沿用原值。
 
-## 交叉連結（19 筆）
+## 交叉連結（21 筆）
 
-- 自動 14 筆：相似度 0.30–0.59，全部 `related-topic`，其中 2 筆因同日發布升為 `same-event`（陳麗珍、黃香菽）。
-- 人工 5 筆：黃柏霖、黃文益、王義雄、鍾易仲（2 筆），皆附理由並指向既有活動，不複製歷史敘述。
+- 自動 15 筆：相似度 0.30–0.59，全部 `related-topic`，其中 2 筆因同日發布升為 `same-event`（陳麗珍、黃香菽）。
+- 人工 6 筆：何權峰、黃柏霖、黃文益、王義雄、鍾易仲（2 筆），皆附理由並指向既有活動，不複製歷史敘述。
 
 ## 完整性和驗證
 

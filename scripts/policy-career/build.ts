@@ -416,7 +416,7 @@ const dataset: PolicyCareerDataset = {
   snapshotDate: SNAPSHOT_DATE,
   policyDatasetId: 'kaohsiung-2026-candidate-policies',
   careerDatasetId: 'kaohsiung-2026-political-career',
-  policyCount: 1005,
+  policyCount: policies.length,
   classifications,
   links,
   review: {

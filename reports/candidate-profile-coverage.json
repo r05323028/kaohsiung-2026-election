@@ -12,16 +12,16 @@
   "candidatesStructurallySupported": 106,
   "candidatesWithVerifiedBasicInformation": 106,
   "candidatesWithVerifiedPolicyStatements": 0,
-  "candidatesWithPendingPolicyResearch": 89,
+  "candidatesWithPendingPolicyResearch": 93,
   "candidatesWithVerifiedNews": 2,
   "formerLegislatorsWithVerifiedProposals": 0,
   "formerLegislatorsWithVerifiedIndividualVotingRecords": 0,
   "formerExecutivesWithVerifiedPolicyInitiatives": 0,
   "publishedPolicyCount": 0,
-  "pendingPolicyCount": 1196,
+  "pendingPolicyCount": 1208,
   "publishedNewsCount": 4,
   "publishedCareerRecordCount": 12,
-  "unavailableCandidateResearchCount": 17,
+  "unavailableCandidateResearchCount": 13,
   "recordsRejectedForInsufficientEvidence": 0,
   "recordsPendingHumanReview": 16,
   "identityOrAttributionConflictCount": 0,
@@ -32,7 +32,7 @@
       "candidateCount": 5,
       "candidatesWithVerifiedBasicInformation": 5,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 269,
+      "pendingPolicyCount": 270,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0
     },
@@ -149,7 +149,7 @@
       "candidateCount": 12,
       "candidatesWithVerifiedBasicInformation": 12,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 97,
+      "pendingPolicyCount": 101,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0
     },
@@ -167,7 +167,7 @@
       "candidateCount": 10,
       "candidatesWithVerifiedBasicInformation": 10,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 88,
+      "pendingPolicyCount": 95,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0
     }
@@ -1531,7 +1531,7 @@
       "verifiedBasicInfo": true,
       "rosterSourceCount": 2,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 0,
+      "pendingPolicyCount": 1,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0,
       "publishedPositionCount": 0,
@@ -1543,12 +1543,12 @@
       "hasVerifiedIndividualVote": false,
       "formerExecutive": false,
       "hasVerifiedExecutiveInitiative": false,
-      "policyResearchOutcome": "sources-unavailable",
+      "policyResearchOutcome": "verified-records",
       "missingOrUnavailable": [
         "尚無已核准政策紀錄",
         "尚無已核准新聞紀錄",
         "尚無已核准從政歷程紀錄",
-        "候選人特定政策來源未保留或無法取得"
+        "政策研究紀錄仍待人工／編輯審查"
       ]
     },
     {
@@ -1681,7 +1681,7 @@
       "verifiedBasicInfo": true,
       "rosterSourceCount": 2,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 1,
+      "pendingPolicyCount": 3,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0,
       "publishedPositionCount": 0,
@@ -1693,7 +1693,7 @@
       "hasVerifiedIndividualVote": false,
       "formerExecutive": false,
       "hasVerifiedExecutiveInitiative": false,
-      "policyResearchOutcome": "current-or-historical-only",
+      "policyResearchOutcome": "verified-records",
       "missingOrUnavailable": [
         "尚無已核准政策紀錄",
         "尚無已核准新聞紀錄",
@@ -1741,7 +1741,7 @@
       "verifiedBasicInfo": true,
       "rosterSourceCount": 2,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 0,
+      "pendingPolicyCount": 1,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0,
       "publishedPositionCount": 0,
@@ -1753,12 +1753,12 @@
       "hasVerifiedIndividualVote": false,
       "formerExecutive": false,
       "hasVerifiedExecutiveInitiative": false,
-      "policyResearchOutcome": "sources-unavailable",
+      "policyResearchOutcome": "verified-records",
       "missingOrUnavailable": [
         "尚無已核准政策紀錄",
         "尚無已核准新聞紀錄",
         "尚無已核准從政歷程紀錄",
-        "候選人特定政策來源未保留或無法取得"
+        "政策研究紀錄仍待人工／編輯審查"
       ]
     },
     {
@@ -2251,7 +2251,7 @@
       "verifiedBasicInfo": true,
       "rosterSourceCount": 2,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 0,
+      "pendingPolicyCount": 7,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0,
       "publishedPositionCount": 0,
@@ -2263,12 +2263,12 @@
       "hasVerifiedIndividualVote": false,
       "formerExecutive": false,
       "hasVerifiedExecutiveInitiative": false,
-      "policyResearchOutcome": "sources-unavailable",
+      "policyResearchOutcome": "verified-records",
       "missingOrUnavailable": [
         "尚無已核准政策紀錄",
         "尚無已核准新聞紀錄",
         "尚無已核准從政歷程紀錄",
-        "候選人特定政策來源未保留或無法取得"
+        "政策研究紀錄仍待人工／編輯審查"
       ]
     },
     {
@@ -3299,7 +3299,7 @@
       "verifiedBasicInfo": true,
       "rosterSourceCount": 3,
       "publishedPolicyCount": 0,
-      "pendingPolicyCount": 0,
+      "pendingPolicyCount": 1,
       "publishedNewsCount": 0,
       "publishedCareerRecordCount": 0,
       "publishedPositionCount": 0,
@@ -3311,12 +3311,12 @@
       "hasVerifiedIndividualVote": false,
       "formerExecutive": true,
       "hasVerifiedExecutiveInitiative": false,
-      "policyResearchOutcome": "sources-unavailable",
+      "policyResearchOutcome": "verified-records",
       "missingOrUnavailable": [
         "尚無已核准政策紀錄",
         "尚無已核准新聞紀錄",
         "尚無已核准從政歷程紀錄",
-        "候選人特定政策來源未保留或無法取得"
+        "政策研究紀錄仍待人工／編輯審查"
       ]
     },
     {

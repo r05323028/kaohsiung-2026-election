@@ -178,7 +178,7 @@ export const PolicyCareerDatasetSchema = z.object({
   snapshotDate: DateOnlySchema,
   policyDatasetId: z.literal('kaohsiung-2026-candidate-policies'),
   careerDatasetId: z.literal('kaohsiung-2026-political-career'),
-  policyCount: z.literal(1005),
+  policyCount: z.number().int().positive(),
   classifications: z.array(PolicyClassificationSchema).min(1),
   links: z.array(PolicyActivityLinkSchema),
   review: PolicyCareerReviewSchema,

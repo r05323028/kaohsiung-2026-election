@@ -16,11 +16,24 @@ describe('policy/career separation dataset', () => {
     expect(policyCareerDataset.review.counts.policies).toBe(seen.size);
   });
 
+  it('keeps the reviewed snapshot in sync with the published dataset', () => {
+    const candidates = new Set(classifications.map((row) => row.candidateId));
+    let published = 0;
+    for (const candidateId of candidates) {
+      published += getPublishedCandidatePolicies(candidateId).length;
+    }
+    expect(published).toBe(policyCareerDataset.policyCount);
+    expect(classifications).toHaveLength(policyCareerDataset.policyCount);
+  });
+
   it('never publishes one policy record in both sections', () => {
     const candidates = new Map<string, string[]>();
     for (const row of classifications) {
       const commitments = candidates.get(row.candidateId) ?? [];
-      if (row.ownership === 'policy-commitments' || row.ownership === 'split-record') {
+      if (
+        row.ownership === 'policy-commitments' ||
+        row.ownership === 'split-record'
+      ) {
         commitments.push(row.policyId);
       }
       candidates.set(row.candidateId, commitments);
@@ -28,19 +41,27 @@ describe('policy/career separation dataset', () => {
     for (const row of classifications) {
       if (row.ownership !== 'political-career') continue;
       const view = getPolicyCareer(row.candidateId);
-      const ids = view.commitments.map((commitment) => commitment.policy.policyId);
+      const ids = view.commitments.map(
+        (commitment) => commitment.policy.policyId,
+      );
       expect(ids).not.toContain(row.policyId);
-      expect(ids.sort()).toEqual((candidates.get(row.candidateId) ?? []).sort());
+      expect(ids.sort()).toEqual(
+        (candidates.get(row.candidateId) ?? []).sort(),
+      );
     }
   });
   it('keeps split promises distinct from the historical half', () => {
-    const split = classifications.filter((row) => row.ownership === 'split-record');
+    const split = classifications.filter(
+      (row) => row.ownership === 'split-record',
+    );
     expect(split).toHaveLength(3);
     for (const row of split) {
       expect(row.commitment).not.toBeNull();
       if (!row.historical) continue;
       expect(row.commitment?.title).not.toBe(row.historical.title);
-      expect(row.commitment?.summary ?? '').not.toContain(row.historical.description);
+      expect(row.commitment?.summary ?? '').not.toContain(
+        row.historical.description,
+      );
       expect(row.historical.sourceUrls.length).toBeGreaterThan(0);
     }
   });
@@ -84,7 +105,9 @@ describe('policy/career separation dataset', () => {
       (entry) => entry.policyId === 'policy-2026-huang-bo-lin-07',
     );
     expect(row?.ownership).toBe('political-career');
-    const view = getPolicyCareer('official-candidate-2026-district-kaohsiung-council-07-c27cf75d');
+    const view = getPolicyCareer(
+      'official-candidate-2026-district-kaohsiung-council-07-c27cf75d',
+    );
     expect(view.commitments.map((c) => c.policy.policyId)).not.toContain(
       'policy-2026-huang-bo-lin-07',
     );
@@ -98,7 +121,9 @@ describe('policy/career separation dataset', () => {
   });
 
   it('returns an empty view for a candidate without policy records', () => {
-    const view = getPolicyCareer('official-mayor-wang-zhao-min-2026');
+    const view = getPolicyCareer(
+      'official-candidate-2026-district-kaohsiung-council-03-53fbb71e',
+    );
     expect(view.commitments).toHaveLength(0);
     expect(view.historicalRecords).toHaveLength(0);
     expect(view.linksByActivityId).toEqual({});

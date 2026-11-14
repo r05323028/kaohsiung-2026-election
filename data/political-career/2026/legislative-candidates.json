@@ -1,0 +1,26 @@
+{
+  "datasetId": "kaohsiung-2026-legislative-candidates",
+  "note": "立法院職務的目標名單以人工登錄為準，不由競選文宣推測；API 回應必須在每一個登錄屆次都列出該姓名為立法委員，否則整批中止，以免把他人的議案與表決記到候選人身上。",
+  "researchCutoff": "2026-11-14",
+  "candidates": [
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "name": "賴瑞隆",
+      "identityBasis": "中央選舉委員會 115 年直轄市長候選人名冊登錄之民主進步黨候選人；立法院開放資料第 9、10、11 屆委員名錄均列同一姓名，選區依序為高雄市第 9、第 8、第 8 選舉區。",
+      "terms": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "name": "柯志恩",
+      "identityBasis": "中央選舉委員會 115 年直轄市長候選人名冊登錄之中國國民黨候選人；立法院開放資料第 9、11 屆委員名錄均列同一姓名，均為全國不分區。",
+      "terms": [
+        9,
+        11
+      ]
+    }
+  ]
+}

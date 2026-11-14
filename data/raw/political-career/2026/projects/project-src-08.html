@@ -1,0 +1,916 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	高雄市議會 議事資訊整合查詢系統
+</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/Style/all.css" rel="stylesheet" type="text/css" />
+<link href="/Scripts/jquery-ui-1.8.22.custom/css/custom-theme/jquery-ui.custom.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+<script src="/Scripts/jquery-ui-1.8.22.custom/js/jquery-ui.custom.min.js" type="text/javascript"></script>
+<!-- 月曆元件載入開始 -->
+<link href="/Scripts/JSCal2-1.9/src/css/win2k/calendar-win2k-1.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/JSCal2-1.9/src/js/jquery.dynDateTimeMinGo.js" type="text/javascript"></script>
+<script src="/Scripts/JSCal2-1.9/src/js/lang/calendar-big5.js" type="text/javascript"></script>
+<!-- 月曆元件載入結束 -->
+<!-- 跑馬燈載入開始 -->
+<link href="/Style/marquee.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/Marquee.js" type="text/javascript"></script>
+<!-- 跑馬燈載入結束 -->
+<!-- fancybox載入開始 -->
+<script type="text/javascript" src="/Scripts/fancybox/jquery.fancybox.js"></script>
+<link type="text/css" href="/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" /> 
+<!-- fancybox載入結束 -->
+<script src="/Scripts/MyScript.js?v=20240702001" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+ window.focus();
+});
+</script>
+
+    <style>
+        .JustPrint {
+            /*display:none*/
+        }
+
+        @media print {
+            .JustPrint {
+                display: block;
+                font: 9pt verdana;
+                letter-spacing: 2px;
+            }
+
+            .NoPrint {
+                display: none
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $(this).find("#menu ul .submenu").hide(0);
+            $("#menu ul li").mouseenter(function () {
+                $(this).find(".submenu").show(150);
+                return false;
+            });
+            $("#menu ul li").mouseleave(function () {
+                $(this).find(".submenu").hide(150);
+            });
+        });
+
+        //        $(document).ready(function() {
+        //            $(".various").fancybox({
+        //		        'maxWidth'	    : 800,
+        //		        'maxHeight'	    : 600,
+        //		        'fitToView'	    : false,
+        //		        'width'		    : '70%',
+        //		        'height'		: '70%',
+        //		        'autoSize'	    : false,
+        //		        'closeClick'	: false,
+        //		        'openEffect'	: 'none',
+        //		        'closeEffect'	: 'none'
+        //	        });
+        //		});
+
+        $(document).ready(function () {
+            $(".various").fancybox({
+                'width': '55%',
+                'height': '90%',
+                'autoScale': true,
+                'transitionIn': 'none',
+                'transitionOut': 'none',
+                'type': 'iframe'
+            });
+
+            $(".dropdown").mouseenter(function () {
+                $(this).find('.dropdown-submenu').attr('style', 'display:block');
+            });
+            $(".dropdown").mouseleave(function () {
+                $(this).find('.dropdown-submenu').attr('style', 'display:none');
+            });
+        });
+    </script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-24833141-8" integrity="sha384-JBf8T86nONMfqJVY9FrA6tI4KR8bmbsU6AWroS1bNRoqVKhYCAc6kkDM9pdYfXqv" crossorigin="anonymous"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-24833141-8');
+    </script>
+
+    
+    <script type="text/javascript" src="Scripts/plugin/jquery.iframe-auto-height.plugin.1.7.1.js"></script>
+    <script src="Scripts/jquery.nav.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Scripts/oka_slider_model.js"></script>
+    <script type='text/javascript' src='Scripts/oka_model.js'></script>
+    <script type="text/javascript">
+        jQuery.support.cors = true;
+        $(function () {
+            var domain = "kcc.gov.tw";
+            try {
+                if (document.domain.indexOf(domain) != -1) {
+                    document.domain = domain;                  // set new document.domain;
+                }
+            } catch (ex) {
+                alert("error: " + ex.toString());
+            }
+            $("#frame_livevideo").on("load", function () {
+                if ($('#frame_livevideo').contents().find('#PanContent').length == 0) {
+                    $('#nonLinkLiveVideo').attr("style", "display:;");
+                    $('#linkLiveVideo').attr("style", "display:none;")
+                }
+                else {
+                    var title = $('#frame_livevideo').contents().find('.play_bg div').eq(0).text();
+                    $('#frame_livevideo').contents().find('.play_bg div').eq(0).text("");
+                    $('#linkLiveVideo').find('.general-service-list-info').prepend("<p>" + title + "</p>");
+                }
+            });
+
+            $("#frame_top").on("load", function () {
+                setIframe('frame_top');
+            });
+            $("#frame_schedule").on("load", function () {
+                setIframe('frame_schedule');
+            });
+            $("#frame_bottom").on("load", function () {
+                setIframe('frame_bottom');
+            });
+
+            //隱藏沒有用到的table
+            $('table').eq(2).attr('style', 'display:none');
+            //window.setInterval("Reload('frame_schedule')", 1000);
+            //window.setInterval("Reload('frame_top')", 1000);
+            //window.setInterval("Reload('frame_bottom')", 1000);
+            //window.setInterval("Reload('frame_livevideo')", 1000);
+
+        });
+        function setIframe(iframeID) {
+            var iframe = parent.document.getElementById(iframeID);
+            var height = 0;
+
+            if (iframe.contentDocument && iframe.contentDocument.body.offsetHeight) {
+                height = iframe.contentDocument.body.offsetHeight;
+            }
+            else if (iframe.Document && iframe.Document.body.scrollHeight) {
+                height = iframe.Document.body.scrollHeight;
+            }
+            iframe.height = height > 50 ? height : 50;
+        }
+//        function Reload(iframeID) {
+//            $(iframeID).load();
+//            $(iframeID).iframeAutoHeight({ minHeight: 50 });
+//        }
+
+    </script>
+
+
+
+    
+</head>
+<body>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" id="ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=HXC5O9kwjV-kVnpN3-SUuTyctSSmzk7KoSh7xjoQPlA20AD2nulPB6rEdYWu-wQTWoCL2XTYB2PLaHTI5yYGNEefDJ01&amp;t=639191121332169432" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=5ypOjBCubZgay4CHUyOpV4x_rYxlmqAbvTkPjSPItZqT_XCSC_cYozat6zfr86XlMdDg-0T-b11SUmGz5xSmIi-6brbQbT_VrThgxhzcK4S08KZ00&amp;t=7f16157c" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2eRIBEVrezxhav_-_Ra9YEkyZirQIfx44qEStF3lljQXTqc4Ufjexj7tvP9Ghy_Ubz_fmRugUSelmb6nrxc4BGNaBcW9VkQ3Z4hOWAvD7m8SRs8utGYTbRZFYtbeWXP3kvCitA2&amp;t=7f16157c" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="XyJnaaa7wo0l2bi1e/DSbCPvmDsqSv32AAKDDRgGlvWRD4dWqyJH19Vz7XKcf0WHhG28QxPRwOE+yBtuizN05aRpUJCZ5IesdoFcZEzXcRibVKWszA9tZVnPkWOljiuVJPTssYvMWC/eEOVFKAencY3iB2lbQt5l6aSXTMcrBI9J/3EnMDiV1rQtCs3Uaj161W2yE64iTGwd8//k4WtIluyo7DeodmIX+ukyqKK4raVtT+jBGE20qfey+ypyHypQzs1Uf62mQqLK93CXrxSHnYjp5udMrHWLLYkXII+kB6WBhix1dnyMEPebyiupoT/uqDnQlt9+YA0fv8knsIUMax7xXQIwCPwKhyAupA8SkSZU0EGQx1GMt3aSh7Dr5ocwap00Oy3EkFlZGJTD59ryM68mbXNU1Qs1E+Kr+lRqCfgFsRA6cILzfU306v5BKgjj4GC/H9TYAcpphejA1TuovNKNT33/IxFLjeYmJohVwpRdR7s40f2p+6DwpxOiAF4ig6n3PFrWf9tSsGmTHchogLq35oE1ck02IS+0R1m2nYe0rN1U7WAudgEsAsUl6ouDo0aGd0hPvhJH1Y7MipQc6zFSA2PtLJu1Fztt7c8CDEEK/Pb0" />
+</div>
+        <div id="wrapper" class="header">
+            <!----上方區塊---->
+            <div class="container justify-content-between header-info NoPrint">
+                <a href="/Index.aspx">
+                    <h1 class="base-logo">
+                        <img src="/img/major_logo.png" alt="高雄市議會" width="260" />
+                        <p class="font-32">
+                            議事資訊<br />
+                            <span class="font-20">整合查詢系統</span>
+                        </p>
+                    </h1>
+                </a>
+                <div class="header-service">
+                    <div class="justify-content-center">
+                        <ul class="d-flex header-menu">
+                            <li><a accesskey="U" href="#" title="上方選單連結區，此區塊列有本網站的主要連結"><span style="visibility: hidden">:::</span></a></li>
+                            <li><a href="/Index.aspx">回首頁</a></li>
+                            <li><a href="/System/StaticPages/Sitemap.aspx">網站地圖</a></li>
+                            <li><a href="https://www.kcc.gov.tw/" target="_blank" rel="noopener noreferrer">高雄市議會</a></li>
+                            
+                        </ul>
+                        <ul class="d-flex header-function">
+                            <li><a href="#" class="font-12 justify-content-center">A</a></li>
+                            <li><a href="#" class="white font-16 justify-content-center bg">A</a></li>
+                            <li><a href="#" class="font-20 justify-content-center">A</a></li>
+                            <li><a href="#" class="font-20 justify-content-center bg">
+                                <img src="/img/share.png" alt="分享" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search justify-content-center">
+                        <input name="ctl00$txtKeyword" type="text" id="txtKeyword" class="search-bar font-16" placeholder="搜尋" size="15" />
+                        <a id="linkSearch" class="search-btn" href="javascript:__doPostBack(&#39;ctl00$linkSearch&#39;,&#39;&#39;)"><img src="/img/search.png" alt="" /></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <a href="#" class="menu">
+                    <label for="burger" class="menu-icon">
+                        <img src="/img/menu.png" alt="主選單">
+                    </label>
+                    <div class="burger-menu">
+                        <!--<input type="checkbox" name="burger" id="burger">-->
+                        <div class="burger-sidebar">
+                            <table>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td><a href="/Index.aspx" class="burger-sidebar-item">回首頁</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/StaticPages/Sitemap.aspx" class="burger-sidebar-item">網站地圖</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://www.kcc.gov.tw/" class="burger-sidebar-item">高雄市議會</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/Bulletin/Order.aspx" class="burger-sidebar-item">訂閱電子報</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="burger-sidebar-title">熱門連結</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="/System/Schedule/Default.aspx" class="burger-sidebar-item">日程表</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/MeetingRecord/Default.aspx" class="burger-sidebar-item">會議紀錄</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/MunicipalQuestion/Default.aspx" class="burger-sidebar-item">市政總質詢</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/Proposal/Default.aspx" class="burger-sidebar-item">提案資料</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/Question/Default.aspx" class="burger-sidebar-item">質詢資料</a></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="burger-sidebar-item-dropdown">
+                                            <a href="#" class="burger-sidebar-item">
+                                                <div class="justify-content-between">
+                                                    <p>議事錄</p>
+                                                    <img src="/img/next_black.png" alt="dropdown">
+                                                </div>
+                                            </a>
+                                            <div class="burger-sidebar-dropdown">
+                                                <ul>
+                                                    <li><a href="/System/Bulletin/Default.aspx" class="dropdown-submenu-item">議事資料查詢</a></li>
+                                                    <li><a href="/System/Bulletin/Proceedings.aspx" class="dropdown-submenu-item">議事錄瀏覽</a></li>
+                                                    <li><a href="/System/Bulletin/ProceedingsInfo.aspx" class="dropdown-submenu-item">歷史議事資訊彙編瀏覽</a></li>
+                                                    <li><a href="/System/Bulletin/BulletinList.aspx" class="dropdown-submenu-item">歷史公報瀏覽</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="burger-sidebar-item-dropdown">
+                                            <a href="#" class="burger-sidebar-item">
+                                                <div class="justify-content-between">
+                                                    <p>其他議事資料</p>
+                                                    <img src="/img/next_black.png" alt="dropdown">
+                                                </div>
+                                            </a>
+                                            <div class="burger-sidebar-dropdown">
+                                                <ul>
+                                                    <li><a href="/System/BusinessReport/Default.aspx" class="dropdown-submenu-item">市府部門業務報告</a></li>
+                                                    <li><a href="/System/PublicHearing/Default.aspx" class="dropdown-submenu-item">公聽會</a></li>
+                                                    <li><a href="/System/ProjectReport/Default.aspx" class="dropdown-submenu-item">專案報告</a></li>
+                                                    <li><a href="/System/BulletinDraft/Default.aspx" class="dropdown-submenu-item">各種會議譯文稿</a></li>
+                                                    <li><a href="/System/Proposal/ReplyDefault.aspx" class="dropdown-submenu-item">執行情形彙總表</a></li>
+                                                    <li><a href="/System/MunicipalQuestion/Default.aspx" class="dropdown-submenu-item">質詢順序</a></li>
+                                                    <li><a href="/System/CommitteeList/Default.aspx" class="dropdown-submenu-item">委員會一覽表</a></li>
+                                                    <li><a href="/System/OtherKind/Default.aspx" class="dropdown-submenu-item">各類名單</a></li>
+                                                    <li><a href="/System/MunicipalMeetingRecord/Default.aspx" class="dropdown-submenu-item">市政會議紀錄</a></li>
+                                                    <li><a href="/System/ProcedureOfTables/Default.aspx" class="dropdown-submenu-item">議事各項統計表</a></li>
+                                                    <li><a href="/System/Proposal/Statistics.aspx" class="dropdown-submenu-item">提案資料統計</a></li>
+                                                    <li><a href="/System/Bulletin/WordCloud.aspx" class="dropdown-submenu-item">關鍵字文字雲</a></li>
+                                                    <li><a href="https://vcs.kcc.gov.tw/" class="dropdown-submenu-item" target="_blank" rel="noopener noreferrer">議事質詢主題分類儀表板</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/System/Councilor/Default.aspx" class="burger-sidebar-item">議員相關資料</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul class="container justify-content-between">
+                    <li><a href="/System/Schedule/Default.aspx" class="navbar-item font-20">日程表</a></li>
+                    <li><a href="/System/MeetingRecord/Default.aspx" class="navbar-item font-20">會議紀錄</a></li>
+                    <li><a href="/System/MunicipalQuestion/Default.aspx" class="navbar-item font-20">市政總質詢</a></li>
+                    <li><a href="/System/Proposal/AdvancedSearch.aspx" class="navbar-item font-20">提案資料</a></li>
+                    <li><a href="/System/Question/Default.aspx" class="navbar-item font-20">質詢資料</a></li>
+                    
+                    <li class="dropdown"><a href="#" class="navbar-item font-20" style="width:120px;">議事錄</a>
+                        <div class="dropdown-submenu" style="display: none">
+                            <ul>
+                                <li><a href="/System/Bulletin/Default.aspx" class="navbar-item-submenu-item">議事資料查詢</a></li>
+                                <li><a href="/System/Bulletin/Proceedings.aspx" class="navbar-item-submenu-item">議事錄瀏覽</a></li>
+                                <li><a href="/System/Bulletin/ProceedingsInfo.aspx" class="navbar-item-submenu-item">歷史議事資訊彙編瀏覽</a></li>
+                                <li><a href="/System/Bulletin/BulletinList.aspx" class="navbar-item-submenu-item">歷史公報瀏覽</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" class="navbar-item font-20">其他議事資料</a>
+                        <div class="dropdown-submenu" style="display: none">
+                            <ul>
+                                <li><a href="/System/BusinessReport/Default.aspx" class="navbar-item-submenu-item">市府部門業務報告</a></li>
+                                <li><a href="/System/PublicHearing/Default.aspx" class="navbar-item-submenu-item">公聽會</a></li>
+                                <li><a href="/System/ProjectReport/Default.aspx" class="navbar-item-submenu-item">專案報告</a></li>
+                                <li><a href="/System/BulletinDraft/Default.aspx" class="navbar-item-submenu-item">各種會議譯文稿</a></li>
+                                <li><a href="/System/Proposal/ReplyDefault.aspx" class="navbar-item-submenu-item">執行情形彙總表</a></li>
+                                <li><a href="/System/MunicipalQuestion/Default.aspx" class="navbar-item-submenu-item">質詢順序</a></li>
+                                <li><a href="/System/CommitteeList/Default.aspx" class="navbar-item-submenu-item">委員會一覽表</a></li>
+                                <li><a href="/System/OtherKind/Default.aspx" class="navbar-item-submenu-item">各類名單</a></li>
+                                <li><a href="/System/MunicipalMeetingRecord/Default.aspx" class="navbar-item-submenu-item">市政會議紀錄</a></li>
+                                <li><a href="/System/ProcedureOfTables/Default.aspx" class="navbar-item-submenu-item">議事各項統計表</a></li>
+                                <li><a href="/System/Proposal/Statistics.aspx" class="navbar-item-submenu-item">提案資料統計</a></li>
+                                <li><a href="/System/Bulletin/WordCloud.aspx" class="navbar-item-submenu-item">關鍵字文字雲</a></li>
+                                <li><a href="https://vcs.kcc.gov.tw/" class="navbar-item-submenu-item" target="_blank" rel="noopener noreferrer">議事質詢主題分類儀表板</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/System/Councilor/Default.aspx" class="navbar-item font-20">議員相關資料</a></li>
+                </ul>
+            </nav>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                
+                <td style="padding: 0 0 0 0;">
+                    <div class="boxMar">
+                        <div id="divBox" class="boxMar" style="overflow: hidden;">
+                            <div id="divBox2" style="width: 600px;">
+                                <span><div id='bul_1' class='ann boxMar' style='height:1px;'></div></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!----訊息公告END---->
+        <!----上方區塊END---->
+        <div id="content">
+            
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ToolkitScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="banner">
+        <div class="container d-flex new-info">
+            <div class="new-case">
+                <!----最新決議案件----->
+                <h2 class="font-32">最新決議案件</h2>
+                <div class="line-grey">
+                    <div class="line-yellow"></div>
+                </div>
+                <div class="d-flex column-center-center">
+                    
+                            <ul class="new-case-list font-16">
+                                
+                            <li>
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl0$hidSN" id="ContentPlaceHolder1_lvNewFinalProposal_hidSN_0" value="145215" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl0$hidCaseTypeCode" id="ContentPlaceHolder1_lvNewFinalProposal_hidCaseTypeCode_0" value="09" />
+
+                                <span class="brown">115/10/27</span>
+                                <a id="ContentPlaceHolder1_lvNewFinalProposal_hlLink_0" href="/System/Proposal/Detail.aspx?s=E872742245228604&amp;ct=A5A869E21EF8FFC1">請審議114年度高雄市總決算暨附屬單位決算及綜計表審核報告案。</a>
+                            </li>
+                        
+                            <li>
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl1$hidSN" id="ContentPlaceHolder1_lvNewFinalProposal_hidSN_1" value="145333" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl1$hidCaseTypeCode" id="ContentPlaceHolder1_lvNewFinalProposal_hidCaseTypeCode_1" value="05" />
+
+                                <span class="brown">115/10/27</span>
+                                <a id="ContentPlaceHolder1_lvNewFinalProposal_hlLink_1" href="/System/Proposal/Detail.aspx?s=51B9B4DF4BF2F2CB&amp;ct=0A42381EC11CB8EE">爭取改善鼓山區新疆路路面老化及破損情形，完善道路修繕維護，提升道路平整度與行車安...</a>
+                            </li>
+                        
+                            <li>
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl2$hidSN" id="ContentPlaceHolder1_lvNewFinalProposal_hidSN_2" value="146327" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl2$hidCaseTypeCode" id="ContentPlaceHolder1_lvNewFinalProposal_hidCaseTypeCode_2" value="05" />
+
+                                <span class="brown">115/10/27</span>
+                                <a id="ContentPlaceHolder1_lvNewFinalProposal_hlLink_2" href="/System/Proposal/Detail.aspx?s=973255D9EEF8555A&amp;ct=0A42381EC11CB8EE">建請市府儘速改善哈瑪星鐵道文化園區步道，確保行人與自行車通行安全。</a>
+                            </li>
+                        
+                            <li>
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl3$hidSN" id="ContentPlaceHolder1_lvNewFinalProposal_hidSN_3" value="145846" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl3$hidCaseTypeCode" id="ContentPlaceHolder1_lvNewFinalProposal_hidCaseTypeCode_3" value="05" />
+
+                                <span class="brown">115/10/27</span>
+                                <a id="ContentPlaceHolder1_lvNewFinalProposal_hlLink_3" href="/System/Proposal/Detail.aspx?s=EF4EAB5867844292&amp;ct=0A42381EC11CB8EE">建立宮廟修繕法規與申請單一諮詢窗口。</a>
+                            </li>
+                        
+                            <li>
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl4$hidSN" id="ContentPlaceHolder1_lvNewFinalProposal_hidSN_4" value="146166" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$lvNewFinalProposal$ctrl4$hidCaseTypeCode" id="ContentPlaceHolder1_lvNewFinalProposal_hidCaseTypeCode_4" value="05" />
+
+                                <span class="brown">115/10/27</span>
+                                <a id="ContentPlaceHolder1_lvNewFinalProposal_hlLink_4" href="/System/Proposal/Detail.aspx?s=92FDDCBE7779C339&amp;ct=0A42381EC11CB8EE">建請推動「產後到宅護理諮詢服務」，由專業護理人員到府提供產婦與新生兒健康評估、哺...</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    <a href="System/Proposal/AdvancedSearch.aspx?resolution=27550C0CF5DE0F37" class="btn-more" target="_top">更多 最新決議案件</a>
+                </div>
+            </div>
+            <div class="new-data">
+                <!---最新會期提案審議狀態--->
+                <h2 class="font-32">最新會期提案審議狀態</h2>
+                <div class="line-grey">
+                    <div class="line-yellow"></div>
+                </div>
+                
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="new-data-form">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">提案別<br />
+                                    </th>
+                                    <th rowspan="2">總件數<br />
+                                    </th>
+                                    <th rowspan="2">審議中<br />(含擱置)
+                                    </th>
+                                    <th colspan="2">決議數<br/>通過 不通過
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                市政府提案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl01$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_0" value="01" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_0" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=EB02F15B1CDF9E89&amp;src=A303F242820F5CB8">100</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_0" class="new-data-form-data-blue" href="System/Proposal/Default.aspx?ct=EB02F15B1CDF9E89&amp;resolution=43E2B16BCA7605D1&amp;src=A303F242820F5CB8">11</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_0" class="new-data-form-data-green" href="System/Proposal/AdvancedSearch.aspx?ct=EB02F15B1CDF9E89&amp;resolution=FFFF1DA925729DD6&amp;src=A303F242820F5CB8">89</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_0" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                報告事項
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl02$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_1" value="03" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_1" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=A9BEC6B0DD9BFF3E&amp;src=A303F242820F5CB8">45</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_1" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_1" class="new-data-form-data-green" href="System/Proposal/AdvancedSearch.aspx?ct=A9BEC6B0DD9BFF3E&amp;resolution=FFFF1DA925729DD6&amp;src=A303F242820F5CB8">45</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_1" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                市政府法規提案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl03$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_2" value="04" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_2" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=A3867EAAE05496DF&amp;src=A303F242820F5CB8">4</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_2" class="new-data-form-data-blue" href="System/Proposal/Default.aspx?ct=A3867EAAE05496DF&amp;resolution=43E2B16BCA7605D1&amp;src=A303F242820F5CB8">4</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_2" class="new-data-form-data-green" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_2" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                議員提案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl04$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_3" value="05" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_3" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=0A42381EC11CB8EE&amp;src=A303F242820F5CB8">1537</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_3" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_3" class="new-data-form-data-green" href="System/Proposal/AdvancedSearch.aspx?ct=0A42381EC11CB8EE&amp;resolution=FFFF1DA925729DD6&amp;src=A303F242820F5CB8">1537</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_3" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                議員臨時提案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl05$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_4" value="06" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_4" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=6583D1D943A87AC2&amp;src=A303F242820F5CB8">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_4" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_4" class="new-data-form-data-green" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_4" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                專案調查小組報告案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl06$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_5" value="07" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_5" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=BD97798A6018A8FD&amp;src=A303F242820F5CB8">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_5" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_5" class="new-data-form-data-green" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_5" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                人民請願案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl07$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_6" value="08" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_6" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=D69A376A6C0AC963&amp;src=A303F242820F5CB8">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_6" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_6" class="new-data-form-data-green" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_6" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                有關機關提案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl08$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_7" value="09" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_7" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=A5A869E21EF8FFC1&amp;src=A303F242820F5CB8">1</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_7" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_7" class="new-data-form-data-green" href="System/Proposal/AdvancedSearch.aspx?ct=A5A869E21EF8FFC1&amp;resolution=FFFF1DA925729DD6&amp;src=A303F242820F5CB8">1</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_7" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        
+                        <tr class="new-data-form-list">
+                            <td class="new-data-form-title">
+                                本會法規案
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptProposalStatistics$ctl09$hidCode" id="ContentPlaceHolder1_rptProposalStatistics_hidCode_8" value="12" />
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlTotal_8" class="new-data-form-data-red" href="System/Proposal/Default.aspx?ct=7126B10CC81DECAC&amp;src=A303F242820F5CB8">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlAudit_8" class="new-data-form-data-blue" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolution_8" class="new-data-form-data-green" style="text-decoration:none;">0</a>
+                            </td>
+                            <td>
+                                <a id="ContentPlaceHolder1_rptProposalStatistics_hlResolutionUnPass_8" class="new-data-form-data-orange" style="text-decoration:none;">0</a>
+                            </td>
+                        </tr>
+                    
+                        </tbody>
+                        </table>
+                <span class="right_main_table_color"></span>
+                    
+                
+            </div>
+        </div>
+    </div>
+    <div id="blue_tabs_box">
+        <iframe id="frame_top" name="frame_top" src="Frame_Top.aspx" frameborder="0" width="100%" scrolling="no"></iframe>
+
+    </div>
+    <div class="module_Calendar">
+        <iframe id="frame_schedule" name="frame_schedule" src="Frame_Schedule.aspx" frameborder="0" width="100%" scrolling="no"></iframe>
+    </div>
+    <div id="orange_tabs_box">
+        <iframe id="frame_bottom" name="frame_bottom" src="Frame_Bottom.aspx" frameborder="0" width="100%" scrolling="no"></iframe>
+    </div>
+    <div class="serve">
+        <div class="container serve-list justify-content-center">
+            <div class="common-services column-center-center">
+                <div class="common-services-box">
+                    <div class="common-services-title justify-content-center">
+                        <div class="serve-title-line"></div>
+                        <h2 class="font-32">常用服務</h2>
+                        <div class="serve-title-line"></div>
+                    </div>
+                    <ul class="common-services-list d-flex">
+                        <li>
+                            <a href="System/CommitteeList/Default.aspx" class="common-services-item">
+                                <img src="/img/common-services01.png" alt="委員會一覽表" />
+                                <p>委員會一覽表</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="System/MunicipalQuestion/Default.aspx" class="common-services-item">
+                                <img src="/img/common-services02.png" alt="議員市政總質詢順序表" />
+                                <p>議員市政總質詢順序表</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="System/PublicHearing/Default.aspx" class="common-services-item">
+                                <img src="/img/common-services03.png" alt="公聽會" />
+                                <p>公聽會</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="System/MunicipalMeetingRecord/Default.aspx" class="common-services-item">
+                                <img src="/img/common-services04.png" alt="市政會議紀錄" />
+                                <p>市政會議紀錄</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="general-service-form">
+                    <li>
+                        <a id="ContentPlaceHolder1_linkBtn01" class="d-flex font-20" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$linkBtn01&#39;,&#39;&#39;)"><img src="/img/general-service03.png" alt="各委員審查進度表" /><p>各委員審查進度表</p></a>
+                    </li>
+                    <li>
+                        <a id="ContentPlaceHolder1_linkBtn02" class="d-flex font-20" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$linkBtn02&#39;,&#39;&#39;)"><img src="/img/general-service04.png" alt="委員審查意見一覽表" /><p>委員審查意見一覽表</p></a>
+                    </li>
+                    <li>
+                        <a id="ContentPlaceHolder1_linkBtn03" class="d-flex font-20" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$linkBtn03&#39;,&#39;&#39;)"><img src="/img/general-service05.png" alt="最新會期二三讀決議案件" /><p>最新會期二三讀決議案件</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="general-service">
+                <ul class="d-flex general-service-list">
+                    <li id="nonLinkLiveVideo" style="display:none">
+                        <a href="#" class="font-24 not-allowed">
+                            <div class="justify-content-between general-service-list-link-close">
+                                <img src="img/not-allowed.png" alt="尚未審議" />尚未審議
+                            </div>
+                        </a>
+                    </li>
+                    <li id="linkLiveVideo">
+                        <a href="#" class="font-24 allowed">
+                            <div class="general-service-list-info scrollbar">
+                                <iframe id="frame_livevideo" name="frame_livevideo" src="Frame_LiveVideo.aspx?type=1" frameborder="0" width="100%" scrolling="no"></iframe>
+                            </div>
+                            <div class="justify-content-between general-service-list-link">
+                                <p>審議實況</p>
+                                <img src="/img/arrow_right.png" alt="點即前往" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="openWindow('System/Broadcast/LiveVideo.aspx', '_LiveVideo', 'status=0,scrollbars=1,resizable=0,menubar=0,toolbar=0,location=0');" class="font-24 allowed">
+                            <div class="general-service-list-info scrollbar">
+                                <p>前往觀看直播</p>
+                                <iframe id="frame_livevideo2" name="frame_livevideo2" src="Frame_LiveVideo.aspx?type=2" frameborder="0" width="100%" scrolling="no"></iframe>
+                            </div>
+                            
+                            <div class="justify-content-between general-service-list-link">
+                                <p>議場直播</p>
+                                <img src="/img/arrow_right.png" alt="點即前往">
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!--議事質詢主題分類儀表板-->
+    <div class="links" style="display:none">
+        <div class="container links-title justify-content-center">
+            <div class="links-title-line"></div>
+            <h2 class="font-32">議事質詢主題分類儀表板</h2>
+            <div class="links-title-line"></div>
+        </div>
+        <div class="container">
+            <div style="margin-top:15px;">
+                <iframe id="frame_question_dashboard" name="frame_question_dashboard" src="https://vcs.kcc.gov.tw/iframe" frameborder="0" width="100%" height="350px" scrolling="auto" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe>
+            </div>
+        </div>
+        <a href="https://vcs.kcc.gov.tw/" class="btn-more" target="_blank" rel="noopener noreferrer">更多資訊</a>
+    </div>
+    <!--議事質詢主題分類儀表板 結束-->
+    <div class="links">
+        <div class="container links-title justify-content-center">
+            <div class="links-title-line"></div>
+            <h2 class="font-32">相關連結</h2>
+            <div class="links-title-line"></div>
+        </div>
+        <div class="container">
+            <div class="banner_slider_model" data-slider="true" data-sliderspeed="3000" data-animatespeed="500" data-function="banner_slider">
+
+                <div class="banner_slider_box">
+                    <div class="banner_mask">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="/img/link01.png" alt="隨選視訊" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/img/link02.png" alt="高雄市議會全球資訊網" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/img/link03.png" alt="高雄市政府全球資訊網" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/img/link04.png" alt="政治獻金網路申報作業" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/img/link05.png" alt="政治獻金懶人包" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="model_ctrl_tools">
+                        <a href="#" class="ctrl_left">&lsaquo;
+                        </a>
+                        <a href="#" class="ctrl_right">&rsaquo;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="footer NoPrint">
+            <div class="footer-list container">
+                <ul class="footer-list-subnav justify-content-center font-16">
+                    <li><a href="/System/StaticPages/PrivacyPolicy.aspx">隱私權宣告</a></li>
+                    <li><a href="/System/StaticPages/InformationSecurityPolicy.aspx">資訊安全政策宣告</a></li>
+                    <li><a href="/System/StaticPages/CopyrightNotice.aspx">著作權聲明</a></li>
+                    <li><a href="/System/StaticPages/RSSSubScriptions.aspx">RSS訂閱專區</a></li>
+                </ul>
+                <div class="gov">
+                    <img src="/images/gov.gif" alt="GOV" />
+                </div>
+                <div class="footer-list-info justify-center font-16">
+                    <img src="/img/footer_icon.png" alt="logo" />
+                    <ul>
+                        <li>瀏覽人數：3145481</li>
+                        <li>高雄市鳳山區國泰路二段156號          電話：07-7470171     傳真：07-7109035</li>
+                        <li>高雄市鳳山區國泰路二段156號<br />
+                            電話：07-7470171     傳真：07-7109035</li>
+                        <li>高雄市議會©版權所有 本網站最佳瀏覽解析度為1024*768 瀏覽人數：<!--388334--><span id="lblWatchCount">29129286</span></li>
+                    </ul>
+                    <div class="gov">
+                        <img src="/Images/gov.gif" alt="GOV" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                $('.menu').on('click', function () {
+                    if ($('.burger-sidebar').attr('style') && $('.burger-sidebar').attr('style').indexOf('inherit') >= 0) {
+                        $('.burger-sidebar').attr('style', '');
+                    }
+                    else {
+                        $('.burger-sidebar').attr('style', 'height: inherit;');
+                    }
+                });
+            });
+            function slideLine(box, box2, stf, delay, speed, w) {
+                var slideBox = document.getElementById(box);
+                var slideBox2 = document.getElementById(box2);
+                var delay = delay || 1000, speed = speed || 20, w = w || 100;
+                var tid = null, pause = false;
+                var s = function () { tid = setInterval(slide, speed); }
+                var slide = function () {
+                    if (pause) return;
+                    slideBox.scrollLeft += 1;
+                    if (slideBox.scrollLeft % w == 0) {
+                        clearInterval(tid);
+                        slideBox2.appendChild(slideBox2.getElementsByTagName(stf)[0]);
+                        slideBox.scrollLeft = 0;
+                        setTimeout(s, delay);
+                    }
+                }
+                slideBox.onmouseover = function () { pause = true; }
+                slideBox.onmouseout = function () { pause = false; }
+                setTimeout(s, delay);
+            }
+            slideLine('divBox', 'divBox2', 'div', 3000, 25, 300);
+            $('a').each(function () {
+                $(this).html($(this).html().replaceAll('記錄', '紀錄'));
+            })
+            $('h2').each(function () {
+                $(this).html($(this).html().replaceAll('記錄', '紀錄'));
+            })
+
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ContentPlaceHolder1_ToolkitScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,174 @@
+{
+  "datasetId": "kaohsiung-2026-political-career-legislative",
+  "publisher": "立法院（開放國會 API）",
+  "api": "https://ly.govapi.tw/v2",
+  "fetchedAt": "2026-11-14T09:19:00.775Z",
+  "entries": [
+    {
+      "key": "bills-official-mayor-ke-zhi-en-2026-t11",
+      "url": "https://ly.govapi.tw/v2/bills?屆=11&提案人=%E6%9F%AF%E5%BF%97%E6%81%A9",
+      "httpStatus": 200,
+      "byteLength": 57910,
+      "sha256": "8c0552316fe9d7a3ddf1139deba0ceff4c090df4d3b73a3adb7f29a5ea50998d",
+      "rawPath": "data/raw/political-career/2026/legislative/bills-official-mayor-ke-zhi-en-2026-t11.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 78,
+      "sourceTotal": 78
+    },
+    {
+      "key": "bills-official-mayor-ke-zhi-en-2026-t9",
+      "url": "https://ly.govapi.tw/v2/bills?屆=9&提案人=%E6%9F%AF%E5%BF%97%E6%81%A9",
+      "httpStatus": 200,
+      "byteLength": 62320,
+      "sha256": "7638f9fec36df9f626bd53646c156a1029335f9652a375a822b7a3426a2e8ffd",
+      "rawPath": "data/raw/political-career/2026/legislative/bills-official-mayor-ke-zhi-en-2026-t9.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 91,
+      "sourceTotal": 91
+    },
+    {
+      "key": "bills-official-mayor-lai-rui-long-2026-t10",
+      "url": "https://ly.govapi.tw/v2/bills?屆=10&提案人=%E8%B3%B4%E7%91%9E%E9%9A%86",
+      "httpStatus": 200,
+      "byteLength": 180439,
+      "sha256": "eb95849947cdcf7592eb61ccc27ffc5228cd749cd02e362252882364436f25dc",
+      "rawPath": "data/raw/political-career/2026/legislative/bills-official-mayor-lai-rui-long-2026-t10.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 256,
+      "sourceTotal": 256
+    },
+    {
+      "key": "bills-official-mayor-lai-rui-long-2026-t11",
+      "url": "https://ly.govapi.tw/v2/bills?屆=11&提案人=%E8%B3%B4%E7%91%9E%E9%9A%86",
+      "httpStatus": 200,
+      "byteLength": 151859,
+      "sha256": "d9d06cc2c9613016b4207dc833c4d2ed9ae9a79356c1cd2ad0ee19155a046d85",
+      "rawPath": "data/raw/political-career/2026/legislative/bills-official-mayor-lai-rui-long-2026-t11.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 222,
+      "sourceTotal": 222
+    },
+    {
+      "key": "bills-official-mayor-lai-rui-long-2026-t9",
+      "url": "https://ly.govapi.tw/v2/bills?屆=9&提案人=%E8%B3%B4%E7%91%9E%E9%9A%86",
+      "httpStatus": 200,
+      "byteLength": 142690,
+      "sha256": "847bac7cb0059a9f2dfab64c1c0233bb27770f8b9615cc3bb3ea07376c092fa5",
+      "rawPath": "data/raw/political-career/2026/legislative/bills-official-mayor-lai-rui-long-2026-t9.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 204,
+      "sourceTotal": 204
+    },
+    {
+      "key": "legislators-official-mayor-ke-zhi-en-2026",
+      "url": "https://ly.govapi.tw/v2/legislators?%E5%A7%94%E5%93%A1%E5%A7%93%E5%90%8D=%E6%9F%AF%E5%BF%97%E6%81%A9",
+      "httpStatus": 200,
+      "byteLength": 3652,
+      "sha256": "a47ba49fe0224157eca1fdb1fa47420529bca76d805a9ed1950eb4ab835f218c",
+      "rawPath": "data/raw/political-career/2026/legislative/legislators-official-mayor-ke-zhi-en-2026.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 2,
+      "sourceTotal": 2
+    },
+    {
+      "key": "legislators-official-mayor-lai-rui-long-2026",
+      "url": "https://ly.govapi.tw/v2/legislators?%E5%A7%94%E5%93%A1%E5%A7%93%E5%90%8D=%E8%B3%B4%E7%91%9E%E9%9A%86",
+      "httpStatus": 200,
+      "byteLength": 5294,
+      "sha256": "f9ec356ea51f4c7d5dd039b25a298a8f416011f4e440dba32c6a05c6746f3b5c",
+      "rawPath": "data/raw/political-career/2026/legislative/legislators-official-mayor-lai-rui-long-2026.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 3,
+      "sourceTotal": 3
+    },
+    {
+      "key": "meets-t10",
+      "url": "https://ly.govapi.tw/v2/meets?屆=10",
+      "httpStatus": 200,
+      "byteLength": 255634,
+      "sha256": "ff2d18e2b538b443eb63eb8a8869f1a409f91cc46ce4e1eb4c4f39763b693b04",
+      "rawPath": "data/raw/political-career/2026/legislative/meets-t10.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 2307,
+      "sourceTotal": 2307
+    },
+    {
+      "key": "meets-t11",
+      "url": "https://ly.govapi.tw/v2/meets?屆=11",
+      "httpStatus": 200,
+      "byteLength": 203785,
+      "sha256": "54786a3cf5d96907d53b3680603ad45e99b3cd9be330e1895280e5a4c54e3f9a",
+      "rawPath": "data/raw/political-career/2026/legislative/meets-t11.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 1844,
+      "sourceTotal": 1844
+    },
+    {
+      "key": "meets-t9",
+      "url": "https://ly.govapi.tw/v2/meets?屆=9",
+      "httpStatus": 200,
+      "byteLength": 267809,
+      "sha256": "40e82ce89f926501e340f7d38ff96fc4c5f9cd042987f11d301d3a31305b968a",
+      "rawPath": "data/raw/political-career/2026/legislative/meets-t9.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 2429,
+      "sourceTotal": 2429
+    },
+    {
+      "key": "votes-official-mayor-ke-zhi-en-2026-t11",
+      "url": "https://ly.govapi.tw/v2/votes?屆=11",
+      "httpStatus": 200,
+      "byteLength": 82794,
+      "sha256": "1c85d760df71e85f8364f88ac4002bcbca8df1a0dd6de07f15befeb739d0cddd",
+      "rawPath": "data/raw/political-career/2026/legislative/votes-official-mayor-ke-zhi-en-2026-t11.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 106,
+      "sourceTotal": 1345
+    },
+    {
+      "key": "votes-official-mayor-ke-zhi-en-2026-t9",
+      "url": "https://ly.govapi.tw/v2/votes?屆=9",
+      "httpStatus": 200,
+      "byteLength": 118922,
+      "sha256": "5613cec4a90e92112d59928612bb8e0c19c6a64de019127f0cdee676e7cc8660",
+      "rawPath": "data/raw/political-career/2026/legislative/votes-official-mayor-ke-zhi-en-2026-t9.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 169,
+      "sourceTotal": 6373
+    },
+    {
+      "key": "votes-official-mayor-lai-rui-long-2026-t10",
+      "url": "https://ly.govapi.tw/v2/votes?屆=10",
+      "httpStatus": 200,
+      "byteLength": 29649,
+      "sha256": "16f890e3c877d1e2b15aec5268354358b3ac8beaabc26f515a84cfe6db7e89f2",
+      "rawPath": "data/raw/political-career/2026/legislative/votes-official-mayor-lai-rui-long-2026-t10.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 37,
+      "sourceTotal": 2495
+    },
+    {
+      "key": "votes-official-mayor-lai-rui-long-2026-t11",
+      "url": "https://ly.govapi.tw/v2/votes?屆=11",
+      "httpStatus": 200,
+      "byteLength": 82541,
+      "sha256": "7b68a4f9b1d4b9f082c3d7fb408af660dd8333783fb59e5c7fe0e4c3da995673",
+      "rawPath": "data/raw/political-career/2026/legislative/votes-official-mayor-lai-rui-long-2026-t11.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 106,
+      "sourceTotal": 1345
+    },
+    {
+      "key": "votes-official-mayor-lai-rui-long-2026-t9",
+      "url": "https://ly.govapi.tw/v2/votes?屆=9",
+      "httpStatus": 200,
+      "byteLength": 118877,
+      "sha256": "b4b2265334c780129f713d23fb1c0cedc752c22d76dfa574285e74feabbaf5b5",
+      "rawPath": "data/raw/political-career/2026/legislative/votes-official-mayor-lai-rui-long-2026-t9.json",
+      "retrievedAt": "2026-11-14T09:19:00.775Z",
+      "recordCount": 169,
+      "sourceTotal": 6373
+    }
+  ],
+  "failures": []
+}

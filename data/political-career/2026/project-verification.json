@@ -1,0 +1,240 @@
+{
+  "datasetId": "kaohsiung-2026-government-project-verification",
+  "verifiedAt": "2026-11-14",
+  "reviewerNote": "獨立驗證代理逐筆比對保留快照；不確定者僅在縮減為來源可支持的事實後保留。",
+  "counts": {
+    "total": 28,
+    "accepted": 15,
+    "uncertain": 11,
+    "rejected": 2,
+    "published": 25,
+    "publishedWithNarrowedClaims": 10,
+    "rejectedFinal": 3
+  },
+  "records": [
+    {
+      "projectId": "project-official-mayor-lai-rui-long-2026-1",
+      "candidateName": "賴瑞隆",
+      "projectTitle": "黃色小鴨高雄首展（光榮碼頭策展）",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-01 載明「高雄市政府新聞局長賴瑞隆」與 9/19–10/20 光榮碼頭展期，但同頁僅稱「短短五天已有50萬人次」、「預估將吸引超過300萬人次」、「可望帶來超過10億元」；400萬人、10億商機與 CNN 頭條並非已實現成果，報導發布時展覽仍在進行，也未載明「已完成」。"
+    },
+    {
+      "projectId": "project-official-mayor-lai-rui-long-2026-2",
+      "candidateName": "賴瑞隆",
+      "projectTitle": "「高雄不思議」城市行銷與五月天城市代言人",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-02 states 「籌辦這趟黃色小鴨之旅的高雄市新聞局局長賴瑞隆」, 「首創邀請知名樂團五月天擔任「城市代言人」」 and 「以「高雄不思議」為主軸」, and the headline itself carries 「吸引400萬人創10億商機」."
+    },
+    {
+      "projectId": "project-official-mayor-lai-rui-long-2026-3",
+      "candidateName": "賴瑞隆",
+      "projectTitle": "「高雄海味」品牌與「高雄五寶」漁產行銷（全家便利商店通路合作）",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-03 載明「在高雄市政府海洋局長賴瑞隆的穿針引線之下…台中以南1,100家的全家連鎖超商販售」，但全台2,900家門市僅是未來規劃（「然後再擴大到全台2,900個全家據點」），頁面未見「預購型錄」，完成狀態僅依據開賣當日單段敘述。"
+    },
+    {
+      "projectId": "project-official-mayor-lai-rui-long-2026-4",
+      "candidateName": "賴瑞隆",
+      "projectTitle": "2014台灣國際遊艇展（高雄展覽館首展）",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-04 carries the verbatim 「海洋局長賴瑞隆指出，遊艇產業是漂浮在黃金水道上的巨大商機」 and all four figures (2,500位國際買家、破7萬人、預計售出62艘、52億產值) plus the 5/8–11 dates; note the page never says he 主辦 (海洋局與國貿局共同主辦、外貿協會執行), so roleType managed is inference from office."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-5",
+      "candidateName": "張以理",
+      "projectTitle": "高雄青年攤車品牌輔導計畫",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-05 可確認 2020-08-24 上任、2025-02-17 卸任與計畫名稱，但頁面未出現「148家、800人次」，也未見「113年4月3日 青年局業務報告」之出處。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-6",
+      "candidateName": "張以理",
+      "projectTitle": "Pinway駁二青創空間",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-05 names 「打造Pinway駁二青創空間」 among his achievements in the same 卸任 report, and the record's outcome is null, so no number rests on inference."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-7",
+      "candidateName": "張以理",
+      "projectTitle": "「青年公共參與計畫」",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-05 lists 「青年公共參與計畫」 verbatim among his 青年局 achievements; status unknown and outcome null match the thin page support."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-8",
+      "candidateName": "張以理",
+      "projectTitle": "「青創之夜」青創業者意見交流機制",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-06 states 「局長張以理規劃每月邀青創業者意見交流」 with the 首發場 on 28日 at KO-IN智高點; the excerpt says 「首場」 where the page says 「首發場」 (ellipsis-joined paraphrase, minor)."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-9",
+      "candidateName": "張以理",
+      "projectTitle": "高雄市青年事務委員會（青年參與平台）",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-07 states 「青年局長張以理指出…透過公開遴選機制選出46位青年委員」, supporting the 46位青年委員 figure; roleType oversaw remains an interpretation of his chairing the committee."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-10",
+      "candidateName": "張以理",
+      "projectTitle": "大港青年實習媒合計畫",
+      "verificationDecision": "rejected",
+      "disposition": "rejected",
+      "reason": "src-08 快照僅為高雄市議會議事資訊整合查詢系統首頁（導覽選單、最新決議案件、頁尾），不含青年局業務報告、張以理、大港青年實習，也沒有1,750個職缺、1,016人次、737人留任等數字；引用證據不存在於留存頁面。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-4c6bef68-11",
+      "candidateName": "張以理",
+      "projectTitle": "全國電競青年錦標賽",
+      "verificationDecision": "rejected",
+      "disposition": "rejected",
+      "reason": "同為 src-08 首頁：未見全國電競青年錦標賽、165隊參賽、40萬元，也未見引用的「四、高雄市政府青年局業務報告　日期：113年4月3日」，故無佐證。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-94f45410-12",
+      "candidateName": "尹立",
+      "projectTitle": "眷村「以住代護」升級版（全民修屋）",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-09 支持所有數字（建業36戶、黃埔28戶、每戶上限100萬元、3年延長為5年、3.2億元），並載明「高市文化局長尹立」，但整篇為前置公告（「將於三月初公告…八月底交屋」），不足以支持「已完成」。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-94f45410-13",
+      "candidateName": "尹立",
+      "projectTitle": "眷村民宿計畫（以住代護2.0）",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-10 與記載相符（14戶/13戶、5年契約、前2年免租金與權利金、文化局取得使用許可、與觀光局「一站式服務」），但頁面顯示徵選仍在進行、收件截止9月14日，原記「已完成」高估進度。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-94f45410-14",
+      "candidateName": "尹立",
+      "projectTitle": "駁二藝術特區青年與創意人才扶植政策群（漾藝廊、漾藝術博覽會、人才回流、藝術家進駐）",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-11 contains the quoted sentence verbatim (「因為駁二是官方經營，我們對於青年在政策上的扶植計畫反而是高於其他園區的…漾藝廊計畫、漾藝術博覽會」); weak in substance — a Facebook rebuttal listing existing programmes, no individual action or outcome."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-94f45410-15",
+      "candidateName": "尹立",
+      "projectTitle": "影視投資與「高雄拍」短片基地政策（含2017年首創VR Film Lab單元）",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-12 supports the excerpt verbatim (「高雄市文化局長尹立說道…票房不好市府會和業者一起承擔」) and the 高雄拍/VR Film Lab facts (5支360度VR短片、入圍日舞); caveat: the piece is a 遠見 廣編稿 marked 「【高雄市政府文化局廣告】」, so the claims are agency self-report."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-94f45410-16",
+      "candidateName": "尹立",
+      "projectTitle": "高雄流行音樂中心行政法人籌設、圖書館與美術館行政法人化、衛武營相關建設推動",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-13 僅有2026年競選人物簡介中的一句話（「尹立更早就在陳菊市長任內擔任文化局長，參與高雄流行音樂中心行政法人籌設、圖書館與美術館行政法人化，以及衛武營相關建設推動」），沒有期間、角色細節與成果，僅屬履歷式記述。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-04-629fea4c-17",
+      "candidateName": "白喬茵",
+      "projectTitle": "「向市民報告」系列影片",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-14 reproduces the 市府新聞稿 paragraph verbatim, including 「即日(16)起兼任市府副發言人」 and 「製作「向市民報告」系列影片，得以讓民眾即時了解市府推動的政策與成果」."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-01-1bea56a9-18",
+      "candidateName": "鍾炳光",
+      "projectTitle": "美濃菸葉輔導站整修與OT委外營運",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-15 有「我們美濃區公所跟客委會來爭取經費，市政府有配合款，花了1700多萬」與6家特色店家10月起進駐，但頁面沒有「2019-02-15決標、金額10,648,033元」的招標細節，且決標日早於其2019-03-05到任。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-01-1bea56a9-19",
+      "candidateName": "鍾炳光",
+      "projectTitle": "第56屆六堆運動會（六堆300年）主辦",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-16 quotes 美濃區長鍾炳光 on 「六堆運動會今年在美濃擴大舉辦」 and lists the same events at 美濃國中 over two days; minor: 「六堆12鄉區」 is not stated (page says 六堆各鄉區輪流辦理)."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-01-1bea56a9-20",
+      "candidateName": "鍾炳光",
+      "projectTitle": "杉林「5230我愛杉林」葵花迷宮花海",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-17 支持「鍾炳光表示，今年在永齡有機農場設置7公頃全國最大向日葵花海迷宮」與「20萬以上人潮」，但頁面未載日期（2018年來自另一篇自由時報報導），且檔案混入無關的台積電文字。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-01-b7b307c1-21",
+      "candidateName": "林義迪",
+      "projectTitle": "溪洲大橋斷橋應急—倍力橋搭設",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-18 names 「旗山鎮長林義迪」, quotes 「我有叫課長跟你們報備」 verbatim, and states the 31公尺長、4公尺寬、可載重45公噸 倍力橋 built after 溪洲大橋 was 沖斷."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-01-b7b307c1-22",
+      "candidateName": "林義迪",
+      "projectTitle": "八八水災旗山救災",
+      "verificationDecision": "uncertain",
+      "disposition": "rejected",
+      "reason": "src-19 僅記載2009-09-28的禮貌性拜會（「旗山鎮長林義迪是在下午4時抵高雄市政府拜會…致上感謝狀」），並將災後復原歸因於「各界的援助」，沒有他管理救災或復原的證據；原記 endDate 2009-11 亦無佐證。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-01-b7b307c1-23",
+      "candidateName": "林義迪",
+      "projectTitle": "旗山溪河床疏濬與災後廢棄物清運協調",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-20 可逐字支持討論與11月底前清空之承諾，但疏濬承諾出自縣長楊秋興（「縣府將全力支持地方河川疏濬」），頁面未顯示林義迪發起，原 roleType「initiated」不成立。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-11-1704a92e-24",
+      "candidateName": "黃天煌",
+      "projectTitle": "大發工業區敦親睦鄰備忘錄簽訂",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-21 states 「22日上午，在黃昭順見證下，顏德和與黃天煌完成備忘錄簽署」 with 20年、820萬＋1180萬＝每年兩千萬元 for 潮寮、過溪、會結3村; provenance caveat: the page is an anonymous PTT transcription of a 2010-07-22 今日新聞 piece."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-11-1704a92e-25",
+      "candidateName": "黃天煌",
+      "projectTitle": "潮寮空污事件村民說明會與監測訴求",
+      "verificationDecision": "uncertain",
+      "disposition": "published-with-narrowed-claims",
+      "reason": "src-22 引述「大寮鄉鄉長黃天煌表示…將持續召開村民說明會討論後續因應辦法」及其增設監測站訴求，但「帶隊向工業區抗議」歸屬於在地居民，頁面也未見求償協調或「促成2010年敦親睦鄰備忘錄」。"
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-05-5abfec11-26",
+      "candidateName": "張勝富",
+      "projectTitle": "大社鄉殯儀館新建",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-23 states 「大社鄉殯儀館則由現任鄉長張勝富完成」 and records the 2010-05-05 剪綵 by 縣長楊秋興、鄉長張勝富 and others, plus 慈恩堂旁 siting and the 告別式場 rationale."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-05-5abfec11-27",
+      "candidateName": "張勝富",
+      "projectTitle": "大社鄉社區營造與社區活化培力",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-24 matches the excerpt on 「95年在新任鄉長張勝富上任後…獲得張鄉長的認同後即積極投入資源及人力」 and all three outcome elements (9社區志工隊、中里/神農/保社/大社空地營造、保社與中里據點評鑑優等); caveat: 縣府社會處 is the initiating actor per the page."
+    },
+    {
+      "projectId": "project-district-kaohsiung-council-05-5abfec11-28",
+      "candidateName": "張勝富",
+      "projectTitle": "田中央橋改建工程",
+      "verificationDecision": "accepted",
+      "disposition": "published",
+      "reason": "src-25 states 「縣長楊秋興在大社鄉長張勝富、工務處長陳存聰陪同下，到田中央橋現勘」 and the 970萬、橋長13公尺、寬6公尺、樑深提高1.5公尺、半重力式擋土牆60公尺 figures, with 縣府與公所 sharing cost."
+    }
+  ]
+}

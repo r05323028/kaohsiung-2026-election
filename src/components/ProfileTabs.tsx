@@ -753,129 +753,6 @@ function PoliciesTab({
   );
 }
 
-function PublicActivityCards({
-  candidate,
-}: {
-  candidate: PublicCandidateProfile;
-}) {
-  const activities = candidate.publicRecords?.activities ?? [];
-  return (
-    <>
-      {activities.map((activity) => (
-        <article className="content-card" key={activity.id}>
-          <div className="content-card__meta">
-            <span className="status-chip">
-              {activity.activityType === 'legislative-proposal'
-                ? '立法／議會提案'
-                : activity.activityType === 'council-questioning'
-                  ? '質詢與監督'
-                  : activity.activityType === 'government-project'
-                    ? '行政／政府計畫'
-                    : '公開活動'}
-            </span>
-            <span>{activity.eventDate}</span>
-          </div>
-          <h4>{activity.title}</h4>
-          <p>{activity.description}</p>
-          <p>
-            <strong>組織／職務：</strong>
-            {activity.organization}・{activity.role}
-          </p>
-          <p>
-            <strong>紀錄性質：</strong>
-            {attributionLabels[activity.attribution] ?? activity.attribution}
-          </p>
-          {activity.documentedOutcome ? (
-            <p>
-              <strong>可查證結果：</strong>
-              {activity.documentedOutcome}
-            </p>
-          ) : (
-            <p>
-              <strong>結果狀態：</strong>來源未標示。
-            </p>
-          )}
-          <ClaimEvidence
-            candidate={candidate}
-            claimIds={activity.claimIds}
-            evidenceIds={activity.evidenceIds}
-          />
-        </article>
-      ))}
-    </>
-  );
-}
-
-function LegacyCareerCards({
-  candidate,
-}: {
-  candidate: PublicCandidateProfile;
-}) {
-  const positionCards = candidate.positions.map((position) => (
-    <article className="content-card" key={position.id}>
-      <div className="content-card__meta">
-        <span className="status-chip">歷任職務</span>
-      </div>
-      <h4>{position.title}</h4>
-      <p>
-        {position.organization}・{position.startDate}—
-        {position.endDate ?? '至今'}
-      </p>
-      <SourceChips
-        candidate={candidate}
-        sourceIds={candidate.sources.map((source) => source.id)}
-      />
-    </article>
-  ));
-  const timelineCards = candidate.timeline.map((event) => (
-    <article className="content-card" key={event.id}>
-      <div className="content-card__meta">
-        <span className="status-chip">{event.category}</span>
-        <span>{event.date}</span>
-      </div>
-      <h4>{event.title}</h4>
-      <p>{event.description}</p>
-      <SourceChips candidate={candidate} sourceIds={event.sourceIds} />
-    </article>
-  ));
-  return [...positionCards, ...timelineCards];
-}
-
-function PublicPositionCards({
-  candidate,
-}: {
-  candidate: PublicCandidateProfile;
-}) {
-  const positions = candidate.publicRecords?.positions ?? [];
-  return (
-    <>
-      {positions.map((position) => (
-        <article className="content-card" key={position.id}>
-          <div className="content-card__meta">
-            <span className="status-chip">公共職務</span>
-            <span>
-              {position.currentStatus === 'current'
-                ? '目前身分'
-                : '歷史／狀態未定'}
-            </span>
-          </div>
-          <h4>{position.title}</h4>
-          <p>{position.organization}</p>
-          <p>
-            {position.startDate ?? '日期未標示'}—
-            {position.endDate ?? '日期未標示'}
-          </p>
-          <ClaimEvidence
-            candidate={candidate}
-            claimIds={position.claimIds}
-            evidenceIds={position.evidenceIds}
-          />
-        </article>
-      ))}
-    </>
-  );
-}
-
 function CareerTab({
   candidate,
   onOpenPolicies,
@@ -885,23 +762,16 @@ function CareerTab({
   onOpenPolicies?: () => void;
   onOpenPolicy?: (policyId: string) => void;
 }) {
-  const publicActivities = candidate.publicRecords?.activities ?? [];
-  const publicPositions = candidate.publicRecords?.positions ?? [];
-  const legacyCards = LegacyCareerCards({ candidate });
   const career = candidate.politicalCareer;
   const policyCareer = candidate.policyCareer;
   const historicalRecords = policyCareer?.historicalRecords ?? [];
-  const showPublicPositions =
-    publicPositions.length > 0 && (career?.officeTerms.length ?? 0) === 0;
   const hasCareer =
     (career?.activities.length ?? 0) > 0 ||
     (career?.officeTerms.length ?? 0) > 0 ||
-    historicalRecords.length > 0 ||
-    publicActivities.length > 0 ||
-    publicPositions.length > 0 ||
-    legacyCards.length > 0 ||
-    (candidate.biography?.claims.length ?? 0) > 0 ||
-    (candidate.automatedPublication?.claims.length ?? 0) > 0;
+    (career?.proposalTotal ?? 0) > 0 ||
+    (career?.votingTotal ?? 0) > 0 ||
+    (career?.coverage.governmentProjectCount ?? 0) > 0 ||
+    historicalRecords.length > 0;
 
   return (
     <div className="profile-tab-content" data-profile-section="career">
@@ -922,57 +792,10 @@ function CareerTab({
           onOpenPolicy={onOpenPolicy}
         />
       ) : null}
-      {!career && historicalRecords.length === 0 ? (
-        <section className="content-card">
-          <h4>政治活動時間軸</h4>
-          <p>目前未收錄可查證的從政紀錄；查無紀錄不代表未從事政治活動。</p>
-        </section>
-      ) : null}
       <PolicyDerivedCareerSection
         records={historicalRecords}
         onOpenPolicy={onOpenPolicy}
       />
-      {showPublicPositions ? (
-        <PublicPositionCards candidate={candidate} />
-      ) : null}
-      {publicActivities.length > 0 ? (
-        <PublicActivityCards candidate={candidate} />
-      ) : null}
-      <details className="content-card career-archive">
-        <summary>其他公開紀錄（含非從政經歷）</summary>
-        <p>
-          以下為既有公開資料中的履歷與背景紀錄，可能包含學歷、一般經歷或組織職務，
-          不屬於市政與議會行動。
-        </p>
-        <AutomatedClaimCards
-          candidate={candidate}
-          categories={['basic-biography', 'timeline']}
-          heading="歷史履歷資料"
-        />
-        {candidate.biography?.claims.length ? (
-          <div className="content-card" data-testid="biography-timeline">
-            <h4>履歷事件</h4>
-            <ol className="timeline">
-              {candidate.biography.claims.map((claim) => (
-                <li key={claim.claimId}>
-                  <time>{claim.validFrom ?? '日期未標示'}</time>
-                  <strong>
-                    {biographyClaimLabels[claim.claimType] ?? claim.claimType}・
-                    {claim.title}
-                  </strong>
-                  <p>{claim.value}</p>
-                  {claim.organization ? <p>{claim.organization}</p> : null}
-                  <SourceChips
-                    candidate={candidate}
-                    sourceIds={claim.sourceIds}
-                  />
-                </li>
-              ))}
-            </ol>
-          </div>
-        ) : null}
-        {legacyCards.length > 0 ? legacyCards : null}
-      </details>
       {!hasCareer ? <EmptyContent category="career" /> : null}
     </div>
   );

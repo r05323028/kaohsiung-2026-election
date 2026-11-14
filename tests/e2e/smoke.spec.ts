@@ -212,36 +212,22 @@ test('official routes expose source references and neutral missing states', asyn
   await expect(page.getByRole('main')).toContainText('本區候選人');
 });
 
-test('automated policy publishes only an eligible scoped claim', async ({
+test('career tab excludes education and private-sector biography', async ({
   page,
 }) => {
   await page.goto('/candidates/kaohsiung-council-04-e810f056/');
   const profile = page.getByTestId('profile-tabs');
   await expect(profile).toHaveAttribute('data-hydrated', 'true');
   await profile.getByRole('tab', { name: '從政歷程', exact: true }).click();
-  const publication = profile.getByTestId('automated-publication');
-  await expect(publication).toBeVisible();
-  await expect(publication).toContainText('三立新聞台主播');
-  await expect(publication).not.toContainText('機器政策核准');
-  // A page now publishes every eligible claim for the candidate, grouped by
-  // claim type, so the same institutional source legitimately backs several
-  // rows. The link contract is "chip points at the retained source".
-  await expect(
-    publication
-      .locator(
-        'a[href="https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181"]',
-      )
-      .first(),
-  ).toHaveAttribute(
-    'href',
-    'https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2181',
-  );
-  expect(
-    await publication.locator('ul.automated-claim-list > li').count(),
-  ).toBeGreaterThan(1);
-  await expect(publication).not.toContainText('enrich-claim-0111');
-  await expect(publication).not.toContainText('gpt-5.6-luna');
-  await expect(publication).not.toContainText('reviewerId');
+  const career = profile.getByRole('tabpanel', { name: '從政歷程' });
+  await expect(career).toBeVisible();
+  await expect(career.getByTestId('automated-publication')).toHaveCount(0);
+  await expect(career.getByTestId('biography-timeline')).toHaveCount(0);
+  await expect(career).not.toContainText('三立新聞台主播');
+  await expect(career).not.toContainText('世新大學');
+  await expect(career).toContainText('「向市民報告」系列影片');
+  await expect(career).not.toContainText('gpt-5.6-luna');
+  await expect(career).not.toContainText('reviewerId');
 });
 
 test('official biography observations remain withheld pending review', async ({
@@ -254,11 +240,55 @@ test('official biography observations remain withheld pending review', async ({
   await expect(basicPanel).not.toContainText('pending-human-review');
   await expect(basicPanel).not.toContainText('機器化觀察待審');
   await profile.getByRole('tab', { name: '從政歷程' }).click();
+  const career = profile.getByRole('tabpanel', { name: '從政歷程' });
   await expect(
-    profile.getByRole('heading', { name: '從政歷程', exact: true }),
+    career.getByRole('heading', { name: '從政歷程', exact: true }),
   ).toBeVisible();
-  await expect(profile.getByTestId('biography-timeline')).toHaveCount(0);
-  await expect(profile).toContainText('表決紀錄：暫無可查證的個別表決紀錄');
+  await expect(career.getByTestId('biography-timeline')).toHaveCount(0);
+  await expect(career).not.toContainText('表決紀錄：暫無可查證的個別表決紀錄');
+  await expect(career.getByText('議會與市政活動')).toBeVisible();
+});
+
+test('legislative service nests proposals and individual roll-call votes', async ({
+  page,
+}) => {
+  await page.goto('/candidates/lai-rui-long-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '從政歷程', exact: true }).click();
+  const career = profile.getByRole('tabpanel', { name: '從政歷程' });
+  await expect(
+    career.getByRole('heading', { name: '從政時間軸' }),
+  ).toBeVisible();
+  await expect(career).toContainText('立法委員');
+  await expect(career).toContainText('立法提案');
+  await expect(career).toContainText('表決紀錄');
+  await expect(career.locator('.vote-chip').first()).toBeVisible();
+  await expect(career).toContainText('第11屆');
+  await expect(career).not.toContainText('evidenceExcerpt');
+  await expect(career).not.toContainText('identityBasis');
+});
+
+test('career timeline fits a phone viewport without sideways scrolling', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/candidates/lai-rui-long-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '從政歷程', exact: true }).click();
+  const timeline = profile
+    .getByRole('tabpanel', { name: '從政歷程' })
+    .locator('.career-terms');
+  await expect(timeline).toBeVisible();
+  const overflow = await timeline.evaluate(
+    (element) => element.scrollWidth - element.clientWidth,
+  );
+  expect(overflow).toBeLessThanOrEqual(1);
 });
 
 test('local editorial workspace loads only in the development review route', async ({
@@ -613,7 +643,7 @@ test('WebGL fallback keeps the candidate journey usable', async ({ page }) => {
 test('candidate without verified policies shows neutral empty state', async ({
   page,
 }) => {
-  await page.goto('/candidates/wang-zhao-min-2026/');
+  await page.goto('/candidates/kaohsiung-council-03-e4af3760/');
   const profile = page.getByTestId('profile-tabs');
   await expect(profile).toHaveAttribute('data-hydrated', 'true', {
     timeout: 30_000,

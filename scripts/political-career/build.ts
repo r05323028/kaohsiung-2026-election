@@ -1,20 +1,23 @@
 import { createHash } from 'node:crypto';
-import type { z } from 'zod';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import type { z } from 'zod';
 import { parseKccProfile } from '../../src/data/biographies/adapters';
 import {
   type CareerCoverage,
   type OfficeTerm,
+  type PoliticalActionSchema,
   type PoliticalActivity,
+  type PoliticalActivityCategorySchema,
   type PoliticalCareerSource,
-  PoliticalActionSchema,
-  PoliticalActivityCategorySchema,
   validatePoliticalCareerDataset,
 } from '../../src/data/political-career/schema';
+import { buildPublicServiceRecords } from './build-public-service';
 
 type PoliticalAction = z.infer<typeof PoliticalActionSchema>;
-type PoliticalActivityCategory = z.infer<typeof PoliticalActivityCategorySchema>;
+type PoliticalActivityCategory = z.infer<
+  typeof PoliticalActivityCategorySchema
+>;
 
 /**
  * Deterministic, offline build of data/approved/2026/political-career.json.
@@ -187,7 +190,13 @@ function rocDateToIso(value: string): string | null {
   if (day < 1 || day > 31) return null;
 
   const western = year + 1911;
-  return western + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+  return (
+    western +
+    '-' +
+    String(month).padStart(2, '0') +
+    '-' +
+    String(day).padStart(2, '0')
+  );
 }
 
 function truncate(value: string, max: number): string {
@@ -226,9 +235,7 @@ function sectionParagraphs(html: string): string[] {
     .filter((text) => text.length > 0);
 }
 
-function loadMemberProfiles(
-  snapshots: EnrichmentSnapshot[],
-): MemberProfile[] {
+function loadMemberProfiles(snapshots: EnrichmentSnapshot[]): MemberProfile[] {
   const profiles: MemberProfile[] = [];
 
   for (const snapshot of snapshots) {
@@ -276,7 +283,7 @@ const STAFF_ROLE =
   /服務處|辦公室|競選總部|後援會|助理|機要|顧問|主任|副主任|秘書|幹事/;
 
 const CN_DIGIT: Record<string, number> = {
-  '〇': 0,
+  〇: 0,
   零: 0,
   一: 1,
   二: 2,
@@ -413,16 +420,16 @@ function parseOfficeLine(raw: string): ParsedOffice | null {
 }
 
 const PARTY_ROLE =
-
   /黨|黨團|全國代表|中央委員|中常委|主任委員|主委|發言人|總召|召集人/;
-
 
 function buildOfficeTerms(
   roster: RosterCandidate[],
   profiles: MemberProfile[],
   personIdOf: (candidateId: string) => string,
 ): { officeTerms: OfficeTerm[]; politicalRoles: PoliticalRole[] } {
-  const byCandidate = new Map(roster.map((candidate) => [candidate.id, candidate]));
+  const byCandidate = new Map(
+    roster.map((candidate) => [candidate.id, candidate]),
+  );
   const officeTerms: OfficeTerm[] = [];
   const politicalRoles: PoliticalRole[] = [];
   const seenOffice = new Set<string>();
@@ -451,8 +458,7 @@ function buildOfficeTerms(
           office.currentHint ||
           (office.organization === '高雄市議會' &&
             office.termNumbers.includes(4)) ||
-          (office.organization === '立法院' &&
-            office.termNumbers.includes(11));
+          (office.organization === '立法院' && office.termNumbers.includes(11));
 
         const key =
           candidate.id +
@@ -465,18 +471,39 @@ function buildOfficeTerms(
 
         if (!seenOffice.has(key)) {
           seenOffice.add(key);
+          const kind =
+            office.officeTitle === '立法委員'
+              ? {
+                  positionType: 'legislative-office' as const,
+                  employmentType: 'elected' as const,
+                }
+              : office.officeTitle === '議員'
+                ? {
+                    positionType: 'council-office' as const,
+                    employmentType: 'elected' as const,
+                  }
+                : {
+                    positionType: 'elected-office' as const,
+                    employmentType: 'elected' as const,
+                  };
           officeTerms.push({
             id: 'office-' + candidate.slug + '-' + String(index),
             candidateId: candidate.id,
             personId: personIdOf(candidate.id),
+            positionType: kind.positionType,
+            employmentType: kind.employmentType,
             officeTitle: office.officeTitle,
             organization: office.organization,
             termLabel,
             termNumbers: office.termNumbers,
             startDate: null,
+            startDatePrecision: null,
             endDate: null,
+            endDatePrecision: null,
             status: isCurrent ? 'current' : 'former',
             sourceIds: [profile.sourceId],
+            evidenceExcerpt: null,
+            attribution: 'institutional-record',
             note: '屆次取自高雄市議會「學經歷與政見」經歷欄位；起訖日期未載明，故不推定。',
           });
         }
@@ -526,7 +553,9 @@ type ProfileAnchor = {
   candidateIds: string[];
 };
 
-function buildProfileAnchors(profiles: MemberProfile[]): Map<string, ProfileAnchor> {
+function buildProfileAnchors(
+  profiles: MemberProfile[],
+): Map<string, ProfileAnchor> {
   const anchors = new Map<string, ProfileAnchor>();
 
   for (const profile of profiles) {
@@ -582,7 +611,6 @@ function loadNewsPages(
 
   return pages;
 }
-
 
 function attributedParagraphs(
   paragraphs: string[],
@@ -710,7 +738,8 @@ function selectOwnSentences(
 ): string[] {
   const surnameToken = memberName.slice(0, 1) + '議員';
   const surnameUnique = pageNames.every(
-    (name) => name === memberName || name.slice(0, 1) !== memberName.slice(0, 1),
+    (name) =>
+      name === memberName || name.slice(0, 1) !== memberName.slice(0, 1),
   );
   const others = rosterNames.filter((name) => name !== memberName);
   const selected: string[] = [];
@@ -752,7 +781,9 @@ function buildNewsActivities(
   pageTexts: Map<string, PageText>,
   personIdOf: (candidateId: string) => string,
 ): { activities: PoliticalActivity[]; usedSourceIds: Set<string> } {
-  const byCandidate = new Map(roster.map((candidate) => [candidate.id, candidate]));
+  const byCandidate = new Map(
+    roster.map((candidate) => [candidate.id, candidate]),
+  );
   const nameById = new Map(
     roster.map((candidate) => [candidate.id, candidate.displayName]),
   );
@@ -799,10 +830,16 @@ function buildNewsActivities(
       );
       if (own.length === 0) continue;
 
-      const ownText = own.map((sentence) => stripSectionHeading(sentence)).filter(Boolean);
+      const ownText = own
+        .map((sentence) => stripSectionHeading(sentence))
+        .filter(Boolean);
       const description = truncate(ownText.slice(0, 2).join(''), 200);
       const dedupeKey =
-        candidateId + '|' + date + '|' + description.replace(/\s+/g, '').slice(0, 40);
+        candidateId +
+        '|' +
+        date +
+        '|' +
+        description.replace(/\s+/g, '').slice(0, 40);
       if (seen.has(dedupeKey)) continue;
       seen.add(dedupeKey);
 
@@ -834,6 +871,7 @@ function buildNewsActivities(
         id: 'activity-' + candidate.slug + '-' + page.newsId + suffix,
         candidateId,
         personId: personIdOf(candidateId),
+        positionId: null,
         date,
         datePrecision: 'day',
         category: meta.category,
@@ -862,7 +900,9 @@ function buildNewsActivities(
   }
 
   const perCandidate = new Map<string, number>();
-  const newestFirst = [...activities].sort((a, b) => b.date.localeCompare(a.date));
+  const newestFirst = [...activities].sort((a, b) =>
+    b.date.localeCompare(a.date),
+  );
   const capped: PoliticalActivity[] = [];
   for (const activity of newestFirst) {
     const count = perCandidate.get(activity.candidateId) ?? 0;
@@ -902,7 +942,9 @@ function buildNameScanActivities(
 
     const kind = pageKindOf(page.title);
     const meta = KIND_META[kind];
-    const sentences = paragraphs.flatMap((paragraph) => splitSentences(paragraph));
+    const sentences = paragraphs.flatMap((paragraph) =>
+      splitSentences(paragraph),
+    );
 
     for (const candidate of targets) {
       const name = candidate.displayName;
@@ -914,7 +956,9 @@ function buildNameScanActivities(
           }
         }
         if (!text.includes(name)) return false;
-        if (rosterNames.some((other) => other !== name && text.includes(other))) {
+        if (
+          rosterNames.some((other) => other !== name && text.includes(other))
+        ) {
           return false;
         }
         if (CEREMONIAL_VERB.test(sentence)) return false;
@@ -923,7 +967,9 @@ function buildNameScanActivities(
       });
       if (own.length === 0) continue;
 
-      const ownText = own.map((sentence) => stripSectionHeading(sentence)).filter(Boolean);
+      const ownText = own
+        .map((sentence) => stripSectionHeading(sentence))
+        .filter(Boolean);
       const description = truncate(ownText.slice(0, 2).join(''), 200);
       const topics: string[] = [];
       for (const sentence of own) {
@@ -938,6 +984,7 @@ function buildNameScanActivities(
         id: 'activity-' + candidate.slug + '-' + page.newsId + '-scan',
         candidateId: candidate.id,
         personId: personIdOf(candidate.id),
+        positionId: null,
         date,
         datePrecision: 'day',
         category: meta.category,
@@ -964,7 +1011,9 @@ function buildNameScanActivities(
 
   const capped: PoliticalActivity[] = [];
   const perCandidate = new Map<string, number>();
-  const newestFirst = [...collected].sort((a, b) => b.date.localeCompare(a.date));
+  const newestFirst = [...collected].sort((a, b) =>
+    b.date.localeCompare(a.date),
+  );
   for (const activity of newestFirst) {
     const count = perCandidate.get(activity.candidateId) ?? 0;
     if (count >= 20) continue;
@@ -989,7 +1038,9 @@ async function main(): Promise<void> {
   const pageTexts = new Map<string, PageText>();
   for (const page of pages) {
     pageTexts.set(page.newsId, {
-      paragraphs: sectionParagraphs(readFileSync(absolute(page.rawPath), 'utf8')),
+      paragraphs: sectionParagraphs(
+        readFileSync(absolute(page.rawPath), 'utf8'),
+      ),
     });
   }
 
@@ -1025,7 +1076,10 @@ async function main(): Promise<void> {
 
   for (const profile of profiles) {
     pushSource(
-      profileSource(profile, '高雄市議會議員服務政見頁（msn ' + profile.msn + '）'),
+      profileSource(
+        profile,
+        '高雄市議會議員服務政見頁（msn ' + profile.msn + '）',
+      ),
     );
   }
 
@@ -1074,6 +1128,8 @@ async function main(): Promise<void> {
 
   for (const source of curated.sources) pushSource(source);
 
+  const publicService = buildPublicServiceRecords({ personIdOf, pushSource });
+
   const nameScanActivities = buildNameScanActivities(
     roster.candidates,
     profiles,
@@ -1088,7 +1144,6 @@ async function main(): Promise<void> {
     ...curated.activities,
   ];
 
-
   const activityIds = new Set<string>();
   for (const activity of activities) {
     if (activityIds.has(activity.id)) {
@@ -1097,7 +1152,24 @@ async function main(): Promise<void> {
     activityIds.add(activity.id);
   }
 
-  const allOfficeTerms = [...officeTerms, ...curated.officeTerms];
+  // A curated public-service position supersedes the term parsed from the
+  // council profile when both describe the same elected office for the same
+  // person: the curated record carries the exact organisation and evidence.
+  const curatedElectedKeys = new Set(
+    publicService.officeTerms
+      .filter((term) => term.employmentType === 'elected')
+      .map((term) => term.candidateId + '|' + term.officeTitle),
+  );
+  const parsedOfficeTerms = officeTerms.filter(
+    (term) =>
+      !curatedElectedKeys.has(term.candidateId + '|' + term.officeTitle),
+  );
+
+  const allOfficeTerms = [
+    ...parsedOfficeTerms,
+    ...curated.officeTerms,
+    ...publicService.officeTerms,
+  ];
   const officeIds = new Set<string>();
   for (const term of allOfficeTerms) {
     if (officeIds.has(term.id)) {
@@ -1107,7 +1179,10 @@ async function main(): Promise<void> {
   }
 
   const coverageNotes = new Map<string, string>(
-    (curated.coverageNotes ?? []).map((entry) => [entry.candidateId, entry.note]),
+    (curated.coverageNotes ?? []).map((entry) => [
+      entry.candidateId,
+      entry.note,
+    ]),
   );
   const profileLookup = new Map(
     profiles.map((profile) => [profile.candidateId, profile]),
@@ -1120,6 +1195,15 @@ async function main(): Promise<void> {
     const ownOffices = allOfficeTerms.filter(
       (term) => term.candidateId === candidate.id,
     );
+    const ownProjects = publicService.governmentProjects.filter(
+      (record) => record.candidateId === candidate.id,
+    );
+    const ownProposals = publicService.legislativeProposals.filter(
+      (record) => record.candidateId === candidate.id,
+    );
+    const ownVotes = publicService.votingRecords.filter(
+      (record) => record.candidateId === candidate.id,
+    );
     const profile = profileLookup.get(candidate.id);
 
     const searchedSourceIds = [
@@ -1128,26 +1212,51 @@ async function main(): Promise<void> {
       'political-career-kcc-news-corpus',
     ];
 
+    const totalRecords =
+      ownOffices.length +
+      ownActivities.length +
+      ownProjects.length +
+      ownProposals.length +
+      ownVotes.length;
+
     const fallbackNote =
-      ownActivities.length + ownOffices.length > 0
-        ? '已自議員服務政見頁與議會新聞稿取得 ' +
+      totalRecords > 0
+        ? '已取得 ' +
           String(ownOffices.length) +
-          ' 筆公職屆次、' +
+          ' 筆公職、' +
+          String(ownProjects.length) +
+          ' 筆政府專案、' +
+          String(ownProposals.length) +
+          ' 筆立法提案、' +
+          String(ownVotes.length) +
+          ' 筆表決與 ' +
           String(ownActivities.length) +
-          ' 筆可查證活動。'
-        : '已檢索議員服務政見頁與 590 篇議會新聞稿，未取得可歸屬至本人的政治活動紀錄；查無紀錄不代表未從事政治活動。';
+          ' 筆議會活動紀錄。'
+        : '已檢索議員服務政見頁、議會新聞稿與立法院開放資料，未取得可歸屬至本人的從政紀錄；查無紀錄不代表未從事政治活動。';
 
     return {
       candidateId: candidate.id,
       displayName: candidate.displayName,
       districtId: candidate.districtId,
       electionType: candidate.electionType,
-      status:
-        ownActivities.length + ownOffices.length > 0
-          ? 'records-found'
-          : 'no-verifiable-record-found',
+      status: totalRecords > 0 ? 'records-found' : 'no-verifiable-record-found',
       officeTermCount: ownOffices.length,
       activityCount: ownActivities.length,
+      governmentPositionCount: ownOffices.filter(
+        (term) => term.positionType === 'government-employment',
+      ).length,
+      legislativePositionCount: ownOffices.filter(
+        (term) => term.positionType === 'legislative-office',
+      ).length,
+      councilPositionCount: ownOffices.filter(
+        (term) => term.positionType === 'council-office',
+      ).length,
+      electedOfficeCount: ownOffices.filter(
+        (term) => term.positionType === 'elected-office',
+      ).length,
+      governmentProjectCount: ownProjects.length,
+      legislativeProposalCount: ownProposals.length,
+      votingRecordCount: ownVotes.length,
       searchedSourceIds,
       note: coverageNotes.get(candidate.id) ?? fallbackNote,
     };
@@ -1164,6 +1273,20 @@ async function main(): Promise<void> {
     activities: [...activities].sort(
       (a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id),
     ),
+    governmentProjects: [...publicService.governmentProjects].sort(
+      (a, b) =>
+        a.candidateId.localeCompare(b.candidateId) || a.id.localeCompare(b.id),
+    ),
+    legislativeProposals: [...publicService.legislativeProposals].sort(
+      (a, b) =>
+        a.candidateId.localeCompare(b.candidateId) || a.id.localeCompare(b.id),
+    ),
+    votingRecords: [...publicService.votingRecords].sort(
+      (a, b) =>
+        a.candidateId.localeCompare(b.candidateId) ||
+        a.votedAt.localeCompare(b.votedAt) ||
+        a.id.localeCompare(b.id),
+    ),
     coverage,
     review: {
       status: 'approved' as const,
@@ -1175,7 +1298,9 @@ async function main(): Promise<void> {
       limitations: [
         '屆次取自議員服務政見頁「經歷」欄位；部分條目未載明起訖日期，故不推定日期。',
         '議會新聞稿為機關新聞稿，屬二手敘述；未逐案核對議事錄與發言紀錄。',
-        '個人表決紀錄無法自議會新聞稿取得，未收錄不代表未參與表決。',
+        '立法院表決僅收錄記名表決名單；未記名或未列名者以「未個別記錄」呈現，不推定其立場。',
+        '立法提案狀態取自立法院開放資料最新進度，非最終立法結果；未經三讀者不視為法律，最新進度可能包含擷取日後之院會議程。',
+        '政府專案僅收錄報導同時載明候選人姓名與職稱者；未具名或僅描述機關作為者，不歸因於候選人。',
         '未持有議員服務政見頁的候選人，僅採新聞稿中以完整姓名指稱的內容。',
         '同一候選人最多保留 40 筆活動紀錄（依日期新到舊），超出部分未列出，不代表未發生。',
         '競選承諾與已發生之從政紀錄分開呈現，承諾內容不計入已發生紀錄。',
@@ -1215,4 +1340,3 @@ async function main(): Promise<void> {
 }
 
 await main();
-

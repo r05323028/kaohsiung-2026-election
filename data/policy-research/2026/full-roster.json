@@ -24467,6 +24467,313 @@
         "新聞報導以姓名指稱候選人，選區與職稱由報導內容確認為高雄市選舉候選人。"
       ],
       "note": "新聞全文以公開網址擷取並保留原始內容；作為候選人表態之報導來源。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-udn-hong-fang-long",
+      "url": "https://udn.com/vote2026/story/124652/9734850",
+      "publisher": "聯合新聞網",
+      "title": "又多1人！洪方隆登記參選高雄市長 稱希望改變7大問題 | 2026九合一選舉",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/udn.txt",
+      "byteLength": 2833,
+      "sha256": "ab1028e614583572e016411e4c5f504afdf9592339b2f44c3469236d19cf0f69",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-mayor-hong-fang-long-2026"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/udn.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "news-report",
+      "publishedAt": "2026-09-04"
+    },
+    {
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "url": "https://n.yam.com/article/20261104774550",
+      "publisher": "蕃新聞",
+      "title": "美濃議員五搶三 李振豪.林慧欣.鍾炳光搶票",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/yam1.txt",
+      "byteLength": 5531,
+      "sha256": "88b94fe12829ae4eefec530f68ec07ef996b203a954a990f933705791de89cbf",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+        "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+        "official-candidate-2026-district-kaohsiung-council-01-1bea56a9"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/yam1.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "news-report",
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "sourceId": "policy-source-enrichment-yam-chen-hui-jun",
+      "url": "https://n.yam.com/Article/20261028781095",
+      "publisher": "蕃新聞",
+      "title": "陳惠君抽中2號 訴求服務不分藍綠、深耕高雄第五選區",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/yam2.txt",
+      "byteLength": 3694,
+      "sha256": "2f474a3e889471d2fb32edf7e848f7288df5387301b4c6714dcac0c3eb2a235e",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-05-147ddb97"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/yam2.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "news-report",
+      "publishedAt": "2026-10-28"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kcc-2194",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2194&n=40&sms=0",
+      "publisher": "高雄市議會",
+      "title": "MemberInfo_New.aspx（服務政見）",
+      "role": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kcc2194.txt",
+      "byteLength": 15526,
+      "sha256": "e21ad8bd14b46b2d55c1cd27cfadc4455a1821c7e27378a514e93987a56379c9",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-05-50dee358"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc2194.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "institutional-record",
+      "publishedAt": null,
+      "retentionNote": "原始 HTML bytes 保留於 data/raw/policy/2026/enrichment/original；可讀 UTF-8 文字副本供引用檢查與研究報告使用。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kcc-2195",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2195&n=40&sms=0",
+      "publisher": "高雄市議會",
+      "title": "MemberInfo_New.aspx（服務政見）",
+      "role": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kcc2195.txt",
+      "byteLength": 13829,
+      "sha256": "0d2c737526c1a037f9a0e54ec736268090f7075eafc784f3875dbeeac7b3bf2b",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-06-68517ae6"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc2195.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "institutional-record",
+      "publishedAt": null,
+      "retentionNote": "原始 HTML bytes 保留於 data/raw/policy/2026/enrichment/original；可讀 UTF-8 文字副本供引用檢查與研究報告使用。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kcc-2197",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2197&n=40&sms=0",
+      "publisher": "高雄市議會",
+      "title": "MemberInfo_New.aspx（服務政見）",
+      "role": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kcc2197.txt",
+      "byteLength": 11083,
+      "sha256": "d58fbf6a81b97eaf48b66af7ad1e4e3a6c970bd5055cee6859b0f123ece1fd9d",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-06-5fb70691"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc2197.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "institutional-record",
+      "publishedAt": null,
+      "retentionNote": "原始 HTML bytes 保留於 data/raw/policy/2026/enrichment/original；可讀 UTF-8 文字副本供引用檢查與研究報告使用。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kcc-2207",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2207&n=40&sms=0",
+      "publisher": "高雄市議會",
+      "title": "MemberInfo_New.aspx（服務政見）",
+      "role": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kcc2207.txt",
+      "byteLength": 12420,
+      "sha256": "849401bab67525d13ffeea3f3ed279f00da6a4c7422576f2f7ed386bd26fdc2f",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-08-3c0e0184"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc2207.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "institutional-record",
+      "publishedAt": null,
+      "retentionNote": "原始 HTML bytes 保留於 data/raw/policy/2026/enrichment/original；可讀 UTF-8 文字副本供引用檢查與研究報告使用。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kcc-2229",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2229&n=39&sms=9028",
+      "publisher": "高雄市議會",
+      "title": "MemberInfo_New.aspx（服務政見）",
+      "role": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kcc2229.txt",
+      "byteLength": 7952,
+      "sha256": "dd4fc9a5651aaba83a866f3f760a490156cf23b92e4d29ecbcc20251c280c6e8",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-11-1704a92e"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc2229.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "institutional-record",
+      "publishedAt": null,
+      "retentionNote": "原始 HTML bytes 保留於 data/raw/policy/2026/enrichment/original；可讀 UTF-8 文字副本供引用檢查與研究報告使用。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-crntt-liu-xian-e",
+      "url": "https://www.crntt.tw/doc/docDetailCreate.jsp?coluid=192&docid=160263414&kindid=0",
+      "publisher": "中評社",
+      "title": "劉仙娥提出六大面向二十條政見",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/crntt.txt",
+      "byteLength": 2986,
+      "sha256": "a50569e89cf3dbbeae851b9a6a4a89edc5b254a9e068ef17428973d232a48b0a",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-6a5be214"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/crntt.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "news-report",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kingtop-hong-cun-ming",
+      "url": "https://www.kingtop.com.tw/detail.php?id=53417&type=popular",
+      "publisher": "今傳媒",
+      "title": "洪村銘完成市議員選舉登記",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kingtop.txt",
+      "byteLength": 5614,
+      "sha256": "b39875c94755a806f97997273b449eaee970fa8856dc519bf5f72859ae051a10",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-11-51c89db1"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kingtop.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "news-report",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "sourceId": "policy-source-enrichment-newtalk-jin-he-ya",
+      "url": "https://newtalk.tw/news/view/2026-09-02/1057224",
+      "publisher": "Newtalk新聞",
+      "title": "金禾雅歌手轉戰議會 端出八大政見拚「原鄉有根、城市有家」",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/newtalk.txt",
+      "byteLength": 7933,
+      "sha256": "807049095200511b2b2b3a2f188d6a5729cff87f7c7a9746e045e4e26e9a799d",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/newtalk.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "news-report",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "sourceId": "policy-source-enrichment-cec-chen-mei-ya-2022",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/05直轄市議員/111年/06高雄市/高雄市第6選區.pdf",
+      "publisher": "中央選舉委員會",
+      "title": "111年高雄市第6選區市議員選舉公報",
+      "role": "roster-context",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/chenmei.txt",
+      "byteLength": 13005,
+      "sha256": "131a9185dfc54b0bc4bfc25bb497e1c9e659007f923b3c0941c00349691e7612",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/chenmei.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。",
+      "sourceCategory": "official-election-record",
+      "publishedAt": "2022-11-26"
     }
   ],
   "sourceAttempts": [
@@ -26583,6 +26890,1490 @@
       "identityStatus": "not-applicable",
       "isNegativeEvidence": false,
       "resultNote": "在保留的官方候選人／政黨來源集合中沒有找到可核驗的候選人專屬政策端點；這不是沒有政策的證據。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-mayor-zhang-jing-2026",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "personId": "person-zhang-jing-2026",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-mayor-wang-zhao-min-2026",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "personId": "person-wang-zhao-min-2026",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-mayor-ke-zhi-en-2026",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "personId": "person-ke-zhi-en-2026",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人官方頁面回應 HTTP 403；第二手政策轉錄未經原始頁面獨立核對，因此不採用。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-mayor-hong-fang-long-2026",
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "personId": "person-hong-fang-long-2026",
+      "sourceId": "policy-source-enrichment-udn-hong-fang-long",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://udn.com/vote2026/story/124652/9734850",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-mayor-lai-rui-long-2026",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "personId": "person-lai-rui-long-2026",
+      "sourceId": "policy-source-raw-policy-2026-zenolai-policy-ai-7-html",
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": "https://www.zenolai.tw/policy/ai/7",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "personId": "person-kaohsiung-council-01-eacf5d92",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://n.yam.com/article/20261104774550",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "personId": "person-kaohsiung-council-01-a038ab23",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "personId": "person-kaohsiung-council-01-3a8398e2",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://n.yam.com/article/20261104774550",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "personId": "person-kaohsiung-council-01-ee1634c3",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://n.yam.com/article/20261104774550",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "personId": "person-kaohsiung-council-01-d01a31e6",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "personId": "person-kaohsiung-council-02-e5d525b6",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "personId": "person-kaohsiung-council-02-200bb44f",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "personId": "person-kaohsiung-council-02-49795f4d",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "personId": "person-kaohsiung-council-02-0e4dd20e",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "personId": "person-kaohsiung-council-02-2f6b9ce3",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "personId": "person-kaohsiung-council-03-34aafd1e",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "personId": "person-kaohsiung-council-03-e4af3760",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "名冊正名與外部資料中的張騏晟不一致，未跨名合併。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "personId": "person-kaohsiung-council-03-4fb9f93d",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "personId": "person-kaohsiung-council-03-03c229c0",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "personId": "person-kaohsiung-council-03-794f0a10",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "名冊正名與外部資料中的黃秋媖不一致，未跨名合併。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "personId": "person-kaohsiung-council-03-49f94419",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "personId": "person-kaohsiung-council-03-c5a8db0a",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+      "personId": "person-kaohsiung-council-03-dc57c1f3",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "名冊正名與外部資料中的蔡秉璁不一致，未跨名合併。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "personId": "person-kaohsiung-council-04-712cf4dd",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "personId": "person-kaohsiung-council-04-23bd0041",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "personId": "person-kaohsiung-council-04-e810f056",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "personId": "person-kaohsiung-council-04-d7b1335b",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "personId": "person-kaohsiung-council-04-a7ed58d6",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "personId": "person-kaohsiung-council-04-58eafab0",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "personId": "person-kaohsiung-council-04-29138ad9",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "personId": "person-kaohsiung-council-04-77e78bf6",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "personId": "person-kaohsiung-council-04-16f09b7e",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "personId": "person-kaohsiung-council-04-6c3e756f",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "personId": "person-kaohsiung-council-04-7594fe5b",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "personId": "person-kaohsiung-council-04-7287e742",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "personId": "person-kaohsiung-council-05-69c3f3e6",
+      "sourceId": "policy-source-enrichment-kcc-2194",
+      "sourceRole": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2194&n=40&sms=0",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "personId": "person-kaohsiung-council-05-87745ac1",
+      "sourceId": "policy-source-enrichment-yam-chen-hui-jun",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://n.yam.com/Article/20261028781095",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "personId": "person-kaohsiung-council-05-4c43ff03",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "personId": "person-kaohsiung-council-05-5580756f",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "personId": "person-kaohsiung-council-05-9f8096a2",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "personId": "person-kaohsiung-council-05-78dc48ed",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "personId": "person-kaohsiung-council-05-ab8f44a1",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "personId": "person-kaohsiung-council-06-02e9b103",
+      "sourceId": "policy-source-enrichment-kcc-2197",
+      "sourceRole": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2197&n=40&sms=0",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "personId": "person-kaohsiung-council-06-0644fda4",
+      "sourceId": "policy-source-enrichment-kcc-2195",
+      "sourceRole": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2195&n=40&sms=0",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "personId": "person-kaohsiung-council-06-8a4e2657",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "personId": "person-kaohsiung-council-06-845d8f64",
+      "sourceId": "policy-source-enrichment-cec-chen-mei-ya-2022",
+      "sourceRole": "roster-context",
+      "tier": "tier-2-authoritative",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/05直轄市議員/111年/06高雄市/高雄市第6選區.pdf",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "personId": "person-kaohsiung-council-07-6b7a49b6",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "personId": "person-kaohsiung-council-07-18990102",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "personId": "person-kaohsiung-council-07-034b7985",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "personId": "person-kaohsiung-council-07-e0956970",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "personId": "person-kaohsiung-council-07-ce1bd95c",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "personId": "person-kaohsiung-council-07-b1cd243b",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "personId": "person-kaohsiung-council-07-c87108af",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "TPP 候選人頁面回應 HTTP 403，無法核對完整原文。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "personId": "person-kaohsiung-council-07-eec9e2bf",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "可見候選人相關來源未提供可核對的完整政策原文。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "personId": "person-kaohsiung-council-07-8f9a3634",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "名冊正名為鄭孟洽，但可見資料出現鄭孟洳異名，無法排除錯誤歸屬。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "personId": "person-kaohsiung-council-07-2a964067",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "personId": "person-kaohsiung-council-07-88ecce5c",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "personId": "person-kaohsiung-council-07-a3f462c1",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "personId": "person-kaohsiung-council-08-aecfd707",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "personId": "person-kaohsiung-council-08-6ecb36dd",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": "https://ssno1.net/news_detail.php?NewsID=92226",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "媒體頁面僅能取得標題或 metadata，全文無法核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "personId": "person-kaohsiung-council-08-6c5507e1",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "personId": "person-kaohsiung-council-08-ccbf37bb",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "personId": "person-kaohsiung-council-08-7b3ae9f2",
+      "sourceId": "policy-source-enrichment-kcc-2207",
+      "sourceRole": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2207&n=40&sms=0",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "personId": "person-kaohsiung-council-08-84ba32a4",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "personId": "person-kaohsiung-council-08-9a658777",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "personId": "person-kaohsiung-council-08-8b2a5074",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "personId": "person-kaohsiung-council-08-0e49fc5e",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "personId": "person-kaohsiung-council-09-7ada4337",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "personId": "person-kaohsiung-council-09-1c7a332c",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "personId": "person-kaohsiung-council-09-07bd8300",
+      "sourceId": null,
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "blocked",
+      "identityStatus": "unresolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "personId": "person-kaohsiung-council-09-423384de",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "personId": "person-kaohsiung-council-09-02facf2a",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+      "personId": "person-kaohsiung-council-09-913eba58",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+      "personId": "person-kaohsiung-council-09-a1a5e49a",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "personId": "person-kaohsiung-council-09-5303e646",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "failed",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+      "personId": "person-kaohsiung-council-09-094736ec",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+      "personId": "person-kaohsiung-council-10-228f04d0",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "personId": "person-kaohsiung-council-10-1c0d4a7e",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+      "personId": "person-kaohsiung-council-10-ef2910ce",
+      "sourceId": "policy-source-enrichment-crntt-liu-xian-e",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://www.crntt.tw/doc/docDetailCreate.jsp?coluid=192&docid=160263414&kindid=0",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "personId": "person-kaohsiung-council-10-da29eabb",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+      "personId": "person-kaohsiung-council-10-39da3c73",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "personId": "person-kaohsiung-council-10-8206c866",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "personId": "person-kaohsiung-council-10-f1f8ec11",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "personId": "person-kaohsiung-council-10-b6784261",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "personId": "person-kaohsiung-council-10-da0bb13d",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+      "personId": "person-kaohsiung-council-10-63a20221",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "personId": "person-kaohsiung-council-10-6712147e",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "personId": "person-kaohsiung-council-10-19864409",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "personId": "person-kaohsiung-council-10-356b5985",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "personId": "person-kaohsiung-council-11-58589937",
+      "sourceId": "policy-source-enrichment-kingtop-hong-cun-ming",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://www.kingtop.com.tw/detail.php?id=53417&type=popular",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "personId": "person-kaohsiung-council-11-6fa8608c",
+      "sourceId": "policy-source-enrichment-kcc-2229",
+      "sourceRole": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2229&n=39&sms=9028",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "personId": "person-kaohsiung-council-11-6db9e527",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "personId": "person-kaohsiung-council-11-ec23428a",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "personId": "person-kaohsiung-council-11-fc9ac319",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+      "personId": "person-kaohsiung-council-11-defd1858",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+      "personId": "person-kaohsiung-council-12-c93e50a3",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+      "personId": "person-kaohsiung-council-12-1aabe755",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "personId": "person-kaohsiung-council-12-1a977b21",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "personId": "person-kaohsiung-council-13-8ca21ce7",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+      "personId": "person-kaohsiung-council-13-b6ae8174",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+      "personId": "person-kaohsiung-council-14-2e144b34",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "personId": "person-kaohsiung-council-14-c66852f5",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+      "personId": "person-kaohsiung-council-14-f0f2e32a",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+      "personId": "person-kaohsiung-council-15-7e4c5eb2",
+      "sourceId": "policy-source-enrichment-newtalk-jin-he-ya",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://newtalk.tw/news/view/2026-09-02/1057224",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "獨立查核者已擷取全文或核對既有來源，並完成候選人身分核對。"
+    },
+    {
+      "attemptId": "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+      "personId": "person-kaohsiung-council-15-0bab53b3",
+      "sourceId": null,
+      "sourceRole": "news-report",
+      "tier": "tier-1-primary",
+      "url": null,
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "not-attempted",
+      "identityStatus": "not-applicable",
+      "isNegativeEvidence": false,
+      "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
     }
   ],
   "policies": [
@@ -67503,6 +69294,223 @@
       ],
       "details": null,
       "researchId": "jin-he-ya-10"
+    },
+    {
+      "policyId": "policy-2026-hong-fang-long-enrichment-issue-priorities-01",
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "personId": "person-hong-fang-long-2026",
+      "title": "參選關注問題與改變現況優先事項",
+      "neutralSummary": "洪方隆將政治鬥爭、詐騙、低薪、淹水與環境、食安、少子化，以及司法與公務人員政黨化列為參選時關注的問題，並表示希望藉由參選改變現況。",
+      "originalStatement": "洪方隆說，參選初衷是看見台灣出現政治鬥爭、詐騙、低薪、淹水與環境、食安、少子化及司法與公務人員太過政黨化等問題，希望藉由參選改變現況。",
+      "type": "issue_position",
+      "categories": [
+        "other"
+      ],
+      "geographicScope": "citywide",
+      "geographicLabel": "高雄市",
+      "statementDate": "2026-09-04",
+      "policyContext": "current-position",
+      "electionYear": null,
+      "sourceId": "policy-source-enrichment-udn-hong-fang-long",
+      "evidenceId": "evidence-2026-enrichment-hong-fang-long-issue-priorities-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-hong-fang-long-issue-priorities"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-hong-fang-long-issue-priorities-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
+    },
+    {
+      "policyId": "policy-2026-lin-hui-xin-enrichment-rural-school-bus-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "personId": "person-kaohsiung-council-01-3a8398e2",
+      "title": "偏鄉暖心通學專車",
+      "neutralSummary": "林慧欣提出在偏鄉交通爭取暖心通學專車。",
+      "originalStatement": "在偏鄉的交通，暖心通學專車",
+      "type": "campaign_proposal",
+      "categories": [
+        "transportation-and-mobility"
+      ],
+      "geographicScope": "district",
+      "geographicLabel": "高雄市第1選舉區",
+      "statementDate": "2026-11-04",
+      "policyContext": "2026-election-commitment",
+      "electionYear": 2026,
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceId": "evidence-2026-enrichment-lin-hui-xin-rural-school-bus-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-lin-hui-xin-transport"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-lin-hui-xin-rural-school-bus-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
+    },
+    {
+      "policyId": "policy-2026-lin-hui-xin-enrichment-crop-insurance-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "personId": "person-kaohsiung-council-01-3a8398e2",
+      "title": "擴大農產品保險項目",
+      "neutralSummary": "林慧欣提出爭取農業發展並擴大農產品保險項目。",
+      "originalStatement": "希望爭取我們的農業發展，可以擴大我們的農產品的保險項目",
+      "type": "campaign_proposal",
+      "categories": [
+        "agriculture-and-fisheries"
+      ],
+      "geographicScope": "district",
+      "geographicLabel": "高雄市第1選舉區",
+      "statementDate": "2026-11-04",
+      "policyContext": "2026-election-commitment",
+      "electionYear": 2026,
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceId": "evidence-2026-enrichment-lin-hui-xin-crop-insurance-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-lin-hui-xin-insurance"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-lin-hui-xin-crop-insurance-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
+    },
+    {
+      "policyId": "policy-2026-lin-hui-xin-enrichment-shingles-vaccine-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "personId": "person-kaohsiung-council-01-3a8398e2",
+      "title": "爭取帶狀疱疹疫苗補助",
+      "neutralSummary": "林慧欣表示將爭取高雄市帶狀疱疹疫苗補助，以照顧長者。",
+      "originalStatement": "我們高雄市，沒有那個皮蛇(帶狀疱疹)疫苗補助，所以未來慧欣也會盡力來爭取，照顧我們的長輩。",
+      "type": "campaign_proposal",
+      "categories": [
+        "healthcare"
+      ],
+      "geographicScope": "district",
+      "geographicLabel": "高雄市第1選舉區",
+      "statementDate": "2026-11-04",
+      "policyContext": "2026-election-commitment",
+      "electionYear": 2026,
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceId": "evidence-2026-enrichment-lin-hui-xin-shingles-vaccine-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-lin-hui-xin-vaccine"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-lin-hui-xin-shingles-vaccine-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
+    },
+    {
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-daycare-ac-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "personId": "person-kaohsiung-council-01-ee1634c3",
+      "title": "改善活動中心日照空調",
+      "neutralSummary": "鍾炳光提出為活動中心日間照顧空間爭取改善空調。",
+      "originalStatement": "老人家在我們的活動中心做日照，活動沒有冷氣，這個我們要極力來爭取",
+      "type": "campaign_proposal",
+      "categories": [
+        "social-welfare-and-long-term-care"
+      ],
+      "geographicScope": "district",
+      "geographicLabel": "高雄市第1選舉區",
+      "statementDate": "2026-11-04",
+      "policyContext": "2026-election-commitment",
+      "electionYear": 2026,
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceId": "evidence-2026-enrichment-zhong-bing-guang-daycare-ac-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-zhong-bing-guang-daycare"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-zhong-bing-guang-daycare-ac-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
+    },
+    {
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "personId": "person-kaohsiung-council-01-ee1634c3",
+      "title": "農保退職金按月加入",
+      "neutralSummary": "鍾炳光提出政府依比例按月加入農保退職金。",
+      "originalStatement": "我們農保的退職金部分，政府要按照比例每一個月固定來加入",
+      "type": "campaign_proposal",
+      "categories": [
+        "agriculture-and-fisheries"
+      ],
+      "geographicScope": "district",
+      "geographicLabel": "高雄市第1選舉區",
+      "statementDate": "2026-11-04",
+      "policyContext": "2026-election-commitment",
+      "electionYear": 2026,
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceId": "evidence-2026-enrichment-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-zhong-bing-guang-insurance"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-zhong-bing-guang-enrichment-farm-insurance-payment-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
+    },
+    {
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-cold-chain-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "personId": "person-kaohsiung-council-01-ee1634c3",
+      "title": "加強農產品蔬果冷鏈設備",
+      "neutralSummary": "鍾炳光提出加強農產品蔬果冷鏈設備，以保存新鮮度。",
+      "originalStatement": "我們的農產品蔬果，要加強我們冷鏈的設備，保存它們的新鮮度。",
+      "type": "campaign_proposal",
+      "categories": [
+        "agriculture-and-fisheries"
+      ],
+      "geographicScope": "district",
+      "geographicLabel": "高雄市第1選舉區",
+      "statementDate": "2026-11-04",
+      "policyContext": "2026-election-commitment",
+      "electionYear": 2026,
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceId": "evidence-2026-enrichment-zhong-bing-guang-enrichment-cold-chain-01",
+      "evidenceType": "policy-statement",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed",
+      "claimIds": [
+        "claim-enrichment-zhong-bing-guang-cold-chain"
+      ],
+      "evidenceIds": [
+        "evidence-2026-enrichment-zhong-bing-guang-enrichment-cold-chain-01"
+      ],
+      "duplicateOf": null,
+      "conflictIds": []
     }
   ],
   "evidence": [
@@ -80581,6 +82589,83 @@
       "evidenceType": "policy-statement",
       "locator": "raw:data/raw/policy/2026/news/0bc431bb766775c6.txt",
       "quotedText": "未來也計畫串聯義守大學原住民族學生資源中心，推動公共參與人才培育及校園工作坊，讓原民青年在累積專業能力的同時，也能找回文化認同。",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-hong-fang-long-issue-priorities-01",
+      "policyId": "policy-2026-hong-fang-long-enrichment-issue-priorities-01",
+      "sourceId": "policy-source-enrichment-udn-hong-fang-long",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/udn.txt",
+      "quotedText": "洪方隆說，參選初衷是看見台灣出現政治鬥爭、詐騙、低薪、淹水與環境、食安、少子化及司法與公務人員太過政黨化等問題，希望藉由參選改變現況。",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-lin-hui-xin-rural-school-bus-01",
+      "policyId": "policy-2026-lin-hui-xin-enrichment-rural-school-bus-01",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/yam1.txt",
+      "quotedText": "在偏鄉的交通，暖心通學專車",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-lin-hui-xin-crop-insurance-01",
+      "policyId": "policy-2026-lin-hui-xin-enrichment-crop-insurance-01",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/yam1.txt",
+      "quotedText": "希望爭取我們的農業發展，可以擴大我們的農產品的保險項目",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-lin-hui-xin-shingles-vaccine-01",
+      "policyId": "policy-2026-lin-hui-xin-enrichment-shingles-vaccine-01",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/yam1.txt",
+      "quotedText": "我們高雄市，沒有那個皮蛇(帶狀疱疹)疫苗補助，所以未來慧欣也會盡力來爭取，照顧我們的長輩。",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-zhong-bing-guang-daycare-ac-01",
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-daycare-ac-01",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/yam1.txt",
+      "quotedText": "老人家在我們的活動中心做日照，活動沒有冷氣，這個我們要極力來爭取",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/yam1.txt",
+      "quotedText": "我們農保的退職金部分，政府要按照比例每一個月固定來加入",
+      "supports": "supports",
+      "identityStatus": "resolved",
+      "attributionStatus": "attributed"
+    },
+    {
+      "evidenceId": "evidence-2026-enrichment-zhong-bing-guang-enrichment-cold-chain-01",
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-cold-chain-01",
+      "sourceId": "policy-source-enrichment-yam-mifeng-candidates",
+      "evidenceType": "policy-statement",
+      "locator": "raw:data/raw/policy/2026/enrichment/text/yam1.txt",
+      "quotedText": "我們的農產品蔬果，要加強我們冷鏈的設備，保存它們的新鮮度。",
       "supports": "supports",
       "identityStatus": "resolved",
       "attributionStatus": "attributed"
@@ -96043,6 +98128,97 @@
         "dateConsistent": true
       },
       "note": "引文逐字出現在Yahoo新聞報導，文中明確為獲聘族群委員的金禾雅表示未來計畫；串聯義守大學原資中心與校園工作坊均保留。"
+    },
+    {
+      "policyId": "policy-2026-hong-fang-long-enrichment-issue-priorities-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認候選人身分、原文摘錄與表態脈絡；此紀錄描述候選人提出的問題優先事項，不宣稱問題或政策已被解決。"
+    },
+    {
+      "policyId": "policy-2026-lin-hui-xin-enrichment-rural-school-bus-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認為候選人採訪中的具體爭取方向，不宣稱政策已實現。"
+    },
+    {
+      "policyId": "policy-2026-lin-hui-xin-enrichment-crop-insurance-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認為候選人採訪中的具體爭取方向，不宣稱保險制度已擴大。"
+    },
+    {
+      "policyId": "policy-2026-lin-hui-xin-enrichment-shingles-vaccine-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認為候選人採訪中的爭取方向，不宣稱補助已存在或已實現。"
+    },
+    {
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-daycare-ac-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認為候選人採訪中的具體爭取方向，不宣稱工程已完成。"
+    },
+    {
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認為候選人採訪中的具體爭取方向，不宣稱制度已改變。"
+    },
+    {
+      "policyId": "policy-2026-zhong-bing-guang-enrichment-cold-chain-01",
+      "decision": "verified",
+      "verifierRole": "independent-verifier",
+      "checkedAt": "2026-11-14T00:00:00.000Z",
+      "checks": {
+        "attributionResolved": true,
+        "excerptPresentInSource": true,
+        "figuresPreserved": true,
+        "dateConsistent": true
+      },
+      "note": "獨立證據查核確認為候選人採訪中的具體爭取方向，不宣稱設備已完成建置。"
     }
   ],
   "audits": [
@@ -96054,7 +98230,8 @@
       "districtLabel": "高雄市長選舉",
       "electionType": "mayoral",
       "sourceAttemptIds": [
-        "policy-attempt-zhang-jing-2026-1"
+        "policy-attempt-zhang-jing-2026-1",
+        "enrichment-attempt-official-mayor-zhang-jing-2026"
       ],
       "policyIds": [
         "policy-2026-zhang-jing-01",
@@ -96096,7 +98273,8 @@
       "districtLabel": "高雄市長選舉",
       "electionType": "mayoral",
       "sourceAttemptIds": [
-        "policy-attempt-wang-zhao-min-2026-1"
+        "policy-attempt-wang-zhao-min-2026-1",
+        "enrichment-attempt-official-mayor-wang-zhao-min-2026"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -96112,7 +98290,8 @@
       "districtLabel": "高雄市長選舉",
       "electionType": "mayoral",
       "sourceAttemptIds": [
-        "policy-attempt-ke-zhi-en-2026-1"
+        "policy-attempt-ke-zhi-en-2026-1",
+        "enrichment-attempt-official-mayor-ke-zhi-en-2026"
       ],
       "policyIds": [
         "policy-ke-zhi-en-2026-raw-policy-2026-kmt-mayor-html-1",
@@ -96442,17 +98621,20 @@
       "districtLabel": "高雄市長選舉",
       "electionType": "mayoral",
       "sourceAttemptIds": [
-        "policy-attempt-hong-fang-long-2026-1"
+        "policy-attempt-hong-fang-long-2026-1",
+        "enrichment-attempt-official-mayor-hong-fang-long-2026"
       ],
       "policyIds": [
-        "policy-2026-hong-fang-long-01"
+        "policy-2026-hong-fang-long-01",
+        "policy-2026-hong-fang-long-enrichment-issue-priorities-01"
       ],
       "evidenceIds": [
-        "evidence-2026-hong-fang-long-01"
+        "evidence-2026-hong-fang-long-01",
+        "evidence-2026-enrichment-hong-fang-long-issue-priorities-01"
       ],
       "outcome": "verified-records",
       "researchStatus": "completed",
-      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-mayor-lai-rui-long-2026",
@@ -96482,7 +98664,8 @@
         "policy-attempt-lai-rui-long-2026-18",
         "policy-attempt-lai-rui-long-2026-19",
         "policy-attempt-lai-rui-long-2026-20",
-        "policy-attempt-lai-rui-long-2026-21"
+        "policy-attempt-lai-rui-long-2026-21",
+        "enrichment-attempt-official-mayor-lai-rui-long-2026"
       ],
       "policyIds": [
         "policy-lai-rui-long-2026-raw-policy-2026-zenolai-policy-ai-5-html-1",
@@ -96698,7 +98881,8 @@
       "districtLabel": "高雄市議員第1選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-01-eacf5d92-1"
+        "policy-attempt-kaohsiung-council-01-eacf5d92-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-fb74ce74"
       ],
       "policyIds": [
         "policy-2026-li-zhen-hao-01",
@@ -96727,7 +98911,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-01-a038ab23-1",
-        "policy-attempt-kaohsiung-council-01-a038ab23-2"
+        "policy-attempt-kaohsiung-council-01-a038ab23-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-b7b307c1"
       ],
       "policyIds": [
         "policy-kaohsiung-council-01-a038ab23-policy-kcc-profile-2172-1",
@@ -96777,19 +98962,26 @@
       "districtLabel": "高雄市議員第1選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-01-3a8398e2-1"
+        "policy-attempt-kaohsiung-council-01-3a8398e2-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-3ac62854"
       ],
       "policyIds": [
         "policy-2026-lin-hui-xin-01",
-        "policy-2026-lin-hui-xin-02"
+        "policy-2026-lin-hui-xin-02",
+        "policy-2026-lin-hui-xin-enrichment-rural-school-bus-01",
+        "policy-2026-lin-hui-xin-enrichment-crop-insurance-01",
+        "policy-2026-lin-hui-xin-enrichment-shingles-vaccine-01"
       ],
       "evidenceIds": [
         "evidence-2026-lin-hui-xin-01",
-        "evidence-2026-lin-hui-xin-02"
+        "evidence-2026-lin-hui-xin-02",
+        "evidence-2026-enrichment-lin-hui-xin-rural-school-bus-01",
+        "evidence-2026-enrichment-lin-hui-xin-crop-insurance-01",
+        "evidence-2026-enrichment-lin-hui-xin-shingles-vaccine-01"
       ],
       "outcome": "verified-records",
       "researchStatus": "completed",
-      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
+      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
@@ -96799,25 +98991,32 @@
       "districtLabel": "高雄市議員第1選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-01-ee1634c3-1"
+        "policy-attempt-kaohsiung-council-01-ee1634c3-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-1bea56a9"
       ],
       "policyIds": [
         "policy-2026-zhong-bing-guang-01",
         "policy-2026-zhong-bing-guang-02",
         "policy-2026-zhong-bing-guang-03",
         "policy-2026-zhong-bing-guang-04",
-        "policy-2026-zhong-bing-guang-05"
+        "policy-2026-zhong-bing-guang-05",
+        "policy-2026-zhong-bing-guang-enrichment-daycare-ac-01",
+        "policy-2026-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+        "policy-2026-zhong-bing-guang-enrichment-cold-chain-01"
       ],
       "evidenceIds": [
         "evidence-2026-zhong-bing-guang-01",
         "evidence-2026-zhong-bing-guang-02",
         "evidence-2026-zhong-bing-guang-03",
         "evidence-2026-zhong-bing-guang-04",
-        "evidence-2026-zhong-bing-guang-05"
+        "evidence-2026-zhong-bing-guang-05",
+        "evidence-2026-enrichment-zhong-bing-guang-daycare-ac-01",
+        "evidence-2026-enrichment-zhong-bing-guang-enrichment-farm-insurance-payment-01",
+        "evidence-2026-enrichment-zhong-bing-guang-enrichment-cold-chain-01"
       ],
       "outcome": "verified-records",
       "researchStatus": "completed",
-      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
@@ -96827,7 +99026,8 @@
       "districtLabel": "高雄市議員第1選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-01-d01a31e6-1"
+        "policy-attempt-kaohsiung-council-01-d01a31e6-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-01-589d21f4"
       ],
       "policyIds": [
         "policy-kaohsiung-council-01-d01a31e6-policy-kcc-profile-2171-1",
@@ -96875,7 +99075,8 @@
       "districtLabel": "高雄市議員第2選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-02-e5d525b6-1"
+        "policy-attempt-kaohsiung-council-02-e5d525b6-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-df6f2338"
       ],
       "policyIds": [
         "policy-2026-li-bo-rong-01"
@@ -96896,7 +99097,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-02-200bb44f-1",
-        "policy-attempt-kaohsiung-council-02-200bb44f-2"
+        "policy-attempt-kaohsiung-council-02-200bb44f-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-00382651"
       ],
       "policyIds": [
         "policy-kaohsiung-council-02-200bb44f-policy-kcc-profile-2174-1",
@@ -96928,7 +99130,8 @@
       "districtLabel": "高雄市議員第2選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-02-49795f4d-1"
+        "policy-attempt-kaohsiung-council-02-49795f4d-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-f32d851b"
       ],
       "policyIds": [
         "policy-kaohsiung-council-02-49795f4d-policy-kcc-profile-2175-1",
@@ -96974,7 +99177,8 @@
       "districtLabel": "高雄市議員第2選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-02-0e4dd20e-1"
+        "policy-attempt-kaohsiung-council-02-0e4dd20e-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-632d8db0"
       ],
       "policyIds": [
         "policy-2026-chen-lin-jie-01",
@@ -97000,7 +99204,8 @@
       "districtLabel": "高雄市議員第2選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-02-2f6b9ce3-1"
+        "policy-attempt-kaohsiung-council-02-2f6b9ce3-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-02-c7761769"
       ],
       "policyIds": [
         "policy-2026-zheng-dong-yuan-01",
@@ -97033,7 +99238,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-03-34aafd1e-1",
-        "policy-attempt-kaohsiung-council-03-34aafd1e-2"
+        "policy-attempt-kaohsiung-council-03-34aafd1e-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-a8f18da8"
       ],
       "policyIds": [
         "policy-kaohsiung-council-03-34aafd1e-policy-kcc-profile-2179-1",
@@ -97099,7 +99305,8 @@
       "districtLabel": "高雄市議員第3選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-03-e4af3760-1"
+        "policy-attempt-kaohsiung-council-03-e4af3760-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-53fbb71e"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -97116,7 +99323,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-03-4fb9f93d-1",
-        "policy-attempt-kaohsiung-council-03-4fb9f93d-2"
+        "policy-attempt-kaohsiung-council-03-4fb9f93d-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-b2fdd62f"
       ],
       "policyIds": [
         "policy-kaohsiung-council-03-4fb9f93d-policy-kcc-profile-2235-1",
@@ -97180,7 +99388,8 @@
       "districtLabel": "高雄市議員第3選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-03-03c229c0-1"
+        "policy-attempt-kaohsiung-council-03-03c229c0-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-a187a5ce"
       ],
       "policyIds": [
         "policy-2026-jiang-huang-nu-01",
@@ -97206,7 +99415,8 @@
       "districtLabel": "高雄市議員第3選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-03-794f0a10-1"
+        "policy-attempt-kaohsiung-council-03-794f0a10-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-c1c9a92e"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -97222,7 +99432,8 @@
       "districtLabel": "高雄市議員第3選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-03-49f94419-1"
+        "policy-attempt-kaohsiung-council-03-49f94419-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-d216e1d3"
       ],
       "policyIds": [
         "policy-kaohsiung-council-03-49f94419-policy-kcc-profile-2178-1",
@@ -97248,7 +99459,8 @@
       "districtLabel": "高雄市議員第3選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-03-c5a8db0a-1"
+        "policy-attempt-kaohsiung-council-03-c5a8db0a-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-8e0ba68c"
       ],
       "policyIds": [
         "policy-2026-huang-yun-han-01",
@@ -97282,7 +99494,8 @@
       "districtLabel": "高雄市議員第3選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-03-dc57c1f3-1"
+        "policy-attempt-kaohsiung-council-03-dc57c1f3-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-03-9b06e0f9"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -97298,7 +99511,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-712cf4dd-1"
+        "policy-attempt-kaohsiung-council-04-712cf4dd-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-fa4f92b7"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-712cf4dd-policy-kcc-profile-2185-1",
@@ -97343,7 +99557,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-04-23bd0041-1",
-        "policy-attempt-kaohsiung-council-04-23bd0041-2"
+        "policy-attempt-kaohsiung-council-04-23bd0041-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-291436e3"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-23bd0041-policy-kcc-profile-2187-1",
@@ -97376,7 +99591,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-04-e810f056-1",
-        "policy-attempt-kaohsiung-council-04-e810f056-2"
+        "policy-attempt-kaohsiung-council-04-e810f056-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-629fea4c"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-e810f056-policy-kcc-profile-2181-1",
@@ -97408,7 +99624,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-d7b1335b-1"
+        "policy-attempt-kaohsiung-council-04-d7b1335b-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-619c7aa1"
       ],
       "policyIds": [
         "policy-2026-liu-shu-fang-01"
@@ -97429,7 +99646,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-04-a7ed58d6-1",
-        "policy-attempt-kaohsiung-council-04-a7ed58d6-2"
+        "policy-attempt-kaohsiung-council-04-a7ed58d6-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-a7ed58d6-policy-kcc-profile-2186-1",
@@ -97479,7 +99697,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-58eafab0-1"
+        "policy-attempt-kaohsiung-council-04-58eafab0-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-71dd90ce"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-58eafab0-policy-kcc-profile-2188-1",
@@ -97516,7 +99735,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-04-29138ad9-1",
-        "policy-attempt-kaohsiung-council-04-29138ad9-2"
+        "policy-attempt-kaohsiung-council-04-29138ad9-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-61d1909b"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-29138ad9-policy-kcc-profile-2189-1",
@@ -97544,7 +99764,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-77e78bf6-1"
+        "policy-attempt-kaohsiung-council-04-77e78bf6-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-4c6bef68"
       ],
       "policyIds": [
         "policy-2026-zhang-yi-li-01",
@@ -97574,7 +99795,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-16f09b7e-1"
+        "policy-attempt-kaohsiung-council-04-16f09b7e-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-2df974a4"
       ],
       "policyIds": [
         "policy-2026-chen-guan-yu-01"
@@ -97595,7 +99817,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-04-6c3e756f-1",
-        "policy-attempt-kaohsiung-council-04-6c3e756f-2"
+        "policy-attempt-kaohsiung-council-04-6c3e756f-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-c448a515"
       ],
       "policyIds": [
         "policy-kaohsiung-council-04-6c3e756f-policy-kcc-profile-2184-1",
@@ -97661,7 +99884,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-7594fe5b-1"
+        "policy-attempt-kaohsiung-council-04-7594fe5b-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-10ad99ed"
       ],
       "policyIds": [
         "policy-2026-xue-zhao-ji-01",
@@ -97693,7 +99917,8 @@
       "districtLabel": "高雄市議員第4選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-04-7287e742-1"
+        "policy-attempt-kaohsiung-council-04-7287e742-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-04-94f45410"
       ],
       "policyIds": [
         "policy-2026-yin-li-01",
@@ -97721,7 +99946,8 @@
       "districtLabel": "高雄市議員第5選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-05-69c3f3e6-1"
+        "policy-attempt-kaohsiung-council-05-69c3f3e6-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-50dee358"
       ],
       "policyIds": [
         "policy-kaohsiung-council-05-69c3f3e6-policy-kcc-profile-2194-1",
@@ -97769,7 +99995,8 @@
       "districtLabel": "高雄市議員第5選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-05-87745ac1-1"
+        "policy-attempt-kaohsiung-council-05-87745ac1-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-147ddb97"
       ],
       "policyIds": [
         "policy-2026-chen-hui-jun-01",
@@ -97809,7 +100036,8 @@
       "districtLabel": "高雄市議員第5選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-05-4c43ff03-1"
+        "policy-attempt-kaohsiung-council-05-4c43ff03-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-5abfec11"
       ],
       "policyIds": [
         "policy-kaohsiung-council-05-4c43ff03-policy-kcc-profile-2192-1",
@@ -97869,7 +100097,8 @@
       "districtLabel": "高雄市議員第5選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-05-5580756f-1"
+        "policy-attempt-kaohsiung-council-05-5580756f-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-f0652f41"
       ],
       "policyIds": [
         "policy-kaohsiung-council-05-5580756f-policy-kcc-profile-2190-1",
@@ -97929,7 +100158,8 @@
       "districtLabel": "高雄市議員第5選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-05-9f8096a2-1"
+        "policy-attempt-kaohsiung-council-05-9f8096a2-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-9a56fce0"
       ],
       "policyIds": [
         "policy-kaohsiung-council-05-9f8096a2-policy-kcc-profile-2193-1",
@@ -97983,7 +100213,8 @@
       "districtLabel": "高雄市議員第5選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-05-78dc48ed-1"
+        "policy-attempt-kaohsiung-council-05-78dc48ed-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-aa51d7ef"
       ],
       "policyIds": [
         "policy-2026-chen-ruo-cui-01",
@@ -98020,7 +100251,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-05-ab8f44a1-1",
-        "policy-attempt-kaohsiung-council-05-ab8f44a1-2"
+        "policy-attempt-kaohsiung-council-05-ab8f44a1-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-05-e6c05223"
       ],
       "policyIds": [
         "policy-kaohsiung-council-05-ab8f44a1-policy-kcc-profile-2191-1",
@@ -98064,7 +100296,8 @@
       "districtLabel": "高雄市議員第6選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-06-02e9b103-1"
+        "policy-attempt-kaohsiung-council-06-02e9b103-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-5fb70691"
       ],
       "policyIds": [
         "policy-kaohsiung-council-06-02e9b103-policy-kcc-profile-2197-1",
@@ -98104,7 +100337,8 @@
       "districtLabel": "高雄市議員第6選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-06-0644fda4-1"
+        "policy-attempt-kaohsiung-council-06-0644fda4-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-68517ae6"
       ],
       "policyIds": [
         "policy-kaohsiung-council-06-0644fda4-policy-kcc-profile-2195-1",
@@ -98169,7 +100403,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-06-8a4e2657-1",
-        "policy-attempt-kaohsiung-council-06-8a4e2657-2"
+        "policy-attempt-kaohsiung-council-06-8a4e2657-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-48b16c5d"
       ],
       "policyIds": [
         "policy-kaohsiung-council-06-8a4e2657-policy-kcc-profile-2198-1",
@@ -98218,7 +100453,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-06-845d8f64-1",
-        "policy-attempt-kaohsiung-council-06-845d8f64-2"
+        "policy-attempt-kaohsiung-council-06-845d8f64-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-06-b48fe8fe"
       ],
       "policyIds": [
         "policy-kaohsiung-council-06-845d8f64-policy-kcc-profile-2196-1",
@@ -98256,7 +100492,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-6b7a49b6-1"
+        "policy-attempt-kaohsiung-council-07-6b7a49b6-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-c4c45f4c"
       ],
       "policyIds": [
         "policy-kaohsiung-council-07-6b7a49b6-policy-kcc-profile-2204-1"
@@ -98276,7 +100513,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-18990102-1"
+        "policy-attempt-kaohsiung-council-07-18990102-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -98292,7 +100530,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-034b7985-1"
+        "policy-attempt-kaohsiung-council-07-034b7985-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-f42af7ef"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -98309,7 +100548,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-07-e0956970-1",
-        "policy-attempt-kaohsiung-council-07-e0956970-2"
+        "policy-attempt-kaohsiung-council-07-e0956970-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-e0f94c56"
       ],
       "policyIds": [
         "policy-kaohsiung-council-07-e0956970-policy-kcc-profile-2200-1",
@@ -98353,7 +100593,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-ce1bd95c-1"
+        "policy-attempt-kaohsiung-council-07-ce1bd95c-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-9cddec16"
       ],
       "policyIds": [
         "policy-kaohsiung-council-07-ce1bd95c-policy-kcc-profile-2205-1",
@@ -98405,7 +100646,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-b1cd243b-1"
+        "policy-attempt-kaohsiung-council-07-b1cd243b-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-b92be47d"
       ],
       "policyIds": [
         "policy-kaohsiung-council-07-b1cd243b-policy-kcc-profile-2202-1",
@@ -98455,7 +100697,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-c87108af-1"
+        "policy-attempt-kaohsiung-council-07-c87108af-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-4b269f51"
       ],
       "policyIds": [
         "policy-2026-lin-yu-kai-01",
@@ -98487,7 +100730,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-eec9e2bf-1"
+        "policy-attempt-kaohsiung-council-07-eec9e2bf-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-afc23f7d"
       ],
       "policyIds": [
         "policy-kaohsiung-council-07-eec9e2bf-policy-kcc-profile-2201-1",
@@ -98519,7 +100763,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-8f9a3634-1"
+        "policy-attempt-kaohsiung-council-07-8f9a3634-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-b54eba4a"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -98536,7 +100781,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-07-2a964067-1",
-        "policy-attempt-kaohsiung-council-07-2a964067-2"
+        "policy-attempt-kaohsiung-council-07-2a964067-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-c27cf75d"
       ],
       "policyIds": [
         "policy-kaohsiung-council-07-2a964067-policy-kcc-profile-2199-1",
@@ -98608,7 +100854,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-88ecce5c-1"
+        "policy-attempt-kaohsiung-council-07-88ecce5c-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-551cc11e"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -98624,7 +100871,8 @@
       "districtLabel": "高雄市議員第7選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-07-a3f462c1-1"
+        "policy-attempt-kaohsiung-council-07-a3f462c1-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-3b007e6b"
       ],
       "policyIds": [
         "policy-2026-huang-shu-mei-01",
@@ -98660,7 +100908,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-aecfd707-1"
+        "policy-attempt-kaohsiung-council-08-aecfd707-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-879b5e31"
       ],
       "policyIds": [
         "policy-2026-huang-shun-jie-01",
@@ -98688,7 +100937,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-6ecb36dd-1"
+        "policy-attempt-kaohsiung-council-08-6ecb36dd-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-67955d67"
       ],
       "policyIds": [
         "policy-2026-huang-yu-ting-01",
@@ -98723,7 +100973,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-08-6c5507e1-1",
-        "policy-attempt-kaohsiung-council-08-6c5507e1-2"
+        "policy-attempt-kaohsiung-council-08-6c5507e1-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-672c71fb"
       ],
       "policyIds": [
         "policy-kaohsiung-council-08-6c5507e1-policy-kcc-profile-2206-1",
@@ -98783,7 +101034,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-ccbf37bb-1"
+        "policy-attempt-kaohsiung-council-08-ccbf37bb-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-440e3b8d"
       ],
       "policyIds": [
         "policy-kaohsiung-council-08-ccbf37bb-policy-kcc-profile-2208-1",
@@ -98843,7 +101095,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-7b3ae9f2-1"
+        "policy-attempt-kaohsiung-council-08-7b3ae9f2-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-3c0e0184"
       ],
       "policyIds": [
         "policy-kaohsiung-council-08-7b3ae9f2-policy-kcc-profile-2207-1",
@@ -98897,7 +101150,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-84ba32a4-1"
+        "policy-attempt-kaohsiung-council-08-84ba32a4-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-6164dd2e"
       ],
       "policyIds": [
         "policy-2026-huang-yu-ting-6164-01",
@@ -98919,7 +101173,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-9a658777-1"
+        "policy-attempt-kaohsiung-council-08-9a658777-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-c9cc4aad"
       ],
       "policyIds": [
         "policy-2026-chen-ya-min-01",
@@ -98945,7 +101200,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-8b2a5074-1"
+        "policy-attempt-kaohsiung-council-08-8b2a5074-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-4a8b9046"
       ],
       "policyIds": [
         "policy-2026-zou-yue-han-01",
@@ -98967,7 +101223,8 @@
       "districtLabel": "高雄市議員第8選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-08-0e49fc5e-1"
+        "policy-attempt-kaohsiung-council-08-0e49fc5e-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-08-fc0812f4"
       ],
       "policyIds": [
         "policy-kaohsiung-council-08-0e49fc5e-policy-kcc-profile-2209-1",
@@ -99051,7 +101308,8 @@
       "districtLabel": "高雄市議員第9選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-09-7ada4337-1"
+        "policy-attempt-kaohsiung-council-09-7ada4337-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-7a196bc1"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-7ada4337-policy-kcc-profile-2216-1",
@@ -99075,7 +101333,8 @@
       "districtLabel": "高雄市議員第9選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-09-1c7a332c-1"
+        "policy-attempt-kaohsiung-council-09-1c7a332c-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-722c1206"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-1c7a332c-policy-kcc-profile-2217-1",
@@ -99126,7 +101385,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-09-07bd8300-1",
-        "policy-attempt-kaohsiung-council-09-07bd8300-2"
+        "policy-attempt-kaohsiung-council-09-07bd8300-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-3ee328a6"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-07bd8300-policy-kcc-profile-2218-1",
@@ -99170,7 +101430,8 @@
       "districtLabel": "高雄市議員第9選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-09-423384de-1"
+        "policy-attempt-kaohsiung-council-09-423384de-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-663696bc"
       ],
       "policyIds": [
         "policy-2026-su-zhi-rong-01",
@@ -99196,7 +101457,8 @@
       "districtLabel": "高雄市議員第9選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-09-02facf2a-1"
+        "policy-attempt-kaohsiung-council-09-02facf2a-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-10ba5344"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-02facf2a-policy-kcc-profile-2215-1",
@@ -99231,7 +101493,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-09-913eba58-1",
-        "policy-attempt-kaohsiung-council-09-913eba58-2"
+        "policy-attempt-kaohsiung-council-09-913eba58-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-83bcf606"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-913eba58-policy-kcc-profile-2214-1",
@@ -99278,7 +101541,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-09-a1a5e49a-1",
-        "policy-attempt-kaohsiung-council-09-a1a5e49a-2"
+        "policy-attempt-kaohsiung-council-09-a1a5e49a-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-660d56f4"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-a1a5e49a-policy-kcc-profile-2213-1",
@@ -99320,7 +101584,8 @@
       "districtLabel": "高雄市議員第9選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-09-c423cf75-1"
+        "policy-attempt-kaohsiung-council-09-c423cf75-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-acaa7403"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -99337,7 +101602,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-09-5303e646-1",
-        "policy-attempt-kaohsiung-council-09-5303e646-2"
+        "policy-attempt-kaohsiung-council-09-5303e646-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-caaa9960"
       ],
       "policyIds": [
         "policy-kaohsiung-council-09-5303e646-policy-kcc-profile-2212-1",
@@ -99385,7 +101651,8 @@
       "districtLabel": "高雄市議員第9選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-09-094736ec-1"
+        "policy-attempt-kaohsiung-council-09-094736ec-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-e192bb1a"
       ],
       "policyIds": [
         "policy-2026-deng-qiao-pei-01",
@@ -99409,7 +101676,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-228f04d0-1"
+        "policy-attempt-kaohsiung-council-10-228f04d0-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-dfc877da"
       ],
       "policyIds": [
         "policy-2026-li-zheng-xian-01",
@@ -99433,7 +101701,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-1c0d4a7e-1"
+        "policy-attempt-kaohsiung-council-10-1c0d4a7e-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-a23863fc"
       ],
       "policyIds": [
         "policy-2026-tang-ru-ting-01",
@@ -99457,7 +101726,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-ef2910ce-1"
+        "policy-attempt-kaohsiung-council-10-ef2910ce-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-6a5be214"
       ],
       "policyIds": [
         "policy-2026-liu-xian-e-01",
@@ -99480,7 +101750,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-10-da29eabb-1",
-        "policy-attempt-kaohsiung-council-10-da29eabb-2"
+        "policy-attempt-kaohsiung-council-10-da29eabb-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-c41bc579"
       ],
       "policyIds": [
         "policy-kaohsiung-council-10-da29eabb-policy-kcc-profile-2222-1",
@@ -99528,7 +101799,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-39da3c73-1"
+        "policy-attempt-kaohsiung-council-10-39da3c73-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-e4b645cd"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -99544,7 +101816,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-8206c866-1"
+        "policy-attempt-kaohsiung-council-10-8206c866-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-740bf55c"
       ],
       "policyIds": [
         "policy-2026-yu-xianling-01",
@@ -99578,7 +101851,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-f1f8ec11-1"
+        "policy-attempt-kaohsiung-council-10-f1f8ec11-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
       ],
       "policyIds": [
         "policy-kaohsiung-council-10-f1f8ec11-policy-kcc-profile-2220-1",
@@ -99635,7 +101909,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-10-b6784261-1",
-        "policy-attempt-kaohsiung-council-10-b6784261-2"
+        "policy-attempt-kaohsiung-council-10-b6784261-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-ec2af867"
       ],
       "policyIds": [
         "policy-kaohsiung-council-10-b6784261-policy-kcc-profile-2221-1",
@@ -99693,7 +101968,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-da0bb13d-1"
+        "policy-attempt-kaohsiung-council-10-da0bb13d-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-c4789f6f"
       ],
       "policyIds": [
         "policy-kaohsiung-council-10-da0bb13d-policy-kcc-profile-2223-1",
@@ -99729,7 +102005,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-63a20221-1"
+        "policy-attempt-kaohsiung-council-10-63a20221-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-e768fad7"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -99745,7 +102022,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-6712147e-1"
+        "policy-attempt-kaohsiung-council-10-6712147e-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-73ec2ae0"
       ],
       "policyIds": [
         "policy-kaohsiung-council-10-6712147e-policy-kcc-profile-2224-1",
@@ -99777,7 +102055,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-19864409-1"
+        "policy-attempt-kaohsiung-council-10-19864409-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-d8feb4cf"
       ],
       "policyIds": [
         "policy-2026-wu-yufeng-01",
@@ -99801,7 +102080,8 @@
       "districtLabel": "高雄市議員第10選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-10-356b5985-1"
+        "policy-attempt-kaohsiung-council-10-356b5985-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-10-c96d364f"
       ],
       "policyIds": [
         "policy-2026-huang-jingya-01",
@@ -99843,7 +102123,8 @@
       "districtLabel": "高雄市議員第11選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-11-58589937-1"
+        "policy-attempt-kaohsiung-council-11-58589937-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-51c89db1"
       ],
       "policyIds": [
         "policy-2026-hong-cun-ming-01",
@@ -99878,7 +102159,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-11-6fa8608c-1",
-        "policy-attempt-kaohsiung-council-11-6fa8608c-2"
+        "policy-attempt-kaohsiung-council-11-6fa8608c-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-1704a92e"
       ],
       "policyIds": [
         "policy-kaohsiung-council-11-6fa8608c-policy-kcc-profile-2229-1",
@@ -99921,7 +102203,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-11-6db9e527-1",
-        "policy-attempt-kaohsiung-council-11-6db9e527-2"
+        "policy-attempt-kaohsiung-council-11-6db9e527-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-a4e7a38d"
       ],
       "policyIds": [
         "policy-kaohsiung-council-11-6db9e527-policy-kcc-profile-2227-1",
@@ -99968,7 +102251,8 @@
       "electionType": "city-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-11-ec23428a-1",
-        "policy-attempt-kaohsiung-council-11-ec23428a-2"
+        "policy-attempt-kaohsiung-council-11-ec23428a-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-aa063da4"
       ],
       "policyIds": [
         "policy-kaohsiung-council-11-ec23428a-policy-kcc-profile-2228-1",
@@ -100026,7 +102310,8 @@
       "districtLabel": "高雄市議員第11選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-11-fc9ac319-1"
+        "policy-attempt-kaohsiung-council-11-fc9ac319-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-d0ff0923"
       ],
       "policyIds": [
         "policy-kaohsiung-council-11-fc9ac319-policy-kcc-profile-2226-1",
@@ -100072,7 +102357,8 @@
       "districtLabel": "高雄市議員第11選舉區",
       "electionType": "city-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-11-defd1858-1"
+        "policy-attempt-kaohsiung-council-11-defd1858-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-11-4699a9be"
       ],
       "policyIds": [
         "policy-2026-zhang-yao-zhong-01",
@@ -100096,7 +102382,8 @@
       "districtLabel": "高雄市議員第12選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-12-c93e50a3-1"
+        "policy-attempt-kaohsiung-council-12-c93e50a3-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -100112,7 +102399,8 @@
       "districtLabel": "高雄市議員第12選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-12-1aabe755-1"
+        "policy-attempt-kaohsiung-council-12-1aabe755-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -100129,7 +102417,8 @@
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-12-1a977b21-1",
-        "policy-attempt-kaohsiung-council-12-1a977b21-2"
+        "policy-attempt-kaohsiung-council-12-1a977b21-2",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd"
       ],
       "policyIds": [
         "policy-kaohsiung-council-12-1a977b21-policy-kcc-profile-2230-1",
@@ -100167,7 +102456,8 @@
       "districtLabel": "高雄市議員第13選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-13-8ca21ce7-1"
+        "policy-attempt-kaohsiung-council-13-8ca21ce7-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f"
       ],
       "policyIds": [
         "policy-kaohsiung-council-13-8ca21ce7-policy-kcc-profile-2231-1",
@@ -100229,7 +102519,8 @@
       "districtLabel": "高雄市議員第13選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-13-b6ae8174-1"
+        "policy-attempt-kaohsiung-council-13-b6ae8174-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -100245,7 +102536,8 @@
       "districtLabel": "高雄市議員第14選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-14-2e144b34-1"
+        "policy-attempt-kaohsiung-council-14-2e144b34-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -100261,7 +102553,8 @@
       "districtLabel": "高雄市議員第14選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-14-c66852f5-1"
+        "policy-attempt-kaohsiung-council-14-c66852f5-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -100277,7 +102570,8 @@
       "districtLabel": "高雄市議員第14選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-14-f0f2e32a-1"
+        "policy-attempt-kaohsiung-council-14-f0f2e32a-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2"
       ],
       "policyIds": [
         "policy-2026-gao-zhong-de-01"
@@ -100297,7 +102591,8 @@
       "districtLabel": "高雄市議員第15選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-15-7e4c5eb2-1"
+        "policy-attempt-kaohsiung-council-15-7e4c5eb2-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca"
       ],
       "policyIds": [
         "policy-2026-jin-he-ya-01",
@@ -100335,7 +102630,8 @@
       "districtLabel": "高雄市議員第15選舉區",
       "electionType": "indigenous-council",
       "sourceAttemptIds": [
-        "policy-attempt-kaohsiung-council-15-0bab53b3-1"
+        "policy-attempt-kaohsiung-council-15-0bab53b3-1",
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b"
       ],
       "policyIds": [],
       "evidenceIds": [],
@@ -100350,7 +102646,7 @@
     "method": "automated-verification-gate-v1",
     "reviewerId": null,
     "reviewedAt": null,
-    "approvedPolicyCount": 998,
-    "publishedPolicyCount": 998
+    "approvedPolicyCount": 1005,
+    "publishedPolicyCount": 1005
   }
 }

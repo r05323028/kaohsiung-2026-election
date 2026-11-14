@@ -1,7 +1,7 @@
 {
   "reportType": "full-roster-policy-enrichment",
-  "generatedAt": "2026-11-12T00:00:00.000Z",
-  "researchCutoff": "2026-11-12",
+  "generatedAt": "2026-11-14T00:00:00.000Z",
+  "researchCutoff": "2026-11-14",
   "totalCandidatesInvestigated": 106,
   "candidatesWithVerified2026Policies": 88,
   "candidatesWithOnlyCurrentOrHistoricalPositions": 1,
@@ -12,41 +12,906 @@
     "sources-unavailable": 17,
     "current-or-historical-only": 1
   },
-  "totalPolicyRecordsDiscovered": 1189,
-  "machineValidatedPolicyCount": 1189,
+  "totalPolicyRecordsDiscovered": 1196,
+  "machineValidatedPolicyCount": 1196,
   "pendingHumanReviewPolicyCount": 166,
-  "approvedPolicyCount": 998,
-  "publishedPolicyCount": 998,
+  "approvedPolicyCount": 1005,
+  "publishedPolicyCount": 1005,
   "rejectedPolicyCount": 25,
   "unresolvedPolicyCount": 166,
-  "sourceSnapshotCount": 1061,
-  "sourceAttemptCount": 1111,
+  "sourceSnapshotCount": 1073,
+  "sourceAttemptCount": 1217,
+  "distinctSourceUrlCount": 1071,
   "sourceDistributionByTier": {
     "tier-1-primary": 62,
-    "tier-2-authoritative": 65,
-    "tier-3-reporting": 934
+    "tier-2-authoritative": 71,
+    "tier-3-reporting": 940
   },
+  "sourceCoverageByCategory": {
+    "candidate-controlled": {
+      "sourceCount": 0,
+      "candidateCount": 0,
+      "searchedCandidateCount": 106
+    },
+    "party-candidate": {
+      "sourceCount": 0,
+      "candidateCount": 0,
+      "searchedCandidateCount": 106
+    },
+    "news-and-independent-media": {
+      "sourceCount": 0,
+      "candidateCount": 0,
+      "searchedCandidateCount": 106
+    },
+    "interviews-and-public-appearances": {
+      "sourceCount": 0,
+      "candidateCount": 0,
+      "searchedCandidateCount": 106
+    },
+    "historical-public-records": {
+      "sourceCount": 0,
+      "candidateCount": 0,
+      "searchedCandidateCount": 106
+    },
+    "news-report": {
+      "sourceCount": 6,
+      "candidateCount": 8,
+      "searchedCandidateCount": 0
+    },
+    "institutional-record": {
+      "sourceCount": 5,
+      "candidateCount": 5,
+      "searchedCandidateCount": 0
+    },
+    "official-election-record": {
+      "sourceCount": 1,
+      "candidateCount": 1,
+      "searchedCandidateCount": 0
+    }
+  },
+  "claimDecisionCounts": {
+    "accepted": 35,
+    "rejected": 1,
+    "unresolved": 1
+  },
+  "improvedCandidates": [
+    {
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "displayName": "洪方隆",
+      "newPolicyCount": 1
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "displayName": "林慧欣",
+      "newPolicyCount": 3
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "displayName": "鍾炳光",
+      "newPolicyCount": 3
+    }
+  ],
+  "researchCoverage": {
+    "totalCandidates": 106,
+    "candidatesResearched": 106,
+    "statusCounts": {
+      "verified": 8,
+      "historical/current-only": 10,
+      "not_found": 70,
+      "source_unavailable": 9,
+      "attribution_uncertain": 4,
+      "awaiting_verification": 5
+    },
+    "candidatesWithVerifiedPolicy": 8,
+    "candidatesWithNoVerifiedPolicy": 98,
+    "candidatesWithNoPolicyInformation": 70,
+    "candidatesWithSourceUnavailable": 9,
+    "candidatesWithAttributionUncertain": 4,
+    "candidatesAwaitingVerification": 5,
+    "candidatesWithHistoricalOrCurrentOnly": 10,
+    "acceptedClaims": 35,
+    "rejectedClaims": 1,
+    "unresolvedClaims": 1,
+    "sourceCategoryCoverage": {
+      "candidate-controlled": {
+        "sourceCount": 0,
+        "candidateCount": 0,
+        "searchedCandidateCount": 106
+      },
+      "party-candidate": {
+        "sourceCount": 0,
+        "candidateCount": 0,
+        "searchedCandidateCount": 106
+      },
+      "news-and-independent-media": {
+        "sourceCount": 0,
+        "candidateCount": 0,
+        "searchedCandidateCount": 106
+      },
+      "interviews-and-public-appearances": {
+        "sourceCount": 0,
+        "candidateCount": 0,
+        "searchedCandidateCount": 106
+      },
+      "historical-public-records": {
+        "sourceCount": 0,
+        "candidateCount": 0,
+        "searchedCandidateCount": 106
+      },
+      "news-report": {
+        "sourceCount": 6,
+        "candidateCount": 8,
+        "searchedCandidateCount": 0
+      },
+      "institutional-record": {
+        "sourceCount": 5,
+        "candidateCount": 5,
+        "searchedCandidateCount": 0
+      },
+      "official-election-record": {
+        "sourceCount": 1,
+        "candidateCount": 1,
+        "searchedCandidateCount": 0
+      }
+    },
+    "improvedCandidates": [
+      {
+        "candidateId": "official-mayor-hong-fang-long-2026",
+        "displayName": "洪方隆",
+        "newPolicyCount": 1
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+        "displayName": "林慧欣",
+        "newPolicyCount": 3
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+        "displayName": "鍾炳光",
+        "newPolicyCount": 3
+      }
+    ],
+    "gaps": [
+      {
+        "candidateId": "official-mayor-zhang-jing-2026",
+        "displayName": "張靜",
+        "districtId": "district-kaohsiung-mayor-2026",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-mayor-wang-zhao-min-2026",
+        "displayName": "王肇民",
+        "districtId": "district-kaohsiung-mayor-2026",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-mayor-ke-zhi-en-2026",
+        "displayName": "柯志恩",
+        "districtId": "district-kaohsiung-mayor-2026",
+        "status": "source_unavailable",
+        "reason": "候選人官方頁面回應 HTTP 403；第二手政策轉錄未經原始頁面獨立核對，因此不採用。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+        "displayName": "林義迪",
+        "districtId": "district-kaohsiung-council-01",
+        "status": "awaiting_verification",
+        "reason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+        "displayName": "林富寶",
+        "districtId": "district-kaohsiung-council-01",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+        "displayName": "李柏融",
+        "districtId": "district-kaohsiung-council-02",
+        "status": "awaiting_verification",
+        "reason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+        "displayName": "李亞築",
+        "districtId": "district-kaohsiung-council-02",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+        "displayName": "黃明太",
+        "districtId": "district-kaohsiung-council-02",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+        "displayName": "陳琳潔",
+        "districtId": "district-kaohsiung-council-02",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+        "displayName": "鄭東元",
+        "districtId": "district-kaohsiung-council-02",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+        "displayName": "方信淵",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "awaiting_verification",
+        "reason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+        "displayName": "張驥晟",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "attribution_uncertain",
+        "reason": "名冊正名與外部資料中的張騏晟不一致，未跨名合併。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+        "displayName": "宋立彬",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+        "displayName": "蔣黃女",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "awaiting_verification",
+        "reason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+        "displayName": "黃秋媛",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "attribution_uncertain",
+        "reason": "名冊正名與外部資料中的黃秋媖不一致，未跨名合併。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+        "displayName": "林志誠",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+        "displayName": "黃韻涵",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "awaiting_verification",
+        "reason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+        "displayName": "蔡秉穎",
+        "districtId": "district-kaohsiung-council-03",
+        "status": "attribution_uncertain",
+        "reason": "名冊正名與外部資料中的蔡秉璁不一致，未跨名合併。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+        "displayName": "黃文志",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+        "displayName": "李雅芬",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+        "displayName": "白喬茵",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+        "displayName": "柳淑芳",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+        "displayName": "李眉蓁",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+        "displayName": "李雅慧",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+        "displayName": "陳玫娟",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+        "displayName": "張以理",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+        "displayName": "陳冠宇",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+        "displayName": "陳麗珍",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+        "displayName": "薛兆基",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+        "displayName": "尹立",
+        "districtId": "district-kaohsiung-council-04",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+        "displayName": "黃飛鳳",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+        "displayName": "陳惠君",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+        "displayName": "張勝富",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+        "displayName": "江瑞鴻",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+        "displayName": "邱俊憲",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+        "displayName": "陳若翠",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+        "displayName": "吳利成",
+        "districtId": "district-kaohsiung-council-05",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+        "displayName": "簡煥宗",
+        "districtId": "district-kaohsiung-council-06",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+        "displayName": "李喬如",
+        "districtId": "district-kaohsiung-council-06",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+        "displayName": "蔡金晏",
+        "districtId": "district-kaohsiung-council-06",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+        "displayName": "陳美雅",
+        "districtId": "district-kaohsiung-council-06",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+        "displayName": "何權峰",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "source_unavailable",
+        "reason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+        "displayName": "童燕珍",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+        "displayName": "林彥",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+        "displayName": "黃香菽",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+        "displayName": "曾俊傑",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+        "displayName": "張博洋",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "source_unavailable",
+        "reason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+        "displayName": "林于凱",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "source_unavailable",
+        "reason": "TPP 候選人頁面回應 HTTP 403，無法核對完整原文。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+        "displayName": "康裕成",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "source_unavailable",
+        "reason": "可見候選人相關來源未提供可核對的完整政策原文。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+        "displayName": "鄭孟洽",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "attribution_uncertain",
+        "reason": "名冊正名為鄭孟洽，但可見資料出現鄭孟洳異名，無法排除錯誤歸屬。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+        "displayName": "黃柏霖",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+        "displayName": "余聖明",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+        "displayName": "黃淑美",
+        "districtId": "district-kaohsiung-council-07",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+        "displayName": "黃舜杰",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+        "displayName": "黃裕庭",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "source_unavailable",
+        "reason": "媒體頁面僅能取得標題或 metadata，全文無法核對。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+        "displayName": "許采蓁",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "source_unavailable",
+        "reason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+        "displayName": "湯詠瑜",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+        "displayName": "黃文益",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+        "displayName": "黃鈺婷",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+        "displayName": "陳雅敏",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+        "displayName": "鄒約翰",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+        "displayName": "郭建盟",
+        "districtId": "district-kaohsiung-council-08",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+        "displayName": "林智鴻",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "source_unavailable",
+        "reason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+        "displayName": "張漢忠",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+        "displayName": "鄭安秝",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "source_unavailable",
+        "reason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+        "displayName": "蘇致榮",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+        "displayName": "陳慧文",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+        "displayName": "劉德林",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+        "displayName": "李雅靜",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+        "displayName": "徐尚賢",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+        "displayName": "鍾易仲",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+        "displayName": "鄧巧佩",
+        "districtId": "district-kaohsiung-council-09",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+        "displayName": "李政憲",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+        "displayName": "湯茹婷",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+        "displayName": "蔡武宏",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+        "displayName": "張藝瑾",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+        "displayName": "于仙玲",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+        "displayName": "鄭光峰",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+        "displayName": "陳麗娜",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+        "displayName": "李順進",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+        "displayName": "李絃毅",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+        "displayName": "吳銘賜",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+        "displayName": "吳昱鋒",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+        "displayName": "黃敬雅",
+        "districtId": "district-kaohsiung-council-10",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+        "displayName": "黃天煌",
+        "districtId": "district-kaohsiung-council-11",
+        "status": "historical/current-only",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+        "displayName": "邱于軒",
+        "districtId": "district-kaohsiung-council-11",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+        "displayName": "王耀裕",
+        "districtId": "district-kaohsiung-council-11",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+        "displayName": "李雨庭",
+        "districtId": "district-kaohsiung-council-11",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+        "displayName": "張耀中",
+        "districtId": "district-kaohsiung-council-11",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+        "displayName": "巫振興",
+        "districtId": "district-kaohsiung-indigenous-flat-12",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+        "displayName": "宋紹銘",
+        "districtId": "district-kaohsiung-indigenous-flat-12",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+        "displayName": "王義雄",
+        "districtId": "district-kaohsiung-indigenous-flat-12",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+        "displayName": "陳幸富",
+        "districtId": "district-kaohsiung-indigenous-mountain-13",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+        "displayName": "葛娜瑩",
+        "districtId": "district-kaohsiung-indigenous-mountain-13",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+        "displayName": "洪英雄",
+        "districtId": "district-kaohsiung-indigenous-mountain-14",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+        "displayName": "林錫閔",
+        "districtId": "district-kaohsiung-indigenous-mountain-14",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+        "displayName": "高忠德",
+        "districtId": "district-kaohsiung-indigenous-mountain-14",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+        "displayName": "陳奕蓁",
+        "districtId": "district-kaohsiung-indigenous-mountain-15",
+        "status": "not_found",
+        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      }
+    ]
+  },
+  "publicationCoverage": {
+    "totalPolicyEntries": 1196,
+    "distinctSourceUrls": 1071,
+    "publishedPolicyEntries": 1005,
+    "candidatesWithPublishedPolicies": 88,
+    "rejectedPolicyEntries": 25,
+    "pendingPolicyEntries": 166,
+    "humanEditorialReviewPerformed": false,
+    "humanEditorialReviewReason": "production reviewer registry and reviewer decisions remain empty; output is machine-gated only"
+  },
+  "validationRuleChanges": [
+    {
+      "rule": "source-admission",
+      "before": "舊 extraction 輸入只能透過 discovery/news-discovery.json 的 rawPath 解析來源。",
+      "after": "新增明確的 enrichment sourceSnapshots 輸入；仍要求 URL、publisher、retrieved 狀態、保留文字、byteLength 與 SHA-256。",
+      "integrity": "擴大可納入來源類型，但未降低來源保留或中介資料要求。"
+    },
+    {
+      "rule": "publication-gate",
+      "before": "政策須有 verified decision、歸屬與數字檢查、原文可在 retained rawPath 找到、來源中介資料完整、類別有效。",
+      "after": "不變；新增紀錄沿用同一門檻，duplicate/未新增/拒絕/未解決 claims 不會進入公開政策。",
+      "integrity": "fail-closed gate unchanged in substance。"
+    },
+    {
+      "rule": "gap-reporting",
+      "before": "報告主要以政策發現與來源嘗試推論候選人結果。",
+      "after": "報告直接保留 106 名候選人的研究 gapStatus，並將研究覆蓋與公開發布覆蓋分開。",
+      "integrity": "不把 not_found 解讀為候選人沒有政策。"
+    }
+  ],
+  "humanEditorialReviewPerformed": false,
   "policyCountByCategory": {
-    "transportation-and-mobility": 233,
+    "transportation-and-mobility": 234,
     "housing-and-urban-development": 106,
     "economic-development-and-industry": 177,
     "education": 127,
     "childcare-and-family-support": 97,
-    "healthcare": 67,
-    "social-welfare-and-long-term-care": 146,
+    "healthcare": 68,
+    "social-welfare-and-long-term-care": 147,
     "environment-and-sustainability": 163,
     "public-safety-and-disaster-preparedness": 119,
     "youth-and-employment": 101,
-    "agriculture-and-fisheries": 52,
+    "agriculture-and-fisheries": 55,
     "culture-tourism-and-sports": 177,
     "digital-governance-and-technology": 63,
     "indigenous-affairs": 29,
     "government-transparency-and-administration": 111,
-    "other": 100
+    "other": 101
   },
   "policyCountByContext": {
-    "2026-election-commitment": 528,
-    "current-position": 652,
+    "2026-election-commitment": 534,
+    "current-position": 653,
     "public-record-achievement": 7,
     "historical-position": 2
   },
@@ -55,13 +920,13 @@
       "districtLabel": "全市・市長",
       "candidateCount": 5,
       "investigatedCount": 5,
-      "policyRecordCount": 268
+      "policyRecordCount": 269
     },
     "district-kaohsiung-council-01": {
       "districtLabel": "普通・第1選舉區",
       "candidateCount": 5,
       "investigatedCount": 5,
-      "policyRecordCount": 43
+      "policyRecordCount": 49
     },
     "district-kaohsiung-council-02": {
       "districtLabel": "普通・第2選舉區",
@@ -157,8 +1022,10 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 12,
-      "sourceCount": 29,
+      "sourceCount": 30,
       "note": "已發布 11 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -169,8 +1036,10 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 6,
+      "sourceCount": 7,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -181,8 +1050,10 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "候選人官方頁面回應 HTTP 403；第二手政策轉錄未經原始頁面獨立核對，因此不採用。",
       "policyCount": 156,
-      "sourceCount": 29,
+      "sourceCount": 30,
       "note": "已發布 59 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -193,9 +1064,11 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "verified-records",
-      "policyCount": 1,
-      "sourceCount": 6,
-      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
+      "policyCount": 2,
+      "sourceCount": 7,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-mayor-lai-rui-long-2026",
@@ -205,8 +1078,10 @@
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
       "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 99,
-      "sourceCount": 48,
+      "sourceCount": 49,
       "note": "已發布 62 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -217,8 +1092,10 @@
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 5,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -229,8 +1106,10 @@
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "awaiting_verification",
+      "researchReason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。",
       "policyCount": 16,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 16 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -241,9 +1120,11 @@
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
-      "policyCount": 2,
-      "sourceCount": 12,
-      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
+      "policyCount": 5,
+      "sourceCount": 13,
+      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
@@ -253,9 +1134,11 @@
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
-      "policyCount": 5,
-      "sourceCount": 12,
-      "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
+      "policyCount": 8,
+      "sourceCount": 13,
+      "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
@@ -265,8 +1148,10 @@
       "districtLabel": "普通・第1選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 15,
-      "sourceCount": 5,
+      "sourceCount": 6,
       "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -277,8 +1162,10 @@
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "awaiting_verification",
+      "researchReason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。",
       "policyCount": 1,
-      "sourceCount": 5,
+      "sourceCount": 6,
       "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -289,8 +1176,10 @@
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 7,
-      "sourceCount": 8,
+      "sourceCount": 9,
       "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -301,8 +1190,10 @@
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 14,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -313,8 +1204,10 @@
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 4,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -325,8 +1218,10 @@
       "districtLabel": "普通・第2選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 7,
-      "sourceCount": 5,
+      "sourceCount": 6,
       "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -337,8 +1232,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "awaiting_verification",
+      "researchReason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。",
       "policyCount": 24,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 24 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -349,8 +1246,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "attribution_uncertain",
+      "researchReason": "名冊正名與外部資料中的張騏晟不一致，未跨名合併。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -361,8 +1260,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 23,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 23 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -373,8 +1274,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "awaiting_verification",
+      "researchReason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。",
       "policyCount": 4,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -385,8 +1288,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "attribution_uncertain",
+      "researchReason": "名冊正名與外部資料中的黃秋媖不一致，未跨名合併。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -397,8 +1302,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 4,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -409,8 +1316,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "awaiting_verification",
+      "researchReason": "已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。",
       "policyCount": 8,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -421,8 +1330,10 @@
       "districtLabel": "普通・第3選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "attribution_uncertain",
+      "researchReason": "名冊正名與外部資料中的蔡秉璁不一致，未跨名合併。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -433,8 +1344,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 13,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -445,8 +1358,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 7,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -457,8 +1372,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 7,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -469,8 +1386,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 1,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -481,8 +1400,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 16,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 16 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -493,8 +1414,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 9,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -505,8 +1428,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 5,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -517,8 +1442,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 6,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -529,8 +1456,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 1,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -541,8 +1470,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 24,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 24 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -553,8 +1484,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 7,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -565,8 +1498,10 @@
       "districtLabel": "普通・第4選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 5,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -577,8 +1512,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 15,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -589,8 +1526,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 11,
-      "sourceCount": 9,
+      "sourceCount": 10,
       "note": "已發布 11 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -601,8 +1540,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 21,
-      "sourceCount": 5,
+      "sourceCount": 6,
       "note": "已發布 21 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -613,8 +1554,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 21,
-      "sourceCount": 5,
+      "sourceCount": 6,
       "note": "已發布 21 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -625,8 +1568,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 18,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 18 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -637,8 +1582,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 9,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 9 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -649,8 +1596,10 @@
       "districtLabel": "普通・第5選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 13,
-      "sourceCount": 8,
+      "sourceCount": 9,
       "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -661,8 +1610,10 @@
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 11,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 11 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -673,8 +1624,10 @@
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 23,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 22 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -685,8 +1638,10 @@
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 15,
-      "sourceCount": 8,
+      "sourceCount": 9,
       "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -697,8 +1652,10 @@
       "districtLabel": "普通・第6選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 10,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -709,8 +1666,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "current-or-historical-only",
+      "researchStatus": "source_unavailable",
+      "researchReason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。",
       "policyCount": 1,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已蒐集政策紀錄但未通過獨立查核或來源不足，暫不發布。"
     },
     {
@@ -721,8 +1680,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -733,8 +1694,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 10,
+      "sourceCount": 11,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -745,8 +1708,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 13,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 9 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -757,8 +1722,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 17,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 16 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -769,8 +1736,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。",
       "policyCount": 16,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -781,8 +1750,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "TPP 候選人頁面回應 HTTP 403，無法核對完整原文。",
       "policyCount": 7,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -793,8 +1764,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "可見候選人相關來源未提供可核對的完整政策原文。",
       "policyCount": 7,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -805,8 +1778,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "attribution_uncertain",
+      "researchReason": "名冊正名為鄭孟洽，但可見資料出現鄭孟洳異名，無法排除錯誤歸屬。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -817,8 +1792,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 27,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 17 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -829,8 +1806,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -841,8 +1820,10 @@
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 9,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 9 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -853,8 +1834,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 5,
-      "sourceCount": 9,
+      "sourceCount": 10,
       "note": "已發布 5 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -865,8 +1848,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "媒體頁面僅能取得標題或 metadata，全文無法核對。",
       "policyCount": 8,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -877,8 +1862,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。",
       "policyCount": 21,
-      "sourceCount": 10,
+      "sourceCount": 11,
       "note": "已發布 20 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -889,8 +1876,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 21,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 20 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -901,8 +1890,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 18,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 18 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -913,8 +1904,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 2,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -925,8 +1918,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 4,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -937,8 +1932,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 2,
-      "sourceCount": 2,
+      "sourceCount": 3,
       "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -949,8 +1946,10 @@
       "districtLabel": "普通・第8選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 33,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 28 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -961,8 +1960,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。",
       "policyCount": 3,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -973,8 +1974,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 16,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -985,8 +1988,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "source_unavailable",
+      "researchReason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口。",
       "policyCount": 13,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -997,8 +2002,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 4,
-      "sourceCount": 10,
+      "sourceCount": 11,
       "note": "已發布 4 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1009,8 +2016,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 8,
-      "sourceCount": 7,
+      "sourceCount": 8,
       "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1021,8 +2030,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 14,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 13 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1033,8 +2044,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 12,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1045,8 +2058,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1057,8 +2072,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 15,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1069,8 +2086,10 @@
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 3,
-      "sourceCount": 11,
+      "sourceCount": 12,
       "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1081,8 +2100,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 3,
-      "sourceCount": 7,
+      "sourceCount": 8,
       "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1093,8 +2114,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 3,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1105,8 +2128,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 2,
-      "sourceCount": 3,
+      "sourceCount": 4,
       "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1117,8 +2142,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 15,
-      "sourceCount": 10,
+      "sourceCount": 11,
       "note": "已發布 15 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1129,8 +2156,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1141,8 +2170,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 8,
-      "sourceCount": 9,
+      "sourceCount": 10,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1153,8 +2184,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 19,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 19 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1165,8 +2198,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 20,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 20 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1177,8 +2212,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 9,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1189,8 +2226,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1201,8 +2240,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 7,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 6 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1213,8 +2254,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 3,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1225,8 +2268,10 @@
       "districtLabel": "普通・第10選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 12,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1237,8 +2282,10 @@
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 8,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 8 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1249,8 +2296,10 @@
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "historical/current-only",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 12,
-      "sourceCount": 9,
+      "sourceCount": 10,
       "note": "已發布 12 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1261,8 +2310,10 @@
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 14,
-      "sourceCount": 13,
+      "sourceCount": 14,
       "note": "已發布 10 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1273,8 +2324,10 @@
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 20,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 19 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1285,8 +2338,10 @@
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 14,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 14 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1297,8 +2352,10 @@
       "districtLabel": "普通・第11選舉區",
       "electionType": "city-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 3,
-      "sourceCount": 12,
+      "sourceCount": 13,
       "note": "已發布 3 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1309,8 +2366,10 @@
       "districtLabel": "平地原住民・第12選舉區",
       "electionType": "indigenous-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1321,8 +2380,10 @@
       "districtLabel": "平地原住民・第12選舉區",
       "electionType": "indigenous-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1333,8 +2394,10 @@
       "districtLabel": "平地原住民・第12選舉區",
       "electionType": "indigenous-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 10,
-      "sourceCount": 14,
+      "sourceCount": 15,
       "note": "已發布 10 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1345,8 +2408,10 @@
       "districtLabel": "山地原住民・第13選舉區",
       "electionType": "indigenous-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 22,
-      "sourceCount": 8,
+      "sourceCount": 9,
       "note": "已發布 21 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1357,8 +2422,10 @@
       "districtLabel": "山地原住民・第13選舉區",
       "electionType": "indigenous-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1369,8 +2436,10 @@
       "districtLabel": "山地原住民・第14選舉區",
       "electionType": "indigenous-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1381,8 +2450,10 @@
       "districtLabel": "山地原住民・第14選舉區",
       "electionType": "indigenous-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     },
     {
@@ -1393,8 +2464,10 @@
       "districtLabel": "山地原住民・第14選舉區",
       "electionType": "indigenous-council",
       "outcome": "verified-records",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 1,
-      "sourceCount": 6,
+      "sourceCount": 7,
       "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1405,8 +2478,10 @@
       "districtLabel": "山地原住民・第15選舉區",
       "electionType": "indigenous-council",
       "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 10,
-      "sourceCount": 10,
+      "sourceCount": 11,
       "note": "已發布 10 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
@@ -1417,8 +2492,10 @@
       "districtLabel": "山地原住民・第15選舉區",
       "electionType": "indigenous-council",
       "outcome": "sources-unavailable",
+      "researchStatus": "not_found",
+      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
       "policyCount": 0,
-      "sourceCount": 1,
+      "sourceCount": 2,
       "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
     }
   ],

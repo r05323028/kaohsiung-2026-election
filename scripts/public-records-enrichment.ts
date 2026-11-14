@@ -139,6 +139,7 @@ function readKccProfiles(
   for (const source of policyDataset.sourceSnapshots) {
     if (
       !source.url.includes('kcc.gov.tw/MemberInfo_New.aspx') ||
+      source.sourceId.startsWith('policy-source-enrichment-kcc-') ||
       source.identityStatus !== 'resolved' ||
       source.candidateIds.length !== 1 ||
       source.rawPath === null
@@ -407,11 +408,10 @@ function makeAudits(
     const refs = policyReferencesByCandidate.get(candidate.id) ?? [];
     const candidatePositions = positionsByCandidate.get(candidate.id) ?? [];
     const candidateCareers = careersByCandidate.get(candidate.id) ?? [];
-    const identityConflict = attempts.some((attempt) =>
-      ['unresolved', 'ambiguous', 'conflicted'].includes(
-        attempt.identityStatus,
-      ),
-    );
+    // Upstream policy-research attempts carry policy attribution gaps, not
+    // public-record identity conflicts. Keep those concerns separate so a
+    // blocked or ambiguous policy source does not hide independently retained
+    // public-record career/position evidence.
     const hasRetrievedSource = attempts.some(
       (attempt) => attempt.retrievalStatus === 'retrieved',
     );
@@ -425,11 +425,7 @@ function makeAudits(
     );
     let outcome: EnrichmentCandidateAudit['outcome'];
     let note: string;
-    if (identityConflict) {
-      outcome = 'identity-conflict';
-      note =
-        '候選人相關來源存在未解決的身份或歸屬狀態；本次不將其轉為新的個人紀錄。';
-    } else if (candidatePositions.length > 0 || candidateCareers.length > 0) {
+    if (candidatePositions.length > 0 || candidateCareers.length > 0) {
       outcome = 'records-found';
       note = `已由保留的高雄市議會個人頁取得 ${candidatePositions.length + candidateCareers.length} 筆待人工審查的基本／從政歷程紀錄；不含個別表決推論。`;
     } else if (refs.length > 0) {

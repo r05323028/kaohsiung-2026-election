@@ -4,19 +4,19 @@
   "researchCutoff": "2026-11-09",
   "candidateCount": 106,
   "candidatesWithResolvedSources": 97,
-  "sourceSnapshotCount": 1061,
+  "sourceSnapshotCount": 1073,
   "sourceRetrievalStatusCounts": {
     "blocked": 2,
-    "retrieved": 1059
+    "retrieved": 1071
   },
   "sourceTierCounts": {
     "tier-1-primary": 62,
-    "tier-2-authoritative": 65,
-    "tier-3-reporting": 934
+    "tier-2-authoritative": 71,
+    "tier-3-reporting": 940
   },
   "sourceIdentityStatusCounts": {
     "not-applicable": 3,
-    "resolved": 1043,
+    "resolved": 1055,
     "unresolved": 15
   },
   "sourcePublisherCounts": {
@@ -27,13 +27,16 @@
     "大紀元": 3,
     "中天新聞網": 3,
     "中央社 CNA": 3,
+    "中央選舉委員會": 1,
     "中時新聞網": 6,
     "中國國民黨全球資訊網": 1,
     "中國國民黨高雄市選舉資訊網": 39,
     "中國評論新聞": 1,
     "中華新聞雲": 1,
     "中華新聞雲／中華日報": 70,
+    "中評社": 1,
     "互傳媒": 1,
+    "今傳媒": 1,
     "今傳媒 JNEWS": 65,
     "天地傳媒": 1,
     "天晴報媒體": 2,
@@ -59,7 +62,7 @@
     "柯志恩競選／候選人網站": 1,
     "風火輪傳媒有限公司": 1,
     "風傳媒": 43,
-    "高雄市議會": 65,
+    "高雄市議會": 70,
     "視傳媒": 1,
     "創新聞": 6,
     "報新聞 Mega News": 2,
@@ -75,9 +78,10 @@
     "樂上新聞網": 75,
     "樂聯網": 4,
     "墨新聞-MORE News": 12,
-    "蕃新聞": 39,
+    "蕃新聞": 41,
     "賴瑞隆競選總部": 21,
     "環球日報社": 5,
+    "聯合新聞網": 1,
     "聯合影音": 1,
     "翻爆": 2,
     "鏡週刊Mirror Media": 4,
@@ -91,7 +95,7 @@
     "https://www.yesmedia.com.tw/": 1,
     "Life 生活網": 47,
     "LINE TODAY": 47,
-    "Newtalk新聞": 24,
+    "Newtalk新聞": 25,
     "NOWnews今日新聞": 8,
     "PChome Online 新聞": 36,
     "PeoPo 公民新聞": 1,
@@ -102,28 +106,31 @@
     "UDN": 22,
     "Yahoo新聞": 211
   },
-  "sourceAttemptCount": 151,
+  "sourceAttemptCount": 257,
   "sourceAttemptStatusCounts": {
-    "not-attempted": 42,
-    "retrieved": 109
+    "blocked": 9,
+    "failed": 13,
+    "not-attempted": 112,
+    "retrieved": 123
   },
   "sourceAttemptTierCounts": {
-    "tier-1-primary": 100,
-    "tier-2-authoritative": 51
+    "tier-1-primary": 192,
+    "tier-2-authoritative": 57,
+    "tier-3-reporting": 8
   },
-  "retainedByteCount": 18587297,
+  "retainedByteCount": 18689703,
   "retainedSourceHashValidation": {
     "validatedBy": "scripts/validate-public-records-enrichment.ts",
-    "retrievedSourceCount": 1059,
+    "retrievedSourceCount": 1071,
     "allRetrievedSourcesHaveMatchingSizeAndSha256": true
   },
-  "sourceReferenceCount": 2353,
+  "sourceReferenceCount": 2360,
   "evidenceRecordCount": 582,
   "pendingReviewCounts": {
     "claims": 582,
     "positions": 51,
     "careerRecords": 531,
-    "policyReferences": 1189,
+    "policyReferences": 1196,
     "publishedRecords": 0
   },
   "missingReasonCounts": {
@@ -135,25 +142,25 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
       "displayName": "鍾炳光",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 11,
-      "resolvedSourceCount": 11,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
       "displayName": "林慧欣",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 11,
-      "resolvedSourceCount": 11,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
       "displayName": "林富寶",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 5,
       "resolvedSourceCount": 5,
@@ -162,7 +169,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
       "displayName": "林義迪",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -171,16 +178,16 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
       "displayName": "李振豪",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 1,
-      "retainedSourceCount": 11,
-      "resolvedSourceCount": 11,
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 2,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
       "displayName": "李亞築",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 8,
       "resolvedSourceCount": 8,
@@ -189,7 +196,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
       "displayName": "陳琳潔",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -198,7 +205,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
       "displayName": "鄭東元",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 4,
       "resolvedSourceCount": 4,
@@ -207,7 +214,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
       "displayName": "李柏融",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 4,
       "resolvedSourceCount": 4,
@@ -216,7 +223,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
       "displayName": "黃明太",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -225,7 +232,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
       "displayName": "張驥晟",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -234,7 +241,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
       "displayName": "黃韻涵",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -243,7 +250,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
       "displayName": "蔡秉穎",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -252,7 +259,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
       "displayName": "蔣黃女",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -261,7 +268,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
       "displayName": "方信淵",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -270,7 +277,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
       "displayName": "宋立彬",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -279,7 +286,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
       "displayName": "黃秋媛",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -288,7 +295,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
       "displayName": "林志誠",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -297,7 +304,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
       "displayName": "薛兆基",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -306,7 +313,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
       "displayName": "李雅芬",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -315,7 +322,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
       "displayName": "陳冠宇",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -324,7 +331,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
       "displayName": "張以理",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -333,7 +340,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
       "displayName": "柳淑芳",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -342,7 +349,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
       "displayName": "陳玫娟",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -351,7 +358,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
       "displayName": "白喬茵",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -360,7 +367,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
       "displayName": "李雅慧",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -369,7 +376,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
       "displayName": "尹立",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 10,
       "resolvedSourceCount": 10,
@@ -378,7 +385,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
       "displayName": "陳麗珍",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -387,7 +394,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
       "displayName": "黃文志",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -396,7 +403,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
       "displayName": "李眉蓁",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -405,25 +412,25 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
       "displayName": "陳惠君",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 8,
-      "resolvedSourceCount": 8,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 9,
+      "resolvedSourceCount": 9,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
       "displayName": "黃飛鳳",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 1,
-      "retainedSourceCount": 12,
-      "resolvedSourceCount": 12,
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 2,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
       "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
       "displayName": "張勝富",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 5,
       "resolvedSourceCount": 5,
@@ -432,7 +439,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
       "displayName": "邱俊憲",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -441,7 +448,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
       "displayName": "陳若翠",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -450,7 +457,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
       "displayName": "吳利成",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 8,
       "resolvedSourceCount": 8,
@@ -459,7 +466,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
       "displayName": "江瑞鴻",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 5,
       "resolvedSourceCount": 5,
@@ -468,7 +475,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
       "displayName": "蔡金晏",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 8,
       "resolvedSourceCount": 8,
@@ -477,24 +484,15 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
       "displayName": "簡煥宗",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 1,
-      "retainedSourceCount": 11,
-      "resolvedSourceCount": 11,
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 2,
+      "retainedSourceCount": 12,
+      "resolvedSourceCount": 12,
       "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
       "displayName": "李喬如",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 1,
-      "retainedSourceCount": 13,
-      "resolvedSourceCount": 13,
-      "sourceUnavailable": false
-    },
-    {
-      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
-      "displayName": "陳美雅",
       "sourceAttemptCount": 2,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
@@ -502,9 +500,18 @@
       "sourceUnavailable": false
     },
     {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "displayName": "陳美雅",
+      "sourceAttemptCount": 3,
+      "retrievedAttemptCount": 3,
+      "retainedSourceCount": 15,
+      "resolvedSourceCount": 15,
+      "sourceUnavailable": false
+    },
+    {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
       "displayName": "黃淑美",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -513,7 +520,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
       "displayName": "林于凱",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -522,7 +529,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
       "displayName": "余聖明",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -531,7 +538,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
       "displayName": "曾俊傑",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -540,7 +547,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
       "displayName": "童燕珍",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -549,7 +556,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
       "displayName": "康裕成",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -558,7 +565,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
       "displayName": "鄭孟洽",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -567,7 +574,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
       "displayName": "張博洋",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -576,7 +583,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
       "displayName": "黃柏霖",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -585,7 +592,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
       "displayName": "何權峰",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -594,7 +601,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
       "displayName": "黃香菽",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -603,7 +610,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
       "displayName": "林彥",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 9,
       "resolvedSourceCount": 9,
@@ -612,16 +619,16 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
       "displayName": "黃文益",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 1,
-      "retainedSourceCount": 13,
-      "resolvedSourceCount": 13,
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 2,
+      "retainedSourceCount": 14,
+      "resolvedSourceCount": 14,
       "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
       "displayName": "湯詠瑜",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -630,7 +637,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
       "displayName": "鄒約翰",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 1,
       "resolvedSourceCount": 1,
@@ -639,7 +646,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
       "displayName": "黃鈺婷",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -648,7 +655,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
       "displayName": "許采蓁",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 10,
       "resolvedSourceCount": 10,
@@ -657,7 +664,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
       "displayName": "黃裕庭",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -666,7 +673,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
       "displayName": "黃舜杰",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 8,
       "resolvedSourceCount": 8,
@@ -675,7 +682,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
       "displayName": "陳雅敏",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -684,7 +691,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
       "displayName": "郭建盟",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -693,7 +700,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
       "displayName": "陳慧文",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 7,
       "resolvedSourceCount": 7,
@@ -702,7 +709,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
       "displayName": "鄭安秝",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -711,7 +718,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
       "displayName": "李雅靜",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -720,7 +727,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
       "displayName": "蘇致榮",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 9,
       "resolvedSourceCount": 9,
@@ -729,7 +736,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
       "displayName": "張漢忠",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -738,7 +745,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
       "displayName": "林智鴻",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -747,7 +754,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
       "displayName": "劉德林",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -756,7 +763,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
       "displayName": "徐尚賢",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -765,7 +772,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
       "displayName": "鍾易仲",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -774,7 +781,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
       "displayName": "鄧巧佩",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 10,
       "resolvedSourceCount": 10,
@@ -783,16 +790,16 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
       "displayName": "劉仙娥",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 2,
-      "resolvedSourceCount": 2,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 3,
+      "resolvedSourceCount": 3,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
       "displayName": "吳銘賜",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -801,7 +808,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
       "displayName": "于仙玲",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 8,
       "resolvedSourceCount": 8,
@@ -810,7 +817,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
       "displayName": "鄭光峰",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -819,7 +826,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
       "displayName": "湯茹婷",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -828,7 +835,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
       "displayName": "蔡武宏",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 10,
       "resolvedSourceCount": 10,
@@ -837,7 +844,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
       "displayName": "李順進",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -846,7 +853,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
       "displayName": "黃敬雅",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -855,7 +862,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
       "displayName": "吳昱鋒",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -864,7 +871,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
       "displayName": "李政憲",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 6,
       "resolvedSourceCount": 6,
@@ -873,7 +880,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
       "displayName": "張藝瑾",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -882,7 +889,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
       "displayName": "李絃毅",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -891,7 +898,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
       "displayName": "陳麗娜",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -900,16 +907,16 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
       "displayName": "黃天煌",
-      "sourceAttemptCount": 2,
-      "retrievedAttemptCount": 2,
-      "retainedSourceCount": 9,
-      "resolvedSourceCount": 9,
+      "sourceAttemptCount": 3,
+      "retrievedAttemptCount": 3,
+      "retainedSourceCount": 10,
+      "resolvedSourceCount": 10,
       "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
       "displayName": "張耀中",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 11,
       "resolvedSourceCount": 11,
@@ -918,16 +925,16 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
       "displayName": "洪村銘",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 12,
-      "resolvedSourceCount": 12,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 13,
+      "resolvedSourceCount": 13,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
       "displayName": "邱于軒",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 13,
       "resolvedSourceCount": 13,
@@ -936,7 +943,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
       "displayName": "王耀裕",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -945,7 +952,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
       "displayName": "李雨庭",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 12,
       "resolvedSourceCount": 12,
@@ -954,7 +961,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
       "displayName": "王義雄",
-      "sourceAttemptCount": 2,
+      "sourceAttemptCount": 3,
       "retrievedAttemptCount": 2,
       "retainedSourceCount": 14,
       "resolvedSourceCount": 14,
@@ -963,7 +970,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
       "displayName": "宋紹銘",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 1,
       "resolvedSourceCount": 1,
@@ -972,7 +979,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
       "displayName": "巫振興",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -981,7 +988,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
       "displayName": "葛娜瑩",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 1,
       "resolvedSourceCount": 1,
@@ -990,7 +997,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
       "displayName": "陳幸富",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 8,
       "resolvedSourceCount": 8,
@@ -999,7 +1006,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
       "displayName": "林錫閔",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 0,
       "resolvedSourceCount": 0,
@@ -1008,7 +1015,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
       "displayName": "洪英雄",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 1,
       "resolvedSourceCount": 1,
@@ -1017,7 +1024,7 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
       "displayName": "高忠德",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 5,
       "resolvedSourceCount": 5,
@@ -1026,16 +1033,16 @@
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
       "displayName": "金禾雅",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 9,
-      "resolvedSourceCount": 9,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 10,
+      "resolvedSourceCount": 10,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
       "displayName": "陳奕蓁",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 1,
       "resolvedSourceCount": 1,
@@ -1044,16 +1051,16 @@
     {
       "candidateId": "official-mayor-hong-fang-long-2026",
       "displayName": "洪方隆",
-      "sourceAttemptCount": 1,
-      "retrievedAttemptCount": 0,
-      "retainedSourceCount": 5,
-      "resolvedSourceCount": 5,
-      "sourceUnavailable": true
+      "sourceAttemptCount": 2,
+      "retrievedAttemptCount": 1,
+      "retainedSourceCount": 6,
+      "resolvedSourceCount": 6,
+      "sourceUnavailable": false
     },
     {
       "candidateId": "official-mayor-ke-zhi-en-2026",
       "displayName": "柯志恩",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 1,
       "retainedSourceCount": 29,
       "resolvedSourceCount": 29,
@@ -1062,7 +1069,7 @@
     {
       "candidateId": "official-mayor-lai-rui-long-2026",
       "displayName": "賴瑞隆",
-      "sourceAttemptCount": 21,
+      "sourceAttemptCount": 22,
       "retrievedAttemptCount": 21,
       "retainedSourceCount": 48,
       "resolvedSourceCount": 48,
@@ -1071,7 +1078,7 @@
     {
       "candidateId": "official-mayor-wang-zhao-min-2026",
       "displayName": "王肇民",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 5,
       "resolvedSourceCount": 5,
@@ -1080,7 +1087,7 @@
     {
       "candidateId": "official-mayor-zhang-jing-2026",
       "displayName": "張靜",
-      "sourceAttemptCount": 1,
+      "sourceAttemptCount": 2,
       "retrievedAttemptCount": 0,
       "retainedSourceCount": 28,
       "resolvedSourceCount": 28,

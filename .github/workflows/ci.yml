@@ -66,6 +66,10 @@ jobs:
       fail-fast: false
       matrix:
         shard: [1, 2]
+    env:
+      # 60:80 puts the six sheet tests plus the short transition test in
+      # shard 1, and the four longer visibility tests in shard 2.
+      PWTEST_SHARD_WEIGHTS: '60:80'
     steps:
       - name: Checkout
         uses: actions/checkout@v4

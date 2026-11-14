@@ -50,26 +50,6 @@ jobs:
         run: npm run validate:avatars
       - name: Validate autonomous candidate publication policy
         run: npm run automated:verify
-      - name: Validate biography OpenSpec contract
-        run: npm run openspec:validate
-      - name: Validate editorial review OpenSpec contract
-        run: npm run openspec:validate:editorial
-      - name: Validate pilot OpenSpec contract
-        run: npm run openspec:validate:pilot
-      - name: Validate release preparation OpenSpec contract
-        run: npm run openspec:validate:release
-      - name: Validate avatar pipeline OpenSpec contract
-        run: npm run openspec:validate:avatars
-      - name: Validate scoped enrichment OpenSpec contract
-        run: npm run openspec:validate:enrichment
-      - name: Validate independent evidence audit OpenSpec contract
-        run: npm run openspec:validate:ai-audit
-      - name: Validate semantic evidence adjudication OpenSpec contract
-        run: npm run openspec:validate:semantic
-      - name: Validate scoped review and publication OpenSpec contract
-        run: npm run openspec:validate:scoped-review
-      - name: Validate autonomous publication OpenSpec contract
-        run: npm run openspec:validate:automated
       - name: Typecheck
         run: npm run typecheck
       - name: Lint

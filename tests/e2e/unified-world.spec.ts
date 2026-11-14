@@ -52,7 +52,14 @@ test.describe('unified Kaohsiung world', () => {
     await expect(card).toContainText('22.6 km²');
     await expect(card).toContainText('相鄰行政區');
     await expect(card).toContainText('楠梓');
-    await expect(card).toContainText('藝術化示意');
+    await expect(card).not.toContainText('ADMIN DISTRICT');
+    await expect(
+      card.getByRole('heading', { name: '所屬選舉區' }),
+    ).toBeVisible();
+    await expect(
+      card.locator('.city-admin-card__constituency-number').first(),
+    ).toContainText('第4選舉區');
+    await expect(card).not.toContainText('藝術化示意');
 
     await card.getByRole('button', { name: '回到全市' }).click();
     await expect(card).toBeHidden();
@@ -81,16 +88,15 @@ test.describe('unified Kaohsiung world', () => {
         .first();
       const box = await label.boundingBox();
       if (!box) throw new Error(`${name} district label is not visible`);
-      await page.mouse.click(
-        box.x + box.width / 2,
-        box.y + box.height / 2,
-      );
+      await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
       await expect(page.locator('.city-admin-card h2')).toHaveText(
         `${name}區`,
         { timeout: 15_000 },
       );
     }
-    await expect(page.locator('.city-admin-card')).toContainText('藝術化示意');
+    await expect(page.locator('.city-admin-card')).not.toContainText(
+      '藝術化示意',
+    );
   });
 
   test('council-04 simulation stays inside Zuoying and Nanzih while following', async ({

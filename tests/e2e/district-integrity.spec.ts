@@ -203,9 +203,16 @@ test.describe('hex district integrity', () => {
     await expect(page.locator('.city-scene-label__zone')).toContainText(
       '行政區',
     );
-    await expect(page.locator('.city-admin-card')).toContainText(
-      'ADMIN DISTRICT',
+    const card = page.locator('.city-admin-card');
+    await expect(
+      card.getByRole('heading', { name: '左營區', level: 2 }),
+    ).toBeVisible();
+    await expect(card.locator('.city-admin-card__english')).toHaveText(
+      'Zuoying',
     );
-    await expect(page.locator('.city-admin-card')).toContainText('左營');
+    await expect(card).not.toContainText('ADMIN DISTRICT');
+    await expect(
+      card.getByRole('heading', { name: '所屬選舉區', level: 3 }),
+    ).toBeVisible();
   });
 });

@@ -2857,62 +2857,131 @@ body.is-immersive .site-footer {
   top: clamp(5.6rem, 11vh, 7.5rem);
   left: clamp(0.65rem, 1.6vw, 1.4rem);
   display: grid;
-  gap: 0.2rem;
-  width: min(23rem, calc(100vw - 2rem));
+  gap: 0.65rem;
+  width: min(22rem, calc(100vw - 2rem));
   border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 1.1rem;
   background: var(--hud-glass-strong);
   box-shadow: var(--hud-shadow);
-  padding: 0.85rem 0.95rem 0.8rem;
+  padding: 0.9rem 1rem 0.8rem;
   backdrop-filter: blur(22px);
+}
+
+.city-admin-card__header {
+  display: grid;
+  gap: 0.08rem;
 }
 
 .city-admin-card h2 {
   margin: 0;
   color: #203f4e;
-  font-size: 1.3rem;
-  font-weight: 950;
-  letter-spacing: -0.035em;
-  line-height: 1.2;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
 }
 
 .city-admin-card__english {
-  color: rgba(41, 72, 88, 0.54);
-  font-size: 0.62rem;
-  font-weight: 800;
+  color: #55717c;
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
+  line-height: 1.35;
 }
 
 .city-admin-card__stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.28rem;
-  margin-top: 0.2rem;
+  gap: 0.35rem;
 }
 
 .city-admin-card__stats span {
   border-radius: 999px;
   background: rgba(41, 72, 88, 0.07);
-  color: rgba(41, 72, 88, 0.78);
-  padding: 0.16rem 0.46rem;
-  font-size: 0.57rem;
-  font-weight: 850;
+  color: rgba(41, 72, 88, 0.82);
+  padding: 0.18rem 0.48rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
-.city-admin-card p {
-  margin: 0.2rem 0 0.2rem;
-  color: rgba(41, 72, 88, 0.78);
-  font-size: 0.7rem;
-  line-height: 1.6;
+.city-admin-card__neighbors,
+.city-admin-card__constituencies {
+  display: grid;
+  gap: 0.28rem;
 }
 
-.city-admin-card__note {
-  color: rgba(41, 72, 88, 0.55) !important;
-  font-size: 0.6rem !important;
+.city-admin-card h3 {
+  margin: 0;
+  color: #294858;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.city-admin-card__neighbors p {
+  margin: 0;
+  color: rgba(41, 72, 88, 0.82);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.city-admin-card__constituencies ul {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.city-admin-card__constituencies button {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.25rem;
+  border: 1px solid rgba(41, 72, 88, 0.13);
+  border-radius: 0.55rem;
+  background: rgba(255, 255, 255, 0.52);
+  color: #294858;
+  padding: 0.36rem 0.55rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.city-admin-card__constituencies button:hover {
+  border-color: rgba(41, 72, 88, 0.24);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.city-admin-card__constituencies button:active {
+  background: rgba(76, 175, 168, 0.12);
+}
+
+.city-admin-card__constituency-number {
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.city-admin-card__constituency-kind {
+  min-width: 0;
+  color: #55717c;
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
 }
 
 .city-admin-card .city-landmark-card__actions {
-  margin-top: 0.25rem;
+  margin-top: -0.1rem;
+}
+
+.city-admin-card .city-landmark-card__actions button {
+  font-size: 0.75rem;
 }
 
 @media (max-width: 760px) {
@@ -2921,11 +2990,16 @@ body.is-immersive .site-footer {
     top: 5.2rem;
     left: 0.55rem;
     width: min(20rem, calc(100vw - 1.1rem));
-    padding: 0.7rem 0.75rem 0.65rem;
+    gap: 0.55rem;
+    padding: 0.8rem 0.8rem 0.7rem;
   }
 
   .city-admin-card h2 {
-    font-size: 1.1rem;
+    font-size: 1.625rem;
+  }
+
+  .city-admin-card__constituencies button {
+    min-height: 2.75rem;
   }
 }
 

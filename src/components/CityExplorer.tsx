@@ -613,11 +613,12 @@ export default function CityExplorer({ districts, candidates }: Props) {
             className="city-admin-card"
             aria-label={`${selectedAdmin.name} 行政區資訊`}
           >
-            <span className="city-card__kicker">ADMIN DISTRICT</span>
-            <h2>{selectedAdmin.name}</h2>
-            <span className="city-admin-card__english">
-              {selectedAdmin.nameEn}
-            </span>
+            <header className="city-admin-card__header">
+              <h2>{selectedAdmin.name}</h2>
+              <span className="city-admin-card__english">
+                {selectedAdmin.nameEn}
+              </span>
+            </header>
             <div className="city-admin-card__stats">
               <span>
                 {TERRAIN_LABELS[selectedAdmin.terrain] ?? selectedAdmin.terrain}
@@ -627,32 +628,42 @@ export default function CityExplorer({ districts, candidates }: Props) {
                 <span>含 {selectedAdmin.remoteCount} 處遠端轄區</span>
               )}
             </div>
-            <p>
-              相鄰行政區：
-              {selectedAdminNeighbours.length
-                ? selectedAdminNeighbours.join('、')
-                : '無資料'}
-            </p>
+            <section
+              className="city-admin-card__neighbors"
+              aria-labelledby="city-admin-neighbors-title"
+            >
+              <h3 id="city-admin-neighbors-title">相鄰行政區</h3>
+              <p>
+                {selectedAdminNeighbours.length
+                  ? selectedAdminNeighbours.join('、')
+                  : '無資料'}
+              </p>
+            </section>
             {selectedAdminCoverages.length > 0 && (
-              <div className="city-admin-card__constituencies">
-                <span>所屬選舉區</span>
-                <div>
+              <section
+                className="city-admin-card__constituencies"
+                aria-labelledby="city-admin-constituencies-title"
+              >
+                <h3 id="city-admin-constituencies-title">所屬選舉區</h3>
+                <ul>
                   {selectedAdminCoverages.map((coverage) => (
-                    <button
-                      key={coverage.number}
-                      type="button"
-                      onClick={() => selectDistrict(coverage.slug)}
-                    >
-                      第{coverage.number}選舉區・
-                      {coverageTypeLabel(coverage.kind)}
-                    </button>
+                    <li key={coverage.number}>
+                      <button
+                        type="button"
+                        onClick={() => selectDistrict(coverage.slug)}
+                      >
+                        <span className="city-admin-card__constituency-number">
+                          第{coverage.number}選舉區
+                        </span>
+                        <span className="city-admin-card__constituency-kind">
+                          {coverageTypeLabel(coverage.kind)}
+                        </span>
+                      </button>
+                    </li>
                   ))}
-                </div>
-              </div>
+                </ul>
+              </section>
             )}
-            <p className="city-admin-card__note">
-              行政區界線依官方圖資簡化；六角平台、地標與街景為藝術化示意。
-            </p>
             <div className="city-landmark-card__actions">
               <button type="button" onClick={backToWorld}>
                 回到全市

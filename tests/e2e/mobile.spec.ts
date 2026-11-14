@@ -200,6 +200,40 @@ test('mobile constituency coverage fits the viewport and links to admin focus', 
   await expect(page.locator('.city-admin-card')).toContainText('第4選舉區');
 });
 
+test('mobile administrative district card stays compact and wraps cleanly', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/?admin=E03');
+  await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+    'data-hydrated',
+    'true',
+  );
+
+  const card = page.locator('.city-admin-card');
+  await expect(card).toBeVisible();
+  await expect(
+    card.getByRole('heading', { name: '左營區', level: 2 }),
+  ).toBeVisible();
+  await expect(card).not.toContainText('藝術化示意');
+
+  const geometry = await card.evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    return {
+      bottom: rect.bottom,
+      right: rect.right,
+      scrollWidth: element.scrollWidth,
+      clientWidth: element.clientWidth,
+      rows: element.querySelectorAll('.city-admin-card__constituencies li')
+        .length,
+    };
+  });
+  expect(geometry.right).toBeLessThanOrEqual(390);
+  expect(geometry.bottom).toBeLessThanOrEqual(844);
+  expect(geometry.scrollWidth).toBeLessThanOrEqual(geometry.clientWidth + 1);
+  expect(geometry.rows).toBeGreaterThan(0);
+});
+
 test('mobile profile panel keeps the official ballot number visible', async ({
   page,
 }) => {

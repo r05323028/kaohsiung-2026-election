@@ -4,7 +4,7 @@
 - roster snapshot：2026-11-05
 - 候選人：106
 - 新增公開紀錄：0
-- 待審查研究紀錄：2360
+- 待審查研究紀錄：2372
 
 ## 前後狀態
 
@@ -14,17 +14,17 @@
 | 本次待審查 claims | 582 |
 | 本次待審查 positions | 51 |
 | 本次待審查 career records | 531 |
-| 政策參照（仍 withheld） | 1196 |
+| 政策參照（仍 withheld） | 1208 |
 | 新增公開 records | 0 |
 
 ## 候選人研究結果
 
 | 結果 | 候選人數 |
 | --- | --- |
-| policy-references-only | 38 |
+| policy-references-only | 42 |
 | records-found | 51 |
-| sources-attempted-no-additional-records | 5 |
-| sources-unavailable | 12 |
+| sources-attempted-no-additional-records | 4 |
+| sources-unavailable | 9 |
 
 ## 選區 coverage
 
@@ -36,16 +36,16 @@
 | district-kaohsiung-council-04 | 12 | 7 | 12 | 181 | 0 |
 | district-kaohsiung-council-05 | 7 | 5 | 7 | 173 | 0 |
 | district-kaohsiung-council-06 | 4 | 4 | 4 | 111 | 0 |
-| district-kaohsiung-council-07 | 12 | 6 | 8 | 161 | 3 |
+| district-kaohsiung-council-07 | 12 | 6 | 10 | 165 | 2 |
 | district-kaohsiung-council-08 | 9 | 4 | 9 | 151 | 0 |
-| district-kaohsiung-council-09 | 10 | 7 | 9 | 187 | 1 |
+| district-kaohsiung-council-09 | 10 | 7 | 10 | 194 | 0 |
 | district-kaohsiung-council-10 | 13 | 5 | 11 | 157 | 2 |
 | district-kaohsiung-council-11 | 6 | 4 | 6 | 113 | 0 |
 | district-kaohsiung-indigenous-flat-12 | 3 | 1 | 1 | 19 | 1 |
 | district-kaohsiung-indigenous-mountain-13 | 2 | 1 | 1 | 31 | 0 |
 | district-kaohsiung-indigenous-mountain-14 | 3 | 0 | 1 | 1 | 1 |
 | district-kaohsiung-indigenous-mountain-15 | 2 | 0 | 1 | 10 | 0 |
-| district-kaohsiung-mayor-2026 | 5 | 0 | 4 | 269 | 1 |
+| district-kaohsiung-mayor-2026 | 5 | 0 | 5 | 270 | 0 |
 
 ## Candidate inventory
 
@@ -96,14 +96,14 @@
 | 林于凱 | district-kaohsiung-council-07 | policy-references-only | 2 | 12 | 7 | 0 | completed |
 | 余聖明 | district-kaohsiung-council-07 | sources-unavailable | 2 | 0 | 0 | 0 | completed |
 | 曾俊傑 | district-kaohsiung-council-07 | records-found | 2 | 11 | 17 | 11 | completed |
-| 童燕珍 | district-kaohsiung-council-07 | sources-attempted-no-additional-records | 2 | 12 | 0 | 0 | completed |
+| 童燕珍 | district-kaohsiung-council-07 | policy-references-only | 3 | 13 | 1 | 0 | completed |
 | 康裕成 | district-kaohsiung-council-07 | records-found | 2 | 13 | 7 | 9 | completed |
 | 鄭孟洽 | district-kaohsiung-council-07 | sources-unavailable | 2 | 0 | 0 | 0 | completed |
 | 張博洋 | district-kaohsiung-council-07 | records-found | 2 | 12 | 16 | 9 | completed |
 | 黃柏霖 | district-kaohsiung-council-07 | records-found | 3 | 14 | 27 | 13 | completed |
-| 何權峰 | district-kaohsiung-council-07 | records-found | 2 | 12 | 1 | 10 | completed |
+| 何權峰 | district-kaohsiung-council-07 | records-found | 4 | 14 | 3 | 10 | completed |
 | 黃香菽 | district-kaohsiung-council-07 | records-found | 3 | 14 | 13 | 12 | completed |
-| 林彥 | district-kaohsiung-council-07 | sources-unavailable | 2 | 9 | 0 | 0 | completed |
+| 林彥 | district-kaohsiung-council-07 | policy-references-only | 3 | 10 | 1 | 0 | completed |
 | 黃文益 | district-kaohsiung-council-08 | records-found | 2 | 14 | 18 | 14 | completed |
 | 湯詠瑜 | district-kaohsiung-council-08 | records-found | 2 | 13 | 21 | 11 | completed |
 | 鄒約翰 | district-kaohsiung-council-08 | policy-references-only | 2 | 1 | 2 | 0 | completed |
@@ -120,7 +120,7 @@
 | 張漢忠 | district-kaohsiung-council-09 | records-found | 2 | 12 | 16 | 16 | completed |
 | 林智鴻 | district-kaohsiung-council-09 | records-found | 2 | 13 | 3 | 17 | completed |
 | 劉德林 | district-kaohsiung-council-09 | records-found | 3 | 13 | 14 | 10 | completed |
-| 徐尚賢 | district-kaohsiung-council-09 | sources-unavailable | 2 | 11 | 0 | 0 | completed |
+| 徐尚賢 | district-kaohsiung-council-09 | policy-references-only | 3 | 12 | 7 | 0 | completed |
 | 鍾易仲 | district-kaohsiung-council-09 | records-found | 3 | 13 | 15 | 13 | completed |
 | 鄧巧佩 | district-kaohsiung-council-09 | policy-references-only | 2 | 10 | 3 | 0 | completed |
 | 劉仙娥 | district-kaohsiung-council-10 | policy-references-only | 2 | 3 | 2 | 0 | completed |
@@ -155,7 +155,7 @@
 | 洪方隆 | district-kaohsiung-mayor-2026 | policy-references-only | 2 | 6 | 2 | 0 | completed |
 | 柯志恩 | district-kaohsiung-mayor-2026 | policy-references-only | 2 | 29 | 156 | 0 | completed |
 | 賴瑞隆 | district-kaohsiung-mayor-2026 | policy-references-only | 22 | 48 | 99 | 0 | completed |
-| 王肇民 | district-kaohsiung-mayor-2026 | sources-unavailable | 2 | 5 | 0 | 0 | completed |
+| 王肇民 | district-kaohsiung-mayor-2026 | policy-references-only | 4 | 7 | 1 | 0 | completed |
 | 張靜 | district-kaohsiung-mayor-2026 | policy-references-only | 2 | 28 | 12 | 0 | completed |
 
 ## 限制

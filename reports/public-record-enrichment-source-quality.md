@@ -2,31 +2,31 @@
 
 - 研究截止日：2026-11-09
 - 候選人：106
-- source snapshots：1073
-- source attempts：257
-- checksum 驗證通過的 retrieved snapshots：1071
+- source snapshots：1080
+- source attempts：264
+- checksum 驗證通過的 retrieved snapshots：1078
 
 ## Retrieval status
 
 | 狀態 | 數量 |
 | --- | --- |
 | blocked | 2 |
-| retrieved | 1071 |
+| retrieved | 1078 |
 
 ## Source tiers
 
 | tier | snapshots |
 | --- | --- |
-| tier-1-primary | 62 |
-| tier-2-authoritative | 71 |
-| tier-3-reporting | 940 |
+| tier-1-primary | 64 |
+| tier-2-authoritative | 72 |
+| tier-3-reporting | 944 |
 
 ## Missing / unavailable states
 
 | 狀態 | 候選人數 |
 | --- | --- |
-| retrieved-without-machine-verifiable-record | 5 |
-| sources-unavailable | 12 |
+| retrieved-without-machine-verifiable-record | 4 |
+| sources-unavailable | 9 |
 
 ## Candidate source inventory
 
@@ -77,14 +77,14 @@
 | 林于凱 | 2 | 0 | 12 | 12 | true |
 | 余聖明 | 2 | 0 | 0 | 0 | true |
 | 曾俊傑 | 2 | 1 | 11 | 11 | false |
-| 童燕珍 | 2 | 1 | 12 | 12 | false |
+| 童燕珍 | 3 | 2 | 13 | 13 | false |
 | 康裕成 | 2 | 1 | 13 | 13 | false |
 | 鄭孟洽 | 2 | 0 | 0 | 0 | true |
 | 張博洋 | 2 | 1 | 12 | 12 | false |
 | 黃柏霖 | 3 | 2 | 14 | 14 | false |
-| 何權峰 | 2 | 1 | 12 | 12 | false |
+| 何權峰 | 4 | 3 | 14 | 14 | false |
 | 黃香菽 | 3 | 2 | 14 | 14 | false |
-| 林彥 | 2 | 0 | 9 | 9 | true |
+| 林彥 | 3 | 1 | 10 | 10 | false |
 | 黃文益 | 2 | 2 | 14 | 14 | false |
 | 湯詠瑜 | 2 | 1 | 13 | 13 | false |
 | 鄒約翰 | 2 | 0 | 1 | 1 | true |
@@ -101,7 +101,7 @@
 | 張漢忠 | 2 | 1 | 12 | 12 | false |
 | 林智鴻 | 2 | 1 | 13 | 13 | false |
 | 劉德林 | 3 | 2 | 13 | 13 | false |
-| 徐尚賢 | 2 | 0 | 11 | 11 | true |
+| 徐尚賢 | 3 | 1 | 12 | 12 | false |
 | 鍾易仲 | 3 | 2 | 13 | 13 | false |
 | 鄧巧佩 | 2 | 0 | 10 | 10 | true |
 | 劉仙娥 | 2 | 1 | 3 | 3 | false |
@@ -136,7 +136,7 @@
 | 洪方隆 | 2 | 1 | 6 | 6 | false |
 | 柯志恩 | 2 | 1 | 29 | 29 | false |
 | 賴瑞隆 | 22 | 21 | 48 | 48 | false |
-| 王肇民 | 2 | 0 | 5 | 5 | true |
+| 王肇民 | 4 | 2 | 7 | 7 | false |
 | 張靜 | 2 | 0 | 28 | 28 | true |
 
 ## Limitations

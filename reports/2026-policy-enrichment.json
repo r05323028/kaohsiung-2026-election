@@ -3,34 +3,33 @@
   "generatedAt": "2026-11-14T00:00:00.000Z",
   "researchCutoff": "2026-11-14",
   "totalCandidatesInvestigated": 106,
-  "candidatesWithVerified2026Policies": 88,
-  "candidatesWithOnlyCurrentOrHistoricalPositions": 1,
+  "candidatesWithVerified2026Policies": 93,
+  "candidatesWithOnlyCurrentOrHistoricalPositions": 0,
   "candidatesWithNoVerifiablePolicyFound": 0,
-  "candidatesWithSourcesUnavailable": 17,
+  "candidatesWithSourcesUnavailable": 13,
   "outcomeCounts": {
-    "verified-records": 88,
-    "sources-unavailable": 17,
-    "current-or-historical-only": 1
+    "verified-records": 93,
+    "sources-unavailable": 13
   },
-  "totalPolicyRecordsDiscovered": 1196,
-  "machineValidatedPolicyCount": 1196,
+  "totalPolicyRecordsDiscovered": 1208,
+  "machineValidatedPolicyCount": 1208,
   "pendingHumanReviewPolicyCount": 166,
-  "approvedPolicyCount": 1005,
-  "publishedPolicyCount": 1005,
+  "approvedPolicyCount": 1017,
+  "publishedPolicyCount": 1017,
   "rejectedPolicyCount": 25,
   "unresolvedPolicyCount": 166,
-  "sourceSnapshotCount": 1073,
-  "sourceAttemptCount": 1217,
-  "distinctSourceUrlCount": 1071,
+  "sourceSnapshotCount": 1080,
+  "sourceAttemptCount": 1224,
+  "distinctSourceUrlCount": 1078,
   "sourceDistributionByTier": {
-    "tier-1-primary": 62,
-    "tier-2-authoritative": 71,
-    "tier-3-reporting": 940
+    "tier-1-primary": 64,
+    "tier-2-authoritative": 72,
+    "tier-3-reporting": 944
   },
   "sourceCoverageByCategory": {
     "candidate-controlled": {
-      "sourceCount": 0,
-      "candidateCount": 0,
+      "sourceCount": 2,
+      "candidateCount": 2,
       "searchedCandidateCount": 106
     },
     "party-candidate": {
@@ -54,13 +53,13 @@
       "searchedCandidateCount": 106
     },
     "news-report": {
-      "sourceCount": 6,
-      "candidateCount": 8,
+      "sourceCount": 10,
+      "candidateCount": 12,
       "searchedCandidateCount": 0
     },
     "institutional-record": {
-      "sourceCount": 5,
-      "candidateCount": 5,
+      "sourceCount": 6,
+      "candidateCount": 6,
       "searchedCandidateCount": 0
     },
     "official-election-record": {
@@ -70,11 +69,16 @@
     }
   },
   "claimDecisionCounts": {
-    "accepted": 35,
+    "accepted": 51,
     "rejected": 1,
     "unresolved": 1
   },
   "improvedCandidates": [
+    {
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "displayName": "王肇民",
+      "newPolicyCount": 1
+    },
     {
       "candidateId": "official-mayor-hong-fang-long-2026",
       "displayName": "洪方隆",
@@ -89,33 +93,53 @@
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
       "displayName": "鍾炳光",
       "newPolicyCount": 3
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "displayName": "何權峰",
+      "newPolicyCount": 2
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "displayName": "童燕珍",
+      "newPolicyCount": 1
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "displayName": "林彥",
+      "newPolicyCount": 1
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "displayName": "徐尚賢",
+      "newPolicyCount": 7
     }
   ],
   "researchCoverage": {
     "totalCandidates": 106,
     "candidatesResearched": 106,
     "statusCounts": {
-      "verified": 8,
+      "verified": 13,
       "historical/current-only": 10,
-      "not_found": 70,
-      "source_unavailable": 9,
+      "not_found": 66,
+      "source_unavailable": 8,
       "attribution_uncertain": 4,
       "awaiting_verification": 5
     },
-    "candidatesWithVerifiedPolicy": 8,
-    "candidatesWithNoVerifiedPolicy": 98,
-    "candidatesWithNoPolicyInformation": 70,
-    "candidatesWithSourceUnavailable": 9,
+    "candidatesWithVerifiedPolicy": 13,
+    "candidatesWithNoVerifiedPolicy": 93,
+    "candidatesWithNoPolicyInformation": 66,
+    "candidatesWithSourceUnavailable": 8,
     "candidatesWithAttributionUncertain": 4,
     "candidatesAwaitingVerification": 5,
     "candidatesWithHistoricalOrCurrentOnly": 10,
-    "acceptedClaims": 35,
+    "acceptedClaims": 51,
     "rejectedClaims": 1,
     "unresolvedClaims": 1,
     "sourceCategoryCoverage": {
       "candidate-controlled": {
-        "sourceCount": 0,
-        "candidateCount": 0,
+        "sourceCount": 2,
+        "candidateCount": 2,
         "searchedCandidateCount": 106
       },
       "party-candidate": {
@@ -139,13 +163,13 @@
         "searchedCandidateCount": 106
       },
       "news-report": {
-        "sourceCount": 6,
-        "candidateCount": 8,
+        "sourceCount": 10,
+        "candidateCount": 12,
         "searchedCandidateCount": 0
       },
       "institutional-record": {
-        "sourceCount": 5,
-        "candidateCount": 5,
+        "sourceCount": 6,
+        "candidateCount": 6,
         "searchedCandidateCount": 0
       },
       "official-election-record": {
@@ -155,6 +179,11 @@
       }
     },
     "improvedCandidates": [
+      {
+        "candidateId": "official-mayor-wang-zhao-min-2026",
+        "displayName": "王肇民",
+        "newPolicyCount": 1
+      },
       {
         "candidateId": "official-mayor-hong-fang-long-2026",
         "displayName": "洪方隆",
@@ -169,19 +198,32 @@
         "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
         "displayName": "鍾炳光",
         "newPolicyCount": 3
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+        "displayName": "何權峰",
+        "newPolicyCount": 2
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+        "displayName": "童燕珍",
+        "newPolicyCount": 1
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+        "displayName": "林彥",
+        "newPolicyCount": 1
+      },
+      {
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+        "displayName": "徐尚賢",
+        "newPolicyCount": 7
       }
     ],
     "gaps": [
       {
         "candidateId": "official-mayor-zhang-jing-2026",
         "displayName": "張靜",
-        "districtId": "district-kaohsiung-mayor-2026",
-        "status": "not_found",
-        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
-      },
-      {
-        "candidateId": "official-mayor-wang-zhao-min-2026",
-        "displayName": "王肇民",
         "districtId": "district-kaohsiung-mayor-2026",
         "status": "not_found",
         "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
@@ -460,27 +502,6 @@
         "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
       },
       {
-        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
-        "displayName": "何權峰",
-        "districtId": "district-kaohsiung-council-07",
-        "status": "source_unavailable",
-        "reason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。"
-      },
-      {
-        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
-        "displayName": "童燕珍",
-        "districtId": "district-kaohsiung-council-07",
-        "status": "not_found",
-        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
-      },
-      {
-        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
-        "displayName": "林彥",
-        "districtId": "district-kaohsiung-council-07",
-        "status": "not_found",
-        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
-      },
-      {
         "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
         "displayName": "黃香菽",
         "districtId": "district-kaohsiung-council-07",
@@ -653,13 +674,6 @@
         "displayName": "李雅靜",
         "districtId": "district-kaohsiung-council-09",
         "status": "historical/current-only",
-        "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
-      },
-      {
-        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
-        "displayName": "徐尚賢",
-        "districtId": "district-kaohsiung-council-09",
-        "status": "not_found",
         "reason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
       },
       {
@@ -861,10 +875,10 @@
     ]
   },
   "publicationCoverage": {
-    "totalPolicyEntries": 1196,
-    "distinctSourceUrls": 1071,
-    "publishedPolicyEntries": 1005,
-    "candidatesWithPublishedPolicies": 88,
+    "totalPolicyEntries": 1208,
+    "distinctSourceUrls": 1078,
+    "publishedPolicyEntries": 1017,
+    "candidatesWithPublishedPolicies": 93,
     "rejectedPolicyEntries": 25,
     "pendingPolicyEntries": 166,
     "humanEditorialReviewPerformed": false,
@@ -892,35 +906,35 @@
   ],
   "humanEditorialReviewPerformed": false,
   "policyCountByCategory": {
-    "transportation-and-mobility": 234,
-    "housing-and-urban-development": 106,
+    "transportation-and-mobility": 237,
+    "housing-and-urban-development": 107,
     "economic-development-and-industry": 177,
     "education": 127,
-    "childcare-and-family-support": 97,
+    "childcare-and-family-support": 99,
     "healthcare": 68,
-    "social-welfare-and-long-term-care": 147,
-    "environment-and-sustainability": 163,
+    "social-welfare-and-long-term-care": 149,
+    "environment-and-sustainability": 164,
     "public-safety-and-disaster-preparedness": 119,
     "youth-and-employment": 101,
     "agriculture-and-fisheries": 55,
-    "culture-tourism-and-sports": 177,
+    "culture-tourism-and-sports": 178,
     "digital-governance-and-technology": 63,
     "indigenous-affairs": 29,
-    "government-transparency-and-administration": 111,
-    "other": 101
+    "government-transparency-and-administration": 112,
+    "other": 102
   },
   "policyCountByContext": {
-    "2026-election-commitment": 534,
-    "current-position": 653,
+    "2026-election-commitment": 542,
+    "current-position": 656,
     "public-record-achievement": 7,
-    "historical-position": 2
+    "historical-position": 3
   },
   "coverageByDistrict": {
     "district-kaohsiung-mayor-2026": {
       "districtLabel": "全市・市長",
       "candidateCount": 5,
       "investigatedCount": 5,
-      "policyRecordCount": 269
+      "policyRecordCount": 270
     },
     "district-kaohsiung-council-01": {
       "districtLabel": "普通・第1選舉區",
@@ -962,7 +976,7 @@
       "districtLabel": "普通・第7選舉區",
       "candidateCount": 12,
       "investigatedCount": 12,
-      "policyRecordCount": 97
+      "policyRecordCount": 101
     },
     "district-kaohsiung-council-08": {
       "districtLabel": "普通・第8選舉區",
@@ -974,7 +988,7 @@
       "districtLabel": "普通・第9選舉區",
       "candidateCount": 10,
       "investigatedCount": 10,
-      "policyRecordCount": 88
+      "policyRecordCount": 95
     },
     "district-kaohsiung-council-10": {
       "districtLabel": "普通・第10選舉區",
@@ -1035,12 +1049,12 @@
       "districtId": "district-kaohsiung-mayor-2026",
       "districtLabel": "全市・市長",
       "electionType": "mayoral",
-      "outcome": "sources-unavailable",
-      "researchStatus": "not_found",
-      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
-      "policyCount": 0,
-      "sourceCount": 7,
-      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
+      "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已由聯合新聞網與 TVBS 全文核對候選人身分；來源記載其城市治理理念的一般性表述，但未將造勢活動或概括理念擴寫為詳細政策。",
+      "policyCount": 1,
+      "sourceCount": 9,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-mayor-ke-zhi-en-2026",
@@ -1665,12 +1679,12 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "current-or-historical-only",
-      "researchStatus": "source_unavailable",
-      "researchReason": "候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。",
-      "policyCount": 1,
-      "sourceCount": 13,
-      "note": "已蒐集政策紀錄但未通過獨立查核或來源不足，暫不發布。"
+      "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "已由高雄市議會公開質詢摘要及 CDNS／Yahoo 全文核對何權峰身分；議會紀錄列為歷史／目前立場，育兒主張不標示為 2026 競選承諾。",
+      "policyCount": 3,
+      "sourceCount": 15,
+      "note": "已發布 2 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
@@ -1679,12 +1693,12 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "researchStatus": "not_found",
-      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
-      "policyCount": 0,
-      "sourceCount": 13,
-      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
+      "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "互傳媒全文明確以高雄市三民區市議員候選人童燕珍指述人行道路平專案；僅記錄其競選主張，不宣稱改善已完成。",
+      "policyCount": 1,
+      "sourceCount": 14,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
@@ -1693,12 +1707,12 @@
       "districtId": "district-kaohsiung-council-07",
       "districtLabel": "普通・第7選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "researchStatus": "not_found",
-      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
-      "policyCount": 0,
-      "sourceCount": 11,
-      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
+      "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "候選人自我介紹頁以林彥及三民區市議員候選人身分提出自我主張；保留自述屬性，不推論預算或執行成果。",
+      "policyCount": 1,
+      "sourceCount": 12,
+      "note": "已發布 1 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
@@ -2057,12 +2071,12 @@
       "districtId": "district-kaohsiung-council-09",
       "districtLabel": "普通・第9選舉區",
       "electionType": "city-council",
-      "outcome": "sources-unavailable",
-      "researchStatus": "not_found",
-      "researchReason": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。",
-      "policyCount": 0,
-      "sourceCount": 13,
-      "note": "已檢視可取得之公開來源，未找到可歸屬且可核實的政策主張；不代表候選人沒有政策。"
+      "outcome": "verified-records",
+      "researchStatus": "verified",
+      "researchReason": "候選人控制網站直接標示徐尚賢及 2026 高雄市鳳山區議員參選人，並列出七項政見；僅記錄提案內容，不宣稱法定權利或政策已核准。",
+      "policyCount": 7,
+      "sourceCount": 14,
+      "note": "已發布 7 筆通過獨立查核之政策紀錄；其餘未通過者保留待查。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",

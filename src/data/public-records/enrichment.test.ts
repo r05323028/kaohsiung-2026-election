@@ -149,9 +149,9 @@ describe('full-roster public-record enrichment', () => {
     expect(coverageReport.candidateInventory).toHaveLength(106);
     expect(coverageReport.outcomeCounts).toMatchObject({
       'records-found': 51,
-      'policy-references-only': 38,
-      'sources-attempted-no-additional-records': 5,
-      'sources-unavailable': 12,
+      'policy-references-only': 42,
+      'sources-attempted-no-additional-records': 4,
+      'sources-unavailable': 9,
     });
     expect(sourceQualityReport.retainedSourceHashValidation).toMatchObject({
       allRetrievedSourcesHaveMatchingSizeAndSha256: true,

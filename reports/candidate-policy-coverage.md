@@ -2,53 +2,53 @@
 
 - 研究截止日：2026-11-14
 - 候選人數：106
-- 有已發布政策紀錄的候選人：88
-- 已發現政策紀錄：1196
-- 已發布政策紀錄：1005
+- 有已發布政策紀錄的候選人：93
+- 已發現政策紀錄：1208
+- 已發布政策紀錄：1017
 - 已否決：25；待查：166
-- 來源快照：1073；檢索嘗試：1217
-- 研究狀態：{"verified":8,"historical/current-only":10,"not_found":70,"source_unavailable":9,"attribution_uncertain":4,"awaiting_verification":5}
-- 政策網址去重後：1071
+- 來源快照：1080；檢索嘗試：1224
+- 研究狀態：{"verified":13,"historical/current-only":10,"not_found":66,"source_unavailable":8,"attribution_uncertain":4,"awaiting_verification":5}
+- 政策網址去重後：1078
 
 ## 研究覆蓋與發布覆蓋
 
 研究覆蓋與公開發布覆蓋是不同指標；not_found 不表示候選人沒有政策。
-- 可發布研究結果：8
+- 可發布研究結果：13
 - 僅歷史／目前立場：10
-- 未找到政策資訊：70
-- 來源無法取得：9
+- 未找到政策資訊：66
+- 來源無法取得：8
 - 歸屬不確定：4
 - 等待核實：5
-- accepted／rejected／unresolved claims：35／1／1
-- 新增且發布的候選人：洪方隆、林慧欣、鍾炳光
+- accepted／rejected／unresolved claims：51／1／1
+- 新增且發布的候選人：王肇民、洪方隆、林慧欣、鍾炳光、何權峰、童燕珍、林彥、徐尚賢
 
 ## 來源類別覆蓋
 
 | 類別 | 來源快照 | 涉及候選人 | 曾檢索候選人 |
 |---|---:|---:|---:|
-| candidate-controlled | 0 | 0 | 106 |
+| candidate-controlled | 2 | 2 | 106 |
 | party-candidate | 0 | 0 | 106 |
 | news-and-independent-media | 0 | 0 | 106 |
 | interviews-and-public-appearances | 0 | 0 | 106 |
 | historical-public-records | 0 | 0 | 106 |
-| news-report | 6 | 8 | 0 |
-| institutional-record | 5 | 5 | 0 |
+| news-report | 10 | 12 | 0 |
+| institutional-record | 6 | 6 | 0 |
 | official-election-record | 1 | 1 | 0 |
 
 ## 各選區覆蓋
 
 | 選區 | 候選人 | 有已發布政策 | 已發布政策 | 已發現政策 |
 |---|---:|---:|---:|---:|
-| 全市・市長 | 5 | 4 | 134 | 269 |
+| 全市・市長 | 5 | 5 | 135 | 270 |
 | 普通・第1選舉區 | 5 | 5 | 49 | 49 |
 | 普通・第2選舉區 | 5 | 5 | 32 | 33 |
 | 普通・第3選舉區 | 8 | 5 | 61 | 63 |
 | 普通・第4選舉區 | 12 | 12 | 97 | 101 |
 | 普通・第5選舉區 | 7 | 7 | 108 | 108 |
 | 普通・第6選舉區 | 4 | 4 | 56 | 59 |
-| 普通・第7選舉區 | 12 | 7 | 73 | 97 |
+| 普通・第7選舉區 | 12 | 10 | 77 | 101 |
 | 普通・第8選舉區 | 9 | 9 | 107 | 114 |
-| 普通・第9選舉區 | 10 | 9 | 81 | 88 |
+| 普通・第9選舉區 | 10 | 10 | 88 | 95 |
 | 普通・第10選舉區 | 13 | 11 | 99 | 101 |
 | 普通・第11選舉區 | 6 | 6 | 66 | 71 |
 | 平地原住民・第12選舉區 | 3 | 1 | 10 | 10 |
@@ -60,29 +60,29 @@
 
 | 類別 | 紀錄數 |
 |---|---:|
-| transportation-and-mobility | 234 |
-| housing-and-urban-development | 106 |
+| transportation-and-mobility | 237 |
+| housing-and-urban-development | 107 |
 | economic-development-and-industry | 177 |
 | education | 127 |
-| childcare-and-family-support | 97 |
+| childcare-and-family-support | 99 |
 | healthcare | 68 |
-| social-welfare-and-long-term-care | 147 |
-| environment-and-sustainability | 163 |
+| social-welfare-and-long-term-care | 149 |
+| environment-and-sustainability | 164 |
 | public-safety-and-disaster-preparedness | 119 |
 | youth-and-employment | 101 |
 | agriculture-and-fisheries | 55 |
-| culture-tourism-and-sports | 177 |
+| culture-tourism-and-sports | 178 |
 | digital-governance-and-technology | 63 |
 | indigenous-affairs | 29 |
-| government-transparency-and-administration | 111 |
-| other | 101 |
+| government-transparency-and-administration | 112 |
+| other | 102 |
 
 ## 逐位候選人
 
 | 候選人 | 選區 | 政黨 | 研究狀態 | 檢索 | 發現 | 已核實 | 已發布 | 否決 | 待查 | 結論 |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---|
 | 張靜 | 全市・市長 | 司法改革黨 | not_found | 30 | 12 | 11 | 11 | 1 | 0 | verified-records |
-| 王肇民 | 全市・市長 | 無 | not_found | 7 | 0 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 王肇民 | 全市・市長 | 無 | verified | 9 | 1 | 1 | 1 | 0 | 0 | verified-records |
 | 柯志恩 | 全市・市長 | 中國國民黨 | source_unavailable | 30 | 156 | 59 | 59 | 7 | 90 | verified-records |
 | 洪方隆 | 全市・市長 | 無 | verified | 7 | 2 | 2 | 2 | 0 | 0 | verified-records |
 | 賴瑞隆 | 全市・市長 | 民主進步黨 | verified | 49 | 99 | 62 | 62 | 2 | 35 | verified-records |
@@ -127,9 +127,9 @@
 | 李喬如 | 普通・第6選舉區 | 民主進步黨 | historical/current-only | 14 | 23 | 22 | 22 | 1 | 0 | verified-records |
 | 蔡金晏 | 普通・第6選舉區 | 中國國民黨 | not_found | 9 | 15 | 15 | 15 | 0 | 0 | verified-records |
 | 陳美雅 | 普通・第6選舉區 | 中國國民黨 | historical/current-only | 15 | 10 | 8 | 8 | 0 | 2 | verified-records |
-| 何權峰 | 普通・第7選舉區 | 民主進步黨 | source_unavailable | 13 | 1 | 0 | 0 | 0 | 1 | current-or-historical-only |
-| 童燕珍 | 普通・第7選舉區 | 中國國民黨 | not_found | 13 | 0 | 0 | 0 | 0 | 0 | sources-unavailable |
-| 林彥 | 普通・第7選舉區 | 無 | not_found | 11 | 0 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 何權峰 | 普通・第7選舉區 | 民主進步黨 | verified | 15 | 3 | 2 | 2 | 0 | 1 | verified-records |
+| 童燕珍 | 普通・第7選舉區 | 中國國民黨 | verified | 14 | 1 | 1 | 1 | 0 | 0 | verified-records |
+| 林彥 | 普通・第7選舉區 | 無 | verified | 12 | 1 | 1 | 1 | 0 | 0 | verified-records |
 | 黃香菽 | 普通・第7選舉區 | 中國國民黨 | not_found | 15 | 13 | 9 | 9 | 0 | 4 | verified-records |
 | 曾俊傑 | 普通・第7選舉區 | 無 | not_found | 12 | 17 | 16 | 16 | 0 | 1 | verified-records |
 | 張博洋 | 普通・第7選舉區 | 無 | source_unavailable | 13 | 16 | 13 | 13 | 3 | 0 | verified-records |
@@ -155,7 +155,7 @@
 | 陳慧文 | 普通・第9選舉區 | 民主進步黨 | historical/current-only | 8 | 8 | 7 | 7 | 0 | 1 | verified-records |
 | 劉德林 | 普通・第9選舉區 | 中國國民黨 | not_found | 14 | 14 | 13 | 13 | 0 | 1 | verified-records |
 | 李雅靜 | 普通・第9選舉區 | 中國國民黨 | historical/current-only | 13 | 12 | 12 | 12 | 0 | 0 | verified-records |
-| 徐尚賢 | 普通・第9選舉區 | 無 | not_found | 13 | 0 | 0 | 0 | 0 | 0 | sources-unavailable |
+| 徐尚賢 | 普通・第9選舉區 | 無 | verified | 14 | 7 | 7 | 7 | 0 | 0 | verified-records |
 | 鍾易仲 | 普通・第9選舉區 | 中國國民黨 | historical/current-only | 14 | 15 | 14 | 14 | 0 | 1 | verified-records |
 | 鄧巧佩 | 普通・第9選舉區 | 民主進步黨 | not_found | 12 | 3 | 3 | 3 | 0 | 0 | verified-records |
 | 李政憲 | 普通・第10選舉區 | 司法改革黨 | not_found | 8 | 3 | 3 | 3 | 0 | 0 | verified-records |
@@ -191,7 +191,6 @@
 ## 研究缺口與驗證規則
 
 - 張靜：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
-- 王肇民：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 柯志恩：source_unavailable；候選人官方頁面回應 HTTP 403；第二手政策轉錄未經原始頁面獨立核對，因此不採用。
 - 林義迪：awaiting_verification；已找到候選人相關線索，但缺乏可由獨立查核者完成的完整原文或明確政策範圍。
 - 林富寶：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
@@ -231,9 +230,6 @@
 - 李喬如：historical/current-only；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 蔡金晏：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 陳美雅：historical/current-only；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
-- 何權峰：source_unavailable；候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。
-- 童燕珍：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
-- 林彥：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 黃香菽：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 曾俊傑：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 張博洋：source_unavailable；候選人或候選人頁面無法取得完整可核對內容，保留來源缺口，不把搜尋摘要當證據。
@@ -259,7 +255,6 @@
 - 陳慧文：historical/current-only；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 劉德林：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 李雅靜：historical/current-only；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
-- 徐尚賢：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 鍾易仲：historical/current-only；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 鄧巧佩：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。
 - 李政憲：not_found；已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。

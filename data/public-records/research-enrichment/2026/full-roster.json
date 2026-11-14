@@ -7,9 +7,9 @@
   "upstreamPolicyResearch": {
     "datasetId": "kaohsiung-2026-policy-research",
     "datasetPath": "data/policy-research/2026/full-roster.json",
-    "sourceSnapshotCount": 1073,
-    "sourceAttemptCount": 257,
-    "policyCount": 1196,
+    "sourceSnapshotCount": 1080,
+    "sourceAttemptCount": 264,
+    "policyCount": 1208,
     "sourceSnapshots": [
       {
         "sourceId": "policy-source-raw-policy-2026-kmt-bai-qiao-yin-html",
@@ -24733,6 +24733,167 @@
           "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
         ],
         "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/chenmei.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-udn-wang-zhao-min",
+        "url": "https://udn.com/vote2026/story/124652/9878477",
+        "publisher": "聯合新聞網",
+        "title": "高雄市長選舉政見會登場 藍綠之外另3候選人背景一次看",
+        "role": "news-report",
+        "tier": "tier-3-reporting",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/udn-wang.txt",
+        "byteLength": 3400,
+        "sha256": "e6f92b2ab14d91c4fc392f72d0e174513388da08fc2c984118c1c847ded1a0b3",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-mayor-wang-zhao-min-2026"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "聯合新聞網全文以無黨籍高雄市長候選人王肇民姓名與選舉活動描述核對身分。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/udn-wang.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。僅用於核對造勢／政見發表活動與候選人身分，不把活動事實擴寫為具體政策。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-tvbs-wang-zhao-min",
+        "url": "https://news.tvbs.com.tw/politics/4047304",
+        "publisher": "TVBS新聞網",
+        "title": "高雄市長候選人「8人造勢場」爆紅！台上獨講68分鐘　奇特畫面曝光",
+        "role": "news-report",
+        "tier": "tier-3-reporting",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/tvbs-wang.txt",
+        "byteLength": 11222,
+        "sha256": "80ec5159c93e99c9bd132713d8ed5c0053a9078baa4b78118a31b31c8c75060d",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-mayor-wang-zhao-min-2026"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "TVBS全文明確標示無黨籍高雄市長候選人王肇民，並將引述內容歸於王肇民。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/tvbs-wang.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。與聯合新聞網交叉核對造勢活動；新增紀錄僅採一般性的城市治理理念表述。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-kcc-he-quan-feng",
+        "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=17295",
+        "publisher": "高雄市議會",
+        "title": "曾俊傑副議長、白喬茵、蔡武宏、李雨庭、何權峰、張勝富議員總質詢摘要",
+        "role": "institutional-member-profile",
+        "tier": "tier-2-authoritative",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/kcc-he.txt",
+        "byteLength": 16786,
+        "sha256": "f8509635b568bb370f7a0d86abf3654642144216e414308ad4b99c85c0a758ab",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "高雄市議會官方全文在何權峰議員總質詢摘要段落標示其姓名與發言內容。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc-he.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。屬議員任期中的公共紀錄；不將議會質詢自動標示為 2026 競選承諾。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-yahoo-he-quan-feng",
+        "url": "https://tw.news.yahoo.com/%E4%BD%95%E6%AC%8A%E5%B3%B0%E4%BF%83%E6%9C%89%E6%95%88%E6%B8%9B%E7%B7%A9%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91-%E5%80%A1%E8%82%B2%E5%85%92%E6%94%BF%E7%AD%96%E6%87%89%E8%B5%B0%E5%90%91%E5%A4%9A%E5%85%83%E5%8D%94%E5%8A%A9-120509206.html",
+        "publisher": "CDNS／Yahoo新聞",
+        "title": "何權峰促有效減緩人口減少 倡育兒政策應走向多元協助",
+        "role": "news-report",
+        "tier": "tier-3-reporting",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/yahoo-he.txt",
+        "byteLength": 21275,
+        "sha256": "5b5d5dc4e529e783c1740919a6988315c6c8db62ca0979657e809410391135e0",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "CDNS／Yahoo全文以高雄市議員何權峰姓名、總質詢脈絡及照片說明核對身分。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/yahoo-he.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。記錄 2026 年 5 月公開育兒政策立場；不推論政策已實施，也不標示為本屆競選承諾。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-hoomedia-tong-yan-zhen",
+        "url": "https://hoomedia.com.tw/2026/11/13/180737/",
+        "publisher": "互傳媒",
+        "title": "燕珍拜票目睹身障行人跌倒送醫　主張推動「人行道路平專案」",
+        "role": "news-report",
+        "tier": "tier-3-reporting",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/hoomedia-tong.txt",
+        "byteLength": 5081,
+        "sha256": "f3c7cc3acfee779a9c7dfcd2c12fcd121a4a24cf2685bd35f582867e429a9cf8",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "互傳媒全文明確標示高雄市三民區市議員候選人童燕珍，並直接引述其主張。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/hoomedia-tong.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。記錄候選人提出的競選主張；不把文中行人受傷事件解讀為政策執行結果。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-portaly-lin-yan",
+        "url": "https://portaly.cc/issue101/pages/introduceyourself",
+        "publisher": "Portaly／林彥候選人自我介紹頁",
+        "title": "自我介紹 by 林彥 三民區 市議員候選人；高雄市。 擬AI智慧議員，提倡幼兒孕育、長照關懷、保育動物 | Portaly",
+        "role": "candidate-operated-campaign-site",
+        "tier": "tier-1-primary",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/portaly-lin.txt",
+        "byteLength": 2637,
+        "sha256": "dd5b3c47b753c27d838e1f0bf103e676f3dd7fb61250f9ad54083d9ba1f70f58",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-candidate-2026-district-kaohsiung-council-07-f42af7ef"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "候選人控制的 Portaly 自我介紹頁標題及頁面內容均標示林彥、三民區市議員候選人。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/portaly-lin.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。屬候選人自述；不由自述推論預算、執行進度或政策成效。"
+      },
+      {
+        "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+        "url": "https://vote-shanghsien.tw/",
+        "publisher": "徐尚賢候選人網站",
+        "title": "徐尚賢｜高雄市鳳山區議員參選人",
+        "role": "candidate-operated-campaign-site",
+        "tier": "tier-1-primary",
+        "retrievalStatus": "retrieved",
+        "httpStatus": 200,
+        "contentType": "text/plain",
+        "rawPath": "data/raw/policy/2026/enrichment/text/xu-site.txt",
+        "byteLength": 6953,
+        "sha256": "9e9fbbfeca47d65f7c77dda001cf8d41c3fcd5ab842dc15f3ec82960ca1c933e",
+        "retrievedAt": "2026-11-14T00:00:00.000Z",
+        "candidateIds": [
+          "official-candidate-2026-district-kaohsiung-council-09-acaa7403"
+        ],
+        "identityStatus": "resolved",
+        "identityBasis": [
+          "候選人控制網站直接寫明 2026 高雄市鳳山區議員參選人，並以「徐尚賢」校正近名搜尋結果。"
+        ],
+        "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/xu-site.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。網站列出六項主張及獨立的老幼共托主張；僅記錄候選人提出的方向，不宣稱法定權利、核准或已完成。"
       }
     ],
     "sourceAttempts": [
@@ -28333,6 +28494,104 @@
         "identityStatus": "not-applicable",
         "isNegativeEvidence": false,
         "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-01",
+        "candidateId": "official-mayor-wang-zhao-min-2026",
+        "personId": "person-wang-zhao-min-2026",
+        "sourceId": "policy-source-enrichment-udn-wang-zhao-min",
+        "sourceRole": "news-report",
+        "tier": "tier-3-reporting",
+        "url": "https://udn.com/vote2026/story/124652/9878477",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "聯合新聞網全文核對王肇民造勢／政見發表活動；活動事實不直接等同具體政策。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-02",
+        "candidateId": "official-mayor-wang-zhao-min-2026",
+        "personId": "person-wang-zhao-min-2026",
+        "sourceId": "policy-source-enrichment-tvbs-wang-zhao-min",
+        "sourceRole": "news-report",
+        "tier": "tier-3-reporting",
+        "url": "https://news.tvbs.com.tw/politics/4047304",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "TVBS全文核對王肇民造勢活動與城市治理理念引述；保留一般性表述。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-03",
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+        "personId": "person-kaohsiung-council-07-6b7a49b6",
+        "sourceId": "policy-source-enrichment-kcc-he-quan-feng",
+        "sourceRole": "institutional-member-profile",
+        "tier": "tier-2-authoritative",
+        "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=17295",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "高雄市議會官方質詢摘要核對何權峰議員身分及公共紀錄立場。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-04",
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+        "personId": "person-kaohsiung-council-07-6b7a49b6",
+        "sourceId": "policy-source-enrichment-yahoo-he-quan-feng",
+        "sourceRole": "news-report",
+        "tier": "tier-3-reporting",
+        "url": "https://tw.news.yahoo.com/%E4%BD%95%E6%AC%8A%E5%B3%B0%E4%BF%83%E6%9C%89%E6%95%88%E6%B8%9B%E7%B7%A9%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91-%E5%80%A1%E8%82%B2%E5%85%92%E6%94%BF%E7%AD%96%E6%87%89%E8%B5%B0%E5%90%91%E5%A4%9A%E5%85%83%E5%8D%94%E5%8A%A9-120509206.html",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "CDNS／Yahoo全文核對何權峰的育兒政策立場，日期為 2026-05-22。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-05",
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+        "personId": "person-kaohsiung-council-07-18990102",
+        "sourceId": "policy-source-enrichment-hoomedia-tong-yan-zhen",
+        "sourceRole": "news-report",
+        "tier": "tier-3-reporting",
+        "url": "https://hoomedia.com.tw/2026/11/13/180737/",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "互傳媒全文核對童燕珍身分及人行道路平專案主張。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-06",
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+        "personId": "person-kaohsiung-council-07-034b7985",
+        "sourceId": "policy-source-enrichment-portaly-lin-yan",
+        "sourceRole": "candidate-operated-campaign-site",
+        "tier": "tier-1-primary",
+        "url": "https://portaly.cc/issue101/pages/introduceyourself",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "候選人控制頁面核對林彥三民區市議員候選人身分與自述主張。"
+      },
+      {
+        "attemptId": "enrichment-followup-attempt-07",
+        "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+        "personId": "person-kaohsiung-council-09-c423cf75",
+        "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+        "sourceRole": "candidate-operated-campaign-site",
+        "tier": "tier-1-primary",
+        "url": "https://vote-shanghsien.tw/",
+        "attemptedAt": "2026-11-14T00:00:00.000Z",
+        "retrievalStatus": "retrieved",
+        "identityStatus": "resolved",
+        "isNegativeEvidence": false,
+        "resultNote": "候選人控制網站直接核對徐尚賢正名、鳳山區參選人身分及七項主張。"
       }
     ]
   },
@@ -53059,6 +53318,167 @@
         "獨立查核者重新擷取來源全文，並以候選人姓名、選區或文中職稱核對候選人身分。"
       ],
       "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/chenmei.source；rawPath 為移除 HTML 標記或將 PDF 轉為 UTF-8 的可核對文字版本。來源僅證明文中表態或歷史紀錄，不證明政策已實現。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-udn-wang-zhao-min",
+      "url": "https://udn.com/vote2026/story/124652/9878477",
+      "publisher": "聯合新聞網",
+      "title": "高雄市長選舉政見會登場 藍綠之外另3候選人背景一次看",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/udn-wang.txt",
+      "byteLength": 3400,
+      "sha256": "e6f92b2ab14d91c4fc392f72d0e174513388da08fc2c984118c1c847ded1a0b3",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-mayor-wang-zhao-min-2026"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "聯合新聞網全文以無黨籍高雄市長候選人王肇民姓名與選舉活動描述核對身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/udn-wang.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。僅用於核對造勢／政見發表活動與候選人身分，不把活動事實擴寫為具體政策。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-tvbs-wang-zhao-min",
+      "url": "https://news.tvbs.com.tw/politics/4047304",
+      "publisher": "TVBS新聞網",
+      "title": "高雄市長候選人「8人造勢場」爆紅！台上獨講68分鐘　奇特畫面曝光",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/tvbs-wang.txt",
+      "byteLength": 11222,
+      "sha256": "80ec5159c93e99c9bd132713d8ed5c0053a9078baa4b78118a31b31c8c75060d",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-mayor-wang-zhao-min-2026"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "TVBS全文明確標示無黨籍高雄市長候選人王肇民，並將引述內容歸於王肇民。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/tvbs-wang.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。與聯合新聞網交叉核對造勢活動；新增紀錄僅採一般性的城市治理理念表述。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-kcc-he-quan-feng",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=17295",
+      "publisher": "高雄市議會",
+      "title": "曾俊傑副議長、白喬茵、蔡武宏、李雨庭、何權峰、張勝富議員總質詢摘要",
+      "role": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/kcc-he.txt",
+      "byteLength": 16786,
+      "sha256": "f8509635b568bb370f7a0d86abf3654642144216e414308ad4b99c85c0a758ab",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "高雄市議會官方全文在何權峰議員總質詢摘要段落標示其姓名與發言內容。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/kcc-he.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。屬議員任期中的公共紀錄；不將議會質詢自動標示為 2026 競選承諾。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-yahoo-he-quan-feng",
+      "url": "https://tw.news.yahoo.com/%E4%BD%95%E6%AC%8A%E5%B3%B0%E4%BF%83%E6%9C%89%E6%95%88%E6%B8%9B%E7%B7%A9%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91-%E5%80%A1%E8%82%B2%E5%85%92%E6%94%BF%E7%AD%96%E6%87%89%E8%B5%B0%E5%90%91%E5%A4%9A%E5%85%83%E5%8D%94%E5%8A%A9-120509206.html",
+      "publisher": "CDNS／Yahoo新聞",
+      "title": "何權峰促有效減緩人口減少 倡育兒政策應走向多元協助",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/yahoo-he.txt",
+      "byteLength": 21275,
+      "sha256": "5b5d5dc4e529e783c1740919a6988315c6c8db62ca0979657e809410391135e0",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "CDNS／Yahoo全文以高雄市議員何權峰姓名、總質詢脈絡及照片說明核對身分。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/yahoo-he.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。記錄 2026 年 5 月公開育兒政策立場；不推論政策已實施，也不標示為本屆競選承諾。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-hoomedia-tong-yan-zhen",
+      "url": "https://hoomedia.com.tw/2026/11/13/180737/",
+      "publisher": "互傳媒",
+      "title": "燕珍拜票目睹身障行人跌倒送醫　主張推動「人行道路平專案」",
+      "role": "news-report",
+      "tier": "tier-3-reporting",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/hoomedia-tong.txt",
+      "byteLength": 5081,
+      "sha256": "f3c7cc3acfee779a9c7dfcd2c12fcd121a4a24cf2685bd35f582867e429a9cf8",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "互傳媒全文明確標示高雄市三民區市議員候選人童燕珍，並直接引述其主張。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/hoomedia-tong.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。記錄候選人提出的競選主張；不把文中行人受傷事件解讀為政策執行結果。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-portaly-lin-yan",
+      "url": "https://portaly.cc/issue101/pages/introduceyourself",
+      "publisher": "Portaly／林彥候選人自我介紹頁",
+      "title": "自我介紹 by 林彥 三民區 市議員候選人；高雄市。 擬AI智慧議員，提倡幼兒孕育、長照關懷、保育動物 | Portaly",
+      "role": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/portaly-lin.txt",
+      "byteLength": 2637,
+      "sha256": "dd5b3c47b753c27d838e1f0bf103e676f3dd7fb61250f9ad54083d9ba1f70f58",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-f42af7ef"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "候選人控制的 Portaly 自我介紹頁標題及頁面內容均標示林彥、三民區市議員候選人。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/portaly-lin.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。屬候選人自述；不由自述推論預算、執行進度或政策成效。"
+    },
+    {
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "url": "https://vote-shanghsien.tw/",
+      "publisher": "徐尚賢候選人網站",
+      "title": "徐尚賢｜高雄市鳳山區議員參選人",
+      "role": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "retrievalStatus": "retrieved",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "rawPath": "data/raw/policy/2026/enrichment/text/xu-site.txt",
+      "byteLength": 6953,
+      "sha256": "9e9fbbfeca47d65f7c77dda001cf8d41c3fcd5ab842dc15f3ec82960ca1c933e",
+      "retrievedAt": "2026-11-14T00:00:00.000Z",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-acaa7403"
+      ],
+      "identityStatus": "resolved",
+      "identityBasis": [
+        "候選人控制網站直接寫明 2026 高雄市鳳山區議員參選人，並以「徐尚賢」校正近名搜尋結果。"
+      ],
+      "note": "保留原始擷取 bytes：data/raw/policy/2026/enrichment/original/xu-site.source；rawPath 為可供連續摘錄核對的 UTF-8 文字。網站列出六項主張及獨立的老幼共托主張；僅記錄候選人提出的方向，不宣稱法定權利、核准或已完成。"
     }
   ],
   "sourceAttempts": [
@@ -56659,6 +57079,104 @@
       "identityStatus": "not-applicable",
       "isNegativeEvidence": false,
       "resultNote": "已依候選人姓名、選區與政黨檢索候選人控制來源、政黨候選人頁面、新聞報導、公開訪談及歷史公共紀錄；本次未找到可由來源全文核對的新增政策主張。這不表示候選人沒有政策。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-01",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "personId": "person-wang-zhao-min-2026",
+      "sourceId": "policy-source-enrichment-udn-wang-zhao-min",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://udn.com/vote2026/story/124652/9878477",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "聯合新聞網全文核對王肇民造勢／政見發表活動；活動事實不直接等同具體政策。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-02",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "personId": "person-wang-zhao-min-2026",
+      "sourceId": "policy-source-enrichment-tvbs-wang-zhao-min",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://news.tvbs.com.tw/politics/4047304",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "TVBS全文核對王肇民造勢活動與城市治理理念引述；保留一般性表述。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-03",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "personId": "person-kaohsiung-council-07-6b7a49b6",
+      "sourceId": "policy-source-enrichment-kcc-he-quan-feng",
+      "sourceRole": "institutional-member-profile",
+      "tier": "tier-2-authoritative",
+      "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=17295",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "高雄市議會官方質詢摘要核對何權峰議員身分及公共紀錄立場。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-04",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "personId": "person-kaohsiung-council-07-6b7a49b6",
+      "sourceId": "policy-source-enrichment-yahoo-he-quan-feng",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://tw.news.yahoo.com/%E4%BD%95%E6%AC%8A%E5%B3%B0%E4%BF%83%E6%9C%89%E6%95%88%E6%B8%9B%E7%B7%A9%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91-%E5%80%A1%E8%82%B2%E5%85%92%E6%94%BF%E7%AD%96%E6%87%89%E8%B5%B0%E5%90%91%E5%A4%9A%E5%85%83%E5%8D%94%E5%8A%A9-120509206.html",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "CDNS／Yahoo全文核對何權峰的育兒政策立場，日期為 2026-05-22。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-05",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "personId": "person-kaohsiung-council-07-18990102",
+      "sourceId": "policy-source-enrichment-hoomedia-tong-yan-zhen",
+      "sourceRole": "news-report",
+      "tier": "tier-3-reporting",
+      "url": "https://hoomedia.com.tw/2026/11/13/180737/",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "互傳媒全文核對童燕珍身分及人行道路平專案主張。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-06",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "personId": "person-kaohsiung-council-07-034b7985",
+      "sourceId": "policy-source-enrichment-portaly-lin-yan",
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": "https://portaly.cc/issue101/pages/introduceyourself",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人控制頁面核對林彥三民區市議員候選人身分與自述主張。"
+    },
+    {
+      "attemptId": "enrichment-followup-attempt-07",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "sourceRole": "candidate-operated-campaign-site",
+      "tier": "tier-1-primary",
+      "url": "https://vote-shanghsien.tw/",
+      "attemptedAt": "2026-11-14T00:00:00.000Z",
+      "retrievalStatus": "retrieved",
+      "identityStatus": "resolved",
+      "isNegativeEvidence": false,
+      "resultNote": "候選人控制網站直接核對徐尚賢正名、鳳山區參選人身分及七項主張。"
     }
   ],
   "claims": [
@@ -100620,6 +101138,138 @@
       "verificationStatus": "machine-validated",
       "reviewStatus": "editorially-approved",
       "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-wang-zhao-min-enrichment-city-governance-01",
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "personId": "person-wang-zhao-min-2026",
+      "sourceId": "policy-source-enrichment-tvbs-wang-zhao-min",
+      "evidenceId": "evidence-2026-enrichment-wang-zhao-min-city-governance-01",
+      "policyContext": "current-position",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-he-quan-feng-enrichment-station-development-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "personId": "person-kaohsiung-council-07-6b7a49b6",
+      "sourceId": "policy-source-enrichment-kcc-he-quan-feng",
+      "evidenceId": "evidence-2026-enrichment-he-quan-feng-station-development-01",
+      "policyContext": "historical-position",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-he-quan-feng-enrichment-childcare-diverse-support-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "personId": "person-kaohsiung-council-07-6b7a49b6",
+      "sourceId": "policy-source-enrichment-yahoo-he-quan-feng",
+      "evidenceId": "evidence-2026-enrichment-he-quan-feng-childcare-diverse-support-01",
+      "policyContext": "current-position",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-tong-yan-zhen-enrichment-sidewalk-leveling-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "personId": "person-kaohsiung-council-07-18990102",
+      "sourceId": "policy-source-enrichment-hoomedia-tong-yan-zhen",
+      "evidenceId": "evidence-2026-enrichment-tong-yan-zhen-sidewalk-leveling-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-lin-yan-enrichment-self-reported-priorities-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "personId": "person-kaohsiung-council-07-034b7985",
+      "sourceId": "policy-source-enrichment-portaly-lin-yan",
+      "evidenceId": "evidence-2026-enrichment-lin-yan-self-reported-priorities-01",
+      "policyContext": "current-position",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-fongshan-creek-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-fongshan-creek-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-wujia-land-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-wujia-land-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-wujia-facilities-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-wujia-facilities-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-underground-connection-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-underground-connection-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-tech-enforcement-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-tech-enforcement-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-cruise-tourism-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-cruise-tourism-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
+    },
+    {
+      "policyId": "policy-2026-xu-shang-xian-enrichment-intergenerational-care-01",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "personId": "person-kaohsiung-council-09-c423cf75",
+      "sourceId": "policy-source-enrichment-xu-shang-xian-site",
+      "evidenceId": "evidence-2026-enrichment-xu-shang-xian-intergenerational-care-01",
+      "policyContext": "2026-election-commitment",
+      "verificationStatus": "machine-validated",
+      "reviewStatus": "editorially-approved",
+      "publicationStatus": "approved-source-backed"
     }
   ],
   "audits": [
@@ -100655,21 +101305,26 @@
       "displayName": "王肇民",
       "districtId": "district-kaohsiung-mayor-2026",
       "electionType": "mayoral",
-      "sourceSnapshotIds": [],
+      "sourceSnapshotIds": [
+        "policy-source-enrichment-udn-wang-zhao-min",
+        "policy-source-enrichment-tvbs-wang-zhao-min"
+      ],
       "sourceAttemptIds": [
         "policy-attempt-wang-zhao-min-2026-1",
-        "enrichment-attempt-official-mayor-wang-zhao-min-2026"
+        "enrichment-attempt-official-mayor-wang-zhao-min-2026",
+        "enrichment-followup-attempt-01",
+        "enrichment-followup-attempt-02"
       ],
-      "policyReferenceCount": 0,
+      "policyReferenceCount": 1,
       "positionRecordIds": [],
       "careerRecordIds": [],
       "newsRecordCount": 0,
       "proposalRecordCount": 0,
       "individualVoteRecordCount": 0,
       "executiveInitiativeRecordCount": 0,
-      "outcome": "sources-unavailable",
+      "outcome": "policy-references-only",
       "researchStatus": "completed",
-      "note": "截至研究截止日，候選人專屬來源未能在保留檔案中取得；這不是候選人沒有相關資料的證據。",
+      "note": "已保留 1 筆上游政策研究參照；公開狀態沿用上游政策研究發布閘門。",
       "isNegativeEvidence": false,
       "verificationStatus": "machine-validated",
       "reviewStatus": "pending-human-review",
@@ -102271,13 +102926,17 @@
       "districtId": "district-kaohsiung-council-07",
       "electionType": "city-council",
       "sourceSnapshotIds": [
-        "policy-kcc-profile-2204"
+        "policy-kcc-profile-2204",
+        "policy-source-enrichment-kcc-he-quan-feng",
+        "policy-source-enrichment-yahoo-he-quan-feng"
       ],
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-07-6b7a49b6-1",
-        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-c4c45f4c"
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+        "enrichment-followup-attempt-03",
+        "enrichment-followup-attempt-04"
       ],
-      "policyReferenceCount": 1,
+      "policyReferenceCount": 3,
       "positionRecordIds": [
         "enrichment-position-kaohsiung-council-07-6b7a49b6-current-council-member"
       ],
@@ -102311,22 +102970,24 @@
       "districtId": "district-kaohsiung-council-07",
       "electionType": "city-council",
       "sourceSnapshotIds": [
-        "policy-source-raw-policy-2026-kmt-tong-yan-zhen-html"
+        "policy-source-raw-policy-2026-kmt-tong-yan-zhen-html",
+        "policy-source-enrichment-hoomedia-tong-yan-zhen"
       ],
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-07-18990102-1",
-        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-abeadb8c"
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+        "enrichment-followup-attempt-05"
       ],
-      "policyReferenceCount": 0,
+      "policyReferenceCount": 1,
       "positionRecordIds": [],
       "careerRecordIds": [],
       "newsRecordCount": 0,
       "proposalRecordCount": 0,
       "individualVoteRecordCount": 0,
       "executiveInitiativeRecordCount": 0,
-      "outcome": "sources-attempted-no-additional-records",
+      "outcome": "policy-references-only",
       "researchStatus": "completed",
-      "note": "已完成有界來源檢索，但目前保留來源未提供可機器驗證的新增基本／從政歷程紀錄；此結果不表示候選人沒有相關資料。",
+      "note": "已保留 1 筆上游政策研究參照；公開狀態沿用上游政策研究發布閘門。",
       "isNegativeEvidence": false,
       "verificationStatus": "machine-validated",
       "reviewStatus": "pending-human-review",
@@ -102338,21 +102999,24 @@
       "displayName": "林彥",
       "districtId": "district-kaohsiung-council-07",
       "electionType": "city-council",
-      "sourceSnapshotIds": [],
+      "sourceSnapshotIds": [
+        "policy-source-enrichment-portaly-lin-yan"
+      ],
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-07-034b7985-1",
-        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-f42af7ef"
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+        "enrichment-followup-attempt-06"
       ],
-      "policyReferenceCount": 0,
+      "policyReferenceCount": 1,
       "positionRecordIds": [],
       "careerRecordIds": [],
       "newsRecordCount": 0,
       "proposalRecordCount": 0,
       "individualVoteRecordCount": 0,
       "executiveInitiativeRecordCount": 0,
-      "outcome": "sources-unavailable",
+      "outcome": "policy-references-only",
       "researchStatus": "completed",
-      "note": "截至研究截止日，候選人專屬來源未能在保留檔案中取得；這不是候選人沒有相關資料的證據。",
+      "note": "已保留 1 筆上游政策研究參照；公開狀態沿用上游政策研究發布閘門。",
       "isNegativeEvidence": false,
       "verificationStatus": "machine-validated",
       "reviewStatus": "pending-human-review",
@@ -103268,21 +103932,24 @@
       "displayName": "徐尚賢",
       "districtId": "district-kaohsiung-council-09",
       "electionType": "city-council",
-      "sourceSnapshotIds": [],
+      "sourceSnapshotIds": [
+        "policy-source-enrichment-xu-shang-xian-site"
+      ],
       "sourceAttemptIds": [
         "policy-attempt-kaohsiung-council-09-c423cf75-1",
-        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-acaa7403"
+        "enrichment-attempt-official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+        "enrichment-followup-attempt-07"
       ],
-      "policyReferenceCount": 0,
+      "policyReferenceCount": 7,
       "positionRecordIds": [],
       "careerRecordIds": [],
       "newsRecordCount": 0,
       "proposalRecordCount": 0,
       "individualVoteRecordCount": 0,
       "executiveInitiativeRecordCount": 0,
-      "outcome": "sources-unavailable",
+      "outcome": "policy-references-only",
       "researchStatus": "completed",
-      "note": "截至研究截止日，候選人專屬來源未能在保留檔案中取得；這不是候選人沒有相關資料的證據。",
+      "note": "已保留 7 筆上游政策研究參照；公開狀態沿用上游政策研究發布閘門。",
       "isNegativeEvidence": false,
       "verificationStatus": "machine-validated",
       "reviewStatus": "pending-human-review",

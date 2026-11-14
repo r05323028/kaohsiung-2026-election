@@ -109,10 +109,10 @@ npm run preview             # preview dist/ output
 ## 靜態部署
 
 ```bash
-BASE_PATH=/your-repository/ SITE_URL=https://example.com/ npm run build
+BASE_PATH=/kaohsiung-2026-election/ SITE_URL=https://r05323028.github.io npm run build
 ```
 
-`dist/` 可直接部署到 GitHub Pages 或其他靜態主機。不要把 repository name 硬編碼到 asset URL；所有網站連結使用 `BASE_PATH`。
+`dist/` 可直接部署到 GitHub Pages 或其他靜態主機。推送 `main` 會由 `.github/workflows/deploy-pages.yml` 建置並部署到 <https://r05323028.github.io/kaohsiung-2026-election/>。不要把 repository name 硬編碼到 asset URL；所有網站連結使用 `BASE_PATH`。
 
 ## 路由
 

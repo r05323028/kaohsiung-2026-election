@@ -50,7 +50,7 @@ data/published/2026/candidate-biographies.json
 npm run editorial:validate
 npm run editorial:publish
 npm run build
-BASE_PATH=/kaohsiung-civic-stories/ npm run build
+BASE_PATH=/kaohsiung-2026-election/ npm run build
 ```
 
 若要新增第一筆真實資料，必須由已設定且實際負責的 reviewer 逐筆檢查原始來源、匯出 decision、通過 CLI integrity gate，再重新產生靜態網站。沒有真人決定時，正確行為是維持空 snapshot。

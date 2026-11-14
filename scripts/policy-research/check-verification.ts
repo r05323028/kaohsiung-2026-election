@@ -21,7 +21,9 @@ function checkVerification(batchId: string): string[] {
   const input = readJsonFile<VerificationInput>(
     'data/policy-research/2026/verification/verify-input-' + batchId + '.json',
   );
-  const records = input.records.map((record) => InputRecordSchema.parse(record));
+  const records = input.records.map((record) =>
+    InputRecordSchema.parse(record),
+  );
   const verification = validateVerificationBatch(
     readJsonFile<unknown>(
       'data/policy-research/2026/verification/verify-' + batchId + '.json',
@@ -34,7 +36,9 @@ function checkVerification(batchId: string): string[] {
   for (const decision of verification.decisions) {
     const researchId = decision.researchId;
     if (!researchId) {
-      problems.push('decision without researchId: ' + (decision.policyId ?? 'unknown'));
+      problems.push(
+        'decision without researchId: ' + (decision.policyId ?? 'unknown'),
+      );
       continue;
     }
     if (!ids.has(researchId)) {

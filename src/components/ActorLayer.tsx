@@ -794,7 +794,7 @@ export default function ActorLayer({
     if (selectedRing.current && selectedPose) {
       selectedRing.current.position.set(
         selectedPose.position.x,
-        0.478,
+        MARKER_GROUND_Y,
         selectedPose.position.z,
       );
       selectedRing.current.visible = true;
@@ -873,7 +873,6 @@ export default function ActorLayer({
           transparent
           opacity={0.9}
           depthWrite={false}
-          depthTest={false}
           side={THREE.DoubleSide}
         />
       </mesh>

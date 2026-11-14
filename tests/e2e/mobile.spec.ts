@@ -116,6 +116,15 @@ test('mobile essential controls meet a 44px touch target at 390x844', async ({
   await page.locator('[aria-controls="city-people-tray"]').click();
   const peopleTray = page.locator('#city-people-tray');
   await expect(peopleTray).toBeVisible();
+  // Wait for the rise animation: mid-flight composited transforms report
+  // sub-pixel sizes and would make the exact 44px assertion flaky.
+  await peopleTray.evaluate((element) =>
+    Promise.all(
+      element
+        .getAnimations({ subtree: true })
+        .map((animation) => animation.finished.catch(() => undefined)),
+    ),
+  );
   assertTargets(
     await measure(
       '#city-people-tray .candidate-sheet__close, #city-people-tray .city-candidate',
@@ -246,4 +255,63 @@ test('mobile profile panel keeps the official ballot number visible', async ({
   await expect(panel).toBeVisible();
   await expect(panel).toContainText('選票號次');
   await expect(panel).toContainText('1 號');
+});
+
+test('mobile roster sheet opens fully below the fixed masthead', async ({
+  page,
+}) => {
+  await page.goto('/?admin=E03');
+  await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+    'data-hydrated',
+    'true',
+  );
+  await page.locator('[aria-controls="city-people-tray"]').click();
+
+  const sheet = page.locator('#city-people-tray');
+  await expect(sheet).toBeVisible();
+  await sheet.evaluate((element) =>
+    Promise.all(
+      element
+        .getAnimations({ subtree: true })
+        .map((animation) => animation.finished.catch(() => undefined)),
+    ),
+  );
+
+  const navbarBox = await page.locator('.global-header__surface').boundingBox();
+  const sheetBox = await sheet.boundingBox();
+  const viewport = page.viewportSize();
+  if (!navbarBox || !sheetBox || !viewport) {
+    throw new Error('missing layout boxes');
+  }
+
+  expect(sheetBox.y).toBeGreaterThanOrEqual(navbarBox.y + navbarBox.height);
+  expect(sheetBox.y).toBeLessThan(navbarBox.y + navbarBox.height + 32);
+  expect(sheetBox.y + sheetBox.height).toBeLessThanOrEqual(
+    viewport.height + 0.5,
+  );
+
+  await expect(
+    sheet.getByRole('heading', { name: '所有候選人' }),
+  ).toBeVisible();
+  const closeBox = await page.locator('.candidate-sheet__close').boundingBox();
+  expect(closeBox?.width ?? 0).toBeGreaterThanOrEqual(44);
+  expect(closeBox?.height ?? 0).toBeGreaterThanOrEqual(44);
+  expect(closeBox?.y ?? 0).toBeGreaterThanOrEqual(sheetBox.y);
+
+  const roster = await sheet.evaluate((element) => {
+    const scroller = element.querySelector('.candidate-sheet__scroll');
+    if (!(scroller instanceof HTMLElement)) {
+      throw new Error('missing roster scroller');
+    }
+    scroller.scrollTop = scroller.scrollHeight;
+    return {
+      scrollTop: scroller.scrollTop,
+      pageScrollY: window.scrollY,
+      groups: element.querySelectorAll('.candidate-sheet__group').length,
+    };
+  });
+  expect(roster.groups).toBe(2);
+  expect(roster.scrollTop).toBeGreaterThan(0);
+  expect(roster.pageScrollY).toBe(0);
+  await expect(sheet.locator('.candidate-sheet__group').last()).toBeVisible();
 });

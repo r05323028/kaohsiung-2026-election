@@ -2,14 +2,88 @@ import {
   type CSSProperties,
   type PointerEvent as ReactPointerEvent,
   type RefObject,
+  useEffect,
   useMemo,
   useRef,
+  useState,
 } from 'react';
 import type { PublicCandidateProfile, PublicDistrictView } from '../data';
 import {
   ballotNumberText,
   compareBallotNumbers,
 } from '../data/official/ballot';
+import {
+  type CandidateSheetBounds,
+  resolveCandidateSheetBounds,
+} from './candidate-sheet-geometry';
+
+const NAVBAR_SELECTOR = '[data-testid="global-header"]';
+
+function measureNavbarBottom(): number | null {
+  const navbar = document.querySelector<HTMLElement>(NAVBAR_SELECTOR);
+  if (!navbar) return null;
+  const rect = navbar.getBoundingClientRect();
+  return rect.height > 0 ? rect.bottom : null;
+}
+
+/**
+ * The expanded sheet is anchored to the real masthead instead of a hard-coded
+ * offset: the navbar height changes between breakpoints and with browser font
+ * scaling, and its position shifts when mobile chrome collapses.
+ */
+function useCandidateSheetBounds(open: boolean): CandidateSheetBounds | null {
+  const [bounds, setBounds] = useState<CandidateSheetBounds | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    let frame = 0;
+    const sync = () => {
+      frame = 0;
+      const navBottom = measureNavbarBottom();
+      if (navBottom === null) {
+        setBounds(null);
+        return;
+      }
+      const next = resolveCandidateSheetBounds({
+        viewportHeight: window.innerHeight,
+        navBottom,
+      });
+      setBounds((current) =>
+        current &&
+        current.top === next.top &&
+        current.maxHeight === next.maxHeight
+          ? current
+          : next,
+      );
+    };
+    const schedule = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(sync);
+    };
+
+    sync();
+    const navbar = document.querySelector<HTMLElement>(NAVBAR_SELECTOR);
+    const observer =
+      navbar && typeof ResizeObserver === 'function'
+        ? new ResizeObserver(schedule)
+        : null;
+    observer?.observe(navbar as HTMLElement);
+    window.addEventListener('resize', schedule);
+    window.addEventListener('orientationchange', schedule);
+    window.visualViewport?.addEventListener('resize', schedule);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      observer?.disconnect();
+      window.removeEventListener('resize', schedule);
+      window.removeEventListener('orientationchange', schedule);
+      window.visualViewport?.removeEventListener('resize', schedule);
+    };
+  }, [open]);
+
+  return bounds;
+}
 
 export type CandidateConstituencyGroup = {
   district: PublicDistrictView;
@@ -96,6 +170,7 @@ export default function CandidateBottomSheet({
   );
   const dragStateRef = useRef<DragState | null>(null);
   const suppressClickRef = useRef(false);
+  const sheetBounds = useCandidateSheetBounds(open);
 
   const startDrag = (event: ReactPointerEvent<HTMLElement>) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return;
@@ -186,6 +261,14 @@ export default function CandidateBottomSheet({
         (reducedMotion ? ' prefers-reduced-motion' : '')
       }
       data-testid="candidate-bottom-sheet"
+      style={
+        sheetBounds
+          ? ({
+              '--candidate-sheet-top': `${sheetBounds.top}px`,
+              '--candidate-sheet-max-height': `${sheetBounds.maxHeight}px`,
+            } as CSSProperties)
+          : undefined
+      }
     >
       <section
         aria-labelledby="candidate-sheet-heading"

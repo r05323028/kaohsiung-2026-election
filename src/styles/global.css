@@ -3543,6 +3543,12 @@ body.is-immersive .site-footer {
 
 /* Candidate roster sheet: candidate-only surface with map-safe drag regions. */
 
+/* The sheet is mounted inside .city-app, which is its own stacking context
+   (z-index: 1, isolation: isolate). That context always paints below the fixed
+   .global-header (z-index: 50) in the root context, so the masthead can never
+   be covered and the sheet is positioned beneath it instead of fighting it
+   with a higher z-index. */
+
 .candidate-sheet {
   position: absolute;
   z-index: 60;
@@ -3620,11 +3626,27 @@ body.is-immersive .site-footer {
 }
 
 .candidate-sheet--open {
+  /* Fixed, not absolute: the expanded sheet must escape the city stage's
+     overflow clip and cover the viewport from the masthead down. The top edge
+     comes from the measured navbar height (see CandidateBottomSheet); this
+     variable is only the safe-area aware fallback for the first paint, and the
+     height budget derives from it so both edges always agree. */
+  --candidate-sheet-top: calc(env(safe-area-inset-top, 0px) + 5.65rem);
+  position: fixed;
+  top: var(--candidate-sheet-top);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  max-height: var(
+    --candidate-sheet-max-height,
+    calc(100dvh - var(--candidate-sheet-top))
+  );
   align-items: stretch;
-  padding: max(0.45rem, env(safe-area-inset-top))
-    clamp(0.45rem, 1.5vw, 1.25rem)
+  padding: 0 clamp(0.45rem, 1.5vw, 1.25rem)
     max(0.45rem, env(safe-area-inset-bottom));
   background: rgba(17, 48, 60, 0.18);
+  overscroll-behavior: contain;
   pointer-events: auto;
   backdrop-filter: blur(2px);
 }
@@ -3633,9 +3655,10 @@ body.is-immersive .site-footer {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   width: min(100%, 92rem);
-  height: min(94dvh, 68rem);
+  height: auto;
   max-height: 100%;
-  margin: auto auto 0;
+  min-height: 0;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 1.45rem 1.45rem 0.9rem 0.9rem;
@@ -3836,7 +3859,6 @@ body.is-immersive .site-footer {
 
   .candidate-sheet__surface {
     width: 100%;
-    height: calc(100dvh - max(0.45rem, env(safe-area-inset-top)));
     border-right: 0;
     border-bottom: 0;
     border-left: 0;

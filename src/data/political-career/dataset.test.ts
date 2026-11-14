@@ -41,7 +41,11 @@ describe('political career dataset', () => {
       'official-candidate-2026-district-kaohsiung-council-08-440e3b8d',
     );
     expect(covered?.activities.length ?? 0).toBeGreaterThan(0);
-    expect(covered?.activities[0]?.sources).toBeUndefined();
+    const first = covered?.activities[0];
+    const source = first ? covered?.sources[first.sourceId] : undefined;
+    expect(source).toBeDefined();
+    expect(source && 'rawPath' in source).toBe(false);
+    expect(source && 'sha256' in source).toBe(false);
 
     const uncovered = getPoliticalCareer('official-mayor-zhang-jing-2026');
     expect(uncovered?.activities).toHaveLength(0);

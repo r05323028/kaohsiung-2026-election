@@ -1,32 +1,32 @@
 import {
   type DiscoveryFile,
-  type RosterCandidate,
-  type VerificationFile,
   discoveryPath,
   fetchDocument,
+  inferTopicTags,
   loadRoster,
   pool,
+  type RosterCandidate,
   readJsonFile,
-  inferTopicTags,
   sleep,
+  type VerificationFile,
   verificationPath,
   writeJsonFile,
 } from '../../src/data/news/pipeline';
 import {
-  NEWS_SOURCES,
-  type CandidateIdentity,
   assessIdentity,
   buildVerification,
+  type CandidateIdentity,
   extractArticleDocument,
+  NEWS_SOURCES,
   sha256,
 } from '../../src/data/news/research';
 import {
-  type NewsArticle,
-  NEWS_POLICY_VERSION,
-  NEWS_VERIFIER_VERSION,
-  NewsArticleSchema,
   articleIdFor,
   eventKeyFor,
+  NEWS_POLICY_VERSION,
+  NEWS_VERIFIER_VERSION,
+  type NewsArticle,
+  NewsArticleSchema,
   normalizeUrl,
 } from '../../src/data/news/schema';
 import { parseNewsArgs } from './args';
@@ -73,9 +73,13 @@ async function main(): Promise<void> {
   let processed = 0;
 
   await pool(scoped, options.concurrency, async (candidate) => {
-    const discovery = await readJsonFile<DiscoveryFile>(discoveryPath(candidate.id));
+    const discovery = await readJsonFile<DiscoveryFile>(
+      discoveryPath(candidate.id),
+    );
     if (!discovery || discovery.hits.length === 0) return;
-    const existing = await readJsonFile<VerificationFile>(verificationPath(candidate.id));
+    const existing = await readJsonFile<VerificationFile>(
+      verificationPath(candidate.id),
+    );
     if (existing && !options.refresh) {
       skipped += 1;
       return;
@@ -85,7 +89,9 @@ async function main(): Promise<void> {
     const articles: NewsArticle[] = [];
     const rejected: VerificationFile['rejected'] = [];
     for (const hit of discovery.hits.slice(0, MAX_ARTICLES_PER_CANDIDATE)) {
-      const response = await fetchDocument(hit.url, { retries: options.retries });
+      const response = await fetchDocument(hit.url, {
+        retries: options.retries,
+      });
       if (response.status !== 200 || !response.text) {
         rejected.push({
           url: hit.url,
@@ -119,7 +125,10 @@ async function main(): Promise<void> {
           headline: hit.headline,
           reasons:
             outcome.excerpt.length < 20
-              ? [...failed.map((check) => 'failed:' + check.check), 'evidence-excerpt-too-short']
+              ? [
+                  ...failed.map((check) => 'failed:' + check.check),
+                  'evidence-excerpt-too-short',
+                ]
               : failed.map((check) => 'failed:' + check.check),
           httpStatus: response.status,
         });
@@ -128,7 +137,8 @@ async function main(): Promise<void> {
       }
 
       const canonicalUrl = normalizeUrl(
-        document.canonicalUrl && document.canonicalUrl.includes(hostnameOf(hit.url))
+        document.canonicalUrl &&
+          document.canonicalUrl.includes(hostnameOf(hit.url))
           ? document.canonicalUrl
           : hit.url,
       );

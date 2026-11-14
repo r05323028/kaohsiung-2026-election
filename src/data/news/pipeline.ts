@@ -1,16 +1,16 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { sha256 } from './research';
 import {
+  articleIdFor,
+  NEWS_SNAPSHOT_DATE,
   type NewsArticle,
   type NewsCandidateCoverage,
   type NewsCoverageStatus,
-  type NewsTopic,
-  NEWS_SNAPSHOT_DATE,
   NewsDateSchema,
-  articleIdFor,
+  type NewsTopic,
   sortNewsArticles,
 } from './schema';
-import { sha256 } from './research';
 
 const ROOT = process.cwd();
 
@@ -65,7 +65,9 @@ export async function loadRoster(): Promise<RosterCandidate[]> {
   const raw = JSON.parse(
     await readFile(path.join(ROOT, NEWS_PATHS.roster), 'utf8'),
   ) as RosterFile;
-  const districts = new Map(raw.districts.map((district) => [district.id, district]));
+  const districts = new Map(
+    raw.districts.map((district) => [district.id, district]),
+  );
   return raw.candidates.map((candidate) => {
     const district = districts.get(candidate.districtId);
     return {
@@ -183,18 +185,88 @@ export async function writeTextFile(
   await writeFile(target, value, 'utf8');
 }
 
-export const TOPIC_KEYWORDS: ReadonlyArray<readonly [NewsTopic, readonly string[]]> = [
-  ['election', ['登記', '抽籤', '號次', '參選', '競選', '初選', '提名', '民調', '投票', '選舉', '政見會', '拜票']],
-  ['policy', ['政策', '政見', '預算', '補助', '托育', '長照', '住宅', '捷運', '產業', '能源', '交通建設']],
-  ['legislative', ['議會', '質詢', '提案', '審查', '程序委員會', '臨時會', '定期會', '表決']],
-  ['public-service', ['會勘', '爭取', '服務處', '陳情', '協調', '捐贈', '公益', '志工']],
-  ['local-issue', ['淹水', '空污', '垃圾', '道路', '公園', '市場', '夜市', '停車', '學區', '社區']],
-  ['legal', ['起訴', '判決', '偵辦', '調查', '羈押', '告訴', '二審', '地院', '高院', '緩刑']],
+export const TOPIC_KEYWORDS: ReadonlyArray<
+  readonly [NewsTopic, readonly string[]]
+> = [
+  [
+    'election',
+    [
+      '登記',
+      '抽籤',
+      '號次',
+      '參選',
+      '競選',
+      '初選',
+      '提名',
+      '民調',
+      '投票',
+      '選舉',
+      '政見會',
+      '拜票',
+    ],
+  ],
+  [
+    'policy',
+    [
+      '政策',
+      '政見',
+      '預算',
+      '補助',
+      '托育',
+      '長照',
+      '住宅',
+      '捷運',
+      '產業',
+      '能源',
+      '交通建設',
+    ],
+  ],
+  [
+    'legislative',
+    ['議會', '質詢', '提案', '審查', '程序委員會', '臨時會', '定期會', '表決'],
+  ],
+  [
+    'public-service',
+    ['會勘', '爭取', '服務處', '陳情', '協調', '捐贈', '公益', '志工'],
+  ],
+  [
+    'local-issue',
+    [
+      '淹水',
+      '空污',
+      '垃圾',
+      '道路',
+      '公園',
+      '市場',
+      '夜市',
+      '停車',
+      '學區',
+      '社區',
+    ],
+  ],
+  [
+    'legal',
+    [
+      '起訴',
+      '判決',
+      '偵辦',
+      '調查',
+      '羈押',
+      '告訴',
+      '二審',
+      '地院',
+      '高院',
+      '緩刑',
+    ],
+  ],
   ['career', ['接任', '卸任', '辭職', '就職', '經歷', '連任', '轉任']],
 ] as const;
 
 /** Descriptive topical tags only. Never tone, sentiment or favourability. */
-export function inferTopicTags(headline: string, description: string | null): NewsTopic[] {
+export function inferTopicTags(
+  headline: string,
+  description: string | null,
+): NewsTopic[] {
   const text = headline + ' ' + (description ?? '');
   const tags: NewsTopic[] = [];
   for (const [topic, keywords] of TOPIC_KEYWORDS) {
@@ -254,9 +326,10 @@ export function coverageFor(
 ): NewsCandidateCoverage {
   const attempts = discovery?.attempts ?? [];
   const discovered = discovery?.hits.length ?? 0;
-  const verifiedArticles = verification?.articles.filter(
-    (article) => article.verification.status === 'verified',
-  ) ?? [];
+  const verifiedArticles =
+    verification?.articles.filter(
+      (article) => article.verification.status === 'verified',
+    ) ?? [];
   const published = verifiedArticles.filter(
     (article) => article.publication.status === 'published',
   ).length;
@@ -266,7 +339,10 @@ export function coverageFor(
   if (!discovery) {
     status = 'not-researched';
     blockers.push('discovery-not-run');
-  } else if (attempts.length > 0 && attempts.every((attempt) => attempt.status === 'source-error')) {
+  } else if (
+    attempts.length > 0 &&
+    attempts.every((attempt) => attempt.status === 'source-error')
+  ) {
     status = 'not-researched';
     blockers.push('discovery-source-error');
   } else if (discovered === 0) {
@@ -332,8 +408,13 @@ export function mergeCoverage(
   verifiedCounts: ReadonlyMap<string, number>,
 ): NewsCandidateCoverage[] {
   return coverage.map((entry) => {
-    const published = publishedIds.has(entry.candidateId) ? Math.max(1, entry.published) : 0;
-    const verified = Math.max(entry.verified, verifiedCounts.get(entry.candidateId) ?? 0);
+    const published = publishedIds.has(entry.candidateId)
+      ? Math.max(1, entry.published)
+      : 0;
+    const verified = Math.max(
+      entry.verified,
+      verifiedCounts.get(entry.candidateId) ?? 0,
+    );
     let status = entry.status;
     if (published > 0) status = 'published';
     else if (verified > 0) status = 'verified-pending-review';
@@ -345,6 +426,8 @@ export function snapshotDate(): string {
   return NewsDateSchema.parse(NEWS_SNAPSHOT_DATE);
 }
 
-export function sortedArticles(articles: readonly NewsArticle[]): NewsArticle[] {
+export function sortedArticles(
+  articles: readonly NewsArticle[],
+): NewsArticle[] {
   return sortNewsArticles(articles);
 }

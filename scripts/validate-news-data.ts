@@ -1,9 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import {
-  NEWS_PATHS,
-  loadRoster,
-} from '../src/data/news/pipeline';
+import { loadRoster, NEWS_PATHS } from '../src/data/news/pipeline';
 import {
   NewsNormalizedDatasetSchema,
   NewsPublishedDatasetSchema,
@@ -24,7 +21,9 @@ const FORBIDDEN_KEYS = [
 function findForbiddenKeys(value: unknown, trail: string): string[] {
   if (!value || typeof value !== 'object') return [];
   if (Array.isArray(value)) {
-    return value.flatMap((item, index) => findForbiddenKeys(item, trail + '[' + index + ']'));
+    return value.flatMap((item, index) =>
+      findForbiddenKeys(item, trail + '[' + index + ']'),
+    );
   }
   const hits: string[] = [];
   for (const [key, child] of Object.entries(value as Record<string, unknown>)) {
@@ -37,7 +36,9 @@ function findForbiddenKeys(value: unknown, trail: string): string[] {
 async function main(): Promise<void> {
   const errors: string[] = [];
   const read = async (relative: string) =>
-    JSON.parse(await readFile(path.join(process.cwd(), relative), 'utf8')) as unknown;
+    JSON.parse(
+      await readFile(path.join(process.cwd(), relative), 'utf8'),
+    ) as unknown;
 
   const roster = await loadRoster();
   const rosterIds = new Set(roster.map((candidate) => candidate.id));
@@ -55,7 +56,9 @@ async function main(): Promise<void> {
 
   const coverageIds = published.coverage.map((entry) => entry.candidateId);
   if (coverageIds.length !== roster.length) {
-    errors.push('coverage rows ' + coverageIds.length + ' != roster ' + roster.length);
+    errors.push(
+      'coverage rows ' + coverageIds.length + ' != roster ' + roster.length,
+    );
   }
   const seenCoverage = new Set<string>();
   for (const entry of published.coverage) {
@@ -83,7 +86,9 @@ async function main(): Promise<void> {
     }
     articleIds.add(article.articleId);
     if (article.publication.status !== 'published') {
-      errors.push('non-published article in published dataset ' + article.articleId);
+      errors.push(
+        'non-published article in published dataset ' + article.articleId,
+      );
     }
     if (!article.summary) {
       errors.push('published article without summary ' + article.articleId);
@@ -102,28 +107,45 @@ async function main(): Promise<void> {
     }
     for (const candidateId of article.candidateIds) {
       if (!rosterIds.has(candidateId)) {
-        errors.push('article ' + article.articleId + ' references unknown candidate ' + candidateId);
+        errors.push(
+          'article ' +
+            article.articleId +
+            ' references unknown candidate ' +
+            candidateId,
+        );
       }
     }
   }
 
-  const normalizedIds = new Set(normalized.articles.map((article) => article.articleId));
+  const normalizedIds = new Set(
+    normalized.articles.map((article) => article.articleId),
+  );
   for (const articleId of articleIds) {
     if (!normalizedIds.has(articleId)) {
-      errors.push('published article missing from normalized dataset ' + articleId);
+      errors.push(
+        'published article missing from normalized dataset ' + articleId,
+      );
     }
   }
   const publishedCounts = new Map<string, number>();
   for (const article of published.articles) {
     for (const candidateId of article.candidateIds) {
-      publishedCounts.set(candidateId, (publishedCounts.get(candidateId) ?? 0) + 1);
+      publishedCounts.set(
+        candidateId,
+        (publishedCounts.get(candidateId) ?? 0) + 1,
+      );
     }
   }
   for (const entry of published.coverage) {
     const expected = publishedCounts.get(entry.candidateId) ?? 0;
     if (entry.published !== expected) {
       errors.push(
-        'coverage published count mismatch ' + entry.candidateId + ': ' + entry.published + ' != ' + expected,
+        'coverage published count mismatch ' +
+          entry.candidateId +
+          ': ' +
+          entry.published +
+          ' != ' +
+          expected,
       );
     }
     if (expected > 0 && entry.status !== 'published') {
@@ -133,7 +155,9 @@ async function main(): Promise<void> {
 
   if (errors.length > 0) {
     console.error(errors.map((error) => '- ' + error).join('\n'));
-    throw new Error('News validation failed with ' + errors.length + ' error(s).');
+    throw new Error(
+      'News validation failed with ' + errors.length + ' error(s).',
+    );
   }
   console.log(
     'News data OK: ' +

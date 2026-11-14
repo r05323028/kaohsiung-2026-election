@@ -41,13 +41,28 @@ export function parseNewsArgs(argv: readonly string[]): NewsCliOptions {
       continue;
     }
     const value = inline ?? argv[index + 1];
-    if (!value || value.startsWith('--')) throw new Error('Missing value for ' + flag + '.\n' + USAGE);
+    if (!value || value.startsWith('--'))
+      throw new Error('Missing value for ' + flag + '.\n' + USAGE);
     if (!inline) index += 1;
-    if (flag === '--candidate') candidates.push(...value.split(',').map((item) => item.trim()).filter(Boolean));
-    else if (flag === '--district') districts.push(...value.split(',').map((item) => item.trim()).filter(Boolean));
+    if (flag === '--candidate')
+      candidates.push(
+        ...value
+          .split(',')
+          .map((item) => item.trim())
+          .filter(Boolean),
+      );
+    else if (flag === '--district')
+      districts.push(
+        ...value
+          .split(',')
+          .map((item) => item.trim())
+          .filter(Boolean),
+      );
     else if (flag === '--limit') options.limit = Number.parseInt(value, 10);
-    else if (flag === '--concurrency') options.concurrency = Math.max(1, Number.parseInt(value, 10));
-    else if (flag === '--retries') options.retries = Math.max(0, Number.parseInt(value, 10));
+    else if (flag === '--concurrency')
+      options.concurrency = Math.max(1, Number.parseInt(value, 10));
+    else if (flag === '--retries')
+      options.retries = Math.max(0, Number.parseInt(value, 10));
     else throw new Error('Unknown flag ' + flag + '.\n' + USAGE);
   }
   if (candidates.length > 0) options.candidateIds = new Set(candidates);

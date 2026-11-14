@@ -1,15 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import {
-  NEWS_POLICY_VERSION,
-  NewsArticleSchema,
   applyDeduplication,
   articleIdFor,
   evaluateNewsPublication,
   eventKeyFor,
+  NEWS_POLICY_VERSION,
+  type NewsArticle,
+  NewsArticleSchema,
   normalizeHeadline,
   normalizeUrl,
   summaryNeutralityBlockers,
-  type NewsArticle,
 } from './schema';
 
 const SHA = 'a'.repeat(64);
@@ -53,7 +53,11 @@ function article(overrides: Partial<NewsArticle> = {}): NewsArticle {
       verifierVersion: 'news-verifier-v1',
       checks: [
         { check: 'source-reachable', passed: true, detail: 'HTTP 200' },
-        { check: 'identity', passed: true, detail: 'name in headline with district' },
+        {
+          check: 'identity',
+          passed: true,
+          detail: 'name in headline with district',
+        },
       ],
       notes: [],
     },
@@ -128,7 +132,9 @@ describe('evaluateNewsPublication', () => {
   });
 
   it('blocks duplicates', () => {
-    const result = evaluateNewsPublication(article({ duplicateOf: 'news-00000002' }));
+    const result = evaluateNewsPublication(
+      article({ duplicateOf: 'news-00000002' }),
+    );
     expect(result.status).toBe('rejected-duplicate');
     expect(result.blockers).toContain('duplicate-of:news-00000002');
   });
@@ -147,7 +153,9 @@ describe('summaryNeutralityBlockers', () => {
 describe('normalisation', () => {
   it('strips tracking parameters, hash and www prefix', () => {
     expect(
-      normalizeUrl('https://www.News.ltn.com.tw/news/politics/breakingnews/1/?utm_source=x&fbclid=y#top'),
+      normalizeUrl(
+        'https://www.News.ltn.com.tw/news/politics/breakingnews/1/?utm_source=x&fbclid=y#top',
+      ),
     ).toBe('https://news.ltn.com.tw/news/politics/breakingnews/1');
   });
 
@@ -159,7 +167,9 @@ describe('normalisation', () => {
 
   it('derives a stable article id from the canonical url', () => {
     const id = articleIdFor('https://www.ettoday.net/news/20261101/123.htm');
-    expect(id).toBe(articleIdFor('https://ettoday.net/news/20261101/123.htm?utm_medium=a'));
+    expect(id).toBe(
+      articleIdFor('https://ettoday.net/news/20261101/123.htm?utm_medium=a'),
+    );
     expect(id).toMatch(/^news-[0-9a-f]{8}$/);
   });
 
@@ -175,7 +185,8 @@ describe('applyDeduplication', () => {
     const first = article({ articleId: 'news-00000001' });
     const second = article({
       articleId: 'news-00000002',
-      canonicalUrl: 'https://news.ltn.com.tw/news/politics/breakingnews/1234567?utm_source=rss',
+      canonicalUrl:
+        'https://news.ltn.com.tw/news/politics/breakingnews/1234567?utm_source=rss',
     });
     const [kept, marked] = applyDeduplication([first, second]);
     expect(kept?.duplicateOf).toBeNull();

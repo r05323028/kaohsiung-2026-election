@@ -2,21 +2,21 @@ import * as THREE from 'three';
 import { describe, expect, it } from 'vitest';
 import {
   HSR_CANOPY,
-  STADIUM_ROOF_START,
-  STADIUM_ROOF_SWEEP,
-  WEIWUYING_ROOF,
   makeFlaredCrownGeometry,
   makePagodaTierRoofGeometry,
   makeRadialShellGeometry,
   makeRibbonRoofGeometry,
   makeStrutGeometry,
+  STADIUM_ROOF_START,
+  STADIUM_ROOF_SWEEP,
+  stadiumRibbonPoint,
   stadiumRoofInnerLift,
   stadiumRoofInnerRadius,
   stadiumRoofOuterLift,
   stadiumRoofOuterRadius,
-  stadiumRibbonPoint,
   strutTransform,
   superellipseRadius,
+  WEIWUYING_ROOF,
   weiwuyingRadiusAt,
   weiwuyingRoofHeight,
   weiwuyingRoofUnderside,
@@ -58,7 +58,9 @@ describe('landmark kit: connecting structure', () => {
     );
     const scale = new THREE.Vector3(...transform.scale);
     const center = new THREE.Vector3(...transform.position);
-    const half = new THREE.Vector3(0, scale.y / 2, 0).applyQuaternion(quaternion);
+    const half = new THREE.Vector3(0, scale.y / 2, 0).applyQuaternion(
+      quaternion,
+    );
     const start = center.clone().sub(half);
     const end = center.clone().add(half);
 
@@ -127,7 +129,10 @@ describe('landmark kit: HSR canopy', () => {
       radiusX: HSR_CANOPY.radiusX,
       radiusZ: HSR_CANOPY.radiusZ,
       radiusAt: (angle) => superellipseRadius(angle, 6),
-      heightAt: (x, z) => 0.63 + 0.022 * (1 - (x / HSR_CANOPY.radiusX) ** 2) + 0.018 * (z / HSR_CANOPY.radiusZ),
+      heightAt: (x, z) =>
+        0.63 +
+        0.022 * (1 - (x / HSR_CANOPY.radiusX) ** 2) +
+        0.018 * (z / HSR_CANOPY.radiusZ),
       thickness: HSR_CANOPY.thickness,
       segments: 32,
       rings: 5,
@@ -235,9 +240,9 @@ describe('landmark kit: Sky Tower crown', () => {
     );
     expect(front.length).toBeGreaterThan(0);
     expect(side.length).toBeGreaterThan(0);
-    expect(Math.max(...points.map((point) => Math.abs(point.x)))).toBeGreaterThan(
-      0.15,
-    );
+    expect(
+      Math.max(...points.map((point) => Math.abs(point.x))),
+    ).toBeGreaterThan(0.15);
     expect(Math.max(...side.map((point) => point.y))).toBeGreaterThan(
       Math.max(...front.map((point) => point.y)),
     );
@@ -258,8 +263,7 @@ describe('landmark kit: ferris wheel kinematics', () => {
     for (let index = 1; index < angles.length; index += 1) {
       const current = angles[index] ?? 0;
       const previous = angles[index - 1] ?? 0;
-      const wrapped =
-        (current - previous + Math.PI * 2) % (Math.PI * 2);
+      const wrapped = (current - previous + Math.PI * 2) % (Math.PI * 2);
       expect(wrapped).toBeCloseTo((Math.PI * 2) / count, 6);
     }
   });

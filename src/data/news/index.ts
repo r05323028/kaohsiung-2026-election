@@ -1,9 +1,9 @@
 import publishedInput from '../../../data/published/2026/candidate-news.json';
 import {
-  type NewsCandidateCoverage,
-  type NewsTopic,
   NEWS_TOPIC_LABELS,
+  type NewsCandidateCoverage,
   NewsPublishedDatasetSchema,
+  type NewsTopic,
   sortNewsArticles,
 } from './schema';
 
@@ -14,7 +14,8 @@ import {
  * editorially-unapproved records stay in data/normalized + data/review and never
  * reach a page. No sentiment, tone or favourability value is modelled or shown.
  */
-export const candidateNewsSnapshot = NewsPublishedDatasetSchema.parse(publishedInput);
+export const candidateNewsSnapshot =
+  NewsPublishedDatasetSchema.parse(publishedInput);
 
 export type PublishedNewsItem = {
   articleId: string;
@@ -38,7 +39,9 @@ for (const article of candidateNewsSnapshot.articles) {
     url: article.canonicalUrl,
     publicationDate: article.publicationDate ?? '',
     summary: article.summary,
-    topicTags: article.topicTags.map((topic: NewsTopic) => NEWS_TOPIC_LABELS[topic]),
+    topicTags: article.topicTags.map(
+      (topic: NewsTopic) => NEWS_TOPIC_LABELS[topic],
+    ),
     contentType: article.contentType,
   };
   for (const candidateId of article.candidateIds) {

@@ -1,8 +1,8 @@
 import { createHash } from 'node:crypto';
 import {
   type NewsArticle,
-  type NewsDateStatus,
   NewsDateSchema,
+  type NewsDateStatus,
   NewsIdentityRiskSchema,
   normalizeHeadline,
   normalizeUrl,
@@ -29,7 +29,8 @@ export const NEWS_SOURCES = {
     publisher: '中央社',
     publisherType: 'national-news' as const,
     searchUrl: (query: string) =>
-      'https://www.cna.com.tw/search/hysearchws.aspx?q=' + encodeURIComponent(query),
+      'https://www.cna.com.tw/search/hysearchws.aspx?q=' +
+      encodeURIComponent(query),
   },
 } as const;
 
@@ -76,7 +77,9 @@ function dateFromCompact(value: string): string | null {
 function dateFromSlash(value: string): string | null {
   const match = /^(\d{4})\/(\d{2})\/(\d{2})$/.exec(value.trim());
   if (!match) return null;
-  return dateFromCompact((match[1] ?? '') + (match[2] ?? '') + (match[3] ?? ''));
+  return dateFromCompact(
+    (match[1] ?? '') + (match[2] ?? '') + (match[3] ?? ''),
+  );
 }
 
 function dateFromArticleUrl(url: string): string | null {
@@ -92,9 +95,10 @@ export function parseLtnSearch(html: string): SearchHit[] {
   const hits: SearchHit[] = [];
   const blocks = html.split('<li>').slice(1);
   for (const block of blocks) {
-    const anchor = /<a href="(https:\/\/news\.ltn\.com\.tw\/news\/[^"]+)"[^>]*class="tit"[^>]*title="([^"]*)"/.exec(
-      block,
-    );
+    const anchor =
+      /<a href="(https:\/\/news\.ltn\.com\.tw\/news\/[^"]+)"[^>]*class="tit"[^>]*title="([^"]*)"/.exec(
+        block,
+      );
     if (!anchor) continue;
     const date = /<span class="time">([^<]+)<\/span>/.exec(block)?.[1] ?? '';
     const snippet = /<p>([\s\S]*?)<\/p>/.exec(block)?.[1] ?? '';
@@ -132,7 +136,8 @@ export function parseEttodaySearch(html: string): SearchHit[] {
 /** Parses cna.com.tw search JSON-LD result list. */
 export function parseCnaSearch(html: string): SearchHit[] {
   const hits: SearchHit[] = [];
-  const pattern = /"name":"([^"]{4,240})","url":"(https:\/\/www\.cna\.com\.tw\/news\/[^"]+)"/g;
+  const pattern =
+    /"name":"([^"]{4,240})","url":"(https:\/\/www\.cna\.com\.tw\/news\/[^"]+)"/g;
   for (const match of html.matchAll(pattern)) {
     const headline = cleanText(decodeEntities(match[1] ?? ''));
     const url = decodeEntities(match[2] ?? '');
@@ -183,7 +188,8 @@ type JsonLdNode = Record<string, unknown>;
 
 function collectJsonLd(html: string): JsonLdNode[] {
   const nodes: JsonLdNode[] = [];
-  const pattern = /<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g;
+  const pattern =
+    /<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g;
   for (const match of html.matchAll(pattern)) {
     const raw = (match[1] ?? '').trim();
     if (!raw) continue;
@@ -239,9 +245,12 @@ export function extractArticleDocument(
     const type = node['@type'];
     const types = Array.isArray(type) ? type : [type];
     return types.some((item) =>
-      ['NewsArticle', 'Article', 'ReportageNewsArticle', 'BlogPosting'].includes(
-        String(item),
-      ),
+      [
+        'NewsArticle',
+        'Article',
+        'ReportageNewsArticle',
+        'BlogPosting',
+      ].includes(String(item)),
     );
   });
   const meta = (property: string): string | null => {
@@ -308,7 +317,11 @@ export function extractArticleDocument(
     dateModified,
     description: description ? cleanText(description) : null,
     bodyText,
-    metadataSource: articleNode ? 'json-ld' : meta('og:title') ? 'open-graph' : 'html',
+    metadataSource: articleNode
+      ? 'json-ld'
+      : meta('og:title')
+        ? 'open-graph'
+        : 'html',
   };
 }
 
@@ -324,14 +337,62 @@ export type CandidateIdentity = {
 
 const DISTRICT_TOKENS: Record<string, string[]> = {
   'district-kaohsiung-mayor-2026': ['高雄市長', '市長', '高雄'],
-  'district-kaohsiung-council-01': ['第1選區', '第一選區', '桃源', '那瑪夏', '甲仙', '六龜', '杉林', '內門', '旗山', '美濃', '茂林'],
-  'district-kaohsiung-council-02': ['第2選區', '第二選區', '茄萣', '湖內', '路竹', '阿蓮', '田寮'],
-  'district-kaohsiung-council-03': ['第3選區', '第三選區', '岡山', '橋頭', '燕巢', '梓官', '彌陀', '永安'],
+  'district-kaohsiung-council-01': [
+    '第1選區',
+    '第一選區',
+    '桃源',
+    '那瑪夏',
+    '甲仙',
+    '六龜',
+    '杉林',
+    '內門',
+    '旗山',
+    '美濃',
+    '茂林',
+  ],
+  'district-kaohsiung-council-02': [
+    '第2選區',
+    '第二選區',
+    '茄萣',
+    '湖內',
+    '路竹',
+    '阿蓮',
+    '田寮',
+  ],
+  'district-kaohsiung-council-03': [
+    '第3選區',
+    '第三選區',
+    '岡山',
+    '橋頭',
+    '燕巢',
+    '梓官',
+    '彌陀',
+    '永安',
+  ],
   'district-kaohsiung-council-04': ['第4選區', '第四選區', '左營', '楠梓'],
-  'district-kaohsiung-council-05': ['第5選區', '第五選區', '大社', '仁武', '鳥松', '大樹'],
-  'district-kaohsiung-council-06': ['第6選區', '第六選區', '鼓山', '鹽埕', '旗津'],
+  'district-kaohsiung-council-05': [
+    '第5選區',
+    '第五選區',
+    '大社',
+    '仁武',
+    '鳥松',
+    '大樹',
+  ],
+  'district-kaohsiung-council-06': [
+    '第6選區',
+    '第六選區',
+    '鼓山',
+    '鹽埕',
+    '旗津',
+  ],
   'district-kaohsiung-council-07': ['第7選區', '第七選區', '三民'],
-  'district-kaohsiung-council-08': ['第8選區', '第八選區', '新興', '前金', '苓雅'],
+  'district-kaohsiung-council-08': [
+    '第8選區',
+    '第八選區',
+    '新興',
+    '前金',
+    '苓雅',
+  ],
   'district-kaohsiung-council-09': ['第9選區', '第九選區', '鳳山'],
   'district-kaohsiung-council-10': ['第10選區', '第十選區', '前鎮', '小港'],
   'district-kaohsiung-council-11': ['第11選區', '第十一選區', '大寮', '林園'],
@@ -352,7 +413,11 @@ export function contextSignalsFor(
   for (const token of ['市議員', '議員', '市議會', '議會', '高雄']) {
     if (text.includes(token)) signals.push(token);
   }
-  if (candidate.party && candidate.party.length > 1 && text.includes(candidate.party)) {
+  if (
+    candidate.party &&
+    candidate.party.length > 1 &&
+    text.includes(candidate.party)
+  ) {
     signals.push(candidate.party);
   }
   return [...new Set(signals)];
@@ -366,7 +431,8 @@ export function assessIdentity(
   bodyText: string,
 ): IdentityAssessment {
   const names = [candidate.name, ...candidate.aliases];
-  const matchedName = names.find((name) => headline.includes(name)) ??
+  const matchedName =
+    names.find((name) => headline.includes(name)) ??
     names.find((name) => bodyText.includes(name));
   if (!matchedName) {
     return {
@@ -379,7 +445,10 @@ export function assessIdentity(
   }
   const inHeadline = headline.includes(matchedName);
   const inBody = bodyText.includes(matchedName);
-  const signals = contextSignalsFor(candidate, headline + ' ' + bodyText.slice(0, 4000));
+  const signals = contextSignalsFor(
+    candidate,
+    headline + ' ' + bodyText.slice(0, 4000),
+  );
   const shortName = matchedName.length <= 2;
   // A generic token such as 高雄 or 議員 is not enough to clear a name match:
   // 林彥 must not be cleared by an article about 林彥甫 in another city.
@@ -397,7 +466,11 @@ export function assessIdentity(
   return {
     matchedName,
     matchedIn:
-      inHeadline && inBody ? 'headline-and-body' : inHeadline ? 'headline' : 'body',
+      inHeadline && inBody
+        ? 'headline-and-body'
+        : inHeadline
+          ? 'headline'
+          : 'body',
     contextSignals: signals,
     namesakeRisk: NewsIdentityRiskSchema.parse(risk),
     note:
@@ -459,7 +532,9 @@ export function buildVerification(
     passed: input.status === 200,
     detail: 'HTTP ' + input.status,
   });
-  const canonical = document.canonicalUrl ? normalizeUrl(document.canonicalUrl) : null;
+  const canonical = document.canonicalUrl
+    ? normalizeUrl(document.canonicalUrl)
+    : null;
   checks.push({
     check: 'url-canonical',
     passed: !canonical || canonical === normalizeUrl(document.url),
@@ -471,15 +546,25 @@ export function buildVerification(
       !document.publisher ||
       document.publisher.includes(input.claimedPublisher) ||
       input.claimedPublisher.includes(document.publisher),
-    detail: 'claimed=' + input.claimedPublisher + ' fetched=' + (document.publisher ?? 'none'),
+    detail:
+      'claimed=' +
+      input.claimedPublisher +
+      ' fetched=' +
+      (document.publisher ?? 'none'),
   });
   checks.push({
     check: 'headline-match',
-    passed: !!document.headline && similar(input.claimedHeadline, document.headline),
-    detail: 'claimed=' + input.claimedHeadline + ' fetched=' + (document.headline ?? 'none'),
+    passed:
+      !!document.headline && similar(input.claimedHeadline, document.headline),
+    detail:
+      'claimed=' +
+      input.claimedHeadline +
+      ' fetched=' +
+      (document.headline ?? 'none'),
   });
 
-  const fetchedDate = document.datePublished ?? dateFromArticleUrl(document.url);
+  const fetchedDate =
+    document.datePublished ?? dateFromArticleUrl(document.url);
   const dateStatus: NewsDateStatus = input.claimedDate
     ? fetchedDate
       ? fetchedDate === input.claimedDate
@@ -495,7 +580,11 @@ export function buildVerification(
   checks.push({
     check: 'publication-date',
     passed: dateStatus === 'confirmed' || dateStatus === 'inferred-from-url',
-    detail: 'claimed=' + (input.claimedDate ?? 'none') + ' fetched=' + (fetchedDate ?? 'none'),
+    detail:
+      'claimed=' +
+      (input.claimedDate ?? 'none') +
+      ' fetched=' +
+      (fetchedDate ?? 'none'),
   });
   checks.push({
     check: 'identity',

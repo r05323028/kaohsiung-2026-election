@@ -27,7 +27,10 @@ async function readJson<T>(file: string): Promise<T> {
     return JSON.parse(await readFile(path.join(ROOT, file), 'utf8')) as T;
   } catch (error) {
     throw new Error(
-      'Failed to read ' + file + ': ' + (error instanceof Error ? error.message : String(error)),
+      'Failed to read ' +
+        file +
+        ': ' +
+        (error instanceof Error ? error.message : String(error)),
     );
   }
 }
@@ -45,7 +48,10 @@ async function main(): Promise<void> {
 
   const seedCount = new Map<string, number>();
   for (const policy of seed.policies) {
-    seedCount.set(policy.candidateId, (seedCount.get(policy.candidateId) ?? 0) + 1);
+    seedCount.set(
+      policy.candidateId,
+      (seedCount.get(policy.candidateId) ?? 0) + 1,
+    );
   }
 
   const filesByCandidate = new Map<string, NewsItem[]>();
@@ -59,7 +65,9 @@ async function main(): Promise<void> {
   await mkdir(BATCH_DIR, { recursive: true });
   const batches: string[][] = [];
   for (let index = 0; index < roster.candidates.length; index += BATCH_SIZE) {
-    batches.push(roster.candidates.slice(index, index + BATCH_SIZE).map((c) => c.id));
+    batches.push(
+      roster.candidates.slice(index, index + BATCH_SIZE).map((c) => c.id),
+    );
   }
 
   for (const [index, candidateIds] of batches.entries()) {

@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import {
   assessIdentity,
+  type CandidateIdentity,
   extractArticleDocument,
   parseCnaSearch,
   parseEttodaySearch,
   parseLtnSearch,
   parseSearchResults,
-  type CandidateIdentity,
 } from './research';
 
 const LTN_HTML = `
@@ -36,7 +36,9 @@ describe('search result parsers', () => {
   it('parses LTN list items with date and snippet', () => {
     const hits = parseLtnSearch(LTN_HTML);
     expect(hits).toHaveLength(1);
-    expect(hits[0]?.url).toBe('https://news.ltn.com.tw/news/politics/breakingnews/5639051');
+    expect(hits[0]?.url).toBe(
+      'https://news.ltn.com.tw/news/politics/breakingnews/5639051',
+    );
     expect(hits[0]?.headline).toBe('高雄市長參選人成立競選總部');
     expect(hits[0]?.publicationDate).toBe('2026-11-01');
     expect(hits[0]?.snippet).toContain('競選總部');
@@ -74,12 +76,17 @@ describe('extractArticleDocument', () => {
       </script>
       <link rel="canonical" href="https://news.ltn.com.tw/news/politics/breakingnews/5639051" />
       </head><body></body></html>`;
-    const doc = extractArticleDocument(html, 'https://news.ltn.com.tw/news/politics/breakingnews/5639051');
+    const doc = extractArticleDocument(
+      html,
+      'https://news.ltn.com.tw/news/politics/breakingnews/5639051',
+    );
     expect(doc.metadataSource).toBe('json-ld');
     expect(doc.headline).toBe('高雄市長參選人成立競選總部');
     expect(doc.publisher).toBe('自由時報');
     expect(doc.datePublished).toBe('2026-11-01');
-    expect(doc.canonicalUrl).toBe('https://news.ltn.com.tw/news/politics/breakingnews/5639051');
+    expect(doc.canonicalUrl).toBe(
+      'https://news.ltn.com.tw/news/politics/breakingnews/5639051',
+    );
     expect(doc.bodyText.length).toBeGreaterThan(200);
   });
 
@@ -93,7 +100,10 @@ describe('extractArticleDocument', () => {
       <p>${'他並主張增加夜間托育與長照據點。'.repeat(6)}</p>
       <script>window.__junk = function () {};</script>
       </body></html>`;
-    const doc = extractArticleDocument(html, 'https://www.ettoday.net/news/20261102/2373869.htm');
+    const doc = extractArticleDocument(
+      html,
+      'https://www.ettoday.net/news/20261102/2373869.htm',
+    );
     expect(doc.metadataSource).toBe('open-graph');
     expect(doc.headline).toBe('高雄市議員參選人說明交通政見');
     expect(doc.publisher).toBe('ETtoday新聞雲');
@@ -125,13 +135,18 @@ describe('assessIdentity', () => {
   });
 
   it('marks medium risk when the name appears without district context', () => {
-    const result = assessIdentity(candidate, '王小明出席同學會', '王小明今天回到母校。');
+    const result = assessIdentity(
+      candidate,
+      '王小明出席同學會',
+      '王小明今天回到母校。',
+    );
     expect(result.namesakeRisk).toBe('medium');
   });
 
   it('does not clear a two-character name that is only part of a longer name', () => {
     const shortNameCandidate: CandidateIdentity = {
-      candidateId: 'official-candidate-2026-district-kaohsiung-council-07-f42af7ef',
+      candidateId:
+        'official-candidate-2026-district-kaohsiung-council-07-f42af7ef',
       name: '林彥',
       aliases: [],
       districtId: 'district-kaohsiung-council-07',
@@ -148,7 +163,11 @@ describe('assessIdentity', () => {
   });
 
   it('marks high risk when the name is absent', () => {
-    const result = assessIdentity(candidate, '高雄市議員質詢交通局', '議會今天質詢交通局。');
+    const result = assessIdentity(
+      candidate,
+      '高雄市議員質詢交通局',
+      '議會今天質詢交通局。',
+    );
     expect(result.namesakeRisk).toBe('high');
     expect(result.matchedIn).toBe('body');
   });

@@ -69,7 +69,9 @@ type DiscoveryItem = DiscoveryCandidate & {
 
 const decode = (value: string): string =>
   value
-    .replace(/&#(\d+);/g, (_, code: string) => String.fromCodePoint(Number(code)))
+    .replace(/&#(\d+);/g, (_, code: string) =>
+      String.fromCodePoint(Number(code)),
+    )
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
@@ -78,7 +80,9 @@ const decode = (value: string): string =>
     .replace(/&nbsp;/g, ' ');
 
 const stripTags = (value: string): string =>
-  decode(value.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+  decode(value.replace(/<[^>]+>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
 
 async function rssItems(query: string): Promise<RawItem[]> {
   const url =
@@ -94,9 +98,15 @@ async function rssItems(query: string): Promise<RawItem[]> {
   const items: RawItem[] = [];
   for (const match of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
     const body = match[1] ?? '';
-    const title = stripTags((body.match(/<title>([\s\S]*?)<\/title>/) ?? [])[1] ?? '');
-    const link = ((body.match(/<link>([\s\S]*?)<\/link>/) ?? [])[1] ?? '').trim();
-    const date = ((body.match(/<pubDate>([\s\S]*?)<\/pubDate>/) ?? [])[1] ?? '').trim();
+    const title = stripTags(
+      (body.match(/<title>([\s\S]*?)<\/title>/) ?? [])[1] ?? '',
+    );
+    const link = (
+      (body.match(/<link>([\s\S]*?)<\/link>/) ?? [])[1] ?? ''
+    ).trim();
+    const date = (
+      (body.match(/<pubDate>([\s\S]*?)<\/pubDate>/) ?? [])[1] ?? ''
+    ).trim();
     const publisher = stripTags(
       (body.match(/<source[^>]*>([\s\S]*?)<\/source>/) ?? [])[1] ?? '',
     );
@@ -105,7 +115,9 @@ async function rssItems(query: string): Promise<RawItem[]> {
     items.push({
       title,
       link,
-      publishedAt: Number.isNaN(parsed) ? null : new Date(parsed).toISOString().slice(0, 10),
+      publishedAt: Number.isNaN(parsed)
+        ? null
+        : new Date(parsed).toISOString().slice(0, 10),
       publisher: publisher || 'unknown',
     });
   }
@@ -143,7 +155,25 @@ async function resolveNewsLink(link: string): Promise<string | null> {
   const inner = JSON.stringify([
     'garturlreq',
     [
-      ['X', 'X', ['X', 'X'], null, null, 1, 1, 'US:en', null, 1, null, null, null, null, null, 0, 1],
+      [
+        'X',
+        'X',
+        ['X', 'X'],
+        null,
+        null,
+        1,
+        1,
+        'US:en',
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        1,
+      ],
       'X',
       'X',
       1,
@@ -160,16 +190,20 @@ async function resolveNewsLink(link: string): Promise<string | null> {
     Number(timestamp),
     signature,
   ]);
-  const body = 'f.req=' + encodeURIComponent(JSON.stringify([[['Fbv4je', inner]]]));
-  const response = await fetch('https://news.google.com/_/DotsSplashUi/data/batchexecute', {
-    method: 'POST',
-    headers: {
-      'user-agent': UA,
-      'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+  const body =
+    'f.req=' + encodeURIComponent(JSON.stringify([[['Fbv4je', inner]]]));
+  const response = await fetch(
+    'https://news.google.com/_/DotsSplashUi/data/batchexecute',
+    {
+      method: 'POST',
+      headers: {
+        'user-agent': UA,
+        'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      },
+      body,
+      signal: AbortSignal.timeout(20000),
     },
-    body,
-    signal: AbortSignal.timeout(20000),
-  });
+  );
   if (!response.ok) return null;
   const text = await response.text();
   for (const line of text.split('\n')) {
@@ -179,9 +213,18 @@ async function resolveNewsLink(link: string): Promise<string | null> {
       const rows = collectRows(JSON.parse(trimmed));
       if (!rows) continue;
       for (const row of rows) {
-        if (row[0] !== 'wrb.fr' || row[1] !== 'Fbv4je' || typeof row[2] !== 'string') continue;
+        if (
+          row[0] !== 'wrb.fr' ||
+          row[1] !== 'Fbv4je' ||
+          typeof row[2] !== 'string'
+        )
+          continue;
         const payload: unknown = JSON.parse(row[2]);
-        if (Array.isArray(payload) && payload[0] === 'garturlres' && typeof payload[1] === 'string') {
+        if (
+          Array.isArray(payload) &&
+          payload[0] === 'garturlres' &&
+          typeof payload[1] === 'string'
+        ) {
           return payload[1];
         }
       }
@@ -222,7 +265,8 @@ function parseJson<T>(raw: string): T {
     return JSON.parse(raw) as T;
   } catch (error) {
     throw new Error(
-      'Invalid JSON: ' + (error instanceof Error ? error.message : String(error)),
+      'Invalid JSON: ' +
+        (error instanceof Error ? error.message : String(error)),
     );
   }
 }
@@ -274,8 +318,11 @@ function isRelevant(candidate: Candidate, item: RawItem): boolean {
   const published = Date.parse(item.publishedAt + 'T00:00:00Z');
   if (Number.isNaN(published) || published < WINDOW_START) return false;
   if (!item.title.includes(candidate.displayName)) return false;
-  const mentionsKaohsiung = item.title.includes('高雄') || item.title.includes('高市');
-  const mentionsOtherCity = OTHER_CITIES.some((city) => item.title.includes(city));
+  const mentionsKaohsiung =
+    item.title.includes('高雄') || item.title.includes('高市');
+  const mentionsOtherCity = OTHER_CITIES.some((city) =>
+    item.title.includes(city),
+  );
   if (mentionsOtherCity && !mentionsKaohsiung) return false;
   return true;
 }
@@ -284,7 +331,8 @@ function queriesFor(candidate: Candidate): string[] {
   const name = '"' + candidate.displayName + '"';
   const office = candidate.electionType === 'mayoral' ? '市長' : '議員';
   const queries = [name + ' 政見', name + ' 政策', name + ' 高雄 ' + office];
-  if (candidate.districtId.includes('indigenous')) queries.push(name + ' 原住民 政見');
+  if (candidate.districtId.includes('indigenous'))
+    queries.push(name + ' 原住民 政見');
   return queries;
 }
 
@@ -292,7 +340,11 @@ function capFor(candidate: Candidate): number {
   return candidate.electionType === 'mayoral' ? 30 : 12;
 }
 
-async function pool<T, R>(values: T[], limit: number, worker: (value: T) => Promise<R>): Promise<R[]> {
+async function pool<T, R>(
+  values: T[],
+  limit: number,
+  worker: (value: T) => Promise<R>,
+): Promise<R[]> {
   const results: R[] = [];
   let cursor = 0;
   const run = async (): Promise<void> => {
@@ -304,11 +356,15 @@ async function pool<T, R>(values: T[], limit: number, worker: (value: T) => Prom
       results[index] = await worker(value);
     }
   };
-  await Promise.all(Array.from({ length: Math.min(limit, values.length) }, run));
+  await Promise.all(
+    Array.from({ length: Math.min(limit, values.length) }, run),
+  );
   return results;
 }
 
-async function runDiscovery(selected: Candidate[]): Promise<DiscoveryCandidate[]> {
+async function runDiscovery(
+  selected: Candidate[],
+): Promise<DiscoveryCandidate[]> {
   const output: DiscoveryCandidate[] = [];
   for (const candidate of selected) {
     const cap = capFor(candidate);
@@ -337,7 +393,9 @@ async function runDiscovery(selected: Candidate[]): Promise<DiscoveryCandidate[]
       if (perCandidate.length >= cap) break;
     }
     output.push(...perCandidate.slice(0, cap));
-    process.stdout.write(candidate.displayName + ': ' + Math.min(perCandidate.length, cap) + '\n');
+    process.stdout.write(
+      candidate.displayName + ': ' + Math.min(perCandidate.length, cap) + '\n',
+    );
   }
   return output;
 }
@@ -380,7 +438,10 @@ async function fetchOne(entry: DiscoveryCandidate): Promise<DiscoveryItem> {
       return record;
     }
     const stored = [entry.headline, '', text].join('\n');
-    const relative = path.join('data/raw/policy/2026/news', slugFor(record.resolvedUrl) + '.txt');
+    const relative = path.join(
+      'data/raw/policy/2026/news',
+      slugFor(record.resolvedUrl) + '.txt',
+    );
     await writeFile(path.join(ROOT, relative), stored, 'utf8');
     record.rawPath = relative.split(path.sep).join('/');
     record.sha256 = createHash('sha256').update(stored).digest('hex');
@@ -399,12 +460,19 @@ async function main(): Promise<void> {
   const stageArg = process.argv.find((arg) => arg.startsWith('--stage='));
   const stage = stageArg ? stageArg.slice('--stage='.length) : 'all';
   const limitArg = process.argv.find((arg) => arg.startsWith('--limit='));
-  const candidateArg = process.argv.find((arg) => arg.startsWith('--candidate='));
+  const candidateArg = process.argv.find((arg) =>
+    arg.startsWith('--candidate='),
+  );
   const all = rosterInput.candidates as Candidate[];
   const filtered = candidateArg
-    ? all.filter((candidate) => candidate.id === candidateArg.slice('--candidate='.length))
+    ? all.filter(
+        (candidate) =>
+          candidate.id === candidateArg.slice('--candidate='.length),
+      )
     : all;
-  const selected = limitArg ? filtered.slice(0, Number(limitArg.slice(8))) : filtered;
+  const selected = limitArg
+    ? filtered.slice(0, Number(limitArg.slice(8)))
+    : filtered;
 
   await mkdir(RAW_DIR, { recursive: true });
   await mkdir(DISCOVERY_DIR, { recursive: true });
@@ -441,7 +509,8 @@ async function main(): Promise<void> {
 
   const fetched = await pool(queued, 8, fetchOne);
   const counts: Record<string, number> = {};
-  for (const item of fetched) counts[item.retrievalStatus] = (counts[item.retrievalStatus] ?? 0) + 1;
+  for (const item of fetched)
+    counts[item.retrievalStatus] = (counts[item.retrievalStatus] ?? 0) + 1;
   await writeFile(
     ITEMS_PATH,
     JSON.stringify(
@@ -457,7 +526,9 @@ async function main(): Promise<void> {
     ) + '\n',
     'utf8',
   );
-  process.stdout.write('fetched ' + fetched.length + ' items ' + JSON.stringify(counts) + '\n');
+  process.stdout.write(
+    'fetched ' + fetched.length + ' items ' + JSON.stringify(counts) + '\n',
+  );
 }
 
 await main();

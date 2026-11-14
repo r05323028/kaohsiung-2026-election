@@ -1,12 +1,12 @@
 import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { validateExtractionBatch } from '../../src/data/policy-research/extraction-schema';
 import {
   POLICY_CATEGORIES,
   policyTypeForContext,
   validatePolicyResearchDataset,
 } from '../../src/data/policy-research/schema';
-import { validateExtractionBatch } from '../../src/data/policy-research/extraction-schema';
 import { validateVerificationBatch } from '../../src/data/policy-research/verification-schema';
 import { quotePresent } from './quote-check';
 

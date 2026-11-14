@@ -147,7 +147,9 @@ export const NewsArticleSchema = z
     updatedDate: NewsDateSchema.nullable(),
     retrievedAt: IsoTimestampSchema,
     summary: z.string().min(20).max(240).nullable(),
-    summaryBasis: z.enum(['article-metadata', 'headline', 'editorial']).nullable(),
+    summaryBasis: z
+      .enum(['article-metadata', 'headline', 'editorial'])
+      .nullable(),
     topicTags: z.array(NewsTopicSchema).min(1),
     contentType: NewsContentTypeSchema,
     eventKey: z.string().min(1),
@@ -290,7 +292,9 @@ export function normalizeUrl(raw: string): string {
     for (const key of [...url.searchParams.keys()]) {
       if (/^(utm_|fbclid|gclid|oc$)/i.test(key)) url.searchParams.delete(key);
     }
-    url.search = url.searchParams.toString() ? '?' + url.searchParams.toString() : '';
+    url.search = url.searchParams.toString()
+      ? '?' + url.searchParams.toString()
+      : '';
     url.hostname = url.hostname.replace(/^www\./, '').toLowerCase();
     const path = url.pathname.replace(/\/+$/, '') || '/';
     return url.origin + path + url.search;
@@ -301,14 +305,20 @@ export function normalizeUrl(raw: string): string {
 
 export function normalizeHeadline(headline: string): string {
   return headline
-    .replace(/^(獨[／/]|快訊[／/]?|影[／/]|圖[／/]|更新[／/]?|不斷更新[／/]?)/, '')
+    .replace(
+      /^(獨[／/]|快訊[／/]?|影[／/]|圖[／/]|更新[／/]?|不斷更新[／/]?)/,
+      '',
+    )
     .replace(/[\s\u3000]+/g, '')
     .replace(/[！!?？…。，,、：:「」『』（）()｜|~～\-—]/g, '')
     .toLocaleLowerCase();
 }
 
 /** Stable event key: publisher-independent headline core plus day precision. */
-export function eventKeyFor(headline: string, publicationDate: string | null): string {
+export function eventKeyFor(
+  headline: string,
+  publicationDate: string | null,
+): string {
   return normalizeHeadline(headline) + '@' + (publicationDate ?? 'unknown');
 }
 
@@ -351,12 +361,15 @@ export function evaluateNewsPublication(
     blockers.push('identity-context-missing');
   }
   if (!article.publicationDate) blockers.push('publication-date-missing');
-  if (article.dateStatus === 'conflicting') blockers.push('publication-date-conflicting');
-  if (article.dateStatus === 'missing') blockers.push('publication-date-missing');
+  if (article.dateStatus === 'conflicting')
+    blockers.push('publication-date-conflicting');
+  if (article.dateStatus === 'missing')
+    blockers.push('publication-date-missing');
   if (article.summary === null) blockers.push('summary-missing');
   blockers.push(...summaryNeutralityBlockers(article.summary));
   if (!/^https?:\/\//.test(article.canonicalUrl)) blockers.push('url-invalid');
-  if (article.evidence.excerpt.length < 20) blockers.push('evidence-excerpt-too-short');
+  if (article.evidence.excerpt.length < 20)
+    blockers.push('evidence-excerpt-too-short');
   if (article.topicTags.length === 0) blockers.push('topic-tags-missing');
 
   const unique = [...new Set(blockers)];
@@ -380,7 +393,8 @@ export function applyDeduplication(
   const seenHeadline = new Map<string, string>();
   return articles.map((article) => {
     const urlKey = normalizeUrl(article.canonicalUrl);
-    const headlineKey = article.publisher + '|' + normalizeHeadline(article.headline);
+    const headlineKey =
+      article.publisher + '|' + normalizeHeadline(article.headline);
     const primary = seenUrl.get(urlKey) ?? seenHeadline.get(headlineKey);
     if (primary && primary !== article.articleId) {
       return {
@@ -389,7 +403,12 @@ export function applyDeduplication(
         publication: {
           ...article.publication,
           status: 'rejected-duplicate',
-          blockers: [...new Set([...article.publication.blockers, 'duplicate-of:' + primary])],
+          blockers: [
+            ...new Set([
+              ...article.publication.blockers,
+              'duplicate-of:' + primary,
+            ]),
+          ],
         },
       };
     }
@@ -399,9 +418,9 @@ export function applyDeduplication(
   });
 }
 
-export function sortNewsArticles<T extends { publicationDate: string | null; headline: string }>(
-  articles: readonly T[],
-): T[] {
+export function sortNewsArticles<
+  T extends { publicationDate: string | null; headline: string },
+>(articles: readonly T[]): T[] {
   return [...articles].sort(
     (left, right) =>
       (right.publicationDate ?? '').localeCompare(left.publicationDate ?? '') ||

@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, type Page, test } from '@playwright/test';
 
 /**
  * Published news coverage on candidate profiles. Only independently verified,
@@ -40,7 +40,9 @@ test.describe('candidate published news', () => {
     expect(body).not.toMatch(/好感度|聲量|正負面|情緒|sentiment/i);
   });
 
-  test('filters by publisher without dropping the source link', async ({ page }) => {
+  test('filters by publisher without dropping the source link', async ({
+    page,
+  }) => {
     const section = await openNewsTab(page, 'ke-zhi-en-2026');
     const publisherSelect = section
       .getByTestId('news-filters')
@@ -48,7 +50,9 @@ test.describe('candidate published news', () => {
       .first();
     const options = await publisherSelect
       .locator('option')
-      .evaluateAll((nodes) => nodes.map((node) => (node as HTMLOptionElement).value));
+      .evaluateAll((nodes) =>
+        nodes.map((node) => (node as HTMLOptionElement).value),
+      );
     expect(options.length).toBeGreaterThan(1);
 
     const before = await section.locator('article.content-card').count();
@@ -59,7 +63,9 @@ test.describe('candidate published news', () => {
 
     const hrefs = await section
       .locator('article.content-card h4 a')
-      .evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href') ?? ''));
+      .evaluateAll((nodes) =>
+        nodes.map((node) => node.getAttribute('href') ?? ''),
+      );
     for (const href of hrefs) expect(href).toMatch(/^https:\/\//);
   });
 

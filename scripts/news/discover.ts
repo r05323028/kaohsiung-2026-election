@@ -1,11 +1,11 @@
 import {
   type DiscoveryFile,
-  NEWS_PATHS,
-  type RosterCandidate,
   discoveryPath,
   fetchDocument,
   loadRoster,
+  NEWS_PATHS,
   pool,
+  type RosterCandidate,
   readJsonFile,
   sleep,
   writeJsonFile,
@@ -24,7 +24,8 @@ const MAX_HITS_PER_CANDIDATE = 18;
 function queriesFor(candidate: RosterCandidate): string[] {
   const queries = [candidate.name];
   if (candidate.name.length <= 2) queries.push(candidate.name + ' 高雄');
-  if (candidate.electionType === 'mayoral') queries.push(candidate.name + ' 高雄市長');
+  if (candidate.electionType === 'mayoral')
+    queries.push(candidate.name + ' 高雄市長');
   return [...new Set(queries)];
 }
 
@@ -35,7 +36,9 @@ function selectTargets(
 ): RosterCandidate[] {
   return roster.filter(
     (candidate) =>
-      (!candidateIds || candidateIds.has(candidate.id) || candidateIds.has(candidate.slug)) &&
+      (!candidateIds ||
+        candidateIds.has(candidate.id) ||
+        candidateIds.has(candidate.slug)) &&
       (!districtIds || districtIds.has(candidate.districtId)),
   );
 }
@@ -43,8 +46,13 @@ function selectTargets(
 async function main(): Promise<void> {
   const options = parseNewsArgs(process.argv.slice(2));
   const roster = await loadRoster();
-  const targets = selectTargets(roster, options.candidateIds, options.districtIds);
-  if (targets.length === 0) throw new Error('No candidates matched the filter.');
+  const targets = selectTargets(
+    roster,
+    options.candidateIds,
+    options.districtIds,
+  );
+  if (targets.length === 0)
+    throw new Error('No candidates matched the filter.');
 
   let skipped = 0;
   let researched = 0;
@@ -52,8 +60,14 @@ async function main(): Promise<void> {
   let failures = 0;
 
   await pool(targets, options.concurrency, async (candidate) => {
-    const existing = await readJsonFile<DiscoveryFile>(discoveryPath(candidate.id));
-    if (existing && !options.refresh && existing.attempts.length >= SOURCE_IDS.length) {
+    const existing = await readJsonFile<DiscoveryFile>(
+      discoveryPath(candidate.id),
+    );
+    if (
+      existing &&
+      !options.refresh &&
+      existing.attempts.length >= SOURCE_IDS.length
+    ) {
       skipped += 1;
       return;
     }
@@ -103,7 +117,8 @@ async function main(): Promise<void> {
       }
     }
 
-    if (attempts.every((attempt) => attempt.status === 'source-error')) failures += 1;
+    if (attempts.every((attempt) => attempt.status === 'source-error'))
+      failures += 1;
     researched += 1;
     if (hits.size > 0) withResults += 1;
 
@@ -115,12 +130,21 @@ async function main(): Promise<void> {
       hits: [...hits.values()],
     };
     if (options.dryRun) {
-      console.log('[dry-run]', candidate.name, 'attempts=' + attempts.length, 'hits=' + hits.size);
+      console.log(
+        '[dry-run]',
+        candidate.name,
+        'attempts=' + attempts.length,
+        'hits=' + hits.size,
+      );
       return;
     }
     await writeJsonFile(discoveryPath(candidate.id), file);
     if (options.verbose) {
-      console.log(candidate.name, 'attempts=' + attempts.length, 'hits=' + hits.size);
+      console.log(
+        candidate.name,
+        'attempts=' + attempts.length,
+        'hits=' + hits.size,
+      );
     }
   });
 

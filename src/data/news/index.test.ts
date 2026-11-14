@@ -24,13 +24,13 @@ describe('published news read model', () => {
 
   it('never models sentiment, tone or favourability', () => {
     const serialised = JSON.stringify(publishedInput);
-    expect(serialised).not.toMatch(/"(sentiment|tone|favourab|positive|negative)"\s*:/i);
+    expect(serialised).not.toMatch(
+      /"(sentiment|tone|favourab|positive|negative)"\s*:/i,
+    );
   });
 
   it('returns candidate news newest first', () => {
-    const items = getCandidatePublishedNews(
-      'official-mayor-ke-zhi-en-2026',
-    );
+    const items = getCandidatePublishedNews('official-mayor-ke-zhi-en-2026');
     expect(items.length).toBeGreaterThan(0);
     const dates = items.map((item) => item.publicationDate);
     expect(dates).toEqual([...dates].sort((a, b) => b.localeCompare(a)));
@@ -42,7 +42,9 @@ describe('published news read model', () => {
   });
 
   it('returns an empty list for a candidate without published coverage', () => {
-    expect(getCandidatePublishedNews('official-candidate-not-in-dataset')).toEqual([]);
+    expect(
+      getCandidatePublishedNews('official-candidate-not-in-dataset'),
+    ).toEqual([]);
   });
 
   it('records a discovery attempt status for every candidate', () => {
@@ -58,9 +60,7 @@ describe('published news read model', () => {
   });
 
   it('reports coverage rows by candidate id', () => {
-    const entry = getCandidateNewsCoverage(
-      'official-mayor-ke-zhi-en-2026',
-    );
+    const entry = getCandidateNewsCoverage('official-mayor-ke-zhi-en-2026');
     expect(entry?.candidateName).toBe('柯志恩');
     expect(entry?.published).toBeGreaterThan(0);
   });

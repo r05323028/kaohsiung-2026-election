@@ -1,32 +1,32 @@
+import { z } from 'zod';
 import {
-  type DiscoveryFile,
-  NEWS_PATHS,
-  type VerificationFile,
   coverageFor,
+  type DiscoveryFile,
   discoveryPath,
   loadRoster,
+  NEWS_PATHS,
   pool,
   readJsonFile,
   snapshotDate,
+  type VerificationFile,
   verificationPath,
   writeJsonFile,
   writeTextFile,
 } from '../../src/data/news/pipeline';
 import {
-  type NewsArticle,
-  type NewsCandidateCoverage,
-  type NewsTopic,
+  applyDeduplication,
+  evaluateNewsPublication,
   NEWS_NORMALIZED_DATASET_ID,
   NEWS_POLICY_VERSION,
   NEWS_PUBLISHED_DATASET_ID,
+  type NewsArticle,
+  type NewsCandidateCoverage,
   NewsNormalizedDatasetSchema,
   NewsPublishedDatasetSchema,
+  type NewsTopic,
   NewsTopicSchema,
-  applyDeduplication,
-  evaluateNewsPublication,
   sortNewsArticles,
 } from '../../src/data/news/schema';
-import { z } from 'zod';
 import { parseNewsArgs } from './args';
 
 const EditorialFileSchema = z
@@ -85,11 +85,12 @@ function decide(
     ...article,
     summary: override?.summary ?? null,
     summaryBasis: override ? 'editorial' : null,
-    topicTags: override ? (override.topicTags as NewsTopic[]) : article.topicTags,
+    topicTags: override
+      ? (override.topicTags as NewsTopic[])
+      : article.topicTags,
   };
   const policy = evaluateNewsPublication(withEditorial);
-  const status =
-    policy.status === 'published' ? 'published' : policy.status;
+  const status = policy.status === 'published' ? 'published' : policy.status;
   return {
     ...withEditorial,
     publication: {
@@ -124,13 +125,14 @@ function mergeDuplicates(articles: readonly NewsArticle[]): NewsArticle[] {
   return [...byId.values()];
 }
 
-function markdownTable(rows: readonly string[][], header: readonly string[]): string {
+function markdownTable(
+  rows: readonly string[][],
+  header: readonly string[],
+): string {
   const line = (cells: readonly string[]) => '| ' + cells.join(' | ') + ' |';
-  return [
-    line(header),
-    line(header.map(() => '---')),
-    ...rows.map(line),
-  ].join('\n');
+  return [line(header), line(header.map(() => '---')), ...rows.map(line)].join(
+    '\n',
+  );
 }
 
 async function main(): Promise<void> {
@@ -147,7 +149,9 @@ async function main(): Promise<void> {
   const discoveries = new Map<string, DiscoveryFile>();
   const verifications = new Map<string, VerificationFile>();
   await pool(scoped, 8, async (candidate) => {
-    const discovery = await readJsonFile<DiscoveryFile>(discoveryPath(candidate.id));
+    const discovery = await readJsonFile<DiscoveryFile>(
+      discoveryPath(candidate.id),
+    );
     if (discovery) discoveries.set(candidate.id, discovery);
     const verification = await readJsonFile<VerificationFile>(
       verificationPath(candidate.id),
@@ -156,11 +160,15 @@ async function main(): Promise<void> {
   });
 
   const editorialRaw = await readJsonFile<unknown>(NEWS_PATHS.editorial);
-  const editorial = editorialRaw ? EditorialFileSchema.parse(editorialRaw) : null;
+  const editorial = editorialRaw
+    ? EditorialFileSchema.parse(editorialRaw)
+    : null;
   const decidedAt = new Date().toISOString();
   const snapshot = snapshotDate();
 
-  const allVerified = [...verifications.values()].flatMap((file) => file.articles);
+  const allVerified = [...verifications.values()].flatMap(
+    (file) => file.articles,
+  );
   const merged = mergeDuplicates(allVerified).map((article) =>
     decide(article, editorial, decidedAt),
   );
@@ -231,8 +239,7 @@ async function main(): Promise<void> {
       status: 'pending-human-review' as const,
       reviewerId: null,
       reviewedAt: null,
-      note:
-        '所有紀錄由自動化政策評估；摘要需經編輯撰寫（data/approved/2026/candidate-news-editorial.json）後才會進入 published。未通過政策者保留於 data/review/2026/candidate-news-review.json。',
+      note: '所有紀錄由自動化政策評估；摘要需經編輯撰寫（data/approved/2026/candidate-news-editorial.json）後才會進入 published。未通過政策者保留於 data/review/2026/candidate-news-review.json。',
     },
   };
   NewsNormalizedDatasetSchema.parse(normalized);
@@ -244,8 +251,7 @@ async function main(): Promise<void> {
     generatedAt: decidedAt,
     articles: publishedArticles,
     coverage,
-    note:
-      '僅包含通過自動化政策（獨立重新抓取驗證、低同名風險、日期可確認、中性摘要、去重）的新聞中介資料；不儲存全文。',
+    note: '僅包含通過自動化政策（獨立重新抓取驗證、低同名風險、日期可確認、中性摘要、去重）的新聞中介資料；不儲存全文。',
   };
   NewsPublishedDatasetSchema.parse(published);
 
@@ -269,23 +275,36 @@ async function main(): Promise<void> {
       })),
   };
 
-  const coverageCounts = coverage.reduce<Record<string, number>>((counts, entry) => {
-    counts[entry.status] = (counts[entry.status] ?? 0) + 1;
-    return counts;
-  }, {});
-  const discoveredTotal = coverage.reduce((sum, entry) => sum + entry.discovered, 0);
+  const coverageCounts = coverage.reduce<Record<string, number>>(
+    (counts, entry) => {
+      counts[entry.status] = (counts[entry.status] ?? 0) + 1;
+      return counts;
+    },
+    {},
+  );
+  const discoveredTotal = coverage.reduce(
+    (sum, entry) => sum + entry.discovered,
+    0,
+  );
   const verifiedTotal = articles.length;
-  const attemptTotal = coverage.reduce((sum, entry) => sum + entry.attempts.length, 0);
+  const attemptTotal = coverage.reduce(
+    (sum, entry) => sum + entry.attempts.length,
+    0,
+  );
   const sourceErrors = coverage.reduce(
     (sum, entry) =>
-      sum + entry.attempts.filter((attempt) => attempt.status === 'source-error').length,
+      sum +
+      entry.attempts.filter((attempt) => attempt.status === 'source-error')
+        .length,
     0,
   );
   const rejectedTotal = [...verifications.values()].reduce(
     (sum, file) => sum + file.rejected.length,
     0,
   );
-  const duplicates = articles.filter((article) => article.duplicateOf !== null).length;
+  const duplicates = articles.filter(
+    (article) => article.duplicateOf !== null,
+  ).length;
 
   const coverageReport = {
     datasetId: 'kaohsiung-2026-candidate-news-coverage',
@@ -363,8 +382,16 @@ async function main(): Promise<void> {
     '- 快照日期：' + snapshot,
     '- 候選人數：' + coverage.length,
     '- 研究嘗試次數：' + attemptTotal + '（來源錯誤 ' + sourceErrors + '）',
-    '- 搜尋命中：' + discoveredTotal + '；獨立驗證通過：' + verifiedTotal + '；已發布：' + publishedArticles.length,
-    '- 待編輯審核：' + (articles.length - publishedArticles.length) + '；重複：' + duplicates,
+    '- 搜尋命中：' +
+      discoveredTotal +
+      '；獨立驗證通過：' +
+      verifiedTotal +
+      '；已發布：' +
+      publishedArticles.length,
+    '- 待編輯審核：' +
+      (articles.length - publishedArticles.length) +
+      '；重複：' +
+      duplicates,
     '',
     '## 狀態統計',
     '',
@@ -378,7 +405,15 @@ async function main(): Promise<void> {
     '',
     '## 逐位候選人',
     '',
-    markdownTable(coverageRows, ['候選人', 'ID', '選區', '狀態', '命中', '驗證', '發布']),
+    markdownTable(coverageRows, [
+      '候選人',
+      'ID',
+      '選區',
+      '狀態',
+      '命中',
+      '驗證',
+      '發布',
+    ]),
     '',
     '搜尋無結果不代表不存在相關報導；僅表示本次查詢的三個來源未回傳可驗證資料。',
     '',
@@ -388,12 +423,20 @@ async function main(): Promise<void> {
     '# 新聞獨立驗證報告',
     '',
     '- 已研究候選人：' + [...discoveries.values()].length,
-    '- 抓取文章：' + (verifiedTotal + rejectedTotal) + '；通過：' + verifiedTotal + '；未通過：' + rejectedTotal,
+    '- 抓取文章：' +
+      (verifiedTotal + rejectedTotal) +
+      '；通過：' +
+      verifiedTotal +
+      '；未通過：' +
+      rejectedTotal,
     '',
     '## 未通過原因',
     '',
     markdownTable(
-      verificationReport.rejectionReasons.map((entry) => [entry.reason, String(entry.count)]),
+      verificationReport.rejectionReasons.map((entry) => [
+        entry.reason,
+        String(entry.count),
+      ]),
       ['原因', '次數'],
     ),
     '',
@@ -417,7 +460,9 @@ async function main(): Promise<void> {
     '',
     '- 已發布：' + publishedArticles.length + ' / 驗證通過 ' + verifiedTotal,
     '- 政策版本：' + NEWS_POLICY_VERSION,
-    '- 審核佇列：' + reviewQueue.entries.length + ' 筆（data/review/2026/candidate-news-review.json）',
+    '- 審核佇列：' +
+      reviewQueue.entries.length +
+      ' 筆（data/review/2026/candidate-news-review.json）',
     '',
     '## 已發布文章',
     '',
@@ -436,7 +481,13 @@ async function main(): Promise<void> {
   ].join('\n');
 
   if (options.dryRun) {
-    console.log(JSON.stringify({ ...coverageReport, statusCounts: coverageCounts }, null, 2));
+    console.log(
+      JSON.stringify(
+        { ...coverageReport, statusCounts: coverageCounts },
+        null,
+        2,
+      ),
+    );
     return;
   }
 

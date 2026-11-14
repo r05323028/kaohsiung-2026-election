@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { validatePolicyResearchDataset } from '../../src/data/policy-research/schema';
 import { validateOfficialDataset } from '../../src/data/official/schema';
+import { validatePolicyResearchDataset } from '../../src/data/policy-research/schema';
 
 const CUTOFF = '2026-11-14';
 const DATASET = 'data/policy-research/2026/full-roster.json';

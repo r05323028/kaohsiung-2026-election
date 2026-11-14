@@ -1,5 +1,5 @@
 import { HEX_TILES, type HexTile } from './hex';
-import { LANDMARKS_BY_TILE, type HexLandmark } from './hex-landmarks';
+import { type HexLandmark, LANDMARKS_BY_TILE } from './hex-landmarks';
 
 export type BuildingArchetype =
   | 'townhouse'

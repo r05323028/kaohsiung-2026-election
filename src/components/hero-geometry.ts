@@ -106,7 +106,11 @@ function mergeGeometries(parts: THREE.BufferGeometry[]): THREE.BufferGeometry {
         position.getY(vertex),
         position.getZ(vertex),
       );
-      normals.push(normal.getX(vertex), normal.getY(vertex), normal.getZ(vertex));
+      normals.push(
+        normal.getX(vertex),
+        normal.getY(vertex),
+        normal.getZ(vertex),
+      );
       uvs.push(uv ? uv.getX(vertex) : 0, uv ? uv.getY(vertex) : 0);
     }
     if (index) {
@@ -169,9 +173,7 @@ export function makeStrutGeometry(struts: StrutSpec[]): THREE.BufferGeometry {
 export function superellipseRadius(angle: number, exponent: number): number {
   const c = Math.abs(Math.cos(angle));
   const s = Math.abs(Math.sin(angle));
-  return (
-    1 / (c ** exponent + s ** exponent) ** (1 / exponent)
-  );
+  return 1 / (c ** exponent + s ** exponent) ** (1 / exponent);
 }
 
 export interface RadialShellOptions {
@@ -203,8 +205,11 @@ export function makeRadialShellGeometry({
   holeAt,
 }: RadialShellOptions): THREE.BufferGeometry {
   const positions: number[] = [];
-  const triangles: { index: [number, number, number]; cx: number; cz: number }[] =
-    [];
+  const triangles: {
+    index: [number, number, number];
+    cx: number;
+    cz: number;
+  }[] = [];
 
   const point = (ring: number, segment: number): Vec3 => {
     const angle = (segment / segments) * Math.PI * 2;
@@ -314,9 +319,7 @@ export const WEIWUYING_ROOF = {
 export function weiwuyingRadiusAt(angle: number): number {
   return (
     superellipseRadius(angle, 3.1) *
-    (1 +
-      0.035 * Math.sin(2 * angle + 0.9) +
-      0.018 * Math.cos(3 * angle - 0.4))
+    (1 + 0.035 * Math.sin(2 * angle + 0.9) + 0.018 * Math.cos(3 * angle - 0.4))
   );
 }
 
@@ -569,10 +572,7 @@ export function makePagodaTierRoofGeometry({
     const cos = Math.cos(angle);
     const sin = Math.sin(angle);
     const max = Math.max(Math.abs(cos), Math.abs(sin));
-    const corner = (
-      Math.min(Math.abs(cos), Math.abs(sin)) / Math.SQRT1_2) ** 
-      4
-    ;
+    const corner = (Math.min(Math.abs(cos), Math.abs(sin)) / Math.SQRT1_2) ** 4;
     const y = rise * (1 - t) ** 1.55 + upturn * corner * t;
     return [(cos / max) * half, y, (sin / max) * halfZ];
   };
@@ -761,8 +761,30 @@ export function makeFlaredCrownGeometry({
 export function makeGableRoofGeometry(): THREE.BufferGeometry {
   const h = 1;
   const positions = [
-    -0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, h, 0, -0.5, h, 0, -0.5, 0, 0.5, 0.5, 0,
-    0.5, 0.5, h, 0, -0.5, h, 0,
+    -0.5,
+    0,
+    -0.5,
+    0.5,
+    0,
+    -0.5,
+    0.5,
+    h,
+    0,
+    -0.5,
+    h,
+    0,
+    -0.5,
+    0,
+    0.5,
+    0.5,
+    0,
+    0.5,
+    0.5,
+    h,
+    0,
+    -0.5,
+    h,
+    0,
   ];
   const index = [
     0, 1, 2, 0, 2, 3, 4, 6, 5, 4, 7, 6, 0, 3, 7, 0, 7, 4, 1, 5, 6, 1, 6, 2,

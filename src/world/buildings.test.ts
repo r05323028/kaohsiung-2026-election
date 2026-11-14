@@ -3,7 +3,6 @@ import {
   BUILDING_BASE_Y,
   BUILDING_DETAIL_ZOOM,
   BUILDING_RING_RADIUS,
-  TREE_RING_RADIUS,
   buildingDetailForZoom,
   buildingProfileForDistrict,
   buildingsForTile,
@@ -13,6 +12,7 @@ import {
   landmarkFootprints,
   layoutTileBuildings,
   maxSilhouetteHeight,
+  TREE_RING_RADIUS,
 } from './buildings';
 import { HEX_TILES } from './hex';
 

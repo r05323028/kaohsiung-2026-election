@@ -10,7 +10,13 @@ const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'capture')
   : 'capture';
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
-const outDir = join(process.cwd(), 'reports', 'visual', 'landmarks', label + '-city');
+const outDir = join(
+  process.cwd(),
+  'reports',
+  'visual',
+  'landmarks',
+  label + '-city',
+);
 mkdirSync(outDir, { recursive: true });
 
 const shots = [

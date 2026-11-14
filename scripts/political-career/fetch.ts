@@ -76,7 +76,9 @@ function newsUrl(newsId: string): string {
   return `https://www.kcc.gov.tw/News_Content.aspx?n=47&s=${newsId}`;
 }
 
-function buildIndex(snapshots: EnrichmentSnapshot[]): Map<string, NewsIndexEntry> {
+function buildIndex(
+  snapshots: EnrichmentSnapshot[],
+): Map<string, NewsIndexEntry> {
   const index = new Map<string, NewsIndexEntry>();
 
   for (const snapshot of snapshots) {
@@ -128,7 +130,9 @@ function buildIndex(snapshots: EnrichmentSnapshot[]): Map<string, NewsIndexEntry
   return index;
 }
 
-async function fetchOnce(url: string): Promise<{ status: number; body: string }> {
+async function fetchOnce(
+  url: string,
+): Promise<{ status: number; body: string }> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
@@ -266,9 +270,7 @@ async function main(): Promise<void> {
     }
   };
 
-  await Promise.all(
-    Array.from({ length: CONCURRENCY }, () => worker()),
-  );
+  await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 
   retained.sort((a, b) => a.newsId.localeCompare(b.newsId));
   failures.sort((a, b) => a.newsId.localeCompare(b.newsId));
@@ -284,7 +286,11 @@ async function main(): Promise<void> {
     failures,
   };
 
-  writeFileSync(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  writeFileSync(
+    MANIFEST_PATH,
+    `${JSON.stringify(manifest, null, 2)}\n`,
+    'utf8',
+  );
 
   console.log(
     `[political-career] retained ${retained.length} pages, ${failures.length} failures → data/raw/political-career/2026/news-manifest.json`,

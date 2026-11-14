@@ -7,18 +7,28 @@ const ROOT = process.cwd();
 const DIR = 'data/policy-research/2026/verification';
 
 type SeedGroup = {
-  source: { sourceId: string; title: string; publisher: string; url: string; rawPath: string };
+  source: {
+    sourceId: string;
+    title: string;
+    publisher: string;
+    url: string;
+    rawPath: string;
+  };
   policies: { policyId: string; originalStatement: string }[];
 };
 
 export function checkSeedVerification(batchId: string): string[] {
-  const input = readJsonFile<{ groups: SeedGroup[] }>(DIR + '/seed-input-' + batchId + '.json');
+  const input = readJsonFile<{ groups: SeedGroup[] }>(
+    DIR + '/seed-input-' + batchId + '.json',
+  );
   const batch = validateVerificationBatch(
     readJsonFile<unknown>(DIR + '/seed-verify-' + batchId + '.json'),
   );
   const problems: string[] = [];
   const policyIds = new Set(
-    input.groups.flatMap((group) => group.policies.map((policy) => policy.policyId)),
+    input.groups.flatMap((group) =>
+      group.policies.map((policy) => policy.policyId),
+    ),
   );
   const statements = new Map<string, { statement: string; rawPath: string }>();
   for (const group of input.groups) {
@@ -47,7 +57,9 @@ export function checkSeedVerification(batchId: string): string[] {
     const raw = readFileSync(path.join(ROOT, entry.rawPath), 'utf8');
     const present = quotePresent(raw, entry.statement);
     if (present !== decision.checks.excerptPresentInSource) {
-      problems.push(policyId + ': excerpt check disagrees with deterministic result');
+      problems.push(
+        policyId + ': excerpt check disagrees with deterministic result',
+      );
     }
     if (decision.decision === 'verified' && !present) {
       problems.push(policyId + ': verified but quote is not in source');

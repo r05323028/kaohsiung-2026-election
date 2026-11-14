@@ -32,7 +32,9 @@ function readJson<T>(relative: string): T {
     return JSON.parse(readFileSync(relative, 'utf8')) as T;
   } catch (error) {
     throw new Error(
-      'Failed to read ' + relative + ': ' +
+      'Failed to read ' +
+        relative +
+        ': ' +
         (error instanceof Error ? error.message : String(error)),
     );
   }
@@ -42,8 +44,12 @@ const seed = readJson<SeedDataset>(
   'data/policy-research/2026/seed/full-roster-2026-11-09.json',
 );
 const roster = readJson<Roster>('data/approved/2026/kaohsiung-election.json');
-const nameById = new Map(roster.candidates.map((candidate) => [candidate.id, candidate.displayName]));
-const sourceById = new Map(seed.sourceSnapshots.map((source) => [source.sourceId, source]));
+const nameById = new Map(
+  roster.candidates.map((candidate) => [candidate.id, candidate.displayName]),
+);
+const sourceById = new Map(
+  seed.sourceSnapshots.map((source) => [source.sourceId, source]),
+);
 
 const groups = new Map<string, SeedPolicy[]>();
 for (const policy of seed.policies) {
@@ -68,7 +74,9 @@ for (const [sourceId, policies] of ordered) {
 }
 if (current.length > 0) batches.push(current);
 
-const missingSource = ordered.filter(([sourceId]) => !sourceById.get(sourceId)?.rawPath);
+const missingSource = ordered.filter(
+  ([sourceId]) => !sourceById.get(sourceId)?.rawPath,
+);
 if (missingSource.length > 0) {
   throw new Error(
     'Seed sources without retained raw bytes: ' +
@@ -104,9 +112,16 @@ batches.forEach((entries, index) => {
       };
     }),
   };
-  writeFileSync(OUT_DIR + '/seed-input-' + batchNumber + '.json', JSON.stringify(payload, null, 2) + '\n');
+  writeFileSync(
+    OUT_DIR + '/seed-input-' + batchNumber + '.json',
+    JSON.stringify(payload, null, 2) + '\n',
+  );
   process.stdout.write(
-    'seed-input-' + batchNumber + '.json policies=' + entries.reduce((sum, entry) => sum + entry.policies.length, 0) + '\n',
+    'seed-input-' +
+      batchNumber +
+      '.json policies=' +
+      entries.reduce((sum, entry) => sum + entry.policies.length, 0) +
+      '\n',
   );
 });
 

@@ -69,7 +69,9 @@ page.on('console', (message) => {
   if (message.type() === 'error') console.log('console:', message.text());
 });
 
-await page.goto(baseURL + '/avatar-preview/', { waitUntil: 'domcontentloaded' });
+await page.goto(baseURL + '/avatar-preview/', {
+  waitUntil: 'domcontentloaded',
+});
 const inspector = page.locator('[data-testid="asset-inspector"]');
 await inspector.waitFor({ timeout: 90_000 });
 await page.locator('[data-testid="asset-inspector-canvas"] canvas').waitFor({

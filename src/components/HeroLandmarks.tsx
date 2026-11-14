@@ -1,16 +1,12 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import { HERO_ASSET_BY_FEATURE } from '../world/hero-landmarks';
 import type { DedicatedFeature } from '../world/hex-landmarks';
+import type { BoxSpec, StrutSpec, Vec3 } from './hero-geometry';
 import {
   HSR_CANOPY,
-  STADIUM_ROOF_START,
-  STADIUM_ROOF_SWEEP,
-  STADIUM_SQUASH_Z,
-  WEIWUYING_ROOF,
-  WEIWUYING_WELLS,
   hsrCanopyHeight,
   hsrCanopyUnderside,
   isInsideWeiwuyingWell,
@@ -24,18 +20,22 @@ import {
   makeRibbonRoofGeometry,
   makeStadiumBowlGeometry,
   makeStrutGeometry,
+  STADIUM_ROOF_START,
+  STADIUM_ROOF_SWEEP,
+  STADIUM_SQUASH_Z,
+  stadiumRibbonPoint,
   stadiumRoofInnerLift,
   stadiumRoofInnerRadius,
   stadiumRoofOuterLift,
   stadiumRoofOuterRadius,
-  stadiumRibbonPoint,
   superellipseRadius,
+  WEIWUYING_ROOF,
+  WEIWUYING_WELLS,
   weiwuyingRadiusAt,
   weiwuyingRoofHeight,
   weiwuyingRoofUnderside,
   wheelCabinPose,
 } from './hero-geometry';
-import type { BoxSpec, StrutSpec, Vec3 } from './hero-geometry';
 
 /* ------------------------------------------------------------------ */
 /* Shared authored materials and geometry                              */
@@ -436,8 +436,9 @@ function HsrStation() {
 const STADIUM_TRUSS = (() => {
   const struts: StrutSpec[] = [];
   const bays = 16;
-  const angles = Array.from({ length: bays }, (_, index) =>
-    STADIUM_ROOF_START + (index / bays) * STADIUM_ROOF_SWEEP,
+  const angles = Array.from(
+    { length: bays },
+    (_, index) => STADIUM_ROOF_START + (index / bays) * STADIUM_ROOF_SWEEP,
   );
   const tops = angles.map((angle) => {
     const point = stadiumRibbonPoint(
@@ -916,14 +917,20 @@ const WEIWUYING_MULLIONS = makeBoxClusterGeometry([
     const x = -0.6 + index * 0.12;
     return [
       { position: [x, 0.2, 0.482] as Vec3, scale: [0.014, 0.26, 0.01] as Vec3 },
-      { position: [x, 0.2, -0.482] as Vec3, scale: [0.014, 0.26, 0.01] as Vec3 },
+      {
+        position: [x, 0.2, -0.482] as Vec3,
+        scale: [0.014, 0.26, 0.01] as Vec3,
+      },
     ];
   }).flat(),
   ...Array.from({ length: 9 }, (_, index) => {
     const z = -0.4 + index * 0.1;
     return [
       { position: [0.642, 0.2, z] as Vec3, scale: [0.01, 0.26, 0.014] as Vec3 },
-      { position: [-0.642, 0.2, z] as Vec3, scale: [0.01, 0.26, 0.014] as Vec3 },
+      {
+        position: [-0.642, 0.2, z] as Vec3,
+        scale: [0.01, 0.26, 0.014] as Vec3,
+      },
     ];
   }).flat(),
 ]);
@@ -958,7 +965,10 @@ function Weiwuying() {
         position={[0, 0.2, 0]}
       />
       {detail === 'near' ? (
-        <HeroPart geometry={WEIWUYING_MULLIONS} material={HERO_MAT.steelLight} />
+        <HeroPart
+          geometry={WEIWUYING_MULLIONS}
+          material={HERO_MAT.steelLight}
+        />
       ) : null}
       <HeroPart
         geometry={G.rounded}
@@ -1035,19 +1045,18 @@ function Warehouse({
         scale={[width, 0.3, depth]}
         position={[0, 0.15, 0]}
       />
-      {Array.from({ length: 6 }, (_, index) => (
-        <HeroPart
-          key={index}
-          geometry={G.box}
-          material={HERO_MAT.paper}
-          scale={[0.012, 0.26, 0.014]}
-          position={[
-            -width / 2 + 0.03 + index * ((width - 0.06) / 5),
-            0.16,
-            depth / 2 + 0.006,
-          ]}
-        />
-      ))}
+      {Array.from({ length: 6 }, (_, index) => {
+        const x = -width / 2 + 0.03 + index * ((width - 0.06) / 5);
+        return (
+          <HeroPart
+            key={x}
+            geometry={G.box}
+            material={HERO_MAT.paper}
+            scale={[0.012, 0.26, 0.014]}
+            position={[x, 0.16, depth / 2 + 0.006]}
+          />
+        );
+      })}
       <HeroPart
         geometry={G.gable}
         material={roof}
@@ -1066,19 +1075,18 @@ function Warehouse({
         scale={[width + 0.05, 0.02, 0.05]}
         position={[0, 0.297, depth / 2 + 0.01]}
       />
-      {Array.from({ length: 3 }, (_, index) => (
-        <HeroPart
-          key={index}
-          geometry={G.box}
-          material={HERO_MAT.glass}
-          scale={[0.1, 0.1, 0.025]}
-          position={[
-            -width * 0.24 + index * width * 0.24,
-            0.21,
-            depth / 2 + 0.008,
-          ]}
-        />
-      ))}
+      {Array.from({ length: 3 }, (_, index) => {
+        const x = -width * 0.24 + index * width * 0.24;
+        return (
+          <HeroPart
+            key={x}
+            geometry={G.box}
+            material={HERO_MAT.glass}
+            scale={[0.1, 0.1, 0.025]}
+            position={[x, 0.21, depth / 2 + 0.008]}
+          />
+        );
+      })}
       {door ? (
         <HeroPart
           geometry={G.box}
@@ -1222,12 +1230,7 @@ const WHEEL_CABINS = 16;
 const WHEEL_HALF_DEPTH = 0.055;
 const WHEEL_COLORS = ['#c98b6b', '#6fa8a0', '#d9b56a', '#b8726a'];
 
-const WHEEL_RIM_GEOMETRY = new THREE.TorusGeometry(
-  WHEEL_RADIUS,
-  0.016,
-  8,
-  72,
-);
+const WHEEL_RIM_GEOMETRY = new THREE.TorusGeometry(WHEEL_RADIUS, 0.016, 8, 72);
 
 const WHEEL_SPOKES = (() => {
   const struts: StrutSpec[] = [];
@@ -1272,10 +1275,18 @@ const WHEEL_LEGS = (() => {
     struts.push({ from: [-0.26, -0.44, z], to: [-0.03, 0, z], width: 0.026 });
     struts.push({ from: [0.26, -0.44, z], to: [0.03, 0, z], width: 0.026 });
     struts.push({ from: [-0.26, -0.44, z], to: [0.26, -0.44, z], width: 0.03 });
-    struts.push({ from: [-0.16, -0.24, z], to: [0.16, -0.24, z], width: 0.016 });
+    struts.push({
+      from: [-0.16, -0.24, z],
+      to: [0.16, -0.24, z],
+      width: 0.016,
+    });
   }
   for (const x of [-0.26, 0.26]) {
-    struts.push({ from: [x, -0.44, -0.075], to: [x, -0.44, 0.075], width: 0.03 });
+    struts.push({
+      from: [x, -0.44, -0.075],
+      to: [x, -0.44, 0.075],
+      width: 0.03,
+    });
   }
   return makeStrutGeometry(struts);
 })();

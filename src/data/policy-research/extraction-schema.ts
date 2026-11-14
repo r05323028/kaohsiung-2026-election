@@ -9,7 +9,10 @@ export const ExtractedPolicySchema = z.object({
   excerptSourcePath: z.string().min(1),
   category: z.enum(POLICY_CATEGORIES),
   policyContext: PolicyContextSchema,
-  announcedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+  announcedAt: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .nullable(),
   geographicScope: z.enum(['citywide', 'district', 'community', 'unknown']),
   geographicLabel: z.string().min(1),
   summary: z.string().min(10),
@@ -46,7 +49,10 @@ export function validateExtractionBatch(input: unknown): ExtractionBatch {
     throw new Error(
       'Extraction batch validation failed:\n' +
         parsed.error.issues
-          .map((issue) => (issue.path.join('.') || '<root>') + ': ' + issue.message)
+          .map(
+            (issue) =>
+              (issue.path.join('.') || '<root>') + ': ' + issue.message,
+          )
           .join('\n'),
     );
   }

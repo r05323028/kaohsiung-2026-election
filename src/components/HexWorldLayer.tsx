@@ -1,6 +1,7 @@
 import { Html } from '@react-three/drei';
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
+import { landmarkFootprints, TREE_RING_RADIUS } from '../world/buildings';
 import {
   HEX_PLAZA_RADIUS,
   HEX_RADIUS,
@@ -15,9 +16,8 @@ import {
   landmarkWorldPosition,
 } from '../world/hex-landmarks';
 import { HEX_ROAD_GRAPH, ROAD_EDGES, roadNode } from '../world/road-graph';
-import { TREE_RING_RADIUS, landmarkFootprints } from '../world/buildings';
-import HexBuildings from './HexBuildings';
 import HeroLandmarkModel from './HeroLandmarks';
+import HexBuildings from './HexBuildings';
 
 type HexWorldLayerProps = {
   selectedAdminId: string | null;

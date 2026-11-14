@@ -389,21 +389,29 @@ export function validatePolicyResearchDataset(
       );
     if (!POLICY_TYPES_BY_CONTEXT[policy.policyContext].includes(policy.type))
       throw new Error(
-        'Policy ' + policy.policyId + ' has a record type inconsistent with its context.',
+        'Policy ' +
+          policy.policyId +
+          ' has a record type inconsistent with its context.',
       );
     const decision = decisions.get(policy.policyId);
     if (!decision)
       throw new Error(
-        'Policy ' + policy.policyId + ' has no independent verification decision.',
+        'Policy ' +
+          policy.policyId +
+          ' has no independent verification decision.',
       );
     if (policy.publicationStatus === 'approved-source-backed') {
       if (policy.reviewStatus !== 'editorially-approved')
         throw new Error(
-          'Policy ' + policy.policyId + ' is published without editorial approval.',
+          'Policy ' +
+            policy.policyId +
+            ' is published without editorial approval.',
         );
       if (decision !== 'verified')
         throw new Error(
-          'Policy ' + policy.policyId + ' is published without a verified decision.',
+          'Policy ' +
+            policy.policyId +
+            ' is published without a verified decision.',
         );
     }
     if (
@@ -412,7 +420,9 @@ export function validatePolicyResearchDataset(
       policy.publicationStatus !== 'rejected'
     )
       throw new Error(
-        'Policy ' + policy.policyId + ' cannot be published on an unverified decision.',
+        'Policy ' +
+          policy.policyId +
+          ' cannot be published on an unverified decision.',
       );
     if (decision === 'rejected' && policy.publicationStatus !== 'rejected')
       throw new Error(

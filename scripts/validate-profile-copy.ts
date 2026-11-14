@@ -130,7 +130,7 @@ function normalizeMarkdown(value: string): string {
 
 function hasSerializedKey(html: string, key: string): boolean {
   const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`(?:\"|&quot;|')${escaped}(?:\"|&quot;|')\\s*:`).test(html);
+  return new RegExp(`(?:"|&quot;|')${escaped}(?:"|&quot;|')\\s*:`).test(html);
 }
 
 const pageEntries = readdirSync(distCandidatesPath, { withFileTypes: true })

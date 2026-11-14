@@ -1,4 +1,3 @@
-import { policyTypeForContext } from '../src/data/policy-research/schema';
 import { createHash } from 'node:crypto';
 import {
   existsSync,
@@ -16,6 +15,7 @@ import {
   type PolicyContext,
   type PolicyResearchDataset,
   type PolicySourceSnapshot,
+  policyTypeForContext,
   type SourceTier,
   validatePolicyResearchDataset,
 } from '../src/data/policy-research/schema';

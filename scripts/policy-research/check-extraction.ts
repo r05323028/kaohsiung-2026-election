@@ -19,7 +19,9 @@ export function checkExtraction(batchId: string): string[] {
     'data/policy-research/2026/extraction/' + batchId + '-input.json',
   );
   const batch = validateExtractionBatch(
-    readJsonFile<unknown>('data/policy-research/2026/extraction/' + batchId + '.json'),
+    readJsonFile<unknown>(
+      'data/policy-research/2026/extraction/' + batchId + '.json',
+    ),
   );
 
   const allowed = new Map<string, Set<string>>();
@@ -49,7 +51,9 @@ export function checkExtraction(batchId: string): string[] {
     }
     const files = allowed.get(record.candidateId);
     if (!files) {
-      problems.push(record.researchId + ': unknown candidate ' + record.candidateId);
+      problems.push(
+        record.researchId + ': unknown candidate ' + record.candidateId,
+      );
       continue;
     }
     if (!files.has(record.excerptSourcePath)) {
@@ -66,7 +70,9 @@ export function checkExtraction(batchId: string): string[] {
   );
   for (const candidateId of withoutPolicy) {
     if (!allowed.has(candidateId)) {
-      problems.push('unknown candidate in candidatesWithoutPolicy ' + candidateId);
+      problems.push(
+        'unknown candidate in candidatesWithoutPolicy ' + candidateId,
+      );
     }
   }
   for (const candidate of input.candidates) {

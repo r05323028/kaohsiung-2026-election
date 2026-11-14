@@ -27,7 +27,10 @@ export function validateVerificationBatch(input: unknown): VerificationBatch {
     throw new Error(
       'Verification batch validation failed:\n' +
         parsed.error.issues
-          .map((issue) => (issue.path.join('.') || '<root>') + ': ' + issue.message)
+          .map(
+            (issue) =>
+              (issue.path.join('.') || '<root>') + ': ' + issue.message,
+          )
           .join('\n'),
     );
   }

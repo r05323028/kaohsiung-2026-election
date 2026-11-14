@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet profile', async ({
-  page,
-}) => {
+test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet profile', {
+  tag: '@critical',
+}, async ({ page }) => {
   await page.goto('/');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
     'data-hydrated',
@@ -37,9 +37,9 @@ test('mobile avatar preview stays within the touch viewport', async ({
   await expect(preview).toContainText('validated');
 });
 
-test('mobile essential controls meet a 44px touch target at 390x844', async ({
-  page,
-}) => {
+test('mobile essential controls meet a 44px touch target at 390x844', {
+  tag: '@critical',
+}, async ({ page }) => {
   test.setTimeout(90_000);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');

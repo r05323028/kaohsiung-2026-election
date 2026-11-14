@@ -99,9 +99,9 @@ test.describe('unified Kaohsiung world', () => {
     );
   });
 
-  test('council-04 simulation stays inside Zuoying and Nanzih while following', async ({
-    page,
-  }) => {
+  test('council-04 simulation stays inside Zuoying and Nanzih while following', {
+    tag: '@critical',
+  }, async ({ page }) => {
     await page.goto(
       '/?district=kaohsiung-council-04&candidate=kaohsiung-council-04-712cf4dd',
     );

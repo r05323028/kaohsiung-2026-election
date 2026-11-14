@@ -108,7 +108,9 @@ test.describe('living-world simulation', () => {
     expect(samples.demoActors).toBe(0);
   });
 
-  test('council-04 cannot leave Zuoying or Nanzih', async ({ page }) => {
+  test('council-04 cannot leave Zuoying or Nanzih', {
+    tag: '@critical',
+  }, async ({ page }) => {
     test.setTimeout(90_000);
     await openWorld(page, '/?district=kaohsiung-council-04');
 

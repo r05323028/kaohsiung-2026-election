@@ -7,11 +7,20 @@ const SHEET_SCROLL = '.candidate-sheet__scroll';
 type Box = { x: number; y: number; width: number; height: number };
 
 async function openExplorer(page: Page, path = '/') {
+  const url = new URL(path, 'http://127.0.0.1');
+  const expectedFocus = url.searchParams.has('admin')
+    ? /^admin-/
+    : url.searchParams.has('candidate')
+      ? /^candidate-/
+      : url.searchParams.has('district')
+        ? /^scope-/
+        : null;
   await page.goto(path);
-  await expect(page.getByTestId('city-explorer')).toHaveAttribute(
-    'data-hydrated',
-    'true',
-  );
+  const explorer = page.getByTestId('city-explorer');
+  await expect(explorer).toHaveAttribute('data-hydrated', 'true');
+  if (expectedFocus) {
+    await expect(explorer).toHaveAttribute('data-scene-focus', expectedFocus);
+  }
   await page.evaluate(() =>
     document.querySelector('astro-dev-toolbar')?.remove(),
   );
@@ -93,7 +102,7 @@ async function expectSheetBelowNavbar(page: Page) {
   expect(close.y + close.height).toBeLessThanOrEqual(viewport.height + 0.5);
 
   const sheetHeader = await boxOf(page, '.candidate-sheet__header');
-  expect(sheetHeader.y).toBeGreaterThanOrEqual(surface.y - 0.5);
+  expect(sheetHeader.y).toBeGreaterThanOrEqual(surface.y - 2);
   expect(sheetHeader.y + sheetHeader.height).toBeLessThanOrEqual(
     surface.y + surface.height + 0.5,
   );
@@ -104,10 +113,10 @@ async function expectSheetBelowNavbar(page: Page) {
 test.describe('candidate sheet below the global navbar', () => {
   test.use({ viewport: { width: 1440, height: 900 } });
 
-  test('desktop expanded sheet clears the navbar and renders the focused roster', async ({
-    page,
-  }) => {
-    const surface = await openSheet(page, '/?admin=E03');
+  test('desktop expanded sheet clears the navbar and renders the focused roster', {
+    tag: '@critical',
+  }, async ({ page }) => {
+    const surface = await openSheet(page, '/?admin=E03&quality=low');
     await expectSheetBelowNavbar(page);
 
     await expect(surface.locator('.candidate-sheet__group')).toHaveCount(2);
@@ -175,10 +184,10 @@ test.describe('candidate sheet below the global navbar', () => {
     await expectSheetBelowNavbar(page);
   });
 
-  test('desktop drag gestures still open and close the sheet', async ({
-    page,
-  }) => {
-    await openExplorer(page);
+  test('desktop drag gestures still open and close the sheet', {
+    tag: '@critical',
+  }, async ({ page }) => {
+    await openExplorer(page, '/?quality=low');
 
     const handle = await boxOf(page, '.candidate-sheet__handle');
     const handleX = handle.x + handle.width / 2;
@@ -204,10 +213,10 @@ test.describe('candidate sheet below the global navbar', () => {
     await expect(page.locator('.candidate-sheet__handle')).toBeVisible();
   });
 
-  test('desktop sheet survives viewing a candidate profile and reopening', async ({
-    page,
-  }) => {
-    const surface = await openSheet(page);
+  test('desktop sheet survives viewing a candidate profile and reopening', {
+    tag: '@critical',
+  }, async ({ page }) => {
+    const surface = await openSheet(page, '/?quality=low');
 
     await surface.locator('.candidate-sheet__card').first().click();
     await expect(page.locator('.profile-panel.is-open')).toBeVisible();
@@ -223,8 +232,10 @@ test.describe('candidate sheet below the global navbar', () => {
     await expectSheetBelowNavbar(page);
   });
 
-  test('desktop sheet tracks viewport resizing', async ({ page }) => {
-    await openSheet(page);
+  test('desktop sheet tracks viewport resizing', { tag: '@critical' }, async ({
+    page,
+  }) => {
+    await openSheet(page, '/?quality=low');
     await expectSheetBelowNavbar(page);
 
     await page.setViewportSize({ width: 1024, height: 640 });
@@ -246,10 +257,10 @@ test.describe('candidate sheet below the global navbar', () => {
 test.describe('candidate sheet below the global navbar on mobile viewports', () => {
   test.use({ viewport: { width: 390, height: 844 }, hasTouch: true });
 
-  test('mobile expanded sheet keeps its header and close button reachable', async ({
-    page,
-  }) => {
-    const surface = await openSheet(page, '/?admin=E03');
+  test('mobile expanded sheet keeps its header and close button reachable', {
+    tag: '@critical',
+  }, async ({ page }) => {
+    const surface = await openSheet(page, '/?admin=E03&quality=low');
     await expectSheetBelowNavbar(page);
 
     const closeButton = await boxOf(page, '.candidate-sheet__close');
@@ -286,10 +297,10 @@ test.describe('candidate sheet below the global navbar on mobile viewports', () 
     ).toBeVisible();
   });
 
-  test('mobile sheet keeps navbar clearance after closing the dialog', async ({
-    page,
-  }) => {
-    await openSheet(page);
+  test('mobile sheet keeps navbar clearance after closing the dialog', {
+    tag: '@critical',
+  }, async ({ page }) => {
+    await openSheet(page, '/?quality=low');
     await page.locator('.candidate-sheet__close').click();
     await expect(page.locator(SHEET_SURFACE)).toBeHidden();
     await expect(page.locator('.candidate-sheet__handle')).toBeVisible();

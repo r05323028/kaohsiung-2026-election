@@ -67,6 +67,22 @@ async function visibility(page: Page): Promise<Visibility> {
   });
 }
 
+async function actorScreenPosition(
+  page: Page,
+  slug: string,
+): Promise<{ x: number; y: number } | null> {
+  return page.evaluate(async (actorSlug) => {
+    const bridge = window as WorldWindow;
+    for (let attempt = 0; attempt < 100; attempt += 1) {
+      if (typeof bridge.__kaohsiungActorScreenPosition === 'function') {
+        return bridge.__kaohsiungActorScreenPosition(actorSlug);
+      }
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+    throw new Error('actor screen bridge is unavailable');
+  }, slug);
+}
+
 async function focusAdmin(page: Page, name: string) {
   // District labels only render in the city overview, so return to the world
   // before focusing another district from the map.
@@ -87,9 +103,9 @@ async function focusAdmin(page: Page, name: string) {
 }
 
 test.describe('district-focused candidate visibility', () => {
-  test('transitions from the mayor-only overview to district focus and back', async ({
-    page,
-  }) => {
+  test('transitions from the mayor-only overview to district focus and back', {
+    tag: '@critical',
+  }, async ({ page }) => {
     test.setTimeout(120_000);
     await openFocus(page, '/');
 
@@ -158,9 +174,9 @@ test.describe('district-focused candidate visibility', () => {
     ).toBe(true);
   });
 
-  test('uses official electoral scope across district focus and restores the full city', async ({
-    page,
-  }) => {
+  test('uses official electoral scope across district focus and restores the full city', {
+    tag: '@critical',
+  }, async ({ page }) => {
     test.setTimeout(180_000);
     await openFocus(page, '/?admin=E03');
 
@@ -273,9 +289,9 @@ test.describe('district-focused candidate visibility', () => {
     );
   });
 
-  test('keeps mayors walking citywide across district focus changes', async ({
-    page,
-  }) => {
+  test('keeps mayors walking citywide across district focus changes', {
+    tag: '@critical',
+  }, async ({ page }) => {
     test.setTimeout(180_000);
     await openFocus(page, '/?admin=E03');
 
@@ -458,17 +474,13 @@ test.describe('district-focused candidate visibility', () => {
       '17',
     );
     expect(
-      await page.evaluate(
-        (slug) =>
-          (window as WorldWindow).__kaohsiungActorScreenPosition?.(slug),
-        mapping.hiddenSlug ?? '',
-      ),
+      await actorScreenPosition(page, mapping.hiddenSlug ?? ''),
     ).toBeNull();
   });
 
-  test('switches constituencies rapidly without leaking candidates or selection', async ({
-    page,
-  }) => {
+  test('switches constituencies rapidly without leaking candidates or selection', {
+    tag: '@critical',
+  }, async ({ page }) => {
     test.setTimeout(120_000);
     await openFocus(page, '/');
     const explorer = page.getByTestId('city-explorer');
@@ -626,11 +638,7 @@ test.describe('district-focused candidate visibility', () => {
       timeout: 20_000,
     });
     expect(
-      await page.evaluate(() =>
-        (window as WorldWindow).__kaohsiungActorScreenPosition?.(
-          'kaohsiung-council-04-712cf4dd',
-        ),
-      ),
+      await actorScreenPosition(page, 'kaohsiung-council-04-712cf4dd'),
     ).not.toBeNull();
 
     await page.locator('[aria-label="關閉人物資料"]').click();

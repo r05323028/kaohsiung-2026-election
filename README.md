@@ -87,7 +87,10 @@ npm run records:coverage
 npm run typecheck           # astro check
 npm run lint                # Biome
 npm test                    # Vitest
-npm run build               # all validation + typecheck + static build
+npm run validate:all        # all data / editorial / coverage validators + typecheck
+npm run build:astro         # static build only; does not run validators
+npm run build:verified      # validate:all + build:astro + profile-copy check
+npm run build               # alias of build:verified
 npm run test:e2e            # Playwright; needs a local Chromium install
 npm run preview             # preview dist/ output
 ```
@@ -105,6 +108,19 @@ npm run preview             # preview dist/ output
 `npm run validate:full-roster` 只讀官方 approved roster、既有 public-record canonical layer 與 manifest，建立 106 位候選人 × 6 類別 = 636 個 audit slots。`2026-11-05` 快照中有 8 個類別 slot 使用已保留來源、16 筆 source-backed static records；其餘 628 個 slot 標為 `not-attempted`，明確表示本批次沒有候選人專屬快照，不表示不存在資料。報告與 review queue 維持 `pending-human-review`，不產生完整度排名。
 
 `npm run research:execute` 不連線，會對已保留的 CEC C1/T 候選人 JSON 快照執行 106 位候選人 × 6 類別 = 636 個真實研究審計格；它保留來源 URL、擷取時間、SHA-256、原始列位置、嘗試結果與 9 筆姓名字元衝突。`npm run research:validate` 產生 `reports/full-roster-research.json/.md` 與 `reports/research-quality.json/.md`；`npm run research:verify` 會重新解析原始 CEC 快照，抽查市長、第 4 與第 13 選區及衝突列，產生 `reports/research-independent-verification.json/.md`。這些資料仍是機器驗證、人工審查 pending，不把未嘗試視為不存在，也不把 CEC 空白欄位視為負面證據。
+
+## 持續整合與瀏覽器測試
+
+CI 分成兩個 workflow：
+
+- **Fast CI**（`.github/workflows/ci.yml`，每次 push / PR）：三個平行 job。Quality 執行 validate:all（含 typecheck）、lint、Vitest；Static build 執行一次 build:astro、profile-copy 驗證與非根路徑建置；Critical browser tests 只跑 16 個標記 `@critical` 的桌面與手機測試，涵蓋 visibility、地理邊界、切換與底部面板。
+- **Full E2E**（`.github/workflows/e2e.yml`，main push、每日排程、手動觸發）：完整 Playwright 測試以 2 個 shard、權重 38:68 平行執行，每個 shard 一個 worker；僅在失敗時上傳 trace、截圖與 HTML report。
+- PR 的新 push 會取消舊的 CI run；GitHub Pages 部署使用獨立的 pages concurrency group，且 cancel-in-progress: false，不會中斷進行中的正式部署。
+
+本機可重現 shard：
+
+    PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=1/2 --workers=1
+    PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=2/2 --workers=1
 
 ## 靜態部署
 

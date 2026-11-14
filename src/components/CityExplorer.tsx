@@ -184,49 +184,62 @@ export default function CityExplorer({ districts, candidates }: Props) {
     adminId: string | null;
     overview: boolean;
   } | null>(null);
+  const initialFocusAppliedRef = useRef(false);
 
   useEffect(() => {
     setWebglSupported(supportsWebGL());
-    if (window.matchMedia('(min-width: 1024px)').matches) setDetail('high');
-
     const params = new URLSearchParams(window.location.search);
-    const districtFromUrl = params.get('district');
-    const validDistrictSlug =
-      districtFromUrl &&
-      districts.some((district) => district.slug === districtFromUrl)
-        ? districtFromUrl
-        : null;
-    const adminFromUrl = params.get('admin');
-    const admin = adminFromUrl
-      ? ADMIN_SUMMARY_BY_ID.get(adminFromUrl)
-      : undefined;
-    const candidateFromUrl = params.get('candidate');
-    const candidate = candidateFromUrl
-      ? candidates.find((item) => item.candidacy.slug === candidateFromUrl)
-      : undefined;
+    const qualityFromUrl = params.get('quality');
+    if (
+      qualityFromUrl === 'low' ||
+      qualityFromUrl === 'medium' ||
+      qualityFromUrl === 'high'
+    ) {
+      setDetail(qualityFromUrl);
+    } else if (window.matchMedia('(min-width: 1024px)').matches) {
+      setDetail('high');
+    }
 
-    if (candidate) {
-      // A candidate route is the most specific focus: it defines the electoral
-      // district and must not inherit an unrelated administrative focus from a
-      // hand-edited URL. Closing the profile then keeps one consistent scope.
-      setOverview(false);
-      setSelectedCandidateSlug(candidate.candidacy.slug);
-      setFollowActorSlug(candidate.candidacy.slug);
-      setSelectedDistrictSlug(candidate.district.slug);
-      setSelectedAdminId(null);
-    } else if (admin) {
-      // An administrative focus resolves to exactly one ordinary constituency.
-      // Always synchronize the electoral district, so ?admin=&district= cannot
-      // initialize contradictory administrative and constituency focus.
-      setSelectedAdminId(admin.id);
-      setOverview(false);
-      const electoral = electoralDistrictSlugForAdminName(admin.shortName);
-      if (electoral && districts.some((item) => item.slug === electoral)) {
-        setSelectedDistrictSlug(electoral);
+    if (!initialFocusAppliedRef.current) {
+      initialFocusAppliedRef.current = true;
+      const districtFromUrl = params.get('district');
+      const validDistrictSlug =
+        districtFromUrl &&
+        districts.some((district) => district.slug === districtFromUrl)
+          ? districtFromUrl
+          : null;
+      const adminFromUrl = params.get('admin');
+      const admin = adminFromUrl
+        ? ADMIN_SUMMARY_BY_ID.get(adminFromUrl)
+        : undefined;
+      const candidateFromUrl = params.get('candidate');
+      const candidate = candidateFromUrl
+        ? candidates.find((item) => item.candidacy.slug === candidateFromUrl)
+        : undefined;
+
+      if (candidate) {
+        // A candidate route is the most specific focus: it defines the electoral
+        // district and must not inherit an unrelated administrative focus from a
+        // hand-edited URL. Closing the profile then keeps one consistent scope.
+        setOverview(false);
+        setSelectedCandidateSlug(candidate.candidacy.slug);
+        setFollowActorSlug(candidate.candidacy.slug);
+        setSelectedDistrictSlug(candidate.district.slug);
+        setSelectedAdminId(null);
+      } else if (admin) {
+        // An administrative focus resolves to exactly one ordinary constituency.
+        // Always synchronize the electoral district, so ?admin=&district= cannot
+        // initialize contradictory administrative and constituency focus.
+        setSelectedAdminId(admin.id);
+        setOverview(false);
+        const electoral = electoralDistrictSlugForAdminName(admin.shortName);
+        if (electoral && districts.some((item) => item.slug === electoral)) {
+          setSelectedDistrictSlug(electoral);
+        }
+      } else if (validDistrictSlug) {
+        setSelectedDistrictSlug(validDistrictSlug);
+        setOverview(false);
       }
-    } else if (validDistrictSlug) {
-      setSelectedDistrictSlug(validDistrictSlug);
-      setOverview(false);
     }
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

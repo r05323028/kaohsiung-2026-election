@@ -1,7 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
 
-test('homepage renders the city explorer', async ({ page }) => {
+test('homepage renders the city explorer', { tag: '@critical' }, async ({
+  page,
+}) => {
   await page.goto('/');
   await expect(
     page.getByRole('link', { name: '港都人物誌首頁' }),
@@ -10,9 +12,9 @@ test('homepage renders the city explorer', async ({ page }) => {
   await expect(page.locator('#scene-heading')).toContainText('高雄市長選舉');
 });
 
-test('district focus changes the active scene and candidate list', async ({
-  page,
-}) => {
+test('district focus changes the active scene and candidate list', {
+  tag: '@critical',
+}, async ({ page }) => {
   test.setTimeout(90_000);
   await page.goto('/?district=kaohsiung-council-04');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(

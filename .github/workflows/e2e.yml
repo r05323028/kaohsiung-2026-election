@@ -1,0 +1,56 @@
+name: Full E2E
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Nightly full browser run at 18:00 UTC (02:00 Asia/Taipei).
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: full-e2e-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  e2e:
+    name: Browser E2E (shard ${{ matrix.shard }}/2)
+    runs-on: ubuntu-latest
+    env:
+      PWTEST_SHARD_WEIGHTS: '38:68'
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser E2E
+        run: >-
+          npx playwright test
+          --shard=${{ matrix.shard }}/2
+          --workers=1
+          --retries=2
+      - name: Upload browser diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-shard-${{ matrix.shard }}
+          path: |
+            test-results
+            playwright-report
+          if-no-files-found: ignore
+          retention-days: 7

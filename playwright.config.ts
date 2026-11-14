@@ -15,7 +15,8 @@ export default defineConfig({
   workers: Number(process.env.PLAYWRIGHT_WORKERS ?? (process.env.CI ? 1 : 2)),
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
-  reporter: 'list',
+  // CI keeps the list output and writes an HTML report for failed-run artifacts.
+  reporter: process.env.CI ? [['list'], ['html', { open: 'never' }]] : 'list',
   use: {
     baseURL: `http://127.0.0.1:${port}`,
     // Set PLAYWRIGHT_HEADLESS=1 when running on a display-less machine.

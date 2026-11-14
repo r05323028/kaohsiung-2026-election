@@ -41,7 +41,8 @@ type WorldWindow = Window & {
 };
 
 async function openModels(page: Page, path: string) {
-  await page.goto(path);
+  const separator = path.includes('?') ? '&' : '?';
+  await page.goto(path + separator + 'quality=low');
   await expect(page.getByTestId('city-explorer')).toHaveAttribute(
     'data-hydrated',
     'true',

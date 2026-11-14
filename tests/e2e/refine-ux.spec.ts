@@ -117,7 +117,7 @@ test.describe('refined living-city exploration', () => {
   test('candidate selection keeps scale, profile does not reset it, and close restores the view', async ({
     page,
   }) => {
-    await page.goto('/?admin=E03');
+    await page.goto('/?admin=E03&quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     const before = await camera(page);
@@ -159,7 +159,7 @@ test.describe('refined living-city exploration', () => {
   test('citywide candidate selection does not force a new zoom level', async ({
     page,
   }) => {
-    await page.goto('/');
+    await page.goto('/?quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     const before = await camera(page);
@@ -171,7 +171,7 @@ test.describe('refined living-city exploration', () => {
   test('manual camera control stops follow and close does not yank the view back', async ({
     page,
   }) => {
-    await page.goto('/?admin=E03');
+    await page.goto('/?admin=E03&quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     await selectMayor(page);
@@ -211,7 +211,7 @@ test.describe('refined living-city exploration', () => {
   test('mouse drag pans without rotating or selecting; wheel zooms', async ({
     page,
   }) => {
-    await page.goto('/?admin=E03');
+    await page.goto('/?admin=E03&quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     const before = await camera(page);
@@ -253,7 +253,7 @@ test.describe('refined living-city exploration', () => {
   test('vertical mouse drag pans on the ground without sinking the target', async ({
     page,
   }) => {
-    await page.goto('/?admin=E03');
+    await page.goto('/?admin=E03&quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     const before = await camera(page);
@@ -283,7 +283,7 @@ test.describe('refined living-city exploration', () => {
       deviceScaleFactor: 1,
     });
     const page = await context.newPage();
-    await page.goto('/');
+    await page.goto('/?quality=low');
     await hydrated(page);
     await page.waitForTimeout(4_000);
     await waitForCameraSettled(page);
@@ -348,7 +348,7 @@ test.describe('refined living-city exploration', () => {
   test('explorer and informational pages share one brand and navigation system', async ({
     page,
   }) => {
-    await page.goto('/');
+    await page.goto('/?quality=low');
     await hydrated(page);
     const explorerBrand = page.locator('.global-header__brand');
     await expect(explorerBrand.locator('.brand-lockup__title')).toHaveText(
@@ -394,7 +394,7 @@ test.describe('candidate focus and miniature scale', () => {
   test('candidate selection keeps the miniature scale and camera zoom', async ({
     page,
   }) => {
-    await page.goto('/?admin=E03');
+    await page.goto('/?admin=E03&quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     const before = await camera(page);
@@ -413,7 +413,7 @@ test.describe('candidate focus and miniature scale', () => {
   test('a selected walking mayor stays framed without changing zoom', async ({
     page,
   }) => {
-    await page.goto('/?admin=E03');
+    await page.goto('/?admin=E03&quality=low');
     await hydrated(page);
     await waitForCameraSettled(page);
     const before = await camera(page);

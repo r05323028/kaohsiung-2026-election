@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,7 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build static site for the repository page
-        run: npm run build
+        # The 28 validators run once in CI. Deployment still verifies the
+        # generated profile copy and builds the exact Pages artifact.
+        run: npm run build:pages
         env:
           BASE_PATH: /kaohsiung-2026-election/
           SITE_URL: https://r05323028.github.io

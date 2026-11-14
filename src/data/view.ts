@@ -11,6 +11,7 @@ import type { PublishedPolicy } from './policy-research/published-schema';
 import type { PoliticalFamilyReadModel } from './political-family';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { PublishedNewsItem } from './news';
+import { getPoliticalCareer, type PoliticalCareerView } from './political-career';
 import type { CandidateResearchSummary } from './public-records/research-index';
 import type { PublicRecordBundle } from './public-records/schema';
 import type {
@@ -187,6 +188,7 @@ export type PublicCandidateProfile = Omit<
   | 'biography'
   | 'basicProfile'
   | 'automatedPublication'
+  | 'politicalCareer'
 > & {
   person: CandidateProfileView['person'];
   candidacy: Omit<
@@ -203,6 +205,7 @@ export type PublicCandidateProfile = Omit<
     claims: PublicAutomatedClaim[];
     sources: PublicAutomatedSource[];
   };
+  politicalCareer?: PoliticalCareerView;
 };
 
 function officeLabelFor(candidate: CandidateProfileView): string {
@@ -353,6 +356,8 @@ export function toPublicCandidateProfile(
     (isDemo
       ? candidate.person.summary
       : officeLabelFor(candidate) + '，參選' + candidate.district.name + '。');
+  const politicalCareer = getPoliticalCareer(candidate.candidacy.id);
+
   const publicDistrict = isDemo
     ? candidate.district
     : { ...candidate.district, description: '', scopeNote: '' };
@@ -386,6 +391,7 @@ export function toPublicCandidateProfile(
     ...(publicAutomatedPublication
       ? { automatedPublication: publicAutomatedPublication }
       : {}),
+    ...(politicalCareer ? { politicalCareer } : {}),
     visual: candidate.visual,
   };
 }

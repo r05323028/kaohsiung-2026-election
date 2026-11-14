@@ -104,6 +104,10 @@
 
 `src/data/enrichment/automated-policy.ts` 與 `automated-publication.ts` 分離 machine decision provenance 與 reviewer-free public records。2026-11-07 的 policy snapshot 覆蓋 143 筆 decisions：1 machine-approved/public、142 rejected；只有 historical basic-biography 的 education／historical-position／professional-experience，institutional KCC/立法院直接證據，且 A/B `supported` + `full-agreement` 才可通過。71 disagreement dispositions、25 correction targets 與 wrong-subject claim `enrich-claim-0111` 均不公開；source SHA/byte length、packet checksum 或 identity 條件變動會使 record 失效。詳見 `docs/AUTOMATED_PUBLICATION.md`。
 
+## Political career timeline entities
+
+`src/data/political-career/schema.ts` 定義 `PoliticalCareerDataset`：公職任期（`officeTerms`）、政治活動（`activities`）、106 列 coverage 與 review 限制；由 `scripts/political-career/build.ts` 離線產生 `data/approved/2026/political-career.json`，`npm run validate:political-career` 驗證來源、日期、歸屬與保留快照。詳見 `docs/POLITICAL_CAREER.md`。
+
 ## Existing content entities
 
 `Person`, `Candidacy`, `ElectoralDistrict`, `Position`, `Policy`, `PublicRecord`, `NewsArticle`, `PersonRelationship`, `TimelineEvent`, `EvidenceSource`, `CharacterVisualConfig` 仍保留給 demo 與既有 read model；新的 official public-record ingestion 使用上述 claim/evidence schemas，不把 demo fixture 混入官方 bundle。

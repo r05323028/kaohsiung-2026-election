@@ -9,6 +9,7 @@ import {
 import { ballotNumberText } from '../data/official/ballot';
 import PoliticalFamilyGraph from './PoliticalFamilyGraph';
 
+import { PoliticalCareerTimeline } from './PoliticalCareerTimeline';
 export type ProfileTab = 'basic' | 'policies' | 'news' | 'career' | 'family';
 
 export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
@@ -806,10 +807,10 @@ function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const publicActivities = candidate.publicRecords?.activities ?? [];
   const publicPositions = candidate.publicRecords?.positions ?? [];
   const legacyCards = LegacyCareerCards({ candidate });
-  const proposalCount = publicActivities.filter(
-    (activity) => activity.activityType === 'legislative-proposal',
-  ).length;
+  const career = candidate.politicalCareer;
   const hasCareer =
+    (career?.activities.length ?? 0) > 0 ||
+    (career?.officeTerms.length ?? 0) > 0 ||
     publicActivities.length > 0 ||
     publicPositions.length > 0 ||
     legacyCards.length > 0 ||
@@ -820,34 +821,23 @@ function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
     <div className="profile-tab-content" data-profile-section="career">
       <div className="profile-section-heading">
         <h3>從政歷程</h3>
-        <p>列出有來源的職務與公共活動。</p>
+        <p>
+          以可查證的市政參與、議會質詢、提案與公職任期為主，依時間排序；
+          學歷與一般經歷請見基本資料。
+        </p>
       </div>
-      <AutomatedClaimCards
-        candidate={candidate}
-        categories={['basic-biography', 'timeline']}
-        heading="歷史履歷資料"
-      />
-      {candidate.biography?.claims.length ? (
-        <div className="content-card" data-testid="biography-timeline">
-          <h4>履歷事件</h4>
-          <ol className="timeline">
-            {candidate.biography.claims.map((claim) => (
-              <li key={claim.claimId}>
-                <time>{claim.validFrom ?? '日期未標示'}</time>
-                <strong>
-                  {biographyClaimLabels[claim.claimType] ?? claim.claimType}・
-                  {claim.title}
-                </strong>
-                <p>{claim.value}</p>
-                {claim.organization ? <p>{claim.organization}</p> : null}
-                <SourceChips
-                  candidate={candidate}
-                  sourceIds={claim.sourceIds}
-                />
-              </li>
-            ))}
-          </ol>
-        </div>
+      {career ? (
+        <PoliticalCareerTimeline
+          view={career}
+          promises={candidate.publishedPolicies ?? []}
+          candidateName={candidate.person.displayName}
+        />
+      ) : null}
+      {!career ? (
+        <section className="content-card">
+          <h4>政治活動時間軸</h4>
+          <p>目前未收錄可查證的從政紀錄；查無紀錄不代表未從事政治活動。</p>
+        </section>
       ) : null}
       {publicPositions.length > 0 ? (
         <PublicPositionCards candidate={candidate} />
@@ -855,21 +845,41 @@ function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
       {publicActivities.length > 0 ? (
         <PublicActivityCards candidate={candidate} />
       ) : null}
-      {legacyCards.length > 0 ? legacyCards : null}
-      <section className="content-card" data-testid="legislative-records">
-        <div>
-          <h4>提案紀錄</h4>
-          <p>
-            {proposalCount > 0
-              ? '已公開 ' + proposalCount + ' 筆提案紀錄'
-              : '提案紀錄：暫無公開提案紀錄'}
-          </p>
-        </div>
-        <div>
-          <h4>表決紀錄</h4>
-          <p>表決紀錄：暫無可查證的個別表決紀錄</p>
-        </div>
-      </section>
+      <details className="content-card career-archive">
+        <summary>其他公開紀錄（含非從政經歷）</summary>
+        <p>
+          以下為既有公開資料中的履歷與背景紀錄，可能包含學歷、一般經歷或組織職務，
+          不屬於市政與議會行動。
+        </p>
+        <AutomatedClaimCards
+          candidate={candidate}
+          categories={['basic-biography', 'timeline']}
+          heading="歷史履歷資料"
+        />
+        {candidate.biography?.claims.length ? (
+          <div className="content-card" data-testid="biography-timeline">
+            <h4>履歷事件</h4>
+            <ol className="timeline">
+              {candidate.biography.claims.map((claim) => (
+                <li key={claim.claimId}>
+                  <time>{claim.validFrom ?? '日期未標示'}</time>
+                  <strong>
+                    {biographyClaimLabels[claim.claimType] ?? claim.claimType}・
+                    {claim.title}
+                  </strong>
+                  <p>{claim.value}</p>
+                  {claim.organization ? <p>{claim.organization}</p> : null}
+                  <SourceChips
+                    candidate={candidate}
+                    sourceIds={claim.sourceIds}
+                  />
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : null}
+        {legacyCards.length > 0 ? legacyCards : null}
+      </details>
       {!hasCareer ? <EmptyContent category="career" /> : null}
     </div>
   );

@@ -15,7 +15,7 @@
 - Tailwind CSS v4 through the official Vite plugin, with project CSS tokens
 - Zod build-time validation and deterministic offline adapters
 - Vitest unit tests, Playwright smoke tests, Biome checks
-- GitHub Actions CI; no deployment workflow
+- GitHub Actions CI and GitHub Pages deployment
 
 無 Node.js production server、API、資料庫、認證、runtime CMS、serverless function 或外部 AI inference。
 
@@ -89,6 +89,7 @@ npm run lint                # Biome
 npm test                    # Vitest
 npm run validate:all        # all data / editorial / coverage validators + typecheck
 npm run build:astro         # static build only; does not run validators
+npm run build:pages         # static build + profile-copy output audit
 npm run build:verified      # validate:all + build:astro + profile-copy check
 npm run build               # alias of build:verified
 npm run test:e2e            # Playwright; needs a local Chromium install
@@ -113,7 +114,7 @@ npm run preview             # preview dist/ output
 
 CI 分成兩個 workflow：
 
-- **Fast CI**（`.github/workflows/ci.yml`，每次 push / PR）：三個平行 job。Quality 執行 validate:all（含 typecheck）、lint、Vitest；Static build 執行一次 build:astro、profile-copy 驗證與非根路徑建置；Critical browser tests 只跑 16 個標記 `@critical` 的桌面與手機測試，涵蓋 visibility、地理邊界、切換與底部面板。
+- **Fast CI**（`.github/workflows/ci.yml`，每次 push / PR）：Quality 執行 validate:all（含 typecheck）、lint、Vitest；Static build 執行一次 build:astro、profile-copy 驗證與非根路徑建置；Critical browser tests 將 16 個標記 `@critical` 的桌面與手機測試分成 2 個 shard 平行執行，涵蓋 visibility、地理邊界、切換與底部面板。
 - **Full E2E**（`.github/workflows/e2e.yml`，main push、每日排程、手動觸發）：完整 Playwright 測試以 2 個 shard、權重 38:68 平行執行，每個 shard 一個 worker；僅在失敗時上傳 trace、截圖與 HTML report。
 - PR 的新 push 會取消舊的 CI run；GitHub Pages 部署使用獨立的 pages concurrency group，且 cancel-in-progress: false，不會中斷進行中的正式部署。
 
@@ -121,6 +122,8 @@ CI 分成兩個 workflow：
 
     PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=1/2 --workers=1
     PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=2/2 --workers=1
+    npx playwright test --grep @critical --shard=1/2 --workers=1
+    npx playwright test --grep @critical --shard=2/2 --workers=1
 
 ## 靜態部署
 

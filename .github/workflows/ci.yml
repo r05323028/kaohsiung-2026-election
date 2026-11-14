@@ -59,9 +59,13 @@ jobs:
         run: BASE_PATH=/kaohsiung-civic-stories/ npm run build:astro
 
   critical-browser:
-    name: Critical browser tests
+    name: Critical browser tests (shard ${{ matrix.shard }}/2)
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -80,13 +84,14 @@ jobs:
         run: >-
           npx playwright test
           --grep @critical
+          --shard=${{ matrix.shard }}/2
           --workers=1
           --retries=1
       - name: Upload browser diagnostics
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-critical-failure
+          name: playwright-critical-shard-${{ matrix.shard }}
           path: |
             test-results
             playwright-report

@@ -15,7 +15,7 @@ This change splits pull-request feedback from exhaustive verification:
 - Layout-oriented browser tests opt into the existing `quality=low` renderer, while tests that inspect map labels keep full detail.
 - The candidate-sheet hydration race is fixed by waiting for the authoritative scene-focus attribute instead of using fixed sleeps.
 
-Measured result: the full 106-test suite now finishes in **6.4 min** as two parallel shards (38 passed in 6.1 min; 68 passed in 6.4 min), and the critical PR suite passes in **3.7 min**.
+Measured result: the full 106-test suite now finishes in **6.3 min** as two parallel shards (38 passed in 5.1 min; 68 passed in 6.3 min), and the critical PR suite passes in **3.3 min**.
 
 ## Baseline evidence
 
@@ -56,7 +56,7 @@ Fix: `openExplorer` now waits for `data-hydrated="true"` and for `data-scene-foc
 - `?candidate=` → `/^candidate-/`
 - `?district=` → `/^scope-/`
 
-This waits for the authoritative focus state rather than a fixed delay. A related assertion allowed only 0.5 px of header clearance; a measured 88 px vs 89.5 px boundary produced one flaky result, so the tolerance is now 2 px. The final critical run passed all 16 tests.
+This waits for the authoritative focus state rather than a fixed delay. A related assertion allowed only 0.5 px of header clearance; a measured 88 px vs 89.5 px boundary produced one flaky result, so the tolerance is now 2 px. The final critical run passed all 16 tests in 3.3 min.
 
 ### 2. High-detail WebGL work in layout-only tests
 
@@ -97,10 +97,10 @@ The Full E2E workflow uses `PWTEST_SHARD_WEIGHTS=38:68` and the measured result 
 
 | Shard | Tests | Result | Wall time |
 | --- | ---: | --- | ---: |
-| 1/2 | 38 | 38 passed | 6.1 min |
-| 2/2 | 68 | 68 passed | 6.4 min |
+| 1/2 | 38 | 38 passed | 5.1 min |
+| 2/2 | 68 | 68 passed | 6.3 min |
 
-Both shards ran with `CI=1`, `workers=1`, `retries=2`, against the real preview server. The total suite is 106 tests (99 desktop-era tests plus added coverage such as candidate-sheet layout tests).
+Both shards ran with `CI=1`, `workers=1`, `retries=2`, against the repository's Playwright `webServer` (Astro dev server). The total suite is 106 tests (99 desktop-era tests plus added coverage such as candidate-sheet layout tests).
 
 ## Workflow changes
 
@@ -110,7 +110,7 @@ Three parallel jobs, each with a 20-minute timeout:
 
 1. **Quality**: `npm ci`, `npm run validate:all`, `npm run lint`, `npm test`.
 2. **Build**: `npm ci`, `npm run build:pages`, then `BASE_PATH=/kaohsiung-civic-stories/ npm run build:astro` to verify path handling without root-relative leaks.
-3. **Critical browser**: installs Chromium and runs `npx playwright test --grep @critical --workers=1 --retries=1`, uploading test results and the HTML report on failure.
+3. **Critical browser**: two shards, each installs Chromium and runs `npx playwright test --grep @critical --shard=<n>/2 --workers=1 --retries=1`, uploading test results and the HTML report on failure.
 
 Concurrency cancels obsolete pull-request runs but does not cancel runs for `main`.
 
@@ -144,20 +144,34 @@ All checks were run in `/Users/seanchang/kaohsiung-2026-election.ci-test-perform
 | --- | --- | --- |
 | Validators + typecheck | `npm run validate:all` | Exit 0; all 28 validators passed; typecheck 0 errors, 0 warnings, 2 hints |
 | Unit tests | `npm test` | 287 tests / 43 files passed (6.98 s) |
-| Critical browser suite | `CI=1 npx playwright test --grep @critical --workers=1 --retries=1` | 16 passed in 3.7 min |
-| Full E2E shard 1 | `CI=1 PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=1/2 --workers=1 --retries=2` | 38 passed in 6.1 min |
-| Full E2E shard 2 | `CI=1 PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=2/2 --workers=1 --retries=2` | 68 passed in 6.4 min |
+| Critical browser suite | `CI=1 npx playwright test --grep @critical --workers=1 --retries=0` | 16 passed in 3.3 min |
+| Full E2E shard 1 | `CI=1 PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=1/2 --workers=1 --retries=2` | 38 passed in 5.1 min |
+| Full E2E shard 2 | `CI=1 PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=2/2 --workers=1 --retries=2` | 68 passed in 6.3 min |
 | Production build + output audit | `npm run build:pages` | 126 pages built; profile-copy audit 106 candidate pages, 0 forbidden strings, 0 metadata matches |
 | Non-root base path | `BASE_PATH=/kaohsiung-civic-stories/ npm run build:astro` | 126 pages, exit 0, base path present in HTML |
 | Lint | `npm run lint` | Passes; 269 files checked, 176 warnings and 572 infos are pre-existing |
+| Mobile suite after focus-state hardening | `CI=1 npx playwright test tests/e2e/mobile.spec.ts --project=mobile-chromium --workers=1 --retries=0` | 7 passed in 1.0 min |
+| Mobile 44px regression stress | same file, `--repeat-each=3 -g "44px touch target"` | 3/3 passed in 1.3 min |
 | Workflow syntax | `actionlint .github/workflows/ci.yml .github/workflows/e2e.yml .github/workflows/deploy-pages.yml` | Passes |
 
 Generated validator reports were reverted before committing; they are build artifacts of the local environment and not part of this change.
 
+### GitHub Actions verification
+
+The first push of this change ('96b8617') ran all three workflows successfully:
+
+| Workflow | Run | Result | Wall time |
+| --- | --- | --- | ---: |
+| Fast CI | [43614904919](https://github.com/r05323028/kaohsiung-2026-election/actions/runs/43614904919) | success | 427 s (7.1 min) |
+| Full E2E | [43614904854](https://github.com/r05323028/kaohsiung-2026-election/actions/runs/43614904854) | success | 561 s (9.4 min) |
+| Deploy GitHub Pages | [43614904982](https://github.com/r05323028/kaohsiung-2026-election/actions/runs/43614904982) | success | 50 s |
+
+Full E2E shard 1 finished in 556 s and shard 2 in 444 s, both with all tests passing. The Fast CI run measured the previous single critical job at 423 s; the two-shard split was added immediately after this run, with local shard results shown above. The quality job took 76 s and the static build 37 s.
+
 ## Limitations
 
 - The full-suite baseline is from a GitHub-hosted runner, while the after timings were measured locally with `CI=1` and software WebGL (SwiftShader on macOS). Absolute GitHub timings will differ, but the same test counts, shard weights, worker settings, and retry policy are used in the workflow.
-- The full GitHub Actions matrix has not run on this branch before merge; it is configured to run on `main` after merge. The local two-shard run is the direct evidence for the shard split.
+- GitHub hosted runners are slower than the local machine: the same critical suite took 3.7 min locally and 423 s in the first GitHub Fast CI run. The critical job is therefore split into two shards; local evidence is 143 s and 111 s per shard, with GitHub verification on the follow-up push.
 - `@critical` is a 16-test PR signal, not a replacement for the full suite. Pull requests do not run all 106 browser tests by design; `main` and the nightly schedule do.
 - `quality=low` is a test-only URL opt-in. Production still renders at the existing high detail by default, and candidate-visibility tests remain at high detail.
 - The deployment workflow relies on Fast CI for validation. A manual Pages deployment can build without rerunning the 28 validators; this is intentional to avoid triple validation, and the workflow remains gated by the same repository checks.

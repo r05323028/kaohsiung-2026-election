@@ -1,0 +1,77 @@
+# Automated disagreement dispositions
+
+All 71 semantic disagreement labels are explicitly excluded from unattended publication.
+
+- enrich-claim-0001 黃文志: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0002 黃文志: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0008 黃文志: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0011 黃文志: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, historical-status-required, unresolved-semantic-disagreement.
+- enrich-claim-0012 李雅芬: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0014 李雅芬: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0016 李雅芬: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0017 李雅芬: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0020 李雅芬: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0022 李雅芬: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0023 李雅芬: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, historical-status-required, unresolved-semantic-disagreement.
+- enrich-claim-0024 白喬茵: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0027 白喬茵: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0028 白喬茵: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0029 白喬茵: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0030 白喬茵: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0033 白喬茵: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0035 白喬茵: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, historical-status-required, unresolved-semantic-disagreement.
+- enrich-claim-0036 柳淑芳: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0040 李眉蓁: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0043 李眉蓁: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0046 李眉蓁: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0049 李雅慧: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0054 李雅慧: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0058 李雅慧: partially-supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, historical-status-required, semantic-review-not-fully-supported, unresolved-semantic-disagreement.
+- enrich-claim-0059 陳玫娟: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0063 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0065 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0067 陳玫娟: partially-supported / supported; disposition **excluded-unresolved**; blockers: semantic-review-not-fully-supported, unresolved-semantic-disagreement.
+- enrich-claim-0068 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0069 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0071 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0072 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0073 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0075 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0076 陳玫娟: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, historical-status-required, unresolved-semantic-disagreement.
+- enrich-claim-0077 張以理: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0080 張以理: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0082 陳冠宇: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: institutional-attribution-required, semantic-review-not-fully-supported, duplicate-or-overlap-review, source-class-not-permitted:news-report, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0083 陳冠宇: supported / partially-supported; disposition **excluded-unresolved**; blockers: institutional-attribution-required, semantic-review-not-fully-supported, duplicate-or-overlap-review, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0086 陳冠宇: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0087 陳冠宇: supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0088 陳麗珍: partially-supported / supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0089 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0090 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0093 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0094 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0096 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0097 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0098 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0099 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0101 陳麗珍: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0104 薛兆基: partially-supported / supported; disposition **excluded-unresolved**; blockers: institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0108 薛兆基: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0110 薛兆基: partially-supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0111 尹立: wrong-identity / wrong-identity; disposition **excluded-unresolved**; blockers: institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement, wrong-identity-verdict.
+- enrich-claim-0112 尹立: supported / supported; disposition **excluded-unresolved**; blockers: institutional-attribution-required, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0116 尹立: supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0117 尹立: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0118 尹立: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0119 張靜: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, source-class-not-permitted:cec-roster, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0120 張靜: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0124 王肇民: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, source-class-not-permitted:cec-roster, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0125 王肇民: partially-supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, source-class-not-permitted:news-report, correction-proposed, unresolved-semantic-disagreement.
+- enrich-claim-0126 王肇民: supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, semantic-identity-not-confirmed, source-class-not-permitted:news-report, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0127 王肇民: supported / supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0128 王肇民: supported / partially-supported; disposition **excluded-unresolved**; blockers: category-not-permitted, claim-type-not-permitted, institutional-attribution-required, semantic-review-not-fully-supported, semantic-identity-not-confirmed, source-class-not-permitted:news-report, unresolved-semantic-disagreement.
+- enrich-claim-0133 柯志恩: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, source-class-not-permitted:cec-roster, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0136 柯志恩: supported / supported; disposition **excluded-unresolved**; blockers: unresolved-semantic-disagreement.
+- enrich-claim-0138 洪方隆: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, source-class-not-permitted:cec-roster, correction-proposed, unresolved-semantic-disagreement, semantic-citation-not-direct-support.
+- enrich-claim-0139 賴瑞隆: partially-supported / partially-supported; disposition **excluded-unresolved**; blockers: claim-type-not-permitted, historical-status-required, semantic-review-not-fully-supported, source-class-not-permitted:cec-roster, correction-proposed, unresolved-semantic-disagreement.
+
+No disagreement was resolved by voting. Original evidence and reviewer provenance remain in the semantic review artifacts.

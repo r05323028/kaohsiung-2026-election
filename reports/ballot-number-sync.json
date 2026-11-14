@@ -1,0 +1,1357 @@
+{
+  "generatedAt": "2026-11-14T07:39:48.423Z",
+  "ok": true,
+  "source": {
+    "id": "source-khec-65366",
+    "publicationDate": "2026-10-27",
+    "attachmentSha256": "9bcbf34a3f18c634b3b619192288a2ff4712ef080d9d05343a90d5cf4a550aa1"
+  },
+  "counts": {
+    "officialRows": 106,
+    "candidates": 106,
+    "matched": 106,
+    "contests": 16
+  },
+  "audit": {
+    "ok": true,
+    "total": 106,
+    "numbered": 106,
+    "unpublished": [],
+    "invalid": [],
+    "missingProvenance": [],
+    "duplicates": [],
+    "contests": [
+      {
+        "contest": "city-council:district-kaohsiung-council-01",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-01",
+        "count": 5,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-02",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-02",
+        "count": 5,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-03",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-03",
+        "count": 8,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-04",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-04",
+        "count": 12,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-05",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-05",
+        "count": 7,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-06",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-06",
+        "count": 4,
+        "numbers": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-07",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-07",
+        "count": 12,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-08",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-08",
+        "count": 9,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-09",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-09",
+        "count": 10,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-10",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-10",
+        "count": 13,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "contest": "city-council:district-kaohsiung-council-11",
+        "electionType": "city-council",
+        "districtId": "district-kaohsiung-council-11",
+        "count": 6,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "contest": "indigenous-council:district-kaohsiung-indigenous-flat-12",
+        "electionType": "indigenous-council",
+        "districtId": "district-kaohsiung-indigenous-flat-12",
+        "count": 3,
+        "numbers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "contest": "indigenous-council:district-kaohsiung-indigenous-mountain-13",
+        "electionType": "indigenous-council",
+        "districtId": "district-kaohsiung-indigenous-mountain-13",
+        "count": 2,
+        "numbers": [
+          1,
+          2
+        ]
+      },
+      {
+        "contest": "indigenous-council:district-kaohsiung-indigenous-mountain-14",
+        "electionType": "indigenous-council",
+        "districtId": "district-kaohsiung-indigenous-mountain-14",
+        "count": 3,
+        "numbers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "contest": "indigenous-council:district-kaohsiung-indigenous-mountain-15",
+        "electionType": "indigenous-council",
+        "districtId": "district-kaohsiung-indigenous-mountain-15",
+        "count": 2,
+        "numbers": [
+          1,
+          2
+        ]
+      },
+      {
+        "contest": "mayoral:district-kaohsiung-mayor-2026",
+        "electionType": "mayoral",
+        "districtId": "district-kaohsiung-mayor-2026",
+        "count": 5,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "contest": "city-council:district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "districtLabel": "普通・第1選舉區",
+      "count": 5,
+      "numbers": "1、2、3、4、5"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-02",
+      "electionType": "city-council",
+      "districtLabel": "普通・第2選舉區",
+      "count": 5,
+      "numbers": "1、2、3、4、5"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-03",
+      "electionType": "city-council",
+      "districtLabel": "普通・第3選舉區",
+      "count": 8,
+      "numbers": "1、2、3、4、5、6、7、8"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-04",
+      "electionType": "city-council",
+      "districtLabel": "普通・第4選舉區",
+      "count": 12,
+      "numbers": "1、2、3、4、5、6、7、8、9、10、11、12"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-05",
+      "electionType": "city-council",
+      "districtLabel": "普通・第5選舉區",
+      "count": 7,
+      "numbers": "1、2、3、4、5、6、7"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-06",
+      "electionType": "city-council",
+      "districtLabel": "普通・第6選舉區",
+      "count": 4,
+      "numbers": "1、2、3、4"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-07",
+      "electionType": "city-council",
+      "districtLabel": "普通・第7選舉區",
+      "count": 12,
+      "numbers": "1、2、3、4、5、6、7、8、9、10、11、12"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-08",
+      "electionType": "city-council",
+      "districtLabel": "普通・第8選舉區",
+      "count": 9,
+      "numbers": "1、2、3、4、5、6、7、8、9"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-09",
+      "electionType": "city-council",
+      "districtLabel": "普通・第9選舉區",
+      "count": 10,
+      "numbers": "1、2、3、4、5、6、7、8、9、10"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-10",
+      "electionType": "city-council",
+      "districtLabel": "普通・第10選舉區",
+      "count": 13,
+      "numbers": "1、2、3、4、5、6、7、8、9、10、11、12、13"
+    },
+    {
+      "contest": "city-council:district-kaohsiung-council-11",
+      "electionType": "city-council",
+      "districtLabel": "普通・第11選舉區",
+      "count": 6,
+      "numbers": "1、2、3、4、5、6"
+    },
+    {
+      "contest": "indigenous-council:district-kaohsiung-indigenous-flat-12",
+      "electionType": "indigenous-council",
+      "districtLabel": "平地原住民・第12選舉區",
+      "count": 3,
+      "numbers": "1、2、3"
+    },
+    {
+      "contest": "indigenous-council:district-kaohsiung-indigenous-mountain-13",
+      "electionType": "indigenous-council",
+      "districtLabel": "山地原住民・第13選舉區",
+      "count": 2,
+      "numbers": "1、2"
+    },
+    {
+      "contest": "indigenous-council:district-kaohsiung-indigenous-mountain-14",
+      "electionType": "indigenous-council",
+      "districtLabel": "山地原住民・第14選舉區",
+      "count": 3,
+      "numbers": "1、2、3"
+    },
+    {
+      "contest": "indigenous-council:district-kaohsiung-indigenous-mountain-15",
+      "electionType": "indigenous-council",
+      "districtLabel": "山地原住民・第15選舉區",
+      "count": 2,
+      "numbers": "1、2"
+    },
+    {
+      "contest": "mayoral:district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "districtLabel": "全市・市長",
+      "count": 5,
+      "numbers": "1、2、3、4、5"
+    }
+  ],
+  "nameObservations": [
+    {
+      "district": "第3選舉區",
+      "candidateNumber": "2",
+      "stored": "張驥晟",
+      "reading": "張騏晟"
+    },
+    {
+      "district": "第3選舉區",
+      "candidateNumber": "5",
+      "stored": "黃秋媛",
+      "reading": "黃秋媖"
+    },
+    {
+      "district": "第3選舉區",
+      "candidateNumber": "8",
+      "stored": "蔡秉穎",
+      "reading": "蔡秉橞"
+    },
+    {
+      "district": "第7選舉區",
+      "candidateNumber": "9",
+      "stored": "鄭孟洽",
+      "reading": "鄭孟洳"
+    }
+  ],
+  "issues": [],
+  "rows": [
+    {
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateName": "張靜",
+      "electionType": "mayoral",
+      "constituency": "全市・市長",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "candidateName": "王肇民",
+      "electionType": "mayoral",
+      "constituency": "全市・市長",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "candidateName": "柯志恩",
+      "electionType": "mayoral",
+      "constituency": "全市・市長",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "candidateName": "洪方隆",
+      "electionType": "mayoral",
+      "constituency": "全市・市長",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "candidateName": "賴瑞隆",
+      "electionType": "mayoral",
+      "constituency": "全市・市長",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "candidateName": "李振豪",
+      "electionType": "city-council",
+      "constituency": "普通・第1選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "candidateName": "林義迪",
+      "electionType": "city-council",
+      "constituency": "普通・第1選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "candidateName": "林慧欣",
+      "electionType": "city-council",
+      "constituency": "普通・第1選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "candidateName": "鍾炳光",
+      "electionType": "city-council",
+      "constituency": "普通・第1選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "candidateName": "林富寶",
+      "electionType": "city-council",
+      "constituency": "普通・第1選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "candidateName": "李柏融",
+      "electionType": "city-council",
+      "constituency": "普通・第2選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "candidateName": "李亞築",
+      "electionType": "city-council",
+      "constituency": "普通・第2選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "candidateName": "黃明太",
+      "electionType": "city-council",
+      "constituency": "普通・第2選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "candidateName": "陳琳潔",
+      "electionType": "city-council",
+      "constituency": "普通・第2選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "candidateName": "鄭東元",
+      "electionType": "city-council",
+      "constituency": "普通・第2選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "candidateName": "方信淵",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "candidateName": "張驥晟",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "candidateName": "宋立彬",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "candidateName": "蔣黃女",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "candidateName": "黃秋媛",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "candidateName": "林志誠",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "candidateName": "黃韻涵",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+      "candidateName": "蔡秉穎",
+      "electionType": "city-council",
+      "constituency": "普通・第3選舉區",
+      "ballotNumber": "8",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateName": "黃文志",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateName": "李雅芬",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateName": "白喬茵",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "candidateName": "柳淑芳",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateName": "李眉蓁",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "candidateName": "李雅慧",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "candidateName": "陳玫娟",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "candidateName": "張以理",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "8",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "candidateName": "陳冠宇",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "9",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "candidateName": "陳麗珍",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "10",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "candidateName": "薛兆基",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "11",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "candidateName": "尹立",
+      "electionType": "city-council",
+      "constituency": "普通・第4選舉區",
+      "ballotNumber": "12",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-50dee358",
+      "candidateName": "黃飛鳳",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-147ddb97",
+      "candidateName": "陳惠君",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-5abfec11",
+      "candidateName": "張勝富",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+      "candidateName": "江瑞鴻",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-9a56fce0",
+      "candidateName": "邱俊憲",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-aa51d7ef",
+      "candidateName": "陳若翠",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-05-e6c05223",
+      "candidateName": "吳利成",
+      "electionType": "city-council",
+      "constituency": "普通・第5選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "candidateName": "簡煥宗",
+      "electionType": "city-council",
+      "constituency": "普通・第6選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "candidateName": "李喬如",
+      "electionType": "city-council",
+      "constituency": "普通・第6選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "candidateName": "蔡金晏",
+      "electionType": "city-council",
+      "constituency": "普通・第6選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "candidateName": "陳美雅",
+      "electionType": "city-council",
+      "constituency": "普通・第6選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "candidateName": "何權峰",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "candidateName": "童燕珍",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "candidateName": "林彥",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "candidateName": "黃香菽",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "candidateName": "曾俊傑",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "candidateName": "張博洋",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "candidateName": "林于凱",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "candidateName": "康裕成",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "8",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "candidateName": "鄭孟洽",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "9",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "candidateName": "黃柏霖",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "10",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "candidateName": "余聖明",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "11",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "candidateName": "黃淑美",
+      "electionType": "city-council",
+      "constituency": "普通・第7選舉區",
+      "ballotNumber": "12",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "candidateName": "黃舜杰",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "candidateName": "黃裕庭",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "candidateName": "許采蓁",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "candidateName": "湯詠瑜",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "candidateName": "黃文益",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "candidateName": "黃鈺婷",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "candidateName": "陳雅敏",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "candidateName": "鄒約翰",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "8",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "candidateName": "郭建盟",
+      "electionType": "city-council",
+      "constituency": "普通・第8選舉區",
+      "ballotNumber": "9",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-7a196bc1",
+      "candidateName": "林智鴻",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "candidateName": "張漢忠",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "candidateName": "鄭安秝",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "candidateName": "蘇致榮",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
+      "candidateName": "陳慧文",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-83bcf606",
+      "candidateName": "劉德林",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-660d56f4",
+      "candidateName": "李雅靜",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "candidateName": "徐尚賢",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "8",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "candidateName": "鍾易仲",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "9",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
+      "candidateName": "鄧巧佩",
+      "electionType": "city-council",
+      "constituency": "普通・第9選舉區",
+      "ballotNumber": "10",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+      "candidateName": "李政憲",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "candidateName": "湯茹婷",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+      "candidateName": "劉仙娥",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "candidateName": "蔡武宏",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+      "candidateName": "張藝瑾",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "candidateName": "于仙玲",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "candidateName": "鄭光峰",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "7",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "candidateName": "陳麗娜",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "8",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "candidateName": "李順進",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "9",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+      "candidateName": "李絃毅",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "10",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "candidateName": "吳銘賜",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "11",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "candidateName": "吳昱鋒",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "12",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "candidateName": "黃敬雅",
+      "electionType": "city-council",
+      "constituency": "普通・第10選舉區",
+      "ballotNumber": "13",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "candidateName": "洪村銘",
+      "electionType": "city-council",
+      "constituency": "普通・第11選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "candidateName": "黃天煌",
+      "electionType": "city-council",
+      "constituency": "普通・第11選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "candidateName": "邱于軒",
+      "electionType": "city-council",
+      "constituency": "普通・第11選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "candidateName": "王耀裕",
+      "electionType": "city-council",
+      "constituency": "普通・第11選舉區",
+      "ballotNumber": "4",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "candidateName": "李雨庭",
+      "electionType": "city-council",
+      "constituency": "普通・第11選舉區",
+      "ballotNumber": "5",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+      "candidateName": "張耀中",
+      "electionType": "city-council",
+      "constituency": "普通・第11選舉區",
+      "ballotNumber": "6",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+      "candidateName": "巫振興",
+      "electionType": "indigenous-council",
+      "constituency": "平地原住民・第12選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+      "candidateName": "宋紹銘",
+      "electionType": "indigenous-council",
+      "constituency": "平地原住民・第12選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-0f37f5cd",
+      "candidateName": "王義雄",
+      "electionType": "indigenous-council",
+      "constituency": "平地原住民・第12選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "candidateName": "陳幸富",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第13選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+      "candidateName": "葛娜瑩",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第13選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+      "candidateName": "洪英雄",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第14選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "candidateName": "林錫閔",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第14選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+      "candidateName": "高忠德",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第14選舉區",
+      "ballotNumber": "3",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+      "candidateName": "金禾雅",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第15選舉區",
+      "ballotNumber": "1",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+      "candidateName": "陳奕蓁",
+      "electionType": "indigenous-council",
+      "constituency": "山地原住民・第15選舉區",
+      "ballotNumber": "2",
+      "sourcePage": "1",
+      "verificationStatus": "verified"
+    }
+  ]
+}

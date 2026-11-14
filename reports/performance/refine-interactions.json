@@ -1,0 +1,106 @@
+{
+  "label": "refine-interactions",
+  "baseURL": "http://127.0.0.1:4321",
+  "measuredAt": "2026-11-08T17:28:33.314Z",
+  "host": {
+    "platform": "darwin",
+    "release": "25.3.0",
+    "cpu": "Apple M1 Pro",
+    "logicalCores": 8,
+    "totalMemoryBytes": 17179869184
+  },
+  "caveat": "Headless Chromium renders WebGL in software (SwiftShader) in this environment. Frame intervals are a lower-bound smoke measurement, not target-hardware performance.",
+  "viewport": {
+    "width": 1600,
+    "height": 1000
+  },
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "vendor": "Google Inc. (Google)"
+  },
+  "camera": {
+    "settled": {
+      "position": [
+        15.744831999999995,
+        32.90818,
+        22.146078999999997
+      ],
+      "target": [
+        -0.815414,
+        0,
+        1.976549
+      ],
+      "zoom": 101.77758
+    },
+    "afterDrag": {
+      "position": [
+        14.113283820094502,
+        33.45624811039752,
+        22.591449575857038
+      ],
+      "target": [
+        -2.4469621799054977,
+        0.5480681103975141,
+        2.4219195758570504
+      ],
+      "zoom": 101.77758
+    },
+    "afterSelection": {
+      "position": [
+        15.232476067474622,
+        32.931852235673794,
+        20.934622433835283
+      ],
+      "target": [
+        -1.3277699325253702,
+        0.023671235673792465,
+        0.7650924338352925
+      ],
+      "zoom": 101.77758
+    },
+    "afterClose": {
+      "position": [
+        15.250699517528597,
+        32.923591057179394,
+        20.910171008119647
+      ],
+      "target": [
+        -1.309546482471402,
+        0.01541105717938926,
+        0.7406410081196474
+      ],
+      "zoom": 101.77758
+    }
+  },
+  "frames": {
+    "idle": {
+      "frames": 7,
+      "p50Ms": 283.3,
+      "p95Ms": 333.3,
+      "maxMs": 333.3,
+      "estimatedFps": 3.7
+    },
+    "drag": {
+      "frames": 22,
+      "p50Ms": 283.3,
+      "p95Ms": 300,
+      "maxMs": 300.1,
+      "estimatedFps": 3.7
+    },
+    "selection": {
+      "frames": 12,
+      "p50Ms": 199.9,
+      "p95Ms": 849.9,
+      "maxMs": 849.9,
+      "estimatedFps": 3.5
+    },
+    "close": {
+      "frames": 8,
+      "p50Ms": 183.3,
+      "p95Ms": 700,
+      "maxMs": 700,
+      "estimatedFps": 3.8
+    }
+  }
+}

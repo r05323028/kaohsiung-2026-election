@@ -1,0 +1,1339 @@
+{
+  "schemaVersion": "1",
+  "disagreements": [
+    {
+      "claimId": "enrich-claim-0001",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0001-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0001-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0002",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0002-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0002-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0008",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0008-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0008-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0011",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0011-1",
+      "reviewerBInvocationId": "batch-1-reviewer-b-enrich-claim-0011",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0012",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0012-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0012-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0014",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0014-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0014-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0016",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0016-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0016-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0017",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0017-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0017-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0020",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0020-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0020-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0022",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0022-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0022-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0023",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0023-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0023-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0024",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0024-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0024-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0027",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0027-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0027-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0028",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0028-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0028-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0029",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0029-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0029-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0030",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0030-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0030-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0033",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0033-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0033-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0035",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0035-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0035-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0036",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0036-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0036-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0040",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0040-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0040-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0043",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0043-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0043-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0046",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0046-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0046-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0049",
+      "reviewerAInvocationId": "semantic-reviewer-a-enrich-claim-0049-1",
+      "reviewerBInvocationId": "semantic-reviewer-b-enrich-claim-0049-1",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0054",
+      "reviewerAInvocationId": "batch-2-reviewer-a-enrich-claim-0054",
+      "reviewerBInvocationId": "batch-3-reviewer-b-enrich-claim-0054",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0058",
+      "reviewerAInvocationId": "batch-4-reviewer-a-enrich-claim-0058",
+      "reviewerBInvocationId": "batch-5-reviewer-b-enrich-claim-0058",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: partially-supported versus supported.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0059",
+      "reviewerAInvocationId": "batch-5-reviewer-a-enrich-claim-0059",
+      "reviewerBInvocationId": "batch-5-reviewer-b-enrich-claim-0059",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0063",
+      "reviewerAInvocationId": "batch-7-reviewer-a-enrich-claim-0063",
+      "reviewerBInvocationId": "batch-7-reviewer-b-enrich-claim-0063",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0065",
+      "reviewerAInvocationId": "batch-8-reviewer-a-enrich-claim-0065",
+      "reviewerBInvocationId": "batch-8-reviewer-b-enrich-claim-0065",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0067",
+      "reviewerAInvocationId": "batch-47-reviewer-a-enrich-claim-0067",
+      "reviewerBInvocationId": "batch-9-reviewer-b-enrich-claim-0067",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: partially-supported versus supported.",
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0068",
+      "reviewerAInvocationId": "batch-10-reviewer-a-enrich-claim-0068",
+      "reviewerBInvocationId": "batch-10-reviewer-b-enrich-claim-0068",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0069",
+      "reviewerAInvocationId": "batch-10-reviewer-a-enrich-claim-0069",
+      "reviewerBInvocationId": "batch-10-reviewer-b-enrich-claim-0069",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0071",
+      "reviewerAInvocationId": "batch-11-reviewer-a-enrich-claim-0071",
+      "reviewerBInvocationId": "batch-11-reviewer-b-enrich-claim-0071",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0072",
+      "reviewerAInvocationId": "batch-12-reviewer-a-enrich-claim-0072",
+      "reviewerBInvocationId": "batch-12-reviewer-b-enrich-claim-0072",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0073",
+      "reviewerAInvocationId": "batch-12-reviewer-a-enrich-claim-0073",
+      "reviewerBInvocationId": "batch-12-reviewer-b-enrich-claim-0073",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0075",
+      "reviewerAInvocationId": "batch-13-reviewer-a-enrich-claim-0075",
+      "reviewerBInvocationId": "batch-13-reviewer-b-enrich-claim-0075",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0076",
+      "reviewerAInvocationId": "batch-14-reviewer-a-enrich-claim-0076",
+      "reviewerBInvocationId": "batch-14-reviewer-b-enrich-claim-0076",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0077",
+      "reviewerAInvocationId": "batch-47-reviewer-a-enrich-claim-0077",
+      "reviewerBInvocationId": "batch-18-reviewer-b-enrich-claim-0077",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0080",
+      "reviewerAInvocationId": "batch-16-reviewer-a-enrich-claim-0080",
+      "reviewerBInvocationId": "batch-16-reviewer-b-enrich-claim-0080",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0082",
+      "reviewerAInvocationId": "batch-18-reviewer-a-enrich-claim-0082",
+      "reviewerBInvocationId": "batch-18-reviewer-b-enrich-claim-0082",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0083",
+      "reviewerAInvocationId": "batch-19-reviewer-a-enrich-claim-0083",
+      "reviewerBInvocationId": "batch-19-reviewer-b-enrich-claim-0083",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: supported versus partially-supported.",
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0086",
+      "reviewerAInvocationId": "batch-20-reviewer-a-enrich-claim-0086",
+      "reviewerBInvocationId": "batch-20-reviewer-b-enrich-claim-0086",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0087",
+      "reviewerAInvocationId": "batch-21-reviewer-a-enrich-claim-0087",
+      "reviewerBInvocationId": "batch-26-reviewer-b-enrich-claim-0087",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: supported versus partially-supported.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0088",
+      "reviewerAInvocationId": "batch-26-reviewer-a-enrich-claim-0088",
+      "reviewerBInvocationId": "batch-26-reviewer-b-enrich-claim-0088",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: partially-supported versus supported.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0089",
+      "reviewerAInvocationId": "batch-22-reviewer-a-enrich-claim-0089",
+      "reviewerBInvocationId": "batch-22-reviewer-b-enrich-claim-0089",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0090",
+      "reviewerAInvocationId": "batch-22-reviewer-a-enrich-claim-0090",
+      "reviewerBInvocationId": "batch-22-reviewer-b-enrich-claim-0090",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0093",
+      "reviewerAInvocationId": "batch-24-reviewer-a-enrich-claim-0093",
+      "reviewerBInvocationId": "batch-24-reviewer-b-enrich-claim-0093",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0094",
+      "reviewerAInvocationId": "batch-24-reviewer-a-enrich-claim-0094",
+      "reviewerBInvocationId": "batch-24-reviewer-b-enrich-claim-0094",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0096",
+      "reviewerAInvocationId": "batch-27-reviewer-a-enrich-claim-0096",
+      "reviewerBInvocationId": "batch-27-reviewer-b-enrich-claim-0096",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0097",
+      "reviewerAInvocationId": "batch-27-reviewer-a-enrich-claim-0097",
+      "reviewerBInvocationId": "batch-28-reviewer-b-enrich-claim-0097",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0098",
+      "reviewerAInvocationId": "batch-28-reviewer-a-enrich-claim-0098",
+      "reviewerBInvocationId": "batch-28-reviewer-b-enrich-claim-0098",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0099",
+      "reviewerAInvocationId": "batch-28-reviewer-a-enrich-claim-0099",
+      "reviewerBInvocationId": "batch-29-reviewer-b-enrich-claim-0099",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0101",
+      "reviewerAInvocationId": "batch-29-reviewer-a-enrich-claim-0101",
+      "reviewerBInvocationId": "batch-30-reviewer-b-enrich-claim-0101",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording."
+      ],
+      "differenceDimensions": [
+        "temporal"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0104",
+      "reviewerAInvocationId": "batch-31-reviewer-a-enrich-claim-0104",
+      "reviewerBInvocationId": "batch-31-reviewer-b-enrich-claim-0104",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: partially-supported versus supported.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0108",
+      "reviewerAInvocationId": "batch-34-reviewer-a-enrich-claim-0108",
+      "reviewerBInvocationId": "batch-34-reviewer-b-enrich-claim-0108",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0110",
+      "reviewerAInvocationId": "batch-35-reviewer-a-enrich-claim-0110",
+      "reviewerBInvocationId": "batch-35-reviewer-b-enrich-claim-0110",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: partially-supported versus supported.",
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "attribution",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0111",
+      "reviewerAInvocationId": "batch-36-reviewer-a-enrich-claim-0111",
+      "reviewerBInvocationId": "batch-36-reviewer-b-enrich-claim-0111",
+      "agreement": "partial-disagreement",
+      "verdictA": "wrong-identity",
+      "verdictB": "wrong-identity",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0112",
+      "reviewerAInvocationId": "batch-36-reviewer-a-enrich-claim-0112",
+      "reviewerBInvocationId": "batch-36-reviewer-b-enrich-claim-0112",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0116",
+      "reviewerAInvocationId": "batch-38-reviewer-a-enrich-claim-0116",
+      "reviewerBInvocationId": "batch-38-reviewer-b-enrich-claim-0116",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: supported versus partially-supported.",
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "attribution",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0117",
+      "reviewerAInvocationId": "batch-39-reviewer-a-enrich-claim-0117",
+      "reviewerBInvocationId": "batch-39-reviewer-b-enrich-claim-0117",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0118",
+      "reviewerAInvocationId": "batch-39-reviewer-a-enrich-claim-0118",
+      "reviewerBInvocationId": "batch-39-reviewer-b-enrich-claim-0118",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0119",
+      "reviewerAInvocationId": "batch-40-reviewer-a-enrich-claim-0119",
+      "reviewerBInvocationId": "batch-40-reviewer-b-enrich-claim-0119",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0120",
+      "reviewerAInvocationId": "batch-40-reviewer-a-enrich-claim-0120",
+      "reviewerBInvocationId": "batch-40-reviewer-b-enrich-claim-0120",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0124",
+      "reviewerAInvocationId": "batch-43-reviewer-a-enrich-claim-0124",
+      "reviewerBInvocationId": "batch-43-reviewer-b-enrich-claim-0124",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0125",
+      "reviewerAInvocationId": "batch-44-reviewer-a-enrich-claim-0125",
+      "reviewerBInvocationId": "batch-44-reviewer-b-enrich-claim-0125",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: partially-supported versus supported.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0126",
+      "reviewerAInvocationId": "batch-44-reviewer-a-enrich-claim-0126",
+      "reviewerBInvocationId": "batch-44-reviewer-b-enrich-claim-0126",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: supported versus partially-supported.",
+        "Reviewers assessed identity differently: confirmed versus uncertain.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "identity",
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0127",
+      "reviewerAInvocationId": "batch-45-reviewer-a-enrich-claim-0127",
+      "reviewerBInvocationId": "batch-45-reviewer-b-enrich-claim-0127",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0128",
+      "reviewerAInvocationId": "batch-45-reviewer-a-enrich-claim-0128",
+      "reviewerBInvocationId": "batch-45-reviewer-b-enrich-claim-0128",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers returned different verdicts: supported versus partially-supported.",
+        "Reviewers assessed identity differently: confirmed versus uncertain.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "verdict",
+        "identity",
+        "evidence",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0133",
+      "reviewerAInvocationId": "batch-50-reviewer-a-enrich-claim-0133",
+      "reviewerBInvocationId": "single-50-b-0133",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers used materially different attribution interpretations.",
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "attribution",
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0136",
+      "reviewerAInvocationId": "single-50-a-0136",
+      "reviewerBInvocationId": "single-51-b-0136",
+      "agreement": "partial-disagreement",
+      "verdictA": "supported",
+      "verdictB": "supported",
+      "disputedPropositions": [
+        "Reviewers disagreed on whether the source supports the claim’s temporal wording.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "temporal",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0138",
+      "reviewerAInvocationId": "single-51-a-0138",
+      "reviewerBInvocationId": "single-52-b-0138",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers cited different evidence locations or relationships.",
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "evidence",
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    },
+    {
+      "claimId": "enrich-claim-0139",
+      "reviewerAInvocationId": "single-52-a-0139",
+      "reviewerBInvocationId": "single-52-b-0139",
+      "agreement": "partial-disagreement",
+      "verdictA": "partially-supported",
+      "verdictB": "partially-supported",
+      "disputedPropositions": [
+        "Reviewers differed on whether a wording correction is required.",
+        "Reviewers reported different limitations."
+      ],
+      "differenceDimensions": [
+        "correction",
+        "limitations"
+      ],
+      "adjudicationRecommendation": "Preserve the disagreement and require human editorial inspection of the cited source; no automatic resolution or publication is permitted.",
+      "requiresHumanDecision": true
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "label": "unified-world",
+  "baseURL": "http://127.0.0.1:4322",
+  "measuredAt": "2026-11-08T08:19:34.778Z",
+  "host": {
+    "platform": "darwin",
+    "release": "25.3.0",
+    "cpu": "Apple M1 Pro",
+    "logicalCores": 8,
+    "totalMemoryBytes": 17179869184
+  },
+  "caveat": "Headless Chromium renders WebGL in software (SwiftShader) in this environment. FPS is a lower-bound smoke measurement, not target-hardware performance. lowFps is the minimum of five samples, not a percentile.",
+  "profiles": [
+    {
+      "scenario": "world-overview",
+      "path": "/?perf=1",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+        "hardwareConcurrency": 8,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "vendor": "Google Inc. (Google)"
+      },
+      "samples": [
+        {
+          "fps": 6.3,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 68,
+          "textures": 3,
+          "programs": 9,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:18:46.320Z"
+        },
+        {
+          "fps": 7.2,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 68,
+          "textures": 3,
+          "programs": 9,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:18:47.427Z"
+        },
+        {
+          "fps": 6.7,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 68,
+          "textures": 3,
+          "programs": 9,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:18:48.469Z"
+        },
+        {
+          "fps": 6.9,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 68,
+          "textures": 3,
+          "programs": 9,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:18:49.485Z"
+        },
+        {
+          "fps": 6.6,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 68,
+          "textures": 3,
+          "programs": 9,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:18:50.548Z"
+        }
+      ],
+      "summary": {
+        "averageFps": 6.7,
+        "minimumFps": 6.3,
+        "lowFps": 6.3,
+        "sampleCount": 5,
+        "averageDrawCalls": 106,
+        "averageTriangles": 67424,
+        "geometries": 68,
+        "textures": 3,
+        "programs": 9,
+        "dpr": 1,
+        "lowFpsDefinition": "minimum of all collected samples; not a percentile"
+      }
+    },
+    {
+      "scenario": "world-overview",
+      "path": "/?perf=1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+        "hardwareConcurrency": 8,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "vendor": "Google Inc. (Google)"
+      },
+      "samples": [
+        {
+          "fps": 16.5,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 250,
+          "textures": 3,
+          "programs": 17,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:01.412Z"
+        },
+        {
+          "fps": 15.3,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 250,
+          "textures": 3,
+          "programs": 17,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:02.455Z"
+        },
+        {
+          "fps": 15.3,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 250,
+          "textures": 3,
+          "programs": 17,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:03.502Z"
+        },
+        {
+          "fps": 14,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 250,
+          "textures": 3,
+          "programs": 17,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:04.502Z"
+        },
+        {
+          "fps": 15.4,
+          "drawCalls": 106,
+          "triangles": 67424,
+          "geometries": 250,
+          "textures": 3,
+          "programs": 17,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:05.541Z"
+        }
+      ],
+      "summary": {
+        "averageFps": 15.3,
+        "minimumFps": 14,
+        "lowFps": 14,
+        "sampleCount": 5,
+        "averageDrawCalls": 106,
+        "averageTriangles": 67424,
+        "geometries": 250,
+        "textures": 3,
+        "programs": 17,
+        "dpr": 1,
+        "lowFpsDefinition": "minimum of all collected samples; not a percentile"
+      }
+    },
+    {
+      "scenario": "hero-zuoying-nanzih",
+      "path": "/?district=kaohsiung-council-04&perf=1",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+        "hardwareConcurrency": 8,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "vendor": "Google Inc. (Google)"
+      },
+      "samples": [
+        {
+          "fps": 0.8,
+          "drawCalls": 564,
+          "triangles": 508772,
+          "geometries": 347,
+          "textures": 4,
+          "programs": 18,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:19:13.289Z"
+        },
+        {
+          "fps": 2.5,
+          "drawCalls": 564,
+          "triangles": 508772,
+          "geometries": 347,
+          "textures": 4,
+          "programs": 21,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:19:14.917Z"
+        },
+        {
+          "fps": 3.8,
+          "drawCalls": 564,
+          "triangles": 508772,
+          "geometries": 348,
+          "textures": 4,
+          "programs": 23,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:19:17.615Z"
+        },
+        {
+          "fps": 2.5,
+          "drawCalls": 564,
+          "triangles": 508772,
+          "geometries": 348,
+          "textures": 4,
+          "programs": 23,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:19:18.830Z"
+        },
+        {
+          "fps": 2.4,
+          "drawCalls": 564,
+          "triangles": 508772,
+          "geometries": 348,
+          "textures": 4,
+          "programs": 23,
+          "dpr": 1,
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "sampledAt": "2026-11-08T08:19:20.089Z"
+        }
+      ],
+      "summary": {
+        "averageFps": 2.4,
+        "minimumFps": 0.8,
+        "lowFps": 0.8,
+        "sampleCount": 5,
+        "averageDrawCalls": 564,
+        "averageTriangles": 508772,
+        "geometries": 348,
+        "textures": 4,
+        "programs": 23,
+        "dpr": 1,
+        "lowFpsDefinition": "minimum of all collected samples; not a percentile"
+      }
+    },
+    {
+      "scenario": "hero-zuoying-nanzih",
+      "path": "/?district=kaohsiung-council-04&perf=1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+        "hardwareConcurrency": 8,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "vendor": "Google Inc. (Google)"
+      },
+      "samples": [
+        {
+          "fps": 0.8,
+          "drawCalls": 550,
+          "triangles": 412251,
+          "geometries": 342,
+          "textures": 4,
+          "programs": 18,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:28.220Z"
+        },
+        {
+          "fps": 2.2,
+          "drawCalls": 550,
+          "triangles": 412251,
+          "geometries": 342,
+          "textures": 4,
+          "programs": 21,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:30.079Z"
+        },
+        {
+          "fps": 5.8,
+          "drawCalls": 550,
+          "triangles": 412251,
+          "geometries": 343,
+          "textures": 4,
+          "programs": 23,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:32.207Z"
+        },
+        {
+          "fps": 4.7,
+          "drawCalls": 550,
+          "triangles": 412251,
+          "geometries": 343,
+          "textures": 4,
+          "programs": 23,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:33.272Z"
+        },
+        {
+          "fps": 4.6,
+          "drawCalls": 550,
+          "triangles": 412251,
+          "geometries": 343,
+          "textures": 4,
+          "programs": 23,
+          "dpr": 1,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "sampledAt": "2026-11-08T08:19:34.357Z"
+        }
+      ],
+      "summary": {
+        "averageFps": 3.6,
+        "minimumFps": 0.8,
+        "lowFps": 0.8,
+        "sampleCount": 5,
+        "averageDrawCalls": 550,
+        "averageTriangles": 412251,
+        "geometries": 343,
+        "textures": 4,
+        "programs": 23,
+        "dpr": 1,
+        "lowFpsDefinition": "minimum of all collected samples; not a percentile"
+      }
+    }
+  ]
+}

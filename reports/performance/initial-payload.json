@@ -1,0 +1,119 @@
+{
+  "baseURL": "http://127.0.0.1:4322",
+  "entry": "/",
+  "viewport": "1600x1000",
+  "generatedAt": "2026-11-08T08:18:17.276Z",
+  "navigation": {
+    "domContentLoaded": 106,
+    "load": 107,
+    "transferSize": 42874,
+    "decodedBodySize": 1087190
+  },
+  "totals": {
+    "javascript": {
+      "transfer": 565184,
+      "decoded": 3077171,
+      "requests": 12
+    },
+    "css": {
+      "transfer": 12134,
+      "decoded": 56157,
+      "requests": 1
+    },
+    "fonts": {
+      "transfer": 0,
+      "decoded": 0,
+      "requests": 0
+    },
+    "images": {
+      "transfer": 0,
+      "decoded": 0,
+      "requests": 0
+    },
+    "all": {
+      "transfer": 577318,
+      "decoded": 3133328,
+      "requests": 13
+    }
+  },
+  "resources": [
+    {
+      "name": "http://127.0.0.1:4322/_astro/useAnimations.C9ilS9jT.js",
+      "initiatorType": "script",
+      "transferSize": 266650,
+      "decodedBodySize": 1007680
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/data.DXajXP12.js",
+      "initiatorType": "script",
+      "transferSize": 95149,
+      "decodedBodySize": 1432868
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/CityScene.CbqsM-dn.js",
+      "initiatorType": "script",
+      "transferSize": 66236,
+      "decodedBodySize": 186853
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/client.iCb6VDOb.js",
+      "initiatorType": "script",
+      "transferSize": 64237,
+      "decodedBodySize": 207608
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/summary.Dnt3KBV5.js",
+      "initiatorType": "script",
+      "transferSize": 57040,
+      "decodedBodySize": 206243
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/BaseLayout.1pMrVtFW.css",
+      "initiatorType": "link",
+      "transferSize": 12134,
+      "decodedBodySize": 56157
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/CityExplorer.CFDybsen.js",
+      "initiatorType": "script",
+      "transferSize": 7288,
+      "decodedBodySize": 21314
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/react.B54jxNxs.js",
+      "initiatorType": "script",
+      "transferSize": 3308,
+      "decodedBodySize": 7876
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/scheduler.CIMWMoOa.js",
+      "initiatorType": "script",
+      "transferSize": 1868,
+      "decodedBodySize": 3566
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/client.XdXLtsrf.js",
+      "initiatorType": "script",
+      "transferSize": 1283,
+      "decodedBodySize": 1938
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/rolldown-runtime.XKyaHtl9.js",
+      "initiatorType": "script",
+      "transferSize": 1026,
+      "decodedBodySize": 726
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/jsx-runtime.CpoXNhZb.js",
+      "initiatorType": "script",
+      "transferSize": 735,
+      "decodedBodySize": 435
+    },
+    {
+      "name": "http://127.0.0.1:4322/_astro/paths.v8Rv6m-l.js",
+      "initiatorType": "script",
+      "transferSize": 364,
+      "decodedBodySize": 64
+    }
+  ]
+}

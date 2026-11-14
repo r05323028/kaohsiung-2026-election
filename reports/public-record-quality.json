@@ -1,0 +1,78 @@
+{
+  "reportVersion": "1.0.0",
+  "reportType": "public-record-quality",
+  "datasetId": "kaohsiung-2026-public-records",
+  "snapshotDate": "2026-11-05",
+  "status": "pending-human-review",
+  "sourceIntegrity": {
+    "checkedSourceCount": 6,
+    "changedSourceCount": 0,
+    "sourceChecks": [
+      {
+        "sourceId": "source-kcc-member-2186-li-meizhen",
+        "sha256": "84fe312ca4c4440864f8933bc35c012994e2e1a9bb646a44d3aa021c432c1452",
+        "status": "unchanged"
+      },
+      {
+        "sourceId": "source-kcc-member-2230-wang-yixiong",
+        "sha256": "8b50ced63f6fd788e8627ee1a550f6fd3c902612c93489869b3d24eb812cc8c2",
+        "status": "unchanged"
+      },
+      {
+        "sourceId": "source-kcc-news-17284",
+        "sha256": "a7c64bbb016e2b2ebcf3a4c18cede12b85a413c834e22a9ed4a8a7d2225357bc",
+        "status": "unchanged"
+      },
+      {
+        "sourceId": "source-kcc-news-17102",
+        "sha256": "139a264c2a560eb6d2509e95b156e46ceaaa098d2c9b7e98072aef95b3baa546",
+        "status": "unchanged"
+      },
+      {
+        "sourceId": "source-kcc-news-17293",
+        "sha256": "ac6424966127bd6045e95590e9bbf199d7fadc225ae58b3b9ed3e4049a21699d",
+        "status": "unchanged"
+      },
+      {
+        "sourceId": "source-kcc-news-17093",
+        "sha256": "4c8f1e433085432b230c2f12919a85b73efbfba41a47ea05e3a84e19e028051f",
+        "status": "unchanged"
+      }
+    ]
+  },
+  "evidenceCoverage": {
+    "claimCount": 6,
+    "claimsWithEvidence": 6,
+    "recordCount": 16,
+    "recordsWithEvidence": 16,
+    "evidenceCount": 6,
+    "pendingClaimCount": 6,
+    "pendingEvidenceCount": 6,
+    "pendingRecordCount": 16
+  },
+  "identityResolution": {
+    "resolvedCount": 2,
+    "pendingCount": 0,
+    "rejectedCount": 0
+  },
+  "conflicts": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0
+  },
+  "reviewGate": {
+    "datasetStatus": "pending-human-review",
+    "reviewerId": null,
+    "reviewedAt": null,
+    "publicationMeaning": "source-checked-static-display; not human editorial approval"
+  },
+  "integrityAssertions": {
+    "partyInferred": false,
+    "achievementInferred": false,
+    "relationshipInferred": false,
+    "rankingProduced": false,
+    "normalizedMatchesApproved": true,
+    "reviewPacketCoversSelectedCandidates": true,
+    "reviewPacketCoversClaims": true
+  }
+}

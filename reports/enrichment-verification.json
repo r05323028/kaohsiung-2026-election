@@ -1,0 +1,58 @@
+{
+  "datasetId": "kaohsiung-2026-zuoying-mayoral-enrichment",
+  "snapshotDate": "2026-11-07",
+  "generatedAt": "2026-11-07T06:32:47.041Z",
+  "records": [
+    {
+      "verificationId": "enrich-verification-001",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateGroup": "district-4",
+      "claimId": "enrich-claim-0001",
+      "sourceId": "scope-kcc-profile-2185",
+      "method": "independent-source-reopen",
+      "checks": [
+        "reopened raw bytes directly",
+        "recomputed SHA-256 and byte length",
+        "compared candidate context and evidence excerpt without reusing the extraction result"
+      ],
+      "result": "matches",
+      "discrepancy": null,
+      "verifiedAt": "2026-11-07T06:32:47.041Z"
+    },
+    {
+      "verificationId": "enrich-verification-002",
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "candidateGroup": "mayoral",
+      "claimId": "enrich-claim-0120",
+      "sourceId": "scope-news-zhang-jing-udn",
+      "method": "independent-source-reopen",
+      "checks": [
+        "reopened raw bytes directly",
+        "recomputed SHA-256 and byte length",
+        "compared candidate context and evidence excerpt without reusing the extraction result"
+      ],
+      "result": "matches",
+      "discrepancy": null,
+      "verifiedAt": "2026-11-07T06:32:47.041Z"
+    },
+    {
+      "verificationId": "enrich-verification-003",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateGroup": "district-4",
+      "claimId": "enrich-claim-0002",
+      "sourceId": "scope-kcc-profile-2185",
+      "method": "independent-source-reopen",
+      "checks": [
+        "reopened raw bytes directly",
+        "recomputed SHA-256 and byte length",
+        "compared candidate context and evidence excerpt without reusing the extraction result"
+      ],
+      "result": "matches",
+      "discrepancy": null,
+      "verifiedAt": "2026-11-07T06:32:47.041Z"
+    }
+  ],
+  "matchCount": 3,
+  "discrepancyCount": 0,
+  "insufficientCount": 0
+}

@@ -1,0 +1,22 @@
+{
+  "datasetId": "kaohsiung-2026-candidate-biographies",
+  "snapshotDate": "2026-11-06",
+  "sourcesWithRawSnapshot": 90,
+  "sourcesWithChecksum": 90,
+  "observations": 64,
+  "resolvedObservations": 9,
+  "conflictedObservations": 11,
+  "claims": 897,
+  "claimsWithEvidence": 897,
+  "claimsWithUnknownDates": 897,
+  "review": {
+    "machineValidated": 897,
+    "humanReviewed": 0,
+    "editoriallyApproved": 0,
+    "publicationEligible": 0
+  },
+  "sourceDependency": {
+    "institutionalRecordClaims": 888,
+    "candidateStatementClaims": 9
+  }
+}

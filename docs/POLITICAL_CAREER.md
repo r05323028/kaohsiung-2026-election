@@ -37,4 +37,4 @@
 
 ## UI
 
-`src/components/PoliticalCareerTimeline.tsx` 依年份分組呈現時間軸，上方為公職任期，下方另立「競選承諾（尚未發生）」區塊（資料來自已發布政策），最後是「提案與表決紀錄」與可展開的資料限制。
+`src/components/PoliticalCareerTimeline.tsx` 依年份分組呈現時間軸，上方為公職任期，接著是「由政策資料移入的歷史行動」（`PolicyDerivedCareerSection`）、指向「政策主張」分頁的提示、`relatedPolicies` 的活動級交叉連結，最後是「提案與表決紀錄」與可展開的資料限制。競選承諾只在政策分頁呈現，不再於此重複列出；分區規則見 `docs/POLICY_CAREER_SEPARATION.md`。

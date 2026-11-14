@@ -5,13 +5,17 @@ import type {
   AutomatedPublicClaim,
   AutomatedPublicSource,
 } from './enrichment/automated-publication';
+import type { PublishedNewsItem } from './news';
 import { isPublishedBallotNumberStatus } from './official/ballot';
+import { getPolicyCareer, type PolicyCareerView } from './policy-career';
 import type { CandidatePolicyResearchSummary } from './policy-research';
 import type { PublishedPolicy } from './policy-research/published-schema';
+import {
+  getPoliticalCareer,
+  type PoliticalCareerView,
+} from './political-career';
 import type { PoliticalFamilyReadModel } from './political-family';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
-import type { PublishedNewsItem } from './news';
-import { getPoliticalCareer, type PoliticalCareerView } from './political-career';
 import type { CandidateResearchSummary } from './public-records/research-index';
 import type { PublicRecordBundle } from './public-records/schema';
 import type {
@@ -189,6 +193,7 @@ export type PublicCandidateProfile = Omit<
   | 'basicProfile'
   | 'automatedPublication'
   | 'politicalCareer'
+  | 'policyCareer'
 > & {
   person: CandidateProfileView['person'];
   candidacy: Omit<
@@ -206,6 +211,7 @@ export type PublicCandidateProfile = Omit<
     sources: PublicAutomatedSource[];
   };
   politicalCareer?: PoliticalCareerView;
+  policyCareer?: PolicyCareerView;
 };
 
 function officeLabelFor(candidate: CandidateProfileView): string {
@@ -357,6 +363,7 @@ export function toPublicCandidateProfile(
       ? candidate.person.summary
       : officeLabelFor(candidate) + '，參選' + candidate.district.name + '。');
   const politicalCareer = getPoliticalCareer(candidate.candidacy.id);
+  const policyCareer = getPolicyCareer(candidate.candidacy.id);
 
   const publicDistrict = isDemo
     ? candidate.district
@@ -379,7 +386,9 @@ export function toPublicCandidateProfile(
       publicationDate: source.publicationDate,
     })),
     ...(publicRecords ? { publicRecords } : {}),
-    ...(candidate.publishedNews ? { publishedNews: candidate.publishedNews } : {}),
+    ...(candidate.publishedNews
+      ? { publishedNews: candidate.publishedNews }
+      : {}),
     ...(candidate.publishedPolicies
       ? { publishedPolicies: candidate.publishedPolicies }
       : {}),
@@ -392,6 +401,10 @@ export function toPublicCandidateProfile(
       ? { automatedPublication: publicAutomatedPublication }
       : {}),
     ...(politicalCareer ? { politicalCareer } : {}),
+    ...(policyCareer.commitments.length > 0 ||
+    policyCareer.historicalRecords.length > 0
+      ? { policyCareer }
+      : {}),
     visual: candidate.visual,
   };
 }

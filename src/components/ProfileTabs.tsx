@@ -7,9 +7,12 @@ import {
   BasicProfileFieldLabels,
 } from '../data/basic-profiles/schema';
 import { ballotNumberText } from '../data/official/ballot';
+import type { PolicyCareerCommitment } from '../data/policy-career';
+import {
+  PolicyDerivedCareerSection,
+  PoliticalCareerTimeline,
+} from './PoliticalCareerTimeline';
 import PoliticalFamilyGraph from './PoliticalFamilyGraph';
-
-import { PoliticalCareerTimeline } from './PoliticalCareerTimeline';
 export type ProfileTab = 'basic' | 'policies' | 'news' | 'career' | 'family';
 
 export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
@@ -67,16 +70,18 @@ const policyTypeLabels: Record<string, string> = {
 
 const policyCategoryOrder = Object.keys(policyCategoryLabels);
 
-function PublishedPolicyCards({
-  policies,
+function PolicyCommitmentCards({
+  commitments,
+  onOpenActivity,
 }: {
-  policies: NonNullable<PublicCandidateProfile['publishedPolicies']>;
+  commitments: PolicyCareerCommitment[];
+  onOpenActivity?: ((activityId: string) => void) | undefined;
 }) {
-  const groups = new Map<string, typeof policies>();
-  for (const policy of policies) {
-    const list = groups.get(policy.category) ?? [];
-    list.push(policy);
-    groups.set(policy.category, list);
+  const groups = new Map<string, PolicyCareerCommitment[]>();
+  for (const commitment of commitments) {
+    const list = groups.get(commitment.policy.category) ?? [];
+    list.push(commitment);
+    groups.set(commitment.policy.category, list);
   }
   const ordered = [...groups.entries()].sort(
     (a, b) =>
@@ -90,15 +95,15 @@ function PublishedPolicyCards({
       : ordered.filter(([category]) => category === activeCategory);
 
   return (
-    <div className="policy-archive">
+    <div className="policy-archive" data-testid="policy-commitments">
       <fieldset className="policy-filter">
-        <legend className="sr-only">依政策類別篩選</legend>
+        <legend className="sr-only">依政策主題篩選</legend>
         <button
           type="button"
           aria-pressed={activeCategory === 'all'}
           onClick={() => setActiveCategory('all')}
         >
-          全部<span>{policies.length}</span>
+          全部<span>{commitments.length}</span>
         </button>
         {ordered.map(([category, items]) => (
           <button
@@ -123,28 +128,64 @@ function PublishedPolicyCards({
               <span>{policyCategoryLabels[category] ?? category}</span>
               <span className="policy-group__count">{items.length} 項</span>
             </summary>
-            {items.map((policy) => (
-              <article className="content-card" key={policy.policyId}>
+            {items.map(({ policy, facet, relatedActivities }) => (
+              <article
+                className="content-card"
+                key={policy.policyId}
+                id={'policy-' + policy.policyId}
+              >
                 <div className="content-card__meta">
                   <span className="status-chip">
                     {policyTypeLabels[policy.type] ?? policy.type}
                   </span>
-                  {policy.announcedAt ? <span>{policy.announcedAt}</span> : null}
+                  {policy.announcedAt ? (
+                    <span>{policy.announcedAt}</span>
+                  ) : null}
                   {policy.scope ? <span>{policy.scope}</span> : null}
                 </div>
-                <h5>{policy.title}</h5>
-                <p>{policy.summary}</p>
+                <h5>{facet?.title ?? policy.title}</h5>
+                <p>{facet?.summary ?? policy.summary}</p>
+                {relatedActivities.length > 0 ? (
+                  <p className="policy-card__links">
+                    <strong>相關政治活動：</strong>
+                    {relatedActivities.map((activity) =>
+                      onOpenActivity ? (
+                        <button
+                          key={activity.activityId}
+                          type="button"
+                          className="source-chip"
+                          onClick={() => onOpenActivity(activity.activityId)}
+                        >
+                          {activity.date}・{activity.title}
+                        </button>
+                      ) : (
+                        <span className="source-chip" key={activity.activityId}>
+                          {activity.date}・{activity.title}
+                        </span>
+                      ),
+                    )}
+                  </p>
+                ) : null}
                 <details className="policy-card__details">
                   <summary>查看政策細節</summary>
-                  {policy.details ? <p>{policy.details}</p> : null}
-                  {policy.implementationDetails.length > 0 ? (
-                    <ul>
-                      {policy.implementationDetails.map((detail) => (
-                        <li key={detail}>{detail}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  <blockquote>{policy.originalStatement}</blockquote>
+                  {facet ? (
+                    <p className="policy-card__note">
+                      原始報導同時記載已發生的協調或提案過程；該部分已移至「從政歷程」，
+                      此處僅保留尚未完成的承諾，避免同一事實重複呈現。
+                    </p>
+                  ) : (
+                    <>
+                      {policy.details ? <p>{policy.details}</p> : null}
+                      {policy.implementationDetails.length > 0 ? (
+                        <ul>
+                          {policy.implementationDetails.map((detail) => (
+                            <li key={detail}>{detail}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      <blockquote>{policy.originalStatement}</blockquote>
+                    </>
+                  )}
                   <p className="policy-card__sources">
                     <strong>來源：</strong>
                     {policy.sources.map((source) => (
@@ -624,7 +665,15 @@ function PublicPolicyCards({
   );
 }
 
-function PoliciesTab({ candidate }: { candidate: PublicCandidateProfile }) {
+function PoliciesTab({
+  candidate,
+  onOpenActivity,
+}: {
+  candidate: PublicCandidateProfile;
+  onOpenActivity?: ((activityId: string) => void) | undefined;
+}) {
+  const career = candidate.policyCareer;
+  const commitments = career?.commitments ?? [];
   const publishedPolicies = candidate.publishedPolicies ?? [];
   const publicPolicies = candidate.publicRecords?.policies ?? [];
 
@@ -632,10 +681,31 @@ function PoliciesTab({ candidate }: { candidate: PublicCandidateProfile }) {
     <div className="profile-tab-content" data-profile-section="policies">
       <div className="profile-section-heading">
         <h3>政策主張</h3>
-        <p>依政策類別整理，並標示來源與提出時間。</p>
+        <p>
+          僅列尚未發生的競選承諾與政策目標，依政策主題分組並標示來源；
+          已發生的提案、質詢與表決請見「從政歷程」。
+        </p>
+        {(career?.movedOutCount ?? 0) > 0 ? (
+          <p className="profile-note" data-testid="policy-moved-out-note">
+            另有 {career?.movedOutCount}{' '}
+            筆紀錄經核對屬於已發生的政治行動，已移至「從政歷程」。
+          </p>
+        ) : null}
       </div>
-      {publishedPolicies.length > 0 ? (
-        <PublishedPolicyCards policies={publishedPolicies} />
+      {career && commitments.length > 0 ? (
+        <PolicyCommitmentCards
+          commitments={commitments}
+          onOpenActivity={onOpenActivity}
+        />
+      ) : publishedPolicies.length > 0 ? (
+        <PolicyCommitmentCards
+          commitments={publishedPolicies.map((policy) => ({
+            policy,
+            facet: null,
+            relatedActivities: [],
+          }))}
+          onOpenActivity={onOpenActivity}
+        />
       ) : (
         <>
           <AutomatedClaimCards
@@ -668,7 +738,10 @@ function PoliciesTab({ candidate }: { candidate: PublicCandidateProfile }) {
                   <strong>政策狀態：</strong>
                   來源未標示
                 </p>
-                <SourceChips candidate={candidate} sourceIds={policy.sourceIds} />
+                <SourceChips
+                  candidate={candidate}
+                  sourceIds={policy.sourceIds}
+                />
               </article>
             ))
           ) : (
@@ -803,14 +876,27 @@ function PublicPositionCards({
   );
 }
 
-function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
+function CareerTab({
+  candidate,
+  onOpenPolicies,
+  onOpenPolicy,
+}: {
+  candidate: PublicCandidateProfile;
+  onOpenPolicies?: () => void;
+  onOpenPolicy?: (policyId: string) => void;
+}) {
   const publicActivities = candidate.publicRecords?.activities ?? [];
   const publicPositions = candidate.publicRecords?.positions ?? [];
   const legacyCards = LegacyCareerCards({ candidate });
   const career = candidate.politicalCareer;
+  const policyCareer = candidate.policyCareer;
+  const historicalRecords = policyCareer?.historicalRecords ?? [];
+  const showPublicPositions =
+    publicPositions.length > 0 && (career?.officeTerms.length ?? 0) === 0;
   const hasCareer =
     (career?.activities.length ?? 0) > 0 ||
     (career?.officeTerms.length ?? 0) > 0 ||
+    historicalRecords.length > 0 ||
     publicActivities.length > 0 ||
     publicPositions.length > 0 ||
     legacyCards.length > 0 ||
@@ -822,24 +908,31 @@ function CareerTab({ candidate }: { candidate: PublicCandidateProfile }) {
       <div className="profile-section-heading">
         <h3>從政歷程</h3>
         <p>
-          以可查證的市政參與、議會質詢、提案與公職任期為主，依時間排序；
-          學歷與一般經歷請見基本資料。
+          僅列已發生的市政參與、議會質詢、提案與公職任期，依時間排序；
+          未來承諾列於「政策主張」，學歷與一般經歷列於基本資料。
         </p>
       </div>
       {career ? (
         <PoliticalCareerTimeline
           view={career}
-          promises={candidate.publishedPolicies ?? []}
           candidateName={candidate.person.displayName}
+          commitmentCount={policyCareer?.commitments.length ?? 0}
+          relatedPolicies={policyCareer?.linksByActivityId ?? {}}
+          onOpenPolicies={onOpenPolicies}
+          onOpenPolicy={onOpenPolicy}
         />
       ) : null}
-      {!career ? (
+      {!career && historicalRecords.length === 0 ? (
         <section className="content-card">
           <h4>政治活動時間軸</h4>
           <p>目前未收錄可查證的從政紀錄；查無紀錄不代表未從事政治活動。</p>
         </section>
       ) : null}
-      {publicPositions.length > 0 ? (
+      <PolicyDerivedCareerSection
+        records={historicalRecords}
+        onOpenPolicy={onOpenPolicy}
+      />
+      {showPublicPositions ? (
         <PublicPositionCards candidate={candidate} />
       ) : null}
       {publicActivities.length > 0 ? (
@@ -972,13 +1065,15 @@ export function collectNewsCards(
   }));
   // Code-unit compare, not localeCompare: Node ICU and browsers can collate
   // zh-Hant headlines differently, which changes the SSR/client order.
-  return [...publicNews, ...publishedNews, ...legacyNews].sort((left, right) => {
-    if (left.publicationDate !== right.publicationDate) {
-      return left.publicationDate < right.publicationDate ? 1 : -1;
-    }
-    if (left.headline === right.headline) return 0;
-    return left.headline < right.headline ? -1 : 1;
-  });
+  return [...publicNews, ...publishedNews, ...legacyNews].sort(
+    (left, right) => {
+      if (left.publicationDate !== right.publicationDate) {
+        return left.publicationDate < right.publicationDate ? 1 : -1;
+      }
+      if (left.headline === right.headline) return 0;
+      return left.headline < right.headline ? -1 : 1;
+    },
+  );
 }
 
 function NewsCards({
@@ -1054,7 +1149,9 @@ function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
     <div className="profile-tab-content" data-profile-section="news">
       <div className="profile-section-heading">
         <h3>相關新聞</h3>
-        <p>依發布日期由新至舊呈現，附來源與日期；僅列出已完成驗證與編輯審核的報導。</p>
+        <p>
+          依發布日期由新至舊呈現，附來源與日期；僅列出已完成驗證與編輯審核的報導。
+        </p>
       </div>
       <AutomatedClaimCards
         candidate={candidate}
@@ -1080,7 +1177,10 @@ function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
             </label>
             <label>
               主題
-              <select value={topic} onChange={(event) => setTopic(event.target.value)}>
+              <select
+                value={topic}
+                onChange={(event) => setTopic(event.target.value)}
+              >
                 <option value="all">全部</option>
                 {topics.map((item) => (
                   <option key={item} value={item}>
@@ -1119,6 +1219,23 @@ export default function ProfileTabs({
     document.getElementById(`tab-${candidate.candidacy.slug}-${tab}`)?.focus();
   };
 
+  const scrollToId = (id: string) => {
+    if (typeof document === 'undefined') return;
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ block: 'center' });
+    }, 80);
+  };
+
+  const openCareerActivity = (activityId: string) => {
+    setActiveTab('career');
+    scrollToId('career-' + activityId);
+  };
+
+  const openPolicy = (policyId: string) => {
+    setActiveTab('policies');
+    scrollToId('policy-' + policyId);
+  };
+
   const handleTabKeyDown = (
     event: KeyboardEvent<HTMLButtonElement>,
     currentTab: ProfileTab,
@@ -1144,11 +1261,22 @@ export default function ProfileTabs({
   const renderTab = (tab: ProfileTab) => {
     switch (tab) {
       case 'policies':
-        return <PoliciesTab candidate={candidate} />;
+        return (
+          <PoliciesTab
+            candidate={candidate}
+            onOpenActivity={openCareerActivity}
+          />
+        );
       case 'news':
         return <NewsTab candidate={candidate} />;
       case 'career':
-        return <CareerTab candidate={candidate} />;
+        return (
+          <CareerTab
+            candidate={candidate}
+            onOpenPolicies={() => setActiveTab('policies')}
+            onOpenPolicy={openPolicy}
+          />
+        );
       case 'family':
         return <FamilyTab candidate={candidate} />;
       default:

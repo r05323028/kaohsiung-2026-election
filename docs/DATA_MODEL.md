@@ -108,6 +108,8 @@
 
 `src/data/political-career/schema.ts` 定義 `PoliticalCareerDataset`：公職任期（`officeTerms`）、政治活動（`activities`）、106 列 coverage 與 review 限制；由 `scripts/political-career/build.ts` 離線產生 `data/approved/2026/political-career.json`，`npm run validate:political-career` 驗證來源、日期、歸屬與保留快照。詳見 `docs/POLITICAL_CAREER.md`。
 
+`src/data/policy-career/schema.ts` 定義 `PolicyCareerDataset`：每筆已發布政策恰好一列所有權分類（`policy-commitments`／`political-career`／`split-record`／`review-required`）、時間軸依據、拆分後的承諾與歷史兩半、政策與活動的穩定 id 連結，以及審核計數；由 `scripts/policy-career/build.ts` 離線產生 `data/approved/2026/policy-career-separation.json`，`npm run validate:policy-career` 驗證分區不矛盾、拆分不重複、證據逐字與連結覆蓋，並已納入 `npm run build`。詳見 `docs/POLICY_CAREER_SEPARATION.md`。
+
 ## Existing content entities
 
 `Person`, `Candidacy`, `ElectoralDistrict`, `Position`, `Policy`, `PublicRecord`, `NewsArticle`, `PersonRelationship`, `TimelineEvent`, `EvidenceSource`, `CharacterVisualConfig` 仍保留給 demo 與既有 read model；新的 official public-record ingestion 使用上述 claim/evidence schemas，不把 demo fixture 混入官方 bundle。

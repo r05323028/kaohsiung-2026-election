@@ -18,6 +18,10 @@ const SOURCE_MARKDOWN_PATH = resolve(
   'candidate-profile-source-quality.md',
 );
 
+function compareText(a: string, b: string): number {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 const PROFILE_TAB_LABELS = [
   '基本資料',
   '政策主張',
@@ -229,7 +233,7 @@ function collectRecords(candidate: CandidateProfileView) {
 function buildReports() {
   const inventories = officialCandidateProfiles
     .map(profileInventory)
-    .sort((a, b) => a.candidateId.localeCompare(b.candidateId));
+    .sort((a, b) => compareText(a.candidateId, b.candidateId));
   const totalCandidates = inventories.length;
   const publishedPolicyCount = inventories.reduce(
     (sum, item) => sum + item.publishedPolicyCount,
@@ -402,7 +406,7 @@ function buildReports() {
     individualVoteRecordCount,
     coverageByDistrict: [...districts.entries()]
       .map(([district, counts]) => ({ district, ...counts }))
-      .sort((a, b) => a.district.localeCompare(b.district)),
+      .sort((a, b) => compareText(a.district, b.district)),
     candidateInventory: inventories,
     limitations: [
       '政策研究與候選人傳記讀模型中的待審紀錄未進入公開內容；pending count 只用於覆蓋報告。',
@@ -428,7 +432,7 @@ function buildReports() {
     publishedRecordWithEvidenceCount,
     publishedRecordWithResolvedSourcesCount,
     sourceReferenceIssues: [...new Set(sourceReferenceIssues)].sort((a, b) =>
-      a.localeCompare(b),
+      compareText(a, b),
     ),
     identityOrAttributionConflictCount,
     recordReviewStatusCounts,
@@ -495,11 +499,11 @@ ${report.limitations.map((item) => `- ${item}`).join('\n')}
 
 function markdownSourceQuality(report: SourceQualityReport): string {
   const statusRows = Object.entries(report.sourceVerificationStatusCounts)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([a], [b]) => compareText(a, b))
     .map(([key, value]) => `| ${key} | ${value} |`)
     .join('\n');
   const publisherRows = Object.entries(report.sourcePublisherCounts)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([a], [b]) => compareText(a, b))
     .map(([key, value]) => `| ${key} | ${value} |`)
     .join('\n');
   return `# 候選人五區塊來源品質報告
@@ -531,7 +535,7 @@ ${publisherRows}
 
 ${
   Object.entries(report.recordReviewStatusCounts)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([a], [b]) => compareText(a, b))
     .map(([key, value]) => `- ${key}：${value}`)
     .join('\n') || '- 無公開紀錄'
 }
@@ -540,7 +544,7 @@ ${
 
 ${
   Object.entries(report.recordVerificationStatusCounts)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([a], [b]) => compareText(a, b))
     .map(([key, value]) => `- ${key}：${value}`)
     .join('\n') || '- 無公開紀錄'
 }

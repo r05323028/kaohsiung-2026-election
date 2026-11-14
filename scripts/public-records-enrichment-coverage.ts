@@ -34,13 +34,17 @@ const SOURCE_MARKDOWN_PATH = resolve(
 
 type CountMap = Record<string, number>;
 
+function compareText(left: string, right: string): number {
+  return left < right ? -1 : left > right ? 1 : 0;
+}
+
 function increment(counts: CountMap, key: string, amount = 1): void {
   counts[key] = (counts[key] ?? 0) + amount;
 }
 
 function sortedCounts(counts: CountMap): CountMap {
   return Object.fromEntries(
-    Object.entries(counts).sort(([left], [right]) => left.localeCompare(right)),
+    Object.entries(counts).sort(([left], [right]) => compareText(left, right)),
   );
 }
 
@@ -159,7 +163,7 @@ function buildCoverageReport(
         missingOrUnavailable,
       };
     })
-    .sort((left, right) => left.candidateId.localeCompare(right.candidateId));
+    .sort((left, right) => compareText(left.candidateId, right.candidateId));
 
   const outcomeCounts: CountMap = {};
   const electionTypeCounts: CountMap = {};
@@ -263,7 +267,7 @@ function buildCoverageReport(
     unresolvedRecordCount: 0,
     candidateInventory,
     coverageByDistrict: Array.from(districtMap.values()).sort((left, right) =>
-      left.districtId.localeCompare(right.districtId),
+      compareText(left.districtId, right.districtId),
     ),
     limitations: [
       '本次新增資料均為機器驗證、待人工審查且 withheld-pending-review；沒有新增公開政策、新聞、表決或執行成果。',
@@ -388,7 +392,7 @@ function buildSourceQualityReport(
     missingReasonCounts: sortedCounts(missingReasonCounts),
     identityOrAttributionConflicts: [],
     candidateSourceInventory: candidateSourceCounts.sort((left, right) =>
-      left.candidateId.localeCompare(right.candidateId),
+      compareText(left.candidateId, right.candidateId),
     ),
     limitations: [
       'source retrieval and checksum validation do not constitute human review or editorial approval.',

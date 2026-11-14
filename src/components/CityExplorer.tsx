@@ -490,12 +490,9 @@ export default function CityExplorer({ districts, candidates }: Props) {
   }, []);
 
   useEffect(() => {
-    const bridge = window as unknown as {
-      __kaohsiungSelectDistrict?: (slug: string) => void;
-    };
-    bridge.__kaohsiungSelectDistrict = selectDistrict;
+    Object.assign(window, { __kaohsiungSelectDistrict: selectDistrict });
     return () => {
-      delete bridge.__kaohsiungSelectDistrict;
+      Reflect.deleteProperty(window, '__kaohsiungSelectDistrict');
     };
   }, [selectDistrict]);
 

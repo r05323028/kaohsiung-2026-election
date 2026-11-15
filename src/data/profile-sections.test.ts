@@ -51,7 +51,15 @@ describe('five-section candidate profile coverage', () => {
       '從政歷程',
       '家族從政關係',
     ]);
-    expect(coverageReport.candidatesWithVerifiedPolicyStatements).toBe(0);
+    expect(
+      coverageReport.candidatesWithVerifiedPolicyStatements,
+    ).toBeGreaterThan(0);
+    expect(coverageReport.publishedPolicyCount).toBeGreaterThan(0);
+    expect(coverageReport.publishedNewsCount).toBeGreaterThan(0);
+    expect(coverageReport.publishedNewsAssociationCount).toBeGreaterThanOrEqual(
+      coverageReport.publishedNewsCount,
+    );
+    expect(coverageReport.publishedCareerRecordCount).toBeGreaterThan(0);
     expect(coverageReport.candidatesWithPendingPolicyResearch).toBeGreaterThan(
       0,
     );
@@ -161,8 +169,8 @@ describe('five-section candidate profile coverage', () => {
     expect(
       coverageReport.formerLegislatorsWithVerifiedIndividualVotingRecords,
     ).toBe(0);
-    expect(coverageReport.formerExecutivesWithVerifiedPolicyInitiatives).toBe(
-      0,
-    );
+    expect(
+      coverageReport.formerExecutivesWithVerifiedPolicyInitiatives,
+    ).toBeGreaterThan(0);
   });
 });

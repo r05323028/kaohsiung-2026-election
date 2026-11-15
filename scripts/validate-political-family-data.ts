@@ -94,6 +94,36 @@ function rosterFromInput(input: unknown): FamilyRosterCandidate[] {
   return roster;
 }
 
+function assertRosterMatchesCanonical(
+  actual: FamilyRosterCandidate[],
+  canonical: FamilyRosterCandidate[],
+): void {
+  assertExactCandidateCoverage(
+    'Research roster',
+    actual.map((candidate) => candidate.id),
+    canonical,
+  );
+  const actualById = new Map(
+    actual.map((candidate) => [candidate.id, candidate]),
+  );
+  for (const expected of canonical) {
+    const candidate = actualById.get(expected.id);
+    if (!candidate) continue;
+    for (const key of [
+      'slug',
+      'displayName',
+      'districtId',
+      'electionType',
+    ] as const) {
+      if (candidate[key] !== expected[key]) {
+        throw new Error(
+          `Research roster differs from canonical roster for ${expected.id}: ${key}.`,
+        );
+      }
+    }
+  }
+}
+
 function assertExactCandidateCoverage(
   label: string,
   ids: string[],
@@ -149,9 +179,14 @@ function assertPublicationCareerReferences(
   }
 }
 
-const roster = rosterFromInput(
+const canonicalRoster = rosterFromInput(
+  readJson('data/approved/2026/kaohsiung-election.json'),
+);
+const researchRoster = rosterFromInput(
   readJson('data/research/2026/political-family/roster.json'),
 );
+assertRosterMatchesCanonical(researchRoster, canonicalRoster);
+const roster = canonicalRoster;
 const research = validatePoliticalFamilyResearch(
   readJson('data/research/2026/political-family/research.json'),
 );

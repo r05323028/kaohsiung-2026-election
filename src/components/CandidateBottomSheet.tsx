@@ -9,8 +9,9 @@ import {
 } from 'react';
 import type { PublicCandidateProfile, PublicDistrictView } from '../data';
 import {
-  ballotNumberText,
   compareBallotNumbers,
+  isPublishedBallotNumberStatus,
+  parseBallotNumber,
 } from '../data/official/ballot';
 import {
   type CandidateSheetBounds,
@@ -318,6 +319,11 @@ export default function CandidateBottomSheet({
                     candidate.candidacy.politicalParty === '暫無資料'
                       ? null
                       : candidate.candidacy.politicalParty;
+                  const ballotNumber = isPublishedBallotNumberStatus(
+                    candidate.candidacy.candidateNumberStatus,
+                  )
+                    ? parseBallotNumber(candidate.candidacy.candidateNumber)
+                    : null;
                   return (
                     <button
                       className="city-candidate candidate-sheet__card"
@@ -342,9 +348,20 @@ export default function CandidateBottomSheet({
                       <span className="candidate-list__copy candidate-sheet__copy">
                         <strong>{candidate.person.shortName}</strong>
                         {party && <small>{party}</small>}
-                        <small className="candidate-list__ballot">
-                          {ballotNumberText(candidate.candidacy)}
-                        </small>
+                        {ballotNumber === null ? (
+                          <span className="candidate-sheet__ballot candidate-sheet__ballot--pending">
+                            待公告
+                          </span>
+                        ) : (
+                          <span className="candidate-sheet__ballot">
+                            <span className="candidate-sheet__ballot-number">
+                              {ballotNumber}
+                            </span>
+                            <span className="candidate-sheet__ballot-label">
+                              號次
+                            </span>
+                          </span>
+                        )}
                       </span>
                     </button>
                   );

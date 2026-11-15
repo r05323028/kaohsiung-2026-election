@@ -1,5 +1,5 @@
+import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
 import publicationInput from '../../../data/published/2026/political-family.json';
-import rosterInput from '../../../data/research/2026/political-family/roster.json';
 import {
   type FamilyEvidenceSource,
   type FamilyRosterCandidate,
@@ -22,9 +22,9 @@ function rosterElectionType(
   throw new Error(`Unknown political family election type: ${value}.`);
 }
 
-const roster: FamilyRosterCandidate[] = rosterInput.candidates.map(
+const roster: FamilyRosterCandidate[] = approvedInput.candidates.map(
   (candidate) => ({
-    id: candidate.candidateId,
+    id: candidate.id,
     slug: candidate.slug,
     displayName: candidate.displayName,
     districtId: candidate.districtId,

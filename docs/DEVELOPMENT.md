@@ -23,7 +23,7 @@
 
 ## 驗證分組
 
-`validate:all` = 28 個離線驗證器 + `typecheck`，全部讀取已提交的 `data/`、`reports/` 與 `src/`，不連網；任一失敗即中止建置。
+`validate:all` = 離線資料／發布驗證器、全名冊候選人稽核產生與驗證 + `typecheck`，全部讀取已提交的 `data/`、`reports/` 與 `src/`，不連網；任一失敗即中止建置。
 
 | 分組 | 指令 |
 | --- | --- |
@@ -78,7 +78,7 @@
 2. 更新 adapter／normalized 資料；確認相同位元組得到相同輸出。
 3. 在 `data/review/` 記錄審查狀態與未解問題。
 4. 對帳通過後才寫入 `data/approved/`；需要公開的 claim 走對應閘門與快照。
-5. 執行 `npm run validate:all`、`npm test`；必要時補單元測試。
+5. 執行 `npm run validate:all`、`npm test`；必要時補單元測試。`validate:all` 會重建並驗證 `reports/candidate-roster-audit/`，不可手改其輸出。
 6. 若改變公開行為，更新對應文件（不要新增文件）。
 
 ## 疑難排解

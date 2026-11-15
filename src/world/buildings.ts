@@ -537,22 +537,22 @@ function pickRoof(
     ReadonlyArray<readonly [BuildingRoofKind, number]>
   > = {
     townhouse: [
-      ['gable', 0.55],
-      ['hip', 0.22],
-      ['flat', 0.23],
+      ['gable', 0.62],
+      ['hip', 0.25],
+      ['flat', 0.13],
     ],
     arcadeShophouse: [
-      ['flat', 0.55],
-      ['gable', 0.3],
-      ['hip', 0.15],
+      ['flat', 0.72],
+      ['gable', 0.18],
+      ['hip', 0.1],
     ],
     apartment: [
-      ['flat', 0.86],
-      ['hip', 0.14],
+      ['flat', 0.92],
+      ['hip', 0.08],
     ],
     cornerCommercial: [
-      ['flat', 0.72],
-      ['hip', 0.28],
+      ['flat', 0.82],
+      ['hip', 0.18],
     ],
     modernBlock: [['flat', 1]],
     warehouse: [
@@ -612,14 +612,19 @@ function buildSpec(
 
   const arcade =
     archetype === 'arcadeShophouse' ||
-    (archetype !== 'warehouse' &&
-      archetype !== 'modernBlock' &&
-      random() < profile.arcadeChance);
-  const awning = archetype !== 'warehouse' && random() < profile.awningChance;
+    (archetype === 'cornerCommercial' &&
+      random() < profile.arcadeChance * 0.75);
+  const awning =
+    (archetype === 'townhouse' ||
+      archetype === 'arcadeShophouse' ||
+      archetype === 'cornerCommercial') &&
+    random() < profile.awningChance;
   const balconies =
-    archetype === 'apartment' ||
-    archetype === 'modernBlock' ||
-    (archetype !== 'warehouse' && random() < profile.balconyChance);
+    archetype === 'apartment' || archetype === 'modernBlock'
+      ? floors >= 3 && random() < 0.9
+      : archetype === 'cornerCommercial' &&
+        floors >= 3 &&
+        random() < profile.balconyChance;
   const shopSign =
     archetype === 'arcadeShophouse' ||
     archetype === 'cornerCommercial' ||
@@ -763,10 +768,83 @@ export function buildingsForTile(tile: HexTile): BuildingSpec[] {
   return specs;
 }
 
+export function validateBuildingSpecs(
+  specs: readonly BuildingSpec[],
+): string[] {
+  const issues: string[] = [];
+  for (const spec of specs) {
+    const numericValues = [
+      spec.x,
+      spec.z,
+      spec.originX,
+      spec.originZ,
+      spec.rotationY,
+      spec.width,
+      spec.depth,
+      spec.floorHeight,
+      spec.bodyHeight,
+      spec.baseY,
+      spec.roofHeight,
+      spec.height,
+      spec.radius,
+    ];
+    if (numericValues.some((value) => !Number.isFinite(value))) {
+      issues.push(spec.id + ': contains a non-finite value');
+      continue;
+    }
+    if (spec.width <= 0 || spec.depth <= 0) {
+      issues.push(spec.id + ': footprint dimensions must be positive');
+    }
+    if (spec.floors < 1 || !Number.isInteger(spec.floors)) {
+      issues.push(spec.id + ': floors must be a positive integer');
+    }
+    if (Math.abs(spec.bodyHeight - spec.floors * spec.floorHeight) > 0.001) {
+      issues.push(spec.id + ': body height does not match floors');
+    }
+    if (Math.abs(spec.height - (spec.bodyHeight + spec.roofHeight)) > 0.001) {
+      issues.push(spec.id + ': total height does not match body and roof');
+    }
+    if (Math.abs(Math.hypot(spec.x, spec.z) - spec.radius) > 0.001) {
+      issues.push(spec.id + ': placement radius does not match x/z');
+    }
+    if (
+      spec.radius < BUILDING_RING_RADIUS - 0.04 ||
+      spec.radius > BUILDING_RING_RADIUS + 0.1
+    ) {
+      issues.push(spec.id + ': placement radius leaves the facade ring');
+    }
+    if (spec.windowColumns < 1 || spec.windowColumns > 5) {
+      issues.push(spec.id + ': window columns are outside the supported range');
+    }
+    if (spec.archetype === 'warehouse' && spec.floors !== 1) {
+      issues.push(spec.id + ': warehouse must be single-storey');
+    }
+    if (spec.archetype === 'modernBlock' && spec.roof !== 'flat') {
+      issues.push(spec.id + ': modern block must use a flat roof');
+    }
+    if (
+      spec.height >
+      Math.min(
+        buildingProfileForDistrict(spec.districtId).maxHeight,
+        maxSilhouetteHeight(spec.radius + spec.depth / 2),
+      ) +
+        0.001
+    ) {
+      issues.push(spec.id + ': silhouette height exceeds its profile limit');
+    }
+  }
+  return issues;
+}
+
 export function generateCityBuildings(
   tiles: readonly HexTile[] = HEX_TILES,
 ): BuildingSpec[] {
-  return tiles.flatMap((tile) => buildingsForTile(tile));
+  const specs = tiles.flatMap((tile) => buildingsForTile(tile));
+  const issues = validateBuildingSpecs(specs);
+  if (issues.length > 0) {
+    throw new Error('Invalid city building specs: ' + issues.join('; '));
+  }
+  return specs;
 }
 
 export function cityBuildingStats(specs: readonly BuildingSpec[]): {

@@ -19,6 +19,7 @@
 - 決定性：以 `tile.id:districtId:town` 播種（FNV-1a + mulberry32），不使用 `Math.random`；相同輸入永遠產生相同城市。
 - LOD：低於 zoom 62 只畫量體；≥62 加窗帶與簷口；≥155 且品質非低時加窗台、欄杆、冷氣、天線、落水管等。細節以正交投影 zoom 判定。
 - 繪製預算：三個合併頂點色 bucket（牆、玻璃、金屬），陰影另計；刻意關閉 frustum culling 以固定 draw call。
+- 幾何契約：`building-geometry.ts` 生成後會檢查有限座標、屬性長度、索引範圍、非退化三角形、面向與頂點法線一致，以及 LOD 索引單調遞增；`buildings.ts` 另檢查樓層、樓高、環道半徑與原型限制。透天厝以山牆／四坡／平屋頂為主，騎樓街屋與轉角商業優先平屋頂，公寓與現代量體不在低樓層強塞陽台，倉庫才使用鋸齒屋頂；水塔只在規格啟用時生成。
 - 光照：暖色主光 + 半球光 + 低環境光、ACES 色調映射；不使用 bloom、景深或 SSAO。
 - 檔案：`src/world/buildings.ts`（純規格，不 import Three）、`src/world/building-geometry.ts`（合併幾何）、`src/components/HexBuildings.tsx`、`HexWorldLayer.tsx`、`CityScene.tsx`。
 - 限制：程序化裝飾不是建築測繪；公園、濕地等稀疏地磚保持誠實的空曠；立面細節需 zoom ≥100；地標仍是獨立低多邊形群組。

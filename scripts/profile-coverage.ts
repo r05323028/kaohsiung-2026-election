@@ -1,5 +1,9 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import politicalCareerInput from '../data/approved/2026/political-career.json';
+import normalizedPolicyInput from '../data/policy-research/2026/full-roster.json';
+import publishedNewsInput from '../data/published/2026/candidate-news.json';
+import publishedPolicyInput from '../data/published/2026/candidate-policies.json';
 import { officialCandidateProfiles } from '../src/data/official';
 import type { CandidateProfileView } from '../src/data/view';
 
@@ -72,6 +76,7 @@ type CoverageReport = {
   publishedPolicyCount: number;
   pendingPolicyCount: number;
   publishedNewsCount: number;
+  publishedNewsAssociationCount: number;
   publishedCareerRecordCount: number;
   unavailableCandidateResearchCount: number;
   recordsRejectedForInsufficientEvidence: number;
@@ -123,6 +128,77 @@ function createCounts(): Record<string, number> {
   return {};
 }
 
+function addCandidateCount(
+  counts: Map<string, number>,
+  candidateId: string,
+  amount = 1,
+): void {
+  counts.set(candidateId, (counts.get(candidateId) ?? 0) + amount);
+}
+
+function countRowsByCandidate(
+  rows: readonly { candidateId: string }[],
+): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const row of rows) addCandidateCount(counts, row.candidateId);
+  return counts;
+}
+
+type PolicyIndexRow = {
+  policyId: string;
+  candidateId: string;
+};
+
+function policyRows(value: unknown): readonly PolicyIndexRow[] {
+  if (value === null || typeof value !== 'object') return [];
+  const rows = (value as Record<string, unknown>).policies;
+  if (!Array.isArray(rows)) return [];
+  return rows.filter((row): row is PolicyIndexRow => {
+    if (row === null || typeof row !== 'object') return false;
+    const candidate = row as Record<string, unknown>;
+    return (
+      typeof candidate.policyId === 'string' &&
+      typeof candidate.candidateId === 'string'
+    );
+  });
+}
+
+const publishedPolicyIds = new Set(
+  publishedPolicyInput.policies.map((policy) => policy.policyId),
+);
+const publishedPolicyCounts = countRowsByCandidate(
+  publishedPolicyInput.policies,
+);
+const normalizedPolicyRows = policyRows(normalizedPolicyInput);
+const pendingPolicyCounts = countRowsByCandidate(
+  normalizedPolicyRows.filter(
+    (policy) => !publishedPolicyIds.has(policy.policyId),
+  ),
+);
+const publishedNewsAssociationCounts = new Map<string, number>();
+for (const article of publishedNewsInput.articles) {
+  for (const candidateId of article.candidateIds)
+    addCandidateCount(publishedNewsAssociationCounts, candidateId);
+}
+const officeTermCounts = countRowsByCandidate(politicalCareerInput.officeTerms);
+const legislativeOfficeTermCounts = countRowsByCandidate(
+  politicalCareerInput.officeTerms.filter(
+    (term) =>
+      term.positionType === 'council-office' ||
+      term.positionType === 'legislative-office',
+  ),
+);
+const activityCounts = countRowsByCandidate(politicalCareerInput.activities);
+const projectCounts = countRowsByCandidate(
+  politicalCareerInput.governmentProjects,
+);
+const proposalCounts = countRowsByCandidate(
+  politicalCareerInput.legislativeProposals,
+);
+const votingRecordCounts = countRowsByCandidate(
+  politicalCareerInput.votingRecords,
+);
+
 function isPublishedRecord(record: {
   publicationStatus: string;
   verificationStatus: string;
@@ -133,37 +209,36 @@ function isPublishedRecord(record: {
   );
 }
 
-function publicCareerRecordCount(candidate: CandidateProfileView): number {
-  const bundle = candidate.publicRecords;
-  if (!bundle) return 0;
-  return (
-    bundle.positions.filter(isPublishedRecord).length +
-    bundle.activities.filter(isPublishedRecord).length +
-    bundle.timeline.filter(isPublishedRecord).length
-  );
-}
-
 function profileInventory(candidate: CandidateProfileView): CandidateInventory {
   const bundle = candidate.publicRecords;
-  const positions = bundle?.positions.filter(isPublishedRecord) ?? [];
-  const activities = bundle?.activities.filter(isPublishedRecord) ?? [];
-  const news = bundle?.news.filter(isPublishedRecord) ?? [];
-  const policies = bundle?.policies.filter(isPublishedRecord) ?? [];
-  const timeline = bundle?.timeline.filter(isPublishedRecord) ?? [];
-  const pendingPolicyCount = candidate.policyResearch?.policyCount ?? 0;
+  const publishedPolicyCount =
+    publishedPolicyCounts.get(candidate.candidacy.id) ?? 0;
+  const pendingPolicyCount =
+    pendingPolicyCounts.get(candidate.candidacy.id) ?? 0;
+  const publishedNewsCount =
+    publishedNewsAssociationCounts.get(candidate.candidacy.id) ?? 0;
+  const publishedPositionCount =
+    officeTermCounts.get(candidate.candidacy.id) ?? 0;
+  const legislativePositionCount =
+    legislativeOfficeTermCounts.get(candidate.candidacy.id) ?? 0;
+  const publishedActivityCount =
+    activityCounts.get(candidate.candidacy.id) ?? 0;
+  const publishedTimelineCount =
+    (projectCounts.get(candidate.candidacy.id) ?? 0) +
+    (proposalCounts.get(candidate.candidacy.id) ?? 0) +
+    (votingRecordCounts.get(candidate.candidacy.id) ?? 0);
+  const publishedCareerRecordCount =
+    publishedPositionCount + publishedActivityCount + publishedTimelineCount;
   const automatedHistoricalClaimCount =
     candidate.automatedPublication?.claims.length ?? 0;
   const missingOrUnavailable: string[] = [];
 
   if (candidate.sources.length === 0)
     missingOrUnavailable.push('未保留可供查閱的候選人來源');
-  if (policies.length === 0) missingOrUnavailable.push('尚無已核准政策紀錄');
-  if (news.length === 0) missingOrUnavailable.push('尚無已核准新聞紀錄');
-  if (
-    activities.length === 0 &&
-    positions.length === 0 &&
-    timeline.length === 0
-  )
+  if (publishedPolicyCount === 0)
+    missingOrUnavailable.push('尚無已核准政策紀錄');
+  if (publishedNewsCount === 0) missingOrUnavailable.push('尚無已核准新聞紀錄');
+  if (publishedCareerRecordCount === 0)
     missingOrUnavailable.push('尚無已核准從政歷程紀錄');
   if (pendingPolicyCount > 0)
     missingOrUnavailable.push('政策研究紀錄仍待人工／編輯審查');
@@ -172,12 +247,11 @@ function profileInventory(candidate: CandidateProfileView): CandidateInventory {
   if (candidate.policyResearch?.outcome === 'no-verifiable-policy-found')
     missingOrUnavailable.push('已完成研究嘗試但未找到足夠可查證政策');
 
-  const hasVerifiedProposal = activities.some(
-    (activity) => activity.activityType === 'legislative-proposal',
-  );
-  const hasVerifiedExecutiveInitiative = activities.some(
-    (activity) => activity.activityType === 'government-project',
-  );
+  const positions = bundle?.positions.filter(isPublishedRecord) ?? [];
+  const hasVerifiedProposal =
+    (proposalCounts.get(candidate.candidacy.id) ?? 0) > 0;
+  const hasVerifiedExecutiveInitiative =
+    (projectCounts.get(candidate.candidacy.id) ?? 0) > 0;
 
   return {
     candidateId: candidate.candidacy.id,
@@ -190,18 +264,15 @@ function profileInventory(candidate: CandidateProfileView): CandidateInventory {
       candidate.sources.length > 0 &&
       candidate.candidacy.publicationStatus === 'approved',
     rosterSourceCount: candidate.sources.length,
-    publishedPolicyCount: policies.length,
+    publishedPolicyCount,
     pendingPolicyCount,
-    publishedNewsCount: news.length,
-    publishedCareerRecordCount: publicCareerRecordCount(candidate),
-    publishedPositionCount: positions.length,
-    publishedActivityCount: activities.length,
-    publishedTimelineCount: timeline.length,
+    publishedNewsCount,
+    publishedCareerRecordCount,
+    publishedPositionCount,
+    publishedActivityCount,
+    publishedTimelineCount,
     automatedHistoricalClaimCount,
-    formerLegislator: Boolean(
-      candidate.candidacy.currentPosition.includes('議員') ||
-        positions.some((position) => position.organization.includes('議會')),
-    ),
+    formerLegislator: legislativePositionCount > 0,
     hasVerifiedProposal,
     hasVerifiedIndividualVote: false,
     formerExecutive: Boolean(
@@ -243,10 +314,11 @@ function buildReports() {
     (sum, item) => sum + item.pendingPolicyCount,
     0,
   );
-  const publishedNewsCount = inventories.reduce(
+  const publishedNewsAssociationCount = inventories.reduce(
     (sum, item) => sum + item.publishedNewsCount,
     0,
   );
+  const publishedNewsCount = publishedNewsInput.articles.length;
   const publishedCareerRecordCount = inventories.reduce(
     (sum, item) => sum + item.publishedCareerRecordCount,
     0,
@@ -366,7 +438,7 @@ function buildReports() {
 
   const coverage: CoverageReport = {
     reportId: 'candidate-profile-five-section-coverage',
-    snapshotDate: '2026-11-09',
+    snapshotDate: '2026-11-14',
     profileTabs: PROFILE_TAB_LABELS,
     totalCandidates,
     candidatesStructurallySupported: inventories.filter(
@@ -385,17 +457,18 @@ function buildReports() {
       (item) => item.publishedNewsCount > 0,
     ).length,
     formerLegislatorsWithVerifiedProposals: inventories.filter(
-      (item) => item.hasVerifiedProposal,
+      (item) => item.formerLegislator && item.hasVerifiedProposal,
     ).length,
     formerLegislatorsWithVerifiedIndividualVotingRecords: inventories.filter(
-      (item) => item.hasVerifiedIndividualVote,
+      (item) => item.formerLegislator && item.hasVerifiedIndividualVote,
     ).length,
     formerExecutivesWithVerifiedPolicyInitiatives: inventories.filter(
-      (item) => item.hasVerifiedExecutiveInitiative,
+      (item) => item.formerExecutive && item.hasVerifiedExecutiveInitiative,
     ).length,
     publishedPolicyCount,
     pendingPolicyCount,
     publishedNewsCount,
+    publishedNewsAssociationCount,
     publishedCareerRecordCount,
     unavailableCandidateResearchCount: inventories.filter((item) =>
       item.missingOrUnavailable.some((reason) => reason.includes('來源未保留')),
@@ -413,13 +486,14 @@ function buildReports() {
       '現有公開資料集沒有可查證的個別點名表決紀錄；未由黨籍、發言或集體結果推論投票。',
       '相關新聞僅呈現已核准的公開新聞，依發布日期排序，不標示正負面或做編輯評價。',
       '候選人特定來源缺漏、無法取得或未完成身份核對時，報告保留缺口，不將缺口解讀為沒有相關事實。',
+      '政策、新聞與從政歷程計數直接來自目前受控快照；新聞同時計算不重複文章與候選人關聯，避免多候選人文章重複計數。',
       '現有 production roster 的基本資料來源與公共紀錄來源分屬不同驗證層級；本報告不將候選人自述當作履行成效。',
     ],
   };
 
   const sourceQuality: SourceQualityReport = {
     reportId: 'candidate-profile-source-quality',
-    snapshotDate: '2026-11-09',
+    snapshotDate: '2026-11-14',
     totalCandidates,
     candidatesWithAtLeastOneSource: officialCandidateProfiles.filter(
       (candidate) => candidate.sources.length > 0,
@@ -464,7 +538,7 @@ function markdownCoverage(report: CoverageReport): string {
 - 有來源的基本資料：${report.candidatesWithVerifiedBasicInformation}
 - 已核准政策紀錄：${report.publishedPolicyCount} 筆／${report.candidatesWithVerifiedPolicyStatements} 位
 - 待審政策研究：${report.pendingPolicyCount} 筆／${report.candidatesWithPendingPolicyResearch} 位
-- 已核准新聞：${report.publishedNewsCount} 筆／${report.candidatesWithVerifiedNews} 位（依發布日期排序）
+- 已核准新聞：${report.publishedNewsCount} 篇不重複文章／${report.publishedNewsAssociationCount} 筆候選人關聯／${report.candidatesWithVerifiedNews} 位（依發布日期排序）
 - 有查證提案的前立法者：${report.formerLegislatorsWithVerifiedProposals} 位
 - 有查證個別表決紀錄：${report.formerLegislatorsWithVerifiedIndividualVotingRecords} 位
 - 有查證行政政策推動：${report.formerExecutivesWithVerifiedPolicyInitiatives} 位
@@ -476,7 +550,7 @@ function markdownCoverage(report: CoverageReport): string {
 
 ## 分區覆蓋
 
-| 選區 | 候選人 | 基本資料 | 已核准政策 | 待審政策 | 已核准新聞 | 已核准從政紀錄 |
+| 選區 | 候選人 | 基本資料 | 已核准政策 | 待審政策 | 已核准新聞關聯 | 已核准從政紀錄 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 ${report.coverageByDistrict
   .map(
@@ -487,7 +561,7 @@ ${report.coverageByDistrict
 
 ## 候選人明細
 
-| 候選人 | 選區 | 基本資料 | 已核准政策 | 待審政策 | 已核准新聞 | 從政紀錄 | 政策研究結果 |
+| 候選人 | 選區 | 基本資料 | 已核准政策 | 待審政策 | 已核准新聞關聯 | 從政紀錄 | 政策研究結果 |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
 ${rows}
 

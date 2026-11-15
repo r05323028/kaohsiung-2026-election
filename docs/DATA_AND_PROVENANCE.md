@@ -62,6 +62,17 @@
 - 稽核 payload 不進 3D、搜尋或 metadata；只有通過閘門的內容才會出現在頁面。
 - 批次支援 `--dry-run`、篩選、重試、併發、checkpoint 與 atomic write；失敗的 run 不覆蓋既有結果。
 
+### 全名冊候選人稽核
+
+`npm run candidate-audit:generate` 會以 `data/approved/2026/kaohsiung-election.json` 的 106 位候選人為唯一邊界，離線聯結目前受控的基本資料、傳記、新聞、公共紀錄、從政歷程、政策與家族資料層，產生：
+
+- `reports/candidate-roster-audit/coverage.json`：每位候選人 × 七類資料各一列，分開記錄 researched、machine-verified、independently-checked、human-reviewed、editorially-approved、approved-layer 與 statically-published。
+- `reports/candidate-roster-audit/claims.json`：保留 claim、source/evidence/provenance 連結、驗證／審查／發布狀態；新聞同時保留候選人關聯與不重複文章的差異。
+- `reports/candidate-roster-audit/provenance.json`：以來源宣告的 raw 路徑、SHA-256、位元組長度與 URL 分類可重算、無法在本地解析、URL-only 等狀態。
+- `reports/candidate-roster-audit/gaps.json` 與 `audit.md`：以 `source-unavailable`、`insufficient-evidence`、`conflict`、`pending-human-review`、`no-verifiable-record-found` 等中性狀態呈現缺口；`isNegativeEvidence` 永遠為 `false`。
+
+`npm run validate:candidate-audit` 會檢查 106 個 canonical IDs、742 個候選人／類別列、claim/provenance 連結、輸入 checksum／byte length，以及人工審查與編輯核准旗標。空的 `data/editorial/reviewer-registry.json` 或缺少授權決策時，任何 claim 都不得被稽核標為 human-reviewed 或 editorially-approved；受控層的 automated／machine-verified／approved status 不等同人工核准。`npm run validate:all` 先重建再驗證這兩份報告。
+
 ## 資料集清單（2026-11-15 現況）
 
 | 資料集 | 內容 | 狀態 |
@@ -76,9 +87,9 @@
 | `political-career.json` | 154 任期、1,045 活動、25 專案、851 提案、327 表決、714 來源；68 人有紀錄、38 人查無 | approved，2026-11-14 |
 | `policy-career-separation.json` | 1,017 筆分類（1,010 承諾、9 歷程、3 拆分）＋21 連結 | approved，2026-11-14 |
 | `political-family.json` | 45 人、24 關係、32 來源 | published，需雙重證據 |
-| `zuoying-mayoral-automated-v2.json` | 左營／市長 scoped 機器發布 75 筆（9 來源、0 撤回） | published（reviewer-free） |
+| scoped enrichment artifacts | 歷史範圍研究與自動化檢核輸出；不屬於 106 人全名冊的公開候選人資料層 | 排除於全名冊覆蓋稽核與公開載入器 |
 
-scoped 研究（`data/enrichment/`，17 位左營第 4 選區與市長候選人）與正式發布層隔離：143 claims 全部 pending，approved/published 為空，production 不 import。
+歷史 scoped 研究與自動化檢核輸出不併入 106 人全名冊稽核，也不由 production loader 讀取；若要重新納入，必須建立新的不可變來源快照並重新通過全名冊身分、證據與發布閘門。
 
 ## 更新程序
 

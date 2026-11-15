@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, type Page, test } from '@playwright/test';
 import { rosterGroupCount, rosterTotal } from './official-roster';
 
 test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet profile', {
@@ -17,6 +17,31 @@ test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet
   );
   await expect(candidateSheet.locator('.candidate-sheet__card')).toHaveCount(
     rosterTotal,
+  );
+  const badge = candidateSheet.locator('.candidate-sheet__ballot').first();
+  await expect(badge).toBeVisible();
+  await expect(badge.locator('.candidate-sheet__ballot-number')).toHaveText(
+    /^\d{1,2}$/,
+  );
+  await expect(badge.locator('.candidate-sheet__ballot-label')).toHaveText(
+    '號次',
+  );
+  const badgeFit = await badge.evaluate((element) => {
+    const copy = element.parentElement;
+    const card = element.closest('.candidate-sheet__card');
+    if (!copy || !card) throw new Error('candidate card is missing');
+    const badgeRect = element.getBoundingClientRect();
+    const copyRect = copy.getBoundingClientRect();
+    return {
+      width: badgeRect.width,
+      copyWidth: copyRect.width,
+      cardScrollWidth: card.scrollWidth,
+      cardClientWidth: card.clientWidth,
+    };
+  });
+  expect(badgeFit.width).toBeLessThan(badgeFit.copyWidth - 2);
+  expect(badgeFit.cardScrollWidth).toBeLessThanOrEqual(
+    badgeFit.cardClientWidth + 1,
   );
   await page.locator('.candidate-sheet__card').first().click();
   await expect(page.locator('.profile-panel.is-open')).toBeVisible();
@@ -328,4 +353,385 @@ test('mobile roster sheet opens fully below the fixed masthead', async ({
   expect(roster.scrollTop).toBeGreaterThan(0);
   expect(roster.pageScrollY).toBe(0);
   await expect(sheet.locator('.candidate-sheet__group').last()).toBeVisible();
+});
+
+type MobileWorldWindow = Window & {
+  __kaohsiungCandidateVisibility?: () => {
+    scope: 'citywide' | 'admin-district' | 'constituency';
+    count: number;
+    slugs: string[];
+  };
+  __kaohsiungActorScreenPosition?: (
+    slug: string,
+  ) => { x: number; y: number } | null;
+  __kaohsiungWorld?: {
+    actors: () => {
+      slug: string;
+      displayName?: string;
+      role: 'mayor' | 'council' | 'indigenous' | 'demo';
+    }[];
+  };
+};
+
+async function openMobileCity(page: Page, path: string) {
+  await page.goto(path);
+  await expect(page.getByTestId('city-explorer')).toHaveAttribute(
+    'data-hydrated',
+    'true',
+    { timeout: 30_000 },
+  );
+  await page.waitForFunction(
+    () =>
+      typeof (window as MobileWorldWindow).__kaohsiungCandidateVisibility ===
+      'function',
+    undefined,
+    { timeout: 30_000 },
+  );
+  await page.waitForTimeout(1800);
+}
+
+async function settleAnimations(locator: ReturnType<Page['locator']>) {
+  await locator.evaluate((element) =>
+    Promise.all(
+      element
+        .getAnimations({ subtree: true })
+        .map((animation) => animation.finished.catch(() => undefined)),
+    ),
+  );
+}
+
+for (const viewport of [
+  { width: 375, height: 667 },
+  { width: 393, height: 852 },
+]) {
+  test(
+    'mobile district summary stays compact until details are requested at ' +
+      viewport.width +
+      'x' +
+      viewport.height,
+    async ({ page }) => {
+      test.setTimeout(90_000);
+      await page.setViewportSize(viewport);
+      await page.goto('/?admin=E03');
+      const explorer = page.getByTestId('city-explorer');
+      await expect(explorer).toHaveAttribute('data-hydrated', 'true');
+      await expect(explorer).toHaveAttribute('data-admin-details', 'false');
+
+      const card = page.locator('.city-admin-card');
+      const handle = page.locator('.candidate-sheet__handle');
+      const details = card.locator('.city-admin-card__details');
+      const toggle = card.getByRole('button', { name: '查看完整資訊' });
+      const backToCity = card.getByRole('button', { name: '回到全市' });
+      const close = card.locator('.city-admin-card__close');
+      const scrim = page.locator('.city-admin-card__scrim');
+
+      await expect(card).toBeVisible();
+      await expect(card).toHaveAttribute('data-expanded', 'false');
+      await expect(
+        card.getByRole('heading', { name: '左營區', level: 2 }),
+      ).toBeVisible();
+      await expect(
+        card.locator('.city-admin-card__compact-coverage'),
+      ).toContainText('第4選舉區');
+      await expect(details).toBeHidden();
+      await expect(card.locator('.city-admin-card__neighbors')).toBeHidden();
+      await expect(close).toBeHidden();
+      await expect(scrim).toHaveCount(0);
+      await expect(handle).toBeVisible();
+      await expect(toggle).toBeVisible();
+      await expect(backToCity).toBeVisible();
+
+      const compactLayout = await page.evaluate(() => {
+        const cardElement = document.querySelector('.city-admin-card');
+        const handleElement = document.querySelector(
+          '.candidate-sheet__handle',
+        );
+        if (!cardElement || !handleElement) {
+          throw new Error('missing compact layout elements');
+        }
+        const cardBox = cardElement.getBoundingClientRect();
+        const handleBox = handleElement.getBoundingClientRect();
+        return {
+          viewportWidth: window.innerWidth,
+          viewportHeight: window.innerHeight,
+          card: {
+            top: cardBox.top,
+            right: cardBox.right,
+            bottom: cardBox.bottom,
+            height: cardBox.height,
+            scrollWidth: cardElement.scrollWidth,
+            clientWidth: cardElement.clientWidth,
+          },
+          handleTop: handleBox.top,
+        };
+      });
+      expect(compactLayout.card.right).toBeLessThanOrEqual(
+        compactLayout.viewportWidth,
+      );
+      expect(compactLayout.card.scrollWidth).toBeLessThanOrEqual(
+        compactLayout.card.clientWidth + 1,
+      );
+      expect(compactLayout.card.height).toBeLessThan(
+        compactLayout.viewportHeight * 0.3,
+      );
+      expect(compactLayout.card.bottom).toBeLessThan(
+        compactLayout.handleTop - 24,
+      );
+
+      for (const action of [toggle, backToCity]) {
+        const box = await action.boundingBox();
+        expect(box?.width ?? 0).toBeGreaterThanOrEqual(44);
+        expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);
+      }
+
+      await toggle.click();
+      await expect(explorer).toHaveAttribute('data-admin-details', 'true');
+      await expect(card).toHaveAttribute('data-expanded', 'true');
+      await expect(details).toBeVisible();
+      await expect(
+        card.getByRole('heading', { name: '相鄰行政區', level: 3 }),
+      ).toBeVisible();
+      await expect(
+        card.locator('.city-admin-card__constituencies li').first(),
+      ).toBeVisible();
+      await expect(close).toBeVisible();
+      await expect(handle).toBeHidden();
+      await expect(scrim).toBeVisible();
+      await settleAnimations(card);
+      const closeBox = await close.boundingBox();
+      expect(closeBox?.width ?? 0).toBeGreaterThanOrEqual(44);
+      expect(closeBox?.height ?? 0).toBeGreaterThanOrEqual(44);
+
+      await close.click();
+      await expect(explorer).toHaveAttribute('data-admin-details', 'false');
+      await expect(card).toHaveAttribute('data-expanded', 'false');
+      await expect(details).toBeHidden();
+      await expect(handle).toBeVisible();
+      await expect(toggle).toBeFocused();
+
+      await toggle.click();
+      await expect(card).toHaveAttribute('data-expanded', 'true');
+      await page.keyboard.press('Escape');
+      await expect(explorer).toHaveAttribute('data-admin-details', 'false');
+      await expect(card).toHaveAttribute('data-expanded', 'false');
+      await expect(handle).toBeVisible();
+
+      await toggle.click();
+      await settleAnimations(card);
+      await page.mouse.click(4, 180);
+      await expect(explorer).toHaveAttribute('data-admin-details', 'false');
+      await expect(card).toHaveAttribute('data-expanded', 'false');
+      await expect(scrim).toHaveCount(0);
+      await expect(handle).toBeVisible();
+
+      await backToCity.click();
+      await expect(card).toBeHidden();
+      await expect(page).not.toHaveURL(/admin=E03/);
+      await expect(page).not.toHaveURL(/district=/);
+      await expect(explorer).toHaveAttribute(
+        'data-candidate-scope',
+        'citywide',
+      );
+      await expect(explorer).toHaveAttribute('data-candidate-count', '5');
+      await expect(explorer).toHaveAttribute(
+        'data-scene-focus',
+        /^world-overview-/,
+      );
+      await expect(handle).toBeVisible();
+      await expect(page.locator('.city-admin-card__scrim')).toHaveCount(0);
+    },
+  );
+}
+
+test('mobile compact district card leaves visible actors directly tappable', async ({
+  page,
+}) => {
+  test.setTimeout(120_000);
+  await page.setViewportSize({ width: 375, height: 667 });
+  await openMobileCity(page, '/?admin=E03');
+
+  const explorer = page.getByTestId('city-explorer');
+  await expect(explorer).toHaveAttribute(
+    'data-candidate-scope',
+    'admin-district',
+  );
+  await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+
+  const target = await page.evaluate(() => {
+    const bridge = window as MobileWorldWindow;
+    const visibility = bridge.__kaohsiungCandidateVisibility?.();
+    const actors = bridge.__kaohsiungWorld?.actors() ?? [];
+    const cardElement = document.querySelector('.city-admin-card');
+    const handleElement = document.querySelector('.candidate-sheet__handle');
+    const headerElement = document.querySelector('.global-header__surface');
+    if (!visibility || !cardElement || !handleElement || !headerElement) {
+      throw new Error('missing actor or HUD geometry');
+    }
+    const card = cardElement.getBoundingClientRect();
+    const handle = handleElement.getBoundingClientRect();
+    const header = headerElement.getBoundingClientRect();
+    const visible = new Set(visibility.slugs);
+    const basePoints = actors
+      .filter((actor) => visible.has(actor.slug) && actor.displayName)
+      .flatMap((actor) => {
+        const screen = bridge.__kaohsiungActorScreenPosition?.(actor.slug);
+        if (!screen) return [];
+        return [
+          {
+            slug: actor.slug,
+            name: actor.displayName ?? '',
+            x: screen.x,
+            y: screen.y,
+          },
+        ];
+      })
+      .filter(
+        (point) =>
+          point.x > 12 &&
+          point.x < window.innerWidth - 12 &&
+          point.y > header.bottom + 12 &&
+          point.y < handle.top - 12 &&
+          !(
+            point.x > card.left - 8 &&
+            point.x < card.right + 8 &&
+            point.y > card.top - 8 &&
+            point.y < card.bottom + 8
+          ),
+      );
+    const points = basePoints
+      .map((point) => ({
+        ...point,
+        clearance: Math.min(
+          ...basePoints
+            .filter((other) => other.slug !== point.slug)
+            .map((other) => Math.hypot(other.x - point.x, other.y - point.y)),
+          Number.POSITIVE_INFINITY,
+        ),
+      }))
+      .sort((left, right) => right.clearance - left.clearance);
+    const chosen = points[0];
+    if (!chosen) throw new Error('no tappable actor outside the card');
+    return chosen;
+  });
+
+  await page.mouse.click(target.x, target.y);
+  const profile = page.locator('.profile-panel.is-open');
+  await expect(profile).toBeVisible({ timeout: 20_000 });
+  await expect(profile.locator('h2')).toHaveText(target.name);
+  await expect(page.getByTestId('scene-frame').locator('canvas')).toBeVisible();
+
+  await profile.locator('[aria-label="關閉人物資料"]').click();
+  await expect(profile).toHaveCount(0);
+  const card = page.locator('.city-admin-card');
+  await expect(card).toBeVisible();
+  await expect(
+    card.getByRole('heading', { name: '左營區', level: 2 }),
+  ).toBeVisible();
+  await expect(card).toHaveAttribute('data-expanded', 'false');
+  await expect(page.locator('.candidate-sheet__handle')).toBeVisible();
+  await expect(explorer).toHaveAttribute(
+    'data-candidate-scope',
+    'admin-district',
+  );
+  await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+});
+
+test('mobile district details close cleanly across constituency and district switches', async ({
+  page,
+}) => {
+  test.setTimeout(120_000);
+  await page.setViewportSize({ width: 393, height: 852 });
+  await page.goto('/?admin=E03');
+  const explorer = page.getByTestId('city-explorer');
+  await expect(explorer).toHaveAttribute('data-hydrated', 'true');
+
+  const card = page.locator('.city-admin-card');
+  const handle = page.locator('.candidate-sheet__handle');
+  await card.getByRole('button', { name: '查看完整資訊' }).click();
+  await expect(card).toHaveAttribute('data-expanded', 'true');
+  await expect(page.locator('.city-admin-card__scrim')).toBeVisible();
+
+  await card.locator('.city-admin-card__constituencies button').first().click();
+  await expect(card).toHaveCount(0);
+  await expect(page.locator('.city-admin-card__scrim')).toHaveCount(0);
+  await expect(explorer).toHaveAttribute('data-admin-details', 'false');
+  await expect(page.getByTestId('city-coverage-card')).toBeVisible();
+  await expect(page).toHaveURL(/district=kaohsiung-council-04/);
+  await expect(page).not.toHaveURL(/admin=/);
+  await expect(handle).toBeVisible();
+
+  await page.keyboard.press('Escape');
+  await expect(page.getByTestId('city-coverage-card')).toHaveCount(0);
+  await expect(page).not.toHaveURL(/district=/);
+  await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
+
+  await page.waitForTimeout(1600);
+  const nanziLabel = page
+    .locator('.hex-district-label', { hasText: '楠梓' })
+    .first();
+  await expect(nanziLabel).toBeVisible();
+  const nanziBox = await nanziLabel.boundingBox();
+  if (!nanziBox) throw new Error('楠梓 district label is not visible');
+  await page.mouse.click(
+    nanziBox.x + nanziBox.width / 2,
+    nanziBox.y + nanziBox.height / 2,
+  );
+  await expect(card).toBeVisible();
+  await expect(
+    card.getByRole('heading', { name: '楠梓區', level: 2 }),
+  ).toBeVisible();
+  await expect(card).toHaveAttribute('data-expanded', 'false');
+  await expect(card.locator('.city-admin-card__details')).toBeHidden();
+  await expect(page.locator('.city-admin-card__scrim')).toHaveCount(0);
+  await card.getByRole('button', { name: '回到全市' }).click();
+  await expect(card).toHaveCount(0);
+  await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
+});
+
+test('mobile roster keeps every constituency reachable and opens an off-screen profile', async ({
+  page,
+}) => {
+  test.setTimeout(120_000);
+  await page.setViewportSize({ width: 393, height: 852 });
+  await page.goto('/?admin=E03');
+  const explorer = page.getByTestId('city-explorer');
+  await expect(explorer).toHaveAttribute('data-hydrated', 'true');
+  await page.locator('[aria-controls="city-people-tray"]').click();
+
+  const sheet = page.locator('#city-people-tray');
+  await expect(sheet).toBeVisible();
+  await expect(sheet.locator('.candidate-sheet__group')).toHaveCount(
+    rosterGroupCount,
+  );
+  await expect(sheet.locator('.candidate-sheet__card')).toHaveCount(
+    rosterTotal,
+  );
+
+  const otherGroup = sheet.locator(
+    '[data-constituency-id="district-kaohsiung-council-01"]',
+  );
+  await expect(otherGroup).toHaveCount(1);
+  const otherCandidate = otherGroup.locator('.candidate-sheet__card').first();
+  await otherCandidate.scrollIntoViewIfNeeded();
+  const name = (await otherCandidate.locator('strong').textContent())?.trim();
+  expect(name).toBeTruthy();
+  await otherCandidate.click();
+
+  const profile = page.locator('.profile-panel.is-open');
+  await expect(profile).toBeVisible({ timeout: 20_000 });
+  await expect(profile.locator('h2')).toHaveText(name ?? '');
+  await expect(page).toHaveURL(/candidate=/);
+  await expect(page).not.toHaveURL(/admin=/);
+  await expect(page.getByTestId('scene-frame').locator('canvas')).toBeVisible();
+
+  await profile.locator('[aria-label="關閉人物資料"]').click();
+  await expect(profile).toHaveCount(0);
+  const card = page.locator('.city-admin-card');
+  await expect(card).toBeVisible();
+  await expect(
+    card.getByRole('heading', { name: '左營區', level: 2 }),
+  ).toBeVisible();
+  await expect(card).toHaveAttribute('data-expanded', 'false');
+  await expect(page).toHaveURL(/admin=E03/);
+  await expect(page.locator('.candidate-sheet__handle')).toBeVisible();
 });

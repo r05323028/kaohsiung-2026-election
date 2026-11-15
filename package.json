@@ -9,7 +9,9 @@
     "build:astro": "astro build",
     "build:verified": "npm run validate:all && npm run build:astro && npm run validate:profile-copy",
     "build:pages": "npm run build:astro && npm run validate:profile-copy",
-    "validate:all": "npm run validate:data && npm run validate:political-family && npm run validate:constituencies && npm run validate:official && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:candidate-policies && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run validate:public-records-coverage && npm run validate:political-career && npm run validate:policy-career && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run validate:basic-profiles && npm run validate:news && npm run typecheck",
+    "candidate-audit:generate": "tsx scripts/candidate-roster-audit.ts",
+    "validate:candidate-audit": "npm run candidate-audit:check && npm run candidate-audit:validate",
+    "validate:all": "npm run validate:data && npm run validate:political-family && npm run validate:constituencies && npm run validate:official && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:candidate-policies && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run validate:public-records-coverage && npm run validate:political-career && npm run validate:policy-career && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run validate:basic-profiles && npm run validate:news && npm run validate:candidate-audit && npm run typecheck",
     "biography:execute": "tsx scripts/execute-biography-research.ts execute",
     "biography:normalize": "tsx scripts/execute-biography-research.ts normalize",
     "biography:review": "tsx scripts/execute-biography-research.ts review",
@@ -137,7 +139,9 @@
     "validate:constituencies": "tsx scripts/validate-constituency-coverage.ts",
     "basic:final-report": "tsx scripts/basic-profile/final-report.ts",
     "basic:finalize": "tsx scripts/basic-profile/finalize-research.ts",
-    "basic:sync-queue": "tsx scripts/basic-profile/sync-queue.ts"
+    "basic:sync-queue": "tsx scripts/basic-profile/sync-queue.ts",
+    "candidate-audit:check": "tsx scripts/candidate-roster-audit.ts --check",
+    "candidate-audit:validate": "tsx scripts/validate-candidate-roster-audit.ts"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.2",

@@ -13,6 +13,7 @@ import {
   layoutTileBuildings,
   maxSilhouetteHeight,
   TREE_RING_RADIUS,
+  validateBuildingSpecs,
 } from './buildings';
 import { HEX_TILES } from './hex';
 
@@ -67,6 +68,41 @@ describe('city building layout', () => {
       expect(spec.floors).toBeGreaterThanOrEqual(1);
       expect(spec.bodyHeight).toBeGreaterThan(0);
       expect(spec.roofHeight).toBeGreaterThan(0);
+    }
+  });
+
+  it('validates generated specs and rejects broken dimensions', () => {
+    expect(validateBuildingSpecs(buildings)).toEqual([]);
+    const broken = {
+      ...buildings[0]!,
+      bodyHeight: buildings[0]!.bodyHeight + 0.1,
+    };
+    expect(validateBuildingSpecs([broken])).toContain(
+      broken.id + ': body height does not match floors',
+    );
+  });
+
+  it('keeps architectural details coherent with their archetypes', () => {
+    for (const spec of buildings) {
+      if (spec.arcade) {
+        expect(['arcadeShophouse', 'cornerCommercial']).toContain(
+          spec.archetype,
+        );
+      }
+      if (spec.awning) {
+        expect(['townhouse', 'arcadeShophouse', 'cornerCommercial']).toContain(
+          spec.archetype,
+        );
+      }
+      if (spec.balconies) {
+        expect(['apartment', 'modernBlock', 'cornerCommercial']).toContain(
+          spec.archetype,
+        );
+        expect(spec.floors).toBeGreaterThanOrEqual(3);
+      }
+      if (spec.archetype === 'modernBlock') {
+        expect(spec.roof).toBe('flat');
+      }
     }
   });
 

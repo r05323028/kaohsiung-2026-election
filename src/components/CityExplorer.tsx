@@ -174,12 +174,15 @@ export default function CityExplorer({ districts, candidates }: Props) {
     useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [adminDetailsOpen, setAdminDetailsOpen] = useState(false);
   const [detail, setDetail] = useState<DetailLevel>('medium');
   const [webglSupported, setWebglSupported] = useState<boolean | null>(null);
   const [sceneReady, setSceneReady] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const profileCloseRef = useRef<HTMLButtonElement>(null);
   const peopleToggleRef = useRef<HTMLButtonElement>(null);
+  const adminDetailsToggleRef = useRef<HTMLButtonElement>(null);
+  const adminDetailsCloseRef = useRef<HTMLButtonElement>(null);
   const lastFocusedRef = useRef<HTMLElement | null>(null);
   const restoreFocusPendingRef = useRef(false);
   const returnFocusRef = useRef<{
@@ -288,6 +291,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
     setSelectedAdminId(null);
+    setAdminDetailsOpen(false);
     setOverview(true);
     setViewNonce((value) => value + 1);
   }, []);
@@ -297,6 +301,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setRestoreCameraOnProfileClose(false);
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
+    setAdminDetailsOpen(false);
     const origin = returnFocusRef.current;
     returnFocusRef.current = null;
     if (origin) {
@@ -309,6 +314,27 @@ export default function CityExplorer({ districts, candidates }: Props) {
     // citywide overview instead of leaving an implicit constituency focus.
     enterOverview();
   }, [enterOverview]);
+
+  const closeAdminDetails = useCallback((restoreFocus = true) => {
+    setAdminDetailsOpen(false);
+    if (!restoreFocus) return;
+    window.requestAnimationFrame(() => {
+      adminDetailsToggleRef.current?.focus();
+    });
+  }, []);
+
+  const openAdminDetails = useCallback(() => {
+    setSheetOpen(false);
+    setAdminDetailsOpen(true);
+    window.requestAnimationFrame(() => {
+      adminDetailsCloseRef.current?.focus();
+    });
+  }, []);
+
+  const openCandidateSheet = useCallback(() => {
+    setAdminDetailsOpen(false);
+    setSheetOpen(true);
+  }, []);
 
   useEffect(() => {
     if (selectedCandidateSlug || !restoreFocusPendingRef.current) return;
@@ -334,6 +360,10 @@ export default function CityExplorer({ districts, candidates }: Props) {
         closeCandidate();
         return;
       }
+      if (adminDetailsOpen) {
+        closeAdminDetails();
+        return;
+      }
       if (sheetOpen) {
         setSheetOpen(false);
         return;
@@ -345,6 +375,8 @@ export default function CityExplorer({ districts, candidates }: Props) {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [
+    adminDetailsOpen,
+    closeAdminDetails,
     closeCandidate,
     enterOverview,
     selectedAdminId,
@@ -477,6 +509,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
       setFollowActorSlug(slug);
       setOverview(false);
       setSheetOpen(false);
+      setAdminDetailsOpen(false);
     },
     [candidates, overview, selectedAdminId, selectedDistrictSlug],
   );
@@ -527,6 +560,8 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
     setSelectedAdminId(null);
+    setAdminDetailsOpen(false);
+    setSheetOpen(false);
     setOverview(false);
     setViewNonce((value) => value + 1);
   }, []);
@@ -563,6 +598,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
     setSheetOpen(false);
+    setAdminDetailsOpen(false);
     setOverview(false);
     if (options.syncConstituency !== false) {
       const electoral = electoralDistrictSlugForAdminName(district.shortName);
@@ -610,7 +646,12 @@ export default function CityExplorer({ districts, candidates }: Props) {
 
   return (
     <div
-      className={`city-app${selectedCandidate ? ' is-profile-open' : ''}`}
+      className={
+        'city-app' +
+        (selectedCandidate ? ' is-profile-open' : '') +
+        (adminDetailsOpen ? ' is-admin-details-open' : '')
+      }
+      data-admin-details={adminDetailsOpen ? 'true' : 'false'}
       data-testid="city-explorer"
       data-scene-focus={sceneFocus.key}
       data-candidate-scope={candidateVisibilityScope.kind}
@@ -665,67 +706,109 @@ export default function CityExplorer({ districts, candidates }: Props) {
         <div className="city-vignette" aria-hidden="true" />
 
         {selectedAdmin && !selectedCandidate && (
-          <article
-            className="city-admin-card"
-            aria-label={`${selectedAdmin.name} 行政區資訊`}
-          >
-            <header className="city-admin-card__header">
-              <h2>{selectedAdmin.name}</h2>
-              <span className="city-admin-card__english">
-                {selectedAdmin.nameEn}
-              </span>
-            </header>
-            <div className="city-admin-card__stats">
-              <span>
-                {TERRAIN_LABELS[selectedAdmin.terrain] ?? selectedAdmin.terrain}
-              </span>
-              <span>{selectedAdmin.areaKm2.toFixed(1)} km²</span>
-              {selectedAdmin.remoteCount > 0 && (
-                <span>含 {selectedAdmin.remoteCount} 處遠端轄區</span>
-              )}
-            </div>
-            <section
-              className="city-admin-card__neighbors"
-              aria-labelledby="city-admin-neighbors-title"
-            >
-              <h3 id="city-admin-neighbors-title">相鄰行政區</h3>
-              <p>
-                {selectedAdminNeighbours.length
-                  ? selectedAdminNeighbours.join('、')
-                  : '無資料'}
-              </p>
-            </section>
-            {selectedAdminCoverages.length > 0 && (
-              <section
-                className="city-admin-card__constituencies"
-                aria-labelledby="city-admin-constituencies-title"
-              >
-                <h3 id="city-admin-constituencies-title">所屬選舉區</h3>
-                <ul>
-                  {selectedAdminCoverages.map((coverage) => (
-                    <li key={coverage.number}>
-                      <button
-                        type="button"
-                        onClick={() => selectDistrict(coverage.slug)}
-                      >
-                        <span className="city-admin-card__constituency-number">
-                          第{coverage.number}選舉區
-                        </span>
-                        <span className="city-admin-card__constituency-kind">
-                          {coverageTypeLabel(coverage.kind)}
-                        </span>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+          <>
+            {adminDetailsOpen && (
+              <div
+                aria-hidden="true"
+                className="city-admin-card__scrim"
+                onClick={() => closeAdminDetails()}
+              />
             )}
-            <div className="city-landmark-card__actions">
-              <button type="button" onClick={backToWorld}>
-                回到全市
+            <article
+              aria-label={`${selectedAdmin.name} 行政區資訊`}
+              className={`city-admin-card${adminDetailsOpen ? ' is-expanded' : ''}`}
+              data-expanded={adminDetailsOpen ? 'true' : 'false'}
+            >
+              <button
+                aria-label="關閉行政區資訊"
+                className="city-admin-card__close"
+                onClick={() => closeAdminDetails()}
+                ref={adminDetailsCloseRef}
+                type="button"
+              >
+                ×
               </button>
-            </div>
-          </article>
+              <header className="city-admin-card__header">
+                <h2>{selectedAdmin.name}</h2>
+                <span className="city-admin-card__english">
+                  {selectedAdmin.nameEn}
+                </span>
+                {selectedAdminCoverages.length > 0 && (
+                  <p className="city-admin-card__compact-coverage">
+                    <span>第{selectedAdminCoverages[0]?.number}選舉區</span>
+                    {selectedAdminCoverages.length > 1 && (
+                      <span className="city-admin-card__compact-more">
+                        另有 {selectedAdminCoverages.length - 1} 個
+                      </span>
+                    )}
+                  </p>
+                )}
+              </header>
+              <div className="city-admin-card__details" id="city-admin-details">
+                <div className="city-admin-card__stats">
+                  <span>
+                    {TERRAIN_LABELS[selectedAdmin.terrain] ??
+                      selectedAdmin.terrain}
+                  </span>
+                  <span>{selectedAdmin.areaKm2.toFixed(1)} km²</span>
+                  {selectedAdmin.remoteCount > 0 && (
+                    <span>含 {selectedAdmin.remoteCount} 處遠端轄區</span>
+                  )}
+                </div>
+                <section
+                  className="city-admin-card__neighbors"
+                  aria-labelledby="city-admin-neighbors-title"
+                >
+                  <h3 id="city-admin-neighbors-title">相鄰行政區</h3>
+                  <p>
+                    {selectedAdminNeighbours.length
+                      ? selectedAdminNeighbours.join('、')
+                      : '無資料'}
+                  </p>
+                </section>
+                {selectedAdminCoverages.length > 0 && (
+                  <section
+                    className="city-admin-card__constituencies"
+                    aria-labelledby="city-admin-constituencies-title"
+                  >
+                    <h3 id="city-admin-constituencies-title">所屬選舉區</h3>
+                    <ul>
+                      {selectedAdminCoverages.map((coverage) => (
+                        <li key={coverage.number}>
+                          <button
+                            type="button"
+                            onClick={() => selectDistrict(coverage.slug)}
+                          >
+                            <span className="city-admin-card__constituency-number">
+                              第{coverage.number}選舉區
+                            </span>
+                            <span className="city-admin-card__constituency-kind">
+                              {coverageTypeLabel(coverage.kind)}
+                            </span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+              </div>
+              <div className="city-landmark-card__actions">
+                <button
+                  aria-controls="city-admin-details"
+                  aria-expanded={adminDetailsOpen}
+                  className="city-admin-card__details-toggle"
+                  onClick={openAdminDetails}
+                  ref={adminDetailsToggleRef}
+                  type="button"
+                >
+                  查看完整資訊
+                </button>
+                <button type="button" onClick={backToWorld}>
+                  回到全市
+                </button>
+              </div>
+            </article>
+          </>
         )}
 
         {!overview &&
@@ -856,7 +939,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
           reducedMotion={reducedMotion}
           triggerRef={peopleToggleRef}
           onClose={() => setSheetOpen(false)}
-          onOpen={() => setSheetOpen(true)}
+          onOpen={openCandidateSheet}
           onSelectCandidate={selectCandidateById}
         />
       </div>

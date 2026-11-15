@@ -1,3 +1,7 @@
+import {
+  candidateIdCoverageIssues,
+  hasCandidateIdCoverageIssues,
+} from '../../src/data/basic-profiles/publication-validation';
 import { BasicProfilePublicationSchema } from '../../src/data/basic-profiles/schema';
 import { candidates, publicationPath, readJson, sha256 } from './lib';
 
@@ -18,17 +22,14 @@ if (sha256(JSON.stringify(input)) !== checksum) {
 const rosterIds = new Map(
   candidates.map((candidate) => [candidate.id, candidate]),
 );
-if (publication.candidates.length !== 106) {
+const coverageIssues = candidateIdCoverageIssues(
+  [...rosterIds.keys()],
+  publication.candidates.map((candidate) => candidate.candidateId),
+);
+if (hasCandidateIdCoverageIssues(coverageIssues)) {
   console.error(
-    `Expected 106 candidate coverage rows, found ${publication.candidates.length}.`,
+    `Candidate coverage roster mismatch. Duplicate: ${coverageIssues.duplicateIds.join(', ') || 'none'}; missing: ${coverageIssues.missingIds.join(', ') || 'none'}; unexpected: ${coverageIssues.unexpectedIds.join(', ') || 'none'}.`,
   );
-  process.exit(1);
-}
-if (
-  new Set(publication.candidates.map((candidate) => candidate.candidateId))
-    .size !== 106
-) {
-  console.error('Duplicate candidate coverage rows.');
   process.exit(1);
 }
 const seenClaims = new Set<string>();

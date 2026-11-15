@@ -218,16 +218,16 @@ class Frame {
       const next = (index + 1) % segments;
       batch.addQuad(
         bottom[index]!,
-        bottom[next]!,
-        top[next]!,
         top[index]!,
+        top[next]!,
+        bottom[next]!,
         color,
       );
     }
     const center = this.toWorld(x, y + height, z);
     for (let index = 0; index < segments; index += 1) {
       const next = (index + 1) % segments;
-      batch.addTriangle(top[index]!, top[next]!, center, color);
+      batch.addTriangle(top[index]!, center, top[next]!, color);
     }
   }
 
@@ -299,7 +299,7 @@ class Frame {
     const frontRight = this.toWorld(x + w, y, z + d);
     const backLeft = this.toWorld(x - w, y + rise, z - d);
     const backRight = this.toWorld(x + w, y + rise, z - d);
-    batch.addQuad(frontRight, frontLeft, backLeft, backRight, color);
+    batch.addQuad(frontLeft, frontRight, backRight, backLeft, color);
     batch.addTriangle(
       frontLeft,
       backLeft,
@@ -510,11 +510,96 @@ function addParapet(context: DetailContext, hex: string): void {
   );
 }
 
+function addRoofEaves(
+  context: DetailContext,
+  width: number,
+  depth: number,
+  roofY: number,
+): void {
+  const { spec } = context;
+  const bucket: BuildingBucket = spec.roof === 'sawtooth' ? 'metal' : 'wall';
+  const height = 0.018;
+  const thickness = 0.024;
+  const y = roofY - 0.006;
+
+  if (spec.roof === 'sawtooth') {
+    // Each shed tooth rises toward local -z. These three fascia bars follow
+    // the actual low/high edges instead of floating at one shared height.
+    for (const [z, edgeY] of [
+      [depth / 2, roofY],
+      [0, roofY + spec.roofHeight],
+      [-depth / 2, roofY + spec.roofHeight],
+    ] as const) {
+      put(
+        context,
+        bucket,
+        spec.trimColor,
+        width,
+        height,
+        thickness,
+        0,
+        edgeY,
+        z,
+      );
+    }
+    return;
+  }
+
+  put(
+    context,
+    bucket,
+    spec.trimColor,
+    width,
+    height,
+    thickness,
+    0,
+    y,
+    -depth / 2,
+  );
+  put(
+    context,
+    bucket,
+    spec.trimColor,
+    width,
+    height,
+    thickness,
+    0,
+    y,
+    depth / 2,
+  );
+
+  if (spec.roof === 'hip') {
+    put(
+      context,
+      bucket,
+      spec.trimColor,
+      thickness,
+      height,
+      depth,
+      -width / 2,
+      y,
+      0,
+    );
+    put(
+      context,
+      bucket,
+      spec.trimColor,
+      thickness,
+      height,
+      depth,
+      width / 2,
+      y,
+      0,
+    );
+  }
+}
+
 function addRoof(context: DetailContext): void {
   const { spec } = context;
   const w = spec.width + 0.05;
   const d = spec.depth + 0.07;
   const roofY = spec.bodyHeight;
+  if (spec.roof !== 'flat') addRoofEaves(context, w, d, roofY);
   if (spec.roof === 'gable') {
     context.frame.gableRoof(
       context.writers.wall,
@@ -639,17 +724,20 @@ function addGroundFloor(context: DetailContext): void {
   const fh = spec.floorHeight;
   const doorX = -spec.width * 0.26;
   if (spec.arcade) {
-    put(
-      context,
-      'wall',
-      spec.wallColor,
-      spec.width,
-      spec.bodyHeight - fh,
-      spec.depth,
-      0,
-      fh + (spec.bodyHeight - fh) / 2,
-      0,
-    );
+    const upperHeight = spec.bodyHeight - fh;
+    if (upperHeight > 0.001) {
+      put(
+        context,
+        'wall',
+        spec.wallColor,
+        spec.width,
+        upperHeight,
+        spec.depth,
+        0,
+        fh + upperHeight / 2,
+        0,
+      );
+    }
     // Back wall of the recessed walkway plus a shop window.
     put(
       context,
@@ -1137,29 +1225,32 @@ function addRooftop(context: DetailContext): void {
   const cornerX = mass.width * (spec.variant % 2 === 0 ? 0.26 : -0.26);
   const cornerZ = mass.offsetZ + mass.depth * 0.2;
   if (spec.roof !== 'flat' && spec.roof !== 'sawtooth') return;
-  // Rooftop water tank on its little concrete pad plus a stair bulkhead.
-  put(
-    context,
-    'wall',
-    spec.trimColor,
-    0.085,
-    0.018,
-    0.075,
-    cornerX,
-    roofY + 0.009,
-    cornerZ,
-  );
-  for (let tank = 0; tank < (spec.variant % 4 === 0 ? 2 : 1); tank += 1) {
-    context.frame.cylinder(
-      context.writers.metal,
-      spec.metalColor,
-      0.05,
-      0.115,
-      cornerX - tank * 0.11,
-      roofY + 0.018,
+  // Rooftop water tanks are an archetype detail, not a mandatory prop on
+  // every flat roof. Keep the pad and cylinders together so neither floats.
+  if (spec.waterTank) {
+    put(
+      context,
+      'wall',
+      spec.trimColor,
+      0.085,
+      0.018,
+      0.075,
+      cornerX,
+      roofY + 0.009,
       cornerZ,
-      8,
     );
+    for (let tank = 0; tank < (spec.variant % 4 === 0 ? 2 : 1); tank += 1) {
+      context.frame.cylinder(
+        context.writers.metal,
+        spec.metalColor,
+        0.05,
+        0.115,
+        cornerX - tank * 0.11,
+        roofY + 0.018,
+        cornerZ,
+        8,
+      );
+    }
   }
   if (spec.variant % 3 === 0) {
     // Solar water heater panel, a fixture on nearly every Taiwanese roof.
@@ -1238,28 +1329,44 @@ function addBalconyRailings(context: DetailContext): void {
     -spec.width / 2 + 0.03 + cell * (Math.floor(spec.windowColumns / 2) + 0.5);
   const topFloor = spec.setback ? spec.floors - 1 : spec.floors;
   for (let floor = 1; floor < topFloor; floor += 1) {
+    const slabY = floor * fh + 0.012;
+    const slabWidth = cell * 0.86;
+    const railZ = frontZ - 0.085;
     put(
       context,
       'wall',
       spec.trimColor,
-      cell * 0.9,
-      0.014,
-      0.06,
+      slabWidth,
+      0.012,
+      0.09,
       x,
-      floor * fh + 0.006,
-      frontZ - 0.028,
+      slabY,
+      frontZ - 0.04,
     );
     put(
       context,
-      'wall',
-      spec.trimColor,
-      cell * 0.9,
-      0.026,
+      'metal',
+      spec.metalColor,
+      slabWidth,
+      0.012,
       0.012,
       x,
-      floor * fh + 0.02,
-      frontZ - 0.056,
+      slabY + 0.075,
+      railZ,
     );
+    for (const side of [-1, 1]) {
+      put(
+        context,
+        'metal',
+        spec.metalColor,
+        0.012,
+        0.075,
+        0.012,
+        x + side * slabWidth * 0.46,
+        slabY + 0.038,
+        railZ,
+      );
+    }
   }
 }
 
@@ -1427,6 +1534,139 @@ function writeBuildingPhase(
   }
 }
 
+export function validateCityBuildingGeometry(
+  city: CityBuildingGeometry,
+): string[] {
+  const issues: string[] = [];
+  for (const bucket of ['wall', 'glass', 'metal'] as const) {
+    const entry = city.buckets[bucket];
+    const geometry = entry.geometry;
+    const position = geometry.getAttribute('position');
+    const normal = geometry.getAttribute('normal');
+    const color = geometry.getAttribute('color');
+    const index = geometry.getIndex();
+
+    if (!position || position.itemSize !== 3) {
+      issues.push(bucket + ': missing position attribute');
+      continue;
+    }
+    if (!normal || normal.itemSize !== 3 || normal.count !== position.count) {
+      issues.push(bucket + ': normal attribute does not match positions');
+    }
+    if (!color || color.itemSize !== 3 || color.count !== position.count) {
+      issues.push(bucket + ': color attribute does not match positions');
+    }
+    if (!index || index.count % 3 !== 0) {
+      issues.push(bucket + ': index buffer is missing or not triangular');
+      continue;
+    }
+    if (
+      entry.lowIndexCount > entry.mediumIndexCount ||
+      entry.mediumIndexCount > entry.highIndexCount ||
+      entry.highIndexCount !== index.count
+    ) {
+      issues.push(bucket + ': LOD index ranges are not monotonic');
+    }
+
+    for (let vertex = 0; vertex < position.count; vertex += 1) {
+      const px = position.getX(vertex);
+      const py = position.getY(vertex);
+      const pz = position.getZ(vertex);
+      if (![px, py, pz].every(Number.isFinite)) {
+        issues.push(bucket + ': non-finite vertex coordinate');
+        break;
+      }
+      if (normal && normal.count === position.count) {
+        const nx = normal.getX(vertex);
+        const ny = normal.getY(vertex);
+        const nz = normal.getZ(vertex);
+        const length = Math.hypot(nx, ny, nz);
+        if (
+          ![nx, ny, nz].every(Number.isFinite) ||
+          Math.abs(length - 1) > 0.02
+        ) {
+          issues.push(
+            bucket +
+              ': invalid vertex normal at ' +
+              vertex +
+              ' (' +
+              [nx, ny, nz].join(',') +
+              ')',
+          );
+          break;
+        }
+      }
+      if (color && color.count === position.count) {
+        const cr = color.getX(vertex);
+        const cg = color.getY(vertex);
+        const cb = color.getZ(vertex);
+        if (![cr, cg, cb].every(Number.isFinite)) {
+          issues.push(bucket + ': non-finite vertex color');
+          break;
+        }
+      }
+    }
+
+    for (let offset = 0; offset < index.count; offset += 3) {
+      const a = index.getX(offset);
+      const b = index.getX(offset + 1);
+      const c = index.getX(offset + 2);
+      if (
+        ![a, b, c].every(Number.isInteger) ||
+        a < 0 ||
+        b < 0 ||
+        c < 0 ||
+        a >= position.count ||
+        b >= position.count ||
+        c >= position.count
+      ) {
+        issues.push(bucket + ': index points outside the position buffer');
+        break;
+      }
+      const ax = position.getX(a);
+      const ay = position.getY(a);
+      const az = position.getZ(a);
+      const bx = position.getX(b);
+      const by = position.getY(b);
+      const bz = position.getZ(b);
+      const cx = position.getX(c);
+      const cy = position.getY(c);
+      const cz = position.getZ(c);
+      const ux = bx - ax;
+      const uy = by - ay;
+      const uz = bz - az;
+      const vx = cx - ax;
+      const vy = cy - ay;
+      const vz = cz - az;
+      const nx = uy * vz - uz * vy;
+      const ny = uz * vx - ux * vz;
+      const nz = ux * vy - uy * vx;
+      const areaSquared = nx * nx + ny * ny + nz * nz;
+      if (!(areaSquared > 1e-12)) {
+        issues.push(
+          bucket +
+            ': degenerate triangle at ' +
+            offset +
+            ' (' +
+            [ax, ay, az, bx, by, bz, cx, cy, cz].join(',') +
+            ')',
+        );
+        break;
+      }
+      if (normal && normal.count === position.count) {
+        const vertexNormalX = normal.getX(a);
+        const vertexNormalY = normal.getY(a);
+        const vertexNormalZ = normal.getZ(a);
+        if (nx * vertexNormalX + ny * vertexNormalY + nz * vertexNormalZ <= 0) {
+          issues.push(bucket + ': winding disagrees with vertex normal');
+          break;
+        }
+      }
+    }
+  }
+  return issues;
+}
+
 export function buildCityBuildingGeometry(
   specs: readonly BuildingSpec[],
 ): CityBuildingGeometry {
@@ -1457,7 +1697,7 @@ export function buildCityBuildingGeometry(
 
   const triangles = (bucket: BuildingBucket): number =>
     buckets[bucket].highIndexCount / 3;
-  return {
+  const result: CityBuildingGeometry = {
     buckets,
     stats: {
       buildings: specs.length,
@@ -1478,4 +1718,9 @@ export function buildCityBuildingGeometry(
       ),
     },
   };
+  const issues = validateCityBuildingGeometry(result);
+  if (issues.length > 0) {
+    throw new Error('Invalid city building geometry: ' + issues.join('; '));
+  }
+  return result;
 }

@@ -45,9 +45,62 @@ test('city explorer and search expose ballot numbers', async ({ page }) => {
     { timeout: 30_000 },
   );
   await page.locator('[aria-controls=city-people-tray]').click();
-  const ballotBadges = page.locator('.candidate-list__ballot');
+  const ballotBadges = page.locator('.candidate-sheet__ballot');
   await expect(ballotBadges.first()).toBeVisible();
-  await expect(ballotBadges.first()).toHaveText(/^\d+ 號$/);
+  const firstBadge = ballotBadges.first();
+  await expect(
+    firstBadge.locator('.candidate-sheet__ballot-number'),
+  ).toHaveText(/^\d{1,2}$/);
+  await expect(firstBadge.locator('.candidate-sheet__ballot-label')).toHaveText(
+    '號次',
+  );
+
+  const badgeLayout = await firstBadge.evaluate((element) => {
+    const copy = element.parentElement;
+    const card = element.closest('.candidate-sheet__card');
+    const number = element.querySelector('.candidate-sheet__ballot-number');
+    const label = element.querySelector('.candidate-sheet__ballot-label');
+    if (!copy || !card || !number || !label) {
+      throw new Error('candidate ballot badge is missing its layout elements');
+    }
+    const badgeRect = element.getBoundingClientRect();
+    const copyRect = copy.getBoundingClientRect();
+    const numberRect = number.getBoundingClientRect();
+    const labelRect = label.getBoundingClientRect();
+    const style = getComputedStyle(element);
+    return {
+      display: style.display,
+      justifySelf: style.justifySelf,
+      width: badgeRect.width,
+      copyWidth: copyRect.width,
+      numberRight: numberRect.right,
+      labelLeft: labelRect.left,
+      numberTop: numberRect.top,
+      labelTop: labelRect.top,
+      cardScrollWidth: card.scrollWidth,
+      cardClientWidth: card.clientWidth,
+    };
+  });
+  // Grid items are blockified, so inline-flex computes to flex while the
+  // fit-content width keeps the badge from stretching across the copy column.
+  expect(badgeLayout.display).toMatch(/^(inline-)?flex$/);
+  expect(badgeLayout.justifySelf).toBe('start');
+  expect(badgeLayout.width).toBeLessThan(badgeLayout.copyWidth - 4);
+  expect(Math.abs(badgeLayout.numberTop - badgeLayout.labelTop)).toBeLessThan(
+    0.6,
+  );
+  expect(badgeLayout.labelLeft).toBeLessThanOrEqual(
+    badgeLayout.numberRight + 0.5,
+  );
+  expect(badgeLayout.labelLeft).toBeGreaterThanOrEqual(
+    badgeLayout.numberRight - 6,
+  );
+  expect(badgeLayout.cardScrollWidth).toBeLessThanOrEqual(
+    badgeLayout.cardClientWidth + 1,
+  );
+  await expect(
+    page.locator('.candidate-sheet__card .candidate-list__ballot'),
+  ).toHaveCount(0);
 
   await page.getByLabel('搜尋人物').fill('柯志恩');
   const result = page.getByRole('link', { name: /柯志恩/ }).first();

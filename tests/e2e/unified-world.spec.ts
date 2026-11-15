@@ -164,9 +164,12 @@ test.describe('unified Kaohsiung world', () => {
 
     await page.getByRole('button', { name: '關閉人物資料' }).click();
     await expect(page.locator('.profile-panel')).toBeHidden();
-    // Closing the profile keeps the district focus; Escape returns to the
-    // city overview where the district labels are interactive again.
-    await page.keyboard.press('Escape');
+    // A direct candidate link has no focus origin to restore, so closing it
+    // returns to the city overview where the district labels are interactive.
+    await expect(page.locator('[data-testid="city-explorer"]')).toHaveAttribute(
+      'data-scene-focus',
+      /^world-overview-/,
+    );
     await expect(page.locator('.hex-district-label')).toHaveCount(38);
     const nanzihLabel = page
       .locator('.hex-district-label', { hasText: '楠梓' })

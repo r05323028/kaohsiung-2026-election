@@ -1,4 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
+import { rosterGroupCount, rosterTotal } from './official-roster';
 
 const HEADER_SURFACE = '.global-header__surface';
 const SHEET_SURFACE = '#city-people-tray';
@@ -113,14 +114,18 @@ async function expectSheetBelowNavbar(page: Page) {
 test.describe('candidate sheet below the global navbar', () => {
   test.use({ viewport: { width: 1440, height: 900 } });
 
-  test('desktop expanded sheet clears the navbar and renders the focused roster', {
+  test('desktop expanded sheet clears the navbar and renders the complete roster', {
     tag: '@critical',
   }, async ({ page }) => {
     const surface = await openSheet(page, '/?admin=E03&quality=low');
     await expectSheetBelowNavbar(page);
 
-    await expect(surface.locator('.candidate-sheet__group')).toHaveCount(2);
-    await expect(surface.locator('.candidate-sheet__card')).toHaveCount(17);
+    await expect(surface.locator('.candidate-sheet__group')).toHaveCount(
+      rosterGroupCount,
+    );
+    await expect(surface.locator('.candidate-sheet__card')).toHaveCount(
+      rosterTotal,
+    );
 
     const scroller = await page.evaluate((selector) => {
       const scroll = document.querySelector(selector);
@@ -173,7 +178,7 @@ test.describe('candidate sheet below the global navbar', () => {
       };
     }, SHEET_SCROLL);
 
-    expect(reach.count).toBe(2);
+    expect(reach.count).toBe(rosterGroupCount);
     expect(reach.unreachable).toEqual([]);
     expect(reach.lastGroup).toBeTruthy();
     expect(reach.pageScrollY).toBe(0);

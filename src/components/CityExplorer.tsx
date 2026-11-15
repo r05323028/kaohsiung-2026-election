@@ -158,9 +158,10 @@ function StaticCityFallback({
 
 export default function CityExplorer({ districts, candidates }: Props) {
   const firstDistrict = districts[0];
-  const [selectedDistrictSlug, setSelectedDistrictSlug] = useState(
-    firstDistrict?.slug ?? '',
-  );
+  // Overview is the absence of a district selection. Keeping a district slug
+  // here would carry a stale constituency into the URL, coverage card, and HUD
+  // on every "back to city" transition.
+  const [selectedDistrictSlug, setSelectedDistrictSlug] = useState('');
   const [selectedCandidateSlug, setSelectedCandidateSlug] = useState<
     string | null
   >(null);
@@ -169,6 +170,8 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const [followActorSlug, setFollowActorSlug] = useState<string | null>(null);
   const [overview, setOverview] = useState(true);
   const [viewNonce, setViewNonce] = useState(0);
+  const [restoreCameraOnProfileClose, setRestoreCameraOnProfileClose] =
+    useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
   const [detail, setDetail] = useState<DetailLevel>('medium');
@@ -220,7 +223,8 @@ export default function CityExplorer({ districts, candidates }: Props) {
       if (candidate) {
         // A candidate route is the most specific focus: it defines the electoral
         // district and must not inherit an unrelated administrative focus from a
-        // hand-edited URL. Closing the profile then keeps one consistent scope.
+        // hand-edited URL. It has no in-app origin to restore on close, so the
+        // profile exits to the citywide overview.
         setOverview(false);
         setSelectedCandidateSlug(candidate.candidacy.slug);
         setFollowActorSlug(candidate.candidacy.slug);
@@ -277,8 +281,20 @@ export default function CityExplorer({ districts, candidates }: Props) {
     return () => window.cancelAnimationFrame(frame);
   }, [selectedCandidateSlug]);
 
+  const enterOverview = useCallback(() => {
+    returnFocusRef.current = null;
+    setRestoreCameraOnProfileClose(false);
+    setSelectedDistrictSlug('');
+    setSelectedCandidateSlug(null);
+    setFollowActorSlug(null);
+    setSelectedAdminId(null);
+    setOverview(true);
+    setViewNonce((value) => value + 1);
+  }, []);
+
   const closeCandidate = useCallback(() => {
     restoreFocusPendingRef.current = true;
+    setRestoreCameraOnProfileClose(false);
     setSelectedCandidateSlug(null);
     setFollowActorSlug(null);
     const origin = returnFocusRef.current;
@@ -287,8 +303,12 @@ export default function CityExplorer({ districts, candidates }: Props) {
       setSelectedDistrictSlug(origin.districtSlug);
       setSelectedAdminId(origin.adminId);
       setOverview(origin.overview);
+      return;
     }
-  }, []);
+    // A direct candidate URL has no in-app origin to restore. Return to the
+    // citywide overview instead of leaving an implicit constituency focus.
+    enterOverview();
+  }, [enterOverview]);
 
   useEffect(() => {
     if (selectedCandidateSlug || !restoreFocusPendingRef.current) return;
@@ -318,17 +338,15 @@ export default function CityExplorer({ districts, candidates }: Props) {
         setSheetOpen(false);
         return;
       }
-      if (selectedAdminId) {
-        setSelectedAdminId(null);
-        setOverview(true);
-        return;
+      if (selectedAdminId || !overview) {
+        enterOverview();
       }
-      if (!overview) setOverview(true);
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [
     closeCandidate,
+    enterOverview,
     selectedAdminId,
     selectedCandidateSlug,
     overview,
@@ -352,7 +370,11 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const selectedAdminCoverages = selectedAdmin
     ? coveragesForAdminDistrictId(selectedAdmin.id)
     : [];
-  const selectedCoverage = selectedDistrict?.constituencyCoverage;
+  // Coverage is contextual to a focused view. The citywide overview must never
+  // resolve one, even if a district slug is still present in state.
+  const selectedCoverage = overview
+    ? undefined
+    : selectedDistrict?.constituencyCoverage;
   const candidateVisibilityScope = useMemo<CandidateVisibilityScope>(() => {
     if (selectedCandidate) {
       return visibilityScopeForFocus({
@@ -443,7 +465,14 @@ export default function CityExplorer({ districts, candidates }: Props) {
         adminId: selectedAdminId,
         overview,
       };
+      // Opening a profile from a real view should restore that camera view on
+      // close. A direct candidate URL has no such origin and must not save the
+      // canvas default as a fake previous view.
+      setRestoreCameraOnProfileClose(true);
       setSelectedDistrictSlug(candidate.district.slug);
+      // Candidate focus owns the HUD and the scene scope; returnFocusRef
+      // restores the administrative focus when the profile closes.
+      setSelectedAdminId(null);
       setSelectedCandidateSlug(slug);
       setFollowActorSlug(slug);
       setOverview(false);
@@ -524,9 +553,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
     options: { syncConstituency?: boolean } = {},
   ) => {
     if (!id) {
-      setSelectedAdminId(null);
-      setOverview(true);
-      setViewNonce((value) => value + 1);
+      enterOverview();
       return;
     }
     const district = ADMIN_SUMMARY_BY_ID.get(id);
@@ -565,20 +592,11 @@ export default function CityExplorer({ districts, candidates }: Props) {
     : null;
 
   const backToWorld = () => {
-    returnFocusRef.current = null;
-    setSelectedAdminId(null);
-    setSelectedCandidateSlug(null);
-    setFollowActorSlug(null);
-    setOverview(true);
-    setViewNonce((value) => value + 1);
+    enterOverview();
   };
 
   const resetView = () => {
-    setSelectedCandidateSlug(null);
-    setFollowActorSlug(null);
-    setSelectedAdminId(null);
-    setOverview(true);
-    setViewNonce((value) => value + 1);
+    enterOverview();
     setSettingsOpen(false);
     window.dispatchEvent(new CustomEvent('kaohsiung:settings-closed'));
   };
@@ -597,6 +615,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
       data-scene-focus={sceneFocus.key}
       data-candidate-scope={candidateVisibilityScope.kind}
       data-candidate-count={visibleCandidates.length}
+      data-roster-count={candidates.length}
       data-hydrated={webglSupported === null ? 'false' : 'true'}
     >
       <div className="city-stage" data-testid="scene-frame">
@@ -617,6 +636,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
                   followActorSlug={followActorSlug}
                   hoveredAdminId={hoveredAdminId}
                   reducedMotion={reducedMotion}
+                  restoreCameraOnProfileClose={restoreCameraOnProfileClose}
                   selectedAdminId={selectedAdminId}
                   selectedCandidateSlug={selectedCandidateSlug}
                   visibilityScope={candidateVisibilityScope}
@@ -708,45 +728,48 @@ export default function CityExplorer({ districts, candidates }: Props) {
           </article>
         )}
 
-        {selectedCoverage && !selectedCandidate && !selectedAdmin && (
-          <article
-            aria-label={`${selectedDistrict?.name ?? ''} 選區範圍`}
-            className="city-coverage-card"
-            data-testid="city-coverage-card"
-          >
-            <span className="city-card__kicker">CONSTITUENCY COVERAGE</span>
-            <h2>{selectedDistrict?.name}</h2>
-            <p className="city-coverage-card__type">
-              {selectedCoverage.coverageLabel}
-            </p>
-            {selectedCoverage.coverageKind === 'citywide-indigenous' ? (
-              <details className="city-coverage-card__details">
-                <summary>全市 38 個行政區（互動移動範圍）</summary>
+        {!overview &&
+          selectedCoverage &&
+          !selectedCandidate &&
+          !selectedAdmin && (
+            <article
+              aria-label={`${selectedDistrict?.name ?? ''} 選區範圍`}
+              className="city-coverage-card"
+              data-testid="city-coverage-card"
+            >
+              <span className="city-card__kicker">CONSTITUENCY COVERAGE</span>
+              <h2>{selectedDistrict?.name}</h2>
+              <p className="city-coverage-card__type">
+                {selectedCoverage.coverageLabel}
+              </p>
+              {selectedCoverage.coverageKind === 'citywide-indigenous' ? (
+                <details className="city-coverage-card__details">
+                  <summary>全市 38 個行政區（互動移動範圍）</summary>
+                  <div className="city-coverage-card__chips">
+                    {coverageAdminButtons}
+                  </div>
+                </details>
+              ) : (
                 <div className="city-coverage-card__chips">
                   {coverageAdminButtons}
                 </div>
-              </details>
-            ) : (
-              <div className="city-coverage-card__chips">
-                {coverageAdminButtons}
-              </div>
-            )}
-            <p className="city-coverage-card__note">
-              {selectedCoverage.coverageKind === 'citywide-indigenous'
-                ? '平地原住民選舉區依身分與選舉資格認定；行政區僅作互動移動範圍。'
-                : selectedCoverage.coverageKind ===
-                    'indigenous-eligible-districts'
-                  ? '上述行政區為山地原住民選舉區的設籍範圍，不是一般地理選區。'
-                  : '點選行政區可聚焦該區，不會切換目前選舉區。'}
-            </p>
-            <a
-              className="secondary-link"
-              href={withBase(`/districts/${selectedCoverage.slug}/`)}
-            >
-              查看選區頁 →
-            </a>
-          </article>
-        )}
+              )}
+              <p className="city-coverage-card__note">
+                {selectedCoverage.coverageKind === 'citywide-indigenous'
+                  ? '平地原住民選舉區依身分與選舉資格認定；行政區僅作互動移動範圍。'
+                  : selectedCoverage.coverageKind ===
+                      'indigenous-eligible-districts'
+                    ? '上述行政區為山地原住民選舉區的設籍範圍，不是一般地理選區。'
+                    : '點選行政區可聚焦該區，不會切換目前選舉區。'}
+              </p>
+              <a
+                className="secondary-link"
+                href={withBase(`/districts/${selectedCoverage.slug}/`)}
+              >
+                查看選區頁 →
+              </a>
+            </article>
+          )}
       </div>
 
       <div className="city-hud">
@@ -766,7 +789,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
                   ? `選區：${selectedDistrict.name}・道路移動範圍`
                   : '高雄市 38 行政區・六角迷你城市'}
           </span>
-          {selectedCoverage && (
+          {!overview && selectedCoverage && (
             <span className="city-scene-label__coverage">
               {coverageCompactSummary(selectedCoverage)}
             </span>
@@ -825,8 +848,9 @@ export default function CityExplorer({ districts, candidates }: Props) {
           </section>
         )}
 
+        {/* The roster is authoritative and independent of 3D scene visibility. */}
         <CandidateBottomSheet
-          candidates={visibleCandidates}
+          candidates={candidates}
           districts={districts}
           open={sheetOpen}
           reducedMotion={reducedMotion}

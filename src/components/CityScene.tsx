@@ -41,6 +41,7 @@ type CitySceneProps = {
   focus: SceneFocus;
   detail: DetailLevel;
   reducedMotion: boolean;
+  restoreCameraOnProfileClose: boolean;
   onSelectCandidate: (slug: string) => void;
   onSelectAdmin: (id: string | null) => void;
   onHoverAdmin: (id: string | null) => void;
@@ -62,11 +63,13 @@ function CameraRig({
   focus,
   reducedMotion,
   followActorSlug,
+  restoreCameraOnProfileClose,
   onManualCamera,
 }: {
   focus: SceneFocus;
   reducedMotion: boolean;
   followActorSlug: string | null;
+  restoreCameraOnProfileClose: boolean;
   onManualCamera: (() => void) | undefined;
 }) {
   const { camera, size } = useThree();
@@ -138,11 +141,18 @@ function CameraRig({
 
     if (candidateFocus) {
       if (!wasCandidate) {
-        savedView.current = {
-          position: cam.position.clone(),
-          target: node.target.clone(),
-          zoom: cam.zoom,
-        };
+        // A direct candidate URL can mount straight into profile focus, where
+        // the current camera is only the canvas default rather than a view the
+        // user chose. Remember a view only when the profile was opened from an
+        // actual in-app context; otherwise closing the profile must settle on
+        // the canonical citywide overview.
+        savedView.current = restoreCameraOnProfileClose
+          ? {
+              position: cam.position.clone(),
+              target: node.target.clone(),
+              zoom: cam.zoom,
+            }
+          : null;
         manualSinceCandidate.current = false;
         manualDuringCandidate.current = false;
       } else if (manualSinceCandidate.current) {
@@ -286,6 +296,7 @@ function CameraRig({
     targetX,
     targetY,
     targetZ,
+    restoreCameraOnProfileClose,
   ]);
 
   useFrame((_, frameDelta) => {
@@ -421,6 +432,7 @@ function CityWorld({
   focus,
   detail,
   reducedMotion,
+  restoreCameraOnProfileClose,
   onSelectCandidate,
   onSelectAdmin,
   onHoverAdmin,
@@ -517,6 +529,7 @@ function CityWorld({
         focus={focus}
         followActorSlug={followActorSlug}
         reducedMotion={reducedMotion}
+        restoreCameraOnProfileClose={restoreCameraOnProfileClose}
         onManualCamera={onManualCamera}
       />
       <SceneDiagnostics />

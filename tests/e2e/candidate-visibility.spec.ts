@@ -1,4 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
+import { mayoralCandidateCount } from './official-roster';
 
 type Visibility = {
   scope: 'citywide' | 'admin-district' | 'constituency';
@@ -643,15 +644,24 @@ test.describe('district-focused candidate visibility', () => {
 
     await page.locator('[aria-label="關閉人物資料"]').click();
     await expect(page.getByTestId('profile-panel')).toHaveCount(0);
+    // A direct candidate URL has no in-app origin, so closing returns to the
+    // citywide overview instead of leaving a stale constituency focus behind.
     await expect(explorer).toHaveAttribute(
-      'data-candidate-scope',
-      'constituency',
+      'data-scene-focus',
+      /^world-overview-/,
     );
-    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+    await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-count',
+      String(mayoralCandidateCount),
+    );
+    await expect(page.getByTestId('city-coverage-card')).toHaveCount(0);
+    await expect(page).not.toHaveURL(/[?&](candidate|district)=/);
     const after = await visibility(page);
-    expect(after.slugs).toContain('kaohsiung-council-04-712cf4dd');
+    expect(after.scope).toBe('citywide');
+    expect(after.slugs).not.toContain('kaohsiung-council-04-712cf4dd');
     expect(
-      after.slugs.some((slug) => slug.startsWith('kaohsiung-council-05-')),
+      after.slugs.some((slug) => slug.startsWith('kaohsiung-council-04-')),
     ).toBe(false);
   });
 
@@ -682,9 +692,13 @@ test.describe('district-focused candidate visibility', () => {
     await expect(page.getByTestId('profile-panel')).toHaveCount(0);
     await expect(explorer).toHaveAttribute(
       'data-scene-focus',
-      /^scope-kaohsiung-council-04-/,
+      /^world-overview-/,
     );
-    await expect(explorer).toHaveAttribute('data-candidate-count', '17');
+    await expect(explorer).toHaveAttribute(
+      'data-candidate-count',
+      String(mayoralCandidateCount),
+    );
+    await expect(page).not.toHaveURL(/[?&](candidate|district|admin)=/);
 
     await openFocus(page, '/?admin=E05&district=kaohsiung-council-04');
     await expect(explorer).toHaveAttribute(

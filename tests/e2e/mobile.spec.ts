@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { rosterGroupCount, rosterTotal } from './official-roster';
 
 test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet profile', {
   tag: '@critical',
@@ -12,9 +13,11 @@ test('mobile layout exposes touch-friendly candidate navigation and bottom-sheet
   await expect(page.getByRole('heading', { name: '所有候選人' })).toBeVisible();
   const candidateSheet = page.locator('#city-people-tray');
   await expect(candidateSheet.locator('.candidate-sheet__group')).toHaveCount(
-    1,
+    rosterGroupCount,
   );
-  await expect(candidateSheet.locator('.candidate-sheet__card')).toHaveCount(5);
+  await expect(candidateSheet.locator('.candidate-sheet__card')).toHaveCount(
+    rosterTotal,
+  );
   await page.locator('.candidate-sheet__card').first().click();
   await expect(page.locator('.profile-panel.is-open')).toBeVisible();
   await expect(page.locator('.profile-panel.is-open')).toContainText(
@@ -113,9 +116,8 @@ test('mobile essential controls meet a 44px touch target at 390x844', {
   await adminCard.getByRole('button', { name: '回到全市' }).click();
   await expect(adminCard).toBeHidden();
 
-  // Returning from an admin focus re-renders the collapsed sheet trigger with
-  // the citywide roster. Wait for that authoritative state before clicking so
-  // the pointer sequence cannot straddle the 17 -> 5 candidate re-render.
+  // Returning from an admin focus re-renders the scene with the citywide
+  // actor scope. The collapsed trigger keeps the complete official roster.
   const explorer = page.getByTestId('city-explorer');
   await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
   await expect(explorer).toHaveAttribute('data-candidate-count', '5');
@@ -124,7 +126,7 @@ test('mobile essential controls meet a 44px touch target at 390x844', {
     /^world-overview-/,
   );
   const peopleTrigger = page.locator('[aria-controls="city-people-tray"]');
-  await expect(peopleTrigger).toContainText('5 位');
+  await expect(peopleTrigger).toContainText(`${rosterTotal} 位`);
   await peopleTrigger.click();
   const peopleTray = page.locator('#city-people-tray');
   await expect(peopleTray).toBeVisible();
@@ -322,7 +324,7 @@ test('mobile roster sheet opens fully below the fixed masthead', async ({
       groups: element.querySelectorAll('.candidate-sheet__group').length,
     };
   });
-  expect(roster.groups).toBe(2);
+  expect(roster.groups).toBe(rosterGroupCount);
   expect(roster.scrollTop).toBeGreaterThan(0);
   expect(roster.pageScrollY).toBe(0);
   await expect(sheet.locator('.candidate-sheet__group').last()).toBeVisible();

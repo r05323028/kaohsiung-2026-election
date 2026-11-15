@@ -1,0 +1,123 @@
+{
+  "note": "Final code: role-independent scene streaming from focus/follow/pan targets, 3.45/3.0 hysteresis, avatar scale 0.07, hero height 0.085, focus offset [0.9,1.22,1.08].",
+  "environment": "Playwright Chromium, ANGLE Vulkan SwiftShader, headless; 1600x1000 desktop, 390x844 mobile",
+  "capturedAt": "2026-11-09T03:20:00+08:00",
+  "screenshots": [
+    {
+      "file": "01-citywide.png",
+      "bytes": 309819,
+      "sha256": "e1d938e0a911774883afaa05bebd558d1a687d1848fd7dc7ce0a403013a4196a",
+      "width": 1600,
+      "height": 1000,
+      "title": "Citywide overview",
+      "description": "full city, HUD, unchanged scale"
+    },
+    {
+      "file": "02-zuoying.png",
+      "bytes": 754369,
+      "sha256": "6d36d755ec769b944502614cfb4a555147d44fc34843a080632d8efa4a6fe29b",
+      "width": 1600,
+      "height": 1000,
+      "title": "左營 district focus",
+      "description": "hero visible; new 0.085 height scale and 41° focus offset"
+    },
+    {
+      "file": "03-nanzih.png",
+      "bytes": 649429,
+      "sha256": "ecc67bc961de4daf211f6f88f5670d060dd43ad84f732843d71ccb828135d515",
+      "width": 1600,
+      "height": 1000,
+      "title": "楠梓 district focus",
+      "description": "hero visible; 楠梓 landmarks and river"
+    },
+    {
+      "file": "04-dragon-tiger-pagodas.png",
+      "bytes": 895735,
+      "sha256": "4885924ebc7051c4f54893b30f02e6f46fea60c84cbb20ea915283da1e4775ec",
+      "width": 1600,
+      "height": 1000,
+      "title": "龍虎塔 landmark",
+      "description": "600 zoom; pagoda side faces and roofs"
+    },
+    {
+      "file": "05-zuoying-old-street.png",
+      "bytes": 1094339,
+      "sha256": "c653181e406b9639eaaa5bfd764c3a7f00a8714d549e4c77dcc8416966eb1066",
+      "width": 1600,
+      "height": 1000,
+      "title": "左營舊街 architecture",
+      "description": "430.663221 zoom; low-rise street volume"
+    },
+    {
+      "file": "06-mayor-in-hero.png",
+      "bytes": 725737,
+      "sha256": "c1e45d6bc054a5037e922443a96458e5e2a6bb01be874e070b0bcc8aaf5d029d",
+      "width": 1600,
+      "height": 1000,
+      "title": "Mayor 洪方隆 selected from 左營",
+      "description": "zoom 101.77758 preserved; hero visible; scales 0.07/0.07/0.07; profile open"
+    },
+    {
+      "file": "07-selected-avatar-close.png",
+      "bytes": 1108036,
+      "sha256": "b678deabbf20edf6727fa0b6318b822af66a5f3cede435dfdf8e9c4a4637568c",
+      "width": 1600,
+      "height": 1000,
+      "title": "Selected mayor close-up",
+      "description": "zoom 474.180796; wrapper scale 0.07; selection ring only"
+    },
+    {
+      "file": "08-mayor-outside-hero.png",
+      "bytes": 454065,
+      "sha256": "2b6f508a68a6f906b0d2052ff428376750b0cc4058155ca907ef30675494bd0b",
+      "width": 1600,
+      "height": 1000,
+      "title": "Mayor 賴瑞隆 in 岡山 E19 after 7200s",
+      "description": "zoom 101.77758 preserved; heroVisible false; authoritative district/massing visible, no whiteout"
+    },
+    {
+      "file": "09-citywide-candidate.png",
+      "bytes": 320088,
+      "sha256": "0b95902cfdd7cc8b68d62468a351928376fde60ce06c9db5fb77f2e2694f0145",
+      "width": 1600,
+      "height": 1000,
+      "title": "張靜 selected at citywide",
+      "description": "zoom 10.482337 preserved; pans to actor; hero visible"
+    },
+    {
+      "file": "10-mobile-citywide.png",
+      "bytes": 294970,
+      "sha256": "cb7f793a72a3f93cc2500734f155c88c1f9ab09a7d9265dccbad8f7f2f3ab47f",
+      "width": 390,
+      "height": 844,
+      "title": "Mobile citywide",
+      "description": "390x844; zoom 72.55814"
+    },
+    {
+      "file": "11-mobile-mayor-focus.png",
+      "bytes": 128271,
+      "sha256": "9a543528dc6f1b98c30701f1e23afe67191fd894cc1849c40304fac081f3b994",
+      "width": 390,
+      "height": 844,
+      "title": "Mobile mayor focus",
+      "description": "zoom 42.868717; hero visible; scale 0.07"
+    }
+  ],
+  "videos": [
+    {
+      "file": "walkthrough-desktop.webm",
+      "bytes": 43874179,
+      "sha256": "b38cc606428a5b4d0604beb9a0fc4b8149f4fd2e22f5f56a0e81e7eda8d582f4",
+      "durationSeconds": 97.84,
+      "description": "1600x1000 VP9 25fps. Citywide drag, 左營, manual pan away/back with hero streaming, mayor selection, close, old street, pagodas, outside-hero mayor."
+    },
+    {
+      "file": "walkthrough-mobile.webm",
+      "bytes": 1905440,
+      "sha256": "9de604aea636fb7543df50ff416dfb818776abfc3abf07625601ca5cf3a7a3c8",
+      "durationSeconds": 17.52,
+      "description": "390x844 VP9 25fps. Mobile mayor selection at preserved zoom."
+    }
+  ],
+  "videosCapturedAt": "2026-11-09T04:31:00+08:00"
+}

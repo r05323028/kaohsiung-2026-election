@@ -1,0 +1,548 @@
+{
+  "url": "http://127.0.0.1:4321/?district=kaohsiung-council-04&admin=E03&candidate=kaohsiung-council-04-16f09b7e",
+  "steps": [
+    {
+      "name": "start-profile-open",
+      "screenshot": "tmp/oval-mouse-dom/screens/00-start-profile-open.png",
+      "camera": {
+        "position": [
+          23.079527324443795,
+          28.03857,
+          22.63280881909541
+        ],
+        "target": [
+          0.957235324443794,
+          0.017,
+          0.5105168190954094
+        ],
+        "zoom": 18
+      },
+      "heroVisible": true,
+      "mutationCount": 0,
+      "mutations": [],
+      "largeNeutral": [],
+      "profileVisible": true,
+      "tagCount": 1
+    },
+    {
+      "name": "hover-candidate-tag",
+      "screenshot": "tmp/oval-mouse-dom/screens/01-hover-candidate-tag.png",
+      "camera": {
+        "position": [
+          23.076135278467127,
+          28.03857,
+          22.619240634813277
+        ],
+        "target": [
+          0.953843278467131,
+          0.017,
+          0.4969486348132743
+        ],
+        "zoom": 18
+      },
+      "heroVisible": true,
+      "mutationCount": 0,
+      "mutations": [],
+      "largeNeutral": [],
+      "profileVisible": true,
+      "tagCount": 1
+    },
+    {
+      "name": "hover-grid-with-profile-open",
+      "screenshot": "tmp/oval-mouse-dom/screens/02-hover-grid-with-profile-open.png",
+      "camera": {
+        "position": [
+          23.053640814641188,
+          28.03857,
+          22.52926277950896
+        ],
+        "target": [
+          0.9313488146411819,
+          0.017,
+          0.4069707795089521
+        ],
+        "zoom": 18
+      },
+      "heroVisible": true,
+      "mutationCount": 0,
+      "mutations": [],
+      "largeNeutral": [],
+      "profileVisible": true,
+      "tagCount": 1
+    },
+    {
+      "name": "pan-drag-with-profile-open",
+      "screenshot": "tmp/oval-mouse-dom/screens/03-pan-drag-with-profile-open.png",
+      "camera": {
+        "position": [
+          25.523941865741406,
+          28.03857,
+          20.061619456664612
+        ],
+        "target": [
+          3.4016498657414096,
+          0.017000000000000067,
+          -2.0606725433353907
+        ],
+        "zoom": 18
+      },
+      "heroVisible": false,
+      "mutationCount": 0,
+      "mutations": [],
+      "largeNeutral": [],
+      "profileVisible": true,
+      "tagCount": 1
+    },
+    {
+      "name": "wheel-zoom-with-profile-open",
+      "screenshot": "tmp/oval-mouse-dom/screens/04-wheel-zoom-with-profile-open.png",
+      "camera": {
+        "position": [
+          26.061495129276892,
+          28.019947591994764,
+          19.547654576714542
+        ],
+        "target": [
+          3.9539050302636998,
+          0.017000000000003013,
+          -2.55993552229865
+        ],
+        "zoom": 18.947368421052634
+      },
+      "heroVisible": false,
+      "mutationCount": 0,
+      "mutations": [],
+      "largeNeutral": [],
+      "profileVisible": true,
+      "tagCount": 1
+    },
+    {
+      "name": "close-profile",
+      "screenshot": "tmp/oval-mouse-dom/screens/05-close-profile.png",
+      "camera": {
+        "position": [
+          26.1607190196241,
+          28.019947591994764,
+          19.448430686367335
+        ],
+        "target": [
+          4.053128920610909,
+          0.017000000000003013,
+          -2.65915941264586
+        ],
+        "zoom": 18.947368421052634
+      },
+      "heroVisible": true,
+      "mutationCount": 4,
+      "mutations": [
+        {
+          "tag": "ASIDE",
+          "id": "",
+          "className": "profile-panel city-profile is-open",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "官方資料陳冠宇2026 高雄市議員候選人（號次抽定，正式公告待發布）・高雄市議員第4選舉區×基本資料政策主張公共紀錄新聞公共關係史政治時間軸基本資料資料以人物身",
+          "removed": true
+        },
+        {
+          "tag": "ARTICLE",
+          "id": "",
+          "className": "city-admin-card",
+          "area": 73433,
+          "rect": {
+            "x": 22,
+            "y": 108,
+            "w": 368,
+            "h": 200
+          },
+          "background": "rgba(255, 249, 240, 0.95)",
+          "borderRadius": "17.6px",
+          "opacity": "1",
+          "text": "ADMIN DISTRICT左營區Zuoying都市22.6 km²相鄰行政區：三民、仁武、楠梓、鼓山邊界依官方圖資簡化；城市量體與街景為藝術化示意。回到全市",
+          "removed": false
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "className": "",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "",
+          "removed": true
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "className": "",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "陳冠宇模擬移動",
+          "removed": true
+        }
+      ],
+      "largeNeutral": [],
+      "profileVisible": false,
+      "tagCount": 0
+    },
+    {
+      "name": "reopen-profile-via-search",
+      "screenshot": "tmp/oval-mouse-dom/screens/06-reopen-profile-via-search.png",
+      "camera": {
+        "position": [
+          23.06901615857229,
+          28.03857,
+          22.465173521394654
+        ],
+        "target": [
+          0.9467241585722921,
+          0.017,
+          0.34288152139465056
+        ],
+        "zoom": 18.947368
+      },
+      "heroVisible": true,
+      "mutationCount": 12,
+      "mutations": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "className": "city-search__results",
+          "area": 29849,
+          "rect": {
+            "x": 1096,
+            "y": 65,
+            "w": 352,
+            "h": 85
+          },
+          "background": "rgba(255, 249, 240, 0.95)",
+          "borderRadius": "16px",
+          "opacity": "1",
+          "text": "1 位人物陳陳冠宇高雄市議員第4選舉區",
+          "removed": false
+        },
+        {
+          "tag": "ARTICLE",
+          "id": "",
+          "className": "city-admin-card",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "ADMIN DISTRICT左營區Zuoying都市22.6 km²相鄰行政區：三民、仁武、楠梓、鼓山邊界依官方圖資簡化；城市量體與街景為藝術化示意。回到全市",
+          "removed": true
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "city-search__clear",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "×",
+          "removed": true
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "className": "city-search__results",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "1 位人物陳陳冠宇高雄市議員第4選舉區",
+          "removed": true
+        },
+        {
+          "tag": "ASIDE",
+          "id": "",
+          "className": "profile-panel city-profile is-open",
+          "area": 335131,
+          "rect": {
+            "x": 1059,
+            "y": 82,
+            "w": 432,
+            "h": 776
+          },
+          "background": "rgba(255, 249, 240, 0.95)",
+          "borderRadius": "20.8px",
+          "opacity": "0",
+          "text": "官方資料陳冠宇2026 高雄市議員候選人（號次抽定，正式公告待發布）・高雄市議員第4選舉區×基本資料政策主張公共紀錄新聞公共關係史政治時間軸基本資料資料以人物身",
+          "removed": false
+        }
+      ],
+      "largeNeutral": [],
+      "profileVisible": true,
+      "tagCount": 1
+    },
+    {
+      "name": "click-map-while-profile-open",
+      "screenshot": "tmp/oval-mouse-dom/screens/07-click-map-while-profile-open.png",
+      "camera": {
+        "position": [
+          26.184781795413137,
+          28.019948,
+          19.424368204586873
+        ],
+        "target": [
+          4.07719079541313,
+          0.017,
+          -2.68322179541313
+        ],
+        "zoom": 18.947368
+      },
+      "heroVisible": false,
+      "mutationCount": 16,
+      "mutations": [
+        {
+          "tag": "ASIDE",
+          "id": "",
+          "className": "profile-panel city-profile is-open",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "官方資料陳冠宇2026 高雄市議員候選人（號次抽定，正式公告待發布）・高雄市議員第4選舉區×基本資料政策主張公共紀錄新聞公共關係史政治時間軸基本資料資料以人物身",
+          "removed": true
+        },
+        {
+          "tag": "ARTICLE",
+          "id": "",
+          "className": "city-admin-card",
+          "area": 73433,
+          "rect": {
+            "x": 22,
+            "y": 108,
+            "w": 368,
+            "h": 200
+          },
+          "background": "rgba(255, 249, 240, 0.95)",
+          "borderRadius": "17.6px",
+          "opacity": "1",
+          "text": "ADMIN DISTRICT鳳山區Fengshan都市27.8 km²相鄰行政區：三民、前鎮、大寮、小港、苓雅、鳥松邊界依官方圖資簡化；城市量體與街景為藝術化示",
+          "removed": false
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "className": "",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "",
+          "removed": true
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "className": "",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "陳冠宇模擬移動",
+          "removed": true
+        }
+      ],
+      "largeNeutral": [],
+      "profileVisible": false,
+      "tagCount": 0
+    },
+    {
+      "name": "profile-close-button-missing-2"
+    },
+    {
+      "name": "switch-nanzih",
+      "screenshot": "tmp/oval-mouse-dom/screens/08-switch-nanzih.png",
+      "camera": {
+        "position": [
+          22.920518948507976,
+          26.375009,
+          24.980602051492028
+        ],
+        "target": [
+          1.504636948507974,
+          0.017,
+          0.2699690514920261
+        ],
+        "zoom": 181.247693
+      },
+      "heroVisible": true,
+      "mutationCount": 17,
+      "mutations": [
+        {
+          "tag": "ARTICLE",
+          "id": "",
+          "className": "city-admin-card",
+          "area": 0,
+          "rect": null,
+          "background": "",
+          "borderRadius": "",
+          "opacity": "",
+          "text": "ADMIN DISTRICT鳳山區Fengshan都市27.8 km²相鄰行政區：三民、前鎮、大寮、小港、苓雅、鳥松邊界依官方圖資簡化；城市量體與街景為藝術化示",
+          "removed": true
+        }
+      ],
+      "largeNeutral": [],
+      "profileVisible": false,
+      "tagCount": 0
+    },
+    {
+      "name": "switch-zuoying",
+      "screenshot": "tmp/oval-mouse-dom/screens/09-switch-zuoying.png",
+      "camera": {
+        "position": [
+          19.516717663637696,
+          27.337451,
+          24.016277336362315
+        ],
+        "target": [
+          -1.3753913363623096,
+          0.017,
+          -0.09000266363769033
+        ],
+        "zoom": 169.164513
+      },
+      "heroVisible": true,
+      "mutationCount": 17,
+      "mutations": [],
+      "largeNeutral": [],
+      "profileVisible": false,
+      "tagCount": 0
+    }
+  ],
+  "screenshots": [
+    "tmp/oval-mouse-dom/screens/00-start-profile-open.png",
+    "tmp/oval-mouse-dom/screens/01-hover-candidate-tag.png",
+    "tmp/oval-mouse-dom/screens/02-hover-grid-with-profile-open.png",
+    "tmp/oval-mouse-dom/screens/03-pan-drag-with-profile-open.png",
+    "tmp/oval-mouse-dom/screens/04-wheel-zoom-with-profile-open.png",
+    "tmp/oval-mouse-dom/screens/05-close-profile.png",
+    "tmp/oval-mouse-dom/screens/06-reopen-profile-via-search.png",
+    "tmp/oval-mouse-dom/screens/07-click-map-while-profile-open.png",
+    "tmp/oval-mouse-dom/screens/08-switch-nanzih.png",
+    "tmp/oval-mouse-dom/screens/09-switch-zuoying.png"
+  ],
+  "consoleErrors": [
+    "Attempted to synchronously unmount a root while React was already rendering. React cannot finish unmounting the root until the current render has completed, which may lead to a race condition."
+  ],
+  "pixelStats": [
+    {
+      "file": "tmp/oval-mouse-dom/screens/00-start-profile-open.png",
+      "nearDEDEDE": 565,
+      "bbox": {
+        "x": 60,
+        "y": 22,
+        "w": 1430,
+        "h": 934
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/01-hover-candidate-tag.png",
+      "nearDEDEDE": 565,
+      "bbox": {
+        "x": 60,
+        "y": 22,
+        "w": 1430,
+        "h": 934
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/02-hover-grid-with-profile-open.png",
+      "nearDEDEDE": 565,
+      "bbox": {
+        "x": 60,
+        "y": 22,
+        "w": 1430,
+        "h": 934
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/03-pan-drag-with-profile-open.png",
+      "nearDEDEDE": 565,
+      "bbox": {
+        "x": 60,
+        "y": 22,
+        "w": 1430,
+        "h": 934
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/04-wheel-zoom-with-profile-open.png",
+      "nearDEDEDE": 531,
+      "bbox": {
+        "x": 28,
+        "y": 26,
+        "w": 1382,
+        "h": 930
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/05-close-profile.png",
+      "nearDEDEDE": 192,
+      "bbox": {
+        "x": 39,
+        "y": 26,
+        "w": 1205,
+        "h": 929
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/06-reopen-profile-via-search.png",
+      "nearDEDEDE": 537,
+      "bbox": {
+        "x": 78,
+        "y": 22,
+        "w": 1412,
+        "h": 934
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/07-click-map-while-profile-open.png",
+      "nearDEDEDE": 196,
+      "bbox": {
+        "x": 28,
+        "y": 26,
+        "w": 1012,
+        "h": 929
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/08-switch-nanzih.png",
+      "nearDEDEDE": 30,
+      "bbox": {
+        "x": 28,
+        "y": 27,
+        "w": 1012,
+        "h": 928
+      }
+    },
+    {
+      "file": "tmp/oval-mouse-dom/screens/09-switch-zuoying.png",
+      "nearDEDEDE": 178,
+      "bbox": {
+        "x": 28,
+        "y": 27,
+        "w": 1012,
+        "h": 929
+      }
+    }
+  ],
+  "video": "tmp/oval-mouse-dom/walkthrough.webm"
+}

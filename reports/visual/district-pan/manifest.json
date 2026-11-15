@@ -1,0 +1,45 @@
+{
+  "mission": "m04751 white-oval reproduction and district/candidate interaction verification",
+  "generatedAt": "2026-11-09T14:20:00.000Z",
+  "renderer": "Playwright Chromium / ANGLE SwiftShader (software)",
+  "viewport": "1600x1000",
+  "url": "/?admin=E03",
+  "note": "Controlled A/B of OrbitControls screenSpacePanning. The before set was captured by temporarily restoring screenSpacePanning=true, then the source was restored to false. It is not a historical commit.",
+  "before": {
+    "path": "before/",
+    "screenshots": ["01-before-drag.png", "02-after-drag.png"],
+    "result": "before/result.json",
+    "cameraBefore": {
+      "position": [19.49191106733697, 27.52770691298721, 26.345339046250906],
+      "target": [-0.8154137045388368, 0, 1.9765493199999264],
+      "zoom": 101.77757972927634
+    },
+    "cameraAfter": {
+      "position": [20.07695607610555, 26.474625897203772, 27.0473930567732],
+      "target": [-0.23036869577026112, -1.0530810157834365, 2.6786033305222174],
+      "zoom": 101.77757972927634
+    },
+    "heroVisibleAfter": true
+  },
+  "after": {
+    "path": "after/",
+    "screenshots": ["01-before-drag.png", "02-after-drag.png"],
+    "result": "after/result.json",
+    "cameraBefore": {
+      "position": [19.49191106733697, 27.52770691298721, 26.345339046250906],
+      "target": [-0.8154137045388368, 0, 1.9765493199999264],
+      "zoom": 101.77757972927634
+    },
+    "cameraAfter": {
+      "position": [20.384535013310746, 27.52770691298721, 27.416487781419438],
+      "target": [0.07721024143493703, 0, 3.047698055168456],
+      "zoom": 101.77757972927634
+    },
+    "heroVisibleAfter": true
+  },
+  "currentHudCopy": {
+    "kicker": "選舉區・CURRENT RACE",
+    "zone": "行政區：左營・藝術化量體",
+    "purpose": "Distinguish the selected electoral district from the administrative district without changing data meaning."
+  }
+}

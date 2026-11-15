@@ -59,7 +59,7 @@ npm run build      # 完整離線驗證 + 靜態輸出（數分鐘）
 
 ## 文件
 
-- [`docs/README.md`](docs/README.md)：文件索引與維護規則
+- [`AGENTS.md`](AGENTS.md)：AI agent 操作契約、文件地圖與維護規則
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)：靜態架構、資料流與模組邊界
 - [`docs/DATA_AND_PROVENANCE.md`](docs/DATA_AND_PROVENANCE.md)：來源、快照、身分對帳與資料集
 - [`docs/EDITORIAL_AND_PUBLICATION.md`](docs/EDITORIAL_AND_PUBLICATION.md)：審查、核准與發布閘門

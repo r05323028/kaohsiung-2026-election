@@ -1,237 +1,69 @@
 # 港都人物誌 Kaohsiung Civic Stories
 
-港都人物誌是 2026 高雄市長與市議選舉的**非黨派、來源導向互動政治百科**。網站以原創迷你城市作為閱讀入口；城市幾何仍是原創視覺化，不代表官方地圖或選舉區界線，但選區的行政區涵蓋範圍與行政區名稱使用官方選舉區資料。
+以原創六角迷你城市探索 2026 高雄市長與市議員選舉的**非黨派、來源導向**互動網站。從城市、選舉區到候選人，資料盡量連回公開來源與原始出處。
 
-目前發布兩種明確分層的資料：
+**線上瀏覽：<https://r05323028.github.io/kaohsiung-2026-election/>**
 
-- **官方核准切片**：截至 `2026-11-05`，包含官方選舉區定義、CEC 審定的五位高雄市長候選人，以及 KHEC 抽定表轉錄的 101 筆市議員預公告列名。所有號次標示為「抽定、非正式公告」；政黨與完整人物資料未刊載。
-- **虛構示範資料**：四位人物與兩個示範選區，用來保留 3D/互動垂直切片；每頁明確標示「虛構示範」，不與官方資料混用。
+本站獨立製作，不是政府官方網站；3D 城市是閱讀介面，不代表法定選舉區邊界。
 
-## 技術堆疊
+## 功能
 
-- Astro static output + TypeScript strict mode
-- React islands + React Three Fiber / Three.js / Drei
-- GSAP for restrained focus and panel transitions
-- Tailwind CSS v4 through the official Vite plugin, with project CSS tokens
-- Zod build-time validation and deterministic offline adapters
-- Vitest unit tests, Playwright smoke tests, Biome checks
-- GitHub Actions CI and GitHub Pages deployment
+- **互動 3D 迷你城市**：38 個行政區的六角地景、港灣與可選擇的候選人角色；WebGL 不可用時有靜態替代。
+- **選舉區探索**：市長與 15 個市議員選區（含平地、山地原住民選區），顯示各區涵蓋的行政區，並區分「行政區」與「選舉區」。
+- **候選人頁面**：基本資料、政策主張、相關新聞、從政歷程、家族從政關係五個分頁。
+- **政策與從政分離**：政策頁只保留未來承諾；已發生的提案、表決、質詢與行政結果歸入從政歷程，同一事實只有一個歸屬。
+- **來源可追溯**：每項事實盡量附來源與日期並連回出處；未查證、待審或來源不可達時標示「暫無資料」，不以空白推論事實。
+- **無障礙替代路徑**：鍵盤操作、reduced motion，以及沒有 WebGL 時的靜態名單與城市預覽。
 
-無 Node.js production server、API、資料庫、認證、runtime CMS、serverless function 或外部 AI inference。
+## 技術
 
-## 開發
+Astro（靜態輸出）、React 19 + TypeScript、Three.js / React Three Fiber、GSAP、Tailwind CSS v4、Zod、Vitest / Playwright / Biome、GitHub Pages。
 
-需要 Node.js 22 或更新版本與 npm。
+沒有後端伺服器、資料庫、認證或 runtime API；所有頁面在 build time 產生。
+
+## 快速開始
+
+需要 Node.js 22.23.4 以上與 npm。
 
 ```bash
-npm install
-npm run dev
-# http://localhost:4321
+npm ci
+npm run dev        # http://localhost:4321
 ```
 
 常用檢查：
 
 ```bash
-npm run validate:data       # 虛構 fixture schema/reference gate
-npm run validate:constituencies # 15 個市議選舉區與 38 個行政區的涵蓋範圍 gate
-npm run validate:official   # official snapshot/checksum/approval/reconciliation gate
-npm run validate:public-records # KCC public-record checksums, evidence, review gate, reports
-npm run validate:full-roster  # 106-candidate × 6-category audit and reports
-npm run research:execute     # execute against retained official snapshots (offline at build time)
-npm run research:validate    # validate normalized/approved research and reports
-npm run research:review      # regenerate the pending human-review packet
-npm run research:verify      # independently reparse a stratified sample
-npm run biography:execute    # regenerate biography layers from retained multi-source captures
-npm run biography:normalize  # rebuild the normalized biography layer
-npm run biography:review     # regenerate the pending human-review packet
-npm run biography:validate   # validate biography layers, review coverage and raw checksums
-npm run biography:verify     # independently reopen/reparse biography source material
-npm run openspec:validate     # strict validation of the biography research change contract
-npm run openspec:validate:editorial # strict validation of the editorial publication contract
-npm run openspec:validate:pilot    # strict validation of the bounded pilot contract
-npm run openspec:validate:release  # strict validation of the release preparation contract
-npm run editorial:prepare    # generate the local-only editorial review packet
-npm run editorial:review     # start the local review UI with EDITORIAL_REVIEW=true
-npm run editorial:validate   # validate registry, decisions, packet and publication gate
-npm run editorial:apply -- --decisions path/to/export.json # validate and import browser decisions
-npm run editorial:publish    # generate the deterministic static publication snapshot
-npm run editorial:report     # regenerate editorial, identity and publication-gate reports
-npm run pilot:prepare        # generate the bounded real-candidate editorial pilot reports
-npm run pilot:verify         # verify pilot source hashes and report freshness
-npm run pilot:report         # explicit alias for pilot report generation
-npm run release:prepare      # prepare the bounded four-candidate release audit
-npm run release:verify       # recheck release reports and raw source checksums
-npm run release:report       # explicit alias for release report generation
-npm run avatars:generate     # regenerate deterministic fictional GLB assets
-npm run avatars:validate     # validate GLB headers, hashes, clips and manifest mappings
-npm run avatars:preview      # start the local developer-only avatar preview
-npm run ai-audit:execute    # audit all 143 scoped claims with two offline raw-reopen passes
-npm run ai-audit:validate   # validate claim coverage and unchanged source snapshots
-npm run ai-audit:verify     # rerun and compare the persisted audit
-npm run ai-audit:report
-npm run semantic:prepare   # rebuild immutable claim evidence packets offline
-npm run semantic:adjudicate # validate model runs and write semantic comparison reports
-npm run semantic:validate
-npm run semantic:verify    # require 143 valid Reviewer A/B findings and 143 pairs
-npm run automated:execute   # fail-closed machine publication policy for scoped claims
-npm run automated:validate
-npm run automated:verify
-npm run automated:report
-npm run openspec:validate:automated
-npm run openspec:validate:ai-audit
-npm run openspec:validate:semantic
-npm run records:discover    # offline discovery audit (supports filters/dry-run/resume)
-npm run records:ingest       # promote discovery to normalized coverage
-npm run records:review-report
-npm run records:coverage
-npm run typecheck           # astro check
-npm run lint                # Biome
-npm test                    # Vitest
-npm run validate:all        # all data / editorial / coverage validators + typecheck
-npm run build:astro         # static build only; does not run validators
-npm run build:pages         # static build + profile-copy output audit
-npm run build:verified      # validate:all + build:astro + profile-copy check
-npm run build               # alias of build:verified
-npm run test:e2e            # Playwright; needs a local Chromium install
-npm run preview             # preview dist/ output
+npm run typecheck
+npm run lint
+npm test
+npm run build      # 完整離線驗證 + 靜態輸出（數分鐘）
 ```
 
-`npm run validate:official` 不連線；它只讀 `data/raw/`, `data/approved/` 與 `data/official-source-manifest.json`，並產生：
+只想預覽畫面可用 `npm run build:astro`。完整指令、驗證分組、CI 與疑難排解見 [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)。
 
-- `reports/election-reconciliation.json`
-- `reports/election-reconciliation.md`
-- `reports/public-record-coverage.json` / `.md`
-- `reports/public-record-quality.json` / `.md`
-- `reports/full-roster-coverage.json` / `.md`
+## 部署
 
-`npm run validate:public-records` 只讀 `data/raw/official/2026/public-records/`、normalized/review/approved public-record JSON 與 manifest，不連線；它目前回報 3 位選定人物、6 個 claims、16 筆 records，且人工審查仍為 pending。
+推送 `main` 觸發 [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)：以 `BASE_PATH=/kaohsiung-2026-election/`、`SITE_URL=https://r05323028.github.io` 執行 `npm run build:pages`，再發布 `dist/` 到 GitHub Pages。
 
-`npm run validate:full-roster` 只讀官方 approved roster、既有 public-record canonical layer 與 manifest，建立 106 位候選人 × 6 類別 = 636 個 audit slots。`2026-11-05` 快照中有 8 個類別 slot 使用已保留來源、16 筆 source-backed static records；其餘 628 個 slot 標為 `not-attempted`，明確表示本批次沒有候選人專屬快照，不表示不存在資料。報告與 review queue 維持 `pending-human-review`，不產生完整度排名。
+`dist/` 是純靜態輸出，也可部署到任何靜態主機。站內連結一律經 `BASE_PATH` 產生，請勿硬編碼站台根路徑。
 
-`npm run research:execute` 不連線，會對已保留的 CEC C1/T 候選人 JSON 快照執行 106 位候選人 × 6 類別 = 636 個真實研究審計格；它保留來源 URL、擷取時間、SHA-256、原始列位置、嘗試結果與 9 筆姓名字元衝突。`npm run research:validate` 產生 `reports/full-roster-research.json/.md` 與 `reports/research-quality.json/.md`；`npm run research:verify` 會重新解析原始 CEC 快照，抽查市長、第 4 與第 13 選區及衝突列，產生 `reports/research-independent-verification.json/.md`。這些資料仍是機器驗證、人工審查 pending，不把未嘗試視為不存在，也不把 CEC 空白欄位視為負面證據。
+## 資料與編輯原則
 
-## 持續整合與瀏覽器測試
+- 選舉區與候選人資格以中選會、高雄市選舉委員會公告及保留的原始快照為基礎；號次依抽定結果標示，正式公告後才以公告為準。
+- 人物資料可能來自官方機構、公開紀錄、候選人陳述與可信新聞；每項刊登事實都能連回支持它的證據。
+- 機器查核、人工審查、編輯核准與發布是四個不同階段，互不代替；公開頁面只讀通過閘門的靜態快照。
+- 未查證或未收錄的資料顯示「暫無資料」，不代表該資訊不存在。
+- 本站不代表任何候選人、政黨或政府機關，也不進行情緒、聲量或好感度評分。
+- 3D 角色使用共用的原創 chibi 模型，不是任何候選人的 likeness。
+- 虛構示範資料僅用於測試與資產驗證，不會出現在正式站台。
 
-CI 分成兩個 workflow：
+## 文件
 
-- **Fast CI**（`.github/workflows/ci.yml`，每次 push / PR）：Quality 執行 validate:all（含 typecheck）、lint、Vitest；Static build 執行一次 build:astro、profile-copy 驗證與非根路徑建置；Critical browser tests 將 16 個標記 `@critical` 的桌面與手機測試分成 2 個 shard 平行執行，涵蓋 visibility、地理邊界、切換與底部面板。
-- **Full E2E**（`.github/workflows/e2e.yml`，main push、每日排程、手動觸發）：完整 Playwright 測試以 2 個 shard、權重 38:68 平行執行，每個 shard 一個 worker；僅在失敗時上傳 trace、截圖與 HTML report。
-- PR 的新 push 會取消舊的 CI run；GitHub Pages 部署使用獨立的 pages concurrency group，且 cancel-in-progress: false，不會中斷進行中的正式部署。
-
-本機可重現 shard：
-
-    PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=1/2 --workers=1
-    PWTEST_SHARD_WEIGHTS=38:68 npx playwright test --shard=2/2 --workers=1
-    npx playwright test --grep @critical --shard=1/2 --workers=1
-    npx playwright test --grep @critical --shard=2/2 --workers=1
-
-## 靜態部署
-
-```bash
-BASE_PATH=/kaohsiung-2026-election/ SITE_URL=https://r05323028.github.io npm run build
-```
-
-`dist/` 可直接部署到 GitHub Pages 或其他靜態主機。推送 `main` 會由 `.github/workflows/deploy-pages.yml` 建置並部署到 <https://r05323028.github.io/kaohsiung-2026-election/>。不要把 repository name 硬編碼到 asset URL；所有網站連結使用 `BASE_PATH`。
-
-## 路由
-
-- `/`：官方/示範資料共用的城市探索、選舉類型與選區切換、搜尋、角色選擇
-- `/districts/`：官方選舉區與虛構示範選區索引
-- `/districts/[slug]/`：靜態選舉區頁；市長、普通市議及原住民族 constituency 分開，並列出官方行政區涵蓋範圍與可點擊的行政區連結
-- `/candidates/[slug]/`：靜態人物頁與六個資訊分類
-- `/editorial-review/`：僅本機啟用的履歷身分／證據審查工作區，不載入公開導覽
-- `/avatar-preview/`：僅開發環境的 GLB 角色資產檢視器，不載入公開導覽
-
-## 專案結構
-
-```text
-data/
-  raw/official/        checked-in primary-source snapshots and PDFs
-  normalized/          adapter output before editorial approval
-  review/              human-review decisions and pending scopes
-  approved/            compatibility projections and legacy approved layers; not the publication authority
-  published/            deterministic static publication snapshot consumed by the public Astro build
-  official-source-manifest.json
-reports/               deterministic reconciliation, research and biography reports
-src/data/
-  fixtures.ts          fictional demo input (kept isolated)
-  schema.ts            demo/content schemas
-  constituencies.ts    canonical 15-constituency to 38-district coverage model
-  official/            official election schema, adapters, reconciliation, mapper, tests
-  public-records/      claim/evidence/coverage/research schemas, KCC/CEC adapters, offline CLIs, bundle API, tests
-  biographies/         multi-source biography schemas, adapters, publication-only read model, tests
-  editorial/            reviewer/decision schemas, integrity validation, publication gate, local review UI
-  avatars/              GLB manifest, strict resolver, fallback mapping and asset tests
-  index.ts             combined view for static pages
-public/assets/avatars/  generated inspectable fictional GLB assets
-src/components/        React explorer, R3F scene, profile tabs, static cards
-src/pages/             Astro static routes and getStaticPaths()
-scripts/               build-time validation scripts
-docs/                  architecture, ingestion, provenance, reconciliation, policy
-```
-
-## 官方資料更新原則
-
-1. 只從中央選舉委員會、 高雄市選舉委員會等一手來源取得文件。
-2. 保留原始快照、URL、發布日、擷取日與 SHA-256；先更新 `normalized`/`review`，不得直接改 `approved`。
-3. 以獨立官方資格名冊與抽定文件互相核對；抽定號次不得標成 final。
-4. 人工審查決定經 CLI 驗證並通過 publication gate 後，才由 `editorial:publish` 產生 `data/published/`；再執行離線驗證、reconciliation 與靜態建置。
-5. 缺少資料顯示為「目前尚無已查證的資料」或 pending，不推論不存在。
-
-詳見 `docs/DATA_INGESTION.md`、`docs/SOURCE_PROVENANCE.md`、`docs/RECONCILIATION.md`、`docs/CONTENT_POLICY.md`。
-
-## 候選人公共紀錄代表性切片
-
-截至 `2026-11-05`，公共紀錄切片選取李眉蓁（普通市議第 4 選區）、王義雄（平地原住民第 12 選區）與賴瑞隆（市長，刻意保留無資料狀態）。已保存高雄市議會兩份議員身分頁與四份機關總質詢摘要；目前只呈現來源支持的職務、公開參與紀錄、機關新聞 metadata 與時間軸，不把總質詢摘要改寫成政策成就、行政成果或政治關係。
-
-每個 claim 都連到 evidence、來源 ID 與原始官方 URL。canonical public-record layer 的資料標為 `approved-source-backed`，代表通過快照、schema、引用與離線驗證後可供靜態切片使用，不代表人工編審已完成；dataset 的 `review.status` 仍為 `pending-human-review`。賴瑞隆沒有這組 KCC 來源，因此頁面顯示中性「目前尚無已查證的資料」，不代表不存在。
-
-## 候選人履歷研究（2026-11-06）
-
-`npm run biography:execute` 會重新解析已保存的 KCC 與內政部地方公職人員資料快照，並保留立法院、CEC 歷史資料庫應用程式入口與既有 CEC 身分衝突來源的探查結果；建置不連線。最新重建資料共有 92 次 source attempt（90 個有 checksum 的本地快照、2 個規劃但未嘗試的來源）、64 個 identity observations、897 個 machine-validated claims、897 筆 evidence、106 個候選人 audit 與 9 位保留中的身分衝突。可保守配對的候選人為 9 位，另有 88 位沒有保守匹配；這是來源與身份解析的測量結果，不是「沒有履歷」。
-
-目前所有 biography claims 都是 `withheld-pending-review`，human/editorial approval 為 0，reviewer 欄位為 null，`data/published/2026/candidate-biographies.json` 保持空集合。因此官方候選人頁只載入出版快照，不會把 normalized/review 中的機器擷取內容、待審數量或審查封包編入公開 HTML。完整操作、source URL、HTTP 結果、擷取時間品質、raw path、SHA-256、excerpt、失敗與未嘗試原因保留在研究與本機 editorial review 層。
-
-## 首批履歷釋出準備（2026-11-06）
-
-`release-first-approved-candidate-biographies` 對既有四位 pilot 候選人的 405 筆 claims 完成離線重開與來源 checksum 審計。分類為 395 basic-biographical-fact、4 current-position、4 candidate-statement、2 administrative-outcome；399 筆可交給真人審查，6 筆因 currentness 或成果語意阻擋。未發現 exact duplicate 或 possible-overlap，等量 review queue 選取每位候選人 3 筆、共 12 筆。四筆 `服務政見` 已以 `candidate-statement` / `self-reported` 修正，並保留 correction lineage。
-
-這 12 筆仍只是本機 review queue；production reviewer registry、decisions 與 publication snapshot 維持空白，沒有任何真人審查或公開履歷。詳見 `docs/RELEASE_PREPARATION.md` 與 `reports/editorial-release-{candidates.md,readiness.md,quality.md,claim-consolidation.md}`。
-
-## 左營第 4 選區與市長候選人 scoped enrichment（2026-11-07）
-
-`enrich-zuoying-and-mayoral-candidate-profiles` 對 12 位第 4 選區候選人與 5 位市長候選人建立 17 × 6 = 102 個 category audits。離線重開 588 次 source attempt、31 個 unique source records、198 個 identity observations，產生 143 筆 claim/evidence：basic-biography 100、policies 8、public-records 2、news 10、relationships 1、timeline 22。42 個 audit 有 claims，60 個 audit 保持中性的 no-evidence/gap 狀態。
-
-所有 143 筆仍在 scoped normalized/review 層，human/editorial/publication 都是 0；`data/enrichment/approved/` 與 `data/enrichment/published/` 維持空白，且 `src/data` 的 production read model 不引用 `data/enrichment`。來源、checksum、identity、duplicate 與 review packet 詳見 `docs/SCOPED_ENRICHMENT.md` 和 `reports/enrichment-*`；這不是完整人物履歷，也不代表沒有其他資料。
-
-自動化出版的 public snapshot 與 machine decision provenance 分離保存；只有通過 `automated-editorial-policy-v1` 的低風險歷史 institutional claim 才會進入 scoped candidate tab。詳見 `docs/AUTOMATED_PUBLICATION.md`。
-
-`review-and-publish-zuoying-mayoral-profiles` 已在同一個 `/editorial-review/` 加入 scoped review 子面板：107 個 blocker rows（涉及 75 個 audits）、203 個 queue items、13 個 stratified verification samples，scoped gate 目前為 0/143 eligible。使用 `EDITORIAL_REVIEW=true npm run dev` 可依第 4 選區／市長、類別與 readiness 篩選並匯出決策 JSON；匯出不等於核准。詳見 `docs/SCOPED_REVIEW_PUBLICATION.md` 與 `reports/zuoying-mayoral-*`。
-
-`independently-audit-zuoying-mayoral-evidence` 對同一批 143 筆 claims 執行兩道離線 raw-reopen/rule pass：首輪 4 筆 machine-verified、139 筆 needs-review、0 筆 unsupported；第二輪 2 筆 machine-verified、141 筆 needs-review，141 筆一致、2 筆差異，0 筆自動修正，149 個 blocker findings。兩次 ACP reviewer 嘗試因無法取得檔案工具而記為 unavailable；這不是真人或模型核准。報告為 `reports/independent-ai-review.json`、`reports/ai-review-disagreements.md`、`reports/claim-corrections.md`、`reports/remaining-evidence-gaps.md`，只在本機 `/editorial-review/` 顯示。詳見 `docs/INDEPENDENT_AI_AUDIT.md`。
-
-`execute-semantic-evidence-adjudication` 是後續的真正模型語意審查流程：每筆 claim 先以 checksum 固定 packet，再由 Reviewer A/B 分開執行結構化判讀，引用必須是 packet 中的精確連續文字，失敗與 unavailable attempts 原樣記錄。它只能產生 local semantic findings/comparisons，不能取代真人 reviewer、既有 publication gate 或 `data/enrichment/published/`；詳見 `docs/SEMANTIC_EVIDENCE_ADJUDICATION.md`。
-
-`autonomous-candidate-content-publication` 另建立版本化 `automated-editorial-policy-v1` 的 fail-closed machine path。143 筆 scoped claims 目前產生 1 筆 machine-approved/public record、142 筆 rejected；71 個 disagreement、25 個 correction targets 與 wrong-subject `enrich-claim-0111` 都維持阻擋或記錄未套用。唯一公開 claim 是白喬茵的 KCC 歷史專業經驗，日期仍 unknown；human/editorial approval 仍為 0。這條 path 不改既有 gates，也不把 machine provenance 當成真人核准。詳見 `docs/AUTOMATED_PUBLICATION.md`。
-
-## 市議選舉區行政區涵蓋範圍（2026-11-10）
-
-`src/data/constituencies.ts` 是 15 個高雄市議員選舉區與 38 個行政區關係的唯一 canonical 模組。每筆選區記錄以既有 `E01`–`E38` 行政區 ID 儲存 `adminDistrictIds`，並以 `coverageKind` 區分 `geographic`（第 1–11 選區）、`citywide-indigenous`（第 12 平地原住民選區）與 `indigenous-eligible-districts`（第 13–15 山地原住民選區）。行政區名稱、幾何與互動 id 仍由 `src/data/geography/kaohsiung-districts.json` 與 `src/world/geography.ts` 提供，不建立第二套行政區定義。
-
-第 1–11 選區是 38 個行政區的互斥分區；第 4 選區為左營區、楠梓區。第 12 選區是全市平地原住民選舉區，不以 38 個行政區邊界界定，介面因此標示「全市 38 個行政區（互動移動範圍）」，不是一般地理選區。第 13–15 選區依中選會公告列出山地原住民設籍範圍；這些範圍可與普通選區重疊，不構成互斥地理分區，介面以「設籍範圍」與原住民族選舉區標籤區隔。
-
-來源為 `source-cec-central-63625`（中選會 115 年選舉區劃分公告）與 `source-cec-vote2026-prvCityDept`（2026 選舉專區選舉區參照資料）；`npm run validate:constituencies` 檢查 15 個選區、38 個行政區 ID、各選區行政區數量、第 4 選區內容、原住民族選區標示、來源 manifest 參照與無 runtime API。選區頁、選區索引、候選人頁、首頁選區資訊卡、行政區焦點卡與行動版資訊列共用同一份資料。常用別名（例如「左楠選區」）目前沒有可獨立查證的來源，因此不刊載，避免把非官方暱稱當成選舉區名稱。
-
-## 候選人新聞覆蓋（2026-11-12）
-
-106 位候選人全部完成一次來源查詢，涵蓋自由時報、ETtoday 與中央社。流程為離線、檔案式、可續跑：`npm run news:discover`、`npm run news:verify`、`npm run news:build`，`npm run validate:news` 已納入 `npm run build` 驗證鏈。
-
-216 篇通過自動驗證的報導，交由獨立 `news-verifier` 子代理逐篇重新抓取原文複驗（標題、媒體、日期、身分、摘要忠實度、中性用語）；最終發布 213 篇於 67 位候選人頁面，另 3 篇列入編輯排除（2 篇同名誤配、1 篇跨縣市同名），2 篇摘要改寫後複驗。每張新聞卡固定顯示標題、媒體、日期、中性摘要與原文連結。
-
-系統不建模、不計算也不顯示情緒、好感度、聲量或正負面評分；姓名辨識僅有 `low`／`medium`／`high` 三級風險，且只有 `low` 可通過自動出版。逐位候選人狀態與 blocker 見 `reports/news-coverage.md`，完整方法與限制見 `docs/NEWS_COVERAGE.md`。
-
-## 重要限制與未完成項目
-
-目前沒有真實人物 likeness 或 visual approval；目前 GLB 只包含原創、明確標示為虛構示範的 Three.js primitive avatars。完整高雄地理或 2026-11-17 正式市議員候選人公告資料也尚未完成。
-
-角色資產流程詳見 `docs/CHARACTER_ASSETS.md`；`avatar-preview` 只可在本機開發模式或明確 `AVATAR_PREVIEW=true` 時啟用。全 roster coverage audit 已建立 636 個候選人／分類檢查格，但只有 8 格有已保留來源、16 筆 source-backed static records；628 格仍待離線來源擴充，不能解讀為不存在資料。人工審查、正式公告刷新、完整公共紀錄 coverage 與任何未授權的 public-record expansion 仍是後續工作；所有新資料都必須重新擷取、審查、reconcile，再重建靜態網站。
+- [`docs/README.md`](docs/README.md)：文件索引與維護規則
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)：靜態架構、資料流與模組邊界
+- [`docs/DATA_AND_PROVENANCE.md`](docs/DATA_AND_PROVENANCE.md)：來源、快照、身分對帳與資料集
+- [`docs/EDITORIAL_AND_PUBLICATION.md`](docs/EDITORIAL_AND_PUBLICATION.md)：審查、核准與發布閘門
+- [`docs/CANDIDATE_CONTENT.md`](docs/CANDIDATE_CONTENT.md)：五個分頁的內容規則
+- [`docs/CITY_AND_CHARACTERS.md`](docs/CITY_AND_CHARACTERS.md)：城市、模擬與角色資產
+- [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)：指令、驗證、CI 與測試
+- [`docs/ROADMAP.md`](docs/ROADMAP.md)：現況、下一步與非目標

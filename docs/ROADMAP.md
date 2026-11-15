@@ -1,45 +1,34 @@
-# Roadmap
+# 藍圖
 
-## Completed: official-data foundation
+本文件只記錄**尚未完成**的工作與非目標。已完成項目的歷史留在 Git 與 `openspec/changes/`；量測數字放在 `reports/`。
 
-- Static Astro/R3F prototype with responsive, accessible city explorer and non-WebGL fallback.
-- Checked-in CEC/KHEC primary-source snapshots, source manifest and SHA-256 metadata.
-- Deterministic CEC/KHEC adapters, Zod official schema, normalized/review/approved layers.
-- Approved 2026 slice: official district definitions, five qualified Kaohsiung mayor candidates, and 101 source-checked preliminary council rows across 15 constituencies.
-- Drawn numbers retained with `candidateNumberStatus: drawn` and `candidateNumberIsFinal: false`; council formal status remains pending announcement.
-- Static official/demo routes, election/constituency filters, source links, neutral unavailable states.
-- Election reconciliation JSON/Markdown reports, unit/scale tests, CI and non-root build coverage.
-- Selected public-record slice for 李眉蓁, 王義雄 and missing-data 賴瑞隆: six claims, 16 typed records, claim-level KCC evidence, separate normalized/review/approved layers, coverage/quality reports, and accessible profile tabs. Human review remains pending.
-- Full-roster coverage audit for all 106 official preliminary candidates × six categories (636 slots), with deterministic offline batch commands, identity ambiguity withholding, checksum gates, checkpoints, review queue, and measured `reports/full-roster-coverage.{json,md}`. Snapshot 2026-11-05: 8 source-retrieved slots, 16 source-backed static records, 628 not-attempted slots; no editorial approvals or rankings.
-- Executed candidate research for all 106 preliminary candidates: 636 persisted audit slots, 318 attempted/retrieved P0/P1 slots, 318 P2/P3 slots not attempted, 97 machine claims, 106 evidence items, 9 distinct unresolved name conflicts, and 12 raw-reparse verification samples. Reports are `reports/full-roster-research.{json,md}`, `reports/research-quality.{json,md}` and `reports/research-independent-verification.{json,md}`; human/editorial approval remains zero.
-- Multi-source biography ingestion foundation executed against retained KCC/MOI captures: 92 source attempts, 90 checksum-verified snapshots, 64 identity observations, 897 machine claims/evidence, 106 audits and 9 open conflicts. Only 9 candidates have conservative matches; all 897 claims await human/editorial review and approved publication remains empty. Reports are `reports/biography-coverage.{json,md}`, `reports/biography-quality.{json,md}`, `reports/identity-conflicts.{json,md}` and `reports/biography-verification.json`.
-- First release preparation audit completed for the four-candidate pilot: 405 claims classified, four `服務政見` attribution corrections carry lineage, 399 claims are ready for human review, 6 are blocked by freshness/outcome evidence, no consolidation groups were found, and an equal 12-claim queue was prepared. The queue is not approval or publication; see `docs/RELEASE_PREPARATION.md` and `reports/editorial-release-*`.
-- Chibi avatar asset pipeline completed at the engineering level: five deterministic original fictional GLBs, four explicit demo mappings, shared animation clips, manifest/checksum/GLB validation, R3F fallback/error handling, and a developer-only preview. Real-person likeness review and publication remain out of scope until suitable references and human visual review exist; see `docs/CHARACTER_ASSETS.md`.
-- Scoped enrichment completed at the machine/research-preparation level for 12 District 4 candidates and five mayoral candidates: 17 × 6 audits, 588 source attempts, 31 source records, 198 observations, 143 claims/evidence, 42 populated audits, 60 neutral gaps, one retained exact-duplicate group, and three independent verification samples. All scoped approved/published layers remain empty; see `docs/SCOPED_ENRICHMENT.md` and `reports/enrichment-*`.
-- Scoped review/publication preparation completed at the machine level: 107 blocker rows across 75 audits, 203 claim-plus-gap queue items, 13 stratified verification samples, and a 0/143 eligible governed scoped gate. The existing `/editorial-review/` now provides local scope/category/readiness filters and decision export; no reviewer or publication decision exists. See `docs/SCOPED_REVIEW_PUBLICATION.md` and `reports/zuoying-mayoral-*`.
-- Independent evidence audit completed at the machine level: all 143 scoped claims were reopened against retained raw snapshots in two deterministic passes; first pass 4 machine-verified/139 needs-review/0 unsupported, second pass 2/141, 141 agreements and 2 disagreements, 0 corrections, 149 blocker findings. Both ACP agent attempts were unavailable; no human review or publication was created. See `docs/INDEPENDENT_AI_AUDIT.md` and `reports/independent-ai-review.json`.
-- Semantic evidence adjudication now has a separate packet/invocation/comparison contract and local-only review surface; completion requires 143 valid Reviewer A findings and 143 valid Reviewer B findings with exact packet citations. It never bypasses human review or the publication gate; see `docs/SEMANTIC_EVIDENCE_ADJUDICATION.md`.
-- Autonomous candidate content publication completed its machine-only policy path for the 143-claim scoped corpus: `automated-editorial-policy-v1` produced 1 machine-approved/public historical institutional claim and 142 rejected decisions. All 71 disagreements, 25 correction targets and wrong-subject `enrich-claim-0111` remain fail-closed; human/editorial approval is still zero. See `docs/AUTOMATED_PUBLICATION.md`.
+## 現況（2026-11-15）
 
-## Next milestone: genuine review of the bounded release queue, formal-announcement refresh, and future asset governance
+- 官方名冊：106 位候選人（5 市長、91 議員、10 原住民議員）、16 個選舉區，全部號次為抽籤結果（非 final），snapshot 2026-11-05。
+- 公開內容：基本資料 829 筆、政策 1,017 筆、新聞 213 篇、從政歷程（154 任期／1,045 活動等）、家族關係 24 筆。
+- 履歷：897 筆機器 claims、9 個未解身分衝突、0 筆人工審查與核准；公開 snapshot 為空。
+- scoped 研究（左營第 4 選區與市長）：143 claims 全部 pending；1 筆 reviewer-free 機器出版；107 個 blockers。
 
-1. Review biography identity observations and claim packets with real human reviewers; resolve or retain the nine conflicts without name-only merges.
-2. Retrieve the official 2026-11-12 mayor and 2026-11-17 council announcements.
-3. Add new immutable snapshots and update manifest/checksums.
-4. Reconcile qualification, drawing and final announcement records; only then promote numbers to `final` where supported.
-5. Human-review and publish council candidate identities/constituencies and biography claims if the sources are sufficient.
+## 下一個里程碑
 
-## Future public-record work
+1. **正式公告對帳**：取得 2026-11-12（市長）與 2026-11-17（議員）正式公告快照，重跑對帳；只有經人工確認的紀錄才能把 `numberStatus` 升為 `final`，並移除「非最終」標示。
+2. **真人審查佇列**：由具名審查者處理 pilot 405 筆中的 12 筆 queue 與基本資料中仍需人工確認的欄位；維持空 registry 直到真的有審查者。
+3. **身分衝突**：逐一解決 9 個未解衝突；沒有 resolution 前，依賴它們的 claims 不得發布。
+4. **覆蓋缺口**：P2（新聞／時間軸）與 P3（關係）研究尚未執行；已嘗試但來源不可達者需重新取得，不可寫成「沒有」。
+5. **公開紀錄切片**：目前只有 李眉蓁、王義雄 具 bundle（賴瑞隆刻意無 bundle）；擴充需逐案通過同一閘門。
 
-The current implementation contains a representative source-backed public-record slice, a full-roster coverage audit, and an executed CEC P0/P1 research layer. Future work may complete human review, execute P2/P3 research, resolve the nine retained official-name conflicts, add more candidates through the same offline snapshot/review/approval pipeline, and fill only specifically sourced audit slots with claim-level primary evidence. Coverage gaps remain unknown, not negative findings. It must not infer claims from general web search, treat machine-validated or `approved-source-backed` data as editorial approval, or silently mix demo fixtures into official bundles.
+## 之後
 
-## Later product work
+- 完成一輪可重現的人工履歷發布（空 snapshot → 少量核准 → 公開），並驗證撤回與來源改版流程。
+- 以既有離線管線新增候選人與來源，不引入 runtime API 或 CMS。
+- 真人 likeness 的授權、視覺審查與獨立發布決定（目前完全未實作）。
+- 選舉區層級的區塊模型變體、效能預算與視覺回歸。
+- 無障礙與多語系治理（目前以 zh-Hant 為主）。
 
-- Respectful, licensed GLB asset pipeline with non-canvas equivalents.
-- District-specific artistic diorama variants, performance budgets and visual regression.
-- Approved client-side search over policy/news metadata after provenance model is extended.
-- Correction history, accessibility audit and optional multilingual governance.
+## 非目標
 
-## Explicitly out of scope
+排名、好感度、聲量或支持度分數；遊戲化經濟或成就；後端 CMS、認證或執行期搜尋 API；自動生成政治主張或自動發布未審查文字；完整城市模擬；把機器查核或 AI 輔助包裝成人類核准。
 
-No rankings, points, game economy, authentication, backend CMS, runtime search API, full city simulation, automatic political claim generation, or automatic publication of unreviewed source text.
+## 維護方式
+
+保持一頁以內。完成項目時刪除對應條目，而不是標記完成；新增里程碑前先確認它不屬於既有文件的職責（資料、編輯、內容、城市或開發）。

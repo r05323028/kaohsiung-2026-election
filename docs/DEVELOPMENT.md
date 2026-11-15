@@ -78,7 +78,7 @@
 2. 更新 adapter／normalized 資料；確認相同位元組得到相同輸出。
 3. 在 `data/review/` 記錄審查狀態與未解問題。
 4. 對帳通過後才寫入 `data/approved/`；需要公開的 claim 走對應閘門與快照。
-5. 執行 `npm run validate:all`、`npm test`；必要時補單元測試。`validate:all` 會重建並驗證 `reports/candidate-roster-audit/`，不可手改其輸出。
+5. 執行 `npm run validate:all`、`npm test`；必要時補單元測試。`validate:all` 會以 deterministic check 驗證 `reports/candidate-roster-audit/` 的五份輸出是否新鮮，再執行結構驗證；需要重建時先執行 `npm run candidate-audit:generate`，不可手改其輸出。
 6. 若改變公開行為，更新對應文件（不要新增文件）。
 
 ## 疑難排解

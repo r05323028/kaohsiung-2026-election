@@ -136,6 +136,19 @@ function validate(): void {
   const sources = list(provenanceReport, 'sources');
   const gaps = list(gapsReport, 'gaps');
 
+  const selectedPublicRecords = read(
+    'data/approved/2026/kaohsiung-public-records.json',
+  );
+  const selectedClaims = list(selectedPublicRecords, 'claims');
+  const selectedEvidenceById = new Map(
+    list(selectedPublicRecords, 'evidence')
+      .map((value) => {
+        const id = stringAt(value, 'evidenceId') ?? stringAt(value, 'id');
+        return id ? ([id, value] as const) : null;
+      })
+      .filter((value): value is readonly [string, unknown] => value !== null),
+  );
+
   const reportRoster = (coverage.roster ?? {}) as Obj;
   const reportIds = list(reportRoster, 'candidateIds').filter(
     (value): value is string => typeof value === 'string',
@@ -192,8 +205,8 @@ function validate(): void {
       'candidateCoverage is missing canonical candidate: ' + id,
     );
     assert(
-      stringAt(report, 'name') === stringAt(row, 'displayName'),
-      'candidateCoverage name mismatch: ' + id,
+      stringAt(report, 'displayName') === stringAt(row, 'displayName'),
+      'candidateCoverage displayName mismatch: ' + id,
     );
     assert(
       stringAt(report, 'districtId') === stringAt(row, 'districtId'),
@@ -336,6 +349,50 @@ function validate(): void {
     referencedClaims.size === claimMap.size,
     'not all claims were traversed',
   );
+
+  const selectedClaimIds = new Set<string>();
+  for (const value of selectedClaims) {
+    const originalId = stringAt(value, 'claimId');
+    assert(
+      Boolean(originalId),
+      'selected public-record claim is missing claimId',
+    );
+    assert(
+      !selectedClaimIds.has(originalId as string),
+      'duplicate selected public-record claim: ' + originalId,
+    );
+    selectedClaimIds.add(originalId as string);
+    const generated = claimMap.get('public-records:selected:' + originalId);
+    assert(
+      Boolean(generated),
+      'audit is missing selected public-record claim: ' + originalId,
+    );
+    const inputEvidenceIds = sorted(
+      list(value, 'evidenceIds').filter(
+        (evidenceId): evidenceId is string => typeof evidenceId === 'string',
+      ),
+    );
+    const generatedEvidenceIds = sorted(
+      list(generated, 'evidenceIds').filter(
+        (evidenceId): evidenceId is string => typeof evidenceId === 'string',
+      ),
+    );
+    assert(
+      equalSet(generatedEvidenceIds, inputEvidenceIds),
+      'selected claim evidence mapping mismatch: ' + originalId,
+    );
+    for (const evidenceId of inputEvidenceIds) {
+      const evidence = selectedEvidenceById.get(evidenceId);
+      assert(
+        Boolean(evidence),
+        'selected claim has unknown evidence: ' + evidenceId,
+      );
+      assert(
+        stringAt(evidence, 'claimId') === originalId,
+        'selected evidence points to a different claim: ' + evidenceId,
+      );
+    }
+  }
 
   for (const value of audits) {
     const row = value as Obj;

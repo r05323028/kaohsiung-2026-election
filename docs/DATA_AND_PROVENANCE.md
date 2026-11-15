@@ -71,7 +71,7 @@
 - `reports/candidate-roster-audit/provenance.json`：以來源宣告的 raw 路徑、SHA-256、位元組長度與 URL 分類可重算、無法在本地解析、URL-only 等狀態。
 - `reports/candidate-roster-audit/gaps.json` 與 `audit.md`：以 `source-unavailable`、`insufficient-evidence`、`conflict`、`pending-human-review`、`no-verifiable-record-found` 等中性狀態呈現缺口；`isNegativeEvidence` 永遠為 `false`。
 
-`npm run validate:candidate-audit` 會檢查 106 個 canonical IDs、742 個候選人／類別列、claim/provenance 連結、輸入 checksum／byte length，以及人工審查與編輯核准旗標。空的 `data/editorial/reviewer-registry.json` 或缺少授權決策時，任何 claim 都不得被稽核標為 human-reviewed 或 editorially-approved；受控層的 automated／machine-verified／approved status 不等同人工核准。`npm run validate:all` 先重建再驗證這兩份報告。
+`npm run validate:candidate-audit` 會檢查 106 個 canonical IDs、742 個候選人／類別列、claim/provenance 連結、輸入 checksum／byte length，以及人工審查與編輯核准旗標。空的 `data/editorial/reviewer-registry.json` 或缺少授權決策時，任何 claim 都不得被稽核標為 human-reviewed 或 editorially-approved；受控層的 automated／machine-verified／approved status 不等同人工核准。`npm run validate:candidate-audit` 會在記憶體中依目前輸入重算五份 artifact，逐位元組檢查既有輸出是否新鮮，再執行結構驗證；`npm run candidate-audit:generate` 才會寫入報告。`npm run validate:all` 只做前述 freshness／validation，不會在驗證流程中覆寫報告。
 
 ## 資料集清單（2026-11-15 現況）
 

@@ -497,7 +497,7 @@ function build() {
       const row = obj(v);
       return {
         id: idOf(row) ?? '',
-        name: firstStr(row, ['displayName']) ?? '',
+        displayName: firstStr(row, ['displayName']) ?? '',
         category: rosterCategory(row),
         districtId: firstStr(row, ['districtId']) ?? '',
         electionType: firstStr(row, ['electionType']) ?? '',

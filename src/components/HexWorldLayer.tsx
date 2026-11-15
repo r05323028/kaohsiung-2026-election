@@ -304,412 +304,261 @@ const GEO = {
   disc: new THREE.CylinderGeometry(0.5, 0.5, 1, 18),
 };
 
-type PrimitiveProps = {
-  geometry: THREE.BufferGeometry;
-  material: THREE.Material;
-  scale: [number, number, number];
-  position: [number, number, number];
-  rotation?: [number, number, number];
+type Vec3 = readonly [number, number, number];
+
+type PartScale = Vec3 | number;
+
+type LandmarkPart = {
+  geoKey: keyof typeof GEO;
+  matKey: keyof typeof MAT;
+  /** Part transform composed into the landmark's own frame. */
+  matrix: THREE.Matrix4;
 };
 
-function Part({
-  geometry,
-  material,
-  scale,
-  position,
-  rotation,
-}: PrimitiveProps) {
-  return (
-    <mesh
-      geometry={geometry}
-      material={material}
-      scale={scale}
-      position={position}
-      {...(rotation ? { rotation } : {})}
-      castShadow
-      receiveShadow
-      raycast={() => {}}
-    />
-  );
+const PART_SCRATCH = new THREE.Object3D();
+
+function composePartMatrix(
+  parentFrame: THREE.Matrix4,
+  position: Vec3,
+  rotation: Vec3 | null,
+  scale: PartScale,
+): THREE.Matrix4 {
+  PART_SCRATCH.position.set(position[0], position[1], position[2]);
+  if (rotation) {
+    PART_SCRATCH.rotation.set(rotation[0], rotation[1], rotation[2]);
+  } else {
+    PART_SCRATCH.rotation.set(0, 0, 0);
+  }
+  if (typeof scale === 'number') {
+    PART_SCRATCH.scale.setScalar(scale);
+  } else {
+    PART_SCRATCH.scale.set(scale[0], scale[1], scale[2]);
+  }
+  PART_SCRATCH.updateMatrix();
+  return new THREE.Matrix4().multiplyMatrices(parentFrame, PART_SCRATCH.matrix);
 }
 
-function TreeCluster({ seed }: { seed: number }) {
-  return (
-    <group>
-      <Part
-        geometry={GEO.cylinder}
-        material={MAT.wood}
-        scale={[0.075, 0.26, 0.075]}
-        position={[0, 0.13, 0]}
-      />
-      <Part
-        geometry={GEO.ico}
-        material={MAT.forest}
-        scale={[0.4, 0.42, 0.4]}
-        position={[0, 0.42, 0]}
-      />
-      <Part
-        geometry={GEO.ico}
-        material={MAT.sage}
-        scale={[0.28, 0.3, 0.28]}
-        position={[0.18 * Math.cos(seed), 0.55, 0.18 * Math.sin(seed)]}
-      />
-    </group>
-  );
+type GroupTransform = {
+  position?: Vec3;
+  rotation?: Vec3;
+  scale?: PartScale;
+};
+
+/**
+ * Landmark props never move, so they are collected as transforms instead of
+ * React meshes: the layer then draws one InstancedMesh per (geometry, material)
+ * pair. Frames are nested exactly like the groups they replace.
+ */
+class LandmarkPartBatch {
+  readonly parts: LandmarkPart[] = [];
+  private frame: THREE.Matrix4 = new THREE.Matrix4();
+
+  part(
+    geoKey: keyof typeof GEO,
+    matKey: keyof typeof MAT,
+    scale: Vec3,
+    position: Vec3,
+    rotation?: Vec3,
+  ): void {
+    this.parts.push({
+      geoKey,
+      matKey,
+      matrix: composePartMatrix(this.frame, position, rotation ?? null, scale),
+    });
+  }
+
+  group(transform: GroupTransform, build: () => void): void {
+    const parentFrame = this.frame;
+    this.frame = composePartMatrix(
+      parentFrame,
+      transform.position ?? [0, 0, 0],
+      transform.rotation ?? null,
+      transform.scale ?? 1,
+    );
+    build();
+    this.frame = parentFrame;
+  }
+
+  tree(seed: number): void {
+    this.part('cylinder', 'wood', [0.075, 0.26, 0.075], [0, 0.13, 0]);
+    this.part('ico', 'forest', [0.4, 0.42, 0.4], [0, 0.42, 0]);
+    this.part(
+      'ico',
+      'sage',
+      [0.28, 0.3, 0.28],
+      [0.18 * Math.cos(seed), 0.55, 0.18 * Math.sin(seed)],
+    );
+  }
 }
 
-function PagodaTower() {
-  return (
-    <group>
-      <Part
-        geometry={GEO.cylinder6}
-        material={MAT.stone}
-        scale={[0.68, 0.1, 0.68]}
-        position={[0, 0.05, 0]}
-      />
-      {[0, 0.22, 0.44, 0.66].map((height, index) => (
-        <group key={height} position={[0, height, 0]}>
-          <Part
-            geometry={GEO.cylinder6}
-            material={index % 2 === 0 ? MAT.cream : MAT.red}
-            scale={[0.4 - index * 0.06, 0.2, 0.4 - index * 0.06]}
-            position={[0, 0.1, 0]}
-          />
-          <Part
-            geometry={GEO.cone4}
-            material={MAT.terracotta}
-            scale={[0.46 - index * 0.07, 0.12, 0.46 - index * 0.07]}
-            position={[0, 0.25, 0]}
-            rotation={[0, Math.PI / 4, 0]}
-          />
-        </group>
-      ))}
-      <Part
-        geometry={GEO.cone}
-        material={MAT.gold}
-        scale={[0.12, 0.22, 0.12]}
-        position={[0, 0.96, 0]}
-      />
-    </group>
-  );
-}
-
-function LandmarkModel({ landmark }: { landmark: HexLandmark }) {
-  if (landmark.feature) return <HeroLandmarkModel feature={landmark.feature} />;
+function buildLandmarkParts(
+  landmark: HexLandmark,
+  batch: LandmarkPartBatch,
+): void {
   const kind = landmark.kind;
+
   if (
     kind === 'lake' ||
     kind === 'wetland' ||
     kind === 'harbor' ||
     kind === 'beach'
   ) {
-    return (
-      <group>
-        <Part
-          geometry={GEO.disc}
-          material={MAT.water}
-          scale={[1.05, 0.035, 0.95]}
-          position={[0, 0.02, 0]}
-        />
-        <Part
-          geometry={GEO.ico}
-          material={MAT.sage}
-          scale={[0.3, 0.18, 0.26]}
-          position={[-0.24, 0.09, 0.18]}
-        />
-        {kind === 'harbor' && (
-          <group position={[0.16, 0.08, -0.12]} rotation={[0, 0.5, 0]}>
-            <Part
-              geometry={GEO.box}
-              material={MAT.cream}
-              scale={[0.38, 0.11, 0.18]}
-              position={[0, 0.06, 0]}
-            />
-            <Part
-              geometry={GEO.box}
-              material={MAT.teal}
-              scale={[0.12, 0.18, 0.14]}
-              position={[-0.04, 0.2, 0]}
-            />
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.wood}
-              scale={[0.025, 0.38, 0.025]}
-              position={[0, 0.28, 0]}
-            />
-          </group>
-        )}
-        {kind === 'beach' && (
-          <group position={[0.28, 0.12, 0.2]}>
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.wood}
-              scale={[0.04, 0.52, 0.04]}
-              position={[0, 0.26, 0]}
-              rotation={[0, 0, 0.2]}
-            />
-            <Part
-              geometry={GEO.cone}
-              material={MAT.sage}
-              scale={[0.42, 0.16, 0.42]}
-              position={[0.08, 0.54, 0]}
-            />
-          </group>
-        )}
-        {kind === 'wetland' && (
-          <group position={[0.22, 0.14, 0.1]}>
-            {[0, 0.18, 0.36].map((offset) => (
-              <Part
-                key={offset}
-                geometry={GEO.cylinder}
-                material={MAT.forest}
-                scale={[0.022, 0.34, 0.022]}
-                position={[offset, 0.17, offset * 0.4]}
-              />
-            ))}
-          </group>
-        )}
-      </group>
-    );
+    batch.part('disc', 'water', [1.05, 0.035, 0.95], [0, 0.02, 0]);
+    batch.part('ico', 'sage', [0.3, 0.18, 0.26], [-0.24, 0.09, 0.18]);
+    if (kind === 'harbor') {
+      batch.group(
+        { position: [0.16, 0.08, -0.12], rotation: [0, 0.5, 0] },
+        () => {
+          batch.part('box', 'cream', [0.38, 0.11, 0.18], [0, 0.06, 0]);
+          batch.part('box', 'teal', [0.12, 0.18, 0.14], [-0.04, 0.2, 0]);
+          batch.part('cylinder', 'wood', [0.025, 0.38, 0.025], [0, 0.28, 0]);
+        },
+      );
+    }
+    if (kind === 'beach') {
+      batch.group({ position: [0.28, 0.12, 0.2] }, () => {
+        batch.part(
+          'cylinder',
+          'wood',
+          [0.04, 0.52, 0.04],
+          [0, 0.26, 0],
+          [0, 0, 0.2],
+        );
+        batch.part('cone', 'sage', [0.42, 0.16, 0.42], [0.08, 0.54, 0]);
+      });
+    }
+    if (kind === 'wetland') {
+      batch.group({ position: [0.22, 0.14, 0.1] }, () => {
+        for (const offset of [0, 0.18, 0.36]) {
+          batch.part(
+            'cylinder',
+            'forest',
+            [0.022, 0.34, 0.022],
+            [offset, 0.17, offset * 0.4],
+          );
+        }
+      });
+    }
+    return;
   }
 
   if (kind === 'mountain' || kind === 'forest' || kind === 'waterfall') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.cylinder6}
-          material={MAT.sage}
-          scale={[1.1, 0.12, 1.0]}
-          position={[0, 0.06, 0]}
-        />
-        <Part
-          geometry={GEO.cone}
-          material={MAT.forest}
-          scale={[0.95, 0.85, 0.9]}
-          position={[-0.12, 0.48, 0.06]}
-        />
-        <Part
-          geometry={GEO.cone}
-          material={MAT.sage}
-          scale={[0.62, 0.62, 0.6]}
-          position={[0.3, 0.33, -0.18]}
-        />
-        {kind === 'forest' && (
-          <>
-            <TreeCluster seed={1} />
-            <group position={[0.48, 0, 0.32]} scale={0.8}>
-              <TreeCluster seed={2} />
-            </group>
-          </>
-        )}
-        {kind === 'waterfall' && (
-          <Part
-            geometry={GEO.box}
-            material={MAT.water}
-            scale={[0.16, 0.62, 0.045]}
-            position={[-0.12, 0.52, -0.32]}
-          />
-        )}
-      </group>
-    );
+    batch.part('cylinder6', 'sage', [1.1, 0.12, 1.0], [0, 0.06, 0]);
+    batch.part('cone', 'forest', [0.95, 0.85, 0.9], [-0.12, 0.48, 0.06]);
+    batch.part('cone', 'sage', [0.62, 0.62, 0.6], [0.3, 0.33, -0.18]);
+    if (kind === 'forest') {
+      batch.tree(1);
+      batch.group({ position: [0.48, 0, 0.32], scale: 0.8 }, () => {
+        batch.tree(2);
+      });
+    }
+    if (kind === 'waterfall') {
+      batch.part('box', 'water', [0.16, 0.62, 0.045], [-0.12, 0.52, -0.32]);
+    }
+    return;
   }
 
-  if (kind === 'pagoda') return <PagodaTower />;
+  if (kind === 'pagoda') {
+    batch.part('cylinder6', 'stone', [0.68, 0.1, 0.68], [0, 0.05, 0]);
+    [0, 0.22, 0.44, 0.66].forEach((height, index) => {
+      batch.group({ position: [0, height, 0] }, () => {
+        const bodyWidth = 0.4 - index * 0.06;
+        batch.part(
+          'cylinder6',
+          index % 2 === 0 ? 'cream' : 'red',
+          [bodyWidth, 0.2, bodyWidth],
+          [0, 0.1, 0],
+        );
+        const roofWidth = 0.46 - index * 0.07;
+        batch.part(
+          'cone4',
+          'terracotta',
+          [roofWidth, 0.12, roofWidth],
+          [0, 0.25, 0],
+          [0, Math.PI / 4, 0],
+        );
+      });
+    });
+    batch.part('cone', 'gold', [0.12, 0.22, 0.12], [0, 0.96, 0]);
+    return;
+  }
 
   if (kind === 'temple' || kind === 'museum' || kind === 'fort') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[1.0, 0.1, 0.78]}
-          position={[0, 0.05, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.cream}
-          scale={[0.74, 0.3, 0.52]}
-          position={[0, 0.24, 0]}
-        />
-        <Part
-          geometry={GEO.cone4}
-          material={kind === 'temple' ? MAT.terracotta : MAT.darkStone}
-          scale={[0.92, 0.26, 0.68]}
-          position={[0, 0.5, 0]}
-          rotation={[0, Math.PI / 4, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.wood}
-          scale={[0.18, 0.18, 0.03]}
-          position={[0, 0.24, 0.27]}
-        />
-        {kind === 'museum' && (
-          <>
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.white}
-              scale={[0.08, 0.34, 0.08]}
-              position={[-0.26, 0.28, 0.24]}
-            />
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.white}
-              scale={[0.08, 0.34, 0.08]}
-              position={[0.26, 0.28, 0.24]}
-            />
-          </>
-        )}
-        {kind === 'fort' && (
-          <>
-            <Part
-              geometry={GEO.box}
-              material={MAT.stone}
-              scale={[0.92, 0.16, 0.16]}
-              position={[0, 0.34, 0.4]}
-            />
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.darkStone}
-              scale={[0.08, 0.16, 0.08]}
-              position={[-0.3, 0.28, 0.4]}
-            />
-          </>
-        )}
-      </group>
+    batch.part('box', 'stone', [1.0, 0.1, 0.78], [0, 0.05, 0]);
+    batch.part('box', 'cream', [0.74, 0.3, 0.52], [0, 0.24, 0]);
+    batch.part(
+      'cone4',
+      kind === 'temple' ? 'terracotta' : 'darkStone',
+      [0.92, 0.26, 0.68],
+      [0, 0.5, 0],
+      [0, Math.PI / 4, 0],
     );
+    batch.part('box', 'wood', [0.18, 0.18, 0.03], [0, 0.24, 0.27]);
+    if (kind === 'museum') {
+      batch.part('cylinder', 'white', [0.08, 0.34, 0.08], [-0.26, 0.28, 0.24]);
+      batch.part('cylinder', 'white', [0.08, 0.34, 0.08], [0.26, 0.28, 0.24]);
+    }
+    if (kind === 'fort') {
+      batch.part('box', 'stone', [0.92, 0.16, 0.16], [0, 0.34, 0.4]);
+      batch.part(
+        'cylinder',
+        'darkStone',
+        [0.08, 0.16, 0.08],
+        [-0.3, 0.28, 0.4],
+      );
+    }
+    return;
   }
 
   if (kind === 'tower' || kind === 'monument' || kind === 'lighthouse') {
     const height = kind === 'tower' ? 1.0 : 0.78;
-    return (
-      <group>
-        <Part
-          geometry={GEO.cylinder6}
-          material={MAT.stone}
-          scale={[0.7, 0.1, 0.7]}
-          position={[0, 0.05, 0]}
-        />
-        {kind === 'lighthouse' ? (
-          <>
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.white}
-              scale={[0.22, height, 0.22]}
-              position={[0, height / 2 + 0.08, 0]}
-            />
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.red}
-              scale={[0.24, 0.2, 0.24]}
-              position={[0, height + 0.02, 0]}
-            />
-            <Part
-              geometry={GEO.cylinder}
-              material={MAT.gold}
-              scale={[0.14, 0.14, 0.14]}
-              position={[0, height + 0.2, 0]}
-            />
-            <Part
-              geometry={GEO.cone}
-              material={MAT.terracotta}
-              scale={[0.3, 0.16, 0.3]}
-              position={[0, height + 0.3, 0]}
-            />
-          </>
-        ) : (
-          <>
-            <Part
-              geometry={GEO.box}
-              material={MAT.glass}
-              scale={[0.4, height, 0.4]}
-              position={[0, height / 2 + 0.08, 0]}
-            />
-            {[0.16, 0.34, 0.52, 0.7].map((heightStep) => (
-              <Part
-                key={heightStep}
-                geometry={GEO.box}
-                material={MAT.cream}
-                scale={[0.44, 0.03, 0.44]}
-                position={[0, heightStep + 0.08, 0]}
-              />
-            ))}
-            {kind === 'tower' && (
-              <Part
-                geometry={GEO.cone}
-                material={MAT.cream}
-                scale={[0.22, 0.26, 0.22]}
-                position={[0, height + 0.22, 0]}
-              />
-            )}
-            {kind === 'monument' && (
-              <Part
-                geometry={GEO.cone4}
-                material={MAT.gold}
-                scale={[0.24, 0.3, 0.24]}
-                position={[0, height + 0.1, 0]}
-                rotation={[0, Math.PI / 4, 0]}
-              />
-            )}
-          </>
-        )}
-      </group>
-    );
+    batch.part('cylinder6', 'stone', [0.7, 0.1, 0.7], [0, 0.05, 0]);
+    if (kind === 'lighthouse') {
+      batch.part(
+        'cylinder',
+        'white',
+        [0.22, height, 0.22],
+        [0, height / 2 + 0.08, 0],
+      );
+      batch.part('cylinder', 'red', [0.24, 0.2, 0.24], [0, height + 0.02, 0]);
+      batch.part('cylinder', 'gold', [0.14, 0.14, 0.14], [0, height + 0.2, 0]);
+      batch.part('cone', 'terracotta', [0.3, 0.16, 0.3], [0, height + 0.3, 0]);
+    } else {
+      batch.part('box', 'glass', [0.4, height, 0.4], [0, height / 2 + 0.08, 0]);
+      for (const heightStep of [0.16, 0.34, 0.52, 0.7]) {
+        batch.part(
+          'box',
+          'cream',
+          [0.44, 0.03, 0.44],
+          [0, heightStep + 0.08, 0],
+        );
+      }
+      if (kind === 'tower') {
+        batch.part('cone', 'cream', [0.22, 0.26, 0.22], [0, height + 0.22, 0]);
+      }
+      if (kind === 'monument') {
+        batch.part(
+          'cone4',
+          'gold',
+          [0.24, 0.3, 0.24],
+          [0, height + 0.1, 0],
+          [0, Math.PI / 4, 0],
+        );
+      }
+    }
+    return;
   }
 
   if (kind === 'bridge') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.water}
-          scale={[1.1, 0.05, 0.5]}
-          position={[0, 0.02, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.terracotta}
-          scale={[0.95, 0.08, 0.24]}
-          position={[0, 0.32, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[0.1, 0.34, 0.08]}
-          position={[-0.36, 0.18, 0.08]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[0.1, 0.34, 0.08]}
-          position={[0.36, 0.18, 0.08]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[0.08, 0.34, 0.08]}
-          position={[-0.36, 0.18, -0.08]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[0.08, 0.34, 0.08]}
-          position={[0.36, 0.18, -0.08]}
-        />
-        <Part
-          geometry={GEO.cylinder}
-          material={MAT.gold}
-          scale={[0.03, 0.42, 0.03]}
-          position={[-0.36, 0.5, 0]}
-        />
-        <Part
-          geometry={GEO.cylinder}
-          material={MAT.gold}
-          scale={[0.03, 0.42, 0.03]}
-          position={[0.36, 0.5, 0]}
-        />
-      </group>
-    );
+    batch.part('box', 'water', [1.1, 0.05, 0.5], [0, 0.02, 0]);
+    batch.part('box', 'terracotta', [0.95, 0.08, 0.24], [0, 0.32, 0]);
+    batch.part('box', 'stone', [0.1, 0.34, 0.08], [-0.36, 0.18, 0.08]);
+    batch.part('box', 'stone', [0.1, 0.34, 0.08], [0.36, 0.18, 0.08]);
+    batch.part('box', 'stone', [0.08, 0.34, 0.08], [-0.36, 0.18, -0.08]);
+    batch.part('box', 'stone', [0.08, 0.34, 0.08], [0.36, 0.18, -0.08]);
+    batch.part('cylinder', 'gold', [0.03, 0.42, 0.03], [-0.36, 0.5, 0]);
+    batch.part('cylinder', 'gold', [0.03, 0.42, 0.03], [0.36, 0.5, 0]);
+    return;
   }
 
   if (
@@ -718,323 +567,261 @@ function LandmarkModel({ landmark }: { landmark: HexLandmark }) {
     kind === 'convention' ||
     kind === 'airport'
   ) {
-    return (
-      <group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[1.04, 0.08, 0.8]}
-          position={[0, 0.04, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.glass}
-          scale={[0.66, 0.28, 0.54]}
-          position={[-0.16, 0.25, 0]}
-          rotation={[0, 0.18, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.cream}
-          scale={[0.36, 0.18, 0.42]}
-          position={[0.28, 0.2, 0.08]}
-          rotation={[0, -0.2, 0]}
-        />
-        {kind === 'convention' && (
-          <Part
-            geometry={GEO.sphere}
-            material={MAT.cream}
-            scale={[0.48, 0.3, 0.48]}
-            position={[0.1, 0.36, 0]}
-          />
-        )}
-        {kind === 'airport' && (
-          <>
-            <Part
-              geometry={GEO.box}
-              material={MAT.darkStone}
-              scale={[1.18, 0.02, 0.16]}
-              position={[0, 0.1, 0.32]}
-            />
-            <Part
-              geometry={GEO.box}
-              material={MAT.white}
-              scale={[0.34, 0.06, 0.08]}
-              position={[0, 0.15, 0.32]}
-            />
-            <Part
-              geometry={GEO.box}
-              material={MAT.terracotta}
-              scale={[0.16, 0.1, 0.06]}
-              position={[0.0, 0.2, 0.32]}
-            />
-          </>
-        )}
-        {kind === 'artCenter' && (
-          <Part
-            geometry={GEO.cylinder}
-            material={MAT.terracotta}
-            scale={[0.1, 0.32, 0.1]}
-            position={[-0.32, 0.25, -0.2]}
-          />
-        )}
-      </group>
+    batch.part('box', 'stone', [1.04, 0.08, 0.8], [0, 0.04, 0]);
+    batch.part(
+      'box',
+      'glass',
+      [0.66, 0.28, 0.54],
+      [-0.16, 0.25, 0],
+      [0, 0.18, 0],
     );
+    batch.part(
+      'box',
+      'cream',
+      [0.36, 0.18, 0.42],
+      [0.28, 0.2, 0.08],
+      [0, -0.2, 0],
+    );
+    if (kind === 'convention') {
+      batch.part('sphere', 'cream', [0.48, 0.3, 0.48], [0.1, 0.36, 0]);
+    }
+    if (kind === 'airport') {
+      batch.part('box', 'darkStone', [1.18, 0.02, 0.16], [0, 0.1, 0.32]);
+      batch.part('box', 'white', [0.34, 0.06, 0.08], [0, 0.15, 0.32]);
+      batch.part('box', 'terracotta', [0.16, 0.1, 0.06], [0.0, 0.2, 0.32]);
+    }
+    if (kind === 'artCenter') {
+      batch.part(
+        'cylinder',
+        'terracotta',
+        [0.1, 0.32, 0.1],
+        [-0.32, 0.25, -0.2],
+      );
+    }
+    return;
   }
 
   if (kind === 'stadium') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.disc}
-          material={MAT.stone}
-          scale={[0.95, 0.08, 0.7]}
-          position={[0, 0.05, 0]}
-        />
-        <Part
-          geometry={GEO.torus}
-          material={MAT.white}
-          scale={[1.3, 1.3, 1.2]}
-          position={[0, 0.18, 0]}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
-        <Part
-          geometry={GEO.disc}
-          material={MAT.sage}
-          scale={[0.58, 0.08, 0.42]}
-          position={[0, 0.13, 0]}
-        />
-      </group>
+    batch.part('disc', 'stone', [0.95, 0.08, 0.7], [0, 0.05, 0]);
+    batch.part(
+      'torus',
+      'white',
+      [1.3, 1.3, 1.2],
+      [0, 0.18, 0],
+      [Math.PI / 2, 0, 0],
     );
+    batch.part('disc', 'sage', [0.58, 0.08, 0.42], [0, 0.13, 0]);
+    return;
   }
 
   if (kind === 'sugarMill') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.cream}
-          scale={[0.9, 0.24, 0.52]}
-          position={[0, 0.16, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.terracotta}
-          scale={[0.94, 0.08, 0.58]}
-          position={[0, 0.32, 0]}
-        />
-        <Part
-          geometry={GEO.cylinder6}
-          material={MAT.red}
-          scale={[0.16, 0.78, 0.16]}
-          position={[0.26, 0.42, 0]}
-        />
-        <Part
-          geometry={GEO.cylinder6}
-          material={MAT.stone}
-          scale={[0.12, 0.52, 0.12]}
-          position={[-0.28, 0.28, 0.12]}
-        />
-        <TreeCluster seed={0.4} />
-      </group>
-    );
+    batch.part('box', 'cream', [0.9, 0.24, 0.52], [0, 0.16, 0]);
+    batch.part('box', 'terracotta', [0.94, 0.08, 0.58], [0, 0.32, 0]);
+    batch.part('cylinder6', 'red', [0.16, 0.78, 0.16], [0.26, 0.42, 0]);
+    batch.part('cylinder6', 'stone', [0.12, 0.52, 0.12], [-0.28, 0.28, 0.12]);
+    batch.tree(0.4);
+    return;
   }
 
   if (kind === 'oldStreet' || kind === 'nightMarket') {
-    return (
-      <group>
-        {[-0.34, 0, 0.34].map((x, index) => (
-          <group key={x} position={[x, 0, index === 1 ? 0.08 : -0.02]}>
-            <Part
-              geometry={GEO.box}
-              material={MAT.cream}
-              scale={[0.26, 0.28, 0.34]}
-              position={[0, 0.18, 0]}
-            />
-            <Part
-              geometry={GEO.cone4}
-              material={index === 1 ? MAT.terracotta : MAT.orange}
-              scale={[0.38, 0.14, 0.42]}
-              position={[0, 0.4, 0]}
-              rotation={[0, Math.PI / 4, 0]}
-            />
-            {kind === 'nightMarket' && (
-              <Part
-                geometry={GEO.box}
-                material={index === 1 ? MAT.gold : MAT.red}
-                scale={[0.18, 0.03, 0.4]}
-                position={[0, 0.12, 0.2]}
-              />
-            )}
-          </group>
-        ))}
-        <Part
-          geometry={GEO.cylinder}
-          material={MAT.wood}
-          scale={[0.03, 0.34, 0.03]}
-          position={[-0.52, 0.2, 0.18]}
-        />
-        <Part
-          geometry={GEO.sphere}
-          material={MAT.gold}
-          scale={[0.12, 0.12, 0.12]}
-          position={[-0.52, 0.4, 0.18]}
-        />
-      </group>
-    );
+    [-0.34, 0, 0.34].forEach((x, index) => {
+      batch.group({ position: [x, 0, index === 1 ? 0.08 : -0.02] }, () => {
+        batch.part('box', 'cream', [0.26, 0.28, 0.34], [0, 0.18, 0]);
+        batch.part(
+          'cone4',
+          index === 1 ? 'terracotta' : 'orange',
+          [0.38, 0.14, 0.42],
+          [0, 0.4, 0],
+          [0, Math.PI / 4, 0],
+        );
+        if (kind === 'nightMarket') {
+          batch.part(
+            'box',
+            index === 1 ? 'gold' : 'red',
+            [0.18, 0.03, 0.4],
+            [0, 0.12, 0.2],
+          );
+        }
+      });
+    });
+    batch.part('cylinder', 'wood', [0.03, 0.34, 0.03], [-0.52, 0.2, 0.18]);
+    batch.part('sphere', 'gold', [0.12, 0.12, 0.12], [-0.52, 0.4, 0.18]);
+    return;
   }
 
   if (kind === 'dam') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.water}
-          scale={[1.0, 0.06, 0.6]}
-          position={[0, 0.02, 0]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.stone}
-          scale={[0.9, 0.32, 0.16]}
-          position={[0, 0.18, 0.12]}
-        />
-        <Part
-          geometry={GEO.box}
-          material={MAT.teal}
-          scale={[0.12, 0.24, 0.04]}
-          position={[-0.18, 0.2, 0.02]}
-        />
-        <Part
-          geometry={GEO.cone}
-          material={MAT.sage}
-          scale={[0.7, 0.42, 0.6]}
-          position={[-0.34, 0.22, -0.24]}
-        />
-      </group>
-    );
+    batch.part('box', 'water', [1.0, 0.06, 0.6], [0, 0.02, 0]);
+    batch.part('box', 'stone', [0.9, 0.32, 0.16], [0, 0.18, 0.12]);
+    batch.part('box', 'teal', [0.12, 0.24, 0.04], [-0.18, 0.2, 0.02]);
+    batch.part('cone', 'sage', [0.7, 0.42, 0.6], [-0.34, 0.22, -0.24]);
+    return;
   }
 
   if (kind === 'hotSpring') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.disc}
-          material={MAT.stone}
-          scale={[0.92, 0.1, 0.72]}
-          position={[0, 0.05, 0]}
-        />
-        <Part
-          geometry={GEO.disc}
-          material={MAT.water}
-          scale={[0.56, 0.04, 0.42]}
-          position={[0, 0.12, 0]}
-        />
-        <Part
-          geometry={GEO.ico}
-          material={MAT.sage}
-          scale={[0.4, 0.24, 0.34]}
-          position={[-0.44, 0.14, 0.22]}
-        />
-        {[0, 0.18, 0.34].map((offset, index) => (
-          <Part
-            key={offset}
-            geometry={GEO.sphere}
-            material={MAT.white}
-            scale={[0.16, 0.12, 0.16]}
-            position={[offset - 0.1, 0.32 + index * 0.08, 0.04]}
-          />
-        ))}
-      </group>
-    );
+    batch.part('disc', 'stone', [0.92, 0.1, 0.72], [0, 0.05, 0]);
+    batch.part('disc', 'water', [0.56, 0.04, 0.42], [0, 0.12, 0]);
+    batch.part('ico', 'sage', [0.4, 0.24, 0.34], [-0.44, 0.14, 0.22]);
+    [0, 0.18, 0.34].forEach((offset, index) => {
+      batch.part(
+        'sphere',
+        'white',
+        [0.16, 0.12, 0.16],
+        [offset - 0.1, 0.32 + index * 0.08, 0.04],
+      );
+    });
+    return;
   }
 
   if (kind === 'farm') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.sage}
-          scale={[1.05, 0.06, 0.85]}
-          position={[0, 0.03, 0]}
-        />
-        {[-0.3, 0, 0.3].map((z) => (
-          <Part
-            key={z}
-            geometry={GEO.box}
-            material={MAT.gold}
-            scale={[0.9, 0.03, 0.1]}
-            position={[0, 0.08, z]}
-          />
-        ))}
-        <Part
-          geometry={GEO.box}
-          material={MAT.terracotta}
-          scale={[0.28, 0.22, 0.24]}
-          position={[0.28, 0.18, 0.28]}
-        />
-        <Part
-          geometry={GEO.cone4}
-          material={MAT.red}
-          scale={[0.4, 0.16, 0.36]}
-          position={[0.28, 0.34, 0.28]}
-          rotation={[0, Math.PI / 4, 0]}
-        />
-      </group>
+    batch.part('box', 'sage', [1.05, 0.06, 0.85], [0, 0.03, 0]);
+    for (const z of [-0.3, 0, 0.3]) {
+      batch.part('box', 'gold', [0.9, 0.03, 0.1], [0, 0.08, z]);
+    }
+    batch.part('box', 'terracotta', [0.28, 0.22, 0.24], [0.28, 0.18, 0.28]);
+    batch.part(
+      'cone4',
+      'red',
+      [0.4, 0.16, 0.36],
+      [0.28, 0.34, 0.28],
+      [0, Math.PI / 4, 0],
     );
+    return;
   }
 
   if (kind === 'park') {
-    return (
-      <group>
-        <Part
-          geometry={GEO.disc}
-          material={MAT.sage}
-          scale={[1.05, 0.04, 0.9]}
-          position={[0, 0.03, 0]}
-        />
-        <Part
-          geometry={GEO.disc}
-          material={MAT.water}
-          scale={[0.42, 0.03, 0.34]}
-          position={[0.16, 0.08, -0.16]}
-        />
-        <group position={[-0.3, 0, 0.18]}>
-          <TreeCluster seed={0.8} />
-        </group>
-        <group position={[0.36, 0, 0.26]} scale={0.8}>
-          <TreeCluster seed={2.1} />
-        </group>
-        <Part
-          geometry={GEO.box}
-          material={MAT.cream}
-          scale={[0.4, 0.03, 0.18]}
-          position={[-0.1, 0.08, 0.28]}
-          rotation={[0, 0.4, 0]}
-        />
-      </group>
+    batch.part('disc', 'sage', [1.05, 0.04, 0.9], [0, 0.03, 0]);
+    batch.part('disc', 'water', [0.42, 0.03, 0.34], [0.16, 0.08, -0.16]);
+    batch.group({ position: [-0.3, 0, 0.18] }, () => {
+      batch.tree(0.8);
+    });
+    batch.group({ position: [0.36, 0, 0.26], scale: 0.8 }, () => {
+      batch.tree(2.1);
+    });
+    batch.part(
+      'box',
+      'cream',
+      [0.4, 0.03, 0.18],
+      [-0.1, 0.08, 0.28],
+      [0, 0.4, 0],
     );
+    return;
   }
 
-  return <TreeCluster seed={landmark.rotation} />;
+  batch.tree(landmark.rotation);
+}
+
+function landmarkParts(landmark: HexLandmark): LandmarkPart[] {
+  if (landmark.feature) return [];
+  const batch = new LandmarkPartBatch();
+  buildLandmarkParts(landmark, batch);
+  return batch.parts;
+}
+
+const LANDMARK_PLACEMENT_SCRATCH = new THREE.Object3D();
+
+function landmarkWorldMatrix(
+  landmark: HexLandmark,
+  target: THREE.Matrix4,
+): THREE.Matrix4 {
+  const position = landmarkWorldPosition(landmark);
+  LANDMARK_PLACEMENT_SCRATCH.position.set(
+    position.x,
+    ROAD_Y - 0.005,
+    position.z,
+  );
+  LANDMARK_PLACEMENT_SCRATCH.rotation.set(0, landmark.rotation, 0);
+  LANDMARK_PLACEMENT_SCRATCH.scale.setScalar(landmark.scale);
+  LANDMARK_PLACEMENT_SCRATCH.updateMatrix();
+  return target.copy(LANDMARK_PLACEMENT_SCRATCH.matrix);
+}
+
+type LandmarkInstanceBatch = {
+  key: string;
+  geoKey: keyof typeof GEO;
+  matKey: keyof typeof MAT;
+  matrices: THREE.Matrix4[];
+};
+
+function buildLandmarkInstanceBatches(): LandmarkInstanceBatch[] {
+  const batches = new Map<string, LandmarkInstanceBatch>();
+  for (const landmark of HEX_LANDMARKS) {
+    const worldMatrix = landmarkWorldMatrix(landmark, new THREE.Matrix4());
+    for (const part of landmarkParts(landmark)) {
+      const key = `${part.geoKey}:${part.matKey}`;
+      let batch = batches.get(key);
+      if (!batch) {
+        batch = { key, geoKey: part.geoKey, matKey: part.matKey, matrices: [] };
+        batches.set(key, batch);
+      }
+      batch.matrices.push(
+        new THREE.Matrix4().multiplyMatrices(worldMatrix, part.matrix),
+      );
+    }
+  }
+  return [...batches.values()];
+}
+
+const HERO_LANDMARK_PLACEMENTS = HEX_LANDMARKS.flatMap((landmark) =>
+  landmark.feature
+    ? [
+        {
+          id: landmark.id,
+          feature: landmark.feature,
+          position: landmarkWorldPosition(landmark),
+          rotation: landmark.rotation,
+          scale: landmark.scale,
+        },
+      ]
+    : [],
+);
+
+const LANDMARK_INSTANCE_BATCHES = buildLandmarkInstanceBatches();
+
+function LandmarkInstanceMesh({ batch }: { batch: LandmarkInstanceBatch }) {
+  const meshRef = useRef<THREE.InstancedMesh>(null);
+
+  useLayoutEffect(() => {
+    const mesh = meshRef.current;
+    if (!mesh) return;
+    batch.matrices.forEach((matrix, index) => {
+      mesh.setMatrixAt(index, matrix);
+    });
+    mesh.instanceMatrix.needsUpdate = true;
+    mesh.computeBoundingSphere();
+  }, [batch]);
+
+  return (
+    <instancedMesh
+      ref={meshRef}
+      args={[GEO[batch.geoKey], MAT[batch.matKey], batch.matrices.length]}
+      castShadow
+      receiveShadow
+      frustumCulled={false}
+      raycast={() => {}}
+    />
+  );
 }
 
 function Landmarks() {
   return (
     <group>
-      {HEX_LANDMARKS.map((landmark) => {
-        const position = landmarkWorldPosition(landmark);
-        return (
-          <group
-            key={landmark.id}
-            position={[position.x, ROAD_Y - 0.005, position.z]}
-            rotation={[0, landmark.rotation, 0]}
-            scale={landmark.scale}
-          >
-            <LandmarkModel landmark={landmark} />
-          </group>
-        );
-      })}
+      {HERO_LANDMARK_PLACEMENTS.map((placement) => (
+        <group
+          key={placement.id}
+          position={[
+            placement.position.x,
+            ROAD_Y - 0.005,
+            placement.position.z,
+          ]}
+          rotation={[0, placement.rotation, 0]}
+          scale={placement.scale}
+        >
+          <HeroLandmarkModel feature={placement.feature} />
+        </group>
+      ))}
+      {LANDMARK_INSTANCE_BATCHES.map((batch) => (
+        <LandmarkInstanceMesh key={batch.key} batch={batch} />
+      ))}
     </group>
   );
 }

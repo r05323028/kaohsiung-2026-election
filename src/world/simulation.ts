@@ -1,5 +1,5 @@
-import { type CandidateProfile, candidateProfiles } from '../data';
-import { candidateRole, movementScopeForCandidate } from './constituencies';
+import type { CandidateProfileView } from '../data/view';
+import { movementScopeForDistrictSlug } from './constituencies';
 import { ADMIN_DISTRICT_BY_ID, type DistrictRecord } from './geography';
 import { HEX_TILES_BY_DISTRICT, type HexPoint } from './hex';
 import { distanceKm, type WorldPoint } from './projection';
@@ -19,6 +19,16 @@ import {
   type RoadNode,
   roadNode,
 } from './road-graph';
+
+/**
+ * The candidate fields the world needs to place an actor. The city island
+ * receives exactly these card fields as props, so the world is built from that
+ * injected list instead of importing the full dataset module here.
+ */
+export type SimulationCandidate = Pick<
+  CandidateProfileView,
+  'candidacy' | 'district' | 'person'
+>;
 
 export type ActorRole = 'mayor' | 'council' | 'indigenous' | 'demo';
 export type ActorState = 'walking' | 'idle';
@@ -180,9 +190,12 @@ function ringEdgesFor(adminId: string): RoadEdge[] {
   );
 }
 
-function spawnActor(candidate: CandidateProfile, index: number): WorldActor {
-  const scope = movementScopeForCandidate(candidate);
-  const role = candidateRole(candidate);
+function spawnActor(candidate: SimulationCandidate, index: number): WorldActor {
+  // The island card carries the electoral district but not a full public
+  // profile, so the movement rule is resolved from the district slug it
+  // delegates to.
+  const scope = movementScopeForDistrictSlug(candidate.district.slug);
+  const role: ActorRole = scope.kind === 'mayoral' ? 'mayor' : scope.kind;
   const allowedAdminIds = [...scope.allowedAdminIds];
   const seed = hashString(candidate.candidacy.slug);
   const adminId = chooseAdminId(role, allowedAdminIds, seed + index * 17);
@@ -257,8 +270,10 @@ function spawnActor(candidate: CandidateProfile, index: number): WorldActor {
   };
 }
 
-function buildState(): SimulationState {
-  const actors = candidateProfiles
+function buildState(
+  candidates: readonly SimulationCandidate[],
+): SimulationState {
+  const actors = candidates
     .filter((candidate) => !candidate.candidacy.isDemo)
     .map((candidate, index) => spawnActor(candidate, index));
   return {
@@ -270,9 +285,22 @@ function buildState(): SimulationState {
   };
 }
 
-const state: SimulationState = buildState();
+/**
+ * Module state starts empty so that importing this module never throws and
+ * never pulls the candidate dataset into the caller's bundle. Every exported
+ * reader tolerates the empty world; the island configures it before its first
+ * frame.
+ */
+const state: SimulationState = {
+  actors: [],
+  selectedSlug: null,
+  followSlug: null,
+  elapsedSeconds: 0,
+  revision: 0,
+};
 const renderTransitions = new Map<string, ActorRenderTransition>();
 let renderAccumulator = 0;
+let configuredCandidates: readonly SimulationCandidate[] = [];
 
 function captureRenderPose(actor: WorldActor): ActorRenderPose {
   return {
@@ -300,7 +328,27 @@ function primeRenderState(): void {
   renderAccumulator = 0;
 }
 
-primeRenderState();
+function applyState(next: SimulationState): void {
+  state.actors = next.actors;
+  state.selectedSlug = next.selectedSlug;
+  state.followSlug = next.followSlug;
+  state.elapsedSeconds = next.elapsedSeconds;
+  state.revision = next.revision;
+  primeRenderState();
+}
+
+/**
+ * Rebuild the world from the candidate list the island passes as props. The
+ * build is deterministic in the list order, so configuring the same list again
+ * yields exactly the state a fresh module load would have built from it.
+ * `resetSimulation` rebuilds from the most recent list.
+ */
+export function configureSimulation(
+  candidates: readonly SimulationCandidate[],
+): void {
+  configuredCandidates = candidates;
+  applyState(buildState(candidates));
+}
 
 function currentEdge(actor: WorldActor): RoadEdge | null {
   return actor.edgeId ? (HEX_ROAD_GRAPH.edges.get(actor.edgeId) ?? null) : null;
@@ -567,13 +615,7 @@ export function followActor(slug: string | null): void {
 }
 
 export function resetSimulation(): void {
-  const next = buildState();
-  state.actors = next.actors;
-  state.selectedSlug = null;
-  state.followSlug = null;
-  state.elapsedSeconds = 0;
-  state.revision = 0;
-  primeRenderState();
+  applyState(buildState(configuredCandidates));
 }
 
 export function canActorEnterDistrict(

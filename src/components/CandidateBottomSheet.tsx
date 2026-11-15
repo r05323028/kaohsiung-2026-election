@@ -7,12 +7,13 @@ import {
   useRef,
   useState,
 } from 'react';
-import type { PublicCandidateProfile, PublicDistrictView } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import {
   compareBallotNumbers,
   isPublishedBallotNumberStatus,
   parseBallotNumber,
 } from '../data/official/ballot';
+import type { PublicDistrictView } from '../data/view';
 import {
   type CandidateSheetBounds,
   resolveCandidateSheetBounds,
@@ -88,17 +89,17 @@ function useCandidateSheetBounds(open: boolean): CandidateSheetBounds | null {
 
 export type CandidateConstituencyGroup = {
   district: PublicDistrictView;
-  candidates: PublicCandidateProfile[];
+  candidates: PublicCandidateCard[];
 };
 
 export function groupCandidatesByConstituency(
-  candidates: PublicCandidateProfile[],
+  candidates: PublicCandidateCard[],
   districts: PublicDistrictView[],
 ): CandidateConstituencyGroup[] {
   const inputOrder = new Map(
     candidates.map((candidate, index) => [candidate.candidacy.id, index]),
   );
-  const grouped = new Map<string, PublicCandidateProfile[]>();
+  const grouped = new Map<string, PublicCandidateCard[]>();
 
   for (const candidate of candidates) {
     const current = grouped.get(candidate.candidacy.districtId) ?? [];
@@ -106,7 +107,7 @@ export function groupCandidatesByConstituency(
     grouped.set(candidate.candidacy.districtId, current);
   }
 
-  const sortCandidates = (items: PublicCandidateProfile[]) =>
+  const sortCandidates = (items: PublicCandidateCard[]) =>
     [...items].sort((left, right) => {
       const ballotOrder = compareBallotNumbers(
         left.candidacy.candidateNumber,
@@ -139,7 +140,7 @@ export function groupCandidatesByConstituency(
 }
 
 type CandidateBottomSheetProps = {
-  candidates: PublicCandidateProfile[];
+  candidates: PublicCandidateCard[];
   districts: PublicDistrictView[];
   open: boolean;
   reducedMotion: boolean;

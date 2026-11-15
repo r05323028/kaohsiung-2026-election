@@ -2,8 +2,10 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { HERO_ASSET_BY_FEATURE } from '../world/hero-landmarks';
 import type { DedicatedFeature } from '../world/hex-landmarks';
+import { invalidateStaticScene } from '../world/render-scheduling';
 import type { BoxSpec, StrutSpec, Vec3 } from './hero-geometry';
 import {
   HSR_CANOPY,
@@ -183,10 +185,15 @@ type Detail = 'near' | 'far';
 function useLandmarkDetail(): Detail {
   const camera = useThree((state) => state.camera);
   const [detail, setDetail] = useState<Detail>('far');
+  const detailRef = useRef<Detail>(detail);
   useFrame(() => {
     const zoom = (camera as THREE.OrthographicCamera).zoom ?? 0;
     const next: Detail = zoom >= 55 ? 'near' : 'far';
-    setDetail((current) => (current === next ? current : next));
+    if (detailRef.current === next) return;
+    detailRef.current = next;
+    // The landmark trim set changed, so cached shadow maps are stale.
+    invalidateStaticScene();
+    setDetail(next);
   });
   return detail;
 }
@@ -203,34 +210,189 @@ function usePrefersReducedMotion(): boolean {
   return reduced;
 }
 
-type HeroPartProps = {
+/* ------------------------------------------------------------------ */
+/* Composition: one merged mesh per material                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * A landmark is authored as placed primitives and baked into its own frame at
+ * module init, so every material of the composition renders as one mesh
+ * instead of one mesh per part.
+ */
+type LandmarkPart = {
   geometry: THREE.BufferGeometry;
   material: THREE.Material;
-  scale?: Vec3;
-  position?: Vec3;
-  rotation?: Vec3;
-  receiveShadow?: boolean;
 };
 
-function HeroPart({
-  geometry,
-  material,
-  scale = [1, 1, 1],
-  position = [0, 0, 0],
-  rotation = [0, 0, 0],
-  receiveShadow = true,
-}: HeroPartProps) {
+type Placement = {
+  position?: Vec3;
+  rotation?: Vec3;
+  scale?: Vec3;
+};
+
+type LandmarkMesh = {
+  geometry: THREE.BufferGeometry;
+  material: THREE.Material;
+};
+
+type LandmarkModel = {
+  shadowRadius: number;
+  base: LandmarkMesh[];
+  /** Trim the far view drops; see useLandmarkDetail. */
+  near: LandmarkMesh[];
+};
+
+const ZERO_VEC: Vec3 = [0, 0, 0];
+const UNIT_VEC: Vec3 = [1, 1, 1];
+
+/** The transform an R3F mesh would have applied for the same placement. */
+function placementMatrix(
+  { position = ZERO_VEC, rotation = ZERO_VEC, scale = UNIT_VEC }: Placement,
+  parent?: THREE.Matrix4,
+): THREE.Matrix4 {
+  const local = new THREE.Matrix4().compose(
+    new THREE.Vector3(...position),
+    new THREE.Quaternion().setFromEuler(
+      new THREE.Euler(rotation[0], rotation[1], rotation[2], 'XYZ'),
+    ),
+    new THREE.Vector3(...scale),
+  );
+  return parent ? parent.clone().multiply(local) : local;
+}
+
+/** One placed primitive, baked into the frame its landmark is authored in. */
+function part(
+  geometry: THREE.BufferGeometry,
+  material: THREE.Material,
+  placement: Placement = {},
+): LandmarkPart {
+  const placed = geometry.clone();
+  placed.applyMatrix4(placementMatrix(placement));
+  return { geometry: placed, material };
+}
+
+/**
+ * A sub-composition (one pagoda, one beast head, one warehouse) re-expressed in
+ * its parent frame. Consumes and releases the parts it is given.
+ */
+function frame(
+  parts: LandmarkPart[],
+  placement: Placement,
+  parent?: THREE.Matrix4,
+): LandmarkPart[] {
+  const matrix = placementMatrix(placement, parent);
+  return parts.map(({ geometry, material }) => {
+    const moved = geometry.clone();
+    moved.applyMatrix4(matrix);
+    geometry.dispose();
+    return { geometry: moved, material };
+  });
+}
+
+/**
+ * mergeGeometries wants one attribute layout and one indexing mode across the
+ * group, and hero parts mix indexed primitives with authored shells.
+ */
+function mergeInput(
+  geometry: THREE.BufferGeometry,
+  keepIndex: boolean,
+): THREE.BufferGeometry {
+  const input =
+    keepIndex || !geometry.index ? geometry.clone() : geometry.toNonIndexed();
+  for (const name of Object.keys(input.attributes)) {
+    if (name !== 'position' && name !== 'normal' && name !== 'uv') {
+      input.deleteAttribute(name);
+    }
+  }
+  if (!input.getAttribute('normal')) input.computeVertexNormals();
+  if (!input.getAttribute('uv')) {
+    const count = input.getAttribute('position').count;
+    input.setAttribute(
+      'uv',
+      new THREE.Float32BufferAttribute(new Float32Array(count * 2), 2),
+    );
+  }
+  input.clearGroups();
+  return input;
+}
+
+function mergedGeometry(
+  parts: THREE.BufferGeometry[],
+): THREE.BufferGeometry | null {
+  const keepIndex = parts.every((geometry) => geometry.index !== null);
+  const inputs = parts.map((geometry) => mergeInput(geometry, keepIndex));
+  const merged = mergeGeometries(inputs, false);
+  for (const input of inputs) input.dispose();
+  if (!merged) return null;
+  for (const geometry of parts) geometry.dispose();
+  return merged;
+}
+
+/** One mesh per material; parts of a refused merge stay as separate meshes. */
+function mergedByMaterial(parts: LandmarkPart[]): LandmarkMesh[] {
+  const groups = new Map<THREE.Material, THREE.BufferGeometry[]>();
+  for (const { geometry, material } of parts) {
+    const group = groups.get(material);
+    if (group) group.push(geometry);
+    else groups.set(material, [geometry]);
+  }
+  const meshes: LandmarkMesh[] = [];
+  for (const [material, geometries] of groups) {
+    const merged = geometries.length > 1 ? mergedGeometry(geometries) : null;
+    if (merged) meshes.push({ material, geometry: merged });
+    else for (const geometry of geometries) meshes.push({ material, geometry });
+  }
+  return meshes;
+}
+
+function landmarkModel(
+  shadowRadius: number,
+  base: LandmarkPart[],
+  near: LandmarkPart[] = [],
+): LandmarkModel {
+  return {
+    shadowRadius,
+    base: mergedByMaterial(base),
+    near: mergedByMaterial(near),
+  };
+}
+
+const NO_RAYCAST = () => {};
+
+function MergedMeshes({ meshes }: { meshes: LandmarkMesh[] }) {
   return (
-    <mesh
-      geometry={geometry}
-      material={material}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-      castShadow
-      receiveShadow={receiveShadow}
-      raycast={() => {}}
-    />
+    <>
+      {meshes.map(({ geometry, material }) => (
+        <mesh
+          key={material.uuid}
+          geometry={geometry}
+          material={material}
+          castShadow
+          receiveShadow
+          raycast={NO_RAYCAST}
+        />
+      ))}
+    </>
+  );
+}
+
+/**
+ * Close-zoom trim appears and disappears while the scene lives, so it keeps its
+ * own subscription to the landmark detail level.
+ */
+function NearTrim({ meshes }: { meshes: LandmarkMesh[] }) {
+  const detail = useLandmarkDetail();
+  if (detail !== 'near') return null;
+  return <MergedMeshes meshes={meshes} />;
+}
+
+function LandmarkModelView({ model }: { model: LandmarkModel }) {
+  return (
+    <>
+      <ContactShadow radius={model.shadowRadius} />
+      <MergedMeshes meshes={model.base} />
+      {model.near.length > 0 ? <NearTrim meshes={model.near} /> : null}
+    </>
   );
 }
 
@@ -294,139 +456,96 @@ const HSR_SLEEPERS = makeBoxClusterGeometry(
   })),
 );
 
+const HSR_MODEL = landmarkModel(
+  0.92,
+  [
+    part(G.rounded, HERO_MAT.concrete, {
+      scale: [1.72, 0.06, 0.98],
+      position: [0, 0.03, 0],
+    }),
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [1.34, 0.28, 0.52],
+      position: [0, 0.2, -0.1],
+    }),
+    part(G.box, HERO_MAT.dark, {
+      scale: [1.36, 0.06, 0.53],
+      position: [0, 0.35, -0.1],
+    }),
+    part(G.box, HERO_MAT.glassGreen, {
+      scale: [1.2, 0.14, 0.02],
+      position: [0, 0.2, 0.165],
+    }),
+    part(HSR_FRAME, HERO_MAT.white),
+    part(G.hsrCanopy, HERO_MAT.shell, { position: [0, 0, -0.02] }),
+    part(G.box, HERO_MAT.track, {
+      scale: [1.5, 0.02, 0.2],
+      position: [0, 0.068, 0.33],
+    }),
+    part(G.box, HERO_MAT.steel, {
+      scale: [1.5, 0.014, 0.02],
+      position: [0, 0.076, 0.29],
+    }),
+    part(G.box, HERO_MAT.steel, {
+      scale: [1.5, 0.014, 0.02],
+      position: [0, 0.076, 0.37],
+    }),
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [1.42, 0.1, 0.16],
+      position: [0, 0.11, 0.13],
+    }),
+    part(G.rounded, HERO_MAT.teal, {
+      scale: [1.06, 0.15, 0.14],
+      position: [0, 0.2, 0.33],
+    }),
+    part(G.rounded, HERO_MAT.paper, {
+      scale: [1.04, 0.045, 0.145],
+      position: [0, 0.283, 0.33],
+    }),
+    part(G.box, HERO_MAT.glassDeep, {
+      scale: [0.98, 0.055, 0.146],
+      position: [0, 0.222, 0.33],
+    }),
+    part(G.cone, HERO_MAT.teal, {
+      scale: [0.14, 0.16, 0.14],
+      position: [0.6, 0.2, 0.33],
+      rotation: [0, 0, -Math.PI / 2],
+    }),
+    part(G.box, HERO_MAT.orange, {
+      scale: [1.02, 0.035, 0.15],
+      position: [0, 0.135, 0.33],
+    }),
+    part(G.rounded, HERO_MAT.orange, {
+      scale: [0.18, 0.16, 0.08],
+      position: [0.62, 0.19, 0.13],
+    }),
+    part(G.box, HERO_MAT.paper, {
+      scale: [0.16, 0.05, 0.012],
+      position: [0.62, 0.25, 0.172],
+    }),
+    ...[-0.34, -0.1].map((x) =>
+      part(G.rounded, HERO_MAT.sage, {
+        scale: [0.14, 0.035, 0.06],
+        position: [x, 0.178, 0.13],
+      }),
+    ),
+    ...[-0.78, 0.78].map((x) =>
+      part(G.cylinder8, HERO_MAT.concrete, {
+        scale: [0.12, 0.05, 0.12],
+        position: [x, 0.085, -0.36],
+      }),
+    ),
+  ],
+  [
+    part(G.box, HERO_MAT.steelLight, {
+      scale: [1.24, 0.02, 0.03],
+      position: [0, 0.29, 0.166],
+    }),
+    part(HSR_SLEEPERS, HERO_MAT.wood),
+  ],
+);
+
 function HsrStation() {
-  const detail = useLandmarkDetail();
-  return (
-    <group>
-      <ContactShadow radius={0.92} />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.concrete}
-        scale={[1.72, 0.06, 0.98]}
-        position={[0, 0.03, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.34, 0.28, 0.52]}
-        position={[0, 0.2, -0.1]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.dark}
-        scale={[1.36, 0.06, 0.53]}
-        position={[0, 0.35, -0.1]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.glassGreen}
-        scale={[1.2, 0.14, 0.02]}
-        position={[0, 0.2, 0.165]}
-      />
-      {detail === 'near' ? (
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.steelLight}
-          scale={[1.24, 0.02, 0.03]}
-          position={[0, 0.29, 0.166]}
-        />
-      ) : null}
-      <HeroPart geometry={HSR_FRAME} material={HERO_MAT.white} />
-      <HeroPart
-        geometry={G.hsrCanopy}
-        material={HERO_MAT.shell}
-        position={[0, 0, -0.02]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.track}
-        scale={[1.5, 0.02, 0.2]}
-        position={[0, 0.068, 0.33]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[1.5, 0.014, 0.02]}
-        position={[0, 0.076, 0.29]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[1.5, 0.014, 0.02]}
-        position={[0, 0.076, 0.37]}
-      />
-      {detail === 'near' ? (
-        <HeroPart geometry={HSR_SLEEPERS} material={HERO_MAT.wood} />
-      ) : null}
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.42, 0.1, 0.16]}
-        position={[0, 0.11, 0.13]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.teal}
-        scale={[1.06, 0.15, 0.14]}
-        position={[0, 0.2, 0.33]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.paper}
-        scale={[1.04, 0.045, 0.145]}
-        position={[0, 0.283, 0.33]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.glassDeep}
-        scale={[0.98, 0.055, 0.146]}
-        position={[0, 0.222, 0.33]}
-      />
-      <HeroPart
-        geometry={G.cone}
-        material={HERO_MAT.teal}
-        scale={[0.14, 0.16, 0.14]}
-        position={[0.6, 0.2, 0.33]}
-        rotation={[0, 0, -Math.PI / 2]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.orange}
-        scale={[1.02, 0.035, 0.15]}
-        position={[0, 0.135, 0.33]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.orange}
-        scale={[0.18, 0.16, 0.08]}
-        position={[0.62, 0.19, 0.13]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.paper}
-        scale={[0.16, 0.05, 0.012]}
-        position={[0.62, 0.25, 0.172]}
-      />
-      {[-0.34, -0.1].map((x) => (
-        <HeroPart
-          key={x}
-          geometry={G.rounded}
-          material={HERO_MAT.sage}
-          scale={[0.14, 0.035, 0.06]}
-          position={[x, 0.178, 0.13]}
-        />
-      ))}
-      {[-0.78, 0.78].map((x) => (
-        <HeroPart
-          key={x}
-          geometry={G.cylinder8}
-          material={HERO_MAT.concrete}
-          scale={[0.12, 0.05, 0.12]}
-          position={[x, 0.085, -0.36]}
-        />
-      ))}
-    </group>
-  );
+  return <LandmarkModelView model={HSR_MODEL} />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -472,68 +591,50 @@ const STADIUM_SEAT_BANDS = [
   { radius: 0.8, y: 0.225, material: HERO_MAT.yellow },
 ];
 
+const STADIUM_MODEL = landmarkModel(1.02, [
+  part(G.disc, HERO_MAT.concrete, {
+    scale: [1.0, 0.05, 0.72],
+    position: [0, 0.035, 0],
+  }),
+  part(G.bowl, HERO_MAT.cream),
+  part(G.disc, HERO_MAT.trackBlue, {
+    scale: [0.43, 0.012, 0.31],
+    position: [0, 0.068, 0],
+  }),
+  part(G.disc, HERO_MAT.green, {
+    scale: [0.28, 0.02, 0.2],
+    position: [0, 0.075, 0],
+  }),
+  part(G.ring, HERO_MAT.paper, {
+    scale: [0.33, 0.238, 1],
+    position: [0, 0.09, 0],
+    rotation: [-Math.PI / 2, 0, 0],
+  }),
+  ...STADIUM_SEAT_BANDS.map((band) =>
+    part(G.ring, band.material, {
+      scale: [band.radius, band.radius * STADIUM_SQUASH_Z, 1],
+      position: [0, band.y, 0],
+      rotation: [-Math.PI / 2, 0, 0],
+    }),
+  ),
+  part(G.stadiumRibbon, HERO_MAT.shell),
+  part(STADIUM_TRUSS, HERO_MAT.lattice),
+  part(G.box, HERO_MAT.concrete, {
+    scale: [0.2, 0.12, 0.1],
+    position: [-0.2, 0.1, -0.66],
+  }),
+  part(G.box, HERO_MAT.dark, {
+    scale: [0.3, 0.14, 0.02],
+    position: [-0.2, 0.24, -0.66],
+  }),
+  part(G.box, HERO_MAT.paper, {
+    scale: [0.28, 0.03, 0.022],
+    position: [-0.2, 0.32, -0.66],
+  }),
+]);
+
 function WorldGamesStadium() {
-  return (
-    <group>
-      <ContactShadow radius={1.02} />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.concrete}
-        scale={[1.0, 0.05, 0.72]}
-        position={[0, 0.035, 0]}
-      />
-      <HeroPart geometry={G.bowl} material={HERO_MAT.cream} />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.trackBlue}
-        scale={[0.43, 0.012, 0.31]}
-        position={[0, 0.068, 0]}
-      />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.green}
-        scale={[0.28, 0.02, 0.2]}
-        position={[0, 0.075, 0]}
-      />
-      <HeroPart
-        geometry={G.ring}
-        material={HERO_MAT.paper}
-        scale={[0.33, 0.238, 1]}
-        position={[0, 0.09, 0]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      {STADIUM_SEAT_BANDS.map((band) => (
-        <HeroPart
-          key={band.radius}
-          geometry={G.ring}
-          material={band.material}
-          scale={[band.radius, band.radius * STADIUM_SQUASH_Z, 1]}
-          position={[0, band.y, 0]}
-          rotation={[-Math.PI / 2, 0, 0]}
-        />
-      ))}
-      <HeroPart geometry={G.stadiumRibbon} material={HERO_MAT.shell} />
-      <HeroPart geometry={STADIUM_TRUSS} material={HERO_MAT.lattice} />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.concrete}
-        scale={[0.2, 0.12, 0.1]}
-        position={[-0.2, 0.1, -0.66]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.dark}
-        scale={[0.3, 0.14, 0.02]}
-        position={[-0.2, 0.24, -0.66]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.paper}
-        scale={[0.28, 0.03, 0.022]}
-        position={[-0.2, 0.32, -0.66]}
-      />
-    </group>
-  );
+  return <LandmarkModelView model={STADIUM_MODEL} />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -632,129 +733,95 @@ const PAGODA_REDWORK = (() => {
   return makeBoxClusterGeometry(boxes);
 })();
 
-function PagodaHero() {
-  return (
-    <group>
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.stone}
-        scale={[0.32, 0.05, 0.32]}
-        position={[0, 0.05, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[0.3, 0.02, 0.3]}
-        position={[0, 0.135, 0]}
-      />
-      <HeroPart geometry={PAGODA_BODIES} material={HERO_MAT.cream} />
-      <HeroPart geometry={PAGODA_REDWORK} material={HERO_MAT.red} />
-      {PAGODA_ROOFS.map((geometry, index) => {
-        const tier = PAGODA_TIER_DATA[index];
-        if (!tier) return null;
-        return (
-          <HeroPart
-            key={tier.base}
-            geometry={geometry}
-            material={DOUBLE_ROOF}
-            position={[0, tier.base + tier.bodyHeight - 0.004, 0]}
-          />
-        );
-      })}
-      <HeroPart
-        geometry={G.cylinder8}
-        material={HERO_MAT.gold}
-        scale={[0.03, 0.03, 0.03]}
-        position={[0, PAGODA_FINIAL_Y + 0.012, 0]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.gold}
-        scale={[0.026, 0.05, 0.026]}
-        position={[0, PAGODA_FINIAL_Y + 0.045, 0]}
-      />
-      <HeroPart
-        geometry={G.cone6}
-        material={HERO_MAT.gold}
-        scale={[0.03, 0.05, 0.03]}
-        position={[0, PAGODA_FINIAL_Y + 0.08, 0]}
-      />
-    </group>
-  );
+/** One pagoda, in the frame of the landmark that places it. */
+function pagodaParts(): LandmarkPart[] {
+  const roofs = PAGODA_TIER_DATA.flatMap((tier, index) => {
+    const geometry = PAGODA_ROOFS[index];
+    return geometry
+      ? [
+          part(geometry, DOUBLE_ROOF, {
+            position: [0, tier.base + tier.bodyHeight - 0.004, 0],
+          }),
+        ]
+      : [];
+  });
+  return [
+    part(G.rounded, HERO_MAT.stone, {
+      scale: [0.32, 0.05, 0.32],
+      position: [0, 0.05, 0],
+    }),
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [0.3, 0.02, 0.3],
+      position: [0, 0.135, 0],
+    }),
+    part(PAGODA_BODIES, HERO_MAT.cream),
+    part(PAGODA_REDWORK, HERO_MAT.red),
+    ...roofs,
+    part(G.cylinder8, HERO_MAT.gold, {
+      scale: [0.03, 0.03, 0.03],
+      position: [0, PAGODA_FINIAL_Y + 0.012, 0],
+    }),
+    part(G.sphereLow, HERO_MAT.gold, {
+      scale: [0.026, 0.05, 0.026],
+      position: [0, PAGODA_FINIAL_Y + 0.045, 0],
+    }),
+    part(G.cone6, HERO_MAT.gold, {
+      scale: [0.03, 0.05, 0.03],
+      position: [0, PAGODA_FINIAL_Y + 0.08, 0],
+    }),
+  ];
 }
 
-function BeastHead({ kind }: { kind: 'dragon' | 'tiger' }) {
+/** One dragon or tiger head, in the frame of the landmark that places it. */
+function beastHeadParts(kind: 'dragon' | 'tiger'): LandmarkPart[] {
   const isDragon = kind === 'dragon';
   const skin = isDragon ? HERO_MAT.greenDeep : HERO_MAT.orange;
   const stripe = isDragon ? HERO_MAT.green : HERO_MAT.dark;
-  return (
-    <group>
-      <HeroPart
-        geometry={G.rounded}
-        material={skin}
-        scale={[0.19, 0.17, 0.18]}
-        position={[0, 0.13, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={skin}
-        scale={[0.13, 0.09, 0.13]}
-        position={[0, 0.11, 0.13]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.paper}
-        scale={[0.12, 0.045, 0.1]}
-        position={[0, 0.075, 0.15]}
-      />
-      {[-0.045, 0.045].map((x) => (
-        <group key={x}>
-          <HeroPart
-            geometry={G.sphereLow}
-            material={HERO_MAT.paper}
-            scale={[0.05, 0.05, 0.03]}
-            position={[x, 0.2, 0.1]}
-          />
-          <HeroPart
-            geometry={G.sphereLow}
-            material={HERO_MAT.dark}
-            scale={[0.022, 0.026, 0.016]}
-            position={[x, 0.2, 0.118]}
-          />
-        </group>
-      ))}
-      <HeroPart
-        geometry={G.cone6}
-        material={skin}
-        scale={[0.045, 0.1, 0.045]}
-        position={[-0.06, 0.235, -0.04]}
-        rotation={[0, 0, 0.35]}
-      />
-      <HeroPart
-        geometry={G.cone6}
-        material={skin}
-        scale={[0.045, 0.1, 0.045]}
-        position={[0.06, 0.235, -0.04]}
-        rotation={[0, 0, -0.35]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={stripe}
-        scale={[0.14, 0.012, 0.09]}
-        position={[0, 0.155, 0.1]}
-      />
-      {[-0.035, 0.035].map((x) => (
-        <HeroPart
-          key={x}
-          geometry={G.cone4}
-          material={HERO_MAT.paper}
-          scale={[0.018, 0.03, 0.018]}
-          position={[x, 0.055, 0.16]}
-          rotation={[Math.PI, 0, 0]}
-        />
-      ))}
-    </group>
-  );
+  return [
+    part(G.rounded, skin, {
+      scale: [0.19, 0.17, 0.18],
+      position: [0, 0.13, 0],
+    }),
+    part(G.rounded, skin, {
+      scale: [0.13, 0.09, 0.13],
+      position: [0, 0.11, 0.13],
+    }),
+    part(G.box, HERO_MAT.paper, {
+      scale: [0.12, 0.045, 0.1],
+      position: [0, 0.075, 0.15],
+    }),
+    ...[-0.045, 0.045].flatMap((x) => [
+      part(G.sphereLow, HERO_MAT.paper, {
+        scale: [0.05, 0.05, 0.03],
+        position: [x, 0.2, 0.1],
+      }),
+      part(G.sphereLow, HERO_MAT.dark, {
+        scale: [0.022, 0.026, 0.016],
+        position: [x, 0.2, 0.118],
+      }),
+    ]),
+    part(G.cone6, skin, {
+      scale: [0.045, 0.1, 0.045],
+      position: [-0.06, 0.235, -0.04],
+      rotation: [0, 0, 0.35],
+    }),
+    part(G.cone6, skin, {
+      scale: [0.045, 0.1, 0.045],
+      position: [0.06, 0.235, -0.04],
+      rotation: [0, 0, -0.35],
+    }),
+    part(G.box, stripe, {
+      scale: [0.14, 0.012, 0.09],
+      position: [0, 0.155, 0.1],
+    }),
+    ...[-0.035, 0.035].map((x) =>
+      part(G.cone4, HERO_MAT.paper, {
+        scale: [0.018, 0.03, 0.018],
+        position: [x, 0.055, 0.16],
+        rotation: [Math.PI, 0, 0],
+      }),
+    ),
+  ];
 }
 
 const LOTUS_PADS = makeBoxClusterGeometry(
@@ -792,61 +859,55 @@ const LOTUS_BRIDGE_POSTS = makeBoxClusterGeometry(
   ),
 );
 
+/** The two pagoda/tiger-and-dragon pairs standing on the water. */
+const LOTUS_FEATURES = [-0.46, 0.46].flatMap((x, index) => {
+  const slot = placementMatrix({ position: [x, 0.06, -0.12] });
+  return [
+    ...frame(pagodaParts(), { scale: [0.92, 0.92, 0.92] }, slot),
+    ...frame(
+      beastHeadParts(index === 0 ? 'dragon' : 'tiger'),
+      { position: [0, 0.005, 0.13], scale: [0.72, 0.72, 0.72] },
+      slot,
+    ),
+  ];
+});
+
+const LOTUS_MODEL = landmarkModel(
+  0.98,
+  [
+    part(G.disc, HERO_MAT.water, {
+      scale: [1.0, 0.045, 0.78],
+      position: [0, 0.02, 0],
+    }),
+    part(G.disc, HERO_MAT.waterDeep, {
+      scale: [0.86, 0.038, 0.64],
+      position: [0, 0.028, 0],
+    }),
+    part(LOTUS_PADS, HERO_MAT.sage),
+    ...[-0.34, 0.28].map((x) =>
+      part(G.sphereLow, HERO_MAT.pink, {
+        scale: [0.05, 0.09, 0.05],
+        position: [x, 0.075, 0.24],
+      }),
+    ),
+    part(G.rounded, HERO_MAT.stone, {
+      scale: [1.32, 0.05, 0.16],
+      position: [0, 0.045, 0.6],
+    }),
+    part(LOTUS_BRIDGE_DECKS, HERO_MAT.wood),
+    part(LOTUS_BRIDGE_POSTS, HERO_MAT.red),
+    ...LOTUS_FEATURES,
+  ],
+  [
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [1.26, 0.02, 0.1],
+      position: [0, 0.078, 0.6],
+    }),
+  ],
+);
+
 function LotusPagodas() {
-  const detail = useLandmarkDetail();
-  return (
-    <group>
-      <ContactShadow radius={0.98} />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.water}
-        scale={[1.0, 0.045, 0.78]}
-        position={[0, 0.02, 0]}
-      />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.waterDeep}
-        scale={[0.86, 0.038, 0.64]}
-        position={[0, 0.028, 0]}
-      />
-      <HeroPart geometry={LOTUS_PADS} material={HERO_MAT.sage} />
-      {[-0.34, 0.28].map((x) => (
-        <HeroPart
-          key={x}
-          geometry={G.sphereLow}
-          material={HERO_MAT.pink}
-          scale={[0.05, 0.09, 0.05]}
-          position={[x, 0.075, 0.24]}
-        />
-      ))}
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.stone}
-        scale={[1.32, 0.05, 0.16]}
-        position={[0, 0.045, 0.6]}
-      />
-      <HeroPart geometry={LOTUS_BRIDGE_DECKS} material={HERO_MAT.wood} />
-      <HeroPart geometry={LOTUS_BRIDGE_POSTS} material={HERO_MAT.red} />
-      {[-0.46, 0.46].map((x, index) => (
-        <group key={x} position={[x, 0.06, -0.12]}>
-          <group scale={0.92}>
-            <PagodaHero />
-          </group>
-          <group position={[0, 0.005, 0.13]} scale={0.72}>
-            <BeastHead kind={index === 0 ? 'dragon' : 'tiger'} />
-          </group>
-        </group>
-      ))}
-      {detail === 'near' ? (
-        <HeroPart
-          geometry={G.rounded}
-          material={HERO_MAT.cream}
-          scale={[1.26, 0.02, 0.1]}
-          position={[0, 0.078, 0.6]}
-        />
-      ) : null}
-    </group>
-  );
+  return <LandmarkModelView model={LOTUS_MODEL} />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -935,84 +996,64 @@ const WEIWUYING_MULLIONS = makeBoxClusterGeometry([
   }).flat(),
 ]);
 
+/** Four planters standing clear of the roof shell. */
+const WEIWUYING_GARDEN: Vec3[] = [
+  [-0.86, 0.06, -0.58],
+  [0.88, 0.06, -0.52],
+  [0.92, 0.06, 0.52],
+  [-0.9, 0.06, 0.54],
+];
+
+const WEIWUYING_MODEL = landmarkModel(
+  1.0,
+  [
+    part(G.disc, HERO_MAT.concrete, {
+      scale: [1.04, 0.05, 0.84],
+      position: [0, 0.025, 0],
+    }),
+    part(G.disc, HERO_MAT.sage, {
+      scale: [0.94, 0.045, 0.74],
+      position: [0, 0.03, 0],
+    }),
+    part(G.disc, HERO_MAT.cream, {
+      scale: [0.88, 0.05, 0.72],
+      position: [0, 0.075, 0],
+    }),
+    part(G.rounded, HERO_MAT.glassDeep, {
+      scale: [1.28, 0.26, 0.96],
+      position: [0, 0.2, 0],
+    }),
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [1.34, 0.04, 1.02],
+      position: [0, 0.345, 0],
+    }),
+    part(G.weiwuyingShell, HERO_MAT.shell),
+    part(WEIWUYING_COLUMNS, HERO_MAT.white),
+    ...WEIWUYING_WELLS.map((well) =>
+      part(G.box, HERO_MAT.well, {
+        scale: [well.width + 0.05, 0.14, well.depth + 0.05],
+        position: [well.x, wellRoofFloor(well) - 0.085, well.z],
+      }),
+    ),
+    part(WEIWUYING_RIM, HERO_MAT.shellEdge),
+    ...WEIWUYING_GARDEN.flatMap((position) =>
+      frame(
+        [
+          part(G.cylinder8, HERO_MAT.concrete, { scale: [0.14, 0.06, 0.14] }),
+          part(G.ico, HERO_MAT.greenDeep, {
+            scale: [0.16, 0.18, 0.16],
+            position: [0, 0.11, 0],
+          }),
+        ],
+        { position },
+      ),
+    ),
+  ],
+  [part(WEIWUYING_MULLIONS, HERO_MAT.steelLight)],
+);
+
 function Weiwuying() {
-  const detail = useLandmarkDetail();
-  return (
-    <group>
-      <ContactShadow radius={1.0} />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.concrete}
-        scale={[1.04, 0.05, 0.84]}
-        position={[0, 0.025, 0]}
-      />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.sage}
-        scale={[0.94, 0.045, 0.74]}
-        position={[0, 0.03, 0]}
-      />
-      <HeroPart
-        geometry={G.disc}
-        material={HERO_MAT.cream}
-        scale={[0.88, 0.05, 0.72]}
-        position={[0, 0.075, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.glassDeep}
-        scale={[1.28, 0.26, 0.96]}
-        position={[0, 0.2, 0]}
-      />
-      {detail === 'near' ? (
-        <HeroPart
-          geometry={WEIWUYING_MULLIONS}
-          material={HERO_MAT.steelLight}
-        />
-      ) : null}
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.34, 0.04, 1.02]}
-        position={[0, 0.345, 0]}
-      />
-      <HeroPart geometry={G.weiwuyingShell} material={HERO_MAT.shell} />
-      <HeroPart geometry={WEIWUYING_COLUMNS} material={HERO_MAT.white} />
-      {WEIWUYING_WELLS.map((well) => (
-        <HeroPart
-          key={String(well.x) + '-' + String(well.z)}
-          geometry={G.box}
-          material={HERO_MAT.well}
-          scale={[well.width + 0.05, 0.14, well.depth + 0.05]}
-          position={[well.x, wellRoofFloor(well) - 0.085, well.z]}
-        />
-      ))}
-      <HeroPart geometry={WEIWUYING_RIM} material={HERO_MAT.shellEdge} />
-      {[
-        [-0.86, -0.58],
-        [0.88, -0.52],
-        [0.92, 0.52],
-        [-0.9, 0.54],
-      ].map(([x, z]) => (
-        <group
-          key={String(x) + '-' + String(z)}
-          position={[x ?? 0, 0.06, z ?? 0]}
-        >
-          <HeroPart
-            geometry={G.cylinder8}
-            material={HERO_MAT.concrete}
-            scale={[0.14, 0.06, 0.14]}
-          />
-          <HeroPart
-            geometry={G.ico}
-            material={HERO_MAT.greenDeep}
-            scale={[0.16, 0.18, 0.16]}
-            position={[0, 0.11, 0]}
-          />
-        </group>
-      ))}
-    </group>
-  );
+  return <LandmarkModelView model={WEIWUYING_MODEL} />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1028,82 +1069,67 @@ type WarehouseProps = {
   door?: boolean;
 };
 
-function Warehouse({
+/** Wall, roof and glazing of one warehouse, in the hero frame. */
+function warehouseParts({
   position,
   width,
   depth,
   wall,
   roof,
   door,
-}: WarehouseProps) {
-  const detail = useLandmarkDetail();
-  return (
-    <group position={position}>
-      <HeroPart
-        geometry={G.box}
-        material={wall}
-        scale={[width, 0.3, depth]}
-        position={[0, 0.15, 0]}
-      />
-      {Array.from({ length: 6 }, (_, index) => {
+}: WarehouseProps): LandmarkPart[] {
+  return frame(
+    [
+      part(G.box, wall, { scale: [width, 0.3, depth], position: [0, 0.15, 0] }),
+      ...Array.from({ length: 6 }, (_, index) => {
         const x = -width / 2 + 0.03 + index * ((width - 0.06) / 5);
-        return (
-          <HeroPart
-            key={x}
-            geometry={G.box}
-            material={HERO_MAT.paper}
-            scale={[0.012, 0.26, 0.014]}
-            position={[x, 0.16, depth / 2 + 0.006]}
-          />
-        );
-      })}
-      <HeroPart
-        geometry={G.gable}
-        material={roof}
-        scale={[width + 0.035, 0.17, depth + 0.035]}
-        position={[0, 0.3, 0]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[width + 0.04, 0.014, 0.03]}
-        position={[0, 0.47, 0]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={roof}
-        scale={[width + 0.05, 0.02, 0.05]}
-        position={[0, 0.297, depth / 2 + 0.01]}
-      />
-      {Array.from({ length: 3 }, (_, index) => {
+        return part(G.box, HERO_MAT.paper, {
+          scale: [0.012, 0.26, 0.014],
+          position: [x, 0.16, depth / 2 + 0.006],
+        });
+      }),
+      part(G.gable, roof, {
+        scale: [width + 0.035, 0.17, depth + 0.035],
+        position: [0, 0.3, 0],
+      }),
+      part(G.box, HERO_MAT.steel, {
+        scale: [width + 0.04, 0.014, 0.03],
+        position: [0, 0.47, 0],
+      }),
+      part(G.box, roof, {
+        scale: [width + 0.05, 0.02, 0.05],
+        position: [0, 0.297, depth / 2 + 0.01],
+      }),
+      ...Array.from({ length: 3 }, (_, index) => {
         const x = -width * 0.24 + index * width * 0.24;
-        return (
-          <HeroPart
-            key={x}
-            geometry={G.box}
-            material={HERO_MAT.glass}
-            scale={[0.1, 0.1, 0.025]}
-            position={[x, 0.21, depth / 2 + 0.008]}
-          />
-        );
-      })}
-      {door ? (
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.dark}
-          scale={[0.12, 0.16, 0.025]}
-          position={[width * 0.34, 0.1, depth / 2 + 0.008]}
-        />
-      ) : null}
-      {detail === 'near' ? (
-        <HeroPart
-          geometry={G.box}
-          material={HERO_MAT.steel}
-          scale={[width + 0.02, 0.014, 0.02]}
-          position={[0, 0.36, depth / 2 + 0.004]}
-        />
-      ) : null}
-    </group>
+        return part(G.box, HERO_MAT.glass, {
+          scale: [0.1, 0.1, 0.025],
+          position: [x, 0.21, depth / 2 + 0.008],
+        });
+      }),
+      ...(door
+        ? [
+            part(G.box, HERO_MAT.dark, {
+              scale: [0.12, 0.16, 0.025],
+              position: [width * 0.34, 0.1, depth / 2 + 0.008],
+            }),
+          ]
+        : []),
+    ],
+    { position },
+  );
+}
+
+/** Eave trim of one warehouse, only shown in the close view. */
+function warehouseNearParts(spec: WarehouseProps): LandmarkPart[] {
+  return frame(
+    [
+      part(G.box, HERO_MAT.steel, {
+        scale: [spec.width + 0.02, 0.014, 0.02],
+        position: [0, 0.36, spec.depth / 2 + 0.004],
+      }),
+    ],
+    { position: spec.position },
   );
 }
 
@@ -1114,111 +1140,100 @@ const PIER2_TRACK = makeBoxClusterGeometry(
   })),
 );
 
+const PIER2_WAREHOUSES: WarehouseProps[] = [
+  {
+    position: [-0.42, 0.05, -0.08],
+    width: 0.38,
+    depth: 0.5,
+    wall: HERO_MAT.brickLight,
+    roof: HERO_MAT.roofGreen,
+  },
+  {
+    position: [0.04, 0.05, -0.04],
+    width: 0.4,
+    depth: 0.52,
+    wall: HERO_MAT.cream,
+    roof: HERO_MAT.terracotta,
+    door: true,
+  },
+  {
+    position: [0.48, 0.05, -0.1],
+    width: 0.34,
+    depth: 0.46,
+    wall: HERO_MAT.brick,
+    roof: HERO_MAT.steel,
+  },
+];
+
+const PIER2_MODEL = landmarkModel(
+  0.96,
+  [
+    part(G.rounded, HERO_MAT.concrete, {
+      scale: [1.52, 0.06, 0.92],
+      position: [0, 0.03, 0],
+    }),
+    ...PIER2_WAREHOUSES.flatMap(warehouseParts),
+    part(G.box, HERO_MAT.steel, {
+      scale: [1.4, 0.012, 0.014],
+      position: [0, 0.062, 0.52],
+    }),
+    part(G.box, HERO_MAT.steel, {
+      scale: [1.4, 0.012, 0.014],
+      position: [0, 0.062, 0.6],
+    }),
+    part(PIER2_TRACK, HERO_MAT.wood),
+    ...[
+      {
+        position: [-0.66, 0.11, 0.24] as Vec3,
+        scale: [0.2, 0.1, 0.16] as Vec3,
+        material: HERO_MAT.orange,
+      },
+      {
+        position: [-0.66, 0.19, 0.24] as Vec3,
+        scale: [0.16, 0.08, 0.14] as Vec3,
+        material: HERO_MAT.teal,
+      },
+      {
+        position: [-0.66, 0.25, 0.24] as Vec3,
+        scale: [0.12, 0.06, 0.12] as Vec3,
+        material: HERO_MAT.red,
+      },
+    ].map((crate) =>
+      part(G.rounded, crate.material, {
+        position: crate.position,
+        scale: crate.scale,
+      }),
+    ),
+    part(G.box, HERO_MAT.steel, {
+      scale: [0.02, 0.12, 0.02],
+      position: [0.18, 0.53, 0.06],
+    }),
+    part(G.box, HERO_MAT.steel, {
+      scale: [0.02, 0.12, 0.02],
+      position: [0.3, 0.53, 0.06],
+    }),
+    part(G.box, HERO_MAT.paper, {
+      scale: [0.24, 0.06, 0.014],
+      position: [0.24, 0.6, 0.06],
+    }),
+    ...[-0.28, 0.3].flatMap((x) =>
+      frame(
+        [
+          part(G.cylinder8, HERO_MAT.wood, { scale: [0.02, 0.1, 0.02] }),
+          part(G.ico, HERO_MAT.green, {
+            scale: [0.13, 0.14, 0.13],
+            position: [0, 0.14, 0],
+          }),
+        ],
+        { position: [x, 0.06, 0.34] },
+      ),
+    ),
+  ],
+  PIER2_WAREHOUSES.flatMap(warehouseNearParts),
+);
+
 function Pier2() {
-  return (
-    <group>
-      <ContactShadow radius={0.96} />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.concrete}
-        scale={[1.52, 0.06, 0.92]}
-        position={[0, 0.03, 0]}
-      />
-      <Warehouse
-        position={[-0.42, 0.05, -0.08]}
-        width={0.38}
-        depth={0.5}
-        wall={HERO_MAT.brickLight}
-        roof={HERO_MAT.roofGreen}
-      />
-      <Warehouse
-        position={[0.04, 0.05, -0.04]}
-        width={0.4}
-        depth={0.52}
-        wall={HERO_MAT.cream}
-        roof={HERO_MAT.terracotta}
-        door
-      />
-      <Warehouse
-        position={[0.48, 0.05, -0.1]}
-        width={0.34}
-        depth={0.46}
-        wall={HERO_MAT.brick}
-        roof={HERO_MAT.steel}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[1.4, 0.012, 0.014]}
-        position={[0, 0.062, 0.52]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[1.4, 0.012, 0.014]}
-        position={[0, 0.062, 0.6]}
-      />
-      <HeroPart geometry={PIER2_TRACK} material={HERO_MAT.wood} />
-      {[
-        {
-          position: [-0.66, 0.11, 0.24] as Vec3,
-          scale: [0.2, 0.1, 0.16] as Vec3,
-          material: HERO_MAT.orange,
-        },
-        {
-          position: [-0.66, 0.19, 0.24] as Vec3,
-          scale: [0.16, 0.08, 0.14] as Vec3,
-          material: HERO_MAT.teal,
-        },
-        {
-          position: [-0.66, 0.25, 0.24] as Vec3,
-          scale: [0.12, 0.06, 0.12] as Vec3,
-          material: HERO_MAT.red,
-        },
-      ].map((crate) => (
-        <HeroPart
-          key={String(crate.position[1])}
-          geometry={G.rounded}
-          material={crate.material}
-          position={crate.position}
-          scale={crate.scale}
-        />
-      ))}
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[0.02, 0.12, 0.02]}
-        position={[0.18, 0.53, 0.06]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.steel}
-        scale={[0.02, 0.12, 0.02]}
-        position={[0.3, 0.53, 0.06]}
-      />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.paper}
-        scale={[0.24, 0.06, 0.014]}
-        position={[0.24, 0.6, 0.06]}
-      />
-      {[-0.28, 0.3].map((x) => (
-        <group key={x} position={[x, 0.06, 0.34]}>
-          <HeroPart
-            geometry={G.cylinder8}
-            material={HERO_MAT.wood}
-            scale={[0.02, 0.1, 0.02]}
-          />
-          <HeroPart
-            geometry={G.ico}
-            material={HERO_MAT.green}
-            scale={[0.13, 0.14, 0.13]}
-            position={[0, 0.14, 0]}
-          />
-        </group>
-      ))}
-    </group>
-  );
+  return <LandmarkModelView model={PIER2_MODEL} />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1303,6 +1318,27 @@ const WHEEL_CABIN_GLASS = makeBoxClusterGeometry([
   { position: [0, -0.082, 0], scale: [0.08, 0.04, 0.077] },
 ]);
 
+/**
+ * Wheel parts bolted to the rotating frame stay static inside it, so they merge
+ * per material; only the cabins move on their own.
+ */
+const WHEEL_STATIC_MESHES = mergedByMaterial([
+  part(WHEEL_RIM_GEOMETRY, HERO_MAT.white, {
+    position: [0, 0, WHEEL_HALF_DEPTH],
+  }),
+  part(WHEEL_RIM_GEOMETRY, HERO_MAT.white, {
+    position: [0, 0, -WHEEL_HALF_DEPTH],
+  }),
+  part(WHEEL_SPOKES, HERO_MAT.steelLight),
+  part(WHEEL_BRACKETS, HERO_MAT.steel),
+  part(G.cylinder, HERO_MAT.gold, {
+    scale: [0.1, 0.2, 0.1],
+    rotation: [Math.PI / 2, 0, 0],
+  }),
+]);
+
+const WHEEL_LEG_MESHES = mergedByMaterial([part(WHEEL_LEGS, HERO_MAT.white)]);
+
 function FerrisWheel() {
   const rotating = useRef<THREE.Group>(null);
   const bodies = useRef<THREE.InstancedMesh>(null);
@@ -1353,35 +1389,19 @@ function FerrisWheel() {
 
   return (
     <group>
-      <HeroPart geometry={WHEEL_LEGS} material={HERO_MAT.white} />
+      <MergedMeshes meshes={WHEEL_LEG_MESHES} />
       <group ref={rotating}>
-        <HeroPart
-          geometry={WHEEL_RIM_GEOMETRY}
-          material={HERO_MAT.white}
-          position={[0, 0, WHEEL_HALF_DEPTH]}
-        />
-        <HeroPart
-          geometry={WHEEL_RIM_GEOMETRY}
-          material={HERO_MAT.white}
-          position={[0, 0, -WHEEL_HALF_DEPTH]}
-        />
-        <HeroPart geometry={WHEEL_SPOKES} material={HERO_MAT.steelLight} />
-        <HeroPart geometry={WHEEL_BRACKETS} material={HERO_MAT.steel} />
-        <HeroPart
-          geometry={G.cylinder}
-          material={HERO_MAT.gold}
-          scale={[0.1, 0.2, 0.1]}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
+        <MergedMeshes meshes={WHEEL_STATIC_MESHES} />
         <instancedMesh
           ref={bodies}
           args={[WHEEL_CABIN_BODY, HERO_MAT.cabinWhite, WHEEL_CABINS]}
-          castShadow
+          castShadow={false}
           frustumCulled={false}
         />
         <instancedMesh
           ref={glass}
           args={[WHEEL_CABIN_GLASS, HERO_MAT.glassDeep, WHEEL_CABINS]}
+          castShadow={false}
           frustumCulled={false}
         />
       </group>
@@ -1442,78 +1462,58 @@ const MALL_MULLIONS = makeBoxClusterGeometry(
   }),
 );
 
+const DREAM_MALL_MODEL = landmarkModel(
+  1.0,
+  [
+    part(G.rounded, HERO_MAT.concrete, {
+      scale: [1.56, 0.07, 0.9],
+      position: [0, 0.035, 0],
+    }),
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [1.32, 0.34, 0.6],
+      position: [0, 0.26, -0.2],
+    }),
+    part(G.rounded, HERO_MAT.cream, {
+      scale: [1.2, 0.18, 0.44],
+      position: [0, 0.52, -0.2],
+    }),
+    part(MALL_FACADE, HERO_MAT.glassGreen, { position: [0, 0.07, 0] }),
+    part(MALL_FASCIA, HERO_MAT.paper),
+    part(G.rounded, HERO_MAT.steelLight, {
+      scale: [1.06, 0.03, 0.72],
+      position: [0, 0.625, -0.1],
+    }),
+    part(G.rounded, HERO_MAT.paper, {
+      scale: [0.34, 0.15, 0.022],
+      position: [0.1, 0.42, 0.39],
+    }),
+    part(G.rounded, HERO_MAT.glassBlue, {
+      scale: [0.16, 0.06, 0.014],
+      position: [0.1, 0.42, 0.4],
+    }),
+    part(G.cone4, HERO_MAT.glassBlue, {
+      scale: [0.05, 0.06, 0.014],
+      position: [0.02, 0.44, 0.41],
+      rotation: [0, 0, -0.5],
+    }),
+    part(G.rounded, HERO_MAT.paper, {
+      scale: [0.38, 0.05, 0.24],
+      position: [0, 0.22, 0.4],
+    }),
+    ...[-0.12, 0.12].map((x) =>
+      part(G.cylinder8, HERO_MAT.steelLight, {
+        scale: [0.02, 0.18, 0.02],
+        position: [x, 0.13, 0.46],
+      }),
+    ),
+  ],
+  [part(MALL_MULLIONS, HERO_MAT.steelLight)],
+);
+
 function DreamMall() {
-  const detail = useLandmarkDetail();
   return (
     <group>
-      <ContactShadow radius={1.0} />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.concrete}
-        scale={[1.56, 0.07, 0.9]}
-        position={[0, 0.035, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.32, 0.34, 0.6]}
-        position={[0, 0.26, -0.2]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[1.2, 0.18, 0.44]}
-        position={[0, 0.52, -0.2]}
-      />
-      <HeroPart
-        geometry={MALL_FACADE}
-        material={HERO_MAT.glassGreen}
-        position={[0, 0.07, 0]}
-      />
-      <HeroPart geometry={MALL_FASCIA} material={HERO_MAT.paper} />
-      {detail === 'near' ? (
-        <HeroPart geometry={MALL_MULLIONS} material={HERO_MAT.steelLight} />
-      ) : null}
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.steelLight}
-        scale={[1.06, 0.03, 0.72]}
-        position={[0, 0.625, -0.1]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.paper}
-        scale={[0.34, 0.15, 0.022]}
-        position={[0.1, 0.42, 0.39]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.glassBlue}
-        scale={[0.16, 0.06, 0.014]}
-        position={[0.1, 0.42, 0.4]}
-      />
-      <HeroPart
-        geometry={G.cone4}
-        material={HERO_MAT.glassBlue}
-        scale={[0.05, 0.06, 0.014]}
-        position={[0.02, 0.44, 0.41]}
-        rotation={[0, 0, -0.5]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.paper}
-        scale={[0.38, 0.05, 0.24]}
-        position={[0, 0.22, 0.4]}
-      />
-      {[-0.12, 0.12].map((x) => (
-        <HeroPart
-          key={x}
-          geometry={G.cylinder8}
-          material={HERO_MAT.steelLight}
-          scale={[0.02, 0.18, 0.02]}
-          position={[x, 0.13, 0.46]}
-        />
-      ))}
+      <LandmarkModelView model={DREAM_MALL_MODEL} />
       <group position={[0.34, 1.075, -0.1]} rotation={[0, 0.5, 0]}>
         <FerrisWheel />
       </group>
@@ -1567,102 +1567,75 @@ const SHAFT_FINS = makeBoxClusterGeometry([
   })),
 ]);
 
+const SKY_TOWER_MODEL = landmarkModel(0.44, [
+  part(G.box, HERO_MAT.concrete, {
+    scale: [0.5, 0.06, 0.5],
+    position: [0, 0.03, 0],
+  }),
+  part(G.rounded, HERO_MAT.cream, {
+    scale: [0.42, 0.1, 0.4],
+    position: [0, 0.09, 0],
+  }),
+  ...[-1, 1].map((side) =>
+    part(G.octagon, HERO_MAT.glassBlue, {
+      scale: [0.062, 0.98, 0.054],
+      position: [side * 0.072, 0.63, 0],
+      rotation: [0, Math.PI / 8, 0],
+    }),
+  ),
+  part(G.box, HERO_MAT.dark, {
+    scale: [0.022, 0.96, 0.09],
+    position: [0, 0.62, -0.01],
+  }),
+  part(TOWER_BANDS, HERO_MAT.steelLight),
+  part(TOWER_FINS, HERO_MAT.maroon),
+  part(G.rounded, HERO_MAT.cream, {
+    scale: [0.31, 0.03, 0.14],
+    position: [0, 1.13, 0],
+  }),
+  part(G.octagonTaper, HERO_MAT.glassDeep, {
+    scale: [0.134, 0.62, 0.116],
+    position: [0, 1.44, 0],
+    rotation: [0, Math.PI / 8, 0],
+  }),
+  part(SHAFT_BANDS, HERO_MAT.steelLight),
+  part(SHAFT_FINS, HERO_MAT.maroon),
+  part(G.crown, HERO_MAT.glassBlue, {
+    position: [0, 1.75, 0],
+    rotation: [0, Math.PI / 8, 0],
+  }),
+  part(G.octagon, HERO_MAT.cream, {
+    scale: [0.09, 0.028, 0.078],
+    position: [0, 1.885, 0],
+    rotation: [0, Math.PI / 8, 0],
+  }),
+  part(G.octagonTaper, HERO_MAT.steelLight, {
+    scale: [0.056, 0.07, 0.05],
+    position: [0, 1.93, 0],
+    rotation: [0, Math.PI / 8, 0],
+  }),
+  part(G.cylinder8, HERO_MAT.steelLight, {
+    scale: [0.01, 0.1, 0.01],
+    position: [0, 1.99, 0],
+  }),
+  part(G.sphereLow, HERO_MAT.orange, {
+    scale: [0.02, 0.02, 0.02],
+    position: [0, 2.04, 0],
+  }),
+  ...frame(
+    [
+      part(G.cylinder8, HERO_MAT.concrete, { scale: [0.1, 0.05, 0.1] }),
+      part(G.ico, HERO_MAT.green, {
+        scale: [0.12, 0.14, 0.12],
+        position: [0, 0.1, 0],
+      }),
+    ],
+    { position: [0.3, 0.06, 0.24] },
+  ),
+]);
+
 function SkyTower85() {
-  return (
-    <group>
-      <ContactShadow radius={0.44} />
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.concrete}
-        scale={[0.5, 0.06, 0.5]}
-        position={[0, 0.03, 0]}
-      />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[0.42, 0.1, 0.4]}
-        position={[0, 0.09, 0]}
-      />
-      {[-1, 1].map((side) => (
-        <HeroPart
-          key={side}
-          geometry={G.octagon}
-          material={HERO_MAT.glassBlue}
-          scale={[0.062, 0.98, 0.054]}
-          position={[side * 0.072, 0.63, 0]}
-          rotation={[0, Math.PI / 8, 0]}
-        />
-      ))}
-      <HeroPart
-        geometry={G.box}
-        material={HERO_MAT.dark}
-        scale={[0.022, 0.96, 0.09]}
-        position={[0, 0.62, -0.01]}
-      />
-      <HeroPart geometry={TOWER_BANDS} material={HERO_MAT.steelLight} />
-      <HeroPart geometry={TOWER_FINS} material={HERO_MAT.maroon} />
-      <HeroPart
-        geometry={G.rounded}
-        material={HERO_MAT.cream}
-        scale={[0.31, 0.03, 0.14]}
-        position={[0, 1.13, 0]}
-      />
-      <HeroPart
-        geometry={G.octagonTaper}
-        material={HERO_MAT.glassDeep}
-        scale={[0.134, 0.62, 0.116]}
-        position={[0, 1.44, 0]}
-        rotation={[0, Math.PI / 8, 0]}
-      />
-      <HeroPart geometry={SHAFT_BANDS} material={HERO_MAT.steelLight} />
-      <HeroPart geometry={SHAFT_FINS} material={HERO_MAT.maroon} />
-      <HeroPart
-        geometry={G.crown}
-        material={HERO_MAT.glassBlue}
-        position={[0, 1.75, 0]}
-        rotation={[0, Math.PI / 8, 0]}
-      />
-      <HeroPart
-        geometry={G.octagon}
-        material={HERO_MAT.cream}
-        scale={[0.09, 0.028, 0.078]}
-        position={[0, 1.885, 0]}
-        rotation={[0, Math.PI / 8, 0]}
-      />
-      <HeroPart
-        geometry={G.octagonTaper}
-        material={HERO_MAT.steelLight}
-        scale={[0.056, 0.07, 0.05]}
-        position={[0, 1.93, 0]}
-        rotation={[0, Math.PI / 8, 0]}
-      />
-      <HeroPart
-        geometry={G.cylinder8}
-        material={HERO_MAT.steelLight}
-        scale={[0.01, 0.1, 0.01]}
-        position={[0, 1.99, 0]}
-      />
-      <HeroPart
-        geometry={G.sphereLow}
-        material={HERO_MAT.orange}
-        scale={[0.02, 0.02, 0.02]}
-        position={[0, 2.04, 0]}
-      />
-      <group position={[0.3, 0.06, 0.24]}>
-        <HeroPart
-          geometry={G.cylinder8}
-          material={HERO_MAT.concrete}
-          scale={[0.1, 0.05, 0.1]}
-        />
-        <HeroPart
-          geometry={G.ico}
-          material={HERO_MAT.green}
-          scale={[0.12, 0.14, 0.12]}
-          position={[0, 0.1, 0]}
-        />
-      </group>
-    </group>
-  );
+  return <LandmarkModelView model={SKY_TOWER_MODEL} />;
 }
 
 /* ------------------------------------------------------------------ */

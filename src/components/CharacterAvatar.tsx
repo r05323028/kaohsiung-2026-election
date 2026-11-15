@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import type { PublicCandidateProfile } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import CandidateChibi from './CandidateChibi';
 
 export type CandidateAnimator = {
@@ -8,7 +8,7 @@ export type CandidateAnimator = {
 };
 
 type CharacterAvatarProps = {
-  candidate: PublicCandidateProfile;
+  candidate: PublicCandidateCard;
   selected: boolean;
   walking?: boolean;
   reducedMotion: boolean;

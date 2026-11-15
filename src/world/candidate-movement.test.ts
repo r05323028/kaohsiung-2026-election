@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { candidateProfiles } from '../data';
 import { COUNCIL_CONSTITUENCIES } from '../data/constituencies';
 import { movementScopeForCandidate } from './constituencies';
@@ -16,6 +16,7 @@ import {
 import {
   actorIsOnRoad,
   advanceSimulationSeconds,
+  configureSimulation,
   followActor,
   getActor,
   getActors,
@@ -36,6 +37,10 @@ function coverageFor(slug: string) {
 function tileForAdmin(adminId: string) {
   return HEX_TILES.find((tile) => tile.adminId === adminId);
 }
+
+beforeAll(() => {
+  configureSimulation(candidateProfiles);
+});
 
 beforeEach(() => {
   resetSimulation();

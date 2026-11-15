@@ -3,7 +3,7 @@ import { type ThreeEvent, useFrame } from '@react-three/fiber';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
-import type { PublicCandidateProfile } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import { withBase } from '../utils/paths';
 import {
   type CandidateVisibilityScope,
@@ -33,7 +33,7 @@ import {
 import { characterStyle } from './character-style';
 
 type ActorLayerProps = {
-  candidates: PublicCandidateProfile[];
+  candidates: PublicCandidateCard[];
   selectedCandidateSlug: string | null;
   focus: HexFocus;
   visibilityScope: CandidateVisibilityScope;
@@ -54,6 +54,11 @@ const MARKER_HEAD_TOP_Y = MARKER_GROUND_Y + CANDIDATE_HEAD_TOP_WORLD;
 // bodies keep the scene inside the software-WebGL test budget while the
 // overview GLB still renders a complete figure for everyone else.
 const MAX_DETAILED_ACTORS = 10;
+// Visibility scopes cap the rendered roster at 18 candidates (13 council + 5
+// mayors). A fixed capacity just above that ceiling keeps the overview and
+// shadow instance buffers small; the frame loop clamps to it so a wider scope
+// can never write past the allocated rows.
+const MAX_VISIBLE_ACTORS = 24;
 const SHADOW_GROUND_Y = 0.452;
 const SHADOW_GEOMETRY = new THREE.CircleGeometry(1, 18);
 SHADOW_GEOMETRY.rotateX(-Math.PI / 2);
@@ -355,9 +360,12 @@ export default function ActorLayer({
     [overviewGltf.scene],
   );
   const overviewRefs = useRef<Array<THREE.InstancedMesh | null>>([]);
+  // Instance row -> slug whose frozen zero-scale overview matrices are already
+  // in the buffer. A row can hold a different actor after a scope change.
+  const hiddenOverviewRows = useRef<Array<string | null>>([]);
   const dummy = useRef(new THREE.Object3D());
   const shadowDummy = useRef(new THREE.Object3D());
-  const shadowRef = useRef<THREE.InstancedMesh>(null);
+  const shadowRef = useRef<THREE.InstancedMesh | null>(null);
   const selectedRing = useRef<THREE.Mesh>(null);
   const selectedTag = useRef<THREE.Group>(null);
   const avatarRefs = useRef(new Map<string, THREE.Group>());
@@ -670,7 +678,7 @@ export default function ActorLayer({
     });
     for (const mesh of meshes) {
       if (!mesh) continue;
-      mesh.count = visibleActors.length;
+      mesh.count = Math.min(visibleActors.length, MAX_VISIBLE_ACTORS);
       mesh.instanceColor?.setUsage(THREE.DynamicDrawUsage);
       if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
     }
@@ -717,7 +725,14 @@ export default function ActorLayer({
     // has no pivots, so each connected component is rotated around the
     // matching detailed-model pivot.
     const blendSpeed = Math.min(1, delta * 9);
+    // The idle oscillation is identical for every actor in a frame, so the two
+    // sines are evaluated once instead of once per actor.
+    const idleYawBase = Math.sin(state.clock.elapsedTime * 0.55) * 0.05;
+    const idlePitchBase = Math.sin(state.clock.elapsedTime * 0.8) * 0.025;
+    const hiddenRows = hiddenOverviewRows.current;
+    const instanceCount = Math.min(visibleActors.length, MAX_VISIBLE_ACTORS);
     visibleActors.forEach((actor, index) => {
+      if (index >= MAX_VISIBLE_ACTORS) return;
       const pose = actorRenderPose(actor, alpha);
       const hidden = avatars.has(actor.slug);
       const targetBlend = pose.walking && !reducedMotion ? 1 : 0;
@@ -725,44 +740,49 @@ export default function ActorLayer({
       const blend = currentBlend + (targetBlend - currentBlend) * blendSpeed;
       overviewBlend.current.set(actor.slug, blend);
 
-      helper.position.set(pose.position.x, MARKER_GROUND_Y, pose.position.z);
-      helper.rotation.set(0, pose.heading, 0);
-      helper.scale.setScalar(hidden ? 0 : overview.scale);
-      helper.updateMatrix();
+      // A hidden actor's zero-scale overview matrices stay frozen in the buffer;
+      // only its ground shadow keeps following the pose below.
+      if (!hidden || hiddenRows[index] !== actor.slug) {
+        hiddenRows[index] = hidden ? actor.slug : null;
+        helper.position.set(pose.position.x, MARKER_GROUND_Y, pose.position.z);
+        helper.rotation.set(0, pose.heading, 0);
+        helper.scale.setScalar(hidden ? 0 : overview.scale);
+        helper.updateMatrix();
 
-      const phase = pose.walkPhase * Math.PI * 4;
-      const stride = Math.sin(phase) * 0.5 * blend;
-      const armSwing = Math.cos(phase) * 0.34 * blend;
-      const idle = 1 - blend;
-      const headYaw = Math.sin(state.clock.elapsedTime * 0.55) * 0.05 * idle;
-      const headPitch = Math.sin(state.clock.elapsedTime * 0.8) * 0.025 * idle;
+        const phase = pose.walkPhase * Math.PI * 4;
+        const stride = Math.sin(phase) * 0.5 * blend;
+        const armSwing = Math.cos(phase) * 0.34 * blend;
+        const idle = 1 - blend;
+        const headYaw = idleYawBase * idle;
+        const headPitch = idlePitchBase * idle;
 
-      for (
-        let partIndex = 0;
-        partIndex < overview.parts.length;
-        partIndex += 1
-      ) {
-        const part = overview.parts[partIndex]!;
-        let rotationX = 0;
-        let rotationY = 0;
-        if (part.pivot === 'leftArm') rotationX = -armSwing;
-        else if (part.pivot === 'rightArm') rotationX = armSwing;
-        else if (part.pivot === 'leftLeg') rotationX = stride;
-        else if (part.pivot === 'rightLeg') rotationX = -stride;
-        else if (part.pivot === 'head') {
-          rotationX = headPitch;
-          rotationY = headYaw;
+        for (
+          let partIndex = 0;
+          partIndex < overview.parts.length;
+          partIndex += 1
+        ) {
+          const part = overview.parts[partIndex]!;
+          let rotationX = 0;
+          let rotationY = 0;
+          if (part.pivot === 'leftArm') rotationX = -armSwing;
+          else if (part.pivot === 'rightArm') rotationX = armSwing;
+          else if (part.pivot === 'leftLeg') rotationX = stride;
+          else if (part.pivot === 'rightLeg') rotationX = -stride;
+          else if (part.pivot === 'head') {
+            rotationX = headPitch;
+            rotationY = headYaw;
+          }
+          partMatrix.current
+            .copy(helper.matrix)
+            .multiply(pivotMatrices[part.pivot]);
+          if (rotationX !== 0 || rotationY !== 0) {
+            pivotRotation.current.makeRotationFromEuler(
+              partEuler.current.set(rotationX, rotationY, 0),
+            );
+            partMatrix.current.multiply(pivotRotation.current);
+          }
+          meshes[partIndex]?.setMatrixAt(index, partMatrix.current);
         }
-        partMatrix.current
-          .copy(helper.matrix)
-          .multiply(pivotMatrices[part.pivot]);
-        if (rotationX !== 0 || rotationY !== 0) {
-          pivotRotation.current.makeRotationFromEuler(
-            partEuler.current.set(rotationX, rotationY, 0),
-          );
-          partMatrix.current.multiply(pivotRotation.current);
-        }
-        meshes[partIndex]?.setMatrixAt(index, partMatrix.current);
       }
 
       shadowHelper.position.set(
@@ -777,13 +797,24 @@ export default function ActorLayer({
     });
     for (const mesh of meshes) {
       if (!mesh) continue;
-      mesh.count = visibleActors.length;
-      mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+      mesh.count = instanceCount;
+      mesh.visible = visibleActors.length > 0;
+      // The rows moved this frame, so the cached raycast bounds are stale.
+      // InstancedMesh.raycast() recomputes them while this is null.
+      mesh.boundingSphere = null;
+      if (instanceCount === 0) continue;
+      mesh.instanceMatrix.clearUpdateRanges();
+      mesh.instanceMatrix.addUpdateRange(0, instanceCount * 16);
       mesh.instanceMatrix.needsUpdate = true;
     }
     if (shadows) {
-      shadows.count = visibleActors.length;
-      shadows.instanceMatrix.needsUpdate = true;
+      shadows.count = instanceCount;
+      shadows.visible = visibleActors.length > 0;
+      if (instanceCount > 0) {
+        shadows.instanceMatrix.clearUpdateRanges();
+        shadows.instanceMatrix.addUpdateRange(0, instanceCount * 16);
+        shadows.instanceMatrix.needsUpdate = true;
+      }
     }
 
     const selected =
@@ -848,8 +879,11 @@ export default function ActorLayer({
   return (
     <group>
       <instancedMesh
-        ref={shadowRef}
-        args={[SHADOW_GEOMETRY, SHADOW_MATERIAL, actors.length]}
+        ref={(node) => {
+          shadowRef.current = node;
+          node?.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+        }}
+        args={[SHADOW_GEOMETRY, SHADOW_MATERIAL, MAX_VISIBLE_ACTORS]}
         frustumCulled={false}
         renderOrder={2}
         raycast={() => {}}
@@ -859,8 +893,9 @@ export default function ActorLayer({
           key={part.pivot + '-' + part.role}
           ref={(node) => {
             overviewRefs.current[index] = node;
+            node?.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
           }}
-          args={[part.geometry, part.material, actors.length]}
+          args={[part.geometry, part.material, MAX_VISIBLE_ACTORS]}
           frustumCulled={false}
           renderOrder={4}
           {...markerHandlers}

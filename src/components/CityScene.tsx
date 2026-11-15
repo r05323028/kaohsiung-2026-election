@@ -11,10 +11,11 @@ import {
 } from 'react';
 import * as THREE from 'three';
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
-import type { PublicCandidateProfile } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import type { CandidateVisibilityScope } from '../world/candidate-visibility';
 import { HEX_TILES, HEX_WORLD_BOUNDS, type HexFocus } from '../world/hex';
 import { HEX_LANDMARKS } from '../world/hex-landmarks';
+import { staticSceneSignal } from '../world/render-scheduling';
 import { HEX_ROAD_GRAPH } from '../world/road-graph';
 import {
   advanceSimulationSeconds,
@@ -32,7 +33,7 @@ export type DetailLevel = 'low' | 'medium' | 'high';
 export type SceneFocus = HexFocus & { key: string };
 
 type CitySceneProps = {
-  candidates: PublicCandidateProfile[];
+  candidates: PublicCandidateCard[];
   selectedCandidateSlug: string | null;
   selectedAdminId: string | null;
   hoveredAdminId: string | null;
@@ -376,11 +377,40 @@ function CameraRig({
 }
 
 /**
+ * Keeps the static world shadow map cached instead of re-rendering every
+ * caster each frame.
+ *
+ * Every shadow caster in the scene is static geometry lit by a fixed sun, so
+ * the depth map only changes when the visible geometry set changes (building
+ * LOD tier, landmark detail tier, or the first model frames). Components bump
+ * the shared static-scene version when that happens; this controller redraws
+ * exactly once per change, plus a short warm-up window so late-loading models
+ * still get a shadow.
+ */
+const SHADOW_WARMUP_MS = 2000;
+
+function StaticShadowMap() {
+  const gl = useThree((state) => state.gl);
+  const applied = useRef(-1);
+  const startedAt = useRef(0);
+  useFrame(() => {
+    if (startedAt.current === 0) startedAt.current = performance.now();
+    const version = staticSceneSignal.version;
+    const warming = performance.now() - startedAt.current < SHADOW_WARMUP_MS;
+    if (!warming && version === applied.current) return;
+    applied.current = version;
+    gl.shadowMap.needsUpdate = true;
+  });
+  return null;
+}
+
+/**
  * Opt-in renderer telemetry for the performance verification script.
  * Enable with ?perf=1.
  */
 function SceneDiagnostics() {
   const gl = useThree((state) => state.gl);
+  const scene = useThree((state) => state.scene);
   const size = useThree((state) => state.size);
   const enabled = useMemo(
     () =>
@@ -389,6 +419,18 @@ function SceneDiagnostics() {
     [],
   );
   const sample = useRef({ frames: 0, elapsed: 0 });
+
+  useEffect(() => {
+    if (!enabled) return;
+    // SAFETY: perf-only inspection bridge for the benchmark harness.
+    const target = window as unknown as {
+      __cityPerf?: { scene: typeof scene; gl: typeof gl };
+    };
+    target.__cityPerf = { scene, gl };
+    return () => {
+      delete target.__cityPerf;
+    };
+  }, [enabled, gl, scene]);
 
   useFrame((_, delta) => {
     if (!enabled) return;
@@ -532,6 +574,7 @@ function CityWorld({
         restoreCameraOnProfileClose={restoreCameraOnProfileClose}
         onManualCamera={onManualCamera}
       />
+      <StaticShadowMap />
       <SceneDiagnostics />
 
       <HexWorldLayer
@@ -576,6 +619,9 @@ export default function CityScene(props: CitySceneProps) {
         gl.toneMapping = THREE.ACESFilmicToneMapping;
         gl.toneMappingExposure = 1.03;
         gl.shadowMap.type = THREE.PCFShadowMap;
+        // Shadows are redrawn on demand by StaticShadowMap.
+        gl.shadowMap.autoUpdate = false;
+        gl.shadowMap.needsUpdate = true;
         onReady?.();
       }}
       onPointerMissed={() => world.onSelectAdmin(null)}

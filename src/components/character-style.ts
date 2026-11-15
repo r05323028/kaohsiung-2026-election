@@ -1,4 +1,4 @@
-import type { PublicCandidateProfile } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 
 /**
  * Deterministic miniature styling. Candidate identity data is untouched: these
@@ -136,9 +136,7 @@ const OUTFIT_PALETTES: readonly {
   { top: '#B46A5C', bottom: '#2F4858', accent: '#D9B36A' },
 ];
 
-export function characterStyle(
-  candidate: PublicCandidateProfile,
-): CharacterStyle {
+export function characterStyle(candidate: PublicCandidateCard): CharacterStyle {
   const hash = hashString(
     candidate.candidacy.slug + ':' + candidate.candidacy.id,
   );

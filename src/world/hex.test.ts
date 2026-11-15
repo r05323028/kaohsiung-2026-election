@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { candidateProfiles } from '../data';
 import { COUNCIL_CONSTITUENCIES } from '../data/constituencies';
 import { movementScopeForCandidate } from './constituencies';
@@ -44,11 +44,16 @@ import {
 import {
   actorIsOnRoad,
   advanceSimulationSeconds,
+  configureSimulation,
   getActors,
   resetSimulation,
   SIMULATION_META,
   spawnPlan,
 } from './simulation';
+
+beforeAll(() => {
+  configureSimulation(candidateProfiles);
+});
 
 beforeEach(() => {
   resetSimulation();

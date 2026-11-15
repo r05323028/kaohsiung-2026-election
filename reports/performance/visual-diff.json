@@ -1,0 +1,80 @@
+{
+  "capturedAt": "2026-11-15",
+  "harness": "/tmp/diff.mjs (pixelwise |dRGB|>15), /tmp/diff2.mjs (signed luminance)",
+  "note": "Production build, data-reduced-motion, camera held 7s. noiseFloor = same build re-run.",
+  "scenarios": [
+    {
+      "name": "overview-desktop",
+      "pixels": 1600000,
+      "diff": 150,
+      "pct": 0.009,
+      "lighter": 72,
+      "darker": 62,
+      "meanSignedLum": 3.1,
+      "noiseFloor": {
+        "diff": 49,
+        "pct": 0.003,
+        "lighter": 22,
+        "darker": 24
+      }
+    },
+    {
+      "name": "overview-mobile",
+      "pixels": 329160,
+      "diff": 1,
+      "pct": 0.0003,
+      "lighter": 0,
+      "darker": 0,
+      "meanSignedLum": 0,
+      "noiseFloor": {
+        "diff": 0,
+        "pct": 0
+      }
+    },
+    {
+      "name": "closeup-desktop",
+      "pixels": 1600000,
+      "diff": 485,
+      "pct": 0.03,
+      "lighter": 246,
+      "darker": 209,
+      "meanSignedLum": 1.6,
+      "noiseFloor": {
+        "diff": 231,
+        "pct": 0.014,
+        "lighter": 111,
+        "darker": 105
+      }
+    },
+    {
+      "name": "zuoying-desktop",
+      "pixels": 1600000,
+      "diff": 2808,
+      "pct": 0.176,
+      "lighter": 1328,
+      "darker": 1338,
+      "meanSignedLum": 1.6,
+      "noiseFloor": {
+        "diff": 33,
+        "pct": 0.002,
+        "lighter": 18,
+        "darker": 15
+      }
+    },
+    {
+      "name": "nanzih-desktop",
+      "pixels": 1600000,
+      "diff": 1701,
+      "pct": 0.106,
+      "lighter": 1113,
+      "darker": 320,
+      "meanSignedLum": 4.1,
+      "noiseFloor": {
+        "diff": 354,
+        "pct": 0.022,
+        "lighter": 158,
+        "darker": 190
+      }
+    }
+  ]
+}

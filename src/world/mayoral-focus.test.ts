@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { candidateProfiles } from '../data';
 import {
   adminDistrictVisibilityScope,
@@ -10,6 +10,7 @@ import { ADMIN_DISTRICTS } from './geography';
 import { allowedEdge, HEX_ROAD_GRAPH } from './road-graph';
 import {
   advanceSimulationSeconds,
+  configureSimulation,
   getActor,
   getActors,
   graphForActor,
@@ -31,6 +32,10 @@ const scopes = [
 function mayors() {
   return getActors().filter((actor) => actor.role === 'mayor');
 }
+
+beforeAll(() => {
+  configureSimulation(candidateProfiles);
+});
 
 describe('mayoral movement under district focus', () => {
   beforeEach(() => {

@@ -1,9 +1,11 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeAll, beforeEach, describe, expect, it } from 'vitest';
+import { candidateProfiles } from '../data';
 import type { WorldPoint } from './projection';
 import { ROAD_EDGES } from './road-graph';
 import {
   actorRenderPose,
   advanceSimulationFrame,
+  configureSimulation,
   getActors,
   resetSimulation,
 } from './simulation';
@@ -31,6 +33,10 @@ function positionSnapshot() {
 }
 
 describe('fixed-step simulation frames', () => {
+  beforeAll(() => {
+    configureSimulation(candidateProfiles);
+  });
+
   beforeEach(() => {
     resetSimulation();
   });

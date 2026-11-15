@@ -1,5 +1,5 @@
 import { useFrame } from '@react-three/fiber';
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { buildCityBuildingGeometry } from '../world/building-geometry';
 import {
@@ -7,6 +7,7 @@ import {
   buildingDetailForZoom,
   generateCityBuildings,
 } from '../world/buildings';
+import { invalidateStaticScene } from '../world/render-scheduling';
 
 type HexBuildingsProps = {
   detail: BuildingDetail;
@@ -54,17 +55,25 @@ export default function HexBuildings({ detail }: HexBuildingsProps) {
     });
   }, []);
 
+  const tierRef = useRef<BuildingDetail | null>(null);
   useFrame(({ camera }) => {
     const tier = buildingDetailForZoom(
       (camera as THREE.OrthographicCamera).zoom,
       detail,
     );
+    let changed = false;
     for (const { bucket, geometry } of meshes) {
       const count = INDEX_COUNT[tier](bucket);
       if (geometry.drawRange.count !== count) {
         geometry.setDrawRange(0, count);
+        changed = true;
       }
     }
+    if (tierRef.current !== tier) {
+      tierRef.current = tier;
+      changed = true;
+    }
+    if (changed) invalidateStaticScene();
   });
 
   return (

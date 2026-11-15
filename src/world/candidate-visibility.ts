@@ -1,9 +1,9 @@
-import type { CandidateProfile } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import { coveragesForAdminDistrictId } from '../data/constituencies';
 
 /** The fields that electoral relevance depends on, shared by public views. */
 export type CandidateVisibilitySubject = Pick<
-  CandidateProfile,
+  PublicCandidateCard,
   'candidacy' | 'district'
 >;
 

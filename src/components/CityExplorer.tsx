@@ -10,13 +10,13 @@ import {
   useRef,
   useState,
 } from 'react';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import {
   coverageCompactSummary,
   coveragesForAdminDistrictId,
   coverageTypeLabel,
-  type PublicCandidateProfile,
-  type PublicDistrictView,
-} from '../data';
+} from '../data/constituencies';
+import type { PublicCandidateProfile, PublicDistrictView } from '../data/view';
 import { withBase } from '../utils/paths';
 import {
   type CandidateVisibilityScope,
@@ -27,7 +27,7 @@ import {
 import { electoralDistrictSlugForAdminName } from '../world/constituencies';
 import { ADMIN_DISTRICT_BY_ID } from '../world/geography';
 import { HEX_WORLD_FOCUS, hexFocusForDistrictIds } from '../world/hex';
-import { getActor } from '../world/simulation';
+import { configureSimulation, getActor } from '../world/simulation';
 import { ADMIN_ADJACENCY, ADMIN_SUMMARY_BY_ID } from '../world/summary';
 import CandidateBottomSheet from './CandidateBottomSheet';
 import type { DetailLevel, SceneFocus } from './CityScene';
@@ -37,7 +37,7 @@ const ProfileTabs = lazy(() => import('./ProfileTabs'));
 
 type Props = {
   districts: PublicDistrictView[];
-  candidates: PublicCandidateProfile[];
+  candidates: PublicCandidateCard[];
 };
 
 type ErrorBoundaryProps = { children: ReactNode; fallback: ReactNode };
@@ -84,7 +84,7 @@ function StaticCityFallback({
   candidates,
   onSelect,
 }: {
-  candidates: PublicCandidateProfile[];
+  candidates: PublicCandidateCard[];
   onSelect: (slug: string) => void;
 }) {
   return (
@@ -179,6 +179,8 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const [webglSupported, setWebglSupported] = useState<boolean | null>(null);
   const [sceneReady, setSceneReady] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [selectedCandidateDetail, setSelectedCandidateDetail] =
+    useState<PublicCandidateProfile | null>(null);
   const profileCloseRef = useRef<HTMLButtonElement>(null);
   const peopleToggleRef = useRef<HTMLButtonElement>(null);
   const adminDetailsToggleRef = useRef<HTMLButtonElement>(null);
@@ -191,6 +193,16 @@ export default function CityExplorer({ districts, candidates }: Props) {
     overview: boolean;
   } | null>(null);
   const initialFocusAppliedRef = useRef(false);
+  const simulationReady = useRef(false);
+
+  // SAFETY: the scene reads module-level world state from its first frame, so
+  // the world is built during render instead of in an effect. The guard keeps
+  // it to one build per mount: re-running on a new `candidates` identity would
+  // reset actor positions mid-scene.
+  if (!simulationReady.current) {
+    simulationReady.current = true;
+    configureSimulation(candidates);
+  }
 
   useEffect(() => {
     setWebglSupported(supportsWebGL());
@@ -283,6 +295,46 @@ export default function CityExplorer({ districts, candidates }: Props) {
     });
     return () => window.cancelAnimationFrame(frame);
   }, [selectedCandidateSlug]);
+
+  // The island only ships card fields; the full profile (career, policies,
+  // sources, ...) is resolved from the bundled dataset only when a profile is
+  // opened, instead of serialising it into every page load.
+  useEffect(() => {
+    setSelectedCandidateDetail(null);
+    if (!selectedCandidateSlug) return undefined;
+    let cancelled = false;
+    void import('../data').then((mod) => {
+      if (cancelled) return;
+      const profile = mod.getCandidateProfile(selectedCandidateSlug);
+      setSelectedCandidateDetail(
+        profile ? mod.toPublicCandidateProfile(profile) : null,
+      );
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedCandidateSlug]);
+
+  // Warm the dataset chunk during idle time: it stays off the critical path but
+  // is already in the module cache before the first profile click.
+  useEffect(() => {
+    const idleId = window.requestIdleCallback?.(
+      () => {
+        void import('../data');
+      },
+      { timeout: 4000 },
+    );
+    const timer =
+      idleId === undefined
+        ? window.setTimeout(() => {
+            void import('../data');
+          }, 3000)
+        : null;
+    return () => {
+      if (idleId !== undefined) window.cancelIdleCallback(idleId);
+      if (timer !== null) window.clearTimeout(timer);
+    };
+  }, []);
 
   const enterOverview = useCallback(() => {
     returnFocusRef.current = null;
@@ -393,6 +445,13 @@ export default function CityExplorer({ districts, candidates }: Props) {
   const selectedCandidate = candidates.find(
     (candidate) => candidate.candidacy.slug === selectedCandidateSlug,
   );
+
+  // A resolved detail is only shown for the selection it was loaded for, so a
+  // slow profile chunk can never leak the previous candidate's tabs.
+  const selectedProfile =
+    selectedCandidateDetail?.candidacy.slug === selectedCandidateSlug
+      ? selectedCandidateDetail
+      : null;
   const selectedAdmin = selectedAdminId
     ? (ADMIN_SUMMARY_BY_ID.get(selectedAdminId) ?? null)
     : null;
@@ -971,10 +1030,14 @@ export default function CityExplorer({ districts, candidates }: Props) {
             </button>
           </div>
           <Suspense fallback={<p className="profile-loading">載入人物資料…</p>}>
-            <ProfileTabs
-              candidate={selectedCandidate}
-              key={selectedCandidate.candidacy.slug}
-            />
+            {selectedProfile ? (
+              <ProfileTabs
+                candidate={selectedProfile}
+                key={selectedProfile.candidacy.slug}
+              />
+            ) : (
+              <p className="profile-loading">載入人物資料…</p>
+            )}
           </Suspense>
         </aside>
       )}

@@ -2,7 +2,7 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
-import type { PublicCandidateProfile } from '../data';
+import type { PublicCandidateCard } from '../data/candidate-card';
 import { withBase } from '../utils/paths';
 import { buildCandidateModel } from './candidate-geometry';
 import { CANDIDATE_MODEL } from './candidate-model';
@@ -11,7 +11,7 @@ import { characterStyle } from './character-style';
 useGLTF.preload(withBase(CANDIDATE_MODEL.basePath));
 
 type CandidateChibiProps = {
-  candidate: PublicCandidateProfile;
+  candidate: PublicCandidateCard;
   walking: boolean;
   selected: boolean;
   reducedMotion: boolean;

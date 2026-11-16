@@ -49,7 +49,7 @@ describe('five-section candidate profile coverage', () => {
       '政策主張',
       '相關新聞',
       '從政歷程',
-      '家族從政關係',
+      '家族政商關係',
     ]);
     expect(
       coverageReport.candidatesWithVerifiedPolicyStatements,

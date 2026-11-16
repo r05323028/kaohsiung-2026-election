@@ -1,12 +1,13 @@
 # 編輯與發布
 
-本專案區分四個階段，任何一階段都不得被當成下一階段：
+本專案區分以下階段，任何一階段都不得被當成下一階段：
 
 | 階段 | 意義 | 不代表 |
 | --- | --- | --- |
 | 機器驗證／查核 | 決定性檢查：schema、來源、checksum、引文、身分訊號 | 人工審查、核准、可發布 |
 | 人工審查 | 具名審查者逐筆檢視來源與證據 | 編輯核准（仍需決策） |
 | 編輯核准 | 針對特定 claim 的具名決策（含理由、時間、來源版本） | 自動永久有效（來源變更即使決策失效） |
+| Agent 查核核准 | 經使用者明確授權，由獨立查核 agent 對特定資料集已 verified 的紀錄逐筆核准（`approvalBasis: agent-verification`） | 人工審查、編輯核准、reviewer registry 身分 |
 | 發布 | 由閘門產生 deterministic 快照，Astro 只讀該快照 | 對候選人的背書或事實保證 |
 
 公開頁面只讀受控快照；raw、normalized、review、decision 與報告都不進 HTML、搜尋、metadata 或 3D。
@@ -56,6 +57,14 @@
 - 決策狀態：`unreviewed`、`needs_identity_review`、`needs_evidence_review`、`approved`、`rejected`、`disputed`、`superseded`。
 - 取代必須以 `supersedesDecisionId` 指向同一 subject 的 active 決策，形成無環鏈；不得同時存在矛盾 active 決策；同一 decision ID 不同內容會被拒絕。
 - 每筆決策保存 reviewer ID、時間、理由、明確確認、claim／identity subject、來源 checksum 版本、schema 版本與被取代決策。審查者 PII 不公開。
+
+### Agent 查核核准軌道
+
+- 只在資料集層級、且使用者明確授權時使用；不是預設路徑，也不適用履歷或一般 claim 的編輯決策。
+- 記錄在該資料集的 approval 檔（目前為 `data/research/2026/political-family/publication-approval.json` 的 `agentApprovals`）：`approvalBasis: agent-verification`、reviewer 字串、`approvedAt`（UTC）、relationshipIds、note。
+- 同一筆不得同時有人工與 agent 核准；validator 拒絕重疊，並要求每個 agent 核准 ID 都是獨立查核 verified、且實際已發布的紀錄。核准後因職務來源不足而無法發布時，必須先撤回核准，不得留下未公開的 agent 核准。
+- 公開快照以 `agentApprovedRelationshipIds` 保留名單；read model 加 `agentApproved` 旗標，UI 必須明示「由 agent 查核核准，非人工編輯審查」。
+- 不得寫入 reviewer registry，不得標成人工審查、編輯核准或候選人同意。
 
 ## 流程與指令
 

@@ -1,0 +1,712 @@
+{
+  "verificationVersion": "1",
+  "verifiedAt": "2026-11-16",
+  "reviewerRole": "independent-fact-checker",
+  "records": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "relativeName": "許崑源",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "自行擷取中時 2022-09-19 原文，明確以「已故父親、前高市議長許崑源」描述關係，並引許采蓁陳述「回溯父親首度當選高市議員時，是1994年」；1994 年即市議會名冊所載合併前第四屆（83~87）起點，關係方向為許崑源（父）→許采蓁（女），無同名衝突（許采蓁現為高雄市議會第四屆議員，同一選區脈絡）。議員（合併前第四屆83~87）與議長（第一屆99~103）兩項職務均經市議會歷屆議員頁獨立確認。惟名冊另載其議員身分續至合併前第五~七屆及合併後第一~三屆，研究檔僅列第四屆，屬列舉不完整，需補列；研究檔 notes 稱議長身分「延續至第三屆」亦不精確，第二屆議長為康裕成，其議長任期為第一屆與第三屆（第三屆議長欄記「許崑源歿」）。",
+      "sourceIds": [
+        "source-verify-ct220919",
+        "source-verify-kcc00032",
+        "source-verify-kcc00036",
+        "source-verify-kcc00038",
+        "source-verify-kcc00040"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ct220919"
+      ],
+      "positionSourceIds": [
+        "source-verify-kcc00032",
+        "source-verify-kcc00036"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ct220919",
+          "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+          "publisher": "中時新聞網",
+          "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+          "publicationDate": "2022-09-19",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcc00032",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第四屆 83~87）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kcc00036",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（高雄市議會第一屆 99~103）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kcc00038",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（高雄市議會第三屆 107~111）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kcc00040",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（高雄市議會第四屆 111~115）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ct220919",
+            "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+            "httpExitCode": 0,
+            "byteCount": 127863,
+            "nameHits": {
+              "許采蓁": true,
+              "許崑源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00032",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 0,
+            "byteCount": 176197,
+            "nameHits": {
+              "許采蓁": false,
+              "許崑源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00036",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 0,
+            "byteCount": 243878,
+            "nameHits": {
+              "許采蓁": false,
+              "許崑源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00038",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+            "httpExitCode": 0,
+            "byteCount": 225847,
+            "nameHits": {
+              "許采蓁": false,
+              "許崑源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00040",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+            "httpExitCode": 0,
+            "byteCount": 227439,
+            "nameHits": {
+              "許采蓁": true,
+              "許崑源": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（合併前第四屆83~87）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00032"
+          ],
+          "notes": "名冊該屆登載「許崑源 合併前高雄市議會 第四屆83~87」；第三屆頁另載其完整議員屆次為合併前第四~七屆及合併後第一~三屆，本篇職務僅列首屆，需補列其餘屆次。"
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議長（第一屆99~103）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00036"
+          ],
+          "notes": "第一屆議員人數 66 人頁面議長欄為許崑源、副議長為蔡昌達；第三屆（107~111）議長欄記「許崑源歿」並列曾麗燕，故其議長任期為第一屆與第三屆，任內逝世，非連續兩屆。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "relativeName": "湯金全",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "自行擷取蕃新聞 2026-09-12 湯詠瑜本人聲明原文：「湯金全律師的女兒只有一位，就是有湯有魚的湯詠瑜，另外還有一位兒子，也就是我的弟弟湯東穎」，親屬方向為湯金全（父）→湯詠瑜（女），且該文主旨即在澄清同姓候選人遭誤認為其妹，屬對同名誤認的主動否認。另擷取中時 2022-11-25 報導「前高雄市副市長湯金全及其女兒、前金新興苓雅選區市議員候選人湯詠瑜」，同時支持父女關係與副市長職務。市議會合併前第四屆名冊列湯金全為該屆議員，與研究檔一致（單一屆次，無漏列）。副市長屬市長任命之政務職、非民選公職，研究檔歸為 public_office 而非 board 或企業 executive，分類可接受；任期起訖無官方紀錄可查，維持 null。",
+      "sourceIds": [
+        "source-verify-ym260912",
+        "source-verify-kcc00032",
+        "source-verify-ct221125"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ym260912"
+      ],
+      "positionSourceIds": [
+        "source-verify-ct221125",
+        "source-verify-kcc00032"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ym260912",
+          "url": "https://n.yam.com/Article/20260912814245",
+          "publisher": "蕃新聞（今傳媒）",
+          "title": "湯詠瑜：湯金全律師只有她這個唯一的女兒",
+          "publicationDate": "2026-09-12",
+          "sourceKind": "candidate-statement"
+        },
+        {
+          "id": "source-verify-kcc00032",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第四屆 83~87）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-ct221125",
+          "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+          "publisher": "中時新聞網",
+          "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+          "publicationDate": "2022-11-25",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ym260912",
+            "url": "https://n.yam.com/Article/20260912814245",
+            "httpExitCode": 0,
+            "byteCount": 41251,
+            "nameHits": {
+              "湯詠瑜": true,
+              "湯金全": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ct221125",
+            "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+            "httpExitCode": 0,
+            "byteCount": 135513,
+            "nameHits": {
+              "湯詠瑜": true,
+              "湯金全": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00032",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 0,
+            "byteCount": 176197,
+            "nameHits": {
+              "湯詠瑜": false,
+              "湯金全": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（合併前第四屆83~87）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00032"
+          ],
+          "notes": "名冊該屆登載「湯金全 合併前高雄市議會 第四屆83~87」，為其唯一議員屆次。"
+        },
+        {
+          "organization": "高雄市政府",
+          "organizationType": "government",
+          "positionTitle": "副市長",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ct221125"
+          ],
+          "notes": "報導以「前高雄市副市長湯金全」稱之，證實曾任高雄市副市長；該職為市長任命之政務職（非民選），非董事會或企業經營職。任期起訖未查得官方紀錄，故起訖日期留 null。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "relativeName": "黃芳仁",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "自行擷取太報 2026-09-04 原文，黃鈺婷原話「父親黃芳仁及哥哥黃紹庭都曾擔任高雄市議員，家人從政及服務選民已有約40年」，親屬方向為黃芳仁（父）→黃鈺婷（女），無同名疑義。職務方面，市議會合併前第四屆名冊列黃芳仁為第二、三、四屆議員，與研究檔所列屆次逐項相符；惟合併前第六屆名冊載其完整屆次為第二~六屆，並於第六屆（91~95）標註「辭職」，TVBS 2026-10-14 另載其 2002 年高雄市議長選舉涉受賄、法院認罪後辭職（2002 年即民國91年），兩者互相吻合，可確認同一人且研究檔漏列第五屆87~91與第六屆91~95，屬列舉不完整，需補列並於 notes 說明辭職。",
+      "sourceIds": [
+        "source-verify-ts260904",
+        "source-verify-kcc00032",
+        "source-verify-kcc00034",
+        "source-verify-tv261014"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ts260904"
+      ],
+      "positionSourceIds": [
+        "source-verify-kcc00032",
+        "source-verify-kcc00034"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ts260904",
+          "url": "https://www.taisounds.com/news/content/134/286966",
+          "publisher": "太報 TaiSounds",
+          "title": "國民黨8選區議員選戰添變數　黃紹庭妹妹接棒、9人搶5席",
+          "publicationDate": "2026-09-04",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcc00032",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第四屆 83~87）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kcc00034",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第六屆 91~95）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-tv261014",
+          "url": "https://news.tvbs.com.tw/politics/4035871",
+          "publisher": "TVBS新聞網",
+          "title": "黃紹庭詐千萬助理費推妹接棒　高雄藍營內鬨爆「撞名大戰」基層炸鍋",
+          "publicationDate": "2026-10-14",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ts260904",
+            "url": "https://www.taisounds.com/news/content/134/286966",
+            "httpExitCode": 0,
+            "byteCount": 51447,
+            "nameHits": {
+              "黃鈺婷": true,
+              "黃芳仁": true,
+              "黃紹庭": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00032",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 0,
+            "byteCount": 176197,
+            "nameHits": {
+              "黃鈺婷": false,
+              "黃芳仁": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00034",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 0,
+            "byteCount": 199225,
+            "nameHits": {
+              "黃鈺婷": false,
+              "黃芳仁": true
+            }
+          },
+          {
+            "sourceId": "source-verify-tv261014",
+            "url": "https://news.tvbs.com.tw/politics/4035871",
+            "httpExitCode": 0,
+            "byteCount": 254168,
+            "nameHits": {
+              "黃鈺婷": true,
+              "黃芳仁": true,
+              "黃紹庭": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（合併前第二屆74~78、第三屆78~83、第四屆83~87）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00032",
+            "source-verify-kcc00034"
+          ],
+          "notes": "合併前第四屆名冊列第二~四屆；第六屆名冊列完整屆次為第二~六屆（74~95），並於第六屆91~95 註記「辭職」（TVBS 報導其 2002 年議長選舉受賄案認罪後辭職）。研究檔漏列第五屆87~91、第六屆91~95；辭職之確切日期未查得，endDate 留 null。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "relativeName": "黃紹庭",
+      "relation": "siblings",
+      "status": "verified",
+      "rationale": "自行擷取太報 2026-09-04 原文，以「胞妹黃鈺婷」「哥哥黃紹庭」描述，並引黃鈺婷「父親黃芳仁及哥哥黃紹庭都曾擔任高雄市議員」「從小看著父兄問政」，手足關係方向正確（黃紹庭為兄）。職務方面，TVBS 2026-10-14 載最高法院於 2026-06-24 駁回上訴確定後依法解職；市議會第四屆議員名冊對黃紹庭記載「第四屆111~115　115.06.24解職」，民國115年即2026年，獨立確認解職日 2026-06-24 與卸任狀態正確。名冊另於合併前第七屆（95~99）對其標註「解職」，與 TVBS 所載 2006 年就任、2009 年因美國國籍遭撤銷當選相符，可排除同名誤認並可確認兩來源所指為同一人。研究檔職務未載屆次，建議補列。",
+      "sourceIds": [
+        "source-verify-ts260904",
+        "source-verify-kcc00040",
+        "source-verify-tv261014",
+        "source-verify-kcc00035"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ts260904"
+      ],
+      "positionSourceIds": [
+        "source-verify-kcc00040",
+        "source-verify-tv261014"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ts260904",
+          "url": "https://www.taisounds.com/news/content/134/286966",
+          "publisher": "太報 TaiSounds",
+          "title": "國民黨8選區議員選戰添變數　黃紹庭妹妹接棒、9人搶5席",
+          "publicationDate": "2026-09-04",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcc00040",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（高雄市議會第四屆 111~115）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-tv261014",
+          "url": "https://news.tvbs.com.tw/politics/4035871",
+          "publisher": "TVBS新聞網",
+          "title": "黃紹庭詐千萬助理費推妹接棒　高雄藍營內鬨爆「撞名大戰」基層炸鍋",
+          "publicationDate": "2026-10-14",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcc00035",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=35",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第七屆 95~99）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ts260904",
+            "url": "https://www.taisounds.com/news/content/134/286966",
+            "httpExitCode": 0,
+            "byteCount": 51447,
+            "nameHits": {
+              "黃鈺婷": true,
+              "黃紹庭": true
+            }
+          },
+          {
+            "sourceId": "source-verify-tv261014",
+            "url": "https://news.tvbs.com.tw/politics/4035871",
+            "httpExitCode": 0,
+            "byteCount": 254168,
+            "nameHits": {
+              "黃鈺婷": true,
+              "黃紹庭": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00040",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+            "httpExitCode": 0,
+            "byteCount": 227439,
+            "nameHits": {
+              "黃鈺婷": false,
+              "黃紹庭": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00035",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=35",
+            "httpExitCode": 0,
+            "byteCount": 175089,
+            "nameHits": {
+              "黃鈺婷": false,
+              "黃紹庭": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（合併後第二屆103~107、第三屆107~111、第四屆111~115）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": "2026-06-24",
+          "sourceIds": [
+            "source-verify-kcc00040",
+            "source-verify-tv261014"
+          ],
+          "notes": "名冊記載第四屆111~115 於「115.06.24解職」；另載合併前第七屆95~99 為「解職」，與 TVBS 所載 2009 年遭撤銷當選相符。研究檔僅寫「議員」未列屆次，建議補列；解職事由（詐領助理費判決定讞）非家族政商職務，不列入本檔。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "relativeName": "蔡松雄",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "自行擷取自由時報 2010-06-10 原文，標題即「蔡松雄之子蔡金晏」，內文載「蔡金晏父親蔡松雄是連任四屆、17年的議員，且當過兩屆副議長」，親屬方向為蔡松雄（父）→蔡金晏（子）。職務交叉驗證：市議會合併前第五屆名冊列蔡松雄為第三~五屆議員並記該屆副議長，第六屆名冊列第三~六屆並記第六屆副議長；78~95 年共 17 年恰為四屆，與報導「連任四屆、17年、兩屆副議長」完全吻合，可確認同一人並排除同名誤認。研究檔職務漏列第六屆議員與第六屆副議長，屬列舉不完整，需補列。副議長為議員互選之議會職務，屬 political，非董事會或企業職。",
+      "sourceIds": [
+        "source-verify-lt100610",
+        "source-verify-kcc00033",
+        "source-verify-kcc00034"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-lt100610"
+      ],
+      "positionSourceIds": [
+        "source-verify-kcc00033",
+        "source-verify-kcc00034"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-lt100610",
+          "url": "https://news.ltn.com.tw/news/local/paper/402524",
+          "publisher": "自由時報",
+          "title": "《博士代父出征》蔡松雄之子蔡金晏 吳敦義背書",
+          "publicationDate": "2010-06-10",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcc00033",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=33",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第五屆 87~91）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kcc00034",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第六屆 91~95）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-lt100610",
+            "url": "https://news.ltn.com.tw/news/local/paper/402524",
+            "httpExitCode": 0,
+            "byteCount": 230197,
+            "nameHits": {
+              "蔡金晏": true,
+              "蔡松雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00033",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=33",
+            "httpExitCode": 0,
+            "byteCount": 181028,
+            "nameHits": {
+              "蔡金晏": false,
+              "蔡松雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00034",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 0,
+            "byteCount": 199225,
+            "nameHits": {
+              "蔡金晏": false,
+              "蔡松雄": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（合併前第三屆78~83、第四屆83~87、第五屆87~91）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00033",
+            "source-verify-kcc00034"
+          ],
+          "notes": "第五屆名冊列第三~五屆；第六屆名冊列第三~六屆，故其議員身分續至合併前第六屆91~95，研究檔漏列第六屆。"
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長（第五屆87~91）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00033",
+            "source-verify-kcc00034"
+          ],
+          "notes": "第五屆議員名冊議會職務欄記其為副議長（議長黃啟川）；第六屆名冊亦記其為副議長（議長蔡見興），兩屆副議長與自由時報「當過兩屆副議長」相符，研究檔漏列第六屆副議長。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "relativeName": "陳明吉",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "自行擷取自由時報 2026-04-21 報導，原文「曾任原高雄市議會第4屆議員的陳明吉…其女、現任高雄市議員陳美雅」，親屬方向為陳明吉（父）→陳美雅（女）。市議會合併前第四屆名冊該屆僅一名陳明吉，職務內容與時間脈絡（原高雄市議會第四屆83~87）交叉支持為同一人，無同名誤認。研究檔未列「里長聯誼會主席20年」等頭銜，屬合理排除（非議員／議長／副議長／副市長等合格職務類別），不影響關係成立。屆次非精確日期，起訖日期留 null 並於 notes 說明屆次。",
+      "sourceIds": [
+        "source-verify-lt260421",
+        "source-verify-kcc00032",
+        "source-verify-kcc00040"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-lt260421"
+      ],
+      "positionSourceIds": [
+        "source-verify-kcc00032"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-lt260421",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5410522",
+          "publisher": "自由時報",
+          "title": "曾隨星雲大師打造佛光大佛 前高市議員陳明吉辭世享壽87歲",
+          "publicationDate": "2026-04-21",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcc00032",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（合併前高雄市議會第四屆 83~87）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kcc00040",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介（高雄市議會第四屆 111~115）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-lt260421",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5410522",
+            "httpExitCode": 0,
+            "byteCount": 237746,
+            "nameHits": {
+              "陳美雅": true,
+              "陳明吉": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00032",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 0,
+            "byteCount": 176197,
+            "nameHits": {
+              "陳美雅": false,
+              "陳明吉": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcc00040",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+            "httpExitCode": 0,
+            "byteCount": 227439,
+            "nameHits": {
+              "陳美雅": true,
+              "陳明吉": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（原高雄市議會第四屆83~87）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcc00032"
+          ],
+          "notes": "名冊合併前第四屆登載陳明吉；屆次區間 83~87 年，無精確到日之起訖紀錄，故 startDate/endDate 皆為 null，以屆次表示任期。"
+        }
+      ]
+    }
+  ]
+}

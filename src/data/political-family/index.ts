@@ -42,7 +42,10 @@ validatePoliticalFamilyPublicationReferences(
 export type PoliticalFamilyPublicRelationship = Omit<
   PoliticalFamilyPublication['relationships'][number],
   'verificationStatus'
->;
+> & {
+  /** True when an explicitly authorised agent track approved the relation. */
+  agentApproved: boolean;
+};
 export type PoliticalFamilyPublicSource = Omit<
   FamilyEvidenceSource,
   'supportedClaimIds'
@@ -71,6 +74,9 @@ const relationshipById = new Map(
     relationship,
   ]),
 );
+const agentApprovedRelationshipIds = new Set(
+  politicalFamilyPublication.agentApprovedRelationshipIds,
+);
 const sourceById = new Map(
   politicalFamilyPublication.sources.map((source) => [source.id, source]),
 );
@@ -89,7 +95,10 @@ export function getPoliticalFamilyReadModel(
     }
     const { verificationStatus: _verificationStatus, ...publicRelationship } =
       relationship;
-    return publicRelationship;
+    return {
+      ...publicRelationship,
+      agentApproved: agentApprovedRelationshipIds.has(relationship.id),
+    };
   });
   const personIds = new Set(
     relationships.flatMap((relationship) => [
@@ -104,9 +113,13 @@ export function getPoliticalFamilyReadModel(
     }
     return person;
   });
-  const sourceIds = new Set(
-    relationships.flatMap((relationship) => relationship.sourceIds),
-  );
+  const sourceIds = new Set([
+    ...relationships.flatMap((relationship) => relationship.sourceIds),
+    // Every affiliation shown in the graph needs its own source links.
+    ...people.flatMap((person) =>
+      person.affiliations.flatMap((affiliation) => affiliation.sourceIds),
+    ),
+  ]);
   const sources = [...sourceIds].map((id) => {
     const source = sourceById.get(id);
     if (!source) {

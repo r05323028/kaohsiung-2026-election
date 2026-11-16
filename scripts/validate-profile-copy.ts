@@ -29,7 +29,7 @@ const requiredTabs = [
   '政策主張',
   '相關新聞',
   '從政歷程',
-  '家族從政關係',
+  '家族政商關係',
 ];
 const emptyStates = [
   '基本資料：暫無資料',

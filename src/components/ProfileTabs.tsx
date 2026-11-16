@@ -20,7 +20,7 @@ export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
   { id: 'policies', label: '政策主張' },
   { id: 'news', label: '相關新聞' },
   { id: 'career', label: '從政歷程' },
-  { id: 'family', label: '家族從政關係' },
+  { id: 'family', label: '家族政商關係' },
 ];
 
 const attributionLabels: Record<string, string> = {

@@ -77,9 +77,9 @@ test('candidate family tab shows verified graph details and sources', async ({
     timeout: 30_000,
   });
   await expect(
-    profile.getByRole('tab', { name: '家族從政關係', exact: true }),
+    profile.getByRole('tab', { name: '家族政商關係', exact: true }),
   ).toBeVisible();
-  await profile.getByRole('tab', { name: '家族從政關係', exact: true }).click();
+  await profile.getByRole('tab', { name: '家族政商關係', exact: true }).click();
   await expect(profile.getByTestId('political-family-graph')).toBeVisible();
   await expect(
     profile.getByRole('button', { name: '放大', exact: true }),
@@ -94,7 +94,7 @@ test('candidate family tab shows verified graph details and sources', async ({
   await relative.click();
   const details = profile.getByTestId('family-details');
   await expect(details).toContainText('柯文福');
-  await expect(details.locator('a')).toHaveCount(2);
+  expect(await details.locator('a').count()).toBeGreaterThanOrEqual(2);
 
   const relationship = profile
     .locator('[data-testid^="family-relationship-"]')
@@ -105,7 +105,7 @@ test('candidate family tab shows verified graph details and sources', async ({
   await expect(details).toContainText('柯志恩');
   await expect(details).toContainText('柯文福');
   await expect(details).toContainText('親屬關係來源');
-  await expect(details).toContainText('政治經歷來源');
+  await expect(details).toContainText('職務來源');
   expect(await details.locator('a').count()).toBeGreaterThanOrEqual(2);
 });
 
@@ -117,9 +117,9 @@ test('candidate family tab uses a neutral empty state when no relation is publis
   await expect(profile).toHaveAttribute('data-hydrated', 'true', {
     timeout: 30_000,
   });
-  await profile.getByRole('tab', { name: '家族從政關係', exact: true }).click();
+  await profile.getByRole('tab', { name: '家族政商關係', exact: true }).click();
   await expect(profile.getByTestId('political-family-empty')).toContainText(
-    '尚無可核實的公開家族從政資料。',
+    '目前尚無已查證且符合收錄條件的親屬資料。',
   );
   await expect(profile).not.toContainText('沒有政治背景');
 });
@@ -136,7 +136,7 @@ test('candidate profile tabs support roving keyboard navigation', async ({
   await basicTab.focus();
   await basicTab.press('End');
   const familyTab = profile.getByRole('tab', {
-    name: '家族從政關係',
+    name: '家族政商關係',
     exact: true,
   });
   await expect(familyTab).toHaveAttribute('aria-selected', 'true');
@@ -455,7 +455,7 @@ test('all five mayor profiles expose five neutral, source-backed sections', asyn
       birthDate: '1973-11-15',
     },
   ];
-  const tabs = ['基本資料', '政策主張', '相關新聞', '從政歷程', '家族從政關係'];
+  const tabs = ['基本資料', '政策主張', '相關新聞', '從政歷程', '家族政商關係'];
   for (const candidate of candidates) {
     await page.goto(`/candidates/${candidate.slug}/`);
     const profile = page.getByTestId('profile-tabs');
@@ -576,7 +576,7 @@ test('all official council routes expose CEC identity fields and tab behavior', 
     '政策主張',
     '相關新聞',
     '從政歷程',
-    '家族從政關係',
+    '家族政商關係',
   ]) {
     const tabButton = conflictProfile.getByRole('tab', {
       name: tab,

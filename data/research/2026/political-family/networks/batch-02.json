@@ -1,0 +1,569 @@
+{
+  "batchId": "batch-02",
+  "researchedAt": "2026-11-16",
+  "researcher": "worker-agent",
+  "rows": [
+    {
+      "sequence": 24,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "displayName": "黃文志",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃文志 父親 家族",
+        "黃文志 政二代 左楠",
+        "黃石龍 副議長 高雄市議會",
+        "黃石龍 兒子 黃文志"
+      ],
+      "urlsAttempted": [
+        "https://newtalk.tw/news/view/2022-11-19/844087",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "黃石龍",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2022-11-19/844087",
+            "publisher": "Newtalk新聞",
+            "title": "黃文志繼承衣缽爭取連任 籲鄉親堅定支持勿信謠言",
+            "publicationDate": "2022-11-19",
+            "quote": "黃文志的父親黃石龍曾和莊啟旺搭配正副議長選舉，創下有史以來清白參選得票率超過一半以上的高得票率"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "副議長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://newtalk.tw/news/view/2022-11-19/844087",
+                "publisher": "Newtalk新聞",
+                "title": "黃文志繼承衣缽爭取連任 籲鄉親堅定支持勿信謠言",
+                "publicationDate": "2022-11-19",
+                "quote": "接續父親前副議長黃石龍服務鄉親的職志"
+              }
+            }
+          ],
+          "notes": "副議長任期起訖未在取得的來源中載明（報導提及與莊啟旺搭配競選正副議長），屆次待複查高雄市議會官方紀錄。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 25,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "displayName": "李雅芬",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李雅芬 丈夫 王春生 分局長",
+        "李雅芬 父親 李水樹 里長",
+        "李雅芬 政二代 家族",
+        "李雅芬 王春生 鳳山分局長"
+      ],
+      "urlsAttempted": [
+        "https://www.mirrormedia.mg/external/setn_1931794",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "王春生",
+          "relationLabel": "丈夫",
+          "relationTypeHint": "spouses",
+          "kinship": {
+            "url": "https://www.mirrormedia.mg/external/setn_1931794",
+            "publisher": "鏡週刊（轉載三立新聞網）",
+            "title": "韓國瑜交代生第6胎！警分局長尪反應曝光",
+            "publicationDate": "2026-11-01",
+            "quote": "丈夫王春生是現任高雄市警察局鳳山分局長"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市政府警察局鳳山分局",
+              "organizationType": "government",
+              "positionTitle": "分局長",
+              "positionCategory": "public_office",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.mirrormedia.mg/external/setn_1931794",
+                "publisher": "鏡週刊（轉載三立新聞網）",
+                "title": "韓國瑜交代生第6胎！警分局長尪反應曝光",
+                "publicationDate": "2026-11-01",
+                "quote": "丈夫王春生是現任高雄市警察局鳳山分局長"
+              }
+            }
+          ],
+          "notes": "同一句同時支持親屬與職務；分局長為警政機關高階主管職。"
+        },
+        {
+          "relativeName": "李水樹",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "publisher": "Newtalk新聞",
+            "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+            "publicationDate": "2022-05-18",
+            "quote": "前副議長黃石龍的兒子黃文志、楠梓區中和里里長李水樹的女兒李雅芬"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市楠梓區中和里",
+              "organizationType": "government",
+              "positionTitle": "里長",
+              "positionCategory": "public_office",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.mirrormedia.mg/external/setn_1931794",
+                "publisher": "鏡週刊（轉載三立新聞網）",
+                "title": "韓國瑜交代生第6胎！警分局長尪反應曝光",
+                "publicationDate": "2026-11-01",
+                "quote": "父親李水樹則曾任楠梓區中和里里長"
+              }
+            }
+          ],
+          "notes": "里長屬基層民選公職，是否計入契約「民選代表」範疇需複查；引文亦以「曾任」表述，卸任時間未載。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 26,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "displayName": "白喬茵",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "白喬茵 丈夫 林育銘",
+        "白喬茵 結婚 磁磚小開",
+        "林育銘 磁磚 董事長",
+        "林育銘 董事 公司"
+      ],
+      "urlsAttempted": [
+        "https://ent.ltn.com.tw/news/breakingnews/1841380",
+        "https://star.ettoday.net/news/784598"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "配偶林育銘",
+          "reason": "報導可證婚姻關係，但僅以「南部磁磚小開」「屏東磁磚小開」描述家世，未載公司名稱或董事長／董事／總經理等高階職務；查無支持合格職務的來源，故不列為關係。",
+          "url": "https://ent.ltn.com.tw/news/breakingnews/1841380"
+        }
+      ]
+    },
+    {
+      "sequence": 27,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-619c7aa1",
+      "displayName": "柳淑芳",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "柳淑芳 家族 家人",
+        "柳淑芳 父親",
+        "柳淑芳 丈夫",
+        "柳淑芳 女兒",
+        "柳淑芳 議員 參選 背景"
+      ],
+      "urlsAttempted": [
+        "https://votetw.com/wiki/%E6%9F%B3%E6%B7%91%E8%8A%B3"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "柳淑芳親屬",
+          "reason": "檢索結果集中於其抽籤脫衣抗議、多次參選等選舉新聞，未出現任何具名親屬或家世報導；查無資料不等於確認無親屬。",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sequence": 28,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "displayName": "李眉蓁",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李眉蓁 父親 李榮宗",
+        "李榮宗 果菜公司 總經理",
+        "李榮宗 城隍廟 主委",
+        "李眉蓁 丈夫 楊紘宇",
+        "李榮宗 前市議員"
+      ],
+      "urlsAttempted": [
+        "https://news.tvbs.com.tw/politics/1343968",
+        "https://news.ltn.com.tw/news/politics/paper/1384412",
+        "https://news.ltn.com.tw/news/politics/breakingnews/4352354",
+        "https://news111.com.tw/news/51/13751"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "李榮宗",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.tvbs.com.tw/politics/1343968",
+            "publisher": "TVBS新聞網",
+            "title": "三連霸議員披掛上陣 李眉蓁父親：這仗不好打",
+            "publicationDate": "2020-06-23",
+            "quote": "倒是她父親李榮宗曾經當過市議員，目前是高雄果菜公司總經理，地方人脈藍綠通吃"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.tvbs.com.tw/politics/1343968",
+                "publisher": "TVBS新聞網",
+                "title": "三連霸議員披掛上陣 李眉蓁父親：這仗不好打",
+                "publicationDate": "2020-06-23",
+                "quote": "倒是她父親李榮宗曾經當過市議員，目前是高雄果菜公司總經理，地方人脈藍綠通吃"
+              }
+            },
+            {
+              "organizationName": "高雄果菜運銷公司",
+              "organizationType": "corporation",
+              "positionTitle": "總經理",
+              "positionCategory": "executive",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/breakingnews/4352354",
+                "publisher": "自由時報",
+                "title": "郭台銘訪李榮宗、李眉蓁父女 李眉蓁：唯一支持侯友宜",
+                "publicationDate": "2023-07-03",
+                "quote": "拜訪前高市果菜市場總經理李榮宗、及投入下屆立委選戰的高市議員李眉蓁父女"
+              }
+            },
+            {
+              "organizationName": "城隍廟",
+              "organizationType": "nonprofit",
+              "positionTitle": "主任委員",
+              "positionCategory": "organizational_leadership",
+              "status": "historical-status-unknown",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/breakingnews/4352354",
+                "publisher": "自由時報",
+                "title": "郭台銘訪李榮宗、李眉蓁父女 李眉蓁：唯一支持侯友宜",
+                "publicationDate": "2023-07-03",
+                "quote": "今天郭董到父親擔任主委的城隍廟參拜，她事前知會侯辦後，陪父親一起接待"
+              }
+            }
+          ],
+          "notes": "果菜公司職稱在報導中作「高市果菜市場總經理」與「高雄果菜公司總經理」，公司登記全名與卸任時間待複查；城隍廟引文未載廟名（李眉蓁選區為左營、楠梓），廟名與主委任期需複查；2026-11 報導僅稱其為「前市議員」。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "配偶楊紘宇",
+          "reason": "財產申報報導可證配偶姓名，並稱其為珠寶商，但屬職業描述而非董事長／董事／總經理等高階職務；查無公司或職稱來源，故不列為關係。",
+          "url": "https://news.ltn.com.tw/news/politics/paper/1384412"
+        }
+      ]
+    },
+    {
+      "sequence": 29,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
+      "displayName": "李雅慧",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李雅慧 家族",
+        "李雅慧 父親",
+        "李雅慧 丈夫",
+        "李雅慧 政二代 高雄",
+        "李雅慧 主婦政治力"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李雅慧親屬",
+          "reason": "檢索僅得其本人「主婦政治力」參政歷程與問政新聞，未出現具名親屬或家世報導；查無資料不等於確認無親屬。",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sequence": 30,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "displayName": "陳玫娟",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳玫娟 父親 陳清玉",
+        "陳清玉 高雄市黨部 副主委",
+        "陳玫娟 兒子 林士翔",
+        "陳玫娟 家族 政治世家"
+      ],
+      "urlsAttempted": [
+        "https://newtalk.tw/news/view/2022-05-18/756501",
+        "https://news.owlting.com/articles/206663"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "陳清玉",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "publisher": "Newtalk新聞",
+            "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+            "publicationDate": "2022-05-18",
+            "quote": "包括前國民黨高雄市黨部副主委陳清玉的女兒陳玫娟"
+          },
+          "positions": [
+            {
+              "organizationName": "中國國民黨高雄市黨部",
+              "organizationType": "political_organization",
+              "positionTitle": "副主委",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+                "publisher": "Newtalk新聞",
+                "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+                "publicationDate": "2022-05-18",
+                "quote": "包括前國民黨高雄市黨部副主委陳清玉的女兒陳玫娟"
+              }
+            }
+          ],
+          "notes": "同一句同時支持親屬與黨職；副主委任期未載，僅知 2022 年報導時已稱「前」副主委。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "長子林士翔",
+          "reason": "報導可證母子關係（「原來是陳玫娟的大兒子林士翔」），但查無其董事長／董事／總經理或民選公職等合格職務來源，故不列為關係。",
+          "url": "https://news.owlting.com/articles/206663"
+        }
+      ]
+    },
+    {
+      "sequence": 31,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
+      "displayName": "張以理",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "張以理 家族",
+        "張以理 父親",
+        "張以理 政二代",
+        "張以理 岳母 兒子"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "配偶與岳母",
+          "reason": "報導提及岳母、兒子參與造勢與其妻為競選夥伴，但未載親屬姓名或任何四類合格職務，無法分別記錄親屬與職務兩項事實。",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sequence": 32,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "displayName": "陳冠宇",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳冠宇 父親 陳善慧",
+        "陳善慧 高雄市議員",
+        "陳冠宇 接棒 左楠",
+        "陳善慧 光電"
+      ],
+      "urlsAttempted": [
+        "https://www.cdns.com.tw/articles/1482340"
+      ],
+      "outcome": "verified-relations-found",
+      "relations": [
+        {
+          "relativeName": "陳善慧",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://www.cdns.com.tw/articles/1482340",
+            "publisher": "中華日報（中華新聞雲）",
+            "title": "陳冠宇深信陳善慧清白 強調堅定接棒服務初心",
+            "publicationDate": "2026-10-30",
+            "quote": "其兒子，市議員候選人陳冠宇卅日向左楠鄉親與各界朋友強調，深信他父親的清白，堅定接棒服務初心"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cdns.com.tw/articles/1482340",
+                "publisher": "中華日報（中華新聞雲）",
+                "title": "陳冠宇深信陳善慧清白 強調堅定接棒服務初心",
+                "publicationDate": "2026-10-30",
+                "quote": "針對高雄市議員陳善慧涉入光電弊案"
+              }
+            }
+          ],
+          "notes": "僅記錄親屬與現職議員身分，不記錄任何案件內容或評價；是否續任以 2026 選舉結果為準。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 33,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-c448a515",
+      "displayName": "陳麗珍",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳麗珍 父親",
+        "陳麗珍 丈夫",
+        "陳麗珍 家族",
+        "陳麗珍 議員 結婚 隨扈"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "配偶（2015 年結婚報導對象）",
+          "reason": "中國評論新聞 2015-08-08 標題為「高雄博士女議員嫁小12歲隨扈 開二百桌」，僅描述對方身分為隨扈、較其年輕 12 歲，未載姓名與任何可查證的高階職務，該站連結亦無法取得穩定 URL；不列為合格關係。",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sequence": 34,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-10ad99ed",
+      "displayName": "薛兆基",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "薛兆基 父親",
+        "薛兆基 家族",
+        "薛兆基 經歷 高雄市政府",
+        "薛兆基 妻子"
+      ],
+      "urlsAttempted": [],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "父親",
+          "reason": "報導（波新聞 2026-09-20「再忙也不忘幫老爸修剪腳趾甲」）僅描述照顧父親的日常，未載姓名或任何職務，無从建立可引用的親屬—職務紀錄。",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sequence": 35,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-94f45410",
+      "displayName": "尹立",
+      "districtId": "district-kaohsiung-council-04",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "尹立 父親",
+        "尹立 妻子",
+        "尹立 靠爸族 清潔隊員",
+        "尹立 插畫家妻子 萬歲少女"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5157769",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5639583"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "父親",
+          "reason": "報導引述其自述由清潔隊員父親養大，屬基層公務員身分而非四類合格高階職務，未載姓名。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5157769"
+        },
+        {
+          "subject": "配偶（插畫家「萬歲少女」）",
+          "reason": "報導可證配偶為插畫家並為其操刀看板，插畫家屬自營創作者，非四類合格職務，亦未載本名。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5639583"
+        }
+      ]
+    },
+    {
+      "sequence": 100,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-facbff4f",
+      "displayName": "陳幸富",
+      "districtId": "district-kaohsiung-indigenous-mountain-13",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳幸富 家族 父親",
+        "陳幸富 議員 妻子 家人",
+        "陳幸富 原住民 議員 背景",
+        "陳幸富 那瑪夏"
+      ],
+      "urlsAttempted": [
+        "https://votetw.com/wiki/%E9%99%B3%E5%B9%B8%E5%AF%8C"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "陳幸富親屬",
+          "reason": "檢索結果全為其原鄉問政、質詢與選區新聞，未出現具名親屬或家世報導；查無資料不等於確認無親屬。",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sequence": 101,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+      "displayName": "葛娜瑩",
+      "districtId": "district-kaohsiung-indigenous-mountain-13",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "葛娜瑩 高雄 議員",
+        "葛娜瑩 家族 父親",
+        "葛娜瑩 原住民 國民黨 參選"
+      ],
+      "urlsAttempted": [
+        "https://votetw.com/wiki/%E8%91%9B%E5%A8%9C%E7%91%A9"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "葛娜瑩公開資料",
+          "reason": "Google News 與其他檢索來源以全名查詢均無任何結果，亦無生平、家族或職務報導；無任何可引用來源，故無可驗證親屬，並非確認其無親屬。",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

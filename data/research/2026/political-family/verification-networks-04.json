@@ -1,0 +1,784 @@
+{
+  "verificationVersion": "1",
+  "verifiedAt": "2026-11-16",
+  "reviewerRole": "independent-fact-checker",
+  "records": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+      "relativeName": "張漢雄",
+      "relation": "siblings",
+      "status": "verified",
+      "rationale": "親屬方向由中央社 2021-04-14 原文單句直接明示：「高雄市政府4月1日發布張漢雄出任海洋局長，他歷任梓官鄉長、梓官區漁會總幹事，是民進黨市議員張漢忠的胞弟。」即張漢雄為張漢忠之胞弟，與研究者標示的 siblings 一致，方向無誤。四項職務皆見於同一句與中華日報 2021-04-13 之獨立報導，後者逐項敘述：「張漢雄從梓官漁市場拍賣員開始做起，經歷梓官鄉代會主席、兩任梓官鄉長，以及梓官區漁會總幹事」，並以「前梓官區漁會總幹事張漢雄出任海洋局長」標示漁會職務已卸任。查核修正三處：(1) 2021-04-01 在原文中是市府「發布」人事的日期，非到任日，故局長 startDate 依規則留 null 並註明；(2) 辭職一事，中央社 2023-10-25 報導市府發言人周璟瑜所述「昨天再度提出辭呈」，辭呈提出日為 2023-10-24，研究者記為 2023-10-25 係採用報導日；(3) 報導另載其 102 年獲全國十大傑出漁業專家獎項，屬非職務之榮譽，未列入 positions。研究者未列出任何 rejectedOrAmbiguousClaims，查核後亦未發現同名誤認：兩篇報導分屬不同媒體、同一時間窗（2021-04-13／14）、同一選區脈絡（鳳山議員之弟接掌市府局處），姓名與職務完全吻合。為排除同名誤認，另以高雄市議會《歷屆議員簡介》第一屆名錄核對「民進黨市議員張漢忠」之身分：該名錄將其列於合併後第一屆（民國99～103年）議員，個人屆次表載「高雄縣議會 第十六屆95~99、高雄市議會 第一屆99~103、第二屆103~107」，與中央社所述 2021 年時之「民進黨市議員」職務與鳳山選區脈絡相符，全頁無「張漢雄」字樣，可確認報導所指為同一張漢忠，非同名他人。",
+      "sourceIds": [
+        "source-verify-ca060fab",
+        "source-verify-e3585328",
+        "source-verify-d8b024f9",
+        "source-verify-e98fe299"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ca060fab"
+      ],
+      "positionSourceIds": [
+        "source-verify-ca060fab",
+        "source-verify-d8b024f9",
+        "source-verify-e3585328"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ca060fab",
+          "url": "https://www.cna.com.tw/news/aloc/202104140336.aspx",
+          "publisher": "中央通訊社",
+          "title": "高市議會頭一遭 召集人哥哥質詢局長弟弟",
+          "publicationDate": "2021-04-14",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-e3585328",
+          "url": "https://www.cdns.com.tw/articles/386336",
+          "publisher": "中華日報",
+          "title": "張漢雄接掌高市海洋局",
+          "publicationDate": "2021-04-13",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-d8b024f9",
+          "url": "https://www.cna.com.tw/news/aloc/202310250074.aspx",
+          "publisher": "中央通訊社",
+          "title": "海洋局長遭爆私生子 陳其邁：尊重身體因素請辭",
+          "publicationDate": "2023-10-25",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-e98fe299",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－高雄市議會第一屆（民國99年12月25日至103年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ca060fab",
+            "url": "https://www.cna.com.tw/news/aloc/202104140336.aspx",
+            "httpExitCode": 200,
+            "byteCount": 122517,
+            "nameHits": {
+              "張漢忠": true,
+              "張漢雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-e3585328",
+            "url": "https://www.cdns.com.tw/articles/386336",
+            "httpExitCode": 200,
+            "byteCount": 85221,
+            "nameHits": {
+              "張漢忠": false,
+              "張漢雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-d8b024f9",
+            "url": "https://www.cna.com.tw/news/aloc/202310250074.aspx",
+            "httpExitCode": 200,
+            "byteCount": 122420,
+            "nameHits": {
+              "張漢忠": false,
+              "張漢雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-e98fe299",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 200,
+            "byteCount": 243878,
+            "nameHits": {
+              "蘇炎城": true,
+              "蘇炎成": false,
+              "陳粹鑾": true,
+              "張漢忠": true,
+              "張漢雄": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市政府海洋局",
+          "organizationType": "government",
+          "positionTitle": "局長",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "中央社 2021-04-14 載「高雄市政府4月1日發布張漢雄出任海洋局長」，2021-04-01 為市府發布人事日期，非到任日，故 startDate 留 null。卸任時點：中央社 2023-10-25 報導市府發言人稱「昨天再度提出辭呈，陳其邁會尊重決定」，辭呈提出日為 2023-10-24；未見任何來源載明辭職生效日或繼任人選發布日，故 endDate 留 null（結束日期未查得）。",
+          "sourceIds": [
+            "source-verify-ca060fab",
+            "source-verify-d8b024f9"
+          ]
+        },
+        {
+          "organization": "高雄縣梓官鄉公所",
+          "organizationType": "government",
+          "positionTitle": "鄉長（兩任）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "中華日報載「兩任梓官鄉長」；鄉長為民選地方行政首長，故列 political。屆次與起訖日期未查得，依規則留 null。",
+          "sourceIds": [
+            "source-verify-e3585328"
+          ]
+        },
+        {
+          "organization": "高雄縣梓官鄉民代表會",
+          "organizationType": "legislature",
+          "positionTitle": "主席",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "來源敘述為「梓官鄉代會主席」。分類修正：依地方制度法第5條，鄉（鎮、市）民代表會為鄉（鎮、市）之立法機關，故 organizationType 由研究者所填的 government 改為 legislature；主席為該民意機關之首長，列 political。任期未查得。",
+          "sourceIds": [
+            "source-verify-e3585328"
+          ]
+        },
+        {
+          "organization": "高雄市梓官區漁會",
+          "organizationType": "nonprofit",
+          "positionTitle": "總幹事",
+          "positionCategory": "executive",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "漁會為依漁會法設立之法人（非營利性質社團法人），故 organizationType 為 nonprofit，非 corporation。總幹事由理事會聘任、綜理會務並具執行與經營決策權，屬 executive 而非 board；中華日報以「前梓官區漁會總幹事張漢雄出任海洋局長」表述，卸任時點即為轉任海洋局長之時，惟日期未載明。任期未查得。",
+          "sourceIds": [
+            "source-verify-e3585328",
+            "source-verify-ca060fab"
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "relativeName": "陳粹鑾",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬關係由兩則獨立報導交叉確認：中央社 2024-12-09「在她任內及女兒擔任市議員期間」、「陳女入監服刑後，女兒鄭安秝當選第3屆高雄市議員」；自由時報 2018-07-26「她力拱24歲的女兒鄭安秝出馬繼續選」。方向為陳粹鑾（母）→鄭安秝（女），與研究者 parent-child 一致。職務由官方紀錄佐證：中央社 2024-12-09 原文「陳粹鑾於民國99年12月25日起至107年7月26日遭因涉貪污案件遭判刑確定解職止，擔任高雄縣市合併改制後高雄市議會第1、2屆議員」，與高雄市議會《歷屆議員簡介》第一屆（民國99年12月25日至103年12月24日）及第二屆（民國103年12月25日至107年12月24日）名錄一致，第二屆名錄並標註「陳粹鑾(解職)」、「第二屆103~107 (已解職107.7.26)」，解職日與報導完全相同，無同名誤認空間（姓名、屆次、選區、解職日均吻合）。研究者所列 2010-12-25～2018-07-26 起訖經核對正確：起日為合併後第一屆就職日，迄日為判刑確定解職日而非屆期屆滿。",
+      "sourceIds": [
+        "source-verify-9b5350a7",
+        "source-verify-63984177",
+        "source-verify-e98fe299",
+        "source-verify-56742faa"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-9b5350a7",
+        "source-verify-63984177"
+      ],
+      "positionSourceIds": [
+        "source-verify-9b5350a7",
+        "source-verify-e98fe299",
+        "source-verify-56742faa"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-9b5350a7",
+          "url": "https://www.cna.com.tw/news/asoc/202412090062.aspx",
+          "publisher": "中央通訊社",
+          "title": "前高市議員陳粹鑾涉詐助理費 女兒鄭安秝判刑",
+          "publicationDate": "2024-12-09",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-63984177",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/2500645",
+          "publisher": "自由時報",
+          "title": "議員媽媽被判刑 女兒接棒繼續選",
+          "publicationDate": "2018-07-26",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-e98fe299",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－高雄市議會第一屆（民國99年12月25日至103年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-56742faa",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－高雄市議會第二屆（民國103年12月25日至107年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-9b5350a7",
+            "url": "https://www.cna.com.tw/news/asoc/202412090062.aspx",
+            "httpExitCode": 200,
+            "byteCount": 124812,
+            "nameHits": {
+              "鄭安秝": true,
+              "陳粹鑾": true,
+              "陳梅芳": false
+            }
+          },
+          {
+            "sourceId": "source-verify-63984177",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/2500645",
+            "httpExitCode": 200,
+            "byteCount": 233799,
+            "nameHits": {
+              "鄭安秝": true,
+              "陳粹鑾": true,
+              "陳梅芳": false
+            }
+          },
+          {
+            "sourceId": "source-verify-e98fe299",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 200,
+            "byteCount": 243878,
+            "nameHits": {
+              "蘇炎城": true,
+              "蘇炎成": false,
+              "陳粹鑾": true,
+              "張漢忠": true,
+              "張漢雄": false
+            }
+          },
+          {
+            "sourceId": "source-verify-56742faa",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 200,
+            "byteCount": 240690,
+            "nameHits": {
+              "蘇炎城": true,
+              "蘇炎成": false,
+              "陳粹鑾": true,
+              "張漢忠": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（合併後第1、2屆）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2010-12-25",
+          "endDate": "2018-07-26",
+          "notes": "第1屆就職 2010-12-25、任期迄 2014-12-24 後連任第2屆；第2屆因貪污案判刑確定於 2018-07-26 解職，早於該屆屆期 2018-12-24。官方名錄另載其合併前高雄縣議會第13、14、16屆資歷，本次查核未列入 positions，因研究者未主張且其起訖需另一屆別換算。",
+          "sourceIds": [
+            "source-verify-9b5350a7",
+            "source-verify-e98fe299",
+            "source-verify-56742faa"
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-3ee328a6",
+      "relativeName": "陳梅芳",
+      "relation": "grandparent-grandchild",
+      "status": "verified",
+      "rationale": "研究者標示的「外祖父」經查證正確，且原文的「祖父」為寬鬆用法：聯合報 2026-06-21 同一篇報導並列「女兒陳粹鑾（前議員）、外孫女鄭安秝（現任議員）等家屬十分哀痛」、「3年前才交棒給外孫女鄭安秝」、「1979年陳梅芳擔任鎮西里長…地方信徒委請時任里長的陳梅芳接手管理，一當就長達44年。3年前改由孫女、高雄市議員鄭安秝接任主委」。因陳粹鑾為鄭安秝之母（另由中央社 2024-12-09、自由時報 2018-07-26 確認），陳梅芳為母方直系尊親屬，relation 取 grandparent-grandchild、稱謂為外祖父；標題「祖父」係媒體慣用泛稱，不足以推翻同篇的「女兒／外孫女」行文。職務兩項均見於同一篇報導：廟方主任委員（1979 年接任、2023 年交棒、2026-06-13 辭世）與 1979 年的鎮西里里長。查核限制：兩項職務的起訖僅有年份（1979、3年前），無月日，故 startDate/endDate 依規則留 null；組織名稱「高雄市鳳山區鎮西里」為現行里名，1979 年時該里屬高雄縣鳳山市，屬回溯命名，已於 notes 註明。單一來源風險：本筆僅一篇聯合報報導，但其為地方新聞對地方職務的直接敘述，非家族整組主張之轉述，且血親方向與廟方交棒事實互相支持。",
+      "sourceIds": [
+        "source-verify-15c6633c"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-15c6633c"
+      ],
+      "positionSourceIds": [
+        "source-verify-15c6633c"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-15c6633c",
+          "url": "https://udn.com/news/story/7327/9578977",
+          "publisher": "聯合報",
+          "title": "鳳山開漳聖王廟40年老主委陳梅芳辭世 議員鄭安秝承接祖父遺願",
+          "publicationDate": "2026-06-21",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-15c6633c",
+            "url": "https://udn.com/news/story/7327/9578977",
+            "httpExitCode": 200,
+            "byteCount": 191695,
+            "nameHits": {
+              "鄭安秝": true,
+              "陳梅芳": true,
+              "陳粹鑾": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市鳳邑開漳聖王廟",
+          "organizationType": "nonprofit",
+          "positionTitle": "主任委員",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "廟宇為依寺廟登記之宗教團體，非公司亦非政府機關，故 organizationType 為 nonprofit、職務列 organizational_leadership。報導載 1979 年起接任、「一當就長達44年」、「3年前」（相對 2026 年，約 2023 年）改由外孫女鄭安秝接任主委，2026-06-13 辭世（享壽84歲）。僅有年份無月日，故起訖留 null。",
+          "sourceIds": [
+            "source-verify-15c6633c"
+          ]
+        },
+        {
+          "organization": "高雄市鳳山區鎮西里",
+          "organizationType": "government",
+          "positionTitle": "里長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "報導載「1979年陳梅芳擔任鎮西里長」、「地方信徒委請時任里長的陳梅芳接手管理」。里長為民選公職，列 political。組織名稱採現行「高雄市鳳山區鎮西里」；1979 年該里屬高雄縣鳳山市，縣市合併（2010-12-25）後方為現名，屬回溯命名。任期起訖未載。",
+          "sourceIds": [
+            "source-verify-15c6633c"
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-663696bc",
+      "relativeName": "蘇炎城",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬方向由自由時報 2022-03-13 兩處引述直接明示：「父親前議員蘇炎城在地方服務不遺餘力」、「父親蘇炎城是鳳山區老議員」，即蘇炎城為蘇致榮之父，與研究者 parent-child 一致。職務以高雄市議會官方紀錄為準：《蘇炎城議員遞補就職》（上版日期 104-12-22）載「高雄市議會今(22)日舉行第2屆第9選區遞補當選人蘇炎城議員宣誓就職典禮」，並敘明其「曾當選高雄縣第12、13、14、15、16屆議員，並擔任縣市合併後第1屆議員」；議會《歷屆議員簡介》第二屆名錄之個人屆次表逐項列出「高雄縣議會 第十二屆79~83、第十三屆83~87、第十四屆87~91、第十五屆91~95、第十六屆95~99；高雄市議會 第一屆99~103、第二屆103~107」，與遞補就職報導完全吻合。研究者標註的「蘇炎成」異體字風險經查核排除，判定為同一人姓名異寫而非兩名不同政治人物：高雄市議會官方兩份名錄與選舉黃頁 2018 年鳳山第09選區頁面均只出現「蘇炎城」，全站未出現「蘇炎成」；2018 年該選區 10 號候選人為蘇炎城（10,605 票），無同選區同姓近名之另一候選人，亦無其他屆次出現蘇炎成。查核補正：研究者將三項職務的 endDate 全部留 null，本次可依官方屆別年段補為第一屆 2014-12-24、第二屆 2018-12-24；第二屆 startDate 2015-12-22 經遞補就職報導確認為宣誓就職日（非當選日），研究者所填無誤。另 2018 年爭取連任未當選，屬選舉結果非職務紀錄，僅於 notes 敘明。",
+      "sourceIds": [
+        "source-verify-50b4c74e",
+        "source-verify-ed306bca",
+        "source-verify-e98fe299",
+        "source-verify-56742faa",
+        "source-verify-7adfb356"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-50b4c74e"
+      ],
+      "positionSourceIds": [
+        "source-verify-ed306bca",
+        "source-verify-56742faa",
+        "source-verify-e98fe299",
+        "source-verify-7adfb356"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-50b4c74e",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/3858457",
+          "publisher": "自由時報",
+          "title": "瞄準「政二代」！鳳山區議員選戰首度交火",
+          "publicationDate": "2022-03-13",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ed306bca",
+          "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=3481",
+          "publisher": "高雄市議會",
+          "title": "蘇炎城議員遞補就職（上版日期 104-12-22）",
+          "publicationDate": "2015-12-22",
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-e98fe299",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－高雄市議會第一屆（民國99年12月25日至103年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-56742faa",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－高雄市議會第二屆（民國103年12月25日至107年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-7adfb356",
+          "url": "https://elections.olc.tw/candidates/view/5acb725b-2760-414f-b325-46dc0a8c0003",
+          "publisher": "選舉黃頁",
+          "title": "2018-11 直轄市議員 高雄市第09選區 10號 蘇炎城",
+          "publicationDate": null,
+          "sourceKind": "other-public-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-50b4c74e",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3858457",
+            "httpExitCode": 200,
+            "byteCount": 242507,
+            "nameHits": {
+              "蘇致榮": true,
+              "蘇炎城": true,
+              "蘇炎成": false
+            }
+          },
+          {
+            "sourceId": "source-verify-ed306bca",
+            "url": "https://www.kcc.gov.tw/News_Content.aspx?n=47&s=3481",
+            "httpExitCode": 200,
+            "byteCount": 89648,
+            "nameHits": {
+              "蘇致榮": false,
+              "蘇炎城": true,
+              "蘇炎成": false
+            }
+          },
+          {
+            "sourceId": "source-verify-e98fe299",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 200,
+            "byteCount": 243878,
+            "nameHits": {
+              "蘇炎城": true,
+              "蘇炎成": false,
+              "陳粹鑾": true,
+              "張漢忠": true,
+              "張漢雄": false
+            }
+          },
+          {
+            "sourceId": "source-verify-56742faa",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 200,
+            "byteCount": 240690,
+            "nameHits": {
+              "蘇炎城": true,
+              "蘇炎成": false,
+              "陳粹鑾": true,
+              "張漢忠": true
+            }
+          },
+          {
+            "sourceId": "source-verify-7adfb356",
+            "url": "https://elections.olc.tw/candidates/view/5acb725b-2760-414f-b325-46dc0a8c0003",
+            "httpExitCode": 200,
+            "byteCount": 19678,
+            "nameHits": {
+              "蘇致榮": false,
+              "蘇炎城": true,
+              "蘇炎成": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（第12至16屆）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "官方個人屆次表列「第十二屆79~83、第十三屆83~87、第十四屆87~91、第十五屆91~95、第十六屆95~99」（民國年），與遞補就職報導「曾當選高雄縣第12、13、14、15、16屆議員」一致。各屆就職日與民國99年（2010）該屆迄日之國曆換算未取得原文，故起訖留 null。",
+          "sourceIds": [
+            "source-verify-ed306bca",
+            "source-verify-56742faa"
+          ]
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（第1屆）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2010-12-25",
+          "endDate": "2014-12-24",
+          "notes": "議會《歷屆議員簡介》第一屆載「民國99年12月25日至民國103年12月24日」，即 2010-12-25～2014-12-24；研究者原留 null，本次依官方屆別補正。",
+          "sourceIds": [
+            "source-verify-e98fe299",
+            "source-verify-56742faa",
+            "source-verify-ed306bca"
+          ]
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（第2屆遞補）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2015-12-22",
+          "endDate": "2018-12-24",
+          "notes": "第2屆第9選區（鳳山）當選人楊見福經判決當選無效確定，中央選舉委員會 104-12-18 公告由蘇炎城遞補，2015-12-22 宣誓就職（議會新聞稿）。該屆任期迄民國107年12月24日（2018-12-24）；2018 年九合一其在同選區以 10,605 票爭取連任未當選（選舉黃頁），故未續任第3屆。",
+          "sourceIds": [
+            "source-verify-ed306bca",
+            "source-verify-56742faa",
+            "source-verify-7adfb356"
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-acaa7403",
+      "relativeName": "徐國祥",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬方向由自由時報 2025-05-15（LINE TODAY 轉載全文）明示：「他的父親徐國祥今宣布退出高雄雙罷劫團隊」、「徐尚賢父親徐國祥昨稱是徐尚賢職務代理人」，即徐國祥為徐尚賢之父。自由時報 2025-06-05 另以「徐尚賢父親說…」、「徐父曾以幹事長身分，宣布雙罷劫總部解散」於記者敘述層級再次確認父子關係與職稱。職務一「高雄雙罷劫總部幹事長」有兩層支持：本人 2025-05-15 陳述「原本是高雄雙罷劫總部幹事長，負責內部後勤管理」，以及自由時報 2025-06-05 記者敘述「徐父曾以幹事長身分」。惟同一則報導載領銜人朱磊、黃晃枝公開表示「徐國祥不是團隊的人」並否認總部解散，爭議在於其是否具團隊成員正當性，而非職稱是否存在；其已於 2025-05-15 宣布退出團隊，故列 former-officeholder，退場日未載明是否同時解除職務，endDate 留 null。職務二「百工百業協進會負責人」僅見於本人 2025-05-15 之陳述，未取得立案、登記或該組織官網資料佐證，屬單一自述來源；已於該筆 notes 標明，未升級為經組織紀錄確認之職務。研究者標示的職務起訖（皆 null）與最終狀態經核對無誤；本筆風險不在親屬方向而在職務正當性爭議，已於 rationale 與 notes 記錄。",
+      "sourceIds": [
+        "source-verify-3c06cda5",
+        "source-verify-723d90a4"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-3c06cda5",
+        "source-verify-723d90a4"
+      ],
+      "positionSourceIds": [
+        "source-verify-3c06cda5",
+        "source-verify-723d90a4"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-3c06cda5",
+          "url": "https://today.line.me/tw/v3/article/PGQwNz0",
+          "publisher": "自由時報（LINE TODAY 轉載）",
+          "title": "內鬨被切割？徐尚賢父親宣布退出「高雄雙罷劫」團隊",
+          "publicationDate": "2025-05-15",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-723d90a4",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5065975",
+          "publisher": "自由時報",
+          "title": "高雄雙罷劫變鬧劇 徐尚賢父親拉下總部鐵門趕人",
+          "publicationDate": "2025-06-05",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-3c06cda5",
+            "url": "https://today.line.me/tw/v3/article/PGQwNz0",
+            "httpExitCode": 200,
+            "byteCount": 260257,
+            "nameHits": {
+              "徐尚賢": true,
+              "徐國祥": true
+            }
+          },
+          {
+            "sourceId": "source-verify-723d90a4",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5065975",
+            "httpExitCode": 200,
+            "byteCount": 235054,
+            "nameHits": {
+              "徐尚賢": true,
+              "徐國祥": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄雙罷劫總部",
+          "organizationType": "political_organization",
+          "positionTitle": "幹事長",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "發起罷免之公民行動總部屬政治性組織，非政府機關或公司，故 organizationType 為 political_organization；幹事長為組織內部職務，列 organizational_leadership。本人稱負責「內部後勤管理」；2025-05-15 宣布退出團隊。領銜人朱磊、黃晃枝稱「徐國祥不是團隊的人」，職務正當性存在爭議。任職起訖未載。",
+          "sourceIds": [
+            "source-verify-3c06cda5",
+            "source-verify-723d90a4"
+          ]
+        },
+        {
+          "organization": "百工百業協進會",
+          "organizationType": "nonprofit",
+          "positionTitle": "負責人",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "historical-status-unknown",
+          "startDate": null,
+          "endDate": null,
+          "notes": "僅本人 2025-05-15 陳述「也是百工百業協進會負責人」，未取得立案登記、組織官網或第三人敘述佐證；組織屬性（社團／協會）與負責人法定職稱均未經官方資料確認。任職起訖未載。",
+          "sourceIds": [
+            "source-verify-3c06cda5"
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "relativeName": "鍾紹和",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬方向由兩則獨立報導確認：自由時報 2015-07-15「鍾易仲今年33歲，是前立委鍾紹和的兒子」，TVBS 2018-10-19「他是前立委鍾紹和的兒子」，即鍾紹和為鍾易仲之父。職務「立法委員」的證據較研究者所引更強：研究者僅引 2015 年自由時報的「前立委」稱謂，本次另取得 TVBS 2018-10-19「以3百萬元行賄時任立委的鍾紹和」，以「時任立委」指涉 2011 年間的職務狀態，屬對其曾任立委之實質敘述，優於僅有頭銜前綴的寫法。查核限制：未取得立法院或中選會之屆次與起訖官方紀錄（本次查核未執行立法院委員名錄檢索），故屆次、startDate、endDate 一律留 null，不以新聞推估年份；僅能確認曾任且已卸任（2018 年報導稱「前立委」，並載其判刑 7 年半）。",
+      "sourceIds": [
+        "source-verify-c5428410",
+        "source-verify-a13706ce"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-c5428410",
+        "source-verify-a13706ce"
+      ],
+      "positionSourceIds": [
+        "source-verify-c5428410",
+        "source-verify-a13706ce"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-c5428410",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/1380661",
+          "publisher": "自由時報",
+          "title": "神祕女子選立委 黃韻涵照片曝光",
+          "publicationDate": "2015-07-15",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-a13706ce",
+          "url": "https://news.tvbs.com.tw/politics/1012948",
+          "publisher": "TVBS新聞網",
+          "title": "前立委鍾紹和判刑7年半 選議員子抱屈",
+          "publicationDate": "2018-10-19",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-c5428410",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/1380661",
+            "httpExitCode": 200,
+            "byteCount": 234708,
+            "nameHits": {
+              "鍾易仲": true,
+              "鍾紹和": true,
+              "鍾昇旭": false
+            }
+          },
+          {
+            "sourceId": "source-verify-a13706ce",
+            "url": "https://news.tvbs.com.tw/politics/1012948",
+            "httpExitCode": 200,
+            "byteCount": 220760,
+            "nameHits": {
+              "鍾易仲": true,
+              "鍾紹和": true,
+              "鍾昇旭": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "立法院",
+          "organizationType": "legislature",
+          "positionTitle": "立法委員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "notes": "自由時報 2015-07-15 稱「前立委鍾紹和」；TVBS 2018-10-19 敘述 2011 年間「時任立委的鍾紹和」，並載其後因收賄案判刑 7 年半。屆次與任期起訖未取得立法院官方紀錄，故留 null（未查得）。",
+          "sourceIds": [
+            "source-verify-c5428410",
+            "source-verify-a13706ce"
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-09-caaa9960",
+      "relativeName": "鍾昇旭",
+      "relation": "siblings",
+      "status": "verified",
+      "rationale": "親屬關係由鏡週刊 2024-01-31 明示：「國民黨高雄市議員鍾易仲弟弟鍾昇旭經營多間生鮮超市『生鮮先生』」，標題亦為「負責人是市議員弟」，即鍾昇旭為鍾易仲之弟，與研究者 siblings 一致。職務「生鮮先生負責人」見於同篇：「認為負責人鍾昇旭、黃姓店長均涉犯…」，為報導對其職稱之直接敘述。查核限制與分類風險：未能取得經濟部商工登記或公司基本資料（twincn 與商工登記開放資料端點皆無回應），故「生鮮先生」之組織型態（有限公司／商號）與其法定職稱無法確認；若為有限公司，負責人通常即董事，positionCategory 應改列 board。本次依報導「經營多間生鮮超市」之經營事實暫列 executive，並於 notes 標明此不確定性。另發現同一篇報導內姓名異寫：同文兩度出現「鍾旭昇」、兩度出現「鍾昇旭」，屬同人之筆誤而非兩人，惟對外呈現時須採研究者與標題一致的「鍾昇旭」。",
+      "sourceIds": [
+        "source-verify-05495dbd"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-05495dbd"
+      ],
+      "positionSourceIds": [
+        "source-verify-05495dbd"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-05495dbd",
+          "url": "https://www.mirrormedia.mg/story/20240131inv003",
+          "publisher": "鏡週刊",
+          "title": "高檔連鎖超市改標賣過期貨 負責人是市議員弟",
+          "publicationDate": "2024-01-31",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-05495dbd",
+            "url": "https://www.mirrormedia.mg/story/20240131inv003",
+            "httpExitCode": 200,
+            "byteCount": 126624,
+            "nameHits": {
+              "鍾易仲": true,
+              "鍾昇旭": true,
+              "鍾旭昇": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "生鮮先生（生鮮超市連鎖）",
+          "organizationType": "corporation",
+          "positionTitle": "負責人",
+          "positionCategory": "executive",
+          "listingStatus": "unknown",
+          "status": "historical-status-unknown",
+          "startDate": null,
+          "endDate": null,
+          "notes": "報導稱其「經營多間生鮮超市『生鮮先生』」並以「負責人」稱之；未取得商工登記資料，組織型態（有限公司或商號）與負責人法定職稱未經官方確認，若為有限公司則負責人通常兼董事，分類可能應為 board。2024-01-31 報導時之在職狀態與其後續（交保後）是否仍任負責人未查得。同篇另有「鍾旭昇」異寫。",
+          "sourceIds": [
+            "source-verify-05495dbd"
+          ]
+        }
+      ]
+    }
+  ]
+}

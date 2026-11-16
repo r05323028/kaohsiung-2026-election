@@ -1,0 +1,585 @@
+{
+  "batchId": "batch-05",
+  "researchedAt": "2026-11-16",
+  "researcher": "agent-05",
+  "rows": [
+    {
+      "sequence": 59,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-879b5e31",
+      "displayName": "黃舜杰",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃舜杰 家族 政治世家",
+        "黃舜杰 阿公 鄉長",
+        "黃舜杰 父親 母親 配偶",
+        "黃舜杰 家族 董事長"
+      ],
+      "urlsAttempted": [
+        "https://n.yam.com/Article/20260910194065",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E8%88%9C%E6%9D%B0%20%E9%98%BF%E5%85%AC%20%E9%84%89%E9%95%B7&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E8%88%9C%E6%9D%B0%20%E5%AE%B6%E6%97%8F%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "未具名祖父（曾任高雄縣杉林鄉鄉長）",
+          "reason": "報導僅以「阿公」指稱，未提供姓名、任期或可供交叉比對的識別資訊，無法確認所指人物為何；依契約紅線，不得以未具名親屬推論關係人，故不列入 relations。",
+          "url": "https://n.yam.com/Article/20260910194065"
+        }
+      ]
+    },
+    {
+      "sequence": 60,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-67955d67",
+      "displayName": "黃裕庭",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃裕庭 父親",
+        "黃裕庭 政治家族",
+        "吳敦義夫人蔡令怡 黃裕庭",
+        "黃裕庭 家族 企業"
+      ],
+      "urlsAttempted": [
+        "https://n.yam.com/Article/20261031732352",
+        "https://leho.com.tw/archives/417012",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E8%A3%95%E5%BA%AD%20%E7%88%B6%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E8%A3%95%E5%BA%AD%20%E6%94%BF%E6%B2%BB%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "黃新郡（黃裕庭父親）",
+          "reason": "親屬關係有明確引文，但來源僅描述黃家為吳敦義當年結識的「民間友人」，未記載任何政治、政府、企業、上市櫃或基金會職務，不符四類合格職務，故不列入 relations。",
+          "url": "https://n.yam.com/Article/20261031732352"
+        },
+        {
+          "subject": "蔡令怡（吳敦義夫人）與黃裕庭的關係",
+          "reason": "報導描述的是吳、黃兩家 36 年的私人情誼與站台輔選，非親屬關係；依契約紅線（同場合、支持關係不等於親屬）排除。",
+          "url": "https://n.yam.com/Article/20261031732352"
+        }
+      ]
+    },
+    {
+      "sequence": 61,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-672c71fb",
+      "displayName": "許采蓁",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "許采蓁 許崑源 父女",
+        "許采蓁 家族",
+        "許崑源 董事長",
+        "林絲娛 許崑源 遺孀",
+        "許崑源 議長 高雄市議會"
+      ],
+      "urlsAttempted": [
+        "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+        "https://www.setn.com/news/769971",
+        "https://news.google.com/rss/search?q=%E8%A8%B1%E9%87%87%E8%93%81%20%E8%A8%B1%E5%B4%91%E6%BA%90%20%E7%88%B6%E5%A5%B3&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "許崑源",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://www.chinatimes.com/realtimenews/20220919004382-260407",
+            "publisher": "中時新聞網",
+            "title": "許采蓁繼承許崑源遺志 首掛父女合體競選看板",
+            "publicationDate": "2022-09-19",
+            "quote": "國民黨高市前金新興苓雅選區市議員參選人許采蓁，今（19）日首度懸掛她與已故父親、前高市議長許崑源的合體看板，上頭寫著「蓁心蓁意，飲水思源」8個字，感性訴求充滿親情之愛。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員（合併前第四屆83~87）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+                "publisher": "高雄市議會",
+                "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "許崑源 合併前高雄市議會 第四屆83~87"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議長（第一屆99~103）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+                "publisher": "高雄市議會",
+                "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "議 長： 許崑源"
+              }
+            }
+          ],
+          "notes": "市議會歷屆議員頁另於第三屆（107~111）議長欄記載「許崑源歿」，可知其議長身分延續至第三屆並於任內結束；頁面未載日期，故 endDate 留 null。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "林絲娛（許崑源妻、許采蓁母親）",
+          "reason": "親屬關係有引文（「許崑源妻林絲娛」），但其公開角色為競選團隊主任委員與婦女團體聲援活動召集，未查得四類合格職務（民選代表、政務任命、企業經營、基金會或非營利組織領導職），故不列入 relations。",
+          "url": "https://www.setn.com/news/769971"
+        }
+      ]
+    },
+    {
+      "sequence": 62,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "displayName": "湯詠瑜",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "湯詠瑜 湯金全 女兒",
+        "湯金全 副市長",
+        "湯金全 董事長 基金會",
+        "湯東穎",
+        "湯金全 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://n.yam.com/Article/20260912814245",
+        "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+        "https://news.google.com/rss/search?q=%E6%B9%AF%E8%A9%A0%E7%91%9C%20%E6%B9%AF%E9%87%91%E5%85%A8%20%E5%A5%B3%E5%85%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E6%B9%AF%E6%9D%B1%E7%A9%8E&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "湯金全",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://n.yam.com/Article/20260912814245",
+            "publisher": "今傳媒",
+            "title": "湯詠瑜：湯金全律師只有她這個唯一的女兒",
+            "publicationDate": "2026-09-12",
+            "quote": "高雄市議員湯詠瑜表示，湯金全律師的女兒只有一位，就是有湯有魚的湯詠瑜，另外還有一位兒子，也就是我的弟弟湯東穎。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員（合併前第四屆83~87）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+                "publisher": "高雄市議會",
+                "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "湯金全 合併前高雄市議會 第四屆83~87"
+              }
+            },
+            {
+              "organizationName": "高雄市政府",
+              "organizationType": "government",
+              "positionTitle": "副市長",
+              "positionCategory": "public_office",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.chinatimes.com/realtimenews/20221125002927-260407",
+                "publisher": "中時新聞網",
+                "title": "湯金全給女兒湯詠瑜的心內話 盼傳承民主火把",
+                "publicationDate": "2022-11-25",
+                "quote": "前高雄市副市長湯金全及其女兒、前金新興苓雅市議員候選人湯詠瑜，近日他們共同在掃街拜票"
+              }
+            }
+          ],
+          "notes": "副市長任期起訖未在來源中載明，故日期留 null。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "湯東穎（湯詠瑜弟弟）",
+          "reason": "親屬關係有引文，但公開報導僅提及他協助拜票，未查得任何政治、政府、企業、上市櫃或基金會職務，故不列入 relations。",
+          "url": "https://n.yam.com/Article/20260912814245"
+        }
+      ]
+    },
+    {
+      "sequence": 63,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "displayName": "黃文益",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃文益 父親",
+        "黃文益 競總 媽媽 彩帶",
+        "黃文益 家族 政治世家",
+        "黃文益 家族 企業 董事長"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%E9%BB%83%E6%96%87%E7%9B%8A%20%E7%88%B6%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E6%96%87%E7%9B%8A%20%E7%AB%B6%E7%B8%BD%20%E5%AA%BD%E5%AA%BD%20%E5%BD%A9%E5%B8%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E6%96%87%E7%9B%8A%20%E5%AE%B6%E6%97%8F%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "未具名母親",
+          "reason": "報導僅記載 2022 年競選總部成立時由母親披上彩帶，未提供姓名，亦未記載任何職務；無從識別對象，故不列入 relations。",
+          "url": "https://news.google.com/rss/search?q=%E9%BB%83%E6%96%87%E7%9B%8A%20%E7%AB%B6%E7%B8%BD%20%E5%AA%BD%E5%AA%BD%20%E5%BD%A9%E5%B8%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+        }
+      ]
+    },
+    {
+      "sequence": 64,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-6164dd2e",
+      "displayName": "黃鈺婷",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃鈺婷 黃芳仁 女兒",
+        "黃鈺婷 父親 前議員 黃芳仁",
+        "黃紹庭 解職",
+        "黃芳仁 董事長 高雄",
+        "黃芳仁 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://www.taisounds.com/news/content/134/286966",
+        "https://news.tvbs.com.tw/politics/4035871",
+        "https://newtalk.tw/news/view/2026-10-14/1065386",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+        "https://news.google.com/rss/search?q=%E9%BB%83%E9%88%BA%E5%A9%B7%20%E9%BB%83%E8%8A%B3%E4%BB%81%20%E5%A5%B3%E5%85%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "黃芳仁",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://www.taisounds.com/news/content/134/286966",
+            "publisher": "太報 TaiSounds",
+            "title": "國民黨8選區議員選戰添變數　黃紹庭妹妹接棒、9人搶5席",
+            "publicationDate": "2026-09-04",
+            "quote": "黃鈺婷表示，父親黃芳仁及哥哥黃紹庭都曾擔任高雄市議員，家人從政及服務選民已有約40年，未來若能進入市議會，希望成為高雄市民的「健康管理師」，從專業角度提供更多問政及政策建議。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員（合併前第二屆74~78、第三屆78~83、第四屆83~87）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+                "publisher": "高雄市議會",
+                "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "黃芳仁 合併前高雄市議會 第二屆74~78 第三屆78~83 第四屆83~87"
+              }
+            }
+          ],
+          "notes": "新頭殼 2026-10-14 另記載其「於法院認罪後辭去議員職務」，惟未載日期，卸任日期留 null。"
+        },
+        {
+          "relativeName": "黃紹庭",
+          "relationLabel": "哥哥",
+          "relationTypeHint": "siblings",
+          "kinship": {
+            "url": "https://www.taisounds.com/news/content/134/286966",
+            "publisher": "太報 TaiSounds",
+            "title": "國民黨8選區議員選戰添變數　黃紹庭妹妹接棒、9人搶5席",
+            "publicationDate": "2026-09-04",
+            "quote": "黃鈺婷表示，父親黃芳仁及哥哥黃紹庭都曾擔任高雄市議員，家人從政及服務選民已有約40年，未來若能進入市議會，希望成為高雄市民的「健康管理師」，從專業角度提供更多問政及政策建議。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": "2026-06-24",
+              "source": {
+                "url": "https://news.tvbs.com.tw/politics/4035871",
+                "publisher": "TVBS新聞網",
+                "title": "黃紹庭詐千萬助理費推妹接棒 高雄藍營內鬨爆「撞名大戰」基層炸鍋",
+                "publicationDate": "2026-10-14",
+                "quote": "國民黨籍前議員黃紹庭因涉及詐領助理費案遭判刑定讞並解職後，於9月登記截止前夕突推胞妹黃鈺婷「代兄出征」"
+              }
+            }
+          ],
+          "notes": "同一篇 TVBS 報導記載「最高法院於今年6月24日駁回上訴確定…依法遭解職」，據此填 endDate；判決內容未列入本檔（非家族政商職務）。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 65,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+      "displayName": "陳雅敏",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳雅敏 高雄 議員 參選",
+        "陳雅敏 家族 政治世家",
+        "陳雅敏 吳益政",
+        "陳雅敏 配偶 子女"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%E9%99%B3%E9%9B%85%E6%95%8F%20%E9%AB%98%E9%9B%84%20%E8%AD%B0%E5%93%A1%20%E5%8F%83%E9%81%B8&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E9%99%B3%E9%9B%85%E6%95%8F%20%E5%AE%B6%E6%97%8F%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "吳益政（前高雄市議員）與陳雅敏的關係",
+          "reason": "報導內容為吳益政公開表態支持陳雅敏，屬政治支持關係，未記載親屬關係；依契約紅線排除。",
+          "url": "https://news.google.com/rss/search?q=%E9%99%B3%E9%9B%85%E6%95%8F%20%E5%90%B3%E7%9B%8A%E6%94%BF&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+        }
+      ]
+    },
+    {
+      "sequence": 66,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+      "displayName": "鄒約翰",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "鄒約翰 高雄 議員",
+        "鄒約翰 退役軍官 家族",
+        "鄒約翰 父親 母親"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%E9%84%92%E7%B4%84%E7%BF%B0%20%E9%AB%98%E9%9B%84%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E9%84%92%E7%B4%84%E7%BF%B0%20%E9%80%80%E5%BD%B9%E8%BB%8D%E5%AE%98%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 67,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-fc0812f4",
+      "displayName": "郭建盟",
+      "districtId": "district-kaohsiung-council-08",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "郭建盟 郭金發 父親",
+        "郭建盟 家族 政治世家",
+        "郭金發 董事長",
+        "郭金發 職務"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/4152674",
+        "https://news.google.com/rss/search?q=%E9%83%AD%E5%BB%BA%E7%9B%9F%20%E9%83%AD%E9%87%91%E7%99%BC%20%E7%88%B6%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E7%87%92%E8%82%89%E7%B2%BD%20%E9%83%AD%E9%87%91%E7%99%BC%E7%AB%99%E5%8F%B0%20%E8%A6%AA%E7%88%B9&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "郭金發（郭建盟父親，已故台語歌手）",
+          "reason": "親屬關係有明確引文，但其公開身分為歌手，未查得政治、政府、企業、上市櫃公司或基金會／非營利組織職務，不符四類合格職務，故不列入 relations。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4152674"
+        }
+      ]
+    },
+    {
+      "sequence": 43,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-5fb70691",
+      "displayName": "簡煥宗",
+      "districtId": "district-kaohsiung-council-06",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "簡煥宗 父親",
+        "簡煥宗 家族 政治世家",
+        "簡煥宗 配偶 子女"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%E7%B0%A1%E7%85%A5%E5%AE%97%20%E7%88%B6%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%E7%B0%A1%E7%85%A5%E5%AE%97%20%E5%AE%B6%E6%97%8F%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "政治人物幕僚或服務處人員",
+          "reason": "既有研究以職務關係推測親屬，未找到任何明確描述親屬關係的來源；職務關係不等於親屬關係，維持排除。",
+          "url": "https://news.google.com/rss/search?q=%E7%B0%A1%E7%85%A5%E5%AE%97%20%E5%AE%B6%E6%97%8F%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+        }
+      ]
+    },
+    {
+      "sequence": 44,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-68517ae6",
+      "displayName": "李喬如",
+      "districtId": "district-kaohsiung-council-06",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李喬如 家族",
+        "李喬如 李昆澤",
+        "李喬如 父親 母親",
+        "李喬如 配偶 子女"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/4138047",
+        "https://news.google.com/rss/search?q=%E6%9D%8E%E5%96%AC%E5%A6%82%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李昆澤（立法委員）與李喬如的關係",
+          "reason": "公開互動與「姊姊／姐姐」稱呼屬政治場合用語，非親屬證據；亦不得由第三人的親屬關係推導，故排除。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4138047"
+        }
+      ]
+    },
+    {
+      "sequence": 45,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-48b16c5d",
+      "displayName": "蔡金晏",
+      "districtId": "district-kaohsiung-council-06",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "蔡金晏 蔡松雄 之子",
+        "蔡松雄 副議長",
+        "蔡松雄 董事長",
+        "蔡松雄 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/local/paper/402524",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=33",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+        "https://news.google.com/rss/search?q=%E8%94%A1%E9%87%91%E6%99%8F%20%E8%94%A1%E6%9D%BE%E9%9B%84%20%E4%B9%8B%E5%AD%90&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "蔡松雄",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/local/paper/402524",
+            "publisher": "自由時報",
+            "title": "《博士代父出征》蔡松雄之子蔡金晏 吳敦義背書",
+            "publicationDate": "2010-06-10",
+            "quote": "蔡金晏父親蔡松雄是連任四屆、17年的議員，且當過兩屆副議長，地方服務有口皆碑"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員（合併前第三屆78~83、第四屆83~87、第五屆87~91）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=33",
+                "publisher": "高雄市議會",
+                "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "蔡松雄 合併前高雄市議會 第三屆78~83 第四屆83~87 第五屆87~91"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "副議長（第五屆87~91）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=33",
+                "publisher": "高雄市議會",
+                "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "副議長： 蔡松雄"
+              }
+            }
+          ],
+          "notes": "市議會第六屆（91~95）頁面副議長欄亦為蔡松雄，與自由時報「當過兩屆副議長」相符；任期日期未載，故留 null。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 46,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "displayName": "陳美雅",
+      "districtId": "district-kaohsiung-council-06",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳美雅 陳明吉 父親",
+        "陳明吉 前高雄市議員 辭世",
+        "陳明吉 佛光山 大佛",
+        "陳明吉 董事長"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5410522",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+        "https://news.google.com/rss/search?q=%E9%99%B3%E6%98%8E%E5%90%89%20%E8%BE%AD%E4%B8%96%20%E9%99%B3%E7%BE%8E%E9%9B%85&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "陳明吉",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5410522",
+            "publisher": "自由時報",
+            "title": "曾隨星雲大師打造佛光大佛 前高市議員陳明吉辭世享壽87歲",
+            "publicationDate": "2026-04-21",
+            "quote": "曾任原高雄市議會第4屆議員的陳明吉，日前於家中安詳辭世，享壽87歲。陳明吉先生年輕時也是藝術家，更曾參與佛光山開山建設，追隨星雲大師打造佛光大佛；其女、現任高雄市議員陳美雅感傷表示，父親一生公義踏實，是她從政之路最重要的啟蒙者，家屬訂於4月28日於市立殯儀館舉行告別儀式。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員（原高雄市議會第四屆83~87）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/breakingnews/5410522",
+                "publisher": "自由時報",
+                "title": "曾隨星雲大師打造佛光大佛 前高市議員陳明吉辭世享壽87歲",
+                "publicationDate": "2026-04-21",
+                "quote": "曾任原高雄市議會第4屆議員的陳明吉，日前於家中安詳辭世，享壽87歲。"
+              }
+            }
+          ],
+          "notes": "市議會歷屆議員頁第四屆名冊亦列有陳明吉。報導另稱其曾受邀帶領團隊參與佛光山大悲殿、大雄寶殿大佛等藝術工程，屬藝術工程合作，未載基金會或非營利組織職稱，故未列為職務。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    }
+  ]
+}

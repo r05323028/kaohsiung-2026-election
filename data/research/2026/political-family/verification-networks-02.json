@@ -1,0 +1,695 @@
+{
+  "verificationVersion": "1",
+  "verifiedAt": "2026-11-16",
+  "reviewerRole": "independent-fact-checker",
+  "records": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "relativeName": "黃石龍",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬：Newtalk 2022-11-19 直述「黃文志的父親黃石龍」，自由時報 2018-03-21「黃文志為現任議員黃石龍的兒子」、2018-10-20「承續父親黃石龍」亦各自以父子敘述，兩家獨立媒體一致，親屬成立。職務：高雄市議會官方「歷屆議員簡介」合併前第七屆（民國95年12月25日至99年12月24日）頁面載明議長莊啟旺、副議長黃石龍，補足 batch 未載的屆次與任期；同頁人員索引另列黃石龍曾任第五、六屆議員。batch 以新聞報導推得的「副議長」職務與官方紀錄一致，故 verified。",
+      "sourceIds": [
+        "source-verify-a450167e",
+        "source-verify-0ea5dfbf",
+        "source-verify-ea59f796",
+        "source-verify-b6ab9437"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-a450167e",
+        "source-verify-0ea5dfbf",
+        "source-verify-ea59f796"
+      ],
+      "positionSourceIds": [
+        "source-verify-b6ab9437"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-a450167e",
+          "url": "https://newtalk.tw/news/view/2022-11-19/844087",
+          "publisher": "Newtalk新聞",
+          "title": "黃文志繼承衣缽爭取連任 籲鄉親堅定支持勿信謠言",
+          "publicationDate": "2022-11-19",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-0ea5dfbf",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/2371863",
+          "publisher": "自由時報",
+          "title": "民進黨高市議員左楠區初選民調出爐 2現任、2新人",
+          "publicationDate": "2018-03-21",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ea59f796",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/2586694",
+          "publisher": "自由時報",
+          "title": "回防高雄力挺子弟兵 陳菊：假新聞充斥要加百倍努力",
+          "publicationDate": "2018-10-20",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-b6ab9437",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=35",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（合併前高雄市議會第七屆：民國95年12月25日至99年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-a450167e",
+            "url": "https://newtalk.tw/news/view/2022-11-19/844087",
+            "httpExitCode": 200,
+            "byteCount": 184516,
+            "nameHits": {
+              "黃文志": true,
+              "黃石龍": true
+            }
+          },
+          {
+            "sourceId": "source-verify-0ea5dfbf",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/2371863",
+            "httpExitCode": 200,
+            "byteCount": 232320,
+            "nameHits": {
+              "黃文志": true,
+              "黃石龍": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ea59f796",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/2586694",
+            "httpExitCode": 200,
+            "byteCount": 234840,
+            "nameHits": {
+              "黃文志": true,
+              "黃石龍": true
+            }
+          },
+          {
+            "sourceId": "source-verify-b6ab9437",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=35",
+            "httpExitCode": 200,
+            "byteCount": 175089,
+            "nameHits": {
+              "黃文志": false,
+              "黃石龍": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2006-12-25",
+          "endDate": "2010-12-24",
+          "sourceIds": [
+            "source-verify-b6ab9437"
+          ],
+          "notes": "合併前高雄市議會第七屆（民國95年12月25日至99年12月24日）副議長，同屆議長為莊啟旺。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "relativeName": "王春生",
+      "relation": "spouses",
+      "status": "verified",
+      "rationale": "親屬：鏡週刊（轉載三立）2026-11-01 直述「丈夫王春生是現任高雄市警察局鳳山分局長」，自由時報 2024-08-22 警職異動報導另稱「新任公關室主任王春生的太太是國民黨高雄市議員李雅芬」，兩家獨立來源一致，配偶關係成立。職務：自由時報 2026-01-16 分局長異動報導載「由岡山分局長王春生扛起重任」（接任鳳山分局），與鏡週刊 2026-11-01「現任鳳山分局長」相符，現任成立。惟 2026-01-16 為異動發布日、非到任日，startDate 留 null 不編造。限制：高雄市警察局官網（police.kcg.gov.tw、www.kmph.gov.tw）DNS 無法解析，未能取得機關人事名錄作為官方佐證，本職務僅有兩家新聞來源。",
+      "sourceIds": [
+        "source-verify-6d5af5ef",
+        "source-verify-79f8437d",
+        "source-verify-35bd5f72"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-6d5af5ef",
+        "source-verify-79f8437d"
+      ],
+      "positionSourceIds": [
+        "source-verify-6d5af5ef",
+        "source-verify-35bd5f72"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-6d5af5ef",
+          "url": "https://www.mirrormedia.mg/external/setn_1931794",
+          "publisher": "鏡週刊（轉載三立新聞網）",
+          "title": "韓國瑜交代生第6胎！警分局長尪反應曝光 - 鏡週刊 Mirror Media",
+          "publicationDate": "2026-11-01",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-79f8437d",
+          "url": "https://news.ltn.com.tw/news/society/breakingnews/4777228",
+          "publisher": "自由時報",
+          "title": "高雄市警官職務異動 王春生升任公關室主任",
+          "publicationDate": "2024-08-22",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-35bd5f72",
+          "url": "https://news.ltn.com.tw/news/society/breakingnews/5312206",
+          "publisher": "自由時報",
+          "title": "獨家》高市警分局長大搬風 左營分局長李明道恰與警友主任同名同姓",
+          "publicationDate": "2026-01-16",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-6d5af5ef",
+            "url": "https://www.mirrormedia.mg/external/setn_1931794",
+            "httpExitCode": 200,
+            "byteCount": 120410,
+            "nameHits": {
+              "李雅芬": true,
+              "王春生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-79f8437d",
+            "url": "https://news.ltn.com.tw/news/society/breakingnews/4777228",
+            "httpExitCode": 200,
+            "byteCount": 240462,
+            "nameHits": {
+              "李雅芬": true,
+              "王春生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-35bd5f72",
+            "url": "https://news.ltn.com.tw/news/society/breakingnews/5312206",
+            "httpExitCode": 200,
+            "byteCount": 234601,
+            "nameHits": {
+              "李雅芬": false,
+              "王春生": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市政府警察局鳳山分局",
+          "organizationType": "government",
+          "positionTitle": "分局長",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-6d5af5ef",
+            "source-verify-35bd5f72"
+          ],
+          "notes": "2026-01-16 分局長異動報導稱其由岡山分局接任鳳山分局長，2026-11-01 報導仍稱現任；實際到任日期未查得。2024-08-22 報導時任高雄市警局公共關係室主任。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "relativeName": "李水樹",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬：Newtalk 2022-05-18 直述「楠梓區中和里里長李水樹的女兒李雅芬」，鏡週刊 2026-11-01 直述「父親李水樹則曾任楠梓區中和里里長」，兩家獨立來源一致，父女關係成立。職務：楠梓區公所官方「里長簡介」（2026-11-16 擷取）載中和里現任里長為李東宇、里辦公處地址與 batch 所述里別一致，李水樹未列於現任名冊，與兩篇報導稱「曾任」相符，故以 former-officeholder 記錄。限制：中選會選舉資料庫為前端渲染（無簡易檢索介面）、高雄市選委會（khec.gov.tw）DNS 無法解析，未能取得里長選舉當選紀錄，卸任日期與屆次查無，endDate 留 null。收錄範疇提醒：里長屬基層民選公職，_instructions.md 所舉「民選代表」僅列立委、議員，是否納入公開親屬職務由編輯端決定；本查核僅確認事實成立。",
+      "sourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-6d5af5ef",
+        "source-verify-9c298ec7"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-6d5af5ef"
+      ],
+      "positionSourceIds": [
+        "source-verify-6d5af5ef",
+        "source-verify-faf4741f",
+        "source-verify-9c298ec7"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-faf4741f",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publisher": "Newtalk新聞",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+          "publicationDate": "2022-05-18",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-6d5af5ef",
+          "url": "https://www.mirrormedia.mg/external/setn_1931794",
+          "publisher": "鏡週刊（轉載三立新聞網）",
+          "title": "韓國瑜交代生第6胎！警分局長尪反應曝光 - 鏡週刊 Mirror Media",
+          "publicationDate": "2026-11-01",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-9c298ec7",
+          "url": "https://nanzih.kcg.gov.tw/News.aspx?n=FDA40B2C704CFB46&sms=03F17BBAFA939AB9",
+          "publisher": "高雄市楠梓區公所",
+          "title": "高雄市楠梓區公所－里長簡介",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-faf4741f",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 200,
+            "byteCount": 211067,
+            "nameHits": {
+              "李雅芬": true,
+              "李水樹": true
+            }
+          },
+          {
+            "sourceId": "source-verify-6d5af5ef",
+            "url": "https://www.mirrormedia.mg/external/setn_1931794",
+            "httpExitCode": 200,
+            "byteCount": 120410,
+            "nameHits": {
+              "李雅芬": true,
+              "李水樹": true
+            }
+          },
+          {
+            "sourceId": "source-verify-9c298ec7",
+            "url": "https://nanzih.kcg.gov.tw/News.aspx?n=FDA40B2C704CFB46&sms=03F17BBAFA939AB9",
+            "httpExitCode": 200,
+            "byteCount": 189728,
+            "nameHits": {
+              "李雅芬": false,
+              "李水樹": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市楠梓區中和里",
+          "organizationType": "government",
+          "positionTitle": "里長",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-6d5af5ef",
+            "source-verify-faf4741f",
+            "source-verify-9c298ec7"
+          ],
+          "notes": "結束日期未查得；2026-11-16 楠梓區公所里長簡介顯示中和里現任里長為李東宇，可確認其已非現任。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "relativeName": "李榮宗",
+      "relation": "parent-child",
+      "status": "unresolved",
+      "rationale": "親屬：TVBS 2020-06-23「她父親李榮宗曾經當過市議員，目前是高雄果菜公司總經理」，自由時報 2023-07-03「郭台銘訪李榮宗、李眉蓁父女」以父女敘述，兩家獨立來源一致，父女關係成立。職務一（議員）：高雄市議會官方合併前第六屆（民國91年12月25日至95年12月24日）議員名單列有李榮宗、人員索引註記「解職」，與 TVBS「曾當過市議員」相符；解職日期查無，endDate 留 null。職務二（果菜公司總經理）：TVBS 2020-06-23 稱當時仍現任、自由時報 2023-07-03 稱「前高市果菜市場總經理」，可確認曾任且已卸任，起訖皆查無；公司登記全名與上市櫃狀態未能取得（商工登記／公開資訊觀測站均未查得），listingStatus 依契約記 unknown。職務三（城隍廟主任委員）不成立為可輸出職務：唯一來源自由時報 2023-07-03 僅稱「到父親擔任主委的城隍廟參拜」，未載廟名；同事件他篇（自由時報 2023-07-05、2023-07-06 報導郭台銘至左營舊城城隍廟參香、李眉蓁陪同）雖可推得同一廟，但跨文推論廟名不符契約「不得推論」要求；內政部全國宗教資訊網查詢未取得該廟負責人資料。因 batch 列出的三個職務中有一項無法以自身來源支持，整筆記 unresolved。缺：可辨識廟名之官方寺廟登記（含負責人）或第二家媒體指名報導及主委任期。",
+      "sourceIds": [
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c",
+        "source-verify-e85d3d88",
+        "source-verify-a3f1f5ee",
+        "source-verify-531a32c8"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c"
+      ],
+      "positionSourceIds": [
+        "source-verify-e85d3d88",
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-5c8158e4",
+          "url": "https://news.tvbs.com.tw/politics/1343968",
+          "publisher": "TVBS新聞網",
+          "title": "三連霸議員披掛上陣 李眉蓁父親：這仗不好打",
+          "publicationDate": "2020-06-23",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-36f0470c",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4352354",
+          "publisher": "自由時報",
+          "title": "郭台銘訪李榮宗、李眉蓁父女 李眉蓁：唯一支持侯友宜",
+          "publicationDate": "2023-07-03",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-e85d3d88",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（合併前高雄市議會第六屆：民國91年12月25日至95年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-a3f1f5ee",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4355189",
+          "publisher": "自由時報",
+          "title": "郭台銘參香點燃高雄左楠立委戰火 藍綠「雙李」隔空開槓",
+          "publicationDate": "2023-07-05",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-531a32c8",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4355298",
+          "publisher": "自由時報",
+          "title": "都是因為郭台銘 左楠立委選戰「雙李」出現煙硝味",
+          "publicationDate": "2023-07-06",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-5c8158e4",
+            "url": "https://news.tvbs.com.tw/politics/1343968",
+            "httpExitCode": 200,
+            "byteCount": 225654,
+            "nameHits": {
+              "李眉蓁": true,
+              "李榮宗": true
+            }
+          },
+          {
+            "sourceId": "source-verify-36f0470c",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4352354",
+            "httpExitCode": 200,
+            "byteCount": 234806,
+            "nameHits": {
+              "李眉蓁": true,
+              "李榮宗": true
+            }
+          },
+          {
+            "sourceId": "source-verify-e85d3d88",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 200,
+            "byteCount": 199225,
+            "nameHits": {
+              "李眉蓁": false,
+              "李榮宗": true
+            }
+          },
+          {
+            "sourceId": "source-verify-a3f1f5ee",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4355189",
+            "httpExitCode": 200,
+            "byteCount": 236534,
+            "nameHits": {
+              "李眉蓁": true,
+              "李榮宗": false
+            }
+          },
+          {
+            "sourceId": "source-verify-531a32c8",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4355298",
+            "httpExitCode": 200,
+            "byteCount": 236280,
+            "nameHits": {
+              "李眉蓁": true,
+              "李榮宗": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2002-12-25",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-e85d3d88",
+            "source-verify-5c8158e4"
+          ],
+          "notes": "合併前高雄市議會第六屆（民國91年12月25日至95年12月24日）議員，官方頁面人員索引註記「解職」，解職日期與原因未查得；結束日期未查得。"
+        },
+        {
+          "organization": "高雄果菜運銷公司",
+          "organizationType": "corporation",
+          "positionTitle": "總經理",
+          "positionCategory": "executive",
+          "listingStatus": "unknown",
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-5c8158e4",
+            "source-verify-36f0470c"
+          ],
+          "notes": "2020-06-23 報導稱當時現任、2023-07-03 報導稱前任，可確認曾任與已卸任；公司登記全名、起訖日期與上市櫃狀態未查得（來源分別作「高雄果菜公司」與「高市果菜市場」）。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "relativeName": "陳清玉",
+      "relation": "parent-child",
+      "status": "unresolved",
+      "rationale": "親屬：Newtalk 2022-05-18「前國民黨高雄市黨部副主委陳清玉的女兒陳玫娟」與自由時報 2010-11-15「國民黨的陳玫娟也是在地人，父親陳清玉曾任高市副議長」兩家獨立媒體一致，父女關係成立；自由時報所述「曾任高市副議長」並與高雄市議會官方紀錄（省轄市高雄市議會第九屆民國66-68副議長陳清玉、改制直轄市臨時市議會68-70副議長陳清玉）吻合，可交叉確認該親屬身分而非同名他人。職務（中國國民黨高雄市黨部副主委）：僅見於 Newtalk 2022-05-18 同一篇，未取得政黨名冊、黨部公告或第二家媒體報導，Google News 全文檢索與自由時報站內檢索均無其他來源，單一媒體不足以支撐，故該職務不輸出、整筆記 unresolved。附帶查核發現（batch 未列，僅記錄不代為擴充）：官方紀錄顯示陳清玉曾任省轄市高雄市議會第九屆與臨時市議會副議長，建議 batch 若需職務改以官方可查之副議長並補屆次。缺：副主委之任命或任期紀錄（政黨文件、黨部名冊）或第二家可信媒體指名報導。",
+      "sourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3",
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3"
+      ],
+      "positionSourceIds": [],
+      "sources": [
+        {
+          "id": "source-verify-faf4741f",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publisher": "Newtalk新聞",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+          "publicationDate": "2022-05-18",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-85bdc7c3",
+          "url": "https://news.ltn.com.tw/news/local/paper/444060",
+          "publisher": "自由時報",
+          "title": "農會、在地人情票 影響左營舊部落",
+          "publicationDate": "2010-11-15",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ccd3b525",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=27",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（省轄市高雄市議會第九屆：民國66-68）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-15228fe4",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=28",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（改制直轄市臨時市議會：民國68-70）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-faf4741f",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 200,
+            "byteCount": 211067,
+            "nameHits": {
+              "陳玫娟": true,
+              "陳清玉": true
+            }
+          },
+          {
+            "sourceId": "source-verify-85bdc7c3",
+            "url": "https://news.ltn.com.tw/news/local/paper/444060",
+            "httpExitCode": 200,
+            "byteCount": 230122,
+            "nameHits": {
+              "陳玫娟": true,
+              "陳清玉": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ccd3b525",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=27",
+            "httpExitCode": 200,
+            "byteCount": 181976,
+            "nameHits": {
+              "陳玫娟": false,
+              "陳清玉": true
+            }
+          },
+          {
+            "sourceId": "source-verify-15228fe4",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=28",
+            "httpExitCode": 200,
+            "byteCount": 217484,
+            "nameHits": {
+              "陳玫娟": false,
+              "陳清玉": true
+            }
+          }
+        ]
+      },
+      "positions": []
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-2df974a4",
+      "relativeName": "陳善慧",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬：中華日報 2026-10-30「其兒子，市議員候選人陳冠宇…深信他父親陳善慧清白」，自由時報 2026-08-10「無黨籍高市議員陳善慧今正式宣布將交棒兒子陳冠宇」、2026-09-07「四選區無黨籍陳善慧交棒兒子陳冠宇」，三家獨立媒體一致，父子關係成立。職務：高雄市議會官方「歷屆議員簡介」第四屆（民國111年12月25日至115年12月24日）議員名單列有陳善慧，自由時報 2026-09-07 稱其為「第三、四屆（本屆）議員」，現任成立，endDate 依契約留 null。本筆不記錄任何案件內容或評價。",
+      "sourceIds": [
+        "source-verify-003b38d0",
+        "source-verify-b4203618",
+        "source-verify-5a72f90b",
+        "source-verify-dcf66a2a"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-003b38d0",
+        "source-verify-b4203618",
+        "source-verify-5a72f90b"
+      ],
+      "positionSourceIds": [
+        "source-verify-dcf66a2a",
+        "source-verify-5a72f90b"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-003b38d0",
+          "url": "https://www.cdns.com.tw/articles/1482340",
+          "publisher": "中華日報（中華新聞雲）",
+          "title": "陳冠宇深信陳善慧清白 強調堅定接棒服務初心",
+          "publicationDate": "2026-10-30",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-b4203618",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5535017",
+          "publisher": "自由時報",
+          "title": "主動接棒參選高雄市議員 陳冠宇：因為看見父親爬樓梯背影",
+          "publicationDate": "2026-08-10",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-5a72f90b",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5565459",
+          "publisher": "自由時報",
+          "title": "大換血！本屆高市議會11人下屆不選了",
+          "publicationDate": "2026-09-07",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-dcf66a2a",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（高雄市議會第四屆：民國111年12月25日至115年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-003b38d0",
+            "url": "https://www.cdns.com.tw/articles/1482340",
+            "httpExitCode": 200,
+            "byteCount": 84968,
+            "nameHits": {
+              "陳冠宇": true,
+              "陳善慧": true
+            }
+          },
+          {
+            "sourceId": "source-verify-b4203618",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5535017",
+            "httpExitCode": 200,
+            "byteCount": 237617,
+            "nameHits": {
+              "陳冠宇": true,
+              "陳善慧": true
+            }
+          },
+          {
+            "sourceId": "source-verify-5a72f90b",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5565459",
+            "httpExitCode": 200,
+            "byteCount": 232336,
+            "nameHits": {
+              "陳冠宇": true,
+              "陳善慧": true
+            }
+          },
+          {
+            "sourceId": "source-verify-dcf66a2a",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=40",
+            "httpExitCode": 200,
+            "byteCount": 227439,
+            "nameHits": {
+              "陳冠宇": false,
+              "陳善慧": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": "2022-12-25",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-dcf66a2a",
+            "source-verify-5a72f90b"
+          ],
+          "notes": "第四屆（民國111年12月25日至115年12月24日）議員，無黨籍；2026-11 已宣布本屆任滿後交棒，惟本屆任期內仍為現任。"
+        }
+      ]
+    }
+  ]
+}

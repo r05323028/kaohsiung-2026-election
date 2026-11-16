@@ -1,0 +1,640 @@
+{
+  "batchId": "batch-01",
+  "researchedAt": "2026-11-16",
+  "researcher": "agent-01",
+  "rows": [
+    {
+      "sequence": 78,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+      "displayName": "李政憲",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"李政憲\" 政治世家",
+        "\"李政憲\" 父親 議員",
+        "\"李政憲\" 家族",
+        "\"李政憲\" 接棒",
+        "\"李政憲\" 先生 議員",
+        "\"李政憲\" 高雄 前鎮 小港 2026",
+        "\"李政憲\" 母親"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E6%94%BF%E6%86%B2%22%20%E6%AF%8D%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://n.yam.com/Article/20231209788979"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李政憲之母（報導未揭露姓名）",
+          "reason": "蕃新聞 2023-12-09 競選總部成立報導僅描述「成立大會上，李政憲在眾多支持民眾前跪下，由年邁的老母為他披上彩帶，場面令人動容！」，屬公開場合致意，未記載任何政治、政府、企業、上市櫃、基金會或非營利組織職務，不符合格職務定義，故不列為 relation。",
+          "url": "https://n.yam.com/Article/20231209788979"
+        }
+      ]
+    },
+    {
+      "sequence": 79,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-a23863fc",
+      "displayName": "湯茹婷",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"湯茹婷\" 政治世家",
+        "\"湯茹婷\" 父親 議員",
+        "\"湯茹婷\" 家族",
+        "\"湯茹婷\" 接棒",
+        "\"湯茹婷\" 先生 議員",
+        "\"湯茹婷\" 高雄 前鎮 小港 2026",
+        "\"湯茹婷\" 曾麗燕 接棒",
+        "\"湯茹婷\" 丈夫"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E6%9B%BE%E9%BA%97%E7%87%95%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%B9%AF%E8%8C%B9%E5%A9%B7%22%20%E4%B8%88%E5%A4%AB&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://www.ettoday.net/news/20260915/3237490.htm",
+        "https://news.tvbs.com.tw/politics/4022278"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "曾麗燕",
+          "reason": "ETtoday 與 TVBS 報導所述為政治交棒（湯茹婷單膝跪地接受曾麗燕披掛競選彩帶象徵傳承），並非親屬關係；契約明文禁止由同框、同場合或交棒推論親屬，故不列為 relation。",
+          "url": "https://www.ettoday.net/news/20260915/3237490.htm"
+        }
+      ]
+    },
+    {
+      "sequence": 80,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-6a5be214",
+      "displayName": "劉仙娥",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"劉仙娥\" 政治世家",
+        "\"劉仙娥\" 父親 議員",
+        "\"劉仙娥\" 家族",
+        "\"劉仙娥\" 接棒",
+        "\"劉仙娥\" 先生 議員",
+        "\"劉仙娥\" 高雄 前鎮 小港 2026",
+        "\"劉仙娥\" 勞動黨",
+        "\"劉仙娥\" 工會"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E5%8B%9E%E5%8B%95%E9%BB%A8&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%8A%89%E4%BB%99%E5%A8%A5%22%20%E5%B7%A5%E6%9C%83&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 81,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "displayName": "蔡武宏",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"蔡武宏\" 政治世家",
+        "\"蔡武宏\" 父親 議員",
+        "\"蔡武宏\" 家族",
+        "\"蔡武宏\" 接棒",
+        "\"蔡武宏\" 先生 議員",
+        "\"蔡武宏\" 高雄 前鎮 小港 2026",
+        "\"蔡武宏\" 哥哥 蔡武男",
+        "\"蔡慶源\" 蔡武男 父子"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%AD%A6%E5%AE%8F%22%20%E5%93%A5%E5%93%A5%20%E8%94%A1%E6%AD%A6%E7%94%B7&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E8%94%A1%E6%85%B6%E6%BA%90%22%20%E8%94%A1%E6%AD%A6%E7%94%B7%20%E7%88%B6%E5%AD%90&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://www.ettoday.net/news/20211202/2136822.htm",
+        "https://news.tvbs.com.tw/politics/343683",
+        "https://news.ltn.com.tw/news/local/paper/49093",
+        "https://www.storm.mg/article/23810",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "蔡慶源",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+            "publisher": "ETtoday新聞雲",
+            "title": "議員變小王！蔡武宏政二代出身　搭上韓流列車再翻身",
+            "publicationDate": "2021-12-02",
+            "quote": "他出身政治世家，父親是6連霸的前國民黨市議員蔡慶源，蔡武宏接下父親的棒子後，仕途不順遂"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "市議員（合併前第一屆至第六屆）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+                "publisher": "ETtoday新聞雲",
+                "title": "議員變小王！蔡武宏政二代出身　搭上韓流列車再翻身",
+                "publicationDate": "2021-12-02",
+                "quote": "他出身政治世家，父親是6連霸的前國民黨市議員蔡慶源，蔡武宏接下父親的棒子後，仕途不順遂"
+              }
+            }
+          ],
+          "notes": "同篇報導另述「蔡武宏為蟬聯六屆市議員的蔡慶源次子」。高雄市議會《歷屆議員簡介》同列蔡慶源為合併前第一屆至第六屆議員並註記「解職」（https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34），可交叉確認連任屆次；ETtoday 所稱 6 連霸與該會屆次紀錄一致。"
+        },
+        {
+          "relativeName": "蔡武男",
+          "relationLabel": "兄弟",
+          "relationTypeHint": "siblings",
+          "kinship": {
+            "url": "https://news.tvbs.com.tw/politics/343683",
+            "publisher": "TVBS新聞網",
+            "title": "父子皆賄選解職　高市議會創紀錄",
+            "publicationDate": "2006-11-23",
+            "quote": "他們積極輔選蔡武男的弟弟蔡武宏，進軍市議員"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "市議員（合併前第六屆，補選）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+                "publisher": "高雄市議會",
+                "title": "歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "蔡武男 合併前高雄市議會 第六屆91~95 補選"
+              }
+            }
+          ],
+          "notes": "TVBS 同文敘述「長子蔡武男延續香火，補選上壘，還是因為賄選案，在昨天被最高法院判刑定讞」，判刑後停職，故 status 記 former。親屬引文直接以「蔡武男的弟弟蔡武宏」指明兄弟關係。高雄市議會《歷屆議員簡介》該列為表格與清單排版，quote 依畫面閱讀順序串接姓名、議會名稱與屆次註記（https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34）；自由時報 2005-12-21〈蔡慶源、蔡武男父子賄選 判刑〉亦記載兩人為父子。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 82,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e4b645cd",
+      "displayName": "張藝瑾",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"張藝瑾\" 政治世家",
+        "\"張藝瑾\" 父親 議員",
+        "\"張藝瑾\" 家族",
+        "\"張藝瑾\" 接棒",
+        "\"張藝瑾\" 先生 議員",
+        "\"張藝瑾\" 高雄 前鎮 小港 2026",
+        "\"張藝瑾\" 里長",
+        "\"張藝瑾\" 高雄市議員"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E9%87%8C%E9%95%B7&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%BC%B5%E8%97%9D%E7%91%BE%22%20%E9%AB%98%E9%9B%84%E5%B8%82%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 83,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-740bf55c",
+      "displayName": "于仙玲",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"于仙玲\" 政治世家",
+        "\"于仙玲\" 父親 議員",
+        "\"于仙玲\" 家族",
+        "\"于仙玲\" 接棒",
+        "\"于仙玲\" 先生 議員",
+        "\"于仙玲\" 高雄 前鎮 小港 2026",
+        "\"于仙玲\" 護理師",
+        "\"于仙玲\" 歐巴桑聯盟"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E8%AD%B7%E7%90%86%E5%B8%AB&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E4%BA%8E%E4%BB%99%E7%8E%B2%22%20%E6%AD%90%E5%B7%B4%E6%A1%91%E8%81%AF%E7%9B%9F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.tvbs.com.tw/politics/4022278"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 84,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
+      "displayName": "鄭光峰",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"鄭光峰\" 政治世家",
+        "\"鄭光峰\" 父親 議員",
+        "\"鄭光峰\" 家族",
+        "\"鄭光峰\" 接棒",
+        "\"鄭光峰\" 先生 議員",
+        "\"鄭光峰\" 高雄 前鎮 小港 2026",
+        "\"鄭光峰\" 女兒",
+        "\"鄭光峰\" 妻子"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E5%A5%B3%E5%85%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%84%AD%E5%85%89%E5%B3%B0%22%20%E5%A6%BB%E5%AD%90&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://www.ettoday.net/news/20260808/3215509.htm",
+        "https://www.ftvnews.com.tw/news/detail/2023126R20M1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "鄭潔安（鄭光峰獨生女）",
+          "reason": "ETtoday 2026-08-08 報導僅描述其為高雄醫學大學後醫學系學生、曾赴美實習及網路高人氣，並引述鄭光峰談話；未記載任何政治、政府、企業、上市櫃、基金會或非營利組織職務，不符合格職務定義，故不列為 relation。民視 2023-01-26〈女兒人氣比爸旺！ 高雄市議員鄭光峰欣慰〉頁面本次抓取受 Cloudflare 阻擋，僅以標題與檢索摘要存參。",
+          "url": "https://www.ettoday.net/news/20260808/3215509.htm"
+        }
+      ]
+    },
+    {
+      "sequence": 85,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "displayName": "陳麗娜",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"陳麗娜\" 政治世家",
+        "\"陳麗娜\" 父親 議員",
+        "\"陳麗娜\" 家族",
+        "\"陳麗娜\" 接棒",
+        "\"陳麗娜\" 先生 議員",
+        "\"陳麗娜\" 高雄 前鎮 小港 2026",
+        "\"陳麗娜\" 楊敏郎",
+        "\"楊振添\" 市議員"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%99%B3%E9%BA%97%E5%A8%9C%22%20%E6%A5%8A%E6%95%8F%E9%83%8E&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%A5%8A%E6%8C%AF%E6%B7%BB%22%20%E5%B8%82%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://newtalk.tw/news/view/2019-09-07/295437",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "楊敏郎",
+          "relationLabel": "丈夫",
+          "relationTypeHint": "spouses",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "publisher": "Newtalk新聞",
+            "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+            "publicationDate": "2019-09-07",
+            "quote": "陳麗娜來自小港最大的政治世家，公公楊振添1981年起連任四屆高雄市議員，1998年交接給她的丈夫楊敏郎，2002年成功連任後，2004年因高雄市議長朱安雄賄選案入獄，喪失議員資格。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "市議員（合併前第五屆、第六屆）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+                "publisher": "高雄市議會",
+                "title": "歷屆議員簡介",
+                "publicationDate": null,
+                "quote": "楊敏郎 合併前高雄市議會 第五屆87~91 第六屆91~95 解職"
+              }
+            }
+          ],
+          "notes": "Newtalk 敘述 1998 年交接、2002 年連任、2004 年因朱安雄議長賄選案入獄喪失議員資格；高雄市議會《歷屆議員簡介》屆次為第五屆（87~91）與第六屆（91~95）並註記「解職」，與報導時序一致。該頁為表格與清單排版，quote 依閱讀順序串接姓名、議會名稱與屆次註記（https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34）。"
+        },
+        {
+          "relativeName": "楊振添",
+          "relationLabel": "公公",
+          "relationTypeHint": "in-laws",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "publisher": "Newtalk新聞",
+            "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+            "publicationDate": "2019-09-07",
+            "quote": "陳麗娜來自小港最大的政治世家，公公楊振添1981年起連任四屆高雄市議員，1998年交接給她的丈夫楊敏郎，2002年成功連任後，2004年因高雄市議長朱安雄賄選案入獄，喪失議員資格。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "市議員（合併前第一屆至第四屆）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+                "publisher": "Newtalk新聞",
+                "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+                "publicationDate": "2019-09-07",
+                "quote": "公公楊振添1981年起連任四屆高雄市議員"
+              }
+            }
+          ],
+          "notes": "親屬關係為姻親（配偶之父），契約列為次要親屬；此處關係由同一篇報導直接以「公公」指明。高雄市議會《歷屆議員簡介》另列楊振添為合併前第一屆至第四屆議員（https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32），與「1981 年起連任四屆」相符。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 86,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c4789f6f",
+      "displayName": "李順進",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"李順進\" 政治世家",
+        "\"李順進\" 父親 議員",
+        "\"李順進\" 家族",
+        "\"李順進\" 接棒",
+        "\"李順進\" 先生 議員",
+        "\"李順進\" 高雄 前鎮 小港 2026",
+        "\"李順進\" 兒子",
+        "\"李順進\" 女兒",
+        "\"李絃毅\" 李順進"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E5%85%92%E5%AD%90&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E9%A0%86%E9%80%B2%22%20%E5%A5%B3%E5%85%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E6%9D%8E%E9%A0%86%E9%80%B2&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李絃毅（同選區同姓候選人）",
+          "reason": "同姓且同選區不構成親屬證據；以「李絃毅 李順進」等組合檢索未取得任何報導或官方紀錄指出兩人關係，故不列為 relation，僅記錄此一被排除的假設。",
+          "url": "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22+%E6%9D%8E%E9%A0%86%E9%80%B2&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+        }
+      ]
+    },
+    {
+      "sequence": 87,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+      "displayName": "李絃毅",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"李絃毅\" 政治世家",
+        "\"李絃毅\" 父親 議員",
+        "\"李絃毅\" 家族",
+        "\"李絃毅\" 接棒",
+        "\"李絃毅\" 先生 議員",
+        "\"李絃毅\" 高雄 前鎮 小港 2026",
+        "\"李絃毅\" 父親",
+        "\"李絃毅\" 李順進"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E7%88%B6%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22%20%E6%9D%8E%E9%A0%86%E9%80%B2&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李順進（同選區同姓現任議員）",
+          "reason": "僅同姓且同選區，無任何來源指出親屬關係；依契約不得由姓氏推論，故不列為 relation。以「李絃毅」單獨檢索於 Google 新聞 RSS 無任何結果，無從取得親屬或職務引文。",
+          "url": "https://news.google.com/rss/search?q=%22%E6%9D%8E%E7%B5%83%E6%AF%85%22&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+        }
+      ]
+    },
+    {
+      "sequence": 88,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "displayName": "吳銘賜",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"吳銘賜\" 政治世家",
+        "\"吳銘賜\" 父親 議員",
+        "\"吳銘賜\" 家族",
+        "\"吳銘賜\" 接棒",
+        "\"吳銘賜\" 先生 議員",
+        "\"吳銘賜\" 高雄 前鎮 小港 2026",
+        "\"吳銘賜\" 吳昱鋒",
+        "\"吳銘賜\" 叔叔"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E5%90%B3%E6%98%B1%E9%8B%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E9%8A%98%E8%B3%9C%22%20%E5%8F%94%E5%8F%94&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://www.setn.com/news/1923195",
+        "https://tw.news.yahoo.com/%E4%BD%95%E8%A8%B1%E4%BA%BA%E4%B9%9F-%E5%89%8D%E9%8E%AE%E5%B0%8F%E6%B8%AF%E8%AD%B0%E5%93%A1%E5%88%9D%E9%81%B8%E6%96%B0%E4%BA%BA%E7%88%86%E5%86%B7%E8%A1%9D%E7%AC%AC%E4%BA%8C-%E5%90%B3%E6%98%B1%E9%8B%92%E8%B6%85%E7%8B%82%E8%83%8C%E6%99%AF%E6%9B%9D%E5%85%89-064215436.html",
+        "https://www.storm.mg/article/11067928"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "吳昱鋒",
+          "relationLabel": "姪子",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://www.setn.com/news/1923195",
+            "publisher": "三立新聞網",
+            "title": "獨家／叔姪之爭！吳銘賜、吳昱鋒「同選區參選議員」",
+            "publicationDate": "2026-10-15",
+            "quote": "民進黨高雄市議員參選人吳昱鋒：「吳銘賜確實是我親叔叔，過往幾年，也都已經沒有再聯繫，所以說其實，本身在政治的方向，或者是理念方向，我不夠了解他的想法 。」"
+          },
+          "positions": [
+            {
+              "organizationName": "智食良果",
+              "organizationType": "corporation",
+              "positionTitle": "創辦人",
+              "positionCategory": "executive",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.storm.mg/article/11067928",
+                "publisher": "風傳媒",
+                "title": "科技百業》智食良果創辦人吳昱鋒—從創投金童到田間實踐者",
+                "publicationDate": "2025-09-17",
+                "quote": "比起打造一個科技公司，智食良果創辦人吳昱鋒更想「讓人繼續生活」。"
+              }
+            }
+          ],
+          "notes": "同一篇三立報導另以旁白敘述「吳銘賜、吳昱鋒，兩人都姓吳，原來雙方是親叔姪關係」，並引吳銘賜本人回應「（叔姪）六七年都沒聯絡」。吳昱鋒職務另有民視報導（Yahoo 新聞轉載，2026-03-05）稱其 2022 年底創立智食良果並擔任執行長；未取得公司登記佐證，故 startDate 留 null。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 89,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "displayName": "吳昱鋒",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"吳昱鋒\" 政治世家",
+        "\"吳昱鋒\" 父親 議員",
+        "\"吳昱鋒\" 家族",
+        "\"吳昱鋒\" 接棒",
+        "\"吳昱鋒\" 先生 議員",
+        "\"吳昱鋒\" 高雄 前鎮 小港 2026",
+        "\"吳昱鋒\" 智食良果",
+        "\"吳昱鋒\" 吳銘賜 叔叔"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E6%99%BA%E9%A3%9F%E8%89%AF%E6%9E%9C&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E5%90%B3%E6%98%B1%E9%8B%92%22%20%E5%90%B3%E9%8A%98%E8%B3%9C%20%E5%8F%94%E5%8F%94&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://www.setn.com/news/1923195",
+        "https://www.storm.mg/article/11067928",
+        "https://tw.news.yahoo.com/%E4%BD%95%E8%A8%B1%E4%BA%BA%E4%B9%9F-%E5%89%8D%E9%8E%AE%E5%B0%8F%E6%B8%AF%E8%AD%B0%E5%93%A1%E5%88%9D%E9%81%B8%E6%96%B0%E4%BA%BA%E7%88%86%E5%86%B7%E8%A1%9D%E7%AC%AC%E4%BA%8C-%E5%90%B3%E6%98%B1%E9%8B%92%E8%B6%85%E7%8B%82%E8%83%8C%E6%99%AF%E6%9B%9D%E5%85%89-064215436.html"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "吳銘賜",
+          "relationLabel": "叔叔",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://www.setn.com/news/1923195",
+            "publisher": "三立新聞網",
+            "title": "獨家／叔姪之爭！吳銘賜、吳昱鋒「同選區參選議員」",
+            "publicationDate": "2026-10-15",
+            "quote": "民進黨高雄市議員參選人吳昱鋒：「吳銘賜確實是我親叔叔，過往幾年，也都已經沒有再聯繫，所以說其實，本身在政治的方向，或者是理念方向，我不夠了解他的想法 。」"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "市議員（前鎮、小港選區，無黨籍）",
+              "positionCategory": "political",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.setn.com/news/1923195",
+                "publisher": "三立新聞網",
+                "title": "獨家／叔姪之爭！吳銘賜、吳昱鋒「同選區參選議員」",
+                "publicationDate": "2026-10-15",
+                "quote": "高雄前鎮小港區，議員選戰上演「叔姪之戰」。尋求四連霸的無黨籍議員吳銘賜，與初次參選的民進黨參選人吳昱鋒，是叔姪關係。"
+              }
+            }
+          ],
+          "notes": "三立報導旁白另敘述「尋求四連霸的無黨籍議員吳銘賜，與初次參選的民進黨參選人吳昱鋒，是叔姪關係」，與本人引文互為佐證；吳銘賜本屆是否當選不在本研究範圍，status 依報導記為現任並註明尋求連任。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 90,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c96d364f",
+      "displayName": "黃敬雅",
+      "districtId": "district-kaohsiung-council-10",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "\"黃敬雅\" 政治世家",
+        "\"黃敬雅\" 父親 議員",
+        "\"黃敬雅\" 家族",
+        "\"黃敬雅\" 接棒",
+        "\"黃敬雅\" 先生 議員",
+        "\"黃敬雅\" 高雄 前鎮 小港 2026",
+        "\"黃敬雅\" 父親",
+        "\"黃敬雅\" 丈夫",
+        "\"黃敬雅\" 家族"
+      ],
+      "urlsAttempted": [
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E7%88%B6%E8%A6%AA%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E6%8E%A5%E6%A3%92&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E5%85%88%E7%94%9F%20%E8%AD%B0%E5%93%A1&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E9%AB%98%E9%9B%84%20%E5%89%8D%E9%8E%AE%20%E5%B0%8F%E6%B8%AF%202026&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E7%88%B6%E8%A6%AA&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E4%B8%88%E5%A4%AB&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "https://news.google.com/rss/search?q=%22%E9%BB%83%E6%95%AC%E9%9B%85%22%20%E5%AE%B6%E6%97%8F&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    }
+  ]
+}

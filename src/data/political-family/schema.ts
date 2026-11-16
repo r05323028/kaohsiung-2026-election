@@ -79,24 +79,100 @@ export const FamilySourceKindSchema = z.enum([
   'other-public-record',
 ]);
 
-export const PoliticalCareerSchema = z
+export const OrganizationTypeSchema = z.enum([
+  'government',
+  'legislature',
+  'political_organization',
+  'corporation',
+  'business_group',
+  'foundation',
+  'nonprofit',
+]);
+export type OrganizationType = z.infer<typeof OrganizationTypeSchema>;
+
+/**
+ * Board governance ('board') and operational management ('executive') are
+ * deliberately separate: a board seat is not executive management.
+ */
+export const PositionCategorySchema = z.enum([
+  'political',
+  'public_office',
+  'executive',
+  'board',
+  'organizational_leadership',
+]);
+export type PositionCategory = z.infer<typeof PositionCategorySchema>;
+
+/**
+ * Listed-company status is a separate fact from the role: a TWSE/TPEx board
+ * seat and an unlisted family firm directorship are not the same disclosure.
+ */
+export const ListingStatusSchema = z.enum([
+  'listed',
+  'otc',
+  'unlisted',
+  'unknown',
+]);
+export type ListingStatus = z.infer<typeof ListingStatusSchema>;
+
+export const AffiliationSchema = z
   .object({
     id: z.string().min(1),
-    officeTitle: z.string().min(1),
     organization: z.string().min(1),
+    organizationType: OrganizationTypeSchema,
+    positionTitle: z.string().min(1),
+    positionCategory: PositionCategorySchema,
+    listingStatus: ListingStatusSchema.nullable(),
     status: PoliticalCareerStatusSchema,
     startDate: DateOnlySchema.nullable(),
     endDate: DateOnlySchema.nullable(),
     sourceIds: z.array(z.string().min(1)).min(1),
   })
-  .strict();
+  .strict()
+  .superRefine((affiliation, context) => {
+    if (
+      affiliation.startDate &&
+      affiliation.endDate &&
+      affiliation.startDate > affiliation.endDate
+    ) {
+      context.addIssue({
+        code: 'custom',
+        path: ['endDate'],
+        message: 'An affiliation cannot end before it starts.',
+      });
+    }
+    const corporate =
+      affiliation.organizationType === 'corporation' ||
+      affiliation.organizationType === 'business_group';
+    if (!corporate && affiliation.listingStatus !== null) {
+      context.addIssue({
+        code: 'custom',
+        path: ['listingStatus'],
+        message: 'Only corporate affiliations carry a listing status.',
+      });
+    }
+    const current =
+      affiliation.status === 'current-officeholder' ||
+      affiliation.status === 'current-candidate';
+    if (current && affiliation.endDate) {
+      context.addIssue({
+        code: 'custom',
+        path: ['endDate'],
+        message: 'A current affiliation must not carry an end date.',
+      });
+    }
+  });
+export type Affiliation = z.infer<typeof AffiliationSchema>;
 
+/** @deprecated Renamed to Affiliation when business and nonprofit roles were added. */
+export const PoliticalCareerSchema = AffiliationSchema;
 export const PoliticalPersonSchema = z
   .object({
     id: z.string().min(1),
     displayName: z.string().min(1),
     candidateId: z.string().min(1).optional(),
-    politicalCareer: z.array(PoliticalCareerSchema),
+    /** Political, corporate, foundation and nonprofit roles of this person. */
+    affiliations: z.array(AffiliationSchema),
   })
   .strict();
 
@@ -124,7 +200,9 @@ export const FamilyRelationshipSchema = z
     personBLabel: z.string().min(1),
     verificationStatus: FamilyVerificationStatusSchema,
     kinshipSourceIds: z.array(z.string().min(1)).min(1),
-    careerSourceIds: z.array(z.string().min(1)).min(1),
+    // A research relation may record the kinship while every claimed position
+    // still lacks a source; such a relation stays unverified (see superRefine).
+    positionSourceIds: z.array(z.string().min(1)),
     sourceIds: z.array(z.string().min(1)).min(1),
   })
   .strict()
@@ -132,7 +210,7 @@ export const FamilyRelationshipSchema = z
     const expected = [
       ...new Set([
         ...relationship.kinshipSourceIds,
-        ...relationship.careerSourceIds,
+        ...relationship.positionSourceIds,
       ]),
     ].sort();
     const actual = [...new Set(relationship.sourceIds)].sort();
@@ -141,7 +219,7 @@ export const FamilyRelationshipSchema = z
         code: 'custom',
         path: ['sourceIds'],
         message:
-          'sourceIds must be the union of kinshipSourceIds and careerSourceIds.',
+          'sourceIds must be the union of kinshipSourceIds and positionSourceIds.',
       });
     }
     if (relationship.personAId === relationship.personBId) {
@@ -154,7 +232,7 @@ export const FamilyRelationshipSchema = z
     if (
       relationship.verificationStatus === 'verified' &&
       (relationship.kinshipSourceIds.length === 0 ||
-        relationship.careerSourceIds.length === 0)
+        relationship.positionSourceIds.length === 0)
     ) {
       context.addIssue({
         code: 'custom',
@@ -216,6 +294,7 @@ export const FamilyUnresolvedFindingSchema = z
 export const PoliticalFamilyResearchDatasetSchema = z
   .object({
     datasetId: z.literal('kaohsiung-2026-political-family-research'),
+    schemaVersion: z.literal('2'),
     snapshotDate: DateOnlySchema,
     researchCutoff: DateOnlySchema,
     generatedAt: IsoTimestampSchema,
@@ -246,7 +325,7 @@ export const PoliticalFamilyPublicationSchema = z
     snapshotDate: DateOnlySchema,
     generatedAt: IsoTimestampSchema,
     rosterDatasetId: z.string().min(1),
-    schemaVersion: z.literal('1'),
+    schemaVersion: z.literal('2'),
     sources: z.array(FamilyEvidenceSourceSchema),
     people: z.array(PoliticalPersonSchema),
     relationships: z.array(
@@ -255,6 +334,18 @@ export const PoliticalFamilyPublicationSchema = z
       }),
     ),
     candidates: z.array(FamilyPublicationCandidateSchema),
+    // Relationship ids approved by the explicitly authorised agent track.
+    agentApprovedRelationshipIds: z.array(z.string().min(1)).default([]),
+    note: z.string().min(1),
+  })
+  .strict();
+
+const PoliticalFamilyAgentApprovalSchema = z
+  .object({
+    approvalBasis: z.literal('agent-verification'),
+    reviewer: z.string().min(1),
+    approvedAt: IsoTimestampSchema,
+    relationshipIds: z.array(z.string().min(1)).min(1),
     note: z.string().min(1),
   })
   .strict();
@@ -266,6 +357,8 @@ export const PoliticalFamilyPublicationApprovalSchema = z
     approvedAt: DateOnlySchema,
     approvalBasis: z.literal('independent-verification'),
     approvedRelationshipIds: z.array(z.string().min(1)).min(1),
+    // Non-human approvals are tracked separately and must be labelled as such.
+    agentApprovals: z.array(PoliticalFamilyAgentApprovalSchema).optional(),
     note: z.string().min(1),
   })
   .strict();
@@ -279,7 +372,7 @@ export type FamilyVerificationStatus = z.infer<
 >;
 export type FamilyResearchStatus = z.infer<typeof FamilyResearchStatusSchema>;
 export type FamilyEvidenceSource = z.infer<typeof FamilyEvidenceSourceSchema>;
-export type PoliticalCareer = z.infer<typeof PoliticalCareerSchema>;
+export type PoliticalCareer = Affiliation;
 export type PoliticalPerson = z.infer<typeof PoliticalPersonSchema>;
 export type FamilyRelationship = z.infer<typeof FamilyRelationshipSchema>;
 export type FamilySearchAudit = z.infer<typeof FamilySearchAuditSchema>;
@@ -564,11 +657,11 @@ export function validatePoliticalFamilyReferences(
           `candidate person ${person.id} does not match candidate ${person.candidateId}.`,
         );
     }
-    for (const career of person.politicalCareer)
-      for (const sourceId of career.sourceIds)
+    for (const affiliation of person.affiliations)
+      for (const sourceId of affiliation.sourceIds)
         if (!sourcesById.has(sourceId))
           errors.push(
-            `career ${career.id} references missing source ${sourceId}.`,
+            `affiliation ${affiliation.id} references missing source ${sourceId}.`,
           );
   }
 
@@ -677,8 +770,8 @@ export function validatePoliticalFamilyPublicationReferences(
   for (const relation of dataset.relationships) {
     allowedClaimIds.add(`claim-${relation.id}-kinship`);
     const personB = peopleById.get(relation.personBId);
-    for (const career of personB?.politicalCareer ?? [])
-      allowedClaimIds.add(`claim-${career.id}`);
+    for (const affiliation of personB?.affiliations ?? [])
+      allowedClaimIds.add(`claim-${affiliation.id}`);
   }
 
   for (const source of dataset.sources) {
@@ -741,14 +834,14 @@ export function validatePoliticalFamilyPublicationReferences(
           errors.push(
             `publication relation ${relationshipId} references missing kinship source ${sourceId}.`,
           );
-      for (const sourceId of relation.careerSourceIds)
+      for (const sourceId of relation.positionSourceIds)
         if (!sourceById.has(sourceId))
           errors.push(
             `publication relation ${relationshipId} references missing career source ${sourceId}.`,
           );
-      for (const sourceId of relation.careerSourceIds) {
-        const careerBacked = (personB?.politicalCareer ?? []).some((career) =>
-          career.sourceIds.includes(sourceId),
+      for (const sourceId of relation.positionSourceIds) {
+        const careerBacked = (personB?.affiliations ?? []).some((affiliation) =>
+          affiliation.sourceIds.includes(sourceId),
         );
         if (!careerBacked)
           errors.push(

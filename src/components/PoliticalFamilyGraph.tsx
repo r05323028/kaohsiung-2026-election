@@ -7,6 +7,12 @@ import type {
   PoliticalFamilyReadModel,
   PoliticalPerson,
 } from '../data/political-family';
+import type {
+  Affiliation,
+  ListingStatus,
+  PoliticalCareerStatus,
+  PositionCategory,
+} from '../data/political-family/schema';
 
 type Point = { x: number; y: number };
 type DragState = { x: number; y: number; panX: number; panY: number };
@@ -14,34 +20,155 @@ type DragState = { x: number; y: number; panX: number; panY: number };
 const GRAPH_WIDTH = 780;
 const GRAPH_HEIGHT = 500;
 
-const CAREER_STATUS_LABELS: Record<string, string> = {
-  'current-officeholder': '現任公職',
-  'former-officeholder': '曾任公職',
-  'current-candidate': '目前參選',
-  'former-candidate': '曾參選',
-  'political-appointee': '政治任命',
-  'party-official': '政黨職務',
-  'historical-status-unknown': '政治經歷時間未明',
+export const NEUTRAL_RELATION_NOTE =
+  '家族與商業關係本身不代表不當或不當影響；未顯示的資料表示尚無已查證紀錄，不代表不存在關係。';
+
+export type AffiliationGroupId =
+  | 'political-government'
+  | 'listed-company'
+  | 'business'
+  | 'foundation'
+  | 'nonprofit';
+
+type AffiliationGroupDefinition = {
+  id: AffiliationGroupId;
+  label: string;
+  shortLabel: string;
+  /** Shape marker so the group is never conveyed by colour alone. */
+  marker: string;
+  color: string;
 };
 
-function careerSummary(person: PoliticalPerson): string {
-  if (person.politicalCareer.length === 0) return '政治經歷未列示';
-  const first = person.politicalCareer[0];
+export const AFFILIATION_GROUPS: readonly AffiliationGroupDefinition[] = [
+  {
+    id: 'political-government',
+    label: '政治與政府',
+    shortLabel: '政治',
+    marker: '●',
+    color: '#2f5d7c',
+  },
+  {
+    id: 'listed-company',
+    label: '上市櫃公司',
+    shortLabel: '上市櫃',
+    marker: '■',
+    color: '#2f817e',
+  },
+  {
+    id: 'business',
+    label: '企業與集團',
+    shortLabel: '企業',
+    marker: '◆',
+    color: '#b0673f',
+  },
+  {
+    id: 'foundation',
+    label: '基金會',
+    shortLabel: '基金會',
+    marker: '▲',
+    color: '#7a5c9e',
+  },
+  {
+    id: 'nonprofit',
+    label: '非營利組織',
+    shortLabel: '非營利',
+    marker: '○',
+    color: '#5f7a35',
+  },
+];
+
+export const POSITION_CATEGORY_LABELS: Record<PositionCategory, string> = {
+  political: '政治職務',
+  public_office: '公職',
+  executive: '經營團隊',
+  board: '董事會',
+  organizational_leadership: '組織領導',
+};
+
+export const LISTING_STATUS_LABELS: Record<ListingStatus, string> = {
+  listed: '上市',
+  otc: '上櫃',
+  unlisted: '未上市櫃',
+  unknown: '未確認',
+};
+
+export const AFFILIATION_STATUS_LABELS: Record<PoliticalCareerStatus, string> =
+  {
+    'current-officeholder': '現任',
+    'former-officeholder': '曾任',
+    'current-candidate': '目前參選',
+    'former-candidate': '曾參選',
+    'political-appointee': '政治任命',
+    'party-official': '政黨職務',
+    'historical-status-unknown': '期間未詳',
+  };
+
+function isCorporate(affiliation: Affiliation): boolean {
   return (
-    (person.politicalCareer.length > 1
-      ? `${first?.officeTitle ?? ''}等 ${person.politicalCareer.length} 項經歷`
-      : first?.officeTitle) ?? '政治經歷未列示'
+    affiliation.organizationType === 'corporation' ||
+    affiliation.organizationType === 'business_group'
   );
 }
 
-function careerPeriod(
+export function affiliationGroupOf(
+  affiliation: Affiliation,
+): AffiliationGroupId {
+  switch (affiliation.organizationType) {
+    case 'government':
+    case 'legislature':
+    case 'political_organization':
+      return 'political-government';
+    case 'corporation':
+      return affiliation.listingStatus === 'listed' ||
+        affiliation.listingStatus === 'otc'
+        ? 'listed-company'
+        : 'business';
+    case 'business_group':
+      return 'business';
+    case 'foundation':
+      return 'foundation';
+    case 'nonprofit':
+      return 'nonprofit';
+  }
+}
+
+export function groupAffiliations(
+  affiliations: Affiliation[],
+): Array<{ group: AffiliationGroupDefinition; affiliations: Affiliation[] }> {
+  return AFFILIATION_GROUPS.map((group) => ({
+    group,
+    affiliations: affiliations.filter(
+      (affiliation) => affiliationGroupOf(affiliation) === group.id,
+    ),
+  })).filter((entry) => entry.affiliations.length > 0);
+}
+
+export function affiliationSummary(affiliations: Affiliation[]): string {
+  const groups = groupAffiliations(affiliations);
+  if (groups.length === 0) return '尚無已查證職務';
+  return groups
+    .map((entry) => `${entry.group.shortLabel} ${entry.affiliations.length}`)
+    .join(' · ');
+}
+
+export function affiliationPeriodLabel(
   startDate: string | null,
   endDate: string | null,
 ): string {
-  if (startDate && endDate) return `${startDate}–${endDate}`;
-  if (startDate) return `${startDate}起`;
-  if (endDate) return `至${endDate}`;
-  return '日期未載明';
+  if (startDate && endDate) return `${startDate} 至 ${endDate}`;
+  if (startDate) return `${startDate} 起`;
+  if (endDate) return `至 ${endDate}`;
+  return '日期未詳';
+}
+
+export function affiliationRowMeta(affiliation: Affiliation): string[] {
+  const meta = [POSITION_CATEGORY_LABELS[affiliation.positionCategory]];
+  if (isCorporate(affiliation)) {
+    meta.push(LISTING_STATUS_LABELS[affiliation.listingStatus ?? 'unknown']);
+  }
+  meta.push(AFFILIATION_STATUS_LABELS[affiliation.status]);
+  meta.push(affiliationPeriodLabel(affiliation.startDate, affiliation.endDate));
+  return meta;
 }
 
 function relationshipsForPerson(
@@ -91,6 +218,8 @@ function FamilyNode({
   selected: boolean;
   onSelect: () => void;
 }) {
+  const hint = affiliationSummary(person.affiliations);
+  const firstAffiliation = person.affiliations[0];
   return (
     <g
       className={`political-family-node ${isCandidate ? 'is-candidate' : ''} ${selected ? 'is-selected' : ''}`}
@@ -102,7 +231,7 @@ function FamilyNode({
         <button
           className="political-family-node__button"
           type="button"
-          aria-label={`${person.displayName}，${careerSummary(person)}`}
+          aria-label={`${person.displayName}，${hint}`}
           onClick={(event) => {
             event.stopPropagation();
             onSelect();
@@ -112,15 +241,13 @@ function FamilyNode({
           <span className="political-family-node__name">
             {person.displayName}
           </span>
-          <span className="political-family-node__career">
-            {careerSummary(person)}
-          </span>
+          <span className="political-family-node__career">{hint}</span>
           <span className="political-family-node__status">
             {isCandidate
               ? '2026 候選人'
-              : person.politicalCareer[0]
-                ? CAREER_STATUS_LABELS[person.politicalCareer[0].status]
-                : '政治經歷'}
+              : firstAffiliation
+                ? AFFILIATION_STATUS_LABELS[firstAffiliation.status]
+                : '職務資料'}
           </span>
         </button>
       </foreignObject>
@@ -151,6 +278,83 @@ function SourceLinks({
   );
 }
 
+function AffiliationGroups({
+  affiliations,
+  sourcesById,
+  showSources,
+}: {
+  affiliations: Affiliation[];
+  sourcesById: Map<string, PoliticalFamilyPublicSource>;
+  showSources: boolean;
+}) {
+  const groups = groupAffiliations(affiliations);
+  if (groups.length === 0) {
+    return <p className="info-note">尚無已查證職務資料。</p>;
+  }
+  return (
+    <div
+      className="political-family-affiliation-groups"
+      style={{ display: 'grid', gap: '0.5rem', minWidth: 0 }}
+    >
+      {groups.map(({ group, affiliations: rows }) => (
+        <section
+          key={group.id}
+          className="political-family-affiliation-group"
+          data-testid={`affiliation-group-${group.id}`}
+          style={{ display: 'grid', gap: '0.3rem', minWidth: 0 }}
+        >
+          <h5
+            className="political-family-affiliation-group__heading"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: '0.2rem 0.4rem',
+              margin: 0,
+              color: group.color,
+              fontSize: '0.72rem',
+              fontWeight: 950,
+            }}
+          >
+            <span aria-hidden="true">{group.marker}</span>
+            <span>{group.label}</span>
+            <span
+              className="political-family-affiliation-group__count"
+              style={{ color: 'rgba(41, 72, 88, 0.62)', fontWeight: 800 }}
+            >
+              {rows.length} 項
+            </span>
+          </h5>
+          <ul className="political-family-careers">
+            {rows.map((affiliation) => (
+              <li
+                key={affiliation.id}
+                data-testid={`affiliation-${affiliation.id}`}
+                style={{
+                  borderLeft: `3px solid ${group.color}`,
+                  paddingLeft: '0.5rem',
+                  minWidth: 0,
+                  overflowWrap: 'anywhere',
+                }}
+              >
+                <strong>{affiliation.positionTitle}</strong>
+                <span>{affiliation.organization}</span>
+                <span>{affiliationRowMeta(affiliation).join('・')}</span>
+                {showSources ? (
+                  <SourceLinks
+                    sourceIds={affiliation.sourceIds}
+                    sourcesById={sourcesById}
+                  />
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  );
+}
+
 function FamilyDetails({
   person,
   candidatePersonId,
@@ -166,9 +370,6 @@ function FamilyDetails({
   peopleById: Map<string, PoliticalPerson>;
   sourcesById: Map<string, PoliticalFamilyPublicSource>;
 }) {
-  const careerSourceIds = [
-    ...new Set(person.politicalCareer.flatMap((career) => career.sourceIds)),
-  ];
   const kinshipSourceIds = [
     ...new Set(
       relationships.flatMap((relationship) => relationship.kinshipSourceIds),
@@ -195,14 +396,19 @@ function FamilyDetails({
             {selectedRelationship.relationshipLabel}・
             {relationshipPersonB.displayName}
           </p>
+          {selectedRelationship.agentApproved ? (
+            <p className="info-note">
+              此關係由 agent 查核核准，非人工編輯審查。
+            </p>
+          ) : null}
           <h4>親屬關係來源</h4>
           <SourceLinks
             sourceIds={selectedRelationship.kinshipSourceIds}
             sourcesById={sourcesById}
           />
-          <h4>政治經歷來源</h4>
+          <h4>職務來源</h4>
           <SourceLinks
-            sourceIds={selectedRelationship.careerSourceIds}
+            sourceIds={selectedRelationship.positionSourceIds}
             sourcesById={sourcesById}
           />
         </>
@@ -216,25 +422,12 @@ function FamilyDetails({
         <strong>與候選人關係：</strong>
         {personRelationshipLabel(person.id, candidatePersonId, relationships)}
       </p>
-      {person.politicalCareer.length > 0 ? (
-        <>
-          <h4>從政經歷</h4>
-          <ul className="political-family-careers">
-            {person.politicalCareer.map((career) => (
-              <li key={career.id}>
-                <strong>{career.officeTitle}</strong>
-                <span>{career.organization}</span>
-                <span>
-                  {CAREER_STATUS_LABELS[career.status] ?? career.status}・
-                  {careerPeriod(career.startDate, career.endDate)}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <h4>政治經歷來源</h4>
-          <SourceLinks sourceIds={careerSourceIds} sourcesById={sourcesById} />
-        </>
-      ) : null}
+      <h4>職務與經歷</h4>
+      <AffiliationGroups
+        affiliations={person.affiliations}
+        sourcesById={sourcesById}
+        showSources
+      />
       {relationships.length > 0 ? (
         <>
           <h4>親屬關係來源</h4>
@@ -245,18 +438,24 @@ function FamilyDetails({
   );
 }
 
-function EmptyFamilyState({ unresolved }: { unresolved: boolean }) {
+function EmptyFamilyState({
+  researchStatus,
+}: {
+  researchStatus: PoliticalFamilyReadModel['researchStatus'] | undefined;
+}) {
+  const unresolved = researchStatus === 'unresolved';
   return (
     <div
       className="political-family-empty content-card"
       data-testid="political-family-empty"
     >
-      <h4>家族從政關係</h4>
+      <h4>家族政商關係</h4>
       <p>
         {unresolved
-          ? '目前仍在查核家族從政資料，尚無可公開的已核實關係。'
-          : '尚無可核實的公開家族從政資料。'}
+          ? '家族關係資料仍在查核中，目前尚無已查證且符合收錄條件的親屬資料。'
+          : '目前尚無已查證且符合收錄條件的親屬資料。'}
       </p>
+      <p className="info-note">{NEUTRAL_RELATION_NOTE}</p>
     </div>
   );
 }
@@ -316,6 +515,18 @@ export default function PoliticalFamilyGraph({
     return { people, points, candidatePerson };
   }, [candidate.person.id, family?.people]);
 
+  const legendGroups = useMemo(
+    () =>
+      AFFILIATION_GROUPS.filter((group) =>
+        layout.people.some((person) =>
+          person.affiliations.some(
+            (affiliation) => affiliationGroupOf(affiliation) === group.id,
+          ),
+        ),
+      ),
+    [layout.people],
+  );
+
   const selectedPerson =
     layout.people.find((person) => person.id === selectedId) ??
     layout.candidatePerson ??
@@ -348,8 +559,8 @@ export default function PoliticalFamilyGraph({
         data-testid="political-family-graph"
       >
         <div className="political-family-empty content-card" role="alert">
-          <h4>家族從政關係</h4>
-          <p>家族從政資料目前無法顯示。</p>
+          <h4>家族政商關係</h4>
+          <p>家族關係資料目前無法顯示。</p>
         </div>
       </section>
     );
@@ -361,9 +572,7 @@ export default function PoliticalFamilyGraph({
         className="political-family-graph"
         data-testid="political-family-graph"
       >
-        <EmptyFamilyState
-          unresolved={family?.researchStatus === 'unresolved'}
-        />
+        <EmptyFamilyState researchStatus={family?.researchStatus} />
       </section>
     );
   }
@@ -391,16 +600,6 @@ export default function PoliticalFamilyGraph({
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
   };
-  const selectedSourceIds = [
-    ...new Set([
-      ...selectedPerson.politicalCareer.flatMap((career) => career.sourceIds),
-      ...selectedRelationships.flatMap((relationship) => [
-        ...relationship.kinshipSourceIds,
-        ...relationship.careerSourceIds,
-      ]),
-      ...(selectedRelationship?.careerSourceIds ?? []),
-    ]),
-  ];
 
   return (
     <section
@@ -408,13 +607,20 @@ export default function PoliticalFamilyGraph({
       data-testid="political-family-graph"
     >
       <div className="profile-section-heading">
-        <h3>家族從政關係</h3>
+        <h3>家族政商關係</h3>
         <p>
-          僅呈現具公開來源支持的親屬關係與政治經歷，不推論未公開的家庭成員。
+          僅呈現具公開來源支持的親屬關係，以及這些親屬的政治、企業、基金會與非營利組織職務，不推論未公開的家庭成員。
         </p>
+        {family.relationships.some(
+          (relationship) => relationship.agentApproved,
+        ) ? (
+          <p className="info-note">
+            標示「agent 查核核准」的關係由自動化查核流程核准，非人工編輯審查。
+          </p>
+        ) : null}
       </div>
       <fieldset className="political-family-toolbar">
-        <legend className="sr-only">家族關係圖控制項</legend>
+        <legend className="sr-only">家族政商關係圖控制項</legend>
         <button
           type="button"
           className="tab-button"
@@ -426,6 +632,32 @@ export default function PoliticalFamilyGraph({
         </button>
         <span className="info-note">可拖曳，選取節點查看資料。</span>
       </fieldset>
+      {legendGroups.length > 0 ? (
+        <ul
+          className="political-family-legend"
+          data-testid="political-family-legend"
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '0.3rem 0.7rem',
+            margin: 0,
+            padding: 0,
+            listStyle: 'none',
+            color: 'rgba(41, 72, 88, 0.78)',
+            fontSize: '0.7rem',
+            fontWeight: 800,
+          }}
+        >
+          {legendGroups.map((group) => (
+            <li key={group.id}>
+              <span aria-hidden="true" style={{ color: group.color }}>
+                {group.marker}
+              </span>{' '}
+              {group.label}
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <div className="political-family-canvas">
         <svg
           className="political-family-svg"
@@ -436,7 +668,7 @@ export default function PoliticalFamilyGraph({
           onPointerUp={endPan}
           onPointerCancel={endPan}
         >
-          <title id="political-family-graph-title">候選人家族從政關係圖</title>
+          <title id="political-family-graph-title">候選人家族政商關係圖</title>
           <g transform={`translate(${pan.x} ${pan.y})`}>
             {family.relationships.map((relationship) => {
               const pointA = layout.points.get(relationship.personAId);
@@ -519,7 +751,7 @@ export default function PoliticalFamilyGraph({
         />
       </div>
       <details className="political-family-text" open>
-        <summary>以文字查看家族從政關係</summary>
+        <summary>以文字查看家族政商關係</summary>
         <ul>
           {family.relationships.map((relationship) => {
             const personA = layout.people.find(
@@ -535,17 +767,32 @@ export default function PoliticalFamilyGraph({
                   {personA.displayName}－{relationship.relationshipLabel}－
                   {personB.displayName}
                 </strong>
-                <span>
-                  {careerSummary(personA)}；{careerSummary(personB)}
-                </span>
+                {relationship.agentApproved ? (
+                  <span> （agent 查核核准）</span>
+                ) : null}
+                {[personA, personB].map((person) => (
+                  <div
+                    key={person.id}
+                    className="political-family-text__person"
+                    style={{ display: 'grid', gap: '0.2rem', minWidth: 0 }}
+                  >
+                    <span>
+                      {person.displayName}：
+                      {affiliationSummary(person.affiliations)}
+                    </span>
+                    <AffiliationGroups
+                      affiliations={person.affiliations}
+                      sourcesById={sourcesById}
+                      showSources={false}
+                    />
+                  </div>
+                ))}
               </li>
             );
           })}
         </ul>
       </details>
-      {selectedSourceIds.length > 0 ? (
-        <p className="info-note">本圖所選人物或關係的來源已列於人物資訊。</p>
-      ) : null}
+      <p className="info-note">{NEUTRAL_RELATION_NOTE}</p>
     </section>
   );
 }

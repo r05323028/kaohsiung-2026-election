@@ -1,0 +1,1539 @@
+{
+  "verificationVersion": "1",
+  "verifiedAt": "2026-11-16",
+  "reviewerRole": "independent-fact-checker",
+  "records": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "relativeName": "張漢雄",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬方向與職務皆自行重新擷取後成立。姓名異體已用中選會 2026 候選人檔交叉確認：候選人檔寫「張驥晟」，中選會 T/64000.json 第3選舉區 2 號為「張騏晟」、生日 0750821（1986-08-21）、政黨「無」、candNo 2，與研究檔同一人（同選區、同號次、同生日），自由時報 2026-06-14 亦作「張騏晟」。親屬關係有兩個來源明文：「前高雄市府海洋局長張漢雄之子張騏晟」（自由時報）、「兩人的父親、高雄市前海洋局長張漢雄」（聯合報），方向為張漢雄（父）→張驥晟（子）。四項職務全部重新查得：中華日報 2021-04-13 載「前梓官區漁會總幹事張漢雄出任海洋局長」並敘明「經歷梓官鄉代會主席、兩任梓官鄉長，以及梓官區漁會總幹事」；聯合報 2026-10-12 追述「於縣市合併前曾任梓官鄉長、鄉代會主席，也曾任梓官區漁會總幹事，並曾任高雄市海洋局長」。兩篇對四項職務敘述一致，無同名衝突（同一人、同一梓官漁會與海洋局職務鏈）。海洋局長與鄉長、鄉代會主席起訖日期、屆次來源均未載明，依契約保留 null。",
+      "sourceIds": [
+        "source-verify-ltn54720",
+        "source-verify-udn98099",
+        "source-verify-cdns3863",
+        "source-verify-cec64000"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn54720",
+        "source-verify-udn98099"
+      ],
+      "positionSourceIds": [
+        "source-verify-cdns3863",
+        "source-verify-udn98099"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ltn54720",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+          "publisher": "自由時報",
+          "title": "藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部",
+          "publicationDate": "2026-06-14",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-udn98099",
+          "url": "https://udn.com/news/story/7321/9809970",
+          "publisher": "聯合報",
+          "title": "高雄梓官區漁會疑涉賄選被搜索 高雄前海洋局長父子被約談",
+          "publicationDate": "2026-10-12",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-cdns3863",
+          "url": "https://www.cdns.com.tw/articles/386336",
+          "publisher": "中華日報",
+          "title": "張漢雄接掌高市海洋局",
+          "publicationDate": "2021-04-13",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-cec64000",
+          "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+          "publisher": "中央選舉委員會",
+          "title": "115年地方公職人員選舉 高雄市議員候選人（T/64000.json）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ltn54720",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+            "httpExitCode": 0,
+            "byteCount": 236290,
+            "nameHits": {
+              "張驥晟": false,
+              "張騏晟": true,
+              "張漢雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-udn98099",
+            "url": "https://udn.com/news/story/7321/9809970",
+            "httpExitCode": 0,
+            "byteCount": 187876,
+            "nameHits": {
+              "張驥晟": false,
+              "張騏晟": true,
+              "張漢雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-cdns3863",
+            "url": "https://www.cdns.com.tw/articles/386336",
+            "httpExitCode": 0,
+            "byteCount": 85220,
+            "nameHits": {
+              "張驥晟": false,
+              "張騏晟": false,
+              "張漢雄": true
+            }
+          },
+          {
+            "sourceId": "source-verify-cec64000",
+            "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+            "httpExitCode": 0,
+            "byteCount": 54281,
+            "nameHits": {
+              "張驥晟": false,
+              "張騏晟": true,
+              "張漢雄": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市政府海洋局",
+          "organizationType": "government",
+          "positionTitle": "局長",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-cdns3863",
+            "source-verify-udn98099"
+          ],
+          "notes": "2021-04-13 報導稱其「新任」海洋局長；屬市長任命的政務首長。卸任日期未查得。"
+        },
+        {
+          "organization": "高雄市梓官區漁會",
+          "organizationType": "nonprofit",
+          "positionTitle": "總幹事",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-cdns3863",
+            "source-verify-udn98099"
+          ],
+          "notes": "縣市合併後之梓官區漁會；卸任時間未查得（最遲於 2021-04 接任海洋局長前）。"
+        },
+        {
+          "organization": "高雄縣梓官鄉公所",
+          "organizationType": "government",
+          "positionTitle": "鄉長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-udn98099",
+            "source-verify-cdns3863"
+          ],
+          "notes": "兩篇報導均作「兩任梓官鄉長」，未載屆次與起訖日期；縣市合併前之梓官鄉。"
+        },
+        {
+          "organization": "高雄縣梓官鄉民代表會",
+          "organizationType": "legislature",
+          "positionTitle": "主席",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-udn98099",
+            "source-verify-cdns3863"
+          ],
+          "notes": "報導作「梓官鄉代會主席」，鄉代會為地方民意機關；屆次與起訖日期未查得。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "relativeName": "張鈞華",
+      "relation": "siblings",
+      "status": "verified",
+      "rationale": "兄弟關係由聯合報 2026-10-12 明文：「約談總幹事張鈞華及其胞弟、無黨籍市議員參選人張騏晟到案」，同篇另載「現任梓官區漁會總幹事張鈞華為張漢雄的大兒子」，故張鈞華為長子、候選人為次子，方向為手足（siblings）。張鈞華身分以「梓官區漁會總幹事」跨來源交叉確認：聯合報稱「現任梓官區漁會總幹事」，農業部「財團法人農業信用保證基金第 15 屆董事及監察人名單」亦記「監察人 張鈞華 高雄市梓官區漁會/總幹事」，同一組織同一職稱，非同名誤認。兩項職務均成立：漁會總幹事為現任（2026-10 報導）；農信保基金監察人為第 15 屆，名單載「任期自 114 年 3 月 11 日至 117 年 3 月 10 日止」，故 startDate 2025-03-11，現任依契約不填 endDate。分類檢查：漁會總幹事為組織最高行政職，歸 organizational_leadership（非理事長）；農信保基金為財團法人，監察人屬董事會成員，歸 board（非 executive）。",
+      "sourceIds": [
+        "source-verify-udn98099",
+        "source-verify-moa44940"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-udn98099"
+      ],
+      "positionSourceIds": [
+        "source-verify-udn98099",
+        "source-verify-moa44940"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-udn98099",
+          "url": "https://udn.com/news/story/7321/9809970",
+          "publisher": "聯合報",
+          "title": "高雄梓官區漁會疑涉賄選被搜索 高雄前海洋局長父子被約談",
+          "publicationDate": "2026-10-12",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-moa44940",
+          "url": "https://www.moa.gov.tw/redirect_files.php?id=44940",
+          "publisher": "農業部",
+          "title": "財團法人農業信用保證基金第 15 屆董事及監察人名單（PDF）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-udn98099",
+            "url": "https://udn.com/news/story/7321/9809970",
+            "httpExitCode": 0,
+            "byteCount": 187876,
+            "nameHits": {
+              "張驥晟": false,
+              "張鈞華": true
+            }
+          },
+          {
+            "sourceId": "source-verify-moa44940",
+            "url": "https://www.moa.gov.tw/redirect_files.php?id=44940",
+            "httpExitCode": 0,
+            "byteCount": 235352,
+            "nameHits": {
+              "張驥晟": false,
+              "張鈞華": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市梓官區漁會",
+          "organizationType": "nonprofit",
+          "positionTitle": "總幹事",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-udn98099",
+            "source-verify-moa44940"
+          ],
+          "notes": "2026-10-12 聯合報作「現任梓官區漁會總幹事」；農業部 2026 年名單亦以其現職「高雄市梓官區漁會/總幹事」列名。"
+        },
+        {
+          "organization": "財團法人農業信用保證基金",
+          "organizationType": "foundation",
+          "positionTitle": "監察人",
+          "positionCategory": "board",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": "2025-03-11",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-moa44940"
+          ],
+          "notes": "第 15 屆監察人；名單載任期「自 114 年 3 月 11 日至 117 年 3 月 10 日止」（2028-03-10 屆滿），現任職務不填 endDate。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "relativeName": "宋萬春",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "父女／父子方向成立，且父親曾任縣議員一節有兩個來源。「承接父親宋萬春的遺願，從一名普通百姓投入市議員選舉」（台灣民眾電子報 2026-10-11，宋立彬本人於競選總部成立時陳述）與中評社 2020-07-18「宋立彬來自政治家族，父親是縣市合併之前的前縣議員宋萬春」互相印證，方向為宋萬春（父）→宋立彬（子）。職務以高雄市議會歷屆議員名單獨立確認：宋萬春列名於高雄縣議會第十屆（頁面載民國 71 年 3 月 1 日至 75 年 2 月 28 日）與第十一屆（75 年 3 月 1 日至 79 年 2 月 28 日），故縣議員任期為 1982-03-01 至 1990-02-28。研究檔僅寫「71~75／75~79」未換算日期，本次補上可由頁面直接換算的精確起訖。研究檔 notes 稱「宋萬春已故」並非來源明述：中評社 2020 年稱其「雖淡出政壇但在梓官區根底深厚」，2026 年報導用「遺願」一詞，是否已故無明確來源，本檔不採為職務事實。",
+      "sourceIds": [
+        "source-verify-alln9551",
+        "source-verify-crntt105",
+        "source-verify-kccs0011",
+        "source-verify-kccs0012"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-alln9551",
+        "source-verify-crntt105"
+      ],
+      "positionSourceIds": [
+        "source-verify-kccs0011",
+        "source-verify-kccs0012"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-alln9551",
+          "url": "https://allnews.tw/news/95515",
+          "publisher": "台灣民眾電子報",
+          "title": "宋立彬梓官競總成立拚三連霸",
+          "publicationDate": "2026-10-11",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-crntt105",
+          "url": "https://hk.crntt.com/doc/1058/2/6/9/105826967.html",
+          "publisher": "中評社",
+          "title": "看藍軍抗爭　宋立彬：只在同溫層走不出困局",
+          "publicationDate": "2020-07-18",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kccs0011",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=11",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十屆 71~75）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0012",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=12",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十一屆 75~79）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-alln9551",
+            "url": "https://allnews.tw/news/95515",
+            "httpExitCode": 0,
+            "byteCount": 15327,
+            "nameHits": {
+              "宋立彬": true,
+              "宋萬春": true
+            }
+          },
+          {
+            "sourceId": "source-verify-crntt105",
+            "url": "https://hk.crntt.com/doc/1058/2/6/9/105826967.html",
+            "httpExitCode": 0,
+            "byteCount": 14773,
+            "nameHits": {
+              "宋立彬": true,
+              "宋萬春": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0011",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=11",
+            "httpExitCode": 0,
+            "byteCount": 176191,
+            "nameHits": {
+              "宋立彬": false,
+              "宋萬春": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0012",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=12",
+            "httpExitCode": 0,
+            "byteCount": 179760,
+            "nameHits": {
+              "宋立彬": false,
+              "宋萬春": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1982-03-01",
+          "endDate": "1990-02-28",
+          "sourceIds": [
+            "source-verify-kccs0011",
+            "source-verify-kccs0012"
+          ],
+          "notes": "第十屆（民國71年3月1日至75年2月28日）與第十一屆（75年3月1日至79年2月28日）連任，換算為 1982-03-01 至 1990-02-28。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "relativeName": "蔣耀賢",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "母子關係成立：自由時報 2026-09-04 報導蔣黃女登記參選時明文「由催生橋仔頭糖廠藝術村、金甘蔗影展的兒子蔣耀賢…陪同」，方向為蔣黃女（母）→蔣耀賢（子）。惟此關係僅此一篇 established-news 來源（無第二個獨立來源），屬中等證據強度，已在下方風險註記。兩項職務查核結果不同：(1) 橋仔頭文史協會理事長—自由時報 2008-08-07「橋頭老街拆除爭議」明文「橋仔頭文史協會理事長蔣耀賢」，同名且同為橋頭文史脈絡（2026 報導稱其催生橋仔頭糖廠藝術村），可確認為同一人；但該職為 2008 年狀態，是否仍任、起訖日期均無來源，故維持 historical-status-unknown。(2) 社團法人台灣藝術發展協會理事長—只能取得內政部合作及人民團體司「全國性社會團體名冊－按理事長性別」開放資料的轉載頁，該頁以「負責人 蔣耀賢」列名（名冊本身即理事長名冊），設立時間 0890311；內政部原始頁面 group.moi.gov.tw 本次 DNS 解析失敗（curl 回 000），無法取得立案快照日期，故職稱以名冊欄位判斷為理事長、狀態記 current 但無任期起訖。維基百科與天下雜誌（Cloudflare 阻擋）均未作為證據。",
+      "sourceIds": [
+        "source-verify-ltn55633",
+        "source-verify-ltn23308",
+        "source-verify-zhup1911"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn55633"
+      ],
+      "positionSourceIds": [
+        "source-verify-ltn23308",
+        "source-verify-zhup1911"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ltn55633",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563312",
+          "publisher": "自由時報",
+          "title": "守護橋頭森林 83歲蔣黃女登記參選高雄市議員",
+          "publicationDate": "2026-09-04",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ltn23308",
+          "url": "https://news.ltn.com.tw/news/society/paper/233084",
+          "publisher": "自由時報",
+          "title": "橋頭老街拆除爭議",
+          "publicationDate": "2008-08-07",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-zhup1911",
+          "url": "https://data.zhupiter.com/oddt/19113965/",
+          "publisher": "諸彼特開放資料閱讀網（轉載內政部合作及人民團體司「全國性社會團體名冊－按理事長性別」）",
+          "title": "台灣藝術發展協會",
+          "publicationDate": null,
+          "sourceKind": "other-public-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ltn55633",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563312",
+            "httpExitCode": 0,
+            "byteCount": 234052,
+            "nameHits": {
+              "蔣黃女": true,
+              "蔣耀賢": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ltn23308",
+            "url": "https://news.ltn.com.tw/news/society/paper/233084",
+            "httpExitCode": 0,
+            "byteCount": 229266,
+            "nameHits": {
+              "蔣黃女": false,
+              "蔣耀賢": true
+            }
+          },
+          {
+            "sourceId": "source-verify-zhup1911",
+            "url": "https://data.zhupiter.com/oddt/19113965/",
+            "httpExitCode": 0,
+            "byteCount": 10885,
+            "nameHits": {
+              "蔣黃女": false,
+              "蔣耀賢": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "橋仔頭文史協會",
+          "organizationType": "nonprofit",
+          "positionTitle": "理事長",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "historical-status-unknown",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ltn23308"
+          ],
+          "notes": "2008-08-07 報導時為理事長；其後是否續任無來源可確認，起訖日期未查得。"
+        },
+        {
+          "organization": "社團法人台灣藝術發展協會",
+          "organizationType": "nonprofit",
+          "positionTitle": "理事長",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-zhup1911"
+          ],
+          "notes": "內政部合作及人民團體司「全國性社會團體名冊－按理事長性別」轉載資料以「負責人 蔣耀賢」列名（設立時間民國89年3月11日）；原始內政部頁面未能取得，快照日期與任期起訖未查得，「負責人」欄位依名冊性質對應理事長。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "relativeName": "翁瑞珠",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "母女關係成立，且姓名異體已交叉確認。中選會 T/64000.json 第3選舉區 5 號為「黃秋媖」、生日 0611014（民國61年10月14日＝1972-10-14）、民主進步黨；站內 approved 名冊同一候選人記 displayName「黃秋媛」、cecDirectoryName「黃秋媖」、birthDate 1972-10-14、candidateNumber 5，兩者同選區、同號次、同生日、同政黨，判為同一人，故 2018 年報導中的「黃秋媖」即本筆候選人。全國報系 2018-08-30 報導明文：「高雄市議員選舉第三選區參選人黃秋媖由母親(現任市議員翁瑞珠)及父親(前縣議員黃萬全)陪同之下，在今天完成參選登記」，同篇再有「母親(高雄市議員翁瑞珠)和父親(前高雄縣議員黃萬全)」，方向為翁瑞珠（母）→黃秋媛（女）。職務以高雄市議會歷屆議員名單獨立確認：翁瑞珠列名高雄市議會第一屆（民國99年12月25日至103年12月24日）與第二屆（103年12月25日至107年12月24日），與 2018 年報導「現任市議員」「已連任兩屆」相符，故任期 2010-12-25 至 2018-12-24；本屆（第4屆）議員名單已無翁瑞珠，故為卸任。",
+      "sourceIds": [
+        "source-verify-natn4599",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037",
+        "source-verify-cec64000"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-natn4599"
+      ],
+      "positionSourceIds": [
+        "source-verify-kccs0036",
+        "source-verify-kccs0037",
+        "source-verify-natn4599"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-natn4599",
+          "url": "https://natnews.com.tw/news/news-45996.html",
+          "publisher": "全國報系（全國時報）",
+          "title": "高雄市議員翁瑞珠傳承給愛女黃秋媖 繼續為地方鄉親打拼！",
+          "publicationDate": "2018-08-30",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kccs0036",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第一屆 99~103）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0037",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第二屆 103~107）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-cec64000",
+          "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+          "publisher": "中央選舉委員會",
+          "title": "115年地方公職人員選舉 高雄市議員候選人（T/64000.json）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-natn4599",
+            "url": "https://natnews.com.tw/news/news-45996.html",
+            "httpExitCode": 0,
+            "byteCount": 88150,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": true,
+              "翁瑞珠": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0036",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 0,
+            "byteCount": 243878,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": false,
+              "翁瑞珠": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0037",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 0,
+            "byteCount": 240690,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": false,
+              "翁瑞珠": true
+            }
+          },
+          {
+            "sourceId": "source-verify-cec64000",
+            "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+            "httpExitCode": 0,
+            "byteCount": 54281,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": true,
+              "翁瑞珠": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2010-12-25",
+          "endDate": "2018-12-24",
+          "sourceIds": [
+            "source-verify-kccs0036",
+            "source-verify-kccs0037",
+            "source-verify-natn4599"
+          ],
+          "notes": "縣市合併後第一屆（2010-12-25 至 2018-12-24 期間涵蓋第一、二屆）連任兩屆；2018 年由女兒黃秋媖接棒參選（報導標題「傳承給愛女」），翁瑞珠未列於第三屆（107~111）與本屆（第4屆）議員名單，故任期結束於 2018-12-24。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "relativeName": "黃萬全",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "父女關係成立（同一 2018-08-30 全國報系報導明文「父親(前縣議員黃萬全)」「父親(前高雄縣議員黃萬全)」），方向為黃萬全（父）→黃秋媛（女）；候選人姓名異體與中選會名冊的對應同前筆（第3選區5號黃秋媖，1972-10-14，民進黨）。職務分兩項獨立查核：(1) 高雄縣議會議員—高雄市議會歷屆議員名單列名黃萬全於高雄縣議會第十四屆（民國87年3月1日至91年2月28日）與第十五屆（91年3月1日至95年2月28日），故任期 1998-03-01 至 2006-02-28，且與報導「前縣議員」相符。（研究檔僅寫「前縣議員」未載屆次，本次補上屆次與起訖。）(2) 田寮鄉長—自立晚報 2004-10-20 以第一人稱引述「他當田寮鄉長時，率全國之先實施敬老津貼」，該篇受訪者為台聯高雄縣立委候選人黃萬全，屬候選身分（非職務）故不列 position。鄉長與縣議員的同一人對應是以姓名＋高雄縣＋年代（1990 年代鄉長、1998-2006 縣議員、2004 立委候選人）推定，並無單一來源同時記載兩項職務，屬本筆較弱環節；惟兩項職務各自的來源均可取得，故整體仍判 verified，並在報告列為風險。鄉長屆次與起訖日期未查得，依契約保留 null。",
+      "sourceIds": [
+        "source-verify-natn4599",
+        "source-verify-kccs0015",
+        "source-verify-kccs0016",
+        "source-verify-idn20041",
+        "source-verify-cec64000"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-natn4599"
+      ],
+      "positionSourceIds": [
+        "source-verify-natn4599",
+        "source-verify-kccs0015",
+        "source-verify-kccs0016",
+        "source-verify-idn20041"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-natn4599",
+          "url": "https://natnews.com.tw/news/news-45996.html",
+          "publisher": "全國報系（全國時報）",
+          "title": "高雄市議員翁瑞珠傳承給愛女黃秋媖 繼續為地方鄉親打拼！",
+          "publicationDate": "2018-08-30",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kccs0015",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=15",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十四屆 87~91）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0016",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十五屆 91~95）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-idn20041",
+          "url": "https://www.idn.com.tw/news/news_content.aspx?artid=20041020ab004",
+          "publisher": "自立晚報",
+          "title": "從鄉長到參選立委 黃萬全敬老精神如一",
+          "publicationDate": "2004-10-20",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-cec64000",
+          "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+          "publisher": "中央選舉委員會",
+          "title": "115年地方公職人員選舉 高雄市議員候選人（T/64000.json）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-natn4599",
+            "url": "https://natnews.com.tw/news/news-45996.html",
+            "httpExitCode": 0,
+            "byteCount": 88150,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": true,
+              "黃萬全": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0015",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=15",
+            "httpExitCode": 0,
+            "byteCount": 186459,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": false,
+              "黃萬全": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0016",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+            "httpExitCode": 0,
+            "byteCount": 185023,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": false,
+              "黃萬全": true
+            }
+          },
+          {
+            "sourceId": "source-verify-idn20041",
+            "url": "https://www.idn.com.tw/news/news_content.aspx?artid=20041020ab004",
+            "httpExitCode": 0,
+            "byteCount": 9937,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": false,
+              "黃萬全": true
+            }
+          },
+          {
+            "sourceId": "source-verify-cec64000",
+            "url": "https://info.cec.gov.tw/vote2026/static/json/cand/T/64000.json",
+            "httpExitCode": 0,
+            "byteCount": 54281,
+            "nameHits": {
+              "黃秋媛": false,
+              "黃秋媖": true,
+              "黃萬全": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1998-03-01",
+          "endDate": "2006-02-28",
+          "sourceIds": [
+            "source-verify-kccs0015",
+            "source-verify-kccs0016",
+            "source-verify-natn4599"
+          ],
+          "notes": "第十四屆（民國87年3月1日至91年2月28日）與第十五屆（91年3月1日至95年2月28日），換算為 1998-03-01 至 2006-02-28；與 2018 年報導「前高雄縣議員」相符。"
+        },
+        {
+          "organization": "高雄縣田寮鄉公所",
+          "organizationType": "government",
+          "positionTitle": "鄉長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-idn20041"
+          ],
+          "notes": "2004-10-20 自立晚報引其所述「他當田寮鄉長時」；屆次與起訖日期未查得。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "relativeName": "陸淑美",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "母女關係成立：自由時報 2026-06-14 標題「藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部」，內文「黃韻涵的母親、前副議長陸淑美象徵性『交棒』」，方向為陸淑美（母）→黃韻涵（女）。五項職務全部改以高雄市議會官方資料重新確認（研究檔原以今傳媒報導支持「現任市議員」，本次未重新擷取該篇，而以來源層級較高的議會名單確認）：(1) 現任市議員—本屆（第4屆）議員頁列有陸淑美，其個人頁屬「本屆議員－陸淑美」；(2) 市議會副議長—個人頁經歷欄「高雄市第3屆副議長」；(3) 高雄縣議會副議長—同欄「高雄縣第15-16屆副議長」；(4) 高雄縣議會議員—同欄「第13-16屆縣議員」，並與歷屆名單第十三至十六屆列名一致；(5) 岡山鎮民代表—同欄「岡山鎮第13-14屆鎮民代表」，職稱以「鎮民代表」為準。市議員任期以第一屆起算 2010-12-25 並持續至現任（endDate null）；市副議長依第三屆屆期（107年12月25日至111年12月24日）為 2018-12-25 至 2022-12-24；縣議員與縣副議長均於第十六屆結束（民國99年12月24日＝2010-12-24）為止。須注意官方個人頁經歷欄僅寫「第1-3屆市議員」未含第4屆，與其列名本屆議員名單不一致，屬頁面未更新，本檔以「列名本屆議員」判定現任。",
+      "sourceIds": [
+        "source-verify-ltn54720",
+        "source-verify-kcccur00",
+        "source-verify-kccms218",
+        "source-verify-kccs0014",
+        "source-verify-kccs0015",
+        "source-verify-kccs0016",
+        "source-verify-kccs0017",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037",
+        "source-verify-kccs0038"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn54720"
+      ],
+      "positionSourceIds": [
+        "source-verify-kcccur00",
+        "source-verify-kccms218",
+        "source-verify-kccs0014",
+        "source-verify-kccs0015",
+        "source-verify-kccs0016",
+        "source-verify-kccs0017",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037",
+        "source-verify-kccs0038"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ltn54720",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+          "publisher": "自由時報",
+          "title": "藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部",
+          "publicationDate": "2026-06-14",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcccur00",
+          "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+          "publisher": "高雄市議會",
+          "title": "本屆議員（第4屆）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccms218",
+          "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+          "publisher": "高雄市議會",
+          "title": "本屆議員－陸淑美",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0014",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=14",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十三屆 83~87）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0015",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=15",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十四屆 87~91）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0016",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十五屆 91~95）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0017",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=17",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十六屆 95~99/12/24）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0036",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第一屆 99~103）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0037",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第二屆 103~107）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0038",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第三屆 107~111）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ltn54720",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+            "httpExitCode": 0,
+            "byteCount": 236290,
+            "nameHits": {
+              "黃韻涵": true,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcccur00",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+            "httpExitCode": 0,
+            "byteCount": 151519,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccms218",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+            "httpExitCode": 0,
+            "byteCount": 123745,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0014",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=14",
+            "httpExitCode": 0,
+            "byteCount": 183215,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0015",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=15",
+            "httpExitCode": 0,
+            "byteCount": 186459,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0016",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+            "httpExitCode": 0,
+            "byteCount": 185023,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0017",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=17",
+            "httpExitCode": 0,
+            "byteCount": 189487,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0036",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 0,
+            "byteCount": 243878,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0037",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 0,
+            "byteCount": 240690,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0038",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+            "httpExitCode": 0,
+            "byteCount": 225847,
+            "nameHits": {
+              "黃韻涵": false,
+              "陸淑美": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": "2010-12-25",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcccur00",
+            "source-verify-kccms218",
+            "source-verify-kccs0036",
+            "source-verify-kccs0037",
+            "source-verify-kccs0038"
+          ],
+          "notes": "第一至第三屆列名歷屆議員名單，並列名本屆（第4屆）議員；個人頁經歷欄僅記「第1-3屆市議員」屬未更新。"
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2018-12-25",
+          "endDate": "2022-12-24",
+          "sourceIds": [
+            "source-verify-kccms218",
+            "source-verify-kccs0038"
+          ],
+          "notes": "個人頁經歷欄「高雄市第3屆副議長」；起訖依第三屆屆期（107年12月25日至111年12月24日）。"
+        },
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2002-03-01",
+          "endDate": "2010-12-24",
+          "sourceIds": [
+            "source-verify-kccms218",
+            "source-verify-kccs0016",
+            "source-verify-kccs0017"
+          ],
+          "notes": "個人頁經歷欄「高雄縣第15-16屆副議長」；第十五屆（91年3月1日起）至第十六屆結束（99年12月24日）。"
+        },
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1994-03-01",
+          "endDate": "2010-12-24",
+          "sourceIds": [
+            "source-verify-kccms218",
+            "source-verify-kccs0014",
+            "source-verify-kccs0015",
+            "source-verify-kccs0016",
+            "source-verify-kccs0017"
+          ],
+          "notes": "個人頁經歷欄「第13-16屆縣議員」，歷屆名單第十三至十六屆均列名；第十三屆自 83 年 3 月 1 日起，第十六屆至 99 年 12 月 24 日止。"
+        },
+        {
+          "organization": "高雄縣岡山鎮民代表會",
+          "organizationType": "legislature",
+          "positionTitle": "鎮民代表",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kccms218"
+          ],
+          "notes": "個人頁經歷欄「岡山鎮第13-14屆鎮民代表」；代表會屆次起訖日期未查得。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "relativeName": "李長生",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "父女關係成立：Newtalk 新聞 2022-05-18「第2選區國民黨現任議員李亞築為前議員李長生的女兒」，方向為李長生（父）→李亞築（女）。此關係僅一個 established-news 來源，無官方親屬記載，屬中等證據強度並在報告列為風險。兩項職務以高雄市議會歷屆議員名單獨立確認：李長生列名高雄縣議會第十三屆（83~87，頁面載民國83年3月1日至87年2月28日）、第十四屆（87~91）、第十五屆（91~95）、第十六屆（95~99/12/24），以及縣市合併後高雄市議會第一屆（99~103）、第二屆（103~107），共六屆；本屆（第4屆）名單無李長生，第三屆（107~111）亦未列名，故市議員任期結束於 2018-12-24。研究檔 notes 指報導「五連霸」與名冊屆數不一致—本次查核確認名冊為六屆（縣4＋市2），「五連霸」為報導用語，屆次以議會名冊為準。職務起訖由名冊頁面屆期換算：縣議員 1994-03-01 至 2010-12-24、市議員 2010-12-25 至 2018-12-24。",
+      "sourceIds": [
+        "source-verify-ntk75650",
+        "source-verify-kccs0014",
+        "source-verify-kccs0015",
+        "source-verify-kccs0016",
+        "source-verify-kccs0017",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ntk75650"
+      ],
+      "positionSourceIds": [
+        "source-verify-kccs0014",
+        "source-verify-kccs0015",
+        "source-verify-kccs0016",
+        "source-verify-kccs0017",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ntk75650",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+          "publisher": "Newtalk新聞",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+          "publicationDate": "2022-05-18",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kccs0014",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=14",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十三屆 83~87）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0015",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=15",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十四屆 87~91）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0016",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十五屆 91~95）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0017",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=17",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十六屆 95~99/12/24）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0036",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第一屆 99~103）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0037",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第二屆 103~107）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ntk75650",
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "httpExitCode": 0,
+            "byteCount": 210706,
+            "nameHits": {
+              "李亞築": true,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0014",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=14",
+            "httpExitCode": 0,
+            "byteCount": 183215,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0015",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=15",
+            "httpExitCode": 0,
+            "byteCount": 186459,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0016",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+            "httpExitCode": 0,
+            "byteCount": 185023,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0017",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=17",
+            "httpExitCode": 0,
+            "byteCount": 189487,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0036",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 0,
+            "byteCount": 243878,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0037",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 0,
+            "byteCount": 240690,
+            "nameHits": {
+              "李亞築": false,
+              "李長生": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1994-03-01",
+          "endDate": "2010-12-24",
+          "sourceIds": [
+            "source-verify-kccs0014",
+            "source-verify-kccs0015",
+            "source-verify-kccs0016",
+            "source-verify-kccs0017"
+          ],
+          "notes": "第十三至十六屆；第十三屆自 83 年 3 月 1 日起，第十六屆屆期至 99 年 12 月 24 日止。"
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2010-12-25",
+          "endDate": "2018-12-24",
+          "sourceIds": [
+            "source-verify-kccs0036",
+            "source-verify-kccs0037"
+          ],
+          "notes": "縣市合併後第一、二屆；第二屆屆期至 107 年 12 月 24 日止。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "relativeName": "陳明澤",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "父女關係成立：自由時報 2026-02-06「民進黨高市6連霸議員陳明澤交棒女兒陳琳潔參選第二選區議員，今上午陪她到市黨部完成登記」，同篇「跟著爸爸陳明澤在地服務」「交棒父親」，方向為陳明澤（父）→陳琳潔（女），無同名疑義（同選區第2選舉區、同黨、同場初選登記）。職務以高雄市議會官方資料確認現任：本屆（第4屆）議員名單列有陳明澤；屆次另以歷屆議員名單核對為高雄縣議會第十五屆（91~95）、第十六屆（95~99/12/24）與高雄市議會第一屆（99~103）、第二屆（103~107）、第三屆（107~111），加上本屆合計六屆，與報導「6連霸」相符（研究檔註記僅列縣15-16與市1-2，本次補上市3與本屆）。現任職務依契約 endDate 為 null，起訖日期未逐一換算故 startDate 亦留 null。",
+      "sourceIds": [
+        "source-verify-ltn53348",
+        "source-verify-kcccur00",
+        "source-verify-kccs0016",
+        "source-verify-kccs0017",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037",
+        "source-verify-kccs0038"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn53348"
+      ],
+      "positionSourceIds": [
+        "source-verify-ltn53348",
+        "source-verify-kcccur00",
+        "source-verify-kccs0016",
+        "source-verify-kccs0017",
+        "source-verify-kccs0036",
+        "source-verify-kccs0037",
+        "source-verify-kccs0038"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ltn53348",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+          "publisher": "自由時報",
+          "title": "民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記",
+          "publicationDate": "2026-02-06",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kcccur00",
+          "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+          "publisher": "高雄市議會",
+          "title": "本屆議員（第4屆）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0016",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十五屆 91~95）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0017",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=17",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄縣議會第十六屆 95~99/12/24）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0036",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第一屆 99~103）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0037",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第二屆 103~107）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-kccs0038",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員（高雄市議會第三屆 107~111）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ltn53348",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+            "httpExitCode": 0,
+            "byteCount": 236390,
+            "nameHits": {
+              "陳琳潔": true,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kcccur00",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+            "httpExitCode": 0,
+            "byteCount": 151519,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0016",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=16",
+            "httpExitCode": 0,
+            "byteCount": 185023,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0017",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=17",
+            "httpExitCode": 0,
+            "byteCount": 189487,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0036",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 0,
+            "byteCount": 243878,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0037",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+            "httpExitCode": 0,
+            "byteCount": 240690,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccs0038",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=38",
+            "httpExitCode": 0,
+            "byteCount": 225847,
+            "nameHits": {
+              "陳琳潔": false,
+              "陳明澤": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kcccur00",
+            "source-verify-ltn53348",
+            "source-verify-kccs0016",
+            "source-verify-kccs0017",
+            "source-verify-kccs0036",
+            "source-verify-kccs0037",
+            "source-verify-kccs0038"
+          ],
+          "notes": "列名本屆（第4屆）議員名單；屆次為縣議會第15、16屆與市議會第1至4屆，合計六屆，與報導「6連霸」相符。雖已交棒女兒參選，本屆任期仍為現任。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "relativeName": "王義川",
+      "relation": "cousins",
+      "status": "verified",
+      "rationale": "表兄妹關係依自由時報 2026-02-06 明文：「立委王義川是陳琳潔親表哥」，同篇引王義川推薦語「懇請各位鄉親支持表妹順利當選議員」，兩處互指方向一致（王義川為表兄、陳琳潔為表妹），relation 記為 cousins。限制：該篇為單一來源，且內容出自陳琳潔初選登記場合（報導註明照片由陳琳潔團隊提供），無官方戶籍或家族紀錄可交叉驗證，屬間接親屬中證據強度較弱者；因報導明述「親表哥」且雙方稱謂互相對應，本筆仍判 verified，但列為應複查項目。職務方面：立法院議事及發言系統以「本院委員王義川等17人」列名提案，確認其立法委員身分；自由時報 2026-02-06 亦稱「立委王義川」。立法院全球資訊網委員名冊（ly.gov.tw）本次回「系統忙碌中」無法取得，故屆次與任期起訖未查得，startDate／endDate 保留 null。",
+      "sourceIds": [
+        "source-verify-ltn53348",
+        "source-verify-ppg20311"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn53348"
+      ],
+      "positionSourceIds": [
+        "source-verify-ppg20311",
+        "source-verify-ltn53348"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ltn53348",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+          "publisher": "自由時報",
+          "title": "民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記",
+          "publicationDate": "2026-02-06",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ppg20311",
+          "url": "https://ppg.ly.gov.tw/ppg/bills/203110228270000/details",
+          "publisher": "立法院議事及發言系統",
+          "title": "委員王義川等17人擬具「道路交通管理處罰條例第三十五條、第三十五條之二及第六十七條條文修正草案」",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ltn53348",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+            "httpExitCode": 0,
+            "byteCount": 236390,
+            "nameHits": {
+              "陳琳潔": true,
+              "王義川": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ppg20311",
+            "url": "https://ppg.ly.gov.tw/ppg/bills/203110228270000/details",
+            "httpExitCode": 0,
+            "byteCount": 86677,
+            "nameHits": {
+              "陳琳潔": false,
+              "王義川": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "立法院",
+          "organizationType": "legislature",
+          "positionTitle": "立法委員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ppg20311",
+            "source-verify-ltn53348"
+          ],
+          "notes": "立法院議事及發言系統列名「委員王義川」為提案人，2026-02 報導稱「立委王義川」；屆次與任期起訖未查得（立法院委員名冊頁暫時無法取得）。"
+        }
+      ]
+    }
+  ]
+}

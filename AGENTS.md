@@ -13,7 +13,7 @@
 - **不以姓名認定身分**：同名、相似姓名、同選區都不是同一人的證據；需來源特有 ID、職務、選區與時間脈絡交叉支持才可合併。
 - **不推論**：不得由姓名、照片、職務、政黨、空白欄位或相同姓氏推論親屬、動機、違法、政策成果或政治關係。
 - **不改寫證據**：`data/raw/`、manifest、SHA-256、審查理由與報告屬不可變 provenance。checksum 對不上代表來源變更 → 新增快照、重跑 adapter、重新對帳；不得就地改 checksum 或手改生成的位元組。
-- **機器 ≠ 人工**：schema／Zod 驗證、AI 輔助、獨立機器查核都不得標成人工審查或編輯核准。`data/editorial/reviewer-registry.json` 的空 registry 是刻意的安全預設，不要代為建立審查者或核准。
+- **機器 ≠ 人工**：schema／Zod 驗證、AI 輔助、獨立機器查核都不得標成人工審查或編輯核准，也不得寫入 `data/editorial/reviewer-registry.json`。例外是經使用者明確授權的 agent 核准軌道：只能記在該資料集的 `agentApprovals`（`approvalBasis: agent-verification`），公開層與 UI 必須標示「非人工編輯審查」；空 registry 仍是安全預設，不要代為建立審查者。
 - **不評分、不排名**：不得產生情緒、聲量、好感度、支持度或人氣分數；所有候選人使用等價版面、視覺與資料類別。
 - **政策與歷程分離**：未來承諾留政策頁；已發生的提案、表決、質詢、預算與行政結果屬從政歷程。同一事實只有一個歸屬，兩邊以 ID 互指、不複製敘述。
 - **公開層只讀受控快照**：頁面與元件不得讀 `data/raw/`、`data/normalized/`、`data/review/` 或 `data/enrichment/`。

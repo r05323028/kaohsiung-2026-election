@@ -1,0 +1,548 @@
+{
+  "verificationVersion": "1",
+  "verifiedAt": "2026-11-16",
+  "reviewerRole": "independent-fact-checker",
+  "records": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-fb74ce74",
+      "relativeName": "李鴻鈞",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "親屬方向由兩則彼此獨立的報導確認，且與研究檔一致、未反向：壹蘋新聞網 2026-06-08 原文「前高雄縣議員李鴻鈞之子李振豪、高雄市海洋局前局長張漢雄之子張騏晟，以及前高雄縣市議員蘇炎城之子蘇致榮等人，也紛紛投入選舉戰場」；大時事（漾新聞）2026-05-29 原文「李振豪是前議員李鴻鈞兒子」。屆次由高雄市議會官方《歷屆議員簡介》同一列記載「李鴻鈞 高雄縣議會 第十五屆91~95 第十六屆95~99 高雄市議會 第一屆99~103 (已解職101.6.21)」，同頁另列「議員： 朱信強(解職) 、 李鴻鈞(解職) 、…」與「本屆議員８人因故解職」，並載明高雄市議會第一屆為「民國 99 年 12 月 25 日至民國 103 年 12 月 24 日」。解職日民國101年6月21日與自由時報 2012-06-21「高市議員李鴻鈞涉賄　當選無效定讞」同日吻合；該稿載其「登記參選高雄市第一選區市議員」並「與參選美濃區祿興里長的胞兄李兆祥合作」，與漾新聞所述美濃原鄉緣紙傘文化村相互定位，可確認官方名冊、判決新聞與地方報導所指為同一人。原鄉緣紙傘廠創辦人身分見漾新聞同稿。同名誤認排除成立：維基百科「李鴻鈞 (1959年)」為 1959-05-11 生、臺北縣泰山鄉、親民黨（2000–2022）、兄李鴻源、立法委員 2002-02-01 至 2020-01-31 之監察院前副院長，與本筆高雄美濃李鴻鈞（高雄縣議員 2002–2010、高雄市議員 2010–2012 解職、國民黨籍）籍貫、政黨、選區與任期均不同，兩者並非同一人。所列四項職務（三屆議員與創辦人）皆有來源支持，故判 verified；原鄉緣紙傘廠之組織法律型態與上市櫃狀態未能取得（商工登記查詢受阻），已於該職務 notes 載明，未因此擴張或虛構任何欄位。",
+      "sourceIds": [
+        "source-verify-napw2606",
+        "source-verify-bgtw2605",
+        "source-verify-kccmhist",
+        "source-verify-ltn12621",
+        "source-verify-wkilhj59"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-napw2606",
+        "source-verify-bgtw2605"
+      ],
+      "positionSourceIds": [
+        "source-verify-kccmhist",
+        "source-verify-ltn12621",
+        "source-verify-bgtw2605"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-napw2606",
+          "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+          "publisher": "壹蘋新聞網",
+          "title": "政壇二代拚接班！年輕高學歷來勢洶洶　高雄政壇年底再洗牌",
+          "publicationDate": "2026-06-08",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-bgtw2605",
+          "url": "https://bigtimes.net/archives/125900",
+          "publisher": "大時事（漾新聞）",
+          "title": "漾新聞|李振豪原鄉文化村參選記者會",
+          "publicationDate": "2026-05-29",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-kccmhist",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網-中文網-歷屆議員簡介",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-ltn12621",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/656623",
+          "publisher": "自由時報",
+          "title": "高市議員李鴻鈞涉賄　當選無效定讞",
+          "publicationDate": "2012-06-21",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-wkilhj59",
+          "url": "https://zh.wikipedia.org/zh-tw/%E6%9D%8E%E9%B4%BB%E9%88%9E_(1959%E5%B9%B4)",
+          "publisher": "維基百科",
+          "title": "李鴻鈞 (1959年)",
+          "publicationDate": null,
+          "sourceKind": "other-public-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-napw2606",
+            "url": "https://news.nextapple.com/politics/20260608/B485A89FAB2004E629689ECC192302A3",
+            "httpExitCode": 200,
+            "byteCount": 141068,
+            "nameHits": {
+              "李振豪": true,
+              "李鴻鈞": true
+            }
+          },
+          {
+            "sourceId": "source-verify-bgtw2605",
+            "url": "https://bigtimes.net/archives/125900",
+            "httpExitCode": 200,
+            "byteCount": 161159,
+            "nameHits": {
+              "李振豪": true,
+              "李鴻鈞": true
+            }
+          },
+          {
+            "sourceId": "source-verify-kccmhist",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=36",
+            "httpExitCode": 200,
+            "byteCount": 243878,
+            "nameHits": {
+              "李振豪": false,
+              "李鴻鈞": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ltn12621",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/656623",
+            "httpExitCode": 200,
+            "byteCount": 231314,
+            "nameHits": {
+              "李振豪": false,
+              "李鴻鈞": true
+            }
+          },
+          {
+            "sourceId": "source-verify-wkilhj59",
+            "url": "https://zh.wikipedia.org/zh-tw/%E6%9D%8E%E9%B4%BB%E9%88%9E_(1959%E5%B9%B4)",
+            "httpExitCode": 200,
+            "byteCount": 746768,
+            "nameHits": {
+              "李振豪": false,
+              "李鴻鈞": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（第十五屆91~95）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kccmhist"
+          ],
+          "notes": "官方名冊該列登載「第十五屆91~95」（民國91年至95年）。同頁未列該屆就職日與卸任日，起訖留 null。"
+        },
+        {
+          "organization": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（第十六屆95~99）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-kccmhist"
+          ],
+          "notes": "官方名冊該列登載「第十六屆95~99」（民國95年至99年）；同一名冊將後續屆次列為「高雄市議會 第一屆99~103」，第一屆任期自民國99年12月25日起。未取得該屆逐字就職與卸任日期，起訖留 null。"
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員（第一屆99~103，已解職）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": "2012-06-21",
+          "sourceIds": [
+            "source-verify-kccmhist",
+            "source-verify-ltn12621"
+          ],
+          "notes": "官方名冊登載「高雄市議會 第一屆99~103 (已解職101.6.21)」，議員名單並列「李鴻鈞(解職)」；同頁載該屆任期為民國99年12月25日至103年12月24日。解職日 101.6.21 即 2012-06-21，與自由時報同日「當選無效定讞」報導一致。就職日未取得逐字原文，startDate 留 null。"
+        },
+        {
+          "organization": "原鄉緣紙傘廠（原鄉緣紙傘文化村）",
+          "organizationType": "corporation",
+          "positionTitle": "創辦人",
+          "positionCategory": "executive",
+          "listingStatus": "unknown",
+          "status": "historical-status-unknown",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-bgtw2605"
+          ],
+          "notes": "漾新聞原文「李鴻鈞是「原鄉緣紙傘廠」創辦人…1989年成立「原鄉緣紙傘廠」…設立「原鄉緣紙傘文化村」，1994年落成啟用」。商工登記查詢（findbiz.nat.gov.tw）回 HTTP 403、GCIS 開放資料 API 回空值，未取得組織法律型態、統一編號與上市櫃狀態，故 listingStatus 記 unknown；organizationType 依其為紙傘產製與文化村經營事業記 corporation。報導未載實際掛名職稱（如負責人、董事長或總經理），僅稱創辦人，故 positionCategory 依經營創始角色記 executive，不推論為董事會職。職務起訖與是否仍在任均未查得，記 historical-status-unknown。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "relativeName": "盧天麟",
+      "relation": "uncle-aunt-niece-nephew",
+      "status": "unresolved",
+      "rationale": "親屬關係與多數職務均可由自行擷取來源確認：自由時報 2022-03-24 原文「屬於「邁盟」新人、投入高雄大旗山議員初選的林慧欣，近日遭對手陣營檢舉，舅舅盧天麟曾任民進黨不分區立委，不應適用新人加分。」；Yahoo 轉載同稿引林慧欣「我以我母舅－曾經擔任勞工代表的民進黨不分區立委而光榮!」，方向為盧天麟（母舅）→林慧欣（甥女），與研究檔一致。立委任期經立法院官方委員頁更正：該頁載明屆別第 6 屆、選舉區全國不分區、到職日期 94年2月1日，並於備註欄記「辭職 中途離職，生效日期：96年5月21日 遞補委員：楊芳婉」，故本人任期為 2005-02-01 至 2007-05-21；研究檔所記 2008-01-31 實為該頁上方「第6屆 (2005/02/01至2008/01/31)」之屆期終止日，非本人卸任日，此項主張予以推翻並更正。勞委會主委 2007-05-21 上任見宜蘭縣政府人事處公告「奉 總統96年5月21日（96）特字第00067號令，特任為行政院 勞工委員會主任委員，遵於96年5月21日接篆視事」。台翔航太董事長見該公司官網歷任董事長頁「盧天麟 Philips T. L. Lu 任職時間 2019.02.01 2024.08.08」，其後為「汪庭安 Andy T. A. Wang 兼代期間 2024.08.08 迄今」，故為前任。亞航董事長見 2021-09-07 自由時報「感謝亞洲航空公司董事長盧天麟」與 2024-08-06 自由財經「現任董事長盧天麟將去職，由前國立聯合大學校長李偉賢出任」，亞航官網現任經營團隊為「董事長兼總經理 李偉賢」。全產總理事長見大紀元 2007-05-16 引全產總秘書長謝創智「盧天麟是工會出身，也當過全產總理事長」，立法院委員頁經歷亦列「全國產業總工會理事長」。惟研究檔另列 organizationName「亞洲航空股份有限公司」、positionTitle「總經理」一職：自行擷取僅得工商時報 2016-10-20「台翔航太昨（19）日經董事會通過推薦前行政院勞委會主委盧天麟，出任旗下子公司－亞洲航空董事長兼總經理人事案…並將交由亞航董事會辦理」，屬董事會推薦、尚待亞航董事會決議之人事案，未取得亞航董事會決議紀錄、年報經理人名單或其實際就任總經理之記載；亞航現任經營團隊固仍為「董事長兼總經理」編制，但該事實不足以證明其任內即兼任總經理。依查核契約規定，任一項職務缺證據即不得判為 verified、無來源支持之職務不得輸出，故本筆記為 unresolved：五項可證職務照實列出並更正立委卸任日，總經理一職不輸出，待補得亞航董事會決議或年報經理人紀錄後再判。",
+      "sourceIds": [
+        "source-verify-ltn22324",
+        "source-verify-yao22324",
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ctee1610",
+        "source-verify-ltn24608",
+        "source-verify-ltn36636",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-wkilut07"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn22324",
+        "source-verify-yao22324"
+      ],
+      "positionSourceIds": [
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ltn36636",
+        "source-verify-ltn24608",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-ctee1610",
+        "source-verify-wkilut07"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-ltn22324",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/3870001",
+          "publisher": "自由時報",
+          "title": "舅曾是不分區立委、新人資格遭檢舉！ 林慧欣：主動放棄加權",
+          "publicationDate": "2022-03-24",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-yao22324",
+          "url": "https://tw.news.yahoo.com/%E6%9E%97%E6%85%A7%E6%AC%A3-%E7%99%BB%E8%A8%98%E5%88%9D%E9%81%B8%E6%99%82%E5%B7%B2%E4%B8%BB%E5%8B%95%E6%94%BE%E6%A3%84%E5%8A%A0%E6%AC%8A-033526882.html",
+          "publisher": "Yahoo奇摩新聞（轉載自由時報）",
+          "title": "林慧欣：登記初選時已主動放棄加權",
+          "publicationDate": "2022-03-24",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-lyluti06",
+          "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=1521",
+          "publisher": "立法院",
+          "title": "立法院全球資訊網－盧天麟委員（第6屆）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-ylhr0521",
+          "url": "https://personnel.e-land.gov.tw/News_Content.aspx?n=4235&s=121700",
+          "publisher": "宜蘭縣政府人事處",
+          "title": "盧天麟先生奉 總統令特任為行政院勞工委員會主任委員",
+          "publicationDate": "2007-05-25",
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-tachhist",
+          "url": "https://www.tacaviation.com.tw/about/4",
+          "publisher": "台翔航太工業股份有限公司",
+          "title": "歷任董事長－關於台翔",
+          "publicationDate": null,
+          "sourceKind": "institutional-profile"
+        },
+        {
+          "id": "source-verify-tacabout",
+          "url": "https://www.tacaviation.com.tw/about/1",
+          "publisher": "台翔航太工業股份有限公司",
+          "title": "台翔簡介－關於台翔",
+          "publicationDate": null,
+          "sourceKind": "institutional-profile"
+        },
+        {
+          "id": "source-verify-ctee1610",
+          "url": "https://www.ctee.com.tw/news/20161020700133-439901",
+          "publisher": "工商時報",
+          "title": "亞航董座兼總座 敲定盧天麟",
+          "publicationDate": "2016-10-20",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ltn24608",
+          "url": "https://ec.ltn.com.tw/article/breakingnews/4761007",
+          "publisher": "自由時報（自由財經）",
+          "title": "亞航董事長傳換人 前聯合大學校長李偉賢將出任",
+          "publicationDate": "2024-08-06",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-ltn36636",
+          "url": "https://news.ltn.com.tw/news/life/breakingnews/3663662",
+          "publisher": "自由時報",
+          "title": "傳遞幸福 亞航購庇護工場月餅分送弱勢職災勞工",
+          "publicationDate": "2021-09-07",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-aaiteam1",
+          "url": "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=424&index=2",
+          "publisher": "亞洲航空股份有限公司",
+          "title": "經營團隊－AIR ASIA Company Limited 亞洲航空股份有限公司",
+          "publicationDate": null,
+          "sourceKind": "institutional-profile"
+        },
+        {
+          "id": "source-verify-aaihist0",
+          "url": "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=1&index=1",
+          "publisher": "亞洲航空股份有限公司",
+          "title": "公司簡介－AIR ASIA Company Limited 亞洲航空股份有限公司",
+          "publicationDate": null,
+          "sourceKind": "institutional-profile"
+        },
+        {
+          "id": "source-verify-epc07016",
+          "url": "https://www.epochtimes.com/b5/7/5/16/n1711866.htm",
+          "publisher": "大紀元",
+          "title": "盧天麟接掌勞委會　勞團：能力應可勝任",
+          "publicationDate": "2007-05-16",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-wkilut07",
+          "url": "https://zh.wikipedia.org/zh-tw/%E7%9B%A7%E5%A4%A9%E9%BA%9F",
+          "publisher": "維基百科",
+          "title": "盧天麟",
+          "publicationDate": null,
+          "sourceKind": "other-public-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-ltn22324",
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3870001",
+            "httpExitCode": 200,
+            "byteCount": 239960,
+            "nameHits": {
+              "林慧欣": true,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-yao22324",
+            "url": "https://tw.news.yahoo.com/%E6%9E%97%E6%85%A7%E6%AC%A3-%E7%99%BB%E8%A8%98%E5%88%9D%E9%81%B8%E6%99%82%E5%B7%B2%E4%B8%BB%E5%8B%95%E6%94%BE%E6%A3%84%E5%8A%A0%E6%AC%8A-033526882.html",
+            "httpExitCode": 200,
+            "byteCount": 560646,
+            "nameHits": {
+              "林慧欣": true,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-lyluti06",
+            "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=1521",
+            "httpExitCode": 200,
+            "byteCount": 158537,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ylhr0521",
+            "url": "https://personnel.e-land.gov.tw/News_Content.aspx?n=4235&s=121700",
+            "httpExitCode": 200,
+            "byteCount": 98631,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-tachhist",
+            "url": "https://www.tacaviation.com.tw/about/4",
+            "httpExitCode": 200,
+            "byteCount": 25696,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-tacabout",
+            "url": "https://www.tacaviation.com.tw/about/1",
+            "httpExitCode": 200,
+            "byteCount": 24049,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": false
+            }
+          },
+          {
+            "sourceId": "source-verify-ctee1610",
+            "url": "https://www.ctee.com.tw/news/20161020700133-439901",
+            "httpExitCode": 200,
+            "byteCount": 75160,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ltn24608",
+            "url": "https://ec.ltn.com.tw/article/breakingnews/4761007",
+            "httpExitCode": 200,
+            "byteCount": 145542,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-ltn36636",
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/3663662",
+            "httpExitCode": 200,
+            "byteCount": 229948,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-aaiteam1",
+            "url": "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=424&index=2",
+            "httpExitCode": 200,
+            "byteCount": 24596,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": false
+            }
+          },
+          {
+            "sourceId": "source-verify-aaihist0",
+            "url": "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=1&index=1",
+            "httpExitCode": 200,
+            "byteCount": 24961,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": false
+            }
+          },
+          {
+            "sourceId": "source-verify-epc07016",
+            "url": "https://www.epochtimes.com/b5/7/5/16/n1711866.htm",
+            "httpExitCode": 200,
+            "byteCount": 100978,
+            "nameHits": {
+              "林慧欣": false,
+              "盧天麟": true
+            }
+          },
+          {
+            "sourceId": "source-verify-wkilut07",
+            "url": "https://zh.wikipedia.org/zh-tw/%E7%9B%A7%E5%A4%A9%E9%BA%9F",
+            "httpExitCode": 200,
+            "byteCount": 91909,
+            "nameHits": {
+              "林慧欣": true,
+              "盧天麟": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "立法院",
+          "organizationType": "legislature",
+          "positionTitle": "立法委員（第六屆，全國不分區）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2005-02-01",
+          "endDate": "2007-05-21",
+          "sourceIds": [
+            "source-verify-lyluti06",
+            "source-verify-wkilut07"
+          ],
+          "notes": "立法院官方委員頁：屆別第6屆、選區全國不分區、黨籍民主進步黨、到職日期94年2月1日（2005-02-01）；備註「辭職 中途離職，生效日期：96年5月21日 遞補委員：楊芳婉」，故卸任日為 2007-05-21。研究檔原記 2008-01-31 為該屆屆期終止日（第6屆 2005/02/01至2008/01/31），非本人任期終止日，已更正。維基百科亦載 2005-02-01 至 2007-05-20，僅作旁證，非唯一證據。"
+        },
+        {
+          "organization": "行政院勞工委員會",
+          "organizationType": "government",
+          "positionTitle": "主任委員",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "political-appointee",
+          "startDate": "2007-05-21",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ylhr0521",
+            "source-verify-epc07016"
+          ],
+          "notes": "宜蘭縣政府人事處公告原文「盧天麟先生奉 總統96年5月21日（96）特字第00067號令，特任為行政院 勞工委員會主任委員，遵於96年5月21日接篆視事」。卸任日未取得官方原文（勞動部歷任首長頁面無法擷取），結束日期未查得，endDate 留 null。大紀元 2007-05-16 報導其內定接任，可佐證就任時序。"
+        },
+        {
+          "organization": "台翔航太工業股份有限公司",
+          "organizationType": "corporation",
+          "positionTitle": "董事長",
+          "positionCategory": "board",
+          "listingStatus": "unlisted",
+          "status": "former-officeholder",
+          "startDate": "2019-02-01",
+          "endDate": "2024-08-08",
+          "sourceIds": [
+            "source-verify-tachhist",
+            "source-verify-tacabout"
+          ],
+          "notes": "台翔航太官網歷任董事長頁逐筆列出：田在勱任職時間 2016.01.16 至 2019.01.31；盧天麟任職時間 2019.02.01 至 2024.08.08；汪庭安兼代期間自 2024.08.08 迄今。任期起訖明確且為前任。公司簡介載 1991 年 9 月成立、2006 年轉型控股公司，主要股東為國發基金 49%、金融機構 35%、其他私人企業 16%，未見上市櫃紀錄，故 listingStatus 記 unlisted。"
+        },
+        {
+          "organization": "亞洲航空股份有限公司",
+          "organizationType": "corporation",
+          "positionTitle": "董事長",
+          "positionCategory": "board",
+          "listingStatus": "listed",
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ltn36636",
+            "source-verify-ltn24608",
+            "source-verify-aaiteam1",
+            "source-verify-aaihist0",
+            "source-verify-ctee1610"
+          ],
+          "notes": "2021-09-07 自由時報引南市勞工局長「感謝亞洲航空公司董事長盧天麟每年大量採購庇護工場產品贈送員工」，證實任內擔任董事長；2024-08-06 自由財經「現任董事長盧天麟將去職，由前國立聯合大學校長李偉賢出任，預計在9月4日董事會後公布」；亞航官網現任經營團隊列「董事長兼總經理 李偉賢」，故為前任。工商時報 2016-10-20 記載台翔航太董事會通過推薦其出任亞航董事長兼總經理人事案，可佐證起點方向，但屬推薦階段，未據以填寫日期。就任日與實際交接日未取得官方原文，結束日期未查得，起訖留 null。亞航沿革載 2017 年登錄興櫃、2018 年股票上市，故 listingStatus 記 listed。"
+        },
+        {
+          "organization": "全國產業總工會",
+          "organizationType": "nonprofit",
+          "positionTitle": "理事長",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "historical-status-unknown",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-epc07016",
+            "source-verify-lyluti06"
+          ],
+          "notes": "大紀元 2007-05-16 引全國產業總工會秘書長謝創智「盧天麟是工會出身，也當過全產總理事長」；立法院委員頁經歷欄亦列「全國產業總工會理事長」。任期起訖未查得，故起訖留 null 並記 historical-status-unknown。全產總為工會聯合組織（社團法人性質），沿用研究檔與既有查核檔對社團、協會類組織的 nonprofit 分類。"
+        }
+      ]
+    }
+  ]
+}

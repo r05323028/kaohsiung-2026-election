@@ -10,7 +10,7 @@
 | 政策主張 | 未來承諾、擬議改革、政策目標、表態要推動的內容 | 已發生的提案、表決、質詢、預算審議、已完成成果 | `candidate-policies.json` |
 | 相關新聞 | 標題、媒體、日期、中性摘要、原文連結 | 情緒詞、聲量、好感度、全文轉載、照片 | `candidate-news.json` |
 | 從政歷程 | 公職任期、議會質詢與參與、預算審議、政府專案、立法提案、記名表決 | 學歷、私人企業經歷、黨職、競選承諾、未發生的事 | `political-career.json` |
-| 家族從政關係 | 有來源支持的公開親屬關係，且親屬本身具可查證政治職涯 | 依姓名、照片或傳聞推論的關係 | `political-family.json` |
+| 家族政商關係 | 有來源支持的公開親屬關係，且親屬本身具可查證政治／企業／基金會／非營利職務 | 依姓名、照片或傳聞推論的關係 | `political-family.json` |
 
 同一事實只能有一個歸屬。政策與歷程以 `policy-career-separation.json` 決定：`policy-commitments`（留政策）、`political-career`（移歷程）、`split-record`（同一來源同時含承諾與行動，拆成兩半）、`review-required`（待人工判斷，不得發布）。兩邊只以 ID 互指，不複製整段敘述；「相關政治活動」與「相關政策主張」互為跳轉。
 
@@ -54,11 +54,27 @@
 
 目前（2026-11-14 截止）：154 筆任期、1,045 筆活動、25 筆專案、851 筆提案、327 筆表決、714 筆來源；68 位有紀錄、38 位查無可查證紀錄。
 
-## 家族從政關係
+## 家族政商關係
 
-- 只有親屬關係與該親屬的政治職涯**各自**有來源支持，才會進入公開層；schema 強制 `kinshipSourceIds` 與 `careerSourceIds` 分開。
-- 不從相同姓氏、同選區、照片或傳聞推論關係；未經查證的關係不顯示卡片，也不顯示「無」。
-- 呈現為可展開的關係圖與清單，文字先於圖形；不以家族關係推論候選人的政治立場或評價。
+- 公開層只收錄「親屬關係」與「該親屬的合格職務」**各自**有來源支持的紀錄；schema 以 `kinshipSourceIds` 與 `positionSourceIds` 強制分離，公司揭露或職務報導都不算親屬證據。
+- 親屬範圍：父母、配偶、子女、兄弟姊妹、祖父母為主；岳父母、姻親、叔伯姑姨等其他可獨立查證的親屬為輔。同姓、同公司、同鄉、同場合、照片、社群互動都不是關係證據。
+- 合格職務分五大類，全部以 `organizationType` + `positionCategory` + `listingStatus` 表達：
+  1. 政治與政府（`government`、`legislature`、`political_organization`）：民選代表、縣市長、部會首長、政務任命、機關高階主管。
+  2. 上市櫃公司（`corporation` 且 `listingStatus` 為 `listed` 或 `otc`）。
+  3. 企業與集團（`corporation` 未上市櫃或未確認、`business_group`）：創辦人、董事長、總經理、執行長、董事、有決策權的高階主管。
+  4. 基金會（`foundation`）。
+  5. 大型非營利組織（`nonprofit`）。
+- `positionCategory` 的 `board`（董事會）與 `executive`（經營團隊）不得互換；「榮譽董事長」不是現任董事長，「顧問」不是董事，基金會董事不是基金會執行長。一般員工、被動會員、掛名榮譽職不收錄。
+- 現任（`current-officeholder`、`current-candidate`）不得有結束日期；已卸任但查不到結束日期時保留空值並標「期間未詳」，不得編造年份或屆次。現任與歷史職務都收錄，同一親屬可有多個組織與職務。
+- 查核與發布分離：研究檔的職務主張需經**未產出該 claim 的另一個 agent** 獨立重抓來源查核，才可能進入 `verified`；任一項缺證據即 `unresolved`，同名誤認或矛盾即 `rejected`。機器查核不等於人工審查或編輯核准。經使用者明確授權時，已 verified 的關係可由獨立查核 agent 核准（`agentApprovals`、`approvalBasis: agent-verification`），但必須與人工核准分開記錄，且不得標成人工審查。
+- 關係方向一律記錄「相對人對候選人的角色」（例如「父親」代表該親屬是候選人的父親）。同一候選人的同一姓名若出現方向矛盾（同時被列為父親與兒子），一律不得 verified，並產生待複查發現；獨立查核檔為 data/research/2026/political-family/verification-networks-NN.json。
+- 同一候選人、同一姓名若在不同批次或查核檔重複出現，generator 先以查核記錄的關係型別與方向過濾，再以已核准 ID、網路研究來源、明確型別等排序保留一筆；不得讓同一親屬以矛盾方向並存。
+- 三個閘門互不取代：研究（networks/batch-NN.json）→ 獨立查核（verification-networks-NN.json）→ 核准（publication-approval.json：人工 `approvedRelationshipIds` 或經授權的 `agentApprovals`）。已查核但未核准的關係寫入 reports/political-family-approvals-pending.json，核准後又被撤銷者寫入 reports/political-family-withdrawals.json，兩者都不會進入公開層。已 verified 但查無合格職務的親屬關係寫入 reports/political-family-verified-without-position.json，保留在研究層，不列為待核准工作。
+- Agent 核准的關係在 read model 標示 `agentApproved`，UI 必須同時以文字說明「由 agent 查核核准，非人工編輯審查」。
+- 查核檔案以 batch 為單位平行產出，合併指令為 `npm run political-family:verify:merge`（輸出 data/research/2026/political-family/verification-networks.json）；之後重跑 `npm run political-family:generate` 與 `npm run validate:political-family`。查核記錄的親屬方向若與研究主張相反，該關係不得 verified。
+- 呈現為可展開的關係圖與清單，文字先於圖形；agent 核准的關係需有可見標示；節點只顯示分類計數，選取親屬後才列出完整職務（組織、職稱、類別、上市櫃狀態、現任／曾任、日期、來源）。分類同時以文字與顏色標示。
+- 查無合格親屬時寫「目前尚無已查證且符合收錄條件的親屬資料。」，不得寫成「沒有政商關係」；空白不代表不存在。
+- 家族與企業關係不是貪腐、不當影響或利益輸送的證據，不得暗示；不刊登住址、私人聯絡方式或其他非公開親屬的隱私。
 
 ## 共同規則
 

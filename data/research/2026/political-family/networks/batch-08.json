@@ -1,0 +1,820 @@
+{
+  "batchId": "batch-08",
+  "researchedAt": "2026-11-16T12:10:00Z",
+  "researcher": "agent-08",
+  "rows": [
+    {
+      "sequence": 91,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-51c89db1",
+      "displayName": "洪村銘",
+      "districtId": "district-kaohsiung-council-11",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "洪村銘 父親 洪添丁",
+        "洪村銘 政二代 大寮",
+        "洪添丁 高雄縣議員 大寮鄉民代表",
+        "洪村銘 家族 兄弟"
+      ],
+      "urlsAttempted": [
+        "https://newtalk.tw/news/view/2019-02-01/203357",
+        "https://newtalk.tw/news/view/2022-05-18/756501",
+        "https://whoareyou.readr.tw/politics/2262",
+        "https://zh.wikipedia.org/zh-tw/%E6%B4%AA%E6%9D%91%E9%8A%98"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "洪添丁",
+          "relationLabel": "父",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2019-02-01/203357",
+            "publisher": "Newtalk新聞",
+            "title": "孫家銘觀點》政院南服中心執行長人事攪亂地方一池春水",
+            "publicationDate": "2019-02-01",
+            "quote": "政二代的他，父親洪添丁是大寮政壇重量級人物，曾擔任多屆鄉民代表、縣議員"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+                "publisher": "Newtalk新聞",
+                "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+                "publicationDate": "2022-05-18",
+                "quote": "今年民進黨在本區提名的洪村銘，父親是前高雄縣議員洪添丁"
+              }
+            },
+            {
+              "organizationName": "高雄縣大寮鄉民代表會",
+              "organizationType": "legislature",
+              "positionTitle": "鄉民代表",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://newtalk.tw/news/view/2019-02-01/203357",
+                "publisher": "Newtalk新聞",
+                "title": "孫家銘觀點》政院南服中心執行長人事攪亂地方一池春水",
+                "publicationDate": "2019-02-01",
+                "quote": "政二代的他，父親洪添丁是大寮政壇重量級人物，曾擔任多屆鄉民代表、縣議員"
+              }
+            }
+          ],
+          "notes": "兩項職務見同一批報導；READr 政見履歷另列洪添丁曾投入 1998、2002 年高雄縣議員選舉與 2005 年鄉鎮市長選舉（https://whoareyou.readr.tw/politics/2262），未載起訖日期。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 92,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-1704a92e",
+      "displayName": "黃天煌",
+      "districtId": "district-kaohsiung-council-11",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃天煌 父親 大寮",
+        "黃天煌 家族 政治世家",
+        "黃天煌 妻子 兒子",
+        "黃天煌 接棒 大寮鄉長",
+        "黃天煌 黃碧霞"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=76&sms=0&msn=2229",
+        "https://zh.wikipedia.org/zh-tw/%E9%BB%83%E5%A4%A9%E7%85%8C"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 93,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
+      "displayName": "邱于軒",
+      "districtId": "district-kaohsiung-council-11",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "邱于軒 父親 邱大展",
+        "邱于軒 婆婆 黃碧霞",
+        "邱于軒 老公 張簡正偉 大發食材行",
+        "邱于軒 家族 政治世家 大寮"
+      ],
+      "urlsAttempted": [
+        "https://hk.crntt.com/doc/1050/2/3/5/105023528.html",
+        "https://www.mirrormedia.mg/story/20260419inv004",
+        "https://zh.wikipedia.org/zh-tw/%E9%82%B1%E4%BA%8E%E8%BB%92"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "邱大展",
+          "relationLabel": "父",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://hk.crntt.com/doc/1050/2/3/5/105023528.html",
+            "publisher": "中評社",
+            "title": "國民黨大掌櫃之女邱于軒　冷看綠抄家滅族",
+            "publicationDate": "2018-03-28",
+            "quote": "中國國民黨行管會主委邱大展女兒邱于軒擔憂國民黨被不法體制抄家"
+          },
+          "positions": [
+            {
+              "organizationName": "中國國民黨",
+              "organizationType": "political_organization",
+              "positionTitle": "行政管理委員會主任委員",
+              "positionCategory": "organizational_leadership",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.mirrormedia.mg/story/20260419inv004",
+                "publisher": "鏡週刊",
+                "title": "食材貼標偽國貨2／老婆是國民黨要角二代　他搶營養午餐標案未揭露遭監院重罰",
+                "publicationDate": "2026-04-19",
+                "quote": "邱于軒及老公張簡正偉都是政治世家，邱父邱大展曾任北市財政局長及國民黨行管會主委，婆婆、即張簡正偉的媽媽則是前高雄縣議員黃碧霞。"
+              }
+            },
+            {
+              "organizationName": "台北市政府財政局",
+              "organizationType": "government",
+              "positionTitle": "局長",
+              "positionCategory": "public_office",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.mirrormedia.mg/story/20260419inv004",
+                "publisher": "鏡週刊",
+                "title": "食材貼標偽國貨2／老婆是國民黨要角二代　他搶營養午餐標案未揭露遭監院重罰",
+                "publicationDate": "2026-04-19",
+                "quote": "邱于軒及老公張簡正偉都是政治世家，邱父邱大展曾任北市財政局長及國民黨行管會主委，婆婆、即張簡正偉的媽媽則是前高雄縣議員黃碧霞。"
+              }
+            }
+          ],
+          "notes": "2018 年報導以「行管會主委」稱之（https://hk.crntt.com/doc/1050/2/3/5/105023528.html），2026 年報導以「曾任」描述兩項職務，故均標為 former；起訖日期查無來源。"
+        },
+        {
+          "relativeName": "黃碧霞",
+          "relationLabel": "婆婆（配偶之母）",
+          "relationTypeHint": "in-laws",
+          "kinship": {
+            "url": "https://hk.crntt.com/doc/1050/2/3/5/105023528.html",
+            "publisher": "中評社",
+            "title": "國民黨大掌櫃之女邱于軒　冷看綠抄家滅族",
+            "publicationDate": "2018-03-28",
+            "quote": "邱于軒為前國民黨高雄縣議員黃碧霞媳婦"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://hk.crntt.com/doc/1050/2/3/5/105023528.html",
+                "publisher": "中評社",
+                "title": "國民黨大掌櫃之女邱于軒　冷看綠抄家滅族",
+                "publicationDate": "2018-03-28",
+                "quote": "邱于軒婆婆前國民黨高雄縣議員黃碧霞陪同"
+              }
+            }
+          ],
+          "notes": "2018 年報導同時出現「媳婦」與「前國民黨高雄縣議員」描述；2026 年報導再次以「前高雄縣議員」稱之，任職期間查無來源。"
+        },
+        {
+          "relativeName": "張簡正偉",
+          "relationLabel": "配偶",
+          "relationTypeHint": "spouses",
+          "kinship": {
+            "url": "https://www.mirrormedia.mg/story/20260419inv004",
+            "publisher": "鏡週刊",
+            "title": "食材貼標偽國貨2／老婆是國民黨要角二代　他搶營養午餐標案未揭露遭監院重罰",
+            "publicationDate": "2026-04-19",
+            "quote": "邱于軒及老公張簡正偉都是政治世家，邱父邱大展曾任北市財政局長及國民黨行管會主委，婆婆、即張簡正偉的媽媽則是前高雄縣議員黃碧霞。"
+          },
+          "positions": [
+            {
+              "organizationName": "大發食材行",
+              "organizationType": "corporation",
+              "positionTitle": "負責人",
+              "positionCategory": "executive",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.mirrormedia.mg/story/20260419inv004",
+                "publisher": "鏡週刊",
+                "title": "食材貼標偽國貨2／老婆是國民黨要角二代　他搶營養午餐標案未揭露遭監院重罰",
+                "publicationDate": "2026-04-19",
+                "quote": "大發食材行由藍營高雄議員邱于軒老公張簡正偉獨資成立，並擔任負責人。"
+              }
+            }
+          ],
+          "notes": "大發食材行為獨資商號（非上市櫃）；同一報導另提及名下「大發冷凍食品」等公司，惟未載其職稱，故不另列職務。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "「白派大寮張簡家族」之家族歸屬",
+          "reason": "中評社 2018 年報導以「隸屬白派大寮張簡家族」描述邱于軒，屬派系與家族之概括描述，未指名任何親屬或職務，不足以建立個別親屬關係，故未據此提出 relations。",
+          "url": "https://hk.crntt.com/doc/1050/2/3/5/105023528.html"
+        }
+      ]
+    },
+    {
+      "sequence": 94,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "displayName": "王耀裕",
+      "districtId": "district-kaohsiung-council-11",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "王耀裕 父親 王國發 林園",
+        "王耀裕 王家班 家族",
+        "王國發 林園 鄉民代表 縣議員"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+        "https://zh.wikipedia.org/zh-tw/%E7%8E%8B%E8%80%80%E8%A3%95"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "王南榮",
+          "relationLabel": "叔父（父王國發之二弟）",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "二弟王南榮曾任高雄客運林園站、鳳山站站長及2屆林園鄉民代表"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣林園鄉民代表會",
+              "organizationType": "legislature",
+              "positionTitle": "鄉民代表",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "二弟王南榮曾任高雄客運林園站、鳳山站站長及2屆林園鄉民代表"
+              }
+            }
+          ],
+          "notes": "親屬鏈：同篇載「市議員王耀裕父親王國發…」及「二弟王南榮…」，故王南榮為候選人父之弟。同句另載其曾任高雄客運林園站、鳳山站站長，非契約四類合格職務，不另列。任職屆次與起訖日期未載。"
+        },
+        {
+          "relativeName": "王方員",
+          "relationLabel": "叔父（父王國發之四弟）",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "將想當歌星的四弟王方員拉回林園從政，王方員曾當過縣議員及兩屆林園鄉長"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "將想當歌星的四弟王方員拉回林園從政，王方員曾當過縣議員及兩屆林園鄉長"
+              }
+            },
+            {
+              "organizationName": "高雄縣林園鄉",
+              "organizationType": "government",
+              "positionTitle": "鄉長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "將想當歌星的四弟王方員拉回林園從政，王方員曾當過縣議員及兩屆林園鄉長"
+              }
+            }
+          ],
+          "notes": "同句載「曾當過縣議員及兩屆林園鄉長」，屆次與起訖日期未載；鄉長屬民選首長，歸 political。"
+        },
+        {
+          "relativeName": "王主安",
+          "relationLabel": "叔父（父王國發之三弟）",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "三弟王主安曾任高雄縣瓦斯公會理事長"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣瓦斯公會",
+              "organizationType": "nonprofit",
+              "positionTitle": "理事長",
+              "positionCategory": "organizational_leadership",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "三弟王主安曾任高雄縣瓦斯公會理事長"
+              }
+            }
+          ],
+          "notes": "職業公會（人民團體）理事長，屬組織領導職；惟是否達契約第 4 類「大型非營利組織」門檻有疑義，列此供複查。"
+        },
+        {
+          "relativeName": "吳慧芬",
+          "relationLabel": "配偶（父王國發之長媳）",
+          "relationTypeHint": "spouses",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "長子王耀裕去年以該選區最高票當選市議員，長媳吳慧芬為現任林園婦女會及青溪婦聯會林園分會理事長"
+          },
+          "positions": [
+            {
+              "organizationName": "林園婦女會",
+              "organizationType": "nonprofit",
+              "positionTitle": "理事長",
+              "positionCategory": "organizational_leadership",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "長子王耀裕去年以該選區最高票當選市議員，長媳吳慧芬為現任林園婦女會及青溪婦聯會林園分會理事長"
+              }
+            },
+            {
+              "organizationName": "青溪婦聯會林園分會",
+              "organizationType": "nonprofit",
+              "positionTitle": "理事長",
+              "positionCategory": "organizational_leadership",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "長子王耀裕去年以該選區最高票當選市議員，長媳吳慧芬為現任林園婦女會及青溪婦聯會林園分會理事長"
+              }
+            }
+          ],
+          "notes": "同句以「長子王耀裕…長媳吳慧芬」並列，故為候選人配偶。地方性婦女團體理事長，是否達契約第 4 類「大型非營利組織」門檻有疑義，列此供複查；2016 年報導稱「現任」，其後狀態未知。"
+        },
+        {
+          "relativeName": "陳有玉",
+          "relationLabel": "姊夫或妹夫（父王國發之女婿）",
+          "relationTypeHint": "in-laws",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "女婿陳有玉任職長榮航空公司副總經理"
+          },
+          "positions": [
+            {
+              "organizationName": "長榮航空",
+              "organizationType": "corporation",
+              "positionTitle": "副總經理",
+              "positionCategory": "executive",
+              "status": "historical-status-unknown",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+                "publisher": "自由時報",
+                "title": "打造林園「王家班」 王國發病逝",
+                "publicationDate": "2016-01-06",
+                "quote": "女婿陳有玉任職長榮航空公司副總經理"
+              }
+            }
+          ],
+          "notes": "2016 年報導以「女婿」稱之（相對於王國發），故為候選人姊妹之配偶；報導以「任職」描述，未載起訖，現職狀態未知。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "王國發（候選人之父）之職務",
+          "reason": "同篇報導載其「於前高縣府建設局服務至退休」，屬一般公務員經歷，非契約四類合格職務；其為地方政治組織者（「王家班」掌門人）亦非職務，故不列為 relation 之 position。",
+          "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465"
+        }
+      ]
+    },
+    {
+      "sequence": 95,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-d0ff0923",
+      "displayName": "李雨庭",
+      "districtId": "district-kaohsiung-council-11",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李雨庭 議員 父親 家族 大寮",
+        "李雨庭 父親 李真和",
+        "李真和 前議員 辭世 女兒 李雨庭",
+        "李香蘭 屏東縣議員"
+      ],
+      "urlsAttempted": [
+        "https://news.tvbs.com.tw/politics/2688605",
+        "https://www.cdns.com.tw/articles/1118393",
+        "https://zh.wikipedia.org/zh-tw/%E6%9D%8E%E9%9B%A8%E5%BA%AD"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "李真和",
+          "relationLabel": "父",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.tvbs.com.tw/politics/2688605",
+            "publisher": "TVBS新聞網",
+            "title": "「國民黨戰將」辭世！享壽80歲 女兒痛喊：來世當您孩子",
+            "publicationDate": "2024-11-17",
+            "quote": "「國民黨戰將」前屏東縣議員李真和辭世，享壽80歲。對此，女兒民進黨高雄市議員李雨庭證實噩耗"
+          },
+          "positions": [
+            {
+              "organizationName": "屏東縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cdns.com.tw/articles/1118393",
+                "publisher": "中華日報",
+                "title": "前屏東縣議員李真和辭世 享壽80歲",
+                "publicationDate": "2024-11-15",
+                "quote": "民進黨高雄市議員李雨庭的尊翁，前屏東縣議員李真和日前辭世"
+              }
+            }
+          ],
+          "notes": "2024-11-13 辭世（https://news.tvbs.com.tw/politics/2688605）；曾任國民黨籍屏東縣議員，屆次與起訖日期未載。"
+        },
+        {
+          "relativeName": "李香蘭",
+          "relationLabel": "姊",
+          "relationTypeHint": "siblings",
+          "kinship": {
+            "url": "https://www.cdns.com.tw/articles/1118393",
+            "publisher": "中華日報",
+            "title": "前屏東縣議員李真和辭世 享壽80歲",
+            "publicationDate": "2024-11-15",
+            "quote": "李真和曾是國民黨籍屏東縣議員，育有六女一子，長女李香蘭承襲李真和位置當選國民黨籍屏東縣議員，連任五屆"
+          },
+          "positions": [
+            {
+              "organizationName": "屏東縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.tvbs.com.tw/politics/2688605",
+                "publisher": "TVBS新聞網",
+                "title": "「國民黨戰將」辭世！享壽80歲 女兒痛喊：來世當您孩子",
+                "publicationDate": "2024-11-17",
+                "quote": "長女李香蘭曾是國民黨籍屏東縣議員，而且還是連任「5連霸」，是屏東縣萬丹南派代表人物"
+              }
+            }
+          ],
+          "notes": "同篇載其為李真和長女、候選人為三女（https://www.cdns.com.tw/articles/1118393），TVBS 則稱候選人為「二女兒」（https://news.tvbs.com.tw/politics/2688605），出生序敘述不一致，惟不影響姊妹關係。TVBS 以「曾為」描述，故標 former；連任五屆，起訖日期未載。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 96,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-11-4699a9be",
+      "displayName": "張耀中",
+      "districtId": "district-kaohsiung-council-11",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "張耀中 高雄 大寮 林園 市議員 參選",
+        "張耀中 父親 高雄 幕僚 陳其邁 背景",
+        "張耀中 里長 父親",
+        "張耀中 家族"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/Kaohsiung/breakingnews/5635570",
+        "https://zh.wikipedia.org/zh-tw/%E5%BC%B5%E8%80%80%E4%B8%AD"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "維基百科「張耀中」（台中市議員）",
+          "reason": "該條目人物為 1961 年生、台中市南屯區市議員（2010-2022），與本批次高雄市第 11 選區民進黨候選人非同一人；其親屬與職務資料不得套用。",
+          "url": "https://zh.wikipedia.org/zh-tw/%E5%BC%B5%E8%80%80%E4%B8%AD"
+        },
+        {
+          "subject": "「張耀中非在地政治家族」之媒體描述",
+          "reason": "自由時報引述大寮區民進黨地方大老稱其「非在地政治家族，更是首次參選的新人」；屬概括描述，未指名任何親屬或職務，既不能建立親屬關係，也不能作為「無親屬」之證明。",
+          "url": "https://news.ltn.com.tw/news/Kaohsiung/breakingnews/5635570"
+        }
+      ]
+    },
+    {
+      "sequence": 1,
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "displayName": "張靜",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "張靜 司法改革黨 高雄市長 候選人 背景",
+        "張靜 律師 司法改革黨 配偶 妻子 家族",
+        "張靜 妻子",
+        "張靜 家族 兄弟"
+      ],
+      "urlsAttempted": [
+        "https://udn.com/news/story/124652/9878477",
+        "https://zh.wikipedia.org/zh-tw/%E5%BC%B5%E9%9D%9C",
+        "https://zh-yue.wikipedia.org/wiki/%E5%BC%B5%E9%9D%9C_(%E5%8F%B0%E7%81%A3%E5%BE%8B%E5%B8%AB"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 2,
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "displayName": "王肇民",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "王肇民 高雄市長",
+        "王肇民 建設公司 負責人 妻子 家族",
+        "王肇民 家族 兄弟"
+      ],
+      "urlsAttempted": [
+        "https://udn.com/news/story/124652/9878477",
+        "https://zh.wikipedia.org/zh-tw/%E7%8E%8B%E8%82%87%E6%B0%91"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 3,
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "displayName": "柯志恩",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "柯志恩 父親 柯文福 屏東縣長",
+        "柯志恩 丈夫 洪德成",
+        "洪德成 建築師 OR 教授 OR 董事長",
+        "柯志恩 家族 兄弟"
+      ],
+      "urlsAttempted": [
+        "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+        "https://www.ettoday.net/news/20261003/3248271.htm",
+        "https://zh.wikipedia.org/zh-tw/%E6%9F%AF%E5%BF%97%E6%81%A9",
+        "https://j-media.tw/Article/Detail/36946"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "柯文福",
+          "relationLabel": "父",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+            "publisher": "中央社",
+            "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+            "publicationDate": "2022-08-07",
+            "quote": "遇到支持者送上父親柯文福50年前的競選徽章"
+          },
+          "positions": [
+            {
+              "organizationName": "屏東縣政府",
+              "organizationType": "government",
+              "positionTitle": "縣長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+                "publisher": "中央社",
+                "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+                "publicationDate": "2022-08-07",
+                "quote": "柯文福是教育出身，1972年受國民黨徵召參選屏東縣長，在7、8屆縣長任滿後出任台灣省政府委員、僑委會副委員長等職"
+              }
+            },
+            {
+              "organizationName": "台灣省政府",
+              "organizationType": "government",
+              "positionTitle": "委員",
+              "positionCategory": "public_office",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+                "publisher": "中央社",
+                "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+                "publicationDate": "2022-08-07",
+                "quote": "柯文福是教育出身，1972年受國民黨徵召參選屏東縣長，在7、8屆縣長任滿後出任台灣省政府委員、僑委會副委員長等職"
+              }
+            },
+            {
+              "organizationName": "僑務委員會",
+              "organizationType": "government",
+              "positionTitle": "副委員長",
+              "positionCategory": "public_office",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+                "publisher": "中央社",
+                "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+                "publicationDate": "2022-08-07",
+                "quote": "柯文福是教育出身，1972年受國民黨徵召參選屏東縣長，在7、8屆縣長任滿後出任台灣省政府委員、僑委會副委員長等職"
+              }
+            }
+          ],
+          "notes": "中央社載其 1972 年受徵召參選、第 7 與第 8 屆縣長任滿後出任台灣省政府委員與僑委會副委員長，2010 年 3 月過世；未載精確起訖日期，故縣長起訖留 null（維基百科條目另載 1973-1981，未經官方來源獨立驗證，不採為日期依據）。"
+        },
+        {
+          "relativeName": "洪德成",
+          "relationLabel": "配偶",
+          "relationTypeHint": "spouses",
+          "kinship": {
+            "url": "https://www.ettoday.net/news/20261003/3248271.htm",
+            "publisher": "ETtoday新聞雲",
+            "title": "獨／捕獲野生柯志恩尪！隱身人群「愛相隨」　開口力挺妻酸對手",
+            "publicationDate": "2026-10-03",
+            "quote": "國民黨高雄市長候選人柯志恩今（3）日與柯文哲合體掃三民區陽明市場，現場人潮中卻藏著另一個熟悉身影，就是柯志恩丈夫洪德成"
+          },
+          "positions": [],
+          "notes": "公開報導確認配偶身分，惟查無其任職、職務或組織職稱之公開來源，故不提出任何 position。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "「柯文哲與柯文福是兄弟」之網路傳言",
+          "reason": "查核報導比對出生年（柯文哲 1959 年生、新竹；柯文福 1934 年生、屏東）與家族背景後認為並非同家族兄弟；屬未經證實之推論，不列入 relations。",
+          "url": "https://j-media.tw/Article/Detail/36946"
+        }
+      ]
+    },
+    {
+      "sequence": 4,
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "displayName": "洪方隆",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "洪方隆 高雄市長",
+        "洪方隆 常春藤電訊 家族 兄弟",
+        "洪方隆 妻子 家族"
+      ],
+      "urlsAttempted": [
+        "https://udn.com/news/story/124652/9878477",
+        "https://zh.wikipedia.org/zh-tw/%E6%B4%AA%E6%96%B9%E9%9A%86"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 5,
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "displayName": "賴瑞隆",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "賴瑞隆 父親",
+        "賴瑞隆 妻子 OR 太太 OR 家族",
+        "陳怡元 賴瑞隆 妻子",
+        "賴瑞隆 父親 家族 背景 高雄"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5639437",
+        "https://zh.wikipedia.org/zh-tw/%E8%B3%B4%E7%91%9E%E9%9A%86"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "賴瑞隆之父（媒體稱彰化縣大村鄉人、從事木工裝潢）",
+          "reason": "自由時報引述賴瑞隆受訪表示父母皆為彰化大村人，父親從事木工裝潢後舉家北上；未具名、亦未載任何政治、企業或組織職務，無法建立具名親屬關係或合格職務。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5639437"
+        },
+        {
+          "subject": "配偶陳怡元之職務",
+          "reason": "維基百科列配偶為陳怡元，惟查無其任職或組織職稱之公開來源；相關報導多涉私人事務，不提出職務主張。",
+          "url": "https://zh.wikipedia.org/zh-tw/%E8%B3%B4%E7%91%9E%E9%9A%86"
+        }
+      ]
+    },
+    {
+      "sequence": 102,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c",
+      "displayName": "洪英雄",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "洪英雄 高雄市議員 參選 原住民 家族",
+        "洪英雄 父親 桃源 里長 代表",
+        "洪英雄 校長 妻子 家族 桃源 兄弟"
+      ],
+      "urlsAttempted": [
+        "https://2026.kmtks.org.tw/Council/hong-ying-xiong",
+        "https://reader.turnnewsapp.com/ctl/20260722/B23AA9/Q1RMXzIwMjYwNzIyX0E5XzI1/share",
+        "https://zh.wikipedia.org/zh-tw/%E6%B4%AA%E8%8B%B1%E9%9B%84"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 103,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-49bf3f0d",
+      "displayName": "林錫閔",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "林錫閔 高雄 原住民 議員",
+        "林錫閔 父親 家族 高雄",
+        "林錫閔 議員 經歷 那瑪夏"
+      ],
+      "urlsAttempted": [
+        "https://political.tw/people/%E6%9E%97%E9%8C%AB%E9%96%94/",
+        "https://votetw.com/wiki/%E6%9E%97%E9%8C%AB%E9%96%94",
+        "https://reader.turnnewsapp.com/ctl/20260722/B23AA9/Q1RMXzIwMjYwNzIyX0E5XzI1/share",
+        "https://zh.wikipedia.org/zh-tw/%E6%9E%97%E9%8C%AB%E9%96%94"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 104,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-14-f65ce1c2",
+      "displayName": "高忠德",
+      "districtId": "district-kaohsiung-indigenous-mountain-14",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "高忠德 高雄 原住民 議員 家族",
+        "高忠德 父親 桃源 布農 家族",
+        "高忠德 議員 妻子 家族 桃源"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2232",
+        "https://reader.turnnewsapp.com/ctl/20260722/B23AA9/Q1RMXzIwMjYwNzIyX0E5XzI1/share",
+        "https://zh.wikipedia.org/zh-tw/%E9%AB%98%E5%BF%A0%E5%BE%B7"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    }
+  ]
+}

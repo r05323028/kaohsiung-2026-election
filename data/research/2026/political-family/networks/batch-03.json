@@ -1,0 +1,898 @@
+{
+  "batchId": "batch-03",
+  "researchedAt": "2026-11-16",
+  "researcher": "agent-03",
+  "rows": [
+    {
+      "sequence": 47,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c4c45f4c",
+      "displayName": "何權峰",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "何權峰 里長",
+        "何權峰 父親",
+        "何權峰 政治世家",
+        "何權峰 里長 父親 三民區"
+      ],
+      "urlsAttempted": [
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://zh.wikipedia.org/zh-tw/何權峰",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2204",
+        "https://search.ltn.com.tw/list?keyword=%E4%BD%95%E6%AC%8A%E5%B3%B0"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "未具名（何權峰之父）",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+            "publisher": "新頭殼（Yahoo奇摩新聞轉載）",
+            "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+            "publicationDate": "2022-05-18",
+            "quote": "黃柏霖是前高雄議長黃啟川和前立委侯彩鳳的姪子，黃香菽是黃啟川、侯彩鳳的女兒，曾俊傑是前高雄市副議長曾長發的兒子，鄭孟洳是前市議員鄭新助的孫女，何權峰的父親是三民區里長"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市三民區（里別未載）",
+              "organizationType": "government",
+              "positionTitle": "里長",
+              "positionCategory": "public_office",
+              "status": "historical-status-unknown",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+                "publisher": "新頭殼（Yahoo奇摩新聞轉載）",
+                "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+                "publicationDate": "2022-05-18",
+                "quote": "何權峰的父親是三民區里長"
+              }
+            }
+          ],
+          "notes": "報導僅載其父為三民區里長，未載姓名、里別與任期，無法進一步核對身分；除該篇報導外未取得其他來源，故職務狀態記為 historical-status-unknown。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 48,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-abeadb8c",
+      "displayName": "童燕珍",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "童燕珍",
+        "童燕珍 夫",
+        "童燕珍 家族",
+        "童燕珍 女兒 家族 高雄 議員",
+        "童燕珍 丈夫 高雄"
+      ],
+      "urlsAttempted": [
+        "https://search.ltn.com.tw/list?keyword=%E7%AB%A5%E7%87%95%E7%8F%8D",
+        "https://www.cna.com.tw/search/hysearchws.aspx?q=%E7%AB%A5%E7%87%95%E7%8F%8D",
+        "https://news.ltn.com.tw/news/politics/breakingnews/4136979",
+        "https://www.votetw.com/wiki/%E7%AB%A5%E7%87%95%E7%8F%8D"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "童燕珍家庭成員",
+          "reason": "自由時報、中央社、選舉資料庫與其個人臉書敘述均只涉及其 20 年議員生涯、教書與幼兒園經營，未出現配偶、子女或父母的姓名與職務，無可引用之親屬敘述。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4136979"
+        }
+      ]
+    },
+    {
+      "sequence": 49,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
+      "displayName": "林彥",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "林彥 三民區 議員",
+        "林彥 許信良 外甥",
+        "許信良 外甥 林彥 高雄 三民區",
+        "林彥 父親"
+      ],
+      "urlsAttempted": [
+        "https://portaly.cc/issue101/pages/introduceyourself",
+        "https://www.chinatimes.com/realtimenews/20261027002439-260407",
+        "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+        "https://www.youtube.com/watch?v=6NgivkA01IQ"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "許信良",
+          "relationLabel": "舅舅（林彥自述為許信良外甥）",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://portaly.cc/issue101/pages/introduceyourself",
+            "publisher": "林彥競選自我介紹頁（Portaly）",
+            "title": "自我介紹 by 林彥 三民區 市議員候選人",
+            "publicationDate": null,
+            "quote": "同時是民主前輩 許信良 的外甥(林彥)"
+          },
+          "positions": [
+            {
+              "organizationName": "臺灣省議會",
+              "organizationType": "legislature",
+              "positionTitle": "省議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": "1973-02-01",
+              "endDate": "1977-12-19",
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "1972年9月22日國民黨中央委員會提名許信良參選臺灣省第五屆省議員桃園縣候選人， 12月23日獲得77,384票當選， 任期自1973年2月1日至1977年12月19日止。"
+              }
+            },
+            {
+              "organizationName": "桃園縣政府",
+              "organizationType": "government",
+              "positionTitle": "縣長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": "1977-12-20",
+              "endDate": null,
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "1977年12月20日許信良宣誓就任第八屆桃園縣長。"
+              }
+            },
+            {
+              "organizationName": "民主進步黨",
+              "organizationType": "political_organization",
+              "positionTitle": "主席（第五任）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": "1991-10-13",
+              "endDate": null,
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "1991年10月13日當選第五任民主進步黨主席"
+              }
+            },
+            {
+              "organizationName": "民主進步黨",
+              "organizationType": "political_organization",
+              "positionTitle": "主席（第七屆）",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": "1996-06-16",
+              "endDate": "1998-08-01",
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "1996年6月16日載當選第七屆民進黨主席，1998年8月1日卸任黨主席"
+              }
+            },
+            {
+              "organizationName": "總統府",
+              "organizationType": "government",
+              "positionTitle": "總統府資政",
+              "positionCategory": "public_office",
+              "status": "former",
+              "startDate": "2000-05-20",
+              "endDate": null,
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "2000年3月18日以無黨籍身份參選總統選舉落選，5月20日獲聘為「有給職總統府資政」"
+              }
+            },
+            {
+              "organizationName": "財團法人新興民族文教基金會",
+              "organizationType": "foundation",
+              "positionTitle": "董事長",
+              "positionCategory": "board",
+              "status": "former",
+              "startDate": "1998-10-14",
+              "endDate": null,
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "1998年8月1日卸任黨主席，10月14日擔任財團法人新興民族文教基金會董事長"
+              }
+            },
+            {
+              "organizationName": "亞太和平研究基金會",
+              "organizationType": "foundation",
+              "positionTitle": "董事長",
+              "positionCategory": "board",
+              "status": "former",
+              "startDate": "2016-08-10",
+              "endDate": null,
+              "source": {
+                "url": "https://memory.nhrm.gov.tw/TopicExploration/Person/Detail/14181",
+                "publisher": "國家人權記憶庫（文化部）",
+                "title": "許信良",
+                "publicationDate": null,
+                "quote": "2016年8月10日當選亞太和平研究基金會董事長"
+              }
+            }
+          ],
+          "notes": "親屬關係取自候選人自行發布的自我介紹頁，文中僅以「外甥」表述，未指明母系舅甥或其他親屬路徑，亦未以生日交叉核對；中國時報 2026-10-27 報導標題同以「許信良外甥」稱之，惟該站封鎖未能取得內文逐字引文。許信良職務引自國家人權記憶庫生平年表；第五任主席任內 1993 年 11 月辭職、第七屆任期至 1998-08-01，年表未載第五任確切卸任日期故記為 null。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 50,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+      "displayName": "黃香菽",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃香菽",
+        "黃香菽 父親",
+        "黃香菽 黃啟川 侯彩鳳",
+        "黃香菽 家族"
+      ],
+      "urlsAttempted": [
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://www.setn.com/news/166101",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+        "https://www.taisounds.com/news/content/71/296482"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "黃啟川",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+            "publisher": "新頭殼（Yahoo奇摩新聞轉載）",
+            "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+            "publicationDate": "2022-05-18",
+            "quote": "黃柏霖是前高雄議長黃啟川和前立委侯彩鳳的姪子，黃香菽是黃啟川、侯彩鳳的女兒，曾俊傑是前高雄市副議長曾長發的兒子，鄭孟洳是前市議員鄭新助的孫女，何權峰的父親是三民區里長"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+                "publisher": "高雄市議會（智慧的傳承）",
+                "title": "智慧的傳承",
+                "publicationDate": null,
+                "quote": "黃議長28歲就當選高雄市議員，從民國66年到91年總共連任6屆議員、1屆議長"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+                "publisher": "高雄市議會（智慧的傳承）",
+                "title": "智慧的傳承",
+                "publicationDate": null,
+                "quote": "前高雄市議會議長 黃啟川"
+              }
+            },
+            {
+              "organizationName": "金屬工業研究發展中心",
+              "organizationType": "foundation",
+              "positionTitle": "董事長",
+              "positionCategory": "board",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+                "publisher": "高雄市議會（智慧的傳承）",
+                "title": "智慧的傳承",
+                "publicationDate": null,
+                "quote": "進入台灣唯一從事金屬研發的專責機構：金屬研究發展中心，擔任董事長"
+              }
+            }
+          ],
+          "notes": "議員 6 屆與議長 1 屆任期僅以民國年份表述（民國66年至91年），未換算為日期故記為 null；金屬中心董事長卸任時間見三立 2016 年報導「去（2015）年從金屬中心董事長職位退休」。"
+        },
+        {
+          "relativeName": "侯彩鳳",
+          "relationLabel": "母親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+            "publisher": "新頭殼（Yahoo奇摩新聞轉載）",
+            "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+            "publicationDate": "2022-05-18",
+            "quote": "黃柏霖是前高雄議長黃啟川和前立委侯彩鳳的姪子，黃香菽是黃啟川、侯彩鳳的女兒，曾俊傑是前高雄市副議長曾長發的兒子，鄭孟洳是前市議員鄭新助的孫女，何權峰的父親是三民區里長"
+          },
+          "positions": [
+            {
+              "organizationName": "立法院",
+              "organizationType": "legislature",
+              "positionTitle": "立法委員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.setn.com/news/166101",
+                "publisher": "三立新聞網",
+                "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+                "publicationDate": null,
+                "quote": "侯彩鳳曾任4屆立委"
+              }
+            }
+          ],
+          "notes": "報導僅載「曾任4屆立委」，未載屆次與起訖日期，故日期記為 null。"
+        },
+        {
+          "relativeName": "黃柏霖",
+          "relationLabel": "堂兄",
+          "relationTypeHint": "cousins",
+          "kinship": {
+            "url": "https://www.setn.com/news/166101",
+            "publisher": "三立新聞網",
+            "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+            "publicationDate": null,
+            "quote": "黃啟川的妻子是曾任4屆立委的侯彩鳳，女兒黃香菽接棒選上議員，姪子黃柏霖則連任多屆"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/breakingnews/3857947",
+                "publisher": "自由時報",
+                "title": "高市議員黃柏霖正能量看板吸睛 民眾：像推廣公益",
+                "publicationDate": "2022-03-13",
+                "quote": "後獲黃啟川支持參選議員、開始從政之路，至今5連任"
+              }
+            }
+          ],
+          "notes": "堂兄妹關係由同一篇報導的兩項陳述組合而得（黃香菽為黃啟川女兒、黃柏霖為黃啟川姪子），報導未直接以「堂兄妹」描述，屬關係推導，建議獨立複查。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 51,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "displayName": "曾俊傑",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "曾俊傑",
+        "曾長發 副議長",
+        "曾長發 副議長 高雄市議會",
+        "曾俊傑 父親 曾長發"
+      ],
+      "urlsAttempted": [
+        "https://www.epochtimes.com.tw/9/11/10/127610.htm",
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2205"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "曾長發",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://www.epochtimes.com.tw/9/11/10/127610.htm",
+            "publisher": "大紀元（台灣）",
+            "title": "老議員曾長發病逝 高市各界哀悼不捨",
+            "publicationDate": "2009-11-10",
+            "quote": "曾長發在卸任議員後，把為民服務的棒子交給其子曾俊傑，曾俊傑為議會第7屆現任議員，傳承父親民代問政責任。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.epochtimes.com.tw/9/11/10/127610.htm",
+                "publisher": "大紀元（台灣）",
+                "title": "老議員曾長發病逝 高市各界哀悼不捨",
+                "publicationDate": "2009-11-10",
+                "quote": "曾長發擔任高雄市議員長達26年，歷經包括省轄第9屆議會、臨時議會、直轄議會第1屆至第6屆議員"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "副議長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+                "publisher": "新頭殼（Yahoo奇摩新聞轉載）",
+                "title": "政二代接棒潮！全台最獨特 高市議員近三分之一出身政治世家",
+                "publicationDate": "2022-05-18",
+                "quote": "曾俊傑是前高雄市副議長曾長發的兒子"
+              }
+            }
+          ],
+          "notes": "議員任期涵蓋省轄市第9屆、臨時議會、直轄市第1至6屆共 26 年，未逐年換算日期故記為 null；副議長職稱僅見於 2022 年新頭殼報導，高雄市議會官網歷屆議員名錄未列該職，已列入 rejectedOrAmbiguousClaims。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "曾長發曾任高雄市議會副議長",
+          "reason": "僅新頭殼 2022 年報導以「前高雄市副議長」稱之；高雄市議會官網「歷屆議員名錄」將曾長發列為省轄市第9屆、臨時議會、直轄市第1至6屆議員，未列副議長，兩者不一致。",
+          "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+        }
+      ]
+    },
+    {
+      "sequence": 52,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "displayName": "張博洋",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "張博洋",
+        "張博洋 父親 高雄",
+        "張博洋 家族"
+      ],
+      "urlsAttempted": [
+        "https://zh.wikipedia.org/zh-tw/張博洋",
+        "https://search.ltn.com.tw/list?keyword=%E5%BC%B5%E5%8D%9A%E6%B4%8B",
+        "https://newtalk.tw/news/view/2026-11-07/1069865"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "張博洋父親的政治表態",
+          "reason": "2020 年報導僅描述其父戴「穿雲箭」帽子挺韓，未載姓名、職務或任何可查證身分資訊，不符合格親屬職務定義。",
+          "url": "https://www.chinatimes.com/realtimenews/20200524004245-260407"
+        }
+      ]
+    },
+    {
+      "sequence": 53,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-4b269f51",
+      "displayName": "林于凱",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "林于凱",
+        "林于凱 父親",
+        "林于凱 家族"
+      ],
+      "urlsAttempted": [
+        "https://zh.wikipedia.org/zh-tw/林于凱",
+        "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187",
+        "https://search.ltn.com.tw/list?keyword=%E6%9E%97%E4%BA%8E%E5%87%B1"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "林于凱父親",
+          "reason": "僅見節目名稱提及父親受訪（民報之聲），未載姓名與職務，無逐字親屬敘述可引用。",
+          "url": "https://www.youtube.com/watch?v=lhjbc56aup0"
+        }
+      ]
+    },
+    {
+      "sequence": 54,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "displayName": "康裕成",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "康裕成 丈夫",
+        "康裕成 曾錦元",
+        "康裕成 夫妻檔 黑料 曾錦元 議員 韓國瑜 2019",
+        "曾錦元 康裕成 妻 太順醫院 院長"
+      ],
+      "urlsAttempted": [
+        "https://zh.wikipedia.org/zh-tw/康裕成",
+        "https://www.chinatimes.com/realtimenews/20190514005053-260407",
+        "https://news.ltn.com.tw/news/politics/paper/64419",
+        "https://news.ltn.com.tw/news/local/paper/38629"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "曾錦元",
+          "relationLabel": "丈夫",
+          "relationTypeHint": "spouses",
+          "kinship": {
+            "url": "https://zh.wikipedia.org/zh-tw/康裕成",
+            "publisher": "維基百科",
+            "title": "康裕成",
+            "publicationDate": null,
+            "quote": "丈夫曾錦元，曾任太順醫院院長。"
+          },
+          "positions": [
+            {
+              "organizationName": "太順醫院",
+              "organizationType": "corporation",
+              "positionTitle": "院長",
+              "positionCategory": "executive",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/paper/64419",
+                "publisher": "自由時報",
+                "title": "涉詐健保 林進興邱永仁求刑5年",
+                "publicationDate": null,
+                "quote": "被具體求刑者除林進興、邱永仁外，另有太順醫院院長曾錦元、富強醫院院長賴禎添被求刑四年"
+              }
+            }
+          ],
+          "notes": "職務僅引用自由時報報導確認「太順醫院院長」，不記錄該報導涉及的司法程序；親屬關係目前僅取得維基百科與轉載貼文敘述，中國時報 2019-05-14 原文站方封鎖、星島日報转载頁 404，未能取得新聞逐字引文，須獨立複查。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "康裕成與曾錦元之配偶關係",
+          "reason": "僅維基百科與內容農場／事實查核轉載出現「曾錦元為康裕成先生」敘述；可及之新聞原始報導（中時 2019-05-14、星島日報 2019-05-15）皆無法取得內文，未達新聞來源逐字引文標準。",
+          "url": "https://zh.wikipedia.org/zh-tw/康裕成"
+        }
+      ]
+    },
+    {
+      "sequence": 56,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
+      "displayName": "黃柏霖",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃柏霖",
+        "黃柏霖 祖父 黃正忠",
+        "黃柏霖 黃啟川 侯彩鳳",
+        "黃柏霖 堂妹 黃香菽"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/3857947",
+        "https://tw.news.yahoo.com/%E6%94%BF%E4%BA%8C%E4%BB%A3%E6%8E%A5%E6%A3%92%E6%BD%AE-%E5%85%A8%E5%8F%B0%E6%9C%80%E7%8D%A8%E7%89%B9-%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E8%BF%91%E4%B8%89%E5%88%86%E4%B9%8B-%E5%87%BA%E8%BA%AB%E6%94%BF%E6%B2%BB%E4%B8%96%E5%AE%B6-013532791.html",
+        "https://www.setn.com/news/166101",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "黃正忠",
+          "relationLabel": "祖父",
+          "relationTypeHint": "grandparent-grandchild",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3857947",
+            "publisher": "自由時報",
+            "title": "高市議員黃柏霖正能量看板吸睛 民眾：像推廣公益",
+            "publicationDate": "2022-03-13",
+            "quote": "黃柏霖的祖父黃正忠是前高市議員、堂叔黃啟川是前高市議長、嬸嬸侯彩鳳是前資深立委，他曾擔任黃啟川秘書，後獲黃啟川支持參選議員、開始從政之路，至今5連任"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/breakingnews/3857947",
+                "publisher": "自由時報",
+                "title": "高市議員黃柏霖正能量看板吸睛 民眾：像推廣公益",
+                "publicationDate": "2022-03-13",
+                "quote": "黃柏霖的祖父黃正忠是前高市議員"
+              }
+            }
+          ],
+          "notes": "職務以報導敘述為據；議會歷屆議員名錄中另有同名「黃正忠」為省轄市議員，是否同一人僅姓名相符，已列入 rejectedOrAmbiguousClaims。"
+        },
+        {
+          "relativeName": "黃啟川",
+          "relationLabel": "堂叔",
+          "relationTypeHint": "uncle-aunt-niece-nephew",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3857947",
+            "publisher": "自由時報",
+            "title": "高市議員黃柏霖正能量看板吸睛 民眾：像推廣公益",
+            "publicationDate": "2022-03-13",
+            "quote": "黃柏霖的祖父黃正忠是前高市議員、堂叔黃啟川是前高市議長、嬸嬸侯彩鳳是前資深立委，他曾擔任黃啟川秘書，後獲黃啟川支持參選議員、開始從政之路，至今5連任"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議長",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+                "publisher": "高雄市議會（智慧的傳承）",
+                "title": "智慧的傳承",
+                "publicationDate": null,
+                "quote": "前高雄市議會議長 黃啟川"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+                "publisher": "高雄市議會（智慧的傳承）",
+                "title": "智慧的傳承",
+                "publicationDate": null,
+                "quote": "黃議長28歲就當選高雄市議員，從民國66年到91年總共連任6屆議員、1屆議長"
+              }
+            },
+            {
+              "organizationName": "金屬工業研究發展中心",
+              "organizationType": "foundation",
+              "positionTitle": "董事長",
+              "positionCategory": "board",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=6",
+                "publisher": "高雄市議會（智慧的傳承）",
+                "title": "智慧的傳承",
+                "publicationDate": null,
+                "quote": "進入台灣唯一從事金屬研發的專責機構：金屬研究發展中心，擔任董事長"
+              }
+            }
+          ],
+          "notes": "三立 2016 年報導另載「黃啟川當過7屆議員與1屆議長…去（2015）年從金屬中心董事長職位退休」，與議會官網「6屆議員、1屆議長」的屆次計法不同，兩者並存不採推算。"
+        },
+        {
+          "relativeName": "侯彩鳳",
+          "relationLabel": "堂嬸",
+          "relationTypeHint": "in-laws",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/3857947",
+            "publisher": "自由時報",
+            "title": "高市議員黃柏霖正能量看板吸睛 民眾：像推廣公益",
+            "publicationDate": "2022-03-13",
+            "quote": "黃柏霖的祖父黃正忠是前高市議員、堂叔黃啟川是前高市議長、嬸嬸侯彩鳳是前資深立委，他曾擔任黃啟川秘書，後獲黃啟川支持參選議員、開始從政之路，至今5連任"
+          },
+          "positions": [
+            {
+              "organizationName": "立法院",
+              "organizationType": "legislature",
+              "positionTitle": "立法委員",
+              "positionCategory": "political",
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.setn.com/news/166101",
+                "publisher": "三立新聞網",
+                "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+                "publicationDate": null,
+                "quote": "侯彩鳳曾任4屆立委"
+              }
+            }
+          ],
+          "notes": "報導僅載「曾任4屆立委」，未載屆次與起訖日期。"
+        },
+        {
+          "relativeName": "黃香菽",
+          "relationLabel": "堂妹",
+          "relationTypeHint": "cousins",
+          "kinship": {
+            "url": "https://www.setn.com/news/166101",
+            "publisher": "三立新聞網",
+            "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+            "publicationDate": null,
+            "quote": "黃啟川的妻子是曾任4屆立委的侯彩鳳，女兒黃香菽接棒選上議員，姪子黃柏霖則連任多屆"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.setn.com/news/166101",
+                "publisher": "三立新聞網",
+                "title": "黃啟川淡政壇　闖禍兒不從政女兒接棒",
+                "publicationDate": null,
+                "quote": "女兒黃香菽接棒選上議員"
+              }
+            }
+          ],
+          "notes": "堂兄妹關係由同一篇報導的兩項陳述組合而得（黃柏霖為黃啟川姪子、黃香菽為黃啟川女兒），報導未直接以「堂兄妹」描述，屬關係推導，建議獨立複查。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "黃柏霖祖父黃正忠與高雄市議會歷屆議員名錄所列省轄市議員黃正忠",
+          "reason": "兩者僅姓名相符；名錄未載親屬關係，亦無生日、選區或任期交叉證據可確認同一人。",
+          "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+        }
+      ]
+    },
+    {
+      "sequence": 55,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "displayName": "鄭孟洽",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "鄭孟洽",
+        "\"鄭孟洽\"",
+        "鄭孟洽 三民區",
+        "鄭孟洳 鄭孟洽",
+        "三民區 鄭孟"
+      ],
+      "urlsAttempted": [
+        "https://www.bing.com/search?q=%22%E9%84%AD%E5%AD%9F%E6%B4%BD%22",
+        "https://duckduckgo.com/html/?q=%22%E9%84%AD%E5%AD%9F%E6%B4%BD%22",
+        "https://search.ltn.com.tw/list?keyword=%E9%84%AD%E5%AD%9F%E6%B4%BD",
+        "https://www.cna.com.tw/search/hysearchws.aspx?q=%E9%84%AD%E5%AD%9F%E6%B4%BD"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "鄭孟洽與同選區民進黨議員鄭孟洳（前議員鄭新助孫女）",
+          "reason": "姓名相近、同選區同黨，但無任何來源顯示兩人為同一人或具親屬關係；以精確字串搜尋 Bing 與 DuckDuckGo 均回報零結果，自由時報與中央社搜尋亦無任何報導，不併入、不推論。",
+          "url": "https://zh.wikipedia.org/zh-tw/鄭孟洳"
+        }
+      ]
+    },
+    {
+      "sequence": 57,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+      "displayName": "余聖明",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "余聖明",
+        "余聖明 高雄",
+        "余聖明 高雄 三民區"
+      ],
+      "urlsAttempted": [
+        "https://votetw.com/data/candidate/%E4%BD%99%E8%81%96%E6%98%8E",
+        "https://formosaobservatory.com/election/64000050",
+        "https://www.cna.com.tw/search/hysearchws.aspx?q=%E4%BD%99%E8%81%96%E6%98%8E"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "余聖明親屬",
+          "reason": "僅見 2018 年國民黨開除違紀參選黨員的名單與選舉資料庫基本欄位，無任何家庭或親屬敘述。",
+          "url": "https://votetw.com/data/candidate/%E4%BD%99%E8%81%96%E6%98%8E"
+        }
+      ]
+    },
+    {
+      "sequence": 58,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-3b007e6b",
+      "displayName": "黃淑美",
+      "districtId": "district-kaohsiung-council-07",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃淑美 三民",
+        "黃淑美 丈夫 高雄 議員 前金",
+        "黃淑美 黃韻涵 女兒 議員",
+        "黃淑美 家族"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5236417",
+        "https://www.ettoday.net/news/20261001/3247128.htm",
+        "https://n.yam.com/Article/20260906363122",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5562987"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "黃淑美之女黃韻涵",
+          "reason": "yam 2026-09-06 報導標題稱「黃淑美…交棒女兒黃韻涵」，但自由時報與維基百科顯示交棒女兒黃韻涵者為前高雄市副議長陸淑美，且該報導稱黃淑美未登記參選，與其後自由時報、ETtoday 報導黃淑美以無黨籍參選三民區議員相互矛盾，姓名疑混淆，不採用。",
+          "url": "https://n.yam.com/Article/20260906363122"
+        }
+      ]
+    },
+    {
+      "sequence": 105,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+      "displayName": "金禾雅",
+      "districtId": "district-kaohsiung-indigenous-mountain-15",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "金禾雅",
+        "金禾雅 家族 父親 原住民",
+        "金禾雅 歌手轉戰議會",
+        "金禾雅 范織欽 世代傳承"
+      ],
+      "urlsAttempted": [
+        "https://newtalk.tw/news/view/2026-09-02/1057224",
+        "https://www.isu.edu.tw/news/fCQN3HsyF8PG",
+        "https://tw.news.yahoo.com/%E5%8E%9F%E6%B0%91%E6%AD%8C%E6%89%8B%E8%BD%89%E6%88%B0%E8%AD%B0%E6%9C%83-%E9%87%91%E7%A6%BE%E9%9B%85%E9%A2%A8%E9%9B%A8%E4%B8%AD%E5%AE%8C%E6%88%90%E7%99%BB%E8%A8%98-%E7%AB%AF%E5%87%BA%E5%85%AB%E5%A4%A7%E6%94%BF%E8%A6%8B-%E4%BC%8D%E9%BA%97%E8%8F%AF-%E5%BA%B7%E8%A3%95%E6%88%90%E7%8F%BE%E8%BA%AB%E5%8A%9B%E6%8C%BA-123717892.html"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "范織欽與金禾雅的「世代傳承」",
+          "reason": "報導所述「世代傳承」與「交棒青年世代」為政治支持與選區交棒表述；金禾雅曾任伍麗華服務處及范織欽服務團隊工作屬聘任關係，兩者皆非親屬證據。",
+          "url": "https://newtalk.tw/news/view/2026-09-02/1057224"
+        }
+      ]
+    },
+    {
+      "sequence": 106,
+      "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+      "displayName": "陳奕蓁",
+      "districtId": "district-kaohsiung-indigenous-mountain-15",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳奕蓁",
+        "陳奕蓁 高雄 原住民 議員 家族",
+        "陳奕蓁 國民黨 原住民"
+      ],
+      "urlsAttempted": [
+        "https://2026.kmtks.org.tw/Council/chen-yi-zhen",
+        "https://votetw.com/wiki/%E9%99%B3%E5%A5%95%E8%93%81",
+        "https://www.week.mcu.edu.tw"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "銘傳大學「陳奕蓁校友」",
+          "reason": "同名不同人（該文為學生出版作品報導），與高雄市第15選區山地原住民候選人無任何關聯證據；國民黨高雄市黨部候選人頁僅有選區與政見標語，無家庭敘述。",
+          "url": "https://www.week.mcu.edu.tw"
+        }
+      ]
+    }
+  ]
+}

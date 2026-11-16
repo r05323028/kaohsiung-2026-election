@@ -120,6 +120,7 @@
     "validate:candidate-policies": "tsx scripts/validate-candidate-policies.ts",
     "validate:policy-research": "tsx scripts/validate-policy-research.ts",
     "political-family:generate": "tsx scripts/generate-political-family-data.ts",
+    "political-family:verify:merge": "tsx scripts/merge-political-family-verification.ts",
     "profile:coverage": "tsx scripts/profile-coverage.ts",
     "validate:profile-coverage": "tsx scripts/profile-coverage.ts --check",
     "validate:profile-copy": "tsx scripts/validate-profile-copy.ts",

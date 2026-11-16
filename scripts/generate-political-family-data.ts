@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import {
   type PoliticalFamilyPublicationApproval,
@@ -16,8 +16,9 @@ type RawRelation = JsonObject & {
   relativeName: string;
   relation: string;
   kinshipSourceIds: string[];
-  careerSourceIds: string[];
+  positionSourceIds: string[];
   career: unknown;
+  positions: unknown;
 };
 type RawRow = JsonObject & {
   sequence: number;
@@ -59,13 +60,15 @@ type SourceRecord = {
 type VerificationRecord = {
   candidateId: string;
   relativeName: string;
+  relation?: string;
   status: 'verified' | 'rejected' | 'unresolved';
   rationale: string;
   sourceIds?: string[];
   kinshipSourceIds?: string[];
-  careerSourceIds?: string[];
+  positionSourceIds?: string[];
   sources?: JsonObject[];
   career?: unknown;
+  positions?: unknown;
   independentReview?: JsonObject;
 };
 type FindingInput = {
@@ -76,18 +79,34 @@ type FindingInput = {
   verification: VerificationRecord[];
   sources: SourceRecord[];
 };
-type PoliticalCareer = {
+type AffiliationStatus =
+  | 'current-officeholder'
+  | 'former-officeholder'
+  | 'current-candidate'
+  | 'former-candidate'
+  | 'political-appointee'
+  | 'party-official'
+  | 'historical-status-unknown';
+type Affiliation = {
   id: string;
-  officeTitle: string;
   organization: string;
-  status:
-    | 'current-officeholder'
-    | 'former-officeholder'
-    | 'current-candidate'
-    | 'former-candidate'
-    | 'political-appointee'
-    | 'party-official'
-    | 'historical-status-unknown';
+  listingStatus: 'listed' | 'otc' | 'unlisted' | 'unknown' | null;
+  organizationType:
+    | 'government'
+    | 'legislature'
+    | 'political_organization'
+    | 'corporation'
+    | 'business_group'
+    | 'foundation'
+    | 'nonprofit';
+  positionTitle: string;
+  positionCategory:
+    | 'political'
+    | 'public_office'
+    | 'executive'
+    | 'board'
+    | 'organizational_leadership';
+  status: AffiliationStatus;
   startDate: string | null;
   endDate: string | null;
   sourceIds: string[];
@@ -96,7 +115,7 @@ type Person = {
   id: string;
   displayName: string;
   candidateId?: string;
-  politicalCareer: PoliticalCareer[];
+  affiliations: Affiliation[];
 };
 type Relationship = {
   id: string;
@@ -116,7 +135,7 @@ type Relationship = {
   personBLabel: string;
   verificationStatus: 'verified' | 'pending-review' | 'rejected';
   kinshipSourceIds: string[];
-  careerSourceIds: string[];
+  positionSourceIds: string[];
   sourceIds: string[];
 };
 type UnresolvedFinding = {
@@ -260,39 +279,181 @@ function normalizeSource(
 }
 
 function relationshipType(relation: string): Relationship['relationshipType'] {
-  if (/父|母|子|女|兒|媳|婿/.test(relation)) return 'parent-child';
-  if (/配偶|丈夫|妻|夫|老婆|先生/.test(relation)) return 'spouses';
-  if (/兄|弟|姊|姐|妹|sibling/i.test(relation)) return 'siblings';
-  if (/祖父|祖母|孫/.test(relation)) return 'grandparent-grandchild';
+  if (/姻親|岳|公公|婆婆|媳婦|女婿|in-law/i.test(relation)) return 'in-laws';
+  if (/曾祖|祖父|祖母|外祖|孫|grand/i.test(relation)) {
+    return 'grandparent-grandchild';
+  }
   if (
-    /叔|伯|姑|姨|舅|外甥|姪|侄|舅舅|外甥女|paternal uncle|uncle|aunt/i.test(
-      relation,
-    )
+    /配偶|丈夫|妻子|太太|老婆|老公|先生|husband|wife|spouse/i.test(relation)
   ) {
+    return 'spouses';
+  }
+  if (/叔|伯|姑|姨|舅|甥|姪|侄|uncle|aunt|nephew|niece/i.test(relation)) {
     return 'uncle-aunt-niece-nephew';
   }
-  if (/姻親|岳|媳婦|女婿|in-law/i.test(relation)) return 'in-laws';
   if (/表|堂|cousin/i.test(relation)) return 'cousins';
+  if (/兄|弟|姊|姐|妹|sibling|brother|sister/i.test(relation)) {
+    return 'siblings';
+  }
+  if (/父|母|爸|媽|爹|娘|father|mother|dad|mom/i.test(relation)) {
+    return 'parent-child';
+  }
+  if (/子|女|兒|囝|son|daughter|child/i.test(relation)) return 'parent-child';
   return 'other';
 }
 
 function candidateSideLabel(relation: string): string {
-  if (/父|母/.test(relation)) return '子女';
-  if (/子|女|兒/.test(relation)) return '父母';
-  if (/配偶|丈夫|妻|夫|老婆|先生/.test(relation)) return '配偶';
-  if (/兄|弟|姊|姐|妹|sibling/i.test(relation)) return '兄弟姊妹';
-  if (/祖父|祖母|孫/.test(relation)) return '孫輩／祖輩';
-  if (/叔|伯|姑|姨|舅|外甥|姪|侄|uncle|aunt/i.test(relation))
+  if (/姻親|岳|公公|婆婆|媳婦|女婿|in-law/i.test(relation)) return '姻親';
+  if (/曾祖|祖父|祖母|外祖|孫|grand/i.test(relation)) return '孫輩／祖輩';
+  if (
+    /配偶|丈夫|妻子|太太|老婆|老公|先生|husband|wife|spouse/i.test(relation)
+  ) {
+    return '配偶';
+  }
+  if (/叔|伯|姑|姨|舅|甥|姪|侄|uncle|aunt|nephew|niece/i.test(relation)) {
     return '姪甥／叔伯姑姨';
-  if (/姻親|岳|媳婦|女婿|in-law/i.test(relation)) return '姻親';
+  }
+  if (/表|堂|cousin/i.test(relation)) return '表堂親';
+  if (/兄|弟|姊|姐|妹|sibling|brother|sister/i.test(relation)) {
+    return '兄弟姊妹';
+  }
+  if (/父|母|爸|媽|爹|娘|father|mother|dad|mom/i.test(relation)) return '子女';
+  if (/子|女|兒|囝|son|daughter|child/i.test(relation)) return '父母';
   return '候選人親屬';
 }
 
-function careerStatus(
+type OrganizationTypeValue = Affiliation['organizationType'];
+type PositionCategoryValue = Affiliation['positionCategory'];
+
+function normalizeOrganizationType(
   value: unknown,
-  officeTitle: string,
-): PoliticalCareer['status'] {
+): OrganizationTypeValue | null {
+  const text = stringValue(value)
+    .toLowerCase()
+    .replace(/[\s-]+/g, '_');
+  const alias: Record<string, OrganizationTypeValue> = {
+    government: 'government',
+    public_agency: 'government',
+    administration: 'government',
+    legislature: 'legislature',
+    parliament: 'legislature',
+    council: 'legislature',
+    political_organization: 'political_organization',
+    political_party: 'political_organization',
+    party: 'political_organization',
+    corporation: 'corporation',
+    company: 'corporation',
+    listed_company: 'corporation',
+    public_company: 'corporation',
+    business_group: 'business_group',
+    conglomerate: 'business_group',
+    group: 'business_group',
+    foundation: 'foundation',
+    nonprofit: 'nonprofit',
+    non_profit: 'nonprofit',
+    ngo: 'nonprofit',
+    npo: 'nonprofit',
+  };
+  return alias[text] ?? null;
+}
+
+function inferOrganizationType(
+  organization: string,
+  positionTitle: string,
+): OrganizationTypeValue {
+  const text = organization + ' ' + positionTitle;
+  if (/立法院|議會|議長|議員|立法委員|國會|市議會|縣議會/.test(text))
+    return 'legislature';
+  if (/黨|政黨|黨部|競選總部|後援會/.test(text))
+    return 'political_organization';
+  if (/基金會|文教基金|慈善基金/.test(text)) return 'foundation';
+  if (
+    /協會|公會|工會|學會|社團|聯盟|紅十字|扶輪|獅子會|宗親會|同鄉會|NPO|NGO|非營利/.test(
+      text,
+    )
+  )
+    return 'nonprofit';
+  if (/集團|控股公司|企業集團/.test(text)) return 'business_group';
+  if (
+    /股份有限公司|有限公司|公司|企業|實業|工業|科技|建設|開發|投資|銀行|金控|證券|保險|營造|貿易|生技|食品|紡織|鋼鐵|電子|商行/.test(
+      text,
+    )
+  )
+    return 'corporation';
+  return 'government';
+}
+
+function normalizePositionCategory(
+  value: unknown,
+): PositionCategoryValue | null {
+  const text = stringValue(value)
+    .toLowerCase()
+    .replace(/[\s-]+/g, '_');
+  const alias: Record<string, PositionCategoryValue> = {
+    political: 'political',
+    party: 'political',
+    public_office: 'public_office',
+    publicoffice: 'public_office',
+    elected: 'public_office',
+    appointed: 'public_office',
+    executive: 'executive',
+    management: 'executive',
+    board: 'board',
+    director: 'board',
+    organizational_leadership: 'organizational_leadership',
+    leadership: 'organizational_leadership',
+  };
+  return alias[text] ?? null;
+}
+
+function inferPositionCategory(
+  positionTitle: string,
+  organizationType: OrganizationTypeValue,
+): PositionCategoryValue {
+  if (/董事長|副董事長|董事|監察人|常務董事|獨立董事|常董/.test(positionTitle))
+    return 'board';
+  if (
+    /總經理|副總經理|總裁|執行長|財務長|營運長|技術長|發言人|經理|執行副總|CEO|COO|CFO/.test(
+      positionTitle,
+    )
+  )
+    return 'executive';
+  if (
+    /理事長|會長|秘書長|創辦人|執行秘書|總幹事|召集人|常務理事|常務監事/.test(
+      positionTitle,
+    )
+  )
+    return organizationType === 'corporation' ||
+      organizationType === 'business_group'
+      ? 'executive'
+      : 'organizational_leadership';
+  if (
+    /議員|立法委員|市長|縣長|鄉長|鎮長|區長|代表|議長|副議長|主席|總統|副總統|村長|里長/.test(
+      positionTitle,
+    )
+  )
+    return 'public_office';
+  if (/部長|主委|主任委員|政務委員|次長|局長|處長|署長/.test(positionTitle))
+    return 'public_office';
+  if (/黨主席|中常委|評議委員|黨部/.test(positionTitle)) return 'political';
+  return 'organizational_leadership';
+}
+
+function affiliationStatus(
+  value: unknown,
+  positionTitle: string,
+): AffiliationStatus {
   const text = stringValue(value).toLowerCase();
+  const direct: Record<string, AffiliationStatus> = {
+    'current-officeholder': 'current-officeholder',
+    'former-officeholder': 'former-officeholder',
+    'current-candidate': 'current-candidate',
+    'former-candidate': 'former-candidate',
+    'political-appointee': 'political-appointee',
+    'party-official': 'party-official',
+    'historical-status-unknown': 'historical-status-unknown',
+  };
+  if (direct[text]) return direct[text];
   if (/current|現任|目前|在任/.test(text)) return 'current-officeholder';
   if (/candidate|參選|候選/.test(text)) {
     return /former|曾|前/.test(text) ? 'former-candidate' : 'current-candidate';
@@ -303,60 +464,127 @@ function careerStatus(
   if (/former|前|曾任|歷任|已故|解職|代表|議員|鄉長|縣長|市長/.test(text)) {
     return 'former-officeholder';
   }
-  if (/議員|市長|縣長|鄉長|代表|立委|院長/.test(officeTitle)) {
+  if (/議員|市長|縣長|鄉長|代表|立委|院長/.test(positionTitle)) {
     return 'historical-status-unknown';
   }
   return 'historical-status-unknown';
 }
 
-function careerRecords(
+function listingStatusFor(
+  organizationType: string,
+  raw: string,
+): 'listed' | 'otc' | 'unlisted' | 'unknown' | null {
+  if (
+    organizationType !== 'corporation' &&
+    organizationType !== 'business_group'
+  ) {
+    return null;
+  }
+  if (raw === 'listed' || raw === 'twse') return 'listed';
+  if (raw === 'otc' || raw === 'tpex') return 'otc';
+  if (raw === 'unlisted') return 'unlisted';
+  return 'unknown';
+}
+
+function affiliationRecords(
   rawRelation: RawRelation,
   relativeId: string,
   additionalSourceIds: string[] = [],
-): PoliticalCareer[] {
-  const records = Array.isArray(rawRelation.career)
-    ? rawRelation.career
-    : [rawRelation.career];
-  return records.flatMap((item, index) => {
-    const career = objectValue(item);
-    if (Object.keys(career).length === 0) return [];
-    const officeTitle = stringValue(
-      career.officeTitle,
-      stringValue(career.office, stringValue(career.title, '政治職務')),
+): Affiliation[] {
+  const entries: unknown[] = [];
+  if (rawRelation.career !== undefined && rawRelation.career !== null) {
+    entries.push(
+      ...(Array.isArray(rawRelation.career)
+        ? rawRelation.career
+        : [rawRelation.career]),
     );
-    const organization = stringValue(career.organization, '來源未標示組織');
-    const sourceIds = [
-      ...new Set([
-        ...stringArray(rawRelation.careerSourceIds),
-        ...additionalSourceIds,
-      ]),
-    ];
-    return [
-      {
-        id: `career-${hash(`${relativeId}|${officeTitle}|${organization}|${index}`)}`,
-        officeTitle,
-        organization,
-        status: careerStatus(career.status, officeTitle),
-        startDate: dateOnly(career.start),
-        endDate: dateOnly(career.end),
-        sourceIds,
-      },
-    ];
+  }
+  if (rawRelation.positions !== undefined && rawRelation.positions !== null) {
+    entries.push(
+      ...(Array.isArray(rawRelation.positions)
+        ? rawRelation.positions
+        : [rawRelation.positions]),
+    );
+  }
+  const records: Affiliation[] = [];
+  entries.forEach((item, index) => {
+    const entry = objectValue(item);
+    if (Object.keys(entry).length === 0) return;
+    const positionTitle = stringValue(
+      entry.positionTitle,
+      stringValue(
+        entry.officeTitle,
+        stringValue(entry.office, stringValue(entry.title, '職務')),
+      ),
+    );
+    const organization = stringValue(
+      entry.organizationName,
+      stringValue(entry.organization, '來源未標示組織'),
+    );
+    const organizationType =
+      normalizeOrganizationType(entry.organizationType) ??
+      inferOrganizationType(organization, positionTitle);
+    const positionCategory =
+      normalizePositionCategory(entry.positionCategory) ??
+      inferPositionCategory(positionTitle, organizationType);
+    const ownSourceIds = [
+      ...stringArray(entry.sourceIds),
+      ...objectArray(entry.sources).map((source) => stringValue(source.id)),
+    ].filter(Boolean);
+    const sourceIds = [...new Set([...ownSourceIds, ...additionalSourceIds])];
+    if (sourceIds.length === 0) return;
+    records.push({
+      id:
+        'affiliation-' +
+        hash(
+          relativeId + '|' + organization + '|' + positionTitle + '|' + index,
+        ),
+      organization,
+      organizationType,
+      positionTitle,
+      positionCategory,
+      listingStatus: listingStatusFor(
+        organizationType,
+        stringValue(entry.listingStatus, ''),
+      ),
+      status: affiliationStatus(entry.status, positionTitle),
+      startDate: dateOnly(entry.startDate ?? entry.start),
+      endDate: dateOnly(entry.endDate ?? entry.end),
+      sourceIds,
+    });
   });
+  return records;
 }
 
-function relationIdentitySignature(relation: RawRelation): string {
-  const records = Array.isArray(relation.career)
-    ? relation.career
-    : [relation.career];
-  return records
-    .map((item) => {
-      const career = objectValue(item);
-      return `${stringValue(career.officeTitle, stringValue(career.office, stringValue(career.title)))}|${stringValue(career.organization)}`;
-    })
-    .filter((value) => value !== '|')
-    .sort()
-    .join(';');
+function relationIdentitySignature(relation: RawRelation): string[] {
+  const entries = [
+    ...(Array.isArray(relation.career) ? relation.career : [relation.career]),
+    ...(Array.isArray(relation.positions)
+      ? relation.positions
+      : [relation.positions]),
+  ];
+  return [
+    ...new Set(
+      entries
+        .map((item) => {
+          const entry = objectValue(item);
+          if (Object.keys(entry).length === 0) return '';
+          const organization = stringValue(
+            entry.organizationName,
+            stringValue(entry.organization),
+          );
+          const title = stringValue(
+            entry.positionTitle,
+            stringValue(
+              entry.officeTitle,
+              stringValue(entry.office, stringValue(entry.title)),
+            ),
+          );
+          return organization + '|' + title;
+        })
+        .filter(Boolean),
+    ),
+  ].sort();
 }
 
 function stableRelationKey(relation: RawRelation): string {
@@ -365,6 +593,158 @@ function stableRelationKey(relation: RawRelation): string {
     explicitKey ||
     `${relation.candidateId}|${relation.relativeName}|${relation.relation}`
   );
+}
+
+const networkDir = join(root, 'data/research/2026/political-family/networks');
+
+function inlineSourceId(
+  value: unknown,
+  addSource: (source: JsonObject) => void,
+): string | null {
+  const source = objectValue(value);
+  const url = stringValue(source.url);
+  if (!/^https?:\/\//.test(url)) return null;
+  const id = stringValue(
+    source.id,
+    'source-' + hash(url + '|' + stringValue(source.title)),
+  );
+  addSource({ ...source, id });
+  return id;
+}
+
+function normalizeNetworkRelation(
+  relation: JsonObject,
+  candidateId: string,
+  addSource: (source: JsonObject) => void,
+): RawRelation {
+  const kinshipId = inlineSourceId(relation.kinship, addSource);
+  const kinshipIds = [
+    ...stringArray(relation.kinshipSourceIds),
+    ...(kinshipId ? [kinshipId] : []),
+  ];
+  const positions = objectArray(relation.positions).map((position) => {
+    const sourceIds = [
+      ...stringArray(position.sourceIds),
+      ...objectArray(position.sources)
+        .map((source) => inlineSourceId(source, addSource))
+        .filter((id): id is string => Boolean(id)),
+      ...(position.source ? [inlineSourceId(position.source, addSource)] : []),
+    ].filter((id): id is string => Boolean(id));
+    return { ...position, sourceIds };
+  });
+  const positionSourceIds = [
+    ...new Set([
+      ...stringArray(relation.positionSourceIds),
+      ...positions.flatMap((position) => stringArray(position.sourceIds)),
+    ]),
+  ];
+  return {
+    ...relation,
+    candidateId,
+    relativeName: stringValue(relation.relativeName),
+    relation: stringValue(
+      relation.relationLabel,
+      stringValue(relation.relation, '親屬'),
+    ),
+    kinshipSourceIds: [...new Set(kinshipIds)],
+    positionSourceIds,
+    career: relation.career ?? null,
+    positions,
+    researchOrigin: 'network',
+  } as RawRelation;
+}
+
+function outcomeRank(outcome: string): number {
+  if (outcome === 'verified-relations-found' || outcome === 'relations-found') {
+    return 3;
+  }
+  if (outcome === 'unresolved') return 2;
+  return 1;
+}
+
+function dedupeRelations(relations: RawRelation[]): RawRelation[] {
+  const byKey = new Map<string, RawRelation>();
+  for (const relation of relations) {
+    const key =
+      relation.candidateId +
+      '|' +
+      relation.relativeName.trim() +
+      '|' +
+      String(relation.relation).trim();
+    const existing = byKey.get(key);
+    if (!existing) {
+      byKey.set(key, relation);
+      continue;
+    }
+    byKey.set(key, {
+      ...existing,
+      kinshipSourceIds: [
+        ...new Set([
+          ...stringArray(existing.kinshipSourceIds),
+          ...stringArray(relation.kinshipSourceIds),
+        ]),
+      ],
+      positionSourceIds: [
+        ...new Set([
+          ...stringArray(existing.positionSourceIds),
+          ...stringArray(relation.positionSourceIds),
+        ]),
+      ],
+      career: existing.career ?? relation.career,
+      positions: [
+        ...objectArray(existing.positions),
+        ...objectArray(relation.positions),
+      ],
+    });
+  }
+  return [...byKey.values()];
+}
+
+function mergeRows(rows: RawRow[]): RawRow[] {
+  const byCandidate = new Map<string, RawRow>();
+  for (const row of rows) {
+    const existing = byCandidate.get(row.candidateId);
+    if (!existing) {
+      byCandidate.set(row.candidateId, {
+        ...row,
+        relations: objectArray(row.relations) as RawRelation[],
+      });
+      continue;
+    }
+    byCandidate.set(row.candidateId, {
+      ...existing,
+      searchedAt: stringValue(row.searchedAt, stringValue(existing.searchedAt)),
+      queries: [
+        ...new Set([
+          ...stringArray(existing.queries),
+          ...stringArray(row.queries),
+        ]),
+      ],
+      urlsAttempted: [
+        ...new Set([
+          ...stringArray(existing.urlsAttempted),
+          ...stringArray(row.urlsAttempted),
+        ]),
+      ],
+      outcome:
+        outcomeRank(row.outcome) > outcomeRank(existing.outcome)
+          ? row.outcome
+          : existing.outcome,
+      relations: dedupeRelations([
+        ...objectArray(existing.relations),
+        ...objectArray(row.relations),
+      ] as RawRelation[]),
+      rejectedOrAmbiguousClaims: [
+        ...objectArray(existing.rejectedOrAmbiguousClaims),
+        ...objectArray(row.rejectedOrAmbiguousClaims),
+      ],
+      rejectedFindings: [
+        ...objectArray(existing.rejectedFindings),
+        ...objectArray(row.rejectedFindings),
+      ],
+    });
+  }
+  return [...byCandidate.values()];
 }
 
 function readResearchRows(): {
@@ -381,6 +761,13 @@ function readResearchRows(): {
   const rows: RawRow[] = [];
   const researchers: string[] = [];
   const sources: SourceRecord[] = [];
+  const addSource = (value: JsonObject) => {
+    const source = normalizeSource(
+      value,
+      stringValue(value.id, stringValue(value.sourceId)),
+    );
+    if (source) sources.push(source);
+  };
   for (const file of files) {
     const path = join(rawDir, file);
     try {
@@ -395,11 +782,7 @@ function readResearchRows(): {
       for (const sourceValue of objectArray(
         input.sourceCatalog ?? input.sourceMetadata,
       )) {
-        const source = normalizeSource(
-          sourceValue,
-          stringValue(sourceValue.id, stringValue(sourceValue.sourceId)),
-        );
-        if (source) sources.push(source);
+        addSource(sourceValue);
       }
       researchers.push(file);
     } catch (error) {
@@ -407,8 +790,51 @@ function readResearchRows(): {
       // Missing batches are rejected by the complete-roster assertion below.
     }
   }
+  let networkFiles: string[] = [];
+  try {
+    networkFiles = readdirSync(networkDir)
+      .filter((entry) => /^batch-\d{2}\.json$/.test(entry))
+      .sort();
+  } catch (error) {
+    if (!isMissingFile(error)) throw error;
+  }
+  for (const file of networkFiles) {
+    const document = readJsonDocument(join(networkDir, file));
+    const input = Array.isArray(document) ? {} : document;
+    const sourceRows = Array.isArray(document)
+      ? document
+      : objectArray(input.rows ?? input.candidates);
+    for (const row of sourceRows) {
+      const candidateId = stringValue(row.candidateId);
+      if (!candidateId) continue;
+      rows.push({
+        ...row,
+        candidateId,
+        sequence: Number(row.sequence ?? 0),
+        displayName: stringValue(row.displayName),
+        outcome:
+          stringValue(row.outcome) === 'relations-found'
+            ? 'verified-relations-found'
+            : stringValue(row.outcome),
+        relations: objectArray(row.relations)
+          .map((relation) =>
+            normalizeNetworkRelation(relation, candidateId, addSource),
+          )
+          .filter((relation) => relation.relativeName),
+        rejectedOrAmbiguousClaims: objectArray(
+          row.rejectedOrAmbiguousClaims ?? row.rejectedFindings,
+        ),
+      } as RawRow);
+    }
+    for (const sourceValue of objectArray(
+      input.sources ?? input.sourceCatalog,
+    )) {
+      addSource(sourceValue);
+    }
+    researchers.push('networks/' + file);
+  }
   return {
-    rows: rows.sort((left, right) => left.sequence - right.sequence),
+    rows: mergeRows(rows).sort((left, right) => left.sequence - right.sequence),
     researchers,
     sources,
   };
@@ -431,32 +857,73 @@ function parseVerificationRecord(value: JsonObject): VerificationRecord {
   return {
     candidateId,
     relativeName,
+    relation: stringValue(value.relation),
     status: status as VerificationRecord['status'],
     rationale: stringValue(value.rationale, '獨立查核未提供足夠公開證據。'),
     sourceIds: stringArray(value.sourceIds),
     kinshipSourceIds: stringArray(value.kinshipSourceIds),
-    careerSourceIds: stringArray(value.careerSourceIds),
+    positionSourceIds: stringArray(
+      value.positionSourceIds ?? value.careerSourceIds,
+    ),
     sources: objectArray(value.sources),
     career: value.career,
+    positions: value.positions,
     ...(Object.keys(review).length > 0 ? { independentReview: review } : {}),
   };
 }
 
 function independentReviewSourceIds(record: VerificationRecord): string[] {
+  // Source checks are fetch telemetry, not citations. Only ids that are also
+  // declared with publisher/URL on the record may flow into the public source
+  // list, otherwise the affiliation would reference a source that does not
+  // exist in the dataset.
+  const declared = new Set(
+    objectArray(record.sources)
+      .map((source) => stringValue(source.id, stringValue(source.sourceId)))
+      .filter(Boolean),
+  );
   return objectArray(record.independentReview?.sourceChecks)
     .map((check) => stringValue(check.sourceId))
-    .filter(Boolean);
+    .filter((id) => id.length > 0 && declared.has(id));
 }
 
 function readVerification(): VerificationRecord[] {
-  const input = readJson(verificationPath);
-  const values = objectArray(input.relations ?? input.records);
-  if (values.length === 0) {
-    throw new Error(
-      `Verification file contains no records: ${verificationPath}`,
-    );
+  const paths = [
+    verificationPath,
+    join(
+      root,
+      'data/research/2026/political-family/verification-networks.json',
+    ),
+  ];
+  // Later files supersede earlier ones: a fresh independent check of the
+  // same candidate/relative pair replaces the legacy verdict instead of
+  // producing two conflicting records for one relationship.
+  const byKey = new Map<string, VerificationRecord>();
+  for (const path of paths) {
+    let input: JsonObject;
+    try {
+      input = readJson(path);
+    } catch (error) {
+      if (isMissingFile(error)) continue;
+      throw error;
+    }
+    const values = objectArray(input.relations ?? input.records);
+    if (values.length === 0 && path === verificationPath) {
+      throw new Error('Verification file contains no records: ' + path);
+    }
+    for (const value of values) {
+      const record = parseVerificationRecord(value);
+      byKey.set(
+        record.candidateId + String.fromCharCode(124) + record.relativeName,
+        record,
+      );
+    }
   }
-  return values.map(parseVerificationRecord);
+  const records = [...byKey.values()];
+  if (records.length === 0) {
+    throw new Error('No independent verification records were found.');
+  }
+  return records;
 }
 
 function readApproval(): PoliticalFamilyPublicationApproval {
@@ -522,19 +989,22 @@ if (
 }
 const sourceMap = new Map<string, SourceRecord>();
 for (const source of batchSources) sourceMap.set(source.id, source);
-const relationInputs: RawRelation[] = [];
+const proposedRelations: RawRelation[] = [];
 
 for (const row of rows) {
   for (const relationValue of objectArray(row.relations)) {
     const relation = relationValue as RawRelation;
-    relationInputs.push({
+    proposedRelations.push({
       ...relation,
       candidateId: row.candidateId,
       relativeName: stringValue(relation.relativeName),
       relation: stringValue(relation.relation),
       kinshipSourceIds: stringArray(relation.kinshipSourceIds),
-      careerSourceIds: stringArray(relation.careerSourceIds),
+      positionSourceIds: stringArray(
+        relation.positionSourceIds ?? relation.careerSourceIds,
+      ),
       career: relation.career,
+      positions: relation.positions,
     });
     for (const sourceValue of objectArray(relation.sources)) {
       const source = normalizeSource(
@@ -551,6 +1021,142 @@ for (const row of rows) {
   }
 }
 
+const SCHEMA_RELATION_TYPES = new Set([
+  'parent-child',
+  'spouses',
+  'siblings',
+  'grandparent-grandchild',
+  'uncle-aunt-niece-nephew',
+  'cousins',
+  'in-laws',
+  'other',
+]);
+
+/** Direction class of a kinship label, used to catch contradictory claims. */
+function relationDirection(label: string): string {
+  const text = label.trim();
+  if (SCHEMA_RELATION_TYPES.has(text)) return 'other';
+  if (/岳|公公|婆婆|婿|媳|in-law/i.test(text)) return 'in-law';
+  if (/祖|孫|外祖|grand/i.test(text)) return 'grand';
+  if (/配偶|丈夫|妻子|太太|先生|老婆|老公|husband|wife|spouse/i.test(text)) {
+    return 'spouse';
+  }
+  if (/父|母|爸|媽|爹|娘|father|mother|dad|mom/i.test(text)) return 'parent';
+  if (/子|女|兒|囝|son|daughter|child/i.test(text)) return 'child';
+  if (/兄|弟|姊|姐|妹|sibling|brother|sister/i.test(text)) return 'sibling';
+  if (/叔|伯|姑|姨|舅|甥|姪|侄|uncle|aunt|nephew|niece/i.test(text)) {
+    return 'uncle';
+  }
+  if (/表|堂|cousin/i.test(text)) return 'cousin';
+  return 'other';
+}
+
+/**
+ * The same named person cannot be both the candidate's father and the
+ * candidate's son. Collect those contradictions so nothing ambiguous is
+ * published under a guessed direction.
+ */
+function contradictionKeys(relations: RawRelation[]): Set<string> {
+  const byName = new Map<string, { key: string; direction: string }[]>();
+  for (const relation of relations) {
+    const key = relationProposalKey(relation);
+    const name = relation.candidateId + '|' + relation.relativeName.trim();
+    const list = byName.get(name) ?? [];
+    list.push({ key, direction: relationDirection(relation.relation) });
+    byName.set(name, list);
+  }
+  const conflicted = new Set<string>();
+  for (const list of byName.values()) {
+    const directions = new Set(list.map((item) => item.direction));
+    if (directions.size > 1) {
+      for (const item of list) conflicted.add(item.key);
+    }
+  }
+  return conflicted;
+}
+
+function relationProposalKey(relation: RawRelation): string {
+  return (
+    relation.candidateId +
+    '|' +
+    relation.relativeName.trim() +
+    '|' +
+    String(relation.relation).trim()
+  );
+}
+
+/**
+ * Legacy researcher batches and the network batches sometimes describe the
+ * same kinship from opposite sides (father vs son). The verifier record is
+ * the authority on direction and type, so choose exactly one proposal per
+ * candidate+relative pair before contradiction detection. Already approved
+ * proposals always win so regeneration cannot silently drop a published ID.
+ */
+function canonicalizeRelationInputs(
+  relations: RawRelation[],
+  verificationByKey: Map<string, VerificationRecord>,
+  approvedIds: Set<string>,
+): RawRelation[] {
+  const groups = new Map<string, RawRelation[]>();
+  for (const relation of relations) {
+    const key =
+      relation.candidateId +
+      '|' +
+      relation.relativeName.trim().normalize('NFC');
+    const group = groups.get(key) ?? [];
+    group.push(relation);
+    groups.set(key, group);
+  }
+  const selected: RawRelation[] = [];
+  for (const group of groups.values()) {
+    const first = group[0];
+    if (!first) continue;
+    const record = verificationByKey.get(
+      first.candidateId + '|' + first.relativeName.trim(),
+    );
+    let candidates = group;
+    if (record) {
+      const verifiedType = relationshipType(String(record.relation ?? ''));
+      if (verifiedType !== 'other') {
+        const typed = candidates.filter(
+          (relation) => relationshipType(relation.relation) === verifiedType,
+        );
+        if (typed.length > 0) candidates = typed;
+      }
+      const verifiedDirection = relationDirection(
+        String(record.relation ?? ''),
+      );
+      if (verifiedDirection !== 'other') {
+        const directed = candidates.filter(
+          (relation) =>
+            relationDirection(relation.relation) === verifiedDirection,
+        );
+        if (directed.length > 0) candidates = directed;
+      }
+    }
+    const score = (relation: RawRelation): number => {
+      const id = 'family-relation-' + hash(stableRelationKey(relation));
+      let value = 0;
+      if (approvedIds.has(id)) value += 1000;
+      if (relation.researchOrigin === 'network') value += 20;
+      if (relationshipType(relation.relation) !== 'other') value += 5;
+      if (relationDirection(relation.relation) !== 'other') value += 2;
+      if (/[㐀-鿿]/.test(relation.relation)) value += 3;
+      value += stringArray(relation.positionSourceIds).length * 0.1;
+      value += stringArray(relation.kinshipSourceIds).length * 0.05;
+      return value;
+    };
+    candidates.sort((a, b) => {
+      const delta = score(b) - score(a);
+      if (delta !== 0) return delta;
+      return relationProposalKey(a).localeCompare(relationProposalKey(b));
+    });
+    const best = candidates[0];
+    if (best) selected.push(best);
+  }
+  return selected;
+}
+
 const verification = readVerification();
 for (const record of verification) {
   for (const sourceValue of objectArray(record.sources)) {
@@ -562,30 +1168,44 @@ for (const record of verification) {
   }
 }
 
+const verificationByKey = new Map<string, VerificationRecord>();
+for (const record of verification) {
+  const key = record.candidateId + '|' + record.relativeName;
+  if (verificationByKey.has(key)) {
+    throw new Error('Ambiguous duplicate verification record for ' + key + '.');
+  }
+  verificationByKey.set(key, record);
+}
+const approvalForSelection = readApproval();
+const approvedSelectionIds = new Set([
+  ...approvalForSelection.approvedRelationshipIds,
+  ...(approvalForSelection.agentApprovals ?? []).flatMap(
+    (entry) => entry.relationshipIds,
+  ),
+]);
+const relationInputs = canonicalizeRelationInputs(
+  proposedRelations,
+  verificationByKey,
+  approvedSelectionIds,
+);
+const conflictedRelationKeys = contradictionKeys(relationInputs);
+
 const allSources = [...sourceMap.values()];
 const sourceIds = new Set(allSources.map((source) => source.id));
 const candidatePeople: Person[] = roster.map((candidate) => ({
   id: `person-${candidate.slug}`,
   displayName: candidate.displayName,
   candidateId: candidate.id,
-  politicalCareer: [],
+  affiliations: [],
 }));
 const peopleById = new Map(
   candidatePeople.map((person) => [person.id, person]),
 );
 const relationships: Relationship[] = [];
 const unresolvedFindings: UnresolvedFinding[] = [];
-const verificationByKey = new Map<string, VerificationRecord>();
-for (const record of verification) {
-  const key = `${record.candidateId}|${record.relativeName}`;
-  if (verificationByKey.has(key)) {
-    throw new Error(`Ambiguous duplicate verification record for ${key}.`);
-  }
-  verificationByKey.set(key, record);
-}
 const relativeIdentityByName = new Map<
   string,
-  { id: string; signature: string }
+  { id: string; signature: Set<string> }
 >();
 
 for (const relation of relationInputs) {
@@ -595,47 +1215,42 @@ for (const relation of relationInputs) {
   const identityKey = relativeName.normalize('NFC');
   const signature = relationIdentitySignature(relation);
   const knownIdentity = relativeIdentityByName.get(identityKey);
-  if (
-    knownIdentity?.signature &&
-    signature &&
-    knownIdentity.signature !== signature
-  ) {
-    throw new Error(
-      `Ambiguous political-person identity for ${relativeName}: conflicting career fingerprints.`,
-    );
-  }
+  const identityConflict = Boolean(
+    knownIdentity &&
+      knownIdentity.signature.size > 0 &&
+      signature.length > 0 &&
+      !signature.some((entry) => knownIdentity.signature.has(entry)),
+  );
   const relativeId =
     knownIdentity?.id ?? `political-person-${hash(identityKey)}`;
   relativeIdentityByName.set(identityKey, {
     id: relativeId,
-    signature: knownIdentity?.signature || signature,
+    signature: new Set([...(knownIdentity?.signature ?? []), ...signature]),
   });
   const verificationRecord = verificationByKey.get(
     `${relation.candidateId}|${relativeName}`,
   );
-  const careerSourceIds = [
+  const positionSourceIds = [
     ...new Set([
       ...stringArray(
-        verificationRecord?.careerSourceIds ?? relation.careerSourceIds,
+        verificationRecord?.positionSourceIds ?? relation.positionSourceIds,
       ),
       ...(verificationRecord
         ? independentReviewSourceIds(verificationRecord)
         : []),
     ]),
   ];
-  const career = careerRecords(relation, relativeId, careerSourceIds);
+  const career = affiliationRecords(relation, relativeId, positionSourceIds);
   const existing = peopleById.get(relativeId);
   if (existing) {
-    const known = new Map(
-      existing.politicalCareer.map((item) => [item.id, item]),
-    );
+    const known = new Map(existing.affiliations.map((item) => [item.id, item]));
     for (const item of career) known.set(item.id, item);
-    existing.politicalCareer = [...known.values()];
+    existing.affiliations = [...known.values()];
   } else {
     peopleById.set(relativeId, {
       id: relativeId,
       displayName: relation.relativeName,
-      politicalCareer: career,
+      affiliations: career,
     });
   }
 
@@ -649,18 +1264,46 @@ for (const relation of relationInputs) {
     ]),
   ];
   const combinedSourceIds = [
-    ...new Set([...kinshipSourceIds, ...careerSourceIds]),
+    ...new Set([...kinshipSourceIds, ...positionSourceIds]),
   ];
+  // A verification record only covers the exact sources it checked. Newly
+  // proposed sources (for example a fresh research batch) need their own
+  // independent re-check before they can inherit an earlier verdict.
+  const verifiedSources = new Set([
+    ...stringArray(verificationRecord?.kinshipSourceIds),
+    ...stringArray(verificationRecord?.positionSourceIds),
+    ...stringArray(verificationRecord?.sourceIds),
+  ]);
+  const conflicted = conflictedRelationKeys.has(relationProposalKey(relation));
+  // The verifier checks a direction too. A record claiming the opposite
+  // direction (for example child where the proposal says parent) cannot
+  // certify this proposal even when the name matches.
+  const recordDirection = relationDirection(
+    String(verificationRecord?.relation ?? ''),
+  );
+  const labelDirection = relationDirection(String(relation.relation));
+  const directionMismatch = Boolean(
+    verificationRecord &&
+      recordDirection !== 'other' &&
+      labelDirection !== 'other' &&
+      recordDirection !== labelDirection,
+  );
   const verified =
+    !conflicted &&
+    !directionMismatch &&
     verificationRecord?.status === 'verified' &&
     kinshipSourceIds.length > 0 &&
-    careerSourceIds.length > 0 &&
-    combinedSourceIds.every((id) => sourceIds.has(id));
-  const status: Relationship['verificationStatus'] = verified
-    ? 'verified'
-    : verificationRecord?.status === 'rejected'
-      ? 'rejected'
-      : 'pending-review';
+    positionSourceIds.length > 0 &&
+    combinedSourceIds.every((id) => sourceIds.has(id)) &&
+    [...kinshipSourceIds, ...positionSourceIds].every((id) =>
+      verifiedSources.has(id),
+    );
+  const status: Relationship['verificationStatus'] =
+    verified && !identityConflict
+      ? 'verified'
+      : verificationRecord?.status === 'rejected'
+        ? 'rejected'
+        : 'pending-review';
   relationships.push({
     id: relationId,
     personAId: `person-${candidate.slug}`,
@@ -671,12 +1314,21 @@ for (const relation of relationInputs) {
     personBLabel: relation.relation,
     verificationStatus: status,
     kinshipSourceIds,
-    careerSourceIds,
+    positionSourceIds,
     sourceIds: combinedSourceIds,
   });
 
   if (status !== 'verified') {
     const reason =
+      (conflicted
+        ? '同一候選人的同一姓名出現方向矛盾的親屬主張，身分與關係方向待人工確認。'
+        : undefined) ??
+      (directionMismatch
+        ? '獨立查核記錄的親屬方向與研究主張相反，關係方向待人工確認。'
+        : undefined) ??
+      (identityConflict
+        ? '同一姓名在其他候選人脈絡中出現不同的職務指紋，身分待複查。'
+        : undefined) ??
       verificationRecord?.rationale ??
       stringArray(relation.contradictions).join('；') ??
       (rowByCandidate.get(relation.candidateId)?.outcome === 'unresolved'
@@ -692,6 +1344,28 @@ for (const relation of relationInputs) {
     });
   }
 }
+
+// The same relative can be proposed twice (legacy researcher files plus a
+// network batch). One relationship id must appear once, with the strongest
+// verification outcome, or candidate assignment counts break.
+const relationshipRank: Record<Relationship['verificationStatus'], number> = {
+  verified: 3,
+  'pending-review': 2,
+  rejected: 1,
+};
+const relationshipById = new Map<string, Relationship>();
+for (const relationship of relationships) {
+  const previous = relationshipById.get(relationship.id);
+  if (
+    !previous ||
+    relationshipRank[relationship.verificationStatus] >
+      relationshipRank[previous.verificationStatus]
+  ) {
+    relationshipById.set(relationship.id, relationship);
+  }
+}
+relationships.length = 0;
+relationships.push(...relationshipById.values());
 
 for (const row of rows) {
   const rejected = objectArray(
@@ -727,8 +1401,8 @@ for (const relationship of relationships) {
     `claim-${relationship.id}-kinship`,
     ...(peopleById
       .get(relationship.personBId)
-      ?.politicalCareer.filter((career) =>
-        relationship.careerSourceIds.some((id) =>
+      ?.affiliations.filter((career) =>
+        relationship.positionSourceIds.some((id) =>
           career.sourceIds.includes(id),
         ),
       )
@@ -752,14 +1426,14 @@ const searchAudits = roster.map((candidate) => {
             .filter((relation) => relation.candidateId === candidate.id)
             .flatMap((relation) => [
               ...relation.kinshipSourceIds,
-              ...relation.careerSourceIds,
+              ...relation.positionSourceIds,
             ]),
           ...verification
             .filter((record) => record.candidateId === candidate.id)
             .flatMap((record) => [
               ...stringArray(record.sourceIds),
               ...stringArray(record.kinshipSourceIds),
-              ...stringArray(record.careerSourceIds),
+              ...stringArray(record.positionSourceIds),
               ...independentReviewSourceIds(record),
             ]),
         ]),
@@ -815,10 +1489,15 @@ const candidateResearch = roster.map((candidate) => {
   const candidateFindings = unresolvedFindings
     .filter((finding) => finding.candidateId === candidate.id)
     .map((finding) => finding.id);
+  const proposedRelationshipIds = candidateRelations.map(
+    (relationship) => relationship.id,
+  );
   const researchStatus =
     publishedRelationIds.length > 0
       ? 'verified-relations-found'
-      : !row || row.outcome === 'unresolved'
+      : proposedRelationshipIds.length > 0 ||
+          !row ||
+          row.outcome === 'unresolved'
         ? 'unresolved'
         : 'searched-no-verified-relations';
   return {
@@ -842,15 +1521,16 @@ const candidateResearch = roster.map((candidate) => {
     unresolvedFindingIds: candidateFindings,
     note:
       researchStatus === 'verified-relations-found'
-        ? '已取得親屬關係與政治職涯的獨立來源支持。'
+        ? '已取得親屬關係與每個職務的獨立來源支持。'
         : researchStatus === 'unresolved'
-          ? '目前仍在查核家族從政資料，尚無可公開的已核實關係。'
-          : '尚無可核實的公開家族從政資料。',
+          ? '已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。'
+          : '目前尚無已查證且符合收錄條件的親屬資料。',
   };
 });
 
 const researchDataset = {
   datasetId: 'kaohsiung-2026-political-family-research',
+  schemaVersion: '2',
   snapshotDate,
   researchCutoff: researchDate,
   generatedAt,
@@ -877,20 +1557,144 @@ const verifiedRelationships = relationships.filter(
   ): relationship is Relationship & { verificationStatus: 'verified' } =>
     relationship.verificationStatus === 'verified',
 );
-const approval = readApproval();
+const approval = approvalForSelection;
 const verifiedRelationIds = new Set(
   verifiedRelationships.map((relation) => relation.id),
 );
+const agentApprovedRelationIds = new Set(
+  (approval.agentApprovals ?? []).flatMap((entry) => entry.relationshipIds),
+);
+const duplicateApprovalIds = [...agentApprovedRelationIds].filter((id) =>
+  approval.approvedRelationshipIds.includes(id),
+);
+if (duplicateApprovalIds.length > 0) {
+  throw new Error(
+    'Relationships cannot carry both editorial and agent approvals: ' +
+      duplicateApprovalIds.join(', '),
+  );
+}
 const approvedRelationIds = new Set(approval.approvedRelationshipIds);
-const missingApprovals = [...verifiedRelationIds].filter(
+for (const id of agentApprovedRelationIds) approvedRelationIds.add(id);
+// A relation can be independently verified as a kinship and still have no
+// qualifying public or corporate position. Those belong in the research
+// layer only: listing them as "awaiting approval" would ask an editor to
+// approve something the publication rules can never publish.
+const publishableVerifiedRelationships = verifiedRelationships.filter(
+  (relationship) => {
+    const person = peopleById.get(relationship.personBId);
+    return Boolean(
+      person?.affiliations.some((affiliation) =>
+        affiliation.sourceIds.some((sourceId) =>
+          relationship.positionSourceIds.includes(sourceId),
+        ),
+      ),
+    );
+  },
+);
+const publishableVerifiedRelationIds = new Set(
+  publishableVerifiedRelationships.map((relationship) => relationship.id),
+);
+const unpublishableVerifiedRelationships = verifiedRelationships.filter(
+  (relationship) => !publishableVerifiedRelationIds.has(relationship.id),
+);
+const missingApprovals = [...publishableVerifiedRelationIds].filter(
   (id) => !approvedRelationIds.has(id),
 );
 const unexpectedApprovals = [...approvedRelationIds].filter(
   (id) => !verifiedRelationIds.has(id),
 );
-if (missingApprovals.length > 0 || unexpectedApprovals.length > 0) {
-  throw new Error(
-    `Publication approval must exactly match independently verified relations. Missing: ${missingApprovals.join(', ') || 'none'}; unexpected: ${unexpectedApprovals.join(', ') || 'none'}.`,
+// Verification and editorial approval are separate gates: a relation that
+// passed independent checking is still withheld until an editor approves it,
+// so a new verification batch never publishes itself.
+const pendingApprovalRelationships = missingApprovals.map((id) => {
+  const relationship = relationshipById.get(id);
+  const person = relationship
+    ? peopleById.get(relationship.personBId)
+    : undefined;
+  return {
+    relationshipId: id,
+    candidateId: relationship?.personAId ?? null,
+    relativeName: person?.displayName ?? null,
+    relationshipLabel: relationship?.relationshipLabel ?? null,
+  };
+});
+writeJson(join(root, 'reports/political-family-approvals-pending.json'), {
+  generatedAt,
+  datasetId: 'kaohsiung-2026-political-family-pending-approvals',
+  pending: pendingApprovalRelationships,
+});
+if (pendingApprovalRelationships.length > 0) {
+  console.warn(
+    `awaiting editorial approval: ${pendingApprovalRelationships.length} (see reports/political-family-approvals-pending.json)`,
+  );
+}
+// Keep verified kinships that have no qualifying position in an auditable
+// research report. They are intentionally not published, and they are not
+// presented as approval work.
+const verifiedWithoutPosition = unpublishableVerifiedRelationships.map(
+  (relationship) => {
+    const person = peopleById.get(relationship.personBId);
+    return {
+      relationshipId: relationship.id,
+      candidateId: relationship.personAId,
+      relativeName: person?.displayName ?? null,
+      relationshipLabel: relationship.relationshipLabel,
+      reason:
+        '親屬關係已通過獨立查核，但查無符合收錄條件的政商職務，保留在研究層，不進入公開圖層。',
+    };
+  },
+);
+writeJson(
+  join(root, 'reports/political-family-verified-without-position.json'),
+  {
+    generatedAt,
+    datasetId: 'kaohsiung-2026-political-family-verified-without-position',
+    withheld: verifiedWithoutPosition,
+  },
+);
+if (verifiedWithoutPosition.length > 0) {
+  console.warn(
+    `verified but no qualifying position: ${verifiedWithoutPosition.length} (see reports/political-family-verified-without-position.json)`,
+  );
+}
+// An approval is withdrawn when the checks above stop supporting it (a
+// contradicting kinship direction, a missing source, or a lost verification
+// record). Publishing stays fail-closed: withdrawn ids never reach the
+// publication layer, and each withdrawal is written to an audit report.
+const withdrawnApprovals = unexpectedApprovals.map((id) => {
+  const relationship = relationshipById.get(id);
+  const person = relationship
+    ? peopleById.get(relationship.personBId)
+    : undefined;
+  const candidateRecord = relationship
+    ? roster.find(
+        (candidate) => 'person-' + candidate.slug === relationship.personAId,
+      )
+    : undefined;
+  const finding = unresolvedFindings.find(
+    (item) =>
+      relationship &&
+      item.candidateId === candidateRecord?.id &&
+      item.subjectName === person?.displayName,
+  );
+  return {
+    relationshipId: id,
+    candidateId: relationship?.personAId ?? null,
+    relativeName: person?.displayName ?? null,
+    relationshipLabel: relationship?.relationshipLabel ?? null,
+    previousStatus: relationship?.verificationStatus ?? 'not-generated',
+    reason:
+      finding?.reason ?? '獨立查核不再支持此關係，或關聯的來源與方向無法確認。',
+  };
+});
+writeJson(join(root, 'reports/political-family-withdrawals.json'), {
+  generatedAt,
+  datasetId: 'kaohsiung-2026-political-family-withdrawals',
+  withdrawn: withdrawnApprovals,
+});
+if (withdrawnApprovals.length > 0) {
+  console.warn(
+    `withdrawn approvals: ${withdrawnApprovals.length} (see reports/political-family-withdrawals.json)`,
   );
 }
 const approvedRelationships = verifiedRelationships.filter((relationship) =>
@@ -903,9 +1707,12 @@ const publicationCandidates = roster.map((candidate) => {
     )
     .map((relationship) => relationship.id);
   const row = rowByCandidate.get(candidate.id);
+  const hasProposedRelation =
+    Boolean(row) &&
+    ((row?.relations ?? []).length > 0 || row?.outcome === 'unresolved');
   const status = relationIds.length
     ? 'verified-relations-found'
-    : !row || row.outcome === 'unresolved'
+    : hasProposedRelation
       ? 'unresolved'
       : 'searched-no-verified-relations';
   return {
@@ -914,10 +1721,10 @@ const publicationCandidates = roster.map((candidate) => {
     relationshipIds: relationIds,
     note:
       status === 'verified-relations-found'
-        ? '已核實的家族從政關係。'
+        ? '已核實的家族政商關係。'
         : status === 'unresolved'
-          ? '目前仍在查核家族從政資料，尚無可公開的已核實關係。'
-          : '尚無可核實的公開家族從政資料。',
+          ? '已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。'
+          : '目前尚無已查證且符合收錄條件的親屬資料。',
   };
 });
 const publicationRelationPeople = new Set(
@@ -931,7 +1738,7 @@ for (const relationship of approvedRelationships) {
   const sources =
     publicCareerSourcesByPerson.get(relationship.personBId) ??
     new Set<string>();
-  for (const sourceId of relationship.careerSourceIds) sources.add(sourceId);
+  for (const sourceId of relationship.positionSourceIds) sources.add(sourceId);
   publicCareerSourcesByPerson.set(relationship.personBId, sources);
 }
 const publicationPeople = [...peopleById.values()]
@@ -941,21 +1748,73 @@ const publicationPeople = [...peopleById.values()]
     if (!allowedSources) return person;
     return {
       ...person,
-      politicalCareer: person.politicalCareer.filter((career) =>
+      affiliations: person.affiliations.filter((career) =>
         career.sourceIds.some((sourceId) => allowedSources.has(sourceId)),
       ),
     };
   });
-const publicationSourceIds = new Set(
-  approvedRelationships.flatMap((relationship) => relationship.sourceIds),
+// A published position source has to belong to a position that also survived
+// publication; otherwise the relationship would cite evidence the site does not
+// show. Relations whose every position lost its source stay unpublished.
+const publishedAffiliationSources = new Map(
+  publicationPeople.map((person) => [
+    person.id,
+    new Set(
+      person.affiliations.flatMap((affiliation) => affiliation.sourceIds),
+    ),
+  ]),
 );
+const publicationRelationships = approvedRelationships
+  .map((relationship) => {
+    const allowed = publishedAffiliationSources.get(relationship.personBId);
+    if (!allowed) return relationship;
+    const positionSourceIds = relationship.positionSourceIds.filter((id) =>
+      allowed.has(id),
+    );
+    if (!positionSourceIds.length) return null;
+    return {
+      ...relationship,
+      positionSourceIds,
+      sourceIds: [
+        ...new Set([...relationship.kinshipSourceIds, ...positionSourceIds]),
+      ],
+    };
+  })
+  .filter((relationship): relationship is NonNullable<typeof relationship> =>
+    Boolean(relationship),
+  );
+const publicationRelationshipIds = new Set(
+  publicationRelationships.map((relationship) => relationship.id),
+);
+// People are published only when a published relationship still points at them.
+const publishedPersonIds = new Set(
+  publicationRelationships.flatMap((relationship) => [
+    relationship.personAId,
+    relationship.personBId,
+  ]),
+);
+const publishedPeople = publicationPeople.filter((person) =>
+  publishedPersonIds.has(person.id),
+);
+const unpublishedCandidates = publicationCandidates.map((candidate) => ({
+  ...candidate,
+  relationshipIds: candidate.relationshipIds.filter((id) =>
+    publicationRelationshipIds.has(id),
+  ),
+}));
+const publicationSourceIds = new Set([
+  ...publicationRelationships.flatMap((relationship) => relationship.sourceIds),
+  ...publishedPeople.flatMap((person) =>
+    person.affiliations.flatMap((affiliation) => affiliation.sourceIds),
+  ),
+]);
 const publicClaimIds = new Set<string>();
-for (const relationship of approvedRelationships) {
+for (const relationship of publicationRelationships) {
   publicClaimIds.add(`claim-${relationship.id}-kinship`);
-  const person = publicationPeople.find(
+  const person = publishedPeople.find(
     (item) => item.id === relationship.personBId,
   );
-  for (const career of person?.politicalCareer ?? []) {
+  for (const career of person?.affiliations ?? []) {
     publicClaimIds.add(`claim-${career.id}`);
   }
 }
@@ -972,12 +1831,21 @@ const publication = {
   snapshotDate,
   generatedAt,
   rosterDatasetId: stringValue(rosterInput.datasetId),
-  schemaVersion: '1',
+  schemaVersion: '2',
   sources: publicationSources,
-  people: publicationPeople,
-  relationships: approvedRelationships,
-  candidates: publicationCandidates,
-  note: '公開層只包含通過獨立查核、且親屬與政治職涯均有來源支持的關係。',
+  people: publishedPeople,
+  relationships: publicationRelationships,
+  candidates: unpublishedCandidates,
+  agentApprovedRelationshipIds: publicationRelationships
+    .filter((relationship) => agentApprovedRelationIds.has(relationship.id))
+    .map((relationship) => relationship.id),
+  note: agentApprovedRelationIds.size
+    ? '公開層只包含通過獨立查核、且親屬與職務均有來源支持的關係；其中 ' +
+      publicationRelationships.filter((relationship) =>
+        agentApprovedRelationIds.has(relationship.id),
+      ).length +
+      ' 筆由 agent 查核核准（非人工編輯審查），其餘由編輯核准。'
+    : '公開層只包含通過獨立查核、且親屬與職務均有來源支持的關係。',
 };
 
 function writeJson(path: string, value: unknown): void {
@@ -1052,7 +1920,7 @@ const report = {
     (item) => item.researchStatus === 'unresolved',
   ).length,
   proposedRelationshipCount: relationships.length,
-  publishedRelationshipCount: approvedRelationships.length,
+  publishedRelationshipCount: publicationRelationships.length,
   uniqueVerifiedRelativeCount: new Set(
     verifiedRelationships.map((relation) => relation.personBId),
   ).size,
@@ -1064,7 +1932,7 @@ const report = {
   candidates: candidateResearch,
   sources: allSources,
   verificationRecords: verification,
-  publishedRelationships: approvedRelationships.map((relationship) => ({
+  publishedRelationships: publicationRelationships.map((relationship) => ({
     ...relationship,
     sourceLinks: relationship.sourceIds
       .map((sourceId) => sourceMap.get(sourceId))
@@ -1090,7 +1958,7 @@ const sourceLinks = (ids: string[]): string =>
 const publishedLines = approvedRelationships
   .map(
     (relation) =>
-      `- ${relation.id}: ${relation.personAId} — ${relation.relationshipLabel} — ${relation.personBId}; kinship sources ${sourceLinks(relation.kinshipSourceIds)}; career sources ${sourceLinks(relation.careerSourceIds)}.`,
+      `- ${relation.id}: ${relation.personAId} — ${relation.relationshipLabel} — ${relation.personBId}; kinship sources ${sourceLinks(relation.kinshipSourceIds)}; career sources ${sourceLinks(relation.positionSourceIds)}.`,
   )
   .join('\n');
 const candidateNameById = new Map(
@@ -1099,7 +1967,7 @@ const candidateNameById = new Map(
 const verificationLines = verification
   .map(
     (record) =>
-      `### ${candidateNameById.get(record.candidateId) ?? record.candidateId} — ${record.relativeName}\n\n- Status: ${record.status}\n- Rationale: ${record.rationale}\n- Kinship sources: ${sourceLinks(stringArray(record.kinshipSourceIds)) || 'none'}\n- Career sources: ${sourceLinks(stringArray(record.careerSourceIds)) || 'none'}`,
+      `### ${candidateNameById.get(record.candidateId) ?? record.candidateId} — ${record.relativeName}\n\n- Status: ${record.status}\n- Rationale: ${record.rationale}\n- Kinship sources: ${sourceLinks(stringArray(record.kinshipSourceIds)) || 'none'}\n- Career sources: ${sourceLinks(stringArray(record.positionSourceIds)) || 'none'}`,
   )
   .join('\n\n');
 writeText(
@@ -1110,9 +1978,41 @@ writeText(
   join(root, 'reports/political-family-verification.md'),
   `# Political family verification\n\n每筆公開關係必須同時具備：明確親屬來源、政治職涯來源、正確身分辨識，以及獨立查核結果。\n\n- Researchers: ${researchers.join(', ') || '尚未匯入'}\n- Independent verification records: ${verification.length}\n- Verified and published relationships: ${approvedRelationships.length}\n- Withheld or unresolved findings: ${unresolvedFindings.length}\n\n公開層採 fail-closed 原則；缺少獨立查核或任一證據面向時，不會進入公開圖表。\n\n## Verification records\n\n${verificationLines || '尚無獨立查核紀錄。'}\n`,
 );
+const publishedAffiliations = publishedPeople.flatMap(
+  (person) => person.affiliations,
+);
+
 writeText(
   join(root, 'reports/political-family-coverage.md'),
-  `# Political family coverage\n\n## Summary\n\n- Canonical roster: ${roster.length} candidates\n- Research audit rows: ${rowByCandidate.size}/${roster.length} (raw rows: ${rows.length})\n- Verified-relations-found: ${candidateResearch.filter((item) => item.researchStatus === 'verified-relations-found').length}\n- Searched with no publishable relation: ${candidateResearch.filter((item) => item.researchStatus === 'searched-no-verified-relations').length}\n- Unresolved: ${candidateResearch.filter((item) => item.researchStatus === 'unresolved').length}\n\n## Candidate-by-candidate matrix\n\n| Sequence | Candidate | Candidate ID | Status | Note |\n|---:|---|---|---|---|\n${roster
+  `# Political family coverage\n\n## Summary\n\n- Canonical roster: ${roster.length} candidates\n- Research audit rows: ${rowByCandidate.size}/${roster.length} (raw rows: ${rows.length})\n- Verified-relations-found: ${candidateResearch.filter((item) => item.researchStatus === 'verified-relations-found').length}\n- Searched with no publishable relation: ${candidateResearch.filter((item) => item.researchStatus === 'searched-no-verified-relations').length}\n- Unresolved: ${candidateResearch.filter((item) => item.researchStatus === 'unresolved').length}\n- Proposed relations: ${relationships.length}\n- Published relations: ${publicationRelationships.length}\n- Published relatives: ${publishedPeople.filter((person) => !person.candidateId).length}\n- Published affiliations by category: ${
+    publishedAffiliations.length === 0
+      ? 'none'
+      : [...new Set(publishedAffiliations.map((item) => item.positionCategory))]
+          .sort()
+          .map(
+            (category) =>
+              category +
+              '=' +
+              publishedAffiliations.filter(
+                (item) => item.positionCategory === category,
+              ).length,
+          )
+          .join(', ')
+  }\n- Published affiliations by organization type: ${
+    publishedAffiliations.length === 0
+      ? 'none'
+      : [...new Set(publishedAffiliations.map((item) => item.organizationType))]
+          .sort()
+          .map(
+            (type) =>
+              type +
+              '=' +
+              publishedAffiliations.filter(
+                (item) => item.organizationType === type,
+              ).length,
+          )
+          .join(', ')
+  }\n- Published listings: ${publishedAffiliations.filter((item) => item.listingStatus).length}\n\n## Candidate-by-candidate matrix\n\n| Sequence | Candidate | Candidate ID | Status | Note |\n|---:|---|---|---|---|\n${roster
     .map((candidate) => {
       const result = candidateResearch.find(
         (item) => item.candidateId === candidate.id,
@@ -1128,7 +2028,7 @@ console.log(
       candidateCount: roster.length,
       researchRows: rows.length,
       proposedRelations: relationships.length,
-      publishedRelations: approvedRelationships.length,
+      publishedRelations: publicationRelationships.length,
       sources: allSources.length,
       verifierRecords: verification.length,
     },

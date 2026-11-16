@@ -1,8 +1,8 @@
 # Candidate profile copy audit
 
 - Candidate pages checked: 106
-- Required tabs present on every page: 基本資料、政策主張、相關新聞、從政歷程、家族從政關係
-- Pages with concise empty states: 92
+- Required tabs present on every page: 基本資料、政策主張、相關新聞、從政歷程、家族政商關係
+- Pages with concise empty states: 57
 - Forbidden visible-text matches: 0
 - Serialized internal metadata matches: 0
 - Duplicate empty states: 0

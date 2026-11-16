@@ -32,7 +32,7 @@
 | 相關新聞 | `data/published/2026/candidate-news.json` | `src/data/news/index.ts` | 中性 metadata，213 篇 |
 | 從政歷程 | `data/approved/2026/political-career.json` | `src/data/political-career/index.ts` | 任期、活動、專案、提案、表決 |
 | 政策／歷程分工 | `data/approved/2026/policy-career-separation.json` | `src/data/policy-career/index.ts` | 每筆政策恰好一個歸屬 |
-| 家族從政關係 | `data/published/2026/political-family.json` | `src/data/political-family/` | 需親屬與政治職涯各自證據 |
+| 家族政商關係 | `data/published/2026/political-family.json` | `src/data/political-family/` | 需親屬與每個職務各自證據 |
 | 角色資產 | `data/avatars/manifest.json`、`public/assets/avatars/` | `src/data/avatars/index.ts` | GLB 校驗碼與對應，缺省回退程序化角色 |
 | 示範資料 | `src/data/fixtures.ts` | `src/data/demo.ts` | 僅測試與資產驗證，全部 isDemo |
 
@@ -43,7 +43,7 @@
 - `src/layouts/BaseLayout.astro`：zh-Hant 語系、SEO、canonical、Open Graph、JSON-LD、skip link、導覽與頁尾。站內連結一律經 `src/utils/paths.ts` 加上 `BASE_PATH`。
 - `src/components/CityExplorer.tsx`：首頁互動層。選舉／圖層篩選、行政區與選舉區切換、靜態搜尋、鍵盤候選人名單、角色選取、個人面板、載入／錯誤／WebGL 不可用狀態。
 - `src/components/CityScene.tsx` + `src/world/`：延遲載入的 R3F 正交相機場景、依需求繪製、DPR 上限、有限 OrbitControls、reduced motion。所有事實同時存在於 HTML。
-- `src/components/ProfileTabs.tsx`：五個分頁（基本資料、政策主張、相關新聞、從政歷程、家族從政關係），只讀上述 read model。
+- `src/components/ProfileTabs.tsx`：五個分頁（基本資料、政策主張、相關新聞、從政歷程、家族政商關係），只讀上述 read model。
 - `src/pages/`：`index`、`candidates/[slug]`、`districts/index`、`districts/[slug]`、`editorial-review`（僅本機）、`avatar-preview`（僅開發）。
 
 行政區與選舉區是兩套地理：38 個行政區（E01–E38）供城市與移動使用；15 個市議員選區與市長選區是選舉單位。點擊行政區只改變焦點，不會改寫選舉區；選舉區卡片會列出其涵蓋的行政區。原住民選區（12–15）另有身分與設籍資格的說明，不以行政區推論。
@@ -64,7 +64,7 @@
 | `validate:basic-profiles` | 查核決定、來源層級、隱私欄位、現職證據 |
 | `validate:news` | 中性摘要、身分風險、去重、日期 |
 | `validate:political-career` / `validate:policy-career` | 任期／活動／提案／表決關聯、政策歸屬唯一、逐字證據 |
-| `validate:political-family` | 親屬與政治職涯證據分離 |
+| `validate:political-family` | 親屬與職務證據分離；agent 核准必須對應已發布關係 |
 | `validate:profile-coverage` / `validate:profile-copy` | 各分頁覆蓋與公開文案不得洩漏內部狀態 |
 | `validate:biographies` / `editorial:validate` | 決策鏈、審查者授權、checksum、閘門結果 |
 | `validate:enrichment` / `ai-audit:verify` / `semantic:verify` / `scoped-review:verify` / `automated:verify` / `remediation:verify` | scoped 研究與機器查核的一致性與可重現性 |

@@ -1,0 +1,869 @@
+{
+  "batchId": "batch-06",
+  "researchedAt": "2026-11-16",
+  "researcher": "agent-06",
+  "rows": [
+    {
+      "sequence": 16,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a8f18da8",
+      "displayName": "方信淵",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "方信淵 議員 父親 岡山 橋頭",
+        "方信淵 家族 政治世家 高雄",
+        "方信淵 議員 妻子 家人 逝世",
+        "方信淵 議員 兄弟 姊妹"
+      ],
+      "urlsAttempted": [
+        "https://www.facebook.com/FANGHSINYUAN/",
+        "https://zh.wikipedia.org/zh-tw/方信淵",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 17,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+      "displayName": "張驥晟",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "張騏晟 張漢雄 父子 海洋局長",
+        "張漢雄 海洋局長 梓官 經歷",
+        "張鈞華 梓官區漁會 總幹事 張漢雄",
+        "張驥晟 議員 參選 大岡山"
+      ],
+      "urlsAttempted": [
+        "https://www.cdns.com.tw/articles/386336",
+        "https://www.udn.com/news/story/7321/9809970",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+        "https://www.moa.gov.tw/redirect_files.php?id=44940",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "張漢雄",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+            "publisher": "自由時報",
+            "title": "藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部",
+            "publicationDate": "2026-06-14",
+            "quote": "另擁有高雄科技大學水產科技產業博士學位、前高雄市府海洋局長張漢雄之子張騏晟，則將以無黨籍身分參選。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市政府海洋局",
+              "organizationType": "government",
+              "positionTitle": "局長",
+              "positionCategory": "public_office",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cdns.com.tw/articles/386336",
+                "publisher": "中華日報",
+                "title": "張漢雄接掌高市海洋局",
+                "publicationDate": "2021-04-13",
+                "quote": "前梓官區漁會總幹事張漢雄出任海洋局長。"
+              }
+            },
+            {
+              "organizationName": "高雄市梓官區漁會",
+              "organizationType": "nonprofit",
+              "positionTitle": "總幹事",
+              "positionCategory": "organizational_leadership",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.cdns.com.tw/articles/386336",
+                "publisher": "中華日報",
+                "title": "張漢雄接掌高市海洋局",
+                "publicationDate": "2021-04-13",
+                "quote": "張漢雄從梓官漁市場拍賣員開始做起，經歷梓官鄉代會主席、兩任梓官鄉長，以及梓官區漁會總幹事，也曾在一０二年榮獲全國十大傑出漁業專家獎項，資歷完備。"
+              }
+            },
+            {
+              "organizationName": "高雄縣梓官鄉公所",
+              "organizationType": "government",
+              "positionTitle": "鄉長",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.udn.com/news/story/7321/9809970",
+                "publisher": "聯合報",
+                "title": "高雄梓官區漁會疑涉賄選被搜索 高雄前海洋局長父子被約談",
+                "publicationDate": "2026-10-12",
+                "quote": "父親張漢雄於縣市合併前曾任梓官鄉長、鄉代會主席，也曾任梓官區漁會總幹事，並曾任高雄市海洋局長。"
+              },
+              "notes": "報導作「兩任梓官鄉長」，未載明屆次與起訖日期。"
+            },
+            {
+              "organizationName": "高雄縣梓官鄉民代表會",
+              "organizationType": "legislature",
+              "positionTitle": "主席",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.udn.com/news/story/7321/9809970",
+                "publisher": "聯合報",
+                "title": "高雄梓官區漁會疑涉賄選被搜索 高雄前海洋局長父子被約談",
+                "publicationDate": "2026-10-12",
+                "quote": "父親張漢雄於縣市合併前曾任梓官鄉長、鄉代會主席，也曾任梓官區漁會總幹事，並曾任高雄市海洋局長。"
+              }
+            }
+          ],
+          "notes": "海洋局長任期起訖未在來源中載明（2021-04-13 報導稱「新任」）。2026-10-12 聯合報另報導梓官區漁會疑涉賄選案約談張漢雄父子；本檔僅採用該報導的親屬與職務敘述，不引用任何案情或評價。"
+        },
+        {
+          "relativeName": "張鈞華",
+          "relationLabel": "哥哥",
+          "relationTypeHint": "siblings",
+          "kinship": {
+            "url": "https://www.udn.com/news/story/7321/9809970",
+            "publisher": "聯合報",
+            "title": "高雄梓官區漁會疑涉賄選被搜索 高雄前海洋局長父子被約談",
+            "publicationDate": "2026-10-12",
+            "quote": "約談總幹事張鈞華及其胞弟、無黨籍市議員參選人張騏晟到案，另兩人的父親、高雄市前海洋局長張漢雄也被約談"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市梓官區漁會",
+              "organizationType": "nonprofit",
+              "positionTitle": "總幹事",
+              "positionCategory": "organizational_leadership",
+              "listingStatus": null,
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.udn.com/news/story/7321/9809970",
+                "publisher": "聯合報",
+                "title": "高雄梓官區漁會疑涉賄選被搜索 高雄前海洋局長父子被約談",
+                "publicationDate": "2026-10-12",
+                "quote": "現任梓官區漁會總幹事張鈞華為張漢雄的大兒子"
+              }
+            },
+            {
+              "organizationName": "財團法人農業信用保證基金",
+              "organizationType": "foundation",
+              "positionTitle": "監察人",
+              "positionCategory": "board",
+              "listingStatus": null,
+              "status": "current",
+              "startDate": "2025-03-11",
+              "endDate": null,
+              "source": {
+                "url": "https://www.moa.gov.tw/redirect_files.php?id=44940",
+                "publisher": "農業部",
+                "title": "財團法人農業信用保證基金第 15 屆董事及監察人名單",
+                "publicationDate": null,
+                "quote": "監察人 張鈞華 高雄市梓官區漁會/總幹事"
+              },
+              "notes": "名單備註「任期自 114 年 3 月 11 日至 117 年 3 月 10 日止」，即 2025-03-11 起至 2028-03-10 止；現任職務依契約不填 endDate，任期屆滿日記於備註。"
+            }
+          ],
+          "notes": "胞弟關係由聯合報報導明文記載；張鈞華為長子、候選人為次子，兩份報導敍述一致。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "張驥晟／張騏晟（姓名用字）",
+          "reason": "候選人名冊作「張驥晟」，中選會 2026 候選人資料與媒體作「張騏晟」。以生日 1986-08-21（民國75年8月21日）、第3選區、號次2交叉比對為同一人，非同名誤認；本檔關係與職務均以此交叉比對為前提。",
+          "url": "https://www.udn.com/news/story/7321/9809970"
+        }
+      ]
+    },
+    {
+      "sequence": 18,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-b2fdd62f",
+      "displayName": "宋立彬",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "宋立彬 父親 宋萬春 縣議員",
+        "宋立彬 政治家族 梓官",
+        "宋萬春 高雄縣議員 屆次",
+        "宋立彬 兄弟 家族 公司"
+      ],
+      "urlsAttempted": [
+        "https://allnews.tw/news/95515",
+        "https://hk.crntt.com/doc/1058/2/6/9/105826967.html",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=12",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "宋萬春",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://allnews.tw/news/95515",
+            "publisher": "台灣民眾電子報",
+            "title": "宋立彬梓官競總成立拚三連霸 柯志恩授旗力挺",
+            "publicationDate": "2026-10-11",
+            "quote": "宋立彬表示，9年前在地方各界鼓勵下，承接父親宋萬春的遺願，從一名普通百姓投入市議員選舉。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=12",
+                "publisher": "高雄市議會",
+                "title": "歷屆議員（高雄縣議會）",
+                "publicationDate": null,
+                "quote": "宋萬春 高雄縣議會 第十屆71~75 第十一屆75~79"
+              },
+              "notes": "高雄市議會歷屆議員名單載明第10、11屆（民國71~79年），未換算西元起訖日期。"
+            }
+          ],
+          "notes": "中評社 2020-07-18 另載「宋立彬來自政治家族，父親是縣市合併之前的前縣議員宋萬春」，與競選總部成立報導一致；宋萬春已故，無現任職務。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 19,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+      "displayName": "蔣黃女",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "蔣黃女 議員 兒子 蔣耀賢",
+        "蔣耀賢 橋仔頭文史協會 理事長",
+        "蔣耀賢 台灣藝術發展協會 理事長",
+        "蔣黃女 家族 橋頭 糖廠"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5563312",
+        "https://news.ltn.com.tw/news/society/paper/233084",
+        "https://data.zhupiter.com/oddt/19113965/",
+        "https://www.cw.com.tw/article/5143695",
+        "https://zh.wikipedia.org/zh-tw/蔣耀賢"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "蔣耀賢",
+          "relationLabel": "兒子",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563312",
+            "publisher": "自由時報",
+            "title": "守護橋頭森林 83歲蔣黃女登記參選高雄市議員",
+            "publicationDate": "2026-09-04",
+            "quote": "蔣黃女今下午由催生橋仔頭糖廠藝術村、金甘蔗影展的兒子蔣耀賢，以及森林城市協會創會理事長莊傑任陪同，前往高雄市選委會登記參選高雄第三選區"
+          },
+          "positions": [
+            {
+              "organizationName": "橋仔頭文史協會",
+              "organizationType": "nonprofit",
+              "positionTitle": "理事長",
+              "positionCategory": "organizational_leadership",
+              "listingStatus": null,
+              "status": "historical-status-unknown",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/society/paper/233084",
+                "publisher": "自由時報",
+                "title": "橋頭老街拆除爭議",
+                "publicationDate": "2008-08-07",
+                "quote": "日前媒體報導橋仔頭文史協會理事長蔣耀賢「反對橋頭老街拆除」"
+              },
+              "notes": "2008 年報導時為理事長；是否仍任該職未有來源可確認，故標為歷史狀態未知、起訖日期未查得。"
+            },
+            {
+              "organizationName": "社團法人台灣藝術發展協會",
+              "organizationType": "nonprofit",
+              "positionTitle": "理事長",
+              "positionCategory": "organizational_leadership",
+              "listingStatus": null,
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://data.zhupiter.com/oddt/19113965/",
+                "publisher": "諸彼特開放資料閱讀網（內政部合作及人民團體司「全國性社會團體名冊－按理事長性別」開放資料）",
+                "title": "台灣藝術發展協會",
+                "publicationDate": null,
+                "quote": "台灣藝術發展協會, 負責人 蔣耀賢, 設立時間 0890311"
+              },
+              "notes": "來源為內政部合作及人民團體司全國性社會團體名冊開放資料（理事長名冊轉載），僅載負責人姓名與立案日期（民國89年3月11日），無任期起訖。"
+            }
+          ],
+          "notes": "天下雜誌（cw.com.tw/article/5143695）全文受 Cloudflare 阻擋未能取得，未採用；維基百科條目僅作搜尋線索，未作為任何證據。母子關係僅自由時報一篇報導，建議複查。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 20,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-c1c9a92e",
+      "displayName": "黃秋媛",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃秋媖 翁瑞珠 女兒 議員",
+        "黃萬全 田寮鄉長 縣議員",
+        "翁瑞珠 議員 屆次 高雄市議會",
+        "黃秋媖 家族 田寮 阿蓮"
+      ],
+      "urlsAttempted": [
+        "https://natnews.com.tw/news/news-45996.html",
+        "https://www.idn.com.tw/news/news_content.aspx?artid=20041020ab004",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "翁瑞珠",
+          "relationLabel": "母親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://natnews.com.tw/news/news-45996.html",
+            "publisher": "全國報系",
+            "title": "高雄市議員翁瑞珠傳承給愛女黃秋媖 繼續為地方鄉親打拼！",
+            "publicationDate": "2018-08-30",
+            "quote": "高雄市議員選舉第三選區參選人黃秋媖由母親(現任市議員翁瑞珠)及父親(前縣議員黃萬全)陪同之下，在今天完成參選登記"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+                "publisher": "高雄市議會",
+                "title": "歷屆議員（合併後高雄市議會）",
+                "publicationDate": null,
+                "quote": "翁瑞珠 高雄市議會 第一屆99~103 第二屆103~107"
+              },
+              "notes": "縣市合併後第1、2屆（民國99~107年）；未換算西元起訖日期。"
+            }
+          ],
+          "notes": "2018 年報導稱其為「現任市議員」且「已連任兩屆」，與市議會歷屆名單的第1、2屆相符。"
+        },
+        {
+          "relativeName": "黃萬全",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://natnews.com.tw/news/news-45996.html",
+            "publisher": "全國報系",
+            "title": "高雄市議員翁瑞珠傳承給愛女黃秋媖 繼續為地方鄉親打拼！",
+            "publicationDate": "2018-08-30",
+            "quote": "高雄市議員選舉第三選區參選人黃秋媖由母親(現任市議員翁瑞珠)及父親(前縣議員黃萬全)陪同之下，在今天完成參選登記"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://natnews.com.tw/news/news-45996.html",
+                "publisher": "全國報系",
+                "title": "高雄市議員翁瑞珠傳承給愛女黃秋媖 繼續為地方鄉親打拼！",
+                "publicationDate": "2018-08-30",
+                "quote": "黃秋媖28日上午是在母親(高雄市議員翁瑞珠)和父親(前高雄縣議員黃萬全)，以及競選團隊陪同下，前往選委會完成參選登記。"
+              }
+            },
+            {
+              "organizationName": "高雄縣田寮鄉公所",
+              "organizationType": "government",
+              "positionTitle": "鄉長",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.idn.com.tw/news/news_content.aspx?artid=20041020ab004",
+                "publisher": "自立晚報",
+                "title": "從鄉長到參選立委 黃萬全敬老精神如一",
+                "publicationDate": "2004-10-20",
+                "quote": "黃萬全強調，他當田寮鄉長時，率全國之先實施敬老津貼，田寮鄉是全國最早發放敬老津貼的鄉鎮"
+              }
+            }
+          ],
+          "notes": "自立晚報 2004 年報導另載其當年參選立法委員（候選身分非當選職務，未列為 position）。縣議員與鄉長職務均查無屆次與起訖日期。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "黃秋媛／黃秋媖（姓名用字）",
+          "reason": "候選人名冊作「黃秋媛」，中選會 2026 候選人資料與媒體作「黃秋媖」。以生日 1972-10-14（民國61年10月14日）、第3選區、號次5交叉比對為同一人，非同名誤認。",
+          "url": "https://natnews.com.tw/news/news-45996.html"
+        }
+      ]
+    },
+    {
+      "sequence": 21,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-d216e1d3",
+      "displayName": "林志誠",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "林志誠 議員 父親 高雄 岡山",
+        "林志誠 家族 政治 高雄市議員",
+        "林志誠 議員 妻子 家人",
+        "林志誠 民進黨 高雄 經歷"
+      ],
+      "urlsAttempted": [
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://www.facebook.com/KaohsiungLinZhiCheng/",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 22,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-8e0ba68c",
+      "displayName": "黃韻涵",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃韻涵 陸淑美 女兒 交棒",
+        "陸淑美 副議長 議員 屆次",
+        "黃韻涵 父親 家族",
+        "陸淑美 岡山 鎮民代表 縣議員"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+        "https://focusnews.com.tw/2026/09/719185/",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "陸淑美",
+          "relationLabel": "母親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5472000",
+            "publisher": "自由時報",
+            "title": "藍前高雄副議長陸淑美交棒女兒 黃韻涵成立競選總部",
+            "publicationDate": "2026-06-14",
+            "quote": "黃韻涵的母親、前副議長陸淑美象徵性「交棒」，懇請鄉親繼續支持。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://focusnews.com.tw/2026/09/719185/",
+                "publisher": "今傳媒",
+                "title": "陸淑美把畢生對地方的感情、為鄉親服務的初心 交棒給女兒黃韻涵",
+                "publicationDate": "2026-09-06",
+                "quote": "民國75年，陸淑美踏上從政這條路，2屆岡山鎮鎮民代表、4屆高雄縣議員、縣市合併後4屆高雄市議員，歷經40年"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "副議長",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+                "publisher": "高雄市議會",
+                "title": "本屆議員－陸淑美",
+                "publicationDate": null,
+                "quote": "高雄市第3屆副議長 第1-3屆市議員 高雄縣第15-16屆副議長 第13-16屆縣議員 岡山鎮第13-14屆鎮民代表"
+              }
+            },
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "副議長",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+                "publisher": "高雄市議會",
+                "title": "本屆議員－陸淑美",
+                "publicationDate": null,
+                "quote": "高雄市第3屆副議長 第1-3屆市議員 高雄縣第15-16屆副議長 第13-16屆縣議員 岡山鎮第13-14屆鎮民代表"
+              }
+            },
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+                "publisher": "高雄市議會",
+                "title": "本屆議員－陸淑美",
+                "publicationDate": null,
+                "quote": "高雄市第3屆副議長 第1-3屆市議員 高雄縣第15-16屆副議長 第13-16屆縣議員 岡山鎮第13-14屆鎮民代表"
+              }
+            },
+            {
+              "organizationName": "高雄縣岡山鎮民代表會",
+              "organizationType": "legislature",
+              "positionTitle": "鎮民代表",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2180",
+                "publisher": "高雄市議會",
+                "title": "本屆議員－陸淑美",
+                "publicationDate": null,
+                "quote": "高雄市第3屆副議長 第1-3屆市議員 高雄縣第15-16屆副議長 第13-16屆縣議員 岡山鎮第13-14屆鎮民代表"
+              }
+            }
+          ],
+          "notes": "市議員職務依今傳媒 2026-09-06 報導「縣市合併後4屆高雄市議員」與高雄市議會本屆議員頁列名，標為現任（2026 年底不再競選連任，任期至第4屆屆滿）；市議會頁面另列第1-3屆與縣議會第13-16屆。各職務屆次均未換算西元起訖日期，結束日期未查得。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": []
+    },
+    {
+      "sequence": 23,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-03-9b06e0f9",
+      "displayName": "蔡秉穎",
+      "districtId": "district-kaohsiung-council-03",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "蔡秉璁 家族 父親 母親 高雄",
+        "蔡秉璁 議員 參選 大岡山 背景",
+        "蔡秉璁 專訪 家庭",
+        "蔡秉穎 家族 政治"
+      ],
+      "urlsAttempted": [
+        "https://www.storm.mg/article/11168906",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5518335",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "蔡秉穎／蔡秉璁（姓名用字）",
+          "reason": "候選人名冊作「蔡秉穎」，中選會 2026 候選人資料與媒體作「蔡秉璁」。以生日 1991-06-24（民國80年6月24日）、第3選區、號次8交叉比對為同一人，非同名誤認；惟其公開報導僅述本人經歷（前立委劉世芳助理、總統府前秘書長陳菊秘書、陸委會與經濟部與台電任職、邱志偉競選團隊執行長），未見任何親屬姓名或職務，故本列無關係。",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5518335"
+        }
+      ]
+    },
+    {
+      "sequence": 11,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-df6f2338",
+      "displayName": "李柏融",
+      "districtId": "district-kaohsiung-council-02",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李柏融 議員 候選人 茄萣 湖內 家人",
+        "李柏融 胞弟 身亡 2026",
+        "李柏融 父親 家族 政治",
+        "李柏融 公司 董事長"
+      ],
+      "urlsAttempted": [
+        "https://news.tvbs.com.tw/local/4045761",
+        "https://www.setn.com/News.aspx?NewsID=1933347",
+        "https://www.taisounds.com/news/content/96/297884",
+        "https://www.nextapple.com/local/20261104/D24120E0117B10B2BD68FE4ED2321F38"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李柏融之弟（姓名未公開）",
+          "reason": "2026-11-04 多家媒體報導其胞弟身故，明確記載手足關係（「死者的胞兄也就是高雄第二選區議員候選人李柏融，現年78歲」），但姓名未公開，且報導未記載任何政治、政府、企業、基金會或非營利組織職務，不符職務門檻，故不列入 relations；亦不記錄任何私人資訊。",
+          "url": "https://www.setn.com/News.aspx?NewsID=1933347"
+        }
+      ]
+    },
+    {
+      "sequence": 12,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-00382651",
+      "displayName": "李亞築",
+      "districtId": "district-kaohsiung-council-02",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "李亞築 李長生 女兒 議員",
+        "李長生 議員 屆次 高雄縣議會",
+        "李長生 公司 董事",
+        "李亞築 家族 路竹 湖內"
+      ],
+      "urlsAttempted": [
+        "https://newtalk.tw/news/view/2022-05-18/756501",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://data.zhupiter.com/oddt/17414528/"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "李長生",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://newtalk.tw/news/view/2022-05-18/756501",
+            "publisher": "Newtalk新聞",
+            "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+            "publicationDate": "2022-05-18",
+            "quote": "第2選區國民黨現任議員李亞築為前議員李長生的女兒，有五連霸的老爸護盤，李亞築幾乎確定可在年底過關。"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄縣議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+                "publisher": "高雄市議會",
+                "title": "歷屆議員（合併後高雄市議會）",
+                "publicationDate": null,
+                "quote": "李長生 高雄縣議會 第十三屆83~87 第十四屆87~91 第十五屆91~95 第十六屆95~99 高雄市議會 第一屆99~103 第二屆103~107"
+              }
+            },
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "former",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+                "publisher": "高雄市議會",
+                "title": "歷屆議員（合併後高雄市議會）",
+                "publicationDate": null,
+                "quote": "李長生 高雄縣議會 第十三屆83~87 第十四屆87~91 第十五屆91~95 第十六屆95~99 高雄市議會 第一屆99~103 第二屆103~107"
+              }
+            }
+          ],
+          "notes": "高雄市議會歷屆議員名單列第13-16屆縣議員與縣市合併後第1、2屆市議員（民國83~107年），合計6屆，與報導「五連霸的老爸」用語不完全一致，屆次以市議會名單為準；未換算西元起訖日期。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "李長生（企業職務）",
+          "reason": "商工登記董監事資料中出現同名「李長生」（如美美資產管理股份有限公司董事），但未能取得可擷取的官方登記頁面交叉確認與候選人父親為同一人，依同名誤認規則不列入職務。",
+          "url": "https://data.zhupiter.com/oddt/17414528/"
+        }
+      ]
+    },
+    {
+      "sequence": 13,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-f32d851b",
+      "displayName": "黃明太",
+      "districtId": "district-kaohsiung-council-02",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "黃明太 議員 父親 母親 家族",
+        "黃明太 妻子 邱秀琴",
+        "黃明太 兒子 和勤 精機 負責人",
+        "黃明太 兄弟 姊妹 公司"
+      ],
+      "urlsAttempted": [
+        "https://www.cna.com.tw/news/asoc/202303080148.aspx",
+        "https://tw.news.yahoo.com/%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E9%BB%83%E6%98%8E%E5%A4%AA%E6%B6%89%E7%82%92%E8%82%A1%E8%B3%BA%E5%83%B9%E5%B7%AE1239%E8%90%AC-%E8%AD%89%E4%BA%A4%E6%B3%95%E8%B5%B7%E8%A8%B4-033045123.html",
+        "https://allnews.tw/news/29461",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "黃明太之子（姓名未於可取得來源中確認）",
+          "reason": "2023-09-05 起訴報導僅稱其利用「兒子夫婦」等人帳戶交易和勤精機股票，未具名亦未記載任何職務；另有非官方轉載稱其子為該公司登記負責人，但無官方登記或 MOPS 文件可驗證姓名與職務，依同名誤認與來源優先序規則不列入 relations。",
+          "url": "https://tw.news.yahoo.com/%E9%AB%98%E5%B8%82%E8%AD%B0%E5%93%A1%E9%BB%83%E6%98%8E%E5%A4%AA%E6%B6%89%E7%82%92%E8%82%A1%E8%B3%BA%E5%83%B9%E5%B7%AE1239%E8%90%AC-%E8%AD%89%E4%BA%A4%E6%B3%95%E8%B5%B7%E8%A8%B4-033045123.html"
+        },
+        {
+          "subject": "邱秀琴（配偶）",
+          "reason": "地方報導以「高雄市逢甲大學校友會長黃明太夫人邱秀琴」提及配偶，關係可辨識，但報導未記載其任何政治、政府、企業、基金會或非營利組織職務，不符職務門檻，故不列入 relations。",
+          "url": "https://allnews.tw/news/29461"
+        }
+      ]
+    },
+    {
+      "sequence": 14,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-632d8db0",
+      "displayName": "陳琳潔",
+      "districtId": "district-kaohsiung-council-02",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "陳琳潔 陳明澤 女兒 交棒",
+        "陳明澤 議員 屆次 高雄市議會",
+        "王義川 陳琳潔 表哥",
+        "陳明澤 家族 路竹 湖內"
+      ],
+      "urlsAttempted": [
+        "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028&msn=2176",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://ppg.ly.gov.tw/ppg/bills/203110228270000/details",
+        "https://data.zhupiter.com/oddt/17414528/"
+      ],
+      "outcome": "relations-found",
+      "relations": [
+        {
+          "relativeName": "陳明澤",
+          "relationLabel": "父親",
+          "relationTypeHint": "parent-child",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+            "publisher": "自由時報",
+            "title": "民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記",
+            "publicationDate": "2026-02-06",
+            "quote": "民進黨高市6連霸議員陳明澤交棒女兒陳琳潔參選第二選區議員，今上午陪她到市黨部完成登記"
+          },
+          "positions": [
+            {
+              "organizationName": "高雄市議會",
+              "organizationType": "legislature",
+              "positionTitle": "議員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+                "publisher": "自由時報",
+                "title": "民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記",
+                "publicationDate": "2026-02-06",
+                "quote": "6屆議員陳明澤深耕在地，他感謝鄉親20多年來不離不棄的支持"
+              },
+              "notes": "高雄市議會本屆議員頁列名陳明澤；歷屆議員名單另載縣議會第15、16屆與市議會第1、2屆（民國91~107年），與報導「6連霸」相符。未換算西元起訖日期。"
+            }
+          ],
+          "notes": "職務來源以自由時報 2026-02-06 報導（現任6屆議員）與高雄市議會本屆議員頁交叉確認。"
+        },
+        {
+          "relativeName": "王義川",
+          "relationLabel": "表哥",
+          "relationTypeHint": "cousins",
+          "kinship": {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5334889",
+            "publisher": "自由時報",
+            "title": "民進黨高市議員初選首見「交棒」 陳明澤陪女兒陳琳潔登記",
+            "publicationDate": "2026-02-06",
+            "quote": "立委王義川是陳琳潔親表哥"
+          },
+          "positions": [
+            {
+              "organizationName": "立法院",
+              "organizationType": "legislature",
+              "positionTitle": "立法委員",
+              "positionCategory": "political",
+              "listingStatus": null,
+              "status": "current",
+              "startDate": null,
+              "endDate": null,
+              "source": {
+                "url": "https://ppg.ly.gov.tw/ppg/bills/203110228270000/details",
+                "publisher": "立法院議事及發言系統",
+                "title": "委員王義川等17人擬具「道路交通管理處罰條例第三十五條、第三十五條之二及第六十七條條文修正草案」",
+                "publicationDate": null,
+                "quote": "本院委員王義川等17人「道路交通管理處罰條例第三十五條、第三十五條之二及第六十七條條文修正草案」，請審議案。"
+              },
+              "notes": "立法院議事及發言系統以「委員王義川」列名提案，確認為現任立法委員；未取得屆次起訖日期。"
+            }
+          ],
+          "notes": "表哥關係僅見自由時報一篇報導（引述王義川為陳琳潔推薦時的發言），無其他獨立來源，建議複查。"
+        }
+      ],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "陳明澤（企業職務）",
+          "reason": "商工登記董監事資料出現同名「陳明澤」任纖福企業股份有限公司董事長（統一編號28475581），但無職務、選區或時間脈絡交叉確認與候選人父親為同一人，依同名誤認規則不列入職務。",
+          "url": "https://data.zhupiter.com/oddt/17414528/"
+        }
+      ]
+    },
+    {
+      "sequence": 15,
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-02-c7761769",
+      "displayName": "鄭東元",
+      "districtId": "district-kaohsiung-council-02",
+      "searchedAt": "2026-11-16",
+      "queries": [
+        "鄭東元 議員 候選人 茄萣 湖內 家族",
+        "鄭東元 高雄 經歷 總經理",
+        "鄭東元 父親 兄弟 政治"
+      ],
+      "urlsAttempted": [
+        "https://votetw.com/wiki/鄭東元",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=37",
+        "https://www.kcc.gov.tw/MemberInfo_New.aspx?n=39&sms=9028"
+      ],
+      "outcome": "searched-no-verified-relations",
+      "relations": [],
+      "rejectedOrAmbiguousClaims": [
+        {
+          "subject": "鄭東元本人經歷（非親屬）",
+          "reason": "網路人物頁記載「曾任全統油脂飼料公司總經理室專員、凱統鐵板燒餐廳總經理」，屬本人任職而非親屬職務，且該頁同時將其政黨誤載為中國國民黨（名冊為無黨籍），來源可信度不足，未採用。",
+          "url": "https://votetw.com/wiki/鄭東元"
+        }
+      ]
+    }
+  ]
+}

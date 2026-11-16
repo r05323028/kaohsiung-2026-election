@@ -1,0 +1,641 @@
+{
+  "verificationVersion": "1",
+  "verifiedAt": "2026-11-16",
+  "reviewerRole": "independent-fact-checker",
+  "records": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "relativeName": "蔡慶源",
+      "relation": "parent-child",
+      "status": "verified",
+      "rationale": "自行擷取 ETtoday 2021-12-02 原文兩處明示方向：「出身政治世家，父親是6連霸的前國民黨市議員蔡慶源」、「蔡武宏為蟬聯六屆市議員的蔡慶源次子」，即蔡慶源為蔡武宏之父，蔡武宏為次子，方向未被寫反。屆次由高雄市議會官方《歷屆議員簡介》兩頁交叉確認：合併前第六屆頁面載「蔡慶源／合併前高雄市議會／第一屆70~74、第二屆74~78、第三屆78~83、第四屆83~87、第五屆87~91、第六屆91~95／解職」，合併前第四屆頁面另載第一屆至第四屆，兩頁一致，六屆與 ETtoday「6連霸」相符。解職日期以自由時報 2005-12-21 最為具體：「蔡慶源（52歲）議員曾因妨害投票案，被法院判處定執行刑6個月，褫奪公權4年確定，並在去年4月22日被解職」，據此記 endDate 2004-04-22；ETtoday 與 TVBS 則以「因涉及朱安雄議長賄選案判刑確定後解職」、「蔡慶源因為涉及朱安雄賄選案，判刑半年，遭到解職」描述同一次解職，刑度（6個月／半年）與自由時報一致，故三篇實指同一事件，僅案名用語不同；解職日期採自由時報之具體記載。同名誤認風險已排除：官方屆次、選區（前鎮、小港，第五選區）與時間（民國70年起至2004年解職）三者互相吻合，且候選人蔡武宏之 2026 年登錄選區、政黨（國民黨）與 ETtoday「接下父親的棒子」敘述連貫，無其他同名者可混用。",
+      "sourceIds": [
+        "source-verify-a1b2c3d4",
+        "source-verify-d4e5f6a7",
+        "source-verify-e5f6a7b8",
+        "source-verify-c3d4e5f6"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-a1b2c3d4"
+      ],
+      "positionSourceIds": [
+        "source-verify-d4e5f6a7",
+        "source-verify-e5f6a7b8",
+        "source-verify-c3d4e5f6"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-a1b2c3d4",
+          "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+          "publisher": "ETtoday新聞雲",
+          "title": "議員變小王！蔡武宏政二代出身　搭上韓流列車再翻身",
+          "publicationDate": "2021-12-02",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-d4e5f6a7",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－合併前高雄市議會第六屆（民國91年12月25日至95年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-e5f6a7b8",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－合併前高雄市議會第四屆（民國83年12月25日至87年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-c3d4e5f6",
+          "url": "https://news.ltn.com.tw/news/local/paper/49093",
+          "publisher": "自由時報",
+          "title": "蔡慶源、蔡武男父子賄選 判刑",
+          "publicationDate": "2005-12-21",
+          "sourceKind": "established-news"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-a1b2c3d4",
+            "url": "https://www.ettoday.net/news/20211202/2136822.htm",
+            "httpExitCode": 200,
+            "byteCount": 122167,
+            "nameHits": {
+              "蔡武宏": true,
+              "蔡慶源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-d4e5f6a7",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 200,
+            "byteCount": 199225,
+            "nameHits": {
+              "蔡武宏": false,
+              "蔡慶源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-e5f6a7b8",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 200,
+            "byteCount": 176197,
+            "nameHits": {
+              "蔡武宏": false,
+              "蔡慶源": true
+            }
+          },
+          {
+            "sourceId": "source-verify-c3d4e5f6",
+            "url": "https://news.ltn.com.tw/news/local/paper/49093",
+            "httpExitCode": 200,
+            "byteCount": 227118,
+            "nameHits": {
+              "蔡武宏": false,
+              "蔡慶源": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "市議員（合併前第一屆至第六屆）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": "2004-04-22",
+          "sourceIds": [
+            "source-verify-d4e5f6a7",
+            "source-verify-e5f6a7b8",
+            "source-verify-c3d4e5f6"
+          ],
+          "notes": "官方屆次紀錄為第一屆70~74、第二屆74~78、第三屆78~83、第四屆83~87、第五屆87~91、第六屆91~95 並註記「解職」；自由時報 2005-12-21（事件發生於 2005-12-21 前一年）記載 2004-04-22 被解職，故 endDate 取該日，任期內解職非屆滿。第一屆起始日以官方屆別年分（民國70年）為準，未取得該屆就職日原文故 startDate 留 null。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-c41bc579",
+      "relativeName": "蔡武男",
+      "relation": "siblings",
+      "status": "verified",
+      "rationale": "親屬方向由三個獨立來源交叉確認且未被寫反：TVBS 2006-11-23 原文「蔡慶源因為涉及朱安雄賄選案，判刑半年，遭到解職，他推派兒子蔡武男接棒，補選上壘」，同篇「他們積極輔選蔡武男的弟弟蔡武宏，進軍市議員」，明示蔡武男為兄、蔡武宏為弟；自由時報 2005-12-21 亦載「推由其長子蔡武男（30歲）參加市議員第5選區（前鎮、小港區）補選」，與標題「蔡慶源、蔡武男父子賄選 判刑」互證父子關係；ETtoday 2021-12-02 稱蔡武宏為「蔡慶源次子」，三方一致。職務以高雄市議會官方第六屆頁面確認：蔡武男列「合併前高雄市議會／第六屆91~95／補選」；同頁說明該屆 18 名解職、離職議員於 93 年（2004）7 月 17 日補選、7 月 26 日就職。卸任時點由 TVBS 同篇確認：「判刑確定，使得蔡武男步爸爸後塵，從今天起，就得停職」，並載「檢方認定93年5月…免費餐會，涉嫌賄選，在昨天定讞，父子各判處1年及半年徒刑」，即 2006-11-22 定讞、2006-11-23 起停職，故記為已卸任、endDate 2006-11-23。研究檔記「兄弟／第六屆補選」與官方紀錄及報導完全相符，未推翻任何主張；本次僅補上就職通案日期說明與停職日期。",
+      "sourceIds": [
+        "source-verify-b2c3d4e5",
+        "source-verify-c3d4e5f6",
+        "source-verify-d4e5f6a7"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-b2c3d4e5",
+        "source-verify-c3d4e5f6"
+      ],
+      "positionSourceIds": [
+        "source-verify-d4e5f6a7",
+        "source-verify-b2c3d4e5"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-b2c3d4e5",
+          "url": "https://news.tvbs.com.tw/politics/343683",
+          "publisher": "TVBS新聞網",
+          "title": "父子皆賄選解職　高市議會創紀錄",
+          "publicationDate": "2006-11-23",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-c3d4e5f6",
+          "url": "https://news.ltn.com.tw/news/local/paper/49093",
+          "publisher": "自由時報",
+          "title": "蔡慶源、蔡武男父子賄選 判刑",
+          "publicationDate": "2005-12-21",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-d4e5f6a7",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－合併前高雄市議會第六屆（民國91年12月25日至95年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-b2c3d4e5",
+            "url": "https://news.tvbs.com.tw/politics/343683",
+            "httpExitCode": 200,
+            "byteCount": 199585,
+            "nameHits": {
+              "蔡武宏": true,
+              "蔡武男": true
+            }
+          },
+          {
+            "sourceId": "source-verify-c3d4e5f6",
+            "url": "https://news.ltn.com.tw/news/local/paper/49093",
+            "httpExitCode": 200,
+            "byteCount": 227118,
+            "nameHits": {
+              "蔡武宏": false,
+              "蔡武男": true
+            }
+          },
+          {
+            "sourceId": "source-verify-d4e5f6a7",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 200,
+            "byteCount": 199225,
+            "nameHits": {
+              "蔡武宏": false,
+              "蔡武男": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "市議員（合併前第六屆，補選）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": "2006-11-23",
+          "sourceIds": [
+            "source-verify-d4e5f6a7",
+            "source-verify-b2c3d4e5"
+          ],
+          "notes": "官方第六屆頁面註記「補選」，同頁說明該屆 18 名解職、離職議員於 2004-07-17 補選、2004-07-26 就職，故未另列起日（該日期為該批補選通案記載，非個人欄位）。TVBS 2006-11-23 報導最高法院於前一日判刑定讞、當日起停職，endDate 取停職日，屬停職而非任期屆滿（第六屆任期至 2006-12-24）。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "relativeName": "楊敏郎",
+      "relation": "spouses",
+      "status": "verified",
+      "rationale": "自行擷取 Newtalk 2019-09-07 原文：「陳麗娜來自小港最大的政治世家，公公楊振添1981年起連任四屆高雄市議員，1998年交接給她的丈夫楊敏郎，2002年成功連任後，2004年因高雄市議長朱安雄賄選案入獄，喪失議員資格。同年高雄市議員補選，陳麗娜代夫出征，當選第6屆高雄市議員」，明示楊敏郎為陳麗娜之夫，且陳麗娜於 2004 年補選接替同一屆席位。職務由高雄市議會官方第六屆頁面確認：楊敏郎列「第五屆87~91、第六屆91~95／解職」；同頁並列陳麗娜「第六屆91~95／補選」，與報導「代夫出征、當選第6屆」時序一致，可證兩人為同一組高雄市議會人物，非同姓同名誤認。陳麗娜現任身分另由高雄市議會《本屆議員》選區列表確認（第十選區前鎮、小港列有陳麗娜），排除同名不同人。研究檔原記「2004年因朱安雄賄選案入獄」與官方「解職」註記相符，本次補記確切解職日期未查得。",
+      "sourceIds": [
+        "source-verify-f6a7b8c9",
+        "source-verify-d4e5f6a7",
+        "source-verify-d0e1f2a3"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-f6a7b8c9"
+      ],
+      "positionSourceIds": [
+        "source-verify-d4e5f6a7",
+        "source-verify-f6a7b8c9"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-f6a7b8c9",
+          "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+          "publisher": "Newtalk新聞",
+          "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+          "publicationDate": "2019-09-07",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-d4e5f6a7",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－合併前高雄市議會第六屆（民國91年12月25日至95年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-d0e1f2a3",
+          "url": "https://www.kcc.gov.tw/Member_List3.aspx?n=39&sms=9028",
+          "publisher": "高雄市議會",
+          "title": "本屆議員－選區列表",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-f6a7b8c9",
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "httpExitCode": 200,
+            "byteCount": 189895,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊敏郎": true,
+              "楊振添": true
+            }
+          },
+          {
+            "sourceId": "source-verify-d4e5f6a7",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 200,
+            "byteCount": 199225,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊敏郎": true
+            }
+          },
+          {
+            "sourceId": "source-verify-d0e1f2a3",
+            "url": "https://www.kcc.gov.tw/Member_List3.aspx?n=39&sms=9028",
+            "httpExitCode": 200,
+            "byteCount": 147947,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊敏郎": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "市議員（合併前第五屆、第六屆）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-d4e5f6a7",
+            "source-verify-f6a7b8c9"
+          ],
+          "notes": "官方屆次紀錄為第五屆87~91、第六屆91~95 並註記「解職」；Newtalk 敘述 1998 年當選、2002 年連任、2004 年因朱安雄議長賄選案入獄喪失議員資格。解職早於同屆 2004-07-17 補選，結束日期未查得，故 endDate 留 null。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "relativeName": "楊振添",
+      "relation": "in-laws",
+      "status": "verified",
+      "rationale": "Newtalk 2019-09-07 以「公公楊振添」直指其為陳麗娜配偶之父，並敘明「1981年起連任四屆高雄市議員，1998年交接給她的丈夫楊敏郎」，方向為姻親（配偶之父），非陳麗娜本人之父，本次特別確認未被寫成父女。職務由高雄市議會官方合併前第四屆頁面確認：楊振添列「第一屆70~74、第二屆74~78、第三屆78~83、第四屆83~87」，恰為四屆，與報導「1981年起連任四屆」相符；該頁為第四屆議員名冊（民國83年12月25日至87年12月24日），楊振添不在第六屆名冊中，與「1998年交接」後未再連任一致。同名誤認風險已檢查：官方屆次、屆別年分（民國70年起）與 1998 年交棒時點互相吻合。",
+      "sourceIds": [
+        "source-verify-f6a7b8c9",
+        "source-verify-e5f6a7b8",
+        "source-verify-d4e5f6a7"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-f6a7b8c9"
+      ],
+      "positionSourceIds": [
+        "source-verify-e5f6a7b8",
+        "source-verify-d4e5f6a7"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-f6a7b8c9",
+          "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+          "publisher": "Newtalk新聞",
+          "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+          "publicationDate": "2019-09-07",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-e5f6a7b8",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－合併前高雄市議會第四屆（民國83年12月25日至87年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-d4e5f6a7",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "publisher": "高雄市議會",
+          "title": "歷屆議員簡介－合併前高雄市議會第六屆（民國91年12月25日至95年12月24日）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-f6a7b8c9",
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "httpExitCode": 200,
+            "byteCount": 189895,
+            "nameHits": {
+              "陳麗娜": true,
+              "楊振添": true
+            }
+          },
+          {
+            "sourceId": "source-verify-e5f6a7b8",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32",
+            "httpExitCode": 200,
+            "byteCount": 176197,
+            "nameHits": {
+              "楊振添": true,
+              "陳麗娜": false
+            }
+          },
+          {
+            "sourceId": "source-verify-d4e5f6a7",
+            "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+            "httpExitCode": 200,
+            "byteCount": 199225,
+            "nameHits": {
+              "楊振添": false,
+              "陳麗娜": true
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "市議員（合併前第一屆至第四屆）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": "1998-12-24",
+          "sourceIds": [
+            "source-verify-e5f6a7b8",
+            "source-verify-f6a7b8c9"
+          ],
+          "notes": "官方屆次紀錄為第一屆70~74、第二屆74~78、第三屆78~83、第四屆83~87；第四屆任期依官方頁面為民國83年12月25日至87年12月24日，且其未列於第六屆名冊、報導稱 1998 年交棒，故 endDate 取第四屆屆滿日 1998-12-24。第一屆起始日未取得該屆就職日原文，startDate 留 null。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-73ec2ae0",
+      "relativeName": "吳昱鋒",
+      "relation": "uncle-aunt-niece-nephew",
+      "status": "verified",
+      "rationale": "親屬方向由三立 2026-10-15 三個獨立語句確認，非單一同框推論：旁白「吳銘賜、吳昱鋒，兩人都姓吳，原來雙方是親叔姪關係」、吳昱鋒本人引述「吳銘賜確實是我親叔叔，過往幾年，也都已經沒有再聯繫」、吳銘賜本人引述「（叔姪）六七年都沒聯絡」，即吳銘賜為叔、吳昱鋒為姪，方向未被寫反。同篇另載「尋求四連霸的無黨籍議員吳銘賜，與初次參選的民進黨參選人吳昱鋒，是叔姪關係」，政黨與選區與候選人登錄資料（吳銘賜無黨籍、吳昱鋒民進黨、第十選區前鎮小港）一致。職務（本筆 positions 指 relativeName 吳昱鋒之職務）：民視新聞 2026-03-05 引《高雄畫刊》專訪原文「他於2022年底創立新創公司「智食良果」，並擔任執行長」；風傳媒 2025-09-17 專訪標題即「智食良果創辦人吳昱鋒—從創投金童到田間實踐者」，並敘及「投入百萬元自建貨櫃洋菇實驗場」、「智食良果團隊開發的智慧農業系統」。兩來源互證其為公司創辦人，執行長職稱僅見於民視引述之《高雄畫刊》一處，屬經營團隊（executive）而非董事會成員，亦非一般員工或掛名；查核未見任何董事、董事長或股東身分之主張，故不列 board 職務。上市櫃狀態以官方清單反向查核：臺灣證券交易所上市公司基本資料（t187ap03_L）與證券櫃檯買賣中心上櫃股票行情均查無「智食良果」，判為 unlisted；商工登記（twincn、findbiz）擷取失敗，未取得公司全名與統一編號，故 organization 採報導所用名稱並未補齊法定名稱。",
+      "sourceIds": [
+        "source-verify-a7b8c9d0",
+        "source-verify-b8c9d0e1",
+        "source-verify-c9d0e1f2",
+        "source-verify-e1f2a3b4",
+        "source-verify-f2a3b4c5"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-a7b8c9d0"
+      ],
+      "positionSourceIds": [
+        "source-verify-c9d0e1f2",
+        "source-verify-b8c9d0e1",
+        "source-verify-e1f2a3b4",
+        "source-verify-f2a3b4c5"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-a7b8c9d0",
+          "url": "https://www.setn.com/news/1923195",
+          "publisher": "三立新聞網",
+          "title": "獨家／叔姪之爭！吳銘賜、吳昱鋒「同選區參選議員」",
+          "publicationDate": "2026-10-15",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-b8c9d0e1",
+          "url": "https://www.storm.mg/article/11067928",
+          "publisher": "風傳媒",
+          "title": "科技百業》智食良果創辦人吳昱鋒—從創投金童到田間實踐者",
+          "publicationDate": "2025-09-17",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-c9d0e1f2",
+          "url": "https://tw.news.yahoo.com/%E4%BD%95%E8%A8%B1%E4%BA%BA%E4%B9%9F-%E5%89%8D%E9%8E%AE%E5%B0%8F%E6%B8%AF%E8%AD%B0%E5%93%A1%E5%88%9D%E9%81%B8%E6%96%B0%E4%BA%BA%E7%88%86%E5%86%B7%E8%A1%9D%E7%AC%AC%E4%BA%8C-%E5%90%B3%E6%98%B1%E9%8B%92%E8%B6%85%E7%8B%82%E8%83%8C%E6%99%AF%E6%9B%9D%E5%85%89-064215436.html",
+          "publisher": "民視新聞網（Yahoo新聞轉載）",
+          "title": "何許人也？前鎮小港議員初選新人爆冷衝第二 吳昱鋒超狂背景曝光",
+          "publicationDate": "2026-03-05",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-e1f2a3b4",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+          "publisher": "臺灣證券交易所",
+          "title": "上市公司基本資料（OpenAPI t187ap03_L）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        },
+        {
+          "id": "source-verify-f2a3b4c5",
+          "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes",
+          "publisher": "證券櫃檯買賣中心",
+          "title": "上櫃股票行情（OpenAPI tpex_mainboard_quotes）",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-a7b8c9d0",
+            "url": "https://www.setn.com/news/1923195",
+            "httpExitCode": 200,
+            "byteCount": 174217,
+            "nameHits": {
+              "吳銘賜": true,
+              "吳昱鋒": true
+            }
+          },
+          {
+            "sourceId": "source-verify-b8c9d0e1",
+            "url": "https://www.storm.mg/article/11067928",
+            "httpExitCode": 200,
+            "byteCount": 909137,
+            "nameHits": {
+              "吳昱鋒": true,
+              "吳銘賜": false
+            }
+          },
+          {
+            "sourceId": "source-verify-c9d0e1f2",
+            "url": "https://tw.news.yahoo.com/%E4%BD%95%E8%A8%B1%E4%BA%BA%E4%B9%9F-%E5%89%8D%E9%8E%AE%E5%B0%8F%E6%B8%AF%E8%AD%B0%E5%93%A1%E5%88%9D%E9%81%B8%E6%96%B0%E4%BA%BA%E7%88%86%E5%86%B7%E8%A1%9D%E7%AC%AC%E4%BA%8C-%E5%90%B3%E6%98%B1%E9%8B%92%E8%B6%85%E7%8B%82%E8%83%8C%E6%99%AF%E6%9B%9D%E5%85%89-064215436.html",
+            "httpExitCode": 200,
+            "byteCount": 561356,
+            "nameHits": {
+              "吳昱鋒": true,
+              "吳銘賜": false
+            }
+          },
+          {
+            "sourceId": "source-verify-e1f2a3b4",
+            "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+            "httpExitCode": 200,
+            "byteCount": 1332377,
+            "nameHits": {
+              "智食良果": false,
+              "吳昱鋒": false
+            }
+          },
+          {
+            "sourceId": "source-verify-f2a3b4c5",
+            "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes",
+            "httpExitCode": 200,
+            "byteCount": 360657,
+            "nameHits": {
+              "智食良果": false,
+              "吳昱鋒": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "智食良果",
+          "organizationType": "corporation",
+          "positionTitle": "執行長（報導另稱創辦人）",
+          "positionCategory": "executive",
+          "listingStatus": "unlisted",
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-c9d0e1f2",
+            "source-verify-b8c9d0e1",
+            "source-verify-e1f2a3b4",
+            "source-verify-f2a3b4c5"
+          ],
+          "notes": "民視新聞引《高雄畫刊》稱其於 2022 年底創立該公司並擔任執行長，風傳媒以「創辦人」稱之並敘及其自建貨櫃洋菇實驗場；確切到職日未查得，故 startDate 留 null。未上市櫃係依證交所上市公司基本資料與櫃買中心上櫃行情清單查無該公司判定；商工登記查詢失敗（twincn 0 bytes、findbiz 403），公司全名與統一編號未取得。"
+        }
+      ]
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-10-d8feb4cf",
+      "relativeName": "吳銘賜",
+      "relation": "uncle-aunt-niece-nephew",
+      "status": "verified",
+      "rationale": "同一則三立 2026-10-15 報導由吳昱鋒本人「吳銘賜確實是我親叔叔」與旁白「雙方是親叔姪關係」雙重支持，方向為吳銘賜為叔、吳昱鋒為姪。職務（本筆 positions 指 relativeName 吳銘賜之職務）由兩個獨立來源確認：三立報導稱「尋求四連霸的無黨籍議員吳銘賜」並多次以「高雄市議員吳銘賜」引述其談話；高雄市議會官網《本屆議員》選區列表第十選區名冊列有吳銘賜，可確認其於 2026-11-16 仍為現任議員（第四屆任期 2022-2026），故 status 記為 current-officeholder、endDate 為 null。政黨註記「無黨籍」與候選人登錄資料（政黨：無）一致。未發現同名誤認：姓名同時出現於同篇報導與官方本屆名冊，選區（前鎮、小港）相符。",
+      "sourceIds": [
+        "source-verify-a7b8c9d0",
+        "source-verify-d0e1f2a3"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-a7b8c9d0"
+      ],
+      "positionSourceIds": [
+        "source-verify-a7b8c9d0",
+        "source-verify-d0e1f2a3"
+      ],
+      "sources": [
+        {
+          "id": "source-verify-a7b8c9d0",
+          "url": "https://www.setn.com/news/1923195",
+          "publisher": "三立新聞網",
+          "title": "獨家／叔姪之爭！吳銘賜、吳昱鋒「同選區參選議員」",
+          "publicationDate": "2026-10-15",
+          "sourceKind": "established-news"
+        },
+        {
+          "id": "source-verify-d0e1f2a3",
+          "url": "https://www.kcc.gov.tw/Member_List3.aspx?n=39&sms=9028",
+          "publisher": "高雄市議會",
+          "title": "本屆議員－選區列表",
+          "publicationDate": null,
+          "sourceKind": "official-record"
+        }
+      ],
+      "independentReview": {
+        "reviewedAt": "2026-11-16",
+        "method": "independent-source-retrieval",
+        "sourceChecks": [
+          {
+            "sourceId": "source-verify-a7b8c9d0",
+            "url": "https://www.setn.com/news/1923195",
+            "httpExitCode": 200,
+            "byteCount": 174217,
+            "nameHits": {
+              "吳銘賜": true,
+              "吳昱鋒": true
+            }
+          },
+          {
+            "sourceId": "source-verify-d0e1f2a3",
+            "url": "https://www.kcc.gov.tw/Member_List3.aspx?n=39&sms=9028",
+            "httpExitCode": 200,
+            "byteCount": 147947,
+            "nameHits": {
+              "吳銘賜": true,
+              "吳昱鋒": false
+            }
+          }
+        ]
+      },
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "市議員（第十選區前鎮、小港，無黨籍）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "current-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-a7b8c9d0",
+            "source-verify-d0e1f2a3"
+          ],
+          "notes": "三立報導稱其「尋求四連霸」，即 2026 年選舉時為現任第四屆議員；官方《本屆議員》名冊確認列名。連任屆數之起始屆別未逐屆查得，startDate 留 null。"
+        }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ describe('candidate profile section structure', () => {
       { id: 'policies', label: '政策主張' },
       { id: 'news', label: '相關新聞' },
       { id: 'career', label: '從政歷程' },
-      { id: 'family', label: '家族從政關係' },
+      { id: 'family', label: '家族政商關係' },
     ]);
   });
 
@@ -38,6 +38,43 @@ describe('candidate profile section structure', () => {
     ]) {
       expect(source).not.toContain(token);
     }
+  });
+});
+
+describe('family political and business relations section', () => {
+  const graphSource = readFileSync(
+    fileURLToPath(new URL('./PoliticalFamilyGraph.tsx', import.meta.url)),
+    'utf8',
+  );
+
+  it('uses the 家族政商關係 heading everywhere it names the section', () => {
+    expect(graphSource).toContain('家族政商關係');
+    expect(graphSource).not.toContain('家族從政關係');
+    expect(graphSource).not.toContain('政治經歷來源');
+  });
+
+  it('reads the schema v2 affiliation and position-source fields', () => {
+    for (const token of [
+      'affiliations',
+      'positionSourceIds',
+      'organizationType',
+      'positionCategory',
+      'listingStatus',
+    ]) {
+      expect(graphSource).toContain(token);
+    }
+    for (const obsolete of [
+      'careerSourceIds',
+      'politicalCareer',
+      'officeTitle',
+    ]) {
+      expect(graphSource).not.toContain(obsolete);
+    }
+  });
+
+  it('keeps the neutral note about family and business relations', () => {
+    expect(graphSource).toContain('家族與商業關係本身不代表不當或不當影響');
+    expect(graphSource).toContain('不代表不存在關係');
   });
 });
 

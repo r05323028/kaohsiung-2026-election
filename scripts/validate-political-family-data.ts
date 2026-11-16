@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { validatePoliticalFamilyVerificationCorrections } from '../src/data/political-family/corrections';
 import {
   type FamilyRosterCandidate,
   validatePoliticalFamilyPublication,
@@ -209,6 +210,174 @@ assertExactCandidateCoverage(
 );
 assertPublicationCareerReferences(publication);
 
+const corrections = validatePoliticalFamilyVerificationCorrections(
+  readJson('data/research/2026/political-family/verification-corrections.json'),
+);
+const researchPersonById = new Map(
+  research.people.map((person) => [person.id, person]),
+);
+const researchRelationshipById = new Map(
+  research.relationships.map((relationship) => [relationship.id, relationship]),
+);
+const researchCandidateById = new Map(
+  research.candidates.map((candidate) => [candidate.candidateId, candidate]),
+);
+const researchSourceIds = new Set(research.sources.map((source) => source.id));
+const researchSourceUrls = new Set(
+  research.sources.map((source) => source.url),
+);
+const rosterIds = new Set(roster.map((candidate) => candidate.id));
+for (const record of corrections.records) {
+  if (!rosterIds.has(record.candidateId)) {
+    throw new Error(
+      'Correction references candidate outside the roster: ' +
+        record.candidateId +
+        '.',
+    );
+  }
+  const relationship = researchRelationshipById.get(record.relationshipId);
+  if (!relationship) {
+    throw new Error(
+      'Correction references missing relationship ' +
+        record.relationshipId +
+        '.',
+    );
+  }
+  if (relationship.verificationStatus !== 'verified') {
+    throw new Error(
+      'Correction target is not verified: ' + record.relationshipId + '.',
+    );
+  }
+  const candidatePerson = researchPersonById.get(relationship.personAId);
+  const relativePerson = researchPersonById.get(relationship.personBId);
+  if (candidatePerson?.candidateId !== record.candidateId) {
+    throw new Error(
+      'Correction candidate does not match relationship person A: ' +
+        record.relationshipId +
+        '.',
+    );
+  }
+  if (relativePerson?.displayName !== record.relativeName) {
+    throw new Error(
+      'Correction relative does not match relationship person B: ' +
+        record.relationshipId +
+        '.',
+    );
+  }
+  const appliedPositionSourceIds =
+    record.positionSourceIds ?? relationship.positionSourceIds;
+  for (const sourceId of appliedPositionSourceIds) {
+    if (!researchSourceIds.has(sourceId)) {
+      throw new Error(
+        'Correction references missing research source ' + sourceId + '.',
+      );
+    }
+    if (!relationship.positionSourceIds.includes(sourceId)) {
+      throw new Error(
+        'Correction position source is not on the relationship: ' +
+          sourceId +
+          '.',
+      );
+    }
+  }
+  for (const position of record.positions ?? []) {
+    for (const sourceId of position.sourceIds) {
+      if (!researchSourceIds.has(sourceId)) {
+        throw new Error(
+          'Corrected position references missing source ' + sourceId + '.',
+        );
+      }
+      if (!relationship.positionSourceIds.includes(sourceId)) {
+        throw new Error(
+          'Corrected position source is not on the relationship: ' +
+            sourceId +
+            '.',
+        );
+      }
+    }
+    const applied = relativePerson?.affiliations.some(
+      (affiliation) =>
+        affiliation.organization === position.organization &&
+        affiliation.positionTitle === position.positionTitle &&
+        affiliation.startDate === position.startDate &&
+        affiliation.endDate === position.endDate,
+    );
+    if (!applied) {
+      throw new Error(
+        'Corrected position was not applied: ' +
+          position.organization +
+          ' ' +
+          position.positionTitle +
+          '.',
+      );
+    }
+  }
+  for (const claim of record.removedClaims) {
+    for (const url of claim.sourceUrls) {
+      if (!researchSourceUrls.has(url)) {
+        throw new Error(
+          'Removed claim cites a source outside the research dataset: ' +
+            url +
+            '.',
+        );
+      }
+    }
+    const stillPresent = relativePerson?.affiliations.some(
+      (affiliation) =>
+        affiliation.organization === claim.organization &&
+        affiliation.positionTitle === claim.positionTitle,
+    );
+    if (stillPresent) {
+      throw new Error(
+        'Removed claim is still present: ' +
+          claim.organization +
+          ' ' +
+          claim.positionTitle +
+          '.',
+      );
+    }
+  }
+  for (const url of record.reviewedAgainst) {
+    if (!researchSourceUrls.has(url)) {
+      throw new Error(
+        'Correction reviewedAgainst cites a source outside the research dataset: ' +
+          url +
+          '.',
+      );
+    }
+  }
+}
+for (const outcome of corrections.candidateOutcomes) {
+  const candidate = researchCandidateById.get(outcome.candidateId);
+  if (!candidate) {
+    throw new Error(
+      'Candidate outcome correction references missing candidate ' +
+        outcome.candidateId +
+        '.',
+    );
+  }
+  if (candidate.researchStatus !== outcome.outcome) {
+    throw new Error(
+      'Candidate outcome correction was not applied: ' +
+        outcome.candidateId +
+        ' is ' +
+        candidate.researchStatus +
+        '.',
+    );
+  }
+  for (const subject of outcome.suppressLegacyFindingSubjects) {
+    if (
+      research.unresolvedFindings.some((finding) =>
+        finding.subjectName.includes(subject),
+      )
+    ) {
+      throw new Error(
+        'Suppressed legacy finding subject is still present: ' + subject + '.',
+      );
+    }
+  }
+}
+
 const publishedRelationshipIds = new Set(
   publication.relationships.map((relationship) => relationship.id),
 );
@@ -281,6 +450,8 @@ console.log(
       publishedCandidates: publication.candidates.length,
       publishedRelationships: publication.relationships.length,
       publishedSources: publication.sources.length,
+      correctedRelationships: corrections.records.length,
+      correctedCandidateOutcomes: corrections.candidateOutcomes.length,
       status: 'ok',
     },
     null,

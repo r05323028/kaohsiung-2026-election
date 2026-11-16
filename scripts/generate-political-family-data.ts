@@ -2,6 +2,10 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import {
+  type PoliticalFamilyVerificationCorrections,
+  validatePoliticalFamilyVerificationCorrections,
+} from '../src/data/political-family/corrections';
+import {
   type PoliticalFamilyPublicationApproval,
   validatePoliticalFamilyPublication,
   validatePoliticalFamilyPublicationApproval,
@@ -70,6 +74,13 @@ type VerificationRecord = {
   career?: unknown;
   positions?: unknown;
   independentReview?: JsonObject;
+  correction?: {
+    previousStatus: 'verified' | 'rejected' | 'unresolved';
+    removedClaims: JsonObject[];
+    reason: string;
+    reviewedAgainst: string[];
+    appliedAt: string;
+  };
 };
 type FindingInput = {
   generatedAt: string;
@@ -164,6 +175,10 @@ const verificationPath = join(
 const approvalPath = join(
   root,
   'data/research/2026/political-family/publication-approval.json',
+);
+const correctionsPath = join(
+  root,
+  'data/research/2026/political-family/verification-corrections.json',
 );
 const snapshotDate = '2026-11-05';
 const researchDate = '2026-11-12';
@@ -887,7 +902,15 @@ function independentReviewSourceIds(record: VerificationRecord): string[] {
     .filter((id) => id.length > 0 && declared.has(id));
 }
 
-function readVerification(): VerificationRecord[] {
+function readCorrections(): PoliticalFamilyVerificationCorrections {
+  return validatePoliticalFamilyVerificationCorrections(
+    readJson(correctionsPath),
+  );
+}
+
+function readVerification(
+  corrections: PoliticalFamilyVerificationCorrections,
+): VerificationRecord[] {
   const paths = [
     verificationPath,
     join(
@@ -918,6 +941,44 @@ function readVerification(): VerificationRecord[] {
         record,
       );
     }
+  }
+  for (const correction of corrections.records) {
+    const key =
+      correction.candidateId +
+      String.fromCharCode(124) +
+      correction.relativeName;
+    const record = byKey.get(key);
+    if (!record) {
+      throw new Error(
+        'Correction targets a missing verification record: ' +
+          correction.candidateId +
+          ' / ' +
+          correction.relativeName,
+      );
+    }
+    const positionSourceIds =
+      correction.positionSource === 'correction-record'
+        ? stringArray(correction.positionSourceIds)
+        : stringArray(record.positionSourceIds);
+    byKey.set(key, {
+      ...record,
+      status: 'verified',
+      positions:
+        correction.positionSource === 'correction-record'
+          ? correction.positions
+          : record.positions,
+      positionSourceIds,
+      sourceIds: [
+        ...new Set([...stringArray(record.sourceIds), ...positionSourceIds]),
+      ],
+      correction: {
+        previousStatus: record.status,
+        removedClaims: correction.removedClaims,
+        reason: correction.reason,
+        reviewedAgainst: correction.reviewedAgainst,
+        appliedAt: corrections.appliedAt,
+      },
+    });
   }
   const records = [...byKey.values()];
   if (records.length === 0) {
@@ -966,7 +1027,25 @@ for (const candidate of roster) {
     throw new Error(`Duplicate canonical candidate ID: ${candidate.id}`);
   rosterIds.add(candidate.id);
 }
-const { rows, researchers, sources: batchSources } = readResearchRows();
+const {
+  rows: mergedRows,
+  researchers,
+  sources: batchSources,
+} = readResearchRows();
+const corrections = readCorrections();
+const candidateCorrections = new Map(
+  corrections.candidateOutcomes.map((correction) => [
+    correction.candidateId,
+    correction,
+  ]),
+);
+const rows = mergedRows.map((row) => {
+  const correction = candidateCorrections.get(row.candidateId);
+  return correction ? { ...row, outcome: correction.outcome } : row;
+});
+const mergedRowByCandidate = new Map(
+  mergedRows.map((row) => [row.candidateId, row]),
+);
 const duplicateRows = rows
   .map((row) => row.candidateId)
   .filter((candidateId, index, ids) => ids.indexOf(candidateId) !== index);
@@ -1157,7 +1236,7 @@ function canonicalizeRelationInputs(
   return selected;
 }
 
-const verification = readVerification();
+const verification = readVerification(corrections);
 for (const record of verification) {
   for (const sourceValue of objectArray(record.sources)) {
     const source = normalizeSource(
@@ -1183,11 +1262,108 @@ const approvedSelectionIds = new Set([
     (entry) => entry.relationshipIds,
   ),
 ]);
+const correctionByKey = new Map(
+  corrections.records.map((record) => [
+    record.candidateId + String.fromCharCode(124) + record.relativeName,
+    record,
+  ]),
+);
+const appliedCorrectionKeys = new Set<string>();
 const relationInputs = canonicalizeRelationInputs(
   proposedRelations,
   verificationByKey,
   approvedSelectionIds,
-);
+).map((relation) => {
+  const key =
+    relation.candidateId +
+    String.fromCharCode(124) +
+    relation.relativeName.trim();
+  const correction = correctionByKey.get(key);
+  if (!correction) return relation;
+  const record = verificationByKey.get(key);
+  if (!record) {
+    throw new Error('Correction has no verification record for ' + key + '.');
+  }
+  const actualRelationshipId =
+    'family-relation-' + hash(stableRelationKey(relation));
+  if (actualRelationshipId !== correction.relationshipId) {
+    throw new Error(
+      'Correction relationship id mismatch for ' +
+        key +
+        ': expected ' +
+        correction.relationshipId +
+        ', generated ' +
+        actualRelationshipId +
+        '.',
+    );
+  }
+  appliedCorrectionKeys.add(key);
+  return {
+    ...relation,
+    positions:
+      correction.positionSource === 'correction-record'
+        ? (correction.positions ?? [])
+        : record.positions,
+    positionSourceIds:
+      correction.positionSource === 'correction-record'
+        ? stringArray(correction.positionSourceIds)
+        : stringArray(record.positionSourceIds),
+  };
+});
+for (const correction of corrections.records) {
+  const key =
+    correction.candidateId + String.fromCharCode(124) + correction.relativeName;
+  if (!appliedCorrectionKeys.has(key)) {
+    throw new Error(
+      'Correction was not applied because no canonical relation matched: ' +
+        key,
+    );
+  }
+  const record = verificationByKey.get(key);
+  if (!record) throw new Error('Correction has no verification record: ' + key);
+  const declaredSourceIds = new Set([
+    ...stringArray(record.sourceIds),
+    ...stringArray(record.kinshipSourceIds),
+    ...stringArray(record.positionSourceIds),
+  ]);
+  for (const position of correction.positions ?? []) {
+    for (const sourceId of stringArray(position.sourceIds)) {
+      if (!declaredSourceIds.has(sourceId)) {
+        throw new Error(
+          'Correction position source is not declared on the verifier record: ' +
+            key +
+            ' / ' +
+            sourceId,
+        );
+      }
+    }
+  }
+  for (const sourceId of stringArray(correction.positionSourceIds)) {
+    if (!declaredSourceIds.has(sourceId)) {
+      throw new Error(
+        'Correction position source is not declared on the verifier record: ' +
+          key +
+          ' / ' +
+          sourceId,
+      );
+    }
+  }
+  const sourceUrls = new Set(
+    objectArray(record.sources)
+      .map((source) => stringValue(source.url))
+      .filter(Boolean),
+  );
+  for (const url of correction.reviewedAgainst) {
+    if (!sourceUrls.has(url)) {
+      throw new Error(
+        'Correction reviewedAgainst URL is not in the verifier sources: ' +
+          key +
+          ' / ' +
+          url,
+      );
+    }
+  }
+}
 const conflictedRelationKeys = contradictionKeys(relationInputs);
 
 const allSources = [...sourceMap.values()];
@@ -1377,6 +1553,20 @@ for (const row of rows) {
       finding.subjectName,
       stringValue(finding.finding, '未具名研究發現'),
     );
+    const legacyCorrection = candidateCorrections.get(row.candidateId);
+    const suppressionText = [
+      stringValue(finding.subjectName),
+      stringValue(finding.subject),
+      stringValue(finding.finding),
+      stringValue(finding.claim),
+    ].join(' ');
+    if (
+      legacyCorrection?.suppressLegacyFindingSubjects.some((subject) =>
+        suppressionText.includes(subject),
+      )
+    ) {
+      continue;
+    }
     unresolvedFindings.push({
       id: `family-finding-${hash(`${row.candidateId}|${subjectName}`)}`,
       candidateId: row.candidateId,
@@ -1786,6 +1976,98 @@ const publicationRelationships = approvedRelationships
 const publicationRelationshipIds = new Set(
   publicationRelationships.map((relationship) => relationship.id),
 );
+const correctionRelationships = corrections.records.map((correction) => {
+  const key =
+    correction.candidateId + String.fromCharCode(124) + correction.relativeName;
+  const record = verificationByKey.get(key);
+  const relationship = relationshipById.get(correction.relationshipId);
+  const candidate = roster.find((item) => item.id === correction.candidateId);
+  return {
+    relationshipId: correction.relationshipId,
+    candidateId: correction.candidateId,
+    displayName: candidate?.displayName ?? null,
+    relativeName: correction.relativeName,
+    previousStatus: record?.correction?.previousStatus ?? null,
+    status: record?.status ?? null,
+    published: publicationRelationshipIds.has(correction.relationshipId),
+    positionSource: correction.positionSource,
+    removedClaims: correction.removedClaims,
+    appliedPositions: record?.positions ?? null,
+    reason: correction.reason,
+    reviewedAgainst: correction.reviewedAgainst,
+    kinshipSourceIds: relationship?.kinshipSourceIds ?? [],
+    positionSourceIds: relationship?.positionSourceIds ?? [],
+  };
+});
+const correctionCandidateOutcomes = corrections.candidateOutcomes.map(
+  (outcome) => {
+    const candidate = roster.find((item) => item.id === outcome.candidateId);
+    const previous = mergedRowByCandidate.get(outcome.candidateId);
+    const research = candidateResearch.find(
+      (item) => item.candidateId === outcome.candidateId,
+    );
+    return {
+      candidateId: outcome.candidateId,
+      displayName: candidate?.displayName ?? null,
+      previousOutcome: previous?.outcome ?? null,
+      outcome: outcome.outcome,
+      researchStatus: research?.researchStatus ?? null,
+      reason: outcome.reason,
+      suppressedFindingSubjects: outcome.suppressLegacyFindingSubjects,
+    };
+  },
+);
+const correctionReport = {
+  reportType: 'political-family-verification-corrections',
+  generatedAt,
+  appliedAt: corrections.appliedAt,
+  reviewerRole: corrections.reviewerRole,
+  note: corrections.note,
+  summary: {
+    correctedRelationships: correctionRelationships.length,
+    verifiedAfterCorrection: correctionRelationships.filter(
+      (item) => item.status === 'verified',
+    ).length,
+    publishedAfterCorrection: correctionRelationships.filter(
+      (item) => item.published,
+    ).length,
+    candidateOutcomes: correctionCandidateOutcomes.length,
+  },
+  relationships: correctionRelationships,
+  candidateOutcomes: correctionCandidateOutcomes,
+};
+const correctionLines = correctionRelationships
+  .map(
+    (item) =>
+      '- ' +
+      item.relationshipId +
+      ': ' +
+      (item.displayName ?? item.candidateId) +
+      ' — ' +
+      item.relativeName +
+      '; previous=' +
+      String(item.previousStatus) +
+      ', status=' +
+      String(item.status) +
+      ', published=' +
+      (item.published ? 'yes' : 'no') +
+      '; removed=' +
+      item.removedClaims
+        .map((claim) => claim.organization + ' ' + claim.positionTitle)
+        .join('、'),
+  )
+  .join('\n');
+const correctionOutcomeLines = correctionCandidateOutcomes
+  .map(
+    (item) =>
+      '- ' +
+      (item.displayName ?? item.candidateId) +
+      ': ' +
+      String(item.previousOutcome) +
+      ' → ' +
+      item.outcome,
+  )
+  .join('\n');
 // People are published only when a published relationship still points at them.
 const publishedPersonIds = new Set(
   publicationRelationships.flatMap((relationship) => [
@@ -1961,6 +2243,11 @@ const publishedLines = approvedRelationships
       `- ${relation.id}: ${relation.personAId} — ${relation.relationshipLabel} — ${relation.personBId}; kinship sources ${sourceLinks(relation.kinshipSourceIds)}; career sources ${sourceLinks(relation.positionSourceIds)}.`,
   )
   .join('\n');
+writeJson(
+  join(root, 'reports/political-family-corrections.json'),
+  correctionReport,
+);
+
 const candidateNameById = new Map(
   roster.map((candidate) => [candidate.id, candidate.displayName]),
 );
@@ -1976,7 +2263,7 @@ writeText(
 );
 writeText(
   join(root, 'reports/political-family-verification.md'),
-  `# Political family verification\n\n每筆公開關係必須同時具備：明確親屬來源、政治職涯來源、正確身分辨識，以及獨立查核結果。\n\n- Researchers: ${researchers.join(', ') || '尚未匯入'}\n- Independent verification records: ${verification.length}\n- Verified and published relationships: ${approvedRelationships.length}\n- Withheld or unresolved findings: ${unresolvedFindings.length}\n\n公開層採 fail-closed 原則；缺少獨立查核或任一證據面向時，不會進入公開圖表。\n\n## Verification records\n\n${verificationLines || '尚無獨立查核紀錄。'}\n`,
+  `# Political family verification\n\n每筆公開關係必須同時具備：明確親屬來源、政治職涯來源、正確身分辨識，以及獨立查核結果。\n\n- Researchers: ${researchers.join(', ') || '尚未匯入'}\n- Independent verification records: ${verification.length}\n- Verified and published relationships: ${approvedRelationships.length}\n- Withheld or unresolved findings: ${unresolvedFindings.length}\n\n公開層採 fail-closed 原則；缺少獨立查核或任一證據面向時，不會進入公開圖表。\n\n## Verification records\n\n${verificationLines || '尚無獨立查核紀錄。'}\n\n## Correction pass\n\nApplied ${corrections.appliedAt}. Reviewer role: ${corrections.reviewerRole}. Corrections remove unsupported claims; they are agent evidence corrections, not human editorial review.\n\n${correctionLines || '尚無更正紀錄。'}\n\n### Candidate outcome corrections\n\n${correctionOutcomeLines || '尚無候選人狀態更正。'}\n`,
 );
 const publishedAffiliations = publishedPeople.flatMap(
   (person) => person.affiliations,
@@ -2012,7 +2299,7 @@ writeText(
               ).length,
           )
           .join(', ')
-  }\n- Published listings: ${publishedAffiliations.filter((item) => item.listingStatus).length}\n\n## Candidate-by-candidate matrix\n\n| Sequence | Candidate | Candidate ID | Status | Note |\n|---:|---|---|---|---|\n${roster
+  }\n- Published listings: ${publishedAffiliations.filter((item) => item.listingStatus).length}\n\n## Correction pass\n\n- Relationships corrected: ${correctionReport.summary.correctedRelationships}\n- Verified after correction: ${correctionReport.summary.verifiedAfterCorrection}\n- Published after correction: ${correctionReport.summary.publishedAfterCorrection}\n- Candidate outcomes reclassified: ${correctionReport.summary.candidateOutcomes}\n\n## Candidate-by-candidate matrix\n\n| Sequence | Candidate | Candidate ID | Status | Note |\n|---:|---|---|---|---|\n${roster
     .map((candidate) => {
       const result = candidateResearch.find(
         (item) => item.candidateId === candidate.id,

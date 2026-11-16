@@ -4,15 +4,22 @@
 
 - Canonical roster: 106 candidates
 - Research audit rows: 106/106 (raw rows: 106)
-- Verified-relations-found: 33
-- Searched with no publishable relation: 66
-- Unresolved: 7
+- Verified-relations-found: 37
+- Searched with no publishable relation: 67
+- Unresolved: 2
 - Proposed relations: 62
-- Published relations: 54
-- Published relatives: 51
-- Published affiliations by category: board=4, executive=6, organizational_leadership=13, political=56, public_office=10
-- Published affiliations by organization type: corporation=5, foundation=4, government=16, legislature=50, nonprofit=10, political_organization=4
-- Published listings: 5
+- Published relations: 58
+- Published relatives: 55
+- Published affiliations by category: board=6, executive=7, organizational_leadership=14, political=60, public_office=12
+- Published affiliations by organization type: corporation=8, foundation=4, government=17, legislature=55, nonprofit=11, political_organization=4
+- Published listings: 8
+
+## Correction pass
+
+- Relationships corrected: 4
+- Verified after correction: 4
+- Published after correction: 4
+- Candidate outcomes reclassified: 1
 
 ## Candidate-by-candidate matrix
 
@@ -25,7 +32,7 @@
 | 5 | 賴瑞隆 | official-mayor-lai-rui-long-2026 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 6 | 李振豪 | official-candidate-2026-district-kaohsiung-council-01-fb74ce74 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 7 | 林義迪 | official-candidate-2026-district-kaohsiung-council-01-b7b307c1 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
-| 8 | 林慧欣 | official-candidate-2026-district-kaohsiung-council-01-3ac62854 | unresolved | 已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。 |
+| 8 | 林慧欣 | official-candidate-2026-district-kaohsiung-council-01-3ac62854 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 9 | 鍾炳光 | official-candidate-2026-district-kaohsiung-council-01-1bea56a9 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 10 | 林富寶 | official-candidate-2026-district-kaohsiung-council-01-589d21f4 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 11 | 李柏融 | official-candidate-2026-district-kaohsiung-council-02-df6f2338 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
@@ -45,9 +52,9 @@
 | 25 | 李雅芬 | official-candidate-2026-district-kaohsiung-council-04-291436e3 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 26 | 白喬茵 | official-candidate-2026-district-kaohsiung-council-04-629fea4c | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 27 | 柳淑芳 | official-candidate-2026-district-kaohsiung-council-04-619c7aa1 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
-| 28 | 李眉蓁 | official-candidate-2026-district-kaohsiung-council-04-fa7345e8 | unresolved | 已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。 |
+| 28 | 李眉蓁 | official-candidate-2026-district-kaohsiung-council-04-fa7345e8 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 29 | 李雅慧 | official-candidate-2026-district-kaohsiung-council-04-71dd90ce | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
-| 30 | 陳玫娟 | official-candidate-2026-district-kaohsiung-council-04-61d1909b | unresolved | 已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。 |
+| 30 | 陳玫娟 | official-candidate-2026-district-kaohsiung-council-04-61d1909b | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 31 | 張以理 | official-candidate-2026-district-kaohsiung-council-04-4c6bef68 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 32 | 陳冠宇 | official-candidate-2026-district-kaohsiung-council-04-2df974a4 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 33 | 陳麗珍 | official-candidate-2026-district-kaohsiung-council-04-c448a515 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
@@ -68,11 +75,11 @@
 | 48 | 童燕珍 | official-candidate-2026-district-kaohsiung-council-07-abeadb8c | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 49 | 林彥 | official-candidate-2026-district-kaohsiung-council-07-f42af7ef | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 50 | 黃香菽 | official-candidate-2026-district-kaohsiung-council-07-e0f94c56 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
-| 51 | 曾俊傑 | official-candidate-2026-district-kaohsiung-council-07-9cddec16 | unresolved | 已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。 |
+| 51 | 曾俊傑 | official-candidate-2026-district-kaohsiung-council-07-9cddec16 | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 52 | 張博洋 | official-candidate-2026-district-kaohsiung-council-07-b92be47d | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 53 | 林于凱 | official-candidate-2026-district-kaohsiung-council-07-4b269f51 | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 54 | 康裕成 | official-candidate-2026-district-kaohsiung-council-07-afc23f7d | unresolved | 已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。 |
-| 55 | 鄭孟洽 | official-candidate-2026-district-kaohsiung-council-07-b54eba4a | unresolved | 已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。 |
+| 55 | 鄭孟洽 | official-candidate-2026-district-kaohsiung-council-07-b54eba4a | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 56 | 黃柏霖 | official-candidate-2026-district-kaohsiung-council-07-c27cf75d | verified-relations-found | 已取得親屬關係與每個職務的獨立來源支持。 |
 | 57 | 余聖明 | official-candidate-2026-district-kaohsiung-council-07-551cc11e | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |
 | 58 | 黃淑美 | official-candidate-2026-district-kaohsiung-council-07-3b007e6b | searched-no-verified-relations | 目前尚無已查證且符合收錄條件的親屬資料。 |

@@ -76,6 +76,10 @@
 - 查無合格親屬時寫「目前尚無已查證且符合收錄條件的親屬資料。」，不得寫成「沒有政商關係」；空白不代表不存在。
 - 家族與企業關係不是貪腐、不當影響或利益輸送的證據，不得暗示；不刊登住址、私人聯絡方式或其他非公開親屬的隱私。
 
+- 更正檔與查核分離：研究或查核檔案發現「關係成立、但某項職務主張過度」時，只能透過 data/research/2026/political-family/verification-corrections.json 記錄移除的職務、理由、重讀來源與更正後職務，不得改寫獨立查核輸出。generator 套用後重算關係 ID 並輸出 reports/political-family-corrections.json；validator 要求更正後的關係為 verified、職務來源存在、移除的主張不再出現，且候選人研究狀態與更正一致。此為 agent 證據更正，不是人工審查或編輯核准。
+- 2026-11-16 更正：4 筆原本因單一過度職務主張而未解的關係（盧天麟、李榮宗、陳清玉、曾長發）在移除該主張後維持 verified 並公開；鄭孟洽由 unresolved 改列 searched-no-verified-relations，因其僅有姓名相似疑慮，後續精確檢索未找到關係。更正後研究層 62 筆關係（59 verified／2 pending-review／1 rejected）、106 位候選人（37 verified-relations-found／67 searched-no-verified-relations／2 unresolved），公開 58 筆關係、55 位親屬、99 筆職務。
+- 第二輪查核：67 位 searched-no-verified-relations 的批次與研究契約在 data/research/2026/political-family/second-pass/（8 批、7–9 人）；輸出只供後續查核與整合，不得直接寫入公開層。
+
 ## 共同規則
 
 - **中立與等價**：所有候選人使用相同版面、字級、視覺與資料類別；不以人氣、外貌、民調、財富、影響力或個性排序。

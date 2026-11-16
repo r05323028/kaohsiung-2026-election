@@ -1,0 +1,258 @@
+{
+  "pass": 2,
+  "batchId": "batch-01",
+  "purpose": "第二輪家族政商關係研究：針對第一輪 searched-no-verified-relations 的候選人，補做來源類別與深度均不同的獨立查找。",
+  "districts": [
+    "district-kaohsiung-mayor-2026",
+    "district-kaohsiung-council-01"
+  ],
+  "candidateCount": 7,
+  "candidates": [
+    {
+      "candidateId": "official-mayor-zhang-jing-2026",
+      "displayName": "張靜",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "standard",
+      "publicRecordRoles": [],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 8,
+          "urlCount": 5,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    },
+    {
+      "candidateId": "official-mayor-hong-fang-long-2026",
+      "displayName": "洪方隆",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "standard",
+      "publicRecordRoles": [],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 7,
+          "urlCount": 4,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    },
+    {
+      "candidateId": "official-mayor-wang-zhao-min-2026",
+      "displayName": "王肇民",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "standard",
+      "publicRecordRoles": [],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 7,
+          "urlCount": 5,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    },
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "displayName": "賴瑞隆",
+      "districtId": "district-kaohsiung-mayor-2026",
+      "electionType": "mayoral",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "high",
+      "publicRecordRoles": [
+        {
+          "officeTitle": "局長",
+          "organization": "高雄市政府新聞局",
+          "status": "former",
+          "termLabel": "任期未載明"
+        },
+        {
+          "officeTitle": "局長",
+          "organization": "高雄市政府海洋局",
+          "status": "former",
+          "termLabel": "任期未載明"
+        },
+        {
+          "officeTitle": "主任秘書",
+          "organization": "高雄市政府觀光局",
+          "status": "former",
+          "termLabel": "任期未載明"
+        },
+        {
+          "officeTitle": "立法委員",
+          "organization": "立法院",
+          "status": "current",
+          "termLabel": "第10屆"
+        },
+        {
+          "officeTitle": "立法委員",
+          "organization": "立法院",
+          "status": "current",
+          "termLabel": "第11屆"
+        },
+        {
+          "officeTitle": "立法委員",
+          "organization": "立法院",
+          "status": "current",
+          "termLabel": "第9屆"
+        }
+      ],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 8,
+          "urlCount": 4,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-589d21f4",
+      "displayName": "林富寶",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "medium",
+      "publicRecordRoles": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄縣議會",
+          "status": "former",
+          "termLabel": "第15、16屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "termLabel": "第1、2、3屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "termLabel": "屆次未載明"
+        }
+      ],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 7,
+          "urlCount": 5,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
+      "displayName": "林義迪",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "medium",
+      "publicRecordRoles": [
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "termLabel": "第1、3屆"
+        },
+        {
+          "officeTitle": "議員",
+          "organization": "高雄市議會",
+          "status": "former",
+          "termLabel": "屆次未載明"
+        },
+        {
+          "officeTitle": "里長",
+          "organization": "高雄縣旗山鎮大德里",
+          "status": "former",
+          "termLabel": "第15、16、17屆"
+        },
+        {
+          "officeTitle": "鎮長",
+          "organization": "高雄縣旗山鎮公所",
+          "status": "former",
+          "termLabel": "任期未載明"
+        },
+        {
+          "officeTitle": "區長",
+          "organization": "高雄市旗山區公所",
+          "status": "former",
+          "termLabel": "任期未載明"
+        }
+      ],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 7,
+          "urlCount": 6,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+      "displayName": "鍾炳光",
+      "districtId": "district-kaohsiung-council-01",
+      "electionType": "city-council",
+      "currentResearchStatus": "searched-no-verified-relations",
+      "priority": "medium",
+      "publicRecordRoles": [
+        {
+          "officeTitle": "區長",
+          "organization": "高雄市美濃區公所",
+          "status": "former",
+          "termLabel": "依來源所載期間"
+        },
+        {
+          "officeTitle": "主任秘書",
+          "organization": "高雄市客家事務委員會",
+          "status": "former",
+          "termLabel": "依來源所載期間"
+        },
+        {
+          "officeTitle": "區長",
+          "organization": "高雄市大寮區公所",
+          "status": "unknown",
+          "termLabel": "依來源所載期間"
+        }
+      ],
+      "baselineAudits": [
+        {
+          "searchedAt": "2026-11-12T00:00:00.000Z",
+          "method": "independent-source-review",
+          "queryCount": 7,
+          "urlCount": 4,
+          "outcome": "searched-no-verified-relations",
+          "notes": "已完成定向公開資料查找；未將缺乏公開資料解讀為不存在。"
+        }
+      ],
+      "currentNote": "目前尚無已查證且符合收錄條件的親屬資料。"
+    }
+  ]
+}

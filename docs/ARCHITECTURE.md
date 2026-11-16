@@ -33,6 +33,7 @@
 | 從政歷程 | `data/approved/2026/political-career.json` | `src/data/political-career/index.ts` | 任期、活動、專案、提案、表決 |
 | 政策／歷程分工 | `data/approved/2026/policy-career-separation.json` | `src/data/policy-career/index.ts` | 每筆政策恰好一個歸屬 |
 | 家族政商關係 | `data/published/2026/political-family.json` | `src/data/political-family/` | 需親屬與每個職務各自證據 |
+| 家族政商更正 | `data/research/2026/political-family/verification-corrections.json` | `scripts/generate-political-family-data.ts` | agent 證據更正；不改寫獨立查核輸出 |
 | 角色資產 | `data/avatars/manifest.json`、`public/assets/avatars/` | `src/data/avatars/index.ts` | GLB 校驗碼與對應，缺省回退程序化角色 |
 | 示範資料 | `src/data/fixtures.ts` | `src/data/demo.ts` | 僅測試與資產驗證，全部 isDemo |
 
@@ -64,7 +65,7 @@
 | `validate:basic-profiles` | 查核決定、來源層級、隱私欄位、現職證據 |
 | `validate:news` | 中性摘要、身分風險、去重、日期 |
 | `validate:political-career` / `validate:policy-career` | 任期／活動／提案／表決關聯、政策歸屬唯一、逐字證據 |
-| `validate:political-family` | 親屬與職務證據分離；agent 核准必須對應已發布關係 |
+| `validate:political-family` | 親屬與職務證據分離；agent 核准必須對應已發布關係；更正檔已套用且移除的主張不再出現 |
 | `validate:profile-coverage` / `validate:profile-copy` | 各分頁覆蓋與公開文案不得洩漏內部狀態 |
 | `validate:biographies` / `editorial:validate` | 決策鏈、審查者授權、checksum、閘門結果 |
 | `validate:enrichment` / `ai-audit:verify` / `semantic:verify` / `scoped-review:verify` / `automated:verify` / `remediation:verify` | scoped 研究與機器查核的一致性與可重現性 |

@@ -4,7 +4,7 @@
 - Candidates: 106
 - Category audit rows: 742 (106 × 7)
 - Claims: 5801; statically published/controlled claims: 4585
-- Provenance rows: 2402
+- Provenance rows: 2424
 - Human-reviewed claims: 0; editorially approved claims: 0
 
 ## Category coverage

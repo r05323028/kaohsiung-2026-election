@@ -7,15 +7,15 @@
   "researchedCandidateCount": 106,
   "researcherRowCount": 106,
   "researchCoverageComplete": true,
-  "candidatesWithVerifiedRelationships": 33,
-  "candidatesWithoutPublishableRelationships": 66,
-  "unresolvedCandidateCount": 7,
+  "candidatesWithVerifiedRelationships": 37,
+  "candidatesWithoutPublishableRelationships": 67,
+  "unresolvedCandidateCount": 2,
   "proposedRelationshipCount": 62,
-  "publishedRelationshipCount": 54,
-  "uniqueVerifiedRelativeCount": 52,
+  "publishedRelationshipCount": 58,
+  "uniqueVerifiedRelativeCount": 56,
   "distinctSourceCount": 269,
   "rejectedRelationshipCount": 1,
-  "unresolvedFindingCount": 74,
+  "unresolvedFindingCount": 68,
   "candidates": [
     {
       "candidateId": "official-mayor-zhang-jing-2026",
@@ -155,21 +155,20 @@
       "displayName": "林慧欣",
       "districtId": "district-kaohsiung-council-01",
       "electionType": "city-council",
-      "researchStatus": "unresolved",
+      "researchStatus": "verified-relations-found",
       "searchedAt": "2026-11-12T00:00:00.000Z",
       "searchAuditIds": [
         "family-audit-official-candidate-2026-district-kaohsiung-council-01-3ac62854"
       ],
-      "verifiedRelationshipIds": [],
-      "pendingRelationshipIds": [
+      "verifiedRelationshipIds": [
         "family-relation-cd7fe6b2ff70"
       ],
+      "pendingRelationshipIds": [],
       "rejectedRelationshipIds": [],
       "unresolvedFindingIds": [
-        "family-finding-98fd001d5747",
         "family-finding-b67891a29134"
       ],
-      "note": "已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。"
+      "note": "已取得親屬關係與每個職務的獨立來源支持。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
@@ -551,21 +550,20 @@
       "displayName": "李眉蓁",
       "districtId": "district-kaohsiung-council-04",
       "electionType": "city-council",
-      "researchStatus": "unresolved",
+      "researchStatus": "verified-relations-found",
       "searchedAt": "2026-11-12T00:00:00.000Z",
       "searchAuditIds": [
         "family-audit-official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
       ],
-      "verifiedRelationshipIds": [],
-      "pendingRelationshipIds": [
+      "verifiedRelationshipIds": [
         "family-relation-6aff8df8d856"
       ],
+      "pendingRelationshipIds": [],
       "rejectedRelationshipIds": [],
       "unresolvedFindingIds": [
-        "family-finding-a0809147ec37",
         "family-finding-4bad7f880623"
       ],
-      "note": "已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。"
+      "note": "已取得親屬關係與每個職務的獨立來源支持。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-71dd90ce",
@@ -592,21 +590,20 @@
       "displayName": "陳玫娟",
       "districtId": "district-kaohsiung-council-04",
       "electionType": "city-council",
-      "researchStatus": "unresolved",
+      "researchStatus": "verified-relations-found",
       "searchedAt": "2026-11-12T00:00:00.000Z",
       "searchAuditIds": [
         "family-audit-official-candidate-2026-district-kaohsiung-council-04-61d1909b"
       ],
-      "verifiedRelationshipIds": [],
-      "pendingRelationshipIds": [
+      "verifiedRelationshipIds": [
         "family-relation-4217d77d4e13"
       ],
+      "pendingRelationshipIds": [],
       "rejectedRelationshipIds": [],
       "unresolvedFindingIds": [
-        "family-finding-a282de01300c",
         "family-finding-8fa8229d6a47"
       ],
-      "note": "已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。"
+      "note": "已取得親屬關係與每個職務的獨立來源支持。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-4c6bef68",
@@ -991,21 +988,20 @@
       "displayName": "曾俊傑",
       "districtId": "district-kaohsiung-council-07",
       "electionType": "city-council",
-      "researchStatus": "unresolved",
+      "researchStatus": "verified-relations-found",
       "searchedAt": "2026-11-12T00:00:00.000Z",
       "searchAuditIds": [
         "family-audit-official-candidate-2026-district-kaohsiung-council-07-9cddec16"
       ],
-      "verifiedRelationshipIds": [],
-      "pendingRelationshipIds": [
+      "verifiedRelationshipIds": [
         "family-relation-36ecb8363f0a"
       ],
+      "pendingRelationshipIds": [],
       "rejectedRelationshipIds": [],
       "unresolvedFindingIds": [
-        "family-finding-15da5e05b388",
         "family-finding-6a99c6740baa"
       ],
-      "note": "已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。"
+      "note": "已取得親屬關係與每個職務的獨立來源支持。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
@@ -1073,7 +1069,7 @@
       "displayName": "鄭孟洽",
       "districtId": "district-kaohsiung-council-07",
       "electionType": "city-council",
-      "researchStatus": "unresolved",
+      "researchStatus": "searched-no-verified-relations",
       "searchedAt": "2026-11-12T00:00:00.000Z",
       "searchAuditIds": [
         "family-audit-official-candidate-2026-district-kaohsiung-council-07-b54eba4a"
@@ -1081,11 +1077,8 @@
       "verifiedRelationshipIds": [],
       "pendingRelationshipIds": [],
       "rejectedRelationshipIds": [],
-      "unresolvedFindingIds": [
-        "family-finding-1b1edc5e3f37",
-        "family-finding-1b1edc5e3f37"
-      ],
-      "note": "已提出親屬或職務線索，仍在獨立查核，尚無可公開的已核實關係。"
+      "unresolvedFindingIds": [],
+      "note": "目前尚無已查證且符合收錄條件的親屬資料。"
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-c27cf75d",
@@ -3404,8 +3397,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3422,8 +3414,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3440,8 +3431,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3458,8 +3448,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3476,8 +3465,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3494,8 +3482,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3512,8 +3499,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3530,8 +3516,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3548,8 +3533,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3566,8 +3550,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3584,8 +3567,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3602,8 +3584,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3620,8 +3601,7 @@
       "supportedClaimIds": [
         "claim-affiliation-04cdcb93255c",
         "claim-affiliation-1481883c7832",
-        "claim-affiliation-174dffcc09e7",
-        "claim-affiliation-4f4e650fbefc",
+        "claim-affiliation-9c3d3938eb79",
         "claim-affiliation-adcc29098ab2",
         "claim-affiliation-ea12dd730740",
         "claim-family-relation-cd7fe6b2ff70-kinship"
@@ -3931,8 +3911,9 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
+        "claim-affiliation-56d2071d7d61",
+        "claim-affiliation-5704af2d12ba",
         "claim-affiliation-ab698745479f",
-        "claim-affiliation-bb0ef65480a3",
         "claim-family-relation-27ac6090e5fb-kinship",
         "claim-family-relation-4217d77d4e13-kinship"
       ]
@@ -3974,7 +3955,6 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-8ff4e64f5a22",
         "claim-affiliation-a8e052c5403c",
         "claim-affiliation-e5837be628e4",
         "claim-family-relation-6aff8df8d856-kinship"
@@ -3989,7 +3969,6 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-8ff4e64f5a22",
         "claim-affiliation-a8e052c5403c",
         "claim-affiliation-e5837be628e4",
         "claim-family-relation-6aff8df8d856-kinship"
@@ -4004,7 +3983,6 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "official-record",
       "supportedClaimIds": [
-        "claim-affiliation-8ff4e64f5a22",
         "claim-affiliation-a8e052c5403c",
         "claim-affiliation-e5837be628e4",
         "claim-family-relation-6aff8df8d856-kinship"
@@ -4019,7 +3997,6 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-8ff4e64f5a22",
         "claim-affiliation-a8e052c5403c",
         "claim-affiliation-e5837be628e4",
         "claim-family-relation-6aff8df8d856-kinship"
@@ -4034,7 +4011,6 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-8ff4e64f5a22",
         "claim-affiliation-a8e052c5403c",
         "claim-affiliation-e5837be628e4",
         "claim-family-relation-6aff8df8d856-kinship"
@@ -4049,7 +4025,8 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-bb0ef65480a3",
+        "claim-affiliation-56d2071d7d61",
+        "claim-affiliation-5704af2d12ba",
         "claim-family-relation-4217d77d4e13-kinship"
       ]
     },
@@ -4062,7 +4039,8 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "official-record",
       "supportedClaimIds": [
-        "claim-affiliation-bb0ef65480a3",
+        "claim-affiliation-56d2071d7d61",
+        "claim-affiliation-5704af2d12ba",
         "claim-family-relation-4217d77d4e13-kinship"
       ]
     },
@@ -4075,7 +4053,8 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "official-record",
       "supportedClaimIds": [
-        "claim-affiliation-bb0ef65480a3",
+        "claim-affiliation-56d2071d7d61",
+        "claim-affiliation-5704af2d12ba",
         "claim-family-relation-4217d77d4e13-kinship"
       ]
     },
@@ -4288,7 +4267,6 @@
         "claim-affiliation-92b501d152ac",
         "claim-affiliation-a6daed8be327",
         "claim-affiliation-e133afb0876b",
-        "claim-affiliation-e39e96c8ed12",
         "claim-family-relation-11c9eb751dcc-kinship",
         "claim-family-relation-36ecb8363f0a-kinship",
         "claim-family-relation-3c7c056d1351-kinship",
@@ -4380,7 +4358,6 @@
       "sourceKind": "other-public-record",
       "supportedClaimIds": [
         "claim-affiliation-7ee3e2d806c0",
-        "claim-affiliation-e39e96c8ed12",
         "claim-family-relation-36ecb8363f0a-kinship"
       ]
     },
@@ -4397,7 +4374,6 @@
         "claim-affiliation-ad0f56c03376",
         "claim-affiliation-bf4eeb146331",
         "claim-affiliation-e133afb0876b",
-        "claim-affiliation-e39e96c8ed12",
         "claim-family-relation-11c9eb751dcc-kinship",
         "claim-family-relation-36ecb8363f0a-kinship",
         "claim-family-relation-7650e298ad48-kinship",
@@ -5882,7 +5858,7 @@
       "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
       "relativeName": "盧天麟",
       "relation": "uncle-aunt-niece-nephew",
-      "status": "unresolved",
+      "status": "verified",
       "rationale": "親屬關係與多數職務均可由自行擷取來源確認：自由時報 2022-03-24 原文「屬於「邁盟」新人、投入高雄大旗山議員初選的林慧欣，近日遭對手陣營檢舉，舅舅盧天麟曾任民進黨不分區立委，不應適用新人加分。」；Yahoo 轉載同稿引林慧欣「我以我母舅－曾經擔任勞工代表的民進黨不分區立委而光榮!」，方向為盧天麟（母舅）→林慧欣（甥女），與研究檔一致。立委任期經立法院官方委員頁更正：該頁載明屆別第 6 屆、選舉區全國不分區、到職日期 94年2月1日，並於備註欄記「辭職 中途離職，生效日期：96年5月21日 遞補委員：楊芳婉」，故本人任期為 2005-02-01 至 2007-05-21；研究檔所記 2008-01-31 實為該頁上方「第6屆 (2005/02/01至2008/01/31)」之屆期終止日，非本人卸任日，此項主張予以推翻並更正。勞委會主委 2007-05-21 上任見宜蘭縣政府人事處公告「奉 總統96年5月21日（96）特字第00067號令，特任為行政院 勞工委員會主任委員，遵於96年5月21日接篆視事」。台翔航太董事長見該公司官網歷任董事長頁「盧天麟 Philips T. L. Lu 任職時間 2019.02.01 2024.08.08」，其後為「汪庭安 Andy T. A. Wang 兼代期間 2024.08.08 迄今」，故為前任。亞航董事長見 2021-09-07 自由時報「感謝亞洲航空公司董事長盧天麟」與 2024-08-06 自由財經「現任董事長盧天麟將去職，由前國立聯合大學校長李偉賢出任」，亞航官網現任經營團隊為「董事長兼總經理 李偉賢」。全產總理事長見大紀元 2007-05-16 引全產總秘書長謝創智「盧天麟是工會出身，也當過全產總理事長」，立法院委員頁經歷亦列「全國產業總工會理事長」。惟研究檔另列 organizationName「亞洲航空股份有限公司」、positionTitle「總經理」一職：自行擷取僅得工商時報 2016-10-20「台翔航太昨（19）日經董事會通過推薦前行政院勞委會主委盧天麟，出任旗下子公司－亞洲航空董事長兼總經理人事案…並將交由亞航董事會辦理」，屬董事會推薦、尚待亞航董事會決議之人事案，未取得亞航董事會決議紀錄、年報經理人名單或其實際就任總經理之記載；亞航現任經營團隊固仍為「董事長兼總經理」編制，但該事實不足以證明其任內即兼任總經理。依查核契約規定，任一項職務缺證據即不得判為 verified、無來源支持之職務不得輸出，故本筆記為 unresolved：五項可證職務照實列出並更正立委卸任日，總經理一職不輸出，待補得亞航董事會決議或年報經理人紀錄後再判。",
       "sourceIds": [
         "source-verify-ltn22324",
@@ -6237,6 +6213,27 @@
             }
           }
         ]
+      },
+      "correction": {
+        "previousStatus": "unresolved",
+        "removedClaims": [
+          {
+            "organization": "亞洲航空股份有限公司",
+            "positionTitle": "總經理",
+            "reason": "工商時報 2016-10-20 僅記載台翔航太董事會通過「推薦」出任亞航董事長兼總經理之人事案，屬董事會提案階段；未取得亞航董事會決議、年報經理人名單或實際就任總經理之紀錄。後續官方與新聞來源僅能證明董事長職務，不足證明總經理到任。",
+            "sourceUrls": [
+              "https://www.ctee.com.tw/news/20161020700133-439901"
+            ]
+          }
+        ],
+        "reason": "剔除無獨立來源支持的亞航總經理職務後，母舅親屬關係、立委任期、勞委會主委、台翔航太董事長、亞航董事長與全產總理事長職務仍各自有來源，已可判為查證通過。",
+        "reviewedAgainst": [
+          "https://www.ctee.com.tw/news/20161020700133-439901",
+          "https://news.ltn.com.tw/news/politics/breakingnews/3870001",
+          "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=424&index=2",
+          "https://www.tacaviation.com.tw/about/4"
+        ],
+        "appliedAt": "2026-11-16"
       }
     },
     {
@@ -7144,7 +7141,7 @@
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
       "relativeName": "李榮宗",
       "relation": "parent-child",
-      "status": "unresolved",
+      "status": "verified",
       "rationale": "親屬：TVBS 2020-06-23「她父親李榮宗曾經當過市議員，目前是高雄果菜公司總經理」，自由時報 2023-07-03「郭台銘訪李榮宗、李眉蓁父女」以父女敘述，兩家獨立來源一致，父女關係成立。職務一（議員）：高雄市議會官方合併前第六屆（民國91年12月25日至95年12月24日）議員名單列有李榮宗、人員索引註記「解職」，與 TVBS「曾當過市議員」相符；解職日期查無，endDate 留 null。職務二（果菜公司總經理）：TVBS 2020-06-23 稱當時仍現任、自由時報 2023-07-03 稱「前高市果菜市場總經理」，可確認曾任且已卸任，起訖皆查無；公司登記全名與上市櫃狀態未能取得（商工登記／公開資訊觀測站均未查得），listingStatus 依契約記 unknown。職務三（城隍廟主任委員）不成立為可輸出職務：唯一來源自由時報 2023-07-03 僅稱「到父親擔任主委的城隍廟參拜」，未載廟名；同事件他篇（自由時報 2023-07-05、2023-07-06 報導郭台銘至左營舊城城隍廟參香、李眉蓁陪同）雖可推得同一廟，但跨文推論廟名不符契約「不得推論」要求；內政部全國宗教資訊網查詢未取得該廟負責人資料。因 batch 列出的三個職務中有一項無法以自身來源支持，整筆記 unresolved。缺：可辨識廟名之官方寺廟登記（含負責人）或第二家媒體指名報導及主委任期。",
       "sourceIds": [
         "source-verify-5c8158e4",
@@ -7291,13 +7288,33 @@
             }
           }
         ]
+      },
+      "correction": {
+        "previousStatus": "unresolved",
+        "removedClaims": [
+          {
+            "organization": "高雄市城隍廟",
+            "positionTitle": "主任委員",
+            "reason": "唯一來源為自由時報 2023-07-03 報導中「到父親擔任主委的城隍廟參拜」一句，未載可辨識之廟名、立案名稱、負責人登記或任期；跨篇推論廟名不符不得推論之要求，故剔除。",
+            "sourceUrls": [
+              "https://news.ltn.com.tw/news/politics/breakingnews/4352354"
+            ]
+          }
+        ],
+        "reason": "剔除證據不足的城隍廟主任委員職務後，父女親屬關係、高雄市議會議員與高雄果菜運銷公司總經理職務仍各自有來源，已可判為查證通過。",
+        "reviewedAgainst": [
+          "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+          "https://news.tvbs.com.tw/politics/1343968",
+          "https://news.ltn.com.tw/news/politics/breakingnews/4352354"
+        ],
+        "appliedAt": "2026-11-16"
       }
     },
     {
       "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
       "relativeName": "陳清玉",
       "relation": "parent-child",
-      "status": "unresolved",
+      "status": "verified",
       "rationale": "親屬：Newtalk 2022-05-18「前國民黨高雄市黨部副主委陳清玉的女兒陳玫娟」與自由時報 2010-11-15「國民黨的陳玫娟也是在地人，父親陳清玉曾任高市副議長」兩家獨立媒體一致，父女關係成立；自由時報所述「曾任高市副議長」並與高雄市議會官方紀錄（省轄市高雄市議會第九屆民國66-68副議長陳清玉、改制直轄市臨時市議會68-70副議長陳清玉）吻合，可交叉確認該親屬身分而非同名他人。職務（中國國民黨高雄市黨部副主委）：僅見於 Newtalk 2022-05-18 同一篇，未取得政黨名冊、黨部公告或第二家媒體報導，Google News 全文檢索與自由時報站內檢索均無其他來源，單一媒體不足以支撐，故該職務不輸出、整筆記 unresolved。附帶查核發現（batch 未列，僅記錄不代為擴充）：官方紀錄顯示陳清玉曾任省轄市高雄市議會第九屆與臨時市議會副議長，建議 batch 若需職務改以官方可查之副議長並補屆次。缺：副主委之任命或任期紀錄（政黨文件、黨部名冊）或第二家可信媒體指名報導。",
       "sourceIds": [
         "source-verify-faf4741f",
@@ -7309,7 +7326,10 @@
         "source-verify-faf4741f",
         "source-verify-85bdc7c3"
       ],
-      "positionSourceIds": [],
+      "positionSourceIds": [
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4"
+      ],
       "sources": [
         {
           "id": "source-verify-faf4741f",
@@ -7344,7 +7364,34 @@
           "sourceKind": "official-record"
         }
       ],
-      "positions": [],
+      "positions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1977-12-30",
+          "endDate": "1979-06-30",
+          "sourceIds": [
+            "source-verify-ccd3b525"
+          ]
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1979-07-01",
+          "endDate": "1981-12-24",
+          "sourceIds": [
+            "source-verify-15228fe4"
+          ]
+        }
+      ],
       "independentReview": {
         "reviewedAt": "2026-11-16",
         "method": "independent-source-retrieval",
@@ -7390,6 +7437,27 @@
             }
           }
         ]
+      },
+      "correction": {
+        "previousStatus": "unresolved",
+        "removedClaims": [
+          {
+            "organization": "中國國民黨高雄市黨部",
+            "positionTitle": "副主委",
+            "reason": "僅見於 Newtalk 2022-05-18 同一篇報導，未取得政黨名冊、黨部公告或第二家可信媒體指名報導；單一媒體不足以支撐職務。",
+            "sourceUrls": [
+              "https://newtalk.tw/news/view/2022-05-18/756501"
+            ]
+          }
+        ],
+        "reason": "剔除證據不足的國民黨高雄市黨部副主委職務後，以高雄市議會官方歷屆議員名錄所載兩屆副議長職務重建政治職涯；父女親屬關係仍由 Newtalk 與自由時報兩家獨立來源支持。",
+        "reviewedAgainst": [
+          "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=27",
+          "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=28",
+          "https://news.ltn.com.tw/news/local/paper/444060",
+          "https://newtalk.tw/news/view/2022-05-18/756501"
+        ],
+        "appliedAt": "2026-11-16"
       }
     },
     {
@@ -8027,7 +8095,7 @@
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
       "relativeName": "曾長發",
       "relation": "父親",
-      "status": "unresolved",
+      "status": "verified",
       "rationale": "父子關係成立：大紀元 2009-11-10〈老議員曾長發病逝 高市各界哀悼不捨〉載『曾長發在卸任議員後，把為民服務的棒子交給其子曾俊傑，曾俊傑為議會第7屆現任議員』，新頭殼 2022-05-18 亦載『曾俊傑是前高雄市副議長曾長發的兒子』；議員職務亦與高雄市議會歷屆議員名錄相符（省轄市第9屆、改制臨時議會、直轄市第1至6屆，第6屆註記『（解職）』，與大紀元『26年』敘述一致）。但研究檔另列的『副議長』職務與官方名錄矛盾：歷屆副議長依序為陳清玉（省轄第9屆、臨時議會）、朱有福（直轄市第1、2屆）、顏火山（第3屆）、張瑞德（第4屆）、蔡松雄（第5、6屆），曾長發從未擔任副議長；新頭殼『前高雄市副議長曾長發』一句是唯一來源且被官方紀錄推翻，大紀元專文亦未提副議長。依規則矛盾職務不得列入，故不能判 verified。缺：研究檔刪除副議長職務後重提，或提出可支持副議長的官方來源。",
       "sourceIds": [
         "source-verify-73c0b8a4",
@@ -8119,6 +8187,26 @@
             }
           }
         ]
+      },
+      "correction": {
+        "previousStatus": "unresolved",
+        "removedClaims": [
+          {
+            "organization": "高雄市議會",
+            "positionTitle": "副議長",
+            "reason": "高雄市議會官方歷屆副議長名錄依序為陳清玉、朱有福、顏火山、張瑞德、蔡松雄，未曾列曾長發；新頭殼「前高雄市副議長曾長發」是唯一來源且與官方紀錄矛盾，故剔除。",
+            "sourceUrls": [
+              "https://newtalk.tw/news/view/2022-05-18/756501"
+            ]
+          }
+        ],
+        "reason": "剔除與官方名錄矛盾的副議長職務後，父子親屬關係與高雄市議會議員職務仍各自有來源，已可判為查證通過。",
+        "reviewedAgainst": [
+          "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+          "https://www.epochtimes.com.tw/9/11/10/127610.htm",
+          "https://newtalk.tw/news/view/2022-05-18/756501"
+        ],
+        "appliedAt": "2026-11-16"
       }
     },
     {
@@ -13178,6 +13266,141 @@
       ]
     },
     {
+      "id": "family-relation-cd7fe6b2ff70",
+      "personAId": "person-kaohsiung-council-01-3a8398e2",
+      "personBId": "political-person-4d3ccee04021",
+      "relationshipType": "uncle-aunt-niece-nephew",
+      "relationshipLabel": "舅舅",
+      "personALabel": "姪甥／叔伯姑姨",
+      "personBLabel": "舅舅",
+      "verificationStatus": "verified",
+      "kinshipSourceIds": [
+        "source-verify-ltn22324",
+        "source-verify-yao22324",
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ctee1610",
+        "source-verify-ltn24608",
+        "source-verify-ltn36636",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-wkilut07"
+      ],
+      "positionSourceIds": [
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ltn36636",
+        "source-verify-ltn24608",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-ctee1610",
+        "source-verify-wkilut07",
+        "source-verify-ltn22324",
+        "source-verify-yao22324"
+      ],
+      "sourceIds": [
+        "source-verify-ltn22324",
+        "source-verify-yao22324",
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ctee1610",
+        "source-verify-ltn24608",
+        "source-verify-ltn36636",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-wkilut07"
+      ],
+      "sourceLinks": [
+        {
+          "id": "source-verify-ltn22324",
+          "publisher": "自由時報",
+          "title": "舅曾是不分區立委、新人資格遭檢舉！ 林慧欣：主動放棄加權",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/3870001"
+        },
+        {
+          "id": "source-verify-yao22324",
+          "publisher": "Yahoo奇摩新聞（轉載自由時報）",
+          "title": "林慧欣：登記初選時已主動放棄加權",
+          "url": "https://tw.news.yahoo.com/%E6%9E%97%E6%85%A7%E6%AC%A3-%E7%99%BB%E8%A8%98%E5%88%9D%E9%81%B8%E6%99%82%E5%B7%B2%E4%B8%BB%E5%8B%95%E6%94%BE%E6%A3%84%E5%8A%A0%E6%AC%8A-033526882.html"
+        },
+        {
+          "id": "source-verify-lyluti06",
+          "publisher": "立法院",
+          "title": "立法院全球資訊網－盧天麟委員（第6屆）",
+          "url": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=1521"
+        },
+        {
+          "id": "source-verify-ylhr0521",
+          "publisher": "宜蘭縣政府人事處",
+          "title": "盧天麟先生奉 總統令特任為行政院勞工委員會主任委員",
+          "url": "https://personnel.e-land.gov.tw/News_Content.aspx?n=4235&s=121700"
+        },
+        {
+          "id": "source-verify-tachhist",
+          "publisher": "台翔航太工業股份有限公司",
+          "title": "歷任董事長－關於台翔",
+          "url": "https://www.tacaviation.com.tw/about/4"
+        },
+        {
+          "id": "source-verify-tacabout",
+          "publisher": "台翔航太工業股份有限公司",
+          "title": "台翔簡介－關於台翔",
+          "url": "https://www.tacaviation.com.tw/about/1"
+        },
+        {
+          "id": "source-verify-ctee1610",
+          "publisher": "工商時報",
+          "title": "亞航董座兼總座 敲定盧天麟",
+          "url": "https://www.ctee.com.tw/news/20161020700133-439901"
+        },
+        {
+          "id": "source-verify-ltn24608",
+          "publisher": "自由時報（自由財經）",
+          "title": "亞航董事長傳換人 前聯合大學校長李偉賢將出任",
+          "url": "https://ec.ltn.com.tw/article/breakingnews/4761007"
+        },
+        {
+          "id": "source-verify-ltn36636",
+          "publisher": "自由時報",
+          "title": "傳遞幸福 亞航購庇護工場月餅分送弱勢職災勞工",
+          "url": "https://news.ltn.com.tw/news/life/breakingnews/3663662"
+        },
+        {
+          "id": "source-verify-aaiteam1",
+          "publisher": "亞洲航空股份有限公司",
+          "title": "經營團隊－AIR ASIA Company Limited 亞洲航空股份有限公司",
+          "url": "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=424&index=2"
+        },
+        {
+          "id": "source-verify-aaihist0",
+          "publisher": "亞洲航空股份有限公司",
+          "title": "公司簡介－AIR ASIA Company Limited 亞洲航空股份有限公司",
+          "url": "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=1&index=1"
+        },
+        {
+          "id": "source-verify-epc07016",
+          "publisher": "大紀元",
+          "title": "盧天麟接掌勞委會　勞團：能力應可勝任",
+          "url": "https://www.epochtimes.com/b5/7/5/16/n1711866.htm"
+        },
+        {
+          "id": "source-verify-wkilut07",
+          "publisher": "維基百科",
+          "title": "盧天麟",
+          "url": "https://zh.wikipedia.org/zh-tw/%E7%9B%A7%E5%A4%A9%E9%BA%9F"
+        }
+      ]
+    },
+    {
       "id": "family-relation-af636565cf52",
       "personAId": "person-kaohsiung-council-02-200bb44f",
       "personBId": "political-person-70d8f772aaf4",
@@ -13934,6 +14157,123 @@
       ]
     },
     {
+      "id": "family-relation-6aff8df8d856",
+      "personAId": "person-kaohsiung-council-04-a7ed58d6",
+      "personBId": "political-person-bf91bbb96605",
+      "relationshipType": "parent-child",
+      "relationshipLabel": "父親",
+      "personALabel": "子女",
+      "personBLabel": "父親",
+      "verificationStatus": "verified",
+      "kinshipSourceIds": [
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c",
+        "source-verify-e85d3d88",
+        "source-verify-a3f1f5ee",
+        "source-verify-531a32c8"
+      ],
+      "positionSourceIds": [
+        "source-verify-e85d3d88",
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c",
+        "source-verify-a3f1f5ee",
+        "source-verify-531a32c8"
+      ],
+      "sourceIds": [
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c",
+        "source-verify-e85d3d88",
+        "source-verify-a3f1f5ee",
+        "source-verify-531a32c8"
+      ],
+      "sourceLinks": [
+        {
+          "id": "source-verify-5c8158e4",
+          "publisher": "TVBS新聞網",
+          "title": "三連霸議員披掛上陣 李眉蓁父親：這仗不好打",
+          "url": "https://news.tvbs.com.tw/politics/1343968"
+        },
+        {
+          "id": "source-verify-36f0470c",
+          "publisher": "自由時報",
+          "title": "郭台銘訪李榮宗、李眉蓁父女 李眉蓁：唯一支持侯友宜",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4352354"
+        },
+        {
+          "id": "source-verify-e85d3d88",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（合併前高雄市議會第六屆：民國91年12月25日至95年12月24日）",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34"
+        },
+        {
+          "id": "source-verify-a3f1f5ee",
+          "publisher": "自由時報",
+          "title": "郭台銘參香點燃高雄左楠立委戰火 藍綠「雙李」隔空開槓",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4355189"
+        },
+        {
+          "id": "source-verify-531a32c8",
+          "publisher": "自由時報",
+          "title": "都是因為郭台銘 左楠立委選戰「雙李」出現煙硝味",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/4355298"
+        }
+      ]
+    },
+    {
+      "id": "family-relation-4217d77d4e13",
+      "personAId": "person-kaohsiung-council-04-29138ad9",
+      "personBId": "political-person-ad4e42be1fa1",
+      "relationshipType": "parent-child",
+      "relationshipLabel": "父親",
+      "personALabel": "子女",
+      "personBLabel": "父親",
+      "verificationStatus": "verified",
+      "kinshipSourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3",
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4"
+      ],
+      "positionSourceIds": [
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4",
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3"
+      ],
+      "sourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3",
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4"
+      ],
+      "sourceLinks": [
+        {
+          "id": "source-verify-faf4741f",
+          "publisher": "Newtalk新聞",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501"
+        },
+        {
+          "id": "source-verify-85bdc7c3",
+          "publisher": "自由時報",
+          "title": "農會、在地人情票 影響左營舊部落",
+          "url": "https://news.ltn.com.tw/news/local/paper/444060"
+        },
+        {
+          "id": "source-verify-ccd3b525",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（省轄市高雄市議會第九屆：民國66-68）",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=27"
+        },
+        {
+          "id": "source-verify-15228fe4",
+          "publisher": "高雄市議會",
+          "title": "高雄市議會全球網－歷屆議員簡介（改制直轄市臨時市議會：民國68-70）",
+          "url": "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=28"
+        }
+      ]
+    },
+    {
       "id": "family-relation-a2e1a7508e41",
       "personAId": "person-kaohsiung-council-04-16f09b7e",
       "personBId": "political-person-25e7cd675639",
@@ -14319,6 +14659,51 @@
           "publisher": "高雄市議會",
           "title": "本屆議員名錄",
           "url": "https://www.kcc.gov.tw/MemberInfo.aspx?n=39&sms=9028"
+        },
+        {
+          "id": "source-verify-5c81fa37",
+          "publisher": "高雄市議會",
+          "title": "沿革、會址變遷與歷屆議員影像（歷屆議員名錄）",
+          "url": "https://sp.kcc.gov.tw/parliament/index.asp?pn=4"
+        }
+      ]
+    },
+    {
+      "id": "family-relation-36ecb8363f0a",
+      "personAId": "person-kaohsiung-council-07-ce1bd95c",
+      "personBId": "political-person-ca516a8a5dba",
+      "relationshipType": "parent-child",
+      "relationshipLabel": "父親",
+      "personALabel": "子女",
+      "personBLabel": "父親",
+      "verificationStatus": "verified",
+      "kinshipSourceIds": [
+        "source-verify-73c0b8a4",
+        "source-verify-3f7a1c02",
+        "source-verify-5c81fa37"
+      ],
+      "positionSourceIds": [
+        "source-verify-5c81fa37",
+        "source-verify-73c0b8a4",
+        "source-verify-3f7a1c02"
+      ],
+      "sourceIds": [
+        "source-verify-73c0b8a4",
+        "source-verify-3f7a1c02",
+        "source-verify-5c81fa37"
+      ],
+      "sourceLinks": [
+        {
+          "id": "source-verify-73c0b8a4",
+          "publisher": "大紀元",
+          "title": "老議員曾長發病逝 高市各界哀悼不捨",
+          "url": "https://www.epochtimes.com.tw/9/11/10/127610.htm"
+        },
+        {
+          "id": "source-verify-3f7a1c02",
+          "publisher": "新頭殼 Newtalk",
+          "title": "政二代接棒潮》全台最獨特 高市議員近三分之一出身政治世家",
+          "url": "https://newtalk.tw/news/view/2022-05-18/756501"
         },
         {
           "id": "source-verify-5c81fa37",

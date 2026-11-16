@@ -20,7 +20,7 @@
     "family-relation-ab081ea17938",
     "family-relation-242df6a1eed4"
   ],
-  "note": "人工編輯核准僅限 approvedRelationshipIds；agent 核准另列於 agentApprovals，並在公開頁標示「agent 查核核准，非人工編輯審查」。\n2026-11-16 撤回 9 筆方向矛盾；同日全批次獨立查核完成後另有 5 筆不予發布（李榮宗、陳清玉、曾長發因職務證據不足或與官方名錄矛盾；王南榮、王方員因方向矛盾），明細見 reports/political-family-withdrawals.json。",
+  "note": "人工編輯核准僅限 approvedRelationshipIds；agent 核准另列於 agentApprovals，並在公開頁標示「agent 查核核准，非人工編輯審查」。\n2026-11-16 撤回 9 筆方向矛盾；同日全批次獨立查核完成後，王南榮、王方員因方向矛盾不發布。李榮宗、陳清玉、曾長發原因職務證據不足暫緩，同日 correction pass 剔除該職務主張後恢復可發布；林慧欣–盧天麟由 agent 另行核准。明細見 reports/political-family-corrections.json 與 reports/political-family-withdrawals.json。",
   "agentApprovals": [
     {
       "approvalBasis": "agent-verification",
@@ -71,6 +71,15 @@
         "family-relation-b3c88bca1b9a"
       ],
       "note": "由使用者明確授權的 agent 查核核准軌道：僅核准已通過 independent-fact-checker 查核、且親屬與職務分別有來源支持的關係。2026-11-16 重跑時移除一筆無可公開職務來源的配偶關係，並補入 11 筆 canonicalization 後才確認為 verified 的關係。此核准不是人工編輯審查，不得記入 reviewer registry，也不代表真人逐筆覆核。"
+    },
+    {
+      "approvalBasis": "agent-verification",
+      "reviewer": "pi-agent (independent fact checker)",
+      "approvedAt": "2026-11-16T15:00:00.000Z",
+      "relationshipIds": [
+        "family-relation-cd7fe6b2ff70"
+      ],
+      "note": "2026-11-16 correction pass：獨立查核原以亞航總經理職務無來源支持暫緩；剔除該職務後，母舅親屬關係與其餘五項職務均各自有來源，經 agent 重新核對後核准。此核准不是人工編輯審查。"
     }
   ]
 }

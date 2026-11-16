@@ -66,6 +66,12 @@
 - 公開快照以 `agentApprovedRelationshipIds` 保留名單；read model 加 `agentApproved` 旗標，UI 必須明示「由 agent 查核核准，非人工編輯審查」。
 - 不得寫入 reviewer registry，不得標成人工審查、編輯核准或候選人同意。
 
+### Agent 證據更正
+
+- 只適用於「親屬關係已獨立查核，但殘餘異議是某項職務主張過度」的情況；更正檔為 data/research/2026/political-family/verification-corrections.json，逐筆記錄移除的職務、理由、重讀來源、更正後職務與候選人狀態調整。
+- 更正不是重新研究，也不是人工審查；不得修改 verification-networks 檔或已產出的核准紀錄。generator 套用更正後重算關係 ID，validator 驗證更正已套用、移除的主張不再出現、來源存在，且候選人研究狀態與更正一致。
+- 更正後仍須符合原核准軌道；agent 核准必須對應已發布關係，不得留下未公開的核准。
+
 ## 流程與指令
 
 ```bash

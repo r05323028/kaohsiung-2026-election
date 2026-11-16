@@ -4,8 +4,8 @@
 
 - Researchers: researcher-a1.json, researcher-a2.json, researcher-a3.json, researcher-a4.json, networks/batch-01.json, networks/batch-02.json, networks/batch-03.json, networks/batch-04.json, networks/batch-05.json, networks/batch-06.json, networks/batch-07.json, networks/batch-08.json
 - Independent verification records: 62
-- Verified and published relationships: 54
-- Withheld or unresolved findings: 74
+- Verified and published relationships: 58
+- Withheld or unresolved findings: 68
 
 公開層採 fail-closed 原則；缺少獨立查核或任一證據面向時，不會進入公開圖表。
 
@@ -27,7 +27,7 @@
 
 ### 林慧欣 — 盧天麟
 
-- Status: unresolved
+- Status: verified
 - Rationale: 親屬關係與多數職務均可由自行擷取來源確認：自由時報 2022-03-24 原文「屬於「邁盟」新人、投入高雄大旗山議員初選的林慧欣，近日遭對手陣營檢舉，舅舅盧天麟曾任民進黨不分區立委，不應適用新人加分。」；Yahoo 轉載同稿引林慧欣「我以我母舅－曾經擔任勞工代表的民進黨不分區立委而光榮!」，方向為盧天麟（母舅）→林慧欣（甥女），與研究檔一致。立委任期經立法院官方委員頁更正：該頁載明屆別第 6 屆、選舉區全國不分區、到職日期 94年2月1日，並於備註欄記「辭職 中途離職，生效日期：96年5月21日 遞補委員：楊芳婉」，故本人任期為 2005-02-01 至 2007-05-21；研究檔所記 2008-01-31 實為該頁上方「第6屆 (2005/02/01至2008/01/31)」之屆期終止日，非本人卸任日，此項主張予以推翻並更正。勞委會主委 2007-05-21 上任見宜蘭縣政府人事處公告「奉 總統96年5月21日（96）特字第00067號令，特任為行政院 勞工委員會主任委員，遵於96年5月21日接篆視事」。台翔航太董事長見該公司官網歷任董事長頁「盧天麟 Philips T. L. Lu 任職時間 2019.02.01 2024.08.08」，其後為「汪庭安 Andy T. A. Wang 兼代期間 2024.08.08 迄今」，故為前任。亞航董事長見 2021-09-07 自由時報「感謝亞洲航空公司董事長盧天麟」與 2024-08-06 自由財經「現任董事長盧天麟將去職，由前國立聯合大學校長李偉賢出任」，亞航官網現任經營團隊為「董事長兼總經理 李偉賢」。全產總理事長見大紀元 2007-05-16 引全產總秘書長謝創智「盧天麟是工會出身，也當過全產總理事長」，立法院委員頁經歷亦列「全國產業總工會理事長」。惟研究檔另列 organizationName「亞洲航空股份有限公司」、positionTitle「總經理」一職：自行擷取僅得工商時報 2016-10-20「台翔航太昨（19）日經董事會通過推薦前行政院勞委會主委盧天麟，出任旗下子公司－亞洲航空董事長兼總經理人事案…並將交由亞航董事會辦理」，屬董事會推薦、尚待亞航董事會決議之人事案，未取得亞航董事會決議紀錄、年報經理人名單或其實際就任總經理之記載；亞航現任經營團隊固仍為「董事長兼總經理」編制，但該事實不足以證明其任內即兼任總經理。依查核契約規定，任一項職務缺證據即不得判為 verified、無來源支持之職務不得輸出，故本筆記為 unresolved：五項可證職務照實列出並更正立委卸任日，總經理一職不輸出，待補得亞航董事會決議或年報經理人紀錄後再判。
 - Kinship sources: source-verify-ltn22324 (https://news.ltn.com.tw/news/politics/breakingnews/3870001), source-verify-yao22324 (https://tw.news.yahoo.com/%E6%9E%97%E6%85%A7%E6%AC%A3-%E7%99%BB%E8%A8%98%E5%88%9D%E9%81%B8%E6%99%82%E5%B7%B2%E4%B8%BB%E5%8B%95%E6%94%BE%E6%A3%84%E5%8A%A0%E6%AC%8A-033526882.html)
 - Career sources: source-verify-lyluti06 (https://www.ly.gov.tw/Pages/List.aspx?nodeid=1521), source-verify-ylhr0521 (https://personnel.e-land.gov.tw/News_Content.aspx?n=4235&s=121700), source-verify-tachhist (https://www.tacaviation.com.tw/about/4), source-verify-tacabout (https://www.tacaviation.com.tw/about/1), source-verify-ltn36636 (https://news.ltn.com.tw/news/life/breakingnews/3663662), source-verify-ltn24608 (https://ec.ltn.com.tw/article/breakingnews/4761007), source-verify-aaiteam1 (https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=424&index=2), source-verify-aaihist0 (https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=1&index=1), source-verify-epc07016 (https://www.epochtimes.com/b5/7/5/16/n1711866.htm), source-verify-ctee1610 (https://www.ctee.com.tw/news/20161020700133-439901), source-verify-wkilut07 (https://zh.wikipedia.org/zh-tw/%E7%9B%A7%E5%A4%A9%E9%BA%9F)
@@ -69,17 +69,17 @@
 
 ### 李眉蓁 — 李榮宗
 
-- Status: unresolved
+- Status: verified
 - Rationale: 親屬：TVBS 2020-06-23「她父親李榮宗曾經當過市議員，目前是高雄果菜公司總經理」，自由時報 2023-07-03「郭台銘訪李榮宗、李眉蓁父女」以父女敘述，兩家獨立來源一致，父女關係成立。職務一（議員）：高雄市議會官方合併前第六屆（民國91年12月25日至95年12月24日）議員名單列有李榮宗、人員索引註記「解職」，與 TVBS「曾當過市議員」相符；解職日期查無，endDate 留 null。職務二（果菜公司總經理）：TVBS 2020-06-23 稱當時仍現任、自由時報 2023-07-03 稱「前高市果菜市場總經理」，可確認曾任且已卸任，起訖皆查無；公司登記全名與上市櫃狀態未能取得（商工登記／公開資訊觀測站均未查得），listingStatus 依契約記 unknown。職務三（城隍廟主任委員）不成立為可輸出職務：唯一來源自由時報 2023-07-03 僅稱「到父親擔任主委的城隍廟參拜」，未載廟名；同事件他篇（自由時報 2023-07-05、2023-07-06 報導郭台銘至左營舊城城隍廟參香、李眉蓁陪同）雖可推得同一廟，但跨文推論廟名不符契約「不得推論」要求；內政部全國宗教資訊網查詢未取得該廟負責人資料。因 batch 列出的三個職務中有一項無法以自身來源支持，整筆記 unresolved。缺：可辨識廟名之官方寺廟登記（含負責人）或第二家媒體指名報導及主委任期。
 - Kinship sources: source-verify-5c8158e4 (https://news.tvbs.com.tw/politics/1343968), source-verify-36f0470c (https://news.ltn.com.tw/news/politics/breakingnews/4352354)
 - Career sources: source-verify-e85d3d88 (https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34), source-verify-5c8158e4 (https://news.tvbs.com.tw/politics/1343968), source-verify-36f0470c (https://news.ltn.com.tw/news/politics/breakingnews/4352354)
 
 ### 陳玫娟 — 陳清玉
 
-- Status: unresolved
+- Status: verified
 - Rationale: 親屬：Newtalk 2022-05-18「前國民黨高雄市黨部副主委陳清玉的女兒陳玫娟」與自由時報 2010-11-15「國民黨的陳玫娟也是在地人，父親陳清玉曾任高市副議長」兩家獨立媒體一致，父女關係成立；自由時報所述「曾任高市副議長」並與高雄市議會官方紀錄（省轄市高雄市議會第九屆民國66-68副議長陳清玉、改制直轄市臨時市議會68-70副議長陳清玉）吻合，可交叉確認該親屬身分而非同名他人。職務（中國國民黨高雄市黨部副主委）：僅見於 Newtalk 2022-05-18 同一篇，未取得政黨名冊、黨部公告或第二家媒體報導，Google News 全文檢索與自由時報站內檢索均無其他來源，單一媒體不足以支撐，故該職務不輸出、整筆記 unresolved。附帶查核發現（batch 未列，僅記錄不代為擴充）：官方紀錄顯示陳清玉曾任省轄市高雄市議會第九屆與臨時市議會副議長，建議 batch 若需職務改以官方可查之副議長並補屆次。缺：副主委之任命或任期紀錄（政黨文件、黨部名冊）或第二家可信媒體指名報導。
 - Kinship sources: source-verify-faf4741f (https://newtalk.tw/news/view/2022-05-18/756501), source-verify-85bdc7c3 (https://news.ltn.com.tw/news/local/paper/444060)
-- Career sources: none
+- Career sources: source-verify-ccd3b525 (https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=27), source-verify-15228fe4 (https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=28)
 
 ### 陳冠宇 — 陳善慧
 
@@ -118,7 +118,7 @@
 
 ### 曾俊傑 — 曾長發
 
-- Status: unresolved
+- Status: verified
 - Rationale: 父子關係成立：大紀元 2009-11-10〈老議員曾長發病逝 高市各界哀悼不捨〉載『曾長發在卸任議員後，把為民服務的棒子交給其子曾俊傑，曾俊傑為議會第7屆現任議員』，新頭殼 2022-05-18 亦載『曾俊傑是前高雄市副議長曾長發的兒子』；議員職務亦與高雄市議會歷屆議員名錄相符（省轄市第9屆、改制臨時議會、直轄市第1至6屆，第6屆註記『（解職）』，與大紀元『26年』敘述一致）。但研究檔另列的『副議長』職務與官方名錄矛盾：歷屆副議長依序為陳清玉（省轄第9屆、臨時議會）、朱有福（直轄市第1、2屆）、顏火山（第3屆）、張瑞德（第4屆）、蔡松雄（第5、6屆），曾長發從未擔任副議長；新頭殼『前高雄市副議長曾長發』一句是唯一來源且被官方紀錄推翻，大紀元專文亦未提副議長。依規則矛盾職務不得列入，故不能判 verified。缺：研究檔刪除副議長職務後重提，或提出可支持副議長的官方來源。
 - Kinship sources: source-verify-73c0b8a4 (https://www.epochtimes.com.tw/9/11/10/127610.htm), source-verify-3f7a1c02 (https://newtalk.tw/news/view/2022-05-18/756501)
 - Career sources: source-verify-5c81fa37 (https://sp.kcc.gov.tw/parliament/index.asp?pn=4), source-verify-73c0b8a4 (https://www.epochtimes.com.tw/9/11/10/127610.htm)
@@ -444,3 +444,16 @@
 - Rationale: ETtoday 2026-10-03 明載「就是柯志恩丈夫洪德成」，並通篇以「柯志恩丈夫」「柯志恩尪」描述其陪同掃街，配偶關係方向唯一（洪德成為柯志恩之夫），無同名疑義。職務部分：該篇僅載其陪同掃街與受訪，未出現任何任職、職稱、公司或組織名稱；另行檢索亦未取得任何足以記載職務的公開來源。依契約「沒有來源的職務直接不要輸出」，positions 留空陣列，且不推測其職業；「查無職務」不是「沒有職務」的證據，故 rationale 與 notes 僅記查無公開職務來源，不作任何負面斷言。因本筆未提出任何職務主張，status 依親屬關係記為 verified，與研究檔處理方式一致。
 - Kinship sources: source-verify-ett32482 (https://www.ettoday.net/news/20261003/3248271.htm)
 - Career sources: none
+
+## Correction pass
+
+Applied 2026-11-16. Reviewer role: agent-evidence-correction. Corrections remove unsupported claims; they are agent evidence corrections, not human editorial review.
+
+- family-relation-cd7fe6b2ff70: 林慧欣 — 盧天麟; previous=unresolved, status=verified, published=yes; removed=亞洲航空股份有限公司 總經理
+- family-relation-6aff8df8d856: 李眉蓁 — 李榮宗; previous=unresolved, status=verified, published=yes; removed=高雄市城隍廟 主任委員
+- family-relation-4217d77d4e13: 陳玫娟 — 陳清玉; previous=unresolved, status=verified, published=yes; removed=中國國民黨高雄市黨部 副主委
+- family-relation-36ecb8363f0a: 曾俊傑 — 曾長發; previous=unresolved, status=verified, published=yes; removed=高雄市議會 副議長
+
+### Candidate outcome corrections
+
+- 鄭孟洽: unresolved → searched-no-verified-relations

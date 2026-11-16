@@ -1,0 +1,357 @@
+{
+  "reportType": "political-family-verification-corrections",
+  "generatedAt": "2026-11-12T00:00:00.000Z",
+  "appliedAt": "2026-11-16",
+  "reviewerRole": "agent-evidence-correction",
+  "note": "Removes one overreaching position claim from each of four independent verification records. The kinship evidence and the remaining positions were re-read against the cited sources; no verifier output file was edited. This is an evidence correction, not human editorial review.",
+  "summary": {
+    "correctedRelationships": 4,
+    "verifiedAfterCorrection": 4,
+    "publishedAfterCorrection": 4,
+    "candidateOutcomes": 1
+  },
+  "relationships": [
+    {
+      "relationshipId": "family-relation-cd7fe6b2ff70",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-01-3ac62854",
+      "displayName": "林慧欣",
+      "relativeName": "盧天麟",
+      "previousStatus": "unresolved",
+      "status": "verified",
+      "published": true,
+      "positionSource": "verification-record",
+      "removedClaims": [
+        {
+          "organization": "亞洲航空股份有限公司",
+          "positionTitle": "總經理",
+          "reason": "工商時報 2016-10-20 僅記載台翔航太董事會通過「推薦」出任亞航董事長兼總經理之人事案，屬董事會提案階段；未取得亞航董事會決議、年報經理人名單或實際就任總經理之紀錄。後續官方與新聞來源僅能證明董事長職務，不足證明總經理到任。",
+          "sourceUrls": [
+            "https://www.ctee.com.tw/news/20161020700133-439901"
+          ]
+        }
+      ],
+      "appliedPositions": [
+        {
+          "organization": "立法院",
+          "organizationType": "legislature",
+          "positionTitle": "立法委員（第六屆，全國不分區）",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2005-02-01",
+          "endDate": "2007-05-21",
+          "sourceIds": [
+            "source-verify-lyluti06",
+            "source-verify-wkilut07"
+          ],
+          "notes": "立法院官方委員頁：屆別第6屆、選區全國不分區、黨籍民主進步黨、到職日期94年2月1日（2005-02-01）；備註「辭職 中途離職，生效日期：96年5月21日 遞補委員：楊芳婉」，故卸任日為 2007-05-21。研究檔原記 2008-01-31 為該屆屆期終止日（第6屆 2005/02/01至2008/01/31），非本人任期終止日，已更正。維基百科亦載 2005-02-01 至 2007-05-20，僅作旁證，非唯一證據。"
+        },
+        {
+          "organization": "行政院勞工委員會",
+          "organizationType": "government",
+          "positionTitle": "主任委員",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "political-appointee",
+          "startDate": "2007-05-21",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ylhr0521",
+            "source-verify-epc07016"
+          ],
+          "notes": "宜蘭縣政府人事處公告原文「盧天麟先生奉 總統96年5月21日（96）特字第00067號令，特任為行政院 勞工委員會主任委員，遵於96年5月21日接篆視事」。卸任日未取得官方原文（勞動部歷任首長頁面無法擷取），結束日期未查得，endDate 留 null。大紀元 2007-05-16 報導其內定接任，可佐證就任時序。"
+        },
+        {
+          "organization": "台翔航太工業股份有限公司",
+          "organizationType": "corporation",
+          "positionTitle": "董事長",
+          "positionCategory": "board",
+          "listingStatus": "unlisted",
+          "status": "former-officeholder",
+          "startDate": "2019-02-01",
+          "endDate": "2024-08-08",
+          "sourceIds": [
+            "source-verify-tachhist",
+            "source-verify-tacabout"
+          ],
+          "notes": "台翔航太官網歷任董事長頁逐筆列出：田在勱任職時間 2016.01.16 至 2019.01.31；盧天麟任職時間 2019.02.01 至 2024.08.08；汪庭安兼代期間自 2024.08.08 迄今。任期起訖明確且為前任。公司簡介載 1991 年 9 月成立、2006 年轉型控股公司，主要股東為國發基金 49%、金融機構 35%、其他私人企業 16%，未見上市櫃紀錄，故 listingStatus 記 unlisted。"
+        },
+        {
+          "organization": "亞洲航空股份有限公司",
+          "organizationType": "corporation",
+          "positionTitle": "董事長",
+          "positionCategory": "board",
+          "listingStatus": "listed",
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-ltn36636",
+            "source-verify-ltn24608",
+            "source-verify-aaiteam1",
+            "source-verify-aaihist0",
+            "source-verify-ctee1610"
+          ],
+          "notes": "2021-09-07 自由時報引南市勞工局長「感謝亞洲航空公司董事長盧天麟每年大量採購庇護工場產品贈送員工」，證實任內擔任董事長；2024-08-06 自由財經「現任董事長盧天麟將去職，由前國立聯合大學校長李偉賢出任，預計在9月4日董事會後公布」；亞航官網現任經營團隊列「董事長兼總經理 李偉賢」，故為前任。工商時報 2016-10-20 記載台翔航太董事會通過推薦其出任亞航董事長兼總經理人事案，可佐證起點方向，但屬推薦階段，未據以填寫日期。就任日與實際交接日未取得官方原文，結束日期未查得，起訖留 null。亞航沿革載 2017 年登錄興櫃、2018 年股票上市，故 listingStatus 記 listed。"
+        },
+        {
+          "organization": "全國產業總工會",
+          "organizationType": "nonprofit",
+          "positionTitle": "理事長",
+          "positionCategory": "organizational_leadership",
+          "listingStatus": null,
+          "status": "historical-status-unknown",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-epc07016",
+            "source-verify-lyluti06"
+          ],
+          "notes": "大紀元 2007-05-16 引全國產業總工會秘書長謝創智「盧天麟是工會出身，也當過全產總理事長」；立法院委員頁經歷欄亦列「全國產業總工會理事長」。任期起訖未查得，故起訖留 null 並記 historical-status-unknown。全產總為工會聯合組織（社團法人性質），沿用研究檔與既有查核檔對社團、協會類組織的 nonprofit 分類。"
+        }
+      ],
+      "reason": "剔除無獨立來源支持的亞航總經理職務後，母舅親屬關係、立委任期、勞委會主委、台翔航太董事長、亞航董事長與全產總理事長職務仍各自有來源，已可判為查證通過。",
+      "reviewedAgainst": [
+        "https://www.ctee.com.tw/news/20161020700133-439901",
+        "https://news.ltn.com.tw/news/politics/breakingnews/3870001",
+        "https://www.airasia.com.tw/index.php?option=module&lang=cht&task=pageinfo&id=424&index=2",
+        "https://www.tacaviation.com.tw/about/4"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-ltn22324",
+        "source-verify-yao22324",
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ctee1610",
+        "source-verify-ltn24608",
+        "source-verify-ltn36636",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-wkilut07"
+      ],
+      "positionSourceIds": [
+        "source-verify-lyluti06",
+        "source-verify-ylhr0521",
+        "source-verify-tachhist",
+        "source-verify-tacabout",
+        "source-verify-ltn36636",
+        "source-verify-ltn24608",
+        "source-verify-aaiteam1",
+        "source-verify-aaihist0",
+        "source-verify-epc07016",
+        "source-verify-ctee1610",
+        "source-verify-wkilut07",
+        "source-verify-ltn22324",
+        "source-verify-yao22324"
+      ]
+    },
+    {
+      "relationshipId": "family-relation-6aff8df8d856",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "displayName": "李眉蓁",
+      "relativeName": "李榮宗",
+      "previousStatus": "unresolved",
+      "status": "verified",
+      "published": true,
+      "positionSource": "verification-record",
+      "removedClaims": [
+        {
+          "organization": "高雄市城隍廟",
+          "positionTitle": "主任委員",
+          "reason": "唯一來源為自由時報 2023-07-03 報導中「到父親擔任主委的城隍廟參拜」一句，未載可辨識之廟名、立案名稱、負責人登記或任期；跨篇推論廟名不符不得推論之要求，故剔除。",
+          "sourceUrls": [
+            "https://news.ltn.com.tw/news/politics/breakingnews/4352354"
+          ]
+        }
+      ],
+      "appliedPositions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "2002-12-25",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-e85d3d88",
+            "source-verify-5c8158e4"
+          ],
+          "notes": "合併前高雄市議會第六屆（民國91年12月25日至95年12月24日）議員，官方頁面人員索引註記「解職」，解職日期與原因未查得；結束日期未查得。"
+        },
+        {
+          "organization": "高雄果菜運銷公司",
+          "organizationType": "corporation",
+          "positionTitle": "總經理",
+          "positionCategory": "executive",
+          "listingStatus": "unknown",
+          "status": "former-officeholder",
+          "startDate": null,
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-5c8158e4",
+            "source-verify-36f0470c"
+          ],
+          "notes": "2020-06-23 報導稱當時現任、2023-07-03 報導稱前任，可確認曾任與已卸任；公司登記全名、起訖日期與上市櫃狀態未查得（來源分別作「高雄果菜公司」與「高市果菜市場」）。"
+        }
+      ],
+      "reason": "剔除證據不足的城隍廟主任委員職務後，父女親屬關係、高雄市議會議員與高雄果菜運銷公司總經理職務仍各自有來源，已可判為查證通過。",
+      "reviewedAgainst": [
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=34",
+        "https://news.tvbs.com.tw/politics/1343968",
+        "https://news.ltn.com.tw/news/politics/breakingnews/4352354"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c",
+        "source-verify-e85d3d88",
+        "source-verify-a3f1f5ee",
+        "source-verify-531a32c8"
+      ],
+      "positionSourceIds": [
+        "source-verify-e85d3d88",
+        "source-verify-5c8158e4",
+        "source-verify-36f0470c",
+        "source-verify-a3f1f5ee",
+        "source-verify-531a32c8"
+      ]
+    },
+    {
+      "relationshipId": "family-relation-4217d77d4e13",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-61d1909b",
+      "displayName": "陳玫娟",
+      "relativeName": "陳清玉",
+      "previousStatus": "unresolved",
+      "status": "verified",
+      "published": true,
+      "positionSource": "correction-record",
+      "removedClaims": [
+        {
+          "organization": "中國國民黨高雄市黨部",
+          "positionTitle": "副主委",
+          "reason": "僅見於 Newtalk 2022-05-18 同一篇報導，未取得政黨名冊、黨部公告或第二家可信媒體指名報導；單一媒體不足以支撐職務。",
+          "sourceUrls": [
+            "https://newtalk.tw/news/view/2022-05-18/756501"
+          ]
+        }
+      ],
+      "appliedPositions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1977-12-30",
+          "endDate": "1979-06-30",
+          "sourceIds": [
+            "source-verify-ccd3b525"
+          ]
+        },
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "副議長",
+          "positionCategory": "political",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1979-07-01",
+          "endDate": "1981-12-24",
+          "sourceIds": [
+            "source-verify-15228fe4"
+          ]
+        }
+      ],
+      "reason": "剔除證據不足的國民黨高雄市黨部副主委職務後，以高雄市議會官方歷屆議員名錄所載兩屆副議長職務重建政治職涯；父女親屬關係仍由 Newtalk 與自由時報兩家獨立來源支持。",
+      "reviewedAgainst": [
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=27",
+        "https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=28",
+        "https://news.ltn.com.tw/news/local/paper/444060",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3",
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4"
+      ],
+      "positionSourceIds": [
+        "source-verify-ccd3b525",
+        "source-verify-15228fe4",
+        "source-verify-faf4741f",
+        "source-verify-85bdc7c3"
+      ]
+    },
+    {
+      "relationshipId": "family-relation-36ecb8363f0a",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "displayName": "曾俊傑",
+      "relativeName": "曾長發",
+      "previousStatus": "unresolved",
+      "status": "verified",
+      "published": true,
+      "positionSource": "verification-record",
+      "removedClaims": [
+        {
+          "organization": "高雄市議會",
+          "positionTitle": "副議長",
+          "reason": "高雄市議會官方歷屆副議長名錄依序為陳清玉、朱有福、顏火山、張瑞德、蔡松雄，未曾列曾長發；新頭殼「前高雄市副議長曾長發」是唯一來源且與官方紀錄矛盾，故剔除。",
+          "sourceUrls": [
+            "https://newtalk.tw/news/view/2022-05-18/756501"
+          ]
+        }
+      ],
+      "appliedPositions": [
+        {
+          "organization": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "public_office",
+          "listingStatus": null,
+          "status": "former-officeholder",
+          "startDate": "1977-12-30",
+          "endDate": null,
+          "sourceIds": [
+            "source-verify-5c81fa37",
+            "source-verify-73c0b8a4"
+          ],
+          "notes": "省轄市第9屆、改制臨時議會、直轄市第1至6屆；第6屆名錄註記『（解職）』，解職日期未查得；2009-11-03 病逝"
+        }
+      ],
+      "reason": "剔除與官方名錄矛盾的副議長職務後，父子親屬關係與高雄市議會議員職務仍各自有來源，已可判為查證通過。",
+      "reviewedAgainst": [
+        "https://sp.kcc.gov.tw/parliament/index.asp?pn=4",
+        "https://www.epochtimes.com.tw/9/11/10/127610.htm",
+        "https://newtalk.tw/news/view/2022-05-18/756501"
+      ],
+      "kinshipSourceIds": [
+        "source-verify-73c0b8a4",
+        "source-verify-3f7a1c02",
+        "source-verify-5c81fa37"
+      ],
+      "positionSourceIds": [
+        "source-verify-5c81fa37",
+        "source-verify-73c0b8a4",
+        "source-verify-3f7a1c02"
+      ]
+    }
+  ],
+  "candidateOutcomes": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+      "displayName": "鄭孟洽",
+      "previousOutcome": "unresolved",
+      "outcome": "searched-no-verified-relations",
+      "researchStatus": "searched-no-verified-relations",
+      "reason": "舊研究列將「鄭孟洽與鄭孟洳可能為同一候選人或不同字形身分」記為 unresolved；後續網路批次以精確字串搜尋 Bing、DuckDuckGo、自由時報與中央社，均無兩人為同一人或具親屬關係之來源。此為姓名近似之待查線索，不是未解關係，改記 searched-no-verified-relations。",
+      "suppressedFindingSubjects": [
+        "鄭孟洳"
+      ]
+    }
+  ]
+}

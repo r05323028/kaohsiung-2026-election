@@ -25,7 +25,7 @@ function isUtcTimestamp(value: string): boolean {
     : normalized.replace('.000Z', 'Z') === value;
 }
 
-const DateOnlySchema = z
+export const DateOnlySchema = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, 'Must use YYYY-MM-DD.')
   .refine(isCalendarDate, 'Must be a real calendar date.');

@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "note": "Machine-assisted visual classification of the licensed portrait for each candidate. Every entry is an ESTIMATE (basis=estimated) made by reading the listed photo; it is not human likeness review. Hair length is only approximable in the current head kit: bob / shoulder-length / medium-straight share a similar chin-to-jaw silhouette.",
+  "observations": [
+    {
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "photoIds": [
+        "commons-ke-chih-en"
+      ],
+      "hairStyle": "bob",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#2f2622",
+      "note": "Chin-length dark bob, side part, slight inward curve."
+    },
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "photoIds": [
+        "commons-lai-rui-long"
+      ],
+      "hairStyle": "short-side-part",
+      "glasses": {
+        "enabled": true,
+        "style": "rectangular"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#262322",
+      "note": "Short side-parted hair, thin rectangular metal frames."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "photoIds": [
+        "commons-huang-wen-jhih"
+      ],
+      "hairStyle": "short-crop",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#1f1c1b",
+      "note": "Short textured crop, clean shaven."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "photoIds": [
+        "commons-bai-ciao-yin"
+      ],
+      "hairStyle": "shoulder-length",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#1d1a19",
+      "note": "Long straight dark hair past the shoulders; three-quarter view."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "photoIds": [
+        "commons-chen-mei-ya"
+      ],
+      "hairStyle": "shoulder-length",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#6b3b28",
+      "note": "Long auburn hair with side-swept volume."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "photoIds": [
+        "commons-tseng-chun-chieh"
+      ],
+      "hairStyle": "short-crop",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#211d1c",
+      "note": "Very short crop, clean shaven."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "photoIds": [
+        "commons-chang-po-yang"
+      ],
+      "hairStyle": "short-crop",
+      "glasses": {
+        "enabled": true,
+        "style": "round"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#232020",
+      "note": "Undercut with lifted textured top, bold round black frames."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "photoIds": [
+        "commons-kang-yu-cheng"
+      ],
+      "hairStyle": "bob",
+      "glasses": {
+        "enabled": true,
+        "style": "rectangular"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#2b2422",
+      "note": "Chin-length bob with fringe, rectangular frames."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "photoIds": [
+        "commons-huang-wen-yi"
+      ],
+      "hairStyle": "short-side-part",
+      "glasses": {
+        "enabled": true,
+        "style": "rectangular"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#4a3324",
+      "note": "Brown side-swept hair, very thin frames."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "photoIds": [
+        "commons-tang-yung-yu"
+      ],
+      "hairStyle": "shoulder-length",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#241f1e",
+      "note": "Straight dark hair past the chin."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "photoIds": [
+        "commons-li-ya-fen"
+      ],
+      "hairStyle": "bun",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#221f1e",
+      "note": "Hair pulled back tightly; low-resolution photo."
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "photoIds": [
+        "commons-li-mei-jhen"
+      ],
+      "hairStyle": "short-crop",
+      "glasses": {
+        "enabled": false,
+        "style": "none"
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none"
+      },
+      "hairColor": "#6a2f28",
+      "note": "Short reddish pixie cut; low-resolution photo."
+    }
+  ]
+}

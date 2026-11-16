@@ -1,12 +1,14 @@
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import { useEffect, useMemo, useRef } from 'react';
+import { Suspense, useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import type { PublicCandidateCard } from '../data/candidate-card';
 import { withBase } from '../utils/paths';
+import { headKitForSlug } from '../data/avatars/likeness/runtime';
 import { buildCandidateModel } from './candidate-geometry';
 import { CANDIDATE_MODEL } from './candidate-model';
 import { characterStyle } from './character-style';
+import CandidateHeadKit from './CandidateHeadKit';
 
 useGLTF.preload(withBase(CANDIDATE_MODEL.basePath));
 
@@ -35,6 +37,17 @@ export default function CandidateChibi({
     () => buildCandidateModel(gltf.scene, style),
     [gltf.scene, style],
   );
+  // Only approved kits are listed in loadable.json; everything else keeps the
+  // shared base head, so this lookup is the single publication gate at runtime.
+  const headKit = headKitForSlug(candidate.candidacy.slug);
+  const skinMeshes = useMemo(() => {
+    const meshes: THREE.Object3D[] = [];
+    model.root.traverse((node) => {
+      const mesh = node as THREE.Mesh;
+      if (mesh.isMesh && mesh.name === 'Merged_skin') meshes.push(node);
+    });
+    return meshes;
+  }, [model.root]);
   const group = useRef<THREE.Group>(null);
   const motion = useRef({
     blend: 0,
@@ -144,6 +157,15 @@ export default function CandidateChibi({
       position={[0, model.groundOffset, 0]}
     >
       <primitive object={model.root} />
+      {headKit && model.pivots.head ? (
+        <Suspense fallback={null}>
+          <CandidateHeadKit
+            head={model.pivots.head}
+            path={headKit.path}
+            skinMeshes={skinMeshes}
+          />
+        </Suspense>
+      ) : null}
     </group>
   );
 }

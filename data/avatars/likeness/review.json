@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "note": "Hand-authored human likeness review. Add a decision only after a named editor has compared the rendered head kit with the licensed source photograph listed in manifest.json. Approvals must pin the appearanceSha256 and headKitSha256 that were actually reviewed; regenerating either artefact invalidates the decision. Machine checks never satisfy this file.",
+  "decisions": []
+}

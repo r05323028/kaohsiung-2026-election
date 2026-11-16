@@ -11,7 +11,7 @@
     "build:pages": "npm run build:astro && npm run validate:profile-copy",
     "candidate-audit:generate": "tsx scripts/candidate-roster-audit.ts",
     "validate:candidate-audit": "npm run candidate-audit:check && npm run candidate-audit:validate",
-    "validate:all": "npm run validate:data && npm run validate:political-family && npm run validate:constituencies && npm run validate:official && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:candidate-policies && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run validate:public-records-coverage && npm run validate:political-career && npm run validate:policy-career && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run automated:verify && npm run remediation:verify && npm run validate:basic-profiles && npm run validate:news && npm run validate:candidate-audit && npm run typecheck",
+    "validate:all": "npm run validate:data && npm run validate:political-family && npm run validate:constituencies && npm run validate:official && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:candidate-policies && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run validate:public-records-coverage && npm run validate:political-career && npm run validate:policy-career && npm run validate:research && npm run validate:biographies && npm run editorial:validate && npm run pilot:verify && npm run release:verify && npm run validate:enrichment && npm run ai-audit:verify && npm run semantic:verify && npm run scoped-review:verify && npm run validate:avatars && npm run avatars:likeness:validate && npm run automated:verify && npm run remediation:verify && npm run validate:basic-profiles && npm run validate:news && npm run validate:candidate-audit && npm run typecheck",
     "biography:execute": "tsx scripts/execute-biography-research.ts execute",
     "biography:normalize": "tsx scripts/execute-biography-research.ts normalize",
     "biography:review": "tsx scripts/execute-biography-research.ts review",
@@ -141,7 +141,11 @@
     "basic:finalize": "tsx scripts/basic-profile/finalize-research.ts",
     "basic:sync-queue": "tsx scripts/basic-profile/sync-queue.ts",
     "candidate-audit:check": "tsx scripts/candidate-roster-audit.ts --check",
-    "candidate-audit:validate": "tsx scripts/validate-candidate-roster-audit.ts"
+    "candidate-audit:validate": "tsx scripts/validate-candidate-roster-audit.ts",
+    "avatars:likeness:extract": ".venv-avatar/bin/python scripts/avatar/face/extract.py --photos data/avatars/likeness/photos.json --photo-dir tmp/avatar-pipeline/photos --observations data/avatars/likeness/observations.json --out data/avatars/likeness/appearances.json --report reports/avatar/face-extraction.json",
+    "avatars:likeness:generate": "tsx scripts/avatar/likeness/generate.ts",
+    "avatars:likeness:publish": "tsx scripts/avatar/likeness/publish.ts",
+    "avatars:likeness:validate": "tsx scripts/avatar/likeness/validate.ts"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.2",

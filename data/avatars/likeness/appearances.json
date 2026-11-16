@@ -1,0 +1,1997 @@
+{
+  "schemaVersion": 1,
+  "appearances": [
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "schemaVersion": 1,
+      "faceShape": "heart",
+      "faceWidth": {
+        "value": 0.279,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "faceLength": {
+        "value": 0.345,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.388,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.638,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.346,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.627,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.512,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.409,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.063,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.402,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "noseLength": {
+        "value": 0.497,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.595,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.615,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-bai-ciao-yin"
+        ]
+      },
+      "hairStyle": "shoulder-length",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#24221e",
+        "skin": "#d8ad9b"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-bai-ciao-yin"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-bai-ciao-yin"
+          ]
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-bai-ciao-yin"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "schemaVersion": 1,
+      "faceShape": "oval",
+      "faceWidth": {
+        "value": 0.396,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "faceLength": {
+        "value": 0.507,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.519,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.322,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.89,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.588,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.076,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.697,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "eyeTilt": {
+        "value": -0.354,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.125,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "noseLength": {
+        "value": 0.154,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.125,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.473,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chang-po-yang"
+        ]
+      },
+      "hairStyle": "short-crop",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": true,
+        "style": "round",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#1c1512",
+        "skin": "#d8ac91"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-chang-po-yang"
+          ]
+        },
+        "hairStyle": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "glasses": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-chang-po-yang"
+          ]
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-chang-po-yang"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "schemaVersion": 1,
+      "faceShape": "oblong",
+      "faceWidth": {
+        "value": 0.162,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "faceLength": {
+        "value": 0.641,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.541,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.702,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.31,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.702,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.383,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.873,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.768,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.398,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "noseLength": {
+        "value": 0.624,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.632,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.68,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-chen-mei-ya"
+        ]
+      },
+      "hairStyle": "shoulder-length",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#3b1f19",
+        "skin": "#efc7b5"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-chen-mei-ya"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-chen-mei-ya"
+          ]
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-chen-mei-ya"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "schemaVersion": 1,
+      "faceShape": "heart",
+      "faceWidth": {
+        "value": 0.298,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "faceLength": {
+        "value": 0.879,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.413,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.467,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.09,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.463,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.13,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.426,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.029,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.572,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "noseLength": {
+        "value": 0.454,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.884,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.444,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-jhih"
+        ]
+      },
+      "hairStyle": "short-crop",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#0e0e0e",
+        "skin": "#c7a299"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-huang-wen-jhih"
+          ]
+        },
+        "hairStyle": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-huang-wen-jhih"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "schemaVersion": 1,
+      "faceShape": "oval",
+      "faceWidth": {
+        "value": 0.339,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "faceLength": {
+        "value": 0.398,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.473,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.454,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.569,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.472,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.745,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.123,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "eyeTilt": {
+        "value": -0.106,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.392,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "noseLength": {
+        "value": 0.104,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.382,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.947,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-huang-wen-yi"
+        ]
+      },
+      "hairStyle": "short-side-part",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": true,
+        "style": "rectangular",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#302423",
+        "skin": "#e1bba1"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-huang-wen-yi"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-huang-wen-yi"
+          ]
+        },
+        "glasses": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-huang-wen-yi"
+          ]
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-huang-wen-yi"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "schemaVersion": 1,
+      "faceShape": "diamond",
+      "faceWidth": {
+        "value": 0.172,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "faceLength": {
+        "value": 0.751,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.399,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.88,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.345,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.463,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.372,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.342,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.071,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.303,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "noseLength": {
+        "value": 0.379,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.595,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.844,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-kang-yu-cheng"
+        ]
+      },
+      "hairStyle": "bob",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": true,
+        "style": "rectangular",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#241d1d",
+        "skin": "#d4b5aa"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-kang-yu-cheng"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-kang-yu-cheng"
+          ]
+        },
+        "glasses": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-kang-yu-cheng"
+          ]
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-kang-yu-cheng"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "mayor-ke-zhi-en-2026",
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "schemaVersion": 1,
+      "faceShape": "heart",
+      "faceWidth": {
+        "value": 0.516,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "faceLength": {
+        "value": 0.385,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.408,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.469,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.466,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.42,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.886,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.823,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.495,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.27,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "noseLength": {
+        "value": 0.826,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.476,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.347,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-ke-chih-en"
+        ]
+      },
+      "hairStyle": "bob",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#3a2f33",
+        "skin": "#f2bcb7"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-ke-chih-en"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-ke-chih-en"
+          ]
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-ke-chih-en"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "mayor-lai-rui-long-2026",
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "schemaVersion": 1,
+      "faceShape": "square",
+      "faceWidth": {
+        "value": 0.851,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "faceLength": {
+        "value": 0.419,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.746,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.137,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.6,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.163,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.887,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.509,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "eyeTilt": {
+        "value": -0.199,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.185,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "noseLength": {
+        "value": 0.479,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.355,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.042,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-lai-rui-long"
+        ]
+      },
+      "hairStyle": "short-side-part",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": true,
+        "style": "rectangular",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#1e1c1d",
+        "skin": "#b6978e"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-lai-rui-long"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-lai-rui-long"
+          ]
+        },
+        "glasses": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-lai-rui-long"
+          ]
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-lai-rui-long"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "schemaVersion": 1,
+      "faceShape": "oblong",
+      "faceWidth": {
+        "value": 0.255,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "faceLength": {
+        "value": 0.448,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.448,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.479,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.127,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.65,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.559,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.594,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.399,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.738,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "noseLength": {
+        "value": 0.287,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.839,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.628,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-mei-jhen"
+        ]
+      },
+      "hairStyle": "short-crop",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#472627",
+        "skin": "#e3bbb2"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-li-mei-jhen"
+          ]
+        },
+        "hairStyle": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-li-mei-jhen"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-291436e3",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "schemaVersion": 1,
+      "faceShape": "heart",
+      "faceWidth": {
+        "value": 0.158,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "faceLength": {
+        "value": 0.759,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.284,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.714,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.367,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.468,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.448,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.646,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "eyeTilt": {
+        "value": -0.096,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.192,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "noseLength": {
+        "value": 0.71,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.574,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.738,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-li-ya-fen"
+        ]
+      },
+      "hairStyle": "bun",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#130e0f",
+        "skin": "#e4afa6"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-li-ya-fen"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-li-ya-fen"
+          ]
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-li-ya-fen"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "schemaVersion": 1,
+      "faceShape": "oblong",
+      "faceWidth": {
+        "value": 0.258,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "faceLength": {
+        "value": 0.141,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.51,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.432,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.198,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.847,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.266,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.797,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.365,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.8,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "noseLength": {
+        "value": 0.293,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.755,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.625,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tang-yung-yu"
+        ]
+      },
+      "hairStyle": "shoulder-length",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#332a28",
+        "skin": "#e6b8a5"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-tang-yung-yu"
+          ]
+        },
+        "hairStyle": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-tang-yung-yu"
+          ]
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-tang-yung-yu"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    },
+    {
+      "appearanceId": "candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "schemaVersion": 1,
+      "faceShape": "square",
+      "faceWidth": {
+        "value": 0.741,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "faceLength": {
+        "value": 0.128,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "jawWidth": {
+        "value": 0.581,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "chinRoundness": {
+        "value": 0.12,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "cheekFullness": {
+        "value": 0.62,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "eyeSize": {
+        "value": 0.483,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "eyeSpacing": {
+        "value": 0.506,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "eyeHeight": {
+        "value": 0.696,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "eyeTilt": {
+        "value": 0.247,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "eyebrowThickness": {
+        "value": 0.4,
+        "basis": "default",
+        "photoIds": []
+      },
+      "eyebrowAngle": {
+        "value": 0,
+        "basis": "default",
+        "photoIds": []
+      },
+      "noseWidth": {
+        "value": 0.27,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "noseLength": {
+        "value": 0.354,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "mouthWidth": {
+        "value": 0.337,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "mouthFullness": {
+        "value": 0.219,
+        "basis": "estimated",
+        "photoIds": [
+          "commons-tseng-chun-chieh"
+        ]
+      },
+      "hairStyle": "short-crop",
+      "hairVolume": {
+        "value": 0.5,
+        "basis": "default",
+        "photoIds": []
+      },
+      "glasses": {
+        "enabled": false,
+        "style": "none",
+        "frameThickness": 0.3
+      },
+      "facialHair": {
+        "enabled": false,
+        "style": "none",
+        "density": 0.5
+      },
+      "observedColors": {
+        "hair": "#2e2523",
+        "skin": "#d5ae99"
+      },
+      "categoricalEvidence": {
+        "faceShape": {
+          "basis": "estimated",
+          "photoIds": [
+            "commons-tseng-chun-chieh"
+          ]
+        },
+        "hairStyle": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "glasses": {
+          "basis": "default",
+          "photoIds": []
+        },
+        "facialHair": {
+          "basis": "default",
+          "photoIds": []
+        }
+      },
+      "sourcePhotoIds": [
+        "commons-tseng-chun-chieh"
+      ],
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "glasses",
+        "facialHair"
+      ],
+      "extraction": {
+        "tool": "mediapipe-face-landmarker",
+        "toolVersion": "1.2.3",
+        "extractedAt": "2026-11-16T00:00:00+08:00",
+        "script": "scripts/avatar/face/extract.py"
+      },
+      "reviewStatus": "extracted"
+    }
+  ]
+}

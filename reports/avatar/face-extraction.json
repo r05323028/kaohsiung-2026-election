@@ -1,0 +1,2750 @@
+{
+  "tool": {
+    "name": "mediapipe-face-landmarker",
+    "version": "1.2.3",
+    "script": "scripts/avatar/face/extract.py"
+  },
+  "model": {
+    "path": "tmp/avatar-pipeline/models/face_landmarker.task",
+    "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+  },
+  "inputs": {
+    "photos": "data/avatars/likeness/photos.json",
+    "observations": "data/avatars/likeness/observations.json",
+    "photoDir": "tmp/avatar-pipeline/photos"
+  },
+  "extractedAt": "2026-11-16T00:00:00+08:00",
+  "candidateCount": 12,
+  "lowConfidencePhotoIds": [
+    "commons-li-mei-jhen",
+    "commons-li-ya-fen",
+    "commons-tang-yung-yu"
+  ],
+  "faceBoxCheck": [
+    {
+      "photoId": "commons-bai-ciao-yin",
+      "recorded": null,
+      "detected": {
+        "x": 0.265,
+        "y": 0.287,
+        "width": 0.355,
+        "height": 0.39
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-chang-po-yang",
+      "recorded": null,
+      "detected": {
+        "x": 0.319,
+        "y": 0.241,
+        "width": 0.336,
+        "height": 0.337
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-chen-mei-ya",
+      "recorded": null,
+      "detected": {
+        "x": 0.208,
+        "y": 0.281,
+        "width": 0.54,
+        "height": 0.468
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-huang-wen-jhih",
+      "recorded": null,
+      "detected": {
+        "x": 0.289,
+        "y": 0.269,
+        "width": 0.345,
+        "height": 0.395
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-huang-wen-yi",
+      "recorded": null,
+      "detected": {
+        "x": 0.253,
+        "y": 0.291,
+        "width": 0.511,
+        "height": 0.466
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-kang-yu-cheng",
+      "recorded": null,
+      "detected": {
+        "x": 0.318,
+        "y": 0.225,
+        "width": 0.364,
+        "height": 0.321
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-ke-chih-en",
+      "recorded": null,
+      "detected": {
+        "x": 0.206,
+        "y": 0.32,
+        "width": 0.578,
+        "height": 0.51
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-lai-rui-long",
+      "recorded": null,
+      "detected": {
+        "x": 0.232,
+        "y": 0.276,
+        "width": 0.519,
+        "height": 0.399
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-li-mei-jhen",
+      "recorded": null,
+      "detected": {
+        "x": 0.205,
+        "y": 0.271,
+        "width": 0.536,
+        "height": 0.473
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-li-ya-fen",
+      "recorded": null,
+      "detected": {
+        "x": 0.42,
+        "y": 0.27,
+        "width": 0.182,
+        "height": 0.218
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-tang-yung-yu",
+      "recorded": null,
+      "detected": {
+        "x": 0.262,
+        "y": 0.28,
+        "width": 0.389,
+        "height": 0.356
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    },
+    {
+      "photoId": "commons-tseng-chun-chieh",
+      "recorded": null,
+      "detected": {
+        "x": 0.271,
+        "y": 0.245,
+        "width": 0.471,
+        "height": 0.406
+      },
+      "status": "no-recorded-faceBox",
+      "maxDelta": null
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-629fea4c",
+      "photoId": "commons-bai-ciao-yin",
+      "usability": "usable",
+      "view": "three-quarter-right",
+      "identityConfidence": "source-linked",
+      "imageWidth": 2040,
+      "imageHeight": 2160,
+      "measuredRatios": {
+        "faceWidth": 0.833,
+        "faceLength": 2.5312,
+        "jawWidth": 0.7743,
+        "chinRoundness": 0.3476,
+        "cheekFullness": 2.2766,
+        "eyeSize": 0.1926,
+        "eyeSpacing": 1.3927,
+        "eyeHeight": 0.2577,
+        "eyeTilt": 0.1095,
+        "noseWidth": 0.3091,
+        "noseLength": 0.2748,
+        "mouthWidth": 0.4393,
+        "mouthFullness": 0.3606,
+        "foreheadWidth": 0.6992
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.833
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.5312
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7743
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3476
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.2766
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1926
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3927
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.2577
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.1095
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3091
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2748
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4393
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3606
+        }
+      },
+      "values": {
+        "faceWidth": 0.279,
+        "faceLength": 0.345,
+        "jawWidth": 0.388,
+        "chinRoundness": 0.638,
+        "cheekFullness": 0.346,
+        "eyeSize": 0.627,
+        "eyeSpacing": 0.512,
+        "eyeHeight": 0.409,
+        "eyeTilt": 0.063,
+        "noseWidth": 0.402,
+        "noseLength": 0.497,
+        "mouthWidth": 0.595,
+        "mouthFullness": 0.615
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "heart",
+      "faceShapeRule": {
+        "rule": "heart: jawWidth < 0.780",
+        "inputs": {
+          "faceWidth": 0.833,
+          "jawWidth": 0.7743,
+          "chinRoundness": 0.3476,
+          "foreheadWidth": 0.6992
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "shoulder-length",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#d8ad9b",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                692.5,
+                1112.5
+              ],
+              "radiusPx": 59,
+              "sampledPx": 10913,
+              "retainedPx": 10913,
+              "hex": "#d0a694"
+            },
+            {
+              "centre": [
+                1146.3,
+                947.9
+              ],
+              "radiusPx": 59,
+              "sampledPx": 10913,
+              "retainedPx": 10913,
+              "hex": "#e0b5a3"
+            }
+          ],
+          "sampledPx": 21826,
+          "retainedPx": 21826,
+          "labMedian": [
+            74.2,
+            13.0,
+            15.0
+          ],
+          "mad": {
+            "L": 4.2,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.742,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#24221e",
+          "source": "measured",
+          "rect": {
+            "x": 605,
+            "y": 416,
+            "width": 360,
+            "height": 166
+          },
+          "sampledPx": 59760,
+          "retainedPx": 59760,
+          "clusterPx": 35961,
+          "rejected": null,
+          "labMedian": [
+            13.3,
+            0.0,
+            3.0
+          ],
+          "mad": {
+            "L": 2.4,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.83,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-07-b92be47d",
+      "photoId": "commons-chang-po-yang",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 2336,
+      "imageHeight": 2656,
+      "measuredRatios": {
+        "faceWidth": 0.8552,
+        "faceLength": 2.5927,
+        "jawWidth": 0.7926,
+        "chinRoundness": 0.2843,
+        "cheekFullness": 2.7117,
+        "eyeSize": 0.1903,
+        "eyeSpacing": 1.2967,
+        "eyeHeight": 0.3125,
+        "eyeTilt": 0.0469,
+        "noseWidth": 0.2925,
+        "noseLength": 0.2508,
+        "mouthWidth": 0.3688,
+        "mouthFullness": 0.3166,
+        "foreheadWidth": 0.7337
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8552
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.5927
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7926
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.2843
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.7117
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1903
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.2967
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.3125
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.0469
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.2925
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2508
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.3688
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3166
+        }
+      },
+      "values": {
+        "faceWidth": 0.396,
+        "faceLength": 0.507,
+        "jawWidth": 0.519,
+        "chinRoundness": 0.322,
+        "cheekFullness": 0.89,
+        "eyeSize": 0.588,
+        "eyeSpacing": 0.076,
+        "eyeHeight": 0.697,
+        "eyeTilt": -0.354,
+        "noseWidth": 0.125,
+        "noseLength": 0.154,
+        "mouthWidth": 0.125,
+        "mouthFullness": 0.473
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "facialHair"
+      ],
+      "faceShape": "oval",
+      "faceShapeRule": {
+        "rule": "oval: no other rule matched",
+        "inputs": {
+          "faceWidth": 0.8552,
+          "jawWidth": 0.7926,
+          "chinRoundness": 0.2843,
+          "foreheadWidth": 0.7337
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "short-crop",
+          "basis": "default"
+        },
+        "glasses": {
+          "enabled": true,
+          "style": "round",
+          "basis": "estimated"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#d8ac91",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                903.9,
+                1076.5
+              ],
+              "radiusPx": 65,
+              "sampledPx": 13273,
+              "retainedPx": 13213,
+              "hex": "#e9c0a8"
+            },
+            {
+              "centre": [
+                1413.4,
+                1085.1
+              ],
+              "radiusPx": 65,
+              "sampledPx": 13273,
+              "retainedPx": 13202,
+              "hex": "#c89a7b"
+            }
+          ],
+          "sampledPx": 26546,
+          "retainedPx": 26415,
+          "labMedian": [
+            73.9,
+            12.0,
+            20.5
+          ],
+          "mad": {
+            "L": 4.2,
+            "b": 1.5
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.714,
+            "retainedFraction": 0.995
+          }
+        },
+        "hair": {
+          "hex": "#1c1512",
+          "source": "measured",
+          "rect": {
+            "x": 988,
+            "y": 372,
+            "width": 398,
+            "height": 179
+          },
+          "sampledPx": 71242,
+          "retainedPx": 70284,
+          "clusterPx": 43714,
+          "rejected": null,
+          "labMedian": [
+            7.5,
+            3.0,
+            3.0
+          ],
+          "mad": {
+            "L": 2.7,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.804,
+            "retainedFraction": 0.987
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-06-b48fe8fe",
+      "photoId": "commons-chen-mei-ya",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 703,
+      "imageHeight": 938,
+      "measuredRatios": {
+        "faceWidth": 0.8107,
+        "faceLength": 2.6437,
+        "jawWidth": 0.7958,
+        "chinRoundness": 0.3604,
+        "cheekFullness": 2.2481,
+        "eyeSize": 0.1971,
+        "eyeSpacing": 1.3643,
+        "eyeHeight": 0.3458,
+        "eyeTilt": 0.2152,
+        "noseWidth": 0.3089,
+        "noseLength": 0.2837,
+        "mouthWidth": 0.4448,
+        "mouthFullness": 0.3808,
+        "foreheadWidth": 0.7334
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8107
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.6437
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7958
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3604
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.2481
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1971
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3643
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.3458
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.2152
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3089
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2837
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4448
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3808
+        }
+      },
+      "values": {
+        "faceWidth": 0.162,
+        "faceLength": 0.641,
+        "jawWidth": 0.541,
+        "chinRoundness": 0.702,
+        "cheekFullness": 0.31,
+        "eyeSize": 0.702,
+        "eyeSpacing": 0.383,
+        "eyeHeight": 0.873,
+        "eyeTilt": 0.768,
+        "noseWidth": 0.398,
+        "noseLength": 0.624,
+        "mouthWidth": 0.632,
+        "mouthFullness": 0.68
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "oblong",
+      "faceShapeRule": {
+        "rule": "oblong: faceWidth < 0.830",
+        "inputs": {
+          "faceWidth": 0.8107,
+          "jawWidth": 0.7958,
+          "chinRoundness": 0.3604,
+          "foreheadWidth": 0.7334
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "shoulder-length",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#efc7b5",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                211.1,
+                495.4
+              ],
+              "radiusPx": 30,
+              "sampledPx": 2821,
+              "retainedPx": 2821,
+              "hex": "#f4cfc2"
+            },
+            {
+              "centre": [
+                454.4,
+                452.4
+              ],
+              "radiusPx": 30,
+              "sampledPx": 2821,
+              "retainedPx": 2821,
+              "hex": "#ebbca9"
+            }
+          ],
+          "sampledPx": 5642,
+          "retainedPx": 5642,
+          "labMedian": [
+            83.0,
+            12.5,
+            13.5
+          ],
+          "mad": {
+            "L": 2.2,
+            "b": 2.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.792,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#3b1f19",
+          "source": "measured",
+          "rect": {
+            "x": 180,
+            "y": 146,
+            "width": 184,
+            "height": 87
+          },
+          "sampledPx": 16008,
+          "retainedPx": 13815,
+          "clusterPx": 8358,
+          "rejected": null,
+          "labMedian": [
+            15.3,
+            13.0,
+            10.0
+          ],
+          "mad": {
+            "L": 7.5,
+            "b": 3.0
+          },
+          "confidence": {
+            "level": "low",
+            "score": 0.41,
+            "retainedFraction": 0.863
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-fa4f92b7",
+      "photoId": "commons-huang-wen-jhih",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 2224,
+      "imageHeight": 2304,
+      "measuredRatios": {
+        "faceWidth": 0.8366,
+        "faceLength": 2.7342,
+        "jawWidth": 0.7778,
+        "chinRoundness": 0.3134,
+        "cheekFullness": 2.0723,
+        "eyeSize": 0.1828,
+        "eyeSpacing": 1.3087,
+        "eyeHeight": 0.261,
+        "eyeTilt": 0.1043,
+        "noseWidth": 0.3193,
+        "noseLength": 0.2718,
+        "mouthWidth": 0.4826,
+        "mouthFullness": 0.3076,
+        "foreheadWidth": 0.7156
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8366
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.7342
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7778
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3134
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.0723
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1828
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3087
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.261
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.1043
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3193
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2718
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4826
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3076
+        }
+      },
+      "values": {
+        "faceWidth": 0.298,
+        "faceLength": 0.879,
+        "jawWidth": 0.413,
+        "chinRoundness": 0.467,
+        "cheekFullness": 0.09,
+        "eyeSize": 0.463,
+        "eyeSpacing": 0.13,
+        "eyeHeight": 0.426,
+        "eyeTilt": 0.029,
+        "noseWidth": 0.572,
+        "noseLength": 0.454,
+        "mouthWidth": 0.884,
+        "mouthFullness": 0.444
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "heart",
+      "faceShapeRule": {
+        "rule": "heart: jawWidth < 0.780",
+        "inputs": {
+          "faceWidth": 0.8366,
+          "jawWidth": 0.7778,
+          "chinRoundness": 0.3134,
+          "foreheadWidth": 0.7156
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "short-crop",
+          "basis": "default"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#c7a299",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                766.5,
+                1071.7
+              ],
+              "radiusPx": 65,
+              "sampledPx": 13273,
+              "retainedPx": 13273,
+              "hex": "#a2766c"
+            },
+            {
+              "centre": [
+                1293.2,
+                1039.7
+              ],
+              "radiusPx": 65,
+              "sampledPx": 13273,
+              "retainedPx": 13273,
+              "hex": "#edd1ca"
+            }
+          ],
+          "sampledPx": 26546,
+          "retainedPx": 26546,
+          "labMedian": [
+            69.8,
+            12.5,
+            9.5
+          ],
+          "mad": {
+            "L": 4.3,
+            "b": 1.5
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.708,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#0e0e0e",
+          "source": "measured",
+          "rect": {
+            "x": 802,
+            "y": 352,
+            "width": 394,
+            "height": 181
+          },
+          "sampledPx": 71314,
+          "retainedPx": 69552,
+          "clusterPx": 42942,
+          "rejected": null,
+          "labMedian": [
+            3.9,
+            0.0,
+            0.0
+          ],
+          "mad": {
+            "L": 1.2,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.868,
+            "retainedFraction": 0.975
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-08-3c0e0184",
+      "photoId": "commons-huang-wen-yi",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "probable",
+      "imageWidth": 1579,
+      "imageHeight": 2026,
+      "measuredRatios": {
+        "faceWidth": 0.8444,
+        "faceLength": 2.5511,
+        "jawWidth": 0.7862,
+        "chinRoundness": 0.3108,
+        "cheekFullness": 2.4552,
+        "eyeSize": 0.1833,
+        "eyeSpacing": 1.4438,
+        "eyeHeight": 0.2034,
+        "eyeTilt": 0.0841,
+        "noseWidth": 0.3085,
+        "noseLength": 0.2473,
+        "mouthWidth": 0.4073,
+        "mouthFullness": 0.4635,
+        "foreheadWidth": 0.7267
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8444
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.5511
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7862
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3108
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.4552
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1833
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.4438
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.2034
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.0841
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3085
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2473
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4073
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.4635
+        }
+      },
+      "values": {
+        "faceWidth": 0.339,
+        "faceLength": 0.398,
+        "jawWidth": 0.473,
+        "chinRoundness": 0.454,
+        "cheekFullness": 0.569,
+        "eyeSize": 0.472,
+        "eyeSpacing": 0.745,
+        "eyeHeight": 0.123,
+        "eyeTilt": -0.106,
+        "noseWidth": 0.392,
+        "noseLength": 0.104,
+        "mouthWidth": 0.382,
+        "mouthFullness": 0.947
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "facialHair"
+      ],
+      "faceShape": "oval",
+      "faceShapeRule": {
+        "rule": "oval: no other rule matched",
+        "inputs": {
+          "faceWidth": 0.8444,
+          "jawWidth": 0.7862,
+          "chinRoundness": 0.3108,
+          "foreheadWidth": 0.7267
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "short-side-part",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": true,
+          "style": "rectangular",
+          "basis": "estimated"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#e1bba1",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                544.6,
+                1066.4
+              ],
+              "radiusPx": 68,
+              "sampledPx": 14505,
+              "retainedPx": 14505,
+              "hex": "#e5c1a6"
+            },
+            {
+              "centre": [
+                1084.2,
+                1028.3
+              ],
+              "radiusPx": 68,
+              "sampledPx": 14505,
+              "retainedPx": 14505,
+              "hex": "#ddb59c"
+            }
+          ],
+          "sampledPx": 29010,
+          "retainedPx": 29010,
+          "labMedian": [
+            78.5,
+            10.0,
+            18.0
+          ],
+          "mad": {
+            "L": 1.4,
+            "b": 1.5
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.855,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#302423",
+          "source": "measured",
+          "rect": {
+            "x": 575,
+            "y": 312,
+            "width": 414,
+            "height": 188
+          },
+          "sampledPx": 77832,
+          "retainedPx": 77832,
+          "clusterPx": 47344,
+          "rejected": null,
+          "labMedian": [
+            15.7,
+            5.0,
+            3.0
+          ],
+          "mad": {
+            "L": 3.1,
+            "b": 2.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.745,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-07-afc23f7d",
+      "photoId": "commons-kang-yu-cheng",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 1358,
+      "imageHeight": 1855,
+      "measuredRatios": {
+        "faceWidth": 0.8127,
+        "faceLength": 2.6852,
+        "jawWidth": 0.7759,
+        "chinRoundness": 0.396,
+        "cheekFullness": 2.2763,
+        "eyeSize": 0.1828,
+        "eyeSpacing": 1.3619,
+        "eyeHeight": 0.245,
+        "eyeTilt": 0.1107,
+        "noseWidth": 0.3032,
+        "noseLength": 0.2665,
+        "mouthWidth": 0.4393,
+        "mouthFullness": 0.4316,
+        "foreheadWidth": 0.6615
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8127
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.6852
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7759
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.396
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.2763
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1828
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3619
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.245
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.1107
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3032
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2665
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4393
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.4316
+        }
+      },
+      "values": {
+        "faceWidth": 0.172,
+        "faceLength": 0.751,
+        "jawWidth": 0.399,
+        "chinRoundness": 0.88,
+        "cheekFullness": 0.345,
+        "eyeSize": 0.463,
+        "eyeSpacing": 0.372,
+        "eyeHeight": 0.342,
+        "eyeTilt": 0.071,
+        "noseWidth": 0.303,
+        "noseLength": 0.379,
+        "mouthWidth": 0.595,
+        "mouthFullness": 0.844
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "facialHair"
+      ],
+      "faceShape": "diamond",
+      "faceShapeRule": {
+        "rule": "diamond: foreheadWidth < 0.690 and jawWidth < 0.790",
+        "inputs": {
+          "faceWidth": 0.8127,
+          "jawWidth": 0.7759,
+          "chinRoundness": 0.396,
+          "foreheadWidth": 0.6615
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "bob",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": true,
+          "style": "rectangular",
+          "basis": "estimated"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#d4b5aa",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                497.3,
+                687.4
+              ],
+              "radiusPx": 41,
+              "sampledPx": 5261,
+              "retainedPx": 5261,
+              "hex": "#dbbfb2"
+            },
+            {
+              "centre": [
+                827.8,
+                690.7
+              ],
+              "radiusPx": 41,
+              "sampledPx": 5261,
+              "retainedPx": 5261,
+              "hex": "#cdac9f"
+            }
+          ],
+          "sampledPx": 10522,
+          "retainedPx": 10522,
+          "labMedian": [
+            76.1,
+            9.0,
+            10.5
+          ],
+          "mad": {
+            "L": 3.4,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.782,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#241d1d",
+          "source": "measured",
+          "rect": {
+            "x": 513,
+            "y": 240,
+            "width": 252,
+            "height": 119
+          },
+          "sampledPx": 29988,
+          "retainedPx": 29984,
+          "clusterPx": 18146,
+          "rejected": null,
+          "labMedian": [
+            11.4,
+            4.0,
+            1.0
+          ],
+          "mad": {
+            "L": 1.6,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.87,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-mayor-ke-zhi-en-2026",
+      "appearanceId": "mayor-ke-zhi-en-2026",
+      "photoId": "commons-ke-chih-en",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 826,
+      "imageHeight": 1062,
+      "measuredRatios": {
+        "faceWidth": 0.8781,
+        "faceLength": 2.5464,
+        "jawWidth": 0.7771,
+        "chinRoundness": 0.3138,
+        "cheekFullness": 2.3728,
+        "eyeSize": 0.1802,
+        "eyeSpacing": 1.475,
+        "eyeHeight": 0.3363,
+        "eyeTilt": 0.1742,
+        "noseWidth": 0.3012,
+        "noseLength": 0.2978,
+        "mouthWidth": 0.4214,
+        "mouthFullness": 0.2776,
+        "foreheadWidth": 0.7152
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8781
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.5464
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7771
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3138
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.3728
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1802
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.475
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.3363
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.1742
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3012
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2978
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4214
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.2776
+        }
+      },
+      "values": {
+        "faceWidth": 0.516,
+        "faceLength": 0.385,
+        "jawWidth": 0.408,
+        "chinRoundness": 0.469,
+        "cheekFullness": 0.466,
+        "eyeSize": 0.42,
+        "eyeSpacing": 0.886,
+        "eyeHeight": 0.823,
+        "eyeTilt": 0.495,
+        "noseWidth": 0.27,
+        "noseLength": 0.826,
+        "mouthWidth": 0.476,
+        "mouthFullness": 0.347
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "heart",
+      "faceShapeRule": {
+        "rule": "heart: jawWidth < 0.780",
+        "inputs": {
+          "faceWidth": 0.8781,
+          "jawWidth": 0.7771,
+          "chinRoundness": 0.3138,
+          "foreheadWidth": 0.7152
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "bob",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#f2bcb7",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                242.0,
+                605.2
+              ],
+              "radiusPx": 40,
+              "sampledPx": 5025,
+              "retainedPx": 4916,
+              "hex": "#eebab6"
+            },
+            {
+              "centre": [
+                564.8,
+                598.4
+              ],
+              "radiusPx": 40,
+              "sampledPx": 5025,
+              "retainedPx": 4212,
+              "hex": "#f6bdb9"
+            }
+          ],
+          "sampledPx": 10050,
+          "retainedPx": 9128,
+          "labMedian": [
+            80.8,
+            19.0,
+            9.5
+          ],
+          "mad": {
+            "L": 2.4,
+            "b": 3.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.665,
+            "retainedFraction": 0.908
+          }
+        },
+        "hair": {
+          "hex": "#3a2f33",
+          "source": "measured",
+          "rect": {
+            "x": 273,
+            "y": 179,
+            "width": 246,
+            "height": 108
+          },
+          "sampledPx": 26568,
+          "retainedPx": 26551,
+          "clusterPx": 15936,
+          "rejected": null,
+          "labMedian": [
+            20.8,
+            6.0,
+            -1.0
+          ],
+          "mad": {
+            "L": 5.1,
+            "b": 4.0
+          },
+          "confidence": {
+            "level": "low",
+            "score": 0.545,
+            "retainedFraction": 0.999
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-mayor-lai-rui-long-2026",
+      "appearanceId": "mayor-lai-rui-long-2026",
+      "photoId": "commons-lai-rui-long",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 933,
+      "imageHeight": 1280,
+      "measuredRatios": {
+        "faceWidth": 0.9417,
+        "faceLength": 2.5593,
+        "jawWidth": 0.8245,
+        "chinRoundness": 0.2475,
+        "cheekFullness": 2.4796,
+        "eyeSize": 0.1648,
+        "eyeSpacing": 1.4752,
+        "eyeHeight": 0.2768,
+        "eyeTilt": 0.0701,
+        "noseWidth": 0.2961,
+        "noseLength": 0.2735,
+        "mouthWidth": 0.4033,
+        "mouthFullness": 0.1829,
+        "foreheadWidth": 0.713
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.9417
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.5593
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.8245
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.2475
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.4796
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1648
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.4752
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.2768
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.0701
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.2961
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2735
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4033
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.1829
+        }
+      },
+      "values": {
+        "faceWidth": 0.851,
+        "faceLength": 0.419,
+        "jawWidth": 0.746,
+        "chinRoundness": 0.137,
+        "cheekFullness": 0.6,
+        "eyeSize": 0.163,
+        "eyeSpacing": 0.887,
+        "eyeHeight": 0.509,
+        "eyeTilt": -0.199,
+        "noseWidth": 0.185,
+        "noseLength": 0.479,
+        "mouthWidth": 0.355,
+        "mouthFullness": 0.042
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "facialHair"
+      ],
+      "faceShape": "square",
+      "faceShapeRule": {
+        "rule": "square: faceWidth >= 0.890 and jawWidth >= 0.795",
+        "inputs": {
+          "faceWidth": 0.9417,
+          "jawWidth": 0.8245,
+          "chinRoundness": 0.2475,
+          "foreheadWidth": 0.713
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "short-side-part",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": true,
+          "style": "rectangular",
+          "basis": "estimated"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#b6978e",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                291.1,
+                608.2
+              ],
+              "radiusPx": 41,
+              "sampledPx": 5261,
+              "retainedPx": 5261,
+              "hex": "#d8beb5"
+            },
+            {
+              "centre": [
+                606.5,
+                595.9
+              ],
+              "radiusPx": 41,
+              "sampledPx": 5261,
+              "retainedPx": 5261,
+              "hex": "#95736a"
+            }
+          ],
+          "sampledPx": 10522,
+          "retainedPx": 10522,
+          "labMedian": [
+            65.1,
+            10.0,
+            9.0
+          ],
+          "mad": {
+            "L": 4.3,
+            "b": 1.5
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.71,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#1e1c1d",
+          "source": "measured",
+          "rect": {
+            "x": 307,
+            "y": 202,
+            "width": 250,
+            "height": 102
+          },
+          "sampledPx": 25500,
+          "retainedPx": 25500,
+          "clusterPx": 15351,
+          "rejected": null,
+          "labMedian": [
+            10.6,
+            1.0,
+            0.0
+          ],
+          "mad": {
+            "L": 2.0,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.85,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": false
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-fa7345e8",
+      "photoId": "commons-li-mei-jhen",
+      "usability": "low-resolution",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 225,
+      "imageHeight": 300,
+      "measuredRatios": {
+        "faceWidth": 0.8285,
+        "faceLength": 2.5704,
+        "jawWidth": 0.7827,
+        "chinRoundness": 0.3158,
+        "cheekFullness": 2.1014,
+        "eyeSize": 0.194,
+        "eyeSpacing": 1.4029,
+        "eyeHeight": 0.2928,
+        "eyeTilt": 0.1599,
+        "noseWidth": 0.3293,
+        "noseLength": 0.2601,
+        "mouthWidth": 0.4759,
+        "mouthFullness": 0.3647,
+        "foreheadWidth": 0.7142
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8285
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.5704
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7827
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3158
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.1014
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.194
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.4029
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.2928
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.1599
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3293
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2601
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4759
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3647
+        }
+      },
+      "values": {
+        "faceWidth": 0.255,
+        "faceLength": 0.448,
+        "jawWidth": 0.448,
+        "chinRoundness": 0.479,
+        "cheekFullness": 0.127,
+        "eyeSize": 0.65,
+        "eyeSpacing": 0.559,
+        "eyeHeight": 0.594,
+        "eyeTilt": 0.399,
+        "noseWidth": 0.738,
+        "noseLength": 0.287,
+        "mouthWidth": 0.839,
+        "mouthFullness": 0.628
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "oblong",
+      "faceShapeRule": {
+        "rule": "oblong: faceWidth < 0.830",
+        "inputs": {
+          "faceWidth": 0.8285,
+          "jawWidth": 0.7827,
+          "chinRoundness": 0.3158,
+          "foreheadWidth": 0.7142
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "short-crop",
+          "basis": "default"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#e3bbb2",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                61.6,
+                148.5
+              ],
+              "radiusPx": 10,
+              "sampledPx": 317,
+              "retainedPx": 317,
+              "hex": "#e5bbb2"
+            },
+            {
+              "centre": [
+                145.1,
+                148.9
+              ],
+              "radiusPx": 10,
+              "sampledPx": 317,
+              "retainedPx": 317,
+              "hex": "#e2bdb5"
+            }
+          ],
+          "sampledPx": 634,
+          "retainedPx": 634,
+          "labMedian": [
+            79.4,
+            13.0,
+            9.5
+          ],
+          "mad": {
+            "L": 1.6,
+            "b": 0.5
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.895,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#472627",
+          "source": "measured",
+          "rect": {
+            "x": 70,
+            "y": 39,
+            "width": 62,
+            "height": 28
+          },
+          "sampledPx": 1736,
+          "retainedPx": 1731,
+          "clusterPx": 1046,
+          "rejected": null,
+          "labMedian": [
+            19.6,
+            16.0,
+            6.0
+          ],
+          "mad": {
+            "L": 3.9,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.753,
+            "retainedFraction": 0.997
+          }
+        }
+      },
+      "lowConfidence": true
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-04-291436e3",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-04-291436e3",
+      "photoId": "commons-li-ya-fen",
+      "usability": "low-resolution",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 300,
+      "imageHeight": 300,
+      "measuredRatios": {
+        "faceWidth": 0.81,
+        "faceLength": 2.6886,
+        "jawWidth": 0.7597,
+        "chinRoundness": 0.3627,
+        "cheekFullness": 2.2932,
+        "eyeSize": 0.1831,
+        "eyeSpacing": 1.3786,
+        "eyeHeight": 0.3027,
+        "eyeTilt": 0.0856,
+        "noseWidth": 0.2965,
+        "noseLength": 0.2897,
+        "mouthWidth": 0.4361,
+        "mouthFullness": 0.3987,
+        "foreheadWidth": 0.7187
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.81
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.6886
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7597
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3627
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.2932
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.1831
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3786
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.3027
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.0856
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.2965
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2897
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4361
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3987
+        }
+      },
+      "values": {
+        "faceWidth": 0.158,
+        "faceLength": 0.759,
+        "jawWidth": 0.284,
+        "chinRoundness": 0.714,
+        "cheekFullness": 0.367,
+        "eyeSize": 0.468,
+        "eyeSpacing": 0.448,
+        "eyeHeight": 0.646,
+        "eyeTilt": -0.096,
+        "noseWidth": 0.192,
+        "noseLength": 0.71,
+        "mouthWidth": 0.574,
+        "mouthFullness": 0.738
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "heart",
+      "faceShapeRule": {
+        "rule": "heart: jawWidth < 0.780",
+        "inputs": {
+          "faceWidth": 0.81,
+          "jawWidth": 0.7597,
+          "chinRoundness": 0.3627,
+          "foreheadWidth": 0.7187
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "bun",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#e4afa6",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                132.8,
+                111.4
+              ],
+              "radiusPx": 4,
+              "sampledPx": 49,
+              "retainedPx": 49,
+              "hex": "#dda398"
+            },
+            {
+              "centre": [
+                169.0,
+                112.8
+              ],
+              "radiusPx": 4,
+              "sampledPx": 49,
+              "retainedPx": 49,
+              "hex": "#ebbbb3"
+            }
+          ],
+          "sampledPx": 98,
+          "retainedPx": 98,
+          "labMedian": [
+            76.1,
+            18.0,
+            12.5
+          ],
+          "mad": {
+            "L": 1.8,
+            "b": 1.5
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.835,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#130e0f",
+          "source": "measured",
+          "rect": {
+            "x": 135,
+            "y": 61,
+            "width": 28,
+            "height": 13
+          },
+          "sampledPx": 364,
+          "retainedPx": 364,
+          "clusterPx": 229,
+          "rejected": null,
+          "labMedian": [
+            4.3,
+            2.0,
+            0.0
+          ],
+          "mad": {
+            "L": 0.8,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.91,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": true
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-08-440e3b8d",
+      "photoId": "commons-tang-yung-yu",
+      "usability": "low-resolution",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 415,
+      "imageHeight": 533,
+      "measuredRatios": {
+        "faceWidth": 0.8291,
+        "faceLength": 2.4536,
+        "jawWidth": 0.7914,
+        "chinRoundness": 0.3064,
+        "cheekFullness": 2.1583,
+        "eyeSize": 0.2058,
+        "eyeSpacing": 1.3386,
+        "eyeHeight": 0.3315,
+        "eyeTilt": 0.1548,
+        "noseWidth": 0.333,
+        "noseLength": 0.2605,
+        "mouthWidth": 0.4633,
+        "mouthFullness": 0.3637,
+        "foreheadWidth": 0.7295
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.8291
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.4536
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.7914
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.3064
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.1583
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.2058
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3386
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.3315
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.1548
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.333
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2605
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4633
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.3637
+        }
+      },
+      "values": {
+        "faceWidth": 0.258,
+        "faceLength": 0.141,
+        "jawWidth": 0.51,
+        "chinRoundness": 0.432,
+        "cheekFullness": 0.198,
+        "eyeSize": 0.847,
+        "eyeSpacing": 0.266,
+        "eyeHeight": 0.797,
+        "eyeTilt": 0.365,
+        "noseWidth": 0.8,
+        "noseLength": 0.293,
+        "mouthWidth": 0.755,
+        "mouthFullness": 0.625
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "oblong",
+      "faceShapeRule": {
+        "rule": "oblong: faceWidth < 0.830",
+        "inputs": {
+          "faceWidth": 0.8291,
+          "jawWidth": 0.7914,
+          "chinRoundness": 0.3064,
+          "foreheadWidth": 0.7295
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "shoulder-length",
+          "basis": "estimated"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#e6b8a5",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                128.2,
+                245.4
+              ],
+              "radiusPx": 13,
+              "sampledPx": 529,
+              "retainedPx": 529,
+              "hex": "#d6a491"
+            },
+            {
+              "centre": [
+                240.3,
+                239.5
+              ],
+              "radiusPx": 13,
+              "sampledPx": 529,
+              "retainedPx": 529,
+              "hex": "#f5cebc"
+            }
+          ],
+          "sampledPx": 1058,
+          "retainedPx": 1058,
+          "labMedian": [
+            78.5,
+            13.5,
+            15.5
+          ],
+          "mad": {
+            "L": 2.4,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.833,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#332a28",
+          "source": "measured",
+          "rect": {
+            "x": 131,
+            "y": 94,
+            "width": 82,
+            "height": 38
+          },
+          "sampledPx": 3116,
+          "retainedPx": 3116,
+          "clusterPx": 1875,
+          "rejected": null,
+          "labMedian": [
+            18.0,
+            4.0,
+            3.0
+          ],
+          "mad": {
+            "L": 3.1,
+            "b": 0.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.845,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": true
+    },
+    {
+      "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "appearanceId": "candidate-2026-district-kaohsiung-council-07-9cddec16",
+      "photoId": "commons-tseng-chun-chieh",
+      "usability": "usable",
+      "view": "frontal",
+      "identityConfidence": "source-linked",
+      "imageWidth": 2800,
+      "imageHeight": 3500,
+      "measuredRatios": {
+        "faceWidth": 0.9208,
+        "faceLength": 2.4485,
+        "jawWidth": 0.8013,
+        "chinRoundness": 0.2439,
+        "cheekFullness": 2.4963,
+        "eyeSize": 0.184,
+        "eyeSpacing": 1.3913,
+        "eyeHeight": 0.3122,
+        "eyeTilt": 0.137,
+        "noseWidth": 0.3012,
+        "noseLength": 0.2648,
+        "mouthWidth": 0.4006,
+        "mouthFullness": 0.238,
+        "foreheadWidth": 0.7256
+      },
+      "windows": {
+        "faceWidth": {
+          "lo": 0.78,
+          "hi": 0.97,
+          "ratio": 0.9208
+        },
+        "faceLength": {
+          "lo": 2.4,
+          "hi": 2.78,
+          "ratio": 2.4485
+        },
+        "jawWidth": {
+          "lo": 0.72,
+          "hi": 0.86,
+          "ratio": 0.8013
+        },
+        "chinRoundness": {
+          "lo": 0.22,
+          "hi": 0.42,
+          "ratio": 0.2439
+        },
+        "cheekFullness": {
+          "lo": 2.0,
+          "hi": 2.8,
+          "ratio": 2.4963
+        },
+        "eyeSize": {
+          "lo": 0.155,
+          "hi": 0.215,
+          "ratio": 0.184
+        },
+        "eyeSpacing": {
+          "lo": 1.28,
+          "hi": 1.5,
+          "ratio": 1.3913
+        },
+        "eyeHeight": {
+          "lo": 0.18,
+          "hi": 0.37,
+          "ratio": 0.3122
+        },
+        "eyeTilt": {
+          "lo": -0.05,
+          "hi": 0.25,
+          "ratio": 0.137
+        },
+        "noseWidth": {
+          "lo": 0.285,
+          "hi": 0.345,
+          "ratio": 0.3012
+        },
+        "noseLength": {
+          "lo": 0.24,
+          "hi": 0.31,
+          "ratio": 0.2648
+        },
+        "mouthWidth": {
+          "lo": 0.35,
+          "hi": 0.5,
+          "ratio": 0.4006
+        },
+        "mouthFullness": {
+          "lo": 0.17,
+          "hi": 0.48,
+          "ratio": 0.238
+        }
+      },
+      "values": {
+        "faceWidth": 0.741,
+        "faceLength": 0.128,
+        "jawWidth": 0.581,
+        "chinRoundness": 0.12,
+        "cheekFullness": 0.62,
+        "eyeSize": 0.483,
+        "eyeSpacing": 0.506,
+        "eyeHeight": 0.696,
+        "eyeTilt": 0.247,
+        "noseWidth": 0.27,
+        "noseLength": 0.354,
+        "mouthWidth": 0.337,
+        "mouthFullness": 0.219
+      },
+      "defaultedParameters": [
+        "eyebrowThickness",
+        "eyebrowAngle",
+        "hairVolume",
+        "hairStyle",
+        "glasses",
+        "facialHair"
+      ],
+      "faceShape": "square",
+      "faceShapeRule": {
+        "rule": "square: faceWidth >= 0.890 and jawWidth >= 0.795",
+        "inputs": {
+          "faceWidth": 0.9208,
+          "jawWidth": 0.8013,
+          "chinRoundness": 0.2439,
+          "foreheadWidth": 0.7256
+        }
+      },
+      "categorical": {
+        "hairStyle": {
+          "value": "short-crop",
+          "basis": "default"
+        },
+        "glasses": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        },
+        "facialHair": {
+          "enabled": false,
+          "style": "none",
+          "basis": "default"
+        }
+      },
+      "colors": {
+        "skin": {
+          "hex": "#d5ae99",
+          "source": "measured",
+          "patches": [
+            {
+              "centre": [
+                971.7,
+                1573.5
+              ],
+              "radiusPx": 111,
+              "sampledPx": 38669,
+              "retainedPx": 38669,
+              "hex": "#d3ad9a"
+            },
+            {
+              "centre": [
+                1853.3,
+                1567.0
+              ],
+              "radiusPx": 111,
+              "sampledPx": 38669,
+              "retainedPx": 38669,
+              "hex": "#d6af9a"
+            }
+          ],
+          "sampledPx": 77338,
+          "retainedPx": 77338,
+          "labMedian": [
+            74.1,
+            11.0,
+            15.5
+          ],
+          "mad": {
+            "L": 2.5,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "high",
+            "score": 0.823,
+            "retainedFraction": 1.0
+          }
+        },
+        "hair": {
+          "hex": "#2e2523",
+          "source": "measured",
+          "rect": {
+            "x": 1055,
+            "y": 430,
+            "width": 680,
+            "height": 285
+          },
+          "sampledPx": 193800,
+          "retainedPx": 193721,
+          "clusterPx": 116678,
+          "rejected": null,
+          "labMedian": [
+            15.7,
+            4.0,
+            3.0
+          ],
+          "mad": {
+            "L": 3.9,
+            "b": 1.0
+          },
+          "confidence": {
+            "level": "medium",
+            "score": 0.755,
+            "retainedFraction": 1.0
+          }
+        }
+      },
+      "lowConfidence": false
+    }
+  ],
+  "limitations": [
+    "Single-photo 478-point landmarks are a 2D projection: no skull depth, brow ridge depth or head volume is measured, so these are proportion estimates, not 3D head geometry.",
+    "Nothing here is a verified likeness. reviewStatus stays \"extracted\" until a named human compares a rendered head kit against the licensed photograph.",
+    "faceShape comes from coarse ratio thresholds on one photograph and is the least reliable output; a reviewer may override it.",
+    "eyeTilt is systematically positive for this landmark set, so it is a relative canthal tilt, not an absolute measurement.",
+    "Width ratios are distorted by head yaw: the three-quarter-view portrait (commons-bai-ciao-yin) and any slight head turn widen or narrow the cheek measurement.",
+    "mouthFullness uses outer lip height, so an open-mouth smile inflates it (see per-candidate measuredRatios for the raw value).",
+    "Hair colour falls back to observations.json hairColor when the hairline patch is not measurably darker than skin; the per-candidate colors.hair.source records which path was taken.",
+    "eyebrowThickness, eyebrowAngle and hairVolume are not measurable from these landmarks and are always schema defaults (basis \"default\", no photoIds).",
+    "Hair style, glasses and facial hair are copied from the machine-assisted observations.json labels and remain basis \"estimated\"; they are never upgraded to \"observed\"."
+  ]
+}

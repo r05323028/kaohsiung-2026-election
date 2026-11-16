@@ -88,6 +88,9 @@
 | `policy-career-separation.json` | 1,017 筆分類（1,010 承諾、9 歷程、3 拆分）＋21 連結 | approved，2026-11-14 |
 | `political-family.json` | 45 人、24 關係、32 來源 | published，需雙重證據 |
 | scoped enrichment artifacts | 歷史範圍研究與自動化檢核輸出；不屬於 106 人全名冊的公開候選人資料層 | 排除於全名冊覆蓋稽核與公開載入器 |
+| likeness photos／appearances | 12 位候選人的 Wikimedia Commons 肖像、授權與外觀參數；身分只到「來源連結」層級 | 研究用，未公開；照片位元組留存於 gitignored 快取 |
+
+likeness 照片只記錄 URL、作者、授權與雜湊；不得在未確認授權與身分的情況下重新散布，也不得以「查無照片」推論當事人外觀。管線與發布閘門見 `docs/CITY_AND_CHARACTERS.md`。
 
 歷史 scoped 研究與自動化檢核輸出不併入 106 人全名冊稽核，也不由 production loader 讀取；若要重新納入，必須建立新的不可變來源快照並重新通過全名冊身分、證據與發布閘門。
 

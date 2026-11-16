@@ -6,9 +6,7 @@ import {
   validatePoliticalFamilyVerificationCorrections,
 } from '../src/data/political-family/corrections';
 import {
-  type PoliticalFamilyPublicationApproval,
   validatePoliticalFamilyPublication,
-  validatePoliticalFamilyPublicationApproval,
   validatePoliticalFamilyPublicationReferences,
   validatePoliticalFamilyReferences,
   validatePoliticalFamilyResearch,
@@ -144,7 +142,7 @@ type Relationship = {
   relationshipLabel: string;
   personALabel: string;
   personBLabel: string;
-  verificationStatus: 'verified' | 'pending-review' | 'rejected';
+  verificationStatus: 'verified' | 'pending-verification' | 'rejected';
   kinshipSourceIds: string[];
   positionSourceIds: string[];
   sourceIds: string[];
@@ -171,10 +169,6 @@ const findingsPath = join(
 const verificationPath = join(
   root,
   'data/research/2026/political-family/verification.json',
-);
-const approvalPath = join(
-  root,
-  'data/research/2026/political-family/publication-approval.json',
 );
 const correctionsPath = join(
   root,
@@ -987,10 +981,6 @@ function readVerification(
   return records;
 }
 
-function readApproval(): PoliticalFamilyPublicationApproval {
-  return validatePoliticalFamilyPublicationApproval(readJson(approvalPath));
-}
-
 function buildFindings(
   rows: RawRow[],
   researchers: string[],
@@ -1174,7 +1164,6 @@ function relationProposalKey(relation: RawRelation): string {
 function canonicalizeRelationInputs(
   relations: RawRelation[],
   verificationByKey: Map<string, VerificationRecord>,
-  approvedIds: Set<string>,
 ): RawRelation[] {
   const groups = new Map<string, RawRelation[]>();
   for (const relation of relations) {
@@ -1214,9 +1203,7 @@ function canonicalizeRelationInputs(
       }
     }
     const score = (relation: RawRelation): number => {
-      const id = 'family-relation-' + hash(stableRelationKey(relation));
       let value = 0;
-      if (approvedIds.has(id)) value += 1000;
       if (relation.researchOrigin === 'network') value += 20;
       if (relationshipType(relation.relation) !== 'other') value += 5;
       if (relationDirection(relation.relation) !== 'other') value += 2;
@@ -1255,13 +1242,6 @@ for (const record of verification) {
   }
   verificationByKey.set(key, record);
 }
-const approvalForSelection = readApproval();
-const approvedSelectionIds = new Set([
-  ...approvalForSelection.approvedRelationshipIds,
-  ...(approvalForSelection.agentApprovals ?? []).flatMap(
-    (entry) => entry.relationshipIds,
-  ),
-]);
 const correctionByKey = new Map(
   corrections.records.map((record) => [
     record.candidateId + String.fromCharCode(124) + record.relativeName,
@@ -1272,7 +1252,6 @@ const appliedCorrectionKeys = new Set<string>();
 const relationInputs = canonicalizeRelationInputs(
   proposedRelations,
   verificationByKey,
-  approvedSelectionIds,
 ).map((relation) => {
   const key =
     relation.candidateId +
@@ -1479,7 +1458,7 @@ for (const relation of relationInputs) {
       ? 'verified'
       : verificationRecord?.status === 'rejected'
         ? 'rejected'
-        : 'pending-review';
+        : 'pending-verification';
   relationships.push({
     id: relationId,
     personAId: `person-${candidate.slug}`,
@@ -1497,13 +1476,13 @@ for (const relation of relationInputs) {
   if (status !== 'verified') {
     const reason =
       (conflicted
-        ? '同一候選人的同一姓名出現方向矛盾的親屬主張，身分與關係方向待人工確認。'
+        ? '同一候選人的同一姓名出現方向矛盾的親屬主張，身分與關係方向待來源確認。'
         : undefined) ??
       (directionMismatch
-        ? '獨立查核記錄的親屬方向與研究主張相反，關係方向待人工確認。'
+        ? '獨立查核記錄的親屬方向與研究主張相反，關係方向待來源確認。'
         : undefined) ??
       (identityConflict
-        ? '同一姓名在其他候選人脈絡中出現不同的職務指紋，身分待複查。'
+        ? '同一姓名在其他候選人脈絡中出現不同的職務指紋，身分待來源複查。'
         : undefined) ??
       verificationRecord?.rationale ??
       stringArray(relation.contradictions).join('；') ??
@@ -1526,7 +1505,7 @@ for (const relation of relationInputs) {
 // verification outcome, or candidate assignment counts break.
 const relationshipRank: Record<Relationship['verificationStatus'], number> = {
   verified: 3,
-  'pending-review': 2,
+  'pending-verification': 2,
   rejected: 1,
 };
 const relationshipById = new Map<string, Relationship>();
@@ -1702,7 +1681,8 @@ const candidateResearch = roster.map((candidate) => {
     verifiedRelationshipIds: publishedRelationIds,
     pendingRelationshipIds: candidateRelations
       .filter(
-        (relationship) => relationship.verificationStatus === 'pending-review',
+        (relationship) =>
+          relationship.verificationStatus === 'pending-verification',
       )
       .map((relationship) => relationship.id),
     rejectedRelationshipIds: candidateRelations
@@ -1747,29 +1727,7 @@ const verifiedRelationships = relationships.filter(
   ): relationship is Relationship & { verificationStatus: 'verified' } =>
     relationship.verificationStatus === 'verified',
 );
-const approval = approvalForSelection;
-const verifiedRelationIds = new Set(
-  verifiedRelationships.map((relation) => relation.id),
-);
-const agentApprovedRelationIds = new Set(
-  (approval.agentApprovals ?? []).flatMap((entry) => entry.relationshipIds),
-);
-const duplicateApprovalIds = [...agentApprovedRelationIds].filter((id) =>
-  approval.approvedRelationshipIds.includes(id),
-);
-if (duplicateApprovalIds.length > 0) {
-  throw new Error(
-    'Relationships cannot carry both editorial and agent approvals: ' +
-      duplicateApprovalIds.join(', '),
-  );
-}
-const approvedRelationIds = new Set(approval.approvedRelationshipIds);
-for (const id of agentApprovedRelationIds) approvedRelationIds.add(id);
-// A relation can be independently verified as a kinship and still have no
-// qualifying public or corporate position. Those belong in the research
-// layer only: listing them as "awaiting approval" would ask an editor to
-// approve something the publication rules can never publish.
-const publishableVerifiedRelationships = verifiedRelationships.filter(
+const publicationEligibleRelationships = verifiedRelationships.filter(
   (relationship) => {
     const person = peopleById.get(relationship.personBId);
     return Boolean(
@@ -1781,48 +1739,14 @@ const publishableVerifiedRelationships = verifiedRelationships.filter(
     );
   },
 );
-const publishableVerifiedRelationIds = new Set(
-  publishableVerifiedRelationships.map((relationship) => relationship.id),
+const publicationEligibleRelationshipIds = new Set(
+  publicationEligibleRelationships.map((relationship) => relationship.id),
 );
-const unpublishableVerifiedRelationships = verifiedRelationships.filter(
-  (relationship) => !publishableVerifiedRelationIds.has(relationship.id),
-);
-const missingApprovals = [...publishableVerifiedRelationIds].filter(
-  (id) => !approvedRelationIds.has(id),
-);
-const unexpectedApprovals = [...approvedRelationIds].filter(
-  (id) => !verifiedRelationIds.has(id),
-);
-// Verification and editorial approval are separate gates: a relation that
-// passed independent checking is still withheld until an editor approves it,
-// so a new verification batch never publishes itself.
-const pendingApprovalRelationships = missingApprovals.map((id) => {
-  const relationship = relationshipById.get(id);
-  const person = relationship
-    ? peopleById.get(relationship.personBId)
-    : undefined;
-  return {
-    relationshipId: id,
-    candidateId: relationship?.personAId ?? null,
-    relativeName: person?.displayName ?? null,
-    relationshipLabel: relationship?.relationshipLabel ?? null,
-  };
-});
-writeJson(join(root, 'reports/political-family-approvals-pending.json'), {
-  generatedAt,
-  datasetId: 'kaohsiung-2026-political-family-pending-approvals',
-  pending: pendingApprovalRelationships,
-});
-if (pendingApprovalRelationships.length > 0) {
-  console.warn(
-    `awaiting editorial approval: ${pendingApprovalRelationships.length} (see reports/political-family-approvals-pending.json)`,
-  );
-}
-// Keep verified kinships that have no qualifying position in an auditable
-// research report. They are intentionally not published, and they are not
-// presented as approval work.
-const verifiedWithoutPosition = unpublishableVerifiedRelationships.map(
-  (relationship) => {
+const verifiedWithoutPosition = verifiedRelationships
+  .filter(
+    (relationship) => !publicationEligibleRelationshipIds.has(relationship.id),
+  )
+  .map((relationship) => {
     const person = peopleById.get(relationship.personBId);
     return {
       relationshipId: relationship.id,
@@ -1832,10 +1756,9 @@ const verifiedWithoutPosition = unpublishableVerifiedRelationships.map(
       reason:
         '親屬關係已通過獨立查核，但查無符合收錄條件的政商職務，保留在研究層，不進入公開圖層。',
     };
-  },
-);
+  });
 writeJson(
-  join(root, 'reports/political-family-verified-without-position.json'),
+  join(root, '.cache/reports/political-family-verified-without-position.json'),
   {
     generatedAt,
     datasetId: 'kaohsiung-2026-political-family-verified-without-position',
@@ -1844,54 +1767,13 @@ writeJson(
 );
 if (verifiedWithoutPosition.length > 0) {
   console.warn(
-    `verified but no qualifying position: ${verifiedWithoutPosition.length} (see reports/political-family-verified-without-position.json)`,
+    'verified but no qualifying position: ' +
+      verifiedWithoutPosition.length +
+      ' (see .cache/reports/political-family-verified-without-position.json)',
   );
 }
-// An approval is withdrawn when the checks above stop supporting it (a
-// contradicting kinship direction, a missing source, or a lost verification
-// record). Publishing stays fail-closed: withdrawn ids never reach the
-// publication layer, and each withdrawal is written to an audit report.
-const withdrawnApprovals = unexpectedApprovals.map((id) => {
-  const relationship = relationshipById.get(id);
-  const person = relationship
-    ? peopleById.get(relationship.personBId)
-    : undefined;
-  const candidateRecord = relationship
-    ? roster.find(
-        (candidate) => 'person-' + candidate.slug === relationship.personAId,
-      )
-    : undefined;
-  const finding = unresolvedFindings.find(
-    (item) =>
-      relationship &&
-      item.candidateId === candidateRecord?.id &&
-      item.subjectName === person?.displayName,
-  );
-  return {
-    relationshipId: id,
-    candidateId: relationship?.personAId ?? null,
-    relativeName: person?.displayName ?? null,
-    relationshipLabel: relationship?.relationshipLabel ?? null,
-    previousStatus: relationship?.verificationStatus ?? 'not-generated',
-    reason:
-      finding?.reason ?? '獨立查核不再支持此關係，或關聯的來源與方向無法確認。',
-  };
-});
-writeJson(join(root, 'reports/political-family-withdrawals.json'), {
-  generatedAt,
-  datasetId: 'kaohsiung-2026-political-family-withdrawals',
-  withdrawn: withdrawnApprovals,
-});
-if (withdrawnApprovals.length > 0) {
-  console.warn(
-    `withdrawn approvals: ${withdrawnApprovals.length} (see reports/political-family-withdrawals.json)`,
-  );
-}
-const approvedRelationships = verifiedRelationships.filter((relationship) =>
-  approvedRelationIds.has(relationship.id),
-);
 const publicationCandidates = roster.map((candidate) => {
-  const relationIds = approvedRelationships
+  const relationIds = publicationEligibleRelationships
     .filter(
       (relationship) => relationship.personAId === `person-${candidate.slug}`,
     )
@@ -1918,13 +1800,13 @@ const publicationCandidates = roster.map((candidate) => {
   };
 });
 const publicationRelationPeople = new Set(
-  approvedRelationships.flatMap((relationship) => [
+  publicationEligibleRelationships.flatMap((relationship) => [
     relationship.personAId,
     relationship.personBId,
   ]),
 );
 const publicCareerSourcesByPerson = new Map<string, Set<string>>();
-for (const relationship of approvedRelationships) {
+for (const relationship of publicationEligibleRelationships) {
   const sources =
     publicCareerSourcesByPerson.get(relationship.personBId) ??
     new Set<string>();
@@ -1954,7 +1836,7 @@ const publishedAffiliationSources = new Map(
     ),
   ]),
 );
-const publicationRelationships = approvedRelationships
+const publicationRelationships = publicationEligibleRelationships
   .map((relationship) => {
     const allowed = publishedAffiliationSources.get(relationship.personBId);
     if (!allowed) return relationship;
@@ -2118,16 +2000,7 @@ const publication = {
   people: publishedPeople,
   relationships: publicationRelationships,
   candidates: unpublishedCandidates,
-  agentApprovedRelationshipIds: publicationRelationships
-    .filter((relationship) => agentApprovedRelationIds.has(relationship.id))
-    .map((relationship) => relationship.id),
-  note: agentApprovedRelationIds.size
-    ? '公開層只包含通過獨立查核、且親屬與職務均有來源支持的關係；其中 ' +
-      publicationRelationships.filter((relationship) =>
-        agentApprovedRelationIds.has(relationship.id),
-      ).length +
-      ' 筆由 agent 查核核准（非人工編輯審查），其餘由編輯核准。'
-    : '公開層只包含通過獨立查核、且親屬與職務均有來源支持的關係。',
+  note: '公開層只包含通過獨立查核、且親屬與職務均有來源支持的關係；發布資格由來源與關係完整性規則決定，內容變更透過 Pull Request 審查。',
 };
 
 function writeJson(path: string, value: unknown): void {
@@ -2222,7 +2095,7 @@ const report = {
       .map(({ id, publisher, title, url }) => ({ id, publisher, title, url })),
   })),
 };
-writeJson(join(root, 'reports/political-family-research.json'), report);
+writeJson(join(root, '.cache/reports/political-family-research.json'), report);
 
 const matrix = candidateResearch
   .map(
@@ -2237,14 +2110,14 @@ const sourceLinks = (ids: string[]): string =>
       return source ? `${id} (${source.url})` : id;
     })
     .join(', ');
-const publishedLines = approvedRelationships
+const publishedLines = publicationEligibleRelationships
   .map(
     (relation) =>
       `- ${relation.id}: ${relation.personAId} — ${relation.relationshipLabel} — ${relation.personBId}; kinship sources ${sourceLinks(relation.kinshipSourceIds)}; career sources ${sourceLinks(relation.positionSourceIds)}.`,
   )
   .join('\n');
 writeJson(
-  join(root, 'reports/political-family-corrections.json'),
+  join(root, '.cache/reports/political-family-corrections.json'),
   correctionReport,
 );
 
@@ -2258,19 +2131,19 @@ const verificationLines = verification
   )
   .join('\n\n');
 writeText(
-  join(root, 'reports/political-family-research.md'),
-  `# Political family research\n\n- Snapshot: ${snapshotDate}\n- Research cutoff: ${researchDate}\n- Candidates in canonical roster: ${roster.length}\n- Candidate research rows: ${rowByCandidate.size}/${roster.length} (raw rows: ${rows.length})\n- Proposed relations: ${relationships.length}\n- Published relations: ${approvedRelationships.length}\n- Distinct sources: ${allSources.length}\n\n## Published relationships\n\n${publishedLines || '尚無通過獨立查核的公開關係。'}\n\n## Candidate coverage matrix\n\n| Candidate | Candidate ID | Status | Published relations | Note |\n|---|---|---:|---:|---|\n${matrix}\n`,
+  join(root, '.cache/reports/political-family-research.md'),
+  `# Political family research\n\n- Snapshot: ${snapshotDate}\n- Research cutoff: ${researchDate}\n- Candidates in canonical roster: ${roster.length}\n- Candidate research rows: ${rowByCandidate.size}/${roster.length} (raw rows: ${rows.length})\n- Proposed relations: ${relationships.length}\n- Published relations: ${publicationEligibleRelationships.length}\n- Distinct sources: ${allSources.length}\n\n## Published relationships\n\n${publishedLines || '尚無通過獨立查核的公開關係。'}\n\n## Candidate coverage matrix\n\n| Candidate | Candidate ID | Status | Published relations | Note |\n|---|---|---:|---:|---|\n${matrix}\n`,
 );
 writeText(
-  join(root, 'reports/political-family-verification.md'),
-  `# Political family verification\n\n每筆公開關係必須同時具備：明確親屬來源、政治職涯來源、正確身分辨識，以及獨立查核結果。\n\n- Researchers: ${researchers.join(', ') || '尚未匯入'}\n- Independent verification records: ${verification.length}\n- Verified and published relationships: ${approvedRelationships.length}\n- Withheld or unresolved findings: ${unresolvedFindings.length}\n\n公開層採 fail-closed 原則；缺少獨立查核或任一證據面向時，不會進入公開圖表。\n\n## Verification records\n\n${verificationLines || '尚無獨立查核紀錄。'}\n\n## Correction pass\n\nApplied ${corrections.appliedAt}. Reviewer role: ${corrections.reviewerRole}. Corrections remove unsupported claims; they are agent evidence corrections, not human editorial review.\n\n${correctionLines || '尚無更正紀錄。'}\n\n### Candidate outcome corrections\n\n${correctionOutcomeLines || '尚無候選人狀態更正。'}\n`,
+  join(root, '.cache/reports/political-family-verification.md'),
+  `# Political family verification\n\n每筆公開關係必須同時具備：明確親屬來源、政治職涯來源、正確身分辨識，以及獨立查核結果。\n\n- Researchers: ${researchers.join(', ') || '尚未匯入'}\n- Independent verification records: ${verification.length}\n- Verified and published relationships: ${publicationEligibleRelationships.length}\n- Withheld or unresolved findings: ${unresolvedFindings.length}\n\n公開層採 fail-closed 原則；缺少獨立查核或任一證據面向時，不會進入公開圖表。\n\n## Verification records\n\n${verificationLines || '尚無獨立查核紀錄。'}\n\n## Correction pass\n\nApplied ${corrections.appliedAt}. Reviewer role: ${corrections.reviewerRole}. Corrections remove unsupported claims; they are agent evidence corrections, not human editorial review.\n\n${correctionLines || '尚無更正紀錄。'}\n\n### Candidate outcome corrections\n\n${correctionOutcomeLines || '尚無候選人狀態更正。'}\n`,
 );
 const publishedAffiliations = publishedPeople.flatMap(
   (person) => person.affiliations,
 );
 
 writeText(
-  join(root, 'reports/political-family-coverage.md'),
+  join(root, '.cache/reports/political-family-coverage.md'),
   `# Political family coverage\n\n## Summary\n\n- Canonical roster: ${roster.length} candidates\n- Research audit rows: ${rowByCandidate.size}/${roster.length} (raw rows: ${rows.length})\n- Verified-relations-found: ${candidateResearch.filter((item) => item.researchStatus === 'verified-relations-found').length}\n- Searched with no publishable relation: ${candidateResearch.filter((item) => item.researchStatus === 'searched-no-verified-relations').length}\n- Unresolved: ${candidateResearch.filter((item) => item.researchStatus === 'unresolved').length}\n- Proposed relations: ${relationships.length}\n- Published relations: ${publicationRelationships.length}\n- Published relatives: ${publishedPeople.filter((person) => !person.candidateId).length}\n- Published affiliations by category: ${
     publishedAffiliations.length === 0
       ? 'none'

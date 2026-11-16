@@ -294,11 +294,9 @@ export const CareerCoverageSchema = z.object({
   note: z.string().min(1),
 });
 
-export const PoliticalCareerReviewSchema = z.object({
-  status: z.enum(['approved', 'pending-review']),
-  reviewerId: z.string().min(1).nullable(),
-  reviewedAt: DateOnlySchema.nullable(),
-  approvedAt: DateOnlySchema.nullable(),
+export const PoliticalCareerValidationSchema = z.object({
+  status: z.literal('validated'),
+  method: z.literal('deterministic-source-check-v1'),
   scopeNote: z.string().min(1),
   limitations: z.array(z.string().min(1)).min(1),
 });
@@ -316,7 +314,7 @@ export const PoliticalCareerDatasetSchema = z.object({
   legislativeProposals: z.array(LegislativeProposalSchema),
   votingRecords: z.array(VotingRecordSchema),
   coverage: z.array(CareerCoverageSchema).min(1),
-  review: PoliticalCareerReviewSchema,
+  validation: PoliticalCareerValidationSchema,
 });
 
 export type PoliticalCareerDataset = z.infer<

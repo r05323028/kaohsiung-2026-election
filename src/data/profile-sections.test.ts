@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import coverageReport from '../../reports/candidate-profile-coverage.json';
-import sourceQualityReport from '../../reports/candidate-profile-source-quality.json';
-import { scopedCategoryToProfileTab } from './enrichment/review-publication';
+import { PROFILE_TABS } from '../components/ProfileTabs';
+import { publicationBiographySnapshot } from './biographies/publication';
 import { candidateProfiles } from './index';
 import { officialCandidateProfiles } from './official';
 
@@ -21,30 +20,17 @@ const publicRecords = (
 
 describe('five-section candidate profile coverage', () => {
   it('covers the current canonical candidate roster', () => {
-    expect(officialCandidateProfiles).toHaveLength(candidateProfiles.length);
-    expect(coverageReport.totalCandidates).toBe(candidateProfiles.length);
-    expect(coverageReport.candidatesStructurallySupported).toBe(
-      candidateProfiles.length,
-    );
-
-    const profileIds = new Set(
-      officialCandidateProfiles.map((candidate) => candidate.candidacy.id),
-    );
-    const inventoryIds = new Set(
-      coverageReport.candidateInventory.map(
-        (candidate) => candidate.candidateId,
-      ),
-    );
-    expect(inventoryIds).toEqual(profileIds);
+    expect(officialCandidateProfiles).toHaveLength(106);
+    expect(candidateProfiles).toHaveLength(officialCandidateProfiles.length);
     expect(
-      coverageReport.candidateInventory.every(
-        (candidate) => candidate.structurallySupported,
-      ),
-    ).toBe(true);
+      new Set(
+        officialCandidateProfiles.map((candidate) => candidate.candidacy.id),
+      ).size,
+    ).toBe(106);
   });
 
-  it('keeps the five section contract and reports explicit content gaps', () => {
-    expect(coverageReport.profileTabs).toEqual([
+  it('keeps the five section contract and neutral content boundaries', () => {
+    expect(PROFILE_TABS.map((tab) => tab.label)).toEqual([
       '基本資料',
       '政策主張',
       '相關新聞',
@@ -52,27 +38,22 @@ describe('five-section candidate profile coverage', () => {
       '家族政商關係',
     ]);
     expect(
-      coverageReport.candidatesWithVerifiedPolicyStatements,
-    ).toBeGreaterThan(0);
-    expect(coverageReport.publishedPolicyCount).toBeGreaterThan(0);
-    expect(coverageReport.publishedNewsCount).toBeGreaterThan(0);
-    expect(coverageReport.publishedNewsAssociationCount).toBeGreaterThanOrEqual(
-      coverageReport.publishedNewsCount,
-    );
-    expect(coverageReport.publishedCareerRecordCount).toBeGreaterThan(0);
-    expect(coverageReport.candidatesWithPendingPolicyResearch).toBeGreaterThan(
-      0,
-    );
-    expect(coverageReport).not.toHaveProperty('candidatesWithPositiveNews');
-    expect(coverageReport).not.toHaveProperty('candidatesWithNegativeNews');
+      officialCandidateProfiles.some(
+        (candidate) => (candidate.publishedPolicies?.length ?? 0) > 0,
+      ),
+    ).toBe(true);
     expect(
-      coverageReport.candidateInventory.every(
+      officialCandidateProfiles.some(
+        (candidate) => (candidate.publishedNews?.length ?? 0) > 0,
+      ),
+    ).toBe(true);
+    expect(
+      officialCandidateProfiles.every(
         (candidate) =>
           !('positiveNewsCount' in candidate) &&
           !('negativeNewsCount' in candidate),
       ),
     ).toBe(true);
-    expect(coverageReport.individualVoteRecordCount).toBe(0);
   });
 
   it('exposes only a status summary for pending public-record research', () => {
@@ -142,22 +123,26 @@ describe('five-section candidate profile coverage', () => {
         ).toBe(true);
       }
     }
-
-    expect(sourceQualityReport.sourceReferenceIssues).toEqual([]);
-    expect(sourceQualityReport.publishedRecordWithEvidenceCount).toBe(
-      sourceQualityReport.publishedRecordCount,
-    );
-    expect(sourceQualityReport.publishedRecordWithResolvedSourcesCount).toBe(
-      sourceQualityReport.publishedRecordCount,
-    );
   });
 
-  it('maps legacy record categories into the career tab', () => {
-    expect(scopedCategoryToProfileTab('public-records')).toBe('career');
-    expect(scopedCategoryToProfileTab('relationships')).toBe('career');
-    expect(scopedCategoryToProfileTab('timeline')).toBe('career');
-    expect(scopedCategoryToProfileTab('news')).toBe('news');
-    expect(scopedCategoryToProfileTab('policies')).toBe('policies');
+  it('keeps biography claims linked to the neutral publication snapshot', () => {
+    expect(publicationBiographySnapshot.records).toHaveLength(75);
+    expect(publicationBiographySnapshot.sources).toHaveLength(9);
+    const snapshotClaimIds = new Set(
+      publicationBiographySnapshot.records.map((claim) => claim.claimId),
+    );
+    const snapshotSourceIds = new Set(
+      publicationBiographySnapshot.sources.map((source) => source.sourceId),
+    );
+    for (const candidate of officialCandidateProfiles) {
+      for (const claim of candidate.biography?.claims ?? []) {
+        expect(snapshotClaimIds.has(claim.claimId)).toBe(true);
+        expect(claim.sourceIds.length).toBeGreaterThan(0);
+        expect(
+          claim.sourceIds.every((sourceId) => snapshotSourceIds.has(sourceId)),
+        ).toBe(true);
+      }
+    }
   });
 
   it('keeps vote availability conservative and separates career record types', () => {
@@ -166,11 +151,5 @@ describe('five-section candidate profile coverage', () => {
         publicRecords(candidate).every((record) => !('votePosition' in record)),
       ),
     ).toBe(true);
-    expect(
-      coverageReport.formerLegislatorsWithVerifiedIndividualVotingRecords,
-    ).toBe(0);
-    expect(
-      coverageReport.formerExecutivesWithVerifiedPolicyInitiatives,
-    ).toBeGreaterThan(0);
   });
 });

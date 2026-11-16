@@ -8,7 +8,6 @@ import {
 import {
   buildResearchDataset,
   buildResearchReport,
-  buildResearchReviewPacket,
   parseCecCandidateRows,
   type ResearchCategory,
   type ResearchDataset,
@@ -28,17 +27,16 @@ const PATHS = {
   council: 'data/raw/official/2026/research/cec-vote2026-t-64000.json',
   normalized: 'data/normalized/2026/candidate-public-record-research.json',
   approved: 'data/approved/2026/candidate-public-record-research.json',
-  review: 'data/review/2026/candidate-public-record-research-review.json',
   checkpoint: 'data/checkpoints/2026/candidate-public-record-research.json',
-  report: 'reports/full-roster-research.json',
-  reportMarkdown: 'reports/full-roster-research.md',
-  quality: 'reports/research-quality.json',
-  qualityMarkdown: 'reports/research-quality.md',
-  verification: 'reports/research-independent-verification.json',
-  verificationMarkdown: 'reports/research-independent-verification.md',
+  report: '.cache/reports/full-roster-research.json',
+  reportMarkdown: '.cache/reports/full-roster-research.md',
+  quality: '.cache/reports/research-quality.json',
+  qualityMarkdown: '.cache/reports/research-quality.md',
+  verification: '.cache/reports/research-independent-verification.json',
+  verificationMarkdown: '.cache/reports/research-independent-verification.md',
 } as const;
 
-type ResearchCommand = 'execute' | 'validate' | 'review' | 'verify';
+type ResearchCommand = 'execute' | 'validate' | 'verify';
 export type ResearchCliOptions = {
   command: ResearchCommand;
   candidateIds?: ReadonlySet<string>;
@@ -51,7 +49,7 @@ export type ResearchCliOptions = {
 };
 
 const USAGE =
-  'Usage: <execute|validate|review|verify> [--candidate ID] [--district ID] [--category CATEGORY] [--dry-run] [--resume] [--retries N] [--concurrency N]';
+  'Usage: <execute|validate|verify> [--candidate ID] [--district ID] [--category CATEGORY] [--dry-run] [--resume] [--retries N] [--concurrency N]';
 
 function parseList(value: string): string[] {
   return value
@@ -62,10 +60,7 @@ function parseList(value: string): string[] {
 
 export function parseResearchArgs(argv: readonly string[]): ResearchCliOptions {
   const command = argv[0] as ResearchCommand | undefined;
-  if (
-    !command ||
-    !['execute', 'validate', 'review', 'verify'].includes(command)
-  )
+  if (!command || !['execute', 'validate', 'verify'].includes(command))
     throw new Error(USAGE);
   const candidateIds: string[] = [];
   const districtIds: string[] = [];
@@ -275,12 +270,9 @@ function qualityReport(
       ).length,
       nameOnlyMatchesPublished: false,
     },
-    review: {
-      status: dataset.review.status,
-      humanReviewedCount: 0,
-      editoriallyApprovedCount: 0,
-      reviewerId: null,
-      reviewedAt: null,
+    validation: {
+      status: dataset.validation.status,
+      method: dataset.validation.method,
     },
     integrityAssertions: report.integrityAssertions,
     limitations: report.limitations,
@@ -308,12 +300,10 @@ function qualityMarkdown(quality: ReturnType<typeof qualityReport>): string {
   }
   lines.push(
     '',
-    '## 審查狀態',
+    '## 決定性檢查',
     '',
-    '- humanReviewedCount: 0',
-    '- editoriallyApprovedCount: 0',
-    '- reviewerId: null',
-    '- reviewedAt: null',
+    `- method: ${quality.validation.method}`,
+    `- status: ${quality.validation.status}`,
     '',
     '## 限制',
     ...quality.limitations.map((note) => `- ${note}`),
@@ -385,8 +375,6 @@ type VerificationReport = {
   matchedCount: number;
   discrepancyCount: number;
   discrepancies: string[];
-  reviewerId: null;
-  reviewedAt: null;
   limitations: string[];
 };
 
@@ -399,8 +387,6 @@ function verificationMarkdown(report: VerificationReport): string {
     `- 抽樣審計數：${report.checkedCount}`,
     `- 相符：${report.matchedCount}`,
     `- 差異：${report.discrepancyCount}`,
-    '- reviewerId: null',
-    '- reviewedAt: null',
     '',
     '## 抽樣條件',
     ...report.sampleCriteria.map((item) => `- ${item}`),
@@ -428,11 +414,10 @@ async function execute(options: ResearchCliOptions): Promise<void> {
   }
   await atomicWrite(PATHS.normalized, dataset);
   await atomicWrite(PATHS.approved, dataset);
-  await atomicWrite(PATHS.review, buildResearchReviewPacket(dataset));
   await atomicWrite(PATHS.checkpoint, dataset.checkpoint);
   await writeReports(dataset, roster);
   console.log(
-    `Executed official candidate research: ${dataset.observations.length} P0 observations, ${dataset.claims.length} claims, ${dataset.audits.length} audit slots; human review remains pending.`,
+    `Executed official candidate research: ${dataset.observations.length} P0 observations, ${dataset.claims.length} claims, ${dataset.audits.length} audit slots; unresolved and unexecuted categories remain unpublished.`,
   );
 }
 
@@ -446,21 +431,7 @@ async function validate(): Promise<void> {
   );
   await writeReports(dataset, roster);
   console.log(
-    `Validated candidate research: ${dataset.audits.length} audit slots, ${dataset.claims.length} claims, ${dataset.observations.length} P0 observations; human review remains pending.`,
-  );
-}
-
-async function review(): Promise<void> {
-  const roster = validateOfficialDataset(await readJson<unknown>(PATHS.roster));
-  const sources = await loadSources();
-  const dataset = await loadDataset(
-    PATHS.normalized,
-    roster,
-    new Set(sources.map((source) => source.sourceId)),
-  );
-  await atomicWrite(PATHS.review, buildResearchReviewPacket(dataset));
-  console.log(
-    `Generated candidate research review packet for ${dataset.audits.length} audit slots.`,
+    `Validated candidate research: ${dataset.audits.length} audit slots, ${dataset.claims.length} claims, ${dataset.observations.length} P0 observations; deterministic checks passed and unresolved categories remain unpublished.`,
   );
 }
 
@@ -527,7 +498,7 @@ async function verify(): Promise<void> {
     reportType: 'independent-machine-reparse',
     snapshotDate: dataset.snapshotDate,
     method:
-      '重新以保留的 CEC C1/T 原始快照依選舉區與號次抽樣比對；這是獨立機器重解析，不是人工審查。',
+      '重新以保留的 CEC C1/T 原始快照依選舉區與號次抽樣比對；這是獨立機器重解析；內容核對透過 Pull Request 完成。',
     sampleCriteria: [
       '至少一名市長候選人',
       '第4普通市議員選舉區',
@@ -540,11 +511,9 @@ async function verify(): Promise<void> {
     matchedCount: sampleAuditIds.length - discrepancies.length,
     discrepancyCount: discrepancies.length,
     discrepancies,
-    reviewerId: null,
-    reviewedAt: null,
     limitations: [
-      '樣本結果不代表全名冊已人工驗證。',
-      '未執行、受阻或衝突的類別仍須後續研究與人工裁決。',
+      '樣本結果不代表全名冊所有類別都已完成決定性驗證。',
+      '未執行、受阻或衝突的類別仍須後續研究；內容核對透過 Pull Request 完成。',
     ],
   };
   await atomicWrite(PATHS.verification, report);
@@ -553,7 +522,7 @@ async function verify(): Promise<void> {
     verificationMarkdown(report),
   );
   console.log(
-    `Generated independent machine verification report for ${report.checkedCount} sampled audits; no human approval was recorded.`,
+    `Generated deterministic verification report for ${report.checkedCount} sampled audits; content review occurs in Pull Requests.`,
   );
 }
 
@@ -561,7 +530,6 @@ export async function main(argv = process.argv.slice(2)): Promise<void> {
   const options = parseResearchArgs(argv);
   if (options.command === 'execute') await execute(options);
   else if (options.command === 'validate') await validate();
-  else if (options.command === 'review') await review();
   else await verify();
 }
 

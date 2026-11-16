@@ -3,17 +3,17 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
-import { officialDataset } from '../../../src/data/official/index';
 import {
   LIKENESS_SCHEMA_VERSION,
   type LikenessAppearance,
   type LikenessDisposition,
-  type LikenessPhoto,
   type LikenessManifest,
+  type LikenessPhoto,
   parseLikenessAppearances,
   parseLikenessManifest,
   parseLikenessPhotos,
 } from '../../../src/data/avatars/likeness/schema';
+import { officialDataset } from '../../../src/data/official/index';
 import { LIKENESS_BUDGETS } from './budgets';
 import { readGlbStats } from './glb-stats';
 import { headKitParamsFor } from './params';
@@ -28,7 +28,7 @@ const MANIFEST_PATH = 'data/avatars/likeness/manifest.json';
 /** Kits stay out of the published tree until publish copies approved ones in. */
 const OUT_DIR = 'data/avatars/likeness/kits';
 const PARAMS_DIR = 'tmp/avatar-pipeline/params';
-const RENDER_DIR = 'reports/avatar/heads';
+const RENDER_DIR = '.cache/reports/avatar/heads';
 const PIPELINE_VERSION = 'likeness-1';
 const BLENDER = process.env.BLENDER_BIN ?? 'blender';
 const HEAD_SCRIPT = 'scripts/avatar/blender/head_kit.py';

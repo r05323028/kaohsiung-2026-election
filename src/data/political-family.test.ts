@@ -54,28 +54,18 @@ describe('political family publication', () => {
     }
   });
 
-  it('separates agent approvals from editorial approvals in the public output', () => {
-    const agentIds = new Set(
-      politicalFamilyPublication.agentApprovedRelationshipIds,
+  it('keeps internal approval metadata out of the public family schema', () => {
+    const retiredPublicationMetadata = [
+      'agentApproved',
+      'RelationshipIds',
+    ].join('');
+    expect(retiredPublicationMetadata in politicalFamilyPublication).toBe(
+      false,
     );
-    expect(agentIds.size).toBeGreaterThan(0);
-    const publishedIds = new Set(
-      politicalFamilyPublication.relationships.map(
-        (relationship) => relationship.id,
-      ),
-    );
-    for (const id of agentIds) expect(publishedIds.has(id)).toBe(true);
-    const flagged = new Map(
-      candidateProfiles
-        .flatMap(
-          (candidate) =>
-            getPoliticalFamilyReadModel(candidate.candidacy.id)
-              ?.relationships ?? [],
-        )
-        .filter((relationship) => relationship.agentApproved)
-        .map((relationship) => [relationship.id, relationship]),
-    );
-    expect(flagged.size).toBe(agentIds.size);
+    for (const relationship of politicalFamilyPublication.relationships) {
+      const retiredRelationshipMetadata = ['agent', 'Approved'].join('');
+      expect(retiredRelationshipMetadata in relationship).toBe(false);
+    }
   });
 
   it('publishes only source-backed, connected relationships and deduplicates people', () => {
@@ -121,7 +111,7 @@ describe('political family publication', () => {
     const serialized = JSON.stringify(publicProfiles);
     expect(serialized).not.toContain('verificationStatus');
     expect(serialized).not.toContain('supportedClaimIds');
-    expect(serialized).not.toContain('pending-review');
+    expect(serialized).not.toContain('pending-verification');
     expect(serialized).not.toContain('rejected');
   });
 
@@ -129,7 +119,7 @@ describe('political family publication', () => {
     const clone = JSON.parse(
       JSON.stringify(politicalFamilyPublication),
     ) as typeof politicalFamilyPublication;
-    for (const status of ['pending-review', 'rejected'] as const) {
+    for (const status of ['pending-verification', 'rejected'] as const) {
       const draft = {
         ...clone,
         relationships: clone.relationships.map((relationship, index) =>

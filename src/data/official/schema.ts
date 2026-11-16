@@ -96,7 +96,7 @@ export const OfficialDatasetSchema = z.object({
   sources: z.array(OfficialSourceSchema).min(1),
   districts: z.array(OfficialDistrictSchema).min(1),
   candidates: z.array(OfficialCandidateSchema),
-  pendingReview: z.array(
+  pendingVerification: z.array(
     z.object({
       sourceId: z.string().min(1),
       scope: z.string().min(1),
@@ -202,7 +202,7 @@ export function validateOfficialDataset(input: unknown): OfficialDataset {
         `Candidate ${candidate.id} is published without approved qualification or preliminary drawn status.`,
       );
   }
-  for (const pending of dataset.pendingReview)
+  for (const pending of dataset.pendingVerification)
     if (!sourceIds.has(pending.sourceId))
       throw new Error(
         `Pending review ${pending.scope} references missing source ${pending.sourceId}.`,

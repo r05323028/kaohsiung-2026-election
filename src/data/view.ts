@@ -1,10 +1,6 @@
 import type { BasicProfileReadModel } from './basic-profiles';
 import type { BiographyReadModel } from './biographies';
 import type { CouncilConstituencyCoverage } from './constituencies';
-import type {
-  AutomatedPublicClaim,
-  AutomatedPublicSource,
-} from './enrichment/automated-publication';
 import type { PublishedNewsItem } from './news';
 import { isPublishedBallotNumberStatus } from './official/ballot';
 import { getPolicyCareer, type PolicyCareerView } from './policy-career';
@@ -66,12 +62,6 @@ export type CandidateProfileView = {
   biography?: BiographyReadModel;
   basicProfile?: BasicProfileReadModel;
   politicalFamily?: PoliticalFamilyReadModel;
-  automatedPublication?: {
-    status: 'published' | 'none';
-    claims: AutomatedPublicClaim[];
-    sources: AutomatedPublicSource[];
-    note: string;
-  };
   visual: Omit<CharacterVisualConfig, 'isDemo'> & { isDemo?: boolean };
 };
 
@@ -160,22 +150,10 @@ type PublicBiographyClaim = Pick<
   | 'organization'
   | 'value'
   | 'validFrom'
+  | 'validTo'
+  | 'currentStatus'
+  | 'attribution'
   | 'sourceIds'
->;
-type PublicAutomatedClaim = Pick<
-  AutomatedPublicClaim,
-  | 'claimId'
-  | 'category'
-  | 'claimType'
-  | 'title'
-  | 'organization'
-  | 'value'
-  | 'sourcePublicationDate'
-  | 'sourceIds'
->;
-type PublicAutomatedSource = Pick<
-  AutomatedPublicSource,
-  'sourceId' | 'url' | 'publisher' | 'publicationDate'
 >;
 
 export type PublicCandidateProfile = Omit<
@@ -191,7 +169,6 @@ export type PublicCandidateProfile = Omit<
   | 'publicRecordResearch'
   | 'biography'
   | 'basicProfile'
-  | 'automatedPublication'
   | 'politicalCareer'
   | 'policyCareer'
 > & {
@@ -206,10 +183,6 @@ export type PublicCandidateProfile = Omit<
   publishedPolicies?: PublishedPolicy[];
   biography?: { claims: PublicBiographyClaim[] };
   basicProfile?: Pick<BasicProfileReadModel, 'claims' | 'note'>;
-  automatedPublication?: {
-    claims: PublicAutomatedClaim[];
-    sources: PublicAutomatedSource[];
-  };
   politicalCareer?: PoliticalCareerView;
   policyCareer?: PolicyCareerView;
 };
@@ -329,33 +302,15 @@ export function toPublicCandidateProfile(
           organization: claim.organization,
           value: claim.value,
           validFrom: claim.validFrom,
+          validTo: claim.validTo,
+          currentStatus: claim.currentStatus,
+          attribution: claim.attribution,
           sourceIds: claim.sourceIds,
         })),
       }
     : undefined;
 
   const publicBasicProfile = candidate.basicProfile;
-
-  const publicAutomatedPublication = candidate.automatedPublication
-    ? {
-        claims: candidate.automatedPublication.claims.map((claim) => ({
-          claimId: claim.claimId,
-          category: claim.category,
-          claimType: claim.claimType,
-          title: claim.title,
-          organization: claim.organization,
-          value: claim.value,
-          sourcePublicationDate: claim.sourcePublicationDate,
-          sourceIds: claim.sourceIds,
-        })),
-        sources: candidate.automatedPublication.sources.map((source) => ({
-          sourceId: source.sourceId,
-          url: source.url,
-          publisher: source.publisher,
-          publicationDate: source.publicationDate,
-        })),
-      }
-    : undefined;
 
   const publicSummary =
     options.summary ??
@@ -396,9 +351,6 @@ export function toPublicCandidateProfile(
     ...(publicBasicProfile ? { basicProfile: publicBasicProfile } : {}),
     ...(candidate.politicalFamily
       ? { politicalFamily: candidate.politicalFamily }
-      : {}),
-    ...(publicAutomatedPublication
-      ? { automatedPublication: publicAutomatedPublication }
       : {}),
     ...(politicalCareer ? { politicalCareer } : {}),
     ...(policyCareer.commitments.length > 0 ||

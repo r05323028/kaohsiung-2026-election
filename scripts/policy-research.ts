@@ -27,8 +27,9 @@ const KCC_TIMESTAMP = '2026-11-06T00:00:00.000Z';
 const ROSTER_PATH = 'data/approved/2026/kaohsiung-election.json';
 const OUTPUT_PATH = 'data/policy-research/2026/full-roster.json';
 const SUMMARY_PATH = 'data/policy-research/2026/summary.json';
-const REPORT_JSON_PATH = 'reports/2026-policy-enrichment.json';
-const REPORT_MD_PATH = 'reports/2026-policy-enrichment.md';
+const REPORT_JSON_PATH = '.cache/reports/2026-policy-enrichment.json';
+const REPORT_MD_PATH = '.cache/reports/2026-policy-enrichment.md';
+mkdirSync('.cache/reports', { recursive: true });
 
 type Candidate = {
   id: string;
@@ -499,8 +500,8 @@ function makePolicy(
     evidenceType,
     type: policyTypeForContext(context, parsed.title),
     verificationStatus: 'machine-validated' as const,
-    reviewStatus: 'pending-human-review' as const,
-    publicationStatus: 'withheld-pending-review' as const,
+    validationStatus: 'pending-verification' as const,
+    publicationStatus: 'withheld-unverified' as const,
     claimIds: [`claim-${policyId}`],
     evidenceIds: [evidenceId],
     duplicateOf: null,
@@ -627,7 +628,7 @@ function main(): void {
       | 'failed',
     identityStatus:
       | 'resolved'
-      | 'pending-review'
+      | 'pending-verification'
       | 'unresolved'
       | 'not-applicable',
     resultNote: string,
@@ -694,7 +695,7 @@ function main(): void {
             ]
           : [],
         parsed.policies.length > 0
-          ? '直接保留之官方候選人政策頁；政策內容待人工與編輯審查後方可出版。'
+          ? '直接保留之官方候選人政策頁；政策內容需通過決定性來源驗證，內容核對在 Pull Request 中進行。'
           : '直接保留之官方黨／候選人頁；未解析到可直接引用的政策卡片，不代表候選人沒有政策。',
       ),
     );
@@ -709,7 +710,7 @@ function main(): void {
           'retrieved',
           'resolved',
           parsed.policies.length > 0
-            ? '已取得候選人／政黨頁；可作為政策研究證據，尚未通過人工出版審查。'
+            ? '已取得候選人／政黨頁；可作為政策研究證據，尚未完成決定性來源驗證，維持不發布。'
             : '已取得候選人／政黨頁，但未解析到可直接引用的政策卡片；不推論沒有政策。',
         ),
       );
@@ -757,7 +758,7 @@ function main(): void {
         lai ? [lai.id] : [],
         lai ? 'resolved' : 'unresolved',
         lai ? ['官方網站首頁與政策頁均標示賴瑞隆'] : [],
-        '候選人競選總部政策頁；政策內容待人工與編輯審查後方可出版。',
+        '候選人競選總部政策頁；政策內容需通過決定性來源驗證，內容核對在 Pull Request 中進行。',
       ),
     );
     if (lai) {
@@ -770,7 +771,7 @@ function main(): void {
           source.url,
           'retrieved',
           'resolved',
-          '已取得賴瑞隆競選總部政策頁；原文保留，尚未通過人工出版審查。',
+          '已取得賴瑞隆競選總部政策頁；原文保留，尚未完成決定性來源驗證，維持不發布。',
         ),
       );
       for (const [index, policy] of parsedPolicies.entries()) {
@@ -867,7 +868,7 @@ function main(): void {
           'retrieved',
           'resolved',
           parsedPolicies.length > 0
-            ? '已以姓名與數字選區雙重匹配議會個人頁；服務政見保留為現任／歷史位置，待人工審查。'
+            ? '已以姓名與數字選區雙重匹配議會個人頁；服務政見保留為現任／歷史位置，待 Pull Request 內容核對。'
             : '已以姓名與數字選區雙重匹配議會個人頁，但未解析到服務政見段落。',
         ),
       );
@@ -931,15 +932,15 @@ function main(): void {
       | 'current-or-historical-only'
       | 'no-verifiable-policy-found'
       | 'sources-unavailable'
-      | 'evidence-requires-review'
+      | 'evidence-requires-verification'
       | 'candidate-identity-unresolved';
     let note: string;
     if (has2026) {
       outcome = 'verified-records';
-      note = `已取得 ${candidatePolicies.length} 筆候選人／政黨直接政策原文；全部仍為 pending-human-review，未進入公開核准資料。`;
+      note = `已取得 ${candidatePolicies.length} 筆候選人／政黨直接政策原文；全部仍為 pending-verification，未進入公開核准資料。`;
     } else if (hasHistorical) {
       outcome = 'current-or-historical-only';
-      note = `已取得 ${candidatePolicies.length} 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待人工審查。`;
+      note = `已取得 ${candidatePolicies.length} 筆議會服務政見；其時間脈絡不是 2026 競選承諾，全部仍待決定性來源驗證。`;
     } else if (candidateSources.length === 0) {
       outcome = 'sources-unavailable';
       note =
@@ -979,11 +980,9 @@ function main(): void {
     evidence,
     audits,
     conflicts: [],
-    review: {
-      status: 'pending-human-review',
-      reviewerId: null,
-      reviewedAt: null,
-      approvedPolicyCount: 0,
+    validation: {
+      status: 'pending-verification',
+      sourceBackedPolicyCount: 0,
       publishedPolicyCount: 0,
     },
   });
@@ -1087,11 +1086,21 @@ function buildReport(
     ),
     totalPolicyRecordsDiscovered: dataset.policies.length,
     machineValidatedPolicyCount: dataset.policies.length,
-    pendingHumanReviewPolicyCount: dataset.policies.length,
-    approvedPolicyCount: 0,
-    publishedPolicyCount: 0,
-    rejectedPolicyCount: 0,
-    unresolvedPolicyCount: 0,
+    pendingVerificationPolicyCount: dataset.policies.filter(
+      (policy) => policy.validationStatus === 'pending-verification',
+    ).length,
+    sourceBackedPolicyCount: dataset.policies.filter(
+      (policy) => policy.publicationStatus === 'source-backed',
+    ).length,
+    publishedPolicyCount: dataset.policies.filter(
+      (policy) => policy.publicationStatus === 'source-backed',
+    ).length,
+    rejectedPolicyCount: dataset.policies.filter(
+      (policy) => policy.publicationStatus === 'rejected',
+    ).length,
+    unresolvedPolicyCount: dataset.policies.filter(
+      (policy) => policy.publicationStatus === 'withheld-unverified',
+    ).length,
     sourceSnapshotCount: dataset.sourceSnapshots.length,
     sourceAttemptCount: dataset.sourceAttempts.length,
     sourceDistributionByTier: tierCounts,
@@ -1127,17 +1136,17 @@ function buildReport(
     coverageByDistrict: districtCounts,
     candidateInventory,
     identityOrAttributionConflicts: dataset.conflicts,
-    remainingManualReviewRequirements: [
-      '人工逐筆確認候選人身份、選區、發言歸屬與政策原文範圍。',
-      '人工確認 2026 競選承諾與現任／歷史服務政見的時間脈絡。',
-      '編輯確認中性摘要、分類、去重與衝突處理。',
-      '在 reviewerId、reviewedAt 與 editorial approval 真實存在前，所有政策維持 withheld-pending-review。',
+    remainingVerificationRequirements: [
+      '在 Pull Request 內容核對中確認候選人身份、選區、發言歸屬與政策原文範圍。',
+      '在 Pull Request 內容核對中確認 2026 競選承諾與現任／歷史服務政見的時間脈絡。',
+      '依 deterministic validation 檢查中性摘要、分類、去重與衝突處理。',
+      '在來源與身份驗證完成前，政策維持 withheld-unverified。',
     ],
     integrityAssertions: {
       everyRosterCandidateInvestigated: dataset.audits.length === 106,
       unsupportedPoliciesGenerated: false,
       nameOnlyMatchesPublished: false,
-      reviewerMetadataInvented: false,
+      validationMetadataInvented: false,
       rejectedOrUnresolvedPublished: false,
       candidateRankingProduced: false,
     },
@@ -1159,8 +1168,8 @@ function buildMarkdownReport(
     '',
     '- 本報告記錄 106 位候選人的限定來源研究，不把找不到政策解讀為沒有政策。',
     '- 2026 競選承諾、現任／歷史服務政見與公共成果分開標示。',
-    '- 所有政策紀錄目前為 machine-validated、pending-human-review、withheld-pending-review。',
-    '- 因沒有真實人工審查與編輯核准 metadata，公開核准與出版數均為 0；本次沒有繞過既有 publication gate。',
+    '- 所有政策紀錄目前為 machine-validated、pending-verification、withheld-unverified。',
+    '- 決定性驗證與來源狀態決定技術出版資格；內容正確性與證據在 Pull Request 中核對，未通過驗證者不會發布。',
     '',
     '## 總覽',
     '',
@@ -1170,8 +1179,8 @@ function buildMarkdownReport(
     `- candidates with no verifiable policy found: ${report.candidatesWithNoVerifiablePolicyFound}`,
     `- candidates with sources unavailable: ${report.candidatesWithSourcesUnavailable}`,
     `- policy records discovered: ${report.totalPolicyRecordsDiscovered}`,
-    `- machine-validated / pending human review: ${report.machineValidatedPolicyCount} / ${report.pendingHumanReviewPolicyCount}`,
-    `- approved / published / rejected / unresolved: ${report.approvedPolicyCount} / ${report.publishedPolicyCount} / ${report.rejectedPolicyCount} / ${report.unresolvedPolicyCount}`,
+    `- machine-validated / pending verification: ${report.machineValidatedPolicyCount} / ${report.pendingVerificationPolicyCount}`,
+    `- source-backed / published / rejected / unresolved: ${report.sourceBackedPolicyCount} / ${report.publishedPolicyCount} / ${report.rejectedPolicyCount} / ${report.unresolvedPolicyCount}`,
     '',
     '## 來源層級分布',
     '',
@@ -1207,9 +1216,9 @@ function buildMarkdownReport(
         `| ${item.displayName} | ${item.districtLabel} | ${item.outcome} | ${item.policyCount} | ${item.sourceCount} |`,
     ),
     '',
-    '## 剩餘人工審查',
+    '## 剩餘決定性驗證與 PR 內容核對',
     '',
-    ...report.remainingManualReviewRequirements.map((item) => `- ${item}`),
+    ...report.remainingVerificationRequirements.map((item) => `- ${item}`),
     '',
     '## 限制',
     '',

@@ -330,7 +330,7 @@ const payload = {
   schemaVersion: '1',
   policyVersion: BASIC_PROFILE_POLICY_VERSION,
   generatedAt: isoNow(),
-  note: 'Merged researcher output and independent verifier decisions. Publication eligibility is a policy decision, not human editorial approval. Wikipedia and candidate social profiles cannot be sole evidence.',
+  note: 'Merged researcher output and independent verifier decisions. Publication eligibility is a policy decision, not PR content review. Wikipedia and candidate social profiles cannot be sole evidence.',
   batchFiles: {
     researcher: researcherBatches.map((batch) => batch.batchId),
     verifier: verifierBatches.map((batch) => batch.batchId),

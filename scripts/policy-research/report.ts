@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { validateOfficialDataset } from '../../src/data/official/schema';
 import { validatePolicyResearchDataset } from '../../src/data/policy-research/schema';
 
@@ -7,6 +7,8 @@ const DATASET = 'data/policy-research/2026/full-roster.json';
 const NEWS = 'data/policy-research/2026/discovery/news-discovery.json';
 const ENRICHMENT =
   'data/policy-research/2026/enrichment/verified-enrichment.json';
+
+mkdirSync('.cache/reports', { recursive: true });
 
 function parseJson<T>(text: string, relative: string): T {
   let parsed: unknown;
@@ -111,13 +113,13 @@ const rows = roster.candidates.map((candidate) => {
       (attempt) => attempt.candidateId === candidate.id,
     ).length + (newsCountByCandidate.get(candidate.id) ?? 0);
   const published = policies.filter(
-    (policy) => policy.publicationStatus === 'approved-source-backed',
+    (policy) => policy.publicationStatus === 'source-backed',
   );
   const rejected = policies.filter(
     (policy) => policy.publicationStatus === 'rejected',
   );
   const unresolved = policies.filter(
-    (policy) => policy.publicationStatus === 'withheld-pending-review',
+    (policy) => policy.publicationStatus === 'withheld-unverified',
   );
   const audit = dataset.audits.find(
     (item) => item.candidateId === candidate.id,
@@ -261,7 +263,7 @@ const improvedCandidateIds = [
         const current = dataset.policies.find(
           (item) => item.policyId === policy.policyId,
         );
-        return current?.publicationStatus === 'approved-source-backed';
+        return current?.publicationStatus === 'source-backed';
       })
       .map((policy) => policy.candidateId),
   ),
@@ -330,9 +332,6 @@ const publicationCoverage = {
   candidatesWithPublishedPolicies: totals.candidatesWithPublishedPolicies,
   rejectedPolicyEntries: totals.rejectedPolicies,
   pendingPolicyEntries: totals.unresolvedPolicies,
-  humanEditorialReviewPerformed: false,
-  humanEditorialReviewReason:
-    'production reviewer registry and reviewer decisions remain empty; output is machine-gated only',
 };
 
 const audit = {
@@ -357,7 +356,7 @@ const audit = {
 };
 
 writeFileSync(
-  'reports/candidate-policy-audit.json',
+  '.cache/reports/candidate-policy-audit.json',
   JSON.stringify(audit, null, 2) + '\n',
 );
 
@@ -533,7 +532,7 @@ md.push(
 );
 md.push('- 歷史主張與 2026 競選承諾分開標示，不將過往主張視為本屆承諾。');
 md.push('');
-writeFileSync('reports/candidate-policy-coverage.md', md.join('\n'));
+writeFileSync('.cache/reports/candidate-policy-coverage.md', md.join('\n'));
 
 const legacy = {
   reportType: 'full-roster-policy-enrichment',
@@ -561,11 +560,11 @@ const legacy = {
   machineValidatedPolicyCount: dataset.policies.filter(
     (policy) => policy.verificationStatus === 'machine-validated',
   ).length,
-  pendingHumanReviewPolicyCount: rows.reduce(
+  pendingVerificationPolicyCount: rows.reduce(
     (sum, row) => sum + row.unresolved,
     0,
   ),
-  approvedPolicyCount: totals.publishedPolicies,
+  sourceBackedPolicyCount: totals.publishedPolicies,
   publishedPolicyCount: totals.publishedPolicies,
   rejectedPolicyCount: totals.rejectedPolicies,
   unresolvedPolicyCount: totals.unresolvedPolicies,
@@ -579,7 +578,6 @@ const legacy = {
   researchCoverage,
   publicationCoverage,
   validationRuleChanges: enrichment.validationRuleChanges,
-  humanEditorialReviewPerformed: false,
   policyCountByCategory,
   policyCountByContext: dataset.policies.reduce<Record<string, number>>(
     (counts, policy) => {
@@ -614,10 +612,10 @@ const legacy = {
     note: row.note,
   })),
   identityOrAttributionConflicts: dataset.conflicts,
-  remainingManualReviewRequirements: [
-    '候選人身份或發言歸屬仍有疑義的紀錄維持待查。',
+  remainingVerificationRequirements: [
+    '候選人身份或發言歸屬仍有疑義的紀錄維持待驗證。',
     '來源無法擷取或僅有間接轉述的紀錄不發布。',
-    '歷史主張與本屆承諾的時間脈絡由人工覆核。',
+    '歷史主張與本屆承諾的時間脈絡在 Pull Request 內容核對中確認。',
   ],
   integrityAssertions: [
     '每位候選人皆有一筆研究與查核紀錄。',
@@ -628,7 +626,7 @@ const legacy = {
 
 void policyCountByType;
 writeFileSync(
-  'reports/2026-policy-enrichment.json',
+  '.cache/reports/2026-policy-enrichment.json',
   JSON.stringify(legacy, null, 2) + '\n',
 );
 

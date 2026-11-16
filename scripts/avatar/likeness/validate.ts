@@ -1,6 +1,5 @@
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
-import { officialDataset } from '../../../src/data/official/index';
 import {
   type LikenessDisposition,
   type LikenessManifest,
@@ -10,6 +9,7 @@ import {
   parseLikenessReview,
   validateLikenessLoadable,
 } from '../../../src/data/avatars/likeness/schema';
+import { officialDataset } from '../../../src/data/official/index';
 import { LIKENESS_BUDGETS } from './budgets';
 import { deriveLoadable, serializeLoadable, sha256 } from './derive';
 import { readGlbStats } from './glb-stats';

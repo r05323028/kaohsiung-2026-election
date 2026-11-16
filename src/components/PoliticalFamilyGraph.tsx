@@ -396,11 +396,6 @@ function FamilyDetails({
             {selectedRelationship.relationshipLabel}・
             {relationshipPersonB.displayName}
           </p>
-          {selectedRelationship.agentApproved ? (
-            <p className="info-note">
-              此關係由 agent 查核核准，非人工編輯審查。
-            </p>
-          ) : null}
           <h4>親屬關係來源</h4>
           <SourceLinks
             sourceIds={selectedRelationship.kinshipSourceIds}
@@ -611,13 +606,6 @@ export default function PoliticalFamilyGraph({
         <p>
           僅呈現具公開來源支持的親屬關係，以及這些親屬的政治、企業、基金會與非營利組織職務，不推論未公開的家庭成員。
         </p>
-        {family.relationships.some(
-          (relationship) => relationship.agentApproved,
-        ) ? (
-          <p className="info-note">
-            標示「agent 查核核准」的關係由自動化查核流程核准，非人工編輯審查。
-          </p>
-        ) : null}
       </div>
       <fieldset className="political-family-toolbar">
         <legend className="sr-only">家族政商關係圖控制項</legend>
@@ -767,9 +755,6 @@ export default function PoliticalFamilyGraph({
                   {personA.displayName}－{relationship.relationshipLabel}－
                   {personB.displayName}
                 </strong>
-                {relationship.agentApproved ? (
-                  <span> （agent 查核核准）</span>
-                ) : null}
                 {[personA, personB].map((person) => (
                   <div
                     key={person.id}

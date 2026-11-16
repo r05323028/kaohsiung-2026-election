@@ -44,8 +44,8 @@ const SUMMARY_PATH =
 
 const STATUS = {
   verificationStatus: 'machine-validated' as const,
-  reviewStatus: 'pending-human-review' as const,
-  publicationStatus: 'withheld-pending-review' as const,
+  validationStatus: 'pending-verification' as const,
+  publicationStatus: 'withheld-unverified' as const,
 };
 
 type Candidate = OfficialCandidate;
@@ -359,7 +359,7 @@ function policyReferences(
         evidenceId: policy.evidenceId,
         policyContext: policy.policyContext,
         verificationStatus: 'machine-validated' as const,
-        reviewStatus: policy.reviewStatus,
+        validationStatus: policy.validationStatus,
         publicationStatus: policy.publicationStatus,
       },
     ];
@@ -427,10 +427,10 @@ function makeAudits(
     let note: string;
     if (candidatePositions.length > 0 || candidateCareers.length > 0) {
       outcome = 'records-found';
-      note = `已由保留的高雄市議會個人頁取得 ${candidatePositions.length + candidateCareers.length} 筆待人工審查的基本／從政歷程紀錄；不含個別表決推論。`;
+      note = `已由保留的高雄市議會個人頁取得 ${candidatePositions.length + candidateCareers.length} 筆待確定性驗證的基本／從政歷程紀錄；不含個別表決推論。`;
     } else if (refs.length > 0) {
       outcome = 'policy-references-only';
-      note = `已保留 ${refs.length} 筆上游政策研究參照；公開狀態沿用上游政策研究發布閘門。`;
+      note = `已保留 ${refs.length} 筆上游政策研究參照；公開狀態維持未發布，待確定性來源驗證與 PR 內容審查。`;
     } else if (hasRetrievedSource) {
       outcome = 'sources-attempted-no-additional-records';
       note =
@@ -519,13 +519,10 @@ function buildDataset(
       proposalsAdded: 0,
       publishedRecords: 0,
     },
-    review: {
-      status: 'pending-human-review' as const,
-      reviewerId: null,
-      reviewedAt: null,
-      approvedRecordCount: 0,
-      publishedRecordCount: 0,
-      note: '本資料集僅保存機器驗證、待人工審查的研究結果；未取得人工審查或編輯核准，不得進入公開靜態資料。',
+    validation: {
+      status: 'pending-verification' as const,
+      method: 'deterministic-source-check-v1' as const,
+      note: '本資料集僅保存決定性驗證的研究結果；未驗證或未發布紀錄不會進入公開靜態資料，內容核對透過 Pull Request 完成。',
     },
   };
   return validatePublicRecordsEnrichmentDataset(dataset);

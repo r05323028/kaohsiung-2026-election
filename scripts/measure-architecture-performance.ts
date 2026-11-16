@@ -17,7 +17,7 @@ const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'perf')
   : 'architecture-perf';
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4323';
-const outDir = join(process.cwd(), 'reports', 'performance');
+const outDir = join(process.cwd(), '.cache', 'reports', 'performance');
 mkdirSync(outDir, { recursive: true });
 
 type Diagnostics = {

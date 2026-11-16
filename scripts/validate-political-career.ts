@@ -459,11 +459,12 @@ function main(): void {
   }
 
   assertCondition(
-    dataset.review.status === 'approved' && dataset.review.approvedAt !== null,
-    'political-career dataset is not approved for publication',
+    dataset.validation.status === 'validated' &&
+      dataset.validation.method === 'deterministic-source-check-v1',
+    'political-career dataset failed deterministic validation',
   );
   assertCondition(
-    dataset.review.limitations.length > 0,
+    dataset.validation.limitations.length > 0,
     'political-career dataset lacks published limitations',
   );
 

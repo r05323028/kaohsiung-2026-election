@@ -14,7 +14,7 @@ import {
 import { loadPublicRecordsEnrichmentDataset } from '../src/data/public-records/enrichment-full-index';
 import type { PublicRecordsEnrichmentDataset } from '../src/data/public-records/enrichment-schema';
 
-const REPORT_DIR = resolve('reports');
+const REPORT_DIR = resolve('.cache/reports');
 const COVERAGE_PATH = resolve(
   REPORT_DIR,
   'public-record-enrichment-coverage.json',
@@ -131,10 +131,12 @@ function buildCoverageReport(
         missingOrUnavailable.push('已嘗試保留來源但尚無可機器驗證的新增紀錄');
       }
       if (audit.outcome === 'policy-references-only') {
-        missingOrUnavailable.push('政策研究參照仍待人工與編輯審查');
+        missingOrUnavailable.push('政策研究參照仍待確定性驗證與 PR 內容審查');
       }
       if (audit.outcome === 'records-found') {
-        missingOrUnavailable.push('基本／從政歷程研究紀錄仍待人工與編輯審查');
+        missingOrUnavailable.push(
+          '基本／從政歷程研究紀錄仍待確定性驗證與 PR 內容審查',
+        );
       }
       if (audit.individualVoteRecordCount === 0) {
         missingOrUnavailable.push('未建立個別表決紀錄；不從黨籍或集體結果推論');
@@ -250,7 +252,7 @@ function buildCoverageReport(
         researchPending.policyReferences,
       newlyPublishedRecordCount: 0,
       publicationDelta: 0,
-      note: '研究資料集的 machine-validated 紀錄與政策參照仍 withheld-pending-review；不計入公開靜態資料。',
+      note: '研究資料集的 已通過確定性檢查的紀錄與政策參照仍 withheld-unverified；不計入公開靜態資料。',
     },
     baselineProduction,
     researchPending,
@@ -270,7 +272,7 @@ function buildCoverageReport(
       compareText(left.districtId, right.districtId),
     ),
     limitations: [
-      '本次新增資料均為機器驗證、待人工審查且 withheld-pending-review；沒有新增公開政策、新聞、表決或執行成果。',
+      '本次新增資料均為已通過技術檢查但仍待來源與 PR 內容驗證，狀態為 withheld-unverified；沒有新增公開政策、新聞、表決或執行成果。',
       'KCC 個人頁的學歷／經歷文字保留為來源所述，不推定任期、投票、政策成果或行政貢獻。',
       '沒有保留候選人專屬來源不表示候選人沒有相關公共紀錄。',
       '個別表決資料必須有明確記名投票與候選人角色證據；本資料集不從黨籍、公開發言或集體結果推論。',
@@ -382,7 +384,7 @@ function buildSourceQualityReport(
       dataset.careerRecords.length +
       dataset.policyReferences.length,
     evidenceRecordCount: dataset.evidence.length,
-    pendingReviewCounts: {
+    pendingVerificationCounts: {
       claims: dataset.claims.length,
       positions: dataset.positions.length,
       careerRecords: dataset.careerRecords.length,
@@ -395,10 +397,10 @@ function buildSourceQualityReport(
       compareText(left.candidateId, right.candidateId),
     ),
     limitations: [
-      'source retrieval and checksum validation do not constitute human review or editorial approval.',
+      'source retrieval and checksum validation are technical checks; PR content review remains a separate change-review step.',
       'blocked, failed, and not-attempted retrievals are preserved as process states, not negative evidence.',
       'candidate-specific source availability is reported separately from policy or public-record absence.',
-      'all 668 upstream policy records are references only and remain withheld-pending-review.',
+      'all 668 upstream policy records are references only and remain withheld-unverified.',
     ],
   };
 }
@@ -427,7 +429,7 @@ function coverageMarkdown(
     '- roster snapshot：' + report.rosterSnapshotDate,
     '- 候選人：' + report.candidateCount,
     '- 新增公開紀錄：' + report.beforeAfter.newlyPublishedRecordCount,
-    '- 待審查研究紀錄：' + report.beforeAfter.pendingResearchRecordCount,
+    '- 待驗證研究紀錄：' + report.beforeAfter.pendingResearchRecordCount,
     '',
     '## 前後狀態',
     '',
@@ -440,9 +442,9 @@ function coverageMarkdown(
           '既有 production public records',
           report.beforeAfter.baselinePublishedRecordCount,
         ],
-        ['本次待審查 claims', report.researchPending.claims],
-        ['本次待審查 positions', report.researchPending.positions],
-        ['本次待審查 career records', report.researchPending.careerRecords],
+        ['本次待驗證 claims', report.researchPending.claims],
+        ['本次待驗證 positions', report.researchPending.positions],
+        ['本次待驗證 career records', report.researchPending.careerRecords],
         ['政策參照（仍 withheld）', report.researchPending.policyReferences],
         ['新增公開 records', report.beforeAfter.newlyPublishedRecordCount],
       ],
@@ -458,7 +460,7 @@ function coverageMarkdown(
   lines.push('', '## 選區 coverage', '');
   lines.push(
     ...markdownTable(
-      ['選區', '候選人', '有紀錄', '政策參照', '待審查紀錄', '來源不可用'],
+      ['選區', '候選人', '有紀錄', '政策參照', '待驗證紀錄', '來源不可用'],
       report.coverageByDistrict.map((item) => [
         item.districtId,
         item.candidateCount,

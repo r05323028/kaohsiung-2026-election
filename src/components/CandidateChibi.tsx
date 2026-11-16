@@ -2,13 +2,13 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { Suspense, useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
+import { headKitForSlug } from '../data/avatars/likeness/runtime';
 import type { PublicCandidateCard } from '../data/candidate-card';
 import { withBase } from '../utils/paths';
-import { headKitForSlug } from '../data/avatars/likeness/runtime';
+import CandidateHeadKit from './CandidateHeadKit';
 import { buildCandidateModel } from './candidate-geometry';
 import { CANDIDATE_MODEL } from './candidate-model';
 import { characterStyle } from './character-style';
-import CandidateHeadKit from './CandidateHeadKit';
 
 useGLTF.preload(withBase(CANDIDATE_MODEL.basePath));
 

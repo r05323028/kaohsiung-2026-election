@@ -7130,7 +7130,7 @@
       "tier": "tier-1-primary",
       "retrievedAt": "2026-11-14T00:00:00.000Z",
       "rawPath": "data/approved/2026/kaohsiung-election.json",
-      "sha256": "6c7b186e1ed926202a8f023ab7bbef91cdfd08eb7aef1485468a166eb9216cee",
+      "sha256": "72da995281736f9a53954ea736ea53a62d9b50a801d1bce3770f57dc96c23a4f",
       "note": "候選人姓名、選區與政黨身分以此名冊為準。"
     },
     {
@@ -65064,11 +65064,9 @@
       "note": "已取得 1 筆公職、0 筆政府專案、0 筆立法提案、0 筆表決與 0 筆議會活動紀錄。"
     }
   ],
-  "review": {
-    "status": "approved",
-    "reviewerId": "editorial-pipeline",
-    "reviewedAt": "2026-11-14",
-    "approvedAt": "2026-11-14",
+  "validation": {
+    "status": "validated",
+    "method": "deterministic-source-check-v1",
     "scopeNote": "僅收錄已保留文件可逐字核對的從政紀錄：議員服務政見頁的屆次、議會新聞稿中以姓名歸屬的質詢與市政參與，以及人工查證並附來源的補充紀錄。",
     "limitations": [
       "屆次取自議員服務政見頁「經歷」欄位；部分條目未載明起訖日期，故不推定日期。",

@@ -8397,53 +8397,86 @@
   ],
   "relations": [
     {
-      "stablePersonKeySuggestion": "person:ke-wen-fu",
       "relativeName": "柯文福",
-      "relation": "父親",
-      "career": [
+      "relationLabel": "父",
+      "relationTypeHint": "parent-child",
+      "kinship": {
+        "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+        "publisher": "中央社",
+        "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+        "publicationDate": "2022-08-07",
+        "quote": "遇到支持者送上父親柯文福50年前的競選徽章"
+      },
+      "positions": [
         {
-          "officeTitle": "屏東縣長",
-          "organization": "屏東縣",
+          "organizationName": "屏東縣政府",
+          "organizationType": "government",
+          "positionTitle": "縣長",
+          "positionCategory": "political",
           "status": "former",
-          "start": "第7屆",
-          "end": "第8屆"
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+            "publisher": "中央社",
+            "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+            "publicationDate": "2022-08-07",
+            "quote": "柯文福是教育出身，1972年受國民黨徵召參選屏東縣長，在7、8屆縣長任滿後出任台灣省政府委員、僑委會副委員長等職"
+          },
+          "sourceIds": [
+            "source-9acc4d480df2"
+          ]
         },
         {
-          "officeTitle": "台灣省政府委員",
-          "organization": "台灣省政府",
+          "organizationName": "台灣省政府",
+          "organizationType": "government",
+          "positionTitle": "委員",
+          "positionCategory": "public_office",
           "status": "former",
-          "start": null,
-          "end": null
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+            "publisher": "中央社",
+            "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+            "publicationDate": "2022-08-07",
+            "quote": "柯文福是教育出身，1972年受國民黨徵召參選屏東縣長，在7、8屆縣長任滿後出任台灣省政府委員、僑委會副委員長等職"
+          },
+          "sourceIds": [
+            "source-9acc4d480df2"
+          ]
         },
         {
-          "officeTitle": "僑委會副委員長",
-          "organization": "僑務委員會",
+          "organizationName": "僑務委員會",
+          "organizationType": "government",
+          "positionTitle": "副委員長",
+          "positionCategory": "public_office",
           "status": "former",
-          "start": null,
-          "end": null
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
+            "publisher": "中央社",
+            "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽",
+            "publicationDate": "2022-08-07",
+            "quote": "柯文福是教育出身，1972年受國民黨徵召參選屏東縣長，在7、8屆縣長任滿後出任台灣省政府委員、僑委會副委員長等職"
+          },
+          "sourceIds": [
+            "source-9acc4d480df2"
+          ]
         }
       ],
-      "kinshipSourceIds": [
-        "source-cna-20220807-aipl-202208070082"
-      ],
-      "careerSourceIds": [
-        "source-cna-20220807-aipl-202208070082"
-      ],
-      "sources": [
-        {
-          "sourceId": "source-cna-20220807-aipl-202208070082",
-          "title": "支持者送上父親50年前「福」字徽章 柯志恩感動哽咽 | 政治 | 中央社 CNA",
-          "publisher": "中央社 CNA",
-          "url": "https://www.cna.com.tw/news/aipl/202208070082.aspx",
-          "publicationDate": "2022-08-07T13:49:00+08:00",
-          "retrievedAt": "2026-11-12"
-        }
-      ],
-      "confidence": "high",
+      "notes": "中央社載其 1972 年受徵召參選、第 7 與第 8 屆縣長任滿後出任台灣省政府委員與僑委會副委員長，2010 年 3 月過世；未載精確起訖日期，故縣長起訖留 null（維基百科條目另載 1973-1981，未經官方來源獨立驗證，不採為日期依據）。",
       "candidateId": "official-mayor-ke-zhi-en-2026",
+      "relation": "父",
+      "kinshipSourceIds": [
+        "source-9acc4d480df2"
+      ],
       "positionSourceIds": [
-        "source-cna-20220807-aipl-202208070082"
-      ]
+        "source-9acc4d480df2"
+      ],
+      "career": null,
+      "researchOrigin": "network"
     },
     {
       "relativeName": "洪德成",
@@ -11215,26 +11248,47 @@
     },
     {
       "relativeName": "楊振添",
-      "relation": "father-in-law",
-      "career": {
-        "office": "市議員",
-        "title": "第1至4屆",
-        "organization": "合併前高雄市議會",
-        "status": "前議員",
-        "start": "民國70（1981）",
-        "end": "民國87（1998）"
+      "relationLabel": "公公",
+      "relationTypeHint": "in-laws",
+      "kinship": {
+        "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+        "publisher": "Newtalk新聞",
+        "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+        "publicationDate": "2019-09-07",
+        "quote": "陳麗娜來自小港最大的政治世家，公公楊振添1981年起連任四屆高雄市議員，1998年交接給她的丈夫楊敏郎，2002年成功連任後，2004年因高雄市議長朱安雄賄選案入獄，喪失議員資格。"
       },
-      "kinshipSourceIds": [
-        "S-CHEN-KIN"
+      "positions": [
+        {
+          "organizationName": "高雄市議會",
+          "organizationType": "legislature",
+          "positionTitle": "市議員（合併前第一屆至第四屆）",
+          "positionCategory": "political",
+          "status": "former",
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://newtalk.tw/news/view/2019-09-07/295437",
+            "publisher": "Newtalk新聞",
+            "title": "立委選情初探》高市第八選區在地「揭弊大將」 挑戰花媽子弟兵",
+            "publicationDate": "2019-09-07",
+            "quote": "公公楊振添1981年起連任四屆高雄市議員"
+          },
+          "sourceIds": [
+            "source-19f1c5af82da"
+          ]
+        }
       ],
-      "careerSourceIds": [
-        "S-KCC-S32"
-      ],
-      "contradictions": [],
+      "notes": "親屬關係為姻親（配偶之父），契約列為次要親屬；此處關係由同一篇報導直接以「公公」指明。高雄市議會《歷屆議員簡介》另列楊振添為合併前第一屆至第四屆議員（https://www.kcc.gov.tw/Member_HistoryList.aspx?n=122&sms=0&s=32），與「1981 年起連任四屆」相符。",
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-ec2af867",
+      "relation": "公公",
+      "kinshipSourceIds": [
+        "source-19f1c5af82da"
+      ],
       "positionSourceIds": [
-        "S-KCC-S32"
-      ]
+        "source-19f1c5af82da"
+      ],
+      "career": null,
+      "researchOrigin": "network"
     },
     {
       "relativeName": "吳昱鋒",
@@ -11566,53 +11620,110 @@
     },
     {
       "relativeName": "王南榮",
-      "relation": "paternal uncle",
-      "career": {
-        "office": "林園鄉民代表",
-        "title": "2屆",
-        "organization": "林園鄉民代表會",
-        "status": "前代表",
-        "start": null,
-        "end": null
+      "relationLabel": "叔父（父王國發之二弟）",
+      "relationTypeHint": "uncle-aunt-niece-nephew",
+      "kinship": {
+        "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+        "publisher": "自由時報",
+        "title": "打造林園「王家班」 王國發病逝",
+        "publicationDate": "2016-01-06",
+        "quote": "二弟王南榮曾任高雄客運林園站、鳳山站站長及2屆林園鄉民代表"
       },
-      "kinshipSourceIds": [
-        "S-WANG"
+      "positions": [
+        {
+          "organizationName": "高雄縣林園鄉民代表會",
+          "organizationType": "legislature",
+          "positionTitle": "鄉民代表",
+          "positionCategory": "political",
+          "status": "former",
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "二弟王南榮曾任高雄客運林園站、鳳山站站長及2屆林園鄉民代表"
+          },
+          "sourceIds": [
+            "source-a28b079b2766"
+          ]
+        }
       ],
-      "careerSourceIds": [
-        "S-WANG"
-      ],
-      "contradictions": [
-        "任期年份未載。"
-      ],
+      "notes": "親屬鏈：同篇載「市議員王耀裕父親王國發…」及「二弟王南榮…」，故王南榮為候選人父之弟。同句另載其曾任高雄客運林園站、鳳山站站長，非契約四類合格職務，不另列。任職屆次與起訖日期未載。",
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "relation": "叔父（父王國發之二弟）",
+      "kinshipSourceIds": [
+        "source-a28b079b2766"
+      ],
       "positionSourceIds": [
-        "S-WANG"
-      ]
+        "source-a28b079b2766"
+      ],
+      "career": null,
+      "researchOrigin": "network"
     },
     {
       "relativeName": "王方員",
-      "relation": "paternal uncle",
-      "career": {
-        "office": "高雄縣議員、林園鄉長",
-        "title": "縣議員；鄉長2屆",
-        "organization": "高雄縣議會、林園鄉公所",
-        "status": "前議員、前鄉長",
-        "start": null,
-        "end": null
+      "relationLabel": "叔父（父王國發之四弟）",
+      "relationTypeHint": "uncle-aunt-niece-nephew",
+      "kinship": {
+        "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+        "publisher": "自由時報",
+        "title": "打造林園「王家班」 王國發病逝",
+        "publicationDate": "2016-01-06",
+        "quote": "將想當歌星的四弟王方員拉回林園從政，王方員曾當過縣議員及兩屆林園鄉長"
       },
-      "kinshipSourceIds": [
-        "S-WANG"
+      "positions": [
+        {
+          "organizationName": "高雄縣議會",
+          "organizationType": "legislature",
+          "positionTitle": "議員",
+          "positionCategory": "political",
+          "status": "former",
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "將想當歌星的四弟王方員拉回林園從政，王方員曾當過縣議員及兩屆林園鄉長"
+          },
+          "sourceIds": [
+            "source-a28b079b2766"
+          ]
+        },
+        {
+          "organizationName": "高雄縣林園鄉",
+          "organizationType": "government",
+          "positionTitle": "鄉長",
+          "positionCategory": "political",
+          "status": "former",
+          "startDate": null,
+          "endDate": null,
+          "source": {
+            "url": "https://news.ltn.com.tw/news/life/breakingnews/1563465",
+            "publisher": "自由時報",
+            "title": "打造林園「王家班」 王國發病逝",
+            "publicationDate": "2016-01-06",
+            "quote": "將想當歌星的四弟王方員拉回林園從政，王方員曾當過縣議員及兩屆林園鄉長"
+          },
+          "sourceIds": [
+            "source-a28b079b2766"
+          ]
+        }
       ],
-      "careerSourceIds": [
-        "S-WANG"
-      ],
-      "contradictions": [
-        "任期年份未載。"
-      ],
+      "notes": "同句載「曾當過縣議員及兩屆林園鄉長」，屆次與起訖日期未載；鄉長屬民選首長，歸 political。",
       "candidateId": "official-candidate-2026-district-kaohsiung-council-11-aa063da4",
+      "relation": "叔父（父王國發之四弟）",
+      "kinshipSourceIds": [
+        "source-a28b079b2766"
+      ],
       "positionSourceIds": [
-        "S-WANG"
-      ]
+        "source-a28b079b2766"
+      ],
+      "career": null,
+      "researchOrigin": "network"
     },
     {
       "relativeName": "王主安",
@@ -20700,10 +20811,10 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-2b7c93ce28e8",
-        "claim-affiliation-41e152ce11f6",
-        "claim-affiliation-d7f0460283a6",
-        "claim-family-relation-22f595914bcb-kinship"
+        "claim-affiliation-979d187b2153",
+        "claim-affiliation-d8e2c0e917f1",
+        "claim-affiliation-fa5e64e52858",
+        "claim-family-relation-77c6fd439e59-kinship"
       ]
     },
     {
@@ -20715,10 +20826,10 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "other-public-record",
       "supportedClaimIds": [
-        "claim-affiliation-2b7c93ce28e8",
-        "claim-affiliation-41e152ce11f6",
-        "claim-affiliation-d7f0460283a6",
-        "claim-family-relation-22f595914bcb-kinship"
+        "claim-affiliation-979d187b2153",
+        "claim-affiliation-d8e2c0e917f1",
+        "claim-affiliation-fa5e64e52858",
+        "claim-family-relation-77c6fd439e59-kinship"
       ]
     },
     {
@@ -21812,12 +21923,12 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "official-record",
       "supportedClaimIds": [
-        "claim-affiliation-3f26ee92a09d",
+        "claim-affiliation-451c17a30ea7",
         "claim-affiliation-7e4c8ffa5392",
         "claim-affiliation-d10b26ee7fef",
         "claim-affiliation-eee4f8f34ce2",
+        "claim-family-relation-04c27fd4033d-kinship",
         "claim-family-relation-83b078b5f060-kinship",
-        "claim-family-relation-8eb9afeeeda1-kinship",
         "claim-family-relation-91a89c29d357-kinship",
         "claim-family-relation-dfeff46c031d-kinship"
       ]
@@ -21831,9 +21942,9 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "official-record",
       "supportedClaimIds": [
-        "claim-affiliation-3f26ee92a09d",
+        "claim-affiliation-451c17a30ea7",
         "claim-affiliation-d10b26ee7fef",
-        "claim-family-relation-8eb9afeeeda1-kinship",
+        "claim-family-relation-04c27fd4033d-kinship",
         "claim-family-relation-91a89c29d357-kinship"
       ]
     },
@@ -21861,9 +21972,9 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "established-news",
       "supportedClaimIds": [
-        "claim-affiliation-3f26ee92a09d",
+        "claim-affiliation-451c17a30ea7",
         "claim-affiliation-7e4c8ffa5392",
-        "claim-family-relation-8eb9afeeeda1-kinship",
+        "claim-family-relation-04c27fd4033d-kinship",
         "claim-family-relation-dfeff46c031d-kinship"
       ]
     },
@@ -21893,13 +22004,14 @@
       "supportedClaimIds": [
         "claim-affiliation-1a1d253151dd",
         "claim-affiliation-1c56b25492e8",
-        "claim-affiliation-21c65c3b9e2e",
         "claim-affiliation-36d70997cf42",
-        "claim-affiliation-6f1e56d73972",
+        "claim-affiliation-5bca62d7cc6f",
+        "claim-affiliation-6b2d55b28a35",
+        "claim-affiliation-81a41e0b55c9",
         "claim-affiliation-a523648f1684",
-        "claim-family-relation-242df6a1eed4-kinship",
+        "claim-family-relation-293e8694d8e4-kinship",
+        "claim-family-relation-2cbd9b50f21e-kinship",
         "claim-family-relation-a5a4bb438c71-kinship",
-        "claim-family-relation-ab081ea17938-kinship",
         "claim-family-relation-b3c88bca1b9a-kinship",
         "claim-family-relation-e509d0b91cbf-kinship"
       ]
@@ -21913,8 +22025,9 @@
       "retrievedAt": "2026-11-12",
       "sourceKind": "official-record",
       "supportedClaimIds": [
-        "claim-affiliation-6f1e56d73972",
-        "claim-family-relation-242df6a1eed4-kinship"
+        "claim-affiliation-5bca62d7cc6f",
+        "claim-affiliation-6b2d55b28a35",
+        "claim-family-relation-2cbd9b50f21e-kinship"
       ]
     },
     {

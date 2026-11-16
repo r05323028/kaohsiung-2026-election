@@ -10,8 +10,8 @@ import {
   type ResearchCategory,
   type ResearchDataset,
   type ResearchResultStatus,
-  type ResearchReviewStatus,
   type ResearchSourceSnapshot,
+  type ResearchValidationStatus,
   validateResearchDataset,
 } from './research';
 
@@ -28,7 +28,7 @@ export type CandidateResearchCategorySummary = {
   discoveryStatus: string;
   retrievalStatus: string;
   resultStatus: ResearchResultStatus;
-  reviewStatus: ResearchReviewStatus;
+  validationStatus: ResearchValidationStatus;
   publicationStatus: string;
   claimCount: number;
   evidenceCount: number;
@@ -37,7 +37,7 @@ export type CandidateResearchCategorySummary = {
 
 export type CandidateResearchSummary = {
   snapshotDate: string;
-  reviewStatus: 'pending-human-review';
+  validationStatus: ResearchDataset['validation']['status'];
   identityStatus: 'roster-verified' | 'conflicted';
   categoryAudits: Record<ResearchCategory, CandidateResearchCategorySummary>;
   sourceIds: string[];
@@ -89,7 +89,7 @@ export function getCandidateResearchSummary(
           discoveryStatus: audit.discoveryStatus,
           retrievalStatus: audit.retrievalStatus,
           resultStatus: audit.resultStatus,
-          reviewStatus: audit.reviewStatus,
+          validationStatus: audit.validationStatus,
           publicationStatus: audit.publicationStatus,
           claimCount: audit.claimIds.length,
           evidenceCount: audit.evidenceIds.length,
@@ -106,7 +106,7 @@ export function getCandidateResearchSummary(
 
   return {
     snapshotDate: candidateResearchDataset.snapshotDate,
-    reviewStatus: candidateResearchDataset.review.status,
+    validationStatus: candidateResearchDataset.validation.status,
     identityStatus,
     categoryAudits,
     sourceIds: sourceIdsFor(audits),
@@ -120,6 +120,6 @@ export function getCandidateResearchSummary(
       (sum, audit) => sum + audit.evidenceIds.length,
       0,
     ),
-    note: '研究快照已通過機器參照檢查；人工審查尚未完成。未執行不代表不存在。',
+    note: '研究快照已通過決定性檢查；未執行、衝突或缺少候選人專屬證據的類別仍維持未發布，內容核對透過 Pull Request 完成。',
   };
 }

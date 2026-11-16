@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import {
   PolicyPublicationStatusSchema,
-  PolicyReviewStatusSchema,
+  PolicyValidationStatusSchema,
 } from '../policy-research/schema';
 
 const DateOnlySchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
@@ -12,8 +12,8 @@ const Sha256Schema = z.string().regex(/^[a-f0-9]{64}$/);
 
 export const EnrichmentRecordStatusSchema = z.object({
   verificationStatus: z.literal('machine-validated'),
-  reviewStatus: z.literal('pending-human-review'),
-  publicationStatus: z.literal('withheld-pending-review'),
+  validationStatus: z.literal('pending-verification'),
+  publicationStatus: z.literal('withheld-unverified'),
 });
 
 const TierSchema = z.enum([
@@ -149,7 +149,7 @@ export const EnrichmentPolicyReferenceSchema = z.object({
     'context-unknown',
   ]),
   verificationStatus: z.literal('machine-validated'),
-  reviewStatus: PolicyReviewStatusSchema,
+  validationStatus: PolicyValidationStatusSchema,
   publicationStatus: PolicyPublicationStatusSchema,
 });
 
@@ -215,12 +215,9 @@ export const PublicRecordsEnrichmentDatasetSchema = z.object({
     proposalsAdded: z.literal(0),
     publishedRecords: z.literal(0),
   }),
-  review: z.object({
-    status: z.literal('pending-human-review'),
-    reviewerId: z.null(),
-    reviewedAt: z.null(),
-    approvedRecordCount: z.literal(0),
-    publishedRecordCount: z.literal(0),
+  validation: z.object({
+    status: z.literal('pending-verification'),
+    method: z.literal('deterministic-source-check-v1'),
     note: z.string().min(1),
   }),
 });
@@ -467,14 +464,7 @@ export function validatePublicRecordsEnrichmentDataset(
       throw new Error(`Audit ${audit.candidateId} is negative evidence`);
   }
 
-  if (dataset.review.reviewerId !== null || dataset.review.reviewedAt !== null)
-    throw new Error('Pending enrichment cannot contain reviewer metadata');
-  if (
-    dataset.review.approvedRecordCount !== 0 ||
-    dataset.review.publishedRecordCount !== 0
-  )
-    throw new Error(
-      'Pending enrichment cannot contain approved or published records',
-    );
+  if (dataset.validation.method !== 'deterministic-source-check-v1')
+    throw new Error('Enrichment dataset must use deterministic validation');
   return dataset;
 }

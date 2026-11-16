@@ -103,15 +103,15 @@ ${[...dispositionCounts.entries()].map(([key, value]) => `| ${key} | ${value} |`
 
 ## 說明
 
-- 「公開」代表通過獨立查核與來源政策，不代表人工編輯核准。
+- 「公開」代表通過獨立查核與來源政策，不代表PR 內容審查。
 - 未通過查核、來源不足或身分未確認的資料保留在研究層，不進入公開頁面。
 - 學歷與經歷若來自選舉公報，屬候選人自行填列，頁面以「候選人自行填列」標示。
 - 未知欄位以中性文字呈現，不推測、不補齊。
 `;
-mkdirSync(join(root, 'reports'), { recursive: true });
-writeFileSync(join(root, 'reports/basic-profile-coverage.md'), markdown);
+mkdirSync(join(root, '.cache/reports'), { recursive: true });
+writeFileSync(join(root, '.cache/reports/basic-profile-coverage.md'), markdown);
 writeFileSync(
-  join(root, 'reports/basic-profile-coverage.json'),
+  join(root, '.cache/reports/basic-profile-coverage.json'),
   `${JSON.stringify(
     {
       generatedAt: publication.generatedAt,
@@ -135,4 +135,4 @@ writeFileSync(
     2,
   )}\n`,
 );
-console.log('Wrote reports/basic-profile-coverage.md and .json');
+console.log('Wrote .cache/reports/basic-profile-coverage.md and .json');

@@ -1,47 +1,39 @@
 import publishedInput from '../../../data/published/2026/candidate-biographies.json';
-import { validateBiographyPublicationSnapshot } from './publication';
 import {
   type BiographyPublishedClaim,
-  validateBiographyApprovedDataset,
+  type BiographySource,
+  validateBiographyPublicationSnapshot,
 } from './schema';
 
 export const publicationBiographySnapshot =
   validateBiographyPublicationSnapshot(publishedInput);
 
-// Compatibility export for existing profile mappers. The publication snapshot remains authoritative.
-export const approvedBiographyDataset = validateBiographyApprovedDataset({
-  datasetId: 'kaohsiung-2026-candidate-biographies-approved',
-  snapshotDate: publicationBiographySnapshot.snapshotDate,
-  records: publicationBiographySnapshot.records,
-  note: 'Derived from the editorial publication snapshot; this is not a separate approval authority.',
-});
-
 export type BiographyReadModel = {
-  status:
-    | 'approved'
-    | 'pending-human-review'
-    | 'withheld-conflict'
-    | 'unavailable';
-  claims: Array<BiographyPublishedClaim>;
+  status: 'published' | 'none';
+  claims: BiographyPublishedClaim[];
   note: string;
 };
 
-export function getBiographyReadModel(
-  candidateId: string,
-): BiographyReadModel | undefined {
-  const claims = approvedBiographyDataset.records.filter(
-    (claim) => claim.candidateId === candidateId,
-  );
-  if (claims.length > 0) {
-    return {
-      status: 'approved',
-      claims,
-      note: '本頁僅顯示已完成身分核對、人工與編輯核准並通過出版閘門的履歷資料。',
-    };
-  }
+export type BiographySourceReadModel = BiographySource & {
+  retrievalDate: string;
+};
+
+export const biographySourceRecords: BiographySourceReadModel[] =
+  publicationBiographySnapshot.sources.map((source) => ({
+    ...source,
+    retrievalDate: publicationBiographySnapshot.generatedAt,
+  }));
+
+const PUBLICATION_NOTE =
+  '本區資料取自已提交的來源快照；候選人資料透過 Pull Request 檢視，網站僅執行確定性的格式、來源與關聯檢查。';
+
+export function getBiographyReadModel(candidateId: string): BiographyReadModel {
+  const claims = publicationBiographySnapshot.records
+    .filter((claim) => claim.candidateId === candidateId)
+    .sort((left, right) => left.claimId.localeCompare(right.claimId));
   return {
-    status: 'pending-human-review',
-    claims: [],
-    note: '目前沒有可公開的已核准履歷主張；空白不代表不存在，待審資料不會載入公開頁面。',
+    status: claims.length > 0 ? 'published' : 'none',
+    claims,
+    note: PUBLICATION_NOTE,
   };
 }

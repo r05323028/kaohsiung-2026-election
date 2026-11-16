@@ -14,7 +14,13 @@ import { chromium } from '@playwright/test';
 import { focusAdmin, returnToWorld } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
-const outDir = join(process.cwd(), 'reports', 'visual', 'living-world');
+const outDir = join(
+  process.cwd(),
+  '.cache',
+  'reports',
+  'visual',
+  'living-world',
+);
 mkdirSync(outDir, { recursive: true });
 
 const COUNCIL = 'kaohsiung-council-04-23bd0041';

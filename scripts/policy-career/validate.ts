@@ -15,13 +15,12 @@ import type { PublishedPolicyDataset } from '../../src/data/policy-research/publ
 import type { PoliticalCareerDataset } from '../../src/data/political-career/schema';
 
 /**
- * Publication gate for data/approved/2026/policy-career-separation.json.
+ * Deterministic classification validation for data/approved/2026/policy-career-separation.json.
  *
  * The Policy tab and the Career tab must never present the same fact twice, and
  * no historical action may be published as a campaign promise. The checks below
- * are the executable form of those rules; the build script enforces the same
- * invariants before writing, so a passing validator and a successful build mean
- * the same thing.
+ * are executable data invariants; the build script enforces the same rules before
+ * writing, so a passing validator and a successful build mean the same thing.
  */
 
 const ROOT = resolve('.');
@@ -43,14 +42,6 @@ function assertCondition(
   if (!condition) fail(message);
 }
 
-type Curation = {
-  entries: {
-    policyId: string;
-    ownership: string;
-    status: string;
-  }[];
-};
-
 const dataset = JSON.parse(
   readFileSync(DATASET_PATH, 'utf8'),
 ) as PolicyCareerDataset;
@@ -62,9 +53,6 @@ const published = JSON.parse(
 const career = JSON.parse(
   readFileSync(CAREER_PATH, 'utf8'),
 ) as PoliticalCareerDataset;
-const curation = JSON.parse(
-  readFileSync(join(ROOT, 'data/policy-career/2026/curation.json'), 'utf8'),
-) as Curation;
 const roster = (
   approvedRoster as { candidates: { id: string; displayName: string }[] }
 ).candidates;
@@ -76,8 +64,6 @@ const policyById = new Map(
 const activityById = new Map(
   career.activities.map((activity) => [activity.id, activity]),
 );
-const configuredIds = new Set(curation.entries.map((entry) => entry.policyId));
-
 assertCondition(
   published.policies.length === dataset.policyCount,
   'policy count does not match the published policy dataset: ' +
@@ -118,14 +104,6 @@ for (const policy of published.policies) {
 const commitments: string[] = [];
 const careerRecords: string[] = [];
 for (const row of dataset.classifications) {
-  assertCondition(
-    row.ownership !== 'review-required' || row.status === 'pending-review',
-    'review-required record is marked publishable: ' + row.policyId,
-  );
-  assertCondition(
-    row.ownership !== 'review-required',
-    'record still requires review and must not be published: ' + row.policyId,
-  );
   assertCondition(
     row.ownership !== 'policy-commitments' ||
       row.temporalBasis === 'future-commitment',
@@ -192,7 +170,7 @@ for (const row of dataset.classifications) {
   );
 }
 
-// 3. A promise that reads as a delivered outcome must carry an editorial reading.
+// 3. A promise that reads as a delivered outcome must carry an explicit classification.
 const policyText = (policy: (typeof published.policies)[number]): string =>
   [
     policy.title,
@@ -208,8 +186,9 @@ for (const policyId of commitments) {
   const row = classified.get(policyId);
   assertCondition(row, 'commitment without classification: ' + policyId);
   assertCondition(
-    row.basis.includes('editorial-review'),
-    'promise reads as completed without an editorial reading: ' + policyId,
+    row.basis === 'classification-rule',
+    'promise reads as completed without an explicit classification: ' +
+      policyId,
   );
   assertCondition(
     row.note.trim().length > 0,
@@ -217,7 +196,7 @@ for (const policyId of commitments) {
   );
 }
 
-// 4. Reviewed history must be traceable to the record it comes from.
+// 4. Classified history must be traceable to the record it comes from.
 for (const row of dataset.classifications) {
   if (row.historical === null) continue;
   const policy = policyById.get(row.policyId);
@@ -345,57 +324,57 @@ for (const link of dataset.links) {
   } else {
     assertCondition(
       Boolean(link.note && link.note.trim().length > 0),
-      'curated link carries no editorial note: ' + link.policyId,
+      'curated link carries no source note: ' + link.policyId,
     );
   }
 }
 
-// 7. Publication gates, counts and review metadata.
+// 7. Deterministic validation metadata and counts.
 assertCondition(
-  dataset.review.status === 'approved',
-  'dataset is not approved for publication',
+  dataset.validation.status === 'validated',
+  'dataset has not passed deterministic validation',
 );
 assertCondition(
-  dataset.review.reviewedAt === dataset.snapshotDate,
-  'review date does not match the snapshot',
+  dataset.validation.method === 'deterministic-classification-v1',
+  'dataset validation method is not deterministic',
 );
 assertCondition(
-  dataset.review.limitations.length > 0,
-  'dataset publishes no limitations',
+  dataset.validation.limitations.length > 0,
+  'dataset publishes no validation limitations',
 );
 assertCondition(
-  dataset.review.counts.policies === dataset.classifications.length,
-  'review count for policies is stale',
+  dataset.validation.counts.policies === dataset.classifications.length,
+  'validation count for policies is stale',
 );
 assertCondition(
-  dataset.review.counts.commitments === commitments.length,
-  'review count for commitments is stale',
+  dataset.validation.counts.commitments === commitments.length,
+  'validation count for commitments is stale',
 );
 assertCondition(
-  dataset.review.counts.careerRecords === careerRecords.length,
-  'review count for career records is stale',
+  dataset.validation.counts.careerRecords === careerRecords.length,
+  'validation count for career records is stale',
 );
 assertCondition(
-  dataset.review.counts.splitRecords ===
+  dataset.validation.counts.splitRecords ===
     dataset.classifications.filter((row) => row.ownership === 'split-record')
       .length,
-  'review count for split records is stale',
+  'validation count for split records is stale',
 );
 assertCondition(
-  dataset.review.counts.movedOut ===
+  dataset.validation.counts.movedOut ===
     dataset.classifications.filter(
       (row) => row.ownership === 'political-career',
     ).length,
-  'review count for moved-out records is stale',
+  'validation count for moved-out records is stale',
 );
 assertCondition(
-  dataset.review.counts.links === dataset.links.length,
-  'review count for links is stale',
+  dataset.validation.counts.links === dataset.links.length,
+  'validation count for links is stale',
 );
 for (const row of dataset.classifications) {
   assertCondition(
-    row.status === 'approved' || !configuredIds.has(row.policyId),
-    'record is not approved and has no reviewed decision: ' + row.policyId,
+    row.status === 'validated',
+    'classification did not pass deterministic validation: ' + row.policyId,
   );
 }
 

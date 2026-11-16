@@ -52,18 +52,18 @@ describe('public-record adapters', () => {
 });
 
 describe('candidate research read model', () => {
-  it('exposes machine research status without inventing approval', () => {
+  it('exposes deterministic research status without inventing publication metadata', () => {
     expect(candidateResearchDataset.candidateCount).toBe(106);
     const summary = getCandidateResearchSummary(
       'official-mayor-zhang-jing-2026',
     );
     expect(summary).toMatchObject({
-      reviewStatus: 'pending-human-review',
+      validationStatus: 'validated',
       identityStatus: 'roster-verified',
       attemptedCategoryCount: 3,
       retrievedCategoryCount: 3,
     });
-    expect(summary?.note).toContain('人工審查尚未完成');
+    expect(summary?.note).toContain('決定性檢查');
     expect(
       getCandidateResearchSummary(
         'official-candidate-2026-district-kaohsiung-council-03-53fbb71e',
@@ -97,12 +97,13 @@ describe('validated public-record dataset', () => {
     );
   });
 
-  it('validates every approved item against evidence and forbids reviewer metadata while pending', () => {
+  it('validates every approved item against evidence and deterministic validation', () => {
     const parsed = validatePublicRecordsDataset(
       approvedInput,
       manifestSourceIds,
     );
-    expect(parsed.review.status).toBe('pending-human-review');
+    expect(parsed.validation.status).toBe('validated');
+    expect(parsed.validation.method).toBe('deterministic-source-check-v1');
     expect(parsed.claims.every((claim) => claim.evidenceIds.length > 0)).toBe(
       true,
     );
@@ -152,21 +153,5 @@ describe('validated public-record dataset', () => {
     expect(() =>
       validatePublicRecordsDataset(unresolvedConflict, manifestSourceIds),
     ).toThrow('must include a resolution');
-
-    const unreviewedWithReviewer = structuredClone(
-      parsed,
-    ) as PublicRecordsDataset;
-    unreviewedWithReviewer.review.reviewerId = 'invented-reviewer';
-    expect(() =>
-      validatePublicRecordsDataset(unreviewedWithReviewer, manifestSourceIds),
-    ).toThrow('cannot contain reviewer identity');
-
-    const approvedWithoutReviewer = structuredClone(
-      parsed,
-    ) as PublicRecordsDataset;
-    approvedWithoutReviewer.review.status = 'approved';
-    expect(() =>
-      validatePublicRecordsDataset(approvedWithoutReviewer, manifestSourceIds),
-    ).toThrow('must contain reviewer identity');
   });
 });

@@ -27,9 +27,9 @@ export const ClaimVerificationStatusSchema = z.enum([
   'Disputed',
   'Insufficient information',
 ]);
-export const ClaimReviewStatusSchema = z.enum([
-  'approved',
-  'pending-review',
+export const ClaimValidationStatusSchema = z.enum([
+  'source-backed',
+  'pending-verification',
   'rejected',
   'needs-clarification',
 ]);
@@ -45,7 +45,7 @@ const ClaimBaseSchema = z.object({
   attribution: ClaimAttributionSchema,
   verificationStatus: ClaimVerificationStatusSchema,
   evidenceIds: z.array(z.string().min(1)).min(1),
-  reviewStatus: ClaimReviewStatusSchema,
+  validationStatus: ClaimValidationStatusSchema,
 });
 
 const PositionClaimSchema = ClaimBaseSchema.extend({
@@ -170,7 +170,7 @@ export const EvidenceSchema = z.object({
   quotedText: z.string().nullable(),
   retrievedAt: PublicDateSchema,
   verificationStatus: ClaimVerificationStatusSchema,
-  reviewStatus: ClaimReviewStatusSchema,
+  validationStatus: ClaimValidationStatusSchema,
 });
 
 export const IdentityResolutionSchema = z.object({
@@ -180,7 +180,7 @@ export const IdentityResolutionSchema = z.object({
   sourceIdentifier: z.string().min(1),
   observedName: z.string().min(1),
   matchBasis: z.array(z.string().min(1)).min(1),
-  status: z.enum(['resolved', 'pending-review', 'rejected']),
+  status: z.enum(['resolved', 'pending-verification', 'rejected']),
   evidenceIds: z.array(z.string().min(1)).min(1),
 });
 
@@ -201,12 +201,12 @@ export const ConflictSchema = z.object({
   resolution: z.string().nullable(),
 });
 
-const RecordReviewFields = {
+const RecordPublicationFields = {
   verificationStatus: ClaimVerificationStatusSchema,
-  reviewStatus: ClaimReviewStatusSchema,
+  validationStatus: ClaimValidationStatusSchema,
   publicationStatus: z.enum([
-    'approved-source-backed',
-    'pending-review',
+    'source-backed',
+    'pending-verification',
     'blocked',
   ]),
   claimIds: z.array(z.string().min(1)).min(1),
@@ -222,7 +222,7 @@ export const PositionRecordSchema = z.object({
   endDate: PublicDateSchema.nullable(),
   currentStatus: z.enum(['current', 'historical', 'unknown']),
   lastVerifiedAt: PublicDateSchema,
-  ...RecordReviewFields,
+  ...RecordPublicationFields,
 });
 
 export const PolicyContextSchema = z.enum([
@@ -259,7 +259,7 @@ export const PolicyRecordSchema = z.object({
   policyContext: PolicyContextSchema.optional(),
   policyStatus: PolicyStatusSchema.optional(),
   geographicScope: z.string().min(1).optional(),
-  ...RecordReviewFields,
+  ...RecordPublicationFields,
 });
 
 export const PublicActivityRecordSchema = z.object({
@@ -280,7 +280,7 @@ export const PublicActivityRecordSchema = z.object({
   description: z.string().min(1),
   documentedOutcome: z.string().nullable(),
   attribution: ClaimAttributionSchema,
-  ...RecordReviewFields,
+  ...RecordPublicationFields,
 });
 
 /**
@@ -320,7 +320,7 @@ export const NewsRecordSchema = z.object({
   ]),
   sourceDependencies: z.array(z.string().min(1)).min(1),
   duplicateOf: z.string().nullable(),
-  ...RecordReviewFields,
+  ...RecordPublicationFields,
 });
 
 export const RelationshipRecordSchema = z.object({
@@ -339,7 +339,7 @@ export const RelationshipRecordSchema = z.object({
   relatedPersonId: z.string().nullable(),
   relatedPersonName: z.string().min(1),
   description: z.string().min(1),
-  ...RecordReviewFields,
+  ...RecordPublicationFields,
 });
 
 export const TimelineEventRecordSchema = z.object({
@@ -357,7 +357,7 @@ export const TimelineEventRecordSchema = z.object({
     'other',
   ]),
   description: z.string().min(1),
-  ...RecordReviewFields,
+  ...RecordPublicationFields,
 });
 
 export const PublicRecordsDatasetSchema = z.object({
@@ -376,10 +376,9 @@ export const PublicRecordsDatasetSchema = z.object({
   timeline: z.array(TimelineEventRecordSchema),
   identityResolutions: z.array(IdentityResolutionSchema),
   conflicts: z.array(ConflictSchema),
-  review: z.object({
-    status: z.enum(['pending-human-review', 'partially-reviewed', 'approved']),
-    reviewerId: z.string().nullable(),
-    reviewedAt: PublicDateSchema.nullable(),
+  validation: z.object({
+    status: z.enum(['validated', 'pending-verification']),
+    method: z.literal('deterministic-source-check-v1'),
     note: z.string().min(1),
   }),
 });
@@ -639,18 +638,11 @@ export function validatePublicRecordsDataset(
       );
   }
   if (
-    dataset.review.status === 'approved' &&
-    (dataset.review.reviewerId === null || dataset.review.reviewedAt === null)
+    dataset.validation.status === 'validated' &&
+    dataset.validation.method !== 'deterministic-source-check-v1'
   )
     errors.push(
-      'approved dataset must contain reviewer identity and review date',
-    );
-  if (
-    dataset.review.status === 'pending-human-review' &&
-    (dataset.review.reviewerId !== null || dataset.review.reviewedAt !== null)
-  )
-    errors.push(
-      'pending-human-review dataset cannot contain reviewer identity or review date',
+      'validated dataset must declare the deterministic source-check method',
     );
   if (errors.length > 0)
     throw new Error(

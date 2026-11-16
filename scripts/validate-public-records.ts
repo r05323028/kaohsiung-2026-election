@@ -1,11 +1,10 @@
 import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { z } from 'zod';
 import approvedInput from '../data/approved/2026/kaohsiung-public-records.json';
 import normalizedInput from '../data/normalized/2026/kaohsiung-public-records.json';
 import manifestInput from '../data/official-source-manifest.json';
-import reviewInput from '../data/review/2026/public-records-review.json';
+import { officialDataset } from '../src/data/official';
 import {
   parseKccMemberProfile,
   parseKccNewsArticle,
@@ -43,34 +42,6 @@ const manifestSourceIds = new Set(
   manifestInput.sources.map((source) => source.id),
 );
 
-const ReviewPacketSchema = z.object({
-  datasetId: z.literal('kaohsiung-2026-public-records'),
-  snapshotDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-  reviewStatus: z.literal('pending-human-review'),
-  reviewerId: z.null(),
-  reviewedAt: z.null(),
-  disposition: z.string().min(1),
-  selectedCandidates: z.array(
-    z.object({
-      candidateId: z.string().min(1),
-      personId: z.string().min(1),
-      displayName: z.string().min(1),
-      categories: z.record(z.string(), z.string()),
-    }),
-  ),
-  claims: z.array(
-    z.object({
-      claimId: z.string().min(1),
-      subjectId: z.string().min(1),
-      evidenceIds: z.array(z.string().min(1)).min(1),
-      disposition: z.literal('pending-human-review'),
-      rationale: z.string().min(1),
-    }),
-  ),
-  notes: z.array(z.string().min(1)),
-});
-type ReviewPacket = z.infer<typeof ReviewPacketSchema>;
-
 type Snapshot = {
   source: ManifestSource;
   bytes: Buffer;
@@ -103,12 +74,6 @@ function assertEqual(label: string, left: unknown, right: unknown): void {
   if (JSON.stringify(left) !== JSON.stringify(right)) {
     throw new Error(`${label} is not deterministic or differs between layers.`);
   }
-}
-
-function validationMessage(error: z.ZodError): string {
-  return error.issues
-    .map((issue) => `${issue.path.join('.') || '<root>'}: ${issue.message}`)
-    .join('\n');
 }
 
 const selectedSourceIds = Object.values(sourceIds);
@@ -185,59 +150,52 @@ assertEqual(
   normalized,
   approved,
 );
-const reviewParsed = ReviewPacketSchema.safeParse(reviewInput);
-if (!reviewParsed.success) {
-  throw new Error(
-    `Public-record review packet validation failed:\n${validationMessage(reviewParsed.error)}`,
-  );
-}
-const review: ReviewPacket = reviewParsed.data;
 if (
-  review.snapshotDate !== snapshotDate ||
-  normalized.snapshotDate !== snapshotDate
+  normalized.snapshotDate !== snapshotDate ||
+  approved.snapshotDate !== snapshotDate
 ) {
   throw new Error('Public-record snapshot dates are inconsistent.');
 }
-if (review.reviewerId !== null || review.reviewedAt !== null) {
+
+if (
+  normalized.selectedCandidateIds.length !==
+    normalized.selectedPersonIds.length ||
+  new Set(normalized.selectedCandidateIds).size !==
+    normalized.selectedCandidateIds.length ||
+  new Set(normalized.selectedPersonIds).size !==
+    normalized.selectedPersonIds.length
+) {
   throw new Error(
-    'Pending public-record review cannot contain reviewer metadata.',
+    'Selected public-record candidate and person IDs are not aligned.',
   );
 }
 
-const selectedCandidateIds = new Set(normalized.selectedCandidateIds);
-const selectedPersonIds = new Set(normalized.selectedPersonIds);
-const reviewedCandidateIds = new Set(
-  review.selectedCandidates.map((candidate) => candidate.candidateId),
+const candidatesById = new Map(
+  officialDataset.candidates.map((candidate) => [candidate.id, candidate]),
 );
-if (
-  selectedCandidateIds.size !== review.selectedCandidates.length ||
-  [...selectedCandidateIds].some((id) => !reviewedCandidateIds.has(id))
-) {
-  throw new Error('Review packet does not cover every selected candidate.');
-}
-const claimIds = new Set(normalized.claims.map((claim) => claim.claimId));
-const evidenceIds = new Set(normalized.evidence.map((item) => item.evidenceId));
-const reviewedClaimIds = new Set(review.claims.map((claim) => claim.claimId));
-if (
-  reviewedClaimIds.size !== normalized.claims.length ||
-  [...claimIds].some((id) => !reviewedClaimIds.has(id))
-) {
-  throw new Error('Review packet does not cover every claim.');
-}
-for (const item of review.claims) {
-  if (!claimIds.has(item.claimId) || !selectedPersonIds.has(item.subjectId)) {
-    throw new Error(
-      `Review packet claim reference is outside the selected dataset: ${item.claimId}.`,
-    );
-  }
-  for (const evidenceId of item.evidenceIds) {
-    if (!evidenceIds.has(evidenceId)) {
+const selectedCandidates = normalized.selectedCandidateIds.map(
+  (candidateId, index) => {
+    const personId = normalized.selectedPersonIds[index];
+    if (!personId) {
       throw new Error(
-        `Review packet references missing evidence ${evidenceId}.`,
+        'Public-record candidate is missing a matching person ID: ' +
+          candidateId,
       );
     }
-  }
-}
+    const candidate = candidatesById.get(candidateId);
+    if (!candidate || `person-${candidate.slug}` !== personId) {
+      throw new Error(
+        'Public-record identity is not matched to the canonical profile: ' +
+          candidateId,
+      );
+    }
+    return {
+      candidateId,
+      personId,
+      displayName: candidate.displayName,
+    };
+  },
+);
 
 const categories = {
   positions: normalized.positions,
@@ -248,7 +206,7 @@ const categories = {
   timeline: normalized.timeline,
 } as const;
 type Category = keyof typeof categories;
-const selectedCandidates = review.selectedCandidates.map((candidate) => {
+const selectedCandidateSummaries = selectedCandidates.map((candidate) => {
   const counts = Object.fromEntries(
     (Object.keys(categories) as Category[]).map((category) => [
       category,
@@ -263,9 +221,7 @@ const selectedCandidates = review.selectedCandidates.map((candidate) => {
     (category) => counts[category] === 0,
   );
   return {
-    candidateId: candidate.candidateId,
-    personId: candidate.personId,
-    displayName: candidate.displayName,
+    ...candidate,
     counts,
     unavailableCategories,
   };
@@ -279,13 +235,13 @@ const recordsWithEvidence = records.filter(
   (record) => record.evidenceIds.length > 0,
 ).length;
 const pendingRecordCount = records.filter(
-  (record) => record.reviewStatus !== 'approved',
+  (record) => record.validationStatus !== 'source-backed',
 ).length;
 const pendingClaimCount = normalized.claims.filter(
-  (claim) => claim.reviewStatus !== 'approved',
+  (claim) => claim.validationStatus !== 'source-backed',
 ).length;
 const pendingEvidenceCount = normalized.evidence.filter(
-  (item) => item.reviewStatus !== 'approved',
+  (item) => item.validationStatus !== 'source-backed',
 ).length;
 const sourceChecks = selectedSourceIds.map((sourceId) => {
   const snapshot = snapshots.get(sourceId);
@@ -303,7 +259,7 @@ const coverageReport = {
   datasetId: normalized.datasetId,
   snapshotDate,
   scope: 'representative-selected-candidate-slice',
-  status: 'partial-pending-human-review',
+  status: 'source-checked-static',
   selectedCandidateCount: normalized.selectedCandidateIds.length,
   selectedPersonCount: normalized.selectedPersonIds.length,
   sourceSnapshotCount: sourceChecks.length,
@@ -317,8 +273,8 @@ const coverageReport = {
     relationships: normalized.relationships.length,
     timeline: normalized.timeline.length,
   },
-  selectedCandidates,
-  unavailableCategoryCount: selectedCandidates.reduce(
+  selectedCandidates: selectedCandidateSummaries,
+  unavailableCategoryCount: selectedCandidateSummaries.reduce(
     (total, candidate) => total + candidate.unavailableCategories.length,
     0,
   ),
@@ -334,7 +290,7 @@ const qualityReport = {
   reportType: 'public-record-quality',
   datasetId: normalized.datasetId,
   snapshotDate,
-  status: 'pending-human-review',
+  status: 'source-checked-static',
   sourceIntegrity: {
     checkedSourceCount: sourceChecks.length,
     changedSourceCount: sourceChecks.filter(
@@ -357,7 +313,7 @@ const qualityReport = {
       (item) => item.status === 'resolved',
     ).length,
     pendingCount: normalized.identityResolutions.filter(
-      (item) => item.status === 'pending-review',
+      (item) => item.status === 'pending-verification',
     ).length,
     rejectedCount: normalized.identityResolutions.filter(
       (item) => item.status === 'rejected',
@@ -369,12 +325,10 @@ const qualityReport = {
     resolved: normalized.conflicts.filter((item) => item.status === 'resolved')
       .length,
   },
-  reviewGate: {
-    datasetStatus: normalized.review.status,
-    reviewerId: normalized.review.reviewerId,
-    reviewedAt: normalized.review.reviewedAt,
+  publication: {
+    datasetStatus: normalized.validation.status,
     publicationMeaning:
-      'source-checked-static-display; not human editorial approval',
+      'source-checked-static-display; factual review occurs in GitHub Pull Requests',
   },
   integrityAssertions: {
     partyInferred: false,
@@ -382,8 +336,7 @@ const qualityReport = {
     relationshipInferred: false,
     rankingProduced: false,
     normalizedMatchesApproved: true,
-    reviewPacketCoversSelectedCandidates: true,
-    reviewPacketCoversClaims: true,
+    selectedCandidatesMatchCanonicalProfiles: true,
   },
 };
 
@@ -394,34 +347,34 @@ function coverageMarkdown(report: typeof coverageReport): string {
         `| ${candidate.displayName} | ${candidate.counts.positions} | ${candidate.counts.policies} | ${candidate.counts.activities} | ${candidate.counts.news} | ${candidate.counts.relationships} | ${candidate.counts.timeline} | ${candidate.unavailableCategories.length ? candidate.unavailableCategories.join('、') : '—'} |`,
     )
     .join('\n');
-  return `# Public-record coverage report\n\n- Dataset: \`${report.datasetId}\`\n- Snapshot: ${report.snapshotDate}\n- Scope: representative selected-candidate slice\n- Status: **partial／待人工審查**\n- Selected candidates: ${report.selectedCandidateCount}\n- Claims: ${report.claims}; evidence items: ${report.evidence}\n\n## Category coverage\n\n| 人物 | 職務 | 政策 | 活動 | 新聞 | 關係 | 時間軸 | 中性空白分類 |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n${rows}\n\n## Interpretation\n\n- This report measures the checked-in representative slice; it is not a ranking or completeness claim about candidates.\n- A category with no record is rendered as unavailable and does not imply that no such record exists.\n- The source-backed items describe institutional identity or documented participation. They are not presented as personal achievements, policy completion, or administrative outcomes.\n`;
+  return `# Public-record coverage report\n\n- Dataset: \`${report.datasetId}\`\n- Snapshot: ${report.snapshotDate}\n- Scope: representative selected-candidate slice\n- Status: **source-checked static**\n- Selected candidates: ${report.selectedCandidateCount}\n- Claims: ${report.claims}; evidence items: ${report.evidence}\n\n## Category coverage\n\n| 人物 | 職務 | 政策 | 活動 | 新聞 | 關係 | 時間軸 | 中性空白分類 |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n${rows}\n\n## Interpretation\n\n- This report measures the checked-in representative slice; it is not a ranking or completeness claim about candidates.\n- A category with no record is rendered as unavailable and does not imply that no such record exists.\n- The source-backed items describe institutional identity or documented participation. They are not presented as personal achievements, policy completion, or administrative outcomes.\n`;
 }
 
 function qualityMarkdown(report: typeof qualityReport): string {
-  return `# Public-record quality report\n\n- Dataset: \`${report.datasetId}\`\n- Snapshot: ${report.snapshotDate}\n- Status: **${report.status}**\n- Publication meaning: ${report.reviewGate.publicationMeaning}\n\n## Evidence and review\n\n- Sources checked: ${report.sourceIntegrity.checkedSourceCount}; checksum changes: ${report.sourceIntegrity.changedSourceCount}\n- Claims with evidence: ${report.evidenceCoverage.claimsWithEvidence}/${report.evidenceCoverage.claimCount}\n- Records with evidence: ${report.evidenceCoverage.recordsWithEvidence}/${report.evidenceCoverage.recordCount}\n- Pending claims/evidence/records: ${report.evidenceCoverage.pendingClaimCount}/${report.evidenceCoverage.pendingEvidenceCount}/${report.evidenceCoverage.pendingRecordCount}\n- Identity resolutions: ${report.identityResolution.resolvedCount} resolved, ${report.identityResolution.pendingCount} pending, ${report.identityResolution.rejectedCount} rejected\n- Conflicts: ${report.conflicts.total} total, ${report.conflicts.open} open, ${report.conflicts.resolved} resolved\n\n## Integrity boundaries\n\n- Party inferred: no\n- Achievement inferred: no\n- Family or political relationship inferred: no\n- Candidate ranking produced: no\n- Human reviewer: not recorded\n- Human review date: not recorded\n\nThe approved-source-backed layer is eligible for static display only because every displayed item has retained official evidence. It remains pending human review and must not be described as editorial approval.\n`;
+  return `# Public-record quality report\n\n- Dataset: \`${report.datasetId}\`\n- Snapshot: ${report.snapshotDate}\n- Status: **${report.status}**\n- Publication meaning: ${report.publication.publicationMeaning}\n\n## Evidence and source checks\n\n- Sources checked: ${report.sourceIntegrity.checkedSourceCount}; checksum changes: ${report.sourceIntegrity.changedSourceCount}\n- Claims with evidence: ${report.evidenceCoverage.claimsWithEvidence}/${report.evidenceCoverage.claimCount}\n- Records with evidence: ${report.evidenceCoverage.recordsWithEvidence}/${report.evidenceCoverage.recordCount}\n- Pending claims/evidence/records: ${report.evidenceCoverage.pendingClaimCount}/${report.evidenceCoverage.pendingEvidenceCount}/${report.evidenceCoverage.pendingRecordCount}\n- Identity resolutions: ${report.identityResolution.resolvedCount} resolved, ${report.identityResolution.pendingCount} pending, ${report.identityResolution.rejectedCount} rejected\n- Conflicts: ${report.conflicts.total} total, ${report.conflicts.open} open, ${report.conflicts.resolved} resolved\n\n## Integrity boundaries\n\n- Party inferred: no\n- Achievement inferred: no\n- Family or political relationship inferred: no\n- Candidate ranking produced: no\n- Human reviewer: not recorded\n- Human review date: not recorded\n\nThe source-backed layer is eligible for static display because every displayed item has retained official evidence. Content review is performed in the Pull Request that changes the committed dataset.\n`;
 }
 
-await mkdir(path.join(root, 'reports'), { recursive: true });
+await mkdir(path.join(root, '.cache/reports'), { recursive: true });
 await writeFile(
-  path.join(root, 'reports/public-record-coverage.json'),
+  path.join(root, '.cache/reports/public-record-coverage.json'),
   `${JSON.stringify(coverageReport, null, 2)}\n`,
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/public-record-coverage.md'),
+  path.join(root, '.cache/reports/public-record-coverage.md'),
   coverageMarkdown(coverageReport),
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/public-record-quality.json'),
+  path.join(root, '.cache/reports/public-record-quality.json'),
   `${JSON.stringify(qualityReport, null, 2)}\n`,
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/public-record-quality.md'),
+  path.join(root, '.cache/reports/public-record-quality.md'),
   qualityMarkdown(qualityReport),
   'utf8',
 );
 console.log(
-  `Validated public-record slice: ${normalized.claims.length} claims, ${records.length} records, ${normalized.selectedCandidateIds.length} selected candidates; human review remains pending.`,
+  `Validated public-record slice: ${normalized.claims.length} claims, ${records.length} records, ${normalized.selectedCandidateIds.length} selected candidates; content review is handled in GitHub Pull Requests.`,
 );

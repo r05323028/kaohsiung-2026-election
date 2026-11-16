@@ -1,7 +1,7 @@
 {
   "datasetId": "kaohsiung-2026-local-election",
   "snapshotDate": "2026-11-04",
-  "sourcePipeline": ["official snapshots", "CEC article adapter", "KHEC article metadata adapter", "manual review queue"],
+  "sourcePipeline": ["official snapshots", "CEC article adapter", "KHEC article metadata adapter", "deterministic reconciliation"],
   "candidateRecords": [
     {"displayName":"張靜","district":"高雄市長選舉","candidateNumber":"1","candidateNumberStatus":"drawn","qualificationStatus":"approved","publicationStatus":"approved","sourceIds":["source-cec-central-65213","source-khec-65366"]},
     {"displayName":"王肇民","district":"高雄市長選舉","candidateNumber":"2","candidateNumberStatus":"drawn","qualificationStatus":"approved","publicationStatus":"approved","sourceIds":["source-cec-central-65213","source-khec-65366"]},
@@ -9,5 +9,5 @@
     {"displayName":"洪方隆","district":"高雄市長選舉","candidateNumber":"4","candidateNumberStatus":"drawn","qualificationStatus":"approved","publicationStatus":"approved","sourceIds":["source-cec-central-65213","source-khec-65366"]},
     {"displayName":"賴瑞隆","district":"高雄市長選舉","candidateNumber":"5","candidateNumberStatus":"drawn","qualificationStatus":"approved","publicationStatus":"approved","sourceIds":["source-cec-central-65213","source-khec-65366"]}
   ],
-  "pendingReview": [{"sourceId":"source-khec-65366","scope":"city-council candidate rows","status":"pending-human-review"}]
+  "pendingVerification": [{"sourceId":"source-khec-65366","scope":"city-council candidate rows","status":"pending-verification"}]
 }

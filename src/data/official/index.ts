@@ -1,9 +1,8 @@
 import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
 import manifestInput from '../../../data/official-source-manifest.json';
 import { getBasicProfileReadModel } from '../basic-profiles';
-import { getBiographyReadModel } from '../biographies';
+import { biographySourceRecords, getBiographyReadModel } from '../biographies';
 import { coverageForDistrictSlug } from '../constituencies';
-import { getAutomatedCandidateReadModel } from '../enrichment/automated-publication';
 import { getCandidatePublishedNews } from '../news';
 import { getCandidatePolicyResearchSummary } from '../policy-research';
 import { getPublishedCandidatePolicies } from '../policy-research/public-index';
@@ -53,6 +52,9 @@ const manifestSourceById = new Map(
 const sourceById = new Map(
   officialDataset.sources.map((source) => [source.id, source]),
 );
+const biographySourceById = new Map(
+  biographySourceRecords.map((source) => [source.sourceId, source]),
+);
 const districtById = new Map(
   officialDataset.districts.map((district) => [district.id, district]),
 );
@@ -78,9 +80,28 @@ function sourceFor(id: string): ProfileSource {
       isDemo: false,
     };
   }
+  const biographySource = biographySourceById.get(id);
+  if (biographySource) {
+    return {
+      id: biographySource.sourceId,
+      url: biographySource.url,
+      publisher: biographySource.publisher,
+      publicationDate: biographySource.publicationDate,
+      retrievalDate: biographySource.retrievalDate,
+      verificationStatus:
+        biographySource.verificationStatus === 'Verified'
+          ? ('Verified' as const)
+          : ('Pending review' as const),
+      relatedEntityIds: [],
+      note: biographySource.note,
+      isDemo: false,
+    };
+  }
   const manifestSource = manifestSourceById.get(id);
   if (!manifestSource)
-    throw new Error(`Approved public-record dataset is missing source ${id}.`);
+    throw new Error(
+      'Approved public-record dataset is missing source ' + id + '.',
+    );
   return {
     id: manifestSource.id,
     url: manifestSource.canonicalUrl,
@@ -169,7 +190,6 @@ function toProfile(
   const biography = getBiographyReadModel(candidate.id);
   const basicProfile = getBasicProfileReadModel(candidate.id);
   const politicalFamily = getPoliticalFamilyReadModel(candidate.id);
-  const automatedPublication = getAutomatedCandidateReadModel(candidate.id);
   const publishedNews = getCandidatePublishedNews(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
   const sources = [
@@ -177,6 +197,7 @@ function toProfile(
       ...candidate.sourceIds,
       ...publicSourceIds,
       ...researchSourceIds,
+      ...biography.claims.flatMap((claim) => claim.sourceIds),
     ]),
   ].map(sourceFor);
   return {
@@ -228,7 +249,6 @@ function toProfile(
     ...(biography ? { biography } : {}),
     ...(basicProfile ? { basicProfile } : {}),
     ...(politicalFamily ? { politicalFamily } : {}),
-    ...(automatedPublication.claims.length > 0 ? { automatedPublication } : {}),
     visual: neutralVisual(candidacyId, index),
   };
 }

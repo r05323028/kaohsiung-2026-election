@@ -4,7 +4,6 @@ import { validatePoliticalFamilyVerificationCorrections } from '../src/data/poli
 import {
   type FamilyRosterCandidate,
   validatePoliticalFamilyPublication,
-  validatePoliticalFamilyPublicationApproval,
   validatePoliticalFamilyPublicationReferences,
   validatePoliticalFamilyReferences,
   validatePoliticalFamilyResearch,
@@ -382,52 +381,50 @@ const publishedRelationshipIds = new Set(
   publication.relationships.map((relationship) => relationship.id),
 );
 
-const approval = validatePoliticalFamilyPublicationApproval(
-  readJson('data/research/2026/political-family/publication-approval.json'),
+const researchById = new Map(
+  research.relationships.map((relationship) => [relationship.id, relationship]),
 );
-const agentApprovedIds = new Set(
-  (approval.agentApprovals ?? []).flatMap((entry) => entry.relationshipIds),
+const peopleById = new Map(
+  publication.people.map((person) => [person.id, person]),
 );
-const verifiedResearchIds = new Set(
-  research.relationships
-    .filter((relationship) => relationship.verificationStatus === 'verified')
-    .map((relationship) => relationship.id),
-);
-for (const id of agentApprovedIds) {
-  if (approval.approvedRelationshipIds.includes(id)) {
+for (const relationship of publication.relationships) {
+  const researchRelationship = researchById.get(relationship.id);
+  if (!researchRelationship) {
     throw new Error(
-      `Relationship ${id} is both editorially and agent approved.`,
+      'Published relationship ' +
+        relationship.id +
+        ' is missing from the research dataset.',
     );
   }
-  if (!verifiedResearchIds.has(id)) {
+  if (researchRelationship.verificationStatus !== 'verified') {
     throw new Error(
-      'Agent approval ' +
-        id +
-        ' is not an independently verified relationship.',
+      'Published relationship ' +
+        relationship.id +
+        ' is not independently verified.',
     );
   }
-  if (!publishedRelationshipIds.has(id)) {
+  if (relationship.positionSourceIds.length === 0) {
     throw new Error(
-      'Agent approval ' +
-        id +
-        ' is not published; withdraw the approval or fix the position evidence.',
+      'Published relationship ' +
+        relationship.id +
+        ' has no position evidence.',
     );
   }
-}
-for (const id of publication.agentApprovedRelationshipIds) {
-  if (!agentApprovedIds.has(id)) {
+  const relative = peopleById.get(relationship.personBId);
+  if (
+    !relative ||
+    !relative.affiliations.some((affiliation) =>
+      affiliation.sourceIds.some((sourceId) =>
+        relationship.positionSourceIds.includes(sourceId),
+      ),
+    )
+  ) {
     throw new Error(
-      'Publication marks relationship ' +
-        id +
-        ' as agent approved without an approval record.',
+      'Published relationship ' +
+        relationship.id +
+        ' has no matching published position evidence.',
     );
   }
-}
-if (
-  new Set(publication.agentApprovedRelationshipIds).size !==
-  publication.agentApprovedRelationshipIds.length
-) {
-  throw new Error('Publication lists an agent approval more than once.');
 }
 for (const candidate of publication.candidates) {
   if (

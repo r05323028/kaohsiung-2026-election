@@ -9,7 +9,7 @@ usable portrait, converts 2D landmark geometry into the normalized parameters
 of ``src/data/avatars/likeness/schema.ts``, and writes:
 
   --out     data/avatars/likeness/appearances.json   (Zod-validated contract)
-  --report  reports/avatar/face-extraction.json      (raw ratios + windows)
+  --report  .cache/reports/avatar/face-extraction.json      (raw ratios + windows)
   --debug-dir tmp/avatar-pipeline/face-debug/<photoId>.png (human check)
 
 Clipboard geometry, not identity
@@ -127,7 +127,7 @@ Usage
         --photo-dir tmp/avatar-pipeline/photos \\
         --observations data/avatars/likeness/observations.json \\
         --out data/avatars/likeness/appearances.json \\
-        --report reports/avatar/face-extraction.json \\
+        --report .cache/reports/avatar/face-extraction.json \\
         --debug-dir tmp/avatar-pipeline/face-debug
 """
 
@@ -974,7 +974,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--photo-dir', default='tmp/avatar-pipeline/photos')
     parser.add_argument('--observations', default='data/avatars/likeness/observations.json')
     parser.add_argument('--out', default='data/avatars/likeness/appearances.json')
-    parser.add_argument('--report', default='reports/avatar/face-extraction.json')
+    parser.add_argument('--report', default='.cache/reports/avatar/face-extraction.json')
     parser.add_argument('--model', default='tmp/avatar-pipeline/models/face_landmarker.task')
     parser.add_argument('--debug-dir', default=None)
     args = parser.parse_args(argv)

@@ -239,7 +239,7 @@ describe('approved official dataset', () => {
       cecQualifiedMayors: 5,
       approvedMayors: 5,
       matchedMayors: 5,
-      pendingReviewScopes: 2,
+      pendingVerificationScopes: 2,
       officialDistricts: 16,
       councilConstituencies: 15,
       councilSourceRows: 101,

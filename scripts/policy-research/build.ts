@@ -244,8 +244,8 @@ function main(): void {
       ...policy,
       policyContext: normalizeContext(policy.policyContext),
       type,
-      reviewStatus: 'pending-human-review',
-      publicationStatus: 'withheld-pending-review',
+      validationStatus: 'pending-verification',
+      publicationStatus: 'withheld-unverified',
       claimIds: ['claim-' + policy.policyId],
       evidenceIds: [policy.evidenceId],
     });
@@ -323,8 +323,8 @@ function main(): void {
       evidenceId,
       evidenceType: record.sourceType,
       verificationStatus: 'machine-validated',
-      reviewStatus: 'pending-human-review',
-      publicationStatus: 'withheld-pending-review',
+      validationStatus: 'pending-verification',
+      publicationStatus: 'withheld-unverified',
       claimIds: ['claim-' + policyId],
       evidenceIds: [evidenceId],
       duplicateOf: null,
@@ -383,8 +383,8 @@ function main(): void {
       evidenceId,
       evidenceType: String(record['evidenceType']),
       verificationStatus: 'machine-validated',
-      reviewStatus: 'pending-human-review',
-      publicationStatus: 'withheld-pending-review',
+      validationStatus: 'pending-verification',
+      publicationStatus: 'withheld-unverified',
       claimIds: [String(record['claimId'])],
       evidenceIds: [evidenceId],
       duplicateOf: null,
@@ -448,7 +448,7 @@ function main(): void {
     decisions.set(policyId, decision);
   }
 
-  // ---- deterministic publication gate -----------------------------------
+  // ---- deterministic verification ---------------------------------------
   const evidenceById = new Map<string, Record<string, unknown>>(
     evidence.map((item) => [String(item.evidenceId), item]),
   );
@@ -488,15 +488,15 @@ function main(): void {
       metadataOk &&
       categorySet.has(String((policy.categories as string[])[0]));
     if (publishable) {
-      policy.reviewStatus = 'editorially-approved';
-      policy.publicationStatus = 'approved-source-backed';
+      policy.validationStatus = 'source-backed';
+      policy.publicationStatus = 'source-backed';
       approved += 1;
     } else if (decision?.['decision'] === 'rejected') {
-      policy.reviewStatus = 'rejected';
+      policy.validationStatus = 'rejected';
       policy.publicationStatus = 'rejected';
     } else {
-      policy.reviewStatus = 'pending-human-review';
-      policy.publicationStatus = 'withheld-pending-review';
+      policy.validationStatus = 'pending-verification';
+      policy.publicationStatus = 'withheld-unverified';
     }
     if (decision) {
       verification.push({
@@ -525,7 +525,7 @@ function main(): void {
             ? 'failed'
             : attempt['retrievalStatus'];
       normalized['identityStatus'] =
-        attempt['identityStatus'] === 'pending-review'
+        attempt['identityStatus'] === 'pending-verification'
           ? 'unresolved'
           : attempt['identityStatus'];
       return normalized;
@@ -536,7 +536,7 @@ function main(): void {
       (policy) => policy.candidateId === candidate.id,
     );
     const published = candidatePolicies.filter(
-      (policy) => policy.publicationStatus === 'approved-source-backed',
+      (policy) => policy.publicationStatus === 'source-backed',
     );
     const candidateAttempts = attempts.filter(
       (attempt) => attempt['candidateId'] === candidate.id,
@@ -589,12 +589,10 @@ function main(): void {
     verification,
     audits,
     conflicts: [],
-    review: {
-      status: 'automated-verified',
-      method: 'automated-verification-gate-v1',
-      reviewerId: null,
-      reviewedAt: null,
-      approvedPolicyCount: approved,
+    validation: {
+      status: 'validated',
+      method: 'deterministic-verification-v1',
+      sourceBackedPolicyCount: approved,
       publishedPolicyCount: approved,
     },
   };
@@ -615,7 +613,7 @@ function main(): void {
       publishedPolicyCount: policies.filter(
         (policy) =>
           policy.candidateId === audit.candidateId &&
-          policy.publicationStatus === 'approved-source-backed',
+          policy.publicationStatus === 'source-backed',
       ).length,
       note: audit.note,
     })),
@@ -623,7 +621,7 @@ function main(): void {
   writeJson(SUMMARY_PATH, summary);
 
   const publishedPolicies = policies
-    .filter((policy) => policy.publicationStatus === 'approved-source-backed')
+    .filter((policy) => policy.publicationStatus === 'source-backed')
     .map((policy) => {
       const source = sourceById.get(String(policy.sourceId));
       const evidenceItem = evidenceById.get(String(policy.evidenceId));

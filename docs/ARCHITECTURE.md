@@ -1,86 +1,58 @@
 # 架構
 
-港都人物誌是 **build-time 產生的純靜態網站**：Astro 在建置時讀取已提交的資料，輸出 HTML、CSS 與靜態資產。瀏覽器不呼叫後端 API，也沒有資料庫、認證、CMS、serverless function 或執行期 AI 推論。
+港都人物誌是 build-time 產生的純靜態網站：Astro 在建置時讀取已提交資料，輸出 HTML、CSS 與靜態資產。瀏覽器不呼叫後端 API，也沒有資料庫、認證、CMS 或執行期 AI。
 
 ## 資料流
 
-```text
 官方文件／公開紀錄
-  → data/raw/…（不可變快照 + manifest + SHA-256）
-  → src/data/<layer>/adapters.ts（決定性解析）
-  → data/normalized/…（正規化）
-  → data/review/…（人工審查與待處理範圍）
-  → data/approved/…（可發布的權威資料）
-  → src/data/<layer>（驗證 + read model）
-  → Astro getStaticPaths / 元件
+  → data/raw/（不可變快照、manifest、SHA-256）
+  → deterministic adapters
+  → data/normalized/、data/research/（正規化與研究狀態）
+  → PR review + offline validators
+  → data/approved/、data/published/（受控快照）
+  → src/data/ read models
+  → Astro
   → dist/（GitHub Pages）
-```
 
-部分內容層在 approved 之後還有獨立的 **published** 快照（例如 `data/published/2026/candidate-biographies.json`、`candidate-basic-profiles.json`、`candidate-news.json`、`candidate-policies.json`）。公開頁面只讀 published 或 approved 的受控資料，绝不讀 raw、normalized 或 review 層。
+頁面只讀 data/approved/、data/published/ 與受控的程式內資料；不讀 raw、normalized、research 或診斷輸出。未驗證、來源不足或衝突資料保持 withheld／unpublished，不會因 PR 合併自動升格。
 
-## 資料層與讀取模型
+## 資料集與讀取模型
 
-| 層 | 位置 | 公開讀取模型 | 說明 |
+| 資料集 | 輸入 | 讀取模型 | 內容 |
 | --- | --- | --- | --- |
-| 官方選舉 | `data/approved/2026/kaohsiung-election.json` | `src/data/official/index.ts` | 唯一 canonical 名冊：16 個選舉區、106 位候選人、來源 manifest 參照 |
-| 選舉區幾何 | `src/data/constituencies.ts`、`src/data/geography/` | 同名模組 | 15 個市議員選區 + 市長；38 個行政區對應 |
-| 公開紀錄 | `data/approved/2026/kaohsiung-public-records.json` | `src/data/public-records/index.ts` | 已選取的來源支持紀錄；狀態仍為 pending-human-review |
-| 傳記研究 | `data/approved/2026/candidate-public-record-research.json` | `src/data/public-records/research-index.ts` | 靜態研究 read model，不是核准 |
-| 傳記出版 | `data/published/2026/candidate-biographies.json` | `src/data/biographies/index.ts` | 唯一公開履歷輸入；目前為空 snapshot |
-| 基本資料 | `data/published/2026/candidate-basic-profiles.json` | `src/data/basic-profiles/index.ts` | 通過獨立查核的 829 筆主張 |
-| 政策主張 | `data/published/2026/candidate-policies.json` | `src/data/policy-research/` | 原文連續引文 + 獨立查核 |
-| 相關新聞 | `data/published/2026/candidate-news.json` | `src/data/news/index.ts` | 中性 metadata，213 篇 |
-| 從政歷程 | `data/approved/2026/political-career.json` | `src/data/political-career/index.ts` | 任期、活動、專案、提案、表決 |
-| 政策／歷程分工 | `data/approved/2026/policy-career-separation.json` | `src/data/policy-career/index.ts` | 每筆政策恰好一個歸屬 |
-| 家族政商關係 | `data/published/2026/political-family.json` | `src/data/political-family/` | 需親屬與每個職務各自證據 |
-| 家族政商更正 | `data/research/2026/political-family/verification-corrections.json` | `scripts/generate-political-family-data.ts` | agent 證據更正；不改寫獨立查核輸出 |
-| 角色資產 | `data/avatars/manifest.json`、`public/assets/avatars/` | `src/data/avatars/index.ts` | GLB 校驗碼與對應，缺省回退程序化角色 |
-| 示範資料 | `src/data/fixtures.ts` | `src/data/demo.ts` | 僅測試與資產驗證，全部 isDemo |
+| 官方選舉 | data/approved/2026/kaohsiung-election.json | src/data/official/index.ts | 16 個選舉區、106 位候選人與來源參照 |
+| 公開紀錄 | data/approved/2026/kaohsiung-public-records.json | src/data/public-records/index.ts | 來源支持的 claims；未驗證項目不公開 |
+| 履歷 | data/published/2026/candidate-biographies.json | src/data/biographies/index.ts | 嚴格 schema、evidence 與 checksum 快照 |
+| 基本資料 | data/published/2026/candidate-basic-profiles.json | src/data/basic-profiles/index.ts | 獨立來源查核的基本資料 |
+| 政策 | data/published/2026/candidate-policies.json | src/data/policy-research/ | 來源原文、歸屬、驗證與發布狀態 |
+| 新聞 | data/published/2026/candidate-news.json | src/data/news/index.ts | 中性 metadata 與來源摘要 |
+| 從政歷程 | data/approved/2026/political-career.json | src/data/political-career/index.ts | 任期、活動、專案、提案、表決 |
+| 政策／歷程分工 | data/approved/2026/policy-career-separation.json | src/data/policy-career/index.ts | 每筆記錄的決定性分類 |
+| 家族政商關係 | data/published/2026/political-family.json | src/data/political-family/ | 親屬與職務各自有來源支持的關係 |
+| 角色資產 | data/avatars/、public/assets/avatars/ | src/data/avatars/index.ts | GLB checksum 與安全路徑驗證 |
 
-示範資料與正式資料是兩條互不回退的路徑：`src/data/index.ts` 同時組合官方與 demo，但官方資料缺失時顯示中性「暫無資料」，不以 demo 補位。各層載入器會先驗證 schema，驗證失敗即建置失敗。
+src/data/fixtures.ts 與 src/data/demo.ts 只供測試、版型與資產驗證，全部標示 isDemo，不會補位正式資料。
 
 ## 前端結構
 
-- `src/layouts/BaseLayout.astro`：zh-Hant 語系、SEO、canonical、Open Graph、JSON-LD、skip link、導覽與頁尾。站內連結一律經 `src/utils/paths.ts` 加上 `BASE_PATH`。
-- `src/components/CityExplorer.tsx`：首頁互動層。選舉／圖層篩選、行政區與選舉區切換、靜態搜尋、鍵盤候選人名單、角色選取、個人面板、載入／錯誤／WebGL 不可用狀態。
-- `src/components/CityScene.tsx` + `src/world/`：延遲載入的 R3F 正交相機場景、依需求繪製、DPR 上限、有限 OrbitControls、reduced motion。所有事實同時存在於 HTML。
-- `src/components/ProfileTabs.tsx`：五個分頁（基本資料、政策主張、相關新聞、從政歷程、家族政商關係），只讀上述 read model。
-- `src/pages/`：`index`、`candidates/[slug]`、`districts/index`、`districts/[slug]`、`editorial-review`（僅本機）、`avatar-preview`（僅開發）。
+- src/layouts/BaseLayout.astro：SEO、導覽、skip link 與 BASE_PATH。
+- src/components/CityExplorer.tsx、CityScene.tsx、src/world/：城市、搜尋、角色與無障礙替代路徑。
+- src/components/ProfileTabs.tsx：基本資料、政策、新聞、從政歷程、家族關係五個分頁。
+- src/pages/：首頁、候選人、選舉區與開發用 avatar preview；沒有內容審查路由。
 
-行政區與選舉區是兩套地理：38 個行政區（E01–E38）供城市與移動使用；15 個市議員選區與市長選區是選舉單位。點擊行政區只改變焦點，不會改寫選舉區；選舉區卡片會列出其涵蓋的行政區。原住民選區（12–15）另有身分與設籍資格的說明，不以行政區推論。
+## 離線驗證
 
-## 驗證閘門
+所有驗證在 build 前執行；失敗即停止：
 
-所有驗證都在 build 前離線執行，讀取已提交的資料；失敗即中止建置。
+- schema、唯一 ID、候選人／選區／來源引用完整性；
+- raw checksum、官方名冊對帳與號次狀態；
+- claims、evidence、引文、日期、去重、身分與發布狀態；
+- 政策／歷程分類、家族親屬與職務證據分離；
+- basic profile、biography、avatar、profile copy 與 coverage 驗證；
+- typecheck、lint、Vitest 與必要的 Playwright checks。
 
-| 驗證 | 主要職責 |
-| --- | --- |
-| `validate:data` | Zod schema、穩定 ID 唯一、引用可解析 |
-| `validate:official` | raw checksum、名冊對帳、抽籤號次不得標為 final、district/source 參照 |
-| `validate:constituencies` | 15 選區 / 38 行政區對應、原住民選區語意、不得有 runtime API |
-| `validate:ballot-numbers` | 號次來源與非 final 狀態一致 |
-| `validate:public-records` | claim/evidence 參照、checksum、身分與審查狀態 |
-| `validate:full-roster` / `validate:research` | 覆蓋稽核欄位、attempt 紀錄、不得把未嘗試寫成不存在 |
-| `validate:candidate-policies` / `validate:policy-research` | 逐字引文、歸屬、發布狀態 |
-| `validate:basic-profiles` | 查核決定、來源層級、隱私欄位、現職證據 |
-| `validate:news` | 中性摘要、身分風險、去重、日期 |
-| `validate:political-career` / `validate:policy-career` | 任期／活動／提案／表決關聯、政策歸屬唯一、逐字證據 |
-| `validate:political-family` | 親屬與職務證據分離；agent 核准必須對應已發布關係；更正檔已套用且移除的主張不再出現 |
-| `validate:profile-coverage` / `validate:profile-copy` | 各分頁覆蓋與公開文案不得洩漏內部狀態 |
-| `validate:biographies` / `editorial:validate` | 決策鏈、審查者授權、checksum、閘門結果 |
-| `validate:enrichment` / `ai-audit:verify` / `semantic:verify` / `scoped-review:verify` / `automated:verify` / `remediation:verify` | scoped 研究與機器查核的一致性與可重現性 |
-| `validate:avatars` | GLB 結構、SHA-256、clip 名稱、僅虛構對應 |
-| `typecheck` | `astro check` |
-
-指令分組與 CI 細節見 [DEVELOPMENT.md](DEVELOPMENT.md)；每條閘門的發布語意見 [EDITORIAL_AND_PUBLICATION.md](EDITORIAL_AND_PUBLICATION.md)。
-
-## 效能與無障礙
-
-- R3F 場景延遲載入；幾何合併為少量 draw call；僅在需要時繪製；DPR 上限；WebGL 不可用時回退靜態城市預覽與可存取名單。
-- 關鍵事實（姓名、職稱、來源、狀態）一律在 HTML，不依賴 canvas。
-- 鍵盤可操作、可見焦點、`role="tab"`、reduced motion 停用自動動畫；行動裝置個人面板為 bottom sheet。
-- 角色或 GLB 載入失敗不影響文字內容。
+GitHub Pull Request 是唯一的人工內容審查入口。CI 只執行可重現的技術檢查；PR reviewer 另檢查 diff、來源、provenance、中立措辭與資料是否由正確指令產生。
 
 ## 部署
 
-`main` 推送觸發 `.github/workflows/deploy-pages.yml`：Node 22 → `npm run build:pages`（`BASE_PATH=/kaohsiung-2026-election/`、`SITE_URL=https://r05323028.github.io`）→ 上傳並發布 `dist/` 到 GitHub Pages。`dist/` 也可部署到任何靜態主機；不得在程式中硬編碼站台根路徑。
+main 推送觸發 .github/workflows/deploy-pages.yml，執行 Node 22、npm run build:pages，再將 dist/ 發布至 GitHub Pages。站內連結一律經 src/utils/paths.ts 處理。

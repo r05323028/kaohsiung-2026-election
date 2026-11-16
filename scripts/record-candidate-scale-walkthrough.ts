@@ -15,6 +15,7 @@ import { focusAdmin } from './lib/city-ui';
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const outDir = join(
   process.cwd(),
+  '.cache',
   'reports',
   'visual',
   'candidate-scale',

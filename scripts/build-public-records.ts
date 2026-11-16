@@ -116,7 +116,7 @@ for (const [key, quote] of Object.entries(quotes)) {
 const claimReview = {
   attribution: 'documented-participation' as const,
   verificationStatus: 'Verified' as const,
-  reviewStatus: 'pending-review' as const,
+  validationStatus: 'pending-verification' as const,
 };
 
 const claims: Claim[] = [
@@ -227,7 +227,7 @@ const evidence: Evidence[] = [
     quotedText: '本屆議員-李眉蓁',
     retrievedAt: snapshotDate,
     verificationStatus: 'Verified',
-    reviewStatus: 'pending-review',
+    validationStatus: 'pending-verification',
   },
   {
     evidenceId: 'evidence-wang-member-profile',
@@ -239,7 +239,7 @@ const evidence: Evidence[] = [
     quotedText: '本屆議員-王義雄',
     retrievedAt: snapshotDate,
     verificationStatus: 'Verified',
-    reviewStatus: 'pending-review',
+    validationStatus: 'pending-verification',
   },
   {
     evidenceId: 'evidence-li-news-17284',
@@ -251,7 +251,7 @@ const evidence: Evidence[] = [
     quotedText: quotes.li17284,
     retrievedAt: snapshotDate,
     verificationStatus: 'Verified',
-    reviewStatus: 'pending-review',
+    validationStatus: 'pending-verification',
   },
   {
     evidenceId: 'evidence-li-news-17102',
@@ -263,7 +263,7 @@ const evidence: Evidence[] = [
     quotedText: quotes.li17102,
     retrievedAt: snapshotDate,
     verificationStatus: 'Verified',
-    reviewStatus: 'pending-review',
+    validationStatus: 'pending-verification',
   },
   {
     evidenceId: 'evidence-wang-news-17293',
@@ -275,7 +275,7 @@ const evidence: Evidence[] = [
     quotedText: quotes.wang17293,
     retrievedAt: snapshotDate,
     verificationStatus: 'Verified',
-    reviewStatus: 'pending-review',
+    validationStatus: 'pending-verification',
   },
   {
     evidenceId: 'evidence-wang-news-17093',
@@ -287,14 +287,14 @@ const evidence: Evidence[] = [
     quotedText: quotes.wang17093,
     retrievedAt: snapshotDate,
     verificationStatus: 'Verified',
-    reviewStatus: 'pending-review',
+    validationStatus: 'pending-verification',
   },
 ];
 
-const reviewFields = {
+const validationFields = {
   verificationStatus: 'Verified' as const,
-  reviewStatus: 'pending-review' as const,
-  publicationStatus: 'approved-source-backed' as const,
+  validationStatus: 'pending-verification' as const,
+  publicationStatus: 'source-backed' as const,
 };
 
 const positions: PositionRecord[] = [
@@ -307,7 +307,7 @@ const positions: PositionRecord[] = [
     endDate: null,
     currentStatus: 'current',
     lastVerifiedAt: snapshotDate,
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-li-current-council-position'],
     evidenceIds: ['evidence-li-member-profile'],
   },
@@ -320,7 +320,7 @@ const positions: PositionRecord[] = [
     endDate: null,
     currentStatus: 'current',
     lastVerifiedAt: snapshotDate,
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-wang-current-council-position'],
     evidenceIds: ['evidence-wang-member-profile'],
   },
@@ -345,7 +345,7 @@ const activity = (
   description,
   documentedOutcome: null,
   attribution: 'documented-participation',
-  ...reviewFields,
+  ...validationFields,
   claimIds: [claimId],
   evidenceIds: [evidenceId],
 });
@@ -403,7 +403,7 @@ const news: NewsRecord[] = [
     contentType: 'institutional-update',
     sourceDependencies: [sources.li17284],
     duplicateOf: null,
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-li-questioning-17284'],
     evidenceIds: ['evidence-li-news-17284'],
   },
@@ -420,7 +420,7 @@ const news: NewsRecord[] = [
     contentType: 'institutional-update',
     sourceDependencies: [sources.li17102],
     duplicateOf: null,
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-li-questioning-17102'],
     evidenceIds: ['evidence-li-news-17102'],
   },
@@ -437,7 +437,7 @@ const news: NewsRecord[] = [
     contentType: 'institutional-update',
     sourceDependencies: [sources.wang17293],
     duplicateOf: null,
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-wang-questioning-17293'],
     evidenceIds: ['evidence-wang-news-17293'],
   },
@@ -454,7 +454,7 @@ const news: NewsRecord[] = [
     contentType: 'institutional-update',
     sourceDependencies: [sources.wang17093],
     duplicateOf: null,
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-wang-questioning-17093'],
     evidenceIds: ['evidence-wang-news-17093'],
   },
@@ -469,7 +469,7 @@ const timeline: TimelineEventRecord[] = [
     category: 'public-office',
     description:
       '高雄市議會官方頁面以「本屆議員-李眉蓁」列示其機構身分；頁面未提供可供本資料集確認的完整任期起日。',
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-li-current-council-position'],
     evidenceIds: ['evidence-li-member-profile'],
   },
@@ -481,7 +481,7 @@ const timeline: TimelineEventRecord[] = [
     category: 'public-office',
     description:
       '高雄市議會官方頁面以「本屆議員-王義雄」列示其機構身分；頁面未提供可供本資料集確認的完整任期起日。',
-    ...reviewFields,
+    ...validationFields,
     claimIds: ['claim-wang-current-council-position'],
     evidenceIds: ['evidence-wang-member-profile'],
   },
@@ -493,7 +493,7 @@ const timeline: TimelineEventRecord[] = [
     category: 'public-activity' as const,
     description: item.description,
     verificationStatus: item.verificationStatus,
-    reviewStatus: item.reviewStatus,
+    validationStatus: item.validationStatus,
     publicationStatus: item.publicationStatus,
     claimIds: item.claimIds,
     evidenceIds: item.evidenceIds,
@@ -547,77 +547,14 @@ const dataset: PublicRecordsDataset = {
   timeline,
   identityResolutions,
   conflicts: [],
-  review: {
-    status: 'pending-human-review',
-    reviewerId: null,
-    reviewedAt: null,
-    note: '官方機構快照與摘要已完成離線來源核對；尚未有可記錄的人工審核者或審核時間，因此所有公開項目仍標示待人工覆核。賴瑞隆在本切片沒有足夠的公共紀錄來源，保留為中性空白。',
+  validation: {
+    status: 'validated',
+    method: 'deterministic-source-check-v1',
+    note: '官方機構快照與摘要已完成離線來源核對；未驗證或身份衝突的紀錄仍維持未發布；內容審閱由修改資料的 Pull Request 完成。賴瑞隆在本切片沒有足夠的公共紀錄來源，保留為中性空白。',
   },
 };
 
 validatePublicRecordsDataset(dataset, new Set(Object.values(sources)));
-
-const reviewPacket = {
-  datasetId: dataset.datasetId,
-  snapshotDate,
-  reviewStatus: dataset.review.status,
-  reviewerId: null,
-  reviewedAt: null,
-  disposition: 'source-checked-pending-human-review',
-  selectedCandidates: [
-    {
-      candidateId: laiCandidateId,
-      personId: laiPersonId,
-      displayName: '賴瑞隆',
-      categories: {
-        positions: 'unavailable',
-        policies: 'unavailable',
-        activities: 'unavailable',
-        news: 'unavailable',
-        relationships: 'unavailable',
-        timeline: 'unavailable',
-      },
-    },
-    {
-      candidateId: liCandidateId,
-      personId: liPersonId,
-      displayName: '李眉蓁',
-      categories: {
-        positions: 'pending-review',
-        policies: 'unavailable',
-        activities: 'pending-review',
-        news: 'pending-review',
-        relationships: 'unavailable',
-        timeline: 'pending-review',
-      },
-    },
-    {
-      candidateId: wangCandidateId,
-      personId: wangPersonId,
-      displayName: '王義雄',
-      categories: {
-        positions: 'pending-review',
-        policies: 'unavailable',
-        activities: 'pending-review',
-        news: 'pending-review',
-        relationships: 'unavailable',
-        timeline: 'pending-review',
-      },
-    },
-  ],
-  claims: claims.map((claim) => ({
-    claimId: claim.claimId,
-    subjectId: claim.subjectId,
-    evidenceIds: claim.evidenceIds,
-    disposition: 'pending-human-review',
-    rationale: '來源文字與候選人身分已由離線適配器核對；尚無人工審核者可記錄。',
-  })),
-  notes: [
-    'KCC member pages provide current institutional identity only; their party text is not copied into the 2026 candidacy record.',
-    'KCC questioning summaries support documented participation, not personal achievement, policy completion, or administrative outcome.',
-    'No family or political relationship is published because no qualifying evidence was captured in this representative slice.',
-  ],
-};
 
 const output = (relative: string, value: unknown) =>
   writeFile(
@@ -626,10 +563,8 @@ const output = (relative: string, value: unknown) =>
     'utf8',
   );
 await mkdir(path.join(root, 'data/normalized/2026'), { recursive: true });
-await mkdir(path.join(root, 'data/review/2026'), { recursive: true });
 await mkdir(path.join(root, 'data/approved/2026'), { recursive: true });
 await output('data/normalized/2026/kaohsiung-public-records.json', dataset);
-await output('data/review/2026/public-records-review.json', reviewPacket);
 await output('data/approved/2026/kaohsiung-public-records.json', dataset);
 console.log(
   `Generated public-record slice for ${dataset.selectedCandidateIds.length} selected candidates: ${dataset.activities.length} activities, ${dataset.news.length} news records, ${dataset.positions.length} positions.`,

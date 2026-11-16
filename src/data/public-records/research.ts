@@ -31,17 +31,15 @@ export const ResearchRetrievalStatusSchema = z.enum([
   'blocked',
   'failed',
 ]);
-export const ResearchReviewStatusSchema = z.enum([
+export const ResearchValidationStatusSchema = z.enum([
   'not-ready',
   'machine-validated',
-  'pending-human-review',
-  'human-reviewed',
-  'editorially-approved',
+  'pending-verification',
+  'source-backed',
 ]);
 export const ResearchPublicationStatusSchema = z.enum([
   'not-eligible',
-  'source-backed-static-display',
-  'editorially-approved',
+  'source-backed',
 ]);
 export const ResearchResultStatusSchema = z.enum([
   'evidence-found',
@@ -51,7 +49,9 @@ export const ResearchResultStatusSchema = z.enum([
   'prior-slice-reused',
 ]);
 export type ResearchResultStatus = z.infer<typeof ResearchResultStatusSchema>;
-export type ResearchReviewStatus = z.infer<typeof ResearchReviewStatusSchema>;
+export type ResearchValidationStatus = z.infer<
+  typeof ResearchValidationStatusSchema
+>;
 export { PUBLIC_RECORD_CATEGORIES };
 
 export const ResearchSourceSnapshotSchema = z.object({
@@ -109,7 +109,7 @@ export const ResearchEvidenceSchema = z.object({
   supportType: z.literal('direct'),
   retrievedAt: IsoTimestampSchema,
   verificationStatus: z.literal('source-retrieved'),
-  reviewStatus: z.literal('pending-human-review'),
+  validationStatus: z.literal('pending-verification'),
 });
 
 export const ResearchClaimSchema = z.object({
@@ -124,8 +124,8 @@ export const ResearchClaimSchema = z.object({
   assertedDate: DateOnlySchema,
   identityStatus: z.literal('roster-verified'),
   verificationStatus: z.literal('source-retrieved'),
-  reviewStatus: z.literal('pending-human-review'),
-  publicationStatus: z.literal('source-backed-static-display'),
+  validationStatus: z.literal('pending-verification'),
+  publicationStatus: z.literal('source-backed'),
   evidenceIds: z.array(z.string().min(1)).min(1),
 });
 
@@ -169,11 +169,11 @@ export const ResearchAuditSchema = z.object({
   evidenceIds: z.array(z.string().min(1)),
   recordIds: z.array(z.string().min(1)),
   conflictCount: z.number().int().nonnegative(),
-  reviewStatus: ResearchReviewStatusSchema,
+  validationStatus: ResearchValidationStatusSchema,
   publicationStatus: ResearchPublicationStatusSchema,
   executionOrigin: z.enum([
     'current-official-snapshot',
-    'prior-approved-slice',
+    'prior-source-slice',
     'not-attempted',
   ]),
   previousAttemptStatus: ResearchDiscoveryStatusSchema.nullable(),
@@ -185,7 +185,7 @@ export const ResearchCheckpointSchema = z.object({
   datasetId: z.string().min(1),
   snapshotDate: DateOnlySchema,
   runId: z.string().min(1),
-  command: z.enum(['execute', 'validate', 'review', 'verify']),
+  command: z.enum(['execute', 'validate', 'verify']),
   candidateIds: z.array(z.string().min(1)),
   districtIds: z.array(z.string().min(1)),
   category: ResearchCategorySchema.nullable(),
@@ -196,28 +196,6 @@ export const ResearchCheckpointSchema = z.object({
   resumedFromRunId: z.string().nullable(),
   dryRun: z.boolean(),
   updatedAt: IsoTimestampSchema,
-});
-
-export const ResearchReviewItemSchema = z.object({
-  reviewItemId: z.string().min(1),
-  auditId: z.string().min(1),
-  candidateId: z.string().min(1),
-  personId: z.string().min(1),
-  displayName: z.string().min(1),
-  category: ResearchCategorySchema,
-  itemType: z.enum(['claim', 'identity-conflict', 'coverage-gap']),
-  claimIds: z.array(z.string().min(1)),
-  evidenceIds: z.array(z.string().min(1)),
-  sourceIds: z.array(z.string().min(1)),
-  suggestedDisposition: z.enum([
-    'human-review-required',
-    'withhold-conflict',
-    'research-required',
-  ]),
-  reviewStatus: z.literal('pending-human-review'),
-  reviewerId: z.null(),
-  reviewedAt: z.null(),
-  notes: z.string().min(1),
 });
 
 export const ResearchDatasetSchema = z.object({
@@ -234,10 +212,9 @@ export const ResearchDatasetSchema = z.object({
   claims: z.array(ResearchClaimSchema),
   audits: z.array(ResearchAuditSchema),
   checkpoint: ResearchCheckpointSchema,
-  review: z.object({
-    status: z.literal('pending-human-review'),
-    reviewerId: z.null(),
-    reviewedAt: z.null(),
+  validation: z.object({
+    status: z.enum(['validated', 'pending-verification']),
+    method: z.literal('deterministic-source-check-v1'),
     note: z.string().min(1),
   }),
 });
@@ -252,7 +229,6 @@ export type ResearchEvidence = z.infer<typeof ResearchEvidenceSchema>;
 export type ResearchClaim = z.infer<typeof ResearchClaimSchema>;
 export type ResearchAudit = z.infer<typeof ResearchAuditSchema>;
 export type ResearchCheckpoint = z.infer<typeof ResearchCheckpointSchema>;
-export type ResearchReviewItem = z.infer<typeof ResearchReviewItemSchema>;
 export type ResearchDataset = z.infer<typeof ResearchDatasetSchema>;
 
 export type CecCandidateRow = {
@@ -435,7 +411,7 @@ function auditBase(
   const resultNote = notAttempted
     ? '本次執行尚未保存此類別的候選人專屬來源；缺少資料不表示不存在。'
     : conflict
-      ? `同一選舉區與號次的官方資料出現姓名字元差異：既有名冊為「${candidate.displayName}」，CEC 候選人資料為「${row?.name ?? ''}」；待人工核對。`
+      ? `同一選舉區與號次的官方資料出現姓名字元差異：既有名冊為「${candidate.displayName}」，CEC 候選人資料為「${row?.name ?? ''}」；待來源核對。`
       : sourceScopeOnly
         ? '已檢查官方候選人資料快照，但該快照未提供可直接引用的本類別紀錄；這不是不存在的證據。'
         : '已從官方候選人資料快照取得與既有名冊相符的候選人列。';
@@ -477,14 +453,12 @@ function auditBase(
     evidenceIds: [],
     recordIds: [],
     conflictCount: conflict ? 1 : 0,
-    reviewStatus:
+    validationStatus:
       category === 'positions' && !conflict
-        ? 'pending-human-review'
+        ? 'pending-verification'
         : 'not-ready',
     publicationStatus:
-      category === 'positions' && !conflict
-        ? 'source-backed-static-display'
-        : 'not-eligible',
+      category === 'positions' && !conflict ? 'source-backed' : 'not-eligible',
     executionOrigin: attempted ? 'current-official-snapshot' : 'not-attempted',
     previousAttemptStatus: null,
     isNegativeEvidence: false,
@@ -576,7 +550,7 @@ export function buildResearchDataset(
         supportType: 'direct',
         retrievedAt: source.retrievedAt,
         verificationStatus: 'source-retrieved',
-        reviewStatus: 'pending-human-review',
+        validationStatus: 'pending-verification',
       });
       if (identityStatus === 'roster-verified') {
         claims.push({
@@ -591,8 +565,8 @@ export function buildResearchDataset(
           assertedDate: snapshotDate,
           identityStatus: 'roster-verified',
           verificationStatus: 'source-retrieved',
-          reviewStatus: 'pending-human-review',
-          publicationStatus: 'source-backed-static-display',
+          validationStatus: 'pending-verification',
+          publicationStatus: 'source-backed',
           evidenceIds: [evidenceId],
         });
       }
@@ -626,7 +600,7 @@ export function buildResearchDataset(
         audit.claimIds = [];
         audit.evidenceIds = [];
         audit.recordIds = [];
-        audit.reviewStatus = 'not-ready';
+        audit.validationStatus = 'not-ready';
         audit.publicationStatus = 'not-eligible';
       }
       if (options.candidateIds && !options.candidateIds.has(candidate.id)) {
@@ -646,7 +620,7 @@ export function buildResearchDataset(
         audit.claimIds = [];
         audit.evidenceIds = [];
         audit.recordIds = [];
-        audit.reviewStatus = 'not-ready';
+        audit.validationStatus = 'not-ready';
         audit.publicationStatus = 'not-eligible';
       }
       if (
@@ -669,7 +643,7 @@ export function buildResearchDataset(
         audit.claimIds = [];
         audit.evidenceIds = [];
         audit.recordIds = [];
-        audit.reviewStatus = 'not-ready';
+        audit.validationStatus = 'not-ready';
         audit.publicationStatus = 'not-eligible';
       }
       audits.push(audit);
@@ -707,11 +681,10 @@ export function buildResearchDataset(
       dryRun: options.dryRun,
       updatedAt: observedAt,
     },
-    review: {
-      status: 'pending-human-review',
-      reviewerId: null,
-      reviewedAt: null,
-      note: '官方快照已保存並通過機器參照檢查；人工審查、字元衝突裁決與編輯核准尚未完成。',
+    validation: {
+      status: 'validated',
+      method: 'deterministic-source-check-v1',
+      note: '官方快照、候選人對帳與來源引用關係通過離線決定性檢查；未執行、衝突或缺少證據的類別仍維持未發布，內容判斷透過 Pull Request 完成。',
     },
   };
 }
@@ -793,7 +766,7 @@ export function validateResearchDataset(
         `conflicted research audit ${audit.auditId} publishes a claim`,
       );
     if (
-      audit.reviewStatus === 'not-ready' &&
+      audit.validationStatus === 'not-ready' &&
       audit.publicationStatus !== 'not-eligible'
     )
       errors.push(
@@ -871,8 +844,8 @@ export function validateResearchDataset(
           `audit ${audit.auditId} references missing evidence ${evidenceId}`,
         );
   }
-  if (dataset.review.reviewerId !== null || dataset.review.reviewedAt !== null)
-    errors.push('pending research review cannot contain reviewer metadata');
+  if (dataset.validation.method !== 'deterministic-source-check-v1')
+    errors.push('research dataset must use deterministic validation');
   if (dataset.audits.length !== expectedKeys.size)
     errors.push(
       `research audit count ${dataset.audits.length} does not match expected ${expectedKeys.size}`,
@@ -884,68 +857,12 @@ export function validateResearchDataset(
   return dataset;
 }
 
-export function buildResearchReviewPacket(dataset: ResearchDataset): {
-  datasetId: ResearchDataset['datasetId'];
-  snapshotDate: string;
-  status: 'pending-human-review';
-  reviewerId: null;
-  reviewedAt: null;
-  items: ResearchReviewItem[];
-  notes: string[];
-} {
-  const items = dataset.audits.map((audit): ResearchReviewItem => {
-    const itemType: ResearchReviewItem['itemType'] =
-      audit.identityStatus === 'conflicted'
-        ? 'identity-conflict'
-        : audit.claimIds.length > 0
-          ? 'claim'
-          : 'coverage-gap';
-    const suggestedDisposition: ResearchReviewItem['suggestedDisposition'] =
-      itemType === 'identity-conflict'
-        ? 'withhold-conflict'
-        : itemType === 'claim'
-          ? 'human-review-required'
-          : 'research-required';
-    return {
-      reviewItemId: `review-${audit.auditId}`,
-      auditId: audit.auditId,
-      candidateId: audit.candidateId,
-      personId: audit.personId,
-      displayName: audit.displayName,
-      category: audit.category,
-      itemType,
-      claimIds: audit.claimIds,
-      evidenceIds: audit.evidenceIds,
-      sourceIds: audit.sourceConsultedIds,
-      suggestedDisposition,
-      reviewStatus: 'pending-human-review' as const,
-      reviewerId: null,
-      reviewedAt: null,
-      notes:
-        itemType === 'identity-conflict' ? audit.resultNote : audit.resultNote,
-    };
-  });
-  return {
-    datasetId: dataset.datasetId,
-    snapshotDate: dataset.snapshotDate,
-    status: 'pending-human-review',
-    reviewerId: null,
-    reviewedAt: null,
-    items,
-    notes: [
-      '缺少來源或未執行不表示事實不存在。',
-      '字元衝突不得以候選人姓名單獨合併或靜默改寫。',
-      '本資料包未填入人工審查者或審查時間。',
-    ],
-  };
-}
-
 export type ResearchReport = {
   reportVersion: '1.0.0';
   reportType: 'full-roster-research';
   datasetId: ResearchDataset['datasetId'];
   snapshotDate: string;
-  status: 'partial-research-and-pending-review';
+  status: 'partial-research-and-pending-verification';
   roster: {
     candidateCount: number;
     mayorCount: number;
@@ -963,8 +880,8 @@ export type ResearchReport = {
     conflictedCandidateCount: number;
     notAttemptedCount: number;
     sourceSnapshotCount: number;
-    humanReviewedCount: 0;
-    editoriallyApprovedCount: 0;
+    sourceBackedCount: number;
+    pendingVerificationCount: number;
   };
   byCategory: Record<
     ResearchCategory,
@@ -995,16 +912,15 @@ export type ResearchReport = {
     notAttemptedCount: number;
   }>;
   sourceChecks: ResearchSourceSnapshot[];
-  review: {
-    status: 'pending-human-review';
-    reviewerId: null;
-    reviewedAt: null;
+  validation: {
+    status: ResearchDataset['validation']['status'];
+    method: ResearchDataset['validation']['method'];
   };
   integrityAssertions: {
     demoCandidatesIncluded: false;
     nameOnlyMatchesPublished: false;
     unsupportedClaimsGenerated: false;
-    reviewerMetadataInvented: false;
+    validationMetadataInvented: false;
     candidateRankingProduced: false;
     completenessClaimed: false;
   };
@@ -1097,7 +1013,7 @@ export function buildResearchReport(
     reportType: 'full-roster-research',
     datasetId: dataset.datasetId,
     snapshotDate: dataset.snapshotDate,
-    status: 'partial-research-and-pending-review',
+    status: 'partial-research-and-pending-verification',
     roster: {
       candidateCount: candidates.length,
       mayorCount: candidates.filter(
@@ -1134,22 +1050,25 @@ export function buildResearchReport(
         (audit) => audit.resultStatus === 'not-attempted',
       ).length,
       sourceSnapshotCount: dataset.sources.length,
-      humanReviewedCount: 0,
-      editoriallyApprovedCount: 0,
+      sourceBackedCount: dataset.claims.filter(
+        (claim) => claim.publicationStatus === 'source-backed',
+      ).length,
+      pendingVerificationCount: dataset.claims.filter(
+        (claim) => claim.validationStatus === 'pending-verification',
+      ).length,
     },
     byCategory,
     candidates: candidatesReport,
     sourceChecks: dataset.sources,
-    review: {
-      status: 'pending-human-review',
-      reviewerId: null,
-      reviewedAt: null,
+    validation: {
+      status: dataset.validation.status,
+      method: dataset.validation.method,
     },
     integrityAssertions: {
       demoCandidatesIncluded: false,
       nameOnlyMatchesPublished: false,
       unsupportedClaimsGenerated: false,
-      reviewerMetadataInvented: false,
+      validationMetadataInvented: false,
       candidateRankingProduced: false,
       completenessClaimed: false,
     },
@@ -1157,7 +1076,7 @@ export function buildResearchReport(
       'P0 候選人資料快照已對照全數 106 名候選人，但 9 筆姓名字元差異保留為衝突，未靜默合併。',
       'P1 政策／活動僅完成 CEC 候選人資料欄位範圍檢查；空欄位不表示不存在。',
       'P2 新聞／時間軸與 P3 公共關係本次未完成候選人專屬檢索，仍是未執行狀態。',
-      '所有研究結果仍待人工審查，沒有人工核准或編輯核准。',
+      '決定性檢查已完成；未執行、衝突或缺少候選人專屬證據的類別仍維持未發布，內容核對在 Pull Request 中進行。',
     ],
   };
 }
@@ -1169,7 +1088,7 @@ export function researchMarkdown(report: ResearchReport): string {
     `- 快照日期：${report.snapshotDate}`,
     `- 狀態：${report.status}`,
     `- 名冊：${report.roster.candidateCount} 人（市長 ${report.roster.mayorCount}、普通市議員 ${report.roster.ordinaryCouncilCount}、原住民族市議員 ${report.roster.indigenousCouncilCount}）`,
-    `- 研究審查：待人工審查；reviewerId/reviewedAt 均為 null`,
+    `- 決定性檢查：${report.validation.method}；未執行或衝突的項目維持未發布，內容核對在 Pull Request 中進行`,
     '',
     '## 類別統計',
     '',
@@ -1189,7 +1108,7 @@ export function researchMarkdown(report: ResearchReport): string {
     '- demoCandidatesIncluded: false',
     '- nameOnlyMatchesPublished: false',
     '- unsupportedClaimsGenerated: false',
-    '- reviewerMetadataInvented: false',
+    '- validationMetadataInvented: false',
     '- candidateRankingProduced: false',
     '- completenessClaimed: false',
     '',
@@ -1215,8 +1134,6 @@ export function buildIndependentVerificationReport(
   matchedCount: number;
   discrepancyCount: number;
   discrepancies: string[];
-  reviewerId: null;
-  reviewedAt: null;
   limitations: string[];
 } {
   const candidates = roster.candidates.filter(
@@ -1250,7 +1167,7 @@ export function buildIndependentVerificationReport(
     reportType: 'independent-machine-reparse',
     snapshotDate: dataset.snapshotDate,
     method:
-      '重新以保留的 CEC C1/T 原始快照依選舉區與號次抽樣比對；這是獨立機器重解析，不是人工審查。',
+      '重新以保留的 CEC C1/T 原始快照依選舉區與號次抽樣比對；這是獨立機器重解析，內容核對在 Pull Request 中進行。',
     sampleCriteria: [
       '至少一名市長候選人',
       '第4普通市議員選舉區',
@@ -1263,11 +1180,9 @@ export function buildIndependentVerificationReport(
     matchedCount: sampleAuditIds.length - discrepancies.length,
     discrepancyCount: discrepancies.length,
     discrepancies,
-    reviewerId: null,
-    reviewedAt: null,
     limitations: [
-      '樣本結果不代表全名冊已人工驗證。',
-      '未執行、受阻或衝突的類別仍須後續研究與人工裁決。',
+      '樣本結果不代表全名冊所有類別都已完成決定性驗證。',
+      '未執行、受阻或衝突的類別仍須後續研究；不得將空白解讀為不存在。',
     ],
   };
 }

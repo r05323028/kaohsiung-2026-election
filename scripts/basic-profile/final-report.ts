@@ -1,4 +1,4 @@
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   BASIC_PROFILE_FIELDS,
@@ -260,14 +260,14 @@ const report = {
   coverageBefore: {
     publishedClaims: 0,
     candidatesWithPublishedClaims: 0,
-    note: '本次變更前沒有基本資料發布快照；既有履歷發布為 0 筆人工編輯核准紀錄。',
+    note: '本次變更前沒有基本資料發布快照；既有履歷發布為 0 筆PR 內容審查紀錄。',
   },
   coverageAfter: {
     publishedClaims: publication.claims.length,
     candidatesWithPublishedClaims: new Set(
       publication.claims.map((claim) => claim.candidateId),
     ).size,
-    note: '獨立機器查核通過後發布；非人工編輯核准。',
+    note: '獨立機器查核通過後發布；非PR 內容審查。',
   },
   byField,
   byDistrict,
@@ -277,7 +277,7 @@ const report = {
   sourceClassCounts,
   publisherCounts,
   uniquePublishers: Object.keys(publisherCounts).length,
-  note: '獨立查核是機器查核，不等於人工編輯核准；未通過查核的欄位保持未知。',
+  note: '獨立查核是機器查核，不等於PR 內容審查；未通過查核的欄位保持未知。',
 };
 
 function table(rows: Array<[string, string | number]>): string {
@@ -305,7 +305,7 @@ const markdown = `# 2026 高雄候選人基本資料最終報告
 
 - 產生時間：${report.generatedAt}
 - 名冊：${report.totalCandidates} 位（市長 5、市議員 101）
-- 政策：獨立機器查核（basic-profile-machine-verification-v1），非人工編輯核准
+- 政策：獨立機器查核（basic-profile-machine-verification-v1），非PR 內容審查
 
 ## 方法
 
@@ -455,11 +455,16 @@ ${
 ${report.checks.map((check) => '| ' + check.command + ' | ' + check.result + ' |').join('\n')}
 `;
 
+mkdirSync(join(root, '.cache/reports'), { recursive: true });
+
 writeFileSync(
-  join(root, 'reports/candidate-basic-profile-final.json'),
+  join(root, '.cache/reports/candidate-basic-profile-final.json'),
   JSON.stringify(report, null, 2) + '\n',
 );
-writeFileSync(join(root, 'reports/candidate-basic-profile-final.md'), markdown);
+writeFileSync(
+  join(root, '.cache/reports/candidate-basic-profile-final.md'),
+  markdown,
+);
 
 console.log(
   `Final basic-profile report: ${report.researchedCandidates}/${report.totalCandidates} researched, ${report.publishedClaims} published claims.`,

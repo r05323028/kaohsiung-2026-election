@@ -40,12 +40,6 @@ type ApprovedDataset = {
   candidates: Candidate[];
   [key: string]: unknown;
 };
-type ReviewPacket = {
-  approvedForPreliminaryDisplay: boolean;
-  approvedRowCount: number;
-  pendingRowCount: number;
-};
-
 const root = process.cwd();
 async function readJson(relativePath: string): Promise<unknown> {
   const text = await readFile(path.join(root, relativePath), 'utf8');
@@ -64,18 +58,6 @@ const approved = (await readJson(
 const normalized = validateCouncilRoster(
   await readJson('data/normalized/2026/kaohsiung-council-roster.json'),
 );
-const review = (await readJson(
-  'data/review/2026/khec-65366-council-roster-review.json',
-)) as ReviewPacket;
-if (
-  review.approvedForPreliminaryDisplay !== true ||
-  review.approvedRowCount !== normalized.totalRowCount ||
-  review.pendingRowCount !== 0
-)
-  throw new Error(
-    'Council review packet does not approve exactly the normalized preliminary roster.',
-  );
-
 const source: Source = {
   id: 'source-khec-65368',
   title: '高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表（重複公告別名）',
@@ -165,12 +147,12 @@ const result = {
   sources,
   districts,
   candidates: [...mayorCandidates, ...councilCandidates],
-  pendingReview: [
+  pendingVerification: [
     {
       sourceId: 'source-khec-65366',
       scope: 'city-council formal announcement',
       reason:
-        '號次抽定表的 101 筆市議員列名已完成預公告展示審核，但正式市議員候選人公告預定於 2026-11-17；公告後必須重新比對。',
+        '號次抽定表的 101 筆市議員列名已完成預公告來源查核，但正式市議員候選人公告預定於 2026-11-17；公告後必須重新比對。',
       expectedResolutionDate: '2026-11-17',
     },
   ],

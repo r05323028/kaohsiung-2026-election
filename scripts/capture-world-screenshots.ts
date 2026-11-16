@@ -14,7 +14,7 @@ const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'world')
   : 'world';
-const outDir = join(process.cwd(), 'reports', 'visual', label);
+const outDir = join(process.cwd(), '.cache', 'reports', 'visual', label);
 mkdirSync(outDir, { recursive: true });
 
 type Shot = {
@@ -165,7 +165,7 @@ for (const shot of shots) {
     .getAttribute('data-scene-focus');
   manifest.captures.push({
     ...shot,
-    file: `reports/visual/${label}/${shot.name}.png`,
+    file: `.cache/reports/visual/${label}/${shot.name}.png`,
     dataSceneFocus: dataSceneFocus ?? '',
     capturedAt: new Date().toISOString(),
   });

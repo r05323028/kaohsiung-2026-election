@@ -19,15 +19,14 @@ export const NEWS_PATHS = {
   rawDiscovery: 'data/raw/2026/news/discovery',
   normalized: 'data/normalized/2026/candidate-news.json',
   normalizedArticles: 'data/normalized/2026/news',
-  editorial: 'data/approved/2026/candidate-news-editorial.json',
-  review: 'data/review/2026/candidate-news-review.json',
+  sourceSummaries: 'data/approved/2026/candidate-news-source-summaries.json',
   published: 'data/published/2026/candidate-news.json',
-  coverageReport: 'reports/news-coverage.json',
-  coverageMarkdown: 'reports/news-coverage.md',
-  verificationReport: 'reports/news-verification.json',
-  verificationMarkdown: 'reports/news-verification.md',
-  publicationReport: 'reports/news-publication.json',
-  publicationMarkdown: 'reports/news-publication.md',
+  coverageReport: '.cache/reports/news-coverage.json',
+  coverageMarkdown: '.cache/reports/news-coverage.md',
+  verificationReport: '.cache/reports/news-verification.json',
+  verificationMarkdown: '.cache/reports/news-verification.md',
+  publicationReport: '.cache/reports/news-publication.json',
+  publicationMarkdown: '.cache/reports/news-publication.md',
 } as const;
 
 export type RosterCandidate = {
@@ -354,7 +353,7 @@ export function coverageFor(
   } else if (published > 0) {
     status = 'published';
   } else {
-    status = 'verified-pending-review';
+    status = 'verified-not-published';
   }
 
   if (status === 'discovered-unverified') blockers.push('verification-not-run');
@@ -391,14 +390,14 @@ export function coverageFor(
 export function articleFromVerification(
   candidate: RosterCandidate,
   draft: NewsArticle,
-  editorial: { summary: string; topicTags: NewsTopic[] } | null,
+  sourceSummary: { summary: string; topicTags: NewsTopic[] } | null,
 ): NewsArticle {
   return {
     ...draft,
     articleId: draft.articleId || articleIdFor(draft.canonicalUrl),
-    summary: editorial?.summary ?? null,
-    summaryBasis: editorial ? 'editorial' : null,
-    topicTags: editorial?.topicTags ?? draft.topicTags,
+    summary: sourceSummary?.summary ?? null,
+    summaryBasis: sourceSummary ? 'source-summary' : null,
+    topicTags: sourceSummary?.topicTags ?? draft.topicTags,
   };
 }
 
@@ -417,7 +416,7 @@ export function mergeCoverage(
     );
     let status = entry.status;
     if (published > 0) status = 'published';
-    else if (verified > 0) status = 'verified-pending-review';
+    else if (verified > 0) status = 'verified-not-published';
     return { ...entry, status, published, verified };
   });
 }

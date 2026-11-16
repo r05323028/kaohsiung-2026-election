@@ -1,11 +1,12 @@
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
 const root = resolve(process.cwd());
+mkdirSync(join(root, '.cache/reports'), { recursive: true });
 const rosterPath = join(root, 'data/approved/2026/kaohsiung-election.json');
 const distCandidatesPath = join(root, 'dist/candidates');
-const jsonReportPath = join(root, 'reports/profile-copy-audit.json');
-const markdownReportPath = join(root, 'reports/profile-copy-audit.md');
+const jsonReportPath = join(root, '.cache/reports/profile-copy-audit.json');
+const markdownReportPath = join(root, '.cache/reports/profile-copy-audit.md');
 
 function loadRoster(): { candidates: Array<{ slug: string }> } {
   try {
@@ -50,19 +51,19 @@ const forbiddenVisibleText = [
   '未分類',
   '中性脈絡',
   '爭議／待釐清',
-  'pending-human-review',
+  'pending-verification',
   'machine-validated',
-  'withheld-pending-review',
-  '待人工審查',
+  'withheld-unverified',
+  '待驗證',
   '機器政策核准',
-  '不等同人工編輯核准',
+  '不等同 PR 內容審查',
   '研究找到',
   '研究摘要',
   '研究快照',
   '研究完整度',
   '來源核對',
   '人工核對',
-  '人工審查',
+  'PR 內容審查',
   '機器參考',
   '參考檢查',
   '已嘗試',

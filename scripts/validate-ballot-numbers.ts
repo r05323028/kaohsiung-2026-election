@@ -645,7 +645,7 @@ const nameObservations = [
 
 const testResultsPath = path.join(
   root,
-  'reports/ballot-number-test-results.json',
+  '.cache/reports/ballot-number-test-results.json',
 );
 let testResults: {
   generatedAt?: string;
@@ -751,7 +751,7 @@ const markdown = [
         ),
       ]
     : [
-        '尚未記錄；執行 `npm run validate:ballot-numbers` 前請先完成測試並寫入 `reports/ballot-number-test-results.json`。',
+        '尚未記錄；執行 `npm run validate:ballot-numbers` 前請先完成測試並寫入 `.cache/reports/ballot-number-test-results.json`。',
       ]),
   '',
   '## 7. 逐筆稽核表',
@@ -765,14 +765,14 @@ const markdown = [
   '',
 ].join('\n');
 
-await mkdir(path.join(root, 'reports'), { recursive: true });
+await mkdir(path.join(root, '.cache/reports'), { recursive: true });
 await writeFile(
-  path.join(root, 'reports/ballot-number-sync.json'),
+  path.join(root, '.cache/reports/ballot-number-sync.json'),
   `${JSON.stringify({ generatedAt: testedAt, ok, source: { id: BALLOT_NUMBER_SOURCE_ID, publicationDate: BALLOT_NUMBER_PUBLICATION_DATE, attachmentSha256 }, counts: { officialRows: officialRows.length, candidates: dataset.candidates.length, matched: matchedRowKeys.size, contests: contests.size }, audit, coverage: coverageRows, nameObservations, issues, rows: auditRows }, null, 2)}\n`,
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/2026-kaohsiung-ballot-number-sync.md'),
+  path.join(root, '.cache/reports/2026-kaohsiung-ballot-number-sync.md'),
   markdown,
   'utf8',
 );
@@ -785,6 +785,6 @@ if (!ok) {
   process.exitCode = 1;
 } else {
   console.log(
-    `Ballot numbers verified: ${matchedRowKeys.size}/${dataset.candidates.length} candidates across ${contests.size} contests; ${officialRows.length} official rows reconciled; report written to reports/2026-kaohsiung-ballot-number-sync.md`,
+    `Ballot numbers verified: ${matchedRowKeys.size}/${dataset.candidates.length} candidates across ${contests.size} contests; ${officialRows.length} official rows reconciled; report written to .cache/reports/2026-kaohsiung-ballot-number-sync.md`,
   );
 }

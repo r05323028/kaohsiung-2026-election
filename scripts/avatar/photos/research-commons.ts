@@ -23,8 +23,8 @@ import path from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
 import { z } from 'zod';
 import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
-import { validateOfficialDataset } from '../../../src/data/official/schema';
 import type { LikenessPhoto } from '../../../src/data/avatars/likeness/schema';
+import { validateOfficialDataset } from '../../../src/data/official/schema';
 
 type DerivateUse = LikenessPhoto['derivativeUse'];
 

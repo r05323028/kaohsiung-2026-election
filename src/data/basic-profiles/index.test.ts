@@ -36,7 +36,7 @@ describe('published basic profiles', () => {
       const model = getBasicProfileReadModel(candidate.candidacy.id);
       if (model) {
         expect(model.claims.length).toBeGreaterThan(0);
-        expect(model.note).toContain('獨立查核');
+        expect(model.note).toContain('公開來源');
         for (const claim of model.claims) {
           expect(claim.candidateId).toBe(candidate.candidacy.id);
           expect(claim).not.toHaveProperty('verification');

@@ -13,13 +13,13 @@ const DateOnlySchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
  * - political-career: a historical action only; migrated to the Career tab.
  * - split-record: one source record that contains a historical action *and* a
  *   future commitment; both facets are rendered, each in its own section.
- * - review-required: not publishable until an editor resolves it.
+ * - split-record: one source record can contain both facets; each is rendered
+ *   in its own section.
  */
 export const PolicyOwnershipSchema = z.enum([
   'policy-commitments',
   'political-career',
   'split-record',
-  'review-required',
 ]);
 
 export const TemporalBasisSchema = z.enum([
@@ -70,10 +70,10 @@ export const PolicyClassificationSchema = z
     candidateId: z.string().min(1),
     ownership: PolicyOwnershipSchema,
     temporalBasis: TemporalBasisSchema,
-    /** How the temporal reading was reached: mostly automated, never silent. */
-    basis: z.enum(['policy-type', 'tense-marker', 'editorial-review']),
+    /** How the temporal reading was reached; explicit overrides remain traceable. */
+    basis: z.enum(['policy-type', 'tense-marker', 'classification-rule']),
     note: z.string().min(4),
-    status: z.enum(['approved', 'pending-review']),
+    status: z.literal('validated'),
     commitment: CommitmentFacetSchema.nullable(),
     historical: HistoricalFacetSchema.nullable(),
     /** Existing career activities that already document this action. */
@@ -110,13 +110,6 @@ export const PolicyClassificationSchema = z
         path: ['historical'],
       });
     }
-    if (value.ownership === 'review-required' && value.status === 'approved') {
-      ctx.addIssue({
-        code: 'custom',
-        message: 'review-required records cannot be approved',
-        path: ['status'],
-      });
-    }
   });
 
 export const PolicyActivityLinkSchema = z
@@ -125,7 +118,7 @@ export const PolicyActivityLinkSchema = z
     activityId: z.string().min(1),
     candidateId: z.string().min(1),
     relation: z.enum(['same-event', 'related-topic']),
-    /** How the link was established, kept so review can audit the aid. */
+    /** How the link was established, kept so the classification aid is traceable. */
     origin: z.enum(['automated', 'curated']),
     similarity: z.number().min(0).max(1),
     sharedTerms: z.array(z.string().min(1)),
@@ -151,16 +144,15 @@ export const PolicyActivityLinkSchema = z
     if (value.origin === 'curated' && !value.note) {
       ctx.addIssue({
         code: 'custom',
-        message: 'curated links must explain their editorial basis',
+        message: 'curated links must explain their source basis',
         path: ['note'],
       });
     }
   });
 
-export const PolicyCareerReviewSchema = z.object({
-  status: z.literal('approved'),
-  reviewerId: z.string().min(1),
-  reviewedAt: DateOnlySchema,
+export const PolicyCareerValidationSchema = z.object({
+  status: z.literal('validated'),
+  method: z.literal('deterministic-classification-v1'),
   scopeNote: z.string().min(1),
   limitations: z.array(z.string().min(1)).min(1),
   counts: z.object({
@@ -181,7 +173,7 @@ export const PolicyCareerDatasetSchema = z.object({
   policyCount: z.number().int().positive(),
   classifications: z.array(PolicyClassificationSchema).min(1),
   links: z.array(PolicyActivityLinkSchema),
-  review: PolicyCareerReviewSchema,
+  validation: PolicyCareerValidationSchema,
 });
 
 export type PolicyCareerDataset = z.infer<typeof PolicyCareerDatasetSchema>;

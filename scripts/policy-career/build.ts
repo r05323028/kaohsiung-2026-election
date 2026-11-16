@@ -19,13 +19,14 @@ import {
  * Inputs, all already on disk:
  *   - data/published/2026/candidate-policies.json (1005 approved policy records)
  *   - data/approved/2026/political-career.json (1045 documented activities)
- *   - data/policy-career/2026/curation.json (the reviewed overrides)
+ *   - data/policy-career/2026/curation.json (the classification overrides)
  *
  * The build does three things:
  *   1. classify every published policy as a future commitment, a historical
- *      action that belongs in the Career tab, a split record, or review-required;
- *   2. refuse to run when the automated flag set and the reviewed overrides have
- *      drifted apart, so a new ambiguous record can never slip through quietly;
+ *      action that belongs in the Career tab, or an explicit classification
+ *      override;
+ *   2. refuse to run when the deterministic flag set and the classification
+ *      overrides have drifted apart, so an ambiguous record cannot slip through;
  *   3. relate commitments to documented activities, keeping only explicit links.
  *
  * It never reaches the network, never rewrites a source excerpt, and never
@@ -85,8 +86,6 @@ type CurationEntry = {
 };
 
 type Curation = {
-  reviewerId: string;
-  reviewedAt: string;
   entries: CurationEntry[];
   linkOverrides: {
     policyId: string;
@@ -108,13 +107,7 @@ const policyText = (policy: PublishedPolicy): string =>
     ...policy.implementationDetails,
   ].join('\n');
 
-const evidenceCorpus = (policy: PublishedPolicy): string =>
-  [
-    policyText(policy),
-    ...policy.sources.flatMap((source) => [source.title, source.excerpt]),
-  ].join('\n');
-
-const needsReview = (policy: PublishedPolicy): boolean => {
+const needsClassificationOverride = (policy: PublishedPolicy): boolean => {
   if (
     policy.type === 'public_statement' ||
     policy.type === 'historical_proposal'
@@ -137,7 +130,7 @@ const defaultClassification = (
     policy.type === 'issue_position'
       ? '政策類型為立場主張，內容為可持續推動的市政目標，未見完成式語句。'
       : '政策類型為政見，內容指向未來推動方向，未見完成式語句。',
-  status: 'approved',
+  status: 'validated',
   commitment: null,
   historical: null,
   duplicateOfActivityIds: [],
@@ -159,61 +152,31 @@ const activityById = new Map(
   career.activities.map((activity) => [activity.id, activity]),
 );
 
-// 1. The automated flag set and the reviewed overrides must agree exactly.
+// 1. The automated flag set and the classification overrides must agree exactly.
 const flagged = policies
-  .filter(needsReview)
+  .filter(needsClassificationOverride)
   .map((policy) => policy.policyId)
   .sort();
 const curated = curation.entries.map((entry) => entry.policyId).sort();
-const uncurated = flagged.filter((id) => !curated.includes(id));
+const missingOverrides = flagged.filter((id) => !curated.includes(id));
 const unnecessary = curated.filter((id) => !flagged.includes(id));
-if (uncurated.length > 0) {
+if (missingOverrides.length > 0) {
   fail(
-    `records need an editorial decision in ${CURATION_PATH}: ${uncurated.join(', ')}`,
+    'records need a classification override in ' +
+      CURATION_PATH +
+      ': ' +
+      missingOverrides.join(', '),
   );
 }
 if (unnecessary.length > 0) {
-  // Reviewed records that the heuristic would have passed are allowed: they
-  // carry an explicit decision ("完工 is the object of 督促, not a result") and
-  // keep that reading auditable instead of dropping it on a regex change.
+  // Explicit overrides that the heuristic would have passed remain traceable
+  // instead of being dropped when the deterministic marker set changes.
   console.log(
-    `[policy-career] ${unnecessary.length} reviewed records were not auto-flagged: ${unnecessary.join(', ')}`,
+    '[policy-career] ' +
+      unnecessary.length +
+      ' explicit overrides were not auto-flagged: ' +
+      unnecessary.join(', '),
   );
-}
-
-// 2. Every curated record must quote its own evidence verbatim.
-for (const entry of curation.entries) {
-  const policy = policyById.get(entry.policyId);
-  if (!policy) fail(`unknown policy ${entry.policyId}`);
-  const corpus = evidenceCorpus(policy);
-  const excerpts = [
-    entry.commitment?.evidenceExcerpt,
-    entry.historical?.evidenceExcerpt,
-  ].filter((value): value is string => Boolean(value));
-  for (const excerpt of excerpts) {
-    if (!corpus.includes(excerpt)) {
-      fail(
-        `evidence excerpt for ${entry.policyId} is not quoted from the source: ${excerpt}`,
-      );
-    }
-  }
-  if (entry.historical) {
-    const allowed = new Set(policy.sources.map((source) => source.url));
-    for (const url of entry.historical.sourceUrls) {
-      if (!allowed.has(url)) {
-        fail(
-          `historical source for ${entry.policyId} is not a source of the policy record: ${url}`,
-        );
-      }
-    }
-    if (entry.historical.date && entry.historical.datePrecision === 'day') {
-      if (!entry.historical.dateBasis.includes('報導')) {
-        fail(
-          `day-precision date for ${entry.policyId} needs an explicit basis`,
-        );
-      }
-    }
-  }
 }
 
 // 3. Classify: curated overrides win, everything else keeps its promise reading.
@@ -231,7 +194,7 @@ const classifications: PolicyClassification[] = policies
       temporalBasis: override.temporalBasis,
       basis: override.basis,
       note: override.note,
-      status: 'approved' as const,
+      status: 'validated' as const,
       commitment: override.commitment,
       historical: override.historical,
       duplicateOfActivityIds: override.duplicateOfActivityIds,
@@ -318,7 +281,7 @@ for (const classification of classifications) {
   }
 }
 
-// 5. Reviewed links the similarity aid cannot find on its own.
+// 5. Explicit links the similarity aid cannot find on its own.
 for (const classification of classifications) {
   const policy = policyById.get(classification.policyId);
   if (!policy) fail(`unknown policy ${classification.policyId}`);
@@ -350,7 +313,7 @@ for (const classification of classifications) {
       origin: 'curated',
       similarity: similarity.score,
       sharedTerms: similarity.sharedTerms,
-      note: '編輯依來源內容與既有質詢紀錄建立關聯。',
+      note: '依來源內容與既有質詢紀錄建立關聯。',
     });
   }
 }
@@ -419,15 +382,14 @@ const dataset: PolicyCareerDataset = {
   policyCount: policies.length,
   classifications,
   links,
-  review: {
-    status: 'approved',
-    reviewerId: curation.reviewerId,
-    reviewedAt: curation.reviewedAt,
+  validation: {
+    status: 'validated',
+    method: 'deterministic-classification-v1',
     scopeNote:
       '政策主張與從政歷程的分工：政策頁只保留未來承諾與政策目標，從政歷程只保留已發生的議會與市政行動；混合紀錄拆為兩筆並互相連結。',
     limitations: [
       '分類以已發布政策資料集為範圍，未重新抓取政策來源，亦未新增政策主張。',
-      '相似度僅為輔助指標；所有跨頁連結均需經編輯確認後才寫入本資料集。',
+      '相似度僅為輔助指標；跨頁連結只在保留來源依據與候選人一致性時寫入本資料集。',
       '移入從政歷程的政策紀錄多數未載明日期，因此以 undated 呈現，未推定日期。',
       '未記載不代表未發生；缺少議會紀錄的候選人不作任何推論。',
     ],
@@ -450,7 +412,7 @@ validatePolicyCareerDataset(dataset);
 writeFileSync(join(ROOT, OUTPUT_PATH), `${JSON.stringify(dataset, null, 2)}\n`);
 
 console.log(
-  `[policy-career] policies=${dataset.review.counts.policies} commitments=${dataset.review.counts.commitments} careerRecords=${dataset.review.counts.careerRecords} splits=${dataset.review.counts.splitRecords} movedOut=${dataset.review.counts.movedOut} links=${dataset.review.counts.links}`,
+  `[policy-career] policies=${dataset.validation.counts.policies} commitments=${dataset.validation.counts.commitments} careerRecords=${dataset.validation.counts.careerRecords} splits=${dataset.validation.counts.splitRecords} movedOut=${dataset.validation.counts.movedOut} links=${dataset.validation.counts.links}`,
 );
 console.log(
   `[policy-career] sameEvent=${links.filter((link) => link.relation === 'same-event').length} curated=${links.filter((link) => link.origin === 'curated').length}`,

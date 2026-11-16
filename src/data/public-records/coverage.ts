@@ -1,7 +1,6 @@
 import { z } from 'zod';
 import type { OfficialCandidate, OfficialDataset } from '../official/schema';
 import type {
-  Claim,
   NewsRecord,
   PolicyRecord,
   PositionRecord,
@@ -45,12 +44,11 @@ export const CoverageIdentityStatusSchema = z.enum([
   'ambiguous',
   'unresolved',
 ]);
-export const CoverageReviewStateSchema = z.enum([
+export const CoverageValidationStateSchema = z.enum([
   'not-ready',
   'machine-validated',
-  'pending-human-review',
-  'human-reviewed',
-  'editorially-approved',
+  'pending-verification',
+  'source-backed',
   'published',
 ]);
 export const CoverageChecksumStatusSchema = z.enum([
@@ -89,19 +87,15 @@ export const CoverageAuditSchema = z.object({
   claimCount: z.number().int().nonnegative(),
   evidenceCount: z.number().int().nonnegative(),
   machineValidatedClaimCount: z.number().int().nonnegative(),
-  humanReviewedClaimCount: z.number().int().nonnegative(),
-  editoriallyApprovedClaimCount: z.number().int().nonnegative(),
+  sourceBackedClaimCount: z.number().int().nonnegative(),
+  publishedClaimCount: z.number().int().nonnegative(),
   staticDisplayRecordCount: z.number().int().nonnegative(),
   publishedRecordCount: z.number().int().nonnegative(),
   conflictCount: z.number().int().nonnegative(),
   ambiguousMatchCount: z.number().int().nonnegative(),
   recordIds: z.array(z.string().min(1)),
-  reviewState: CoverageReviewStateSchema,
-  publicationState: z.enum([
-    'not-eligible',
-    'source-backed-static-display',
-    'editorially-approved',
-  ]),
+  validationState: CoverageValidationStateSchema,
+  publicationState: z.enum(['not-eligible', 'source-backed', 'published']),
   attemptCount: z.number().int().nonnegative(),
   previousAuditStatus: CoverageDiscoveryStatusSchema.nullable(),
 });
@@ -130,9 +124,8 @@ export const ClaimRevisionSchema = z.object({
   lastSeenSnapshotDate: DateOnlySchema,
   status: z.enum([
     'machine-validated',
-    'pending-human-review',
-    'human-reviewed',
-    'editorially-approved',
+    'pending-verification',
+    'source-backed',
     'published',
   ]),
   sourceIds: z.array(z.string().min(1)).min(1),
@@ -144,13 +137,7 @@ export const CoverageCheckpointSchema = z.object({
   datasetId: z.string().min(1),
   snapshotDate: DateOnlySchema,
   runId: z.string().min(1),
-  command: z.enum([
-    'discover',
-    'ingest',
-    'validate',
-    'review-report',
-    'coverage',
-  ]),
+  command: z.enum(['discover', 'ingest', 'validate', 'coverage']),
   candidateIds: z.array(z.string().min(1)),
   districtIds: z.array(z.string().min(1)),
   category: CoverageCategorySchema.nullable(),
@@ -177,13 +164,7 @@ export const CoverageDatasetSchema = z.object({
   previousBaseline: z.enum(['available', 'no-baseline']),
   batch: z.object({
     runId: z.string().min(1),
-    command: z.enum([
-      'discover',
-      'ingest',
-      'validate',
-      'review-report',
-      'coverage',
-    ]),
+    command: z.enum(['discover', 'ingest', 'validate', 'coverage']),
     candidateIds: z.array(z.string().min(1)),
     districtIds: z.array(z.string().min(1)),
     category: CoverageCategorySchema.nullable(),
@@ -192,44 +173,11 @@ export const CoverageDatasetSchema = z.object({
     concurrency: z.number().int().min(1).max(8),
     resumedFromRunId: z.string().nullable(),
   }),
-  review: z.object({
-    status: z.literal('pending-human-review'),
-    reviewerId: z.null(),
-    reviewedAt: z.null(),
+  validation: z.object({
+    status: z.enum(['validated', 'pending-verification']),
+    method: z.literal('deterministic-source-check-v1'),
     note: z.string().min(1),
   }),
-});
-
-export const FullRosterReviewItemSchema = z.object({
-  reviewItemId: z.string().min(1),
-  candidateId: z.string().min(1),
-  personId: z.string().min(1),
-  displayName: z.string().min(1),
-  category: CoverageCategorySchema,
-  itemType: z.enum(['claim', 'coverage-gap']),
-  proposedClaimId: z.string().nullable(),
-  sourceIds: z.array(z.string().min(1)),
-  identityStatus: CoverageIdentityStatusSchema,
-  validationResult: z.enum(['machine-validated', 'not-ready']),
-  suggestedDisposition: z.enum([
-    'human-review-required',
-    'discovery-required',
-    'withhold-ambiguous-match',
-  ]),
-  reviewStatus: z.literal('pending-human-review'),
-  reviewerId: z.null(),
-  reviewedAt: z.null(),
-  notes: z.string().min(1),
-});
-
-export const FullRosterReviewPacketSchema = z.object({
-  datasetId: z.literal('kaohsiung-2026-full-roster-public-record-coverage'),
-  snapshotDate: DateOnlySchema,
-  status: z.literal('pending-human-review'),
-  reviewerId: z.null(),
-  reviewedAt: z.null(),
-  items: z.array(FullRosterReviewItemSchema),
-  notes: z.array(z.string().min(1)),
 });
 
 export type CoverageCategory = z.infer<typeof CoverageCategorySchema>;
@@ -238,10 +186,6 @@ export type CoverageSourceCheck = z.infer<typeof CoverageSourceCheckSchema>;
 export type ClaimRevision = z.infer<typeof ClaimRevisionSchema>;
 export type CoverageCheckpoint = z.infer<typeof CoverageCheckpointSchema>;
 export type CoverageDataset = z.infer<typeof CoverageDatasetSchema>;
-export type FullRosterReviewItem = z.infer<typeof FullRosterReviewItemSchema>;
-export type FullRosterReviewPacket = z.infer<
-  typeof FullRosterReviewPacketSchema
->;
 export type CoverageBatchOptions = {
   snapshotDate: string;
   runId: string;
@@ -268,7 +212,7 @@ export type CoverageReport = {
   datasetId: CoverageDataset['datasetId'];
   snapshotDate: string;
   scope: 'complete-official-preliminary-roster';
-  status: 'partial-discovery-and-pending-review';
+  status: 'partial-discovery-and-pending-verification';
   roster: {
     candidateCount: number;
     mayorCount: number;
@@ -281,8 +225,8 @@ export type CoverageReport = {
     sourceRetrieval: Record<string, unknown>;
     claimExtraction: Record<string, unknown>;
     machineValidation: Record<string, unknown>;
-    humanReview: Record<string, unknown>;
-    editorialApproval: Record<string, unknown>;
+    sourceBacking: Record<string, unknown>;
+    publication: Record<string, unknown>;
     staticPublication: Record<string, unknown>;
   };
   categoryMetrics: Record<CoverageCategory, Record<string, unknown>>;
@@ -297,8 +241,8 @@ export type CoverageReport = {
     sourceRetrievalCount: number;
     claimCount: number;
     machineValidatedClaimCount: number;
-    humanReviewedClaimCount: number;
-    editoriallyApprovedClaimCount: number;
+    sourceBackedClaimCount: number;
+    publishedClaimCount: number;
     staticDisplayRecordCount: number;
     publishedRecordCount: number;
     conflictCount: number;
@@ -317,7 +261,7 @@ export type CoverageReport = {
     demoCandidatesIncluded: false;
     nameOnlyMatchesPublished: false;
     unsupportedClaimsGenerated: false;
-    reviewerMetadataInvented: false;
+    validationMetadataInvented: false;
     candidateRankingProduced: false;
     singleCompletenessScoreProduced: false;
   };
@@ -521,8 +465,8 @@ export function buildCoverageAudits(
         manifestSources,
       );
       const hasRecords = records.length > 0;
-      const reviewState: CoverageAudit['reviewState'] = hasRecords
-        ? 'pending-human-review'
+      const validationState: CoverageAudit['validationState'] = hasRecords
+        ? 'pending-verification'
         : 'not-ready';
       audits.push({
         auditId: `audit-${candidate.id}-${category}`,
@@ -557,25 +501,23 @@ export function buildCoverageAudits(
         claimCount: claimIds.length,
         evidenceCount: evidenceIds.length,
         machineValidatedClaimCount: claimIds.length,
-        humanReviewedClaimCount: 0,
-        editoriallyApprovedClaimCount: 0,
+        sourceBackedClaimCount: 0,
+        publishedClaimCount: 0,
         staticDisplayRecordCount: records.filter(
-          (record) => record.publicationStatus === 'approved-source-backed',
+          (record) => record.publicationStatus === 'source-backed',
         ).length,
         publishedRecordCount: records.filter(
-          (record) => record.publicationStatus === 'approved-source-backed',
+          (record) => record.publicationStatus === 'source-backed',
         ).length,
         conflictCount: bundle?.conflicts.length ?? 0,
         ambiguousMatchCount: hasRecords
           ? (bundle?.identityResolutions.filter(
-              (item) => item.status === 'pending-review',
+              (item) => item.status === 'pending-verification',
             ).length ?? 0)
           : 0,
         recordIds: records.map((record) => record.id),
-        reviewState,
-        publicationState: hasRecords
-          ? 'source-backed-static-display'
-          : 'not-eligible',
+        validationState,
+        publicationState: hasRecords ? 'source-backed' : 'not-eligible',
         attemptCount: hasRecords ? 1 : 0,
         previousAuditStatus: previous?.discoveryStatus ?? null,
       });
@@ -619,10 +561,10 @@ export function buildClaimRevisions(
     firstSeenSnapshotDate: dataset.snapshotDate,
     lastSeenSnapshotDate: dataset.snapshotDate,
     status:
-      claim.reviewStatus === 'approved'
-        ? 'editorially-approved'
-        : claim.reviewStatus === 'pending-review'
-          ? 'pending-human-review'
+      claim.validationStatus === 'source-backed'
+        ? 'published'
+        : claim.validationStatus === 'pending-verification'
+          ? 'pending-verification'
           : 'machine-validated',
     sourceIds: unique(evidenceByClaim.get(claim.claimId) ?? []),
     previousClaimId: null,
@@ -669,11 +611,10 @@ export function buildCoverageDataset(
       concurrency: options.concurrency,
       resumedFromRunId: options.resumedFromRunId ?? null,
     },
-    review: {
-      status: 'pending-human-review',
-      reviewerId: null,
-      reviewedAt: null,
-      note: 'Coverage audits and source-backed records remain pending human review; no reviewer metadata is inferred.',
+    validation: {
+      status: 'validated',
+      method: 'deterministic-source-check-v1',
+      note: 'Coverage audits and source/evidence links passed deterministic checks; unattempted, ambiguous, or unsupported categories remain unpublished and content review occurs in Pull Requests.',
     },
   };
 }
@@ -749,15 +690,11 @@ export function validateCoverageDataset(
       );
     if (audit.identityStatus === 'ambiguous' && audit.publishedRecordCount > 0)
       errors.push(`ambiguous audit ${audit.auditId} publishes records`);
-    if (audit.reviewState === 'not-ready' && audit.publishedRecordCount > 0)
+    if (audit.validationState === 'not-ready' && audit.publishedRecordCount > 0)
       errors.push(`not-ready audit ${audit.auditId} publishes records`);
-    if (audit.editoriallyApprovedClaimCount > audit.humanReviewedClaimCount)
+    if (audit.publishedClaimCount > audit.sourceBackedClaimCount)
       errors.push(
-        `audit ${audit.auditId} editorial approval exceeds human review`,
-      );
-    if (audit.publishedRecordCount < audit.editoriallyApprovedClaimCount)
-      errors.push(
-        `audit ${audit.auditId} publication count is below editorial approval count`,
+        `audit ${audit.auditId} published claims exceed source-backed claims`,
       );
   }
   for (const key of expectedKeys)
@@ -770,8 +707,8 @@ export function validateCoverageDataset(
     if (!manifestSourceIds.has(revision.sourceIds[0] ?? ''))
       errors.push(`claim revision ${revision.claimId} has no manifest source`);
   }
-  if (dataset.review.reviewerId !== null || dataset.review.reviewedAt !== null)
-    errors.push('pending coverage review cannot contain reviewer metadata');
+  if (dataset.validation.method !== 'deterministic-source-check-v1')
+    errors.push('coverage dataset must use deterministic validation');
   if (dataset.audits.length !== expectedKeys.size)
     errors.push(
       `coverage audit count ${dataset.audits.length} does not match expected ${expectedKeys.size}`,
@@ -781,88 +718,6 @@ export function validateCoverageDataset(
       `Full-roster coverage reference validation failed:\n${errors.join('\n')}`,
     );
   return dataset;
-}
-
-export function buildReviewPacket(
-  coverage: CoverageDataset,
-  publicRecords: PublicRecordsDataset,
-): FullRosterReviewPacket {
-  const items: FullRosterReviewItem[] = [];
-  const claimByPerson = new Map<string, Claim[]>();
-  for (const claim of publicRecords.claims) {
-    const claims = claimByPerson.get(claim.subjectId) ?? [];
-    claims.push(claim);
-    claimByPerson.set(claim.subjectId, claims);
-  }
-  for (const audit of coverage.audits) {
-    const bundle = bundleFor(publicRecords, audit.personId);
-    const categoryClaimIdSet = new Set(
-      categoryClaimIds(bundle, audit.category),
-    );
-    const claims = (claimByPerson.get(audit.personId) ?? []).filter((claim) =>
-      categoryClaimIdSet.has(claim.claimId),
-    );
-    if (claims.length > 0) {
-      for (const claim of claims) {
-        const sourceIds = publicRecords.evidence
-          .filter((evidence) => claim.evidenceIds.includes(evidence.evidenceId))
-          .map((evidence) => evidence.sourceId);
-        items.push({
-          reviewItemId: `review-${audit.auditId}-${claim.claimId}`,
-          candidateId: audit.candidateId,
-          personId: audit.personId,
-          displayName: audit.displayName,
-          category: audit.category,
-          itemType: 'claim',
-          proposedClaimId: claim.claimId,
-          sourceIds: unique(sourceIds),
-          identityStatus: audit.identityStatus,
-          validationResult: 'machine-validated',
-          suggestedDisposition: 'human-review-required',
-          reviewStatus: 'pending-human-review',
-          reviewerId: null,
-          reviewedAt: null,
-          notes: '此項目有保留來源與證據鏈，仍須人工確認歸屬、脈絡與發布措辭。',
-        });
-      }
-    } else {
-      items.push({
-        reviewItemId: `review-gap-${audit.auditId}`,
-        candidateId: audit.candidateId,
-        personId: audit.personId,
-        displayName: audit.displayName,
-        category: audit.category,
-        itemType: 'coverage-gap',
-        proposedClaimId: null,
-        sourceIds: audit.sourceConsultedIds,
-        identityStatus: audit.identityStatus,
-        validationResult: 'not-ready',
-        suggestedDisposition:
-          audit.identityStatus === 'ambiguous'
-            ? 'withhold-ambiguous-match'
-            : 'discovery-required',
-        reviewStatus: 'pending-human-review',
-        reviewerId: null,
-        reviewedAt: null,
-        notes:
-          audit.failureReason ??
-          '目前沒有可供人工審查的候選人專屬證據；不得將空白解讀為不存在。',
-      });
-    }
-  }
-  return {
-    datasetId: coverage.datasetId,
-    snapshotDate: coverage.snapshotDate,
-    status: 'pending-human-review',
-    reviewerId: null,
-    reviewedAt: null,
-    items,
-    notes: [
-      'Coverage-gap items are discovery work, not negative findings.',
-      'Claim items preserve source/evidence references but are not editorial approval.',
-      'No reviewer identity or review date is populated by the generator.',
-    ],
-  };
 }
 
 export function validatePositionDateRanges(
@@ -922,7 +777,7 @@ export function buildTimelineEvents(
       category: 'public-office' as const,
       description: `來源記錄此職務；完整任期日期可能未在來源頁面標示。`,
       verificationStatus: position.verificationStatus,
-      reviewStatus: position.reviewStatus,
+      validationStatus: position.validationStatus,
       publicationStatus: position.publicationStatus,
       claimIds: position.claimIds,
       evidenceIds: position.evidenceIds,
@@ -935,7 +790,7 @@ export function buildTimelineEvents(
       category: 'public-activity' as const,
       description: activity.description,
       verificationStatus: activity.verificationStatus,
-      reviewStatus: activity.reviewStatus,
+      validationStatus: activity.validationStatus,
       publicationStatus: activity.publicationStatus,
       claimIds: activity.claimIds,
       evidenceIds: activity.evidenceIds,
@@ -948,7 +803,7 @@ export function buildTimelineEvents(
       category: 'policy' as const,
       description: policy.neutralSummary ?? policy.originalStatement,
       verificationStatus: policy.verificationStatus,
-      reviewStatus: policy.reviewStatus,
+      validationStatus: policy.validationStatus,
       publicationStatus: policy.publicationStatus,
       claimIds: policy.claimIds,
       evidenceIds: policy.evidenceIds,
@@ -962,7 +817,7 @@ export function buildTimelineEvents(
         category: 'other' as const,
         description: news.editorialSummary ?? news.headline,
         verificationStatus: news.verificationStatus,
-        reviewStatus: news.reviewStatus,
+        validationStatus: news.validationStatus,
         publicationStatus: news.publicationStatus,
         claimIds: news.claimIds,
         evidenceIds: news.evidenceIds,
@@ -1018,12 +873,12 @@ export function buildCoverageReport(
         (sum, audit) => sum + audit.machineValidatedClaimCount,
         0,
       ),
-      humanReviewedClaimCount: categories.reduce(
-        (sum, audit) => sum + audit.humanReviewedClaimCount,
+      sourceBackedClaimCount: categories.reduce(
+        (sum, audit) => sum + audit.sourceBackedClaimCount,
         0,
       ),
-      editoriallyApprovedClaimCount: categories.reduce(
-        (sum, audit) => sum + audit.editoriallyApprovedClaimCount,
+      publishedClaimCount: categories.reduce(
+        (sum, audit) => sum + audit.publishedClaimCount,
         0,
       ),
       staticDisplayRecordCount: categories.reduce(
@@ -1077,12 +932,12 @@ export function buildCoverageReport(
             (sum, audit) => sum + audit.machineValidatedClaimCount,
             0,
           ),
-          humanReviewedClaims: audits.reduce(
-            (sum, audit) => sum + audit.humanReviewedClaimCount,
+          sourceBackedClaims: audits.reduce(
+            (sum, audit) => sum + audit.sourceBackedClaimCount,
             0,
           ),
-          editoriallyApprovedClaims: audits.reduce(
-            (sum, audit) => sum + audit.editoriallyApprovedClaimCount,
+          publishedClaims: audits.reduce(
+            (sum, audit) => sum + audit.publishedClaimCount,
             0,
           ),
           staticDisplayRecords: audits.reduce(
@@ -1103,7 +958,7 @@ export function buildCoverageReport(
     datasetId: coverage.datasetId,
     snapshotDate: coverage.snapshotDate,
     scope: 'complete-official-preliminary-roster',
-    status: 'partial-discovery-and-pending-review',
+    status: 'partial-discovery-and-pending-verification',
     roster: {
       candidateCount: candidates.length,
       mayorCount: candidates.filter(
@@ -1165,25 +1020,22 @@ export function buildCoverageReport(
           0,
         ),
       },
-      humanReview: {
+      sourceBacking: {
         pendingClaimCount: coverage.audits.reduce(
-          (sum, audit) =>
-            sum + audit.claimCount - audit.humanReviewedClaimCount,
+          (sum, audit) => sum + audit.claimCount - audit.sourceBackedClaimCount,
           0,
         ),
-        humanReviewedClaimCount: coverage.audits.reduce(
-          (sum, audit) => sum + audit.humanReviewedClaimCount,
+        sourceBackedClaimCount: coverage.audits.reduce(
+          (sum, audit) => sum + audit.sourceBackedClaimCount,
           0,
         ),
-        reviewerId: null,
-        reviewedAt: null,
       },
-      editorialApproval: {
-        editoriallyApprovedClaimCount: coverage.audits.reduce(
-          (sum, audit) => sum + audit.editoriallyApprovedClaimCount,
+      publication: {
+        publishedClaimCount: coverage.audits.reduce(
+          (sum, audit) => sum + audit.publishedClaimCount,
           0,
         ),
-        editoriallyApprovedRecordCount: 0,
+        publishedRecordCount: 0,
       },
       staticPublication: {
         sourceBackedStaticDisplayRecordCount: coverage.audits.reduce(
@@ -1198,7 +1050,7 @@ export function buildCoverageReport(
           (candidate) => candidate.staticDisplayRecordCount > 0,
         ).length,
         meaning:
-          'publishedRecordCount means source-backed static HTML display; it is not editorial approval.',
+          'publishedRecordCount means source-backed static HTML display; it is not a separate publication state.',
       },
     },
     categoryMetrics,
@@ -1225,14 +1077,14 @@ export function buildCoverageReport(
       demoCandidatesIncluded: false,
       nameOnlyMatchesPublished: false,
       unsupportedClaimsGenerated: false,
-      reviewerMetadataInvented: false,
+      validationMetadataInvented: false,
       candidateRankingProduced: false,
       singleCompletenessScoreProduced: false,
     },
     notes: [
       'A not-attempted or pending-discovery category is not evidence that no public information exists.',
       'The official roster is preliminary; drawn numbers and formal election status remain governed by the official election dataset.',
-      'Selected source-backed records remain pending human review and are displayed with attribution and provenance.',
+      'Selected source-backed records retain attribution and provenance; content review occurs in the Pull Request.',
       'Fictional demo candidates are excluded from this production coverage report.',
     ],
   };
@@ -1241,7 +1093,7 @@ export function buildCoverageReport(
 export function coverageMarkdown(report: CoverageReport): string {
   const categoryRows = PUBLIC_RECORD_CATEGORIES.map((category) => {
     const metrics = report.categoryMetrics[category];
-    return `| ${category} | ${metrics.auditedSlots} | ${metrics.sourceRetrievedSlots} | ${metrics.notAttemptedSlots} | ${metrics.claims} | ${metrics.machineValidatedClaims} | ${metrics.humanReviewedClaims} | ${metrics.editoriallyApprovedClaims} | ${metrics.publishedRecords} |`;
+    return `| ${category} | ${metrics.auditedSlots} | ${metrics.sourceRetrievedSlots} | ${metrics.notAttemptedSlots} | ${metrics.claims} | ${metrics.machineValidatedClaims} | ${metrics.sourceBackedClaims} | ${metrics.publishedClaims} | ${metrics.publishedRecords} |`;
   }).join('\n');
   const candidateRows = report.candidates
     .map((candidate) => {
@@ -1256,7 +1108,7 @@ export function coverageMarkdown(report: CoverageReport): string {
 - Dataset: \`${report.datasetId}\`
 - Snapshot: ${report.snapshotDate}
 - Scope: official preliminary roster only
-- Status: **partial discovery／待人工審查**
+- Status: **partial discovery／待決定性驗證**
 - Candidates: ${report.roster.candidateCount} (${report.roster.mayorCount} mayoral, ${report.roster.ordinaryCouncilCount} ordinary-council, ${report.roster.indigenousCouncilCount} indigenous-council)
 - Districts: ${report.roster.districtCount}
 
@@ -1270,13 +1122,13 @@ This report is a coverage audit, not a ranking and not a claim that unattempted 
 | Source retrieval | ${report.metrics.sourceRetrieval.retrievedCategorySlots} category slots with retained retrieval; ${report.metrics.sourceRetrieval.missingSnapshotCount} manifest sources without snapshots |
 | Claim extraction | ${report.metrics.claimExtraction.distinctClaimCount} distinct claims; ${report.metrics.claimExtraction.categorySlotsWithClaims} category slots with claims |
 | Machine validation | ${report.metrics.machineValidation.machineValidatedClaimCount} machine-validated claim references; ${report.metrics.machineValidation.conflicts} conflicts; ${report.metrics.machineValidation.ambiguousIdentityMatches} ambiguous matches |
-| Human review | ${report.metrics.humanReview.humanReviewedClaimCount} reviewed; ${report.metrics.humanReview.pendingClaimCount} pending; reviewer metadata is not recorded |
-| Editorial approval | ${report.metrics.editorialApproval.editoriallyApprovedClaimCount} claims / ${report.metrics.editorialApproval.editoriallyApprovedRecordCount} records |
-| Static publication | ${report.metrics.staticPublication.publishedRecordCount} source-backed records in static HTML for ${report.metrics.staticPublication.candidatesWithStaticRecords} candidates; this is not editorial approval |
+| Source backing | ${report.metrics.sourceBacking.sourceBackedClaimCount} source-backed; ${report.metrics.sourceBacking.pendingClaimCount} pending verification |
+| Publication | ${report.metrics.publication.publishedClaimCount} claims / ${report.metrics.publication.publishedRecordCount} records |
+| Static publication | ${report.metrics.staticPublication.publishedRecordCount} source-backed records in static HTML for ${report.metrics.staticPublication.candidatesWithStaticRecords} candidates; publication follows deterministic validation; content review occurs in Pull Requests |
 
 ## Category metrics
 
-| Category | Audited | Retrieved | Not attempted | Claims | Machine validated | Human reviewed | Editorially approved | Static records |
+| Category | Audited | Retrieved | Not attempted | Claims | Machine validated | Source-backed | Published | Static records |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 ${categoryRows}
 
@@ -1299,7 +1151,7 @@ ${candidateRows}
 - Demo candidates included: no
 - Name-only matches published: no
 - Unsupported claims generated: no
-- Reviewer identity/date invented: no
+- Publication metadata invented: no
 - Candidate ranking produced: no
 - Single completeness score produced: no
 

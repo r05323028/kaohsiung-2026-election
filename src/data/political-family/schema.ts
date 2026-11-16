@@ -61,7 +61,7 @@ export const FamilyRelationshipTypeSchema = z.enum([
 
 export const FamilyVerificationStatusSchema = z.enum([
   'verified',
-  'pending-review',
+  'pending-verification',
   'rejected',
 ]);
 
@@ -334,31 +334,6 @@ export const PoliticalFamilyPublicationSchema = z
       }),
     ),
     candidates: z.array(FamilyPublicationCandidateSchema),
-    // Relationship ids approved by the explicitly authorised agent track.
-    agentApprovedRelationshipIds: z.array(z.string().min(1)).default([]),
-    note: z.string().min(1),
-  })
-  .strict();
-
-const PoliticalFamilyAgentApprovalSchema = z
-  .object({
-    approvalBasis: z.literal('agent-verification'),
-    reviewer: z.string().min(1),
-    approvedAt: IsoTimestampSchema,
-    relationshipIds: z.array(z.string().min(1)).min(1),
-    note: z.string().min(1),
-  })
-  .strict();
-
-export const PoliticalFamilyPublicationApprovalSchema = z
-  .object({
-    approvalVersion: z.literal('1'),
-    datasetId: z.literal('kaohsiung-2026-political-family-publication'),
-    approvedAt: DateOnlySchema,
-    approvalBasis: z.literal('independent-verification'),
-    approvedRelationshipIds: z.array(z.string().min(1)).min(1),
-    // Non-human approvals are tracked separately and must be labelled as such.
-    agentApprovals: z.array(PoliticalFamilyAgentApprovalSchema).optional(),
     note: z.string().min(1),
   })
   .strict();
@@ -388,9 +363,6 @@ export type PoliticalFamilyResearchDataset = z.infer<
 export type PoliticalFamilyPublication = z.infer<
   typeof PoliticalFamilyPublicationSchema
 >;
-export type PoliticalFamilyPublicationApproval = z.infer<
-  typeof PoliticalFamilyPublicationApprovalSchema
->;
 
 function issueText(issues: z.core.$ZodIssue[]): string {
   return issues
@@ -417,18 +389,6 @@ export function validatePoliticalFamilyPublication(
   if (!result.success) {
     throw new Error(
       `Political family publication schema validation failed:\n${issueText(result.error.issues)}`,
-    );
-  }
-  return result.data;
-}
-
-export function validatePoliticalFamilyPublicationApproval(
-  input: unknown,
-): PoliticalFamilyPublicationApproval {
-  const result = PoliticalFamilyPublicationApprovalSchema.safeParse(input);
-  if (!result.success) {
-    throw new Error(
-      `Political family publication approval validation failed:\n${issueText(result.error.issues)}`,
     );
   }
   return result.data;
@@ -585,7 +545,7 @@ export function validatePoliticalFamilyReferences(
     const assigned = new Set<string>();
     for (const [ids, status] of [
       [candidate.verifiedRelationshipIds, 'verified'],
-      [candidate.pendingRelationshipIds, 'pending-review'],
+      [candidate.pendingRelationshipIds, 'pending-verification'],
       [candidate.rejectedRelationshipIds, 'rejected'],
     ] as const) {
       const current = checkRelationshipAssignment(

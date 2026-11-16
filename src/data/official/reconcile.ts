@@ -60,7 +60,7 @@ export type ReconciliationReport = {
     cecQualifiedMayors: number;
     approvedMayors: number;
     matchedMayors: number;
-    pendingReviewScopes: number;
+    pendingVerificationScopes: number;
     officialDistricts: number;
     councilConstituencies: number;
     councilSourceRows: number;
@@ -72,7 +72,7 @@ export type ReconciliationReport = {
   councilConstituencies: ConstituencyReconciliation[];
   cecCouncil?: CecCouncilReconciliation;
   discrepancies: string[];
-  pendingReview: OfficialDataset['pendingReview'];
+  pendingVerification: OfficialDataset['pendingVerification'];
   publication: {
     approvedCandidateCount: number;
     approvedDistrictCount: number;
@@ -375,7 +375,7 @@ export function reconcileOfficialData(
     datasetId: dataset.datasetId,
     snapshotDate: dataset.snapshotDate,
     status:
-      dataset.pendingReview.length > 0 ||
+      dataset.pendingVerification.length > 0 ||
       discrepancies.length > 0 ||
       councilConstituencies.some(
         (constituency) => constituency.status === 'failed',
@@ -403,7 +403,7 @@ export function reconcileOfficialData(
       cecQualifiedMayors: cecNames.length,
       approvedMayors: approvedMayors.length,
       matchedMayors: mayorMatches.length,
-      pendingReviewScopes: dataset.pendingReview.length,
+      pendingVerificationScopes: dataset.pendingVerification.length,
       officialDistricts: dataset.districts.length,
       councilConstituencies: councilConstituencies.length,
       councilSourceRows: councilConstituencies.reduce(
@@ -427,7 +427,7 @@ export function reconcileOfficialData(
     councilConstituencies,
     ...(cecCouncil ? { cecCouncil } : {}),
     discrepancies,
-    pendingReview: dataset.pendingReview,
+    pendingVerification: dataset.pendingVerification,
     publication: {
       approvedCandidateCount: dataset.candidates.filter(
         (candidate) => candidate.publicationStatus === 'approved',
@@ -449,8 +449,8 @@ export function reconcileOfficialData(
 }
 
 export function reconciliationMarkdown(report: ReconciliationReport): string {
-  const pending = report.pendingReview.length
-    ? report.pendingReview
+  const pending = report.pendingVerification.length
+    ? report.pendingVerification
         .map(
           (item) =>
             `- ${item.scope}: ${item.reason}（預定處理日 ${item.expectedResolutionDate}）`,
@@ -515,7 +515,7 @@ export function reconciliationMarkdown(report: ReconciliationReport): string {
     `| Council normalized rows | ${report.counts.councilNormalizedRows} |`,
     `| Council approved rows | ${report.counts.councilApprovedRows} |`,
     `| Council published rows | ${report.counts.councilPublishedRows} |`,
-    `| Pending review scopes | ${report.counts.pendingReviewScopes} |`,
+    `| Pending review scopes | ${report.counts.pendingVerificationScopes} |`,
     '',
     '## Council constituency coverage',
     '',

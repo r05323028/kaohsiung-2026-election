@@ -10,9 +10,10 @@ import {
 /**
  * Read model for published candidate news.
  *
- * Only records whose publication status is "published" are exposed. Verified but
- * editorially-unapproved records stay in data/normalized + data/review and never
- * reach a page. No sentiment, tone or favourability value is modelled or shown.
+ * Only records whose publication status is "published" are exposed. Records
+ * without complete deterministic source and evidence checks remain unpublished in
+ * the normalized layer and never reach a page. No sentiment, tone or favourability
+ * value is modelled or shown.
  */
 export const candidateNewsSnapshot =
   NewsPublishedDatasetSchema.parse(publishedInput);

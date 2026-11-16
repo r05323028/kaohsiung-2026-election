@@ -13,7 +13,7 @@ import { chromium } from '@playwright/test';
 import { focusAdmin } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
-const outDir = join(process.cwd(), 'reports', 'visual', 'world');
+const outDir = join(process.cwd(), '.cache', 'reports', 'visual', 'world');
 mkdirSync(outDir, { recursive: true });
 
 const browser = await chromium.launch({

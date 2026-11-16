@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "pipelineVersion": "likeness-1",
-  "generatedAt": "2026-11-16T01:59:28.926Z",
+  "generatedAt": "2026-11-16T17:41:44.641Z",
   "roster": {
     "source": "data/approved/2026/kaohsiung-election.json",
     "candidateCount": 106,
-    "sha256": "6c7b186e1ed926202a8f023ab7bbef91cdfd08eb7aef1485468a166eb9216cee"
+    "sha256": "72da995281736f9a53954ea736ea53a62d9b50a801d1bce3770f57dc96c23a4f"
   },
   "candidates": [
     {
@@ -358,25 +358,8 @@
       "photoIdentityConfidence": "source-linked",
       "appearanceId": "candidate-2026-district-kaohsiung-council-04-fa4f92b7",
       "appearanceSha256": "5894a1035bec57cc8445b1fdfbfd8c8282487d430fcf50825e62b64959486641",
-      "state": "generated",
-      "headKit": {
-        "path": "/assets/avatars/likeness/kaohsiung-council-04-712cf4dd-head.glb",
-        "sha256": "479689ce50616da184328deace6ff8d223f12d034420ce0e8c7a443f11f5ed65",
-        "fileSizeBytes": 229304,
-        "meshCount": 8,
-        "materialCount": 8,
-        "triangleCount": 12242,
-        "bounds": {
-          "minX": -0.5404202938079834,
-          "maxX": 0.5401421189308167,
-          "minY": -0.14504599571228027,
-          "maxY": 1.0811090469360352,
-          "minZ": -0.48242080211639404,
-          "maxZ": 0.5015206336975098
-        },
-        "generator": "Khronos glTF Blender I/O v5.3.43",
-        "blenderVersion": "4.5"
-      },
+      "state": "extracted",
+      "headKit": null,
       "blockedReason": null
     },
     {
@@ -523,25 +506,8 @@
       "photoIdentityConfidence": "source-linked",
       "appearanceId": "candidate-2026-district-kaohsiung-council-06-b48fe8fe",
       "appearanceSha256": "10d2fc6ad976e0879c6081bf8e9cc33b4ee7d4f66e6d8e669fcf3d3574cdefd8",
-      "state": "generated",
-      "headKit": {
-        "path": "/assets/avatars/likeness/kaohsiung-council-06-845d8f64-head.glb",
-        "sha256": "7e6d20de578c9d784da94b419509e2284e61d754e0cb4305f97e97968e6a34d3",
-        "fileSizeBytes": 229288,
-        "meshCount": 8,
-        "materialCount": 8,
-        "triangleCount": 12242,
-        "bounds": {
-          "minX": -0.5524500608444214,
-          "maxX": 0.5524502396583557,
-          "minY": -0.30686089396476746,
-          "maxY": 1.0690534114837646,
-          "minZ": -0.4869614839553833,
-          "maxZ": 0.5022578239440918
-        },
-        "generator": "Khronos glTF Blender I/O v5.3.43",
-        "blenderVersion": "4.5"
-      },
+      "state": "extracted",
+      "headKit": null,
       "blockedReason": null
     },
     {
@@ -642,25 +608,8 @@
       "photoIdentityConfidence": "source-linked",
       "appearanceId": "candidate-2026-district-kaohsiung-council-07-b92be47d",
       "appearanceSha256": "5c793002f8f8639ebe94b32bc58df4aca468963eb4bb2c1a32c53d5a1f1356a0",
-      "state": "generated",
-      "headKit": {
-        "path": "/assets/avatars/likeness/kaohsiung-council-07-b1cd243b-head.glb",
-        "sha256": "dad1984e3cce93d15d1b1f954d52760135d937dd23d033aa855a124219e35040",
-        "fileSizeBytes": 261212,
-        "meshCount": 9,
-        "materialCount": 9,
-        "triangleCount": 12910,
-        "bounds": {
-          "minX": -0.583404541015625,
-          "maxX": 0.5827891230583191,
-          "minY": -0.14504599571228027,
-          "maxY": 1.0486111640930176,
-          "minZ": -0.4814624786376953,
-          "maxZ": 0.5096477270126343
-        },
-        "generator": "Khronos glTF Blender I/O v5.3.43",
-        "blenderVersion": "4.5"
-      },
+      "state": "extracted",
+      "headKit": null,
       "blockedReason": null
     },
     {
@@ -1313,25 +1262,8 @@
       "photoIdentityConfidence": "source-linked",
       "appearanceId": "mayor-ke-zhi-en-2026",
       "appearanceSha256": "f4d0564cd0e758025f42ca2bdc4133e72f8e8b47192a1c1e73bb454a61771af8",
-      "state": "generated",
-      "headKit": {
-        "path": "/assets/avatars/likeness/ke-zhi-en-2026-head.glb",
-        "sha256": "ccb36d38c3d45b67bc0dc6d42a0c6e0b9c13f9c7632a3e11b2618c9ed4c781b4",
-        "fileSizeBytes": 229284,
-        "meshCount": 8,
-        "materialCount": 8,
-        "triangleCount": 12242,
-        "bounds": {
-          "minX": -0.5678492784500122,
-          "maxX": 0.5676044821739197,
-          "minY": -0.14504599571228027,
-          "maxY": 1.03795325756073,
-          "minZ": -0.4824380874633789,
-          "maxZ": 0.5039175748825073
-        },
-        "generator": "Khronos glTF Blender I/O v5.3.43",
-        "blenderVersion": "4.5"
-      },
+      "state": "extracted",
+      "headKit": null,
       "blockedReason": null
     },
     {
@@ -1344,25 +1276,8 @@
       "photoIdentityConfidence": "source-linked",
       "appearanceId": "mayor-lai-rui-long-2026",
       "appearanceSha256": "3e76877a278b73307ba8a2eeacad6ec93f5a7105185e104e5015de9b2a5d4302",
-      "state": "generated",
-      "headKit": {
-        "path": "/assets/avatars/likeness/lai-rui-long-2026-head.glb",
-        "sha256": "42da734eaa19d4b25769a3ec3301c462ff4b6670630692ad1aed9edeeebc0916",
-        "fileSizeBytes": 239896,
-        "meshCount": 9,
-        "materialCount": 9,
-        "triangleCount": 12430,
-        "bounds": {
-          "minX": -0.6632022857666016,
-          "maxX": 0.6632004380226135,
-          "minY": -0.14504599571228027,
-          "maxY": 1.0409234762191772,
-          "minZ": -0.4818337559700012,
-          "maxZ": 0.5043947100639343
-        },
-        "generator": "Khronos glTF Blender I/O v5.3.43",
-        "blenderVersion": "4.5"
-      },
+      "state": "extracted",
+      "headKit": null,
       "blockedReason": null
     },
     {

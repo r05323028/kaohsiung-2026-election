@@ -13,7 +13,7 @@ describe('policy/career separation dataset', () => {
       seen.add(row.policyId);
     }
     expect(seen.size).toBe(policyCareerDataset.policyCount);
-    expect(policyCareerDataset.review.counts.policies).toBe(seen.size);
+    expect(policyCareerDataset.validation.counts.policies).toBe(seen.size);
   });
 
   it('keeps the reviewed snapshot in sync with the published dataset', () => {
@@ -66,7 +66,7 @@ describe('policy/career separation dataset', () => {
     }
   });
 
-  it('only reads a promise as a completed action with editorial review', () => {
+  it('requires an explicit classification for completed-action wording', () => {
     for (const row of classifications) {
       if (!row.commitment) continue;
       const policy = getPublishedCandidatePolicies(row.candidateId).find(
@@ -75,13 +75,13 @@ describe('policy/career separation dataset', () => {
       if (!policy) continue;
       const text = [policy.title, policy.summary, policy.details].join(' ');
       if (!readsAsCompletedAction(text)) continue;
-      expect(row.basis).toBe('editorial-review');
+      expect(row.basis).toBe('classification-rule');
       expect(row.note.length).toBeGreaterThan(0);
     }
   });
 
   it('links policies to activities of the same candidate', () => {
-    expect(links.length).toBe(policyCareerDataset.review.counts.links);
+    expect(links.length).toBe(policyCareerDataset.validation.counts.links);
     const pairs = new Set<string>();
     for (const link of links) {
       const policy = getPublishedCandidatePolicies(link.candidateId).find(
@@ -117,7 +117,7 @@ describe('policy/career separation dataset', () => {
     expect(record?.sourceUrls.length).toBeGreaterThan(0);
     expect(record?.outcome ?? '').not.toBe('');
     expect(view.movedOutCount).toBeGreaterThan(0);
-    expect(view.review.status).toBe('approved');
+    expect(view.validation.status).toBe('validated');
   });
 
   it('returns an empty view for a candidate without policy records', () => {

@@ -207,7 +207,7 @@ export function getPoliticalCareer(
     votingBreakdown,
     coverage,
     sources,
-    limitations: politicalCareerDataset.review.limitations,
+    limitations: politicalCareerDataset.validation.limitations,
   };
 }
 

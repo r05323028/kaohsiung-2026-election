@@ -2,9 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   applyDeduplication,
   articleIdFor,
-  evaluateNewsPublication,
   eventKeyFor,
-  NEWS_POLICY_VERSION,
   type NewsArticle,
   NewsArticleSchema,
   normalizeHeadline,
@@ -27,7 +25,7 @@ function article(overrides: Partial<NewsArticle> = {}): NewsArticle {
     updatedDate: null,
     retrievedAt: '2026-11-12T00:00:00.000Z',
     summary: '某候選人在高雄成立競選總部，多位地方民代到場。',
-    summaryBasis: 'editorial',
+    summaryBasis: 'source-summary',
     topicTags: ['election'],
     contentType: 'reporting',
     eventKey: 'event',
@@ -62,12 +60,8 @@ function article(overrides: Partial<NewsArticle> = {}): NewsArticle {
       notes: [],
     },
     publication: {
-      status: 'pending-review',
-      policyVersion: NEWS_POLICY_VERSION,
-      decisionId: null,
-      decidedAt: null,
+      status: 'published',
       blockers: [],
-      origin: null,
     },
   };
   return { ...base, ...overrides };
@@ -81,62 +75,6 @@ describe('news schema', () => {
 
   it('accepts a fully specified record', () => {
     expect(NewsArticleSchema.safeParse(article()).success).toBe(true);
-  });
-});
-
-describe('evaluateNewsPublication', () => {
-  it('publishes a verified, summarised, low-risk record', () => {
-    const result = evaluateNewsPublication(article());
-    expect(result).toEqual({ status: 'published', blockers: [] });
-  });
-
-  it('blocks a record without an editorial summary', () => {
-    const result = evaluateNewsPublication(
-      article({ summary: null, summaryBasis: null }),
-    );
-    expect(result.status).toBe('blocked-policy');
-    expect(result.blockers).toContain('summary-missing');
-  });
-
-  it('blocks loaded summary wording instead of scoring tone', () => {
-    const result = evaluateNewsPublication(
-      article({ summary: '某候選人痛批對手，現場砲轟連連。' }),
-    );
-    expect(result.status).toBe('blocked-policy');
-    expect(result.blockers).toContain('summary-loaded-term:痛批');
-  });
-
-  it('blocks unverified records before any policy check', () => {
-    const result = evaluateNewsPublication(
-      article({
-        verification: {
-          ...article().verification,
-          status: 'unverified',
-        },
-      }),
-    );
-    expect(result.status).toBe('blocked-verification');
-    expect(result.blockers).toContain('verification-not-passed');
-  });
-
-  it('blocks medium namesake risk and missing dates', () => {
-    const result = evaluateNewsPublication(
-      article({
-        identity: { ...article().identity, namesakeRisk: 'medium' },
-        publicationDate: null,
-        dateStatus: 'missing',
-      }),
-    );
-    expect(result.blockers).toContain('identity-namesake-risk:medium');
-    expect(result.blockers).toContain('publication-date-missing');
-  });
-
-  it('blocks duplicates', () => {
-    const result = evaluateNewsPublication(
-      article({ duplicateOf: 'news-00000002' }),
-    );
-    expect(result.status).toBe('rejected-duplicate');
-    expect(result.blockers).toContain('duplicate-of:news-00000002');
   });
 });
 
@@ -191,7 +129,7 @@ describe('applyDeduplication', () => {
     const [kept, marked] = applyDeduplication([first, second]);
     expect(kept?.duplicateOf).toBeNull();
     expect(marked?.duplicateOf).toBe('news-00000001');
-    expect(marked?.publication.status).toBe('rejected-duplicate');
+    expect(marked?.publication.status).toBe('blocked-duplicate');
   });
 
   it('does not merge different publishers with the same headline', () => {

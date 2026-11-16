@@ -66,7 +66,7 @@ export type PolicyCareerView = {
   linksByActivityId: Record<string, PolicyCareerActivityLink[]>;
   movedOutCount: number;
   splitCount: number;
-  review: PolicyCareerDataset['review'];
+  validation: PolicyCareerDataset['validation'];
 };
 
 const activityLink = (
@@ -135,9 +135,7 @@ export function getPolicyCareer(candidateId: string): PolicyCareerView {
     });
 
   const historicalRecords: PolicyCareerHistoricalRecord[] = classifications
-    .filter(
-      (row) => row.historical !== null && row.ownership !== 'review-required',
-    )
+    .filter((row) => row.historical !== null)
     .map((row) => {
       const historical = row.historical as HistoricalFacet;
       const siblingActivityIds = new Set([
@@ -189,6 +187,6 @@ export function getPolicyCareer(candidateId: string): PolicyCareerView {
     splitCount: classifications.filter(
       (row) => row.ownership === 'split-record',
     ).length,
-    review: policyCareerDataset.review,
+    validation: policyCareerDataset.validation,
   };
 }

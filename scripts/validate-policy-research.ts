@@ -53,7 +53,7 @@ for (const audit of dataset.audits) {
     publishedPolicyCount: dataset.policies.filter(
       (policy) =>
         policy.candidateId === audit.candidateId &&
-        policy.publicationStatus === 'approved-source-backed',
+        policy.publicationStatus === 'source-backed',
     ).length,
     note: audit.note,
   };
@@ -171,9 +171,11 @@ for (const policy of dataset.policies) {
   const decision = dataset.verification.find(
     (item) => item.policyId === policy.policyId,
   );
-  if (policy.publicationStatus === 'approved-source-backed') {
-    if (policy.reviewStatus !== 'editorially-approved')
-      fail(`published policy ${policy.policyId} is not editorially approved`);
+  if (policy.publicationStatus === 'source-backed') {
+    if (policy.validationStatus !== 'source-backed')
+      fail(
+        `published policy ${policy.policyId} is lacks source-backed validation`,
+      );
     if (decision?.decision !== 'verified')
       fail(`published policy ${policy.policyId} lacks a verified decision`);
     if (source.retrievalStatus !== 'retrieved')
@@ -189,8 +191,8 @@ for (const policy of dataset.policies) {
       fail(`published policy ${policy.policyId} quote is absent from source`);
   }
   if (
-    policy.publicationStatus !== 'approved-source-backed' &&
-    policy.publicationStatus !== 'withheld-pending-review' &&
+    policy.publicationStatus !== 'source-backed' &&
+    policy.publicationStatus !== 'withheld-unverified' &&
     policy.publicationStatus !== 'rejected'
   )
     fail(`policy ${policy.policyId} has invalid publication status`);
@@ -235,15 +237,13 @@ for (const audit of dataset.audits) {
     fail(`audit ${audit.candidateId} references missing evidence`);
 }
 
-if (dataset.review.status !== 'automated-verified')
-  fail(`dataset review status is ${dataset.review.status}`);
-if (dataset.review.reviewerId !== null || dataset.review.reviewedAt !== null)
-  fail('dataset contains invented reviewer metadata');
+if (dataset.validation.status !== 'validated')
+  fail(`dataset validation status is ${dataset.validation.status}`);
 const publishedCount = dataset.policies.filter(
-  (policy) => policy.publicationStatus === 'approved-source-backed',
+  (policy) => policy.publicationStatus === 'source-backed',
 ).length;
-if (dataset.review.publishedPolicyCount !== publishedCount)
-  fail('dataset review published count does not match policy inventory');
+if (dataset.validation.publishedPolicyCount !== publishedCount)
+  fail('dataset validation published count does not match policy inventory');
 
 console.log(
   `Validated 106 candidate audits, ${dataset.policies.length} policy records, ${dataset.sourceSnapshots.length} retained sources, and ${publishedCount} published policies.`,

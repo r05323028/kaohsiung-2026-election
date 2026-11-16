@@ -23,7 +23,6 @@ import {
 import {
   articleIdFor,
   eventKeyFor,
-  NEWS_POLICY_VERSION,
   NEWS_VERIFIER_VERSION,
   type NewsArticle,
   NewsArticleSchema,
@@ -177,12 +176,8 @@ async function main(): Promise<void> {
           notes: outcome.notes,
         },
         publication: {
-          status: 'pending-review' as const,
-          policyVersion: NEWS_POLICY_VERSION,
-          decisionId: null,
-          decidedAt: null,
-          blockers: ['publication-policy-not-evaluated'],
-          origin: null,
+          status: 'not-published' as const,
+          blockers: ['source-summary-not-attached'],
         },
       };
       const parsed = NewsArticleSchema.safeParse(draft);

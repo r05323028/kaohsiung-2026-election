@@ -13,7 +13,14 @@ import { chromium } from '@playwright/test';
 import { focusAdmin } from './lib/city-ui';
 
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
-const outDir = join(process.cwd(), 'reports', 'visual', 'refine', 'after');
+const outDir = join(
+  process.cwd(),
+  '.cache',
+  'reports',
+  'visual',
+  'refine',
+  'after',
+);
 mkdirSync(outDir, { recursive: true });
 
 type CameraView = {

@@ -64,7 +64,7 @@ describe('full-roster policy research', () => {
 
   it('publishes only approved, verified, source-backed records', () => {
     for (const policy of dataset.policies) {
-      if (policy.publicationStatus !== 'approved-source-backed') continue;
+      if (policy.publicationStatus !== 'source-backed') continue;
       const decision = dataset.verification.find(
         (item) => item.policyId === policy.policyId,
       );
@@ -74,7 +74,7 @@ describe('full-roster policy research', () => {
       const evidence = dataset.evidence.find(
         (item) => item.evidenceId === policy.evidenceId,
       );
-      expect(policy.reviewStatus).toBe('editorially-approved');
+      expect(policy.validationStatus).toBe('source-backed');
       expect(decision?.decision).toBe('verified');
       expect(decision?.checks.attributionResolved).toBe(true);
       expect(decision?.checks.figuresPreserved).toBe(true);
@@ -110,9 +110,7 @@ describe('published candidate policy artifact', () => {
   it('loads only published records from the research dataset', () => {
     const publishedIds = new Set(
       dataset.policies
-        .filter(
-          (policy) => policy.publicationStatus === 'approved-source-backed',
-        )
+        .filter((policy) => policy.publicationStatus === 'source-backed')
         .map((policy) => policy.policyId),
     );
     expect(published.policies).toHaveLength(publishedIds.size);
@@ -149,7 +147,9 @@ describe('published candidate policy artifact', () => {
     expect(
       summary.audits.filter((audit) => audit.publishedPolicyCount > 0),
     ).toHaveLength(withPolicies);
-    expect(dataset.review.publishedPolicyCount).toBe(published.policies.length);
+    expect(dataset.validation.publishedPolicyCount).toBe(
+      published.policies.length,
+    );
   });
 
   it('renders published policies on the candidate profile', () => {

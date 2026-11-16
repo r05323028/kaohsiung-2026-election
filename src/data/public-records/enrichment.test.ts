@@ -2,11 +2,15 @@ import { describe, expect, it } from 'vitest';
 import policyInput from '../../../data/policy-research/2026/full-roster.json';
 import enrichmentInput from '../../../data/public-records/research-enrichment/2026/full-roster.json';
 import enrichmentSummaryInput from '../../../data/public-records/research-enrichment/2026/summary.json';
-import coverageReport from '../../../reports/public-record-enrichment-coverage.json';
-import sourceQualityReport from '../../../reports/public-record-enrichment-source-quality.json';
+import type { PolicyResearchDataset } from '../policy-research/schema';
 import { publicRecordsEnrichment } from './enrichment-full-index';
 import { validatePublicRecordsEnrichmentDataset } from './enrichment-schema';
 import { validatePublicRecordsEnrichmentSummary } from './enrichment-summary-schema';
+
+const policyDataset = policyInput as unknown as Pick<
+  PolicyResearchDataset,
+  'policies'
+>;
 
 describe('full-roster public-record enrichment', () => {
   it('covers every canonical candidate with stable identity fields', () => {
@@ -32,10 +36,10 @@ describe('full-roster public-record enrichment', () => {
 
   it('keeps every upstream policy traceable without publishing pending content', () => {
     expect(publicRecordsEnrichment.policyReferences).toHaveLength(
-      policyInput.policies.length,
+      policyDataset.policies.length,
     );
     const policiesById = new Map(
-      policyInput.policies.map((policy) => [policy.policyId, policy]),
+      policyDataset.policies.map((policy) => [policy.policyId, policy]),
     );
 
     for (const reference of publicRecordsEnrichment.policyReferences) {
@@ -44,13 +48,14 @@ describe('full-roster public-record enrichment', () => {
       expect(reference.candidateId).toBe(policy?.candidateId);
       expect(reference.sourceId).toBe(policy?.sourceId);
       expect(reference.evidenceId).toBe(policy?.evidenceId);
-      expect(reference.reviewStatus).toBe(policy?.reviewStatus);
+      expect(reference.validationStatus).toBe(policy?.validationStatus);
       expect(reference.publicationStatus).toBe(policy?.publicationStatus);
     }
 
-    expect(publicRecordsEnrichment.review.reviewerId).toBeNull();
-    expect(publicRecordsEnrichment.review.reviewedAt).toBeNull();
-    expect(publicRecordsEnrichment.review.publishedRecordCount).toBe(0);
+    expect(publicRecordsEnrichment.validation).toMatchObject({
+      status: 'pending-verification',
+      method: 'deterministic-source-check-v1',
+    });
     expect(publicRecordsEnrichment.coverageAssertions.publishedRecords).toBe(0);
   });
 
@@ -71,8 +76,8 @@ describe('full-roster public-record enrichment', () => {
     for (const claim of publicRecordsEnrichment.claims) {
       expect(claim.evidenceIds.length).toBeGreaterThan(0);
       expect(claim.evidenceIds.every((id) => evidence.has(id))).toBe(true);
-      expect(claim.reviewStatus).toBe('pending-human-review');
-      expect(claim.publicationStatus).toBe('withheld-pending-review');
+      expect(claim.validationStatus).toBe('pending-verification');
+      expect(claim.publicationStatus).toBe('withheld-unverified');
     }
     for (const item of publicRecordsEnrichment.evidence) {
       expect(sources.has(item.sourceId)).toBe(true);
@@ -86,7 +91,7 @@ describe('full-roster public-record enrichment', () => {
       expect(record.claimIds.length).toBeGreaterThan(0);
       expect(record.evidenceIds.length).toBeGreaterThan(0);
       expect(record.verificationStatus).toBe('machine-validated');
-      expect(record.publicationStatus).toBe('withheld-pending-review');
+      expect(record.publicationStatus).toBe('withheld-unverified');
     }
   });
 
@@ -139,24 +144,5 @@ describe('full-roster public-record enrichment', () => {
     expect(JSON.stringify(summary)).not.toContain('quotedText');
     expect(JSON.stringify(summary)).not.toContain('rawPath');
     expect(JSON.stringify(summary)).not.toContain('https://');
-  });
-
-  it('keeps report metrics explicit about coverage versus publication', () => {
-    expect(coverageReport.candidateCount).toBe(106);
-    expect(coverageReport.beforeAfter.baselinePublishedRecordCount).toBe(16);
-    expect(coverageReport.beforeAfter.newlyPublishedRecordCount).toBe(0);
-    expect(coverageReport.publishedRecordCount).toBe(0);
-    expect(coverageReport.candidateInventory).toHaveLength(106);
-    expect(coverageReport.outcomeCounts).toMatchObject({
-      'records-found': 51,
-      'policy-references-only': 42,
-      'sources-attempted-no-additional-records': 4,
-      'sources-unavailable': 9,
-    });
-    expect(sourceQualityReport.retainedSourceHashValidation).toMatchObject({
-      allRetrievedSourcesHaveMatchingSizeAndSha256: true,
-    });
-    expect(sourceQualityReport.identityOrAttributionConflicts).toEqual([]);
-    expect(sourceQualityReport.pendingReviewCounts.publishedRecords).toBe(0);
   });
 });

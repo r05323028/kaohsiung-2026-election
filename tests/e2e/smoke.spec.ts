@@ -220,6 +220,13 @@ test('career tab excludes education and private-sector biography', async ({
   await page.goto('/candidates/kaohsiung-council-04-e810f056/');
   const profile = page.getByTestId('profile-tabs');
   await expect(profile).toHaveAttribute('data-hydrated', 'true');
+  const basic = profile.getByRole('tabpanel', { name: '基本資料' });
+  await expect(basic.getByTestId('biography-publication')).toContainText(
+    '三立新聞台主播',
+  );
+  await expect(basic.getByTestId('biography-publication')).toContainText(
+    '世新大學',
+  );
   await profile.getByRole('tab', { name: '從政歷程', exact: true }).click();
   const career = profile.getByRole('tabpanel', { name: '從政歷程' });
   await expect(career).toBeVisible();
@@ -239,7 +246,7 @@ test('official biography observations remain withheld pending review', async ({
   const profile = page.getByTestId('profile-tabs');
   await expect(profile).toHaveAttribute('data-hydrated', 'true');
   const basicPanel = profile.getByRole('tabpanel', { name: '基本資料' });
-  await expect(basicPanel).not.toContainText('pending-human-review');
+  await expect(basicPanel).not.toContainText('pending-verification');
   await expect(basicPanel).not.toContainText('機器化觀察待審');
   await profile.getByRole('tab', { name: '從政歷程' }).click();
   const career = profile.getByRole('tabpanel', { name: '從政歷程' });
@@ -293,77 +300,6 @@ test('career timeline fits a phone viewport without sideways scrolling', async (
   expect(overflow).toBeLessThanOrEqual(1);
 });
 
-test('local editorial workspace loads only in the development review route', async ({
-  page,
-}) => {
-  await page.goto('/editorial-review/');
-  const workspace = page.getByTestId('editorial-review-app');
-  await expect(workspace).toHaveAttribute('data-hydrated', 'true');
-  await expect(
-    workspace.getByRole('heading', { name: '候選人履歷編輯審查' }),
-  ).toBeVisible();
-  await expect(workspace).toContainText('不是登入系統，也不會直接發布');
-  await expect(workspace.getByTestId('release-batch-summary')).toContainText(
-    '首批審查批次 12 筆／4 位候選人',
-  );
-  await expect(workspace.getByTestId('release-blockers')).toContainText(
-    'Currentness needs human confirmation',
-  );
-  const releaseBatchFilter = workspace
-    .getByTestId('release-batch-filter')
-    .locator('select');
-  await releaseBatchFilter.selectOption('selected');
-  await expect(workspace.getByTestId('release-batch-context')).toBeVisible();
-  const downloadPromise = page.waitForEvent('download');
-  await workspace.getByRole('button', { name: '匯出決策 JSON' }).click();
-  const download = await downloadPromise;
-  expect(download.suggestedFilename()).toBe(
-    'biography-decisions-2026-11-06.json',
-  );
-
-  const scoped = workspace.getByTestId('scoped-enrichment-panel');
-  await expect(scoped).toContainText('143 筆主張');
-  await expect(scoped.getByTestId('scoped-group-filter')).toBeVisible();
-  await scoped.getByTestId('scoped-group-filter').selectOption('mayoral');
-  await expect(scoped.getByText('範圍審查項目')).toBeVisible();
-  await scoped
-    .getByTestId('scoped-readiness-filter')
-    .selectOption('requires-additional-evidence');
-  const scopedDownloadPromise = page.waitForEvent('download');
-  await scoped.getByRole('button', { name: '匯出範圍決策 JSON' }).click();
-  const scopedDownload = await scopedDownloadPromise;
-  expect(scopedDownload.suggestedFilename()).toBe(
-    'zuoying-mayoral-decisions-2026-11-07.json',
-  );
-  const audit = workspace.getByTestId('scoped-ai-audit-panel');
-  await expect(audit).toContainText('143 筆主張');
-  await expect(audit.getByTestId('scoped-ai-audit-summary')).toContainText(
-    '雙輪一致：141',
-  );
-  await audit
-    .getByTestId('scoped-ai-audit-filter')
-    .selectOption('needs-review');
-  await expect(audit.getByTestId('scoped-ai-audit-detail')).toBeVisible();
-});
-
-test('editorial workspace can inspect a real pilot candidate without recording a decision', async ({
-  page,
-}) => {
-  await page.goto('/editorial-review/');
-  const workspace = page.getByTestId('editorial-review-app');
-  await expect(workspace).toHaveAttribute('data-hydrated', 'true');
-  await workspace.getByLabel('候選人').selectOption({ label: '鄭光峰' });
-  await expect(workspace.getByText('93 筆', { exact: true })).toBeVisible();
-  await expect(workspace).toContainText('鄭光峰');
-  await expect(
-    workspace.getByRole('link', { name: '開啟原始來源' }).first(),
-  ).toHaveAttribute(
-    'href',
-    /kcc\.gov\.tw\/MemberInfo_New\.aspx\?n=39&sms=9028&msn=2220/,
-  );
-  await expect(workspace).toContainText('目前暫存 0 筆決策');
-});
-
 test('selected public-record profiles expose provenance and neutral gaps', async ({
   page,
 }) => {
@@ -374,7 +310,7 @@ test('selected public-record profiles expose provenance and neutral gaps', async
     page.getByRole('heading', { name: '李眉蓁', exact: true }),
   ).toBeVisible();
   await expect(profile.getByTestId('research-summary')).toHaveCount(0);
-  await expect(profile).not.toContainText('pending-human-review');
+  await expect(profile).not.toContainText('pending-verification');
   await expect(
     profile
       .locator(
@@ -387,7 +323,7 @@ test('selected public-record profiles expose provenance and neutral gaps', async
     profile.getByRole('heading', { name: '從政歷程' }),
   ).toBeVisible();
   await expect(profile).toContainText('市府應面對找得到工作卻看不到加薪');
-  await expect(profile).not.toContainText('待人工審查');
+  await expect(profile).not.toContainText('待驗證');
   await expect(
     profile
       .locator(
@@ -569,7 +505,7 @@ test('all official council routes expose CEC identity fields and tab behavior', 
   await expect(conflictProfile).toContainText(
     conflictCandidate.cecDirectoryName ?? '',
   );
-  await expect(conflictProfile).not.toContainText('待人工比對');
+  await expect(conflictProfile).not.toContainText('待來源比對');
 
   for (const tab of [
     '基本資料',

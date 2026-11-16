@@ -55,7 +55,7 @@ export type BasicProfileReadModel = {
 };
 
 const READ_MODEL_NOTE =
-  '本區資料由公開來源逐項獨立查核，並與人工編輯核准的履歷分開列示；未查證的欄位不會顯示。';
+  '本區資料逐項連結公開來源，並與其他履歷資料分開列示；未能由來源確認的欄位不會顯示。';
 
 export function getBasicProfileReadModel(
   candidateId: string,

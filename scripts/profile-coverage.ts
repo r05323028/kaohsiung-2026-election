@@ -7,7 +7,7 @@ import publishedPolicyInput from '../data/published/2026/candidate-policies.json
 import { officialCandidateProfiles } from '../src/data/official';
 import type { CandidateProfileView } from '../src/data/view';
 
-const REPORT_DIR = resolve('reports');
+const REPORT_DIR = resolve('.cache/reports');
 const COVERAGE_PATH = resolve(REPORT_DIR, 'candidate-profile-coverage.json');
 const COVERAGE_MARKDOWN_PATH = resolve(
   REPORT_DIR,
@@ -50,7 +50,7 @@ type CandidateInventory = {
   publishedPositionCount: number;
   publishedActivityCount: number;
   publishedTimelineCount: number;
-  automatedHistoricalClaimCount: number;
+  biographyHistoricalClaimCount: number;
   formerLegislator: boolean;
   hasVerifiedProposal: boolean;
   hasVerifiedIndividualVote: boolean;
@@ -80,7 +80,7 @@ type CoverageReport = {
   publishedCareerRecordCount: number;
   unavailableCandidateResearchCount: number;
   recordsRejectedForInsufficientEvidence: number;
-  recordsPendingHumanReview: number;
+  recordsPendingResearch: number;
   identityOrAttributionConflictCount: number;
   individualVoteRecordCount: number;
   coverageByDistrict: Array<{
@@ -110,7 +110,7 @@ type SourceQualityReport = {
   publishedRecordWithResolvedSourcesCount: number;
   sourceReferenceIssues: string[];
   identityOrAttributionConflictCount: number;
-  recordReviewStatusCounts: Record<string, number>;
+  recordPublicationStatusCounts: Record<string, number>;
   recordVerificationStatusCounts: Record<string, number>;
   rejectedOrInsufficientRecordCount: number;
   limitations: string[];
@@ -204,7 +204,7 @@ function isPublishedRecord(record: {
   verificationStatus: string;
 }): boolean {
   return (
-    record.publicationStatus === 'approved-source-backed' &&
+    record.publicationStatus === 'source-backed' &&
     record.verificationStatus === 'Verified'
   );
 }
@@ -229,8 +229,7 @@ function profileInventory(candidate: CandidateProfileView): CandidateInventory {
     (votingRecordCounts.get(candidate.candidacy.id) ?? 0);
   const publishedCareerRecordCount =
     publishedPositionCount + publishedActivityCount + publishedTimelineCount;
-  const automatedHistoricalClaimCount =
-    candidate.automatedPublication?.claims.length ?? 0;
+  const biographyHistoricalClaimCount = candidate.biography?.claims.length ?? 0;
   const missingOrUnavailable: string[] = [];
 
   if (candidate.sources.length === 0)
@@ -241,7 +240,7 @@ function profileInventory(candidate: CandidateProfileView): CandidateInventory {
   if (publishedCareerRecordCount === 0)
     missingOrUnavailable.push('尚無已核准從政歷程紀錄');
   if (pendingPolicyCount > 0)
-    missingOrUnavailable.push('政策研究紀錄仍待人工／編輯審查');
+    missingOrUnavailable.push('政策研究紀錄尚未具備可公開的來源證據');
   if (candidate.policyResearch?.outcome === 'sources-unavailable')
     missingOrUnavailable.push('候選人特定政策來源未保留或無法取得');
   if (candidate.policyResearch?.outcome === 'no-verifiable-policy-found')
@@ -271,7 +270,7 @@ function profileInventory(candidate: CandidateProfileView): CandidateInventory {
     publishedPositionCount,
     publishedActivityCount,
     publishedTimelineCount,
-    automatedHistoricalClaimCount,
+    biographyHistoricalClaimCount,
     formerLegislator: legislativePositionCount > 0,
     hasVerifiedProposal,
     hasVerifiedIndividualVote: false,
@@ -359,11 +358,11 @@ function buildReports() {
   let publishedRecordWithEvidenceCount = 0;
   let publishedRecordWithResolvedSourcesCount = 0;
   let rejectedOrInsufficientRecordCount = 0;
-  let recordsPendingHumanReview = 0;
+  let recordsPendingResearch = 0;
   let identityOrAttributionConflictCount = 0;
   const individualVoteRecordCount = 0;
   const sourceReferenceIssues: string[] = [];
-  const recordReviewStatusCounts = createCounts();
+  const recordPublicationStatusCounts = createCounts();
   const recordVerificationStatusCounts = createCounts();
 
   for (const candidate of officialCandidateProfiles) {
@@ -379,15 +378,15 @@ function buildReports() {
     );
 
     for (const record of collectRecords(candidate)) {
-      increment(recordReviewStatusCounts, record.reviewStatus);
+      increment(recordPublicationStatusCounts, record.publicationStatus);
       increment(recordVerificationStatusCounts, record.verificationStatus);
       if (
-        record.reviewStatus === 'rejected' ||
+        record.validationStatus === 'rejected' ||
         record.verificationStatus === 'Insufficient information'
       )
         rejectedOrInsufficientRecordCount += 1;
-      if (record.reviewStatus === 'pending-review')
-        recordsPendingHumanReview += 1;
+      if (record.validationStatus === 'pending-verification')
+        recordsPendingResearch += 1;
       if (!isPublishedRecord(record)) continue;
       publishedRecordCount += 1;
       const evidence = record.evidenceIds
@@ -474,7 +473,7 @@ function buildReports() {
       item.missingOrUnavailable.some((reason) => reason.includes('來源未保留')),
     ).length,
     recordsRejectedForInsufficientEvidence: rejectedOrInsufficientRecordCount,
-    recordsPendingHumanReview: recordsPendingHumanReview,
+    recordsPendingResearch: recordsPendingResearch,
     identityOrAttributionConflictCount,
     individualVoteRecordCount,
     coverageByDistrict: [...districts.entries()]
@@ -509,12 +508,12 @@ function buildReports() {
       compareText(a, b),
     ),
     identityOrAttributionConflictCount,
-    recordReviewStatusCounts,
+    recordPublicationStatusCounts,
     recordVerificationStatusCounts,
     rejectedOrInsufficientRecordCount,
     limitations: [
       '來源品質統計以 profile read model 可查閱的來源 metadata 為準；原始快照與 SHA-256 仍由各 ingestion pipeline 保存。',
-      '公開紀錄的 publicationStatus 與 claim/evidence reviewStatus 是不同閘門；本報告不把來源核取自動等同人工編輯核准。',
+      '公開紀錄的 publicationStatus 與 claim/evidence validationStatus 是不同閘門；本報告不把來源核取自動等同 PR 內容審查結論。',
       '候選人政策研究中的待審 claims 未算入 publishedRecordCount。',
       '目前沒有獨立的 vote record schema 或公開個別點名表決資料。',
     ],
@@ -545,7 +544,7 @@ function markdownCoverage(report: CoverageReport): string {
 - 已核准從政紀錄：${report.publishedCareerRecordCount} 筆
 - 來源不足／不可用的候選人研究：${report.unavailableCandidateResearchCount} 位
 - 因證據不足拒絕的紀錄：${report.recordsRejectedForInsufficientEvidence} 筆
-- 待人工審查紀錄：${report.recordsPendingHumanReview} 筆
+- 待驗證紀錄：${report.recordsPendingResearch} 筆
 - 身份／歸屬衝突：${report.identityOrAttributionConflictCount} 筆
 
 ## 分區覆蓋
@@ -605,10 +604,10 @@ ${statusRows}
 | --- | ---: |
 ${publisherRows}
 
-## Record review status
+## Record publication status
 
 ${
-  Object.entries(report.recordReviewStatusCounts)
+  Object.entries(report.recordPublicationStatusCounts)
     .sort(([a], [b]) => compareText(a, b))
     .map(([key, value]) => `- ${key}：${value}`)
     .join('\n') || '- 無公開紀錄'

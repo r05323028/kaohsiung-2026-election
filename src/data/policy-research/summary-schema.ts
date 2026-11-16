@@ -7,7 +7,7 @@ const CandidatePolicyOutcomeSummarySchema = z.enum([
   'current-or-historical-only',
   'no-verifiable-policy-found',
   'sources-unavailable',
-  'evidence-requires-review',
+  'evidence-requires-verification',
   'candidate-identity-unresolved',
 ]);
 

@@ -17,7 +17,14 @@ const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'after')
   : 'after';
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4323';
-const outDir = join(process.cwd(), 'reports', 'visual', 'architecture', label);
+const outDir = join(
+  process.cwd(),
+  '.cache',
+  'reports',
+  'visual',
+  'architecture',
+  label,
+);
 mkdirSync(outDir, { recursive: true });
 
 async function settle(page: Page, delay = 3200) {

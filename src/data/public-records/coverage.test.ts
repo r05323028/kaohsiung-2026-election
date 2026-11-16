@@ -7,7 +7,6 @@ import {
   buildClaimRevisions,
   buildCoverageDataset,
   buildCoverageReport,
-  buildReviewPacket,
   buildTimelineEvents,
   type CoverageSourceCheck,
   coverageAuditKey,
@@ -128,27 +127,26 @@ describe('full-roster coverage', () => {
     expect(resumed.audits).toHaveLength(106 * PUBLIC_RECORD_CATEGORIES.length);
   });
 
-  it('keeps report integrity assertions and review metadata neutral', () => {
+  it('keeps deterministic report assertions and validation metadata neutral', () => {
     const coverage = validateCoverageDataset(
       buildFullCoverage(),
       roster,
       manifestSourceIds,
     );
     const report = buildCoverageReport(coverage, roster);
-    const review = buildReviewPacket(coverage, publicRecordsDataset);
     expect(report.integrityAssertions).toEqual({
       demoCandidatesIncluded: false,
       nameOnlyMatchesPublished: false,
       unsupportedClaimsGenerated: false,
-      reviewerMetadataInvented: false,
+      validationMetadataInvented: false,
       candidateRankingProduced: false,
       singleCompletenessScoreProduced: false,
     });
-    expect(review.reviewerId).toBeNull();
-    expect(review.reviewedAt).toBeNull();
-    expect(review.items.some((item) => item.itemType === 'coverage-gap')).toBe(
-      true,
-    );
+    expect(coverage.validation).toMatchObject({
+      status: 'validated',
+      method: 'deterministic-source-check-v1',
+    });
+    expect(report.status).toBe('partial-discovery-and-pending-verification');
   });
 });
 

@@ -6,7 +6,7 @@
  *   npx tsx scripts/capture-city-screenshots.ts --label after
  *
  * Requires a running dev/preview server (default http://127.0.0.1:4321).
- * The script writes PNGs into reports/visual/<label>/ and a JSON manifest with
+ * The script writes PNGs into .cache/reports/visual/<label>/ and a JSON manifest with
  * the viewport, URL, and camera query used for each shot.
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -17,7 +17,7 @@ const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'capture')
   : 'capture';
 const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
-const outDir = join(process.cwd(), 'reports', 'visual', label);
+const outDir = join(process.cwd(), '.cache', 'reports', 'visual', label);
 mkdirSync(outDir, { recursive: true });
 
 type Shot = {

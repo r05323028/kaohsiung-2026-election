@@ -9,7 +9,6 @@ import { sourceChangeStatus } from '../src/data/public-records/adapters';
 import {
   buildCoverageDataset,
   buildCoverageReport,
-  buildReviewPacket,
   type CoverageBatchOptions,
   type CoverageCategory,
   CoverageCategorySchema,
@@ -17,7 +16,6 @@ import {
   CoverageDatasetSchema,
   type CoverageSourceCheck,
   coverageMarkdown,
-  FullRosterReviewPacketSchema,
   validateCoverageDataset,
 } from '../src/data/public-records/coverage';
 import { validatePublicRecordsDataset } from '../src/data/public-records/schema';
@@ -36,10 +34,6 @@ const discoveryPath = path.join(
 const checkpointPath = path.join(
   root,
   'data/checkpoints/2026/full-roster-public-records.json',
-);
-const reviewPath = path.join(
-  root,
-  'data/review/2026/full-roster-public-records-review.json',
 );
 
 type ManifestSource = {
@@ -96,13 +90,7 @@ function parseInteger(
 
 export function parseCoverageArgs(argv: readonly string[]): CliOptions {
   const command = argv[0] as Command | undefined;
-  const commands: Command[] = [
-    'discover',
-    'ingest',
-    'validate',
-    'review-report',
-    'coverage',
-  ];
+  const commands: Command[] = ['discover', 'ingest', 'validate', 'coverage'];
   if (!command || !commands.includes(command))
     throw new Error(
       `Usage: <${commands.join('|')}> [--candidate ID] [--district ID] [--category CATEGORY] [--dry-run] [--resume] [--retries N] [--concurrency N]`,
@@ -387,28 +375,16 @@ async function loadNormalizedOrDiscovery(
   return loadOrBuildCoverage(options, sourceChecks);
 }
 
-async function writeReview(
-  coverage: ReturnType<typeof validateCoverageDataset>,
-): Promise<void> {
-  const review = buildReviewPacket(coverage, publicRecordsDataset);
-  const parsed = FullRosterReviewPacketSchema.safeParse(review);
-  if (!parsed.success)
-    throw new Error(
-      `Full-roster review packet validation failed: ${parsed.error.message}`,
-    );
-  await writeAtomic(reviewPath, `${JSON.stringify(parsed.data, null, 2)}\n`);
-}
-
 async function writeReports(
   coverage: ReturnType<typeof validateCoverageDataset>,
 ): Promise<void> {
   const report = buildCoverageReport(coverage, officialDataset);
   await writeAtomic(
-    path.join(root, 'reports/full-roster-coverage.json'),
+    path.join(root, '.cache/reports/full-roster-coverage.json'),
     `${JSON.stringify(report, null, 2)}\n`,
   );
   await writeAtomic(
-    path.join(root, 'reports/full-roster-coverage.md'),
+    path.join(root, '.cache/reports/full-roster-coverage.md'),
     coverageMarkdown(report),
   );
 }
@@ -454,13 +430,6 @@ async function main(): Promise<void> {
   }
   coverage = await loadNormalizedOrDiscovery(options, sourceChecks);
   CoverageDatasetSchema.parse(coverage);
-  if (options.command === 'review-report') {
-    if (!options.dryRun) await writeReview(coverage);
-    console.log(
-      `Generated review queue for ${coverage.audits.length} coverage slots.`,
-    );
-    return;
-  }
   if (options.command === 'coverage') {
     if (!options.dryRun) await writeReports(coverage);
     console.log(
@@ -470,7 +439,6 @@ async function main(): Promise<void> {
   }
   if (!options.dryRun) {
     await writeReports(coverage);
-    await writeReview(coverage);
     await writeAtomic(
       checkpointPath,
       `${JSON.stringify(buildCheckpoint(coverage, options, 'validate'), null, 2)}\n`,

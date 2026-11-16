@@ -21,10 +21,10 @@ const forbiddenKeys = [
 ];
 
 const forbiddenStrings = [
-  'pending-human-review',
+  'pending-verification',
   'machine-validated',
-  'withheld-pending-review',
-  '待人工審查',
+  'withheld-unverified',
+  '待驗證',
   '中央選舉委員會選舉專區留存快照',
   '目前沒有可公開的已核准履歷主張',
   '待審資料不會載入公開頁面',

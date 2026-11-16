@@ -245,16 +245,6 @@ function EmptyContent({ category }: { category: EmptyStateKey }) {
   );
 }
 
-const biographyClaimLabels: Record<string, string> = {
-  'current-position': '目前職務',
-  'historical-position': '歷任職務',
-  'historical-candidacy': '歷史參選',
-  'elected-office': '當選公職',
-  'professional-experience': '專業經驗',
-  education: '教育',
-  'career-event': '職涯事件',
-};
-
 function SourceChips({
   candidate,
   sourceIds,
@@ -285,36 +275,6 @@ function SourceChips({
           {source.publisher}
         </a>
       ))}
-    </div>
-  );
-}
-
-function AutomatedSourceChips({
-  candidate,
-  sourceIds,
-}: {
-  candidate: PublicCandidateProfile;
-  sourceIds: string[];
-}) {
-  const sources = candidate.automatedPublication?.sources ?? [];
-  return (
-    <div className="content-card__meta">
-      {sourceIds.map((sourceId) => {
-        const source = sources.find((item) => item.sourceId === sourceId);
-        if (!source) return null;
-        return (
-          <a
-            className="source-chip"
-            href={source.url}
-            target="_blank"
-            rel="noreferrer"
-            key={source.sourceId}
-            aria-label={`${source.publisher}：開啟來源`}
-          >
-            {source.publisher}
-          </a>
-        );
-      })}
     </div>
   );
 }
@@ -362,48 +322,6 @@ function ClaimEvidence({
         </div>
       ))}
       <SourceChips candidate={candidate} sourceIds={sourceIds} />
-    </div>
-  );
-}
-
-function AutomatedClaimCards({
-  candidate,
-  categories,
-  heading,
-}: {
-  candidate: PublicCandidateProfile;
-  categories: string[];
-  heading: string;
-}) {
-  const publication = candidate.automatedPublication;
-  const claims =
-    publication?.claims.filter((claim) =>
-      categories.includes(claim.category),
-    ) ?? [];
-  if (claims.length === 0) return null;
-
-  return (
-    <div className="content-card" data-testid="automated-publication">
-      <h4>{heading}</h4>
-      <ul className="automated-claim-list">
-        {claims.map((claim) => (
-          <li key={claim.claimId}>
-            <div className="content-card__meta">
-              <span className="status-chip">
-                {biographyClaimLabels[claim.claimType] ?? claim.claimType}
-              </span>
-              <span>{claim.sourcePublicationDate ?? '日期未標示'}</span>
-            </div>
-            <strong>{claim.title}</strong>
-            <p>{claim.value}</p>
-            {claim.organization ? <p>{claim.organization}</p> : null}
-            <AutomatedSourceChips
-              candidate={candidate}
-              sourceIds={claim.sourceIds}
-            />
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
@@ -520,6 +438,50 @@ function BasicProfileSection({
   );
 }
 
+function BiographyCards({ candidate }: { candidate: PublicCandidateProfile }) {
+  const claims = candidate.biography?.claims ?? [];
+  if (claims.length === 0) return null;
+
+  return (
+    <div className="content-card" data-testid="biography-publication">
+      <h4>公開來源履歷資料</h4>
+      <p className="info-note">
+        內容來自已提交的來源快照；資料變更透過 Pull Request
+        檢視，未查證的欄位不會顯示。
+      </p>
+      <ul className="basic-profile-list">
+        {claims.map((claim) => (
+          <li className="basic-profile-item" key={claim.claimId}>
+            <div className="basic-profile-item__value">
+              <strong>{claim.value}</strong>
+            </div>
+            <p>{claim.title}</p>
+            <div className="content-card__meta">
+              {claim.organization ? <span>{claim.organization}</span> : null}
+              <span>
+                {claim.currentStatus === 'current'
+                  ? '現任'
+                  : claim.currentStatus === 'historical'
+                    ? '歷史'
+                    : '狀態未標示'}
+              </span>
+              {claim.validFrom || claim.validTo ? (
+                <span>
+                  {claim.validFrom ?? '年份未標示'}–{claim.validTo ?? '迄今'}
+                </span>
+              ) : null}
+              <span>
+                {attributionLabels[claim.attribution] ?? claim.attribution}
+              </span>
+            </div>
+            <SourceChips candidate={candidate} sourceIds={claim.sourceIds} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const { person, candidacy, district } = candidate;
   const demo = isDemoProfile(candidate);
@@ -587,6 +549,7 @@ function BasicTab({ candidate }: { candidate: PublicCandidateProfile }) {
         />
       </div>
       <BasicProfileSection candidate={candidate} />
+      <BiographyCards candidate={candidate} />
       {demo &&
       (person.education.length > 0 ||
         person.professionalExperience.length > 0) ? (
@@ -708,11 +671,6 @@ function PoliciesTab({
         />
       ) : (
         <>
-          <AutomatedClaimCards
-            candidate={candidate}
-            categories={['policies']}
-            heading="歷史政策資料"
-          />
           {publicPolicies.length > 0 ? (
             <PublicPolicyCards candidate={candidate} />
           ) : candidate.policies.length > 0 ? (
@@ -973,14 +931,9 @@ function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
       <div className="profile-section-heading">
         <h3>相關新聞</h3>
         <p>
-          依發布日期由新至舊呈現，附來源與日期；僅列出已完成驗證與編輯審核的報導。
+          依發布日期由新至舊呈現，附來源與日期；僅列出已提交來源並通過確定性資料檢查的報導。
         </p>
       </div>
-      <AutomatedClaimCards
-        candidate={candidate}
-        categories={['news']}
-        heading="新聞資料"
-      />
       {news.length > 0 ? (
         <>
           <div className="news-filters" data-testid="news-filters">

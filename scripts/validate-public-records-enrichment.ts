@@ -199,8 +199,8 @@ function validateRoster(
     assertCondition(
       audit.researchStatus === 'completed' &&
         audit.isNegativeEvidence === false &&
-        audit.publicationStatus === 'withheld-pending-review',
-      'Audit publication gate mismatch for ' + candidate.id,
+        audit.publicationStatus === 'withheld-unverified',
+      'Audit publication state mismatch for ' + candidate.id,
     );
   }
   return candidates;
@@ -234,7 +234,7 @@ function validateUpstream(
   );
   assertCondition(
     dataset.policyReferences.length === policyDataset.policies.length,
-    'Every upstream policy must have exactly one pending reference',
+    'Every upstream policy must have exactly one withheld reference',
   );
   for (const reference of dataset.policyReferences) {
     const policy = policyById.get(reference.policyId);
@@ -256,7 +256,7 @@ function validateUpstream(
     );
     assertCondition(
       reference.verificationStatus === 'machine-validated' &&
-        reference.reviewStatus === policy.reviewStatus &&
+        reference.validationStatus === policy.validationStatus &&
         reference.publicationStatus === policy.publicationStatus,
       'Policy reference is not withheld ' + reference.policyId,
     );
@@ -329,9 +329,9 @@ function validateReferences(
     );
     assertCondition(
       claim.verificationStatus === 'machine-validated' &&
-        claim.reviewStatus === 'pending-human-review' &&
-        claim.publicationStatus === 'withheld-pending-review',
-      'Claim publication gate mismatch ' + claim.claimId,
+        claim.validationStatus === 'pending-verification' &&
+        claim.publicationStatus === 'withheld-unverified',
+      'Claim publication state mismatch ' + claim.claimId,
     );
     for (const evidenceId of claim.evidenceIds) {
       assertCondition(
@@ -365,11 +365,8 @@ function validateReferences(
 
 function validatePublications(dataset: PublicRecordsEnrichmentDataset): void {
   assertCondition(
-    dataset.review.reviewerId === null &&
-      dataset.review.reviewedAt === null &&
-      dataset.review.approvedRecordCount === 0 &&
-      dataset.review.publishedRecordCount === 0,
-    'Enrichment review metadata indicates unpublished data was approved',
+    dataset.validation.method === 'deterministic-source-check-v1',
+    'Enrichment validation metadata keeps unpublished data withheld',
   );
   assertCondition(
     dataset.coverageAssertions.individualVoteRecords === 0 &&
@@ -387,9 +384,9 @@ function validatePublications(dataset: PublicRecordsEnrichmentDataset): void {
   for (const record of pendingRecords) {
     assertCondition(
       record.verificationStatus === 'machine-validated' &&
-        record.reviewStatus === 'pending-human-review' &&
-        record.publicationStatus === 'withheld-pending-review',
-      'Pending record publication gate mismatch',
+        record.validationStatus === 'pending-verification' &&
+        record.publicationStatus === 'withheld-unverified',
+      'Pending record publication state mismatch',
     );
   }
 }

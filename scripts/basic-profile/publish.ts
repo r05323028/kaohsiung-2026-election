@@ -153,7 +153,7 @@ const input: BasicProfilePublicationInput = {
   policyName: BASIC_PROFILE_POLICY_NAME,
   snapshotDate: '2026-11-12',
   generatedAt: isoNow(),
-  note: '本區基本資料僅收錄通過獨立查核（候選人以外的第二個代理，重新開啟來源核對）的項目，並標示機構紀錄、候選人自行填列或獨立佐證。獨立查核不是人工編輯核准，也不代表所有欄位皆已完整；未通過查核的資料留在研究層，不公開呈現。',
+  note: '本區基本資料僅收錄通過獨立查核（候選人以外的第二個代理，重新開啟來源核對）的項目，並標示機構紀錄、候選人自行填列或獨立佐證。獨立查核不是PR 內容審查，也不代表所有欄位皆已完整；未通過查核的資料留在研究層，不公開呈現。',
   claims,
   candidates,
   summary: {

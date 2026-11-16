@@ -60,7 +60,7 @@ check(
 
 const approvedIds = new Set(
   dataset.policies
-    .filter((policy) => policy.publicationStatus === 'approved-source-backed')
+    .filter((policy) => policy.publicationStatus === 'source-backed')
     .map((policy) => policy.policyId),
 );
 check(
@@ -84,7 +84,7 @@ for (const policy of published.policies) {
     'cross-candidate leak ' + policy.policyId,
   );
   check(
-    sourcePolicy.publicationStatus === 'approved-source-backed',
+    sourcePolicy.publicationStatus === 'source-backed',
     'unapproved policy published ' + policy.policyId,
   );
   check(

@@ -1288,11 +1288,9 @@ async function main(): Promise<void> {
         a.id.localeCompare(b.id),
     ),
     coverage,
-    review: {
-      status: 'approved' as const,
-      reviewerId: 'editorial-pipeline',
-      reviewedAt: SNAPSHOT_DATE,
-      approvedAt: SNAPSHOT_DATE,
+    validation: {
+      status: 'validated' as const,
+      method: 'deterministic-source-check-v1' as const,
       scopeNote:
         '僅收錄已保留文件可逐字核對的從政紀錄：議員服務政見頁的屆次、議會新聞稿中以姓名歸屬的質詢與市政參與，以及人工查證並附來源的補充紀錄。',
       limitations: [

@@ -41,28 +41,6 @@ type ManifestSource = {
   attachmentSha256?: string | null;
 };
 
-type ResearchAudit = {
-  category: string;
-  attemptedAt: string | null;
-  attemptCount: number;
-  resultStatus: string;
-  conflictCount: number;
-  claimIds: string[];
-  evidenceIds: string[];
-  reviewStatus: string;
-  publicationStatus: string;
-};
-
-type ResearchCandidate = {
-  candidateId: string;
-  categories: ResearchAudit[];
-};
-
-type ResearchReport = {
-  snapshotDate: string;
-  candidates: ResearchCandidate[];
-};
-
 const root = process.cwd();
 const manifest = manifestInput as { sources: ManifestSource[] };
 const dataset = validateOfficialDataset(approvedInput);
@@ -269,27 +247,6 @@ if (
     'Council roster reconciliation must cover 101 rows with zero structural CEC mismatches and nine pending source-name conflicts.',
   );
 
-let fullRosterResearch: ResearchReport;
-try {
-  fullRosterResearch = JSON.parse(
-    await readFile(
-      path.join(root, 'reports/full-roster-research.json'),
-      'utf8',
-    ),
-  ) as ResearchReport;
-} catch (error) {
-  throw new Error(
-    'Unable to read or parse reports/full-roster-research.json: ' +
-      (error instanceof Error ? error.message : String(error)),
-  );
-}
-const researchByCandidateId = new Map(
-  fullRosterResearch.candidates.map((candidate) => [
-    candidate.candidateId,
-    candidate,
-  ]),
-);
-
 const sectionKeys = [
   'biography',
   'policies',
@@ -299,29 +256,13 @@ const sectionKeys = [
   'timeline',
 ] as const;
 type SectionKey = (typeof sectionKeys)[number];
-const researchCategoryBySection: Record<SectionKey, string> = {
-  biography: 'positions',
-  policies: 'policies',
-  'public-records': 'activities',
-  news: 'news',
-  'public-relationships': 'relationships',
-  timeline: 'timeline',
-};
-const automatedCategoryBySection: Record<SectionKey, string> = {
-  biography: 'basic-biography',
-  policies: 'policies',
-  'public-records': 'public-records',
-  news: 'news',
-  'public-relationships': 'relationships',
-  timeline: 'timeline',
-};
 
 type SectionCoverage = {
   researchAttempted: boolean;
   evidenceFound: boolean;
   evidenceRecordCount: number;
   researchClaimCount: number;
-  editorialApprovedRecords: number;
+  sourceBackedRecords: number;
   displayedRecords: number;
   researchResultStatus: string;
   researchConflictCount: number;
@@ -338,56 +279,38 @@ function displayedCount(
   profile: CandidateProfileView,
   section: SectionKey,
 ): number {
-  const automatedCount =
-    profile.automatedPublication?.claims.filter(
-      (claim) => claim.category === automatedCategoryBySection[section],
-    ).length ?? 0;
+  const biographyCount = profile.biography?.claims.length ?? 0;
   switch (section) {
     case 'biography': {
-      const biographyCount = profile.biography?.claims.length ?? 0;
       const positions = profile.publicRecords?.positions ?? [];
       return (
-        automatedCount +
         biographyCount +
         legacyOrPublicRecordCount(positions.length, profile.positions.length)
       );
     }
     case 'policies':
-      return (
-        automatedCount +
-        legacyOrPublicRecordCount(
-          profile.publicRecords?.policies.length ?? 0,
-          profile.policies.length,
-        )
+      return legacyOrPublicRecordCount(
+        profile.publicRecords?.policies.length ?? 0,
+        profile.policies.length,
       );
     case 'public-records':
-      return (
-        automatedCount +
-        legacyOrPublicRecordCount(
-          profile.publicRecords?.activities.length ?? 0,
-          profile.records.length,
-        )
+      return legacyOrPublicRecordCount(
+        profile.publicRecords?.activities.length ?? 0,
+        profile.records.length,
       );
     case 'news':
-      return (
-        automatedCount +
-        legacyOrPublicRecordCount(
-          profile.publicRecords?.news.length ?? 0,
-          profile.news.length,
-        )
+      return legacyOrPublicRecordCount(
+        profile.publicRecords?.news.length ?? 0,
+        profile.news.length,
       );
     case 'public-relationships':
-      return (
-        automatedCount +
-        legacyOrPublicRecordCount(
-          profile.publicRecords?.relationships.length ?? 0,
-          profile.relationships.length,
-        )
+      return legacyOrPublicRecordCount(
+        profile.publicRecords?.relationships.length ?? 0,
+        profile.relationships.length,
       );
     case 'timeline':
       return (
-        automatedCount +
-        (profile.biography?.claims.length ?? 0) +
+        biographyCount +
         legacyOrPublicRecordCount(
           profile.publicRecords?.timeline.length ?? 0,
           profile.timeline.length,
@@ -396,58 +319,64 @@ function displayedCount(
   }
 }
 
-function editorialApprovedCount(
+type CoverageRecord = {
+  claimIds?: readonly string[];
+  evidenceIds?: readonly string[];
+  publicationStatus?: string;
+};
+
+function recordsForSection(
+  profile: CandidateProfileView,
+  section: SectionKey,
+): readonly CoverageRecord[] {
+  const records =
+    section === 'biography'
+      ? (profile.biography?.claims ?? [])
+      : section === 'policies'
+        ? (profile.publicRecords?.policies ?? [])
+        : section === 'public-records'
+          ? (profile.publicRecords?.activities ?? [])
+          : section === 'news'
+            ? (profile.publicRecords?.news ?? [])
+            : section === 'public-relationships'
+              ? (profile.publicRecords?.relationships ?? [])
+              : (profile.publicRecords?.timeline ?? []);
+  return records as readonly CoverageRecord[];
+}
+
+function sourceBackedRecordCount(
   profile: CandidateProfileView,
   section: SectionKey,
 ): number {
-  if (section === 'biography')
-    return (
-      profile.biography?.claims.filter(
-        (claim) =>
-          claim.editorialStatus === 'editorially-approved' &&
-          claim.publicationStatus === 'approved-static',
-      ).length ?? 0
-    );
-  const records =
-    section === 'policies'
-      ? profile.publicRecords?.policies
-      : section === 'public-records'
-        ? profile.publicRecords?.activities
-        : section === 'news'
-          ? profile.publicRecords?.news
-          : section === 'public-relationships'
-            ? profile.publicRecords?.relationships
-            : profile.publicRecords?.timeline;
-  return (
-    records?.filter(
-      (record) => record.publicationStatus === 'approved-source-backed',
-    ).length ?? 0
-  );
+  if (section === 'biography') return profile.biography?.claims.length ?? 0;
+  return recordsForSection(profile, section).filter(
+    (record) => record.publicationStatus === 'source-backed',
+  ).length;
 }
 
 function getSectionCoverage(
   profile: CandidateProfileView,
-  researchCandidate: ResearchCandidate,
   section: SectionKey,
 ): SectionCoverage {
-  const audit = researchCandidate.categories.find(
-    (item) => item.category === researchCategoryBySection[section],
+  const records = recordsForSection(profile, section);
+  const evidenceRecordCount = records.reduce(
+    (count, record) => count + (record.evidenceIds?.length ?? 0),
+    0,
   );
-  if (!audit)
-    throw new Error(
-      `Research report is missing ${section} audit for ${profile.person.displayName}.`,
-    );
-  const researchAttempted =
-    audit.attemptCount > 0 || audit.attemptedAt !== null;
+  const researchClaimCount = records.reduce(
+    (count, record) => count + (record.claimIds?.length ?? 0),
+    0,
+  );
   return {
-    researchAttempted,
-    evidenceFound: audit.evidenceIds.length > 0,
-    evidenceRecordCount: audit.evidenceIds.length,
-    researchClaimCount: audit.claimIds.length,
-    editorialApprovedRecords: editorialApprovedCount(profile, section),
+    researchAttempted: records.length > 0,
+    evidenceFound: evidenceRecordCount > 0,
+    evidenceRecordCount,
+    researchClaimCount: researchClaimCount || records.length,
+    sourceBackedRecords: sourceBackedRecordCount(profile, section),
     displayedRecords: displayedCount(profile, section),
-    researchResultStatus: audit.resultStatus,
-    researchConflictCount: audit.conflictCount,
+    researchResultStatus:
+      records.length > 0 ? 'evidence-found' : 'no-records-retained',
+    researchConflictCount: profile.publicRecords?.conflicts.length ?? 0,
   };
 }
 
@@ -502,13 +431,10 @@ const candidateCoverage: CandidateCoverage[] = councilProfiles.map(
       throw new Error(
         `Missing council district number for ${candidate.displayName}.`,
       );
-    const researchCandidate = researchByCandidateId.get(candidate.id);
-    if (!researchCandidate)
-      throw new Error(`Research report is missing ${candidate.displayName}.`);
     const sections = Object.fromEntries(
       sectionKeys.map((section) => [
         section,
-        getSectionCoverage(profile, researchCandidate, section),
+        getSectionCoverage(profile, section),
       ]),
     ) as Record<SectionKey, SectionCoverage>;
     const fieldsPresent = {
@@ -558,7 +484,7 @@ function aggregateSections(entries: CandidateCoverage[]): Record<
     evidenceFoundCount: number;
     evidenceRecordCount: number;
     researchClaimCount: number;
-    editorialApprovedRecords: number;
+    sourceBackedRecords: number;
     displayedRecords: number;
   }
 > {
@@ -582,8 +508,8 @@ function aggregateSections(entries: CandidateCoverage[]): Record<
             (sum, value) => sum + value.researchClaimCount,
             0,
           ),
-          editorialApprovedRecords: values.reduce(
-            (sum, value) => sum + value.editorialApprovedRecords,
+          sourceBackedRecords: values.reduce(
+            (sum, value) => sum + value.sourceBackedRecords,
             0,
           ),
           displayedRecords: values.reduce(
@@ -601,7 +527,7 @@ function aggregateSections(entries: CandidateCoverage[]): Record<
       evidenceFoundCount: number;
       evidenceRecordCount: number;
       researchClaimCount: number;
-      editorialApprovedRecords: number;
+      sourceBackedRecords: number;
       displayedRecords: number;
     }
   >;
@@ -646,20 +572,20 @@ const coverageReport = {
   reportType: '2026-council-profile-coverage',
   researchCutoff: '2026-11-09',
   rosterSnapshotDate: dataset.snapshotDate,
-  researchSnapshotDate: fullRosterResearch.snapshotDate,
+  researchSnapshotDate: dataset.snapshotDate,
   status: 'partial-before-final-announcement',
   sourceIds: ['source-khec-65366', 'source-cec-vote2026-t-64000'],
   identityFieldPolicy:
     'CEC election-directory party/registration and birth fields are source-backed identity data; party/registration is not proof of party membership. KHEC drawn names, identifiers, and non-final number semantics remain canonical.',
   substantivePublicationPolicy:
-    'Research evidence and automated basic-biography records are reported separately; pending or unapproved substantive claims are not published.',
+    'Retained research evidence and source-backed records are reported separately; unsupported claims are not published.',
   summary: coverageSummary,
   districts: coverageByDistrict,
   candidates: candidateCoverage,
 };
 
 function metricCell(metric: SectionCoverage): string {
-  return `${metric.displayedRecords}（研${metric.researchAttempted ? '✓' : '—'}／證${metric.evidenceFound ? '✓' : '—'}／編${metric.editorialApprovedRecords}）`;
+  return `${metric.displayedRecords}（研${metric.researchAttempted ? '✓' : '—'}／證${metric.evidenceFound ? '✓' : '—'}／編${metric.sourceBackedRecords}）`;
 }
 
 const sectionLabels: Record<SectionKey, string> = {
@@ -674,7 +600,7 @@ const sectionLabels: Record<SectionKey, string> = {
 const summaryRows = sectionKeys
   .map((section) => {
     const metric = coverageSummary.sections[section];
-    return `| ${sectionLabels[section]} | ${metric.candidateCount} | ${metric.researchAttemptedCount} | ${metric.evidenceFoundCount} | ${metric.editorialApprovedRecords} | ${metric.displayedRecords} |`;
+    return `| ${sectionLabels[section]} | ${metric.candidateCount} | ${metric.researchAttemptedCount} | ${metric.evidenceFoundCount} | ${metric.sourceBackedRecords} | ${metric.displayedRecords} |`;
   })
   .join('\n');
 const districtRows = coverageByDistrict
@@ -695,14 +621,14 @@ const coverageMarkdown = [
   '',
   '- Research cutoff: 2026-11-09',
   `- Roster snapshot: ${dataset.snapshotDate}`,
-  `- Research snapshot: ${fullRosterResearch.snapshotDate}`,
+  `- Research snapshot: ${dataset.snapshotDate}`,
   '- Scope: 15 districts, 101 council candidates; mayoral profiles are excluded from the candidate matrix.',
   '- Identity fields: CEC election-directory party/registration and birth fields are source-backed; they do not establish party membership. KHEC drawn names, stable identifiers, and non-final ballot semantics remain canonical.',
-  '- Substantive tabs: machine research, pending claims, and automated basic-biography records are not counted as human/editorially approved substantive records.',
+  '- Substantive tabs: Retained research and source-backed records are measured separately; unsupported claims are not displayed.',
   '',
   '## Overall section coverage',
   '',
-  '| Section | Candidates | Research attempted | Evidence found | Editorially approved | Displayed records |',
+  '| Section | Candidates | Research attempted | Evidence found | Source-backed | Displayed records |',
   '| --- | ---: | ---: | ---: | ---: | ---: |',
   summaryRows,
   '',
@@ -733,27 +659,27 @@ const coverageMarkdown = [
   '',
 ].join('\n');
 
-await mkdir(path.join(root, 'reports'), { recursive: true });
+await mkdir(path.join(root, '.cache/reports'), { recursive: true });
 await writeFile(
-  path.join(root, 'reports/election-reconciliation.json'),
+  path.join(root, '.cache/reports/election-reconciliation.json'),
   `${JSON.stringify(report, null, 2)}\n`,
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/election-reconciliation.md'),
+  path.join(root, '.cache/reports/election-reconciliation.md'),
   reconciliationMarkdown(report),
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/council-profile-coverage.json'),
+  path.join(root, '.cache/reports/council-profile-coverage.json'),
   `${JSON.stringify(coverageReport, null, 2)}\n`,
   'utf8',
 );
 await writeFile(
-  path.join(root, 'reports/council-profile-coverage.md'),
+  path.join(root, '.cache/reports/council-profile-coverage.md'),
   coverageMarkdown,
   'utf8',
 );
 console.log(
-  `Validated official snapshot ${dataset.snapshotDate}: ${report.counts.approvedMayors} approved mayors, ${report.counts.councilPublishedRows} preliminary council rows, ${report.counts.officialDistricts} districts, ${report.counts.pendingReviewScopes} pending review scope; CEC council identity ${report.cecCouncil?.matchedRows ?? 0}/101 with ${report.cecCouncil?.sourceNameConflicts.length ?? 0} name conflicts. Coverage report written for ${candidateCoverage.length} council candidates.`,
+  `Validated official snapshot ${dataset.snapshotDate}: ${report.counts.approvedMayors} approved mayors, ${report.counts.councilPublishedRows} preliminary council rows, ${report.counts.officialDistricts} districts, ${report.counts.pendingVerificationScopes} source-check scope; CEC council identity ${report.cecCouncil?.matchedRows ?? 0}/101 with ${report.cecCouncil?.sourceNameConflicts.length ?? 0} name conflicts. Coverage report written for ${candidateCoverage.length} council candidates.`,
 );

@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type {
   CareerCoverage,
@@ -12,8 +12,15 @@ const VERIFICATION_PATH = resolve(
   ROOT,
   'data/political-career/2026/project-verification.json',
 );
-const MARKDOWN_PATH = resolve(ROOT, 'reports/political-career-coverage.md');
-const JSON_PATH = resolve(ROOT, 'reports/political-career-coverage.json');
+const MARKDOWN_PATH = resolve(
+  ROOT,
+  '.cache/reports/political-career-coverage.md',
+);
+const JSON_PATH = resolve(
+  ROOT,
+  '.cache/reports/political-career-coverage.json',
+);
+mkdirSync(resolve(ROOT, '.cache/reports'), { recursive: true });
 
 type Roster = {
   districts: Array<{ id: string; districtLabel: string; name: string }>;

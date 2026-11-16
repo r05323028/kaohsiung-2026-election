@@ -1,7 +1,6 @@
 {
   "datasetId": "kaohsiung-2026-candidate-news-normalized",
   "snapshotDate": "2026-11-12",
-  "policyVersion": "news-publication-policy-v1",
   "articles": [
     {
       "articleId": "news-96ecce4c",
@@ -17,7 +16,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:34.744Z",
       "summary": "柯志恩說明競選看板口號「這柯不一樣」是指與4年前的自己不同，並非對比柯文哲；該說法是在黃國昌直播節目中回應網友提問。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -93,11 +92,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-96ecce4c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -114,7 +109,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:38.495Z",
       "summary": "賴瑞隆於醫師節發文向醫師致敬，提及半夜急診室、清晨開刀房與偏鄉巡迴診療車都有醫師值守，並表示未來會努力提升醫護勞動條件。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service",
         "policy"
@@ -191,11 +186,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f3a0fe0e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -212,7 +203,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:37.681Z",
       "summary": "賴瑞隆競選總部推出「大港政策島」3D互動政見地圖，將21項主題政見與11個選區的在地建設整合為可旋轉、縮放的網頁地圖。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "election"
@@ -289,11 +280,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b036dd5c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -310,7 +297,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:39.850Z",
       "summary": "王金平受訪談九合一選情，認為空戰階段已趨飽和、陸戰動員將決定勝負，並表示高雄選民愈來愈接受柯志恩，稱其內參民調沒有輸。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -385,11 +372,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-c43db89d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -406,7 +389,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:39.036Z",
       "summary": "社群「高雄好過日」指出柯志恩2016年擔任立委時曾稱中國武警監控演唱會是歌手榮耀；陳其邁表示不理解其邏輯，請柯志恩自行說明。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -482,11 +465,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-51a1e828",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -504,7 +483,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:38.257Z",
       "summary": "賴瑞隆與柯志恩就柯2016年質詢中國武警監控演唱會的發言隔空交鋒；柯志恩競選總部反指賴瑞隆過去推動高雄直航北京。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -581,11 +560,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-fbe38995",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -602,7 +577,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:38.591Z",
       "summary": "柯志恩與澎湖縣長候選人陳振中在馬公北辰市場拜票，雙方就醫療綠色通道、空運機票與焚化爐議題達成進一步合作共識。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -683,11 +658,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-925fcc31",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -704,7 +675,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:57.283Z",
       "summary": "陳其邁為黃文志爭取連任背書，提及他為左營、楠梓爭取建設；黃文志表示將持續向新遷入居民說明政策與地方政績。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -783,11 +754,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-bd3dad98",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -804,7 +771,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:35.633Z",
       "summary": "賴瑞隆競選總部舉行「隆隆志工團」誓師大會，志工並為賴瑞隆慶生；賴瑞隆向志工鞠躬致謝，稱志工是他在第一線衝刺的後盾。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -881,11 +848,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-c5ee2592",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -902,7 +865,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:37.614Z",
       "summary": "柯志恩與雲林縣長候選人張嘉郡在斗六座談教育政策並車隊掃街，議題包括雙語教育、AI科技、品德教育與友善校園。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -979,11 +942,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-c5f06429",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1000,7 +959,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:36.661Z",
       "summary": "柯志恩到新北參加黃國昌直播節目前受訪，表示對國民黨新北市長候選人李四川的政見發表會有信心，認為其實務經驗充足。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -1076,11 +1035,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6bc097a1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1098,7 +1053,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:36.328Z",
       "summary": "媒體報導賴瑞隆後援會榮譽總會長蘇方誠疑涉動保處貪汙案；柯志恩受訪質疑賴瑞隆的用人標準，並提及賴方以請辭、尊重司法回應。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -1175,11 +1130,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6cc51662",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1197,7 +1148,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:40.626Z",
       "summary": "賴瑞隆簽署「挺社工」承諾書，承諾從五大面向建構社會安全網；柯志恩則持續到傳統市場拜票，並前往澎湖、雲林輔選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -1276,11 +1227,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-409b6b5f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1297,7 +1244,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:27:35.660Z",
       "summary": "柯志恩在黃國昌直播節目中回應藍白合作提問，表示國民黨資源較多，合作時應適度釋出善意與空間讓民眾黨融入。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -1373,11 +1320,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-13e0c720",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1394,7 +1337,7 @@
       "updatedDate": "2026-11-12",
       "retrievedAt": "2026-11-12T16:28:51.690Z",
       "summary": "羅大佑在廣播節目稱未婚無子女者對下一代不會想太多；鄧巧佩回應，蔡英文、蕭美琴與陳菊對下一代的貢獻不應以婚育衡量。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -1470,11 +1413,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-8e50bb5b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1491,7 +1430,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:27:41.082Z",
       "summary": "柯志恩提出府會遷移205兵工廠與演唱會高雄市民優先購票構想遭陳其邁反駁，她受訪表示對手是賴瑞隆，並稱陳其邁能輔選但不能代為當市長。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "election"
@@ -1570,11 +1509,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-696d4c8e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1666,13 +1601,9 @@
       },
       "publication": {
         "status": "blocked-verification",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f4cd6990",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
         "blockers": [
           "editorial-exclusion:wrong-person: 報導對象為新竹市議員林彥甫，非高雄市第7選舉區候選人林彥"
-        ],
-        "origin": "automated-policy"
+        ]
       }
     },
     {
@@ -1689,7 +1620,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:27:41.035Z",
       "summary": "陳其邁批評柯志恩對市政不清楚、想到就講過於急就章；柯志恩在左營受訪表示自己的對手是賴瑞隆，不是與陳其邁競選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "election"
@@ -1767,11 +1698,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-7ed97bc1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1788,7 +1715,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:27:41.869Z",
       "summary": "賴瑞隆在選戰最後階段安排站路口與市場掃街，並與立委李昆澤、議長康裕成及多名議員候選人在三民區向通勤民眾與攤商拜票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -1868,11 +1795,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e41583db",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1889,7 +1812,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:27:40.522Z",
       "summary": "賴瑞隆參加社工工會與社工師公會舉辦的社福客廳會並簽署挺社工承諾書，提出改善待遇、行政減壓、專業保障、執業安全與制度參與五大方向。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service",
         "policy"
@@ -1967,11 +1890,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6fe1f0b5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -1988,7 +1907,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:28:45.550Z",
       "summary": "羅大佑稱未婚無子女者對下一代不會想太多；同樣未婚無子女的陳慧文回應，女性政治人物為公共事務的付出不應以婚育衡量。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -2065,11 +1984,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-21137780",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2086,7 +2001,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:28:42.375Z",
       "summary": "羅大佑在廣播節目點名蔡英文、蕭美琴與陳菊未婚無子女；林智鴻批評該說法歧視沒有小孩的人，並認為會誤導下一代。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -2162,11 +2077,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a1b16276",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2183,7 +2094,7 @@
       "updatedDate": "2026-11-10",
       "retrievedAt": "2026-11-12T16:28:31.880Z",
       "summary": "柯志恩推出第二支競選影片提及一心路；張博洋指出一心路東側連接瑞隆路，並提及柯志恩過去多次被指對高雄不熟悉。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -2260,11 +2171,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-722120f8",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2281,7 +2188,7 @@
       "updatedDate": "2026-11-10",
       "retrievedAt": "2026-11-12T16:29:10.041Z",
       "summary": "高雄市議員第11選區（大寮、林園）六人角逐四席，張耀中表示原民調居前，但在分票與派系競爭下接近安全名單邊緣，呼籲支持者集中選票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -2360,11 +2267,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-3e1a76fa",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2381,7 +2284,7 @@
       "updatedDate": "2026-11-10",
       "retrievedAt": "2026-11-12T16:28:30.379Z",
       "summary": "柯志恩社群發文稱常走一心路是因為有心；張博洋指出一心路東側接瑞隆路而非三多路，並提及柯志恩二度參選仍被批評與高雄不熟。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -2459,11 +2362,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2d645761",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2480,7 +2379,7 @@
       "updatedDate": "2026-11-10",
       "retrievedAt": "2026-11-12T16:28:52.341Z",
       "summary": "吳沛憶與黃捷首度合體到鳳山為鄧巧佩助選，張以理也現身，四人品嘗鳳山在地美食並搭配車隊掃街。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -2557,11 +2456,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e8174d5e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2578,7 +2473,7 @@
       "updatedDate": "2026-11-10",
       "retrievedAt": "2026-11-12T16:27:55.782Z",
       "summary": "黃韻涵指出大岡山螺絲等傳統產業面臨缺工與資金壓力，提出合理電費、開放移工配額與實質輔導轉型三項主張。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy"
       ],
@@ -2656,11 +2551,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-aebf0485",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2677,7 +2568,7 @@
       "updatedDate": "2026-11-09",
       "retrievedAt": "2026-11-12T16:28:07.492Z",
       "summary": "張以理在漢神巨蛋旁發送煎餃飄帶吸引民眾排隊，邱議瑩排隊送上生日蛋糕與8包雞蛋糕為他慶生。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -2754,11 +2645,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d6dc650f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2775,7 +2662,7 @@
       "updatedDate": "2026-11-09",
       "retrievedAt": "2026-11-12T16:29:14.010Z",
       "summary": "柯志恩提出研議保留部分演唱會票券供高雄市民優先購買，賴瑞隆認為可能助長黃牛；邱于軒對民進黨方面的說法提出批評。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "election"
@@ -2852,11 +2739,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-becd773b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2873,7 +2756,7 @@
       "updatedDate": "2026-11-09",
       "retrievedAt": "2026-11-12T16:28:08.391Z",
       "summary": "林俊憲頒發「戒慎恐懼協會」分會長證書給張以理，並提及張以理在市長陳其邁團隊擔任局長的經歷。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -2950,11 +2833,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b356e16e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -2971,7 +2850,7 @@
       "updatedDate": "2026-11-08",
       "retrievedAt": "2026-11-12T16:29:06.851Z",
       "summary": "公督盟執行長張宏林質疑柯志恩切割騙票、未來仍是聽話的狗；邱于軒批評公督盟以貶抑字眼評論女性從政者，並質疑其評價標準。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -3047,11 +2926,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2b35783b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3068,7 +2943,7 @@
       "updatedDate": "2026-11-08",
       "retrievedAt": "2026-11-12T16:28:09.400Z",
       "summary": "李眉蓁舉辦競選總部成立大會時表示，過去6年參與市議員、市長補選、立委與議員補選等選舉，此次面臨分票壓力，呼籲支持者集中選票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -3147,11 +3022,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-bccf3859",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3168,7 +3039,7 @@
       "updatedDate": "2026-11-11",
       "retrievedAt": "2026-11-12T16:28:37.661Z",
       "summary": "高雄三民區發生機車擦撞事故，林于凱當時在附近跑行程，取來三角錐並拆下宣傳燈箱的LED燈充當指揮棒，在警方抵達前協助戒護。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service",
         "local-issue"
@@ -3246,11 +3117,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-24eb97c4",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3267,7 +3134,7 @@
       "updatedDate": "2026-11-07",
       "retrievedAt": "2026-11-12T16:28:32.840Z",
       "summary": "賴瑞隆與張博洋成立聯合競選總部，陳其邁、康裕成等到場助陣；陳其邁稱張博洋是高雄溫暖的洋流。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -3346,11 +3213,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-67469dc5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3367,7 +3230,7 @@
       "updatedDate": "2026-11-06",
       "retrievedAt": "2026-11-12T16:28:09.419Z",
       "summary": "張以理抽籤時忘詞喊出「8包煎餃拼到底」成為網路迷因，他表示網路聲量能否轉為選票仍未知，並提醒選票上沒有印煎餃。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -3442,11 +3305,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f04a342a",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3463,7 +3322,7 @@
       "updatedDate": "2026-11-05",
       "retrievedAt": "2026-11-12T16:27:58.458Z",
       "summary": "白喬茵與林于凱在市場拍攝拜票短影音時，白喬茵誤稱自己4號後修正為第4選區3號；同選區4號候選人柳淑芳對此回應。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -3543,11 +3402,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-caf6bba6",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3565,7 +3420,7 @@
       "updatedDate": "2026-11-03",
       "retrievedAt": "2026-11-12T16:28:43.725Z",
       "summary": "林智鴻接任「戒慎恐懼協會」鳳山分會長後拜訪蘇致榮，兩人喊出鳳山提名5席全數過關、議會過半的目標。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -3644,11 +3499,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-0a71e348",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3665,7 +3516,7 @@
       "updatedDate": "2026-11-02",
       "retrievedAt": "2026-11-12T16:28:35.859Z",
       "summary": "黃裕庭發現維基百科內容疑遭竄改為涉詐領助理費遭判刑解職的前市議員黃紹庭，赴高雄地檢署按鈴申告。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -3746,11 +3597,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-12c3f853",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3767,7 +3614,7 @@
       "updatedDate": "2026-11-02",
       "retrievedAt": "2026-11-12T16:28:11.764Z",
       "summary": "柯文哲為柯志恩站台時提及雲豹捐款與司法案件；尹立回應此事，並認為柯文哲把高雄當成轉移司法焦點的場合。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -3843,11 +3690,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a9cba1cd",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3864,7 +3707,7 @@
       "updatedDate": "2026-11-02",
       "retrievedAt": "2026-11-12T16:28:45.596Z",
       "summary": "林智鴻競選總部成立，眼癌學童范小弟的阿嬤到場感謝他6年前協助孫子就醫，范小弟也錄音致謝。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service",
         "election"
@@ -3941,11 +3784,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e2fb5526",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -3962,7 +3801,7 @@
       "updatedDate": "2026-11-02",
       "retrievedAt": "2026-11-12T16:28:44.779Z",
       "summary": "林俊憲授與林智鴻「戒慎恐懼協會」鳳山分會長，林智鴻表示會向林俊憲、沈伯洋看齊，為鳳山選情加溫。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -4039,11 +3878,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b315819f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4060,7 +3895,7 @@
       "updatedDate": "2026-11-02",
       "retrievedAt": "2026-11-12T16:28:31.158Z",
       "summary": "柯文哲陪同林于凱到自由黃昏市場掃街拜票，國民黨議員白喬茵也同行，柯文哲舉起兩人的手喊凍蒜。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -4139,11 +3974,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-14e68a05",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4160,7 +3991,7 @@
       "updatedDate": "2026-11-01",
       "retrievedAt": "2026-11-12T16:27:55.193Z",
       "summary": "林志誠與賴瑞隆成立聯合競選總部，現場逾5000人到場，陳其邁等黨內人士站台，呼籲支持者不要分票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -4242,11 +4073,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-62ed0ccd",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4263,7 +4090,7 @@
       "updatedDate": "2026-11-01",
       "retrievedAt": "2026-11-12T16:28:46.565Z",
       "summary": "賴瑞隆與張漢忠在鳳山舉辦聯合競選總部成立大會，擺放的椅子延伸至柯志恩與李雅靜聯合競選總部前；李雅靜質疑影響出入，市府表示道路臨時使用申請不分藍綠。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -4340,11 +4167,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e0186d69",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4361,7 +4184,7 @@
       "updatedDate": "2026-11-01",
       "retrievedAt": "2026-11-12T16:28:46.199Z",
       "summary": "林智鴻競選總部成立大會逾2000人到場，眼癌學童范小弟的阿嬤到場致謝，陳其邁送他簽名戰袍。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -4438,11 +4261,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-55f7c37e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4459,7 +4278,7 @@
       "updatedDate": "2026-11-02",
       "retrievedAt": "2026-11-12T16:28:41.464Z",
       "summary": "許采蓁舉辦競選晚會，韓國瑜與柯志恩到場助陣，柯志恩為她披上勝選彩帶並提及她一路以來的成長。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -4536,11 +4355,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-00b373bd",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4557,7 +4372,7 @@
       "updatedDate": "2026-11-01",
       "retrievedAt": "2026-11-12T16:28:40.789Z",
       "summary": "韓國瑜為許采蓁授戰旗，並表示高雄資源充足，若未發展成台灣最有錢、最有活力的城市，是所有高雄人的損失。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -4637,11 +4452,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b99ce094",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4658,7 +4469,7 @@
       "updatedDate": "2026-11-01",
       "retrievedAt": "2026-11-12T16:28:09.876Z",
       "summary": "韓國瑜到高雄助選首站為李眉蓁站台，稱她是壓不扁的玫瑰，並號召高雄鄉親動員新北親友支持李四川。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -4736,11 +4547,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-fc67d076",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4757,7 +4564,7 @@
       "updatedDate": "2026-10-31",
       "retrievedAt": "2026-11-12T16:28:34.755Z",
       "summary": "高雄市長電視辯論後，張博洋評論柯志恩在辯論中的表現，認為與其「這柯不一樣」的路線有落差。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -4833,11 +4640,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-23504bad",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4854,7 +4657,7 @@
       "updatedDate": "2026-10-31",
       "retrievedAt": "2026-11-12T16:28:36.597Z",
       "summary": "蔡令怡到高雄為黃裕庭助選並披彩帶，提及與黃裕庭父母相識36年，以及吳敦義南下高雄參選市長的往事。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -4937,11 +4740,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-734fe043",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -4958,7 +4757,7 @@
       "updatedDate": "2026-10-30",
       "retrievedAt": "2026-11-12T16:28:10.389Z",
       "summary": "高雄市長電視辯論後，李眉蓁指賴瑞隆在雲豹、政治獻金與新潮流等問題上多次迴避；林于凱以主客易位形容整場辯論。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -5034,11 +4833,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-762ac4c3",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5055,7 +4850,7 @@
       "updatedDate": "2026-10-30",
       "retrievedAt": "2026-11-12T16:28:50.963Z",
       "summary": "國道10號旗山端看板由質疑柯志恩刪預算改回賴瑞隆版本；鍾易仲質疑行政院刪減高雄補助款時賴瑞隆的立場，賴瑞隆則指藍白統籌款修法擠壓中央財源。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "public-service"
@@ -5132,11 +4927,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2564a08a",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5153,7 +4944,7 @@
       "updatedDate": "2026-10-29",
       "retrievedAt": "2026-11-12T16:28:10.027Z",
       "summary": "張以理因抽籤忘詞喊出「8包煎餃拼到底」在網路流傳，他分享的車掃影片中介紹左楠在地美食，引起網友索取名單。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -5229,11 +5020,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-47b2c149",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5250,7 +5037,7 @@
       "updatedDate": "2026-10-29",
       "retrievedAt": "2026-11-12T16:28:47.496Z",
       "summary": "林智鴻競選總部成立大會當天中午將場地提供給「高雄小水滴」舉辦台北市長候選人辯論直播，現場架設200吋螢幕並發放洋流飄帶。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -5328,11 +5115,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6b2c1045",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5349,7 +5132,7 @@
       "updatedDate": "2026-10-29",
       "retrievedAt": "2026-11-12T16:29:03.572Z",
       "summary": "鳳林國小新校區動土，陳其邁表示象徵大林蒲遷村進入實質推動階段；鄭光峰表示從遷村條件、個案陳情到土地持分一路陪同居民，學校先建代表先建後遷落實。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service",
         "local-issue"
@@ -5430,11 +5213,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a0119433",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5451,7 +5230,7 @@
       "updatedDate": "2026-10-28",
       "retrievedAt": "2026-11-12T16:28:31.950Z",
       "summary": "柯志恩與黃國昌、林于凱同框直播，前往三民區烏托邦小作所參觀並體驗手作鳳梨酥，了解身心障礙家庭的照顧需求。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy"
       ],
@@ -5528,11 +5307,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6160381e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5549,7 +5324,7 @@
       "updatedDate": "2026-10-28",
       "retrievedAt": "2026-11-12T16:28:52.708Z",
       "summary": "鄧巧佩抽中10號，由黃捷陪同車隊掃街；支持者送兩艘積木組裝的「洋流號」，一艘給鄧巧佩、一艘請黃捷轉交沈伯洋。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -5627,11 +5402,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-80a8cd5c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5725,13 +5496,9 @@
       },
       "publication": {
         "status": "blocked-verification",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-01cff230",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
         "blockers": [
           "editorial-exclusion:wrong-person: 報導對象為新竹市議員林彥甫，非高雄市第7選舉區候選人林彥"
-        ],
-        "origin": "automated-policy"
+        ]
       }
     },
     {
@@ -5748,7 +5515,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:28:01.256Z",
       "summary": "第八次參選的柳淑芳在議員號次抽籤時表示不會脫衣，並請選委會等她展開布條、喊出號碼後再進行流程。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -5827,11 +5594,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-8fcbe149",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5848,7 +5611,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:27:36.214Z",
       "summary": "司法改革黨在高雄的市長、議員與里長三名候選人號次抽籤皆抽中1號，黨主席張靜認為是好兆頭。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -5927,11 +5690,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-aa12dd74",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -5948,7 +5707,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:28:35.557Z",
       "summary": "柯志恩在前鎮廟口開講時回應民眾質疑的過程引發討論；張博洋表示藍營操作五五波民調已超過1個月未見發酵。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -6025,11 +5784,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f7722dc9",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6046,7 +5801,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:28:10.759Z",
       "summary": "張以理抽中8號，在台上忘詞後喊出「八包煎餃拼到底」，畫面在網路流傳。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -6124,11 +5879,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-43b54370",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6145,7 +5896,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:28:48.160Z",
       "summary": "鳳山地方流傳抽中1號20年來皆落選，林智鴻此次抽中1號，表示只能戒慎恐懼繼續拚，並呼籲支持者不要分票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -6223,11 +5974,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e996250f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6244,7 +5991,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:28:37.835Z",
       "summary": "高雄市選委會完成市長與市議員候選人號次抽籤，15個選區101位候選人號次出爐；議長康裕成抽中8號，表示目標是第8次連任。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -6322,11 +6069,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-5946da24",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6344,7 +6087,7 @@
       "updatedDate": "2026-10-27",
       "retrievedAt": "2026-11-12T16:28:41.856Z",
       "summary": "許采蓁抽中3號，與市長候選人柯志恩同為3號；黃敬雅抽中13號，笑稱1313亮晶晶。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -6421,11 +6164,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-879e7f89",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6442,7 +6181,7 @@
       "updatedDate": null,
       "retrievedAt": "2026-11-12T16:28:52.079Z",
       "summary": "李眉蓁抽中5號，表示最穩的可能最危險，將請重量級人物協助；2022年鳳山落選頭蘇致榮再戰，表示要翻轉四年前的遺憾。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -6520,11 +6259,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-1d03b1ae",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6541,7 +6276,7 @@
       "updatedDate": "2026-10-26",
       "retrievedAt": "2026-11-12T16:28:11.448Z",
       "summary": "王義川到高雄為張以理站台並到楠都夜市掃街，喊出搶救新兵；張以理表示沒有家族背景與地方樁腳，擔心網路支持只是空氣票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -6619,11 +6354,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-0113da98",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6640,7 +6371,7 @@
       "updatedDate": "2026-10-26",
       "retrievedAt": "2026-11-12T16:28:17.354Z",
       "summary": "邱俊憲舉辦聯合競選總部成立晚會，現場逾2000人，陳其邁、賴瑞隆與8位立委、議長康裕成及20多位跨派系議員到場，力拚市長勝選與議會過半。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -6722,11 +6453,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-46a6037e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6743,7 +6470,7 @@
       "updatedDate": "2026-10-26",
       "retrievedAt": "2026-11-12T16:29:06.142Z",
       "summary": "柯志恩在前鎮廟口開講時對綠營支持者喊話的內容引發討論；黃敬雅建議柯志恩若選到煽動仇恨，不如不要選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -6821,11 +6548,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-8ae19fb9",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6842,7 +6565,7 @@
       "updatedDate": "2026-10-25",
       "retrievedAt": "2026-11-12T16:28:51.804Z",
       "summary": "柯志恩與李雅靜成立聯合競選總部，王金平到場喊唯一支持；李雅靜提出近4年逾90億元建設成果，盼鳳山成為高雄首善之區。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -6921,11 +6644,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-cd0a9ae6",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -6942,7 +6661,7 @@
       "updatedDate": "2026-10-25",
       "retrievedAt": "2026-11-12T16:28:28.763Z",
       "summary": "陳美雅競選總部成立，現場有兩名百歲人瑞到場表達支持，其中一人稱只要還能呼吸就會投她一票。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -7024,11 +6743,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-1589f969",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7045,7 +6760,7 @@
       "updatedDate": "2026-10-25",
       "retrievedAt": "2026-11-12T16:28:46.927Z",
       "summary": "李雅靜競選總部成立，柯志恩與王金平到場力挺；李雅靜表示近4年爭取至少90億元建設、135條道路翻新與近2億元治水經費。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -7124,11 +6839,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2e4232a7",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7145,7 +6856,7 @@
       "updatedDate": "2026-10-25",
       "retrievedAt": "2026-11-12T16:28:26.494Z",
       "summary": "黃香菽在義民廟廣場成立競選總部，柯志恩稱其問政具俠女精神，王金平與李乾龍到場，父母黃啟川、侯彩鳳為她披彩帶。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -7224,11 +6935,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-64c18637",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7245,7 +6952,7 @@
       "updatedDate": "2026-10-25",
       "retrievedAt": "2026-11-12T16:28:48.845Z",
       "summary": "林智鴻在鳳山八德滯洪池旁成立後援總會，提及滯洪池已改善赤山地區淹水情況；賴瑞隆、許智傑、黃捷、康裕成到場。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service"
       ],
@@ -7323,11 +7030,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d33b74c7",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7344,7 +7047,7 @@
       "updatedDate": "2026-10-24",
       "retrievedAt": "2026-11-12T16:27:47.946Z",
       "summary": "具台美雙會計師資格的陳琳潔成立競選總部，賴瑞隆到場站台，提及她推動兒童程式與AI教育，盼以會計專業進入議會。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -7426,11 +7129,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-82529ee1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7447,7 +7146,7 @@
       "updatedDate": "2026-10-19",
       "retrievedAt": "2026-11-12T16:27:59.907Z",
       "summary": "李雅芬競選總部成立，柯志恩到場站台，稱她教養5個孩子令人佩服，相信她會用媽媽的心照顧選區家庭。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -7527,11 +7226,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-5b39754e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7548,7 +7243,7 @@
       "updatedDate": "2026-10-18",
       "retrievedAt": "2026-11-12T16:29:12.093Z",
       "summary": "張耀中競選總部成立，陳其邁到場站台，提及張耀中跟隨他7年、2526天，稱他是其邁的分身。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -7627,11 +7322,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-288fa07e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7648,7 +7339,7 @@
       "updatedDate": "2026-10-18",
       "retrievedAt": "2026-11-12T16:28:13.119Z",
       "summary": "柯志恩邀請韓國瑜站台，尹立以當年罷免韓國瑜的94萬票為例提出質疑，並提及韓國瑜談愛情摩天輪與婚紗一條街。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -7723,11 +7414,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-1f8d53bc",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7744,7 +7431,7 @@
       "updatedDate": "2026-10-18",
       "retrievedAt": "2026-11-12T16:29:12.457Z",
       "summary": "張耀中競選總部成立，陳其邁到場站台，提及兩人共事7年、2526天，稱張耀中是精心嚴選的分身。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -7824,11 +7511,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-3ddbf7c4",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7845,7 +7528,7 @@
       "updatedDate": "2026-10-18",
       "retrievedAt": "2026-11-12T16:28:12.161Z",
       "summary": "張以理競選總部成立，賴瑞隆到場唱歌相挺，陳其邁致贈「天翻地覆」中堂，並承諾張以理當選就唱歌祝賀。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -7925,11 +7608,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-42ba80f0",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -7946,7 +7625,7 @@
       "updatedDate": "2026-10-17",
       "retrievedAt": "2026-11-12T16:28:51.673Z",
       "summary": "鍾易仲在鳳山中崙成立競選總部，柯志恩與王金平到場，他以8年10大政績為主軸，包括中崙農業區轉型、客家重點發展區與反對住宅區設儲能場。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -8024,11 +7703,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-00e36546",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8045,7 +7720,7 @@
       "updatedDate": "2026-10-16",
       "retrievedAt": "2026-11-12T16:28:32.610Z",
       "summary": "林于凱建議高雄推動降溫城市，在人行道、候車亭與親子空間增加遮蔭設計，並參考首爾在公車候車區搭建遮蔭亭。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "local-issue"
@@ -8123,11 +7798,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2dba29a2",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8144,7 +7815,7 @@
       "updatedDate": "2026-10-15",
       "retrievedAt": "2026-11-12T16:28:15.259Z",
       "summary": "柯志恩在中山大學青年論壇回應黨意與高雄利益衝突的提問，表示表決時須回歸政黨；尹立質疑高雄發展是否要排在黨意之後。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -8220,11 +7891,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4a7df78d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8241,7 +7908,7 @@
       "updatedDate": "2026-10-14",
       "retrievedAt": "2026-11-12T16:28:01.891Z",
       "summary": "白喬茵在總質詢中公開力挺同婚與性別平權，並細數與市府在交通、教育、社福等面向推動的建設；陳其邁答詢表示感動。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "legislative"
@@ -8320,11 +7987,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-773cb993",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8341,7 +8004,7 @@
       "updatedDate": "2026-10-14",
       "retrievedAt": "2026-11-12T16:28:15.997Z",
       "summary": "柯志恩預計到小港並邀韓國瑜站台，尹立分析此舉可能把柯志恩鎖在藍營同溫層，並認為反映藍營在高雄的焦慮。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -8417,11 +8080,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-73a4e3e5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8438,7 +8097,7 @@
       "updatedDate": "2026-10-12",
       "retrievedAt": "2026-11-12T16:28:00.657Z",
       "summary": "陳其邁在總質詢時肯定李雅芬不會作秀，稱議員100芬但要再扣11分，並提及自己卸任後仍是左營區市民。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "career"
@@ -8516,11 +8175,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-dece8467",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8537,7 +8192,7 @@
       "updatedDate": "2026-10-12",
       "retrievedAt": "2026-11-12T16:29:09.102Z",
       "summary": "邱于軒在總質詢送多啦A夢玩偶，呼籲市府重視兒虐議題，並提及過去揭發幼兒園虐童案的情形。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -8613,11 +8268,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-5cc27ece",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8634,7 +8285,7 @@
       "updatedDate": "2026-10-11",
       "retrievedAt": "2026-11-12T16:27:42.233Z",
       "summary": "林慧欣成立競選總部並提出六星政見、發表競選主題曲；賴瑞隆到場站台，稱她是美濃栽培的客家後生。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -8714,11 +8365,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a4469a44",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8735,7 +8382,7 @@
       "updatedDate": "2026-10-11",
       "retrievedAt": "2026-11-12T16:29:09.760Z",
       "summary": "挺柯志恩看板列出多位民進黨議員姓名引發爭議，柯競辦澄清非團隊所掛；邱于軒認為綠營未查證，要求賴瑞隆、黃捷公開道歉。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -8811,11 +8458,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-beac535d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8832,7 +8475,7 @@
       "updatedDate": "2026-10-11",
       "retrievedAt": "2026-11-12T16:27:40.355Z",
       "summary": "林義迪在旗山老街封街舉辦競選總部成立大會，湧入上千名支持者；第一選區應選3席，共6人登記。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -8921,11 +8564,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-cd2b9178",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -8942,7 +8581,7 @@
       "updatedDate": "2026-10-10",
       "retrievedAt": "2026-11-12T16:28:17.582Z",
       "summary": "柯志恩與賴瑞隆就新潮流標籤相互回應，賴瑞隆表示20幾年來全力爭取高雄建設；尹立則稱柯志恩是傅崐萁的乖寶寶。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -9019,11 +8658,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-277ae20b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9040,7 +8675,7 @@
       "updatedDate": "2026-10-09",
       "retrievedAt": "2026-11-12T16:28:13.639Z",
       "summary": "張以理表示「洋流飄帶」成為高雄熱門競選小物，民眾在站路口與市場掃街時常詢問索取。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -9117,11 +8752,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-8feb03cc",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9138,7 +8769,7 @@
       "updatedDate": "2026-10-07",
       "retrievedAt": "2026-11-12T16:29:11.068Z",
       "summary": "邱于軒的宣傳車在大寮區力行路擦撞路邊停放車輛，駕駛稱身體不適，無人受傷、無酒駕，肇事原因待鑑定。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -9214,11 +8845,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-08885649",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9235,7 +8862,7 @@
       "updatedDate": "2026-10-07",
       "retrievedAt": "2026-11-12T16:29:11.733Z",
       "summary": "邱于軒在輔選夥伴發生擦撞後身體不適到醫院吊點滴，並在社群表示自己真的累了。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -9310,11 +8937,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-81bbc198",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9331,7 +8954,7 @@
       "updatedDate": "2026-10-06",
       "retrievedAt": "2026-11-12T16:28:03.254Z",
       "summary": "李眉蓁在議會關切高捷紫線進度並點名行政院長；陳其邁答詢表示問題主要來自財劃法修法導致中央補助減少，軌道建設進度多會後移。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "legislative"
@@ -9408,11 +9031,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-9f7a25b1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9429,7 +9048,7 @@
       "updatedDate": "2026-10-06",
       "retrievedAt": "2026-11-12T16:28:27.158Z",
       "summary": "黃香菽在總質詢中對陳其邁提出四個肯定一個期許，稱許其說到做到、做好做滿。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -9508,11 +9127,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a1ec84f5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9529,7 +9144,7 @@
       "updatedDate": "2026-10-04",
       "retrievedAt": "2026-11-12T16:28:18.319Z",
       "summary": "尹立舉行競選總部成立大會，賴瑞隆、鄭英耀與多名立委到場；尹立表示自己是首次參選的新人，選情真的不穩，盼凝聚支持守住左楠關鍵一席。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -9609,11 +9224,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-3fce4524",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9630,7 +9241,7 @@
       "updatedDate": "2026-10-01",
       "retrievedAt": "2026-11-12T16:28:38.818Z",
       "summary": "黃淑美以無黨籍身分再參選三民區市議員，表示自己沒有離開、一直都在，並提及過去處理輪船公司問題的經驗。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -9708,11 +9319,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b5599c4d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9729,7 +9336,7 @@
       "updatedDate": "2026-09-30",
       "retrievedAt": "2026-11-12T16:28:38.886Z",
       "summary": "湯詠瑜在最後一次總質詢後送陳其邁茄冬樹苗，質詢主軸聚焦綠蔭與環境，從人行道、公園到愛河流域規劃。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "local-issue"
@@ -9806,11 +9413,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-ece09ec6",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9827,7 +9430,7 @@
       "updatedDate": "2026-09-27",
       "retrievedAt": "2026-11-12T16:29:08.753Z",
       "summary": "柯志恩在旗山活動被問是否吃旗山香蕉時回答要吃屏東香蕉，引發討論；黃敬雅認為此舉顯示缺乏在地認同。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -9903,11 +9506,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e5a9b739",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -9924,7 +9523,7 @@
       "updatedDate": "2026-09-24",
       "retrievedAt": "2026-11-12T16:28:19.713Z",
       "summary": "柯志恩發文批評永安廢柴山案處理進度；邱俊憲列出市府調查時間軸，表示去年底展開調查、今年2月移送司法。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -10001,11 +9600,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-5aa5ac37",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10022,7 +9617,7 @@
       "updatedDate": "2026-09-23",
       "retrievedAt": "2026-11-12T16:28:38.699Z",
       "summary": "許采蓁在議會質詢指出永安區農地遭堆置大量廢木材，面積接近6座游泳池；環保局長表示已掌握44名行為人，限期年底前改善。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "local-issue"
@@ -10100,11 +9695,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d46a4aa3",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10121,7 +9712,7 @@
       "updatedDate": "2026-09-23",
       "retrievedAt": "2026-11-12T16:28:52.333Z",
       "summary": "李雅靜推出與台北市長蔣萬安的合體看板，成為蔣萬安在高雄首面合體看板。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -10200,11 +9791,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-c58d9ad5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10221,7 +9808,7 @@
       "updatedDate": "2026-09-23",
       "retrievedAt": "2026-11-12T16:28:48.921Z",
       "summary": "李雅靜在鳳山兩處主要路段設置與蔣萬安的合體看板，盼打造北高連線、讓青年不必北漂。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -10299,11 +9886,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-40235ca0",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10320,7 +9903,7 @@
       "updatedDate": "2026-09-22",
       "retrievedAt": "2026-11-12T16:28:38.700Z",
       "summary": "黃裕庭拜票途中協助一名被障礙物絆倒流血的民眾止血並叫救護車；他現任苓雅區仁政里里長，投入第八選區議員選舉。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "local-issue"
@@ -10401,11 +9984,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-be512430",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10422,7 +10001,7 @@
       "updatedDate": "2026-09-19",
       "retrievedAt": "2026-11-12T16:27:38.016Z",
       "summary": "張靜提出交通三箭，主張拆除或遷移高雄火車站前的舊願景館以打通中博大道，並以三公一體為市政主張。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -10500,11 +10079,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-ed7d12f1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10521,7 +10096,7 @@
       "updatedDate": "2026-09-19",
       "retrievedAt": "2026-11-12T16:28:00.426Z",
       "summary": "黃文志在左楠舉辦廟埕音樂會，邀賴瑞隆以神秘嘉賓身分現身演唱台語歌，並隔空邀請陳其邁。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -10600,11 +10175,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b3b69eb0",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10621,7 +10192,7 @@
       "updatedDate": "2026-09-19",
       "retrievedAt": "2026-11-12T16:28:52.972Z",
       "summary": "鍾易仲在議會質詢指出，立法院3月表決147億元治水預算時高雄8席民進黨立委無人投贊成票，賴瑞隆未參加表決；水利局長答詢說明爭取情形。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "legislative"
@@ -10699,11 +10270,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b7c5af86",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10720,7 +10287,7 @@
       "updatedDate": "2026-09-19",
       "retrievedAt": "2026-11-12T16:28:47.476Z",
       "summary": "蘇致榮成立競選總部，賴瑞隆、許智傑、邱志偉、李昆澤、李柏毅、邱議瑩與議長康裕成等到場，鳳山近50名里長出席，現場4千多人。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -10800,11 +10367,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-baa3a220",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10821,7 +10384,7 @@
       "updatedDate": "2026-09-16",
       "retrievedAt": "2026-11-12T16:28:40.384Z",
       "summary": "黃文益在議會關切某私立學校男生進入女廁偷拍事件，建議提高反偷拍稽查頻率並要求校方說明；教育局長表示校方已通報調查。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "legal"
@@ -10898,11 +10461,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-067af0a8",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -10920,7 +10479,7 @@
       "updatedDate": "2026-09-15",
       "retrievedAt": "2026-11-12T16:28:40.020Z",
       "summary": "陳慧文與湯詠瑜在教育部門質詢為特教生發聲，陳慧文要求以合理待遇留住特教學校專案護理師，湯詠瑜要求研議幼兒園園內均化、一班二師優先。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -10996,11 +10555,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-82831226",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11017,7 +10572,7 @@
       "updatedDate": "2026-09-14",
       "retrievedAt": "2026-11-12T16:28:54.052Z",
       "summary": "賴瑞隆以棒球第四棒比喻接棒市政，鍾易仲在藍營鳳山造勢場合稱柯志恩是大聯盟等級的最強棒。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -11094,11 +10649,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4df3f849",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11115,7 +10666,7 @@
       "updatedDate": "2026-09-14",
       "retrievedAt": "2026-11-12T16:29:00.037Z",
       "summary": "陳麗娜質詢指陳其邁任內自償性債務增加、每名市民多背約8500元；市府回應人均負債減少1萬元，並指六都自償性債務增加最多為桃園。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -11192,11 +10743,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d9fe4080",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11213,7 +10760,7 @@
       "updatedDate": "2026-09-14",
       "retrievedAt": "2026-11-12T16:28:53.479Z",
       "summary": "湯茹婷獲國民黨報准參選並接受前議長曾麗燕披彩帶；于仙玲質疑她如何看待曾麗燕的貪污判決與過去主張的改革清廉。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -11293,11 +10840,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-68f8d3a3",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11314,7 +10857,7 @@
       "updatedDate": "2026-09-13",
       "retrievedAt": "2026-11-12T16:28:48.320Z",
       "summary": "徐尚賢發起罷免許智傑、黃捷的雙罷劫活動，涉偽造連署書與提議人名冊；他認罪部分判刑2年、緩刑5年，未認罪部分處5月徒刑得易科罰金，全案仍可上訴。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -11391,11 +10934,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2b5c4d0d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11412,7 +10951,7 @@
       "updatedDate": "2026-09-12",
       "retrievedAt": "2026-11-12T16:28:54.101Z",
       "summary": "湯茹婷在前議長曾麗燕宣布不參選後獲國民黨報准參選，單膝跪地接受曾麗燕披綵帶，柯志恩親授戰旗。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -11493,11 +11032,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-839623a8",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11514,7 +11049,7 @@
       "updatedDate": "2026-09-11",
       "retrievedAt": "2026-11-12T16:28:40.787Z",
       "summary": "湯詠瑜在財經部門質詢提出女力創業、海外研修平權、實習留任追蹤、聖誕商圈串聯與青年AI訂閱補助五項建言。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "legislative"
@@ -11591,11 +11126,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d7960866",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11612,7 +11143,7 @@
       "updatedDate": "2026-09-09",
       "retrievedAt": "2026-11-12T16:28:50.622Z",
       "summary": "李雅靜指出豪雨後路面出現坑洞，基層區公所小型修繕經費告急，呼籲動用預備金並向中央爭取支援。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service",
         "local-issue"
@@ -11689,11 +11220,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-c93b8dfb",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11710,7 +11237,7 @@
       "updatedDate": "2026-09-08",
       "retrievedAt": "2026-11-12T16:28:32.161Z",
       "summary": "曾俊傑質詢指出高雄公共樹灑葬園區因土壤改良時間不足而接近休耕，建議納入第一殯儀館改造計畫。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -11784,11 +11311,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-3b09f27b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11805,7 +11328,7 @@
       "updatedDate": "2026-09-08",
       "retrievedAt": "2026-11-12T16:28:21.079Z",
       "summary": "球迷反映澄清湖棒球場哺乳室只有電風扇，邱俊憲向運發局爭取後，哺乳室已裝設冷氣。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "public-service"
@@ -11883,11 +11406,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-7299cd28",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -11904,7 +11423,7 @@
       "updatedDate": "2026-09-07",
       "retrievedAt": "2026-11-12T16:28:21.926Z",
       "summary": "柯志恩發文支持庇護工場訂單，邱俊憲回應指造成弱勢團體困擾的是藍白政黨，並認為從財劃法到中秋禮盒事件都應接受檢驗。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -11980,11 +11499,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-32c8370c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12001,7 +11516,7 @@
       "updatedDate": "2026-09-07",
       "retrievedAt": "2026-11-12T16:28:20.937Z",
       "summary": "高雄市議員第六選區出現同額競選，4席現任議員登記爭取連任；簡煥宗表示仍會站路口拜票、戰戰兢兢。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -12081,11 +11596,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-2f53979e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12102,7 +11613,7 @@
       "updatedDate": "2026-09-07",
       "retrievedAt": "2026-11-12T16:28:49.943Z",
       "summary": "陳慧文與黃敬雅在鳳山、前鎮交界的媽祖港橋站路口拜票，跨區聯手爭取選民認同。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -12179,11 +11690,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-be84b632",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12201,7 +11708,7 @@
       "updatedDate": "2026-09-04",
       "retrievedAt": "2026-11-12T16:28:39.297Z",
       "summary": "前議員黃紹庭因案停職後由妹妹黃鈺婷接棒參選第八選區，與同黨同選區的黃裕庭名字相近，成為地方話題。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -12281,11 +11788,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6ec3c4a2",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12302,7 +11805,7 @@
       "updatedDate": "2026-09-04",
       "retrievedAt": "2026-11-12T16:27:56.968Z",
       "summary": "83歲的蔣黃女為守護橋頭森林登記參選第三選區市議員，由兒子蔣耀賢與森林城市協會莊傑任陪同。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -12381,11 +11884,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e2569c4e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12402,7 +11901,7 @@
       "updatedDate": "2026-09-04",
       "retrievedAt": "2026-11-12T16:27:57.969Z",
       "summary": "前副議長陸淑美不再競選連任，交棒女兒黃韻涵參選大岡山區；黃韻涵在國民黨團KK連線陪同下完成登記。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -12481,11 +11980,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-27e6039f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12502,7 +11997,7 @@
       "updatedDate": "2026-09-04",
       "retrievedAt": "2026-11-12T16:27:38.413Z",
       "summary": "洪方隆登記參選高雄市長，提出台灣面臨的七大核心問題，主張政治責任化、政見應受檢驗並設懲罰機制。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -12579,11 +12074,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-916940e0",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12600,7 +12091,7 @@
       "updatedDate": "2026-09-04",
       "retrievedAt": "2026-11-12T16:28:42.264Z",
       "summary": "高雄市議員選舉有多位素人登記，第10選區公民老師張藝璉稱參選是學習與增加閱歷，第8選區退役軍官鄒約翰表示要為基層勞工發聲。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -12677,11 +12168,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a984e0f1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12699,7 +12186,7 @@
       "updatedDate": "2026-09-03",
       "retrievedAt": "2026-11-12T16:28:11.449Z",
       "summary": "台灣前進推薦于仙玲參選前鎮小港、薛兆基參選左營楠梓，台灣基進與小民參政歐巴桑聯盟代表到場站台。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -12777,11 +12264,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a0321b0c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12798,7 +12281,7 @@
       "updatedDate": "2026-09-03",
       "retrievedAt": "2026-11-12T16:28:28.390Z",
       "summary": "康裕成、鄭孟洳與何權峰聯合登記，喊出團結拚過半、三民全壘打；賴瑞隆到場表示三人長期服務地方。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -12877,11 +12360,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-fea0f199",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12898,7 +12377,7 @@
       "updatedDate": "2026-09-02",
       "retrievedAt": "2026-11-12T16:28:34.309Z",
       "summary": "高雄三民區議員席次由7席增至8席，無黨籍副議長曾俊傑身穿綠營外套出席賴瑞隆登記記者會，動向受關注。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -12977,11 +12456,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e7ac5977",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -12998,7 +12473,7 @@
       "updatedDate": "2026-09-02",
       "retrievedAt": "2026-11-12T16:28:55.288Z",
       "summary": "鍾易仲持續追蹤鳳翔公園垃圾山整治，副市長林欽榮在議會肯定其質詢促使市府由簡易修繕轉為全面整治開發。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "legislative"
@@ -13077,11 +12552,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-fcd00ab1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13098,7 +12569,7 @@
       "updatedDate": "2026-09-01",
       "retrievedAt": "2026-11-12T16:28:04.423Z",
       "summary": "李眉蓁質詢追蹤高捷紫線進度，指可行性評估已近2年、路線由36公里29站縮減為25公里23站；陳其邁答詢表示進度尚順利，將再與交通部協調。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "legislative"
@@ -13175,11 +12646,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b8ea5560",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13196,7 +12663,7 @@
       "updatedDate": "2026-09-01",
       "retrievedAt": "2026-11-12T16:28:55.644Z",
       "summary": "前議長曾麗燕疑因涉詐領助理費案未獲國民黨提名，表態不參選；國民黨證實湯茹婷已入黨並獲報准參選前鎮小港區。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -13275,11 +12742,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-0b3f7bb1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13296,7 +12759,7 @@
       "updatedDate": "2026-09-01",
       "retrievedAt": "2026-11-12T16:28:29.143Z",
       "summary": "黃香菽在質詢中肯定陳其邁6年施政成果，並指出市民對市長任期最後階段仍有四個期待。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -13374,11 +12837,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-834b1811",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13395,7 +12854,7 @@
       "updatedDate": "2026-08-31",
       "retrievedAt": "2026-11-12T16:28:22.844Z",
       "summary": "高雄市長與市議員選舉開始登記，爭取4連任的邱俊憲在妻女陪同下搶頭香完成登記。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -13475,11 +12934,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-1bd94522",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13496,7 +12951,7 @@
       "updatedDate": "2026-08-31",
       "retrievedAt": "2026-11-12T16:28:22.518Z",
       "summary": "高雄市議員選舉登記首日13人完成，邱俊憲搶得頭香；選委會統計各選區完成登記者名單。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -13574,11 +13029,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-fd987fab",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13595,7 +13046,7 @@
       "updatedDate": "2026-08-25",
       "retrievedAt": "2026-11-12T16:28:25.065Z",
       "summary": "高雄鼓山區多處在豪雨中積淹水，陳美雅指出同樣地點一再淹水，要求市府說明問題所在。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "local-issue"
       ],
@@ -13672,11 +13123,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-79f73dc9",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13693,7 +13140,7 @@
       "updatedDate": "2026-08-22",
       "retrievedAt": "2026-11-12T16:28:25.713Z",
       "summary": "陳美雅質疑中央補助2700萬元的鼓山三路抽水站6月才完工又淹水，要求市府提出系統性防洪方案並檢討。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "local-issue"
@@ -13770,11 +13217,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-04f6db07",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13791,7 +13234,7 @@
       "updatedDate": "2026-08-15",
       "retrievedAt": "2026-11-12T16:28:26.500Z",
       "summary": "陳美雅指三民運動中心啟用後出現跑步機數量不足、水質與廁所異味等問題，質疑追加3.64億元經費的用途。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy"
       ],
@@ -13867,11 +13310,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-30285835",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13888,7 +13327,7 @@
       "updatedDate": "2026-08-14",
       "retrievedAt": "2026-11-12T16:28:03.232Z",
       "summary": "黃文志掛出新看板寫著「好徛起」，說明這是台語日常起居、立足之意，希望讓民眾知道學台語是很酷的事。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "public-service"
@@ -13967,11 +13406,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d15845ab",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -13988,7 +13423,7 @@
       "updatedDate": "2026-08-11",
       "retrievedAt": "2026-11-12T16:27:48.660Z",
       "summary": "柯志恩在Threads貼出與川湖科技董事長林聰吉的合照引發討論；黃明太表示林聰吉為人低調、無特定政治傾向。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -14066,11 +13501,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b2e76528",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14087,7 +13518,7 @@
       "updatedDate": "2026-08-11",
       "retrievedAt": "2026-11-12T16:28:04.742Z",
       "summary": "傅崐萁缺席總預算朝野協商，韓國瑜提醒君子務本；白喬茵表示希望這番話能點醒黨內許多人。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy"
       ],
@@ -14163,11 +13594,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d5a9c0a8",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14184,7 +13611,7 @@
       "updatedDate": "2026-08-10",
       "retrievedAt": "2026-11-12T16:28:50.648Z",
       "summary": "高雄1至7月毒駕事故87件、較去年同期增加44件，蘇致榮提出執法、教育、科技、輔導四管齊下防制。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -14259,11 +13686,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d385b039",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14280,7 +13703,7 @@
       "updatedDate": "2026-08-09",
       "retrievedAt": "2026-11-12T16:29:03.340Z",
       "summary": "陳麗娜接任國民黨文傳會發言人，表示要為正義直言、為南部發聲；黃敬雅質疑其過去對追蹤器事件的說法。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -14357,11 +13780,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-c9bde919",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14378,7 +13797,7 @@
       "updatedDate": "2026-08-08",
       "retrievedAt": "2026-11-12T16:29:04.016Z",
       "summary": "鄭光峰的女兒鄭潔安就讀高雄醫學大學後醫學系，去年赴美實習，他談及女兒的醫學養成歷程。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -14454,11 +13873,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d7fd2c47",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14475,7 +13890,7 @@
       "updatedDate": "2026-08-06",
       "retrievedAt": "2026-11-12T16:29:04.512Z",
       "summary": "上市營建公司董事長陳武聰捐贈300萬元協助百年媽祖廟慈明宮，鄭光峰稱其為孟嘗君，肯定企業回饋地方。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service"
       ],
@@ -14551,11 +13966,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-94c4b0a3",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14572,7 +13983,7 @@
       "updatedDate": "2026-07-31",
       "retrievedAt": "2026-11-12T16:28:27.159Z",
       "summary": "新九如橋通車後，陳美雅指居民反映施工期間的不便，並要求市府說明工程品質、設計變更與防洪規劃。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "local-issue",
         "career"
@@ -14649,11 +14060,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-60393b6d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14670,7 +14077,7 @@
       "updatedDate": "2026-07-30",
       "retrievedAt": "2026-11-12T16:28:06.190Z",
       "summary": "九如橋護欄顏色爭議後通車典禮取消，白喬茵到場發現署名議長康裕成、日期7月31日的鎖頭，猜測是為通車典禮預先安裝。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -14747,11 +14154,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-40815faa",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14768,7 +14171,7 @@
       "updatedDate": "2026-07-28",
       "retrievedAt": "2026-11-12T16:28:58.447Z",
       "summary": "大林蒲遷村議題引發前鎮小港選區攻防，黃敬雅指國民黨執政留下污染問題，湯茹婷回應指對方空降地方、只打口水戰。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -14847,11 +14250,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d7ee082f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14868,7 +14267,7 @@
       "updatedDate": "2026-07-20",
       "retrievedAt": "2026-11-12T16:28:59.782Z",
       "summary": "食用油檢出苯駢芘引發關注，鄭光峰認為台灣食安過度依賴末端抽驗，主張建立原料、製程與成品三級管理。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -14943,11 +14342,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d37e2d3c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -14964,7 +14359,7 @@
       "updatedDate": "2026-07-19",
       "retrievedAt": "2026-11-12T16:27:49.270Z",
       "summary": "阿蓮中路多功能活動中心揭牌，黃明太指出建造經費全由路竹衛生掩埋場回饋金支應，認為市府虧待中路居民，將在總質詢提出。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "local-issue"
@@ -15044,11 +14439,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-5c1b0579",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15065,7 +14456,7 @@
       "updatedDate": "2026-07-15",
       "retrievedAt": "2026-11-12T16:28:02.574Z",
       "summary": "柳淑芳宣告將參選左楠區市議員，這是她第8度投入選舉，訴求拚幸福、護台灣。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -15144,11 +14535,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6a503060",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15165,7 +14552,7 @@
       "updatedDate": "2026-07-07",
       "retrievedAt": "2026-11-12T16:29:04.432Z",
       "summary": "吳昱鋒認為高雄可發展無人船產業，指出前鎮、小港在產官學具關鍵動能，並說明無人船所需的浮力控制、推進與複合材料等工藝。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -15243,11 +14630,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d2365a3a",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15264,7 +14647,7 @@
       "updatedDate": "2026-07-01",
       "retrievedAt": "2026-11-12T16:28:09.011Z",
       "summary": "高雄在路口試辦遮陽傘引發種樹與種傘的討論，李雅慧認為兩者可互補。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy"
       ],
@@ -15340,11 +14723,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-87ad71c2",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15361,7 +14740,7 @@
       "updatedDate": "2026-06-27",
       "retrievedAt": "2026-11-12T16:28:39.992Z",
       "summary": "黃紹庭涉詐助理費案判刑確定、3年內不得參選，原選區由苓雅區仁政里里長黃裕庭獲國民黨提名參選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -15440,11 +14819,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-5b026ee5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15461,7 +14836,7 @@
       "updatedDate": "2026-06-14",
       "retrievedAt": "2026-11-12T16:27:58.336Z",
       "summary": "黃韻涵成立競選總部，柯志恩為她披掛綵帶，母親、前副議長陸淑美象徵性交棒；第三選區應選5席。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -15544,11 +14919,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-887e281b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15565,7 +14936,7 @@
       "updatedDate": "2026-06-10",
       "retrievedAt": "2026-11-12T16:28:15.798Z",
       "summary": "台灣前進陣線推薦薛兆基參選左營楠梓，他表示推薦不是榮耀時刻而是責任開始，將以感恩謙卑的心情接受。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -15643,11 +15014,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f3a7f29e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15664,7 +15031,7 @@
       "updatedDate": "2026-06-09",
       "retrievedAt": "2026-11-12T16:28:16.449Z",
       "summary": "薛兆基5月以書面提出退黨並代表台灣前進陣線參選，民進黨高市黨部表示違紀參選者仍將面臨除名處分。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -15742,11 +15109,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a314babd",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15763,7 +15126,7 @@
       "updatedDate": "2026-05-25",
       "retrievedAt": "2026-11-12T16:28:44.327Z",
       "summary": "鄭安秝在質詢時詢問官員被罵三字經是否構成霸凌，現場無人舉手；陳其邁答詢表示要看個案，霸凌有成立條件。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -15839,11 +15202,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-8a9c8540",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15860,7 +15219,7 @@
       "updatedDate": "2026-05-23",
       "retrievedAt": "2026-11-12T16:28:43.028Z",
       "summary": "民進黨黨職改選投票前夕，身兼市議員與高市黨部主委的黃文益表示經過整體選戰布局考量，決定不競選下一屆主委。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -15941,11 +15300,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-caff5422",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -15962,7 +15317,7 @@
       "updatedDate": "2026-05-18",
       "retrievedAt": "2026-11-12T16:27:42.195Z",
       "summary": "李振豪掛上與國民黨主席鄭麗文、市長參選人柯志恩的合體看板，這是鄭麗文在高雄與市議員參選人合體的首面看板。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16038,11 +15393,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-bee7a87f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16059,7 +15410,7 @@
       "updatedDate": "2026-05-16",
       "retrievedAt": "2026-11-12T16:28:49.229Z",
       "summary": "民眾黨鳳山區議員初選競爭，徐尚賢表示希望依全民調制度公平競爭、不會退選，並駁斥外界指其雙罷劫官司將影響參選資格的說法。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16136,11 +15487,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-ba9c76af",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16157,7 +15504,7 @@
       "updatedDate": "2026-05-06",
       "retrievedAt": "2026-11-12T16:28:06.437Z",
       "summary": "李眉蓁在社群發布高雄左營區福山國中、新莊高中外牆老鼠出沒影片，稱高雄跟得上潮流，貼文引來網友批評。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "local-issue"
       ],
@@ -16234,11 +15581,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-df97dc56",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16255,7 +15598,7 @@
       "updatedDate": "2026-04-30",
       "retrievedAt": "2026-11-12T16:28:50.278Z",
       "summary": "許雅筑宣布接受民眾黨徵召、傳出可能投入鳳山區，已在鳳山備戰的徐尚賢表示，除非經全民調淘汰，否則不會退縮或放棄。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16332,11 +15675,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4d772e2d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16353,7 +15692,7 @@
       "updatedDate": "2026-04-23",
       "retrievedAt": "2026-11-12T16:28:31.446Z",
       "summary": "高雄三民區議員選戰再現2022年對決組合，張博洋以無黨籍身分爭取連任，林于凱轉披民眾黨戰袍，童燕珍也捲土重來。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -16432,11 +15771,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-835f1567",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16453,7 +15788,7 @@
       "updatedDate": "2026-04-22",
       "retrievedAt": "2026-11-12T16:28:27.356Z",
       "summary": "童燕珍在國民黨三民區初選勝出取得第3席提名，她評估該區為泛綠6席對泛藍4席、10人搶8席，國民黨約有3席半空間。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16531,11 +15866,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-167f102b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16552,7 +15883,7 @@
       "updatedDate": "2026-04-22",
       "retrievedAt": "2026-11-12T16:28:28.079Z",
       "summary": "國民黨高雄市議員第七選區初選民調結果公布，前議員童燕珍以明顯差距擊敗中央委員孫健萍，成為該區第3席提名。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16632,11 +15963,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-aee7ce35",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16653,7 +15980,7 @@
       "updatedDate": "2026-04-22",
       "retrievedAt": "2026-11-12T16:28:31.920Z",
       "summary": "國民黨三民區初選民調由童燕珍以82.821%對孫健萍的22.332%勝出，市黨部將依結果提報中央提名人選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16731,11 +16058,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-ec5adcea",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16752,7 +16075,7 @@
       "updatedDate": "2026-04-19",
       "retrievedAt": "2026-11-12T16:28:35.125Z",
       "summary": "黃柏霖協助將200組電腦從台灣運到奈及利亞，供藍寶石基金會中心推動智慧光明燈計畫，協助當地青年提升資訊能力。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "public-service"
       ],
@@ -16828,11 +16151,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d0c04396",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16849,7 +16168,7 @@
       "updatedDate": "2026-04-09",
       "retrievedAt": "2026-11-12T16:28:28.767Z",
       "summary": "國民黨高市黨部宣布第七選區（三民區）提名出現競爭，4月19日進行初選民調，由童燕珍與孫健萍爭取第3席提名。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -16928,11 +16247,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-bea6cf17",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -16949,7 +16264,7 @@
       "updatedDate": "2026-04-08",
       "retrievedAt": "2026-11-12T16:28:53.723Z",
       "summary": "鄧巧佩的選舉看板遭人以鑰匙刮損，前鎮分局查緝顏姓男子到案並依毀損等罪嫌送辦；鄧巧佩表示選舉競爭不應破壞合法文宣。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -17027,11 +16342,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-19663333",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17048,7 +16359,7 @@
       "updatedDate": "2026-04-08",
       "retrievedAt": "2026-11-12T16:27:59.266Z",
       "summary": "黃韻涵主張國民黨應以議會過半為目標、藍白合作並採高額提名，並認為對有案在身的人選應採更高標準。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legislative"
@@ -17129,11 +16440,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-94fb560e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17150,7 +16457,7 @@
       "updatedDate": "2026-04-07",
       "retrievedAt": "2026-11-12T16:28:54.508Z",
       "summary": "鄧巧佩位於公正路口的公車站牌選舉廣告遭人將雙眼、嘴巴塗白，她已到派出所完成筆錄，警方將調閱監視器追查。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -17227,11 +16534,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4a9c9aa1",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17248,7 +16551,7 @@
       "updatedDate": "2026-04-01",
       "retrievedAt": "2026-11-12T16:27:49.968Z",
       "summary": "黃明太在議會關切高雄傳統產業關廠家數，質疑市府未顧及傳產業者生計；陳其邁答詢表示粗估約10多家廠商可能關廠，會持續關注。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -17324,11 +16627,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f44f47a7",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17345,7 +16644,7 @@
       "updatedDate": "2026-03-30",
       "retrievedAt": "2026-11-12T16:28:57.577Z",
       "summary": "台灣前進陣線公布議員提名，于仙玲第三度參選高雄市議員，訴求打破長期壟斷地方的派系與金權政治，爭取前鎮小港選民支持。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -17424,11 +16723,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-bacecbff",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17445,7 +16740,7 @@
       "updatedDate": "2026-03-26",
       "retrievedAt": "2026-11-12T16:28:50.959Z",
       "summary": "針對柯文哲京華城等案一審判決，徐尚賢認為這是對在野陣營的強烈訊號、會讓泛藍泛白更團結，並批評該判決是司法迫害。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -17522,11 +16817,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-31eb6823",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17544,7 +16835,7 @@
       "updatedDate": null,
       "retrievedAt": "2026-11-12T16:28:25.128Z",
       "summary": "民進黨高雄第六選區（旗津、鼓山、鹽埕）初選民調結果，李喬如與簡煥宗分居前兩名出線，新人林哲弘落馬。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -17623,11 +16914,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-9b72d053",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17718,13 +17005,9 @@
       },
       "publication": {
         "status": "blocked-verification",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b4c5d1a3",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
         "blockers": [
           "editorial-exclusion:wrong-person: 報導對象為南投縣政府人事處長李政憲，非高雄市第10選舉區候選人"
-        ],
-        "origin": "automated-policy"
+        ]
       }
     },
     {
@@ -17741,7 +17024,7 @@
       "updatedDate": "2026-02-25",
       "retrievedAt": "2026-11-12T16:28:51.802Z",
       "summary": "報導指民眾黨力拚高雄市議員席次，林于凱改披民眾黨戰袍，徐尚賢等4名參選人浮出檯面，布局涵蓋左楠、三民、鳳山、前鎮小港等選區。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -17821,11 +17104,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-15a331a0",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17842,7 +17121,7 @@
       "updatedDate": "2026-02-06",
       "retrievedAt": "2026-11-12T16:27:52.667Z",
       "summary": "六連霸議員陳明澤交棒女兒陳琳潔參選第二選區，陳琳潔具台灣與美國會計師資格，已完成民進黨黨內初選登記。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -17920,11 +17199,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b2a302dd",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -17941,7 +17216,7 @@
       "updatedDate": "2026-01-14",
       "retrievedAt": "2026-11-12T16:28:08.292Z",
       "summary": "媒體報導指陳玫娟涉及票據與簽賭糾紛，她否認簽賭，表示當初是答應王姓婦人借名登記辦理房貸，並委託律師發聲明。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -18019,11 +17294,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-b8c0bb6c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18040,7 +17311,7 @@
       "updatedDate": "2025-11-06",
       "retrievedAt": "2026-11-12T16:28:36.598Z",
       "summary": "曾任4屆議員、前高雄輪船公司董事長的黃淑美宣布參選三民區議員，她任內推動改革並將涉舞弊同仁送政風查察。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -18120,11 +17391,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-0bc11a91",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18141,7 +17408,7 @@
       "updatedDate": "2025-11-04",
       "retrievedAt": "2026-11-12T16:28:03.273Z",
       "summary": "常在路口舉牌宣示反共愛台理念、被網友稱為舉牌姐的柳淑芳表示，正認真考慮再次參選高雄市議員；她過去曾7度參選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -18219,11 +17486,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6b21bc24",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18240,7 +17503,7 @@
       "updatedDate": "2025-09-22",
       "retrievedAt": "2026-11-12T16:28:53.181Z",
       "summary": "徐尚賢因雙罷劫案涉個資法與偽造私文書遭起訴，他表示為避免再困擾參與民眾，決定放棄各項抗辯、接受法官判決。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -18314,11 +17577,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-819be747",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18335,7 +17594,7 @@
       "updatedDate": "2025-08-19",
       "retrievedAt": "2026-11-12T16:28:53.902Z",
       "summary": "徐尚賢涉偽造私文書與非法利用個人資料案，高雄地院裁定100萬元交保，並限制住居、禁止出境出海8個月。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -18409,11 +17668,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a96ceee9",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18430,7 +17685,7 @@
       "updatedDate": "2025-08-03",
       "retrievedAt": "2026-11-12T16:27:52.238Z",
       "summary": "黃明太透過臉書聲援王世堅，表示黨內若有60個王世堅，立法院怎會不過半；他先前在議會質疑大罷免而引發黨內批評。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative",
         "election"
@@ -18508,11 +17763,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-50ba77d8",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18529,7 +17780,7 @@
       "updatedDate": "2025-08-02",
       "retrievedAt": "2026-11-12T16:29:18.435Z",
       "summary": "高忠德指出南橫公路96K至100K路段每逢強降雨即中斷，認為僅靠疏濬無效，建議進行路基抬升10公尺等根本改善工程。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "local-issue",
         "policy"
@@ -18606,11 +17857,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f79e456e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18627,7 +17874,7 @@
       "updatedDate": "2025-07-31",
       "retrievedAt": "2026-11-12T16:29:19.296Z",
       "summary": "高雄一家五口連人帶車墜落山谷，高忠德證實遇難者為其外孫姪女，吳女家境清寒，他盼外界協助倖存的14歲少年完成學業。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -18703,11 +17950,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4b251995",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18724,7 +17967,7 @@
       "updatedDate": "2025-06-17",
       "retrievedAt": "2026-11-12T16:28:54.602Z",
       "summary": "雄檢偵辦雙罷劫涉幽靈連署案，徐尚賢否認涉案，高雄地院裁定續押2個月並禁止接見通信；中選會資料顯示兩案連署均有死亡連署情形。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -18799,11 +18042,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a2a4acec",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18820,7 +18059,7 @@
       "updatedDate": "2025-06-16",
       "retrievedAt": "2026-11-12T16:28:55.476Z",
       "summary": "徐尚賢涉偽造文書等罪嫌遭羈押禁見，2個月羈押期將屆，檢方聲請延押，高雄地院開庭後最晚於6月18日前裁定。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -18894,11 +18133,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-01a2a985",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -18915,7 +18150,7 @@
       "updatedDate": "2025-06-06",
       "retrievedAt": "2026-11-12T16:28:56.160Z",
       "summary": "雙罷劫團隊內部發生爭執，徐尚賢父親徐國祥澄清沒有趕走志工，指領銜人朱磊自行決定帶走連署書，志工隨後離開。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -18989,11 +18224,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-6784ab72",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19010,7 +18241,7 @@
       "updatedDate": "2025-06-05",
       "retrievedAt": "2026-11-12T16:28:57.047Z",
       "summary": "雙罷劫負責人徐尚賢遭羈押後團隊內鬨，其父拉下總部鐵門請志工離開並驚動警方，領銜人朱磊帶走第二階段連署書。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "other"
       ],
@@ -19085,11 +18316,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-92574b8c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19106,7 +18333,7 @@
       "updatedDate": "2025-05-22",
       "retrievedAt": "2026-11-12T16:27:59.906Z",
       "summary": "從政40年、曾任高雄市議會副議長的陸淑美宣布下屆不參選，交棒女兒黃韻涵投入高雄市議員選舉。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -19192,11 +18419,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d9850cf5",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19213,7 +18436,7 @@
       "updatedDate": "2025-04-09",
       "retrievedAt": "2026-11-12T16:27:53.839Z",
       "summary": "黃明太因質疑大罷免引發綠營支持者批評，他在議會質詢時表示被要求滾出民進黨、甚至滾出台灣並不理性，盼大家平常心看待建議。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -19291,11 +18514,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-7bd81b47",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19312,7 +18531,7 @@
       "updatedDate": "2025-04-01",
       "retrievedAt": "2026-11-12T16:27:54.688Z",
       "summary": "黃明太反對大罷免，政治評論員溫朗東質疑他一邊靠綠營本土票當選、一邊配合中國批評賴清德，並問他何不披藍袍參選。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "policy"
@@ -19391,11 +18610,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-1a41136f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19412,7 +18627,7 @@
       "updatedDate": "2025-03-27",
       "retrievedAt": "2026-11-12T16:29:18.752Z",
       "summary": "高雄市府去年採購203台農用搬運車補助茂林、桃源、那瑪夏族人，陳幸富爭取今年續辦，農業局長允諾向市長報告爭取補助。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "policy",
         "public-service"
@@ -19491,11 +18706,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-85998f44",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19512,7 +18723,7 @@
       "updatedDate": "2025-02-08",
       "retrievedAt": "2026-11-12T16:28:01.379Z",
       "summary": "有8連霸紀錄的高市議員陸淑美傳出將交棒女兒黃韻涵，黃韻涵證實將挑戰下屆高雄市議員選舉。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "career"
@@ -19592,11 +18803,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e5134ce7",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19613,7 +18820,7 @@
       "updatedDate": "2024-11-29",
       "retrievedAt": "2026-11-12T16:29:03.734Z",
       "summary": "吳銘賜被控以善行包裝賄選，一、二審均判無罪；他反告調查員與員警製作不實筆錄求償360萬元，法官認為無故意而判他敗訴。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -19689,11 +18896,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e1b58a46",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19710,7 +18913,7 @@
       "updatedDate": "2024-11-21",
       "retrievedAt": "2026-11-12T16:29:04.425Z",
       "summary": "吳銘賜質疑市府以交通罰款收入支應車輛偵測器與路況監視器電費，認為罰單無助交通安全；交通局長答詢表示與交通安全有關。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -19785,11 +18988,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4c6a7188",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19806,7 +19005,7 @@
       "updatedDate": "2024-10-09",
       "retrievedAt": "2026-11-12T16:29:12.773Z",
       "summary": "王耀裕質疑陳其邁到林園勘災只通知綠營民代，批評勘災分藍綠；對於當晚到墾丁的質疑，他澄清是到枋山敬酒。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legislative"
       ],
@@ -19883,11 +19082,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d8356c26",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -19904,7 +19099,7 @@
       "updatedDate": "2024-06-21",
       "retrievedAt": "2026-11-12T16:27:50.066Z",
       "summary": "鄭東元被控在競選期間席開19桌舉辦問政說明會涉賄選，橋頭地院認為出席者多非選區選民、難認影響投票行為，判他與競選幹部無罪。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -19983,11 +19178,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-475b4ed4",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20004,7 +19195,7 @@
       "updatedDate": "2024-02-22",
       "retrievedAt": "2026-11-12T16:29:09.773Z",
       "summary": "黃天煌被控透過樁腳招待選民用餐，檢方提起當選無效之訴，一審判黃勝訴，高分院二審仍判當選有效並定讞。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -20082,11 +19273,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4b9a7f2c",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20103,7 +19290,7 @@
       "updatedDate": "2024-02-21",
       "retrievedAt": "2026-11-12T16:29:10.388Z",
       "summary": "檢方指黃天煌競選總部成立時由樁腳邀約選民參加並載往餐廳用餐，提起當選無效之訴；高分院判決當選有效定讞。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -20181,11 +19368,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-4b98e104",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20202,7 +19385,7 @@
       "updatedDate": "2023-12-15",
       "retrievedAt": "2026-11-12T16:28:22.495Z",
       "summary": "陳若翠散發文宣指對手林岱樺政治獻金增加、財富暴漲，林岱樺反駁並委託律師蒐證，準備提出加重誹謗及違反選罷法告訴。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -20281,11 +19464,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-d902e3f0",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20302,7 +19481,7 @@
       "updatedDate": "2023-12-14",
       "retrievedAt": "2026-11-12T16:28:23.078Z",
       "summary": "陳若翠質疑林岱樺上屆政治獻金近4700萬元的用途，邀對方一起公布募款用途；林岱樺已就文宣內容提告。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election",
         "legal"
@@ -20381,11 +19560,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-e619835f",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20402,7 +19577,7 @@
       "updatedDate": "2023-12-01",
       "retrievedAt": "2026-11-12T16:28:14.371Z",
       "summary": "陳惠君被控以募款餐會名義無償宴請選民，法院查出餐會由90桌降到13桌、參與者多為親友與無選舉權者，判她與幹部無罪。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -20480,11 +19655,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-3d850072",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20501,7 +19672,7 @@
       "updatedDate": "2023-11-25",
       "retrievedAt": "2026-11-12T16:28:04.099Z",
       "summary": "柳淑芳在立委登記前宣告不再參選，表示雖不參選仍會站路口為台獨發聲；她曾7度參選立委、議員與里長。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -20577,11 +19748,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-21fae381",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20598,7 +19765,7 @@
       "updatedDate": "2023-11-11",
       "retrievedAt": "2026-11-12T16:28:04.962Z",
       "summary": "柳淑芳受訪表示因負債累累、為了尊嚴生活不再參選；她曾7度參選，選區在左營楠梓。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -20676,11 +19843,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-a823311b",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20697,7 +19860,7 @@
       "updatedDate": "2023-09-29",
       "retrievedAt": "2026-11-12T16:29:13.910Z",
       "summary": "黃天煌的樁腳被指載送30多名鄉親參加總部成立大會並到東港用餐，雄檢提起當選無效之訴，法官判檢方敗訴，黃表示感謝法官還他清白。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -20776,11 +19939,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-eb60fbfe",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20797,7 +19956,7 @@
       "updatedDate": "2023-01-19",
       "retrievedAt": "2026-11-12T16:28:15.102Z",
       "summary": "橋頭地檢署指陳惠君以募款餐會名義，實際以每桌8000元代價無償宴請13桌具投票權選民，依違反選罷法提起公訴；陳否認犯行。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -20875,11 +20034,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-f39311a6",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20896,7 +20051,7 @@
       "updatedDate": "2023-01-18",
       "retrievedAt": "2026-11-12T16:28:15.687Z",
       "summary": "陳惠君涉以募款餐會名義無償宴請選民，橋頭地檢署依違反選罷法提起公訴；她未當選，案件後續由法院審理。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "election"
@@ -20974,11 +20129,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-463bc2ec",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -20995,7 +20146,7 @@
       "updatedDate": "2022-11-26",
       "retrievedAt": "2026-11-12T16:27:46.793Z",
       "summary": "民進黨「邁向過半大聯盟」7名參選人僅湯詠瑜、黃彥毓當選，林慧欣等4人成為落選頭，她表示會擦乾眼淚繼續努力。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -21074,11 +20225,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-7bbbd0d7",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -21095,7 +20242,7 @@
       "updatedDate": null,
       "retrievedAt": "2026-11-12T16:27:54.658Z",
       "summary": "柯志恩到阿蓮參加李亞築競選總部成立大會，現場近3千人與多位里長到場；柯志恩稱讚李亞築年輕肯拚，呼籲選民支持。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "election"
       ],
@@ -21173,11 +20320,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-0694075d",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -21194,7 +20337,7 @@
       "updatedDate": "2020-01-20",
       "retrievedAt": "2026-11-12T16:27:48.977Z",
       "summary": "立委選舉失利的李柏融帶著汽油瓶與白布條到鳳山行政中心欲向韓國瑜陳情茄萣大排工程，因情緒激動遭警方逮捕，訊後依法送辦。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal",
         "public-service"
@@ -21270,11 +20413,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-99359ffc",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     },
     {
@@ -21291,7 +20430,7 @@
       "updatedDate": "2020-01-20",
       "retrievedAt": "2026-11-12T16:27:49.846Z",
       "summary": "李柏融攜帶汽油到市府鳳山行政中心，稱要向韓國瑜陳情茄萣大排工程，過程中掏出汽油瓶，警方依公共危險罪嫌逮捕偵訊。",
-      "summaryBasis": "editorial",
+      "summaryBasis": "source-summary",
       "topicTags": [
         "legal"
       ],
@@ -21365,11 +20504,7 @@
       },
       "publication": {
         "status": "published",
-        "policyVersion": "news-publication-policy-v1",
-        "decisionId": "news-policy-news-3b63796e",
-        "decidedAt": "2026-11-12T16:45:47.078Z",
-        "blockers": [],
-        "origin": "automated-policy"
+        "blockers": []
       }
     }
   ],
@@ -23628,7 +22763,7 @@
       "candidateId": "official-candidate-2026-district-kaohsiung-council-07-f42af7ef",
       "candidateName": "林彥",
       "districtId": "district-kaohsiung-council-07",
-      "status": "verified-pending-review",
+      "status": "verified-not-published",
       "attempts": [
         {
           "sourceId": "ltn",
@@ -24886,7 +24021,7 @@
       "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
       "candidateName": "李政憲",
       "districtId": "district-kaohsiung-council-10",
-      "status": "verified-pending-review",
+      "status": "verified-not-published",
       "attempts": [
         {
           "sourceId": "ltn",
@@ -26121,10 +25256,5 @@
       ]
     }
   ],
-  "review": {
-    "status": "pending-human-review",
-    "reviewerId": null,
-    "reviewedAt": null,
-    "note": "所有紀錄由自動化政策評估；摘要需經編輯撰寫（data/approved/2026/candidate-news-editorial.json）後才會進入 published。未通過政策者保留於 data/review/2026/candidate-news-review.json。"
-  }
+  "note": "來源發現與獨立重抓驗證結果；未通過驗證的紀錄維持未發布，資料集變更透過 Pull Request 審查。"
 }

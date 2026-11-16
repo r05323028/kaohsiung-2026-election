@@ -83,24 +83,25 @@ export type SourceRetrievalStatus = z.infer<typeof SourceRetrievalStatusSchema>;
 
 export const IdentityStatusSchema = z.enum([
   'resolved',
-  'pending-review',
+  'pending-verification',
   'unresolved',
   'not-applicable',
 ]);
 export type IdentityStatus = z.infer<typeof IdentityStatusSchema>;
 
-export const PolicyReviewStatusSchema = z.enum([
+export const PolicyValidationStatusSchema = z.enum([
   'machine-validated',
-  'pending-human-review',
-  'human-reviewed',
-  'editorially-approved',
+  'pending-verification',
+  'source-backed',
   'rejected',
 ]);
-export type PolicyReviewStatus = z.infer<typeof PolicyReviewStatusSchema>;
+export type PolicyValidationStatus = z.infer<
+  typeof PolicyValidationStatusSchema
+>;
 
 export const PolicyPublicationStatusSchema = z.enum([
-  'withheld-pending-review',
-  'approved-source-backed',
+  'withheld-unverified',
+  'source-backed',
   'rejected',
   'blocked',
 ]);
@@ -202,7 +203,7 @@ export const PolicyRecordSchema = z.object({
     'policy-statement',
   ]),
   verificationStatus: z.literal('machine-validated'),
-  reviewStatus: PolicyReviewStatusSchema,
+  validationStatus: PolicyValidationStatusSchema,
   publicationStatus: PolicyPublicationStatusSchema,
   claimIds: z.array(z.string().min(1)).min(1),
   evidenceIds: z.array(z.string().min(1)).min(1),
@@ -217,7 +218,7 @@ export const CandidatePolicyOutcomeSchema = z.enum([
   'current-or-historical-only',
   'no-verifiable-policy-found',
   'sources-unavailable',
-  'evidence-requires-review',
+  'evidence-requires-verification',
   'candidate-identity-unresolved',
 ]);
 export type CandidatePolicyOutcome = z.infer<
@@ -267,14 +268,11 @@ export type PolicyVerificationDecision = z.infer<
   typeof PolicyVerificationDecisionSchema
 >;
 
-export const PolicyResearchReviewSchema = z.object({
-  // Machine gate: an independent verifier decided every record, and the
-  // deterministic publication gate released only supported records.
-  status: z.enum(['pending-human-review', 'automated-verified']),
-  method: z.literal('automated-verification-gate-v1'),
-  reviewerId: z.null(),
-  reviewedAt: z.null(),
-  approvedPolicyCount: z.number().int().nonnegative(),
+export const PolicyResearchValidationSchema = z.object({
+  // Deterministic verification records which sources support publication.
+  status: z.enum(['pending-verification', 'validated']),
+  method: z.literal('deterministic-verification-v1'),
+  sourceBackedPolicyCount: z.number().int().nonnegative(),
   publishedPolicyCount: z.number().int().nonnegative(),
 });
 
@@ -292,7 +290,7 @@ export const PolicyResearchDatasetSchema = z.object({
   verification: z.array(PolicyVerificationDecisionSchema),
   audits: z.array(CandidatePolicyAuditSchema).length(106),
   conflicts: z.array(PolicyResearchConflictSchema),
-  review: PolicyResearchReviewSchema,
+  validation: PolicyResearchValidationSchema,
 });
 
 export type PolicyResearchDataset = z.infer<typeof PolicyResearchDatasetSchema>;
@@ -400,12 +398,12 @@ export function validatePolicyResearchDataset(
           policy.policyId +
           ' has no independent verification decision.',
       );
-    if (policy.publicationStatus === 'approved-source-backed') {
-      if (policy.reviewStatus !== 'editorially-approved')
+    if (policy.publicationStatus === 'source-backed') {
+      if (policy.validationStatus !== 'source-backed')
         throw new Error(
           'Policy ' +
             policy.policyId +
-            ' is published without editorial approval.',
+            ' is published without source-backed validation.',
         );
       if (decision !== 'verified')
         throw new Error(
@@ -416,7 +414,7 @@ export function validatePolicyResearchDataset(
     }
     if (
       decision !== 'verified' &&
-      policy.publicationStatus !== 'withheld-pending-review' &&
+      policy.publicationStatus !== 'withheld-unverified' &&
       policy.publicationStatus !== 'rejected'
     )
       throw new Error(
@@ -458,15 +456,15 @@ export function validatePolicyResearchDataset(
       );
   }
   const approvedCount = dataset.policies.filter(
-    (policy) => policy.publicationStatus === 'approved-source-backed',
+    (policy) => policy.publicationStatus === 'source-backed',
   ).length;
-  if (dataset.review.approvedPolicyCount !== approvedCount)
+  if (dataset.validation.sourceBackedPolicyCount !== approvedCount)
     throw new Error(
-      'Review approvedPolicyCount does not match the policy inventory.',
+      'Validation sourceBackedPolicyCount does not match the policy inventory.',
     );
-  if (dataset.review.publishedPolicyCount !== approvedCount)
+  if (dataset.validation.publishedPolicyCount !== approvedCount)
     throw new Error(
-      'Review publishedPolicyCount does not match the published inventory.',
+      'Validation publishedPolicyCount does not match the published inventory.',
     );
   return dataset;
 }

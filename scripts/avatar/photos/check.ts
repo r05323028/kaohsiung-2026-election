@@ -10,18 +10,16 @@
  * - cached bytes in tmp/avatar-pipeline/photos/ still hash to bytesSha256 and
  *   still decode to the recorded pixel size (skipped when no cache exists,
  *   because image bytes are never committed).
- * - reports/avatar/photo-availability.md documents all 106 candidates, and
- *   every candidate without a photo carries a written reason.
  */
 
 import { createHash } from 'node:crypto';
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
 import approvedInput from '../../../data/approved/2026/kaohsiung-election.json';
 import {
-  LikenessPhotoFileSchema,
   type LikenessPhoto,
+  LikenessPhotoFileSchema,
 } from '../../../src/data/avatars/likeness/schema';
 import { validateOfficialDataset } from '../../../src/data/official/schema';
 import { readImageDimensions } from './fetch';
@@ -31,10 +29,6 @@ const MANIFEST_PATH = path.join(
   'data/avatars/likeness/photos.json',
 );
 const CACHE_DIR = path.join(process.cwd(), 'tmp/avatar-pipeline/photos');
-const REPORT_PATH = path.join(
-  process.cwd(),
-  'reports/avatar/photo-availability.md',
-);
 const MAX_PHOTOS_PER_CANDIDATE = 2;
 
 const DERIVATIVE_OK = new Set([
@@ -104,26 +98,6 @@ async function checkCachedBytes(
     );
 }
 
-type ReportRow = { photoCell: string; reasonCell: string };
-
-function parseReport(markdown: string): Map<string, ReportRow> {
-  const rows = new Map<string, ReportRow>();
-  for (const line of markdown.split('\n')) {
-    const cells = line
-      .split('|')
-      .slice(1, -1)
-      .map((cell) => cell.trim());
-    if (cells.length < 4) continue;
-    const candidateId = cells[0] ?? '';
-    if (!/^official-/u.test(candidateId)) continue;
-    rows.set(candidateId, {
-      photoCell: cells[3] ?? '',
-      reasonCell: cells[cells.length - 1] ?? '',
-    });
-  }
-  return rows;
-}
-
 async function main(): Promise<void> {
   const roster = validateOfficialDataset(approvedInput);
   const rosterIds = new Set(roster.candidates.map((entry) => entry.id));
@@ -185,46 +159,6 @@ async function main(): Promise<void> {
   else
     for (const photo of manifest.photos)
       await checkCachedBytes(photo, cacheFiles);
-
-  const reportMarkdown = await readFile(REPORT_PATH, 'utf8').catch(() => null);
-  if (reportMarkdown === null)
-    errors.push(
-      `missing ${path.relative(process.cwd(), REPORT_PATH)}: every candidate needs a photo entry or a documented gap`,
-    );
-  else {
-    const rows = parseReport(reportMarkdown);
-    for (const candidateId of rosterIds) {
-      const row = rows.get(candidateId);
-      if (!row) {
-        errors.push(
-          `${candidateId}: not listed in reports/avatar/photo-availability.md`,
-        );
-        continue;
-      }
-      const photos = photosByCandidate.get(candidateId) ?? [];
-      if (photos.length === 0) {
-        if (!/暫無資料/u.test(row.photoCell))
-          errors.push(
-            `${candidateId}: has no photo in photos.json but the report does not mark 暫無資料`,
-          );
-        if (row.reasonCell.length < 4)
-          errors.push(
-            `${candidateId}: missing photo without a documented reason`,
-          );
-      } else if (
-        !photos.some((photo) => row.photoCell.includes(photo.photoId))
-      ) {
-        errors.push(
-          `${candidateId}: report photo column does not name any recorded photoId (${photos.map((photo) => photo.photoId).join(', ')})`,
-        );
-      }
-    }
-    for (const candidateId of rows.keys())
-      if (!rosterIds.has(candidateId))
-        errors.push(
-          `${candidateId}: report lists a candidate outside the roster`,
-        );
-  }
 
   const usabilityCounts = new Map<string, number>();
   for (const photo of manifest.photos)

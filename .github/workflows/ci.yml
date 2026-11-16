@@ -29,7 +29,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      # validate:all covers the 28 data/editorial validators and typecheck.
+      # validate:all is the deterministic offline data gate and includes
+      # typecheck. This required PR check does not perform network I/O.
       - name: Validate datasets and types
         run: npm run validate:all
       - name: Lint
@@ -51,8 +52,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      # One canonical build. validate:profile-copy reads dist/candidates, so it
-      # must run before the non-root build replaces dist.
+      # One canonical PR build. validate:profile-copy reads dist/candidates, so
+      # it must run before the non-root build replaces dist.
       - name: Build and validate profile copy
         run: npm run build:pages
       - name: Static build with a non-root base path

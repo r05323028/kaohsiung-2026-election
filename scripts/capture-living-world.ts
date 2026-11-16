@@ -17,7 +17,7 @@ const baseURL = process.env.CAPTURE_BASE_URL ?? 'http://127.0.0.1:4321';
 const label = process.argv.includes('--label')
   ? (process.argv[process.argv.indexOf('--label') + 1] ?? 'living-world')
   : 'living-world';
-const outDir = join(process.cwd(), 'reports', 'visual', label);
+const outDir = join(process.cwd(), '.cache', 'reports', 'visual', label);
 mkdirSync(outDir, { recursive: true });
 
 const COUNCIL = 'kaohsiung-council-04-23bd0041';
@@ -470,7 +470,7 @@ for (const shot of shots) {
     .getAttribute('data-scene-focus');
   manifest.captures.push({
     ...shot,
-    file: `reports/visual/${label}/${shot.name}.png`,
+    file: `.cache/reports/visual/${label}/${shot.name}.png`,
     dataSceneFocus: dataSceneFocus ?? '',
     evidence,
     capturedAt: new Date().toISOString(),

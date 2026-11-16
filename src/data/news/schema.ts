@@ -3,13 +3,12 @@ import { z } from 'zod';
 /**
  * Candidate news coverage model.
  *
- * Lifecycle: raw discovery -> independent verification -> normalized -> review -> published.
- * Publication is decided by an explicit, fail-closed policy; no sentiment, tone or
- * favourability field exists anywhere in this model, and every article schema is strict
- * so a sentiment-like field cannot be smuggled in.
+ * Lifecycle: raw discovery -> independent verification -> normalized -> published.
+ * Pull Requests review committed source summaries and dataset changes; CI performs
+ * deterministic schema, evidence, identity and neutrality checks. No sentiment,
+ * tone or favourability field exists anywhere in this model.
  */
 
-export const NEWS_POLICY_VERSION = 'news-publication-policy-v1';
 export const NEWS_VERIFIER_VERSION = 'news-verifier-v1';
 export const NEWS_PUBLISHED_DATASET_ID =
   'kaohsiung-2026-candidate-news-published';
@@ -59,18 +58,16 @@ export const NewsVerificationStatusSchema = z.enum([
 ]);
 export const NewsPublicationStatusSchema = z.enum([
   'published',
-  'pending-review',
+  'not-published',
   'blocked-verification',
-  'blocked-policy',
-  'rejected-duplicate',
-  'rejected-irrelevant',
+  'blocked-duplicate',
 ]);
 export const NewsCoverageStatusSchema = z.enum([
   'not-researched',
   'no-results',
   'discovered-unverified',
   'verification-failed',
-  'verified-pending-review',
+  'verified-not-published',
   'published',
 ]);
 export const NewsIdentityRiskSchema = z.enum(['low', 'medium', 'high']);
@@ -126,11 +123,7 @@ export const NewsVerificationSchema = z
 export const NewsPublicationSchema = z
   .object({
     status: NewsPublicationStatusSchema,
-    policyVersion: z.string().min(1),
-    decisionId: z.string().min(1).nullable(),
-    decidedAt: IsoTimestampSchema.nullable(),
     blockers: z.array(z.string().min(1)),
-    origin: z.enum(['human-editorial', 'automated-policy']).nullable(),
   })
   .strict();
 
@@ -148,7 +141,7 @@ export const NewsArticleSchema = z
     retrievedAt: IsoTimestampSchema,
     summary: z.string().min(20).max(240).nullable(),
     summaryBasis: z
-      .enum(['article-metadata', 'headline', 'editorial'])
+      .enum(['article-metadata', 'headline', 'source-summary'])
       .nullable(),
     topicTags: z.array(NewsTopicSchema).min(1),
     contentType: NewsContentTypeSchema,
@@ -203,17 +196,9 @@ export const NewsNormalizedDatasetSchema = z
   .object({
     datasetId: z.literal(NEWS_NORMALIZED_DATASET_ID),
     snapshotDate: NewsDateSchema,
-    policyVersion: z.literal(NEWS_POLICY_VERSION),
     articles: z.array(NewsArticleSchema),
     coverage: z.array(NewsCandidateCoverageSchema),
-    review: z
-      .object({
-        status: z.enum(['pending-human-review', 'partially-reviewed']),
-        reviewerId: z.string().nullable(),
-        reviewedAt: NewsDateSchema.nullable(),
-        note: z.string().min(1),
-      })
-      .strict(),
+    note: z.string().min(1),
   })
   .strict();
 
@@ -221,7 +206,6 @@ export const NewsPublishedDatasetSchema = z
   .object({
     datasetId: z.literal(NEWS_PUBLISHED_DATASET_ID),
     snapshotDate: NewsDateSchema,
-    policyVersion: z.literal(NEWS_POLICY_VERSION),
     generatedAt: IsoTimestampSchema,
     articles: z.array(NewsArticleSchema),
     coverage: z.array(NewsCandidateCoverageSchema),
@@ -332,59 +316,6 @@ export function articleIdFor(url: string): string {
   return 'news-' + hash.toString(16).padStart(8, '0');
 }
 
-export type PublicationPolicyResult = {
-  status: NewsArticle['publication']['status'];
-  blockers: string[];
-};
-
-/**
- * Fail-closed machine publication policy for news metadata. It only ever admits a
- * record that passed an independent live re-fetch, a low-risk identity resolution,
- * a confirmed or URL-derived date, a grounded neutral summary, and a clean dedupe
- * pass. Anything else stays in the review queue with an explicit blocker.
- */
-export function evaluateNewsPublication(
-  article: NewsArticle,
-): PublicationPolicyResult {
-  const blockers: string[] = [];
-  if (article.duplicateOf) blockers.push('duplicate-of:' + article.duplicateOf);
-  if (article.verification.status !== 'verified') {
-    blockers.push('verification-not-passed');
-  }
-  for (const check of article.verification.checks) {
-    if (!check.passed) blockers.push('failed-check:' + check.check);
-  }
-  if (article.identity.namesakeRisk !== 'low') {
-    blockers.push('identity-namesake-risk:' + article.identity.namesakeRisk);
-  }
-  if (article.identity.contextSignals.length === 0) {
-    blockers.push('identity-context-missing');
-  }
-  if (!article.publicationDate) blockers.push('publication-date-missing');
-  if (article.dateStatus === 'conflicting')
-    blockers.push('publication-date-conflicting');
-  if (article.dateStatus === 'missing')
-    blockers.push('publication-date-missing');
-  if (article.summary === null) blockers.push('summary-missing');
-  blockers.push(...summaryNeutralityBlockers(article.summary));
-  if (!/^https?:\/\//.test(article.canonicalUrl)) blockers.push('url-invalid');
-  if (article.evidence.excerpt.length < 20)
-    blockers.push('evidence-excerpt-too-short');
-  if (article.topicTags.length === 0) blockers.push('topic-tags-missing');
-
-  const unique = [...new Set(blockers)];
-  if (unique.length > 0) {
-    const status: NewsArticle['publication']['status'] =
-      article.verification.status !== 'verified'
-        ? 'blocked-verification'
-        : unique.includes('duplicate-of:' + article.duplicateOf)
-          ? 'rejected-duplicate'
-          : 'blocked-policy';
-    return { status, blockers: unique };
-  }
-  return { status: 'published', blockers: [] };
-}
-
 /** Groups syndicated/identical coverage and marks every non-primary copy. */
 export function applyDeduplication(
   articles: readonly NewsArticle[],
@@ -402,7 +333,7 @@ export function applyDeduplication(
         duplicateOf: primary,
         publication: {
           ...article.publication,
-          status: 'rejected-duplicate',
+          status: 'blocked-duplicate',
           blockers: [
             ...new Set([
               ...article.publication.blockers,

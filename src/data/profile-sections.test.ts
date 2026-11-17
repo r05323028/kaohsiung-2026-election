@@ -18,10 +18,15 @@ const publicRecords = (
       ]
     : [];
 
-describe('five-section candidate profile coverage', () => {
+describe('six-section candidate profile coverage', () => {
   it('covers the current canonical candidate roster', () => {
     expect(officialCandidateProfiles).toHaveLength(106);
     expect(candidateProfiles).toHaveLength(officialCandidateProfiles.length);
+    expect(
+      officialCandidateProfiles.every(
+        (candidate) => candidate.propertyDeclaration !== undefined,
+      ),
+    ).toBe(true);
     expect(
       new Set(
         officialCandidateProfiles.map((candidate) => candidate.candidacy.id),
@@ -29,13 +34,14 @@ describe('five-section candidate profile coverage', () => {
     ).toBe(106);
   });
 
-  it('keeps the five section contract and neutral content boundaries', () => {
+  it('keeps the six section contract and neutral content boundaries', () => {
     expect(PROFILE_TABS.map((tab) => tab.label)).toEqual([
       '基本資料',
       '政策主張',
       '相關新聞',
       '從政歷程',
       '家族政商關係',
+      '財產申報',
     ]);
     expect(
       officialCandidateProfiles.some(

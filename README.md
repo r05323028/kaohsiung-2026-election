@@ -10,7 +10,7 @@
 
 - **互動 3D 迷你城市**：38 個行政區的六角地景、港灣與可選擇的候選人角色；WebGL 不可用時有靜態替代。
 - **選舉區探索**：市長與 15 個市議員選區（含平地、山地原住民選區），顯示各區涵蓋的行政區，並區分「行政區」與「選舉區」。
-- **候選人頁面**：基本資料、政策主張、相關新聞、從政歷程、家族政商關係五個分頁。
+- **候選人頁面**：基本資料、政策主張、相關新聞、從政歷程、家族政商關係、財產申報六個分頁。
 - **政策與從政分離**：政策頁只保留未來承諾；已發生的提案、表決、質詢與行政結果歸入從政歷程，同一事實只有一個歸屬。
 - **來源可追溯**：每項事實盡量附來源與日期並連回出處；未驗證、來源不可達或證據不足時標示「暫無資料」，不以空白推論事實。
 - **無障礙替代路徑**：鍵盤操作、reduced motion，以及沒有 WebGL 時的靜態名單與城市預覽。
@@ -63,7 +63,7 @@ npm run build      # 完整離線驗證 + 靜態輸出（數分鐘）
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)：靜態架構、資料流與模組邊界
 - [`docs/DATA_AND_PROVENANCE.md`](docs/DATA_AND_PROVENANCE.md)：來源、快照、身分對帳與資料集
 - [`docs/EDITORIAL_AND_PUBLICATION.md`](docs/EDITORIAL_AND_PUBLICATION.md)：PR 審查、驗證與發布流程
-- [`docs/CANDIDATE_CONTENT.md`](docs/CANDIDATE_CONTENT.md)：五個分頁的內容規則
+- [`docs/CANDIDATE_CONTENT.md`](docs/CANDIDATE_CONTENT.md)：六個分頁的內容規則
 - [`docs/CITY_AND_CHARACTERS.md`](docs/CITY_AND_CHARACTERS.md)：城市、模擬與角色資產
 - [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)：指令、驗證、CI 與測試
 - [`docs/ROADMAP.md`](docs/ROADMAP.md)：現況、下一步與非目標

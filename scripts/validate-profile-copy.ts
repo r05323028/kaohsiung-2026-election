@@ -31,6 +31,7 @@ const requiredTabs = [
   '相關新聞',
   '從政歷程',
   '家族政商關係',
+  '財產申報',
 ];
 const emptyStates = [
   '基本資料：暫無資料',
@@ -304,7 +305,7 @@ writeFileSync(markdownReportPath, markdown);
 console.log(
   'Validated candidate profile copy: ' +
     pages.length +
-    ' pages, five tabs on every page, ' +
+    ' pages, six tabs on every page, ' +
     forbiddenMatches.length +
     ' forbidden visible strings, ' +
     serializedInternalMatches.length +

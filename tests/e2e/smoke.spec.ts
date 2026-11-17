@@ -68,6 +68,58 @@ test('direct candidate URL renders without relying on the city scene', async ({
   ).toBeVisible();
 });
 
+test('candidate property tab exposes the official source link without sensitive fields', async ({
+  page,
+}) => {
+  await page.goto('/candidates/zhang-jing-2026/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '財產申報', exact: true }).click();
+  const property = profile.getByTestId('property-declaration');
+  await expect(property).toBeVisible();
+  await expect(property).toContainText('官方文件已唯一對帳');
+  await expect(
+    property.locator(
+      'a[href="https://pdps-dec.cec.gov.tw/release/formal/files/3379.pdf"]',
+    ),
+  ).toHaveCount(1);
+  await expect(
+    property.locator(
+      'a[href="https://pdps-dec.cec.gov.tw/release/formal/Page5_02.html"]',
+    ),
+  ).toHaveCount(1);
+  const sourceCard = property.locator('.property-declaration-card');
+  await expect(sourceCard).toContainText('只保留連結');
+  await expect(sourceCard).not.toContainText('身分證字號');
+  await expect(sourceCard).not.toContainText('金融帳戶');
+  await expect(sourceCard).not.toContainText('金額');
+});
+
+test('ambiguous property sources stay unassigned and do not imply absence', async ({
+  page,
+}) => {
+  await page.goto('/candidates/kaohsiung-council-14-2e144b34/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '財產申報', exact: true }).click();
+  const property = profile.getByTestId('property-declaration-ambiguous');
+  await expect(property).toBeVisible();
+  await expect(property).toContainText('多筆同名文件');
+  await expect(property).toContainText('不代表沒有財產或沒有申報');
+  await expect(
+    property.locator('a[href*="/release/formal/files/"]'),
+  ).toHaveCount(0);
+  await expect(
+    property.locator(
+      'a[href="https://pdps-dec.cec.gov.tw/release/formal/Page7_02_14.html"]',
+    ),
+  ).toHaveCount(1);
+});
+
 test('candidate family tab shows verified graph details and sources', async ({
   page,
 }) => {
@@ -135,14 +187,14 @@ test('candidate profile tabs support roving keyboard navigation', async ({
   const basicTab = profile.getByRole('tab', { name: '基本資料', exact: true });
   await basicTab.focus();
   await basicTab.press('End');
-  const familyTab = profile.getByRole('tab', {
-    name: '家族政商關係',
+  const propertyTab = profile.getByRole('tab', {
+    name: '財產申報',
     exact: true,
   });
-  await expect(familyTab).toHaveAttribute('aria-selected', 'true');
-  await expect(familyTab).toHaveAttribute('tabindex', '0');
-  await expect(familyTab).toBeFocused();
-  await familyTab.press('Home');
+  await expect(propertyTab).toHaveAttribute('aria-selected', 'true');
+  await expect(propertyTab).toHaveAttribute('tabindex', '0');
+  await expect(propertyTab).toBeFocused();
+  await propertyTab.press('Home');
   await expect(basicTab).toHaveAttribute('aria-selected', 'true');
   await basicTab.press('ArrowRight');
   await expect(
@@ -356,7 +408,7 @@ test('selected public-record profiles expose provenance and neutral gaps', async
   );
 });
 
-test('all five mayor profiles expose five neutral, source-backed sections', async ({
+test('all five mayor profiles expose six neutral, source-backed sections', async ({
   page,
 }) => {
   const candidates = [
@@ -391,7 +443,14 @@ test('all five mayor profiles expose five neutral, source-backed sections', asyn
       birthDate: '1973-11-15',
     },
   ];
-  const tabs = ['基本資料', '政策主張', '相關新聞', '從政歷程', '家族政商關係'];
+  const tabs = [
+    '基本資料',
+    '政策主張',
+    '相關新聞',
+    '從政歷程',
+    '家族政商關係',
+    '財產申報',
+  ];
   for (const candidate of candidates) {
     await page.goto(`/candidates/${candidate.slug}/`);
     const profile = page.getByTestId('profile-tabs');

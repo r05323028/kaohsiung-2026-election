@@ -29,15 +29,22 @@
 | 從政歷程 | data/approved/2026/political-career.json | src/data/political-career/index.ts | 任期、活動、專案、提案、表決 |
 | 政策／歷程分工 | data/approved/2026/policy-career-separation.json | src/data/policy-career/index.ts | 每筆記錄的決定性分類 |
 | 家族政商關係 | data/published/2026/political-family.json | src/data/political-family/ | 親屬與職務各自有來源支持的關係 |
+| 財產申報 | data/published/2026/candidate-property-declarations.json | src/data/property-declarations/index.ts | 中選會官方清單對帳狀態與 URL-only 文件連結，不轉錄敏感欄位 |
 | 角色資產 | data/avatars/、public/assets/avatars/ | src/data/avatars/index.ts | GLB checksum 與安全路徑驗證 |
 
 src/data/fixtures.ts 與 src/data/demo.ts 只供測試、版型與資產驗證，全部標示 isDemo，不會補位正式資料。
+
+### 財產申報資料
+
+財產申報功能只保留中選會公開查閱平台的 HTML 清單快照、URL、擷取時間與 SHA-256；掃描 PDF 不提交、不 OCR，也不把地址、身分證字號、金融帳戶、金額或個別財產標的帶入 normalized、published 或瀏覽器 props。`property-declarations:discover` 是離線、明確的來源對帳指令；`validate:property-declarations` 驗證官方網域、頁面 checksum、候選人／選區／選舉類型與 URL-only 邊界。
+
+同名或來源不唯一時，候選人頁只顯示中性未唯一對帳狀態與官方清單連結，不指定個別 PDF；來源缺失或未唯一對帳不代表沒有財產或沒有申報。只有在 canonical candidate ID、選區與選舉類型脈絡一致時，才顯示單一官方文件連結。
 
 ## 前端結構
 
 - src/layouts/BaseLayout.astro：SEO、導覽、skip link 與 BASE_PATH。
 - src/components/CityExplorer.tsx、CityScene.tsx、src/world/：城市、搜尋、角色與無障礙替代路徑。
-- src/components/ProfileTabs.tsx：基本資料、政策、新聞、從政歷程、家族關係五個分頁。
+- src/components/ProfileTabs.tsx：基本資料、政策、新聞、從政歷程、家族關係、財產申報六個分頁。
 - src/pages/：首頁、候選人、選舉區與開發用 avatar preview；沒有內容審查路由。
 
 ## 離線驗證

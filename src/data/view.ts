@@ -11,6 +11,7 @@ import {
   type PoliticalCareerView,
 } from './political-career';
 import type { PoliticalFamilyReadModel } from './political-family';
+import type { PropertyDeclarationReadModel } from './property-declarations';
 import type { CandidatePublicRecordResearchSummary } from './public-records/enrichment-summary';
 import type { CandidateResearchSummary } from './public-records/research-index';
 import type { PublicRecordBundle } from './public-records/schema';
@@ -62,6 +63,7 @@ export type CandidateProfileView = {
   biography?: BiographyReadModel;
   basicProfile?: BasicProfileReadModel;
   politicalFamily?: PoliticalFamilyReadModel;
+  propertyDeclaration?: PropertyDeclarationReadModel;
   visual: Omit<CharacterVisualConfig, 'isDemo'> & { isDemo?: boolean };
 };
 
@@ -351,6 +353,9 @@ export function toPublicCandidateProfile(
     ...(publicBasicProfile ? { basicProfile: publicBasicProfile } : {}),
     ...(candidate.politicalFamily
       ? { politicalFamily: candidate.politicalFamily }
+      : {}),
+    ...(candidate.propertyDeclaration
+      ? { propertyDeclaration: candidate.propertyDeclaration }
       : {}),
     ...(politicalCareer ? { politicalCareer } : {}),
     ...(policyCareer.commitments.length > 0 ||

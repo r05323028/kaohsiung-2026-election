@@ -1,8 +1,8 @@
 # 候選人內容
 
-本文件規定候選人頁五個分頁各自能放什麼、不能放什麼，以及共同的歸因與中立規則。資料來源、checksum 與 provenance 見 [DATA_AND_PROVENANCE.md](DATA_AND_PROVENANCE.md)；deterministic 閘門與 PR review 見 [EDITORIAL_AND_PUBLICATION.md](EDITORIAL_AND_PUBLICATION.md)。
+本文件規定候選人頁六個分頁各自能放什麼、不能放什麼，以及共同的歸因與中立規則。資料來源、checksum 與 provenance 見 [DATA_AND_PROVENANCE.md](DATA_AND_PROVENANCE.md)；deterministic 閘門與 PR review 見 [EDITORIAL_AND_PUBLICATION.md](EDITORIAL_AND_PUBLICATION.md)。
 
-## 五個分頁
+## 六個分頁
 
 | 分頁 | 只放這些 | 不放這些 | 資料來源 |
 | --- | --- | --- | --- |
@@ -11,6 +11,7 @@
 | 相關新聞 | 標題、媒體、日期、中性摘要、原文連結 | 情緒詞、聲量、好感度、全文轉載、照片 | `candidate-news.json` |
 | 從政歷程 | 公職任期、議會質詢與參與、預算審議、政府專案、立法提案、記名表決 | 學歷、私人企業經歷、黨職、競選承諾、未發生的事 | `political-career.json` |
 | 家族政商關係 | 有來源支持的公開親屬關係，且親屬本身具可查證政治／企業／基金會／非營利職務 | 依姓名、照片或傳聞推論的關係 | `political-family.json` |
+| 財產申報 | 中選會官方公開查閱平台的 URL-only 文件連結與來源對帳狀態 | 地址、身分證字號、金融帳戶、金額、個別財產標的、OCR 文字，以及把缺 link 解讀為沒有申報 | `candidate-property-declarations.json` |
 
 同一事實只能有一個歸屬。政策與歷程以 `policy-career-separation.json` 決定：`policy-commitments`（留政策）、`political-career`（移歷程）、`split-record`（同一來源同時含承諾與行動，拆成兩半）、未完成分類（證據或分類尚未解決，不得發布）。兩邊只以 ID 互指，不複製整段敘述；「相關政治活動」與「相關政策主張」互為跳轉。
 
@@ -69,6 +70,13 @@
 - 更正檔與查核分離：研究或查核檔案發現「關係成立、但某項職務主張過度」時，只能透過 data/research/2026/political-family/verification-corrections.json 記錄移除的職務、理由、重讀來源與更正後職務，不得改寫獨立查核輸出。generator 套用後重算關係 ID 並輸出 .cache/reports/political-family-corrections.json；validator 要求更正後的關係為 verified、職務來源存在、移除的主張不再出現，且候選人研究狀態與更正一致。此為來源更正紀錄，不是內容審查或核准狀態。
 - 2026-11-16 更正：4 筆原本因單一過度職務主張而未解的關係（盧天麟、李榮宗、陳清玉、曾長發）在移除該主張後維持 verified 並公開；鄭孟洽由 unresolved 改列 searched-no-verified-relations，因其僅有姓名相似疑慮，後續精確檢索未找到關係。更正後研究層 62 筆關係（59 verified／2 pending-verification／1 rejected）、106 位候選人（37 verified-relations-found／67 searched-no-verified-relations／2 unresolved），公開 58 筆關係、55 位親屬、99 筆職務。
 - 第二輪查核：67 位 searched-no-verified-relations 的批次與研究契約在 data/research/2026/political-family/second-pass/（8 批、7–9 人）；輸出只供後續查核與整合，不得直接寫入公開層。
+
+## 財產申報
+
+- 只呈現中選會公開查閱平台的官方清單與文件 URL，以及由 canonical candidate ID、選舉類型、選區脈絡產生的來源對帳狀態。
+- 不下載、不保留、不 OCR 掃描 PDF；不公開地址、身分證字號、金融帳戶、金額、債務、簽名、家庭成員敏感資料或個別財產標的。
+- `source-linked` 只表示單一文件已唯一對帳；`ambiguous-source` 與 `source-unavailable` 顯示中性說明，不指定文件，也不表示候選人沒有財產或沒有申報。
+- 同名文件不得只靠姓名合併；來源不唯一時保留官方清單連結，等待新的可驗證脈絡透過 Pull Request 更新。
 
 ## 共同規則
 

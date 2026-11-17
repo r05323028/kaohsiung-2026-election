@@ -1,2 +1,3 @@
 # Retained source snapshots preserve their original CRLF bytes for SHA-256 verification.
 data/raw/policy/2026/**/*.html whitespace=cr-at-eol,-trailing-space
+data/raw/official/2026/property-declarations/pages/*.html whitespace=cr-at-eol,-trailing-space

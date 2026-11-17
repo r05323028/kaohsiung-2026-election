@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=10.000" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>中央選舉委員會公職候選人財產申報系統</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="./files/newStyle.css">
+    <script src="./files/jquery-4.0.0.min.js"></script>
+</head>
+
+<body id="contents_01">
+    <div id="wrap">
+        <script>
+            $(function (){
+                $('.size').on('click',function (){
+                    if($(this).hasClass('sizeSmall')){
+                        $('size').removeClass('sizeMiddle');
+                        $('size').removeClass('sizeBig');
+                        $('body').removeClass().addClass('bodySmall');
+                    }else if($(this).hasClass('sizeMiddle')){
+                        $('size').removeClass('sizeSmall');
+                        $('size').removeClass('sizeBig');
+                        $('body').removeClass();
+                    }else if($(this).hasClass('sizeBig')){
+                        $('size').removeClass('sizeSmall');
+                        $('size').removeClass('sizeMiddle');
+                        $('body').removeClass().addClass('bodyBig');
+                    };
+                    $(this).addClass('current').siblings().removeClass('current');
+                });
+            });
+        </script>
+        <div id="header">
+            <!-- ▼LOGO圖片 -->
+            <h1><a href="HomePage.html"><img src="./files/td_logo_in.png" class="logo"></a> </h1>
+            <!-- ▲LOGO圖片-->
+            <ul class="fontSize">
+                <li>字體大小：</li>
+                <li class="size sizeBig">大</li>
+                <li class="size current sizeMiddle">中</li>
+                <li class="size sizeSmall">小</li>
+				<li></li>
+            </ul>
+            <div class="menuBtn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function() {
+                let menuBtn = document.querySelector('.menuBtn'),
+                    menu = document.querySelector("#menu");
+                menuBtn.addEventListener('click', function() {
+                    menu.classList.toggle("menuShow");
+                });
+            };
+        </script>
+		
+        <div id="menu">
+            <ul id="main-menu" class="sm sm-blue">			
+                <li class="hasSecond">
+                    <a href="HomePage.html"><img src="./files/icon_home.png" class=" icon_haiImgGreen" alt="">首頁</a>
+                </li> 								
+			</ul>
+        </div>
+		
+	    <div id="contents" class="clearfix">		  
+           <div id="main_area"> 				
+				<div class="">				  
+					<h3><a href="QueryPage.html" class="blue">條件查詢</a>/<a href="HomePage.html">階層查詢</a>/<a href="Page7.html">115年地方公職人員選舉直轄市議員</a>/<a href="Page7_02.html">高雄市</a>/<a href="Page7_02_12.html">第12選舉區</a></h3>
+					<div class="">		
+					  <table width="80%" align="center" id="electTable">
+						  <tbody id="electTableBody"><tr><th width="20%" height="40px" align="left" bgcolor="#fff" style="color:#fff; padding:20px; border:5px solid #f0ede5;" ;="">
+                        <a href="./files/3359.pdf" style="color:#2C0D0D; text-decoration:unset;" target="_blank">巫振興</a>
+                      </th><th width="20%" height="40px" align="left" bgcolor="#fff" style="color:#fff; padding:20px; border:5px solid #f0ede5;" ;="">
+                        <a href="./files/3367.pdf" style="color:#2C0D0D; text-decoration:unset;" target="_blank">王義雄</a>
+                      </th><th width="20%" height="40px" align="left" bgcolor="#fff" style="color:#fff; padding:20px; border:5px solid #f0ede5;" ;="">
+                        <a href="./files/3414.pdf" style="color:#2C0D0D; text-decoration:unset;" target="_blank">宋紹銘</a>
+                      </th></tr></tbody>
+					  </table>
+					</div>
+				</div>
+            </div>
+         </div>
+      </div>
+</body>
+</html>

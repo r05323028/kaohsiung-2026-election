@@ -955,6 +955,38 @@ body:not(.is-immersive) #main-content {
   display: none;
 }
 
+.property-declaration-card {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.property-declaration-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.property-declaration-card__links a,
+.property-declaration-card > a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  border: 1px solid rgba(41, 72, 88, 0.16);
+  border-radius: 0.7rem;
+  background: rgba(255, 249, 240, 0.82);
+  color: #294858;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.property-declaration-card__links a:hover,
+.property-declaration-card > a:hover {
+  border-color: #294858;
+  background: #294858;
+  color: #fff9f0;
+}
+
 .profile-section-heading {
   display: grid;
   gap: 0.2rem;

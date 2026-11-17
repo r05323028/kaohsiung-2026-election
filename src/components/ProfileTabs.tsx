@@ -8,12 +8,19 @@ import {
 } from '../data/basic-profiles/schema';
 import { ballotNumberText } from '../data/official/ballot';
 import type { PolicyCareerCommitment } from '../data/policy-career';
+import { PROPERTY_DECLARATION_PUBLIC_NOTE } from '../data/property-declarations';
 import {
   PolicyDerivedCareerSection,
   PoliticalCareerTimeline,
 } from './PoliticalCareerTimeline';
 import PoliticalFamilyGraph from './PoliticalFamilyGraph';
-export type ProfileTab = 'basic' | 'policies' | 'news' | 'career' | 'family';
+export type ProfileTab =
+  | 'basic'
+  | 'policies'
+  | 'news'
+  | 'career'
+  | 'family'
+  | 'property';
 
 export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
   { id: 'basic', label: '基本資料' },
@@ -21,6 +28,7 @@ export const PROFILE_TABS: ReadonlyArray<{ id: ProfileTab; label: string }> = [
   { id: 'news', label: '相關新聞' },
   { id: 'career', label: '從政歷程' },
   { id: 'family', label: '家族政商關係' },
+  { id: 'property', label: '財產申報' },
 ];
 
 const attributionLabels: Record<string, string> = {
@@ -914,6 +922,82 @@ function FamilyTab({ candidate }: { candidate: PublicCandidateProfile }) {
   return <PoliticalFamilyGraph candidate={candidate} />;
 }
 
+function PropertyDeclarationTab({
+  candidate,
+}: {
+  candidate: PublicCandidateProfile;
+}) {
+  const declaration = candidate.propertyDeclaration;
+  const listingPageUrl = declaration?.identity.listingPageUrls[0];
+  const document = declaration?.documents[0];
+
+  return (
+    <div
+      className="profile-tab-content"
+      data-profile-section="property"
+      data-testid="property-declaration"
+    >
+      <div className="profile-section-heading">
+        <h3>財產申報</h3>
+        <p>{PROPERTY_DECLARATION_PUBLIC_NOTE}</p>
+      </div>
+      {declaration?.status === 'source-linked' && document ? (
+        <article className="content-card property-declaration-card">
+          <div className="content-card__meta">
+            <span className="status-chip">官方文件已唯一對帳</span>
+            <span>{declaration.identity.listedNames[0]}</span>
+          </div>
+          <h4>中選會財產申報公開查閱文件</h4>
+          <p>
+            此連結依候選人姓名、選舉區與選舉類型對帳至官方清單；本站只保留連結，
+            不下載、轉錄或摘要文件內容。
+          </p>
+          <div className="property-declaration-card__links">
+            <a href={document.pdfUrl} target="_blank" rel="noreferrer">
+              開啟官方申報文件
+            </a>
+            <a href={document.listingPageUrl} target="_blank" rel="noreferrer">
+              查看官方候選人清單
+            </a>
+          </div>
+        </article>
+      ) : declaration?.status === 'ambiguous-source' ? (
+        <article
+          className="content-card property-declaration-card"
+          data-testid="property-declaration-ambiguous"
+        >
+          <div className="content-card__meta">
+            <span className="status-chip">來源尚未唯一對帳</span>
+          </div>
+          <h4>官方清單有多筆同名文件</h4>
+          <p>
+            目前無法在不依賴姓名推論的前提下，將其中一份文件唯一指定給此候選人；
+            因此不提供個別 PDF 連結。這不代表沒有財產或沒有申報。
+          </p>
+          {listingPageUrl ? (
+            <a href={listingPageUrl} target="_blank" rel="noreferrer">
+              查看官方候選人清單
+            </a>
+          ) : null}
+        </article>
+      ) : (
+        <article
+          className="content-card property-declaration-card"
+          data-testid="property-declaration-unavailable"
+        >
+          <div className="content-card__meta">
+            <span className="status-chip">暫無可唯一對帳的連結</span>
+          </div>
+          <h4>暫無資料</h4>
+          <p>
+            目前沒有可唯一對帳的官方文件連結；空白不代表候選人沒有財產或沒有申報。
+          </p>
+        </article>
+      )}
+    </div>
+  );
+}
+
 function NewsTab({ candidate }: { candidate: PublicCandidateProfile }) {
   const news = collectNewsCards(candidate);
   const [publisher, setPublisher] = useState('all');
@@ -1055,6 +1139,8 @@ export default function ProfileTabs({
         );
       case 'family':
         return <FamilyTab candidate={candidate} />;
+      case 'property':
+        return <PropertyDeclarationTab candidate={candidate} />;
       default:
         return <BasicTab candidate={candidate} />;
     }

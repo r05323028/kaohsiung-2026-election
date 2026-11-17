@@ -8,7 +8,12 @@ import {
 } from '../data/basic-profiles/schema';
 import { ballotNumberText } from '../data/official/ballot';
 import type { PolicyCareerCommitment } from '../data/policy-career';
-import { PROPERTY_DECLARATION_PUBLIC_NOTE } from '../data/property-declarations';
+import type { PropertyDeclarationPublicFinancialSummary } from '../data/property-declarations';
+import {
+  PROPERTY_DECLARATION_FINANCIAL_CATEGORY_LABELS,
+  PROPERTY_DECLARATION_FINANCIAL_NOTE,
+  PROPERTY_DECLARATION_PUBLIC_NOTE,
+} from '../data/property-declarations';
 import {
   PolicyDerivedCareerSection,
   PoliticalCareerTimeline,
@@ -922,6 +927,89 @@ function FamilyTab({ candidate }: { candidate: PublicCandidateProfile }) {
   return <PoliticalFamilyGraph candidate={candidate} />;
 }
 
+const financialSummaryStatusLabels: Record<
+  PropertyDeclarationPublicFinancialSummary['summaryStatus'],
+  string
+> = {
+  'independently-verified': '14 類均已獨立核對',
+  'partially-verified': '部分類別已獨立核對',
+  unavailable: '目前無法安全確定類別摘要',
+};
+
+function formatPropertyDeclarationTwd(value: number): string {
+  return new Intl.NumberFormat('zh-TW', {
+    style: 'currency',
+    currency: 'TWD',
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
+function PropertyFinancialSummary({
+  summary,
+}: {
+  summary: PropertyDeclarationPublicFinancialSummary;
+}) {
+  return (
+    <section
+      className="property-declaration-financial"
+      data-testid="property-declaration-financial-summary"
+    >
+      <div className="property-declaration-financial__heading">
+        <h4>財產類別摘要</h4>
+        <span className="status-chip">
+          {financialSummaryStatusLabels[summary.summaryStatus]}
+        </span>
+      </div>
+      <p className="property-declaration-financial__note">
+        {PROPERTY_DECLARATION_FINANCIAL_NOTE}
+      </p>
+      <ul className="property-declaration-financial__list">
+        {summary.categories.map((category) => {
+          const values: string[] = [];
+          if (category.totalTwd !== null) {
+            values.push(formatPropertyDeclarationTwd(category.totalTwd));
+          }
+          if (category.entryCount !== null) {
+            values.push(`申報筆數：${category.entryCount}`);
+          }
+          const valueText =
+            category.status === 'not-determined' || values.length === 0
+              ? '未能確定'
+              : values.join('・');
+          const statusText =
+            category.status === 'none-reported'
+              ? '明列為零或無申報筆數'
+              : category.status === 'not-determined'
+                ? '資料不足，未發布數值'
+                : '已核對';
+          return (
+            <li
+              className="property-declaration-financial__item"
+              data-testid={`property-category-${category.category}`}
+              key={category.category}
+            >
+              <div>
+                <strong>
+                  {
+                    PROPERTY_DECLARATION_FINANCIAL_CATEGORY_LABELS[
+                      category.category
+                    ]
+                  }
+                </strong>
+                <span>{statusText}</span>
+              </div>
+              <b>{valueText}</b>
+              {category.evidencePages.length > 0 ? (
+                <small>官方文件頁碼：{category.evidencePages.join('、')}</small>
+              ) : null}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 function PropertyDeclarationTab({
   candidate,
 }: {
@@ -942,7 +1030,10 @@ function PropertyDeclarationTab({
         <p>{PROPERTY_DECLARATION_PUBLIC_NOTE}</p>
       </div>
       {declaration?.status === 'source-linked' && document ? (
-        <article className="content-card property-declaration-card">
+        <article
+          className="content-card property-declaration-card"
+          data-testid="property-declaration-linked"
+        >
           <div className="content-card__meta">
             <span className="status-chip">官方文件已唯一對帳</span>
             <span>{declaration.identity.listedNames[0]}</span>
@@ -950,7 +1041,7 @@ function PropertyDeclarationTab({
           <h4>中選會財產申報公開查閱文件</h4>
           <p>
             此連結依候選人姓名、選舉區與選舉類型對帳至官方清單；本站只保留連結，
-            不下載、轉錄或摘要文件內容。
+            並以類別層級呈現可由兩次離線擷取一致核對的摘要。
           </p>
           <div className="property-declaration-card__links">
             <a href={document.pdfUrl} target="_blank" rel="noreferrer">
@@ -960,6 +1051,13 @@ function PropertyDeclarationTab({
               查看官方候選人清單
             </a>
           </div>
+          {declaration.financialSummary ? (
+            <PropertyFinancialSummary summary={declaration.financialSummary} />
+          ) : (
+            <p className="property-declaration-card__unavailable">
+              類別摘要目前無法安全確定；不以空白推論為零。
+            </p>
+          )}
         </article>
       ) : declaration?.status === 'ambiguous-source' ? (
         <article
@@ -972,7 +1070,7 @@ function PropertyDeclarationTab({
           <h4>官方清單有多筆同名文件</h4>
           <p>
             目前無法在不依賴姓名推論的前提下，將其中一份文件唯一指定給此候選人；
-            因此不提供個別 PDF 連結。這不代表沒有財產或沒有申報。
+            因此不提供個別 PDF 連結或財產摘要。這不代表沒有財產或沒有申報。
           </p>
           {listingPageUrl ? (
             <a href={listingPageUrl} target="_blank" rel="noreferrer">

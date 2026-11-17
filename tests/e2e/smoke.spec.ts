@@ -91,7 +91,11 @@ test('candidate property tab exposes the official source link without sensitive 
     ),
   ).toHaveCount(1);
   const sourceCard = property.locator('.property-declaration-card');
-  await expect(sourceCard).toContainText('只保留連結');
+  await expect(sourceCard).toContainText('財產類別摘要');
+  await expect(sourceCard).toContainText('現金');
+  await expect(sourceCard).toContainText('申報筆數：6');
+  await expect(sourceCard).toContainText('官方文件頁碼：7');
+  await expect(sourceCard.getByTestId('property-category-cash')).toBeVisible();
   await expect(sourceCard).not.toContainText('身分證字號');
   await expect(sourceCard).not.toContainText('金融帳戶');
   await expect(sourceCard).not.toContainText('金額');
@@ -110,6 +114,9 @@ test('ambiguous property sources stay unassigned and do not imply absence', asyn
   await expect(property).toBeVisible();
   await expect(property).toContainText('多筆同名文件');
   await expect(property).toContainText('不代表沒有財產或沒有申報');
+  await expect(
+    property.getByTestId('property-declaration-financial-summary'),
+  ).toHaveCount(0);
   await expect(
     property.locator('a[href*="/release/formal/files/"]'),
   ).toHaveCount(0);

@@ -49,13 +49,13 @@
 - 從政歷程：`data/approved/2026/political-career.json`；政策／歷程分類在 `policy-career-separation.json` 以決定性 validation envelope 保存。
 - 家族關係：`data/published/2026/political-family.json`；親屬與職務來源必須分離且各自完整。
 - 角色資產：manifest、授權、來源身分與 GLB／照片 checksum 通過後才可使用；視覺資產的安全檢查不等同候選人內容審查。
-- 財產申報：`data/raw/official/2026/property-declarations/pages/` 僅保留中選會 HTML 清單快照與 retrieval metadata；`data/published/2026/candidate-property-declarations.json` 僅提供 URL-only 的官方文件連結與來源對帳狀態。掃描 PDF、OCR 文字、地址、身分證字號、金融帳戶、金額與個別財產標的不進入 repository 的財產申報資料流。
+- 財產申報：`data/raw/official/2026/property-declarations/pages/` 僅保留中選會 HTML 清單快照與 retrieval metadata；`data/normalized/2026/candidate-property-declaration-financial-summaries.json` 與 `data/published/2026/candidate-property-declarations.json` 只保留類別層級的彙總總額／申報筆數、官方文件頁碼與雙重離線擷取驗證狀態；這些是候選人公開申報的類別摘要，不是逐筆財產明細。`data/normalized/2026/candidate-property-declaration-verification.json` 另保留每份外部 PDF 的 SHA-256、頁數、兩次擷取工具版本與類別對帳結果，供離線驗證，不含 PDF 位元組、OCR 文字或個別金額。掃描 PDF、原始 OCR 文字、逐字轉錄、地址、身分證字號、金融帳戶、簽名與個別財產標的不進入 repository。
 
 `src/data/fixtures.ts` 與 `src/data/demo.ts` 只供測試與資產驗證，全部標示 `isDemo`，不得補位公開資料。
 
 ### 財產申報來源與隱私邊界
 
-`property-declarations:discover` 預設離線讀取已提交的官方 HTML 快照；`--fetch` 只允許固定的 `pdps-dec.cec.gov.tw/release/formal/` 頁面清單，不能把任意 URL 帶入來源流程。來源頁的 checksum 改變時，建立新快照並重新對帳，不就地改寫既有 provenance。PDF 只作為官方外部連結，不下載、不保留、不 OCR。
+`property-declarations:discover` 預設離線讀取已提交的官方 HTML 快照；`--fetch` 只允許固定的 `pdps-dec.cec.gov.tw/release/formal/` 頁面清單，不能把任意 URL 帶入來源流程。來源頁的 checksum 改變時，建立新快照並重新對帳，不就地改寫既有 provenance。PDF 只作為官方外部連結；實作期間可在受控本機暫存區做離線擷取與第二次核對；驗證 manifest 只保留 PDF SHA-256、頁數、工具版本與類別級 agree/not-determined 結果。PDF、原始 OCR 文字與逐字轉錄不得進入 repository，發布層只接受清理後的類別彙總摘要。
 
 `source-linked` 表示單一官方文件已以 canonical candidate ID、選舉類型與選區脈絡對帳；`ambiguous-source` 或 `source-unavailable` 只表示目前無法唯一呈現連結，不是「沒有財產」或「沒有申報」的負面證據。
 

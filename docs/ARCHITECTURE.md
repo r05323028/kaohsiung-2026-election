@@ -29,14 +29,14 @@
 | 從政歷程 | data/approved/2026/political-career.json | src/data/political-career/index.ts | 任期、活動、專案、提案、表決 |
 | 政策／歷程分工 | data/approved/2026/policy-career-separation.json | src/data/policy-career/index.ts | 每筆記錄的決定性分類 |
 | 家族政商關係 | data/published/2026/political-family.json | src/data/political-family/ | 親屬與職務各自有來源支持的關係 |
-| 財產申報 | data/published/2026/candidate-property-declarations.json | src/data/property-declarations/index.ts | 中選會官方清單對帳狀態與 URL-only 文件連結，不轉錄敏感欄位 |
+| 財產申報 | data/published/2026/candidate-property-declarations.json | src/data/property-declarations/index.ts | 中選會官方清單對帳、URL-only 文件連結與具頁碼證據的類別總額／筆數摘要 |
 | 角色資產 | data/avatars/、public/assets/avatars/ | src/data/avatars/index.ts | GLB checksum 與安全路徑驗證 |
 
 src/data/fixtures.ts 與 src/data/demo.ts 只供測試、版型與資產驗證，全部標示 isDemo，不會補位正式資料。
 
 ### 財產申報資料
 
-財產申報功能只保留中選會公開查閱平台的 HTML 清單快照、URL、擷取時間與 SHA-256；掃描 PDF 不提交、不 OCR，也不把地址、身分證字號、金融帳戶、金額或個別財產標的帶入 normalized、published 或瀏覽器 props。`property-declarations:discover` 是離線、明確的來源對帳指令；`validate:property-declarations` 驗證官方網域、頁面 checksum、候選人／選區／選舉類型與 URL-only 邊界。
+財產申報功能保留中選會公開查閱平台的 HTML 清單快照、URL、擷取時間與 SHA-256；從官方 PDF 離線擷取的結果只留下類別層級彙總總額／申報筆數、實體頁碼與雙重離線擷取的驗證狀態；`candidate-property-declaration-verification.json` 另保留 PDF SHA-256、頁數、兩次工具版本與類別級對帳結果。掃描 PDF、原始 OCR 文字、逐字轉錄、地址、身分證字號、金融帳戶、簽名與個別財產標的不提交，也不進入瀏覽器 props。`property-declarations:discover` 對帳來源；`property-declarations:publish` 只投影已清理的摘要；`validate:property-declarations` 驗證官方網域、頁面 checksum、候選人／選區／選舉類型、類別完整性與隱私邊界。
 
 同名或來源不唯一時，候選人頁只顯示中性未唯一對帳狀態與官方清單連結，不指定個別 PDF；來源缺失或未唯一對帳不代表沒有財產或沒有申報。只有在 canonical candidate ID、選區與選舉類型脈絡一致時，才顯示單一官方文件連結。
 

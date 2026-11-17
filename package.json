@@ -9,7 +9,7 @@
     "build:astro": "astro build",
     "build:verified": "npm run validate:all && npm run build:astro && npm run validate:profile-copy",
     "build:pages": "npm run build:astro && npm run validate:profile-copy",
-    "validate:all": "npm run validate:data && npm run validate:political-family && npm run validate:constituencies && npm run validate:official && npm run validate:property-declarations && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:candidate-policies && npm run profile:coverage && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run public-records:coverage && npm run validate:public-records-coverage && npm run validate:political-career && npm run validate:policy-career && npm run validate:research && npm run validate:biographies && npm run validate:avatars && npm run avatars:likeness:validate && npm run validate:basic-profiles && npm run validate:news && npm run typecheck",
+    "validate:all": "npm run validate:data && npm run validate:political-family && npm run validate:constituencies && npm run validate:official && npm run validate:property-declarations && npm run property-declarations:verify && npm run validate:ballot-numbers && npm run validate:public-records && npm run validate:full-roster && npm run validate:policy-research && npm run validate:candidate-policies && npm run profile:coverage && npm run validate:profile-coverage && npm run validate:public-record-enrichment && npm run public-records:coverage && npm run validate:public-records-coverage && npm run validate:political-career && npm run validate:policy-career && npm run validate:research && npm run validate:biographies && npm run validate:avatars && npm run avatars:likeness:validate && npm run validate:basic-profiles && npm run validate:news && npm run typecheck",
     "basic:queue": "tsx scripts/basic-profile/build-queue.ts",
     "basic:seed": "tsx scripts/basic-profile/extract-seed.ts",
     "basic:merge": "tsx scripts/basic-profile/merge.ts",
@@ -77,6 +77,7 @@
     "validate:biographies": "tsx scripts/validate-biography-publication.ts",
     "property-declarations:discover": "tsx scripts/property-declarations/discover.ts",
     "property-declarations:publish": "tsx scripts/property-declarations/publish.ts",
+    "property-declarations:verify": "tsx scripts/property-declarations/verify.ts",
     "validate:property-declarations": "tsx scripts/validate-property-declarations.ts"
   },
   "dependencies": {

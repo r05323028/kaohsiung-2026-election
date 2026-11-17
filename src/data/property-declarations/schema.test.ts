@@ -59,17 +59,17 @@ describe('property declaration financial summary schema', () => {
         (total, record) => total + record.verifiedCategoryCount,
         0,
       ),
-    ).toBe(684);
+    ).toBe(764);
     expect(
       dataset.records.filter(
         (record) => record.summaryStatus === 'partially-verified',
       ),
-    ).toHaveLength(96);
+    ).toHaveLength(100);
     expect(
       dataset.records.filter(
         (record) => record.summaryStatus === 'unavailable',
       ),
-    ).toHaveLength(8);
+    ).toHaveLength(0);
   });
 
   it('does not allow not-determined values or page evidence', () => {
@@ -94,7 +94,7 @@ describe('property declaration financial summary schema', () => {
         totalTwd: 110000,
         entryCount: 0,
         evidencePages: [7],
-        verificationStatus: 'independently-verified',
+        verificationStatus: 'page-evidenced',
         verificationMethod: 'dual-render-local-ocr-agreement',
       }),
     ).toThrow();
@@ -108,13 +108,13 @@ describe('property declaration financial summary schema', () => {
         totalTwd: 110000,
         entryCount: 0,
         evidencePages: [3],
-        verificationStatus: 'independently-verified',
+        verificationStatus: 'page-evidenced',
         verificationMethod: 'dual-render-local-ocr-agreement',
       }),
     ).toThrow();
   });
 
-  it('validates the privacy-safe two-pass verification manifest', () => {
+  it('validates the privacy-safe page-evidence verification manifest', () => {
     const verification =
       validatePropertyDeclarationVerificationDataset(verificationInput);
     expect(verification.records).toHaveLength(105);
@@ -127,8 +127,26 @@ describe('property declaration financial summary schema', () => {
           ).length,
         0,
       ),
-    ).toBe(684);
+    ).toBe(764);
     expect(verification.records[0]?.pdfSha256).toMatch(/^[a-f0-9]{64}$/);
+  });
+
+  it('accepts the visual page-review method for recovered categories', () => {
+    const dataset =
+      validatePropertyDeclarationFinancialSummaryDataset(financialInput);
+    const recovered = dataset.records.find(
+      (record) =>
+        record.candidateId ===
+        'official-candidate-2026-district-kaohsiung-council-01-fb74ce74',
+    );
+    expect(
+      recovered?.categories.every(
+        (category) =>
+          category.verificationMethod ===
+            'visual-page-review-with-gazette-cross-check' ||
+          category.verificationMethod === null,
+      ),
+    ).toBe(true);
   });
 
   it('allows explicit zero values without turning unknowns into zero', () => {

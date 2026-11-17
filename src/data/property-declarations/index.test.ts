@@ -12,9 +12,9 @@ describe('published property declaration read model', () => {
       ambiguous: 1,
       sourceUnavailable: 0,
       financialSummaries: 105,
-      verifiedCategories: 684,
-      partialSummaries: 96,
-      unavailableSummaries: 8,
+      verifiedCategories: 764,
+      partialSummaries: 100,
+      unavailableSummaries: 0,
     });
 
     const linked = getCandidatePropertyDeclaration(
@@ -54,6 +54,46 @@ describe('published property declaration read model', () => {
           !('verificationMethod' in category),
       ),
     ).toBe(true);
+  });
+
+  it('publishes the recovered official summaries without turning gaps into zero', () => {
+    const fullyRecovered = getCandidatePropertyDeclaration(
+      'official-candidate-2026-district-kaohsiung-council-01-fb74ce74',
+    )?.financialSummary;
+    expect(fullyRecovered?.summaryStatus).toBe('page-evidenced');
+    expect(fullyRecovered?.verifiedCategoryCount).toBe(14);
+    expect(
+      fullyRecovered?.categories.find(
+        (category) => category.category === 'insurance',
+      ),
+    ).toMatchObject({ status: 'reported', entryCount: 1, totalTwd: null });
+
+    const partial = getCandidatePropertyDeclaration(
+      'official-candidate-2026-district-kaohsiung-council-07-9cddec16',
+    )?.financialSummary;
+    expect(partial?.summaryStatus).toBe('partially-verified');
+    expect(
+      partial?.categories.find((category) => category.category === 'land'),
+    ).toMatchObject({
+      status: 'not-determined',
+      totalTwd: null,
+      entryCount: null,
+    });
+    expect(
+      partial?.categories.find((category) => category.category === 'insurance'),
+    ).toMatchObject({ status: 'reported', entryCount: 9 });
+
+    const handwritten = getCandidatePropertyDeclaration(
+      'official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b',
+    )?.financialSummary;
+    expect(handwritten?.summaryStatus).toBe('partially-verified');
+    expect(handwritten?.verifiedCategoryCount).toBe(3);
+    expect(
+      handwritten?.categories.find((category) => category.category === 'land'),
+    ).toMatchObject({ status: 'reported', entryCount: 7 });
+    expect(
+      handwritten?.categories.find((category) => category.category === 'debts'),
+    ).toMatchObject({ status: 'reported', totalTwd: 8_000_000, entryCount: 3 });
   });
 
   it('withholds ambiguous same-name documents from direct assignment', () => {

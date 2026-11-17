@@ -17,10 +17,10 @@ export type PropertyDeclarationPublicFinancialSummary = Omit<
 };
 
 export const PROPERTY_DECLARATION_PUBLIC_NOTE =
-  '本頁僅呈現中選會財產申報公開查閱平台的官方文件連結、來源對帳狀態，以及經兩次不同渲染倍率離線 OCR 結果比對、並以官方文件頁碼定位的類別摘要；這不是人工逐筆覆核。不轉錄地址、身分證字號、金融帳戶、簽名或個別財產標的。';
+  '本頁僅呈現中選會財產申報公開查閱平台的官方文件連結、來源對帳狀態，以及以官方文件頁碼定位的類別摘要。摘要來自離線 OCR 或頁面座標核對，且只發布通過所標示核對方法的類別總額或申報筆數；這不是人工逐筆覆核。不轉錄地址、身分證字號、金融帳戶、簽名或個別財產標的。';
 
 export const PROPERTY_DECLARATION_FINANCIAL_NOTE =
-  '類別摘要只保留兩次不同渲染倍率離線 OCR 結果一致、且有官方文件頁碼證據的總額或申報筆數；衝突、辨識不足或無法安全確定的欄位維持「未能確定」，不以空白推論為零。';
+  '類別摘要只保留通過所標示離線核對方法、且有官方文件頁碼證據的總額或申報筆數；不同核對方法不互相替代，衝突、辨識不足或無法安全確定的欄位維持「未能確定」，不以空白推論為零。';
 
 export const PROPERTY_DECLARATION_FINANCIAL_CATEGORY_LABELS: Record<
   PropertyDeclarationFinancialCategory,

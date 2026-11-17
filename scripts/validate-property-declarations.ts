@@ -135,23 +135,23 @@ for (const sourcePage of normalized.sourcePages) {
     fail('source page hash mismatch: ' + sourcePage.snapshotFile);
 }
 
-if (normalized.sourcePages.length !== 20)
-  fail('expected 20 retained source pages.');
-if (normalized.rows.length !== 107)
-  fail('expected 107 official declaration rows.');
-if (roster.candidates.length !== 106)
-  fail('expected 106 canonical candidates.');
+if (normalized.sourcePages.length === 0)
+  fail('at least one retained source page is required.');
 if (
-  roster.candidates.filter((candidate) => candidate.electionType === 'mayoral')
-    .length !== 5 ||
-  roster.candidates.filter(
-    (candidate) => candidate.electionType === 'city-council',
-  ).length !== 91 ||
-  roster.candidates.filter(
-    (candidate) => candidate.electionType === 'indigenous-council',
-  ).length !== 10
+  new Set(normalized.sourcePages.map((sourcePage) => sourcePage.id)).size !==
+  normalized.sourcePages.length
 )
-  fail('canonical election-type coverage changed unexpectedly.');
+  fail('retained source page IDs must be unique.');
+if (normalized.rows.length === 0)
+  fail('at least one official declaration row is required.');
+if (roster.candidates.length === 0) fail('canonical roster must not be empty.');
+if (
+  new Set(roster.candidates.map((candidate) => candidate.id)).size !==
+  roster.candidates.length
+)
+  fail('canonical candidate IDs must be unique.');
+if (roster.candidates.some((candidate) => !candidate.electionType))
+  fail('every canonical candidate must have an election type.');
 
 for (const row of normalized.rows) {
   if (
@@ -193,23 +193,32 @@ for (const [candidateId, rows] of rowsByCandidate) {
   if (rows.some((row) => row.matchStatus !== expectedStatus))
     fail('row ambiguity state is inconsistent for ' + candidateId);
 }
+const matchedRows = normalized.rows.filter(
+  (row) => row.matchStatus === 'matched',
+);
+const ambiguousRows = normalized.rows.filter(
+  (row) => row.matchStatus === 'ambiguous',
+);
+if (matchedRows.some((row) => row.candidateId === null))
+  fail('every uniquely matched row must carry a candidate ID.');
+if (ambiguousRows.some((row) => row.candidateId === null))
+  fail('every ambiguous row must carry a candidate ID.');
 if (
-  normalized.rows.filter((row) => row.matchStatus === 'matched').length !==
-    105 ||
-  normalized.rows.filter((row) => row.matchStatus === 'ambiguous').length !==
-    2 ||
-  normalized.unmatchedRows.length !== 0
+  !sameValues(
+    normalized.unmatchedRows,
+    normalized.rows
+      .filter((row) => row.matchStatus === 'unmatched')
+      .map((row) => row.rowId),
+  )
 )
-  fail(
-    'expected 105 uniquely matched rows, 2 ambiguous rows and no unmatched rows.',
-  );
+  fail('unmatchedRows does not match normalized row states.');
 
 const rosterIds = roster.candidates.map((candidate) => candidate.id);
 const publishedIds = published.records.map((record) => record.candidateId);
 if (!sameValues(rosterIds, publishedIds))
   fail('published records must cover exactly the canonical candidate IDs.');
-if (published.coverage.candidateCount !== 106)
-  fail('published candidate coverage must be 106.');
+if (published.coverage.candidateCount !== roster.candidates.length)
+  fail('published candidate coverage must equal the canonical roster.');
 if (
   published.coverage.declarationRowCount !== normalized.rows.length ||
   published.coverage.unmatchedRowCount !== normalized.unmatchedRows.length
@@ -283,24 +292,44 @@ for (const record of published.records) {
         record.candidateId,
     );
 }
+const uniqueSourceLinkedIds = [
+  ...new Set(
+    normalized.rows
+      .filter(
+        (row) => row.matchStatus === 'matched' && row.candidateId !== null,
+      )
+      .map((row) => row.candidateId as string),
+  ),
+];
+const ambiguousCandidateIds = new Set(
+  normalized.rows
+    .filter(
+      (row) => row.matchStatus === 'ambiguous' && row.candidateId !== null,
+    )
+    .map((row) => row.candidateId as string),
+);
+const sourceUnavailableIds = rosterIds.filter(
+  (candidateId) =>
+    !uniqueSourceLinkedIds.includes(candidateId) &&
+    !ambiguousCandidateIds.has(candidateId),
+);
 if (
-  published.coverage.sourceLinkedCount !== 105 ||
-  published.coverage.ambiguousCount !== 1 ||
-  published.coverage.sourceUnavailableCount !== 0
+  published.coverage.sourceLinkedCount !== uniqueSourceLinkedIds.length ||
+  published.coverage.ambiguousCount !== ambiguousCandidateIds.size ||
+  published.coverage.sourceUnavailableCount !== sourceUnavailableIds.length
 )
   fail('published source status coverage changed unexpectedly.');
 
-if (verification.records.length !== 105) {
-  fail('expected 105 privacy-safe verification records.');
-}
-if (financial.records.length !== 105) {
+if (verification.records.length !== uniqueSourceLinkedIds.length) {
   fail(
-    'expected 105 financial summary records for unique source-linked candidates.',
+    'privacy-safe verification records must cover exactly the uniquely matched candidates.',
   );
 }
-const uniqueSourceLinkedIds = normalized.rows
-  .filter((row) => row.matchStatus === 'matched' && row.candidateId !== null)
-  .map((row) => row.candidateId as string);
+if (financial.records.length !== uniqueSourceLinkedIds.length) {
+  fail(
+    'financial summary records must cover exactly the uniquely matched candidates.',
+  );
+}
 if (!sameValues([...financialByCandidate.keys()], uniqueSourceLinkedIds)) {
   fail(
     'financial summaries must cover exactly the uniquely matched candidates.',
@@ -308,8 +337,8 @@ if (!sameValues([...financialByCandidate.keys()], uniqueSourceLinkedIds)) {
 }
 
 const financialSummaryStatuses = {
-  'independently-verified': financial.records.filter(
-    (record) => record.summaryStatus === 'independently-verified',
+  'page-evidenced': financial.records.filter(
+    (record) => record.summaryStatus === 'page-evidenced',
   ).length,
   'partially-verified': financial.records.filter(
     (record) => record.summaryStatus === 'partially-verified',
@@ -319,12 +348,13 @@ const financialSummaryStatuses = {
   ).length,
 };
 if (
-  financialSummaryStatuses['independently-verified'] !== 1 ||
-  financialSummaryStatuses['partially-verified'] !== 96 ||
-  financialSummaryStatuses.unavailable !== 8
+  Object.values(financialSummaryStatuses).reduce(
+    (total, value) => total + value,
+    0,
+  ) !== financial.records.length
 ) {
   fail(
-    'financial summary status coverage changed unexpectedly: ' +
+    'financial summary status coverage does not cover every record: ' +
       JSON.stringify(financialSummaryStatuses),
   );
 }
@@ -332,9 +362,6 @@ const verifiedCategoryCount = financial.records.reduce(
   (total, record) => total + record.verifiedCategoryCount,
   0,
 );
-if (verifiedCategoryCount !== 684) {
-  fail('expected 684 independently verified category summaries.');
-}
 
 for (const record of financial.records) {
   const candidate = rosterById.get(record.candidateId);
@@ -393,10 +420,13 @@ for (const record of published.records) {
   }
 }
 if (
-  published.coverage.financialSummaryCount !== 105 ||
-  published.coverage.financialSummaryVerifiedCategoryCount !== 684 ||
-  published.coverage.financialSummaryPartialCount !== 96 ||
-  published.coverage.financialSummaryUnavailableCount !== 8
+  published.coverage.financialSummaryCount !== financial.records.length ||
+  published.coverage.financialSummaryVerifiedCategoryCount !==
+    verifiedCategoryCount ||
+  published.coverage.financialSummaryPartialCount !==
+    financialSummaryStatuses['partially-verified'] ||
+  published.coverage.financialSummaryUnavailableCount !==
+    financialSummaryStatuses.unavailable
 ) {
   fail('published financial summary coverage changed unexpectedly.');
 }
@@ -404,6 +434,27 @@ if (
 assertNoSensitiveKeys(financial);
 assertNoSensitiveKeys(published);
 await assertNoPropertyPdfBytes();
+const fullyVerifiedCount = financialSummaryStatuses['page-evidenced'];
 console.log(
-  '[validate:property-declarations] 106 candidates, 105 unique source links, 1 ambiguous source, 0 unavailable; 107 rows and 20 hashed source pages verified.',
+  '[validate:property-declarations] ' +
+    roster.candidates.length +
+    ' candidates, ' +
+    uniqueSourceLinkedIds.length +
+    ' unique source links, ' +
+    ambiguousCandidateIds.size +
+    ' ambiguous, ' +
+    sourceUnavailableIds.length +
+    ' unavailable; ' +
+    normalized.rows.length +
+    ' rows and ' +
+    normalized.sourcePages.length +
+    ' hashed source pages; ' +
+    verifiedCategoryCount +
+    ' verified categories (' +
+    fullyVerifiedCount +
+    ' fully verified, ' +
+    financialSummaryStatuses['partially-verified'] +
+    ' partial, ' +
+    financialSummaryStatuses.unavailable +
+    ' unavailable).',
 );

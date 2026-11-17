@@ -3,6 +3,7 @@ import { PROFILE_TABS } from '../components/ProfileTabs';
 import { publicationBiographySnapshot } from './biographies/publication';
 import { candidateProfiles } from './index';
 import { officialCandidateProfiles } from './official';
+import { getCandidatePropertyDeclaration } from './property-declarations';
 
 const publicRecords = (
   candidate: (typeof officialCandidateProfiles)[number],
@@ -24,7 +25,8 @@ describe('six-section candidate profile coverage', () => {
     expect(candidateProfiles).toHaveLength(officialCandidateProfiles.length);
     expect(
       officialCandidateProfiles.every(
-        (candidate) => candidate.propertyDeclaration !== undefined,
+        (candidate) =>
+          getCandidatePropertyDeclaration(candidate.candidacy.id) !== undefined,
       ),
     ).toBe(true);
     expect(

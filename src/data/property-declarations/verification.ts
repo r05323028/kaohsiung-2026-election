@@ -59,11 +59,14 @@ export function assertPropertyDeclarationFinancialEvidence(
           : 'not-determined';
       if (
         agreement.outcome !== expectedOutcome ||
+        agreement.status !== category.status ||
+        agreement.totalTwd !== category.totalTwd ||
+        agreement.entryCount !== category.entryCount ||
         JSON.stringify(agreement.evidencePages) !==
           JSON.stringify(category.evidencePages)
       ) {
         throw new Error(
-          'Verification agreement drifted for ' +
+          'Verification agreement values drifted for ' +
             financialRecord.candidateId +
             '/' +
             category.category,

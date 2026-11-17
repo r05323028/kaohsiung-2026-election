@@ -59,7 +59,7 @@ describe('property declaration financial summary schema', () => {
         (total, record) => total + record.verifiedCategoryCount,
         0,
       ),
-    ).toBe(675);
+    ).toBe(684);
     expect(
       dataset.records.filter(
         (record) => record.summaryStatus === 'partially-verified',
@@ -95,7 +95,21 @@ describe('property declaration financial summary schema', () => {
         entryCount: 0,
         evidencePages: [7],
         verificationStatus: 'independently-verified',
-        verificationMethod: 'dual-pass-local-ocr-and-source-page-cross-check',
+        verificationMethod: 'dual-render-local-ocr-agreement',
+      }),
+    ).toThrow();
+  });
+
+  it('rejects a none-reported category with a positive total', () => {
+    expect(() =>
+      PropertyDeclarationFinancialCategorySummarySchema.parse({
+        category: 'land',
+        status: 'none-reported',
+        totalTwd: 110000,
+        entryCount: 0,
+        evidencePages: [3],
+        verificationStatus: 'independently-verified',
+        verificationMethod: 'dual-render-local-ocr-agreement',
       }),
     ).toThrow();
   });
@@ -113,7 +127,7 @@ describe('property declaration financial summary schema', () => {
           ).length,
         0,
       ),
-    ).toBe(675);
+    ).toBe(684);
     expect(verification.records[0]?.pdfSha256).toMatch(/^[a-f0-9]{64}$/);
   });
 

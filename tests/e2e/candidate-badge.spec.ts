@@ -142,6 +142,7 @@ test('badge shows only the candidate name', async ({ page }) => {
   const name = await page
     .getByTestId('profile-panel')
     .locator('h2')
+    .first()
     .textContent();
   const metrics = await settleBadge(page, MAYOR);
   expect(metrics.text).toBe(name?.trim());

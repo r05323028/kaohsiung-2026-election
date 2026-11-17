@@ -8,6 +8,7 @@ import {
   toPublicCandidateProfile,
 } from '../../data';
 import { ballotNumberText } from '../../data/official/ballot';
+import { getCandidatePropertyDeclaration } from '../../data/property-declarations';
 import { withBase } from '../../utils/paths';
 
 export function getStaticPaths() {
@@ -38,9 +39,16 @@ const partyLabel =
     ? candidate.candidacy.politicalParty
     : '暫無資料';
 
-const publicCandidate = toPublicCandidateProfile(candidate, {
+const publicCandidateBase = toPublicCandidateProfile(candidate, {
   summary: publicSummary,
 });
+const propertyDeclaration = getCandidatePropertyDeclaration(
+  candidate.candidacy.id,
+);
+const publicCandidate = {
+  ...publicCandidateBase,
+  ...(propertyDeclaration ? { propertyDeclaration } : {}),
+};
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -56,7 +64,7 @@ const structuredData = {
 
 <BaseLayout
   title={`${candidate.person.displayName}｜港都人物誌`}
-  description={`${candidate.person.displayName}的${demo ? '虛構示範人物' : '候選人'}頁，包含基本資料、政策主張、相關新聞、從政歷程與家族政商關係。`}
+  description={`${candidate.person.displayName}的${demo ? '虛構示範人物' : '候選人'}頁，包含基本資料、政策主張、相關新聞、從政歷程、家族政商關係與財產申報。`}
   canonicalPath={`/candidates/${candidate.candidacy.slug}/`}
   structuredData={structuredData}
 >

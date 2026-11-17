@@ -7,7 +7,6 @@ import { getCandidatePublishedNews } from '../news';
 import { getCandidatePolicyResearchSummary } from '../policy-research';
 import { getPublishedCandidatePolicies } from '../policy-research/public-index';
 import { getPoliticalFamilyReadModel } from '../political-family';
-import { getCandidatePropertyDeclaration } from '../property-declarations';
 import {
   getCandidateResearchSummary,
   getPublicRecordBundle,
@@ -191,7 +190,6 @@ function toProfile(
   const biography = getBiographyReadModel(candidate.id);
   const basicProfile = getBasicProfileReadModel(candidate.id);
   const politicalFamily = getPoliticalFamilyReadModel(candidate.id);
-  const propertyDeclaration = getCandidatePropertyDeclaration(candidate.id);
   const publishedNews = getCandidatePublishedNews(candidate.id);
   const researchSourceIds = research?.sourceIds ?? [];
   const sources = [
@@ -251,7 +249,6 @@ function toProfile(
     ...(biography ? { biography } : {}),
     ...(basicProfile ? { basicProfile } : {}),
     ...(politicalFamily ? { politicalFamily } : {}),
-    ...(propertyDeclaration ? { propertyDeclaration } : {}),
     visual: neutralVisual(candidacyId, index),
   };
 }

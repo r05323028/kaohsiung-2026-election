@@ -135,6 +135,14 @@ function hasSerializedKey(html: string, key: string): boolean {
   return new RegExp(`(?:"|&quot;|')${escaped}(?:"|&quot;|')\\s*:`).test(html);
 }
 
+function collectJavaScriptFiles(directory: string): string[] {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const entryPath = join(directory, entry.name);
+    if (entry.isDirectory()) return collectJavaScriptFiles(entryPath);
+    return entry.isFile() && entry.name.endsWith('.js') ? [entryPath] : [];
+  });
+}
+
 const pageEntries = readdirSync(distCandidatesPath, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
@@ -203,6 +211,28 @@ const pages = pageEntries.map((slug) => {
   };
 });
 
+const forbiddenPropertyBundleTokens = [
+  'pdfSha256',
+  'verificationMethod',
+  'physicalPageCount',
+  'dual-render-local-ocr-agreement',
+  'kaohsiung-2026-candidate-property-declarations',
+];
+const clientBundleFiles = collectJavaScriptFiles(join(root, 'dist'));
+const clientBundleMatches = clientBundleFiles.flatMap((file) => {
+  const source = readFileSync(file, 'utf8');
+  return forbiddenPropertyBundleTokens
+    .filter((token) => source.includes(token))
+    .map((token) => ({
+      file: file.slice(root.length + 1),
+      token,
+    }));
+});
+const clientBundleBytes = clientBundleFiles.reduce(
+  (total, file) => total + Buffer.byteLength(readFileSync(file)),
+  0,
+);
+
 const tabFailures = pages.filter((page) =>
   requiredTabs.some((label) => (page.tabCounts[label] ?? 0) < 1),
 );
@@ -245,6 +275,15 @@ if (duplicateEmptyStates.length > 0) {
   );
 }
 
+if (clientBundleMatches.length > 0) {
+  throw new Error(
+    'Internal property-declaration metadata found in client JavaScript: ' +
+      clientBundleMatches
+        .map((item) => item.file + ': ' + item.token)
+        .join('; '),
+  );
+}
+
 const emptyStateTotals = Object.fromEntries(
   emptyStates.map((label) => [
     label,
@@ -267,13 +306,17 @@ const report = {
   forbiddenVisibleMatches: forbiddenMatches,
   serializedInternalMatches,
   duplicateEmptyStates,
+  clientBundleFiles: clientBundleFiles.length,
+  clientBundleBytes,
+  clientBundleInternalMatches: clientBundleMatches,
   pageInventory: pages,
   assertions: {
     allRosterPagesPresent: true,
-    allPagesHaveFiveTabs: true,
+    allPagesHaveRequiredTabs: true,
     forbiddenVisibleTextCount: forbiddenMatches.length,
     serializedInternalMetadataCount: serializedInternalMatches.length,
     duplicateEmptyStateCount: duplicateEmptyStates.length,
+    clientBundleInternalMetadataCount: clientBundleMatches.length,
   },
 };
 
@@ -297,7 +340,7 @@ const markdown = normalizeMarkdown(
     '- Duplicate empty states: ' +
     duplicateEmptyStates.length +
     '\n\n' +
-    'The audit checks generated static HTML for the complete roster, the five public tabs, concise empty-state strings, and removal of internal research/editorial workflow copy from both visitor-visible text and serialized island props.\n',
+    'The audit checks generated static HTML for the complete roster, the six required tabs, concise empty-state strings, and removal of internal research/editorial workflow copy from both visitor-visible text and serialized island props, and absence of internal property-declaration metadata from client JavaScript bundles.\n',
 );
 
 writeFileSync(jsonReportPath, JSON.stringify(report, null, 2) + '\n');
@@ -311,5 +354,7 @@ console.log(
     serializedInternalMatches.length +
     ' serialized internal metadata matches, ' +
     duplicateEmptyStates.length +
-    ' duplicate empty states.',
+    ' duplicate empty states, ' +
+    clientBundleMatches.length +
+    ' property internals in client bundles.',
 );

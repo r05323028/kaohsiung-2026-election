@@ -7,7 +7,6 @@ import type { CandidateProfileView, DistrictView } from './view';
 
 export * from './constituencies';
 export * from './official';
-export * from './property-declarations';
 export * from './schema';
 export * from './view';
 

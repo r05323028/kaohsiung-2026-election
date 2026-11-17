@@ -1058,6 +1058,7 @@ body:not(.is-immersive) #main-content {
   color: #294858;
   font-size: 0.88rem;
   font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
 }
 
 .property-declaration-financial__item small {

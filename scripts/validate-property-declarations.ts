@@ -332,8 +332,8 @@ const verifiedCategoryCount = financial.records.reduce(
   (total, record) => total + record.verifiedCategoryCount,
   0,
 );
-if (verifiedCategoryCount !== 675) {
-  fail('expected 675 independently verified category summaries.');
+if (verifiedCategoryCount !== 684) {
+  fail('expected 684 independently verified category summaries.');
 }
 
 for (const record of financial.records) {
@@ -394,7 +394,7 @@ for (const record of published.records) {
 }
 if (
   published.coverage.financialSummaryCount !== 105 ||
-  published.coverage.financialSummaryVerifiedCategoryCount !== 675 ||
+  published.coverage.financialSummaryVerifiedCategoryCount !== 684 ||
   published.coverage.financialSummaryPartialCount !== 96 ||
   published.coverage.financialSummaryUnavailableCount !== 8
 ) {

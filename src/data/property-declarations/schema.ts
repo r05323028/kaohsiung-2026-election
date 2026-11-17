@@ -154,7 +154,7 @@ export type PropertyDeclarationFinancialVerificationStatus = z.infer<
 >;
 
 const PropertyDeclarationFinancialVerificationMethodSchema = z
-  .literal('dual-pass-local-ocr-and-source-page-cross-check')
+  .literal('dual-render-local-ocr-agreement')
   .nullable();
 
 export const PropertyDeclarationFinancialCategorySummarySchema = z
@@ -198,7 +198,7 @@ export const PropertyDeclarationFinancialCategorySummarySchema = z
       context.addIssue({
         code: 'custom',
         message:
-          'Published financial category values require independent verification and page evidence.',
+          'Published financial category values require two-pass OCR agreement and page evidence.',
       });
     }
 
@@ -224,13 +224,24 @@ export const PropertyDeclarationFinancialCategorySummarySchema = z
 
     if (
       value.status === 'none-reported' &&
-      ((value.entryCount !== null && value.entryCount !== 0) ||
-        (value.totalTwd !== null && value.totalTwd !== 0))
+      ((value.totalTwd !== null && value.totalTwd !== 0) ||
+        (value.entryCount !== null && value.entryCount !== 0))
     ) {
       context.addIssue({
         code: 'custom',
         message:
-          'None-reported financial categories may expose only explicit zero totals or zero entry counts.',
+          'None-reported financial categories must not claim positive values or entries.',
+      });
+    }
+
+    if (
+      value.status === 'none-reported' &&
+      !(value.totalTwd === 0 || value.entryCount === 0)
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'None-reported financial categories require an explicit zero total or entry count.',
       });
     }
   });
@@ -366,9 +377,88 @@ const PropertyDeclarationCategoryAgreementSchema = z
   .object({
     category: PropertyDeclarationFinancialCategorySchema,
     outcome: z.enum(['agree', 'not-determined']),
+    status: PropertyDeclarationFinancialCategoryStatusSchema,
+    totalTwd: z
+      .number()
+      .nonnegative()
+      .refine(Number.isFinite, { message: 'Total must be finite.' })
+      .nullable(),
+    entryCount: z.number().int().nonnegative().nullable(),
     evidencePages: z.array(z.number().int().positive()),
   })
-  .strict();
+  .strict()
+  .superRefine((value, context) => {
+    if (value.outcome === 'not-determined') {
+      if (
+        value.status !== 'not-determined' ||
+        value.totalTwd !== null ||
+        value.entryCount !== null ||
+        value.evidencePages.length > 0
+      ) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Not-determined verification agreements must not contain values or evidence.',
+        });
+      }
+      return;
+    }
+
+    if (value.status === 'not-determined') {
+      context.addIssue({
+        code: 'custom',
+        message: 'Agreed verification categories require a reported state.',
+      });
+      return;
+    }
+
+    if (value.evidencePages.length === 0) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Agreed verification categories require page evidence.',
+      });
+    }
+
+    if (
+      value.status === 'reported' &&
+      value.totalTwd === null &&
+      value.entryCount === null
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Reported verification categories require a total or entry count.',
+      });
+    }
+
+    if (value.status === 'reported' && value.entryCount === 0) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Reported verification categories must not claim zero entries.',
+      });
+    }
+
+    if (value.status === 'none-reported') {
+      if (
+        (value.totalTwd !== null && value.totalTwd !== 0) ||
+        (value.entryCount !== null && value.entryCount !== 0)
+      ) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'None-reported verification categories must not claim positive values or entries.',
+        });
+      }
+      if (!(value.totalTwd === 0 || value.entryCount === 0)) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'None-reported verification categories require an explicit zero.',
+        });
+      }
+    }
+  });
 
 export const PropertyDeclarationVerificationRecordSchema = z
   .object({

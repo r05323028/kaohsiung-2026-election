@@ -12,7 +12,7 @@ describe('published property declaration read model', () => {
       ambiguous: 1,
       sourceUnavailable: 0,
       financialSummaries: 105,
-      verifiedCategories: 675,
+      verifiedCategories: 684,
       partialSummaries: 96,
       unavailableSummaries: 8,
     });

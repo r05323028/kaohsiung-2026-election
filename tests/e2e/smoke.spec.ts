@@ -112,7 +112,7 @@ test('ambiguous property sources stay unassigned and do not imply absence', asyn
   await profile.getByRole('tab', { name: '財產申報', exact: true }).click();
   const property = profile.getByTestId('property-declaration-ambiguous');
   await expect(property).toBeVisible();
-  await expect(property).toContainText('多筆同名文件');
+  await expect(property).toContainText('同名文件無法以現有識別脈絡唯一對應');
   await expect(property).toContainText('不代表沒有財產或沒有申報');
   await expect(
     property.getByTestId('property-declaration-financial-summary'),

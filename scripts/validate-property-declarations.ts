@@ -2,18 +2,30 @@ import { createHash } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import rosterInput from '../data/approved/2026/kaohsiung-election.json';
+import financialInput from '../data/normalized/2026/candidate-property-declaration-financial-summaries.json';
 import normalizedInput from '../data/normalized/2026/candidate-property-declaration-sources.json';
+import verificationInput from '../data/normalized/2026/candidate-property-declaration-verification.json';
 import publishedInput from '../data/published/2026/candidate-property-declarations.json';
 import {
+  PROPERTY_DECLARATION_FINANCIAL_CATEGORIES,
+  type PropertyDeclarationFinancialSummaryRecord,
   type PropertyDeclarationNormalizedRow,
   validatePropertyDeclarationDataset,
+  validatePropertyDeclarationFinancialSummaryDataset,
   validatePropertyDeclarationNormalizedDataset,
+  validatePropertyDeclarationVerificationDataset,
 } from '../src/data/property-declarations/schema';
+import { assertPropertyDeclarationFinancialEvidence } from '../src/data/property-declarations/verification';
 
 const root = process.cwd();
 const normalized =
   validatePropertyDeclarationNormalizedDataset(normalizedInput);
 const published = validatePropertyDeclarationDataset(publishedInput);
+const financial =
+  validatePropertyDeclarationFinancialSummaryDataset(financialInput);
+const verification =
+  validatePropertyDeclarationVerificationDataset(verificationInput);
+assertPropertyDeclarationFinancialEvidence(verification, financial);
 const roster = rosterInput as {
   candidates: Array<{
     id: string;
@@ -33,6 +45,16 @@ const rowsByCandidate = new Map<string, PropertyDeclarationNormalizedRow[]>();
 
 function fail(message: string): never {
   throw new Error('[validate:property-declarations] ' + message);
+}
+
+const financialByCandidate = new Map<
+  string,
+  PropertyDeclarationFinancialSummaryRecord
+>();
+for (const record of financial.records) {
+  if (financialByCandidate.has(record.candidateId))
+    fail('duplicate financial summary for ' + record.candidateId);
+  financialByCandidate.set(record.candidateId, record);
 }
 
 function sha256(bytes: Uint8Array): string {
@@ -268,6 +290,118 @@ if (
 )
   fail('published source status coverage changed unexpectedly.');
 
+if (verification.records.length !== 105) {
+  fail('expected 105 privacy-safe verification records.');
+}
+if (financial.records.length !== 105) {
+  fail(
+    'expected 105 financial summary records for unique source-linked candidates.',
+  );
+}
+const uniqueSourceLinkedIds = normalized.rows
+  .filter((row) => row.matchStatus === 'matched' && row.candidateId !== null)
+  .map((row) => row.candidateId as string);
+if (!sameValues([...financialByCandidate.keys()], uniqueSourceLinkedIds)) {
+  fail(
+    'financial summaries must cover exactly the uniquely matched candidates.',
+  );
+}
+
+const financialSummaryStatuses = {
+  'independently-verified': financial.records.filter(
+    (record) => record.summaryStatus === 'independently-verified',
+  ).length,
+  'partially-verified': financial.records.filter(
+    (record) => record.summaryStatus === 'partially-verified',
+  ).length,
+  unavailable: financial.records.filter(
+    (record) => record.summaryStatus === 'unavailable',
+  ).length,
+};
+if (
+  financialSummaryStatuses['independently-verified'] !== 1 ||
+  financialSummaryStatuses['partially-verified'] !== 96 ||
+  financialSummaryStatuses.unavailable !== 8
+) {
+  fail(
+    'financial summary status coverage changed unexpectedly: ' +
+      JSON.stringify(financialSummaryStatuses),
+  );
+}
+const verifiedCategoryCount = financial.records.reduce(
+  (total, record) => total + record.verifiedCategoryCount,
+  0,
+);
+if (verifiedCategoryCount !== 675) {
+  fail('expected 675 independently verified category summaries.');
+}
+
+for (const record of financial.records) {
+  const candidate = rosterById.get(record.candidateId);
+  const row = rowsByCandidate.get(record.candidateId);
+  if (
+    !candidate ||
+    !row ||
+    row.length !== 1 ||
+    row[0]?.matchStatus !== 'matched'
+  )
+    fail(
+      'financial summary candidate is not uniquely source-linked: ' +
+        record.candidateId,
+    );
+  if (
+    !row[0] ||
+    record.pdfUrl !== row[0].pdfUrl ||
+    record.pdfFileName !== row[0].pdfFileName
+  )
+    fail('financial summary source drifted for ' + record.candidateId);
+  if (record.displayName !== candidate.displayName)
+    fail('financial summary display name drifted for ' + record.candidateId);
+  const categories = new Set(
+    record.categories.map((category) => category.category),
+  );
+  if (categories.size !== PROPERTY_DECLARATION_FINANCIAL_CATEGORIES.length) {
+    fail(
+      'financial summary category coverage is incomplete for ' +
+        record.candidateId,
+    );
+  }
+}
+
+for (const record of published.records) {
+  const financialRecord = financialByCandidate.get(record.candidateId);
+  if (record.status === 'source-linked') {
+    if (!financialRecord || !record.financialSummary)
+      fail(
+        'source-linked record is missing its financial summary: ' +
+          record.candidateId,
+      );
+    if (
+      record.financialSummary.summaryStatus !== financialRecord.summaryStatus ||
+      record.financialSummary.verifiedCategoryCount !==
+        financialRecord.verifiedCategoryCount ||
+      JSON.stringify(record.financialSummary.categories) !==
+        JSON.stringify(financialRecord.categories)
+    ) {
+      fail('published financial summary drifted for ' + record.candidateId);
+    }
+  } else if (record.financialSummary !== null) {
+    fail(
+      'ambiguous or unavailable records must not publish financial summaries: ' +
+        record.candidateId,
+    );
+  }
+}
+if (
+  published.coverage.financialSummaryCount !== 105 ||
+  published.coverage.financialSummaryVerifiedCategoryCount !== 675 ||
+  published.coverage.financialSummaryPartialCount !== 96 ||
+  published.coverage.financialSummaryUnavailableCount !== 8
+) {
+  fail('published financial summary coverage changed unexpectedly.');
+}
+
+assertNoSensitiveKeys(financial);
 assertNoSensitiveKeys(published);
 await assertNoPropertyPdfBytes();
 console.log(

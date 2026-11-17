@@ -987,6 +987,83 @@ body:not(.is-immersive) #main-content {
   color: #fff9f0;
 }
 
+
+.property-declaration-card__unavailable {
+  margin: 0;
+  border-top: 1px solid rgba(41, 72, 88, 0.12);
+  padding-top: 0.7rem;
+  color: rgba(41, 72, 88, 0.72);
+}
+
+.property-declaration-financial {
+  display: grid;
+  gap: 0.7rem;
+  border-top: 1px solid rgba(41, 72, 88, 0.12);
+  padding-top: 0.85rem;
+}
+
+.property-declaration-financial__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem;
+}
+
+.property-declaration-financial__heading h4 {
+  margin: 0;
+}
+
+.property-declaration-financial__note {
+  margin: 0;
+  color: rgba(41, 72, 88, 0.72);
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.property-declaration-financial__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.property-declaration-financial__item {
+  display: grid;
+  gap: 0.25rem;
+  min-height: 6.2rem;
+  border: 1px solid rgba(41, 72, 88, 0.12);
+  border-radius: 0.75rem;
+  background: rgba(255, 249, 240, 0.58);
+  padding: 0.65rem;
+}
+
+.property-declaration-financial__item > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.property-declaration-financial__item > div span,
+.property-declaration-financial__item small {
+  color: rgba(41, 72, 88, 0.62);
+  font-size: 0.7rem;
+}
+
+.property-declaration-financial__item b {
+  color: #294858;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.property-declaration-financial__item small {
+  align-self: end;
+}
+
 .profile-section-heading {
   display: grid;
   gap: 0.2rem;

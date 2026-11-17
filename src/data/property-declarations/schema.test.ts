@@ -1,6 +1,14 @@
 import { describe, expect, it } from 'vitest';
+import financialInput from '../../../data/normalized/2026/candidate-property-declaration-financial-summaries.json';
 import normalizedInput from '../../../data/normalized/2026/candidate-property-declaration-sources.json';
-import { validatePropertyDeclarationNormalizedDataset } from './schema';
+import verificationInput from '../../../data/normalized/2026/candidate-property-declaration-verification.json';
+import {
+  PROPERTY_DECLARATION_FINANCIAL_CATEGORIES,
+  PropertyDeclarationFinancialCategorySummarySchema,
+  validatePropertyDeclarationFinancialSummaryDataset,
+  validatePropertyDeclarationNormalizedDataset,
+  validatePropertyDeclarationVerificationDataset,
+} from './schema';
 
 describe('property declaration normalized schema', () => {
   it('validates the deterministic official source map', () => {
@@ -31,5 +39,93 @@ describe('property declaration normalized schema', () => {
     });
     expect(validated.rows[0]?.candidateId).toBeNull();
     expect(validated.rows[0]?.matchStatus).toBe('unmatched');
+  });
+});
+
+describe('property declaration financial summary schema', () => {
+  it('validates all 105 sanitized source-linked summaries', () => {
+    const dataset =
+      validatePropertyDeclarationFinancialSummaryDataset(financialInput);
+    expect(dataset.records).toHaveLength(105);
+    expect(
+      dataset.records.every(
+        (record) =>
+          record.categories.length ===
+          PROPERTY_DECLARATION_FINANCIAL_CATEGORIES.length,
+      ),
+    ).toBe(true);
+    expect(
+      dataset.records.reduce(
+        (total, record) => total + record.verifiedCategoryCount,
+        0,
+      ),
+    ).toBe(675);
+    expect(
+      dataset.records.filter(
+        (record) => record.summaryStatus === 'partially-verified',
+      ),
+    ).toHaveLength(96);
+    expect(
+      dataset.records.filter(
+        (record) => record.summaryStatus === 'unavailable',
+      ),
+    ).toHaveLength(8);
+  });
+
+  it('does not allow not-determined values or page evidence', () => {
+    expect(() =>
+      PropertyDeclarationFinancialCategorySummarySchema.parse({
+        category: 'land',
+        status: 'not-determined',
+        totalTwd: null,
+        entryCount: null,
+        evidencePages: [3],
+        verificationStatus: 'not-determined',
+        verificationMethod: null,
+      }),
+    ).toThrow();
+  });
+
+  it('rejects a reported category with a positive total and zero entries', () => {
+    expect(() =>
+      PropertyDeclarationFinancialCategorySummarySchema.parse({
+        category: 'securities',
+        status: 'reported',
+        totalTwd: 110000,
+        entryCount: 0,
+        evidencePages: [7],
+        verificationStatus: 'independently-verified',
+        verificationMethod: 'dual-pass-local-ocr-and-source-page-cross-check',
+      }),
+    ).toThrow();
+  });
+
+  it('validates the privacy-safe two-pass verification manifest', () => {
+    const verification =
+      validatePropertyDeclarationVerificationDataset(verificationInput);
+    expect(verification.records).toHaveLength(105);
+    expect(
+      verification.records.reduce(
+        (total, record) =>
+          total +
+          record.categoryAgreements.filter(
+            (agreement) => agreement.outcome === 'agree',
+          ).length,
+        0,
+      ),
+    ).toBe(675);
+    expect(verification.records[0]?.pdfSha256).toMatch(/^[a-f0-9]{64}$/);
+  });
+
+  it('allows explicit zero values without turning unknowns into zero', () => {
+    const dataset =
+      validatePropertyDeclarationFinancialSummaryDataset(financialInput);
+    const noneReported = dataset.records
+      .flatMap((record) => record.categories)
+      .find((category) => category.status === 'none-reported');
+    expect(noneReported).toBeDefined();
+    expect(noneReported?.totalTwd === 0 || noneReported?.entryCount === 0).toBe(
+      true,
+    );
   });
 });

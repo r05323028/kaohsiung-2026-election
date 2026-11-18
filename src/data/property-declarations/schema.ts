@@ -146,7 +146,7 @@ export type PropertyDeclarationFinancialCategoryStatus = z.infer<
 >;
 
 export const PropertyDeclarationFinancialVerificationStatusSchema = z.enum([
-  'independently-verified',
+  'page-evidenced',
   'not-determined',
 ]);
 export type PropertyDeclarationFinancialVerificationStatus = z.infer<
@@ -154,7 +154,11 @@ export type PropertyDeclarationFinancialVerificationStatus = z.infer<
 >;
 
 const PropertyDeclarationFinancialVerificationMethodSchema = z
-  .literal('dual-render-local-ocr-agreement')
+  .enum([
+    'dual-render-local-ocr-agreement',
+    'multi-engine-local-ocr-and-page-cross-check',
+    'visual-page-review-with-gazette-cross-check',
+  ])
   .nullable();
 
 export const PropertyDeclarationFinancialCategorySummarySchema = z
@@ -191,14 +195,14 @@ export const PropertyDeclarationFinancialCategorySummarySchema = z
     }
 
     if (
-      value.verificationStatus !== 'independently-verified' ||
+      value.verificationStatus !== 'page-evidenced' ||
       value.verificationMethod === null ||
       value.evidencePages.length === 0
     ) {
       context.addIssue({
         code: 'custom',
         message:
-          'Published financial category values require two-pass OCR agreement and page evidence.',
+          'Published financial category values require a stated local verification method and page evidence.',
       });
     }
 
@@ -251,7 +255,7 @@ export type PropertyDeclarationFinancialCategorySummary = z.infer<
 >;
 
 export const PropertyDeclarationFinancialSummaryStatusSchema = z.enum([
-  'independently-verified',
+  'page-evidenced',
   'partially-verified',
   'unavailable',
 ]);
@@ -289,7 +293,7 @@ export const PropertyDeclarationFinancialSummarySchema = z
     }
 
     const independentlyVerified = value.categories.filter(
-      (item) => item.verificationStatus === 'independently-verified',
+      (item) => item.verificationStatus === 'page-evidenced',
     ).length;
     if (value.verifiedCategoryCount !== independentlyVerified) {
       context.addIssue({
@@ -303,7 +307,7 @@ export const PropertyDeclarationFinancialSummarySchema = z
       independentlyVerified === 0
         ? 'unavailable'
         : independentlyVerified === value.categories.length
-          ? 'independently-verified'
+          ? 'page-evidenced'
           : 'partially-verified';
     if (value.summaryStatus !== expectedStatus) {
       context.addIssue({
@@ -468,7 +472,7 @@ export const PropertyDeclarationVerificationRecordSchema = z
     pdfSha256: Sha256Schema,
     physicalPageCount: z.number().int().positive(),
     primaryPass: PropertyDeclarationVerificationPassSchema,
-    independentPass: PropertyDeclarationVerificationPassSchema,
+    comparisonPass: PropertyDeclarationVerificationPassSchema,
     categoryAgreements: z.array(PropertyDeclarationCategoryAgreementSchema),
   })
   .strict()

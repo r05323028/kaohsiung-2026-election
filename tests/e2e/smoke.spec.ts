@@ -101,6 +101,39 @@ test('candidate property tab exposes the official source link without sensitive 
   await expect(sourceCard).not.toContainText('金額');
 });
 
+test('recovered property summaries show page evidence and keep unknowns', async ({
+  page,
+}) => {
+  await page.goto('/candidates/kaohsiung-council-01-eacf5d92/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '財產申報', exact: true }).click();
+  const recovered = profile.getByTestId('property-declaration');
+  await expect(recovered).toContainText('14 類均有官方頁碼證據');
+  await expect(
+    recovered.getByTestId('property-category-insurance'),
+  ).toContainText('申報筆數：1');
+
+  await page.goto('/candidates/kaohsiung-council-07-ce1bd95c/');
+  const partialProfile = page.getByTestId('profile-tabs');
+  await expect(partialProfile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await partialProfile
+    .getByRole('tab', { name: '財產申報', exact: true })
+    .click();
+  const partial = partialProfile.getByTestId('property-declaration');
+  await expect(partial).toContainText('部分類別有官方頁碼證據');
+  await expect(partial.getByTestId('property-category-land')).toContainText(
+    '未能確定',
+  );
+  await expect(
+    partial.getByTestId('property-category-insurance'),
+  ).toContainText('申報筆數：9');
+});
+
 test('ambiguous property sources stay unassigned and do not imply absence', async ({
   page,
 }) => {

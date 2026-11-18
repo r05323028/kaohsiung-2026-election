@@ -54,7 +54,7 @@ export function assertPropertyDeclarationFinancialEvidence(
         );
       }
       const expectedOutcome =
-        category.verificationStatus === 'independently-verified'
+        category.verificationStatus === 'page-evidenced'
           ? 'agree'
           : 'not-determined';
       if (

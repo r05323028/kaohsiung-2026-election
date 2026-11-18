@@ -933,10 +933,9 @@ const financialSummaryStatusLabels: Record<
   PropertyDeclarationPublicFinancialSummary['summaryStatus'],
   string
 > = {
-  'independently-verified':
-    PROPERTY_DECLARATION_FINANCIAL_CATEGORY_COUNT +
-    ' 類已完成兩次離線 OCR 比對',
-  'partially-verified': '部分類別已完成兩次離線 OCR 比對',
+  'page-evidenced':
+    PROPERTY_DECLARATION_FINANCIAL_CATEGORY_COUNT + ' 類均有官方頁碼證據',
+  'partially-verified': '部分類別有官方頁碼證據',
   unavailable: '目前無法安全確定類別摘要',
 };
 
@@ -993,7 +992,7 @@ function PropertyFinancialSummary({
                 ? '明列為零或無申報筆數'
                 : category.status === 'not-determined'
                   ? '資料不足，未發布數值'
-                  : '已核對';
+                  : '有官方頁碼證據';
             return (
               <li
                 className="property-declaration-financial__item"
@@ -1056,8 +1055,7 @@ function PropertyDeclarationTab({
           <h4>中選會財產申報公開查閱文件</h4>
           <p>
             此連結依候選人姓名、選舉區與選舉類型對帳至官方清單；本站只保留連結，
-            並以類別層級呈現兩次不同渲染倍率離線 OCR
-            結果一致的摘要；這不是人工逐筆覆核。
+            並以類別層級呈現通過離線核對且有官方頁碼證據的摘要；這不是人工逐筆覆核。
           </p>
           <div className="property-declaration-card__links">
             <a href={document.pdfUrl} target="_blank" rel="noreferrer">

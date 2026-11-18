@@ -17,3 +17,7 @@ tmp*/
 .vitest/
 
 .cache/
+
+# Python bytecode from local extraction helpers
+__pycache__/
+*.pyc

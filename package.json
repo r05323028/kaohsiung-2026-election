@@ -76,6 +76,7 @@
     "avatars:likeness:validate": "tsx scripts/avatar/likeness/validate.ts",
     "validate:biographies": "tsx scripts/validate-biography-publication.ts",
     "property-declarations:discover": "tsx scripts/property-declarations/discover.ts",
+    "property-declarations:extract": "tsx scripts/property-declarations/extract.ts",
     "property-declarations:publish": "tsx scripts/property-declarations/publish.ts",
     "property-declarations:verify": "tsx scripts/property-declarations/verify.ts",
     "validate:property-declarations": "tsx scripts/validate-property-declarations.ts"

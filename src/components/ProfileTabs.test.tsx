@@ -1,8 +1,15 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { officialCandidateProfiles } from '../data/official';
-import { collectNewsCards, PROFILE_TABS } from './ProfileTabs';
+import { getCandidatePropertyDeclaration } from '../data/property-declarations';
+import type { PublicCandidateProfile } from '../data/view';
+import {
+  collectNewsCards,
+  PROFILE_TABS,
+  PropertyDeclarationTab,
+} from './ProfileTabs';
 
 describe('candidate profile section structure', () => {
   it('exposes exactly the six production sections in Traditional Chinese', () => {
@@ -113,5 +120,50 @@ describe('neutral candidate news presentation', () => {
     expect(cards).toHaveLength(expected);
     const dates = cards.map((card) => card.publicationDate);
     expect(dates).toEqual([...dates].sort((a, b) => b.localeCompare(a)));
+  });
+});
+
+function renderPropertyPanel(candidateId: string): string {
+  const propertyDeclaration = getCandidatePropertyDeclaration(candidateId);
+  expect(propertyDeclaration).toBeDefined();
+  const candidate = {
+    propertyDeclaration,
+  } as unknown as PublicCandidateProfile;
+  return renderToStaticMarkup(<PropertyDeclarationTab candidate={candidate} />);
+}
+
+describe('property declaration source presentation', () => {
+  it('labels official and civil fields on a mixed-source candidate', () => {
+    const html = renderPropertyPanel(
+      'official-candidate-2026-district-kaohsiung-council-07-afc23f7d',
+    );
+    expect(html).toContain('property-declaration-linked');
+    expect(html).toContain('data-source="official-cec"');
+    expect(html).toContain('data-source="civil-gazette"');
+    expect(html).toContain('中選會官方財產申報');
+    expect(html).toContain('台灣前進《2026 民間版選舉公報》');
+    expect(html).toContain('NT$750,000');
+    expect(html).toContain('申報筆數：14');
+    expect(html).toContain('官方與民間來源');
+    expect(html).not.toContain('verificationStatus');
+    expect(html).not.toContain('dual-render-local-ocr-agreement');
+  });
+
+  it('shows civil attribution without assigning an ambiguous official PDF', () => {
+    const html = renderPropertyPanel(
+      'official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c',
+    );
+    expect(html).toContain('property-declaration-ambiguous');
+    expect(html).toContain('同名文件無法以現有識別脈絡唯一對應');
+    expect(html).toContain('台灣前進《2026 民間版選舉公報》');
+    expect(html).toContain('NT$2,188,518');
+    expect(html).not.toContain('files/3471.pdf');
+    expect(html).not.toContain('files/3472.pdf');
+  });
+
+  it('renders explicit official zeros without substituting a civil value', () => {
+    const html = renderPropertyPanel('official-mayor-wang-zhao-min-2026');
+    expect(html).toContain('官方明列為零或無申報筆數');
+    expect(html).toContain('申報筆數：0');
   });
 });

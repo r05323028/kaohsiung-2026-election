@@ -1,11 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import financialInput from '../../../data/normalized/2026/candidate-property-declaration-financial-summaries.json';
+import gazetteInput from '../../../data/normalized/2026/candidate-property-declaration-gazette.json';
 import normalizedInput from '../../../data/normalized/2026/candidate-property-declaration-sources.json';
 import verificationInput from '../../../data/normalized/2026/candidate-property-declaration-verification.json';
 import {
   PROPERTY_DECLARATION_FINANCIAL_CATEGORIES,
+  PROPERTY_DECLARATION_GAZETTE_ATTRIBUTION,
   PropertyDeclarationFinancialCategorySummarySchema,
+  PropertyDeclarationGazetteCategorySchema,
   validatePropertyDeclarationFinancialSummaryDataset,
+  validatePropertyDeclarationGazetteDataset,
   validatePropertyDeclarationNormalizedDataset,
   validatePropertyDeclarationVerificationDataset,
 } from './schema';
@@ -159,5 +163,108 @@ describe('property declaration financial summary schema', () => {
     expect(noneReported?.totalTwd === 0 || noneReported?.entryCount === 0).toBe(
       true,
     );
+  });
+});
+
+describe('civil gazette property declaration schema', () => {
+  it('validates the declared-amount gazette snapshot', () => {
+    const dataset = validatePropertyDeclarationGazetteDataset(gazetteInput);
+    expect(dataset.records).toHaveLength(106);
+    expect(dataset.source.attribution).toBe(
+      PROPERTY_DECLARATION_GAZETTE_ATTRIBUTION,
+    );
+    expect(
+      dataset.records.every(
+        (record) =>
+          record.categories.length ===
+          PROPERTY_DECLARATION_FINANCIAL_CATEGORIES.length,
+      ),
+    ).toBe(true);
+    expect(
+      dataset.records.reduce(
+        (total, record) =>
+          total +
+          record.categories.filter((category) => category.status === 'reported')
+            .length,
+        0,
+      ),
+    ).toBe(599);
+    expect(
+      dataset.records.reduce(
+        (total, record) =>
+          total +
+          record.categories.filter((category) => category.totalTwd !== null)
+            .length,
+        0,
+      ),
+    ).toBe(205);
+  });
+
+  it('keeps gazette identities unique and independent of display names', () => {
+    const dataset = validatePropertyDeclarationGazetteDataset(gazetteInput);
+    expect(
+      new Set(dataset.records.map((record) => record.candidateId)).size,
+    ).toBe(106);
+    expect(
+      new Set(dataset.records.map((record) => record.gazetteCandidateId)).size,
+    ).toBe(106);
+    expect(
+      dataset.records.every(
+        (record) =>
+          record.matchMethod === 'district+ballot-number' &&
+          String(record.matchEvidence.gazetteBallotNumber) ===
+            record.matchEvidence.rosterCandidateNumber,
+      ),
+    ).toBe(true);
+    const hong = dataset.records.find(
+      (record) =>
+        record.candidateId ===
+        'official-candidate-2026-district-kaohsiung-indigenous-mountain-14-c9a9596c',
+    );
+    expect(hong?.displayName).toBe('洪英雄');
+    expect(hong?.officialPdfFileName).toBeNull();
+    expect(hong?.officialPdfSha256).toBeNull();
+  });
+
+  it('rejects a reported gazette category without a positive entry count', () => {
+    expect(() =>
+      PropertyDeclarationGazetteCategorySchema.parse({
+        category: 'land',
+        status: 'reported',
+        totalTwd: null,
+        entryCount: 0,
+        totalBasis: 'count-only-amounts-withheld',
+        valuedItemCount: 0,
+        unvaluedItemCount: 0,
+      }),
+    ).toThrow();
+  });
+
+  it('rejects an inferred total when the gazette withholds amounts', () => {
+    expect(() =>
+      PropertyDeclarationGazetteCategorySchema.parse({
+        category: 'building',
+        status: 'reported',
+        totalTwd: 1_800_000,
+        entryCount: 2,
+        totalBasis: 'count-only-amounts-withheld',
+        valuedItemCount: 2,
+        unvaluedItemCount: 0,
+      }),
+    ).toThrow();
+  });
+
+  it('accepts a declared total only when every item is valued', () => {
+    expect(() =>
+      PropertyDeclarationGazetteCategorySchema.parse({
+        category: 'deposits',
+        status: 'reported',
+        totalTwd: 2_000_000,
+        entryCount: 2,
+        totalBasis: 'declared-item-sum',
+        valuedItemCount: 1,
+        unvaluedItemCount: 1,
+      }),
+    ).toThrow();
   });
 });

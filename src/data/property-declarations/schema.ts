@@ -8,8 +8,14 @@ export const PROPERTY_DECLARATIONS_VERIFICATION_DATASET_ID =
   'kaohsiung-2026-candidate-property-declaration-verification';
 export const PROPERTY_DECLARATIONS_PUBLISHED_DATASET_ID =
   'kaohsiung-2026-candidate-property-declarations';
+export const PROPERTY_DECLARATIONS_GAZETTE_DATASET_ID =
+  'kaohsiung-2026-candidate-property-declaration-gazette';
 export const PROPERTY_DECLARATIONS_SCHEMA_VERSION = '1';
 export const PROPERTY_DECLARATIONS_SNAPSHOT_DATE = '2026-11-17';
+export const PROPERTY_DECLARATIONS_GAZETTE_SNAPSHOT_DATE = '2026-11-18';
+export const PROPERTY_DECLARATION_GAZETTE_ATTRIBUTION =
+  '資料來源：台灣前進《2026 民間版選舉公報》';
+export const PROPERTY_DECLARATION_GAZETTE_LICENSE = 'CC BY 4.0';
 
 const DateOnlySchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const IsoTimestampSchema = z.iso.datetime({ offset: true });
@@ -22,6 +28,26 @@ const OfficialPdfUrlSchema = z
       value.endsWith('.pdf'),
     {
       message: 'Property declaration URLs must be official CEC PDF URLs.',
+    },
+  );
+const GazetteCandidateUrlSchema = z
+  .url()
+  .refine(
+    (value) =>
+      value.startsWith('https://gazette2026.taiwangogo.tw/candidates/') &&
+      !value.includes('/cards/'),
+    {
+      message: 'Civil gazette candidate URLs must use the gazette domain.',
+    },
+  );
+const GazettePropertyCardUrlSchema = z
+  .url()
+  .refine(
+    (value) =>
+      value.startsWith('https://gazette2026.taiwangogo.tw/candidates/') &&
+      value.endsWith('/cards/property/'),
+    {
+      message: 'Civil gazette property URLs must use the gazette domain.',
     },
   );
 
@@ -145,21 +171,247 @@ export type PropertyDeclarationFinancialCategoryStatus = z.infer<
   typeof PropertyDeclarationFinancialCategoryStatusSchema
 >;
 
+export const PropertyDeclarationFieldSourceSchema = z.enum([
+  'official-cec',
+  'civil-gazette',
+]);
+export type PropertyDeclarationFieldSource = z.infer<
+  typeof PropertyDeclarationFieldSourceSchema
+>;
+
+export const PropertyDeclarationFinancialFieldSourcesSchema = z
+  .object({
+    total: PropertyDeclarationFieldSourceSchema.nullable(),
+    entryCount: PropertyDeclarationFieldSourceSchema.nullable(),
+  })
+  .strict();
+export type PropertyDeclarationFinancialFieldSources = z.infer<
+  typeof PropertyDeclarationFinancialFieldSourcesSchema
+>;
+
 export const PropertyDeclarationFinancialVerificationStatusSchema = z.enum([
   'page-evidenced',
+  'civil-gazette-evidenced',
+  'mixed-source-evidenced',
   'not-determined',
 ]);
 export type PropertyDeclarationFinancialVerificationStatus = z.infer<
   typeof PropertyDeclarationFinancialVerificationStatusSchema
 >;
 
-const PropertyDeclarationFinancialVerificationMethodSchema = z
+export const PropertyDeclarationFinancialVerificationMethodSchema = z
   .enum([
     'dual-render-local-ocr-agreement',
     'multi-engine-local-ocr-and-page-cross-check',
     'visual-page-review-with-gazette-cross-check',
+    'civil-gazette-structured-source-resolution',
+    'mixed-official-and-civil-source-resolution',
   ])
   .nullable();
+export type PropertyDeclarationFinancialVerificationMethod = z.infer<
+  typeof PropertyDeclarationFinancialVerificationMethodSchema
+>;
+
+export const PropertyDeclarationOfficialFinancialSourceSchema = z
+  .object({
+    publisher: z.literal('中央選舉委員會'),
+    pdfFileName: z.string().regex(/^\d+\.pdf$/),
+    url: OfficialPdfUrlSchema,
+  })
+  .strict();
+
+export const PropertyDeclarationCivilGazetteSourceSchema = z
+  .object({
+    publisher: z.literal('台灣前進'),
+    url: GazettePropertyCardUrlSchema,
+    retrievedAt: DateOnlySchema,
+    attribution: z.literal(PROPERTY_DECLARATION_GAZETTE_ATTRIBUTION),
+    license: z.literal(PROPERTY_DECLARATION_GAZETTE_LICENSE),
+  })
+  .strict();
+
+export const PropertyDeclarationFinancialSummarySourcesSchema = z
+  .object({
+    official: PropertyDeclarationOfficialFinancialSourceSchema.nullable(),
+    civil: PropertyDeclarationCivilGazetteSourceSchema.nullable(),
+  })
+  .strict();
+export type PropertyDeclarationFinancialSummarySources = z.infer<
+  typeof PropertyDeclarationFinancialSummarySourcesSchema
+>;
+
+export const PropertyDeclarationGazetteTotalBasisSchema = z.enum([
+  'declared-item-sum',
+  'count-only-amounts-withheld',
+  'unvalued',
+]);
+export type PropertyDeclarationGazetteTotalBasis = z.infer<
+  typeof PropertyDeclarationGazetteTotalBasisSchema
+>;
+
+export const PropertyDeclarationGazetteCategorySchema = z
+  .object({
+    category: PropertyDeclarationFinancialCategorySchema,
+    status: z.enum(['reported', 'not-determined']),
+    totalTwd: z
+      .number()
+      .nonnegative()
+      .refine(Number.isFinite, { message: 'Total must be finite.' })
+      .nullable(),
+    entryCount: z.number().int().nonnegative().nullable(),
+    totalBasis: PropertyDeclarationGazetteTotalBasisSchema.nullable(),
+    valuedItemCount: z.number().int().nonnegative(),
+    unvaluedItemCount: z.number().int().nonnegative(),
+  })
+  .strict()
+  .superRefine((value, context) => {
+    if (value.status === 'not-determined') {
+      if (
+        value.totalTwd !== null ||
+        value.entryCount !== null ||
+        value.totalBasis !== null ||
+        value.valuedItemCount !== 0 ||
+        value.unvaluedItemCount !== 0
+      ) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Not-determined gazette categories must not expose values or counts.',
+        });
+      }
+      return;
+    }
+    if (value.entryCount === null || value.entryCount === 0) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Reported gazette categories require positive entry counts.',
+      });
+    }
+    if (
+      value.entryCount !== null &&
+      value.valuedItemCount + value.unvaluedItemCount !== value.entryCount
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Gazette item counts must add up to the entry count.',
+      });
+    }
+    if (value.totalBasis === 'declared-item-sum') {
+      if (value.totalTwd === null || value.unvaluedItemCount !== 0) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Declared gazette totals require a value and no unvalued items.',
+        });
+      }
+      return;
+    }
+    if (value.totalTwd !== null) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Count-only or unvalued gazette categories must not expose a total.',
+      });
+    }
+  });
+
+export const PropertyDeclarationGazetteMatchEvidenceSchema = z
+  .object({
+    gazetteRegion: z.string().min(1),
+    gazetteBallotNumber: z.number().int().positive(),
+    rosterDistrictId: z.string().min(1),
+    rosterElectionType: z.enum([
+      'mayoral',
+      'city-council',
+      'indigenous-council',
+    ]),
+    rosterCandidateNumber: z.string().min(1),
+  })
+  .strict();
+
+export const PropertyDeclarationGazetteRecordSchema = z
+  .object({
+    candidateId: z.string().min(1),
+    displayName: z.string().min(1),
+    gazetteCandidateId: z.uuid(),
+    gazetteName: z.string().min(1),
+    matchMethod: z.literal('district+ballot-number'),
+    matchEvidence: PropertyDeclarationGazetteMatchEvidenceSchema,
+    nameExact: z.boolean(),
+    candidateUrl: GazetteCandidateUrlSchema,
+    propertyCardUrl: GazettePropertyCardUrlSchema,
+    retrievedAt: DateOnlySchema,
+    sourcePageSha256: Sha256Schema,
+    declarationDate: DateOnlySchema.nullable(),
+    officialPdfFileName: z
+      .string()
+      .regex(/^\d+\.pdf$/)
+      .nullable(),
+    officialPdfSha256: Sha256Schema.nullable(),
+    sourceDocumentSha256: Sha256Schema.nullable(),
+    categories: z.array(PropertyDeclarationGazetteCategorySchema),
+  })
+  .strict()
+  .superRefine((value, context) => {
+    if (
+      value.categories.length !==
+      PROPERTY_DECLARATION_FINANCIAL_CATEGORIES.length
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Gazette records must cover all financial categories.',
+      });
+    }
+    if (
+      new Set(value.categories.map((item) => item.category)).size !==
+      value.categories.length
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Gazette categories must be unique.',
+      });
+    }
+    if (
+      String(value.matchEvidence.gazetteBallotNumber) !==
+      value.matchEvidence.rosterCandidateNumber
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Gazette ballot number must match the canonical roster candidate number.',
+      });
+    }
+    if (
+      (value.officialPdfFileName === null) !==
+      (value.officialPdfSha256 === null)
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Gazette official PDF file name and SHA-256 must both be present or absent.',
+      });
+    }
+  });
+
+export const PropertyDeclarationGazetteDatasetSchema = z
+  .object({
+    datasetId: z.literal(PROPERTY_DECLARATIONS_GAZETTE_DATASET_ID),
+    schemaVersion: z.literal(PROPERTY_DECLARATIONS_SCHEMA_VERSION),
+    snapshotDate: DateOnlySchema,
+    source: z
+      .object({
+        publisher: z.literal('台灣前進'),
+        url: z.url(),
+        attribution: z.literal(PROPERTY_DECLARATION_GAZETTE_ATTRIBUTION),
+        license: z.literal(PROPERTY_DECLARATION_GAZETTE_LICENSE),
+        retrievedAt: DateOnlySchema,
+        note: z.string().min(1),
+      })
+      .strict(),
+    records: z.array(PropertyDeclarationGazetteRecordSchema),
+    note: z.string().min(1),
+  })
+  .strict();
 
 export const PropertyDeclarationFinancialCategorySummarySchema = z
   .object({
@@ -172,6 +424,8 @@ export const PropertyDeclarationFinancialCategorySummarySchema = z
       .nullable(),
     entryCount: z.number().int().nonnegative().nullable(),
     evidencePages: z.array(z.number().int().positive()),
+    fieldSources: PropertyDeclarationFinancialFieldSourcesSchema,
+    sourceConflict: z.boolean(),
     verificationStatus: PropertyDeclarationFinancialVerificationStatusSchema,
     verificationMethod: PropertyDeclarationFinancialVerificationMethodSchema,
   })
@@ -182,27 +436,106 @@ export const PropertyDeclarationFinancialCategorySummarySchema = z
         value.totalTwd !== null ||
         value.entryCount !== null ||
         value.evidencePages.length > 0 ||
+        value.fieldSources.total !== null ||
+        value.fieldSources.entryCount !== null ||
+        value.sourceConflict ||
         value.verificationStatus !== 'not-determined' ||
         value.verificationMethod !== null
       ) {
         context.addIssue({
           code: 'custom',
           message:
-            'Not-determined financial categories must not expose values or evidence.',
+            'Not-determined financial categories must not expose values, evidence or sources.',
         });
       }
       return;
     }
 
     if (
-      value.verificationStatus !== 'page-evidenced' ||
-      value.verificationMethod === null ||
+      value.verificationStatus === 'not-determined' ||
+      value.verificationMethod === null
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Published financial category values require a stated source-aware verification method.',
+      });
+    }
+
+    if (
+      (value.verificationStatus === 'page-evidenced' ||
+        value.verificationStatus === 'mixed-source-evidenced') &&
       value.evidencePages.length === 0
     ) {
       context.addIssue({
         code: 'custom',
         message:
-          'Published financial category values require a stated local verification method and page evidence.',
+          'Page-evidenced and mixed-source categories require official page evidence.',
+      });
+    }
+
+    if (
+      (value.totalTwd === null) !== (value.fieldSources.total === null) ||
+      (value.entryCount === null) !== (value.fieldSources.entryCount === null)
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Each financial field source must be present exactly when its value is present.',
+      });
+    }
+
+    if (
+      value.status === 'none-reported' &&
+      (value.fieldSources.total === 'civil-gazette' ||
+        value.fieldSources.entryCount === 'civil-gazette')
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'None-reported financial categories require an official explicit zero.',
+      });
+    }
+
+    const sources = [
+      value.fieldSources.total,
+      value.fieldSources.entryCount,
+    ].filter(
+      (source): source is PropertyDeclarationFieldSource => source !== null,
+    );
+    const usesOfficial = sources.includes('official-cec');
+    const usesCivil = sources.includes('civil-gazette');
+    if (value.sourceConflict && !usesOfficial) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Source conflicts require an official field to remain primary.',
+      });
+    }
+    if (value.verificationStatus === 'page-evidenced' && usesCivil) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Page-evidenced categories must use official fields only.',
+      });
+    }
+    if (
+      value.verificationStatus === 'civil-gazette-evidenced' &&
+      (!usesCivil || usesOfficial)
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Civil-gazette-evidenced categories must use civil fields only.',
+      });
+    }
+    if (
+      value.verificationStatus === 'mixed-source-evidenced' &&
+      (!usesCivil || !usesOfficial)
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Mixed-source categories require both official and civil fields.',
       });
     }
 
@@ -256,6 +589,8 @@ export type PropertyDeclarationFinancialCategorySummary = z.infer<
 
 export const PropertyDeclarationFinancialSummaryStatusSchema = z.enum([
   'page-evidenced',
+  'civil-gazette-verified',
+  'mixed-source-verified',
   'partially-verified',
   'unavailable',
 ]);
@@ -268,6 +603,7 @@ export const PropertyDeclarationFinancialSummarySchema = z
     summaryStatus: PropertyDeclarationFinancialSummaryStatusSchema,
     verifiedCategoryCount: z.number().int().nonnegative(),
     categories: z.array(PropertyDeclarationFinancialCategorySummarySchema),
+    sources: PropertyDeclarationFinancialSummarySourcesSchema,
     note: z.string().min(1),
   })
   .strict()
@@ -292,28 +628,71 @@ export const PropertyDeclarationFinancialSummarySchema = z
       });
     }
 
-    const independentlyVerified = value.categories.filter(
+    const resolved = value.categories.filter(
+      (item) => item.verificationStatus !== 'not-determined',
+    ).length;
+    const officialOnly = value.categories.filter(
       (item) => item.verificationStatus === 'page-evidenced',
     ).length;
-    if (value.verifiedCategoryCount !== independentlyVerified) {
+    const civilOnly = value.categories.filter(
+      (item) => item.verificationStatus === 'civil-gazette-evidenced',
+    ).length;
+    const mixed = value.categories.filter(
+      (item) => item.verificationStatus === 'mixed-source-evidenced',
+    ).length;
+    if (value.verifiedCategoryCount !== resolved) {
       context.addIssue({
         code: 'custom',
         message:
-          'verifiedCategoryCount does not match category verification states.',
+          'verifiedCategoryCount does not match resolved category states.',
       });
     }
 
     const expectedStatus =
-      independentlyVerified === 0
+      resolved === 0
         ? 'unavailable'
-        : independentlyVerified === value.categories.length
-          ? 'page-evidenced'
-          : 'partially-verified';
+        : resolved < value.categories.length
+          ? 'partially-verified'
+          : civilOnly === 0 && mixed === 0
+            ? 'page-evidenced'
+            : officialOnly === 0 && mixed === 0
+              ? 'civil-gazette-verified'
+              : 'mixed-source-verified';
     if (value.summaryStatus !== expectedStatus) {
       context.addIssue({
         code: 'custom',
         message:
-          'Financial summary status does not match verified category coverage.',
+          'Financial summary status does not match resolved category coverage.',
+      });
+    }
+
+    const usesOfficial = value.categories.some(
+      (item) =>
+        item.fieldSources.total === 'official-cec' ||
+        item.fieldSources.entryCount === 'official-cec',
+    );
+    const usesCivil = value.categories.some(
+      (item) =>
+        item.fieldSources.total === 'civil-gazette' ||
+        item.fieldSources.entryCount === 'civil-gazette',
+    );
+    if (usesOfficial && value.sources.official === null) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Official category values require an official source link.',
+      });
+    }
+    if (usesCivil && value.sources.civil === null) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Civil-gazette category values require a civil source link and attribution.',
+      });
+    }
+    if (value.sources.official === null && value.sources.civil === null) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Financial summaries require at least one published source.',
       });
     }
   });
@@ -389,6 +768,8 @@ const PropertyDeclarationCategoryAgreementSchema = z
       .nullable(),
     entryCount: z.number().int().nonnegative().nullable(),
     evidencePages: z.array(z.number().int().positive()),
+    fieldSources: PropertyDeclarationFinancialFieldSourcesSchema,
+    sourceConflict: z.boolean(),
   })
   .strict()
   .superRefine((value, context) => {
@@ -397,7 +778,10 @@ const PropertyDeclarationCategoryAgreementSchema = z
         value.status !== 'not-determined' ||
         value.totalTwd !== null ||
         value.entryCount !== null ||
-        value.evidencePages.length > 0
+        value.evidencePages.length > 0 ||
+        value.fieldSources.total !== null ||
+        value.fieldSources.entryCount !== null ||
+        value.sourceConflict
       ) {
         context.addIssue({
           code: 'custom',
@@ -420,6 +804,23 @@ const PropertyDeclarationCategoryAgreementSchema = z
       context.addIssue({
         code: 'custom',
         message: 'Agreed verification categories require page evidence.',
+      });
+    }
+
+    if (
+      value.fieldSources.total !== 'official-cec' &&
+      value.fieldSources.entryCount !== 'official-cec'
+    ) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Agreed official verification categories require an official field source.',
+      });
+    }
+    if (value.sourceConflict) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Official verification agreements must not carry conflicts.',
       });
     }
 
@@ -537,7 +938,61 @@ export const PropertyDeclarationCandidateRecordSchema = z
     documents: z.array(PropertyDeclarationDocumentSchema),
     financialSummary: PropertyDeclarationFinancialSummarySchema.nullable(),
   })
-  .strict();
+  .strict()
+  .superRefine((value, context) => {
+    if (value.status === 'source-linked') {
+      if (
+        value.financialSummary !== null &&
+        value.financialSummary.sources.official === null
+      ) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Source-linked candidates require an official summary source.',
+        });
+      }
+      return;
+    }
+
+    if (value.status === 'ambiguous-source' && value.financialSummary) {
+      if (value.documents.length !== 0) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Ambiguous-source candidates must not publish an unassigned official document.',
+        });
+      }
+      if (value.financialSummary.sources.official !== null) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Ambiguous-source civil fallback must not claim an official document source.',
+        });
+      }
+      if (
+        value.financialSummary.categories.some(
+          (category) =>
+            category.verificationStatus !== 'not-determined' &&
+            category.verificationStatus !== 'civil-gazette-evidenced',
+        )
+      ) {
+        context.addIssue({
+          code: 'custom',
+          message:
+            'Ambiguous-source candidates may publish civil fallback categories only.',
+        });
+      }
+      return;
+    }
+
+    if (value.financialSummary !== null) {
+      context.addIssue({
+        code: 'custom',
+        message:
+          'Unavailable-source candidates must not publish a financial summary.',
+      });
+    }
+  });
 
 export const PropertyDeclarationCoverageSchema = z
   .object({
@@ -549,6 +1004,10 @@ export const PropertyDeclarationCoverageSchema = z
     unmatchedRowCount: z.number().int().nonnegative(),
     financialSummaryCount: z.number().int().nonnegative(),
     financialSummaryVerifiedCategoryCount: z.number().int().nonnegative(),
+    financialSummaryOfficialCategoryCount: z.number().int().nonnegative(),
+    financialSummaryCivilFallbackCategoryCount: z.number().int().nonnegative(),
+    financialSummaryMixedSourceCategoryCount: z.number().int().nonnegative(),
+    financialSummarySourceConflictCount: z.number().int().nonnegative(),
     financialSummaryPartialCount: z.number().int().nonnegative(),
     financialSummaryUnavailableCount: z.number().int().nonnegative(),
   })
@@ -585,6 +1044,15 @@ export type PropertyDeclarationCandidateRecord = z.infer<
 export type PropertyDeclarationPublishedDataset = z.infer<
   typeof PropertyDeclarationPublishedDatasetSchema
 >;
+export type PropertyDeclarationGazetteCategory = z.infer<
+  typeof PropertyDeclarationGazetteCategorySchema
+>;
+export type PropertyDeclarationGazetteRecord = z.infer<
+  typeof PropertyDeclarationGazetteRecordSchema
+>;
+export type PropertyDeclarationGazetteDataset = z.infer<
+  typeof PropertyDeclarationGazetteDatasetSchema
+>;
 
 export function validatePropertyDeclarationNormalizedDataset(
   input: unknown,
@@ -602,6 +1070,12 @@ export function validatePropertyDeclarationVerificationDataset(
   input: unknown,
 ): PropertyDeclarationVerificationDataset {
   return PropertyDeclarationVerificationDatasetSchema.parse(input);
+}
+
+export function validatePropertyDeclarationGazetteDataset(
+  input: unknown,
+): PropertyDeclarationGazetteDataset {
+  return PropertyDeclarationGazetteDatasetSchema.parse(input);
 }
 
 export function validatePropertyDeclarationDataset(

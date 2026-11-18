@@ -84,6 +84,7 @@ const forbiddenSerializedKeys = [
   'policyResearch',
   'publicRecordResearch',
   'verificationStatus',
+  'sourceConflict',
   'reviewStatus',
   'publicationStatus',
   'retrievalDate',
@@ -213,10 +214,16 @@ const pages = pageEntries.map((slug) => {
 
 const forbiddenPropertyBundleTokens = [
   'pdfSha256',
+  'sourcePageSha256',
+  'sourceDocumentSha256',
   'verificationMethod',
   'physicalPageCount',
   'dual-render-local-ocr-agreement',
+  'civil-gazette-structured-source-resolution',
+  'mixed-official-and-civil-source-resolution',
+  'gazetteCandidateId',
   'kaohsiung-2026-candidate-property-declarations',
+  'kaohsiung-2026-candidate-property-declaration-gazette',
 ];
 const clientBundleFiles = collectJavaScriptFiles(join(root, 'dist'));
 const clientBundleMatches = clientBundleFiles.flatMap((file) => {

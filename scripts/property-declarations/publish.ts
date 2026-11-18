@@ -2,14 +2,18 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import rosterInput from '../../data/approved/2026/kaohsiung-election.json';
 import financialInput from '../../data/normalized/2026/candidate-property-declaration-financial-summaries.json';
+import gazetteInput from '../../data/normalized/2026/candidate-property-declaration-gazette.json';
 import normalizedInput from '../../data/normalized/2026/candidate-property-declaration-sources.json';
+import { resolvePropertyDeclarationFinancialSummary } from '../../src/data/property-declarations/resolve';
 import {
   type PropertyDeclarationCandidateRecord,
   type PropertyDeclarationDocument,
   type PropertyDeclarationFinancialSummary,
   type PropertyDeclarationFinancialSummaryRecord,
+  type PropertyDeclarationGazetteRecord,
   type PropertyDeclarationNormalizedRow,
   validatePropertyDeclarationFinancialSummaryDataset,
+  validatePropertyDeclarationGazetteDataset,
   validatePropertyDeclarationNormalizedDataset,
 } from '../../src/data/property-declarations/schema';
 
@@ -23,6 +27,7 @@ const normalized =
   validatePropertyDeclarationNormalizedDataset(normalizedInput);
 const financial =
   validatePropertyDeclarationFinancialSummaryDataset(financialInput);
+const gazette = validatePropertyDeclarationGazetteDataset(gazetteInput);
 const roster = rosterInput as {
   candidates: Array<{
     id: string;
@@ -52,6 +57,14 @@ for (const record of financial.records) {
   financialByCandidate.set(record.candidateId, record);
 }
 
+const gazetteByCandidate = new Map<string, PropertyDeclarationGazetteRecord>();
+for (const record of gazette.records) {
+  if (gazetteByCandidate.has(record.candidateId)) {
+    throw new Error('Duplicate gazette record for ' + record.candidateId);
+  }
+  gazetteByCandidate.set(record.candidateId, record);
+}
+
 function unique(values: string[]): string[] {
   return [...new Set(values)];
 }
@@ -79,6 +92,7 @@ function summaryFromRecord(
     summaryStatus: record.summaryStatus,
     verifiedCategoryCount: record.verifiedCategoryCount,
     categories: record.categories,
+    sources: record.sources,
     note: record.note,
   };
 }
@@ -107,6 +121,10 @@ const records: PropertyDeclarationCandidateRecord[] = roster.candidates.map(
       };
     }
     if (rows.length > 1 || rows.some((row) => row.matchStatus !== 'matched')) {
+      const civilSummary = resolvePropertyDeclarationFinancialSummary(
+        null,
+        gazetteByCandidate.get(candidate.id) ?? null,
+      );
       return {
         candidateId: candidate.id,
         displayName: candidate.displayName,
@@ -118,10 +136,14 @@ const records: PropertyDeclarationCandidateRecord[] = roster.candidates.map(
           matchMethod: null,
           listedNames,
           listingPageUrls,
-          note: 'Multiple or otherwise ambiguous official listing rows remain unassigned to this candidate. No individual PDF link or financial summary is published until the source identity is unique.',
+          note:
+            'Multiple or otherwise ambiguous official listing rows remain unassigned to this candidate. No individual official PDF is selected. ' +
+            (civilSummary
+              ? 'The civil gazette property card is published only as an explicitly attributed fallback and does not establish which official PDF belongs to this candidate.'
+              : 'No financial summary is published until the source identity is unique.'),
         },
         documents: [],
-        financialSummary: null,
+        financialSummary: civilSummary,
       };
     }
 
@@ -155,7 +177,10 @@ const records: PropertyDeclarationCandidateRecord[] = roster.candidates.map(
         note: 'The official listing name was reconciled to the canonical candidate by name, district and election type. The linked PDF is not retained; only conservative category-level values independently supported by two offline passes are published.',
       },
       documents: [documentFromRow(row)],
-      financialSummary: summaryFromRecord(financialRecord),
+      financialSummary: resolvePropertyDeclarationFinancialSummary(
+        summaryFromRecord(financialRecord),
+        gazetteByCandidate.get(candidate.id) ?? null,
+      ),
     };
   },
 );
@@ -191,6 +216,38 @@ const output = {
       (total, summary) => total + summary.verifiedCategoryCount,
       0,
     ),
+    financialSummaryOfficialCategoryCount: financialSummaries.reduce(
+      (total, summary) =>
+        total +
+        summary.categories.filter(
+          (category) => category.verificationStatus === 'page-evidenced',
+        ).length,
+      0,
+    ),
+    financialSummaryCivilFallbackCategoryCount: financialSummaries.reduce(
+      (total, summary) =>
+        total +
+        summary.categories.filter(
+          (category) =>
+            category.verificationStatus === 'civil-gazette-evidenced',
+        ).length,
+      0,
+    ),
+    financialSummaryMixedSourceCategoryCount: financialSummaries.reduce(
+      (total, summary) =>
+        total +
+        summary.categories.filter(
+          (category) =>
+            category.verificationStatus === 'mixed-source-evidenced',
+        ).length,
+      0,
+    ),
+    financialSummarySourceConflictCount: financialSummaries.reduce(
+      (total, summary) =>
+        total +
+        summary.categories.filter((category) => category.sourceConflict).length,
+      0,
+    ),
     financialSummaryPartialCount: financialSummaries.filter(
       (summary) => summary.summaryStatus === 'partially-verified',
     ).length,
@@ -198,7 +255,7 @@ const output = {
       (summary) => summary.summaryStatus === 'unavailable',
     ).length,
   },
-  note: 'This privacy-safe publication contains official CEC listing links plus conservative category-level financial totals or entry counts only when two offline OCR passes agree and page evidence is retained. It does not reproduce addresses, identity numbers, accounts, signatures, raw OCR, transcripts or itemized property details; an ambiguous or unavailable link is not evidence that no declaration or property exists.',
+  note: 'This privacy-safe publication contains official CEC listing links plus conservative category-level financial totals or entry counts. Official values remain primary when reliably verified; individually unresolved fields may use the 2026 civil election gazette with explicit source attribution. It does not reproduce addresses, identity numbers, accounts, signatures, raw OCR, transcripts or itemized property details; an ambiguous or unavailable link is not evidence that no declaration or property exists.',
 };
 await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
 await writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2) + '\n');

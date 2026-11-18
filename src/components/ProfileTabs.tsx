@@ -11,6 +11,8 @@ import {
   PROPERTY_DECLARATION_FINANCIAL_CATEGORY_COUNT,
   PROPERTY_DECLARATION_FINANCIAL_CATEGORY_LABELS,
   PROPERTY_DECLARATION_FINANCIAL_NOTE,
+  PROPERTY_DECLARATION_GAZETTE_SOURCE_LABEL,
+  PROPERTY_DECLARATION_OFFICIAL_SOURCE_LABEL,
   PROPERTY_DECLARATION_PUBLIC_NOTE,
   type PropertyDeclarationPublicFinancialSummary,
 } from '../data/property-declarations/public-copy';
@@ -935,7 +937,10 @@ const financialSummaryStatusLabels: Record<
 > = {
   'page-evidenced':
     PROPERTY_DECLARATION_FINANCIAL_CATEGORY_COUNT + ' 類均有官方頁碼證據',
-  'partially-verified': '部分類別有官方頁碼證據',
+  'civil-gazette-verified':
+    PROPERTY_DECLARATION_FINANCIAL_CATEGORY_COUNT + ' 類均有民間版選舉公報來源',
+  'mixed-source-verified': '官方與民間來源共同完成類別核對',
+  'partially-verified': '部分類別已有可標示來源',
   unavailable: '目前無法安全確定類別摘要',
 };
 
@@ -948,11 +953,46 @@ function formatPropertyDeclarationTwd(value: number): string {
   );
 }
 
-function PropertyFinancialSummary({
+export function PropertyValueSource({
+  source,
+  summary,
+}: {
+  source: 'official-cec' | 'civil-gazette';
+  summary: PropertyDeclarationPublicFinancialSummary;
+}) {
+  const href =
+    source === 'official-cec'
+      ? summary.sources.official?.url
+      : summary.sources.civil?.url;
+  const label =
+    source === 'official-cec'
+      ? PROPERTY_DECLARATION_OFFICIAL_SOURCE_LABEL
+      : PROPERTY_DECLARATION_GAZETTE_SOURCE_LABEL;
+  return (
+    <small
+      className="property-declaration-financial__source"
+      data-source={source}
+    >
+      資料來源：
+      {href ? (
+        <a href={href} target="_blank" rel="noreferrer">
+          {label}
+          <span className="sr-only">（另開新視窗）</span>
+        </a>
+      ) : (
+        label
+      )}
+    </small>
+  );
+}
+
+export function PropertyFinancialSummary({
   summary,
 }: {
   summary: PropertyDeclarationPublicFinancialSummary;
 }) {
+  const hasOfficialSource = summary.sources.official !== null;
+  const hasGazetteSource = summary.sources.civil !== null;
   return (
     <section
       className="property-declaration-financial"
@@ -967,6 +1007,24 @@ function PropertyFinancialSummary({
       <p className="property-declaration-financial__note">
         {PROPERTY_DECLARATION_FINANCIAL_NOTE}
       </p>
+      <p className="property-declaration-financial__sources">
+        {hasOfficialSource ? (
+          <a
+            href={summary.sources.official?.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            中選會官方文件
+            <span className="sr-only">（另開新視窗）</span>
+          </a>
+        ) : null}
+        {hasGazetteSource ? (
+          <a href={summary.sources.civil?.url} target="_blank" rel="noreferrer">
+            {PROPERTY_DECLARATION_GAZETTE_SOURCE_LABEL}
+            <span className="sr-only">（另開新視窗）</span>
+          </a>
+        ) : null}
+      </p>
       {summary.summaryStatus === 'unavailable' ? (
         <p className="property-declaration-card__unavailable">
           目前無法安全確定任何類別摘要；不以空白推論為零。
@@ -974,29 +1032,50 @@ function PropertyFinancialSummary({
       ) : (
         <ul className="property-declaration-financial__list">
           {summary.categories.map((category) => {
-            const values: string[] = [];
-            if (category.totalTwd !== null) {
-              values.push(formatPropertyDeclarationTwd(category.totalTwd));
+            const values: Array<{
+              key: 'total' | 'count';
+              text: string;
+              source: 'official-cec' | 'civil-gazette';
+            }> = [];
+            if (
+              category.totalTwd !== null &&
+              category.fieldSources.total !== null
+            ) {
+              values.push({
+                key: 'total',
+                text:
+                  (category.category === 'debts' ? '負債 ' : '') +
+                  formatPropertyDeclarationTwd(category.totalTwd),
+                source: category.fieldSources.total,
+              });
             }
-            if (category.entryCount !== null) {
-              values.push(`申報筆數：${category.entryCount}`);
+            if (
+              category.entryCount !== null &&
+              category.fieldSources.entryCount !== null
+            ) {
+              values.push({
+                key: 'count',
+                text: '申報筆數：' + category.entryCount,
+                source: category.fieldSources.entryCount,
+              });
             }
-            const valueText =
-              category.status === 'not-determined' || values.length === 0
-                ? '未能確定'
-                : category.category === 'debts'
-                  ? '負債 ' + values.join('・')
-                  : values.join('・');
+            const fieldSources = values.map((value) => value.source);
+            const hasOfficialField = fieldSources.includes('official-cec');
+            const hasGazetteField = fieldSources.includes('civil-gazette');
             const statusText =
               category.status === 'none-reported'
-                ? '明列為零或無申報筆數'
+                ? '官方明列為零或無申報筆數'
                 : category.status === 'not-determined'
                   ? '資料不足，未發布數值'
-                  : '有官方頁碼證據';
+                  : hasOfficialField && hasGazetteField
+                    ? '官方與民間來源'
+                    : hasGazetteField
+                      ? '民間版選舉公報'
+                      : '官方頁碼證據';
             return (
               <li
                 className="property-declaration-financial__item"
-                data-testid={`property-category-${category.category}`}
+                data-testid={'property-category-' + category.category}
                 key={category.category}
               >
                 <div>
@@ -1009,7 +1088,22 @@ function PropertyFinancialSummary({
                   </strong>
                   <span>{statusText}</span>
                 </div>
-                <b>{valueText}</b>
+                {values.length > 0 ? (
+                  values.map((value) => (
+                    <div
+                      className="property-declaration-financial__value"
+                      key={value.key}
+                    >
+                      <b>{value.text}</b>
+                      <PropertyValueSource
+                        source={value.source}
+                        summary={summary}
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <b>未能確定</b>
+                )}
                 {category.evidencePages.length > 0 ? (
                   <small>
                     官方文件頁碼：{category.evidencePages.join('、')}
@@ -1024,7 +1118,7 @@ function PropertyFinancialSummary({
   );
 }
 
-function PropertyDeclarationTab({
+export function PropertyDeclarationTab({
   candidate,
 }: {
   candidate: PublicCandidateProfile;
@@ -1054,8 +1148,9 @@ function PropertyDeclarationTab({
           </div>
           <h4>中選會財產申報公開查閱文件</h4>
           <p>
-            此連結依候選人姓名、選舉區與選舉類型對帳至官方清單；本站只保留連結，
-            並以類別層級呈現通過離線核對且有官方頁碼證據的摘要；這不是人工逐筆覆核。
+            此連結依候選人姓名、選舉區與選舉類型對帳至官方清單；本站只保留連結。
+            類別摘要以官方可判讀欄位優先，官方無法判讀的個別欄位才以民間版選舉公報補足，
+            每個數值都標示來源；這不是人工逐筆覆核。
           </p>
           <div className="property-declaration-card__links">
             <a href={document.pdfUrl} target="_blank" rel="noreferrer">
@@ -1085,9 +1180,14 @@ function PropertyDeclarationTab({
           </div>
           <h4>同名文件無法以現有識別脈絡唯一對應</h4>
           <p>
-            目前無法在不依賴姓名推論的前提下，將其中一份文件唯一指定給此候選人；
-            因此不提供個別 PDF 連結或財產摘要。這不代表沒有財產或沒有申報。
+            目前無法在不依賴姓名推論的前提下，將其中一份官方文件唯一指定給此候選人，
+            因此不提供個別官方 PDF
+            連結。若民間版選舉公報有可歸屬同一候選人的類別資料，
+            以下會逐項標示來源；這不代表沒有財產或沒有申報。
           </p>
+          {declaration.financialSummary ? (
+            <PropertyFinancialSummary summary={declaration.financialSummary} />
+          ) : null}
           {listingPageUrl ? (
             <a href={listingPageUrl} target="_blank" rel="noreferrer">
               查看官方候選人清單

@@ -3,15 +3,20 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import rosterInput from '../data/approved/2026/kaohsiung-election.json';
 import financialInput from '../data/normalized/2026/candidate-property-declaration-financial-summaries.json';
+import gazetteInput from '../data/normalized/2026/candidate-property-declaration-gazette.json';
 import normalizedInput from '../data/normalized/2026/candidate-property-declaration-sources.json';
 import verificationInput from '../data/normalized/2026/candidate-property-declaration-verification.json';
 import publishedInput from '../data/published/2026/candidate-property-declarations.json';
+import { resolvePropertyDeclarationFinancialSummary } from '../src/data/property-declarations/resolve';
 import {
   PROPERTY_DECLARATION_FINANCIAL_CATEGORIES,
+  type PropertyDeclarationFinancialSummary,
   type PropertyDeclarationFinancialSummaryRecord,
+  type PropertyDeclarationGazetteRecord,
   type PropertyDeclarationNormalizedRow,
   validatePropertyDeclarationDataset,
   validatePropertyDeclarationFinancialSummaryDataset,
+  validatePropertyDeclarationGazetteDataset,
   validatePropertyDeclarationNormalizedDataset,
   validatePropertyDeclarationVerificationDataset,
 } from '../src/data/property-declarations/schema';
@@ -23,6 +28,7 @@ const normalized =
 const published = validatePropertyDeclarationDataset(publishedInput);
 const financial =
   validatePropertyDeclarationFinancialSummaryDataset(financialInput);
+const gazette = validatePropertyDeclarationGazetteDataset(gazetteInput);
 const verification =
   validatePropertyDeclarationVerificationDataset(verificationInput);
 assertPropertyDeclarationFinancialEvidence(verification, financial);
@@ -55,6 +61,27 @@ for (const record of financial.records) {
   if (financialByCandidate.has(record.candidateId))
     fail('duplicate financial summary for ' + record.candidateId);
   financialByCandidate.set(record.candidateId, record);
+}
+
+const gazetteByCandidate = new Map<string, PropertyDeclarationGazetteRecord>();
+for (const record of gazette.records) {
+  if (gazetteByCandidate.has(record.candidateId))
+    fail('duplicate gazette record for ' + record.candidateId);
+  gazetteByCandidate.set(record.candidateId, record);
+}
+if (!sameValues([...gazetteByCandidate.keys()], [...rosterById.keys()]))
+  fail('gazette records do not cover the canonical roster exactly.');
+
+function summaryFromRecord(
+  record: PropertyDeclarationFinancialSummaryRecord,
+): PropertyDeclarationFinancialSummary {
+  return {
+    summaryStatus: record.summaryStatus,
+    verifiedCategoryCount: record.verifiedCategoryCount,
+    categories: record.categories,
+    sources: record.sources,
+    note: record.note,
+  };
 }
 
 function sha256(bytes: Uint8Array): string {
@@ -264,6 +291,18 @@ for (const record of published.records) {
         'ambiguous candidate must not receive a PDF assignment: ' +
           record.candidateId,
       );
+    if (record.financialSummary) {
+      if (record.financialSummary.sources.official !== null)
+        fail('ambiguous candidate civil fallback claims an official source.');
+      if (
+        record.financialSummary.categories.some(
+          (category) =>
+            category.verificationStatus !== 'not-determined' &&
+            category.verificationStatus !== 'civil-gazette-evidenced',
+        )
+      )
+        fail('ambiguous candidate published a non-civil category.');
+    }
     continue;
   }
   const row = rows[0];
@@ -358,11 +397,6 @@ if (
       JSON.stringify(financialSummaryStatuses),
   );
 }
-const verifiedCategoryCount = financial.records.reduce(
-  (total, record) => total + record.verifiedCategoryCount,
-  0,
-);
-
 for (const record of financial.records) {
   const candidate = rosterById.get(record.candidateId);
   const row = rowsByCandidate.get(record.candidateId);
@@ -395,46 +429,90 @@ for (const record of financial.records) {
   }
 }
 
+const expectedSummaries = new Map<
+  string,
+  PropertyDeclarationFinancialSummary | null
+>();
+for (const candidate of roster.candidates) {
+  const gazetteRecord = gazetteByCandidate.get(candidate.id) ?? null;
+  const officialRecord = financialByCandidate.get(candidate.id);
+  expectedSummaries.set(
+    candidate.id,
+    resolvePropertyDeclarationFinancialSummary(
+      officialRecord ? summaryFromRecord(officialRecord) : null,
+      gazetteRecord,
+    ),
+  );
+}
+
 for (const record of published.records) {
-  const financialRecord = financialByCandidate.get(record.candidateId);
-  if (record.status === 'source-linked') {
-    if (!financialRecord || !record.financialSummary)
-      fail(
-        'source-linked record is missing its financial summary: ' +
-          record.candidateId,
-      );
-    if (
-      record.financialSummary.summaryStatus !== financialRecord.summaryStatus ||
-      record.financialSummary.verifiedCategoryCount !==
-        financialRecord.verifiedCategoryCount ||
-      JSON.stringify(record.financialSummary.categories) !==
-        JSON.stringify(financialRecord.categories)
-    ) {
-      fail('published financial summary drifted for ' + record.candidateId);
-    }
-  } else if (record.financialSummary !== null) {
-    fail(
-      'ambiguous or unavailable records must not publish financial summaries: ' +
-        record.candidateId,
-    );
+  const expected = expectedSummaries.get(record.candidateId) ?? null;
+  if (JSON.stringify(record.financialSummary) !== JSON.stringify(expected)) {
+    fail('published financial summary drifted for ' + record.candidateId);
   }
 }
-if (
-  published.coverage.financialSummaryCount !== financial.records.length ||
-  published.coverage.financialSummaryVerifiedCategoryCount !==
-    verifiedCategoryCount ||
-  published.coverage.financialSummaryPartialCount !==
-    financialSummaryStatuses['partially-verified'] ||
-  published.coverage.financialSummaryUnavailableCount !==
-    financialSummaryStatuses.unavailable
-) {
-  fail('published financial summary coverage changed unexpectedly.');
+
+const publishedSummaries = published.records.flatMap((record) =>
+  record.financialSummary ? [record.financialSummary] : [],
+);
+const publishedSummaryStatuses = new Map<string, number>();
+for (const summary of publishedSummaries) {
+  publishedSummaryStatuses.set(
+    summary.summaryStatus,
+    (publishedSummaryStatuses.get(summary.summaryStatus) ?? 0) + 1,
+  );
+}
+const expectedCoverage = {
+  financialSummaryCount: publishedSummaries.length,
+  financialSummaryVerifiedCategoryCount: publishedSummaries.reduce(
+    (total, summary) => total + summary.verifiedCategoryCount,
+    0,
+  ),
+  financialSummaryOfficialCategoryCount: publishedSummaries.reduce(
+    (total, summary) =>
+      total +
+      summary.categories.filter(
+        (category) => category.verificationStatus === 'page-evidenced',
+      ).length,
+    0,
+  ),
+  financialSummaryCivilFallbackCategoryCount: publishedSummaries.reduce(
+    (total, summary) =>
+      total +
+      summary.categories.filter(
+        (category) => category.verificationStatus === 'civil-gazette-evidenced',
+      ).length,
+    0,
+  ),
+  financialSummaryMixedSourceCategoryCount: publishedSummaries.reduce(
+    (total, summary) =>
+      total +
+      summary.categories.filter(
+        (category) => category.verificationStatus === 'mixed-source-evidenced',
+      ).length,
+    0,
+  ),
+  financialSummarySourceConflictCount: publishedSummaries.reduce(
+    (total, summary) =>
+      total +
+      summary.categories.filter((category) => category.sourceConflict).length,
+    0,
+  ),
+  financialSummaryPartialCount:
+    publishedSummaryStatuses.get('partially-verified') ?? 0,
+  financialSummaryUnavailableCount:
+    publishedSummaryStatuses.get('unavailable') ?? 0,
+};
+for (const [key, value] of Object.entries(expectedCoverage)) {
+  if (published.coverage[key as keyof typeof expectedCoverage] !== value) {
+    fail('published financial summary coverage drifted: ' + key);
+  }
 }
 
 assertNoSensitiveKeys(financial);
 assertNoSensitiveKeys(published);
 await assertNoPropertyPdfBytes();
-const fullyVerifiedCount = financialSummaryStatuses['page-evidenced'];
+const fullyVerifiedCount = publishedSummaryStatuses.get('page-evidenced') ?? 0;
 console.log(
   '[validate:property-declarations] ' +
     roster.candidates.length +
@@ -449,12 +527,22 @@ console.log(
     ' rows and ' +
     normalized.sourcePages.length +
     ' hashed source pages; ' +
-    verifiedCategoryCount +
-    ' verified categories (' +
+    expectedCoverage.financialSummaryVerifiedCategoryCount +
+    ' resolved categories (' +
+    expectedCoverage.financialSummaryOfficialCategoryCount +
+    ' official, ' +
+    expectedCoverage.financialSummaryMixedSourceCategoryCount +
+    ' mixed, ' +
+    expectedCoverage.financialSummaryCivilFallbackCategoryCount +
+    ' civil fallback, ' +
+    expectedCoverage.financialSummarySourceConflictCount +
+    ' conflicts; ' +
     fullyVerifiedCount +
-    ' fully verified, ' +
-    financialSummaryStatuses['partially-verified'] +
+    ' fully official, ' +
+    (publishedSummaryStatuses.get('mixed-source-verified') ?? 0) +
+    ' fully mixed, ' +
+    expectedCoverage.financialSummaryPartialCount +
     ' partial, ' +
-    financialSummaryStatuses.unavailable +
+    expectedCoverage.financialSummaryUnavailableCount +
     ' unavailable).',
 );

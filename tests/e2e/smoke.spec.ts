@@ -81,15 +81,19 @@ test('candidate property tab exposes the official source link without sensitive 
   await expect(property).toBeVisible();
   await expect(property).toContainText('官方文件已唯一對帳');
   await expect(
-    property.locator(
-      'a[href="https://pdps-dec.cec.gov.tw/release/formal/files/3379.pdf"]',
-    ),
-  ).toHaveCount(1);
+    property
+      .locator(
+        'a[href="https://pdps-dec.cec.gov.tw/release/formal/files/3379.pdf"]',
+      )
+      .first(),
+  ).toBeVisible();
   await expect(
-    property.locator(
-      'a[href="https://pdps-dec.cec.gov.tw/release/formal/Page5_02.html"]',
-    ),
-  ).toHaveCount(1);
+    property
+      .locator(
+        'a[href="https://pdps-dec.cec.gov.tw/release/formal/Page5_02.html"]',
+      )
+      .first(),
+  ).toBeVisible();
   const sourceCard = property.locator('.property-declaration-card');
   await expect(sourceCard).toContainText('財產類別摘要');
   await expect(sourceCard).toContainText('現金');
@@ -125,7 +129,7 @@ test('recovered property summaries show page evidence and keep unknowns', async 
     .getByRole('tab', { name: '財產申報', exact: true })
     .click();
   const partial = partialProfile.getByTestId('property-declaration');
-  await expect(partial).toContainText('部分類別有官方頁碼證據');
+  await expect(partial).toContainText('部分類別已有可標示來源');
   await expect(partial.getByTestId('property-category-land')).toContainText(
     '未能確定',
   );
@@ -149,7 +153,9 @@ test('ambiguous property sources stay unassigned and do not imply absence', asyn
   await expect(property).toContainText('不代表沒有財產或沒有申報');
   await expect(
     property.getByTestId('property-declaration-financial-summary'),
-  ).toHaveCount(0);
+  ).toBeVisible();
+  await expect(property).toContainText('台灣前進《2026 民間版選舉公報》');
+  await expect(property).toContainText('NT$2,188,518');
   await expect(
     property.locator('a[href*="/release/formal/files/"]'),
   ).toHaveCount(0);
@@ -158,6 +164,34 @@ test('ambiguous property sources stay unassigned and do not imply absence', asyn
       'a[href="https://pdps-dec.cec.gov.tw/release/formal/Page7_02_14.html"]',
     ),
   ).toHaveCount(1);
+});
+
+test('mixed property summaries label official and civil fields separately', async ({
+  page,
+}) => {
+  await page.goto('/candidates/kaohsiung-council-07-eec9e2bf/');
+  const profile = page.getByTestId('profile-tabs');
+  await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+    timeout: 30_000,
+  });
+  await profile.getByRole('tab', { name: '財產申報', exact: true }).click();
+  const property = profile.getByTestId('property-declaration-linked');
+  await expect(property).toContainText('官方與民間來源共同完成類別核對');
+  await expect(property).toContainText('官方與民間來源');
+  await expect(property).toContainText('中選會官方財產申報');
+  await expect(property).toContainText('台灣前進《2026 民間版選舉公報》');
+  await expect(property).toContainText('NT$750,000');
+  await expect(property).toContainText('申報筆數：14');
+  await expect(
+    property.locator('[data-source="civil-gazette"]').first(),
+  ).toBeVisible();
+  await expect(
+    property
+      .locator(
+        'a[href="https://pdps-dec.cec.gov.tw/release/formal/files/3373.pdf"]',
+      )
+      .first(),
+  ).toBeVisible();
 });
 
 test('candidate family tab shows verified graph details and sources', async ({

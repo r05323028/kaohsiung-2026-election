@@ -1,8 +1,12 @@
 import publishedInput from '../../../data/published/2026/candidate-property-declarations.json';
-import type { PropertyDeclarationPublicFinancialSummary } from './public-copy';
+import type {
+  PropertyDeclarationPublicFinancialSummary,
+  PropertyDeclarationPublicSource,
+} from './public-copy';
 import {
   type PropertyDeclarationCandidateRecord,
   type PropertyDeclarationDocument,
+  type PropertyDeclarationFinancialCategorySummary,
   type PropertyDeclarationFinancialSummary,
   type PropertyDeclarationPublishedDataset,
   validatePropertyDeclarationDataset,
@@ -11,7 +15,7 @@ import {
 const propertyDeclarationSnapshot: PropertyDeclarationPublishedDataset =
   validatePropertyDeclarationDataset(publishedInput);
 
-type PublicPropertyDeclarationDocument = Pick<
+export type PublicPropertyDeclarationDocument = Pick<
   PropertyDeclarationDocument,
   | 'listedName'
   | 'pdfFileName'
@@ -22,10 +26,21 @@ type PublicPropertyDeclarationDocument = Pick<
   | 'privacyNote'
 >;
 
-export type PropertyDeclarationReadModel = Omit<
+export type PublicPropertyDeclarationCategory = Pick<
+  PropertyDeclarationFinancialCategorySummary,
+  | 'category'
+  | 'status'
+  | 'totalTwd'
+  | 'entryCount'
+  | 'evidencePages'
+  | 'fieldSources'
+>;
+
+export type PropertyDeclarationReadModel = Pick<
   PropertyDeclarationCandidateRecord,
-  'documents' | 'financialSummary'
+  'candidateId' | 'displayName' | 'electionType' | 'districtId' | 'status'
 > & {
+  identity: PropertyDeclarationCandidateRecord['identity'];
   documents: PublicPropertyDeclarationDocument[];
   financialSummary: PropertyDeclarationPublicFinancialSummary | null;
 };
@@ -35,14 +50,18 @@ function toPublicFinancialSummary(
 ): PropertyDeclarationPublicFinancialSummary | null {
   if (!summary) return null;
   return {
-    ...summary,
-    categories: summary.categories.map(
-      ({
-        verificationStatus: _verificationStatus,
-        verificationMethod: _verificationMethod,
-        ...category
-      }) => category,
-    ),
+    summaryStatus: summary.summaryStatus,
+    verifiedCategoryCount: summary.verifiedCategoryCount,
+    categories: summary.categories.map((category) => ({
+      category: category.category,
+      status: category.status,
+      totalTwd: category.totalTwd,
+      entryCount: category.entryCount,
+      evidencePages: category.evidencePages,
+      fieldSources: category.fieldSources,
+    })),
+    sources: summary.sources satisfies PropertyDeclarationPublicSource,
+    note: summary.note,
   };
 }
 
@@ -50,11 +69,27 @@ function toPublicPropertyDeclaration(
   record: PropertyDeclarationCandidateRecord,
 ): PropertyDeclarationReadModel {
   return {
-    ...record,
-    documents: record.documents.map(
-      ({ retention: _retention, pdfSha256: _pdfSha256, ...document }) =>
-        document,
-    ),
+    candidateId: record.candidateId,
+    displayName: record.displayName,
+    electionType: record.electionType,
+    districtId: record.districtId,
+    status: record.status,
+    identity: {
+      status: record.identity.status,
+      matchMethod: record.identity.matchMethod,
+      listedNames: record.identity.listedNames,
+      listingPageUrls: record.identity.listingPageUrls,
+      note: record.identity.note,
+    },
+    documents: record.documents.map((document) => ({
+      listedName: document.listedName,
+      pdfFileName: document.pdfFileName,
+      pdfUrl: document.pdfUrl,
+      listingPageId: document.listingPageId,
+      listingPageUrl: document.listingPageUrl,
+      sourcePageId: document.sourcePageId,
+      privacyNote: document.privacyNote,
+    })),
     financialSummary: toPublicFinancialSummary(record.financialSummary),
   };
 }
@@ -79,6 +114,10 @@ export function propertyDeclarationCoverage(): {
   sourceUnavailable: number;
   financialSummaries: number;
   verifiedCategories: number;
+  officialCategories: number;
+  civilFallbackCategories: number;
+  mixedSourceCategories: number;
+  sourceConflicts: number;
   partialSummaries: number;
   unavailableSummaries: number;
 } {
@@ -93,6 +132,17 @@ export function propertyDeclarationCoverage(): {
     verifiedCategories:
       propertyDeclarationSnapshot.coverage
         .financialSummaryVerifiedCategoryCount,
+    officialCategories:
+      propertyDeclarationSnapshot.coverage
+        .financialSummaryOfficialCategoryCount,
+    civilFallbackCategories:
+      propertyDeclarationSnapshot.coverage
+        .financialSummaryCivilFallbackCategoryCount,
+    mixedSourceCategories:
+      propertyDeclarationSnapshot.coverage
+        .financialSummaryMixedSourceCategoryCount,
+    sourceConflicts:
+      propertyDeclarationSnapshot.coverage.financialSummarySourceConflictCount,
     partialSummaries:
       propertyDeclarationSnapshot.coverage.financialSummaryPartialCount,
     unavailableSummaries:

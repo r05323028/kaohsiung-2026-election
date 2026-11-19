@@ -2,12 +2,16 @@ import type {
   PropertyDeclarationFinancialCategory,
   PropertyDeclarationFinancialCategorySummary,
   PropertyDeclarationFinancialSummary,
+  PropertyDeclarationFinancialSummarySources,
 } from './schema';
 
 type PublicPropertyDeclarationCategorySummary = Omit<
   PropertyDeclarationFinancialCategorySummary,
-  'verificationStatus' | 'verificationMethod'
+  'verificationStatus' | 'verificationMethod' | 'sourceConflict'
 >;
+
+export type PropertyDeclarationPublicSource =
+  PropertyDeclarationFinancialSummarySources;
 
 export type PropertyDeclarationPublicFinancialSummary = Omit<
   PropertyDeclarationFinancialSummary,
@@ -16,11 +20,15 @@ export type PropertyDeclarationPublicFinancialSummary = Omit<
   categories: PublicPropertyDeclarationCategorySummary[];
 };
 
+export const PROPERTY_DECLARATION_OFFICIAL_SOURCE_LABEL = '中選會官方財產申報';
+export const PROPERTY_DECLARATION_GAZETTE_SOURCE_LABEL =
+  '台灣前進《2026 民間版選舉公報》';
+
 export const PROPERTY_DECLARATION_PUBLIC_NOTE =
-  '本頁僅呈現中選會財產申報公開查閱平台的官方文件連結、來源對帳狀態，以及以官方文件頁碼定位的類別摘要。摘要來自離線 OCR 或頁面座標核對，且只發布通過所標示核對方法的類別總額或申報筆數；這不是人工逐筆覆核。不轉錄地址、身分證字號、金融帳戶、簽名或個別財產標的。';
+  '本頁呈現中選會公開文件連結與類別摘要。官方文件可安全判讀的欄位優先採用；官方欄位無法判讀或未發布時，才以可對帳的《2026 民間版選舉公報》資料補足，並逐項標示來源。民間來源是該站公開整理的資料，不是官方文件。摘要只呈現有來源證據的類別總額或申報筆數，不是人工逐筆覆核；衝突、辨識不足或無法確定的欄位維持「未能確定」，不以空白推論為零。不轉錄地址、身分證字號、金融帳戶、簽名或個別財產標的。';
 
 export const PROPERTY_DECLARATION_FINANCIAL_NOTE =
-  '類別摘要只保留通過所標示離線核對方法、且有官方文件頁碼證據的總額或申報筆數；不同核對方法不互相替代，衝突、辨識不足或無法安全確定的欄位維持「未能確定」，不以空白推論為零。';
+  '每個數值都標示來源。官方與民間來源不一致時保留官方已核對數值，不平均或改寫；兩邊都無法安全確定時維持「未能確定」，不以空白推論為零。';
 
 export const PROPERTY_DECLARATION_FINANCIAL_CATEGORY_LABELS: Record<
   PropertyDeclarationFinancialCategory,

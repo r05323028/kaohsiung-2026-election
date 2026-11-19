@@ -1065,6 +1065,36 @@ body:not(.is-immersive) #main-content {
   align-self: end;
 }
 
+.property-declaration-financial__item
+  > .property-declaration-financial__value {
+  display: grid;
+  gap: 0.15rem;
+  justify-content: initial;
+}
+
+.property-declaration-financial__source {
+  align-self: initial;
+  line-height: 1.5;
+}
+
+.property-declaration-financial__source a,
+.property-declaration-financial__sources a {
+  color: #294858;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.property-declaration-financial__sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin: 0;
+  color: rgba(41, 72, 88, 0.72);
+  font-size: 0.74rem;
+  line-height: 1.6;
+}
+
 .profile-section-heading {
   display: grid;
   gap: 0.2rem;

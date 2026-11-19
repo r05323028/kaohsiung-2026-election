@@ -49,7 +49,7 @@ data/approved/2026/kaohsiung-election.json 是候選人、選區、號次與官�
 - 從政歷程：`data/approved/2026/political-career.json`；政策／歷程分類在 `policy-career-separation.json` 以決定性 validation envelope 保存。
 - 家族關係：`data/published/2026/political-family.json`；親屬與職務來源必須分離且各自完整。
 - 角色資產：manifest、授權、來源身分與 GLB／照片 checksum 通過後才可使用；視覺資產的安全檢查不等同候選人內容審查。
-- 財產申報：`data/raw/official/2026/property-declarations/pages/` 僅保留中選會 HTML 清單快照與 retrieval metadata；`data/normalized/2026/candidate-property-declaration-financial-summaries.json` 與 `data/published/2026/candidate-property-declarations.json` 只保留類別層級的彙總總額／申報筆數、官方文件頁碼與每類的離線核對方法；這些是候選人公開申報的類別摘要，不是逐筆財產明細。`data/normalized/2026/candidate-property-declaration-verification.json` 另保留每份外部 PDF 的 SHA-256、頁數、擷取與核對方法描述、工具版本，以及類別級數值／頁碼對帳結果，供離線驗證，不含 PDF 位元組、OCR 文字或個別金額。核對方法是機器輔助的雙渲染 OCR 比對，或官方頁面與頁面座標的視覺核對；不同方法不互相替代，也不是人工逐筆覆核。掃描 PDF、原始 OCR 文字、逐字轉錄、地址、身分證字號、金融帳戶、簽名與個別財產標的不進入 repository。
+- 財產申報：`data/raw/official/2026/property-declarations/pages/` 保留中選會 HTML 清單快照與 retrieval metadata；`data/normalized/2026/candidate-property-declaration-financial-summaries.json` 保留官方 PDF 的類別層級彙總與欄位來源，`candidate-property-declaration-verification.json` 保留外部 PDF 的 SHA-256、頁數與類別級頁碼對帳，`candidate-property-declaration-gazette.json` 保留可對帳的民間版選舉公報類別欄位與來源 URL。`data/published/2026/candidate-property-declarations.json` 只投影合併後可公開的類別總額／申報筆數、來源與 attribution；不是逐筆財產明細。官方摘要的核對方法是機器輔助的雙渲染 OCR 比對，或官方頁面與頁面座標的視覺核對；不同方法不互相替代，也不是人工逐筆覆核。掃描 PDF、原始 OCR 文字、逐字轉錄、地址、身分證字號、金融帳戶、簽名與個別財產標的不進入 repository。
 
 `src/data/fixtures.ts` 與 `src/data/demo.ts` 只供測試與資產驗證，全部標示 `isDemo`，不得補位公開資料。
 
@@ -57,9 +57,9 @@ data/approved/2026/kaohsiung-election.json 是候選人、選區、號次與官�
 
 `property-declarations:discover` 預設離線讀取已提交的官方 HTML 快照；`--fetch` 只允許固定的 `pdps-dec.cec.gov.tw/release/formal/` 頁面清單，不能把任意 URL 帶入來源流程。來源頁的 checksum 改變時，建立新快照並重新對帳，不就地改寫既有 provenance。PDF 只作為官方外部連結；`property-declarations:extract --all --pdf-dir <dir>` 在受控本機依 verification manifest 核對 PDF SHA-256 與頁數後，將頁面文字／OCR 證據寫到 gitignored 的 `.cache/reports/property-declarations/extraction/`，支援單一候選人、單一 PDF、增量與 `--force`。驗證 manifest 只保留 PDF SHA-256、頁數、擷取與核對方法描述、工具版本與類別級 agree/not-determined 結果；`property-declarations:verify --pdf-dir` 可重新雜湊 PDF 並核對頁數。PDF、原始 OCR 文字與逐字轉錄不得進入 repository，發布層只接受清理後的類別彙總摘要。
 
-2026 民間版選舉公報（`gazette2026.taiwangogo.tw`）只作為尋找與交叉提示的次要來源，不取代中選會文件；其 OCR／LLM 輔助摘要、估算值與缺漏不進入公開資料。引用其策展資料或文字時依 CC BY 4.0 標註「資料來源：台灣前進《2026 民間版選舉公報》」；第三方原始文件不在授權範圍。
+2026 民間版選舉公報（`gazette2026.taiwangogo.tw`）是次要但可發布的備援來源，不取代中選會文件。`property-declarations:gazette` 從已保存的候選人頁面與來源 snapshots 產生受控 normalized 資料；`property-declarations:publish` 逐欄位先採官方可核對值，官方欄位無法判讀或未發布時才採用可對帳的民間欄位，並保留 `fieldSources`。民間總額只接受該站標示為申報金額的欄位；估算、取得價額、未估值與缺漏不得當作申報總額。引用其策展資料時依 CC BY 4.0 標註「資料來源：台灣前進《2026 民間版選舉公報》」；第三方原始文件不在授權範圍。來源衝突保留官方值，不平均、不改寫，並在內部 provenance 記錄衝突。
 
-`source-linked` 表示單一官方文件已以 canonical candidate ID、選舉類型與選區脈絡對帳；`ambiguous-source` 或 `source-unavailable` 只表示目前無法唯一呈現連結，不是「沒有財產」或「沒有申報」的負面證據。
+`source-linked` 表示單一官方文件已以 canonical candidate ID、選舉類型與選區脈絡對帳；`ambiguous-source` 或 `source-unavailable` 只表示目前無法唯一呈現連結，不是「沒有財產」或「沒有申報」的負面證據。`ambiguous-source` 可顯示有候選人層級對帳依據的民間來源摘要，但不得指定個別官方 PDF。財務摘要的 `page-evidenced`、`civil-gazette-evidenced`、`mixed-source-evidenced`、`partially-verified` 與 `unavailable` 分別表示官方、民間、混合、部分與無可用來源；`civil-gazette-evidenced` 是來源標示，不是官方核可。
 
 ## 更新程序
 

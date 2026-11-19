@@ -62,6 +62,10 @@ export function assertPropertyDeclarationFinancialEvidence(
         agreement.status !== category.status ||
         agreement.totalTwd !== category.totalTwd ||
         agreement.entryCount !== category.entryCount ||
+        agreement.fieldSources.total !== category.fieldSources.total ||
+        agreement.fieldSources.entryCount !==
+          category.fieldSources.entryCount ||
+        agreement.sourceConflict !== category.sourceConflict ||
         JSON.stringify(agreement.evidencePages) !==
           JSON.stringify(category.evidencePages)
       ) {

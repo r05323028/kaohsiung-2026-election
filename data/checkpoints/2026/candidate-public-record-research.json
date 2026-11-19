@@ -1,8 +1,8 @@
 {
-  "checkpointId": "research-checkpoint-execute:2026-11-05:all:all:all",
+  "checkpointId": "research-checkpoint-execute:2026-11-19:all:all:all",
   "datasetId": "kaohsiung-2026-candidate-public-record-research",
-  "snapshotDate": "2026-11-05",
-  "runId": "execute:2026-11-05:all:all:all",
+  "snapshotDate": "2026-11-19",
+  "runId": "execute:2026-11-19:all:all:all",
   "command": "execute",
   "candidateIds": [],
   "districtIds": [],
@@ -329,8 +329,8 @@
   ],
   "failedAuditIds": [],
   "retryLimit": 2,
-  "concurrency": 2,
+  "concurrency": 1,
   "resumedFromRunId": null,
   "dryRun": false,
-  "updatedAt": "2026-11-05T16:15:19.349Z"
+  "updatedAt": "2026-11-19T00:00:00.000Z"
 }

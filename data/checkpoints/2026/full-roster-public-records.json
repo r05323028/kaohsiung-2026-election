@@ -1,8 +1,8 @@
 {
-  "checkpointId": "checkpoint-validate:2026-11-05:::all",
+  "checkpointId": "checkpoint-validate:2026-11-19:::all",
   "datasetId": "kaohsiung-2026-full-roster-public-record-coverage",
   "snapshotDate": "2026-11-05",
-  "runId": "validate:2026-11-05:::all",
+  "runId": "validate:2026-11-19:::all",
   "command": "validate",
   "candidateIds": [],
   "districtIds": [],
@@ -650,5 +650,5 @@
   "concurrency": 1,
   "resumedFromRunId": "ingest:2026-11-05:::all",
   "dryRun": false,
-  "updatedAt": "2026-11-05T00:00:00Z"
+  "updatedAt": "2026-11-19T00:00:00Z"
 }

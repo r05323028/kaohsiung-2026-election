@@ -187,20 +187,25 @@ describe('official council roster', () => {
 });
 
 describe('approved official dataset', () => {
-  it('rejects a drawn number that is incorrectly marked final', () => {
+  it('rejects a final number without final-announcement provenance', () => {
     const invalid = structuredClone(approvedInput) as Record<
       string,
       unknown
     > & {
-      candidates: Array<Record<string, unknown>>;
+      candidates: Array<{
+        candidateNumberSource: { sourceId: string; publicationDate: string };
+      }>;
     };
     const firstCandidate = invalid.candidates.at(0);
     if (!firstCandidate) {
       throw new Error('Approved dataset has no candidate for invalid fixture.');
     }
-    firstCandidate.candidateNumberIsFinal = true;
+    Object.assign(firstCandidate.candidateNumberSource, {
+      sourceId: 'source-khec-65366',
+      publicationDate: '2026-10-27',
+    });
     expect(() => validateOfficialDataset(invalid)).toThrow(
-      'non-final number as final',
+      'expected announcement date',
     );
   });
 
@@ -227,19 +232,19 @@ describe('approved official dataset', () => {
     ]);
   });
 
-  it('reconciles all 101 council rows while formal announcement remains pending', () => {
+  it('reconciles all 101 council rows after the final announcements', () => {
     const dataset = validateOfficialDataset(approvedInput);
     const roster = validateCouncilRoster(councilRosterInput);
     const names = parseCecQualifiedKaohsiungMayors(cecQualification).map(
       (candidate) => candidate.displayName,
     );
     const report = reconcileOfficialData(dataset, names, roster);
-    expect(report.status).toBe('partial');
+    expect(report.status).toBe('ready');
     expect(report.counts).toMatchObject({
       cecQualifiedMayors: 5,
       approvedMayors: 5,
       matchedMayors: 5,
-      pendingVerificationScopes: 2,
+      pendingVerificationScopes: 0,
       officialDistricts: 16,
       councilConstituencies: 15,
       councilSourceRows: 101,
@@ -251,9 +256,11 @@ describe('approved official dataset', () => {
       report.councilConstituencies.every((item) => item.status === 'complete'),
     ).toBe(true);
     expect(report.publication.councilCandidatesPublished).toBe(true);
-    expect(report.publication.councilRosterStatus).toBe(
-      'preliminary-drawn-non-final',
-    );
+    expect(report.publication.councilRosterStatus).toBe('formally-announced');
+    expect(report.publication.finalAnnouncementDates).toEqual({
+      mayoral: '2026-11-12',
+      council: '2026-11-17',
+    });
     expect(report.discrepancies).toEqual([]);
   });
 

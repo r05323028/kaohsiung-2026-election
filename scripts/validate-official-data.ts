@@ -9,7 +9,10 @@ import cecRegistration from '../data/raw/official/2026/cec-central-64009.json';
 import cecQualification from '../data/raw/official/2026/cec-central-65213.json';
 import khecDrawing from '../data/raw/official/2026/khec-65366.json';
 import khecAlias from '../data/raw/official/2026/khec-65368.json';
-import khecBulletin from '../data/raw/official/2026/khec-bulletin.json';
+import khecMayorFinal from '../data/raw/official/2026/khec-65759.json';
+import khecCouncilFinal from '../data/raw/official/2026/khec-66006.json';
+import khecDrawingBulletin from '../data/raw/official/2026/khec-bulletin.json';
+import khecFinalBulletin from '../data/raw/official/2026/khec-bulletin-2026-11-19.json';
 import cecMayoralDirectory from '../data/raw/official/2026/research/cec-vote2026-c1-64000.json';
 import cecCouncilDirectory from '../data/raw/official/2026/research/cec-vote2026-t-64000.json';
 import { officialCandidateProfiles } from '../src/data/official';
@@ -53,13 +56,16 @@ const registrationMetadata = parseCecArticleMetadata(
   cecRegistration,
   'source-cec-central-64009',
 );
-const bulletinArticles = parseKhecBulletin(khecBulletin);
+const drawingBulletinArticles = parseKhecBulletin(khecDrawingBulletin);
+const finalBulletinArticles = parseKhecBulletin(khecFinalBulletin);
 const qualifiedMayors = parseCecQualifiedKaohsiungMayors(cecQualification);
 const directoryMayors = parseCecMayoralCandidates(cecMayoralDirectory);
 const directoryCouncilCandidates =
   parseCecCouncilCandidates(cecCouncilDirectory);
 const drawing = parseKhecDrawingMetadata(khecDrawing);
 const aliasDrawing = parseKhecDrawingMetadata(khecAlias);
+const mayorFinal = parseKhecDrawingMetadata(khecMayorFinal);
+const councilFinal = parseKhecDrawingMetadata(khecCouncilFinal);
 const aliasStatus = khecAliasStatus(
   drawing.fileId,
   aliasDrawing.fileId,
@@ -69,7 +75,9 @@ const aliasStatus = khecAliasStatus(
 if (
   constituencyMetadata.publicationDate !== '2026-08-20' ||
   registrationMetadata.publicationDate !== '2026-08-27' ||
-  !bulletinArticles.some((article) => article.articleId === 65366)
+  !drawingBulletinArticles.some((article) => article.articleId === 65366) ||
+  !finalBulletinArticles.some((article) => article.articleId === 65759) ||
+  !finalBulletinArticles.some((article) => article.articleId === 66006)
 )
   throw new Error(
     'Official article metadata does not match retained snapshots.',
@@ -82,6 +90,17 @@ if (
 )
   throw new Error(
     'KHEC drawing metadata or duplicate alias does not match the retained official files.',
+  );
+if (
+  mayorFinal.beginDate !== '2026-11-12' ||
+  mayorFinal.fileId !== 'b18b321c-76a2-43af-aae7-e985402e7300' ||
+  !mayorFinal.isImageOnly ||
+  councilFinal.beginDate !== '2026-11-17' ||
+  councilFinal.fileId !== '1b7d791c-9ae8-4669-8f57-1adf71cc2996' ||
+  !councilFinal.isImageOnly
+)
+  throw new Error(
+    'KHEC final-announcement metadata does not match the retained official files.',
   );
 if (
   councilRoster.totalRowCount !== 101 ||
@@ -241,7 +260,12 @@ if (
   report.cecCouncil.unexpectedCandidates.length > 0 ||
   report.cecCouncil.partyMismatches.length > 0 ||
   report.cecCouncil.birthDateMismatches.length > 0 ||
-  report.cecCouncil.sourceNameConflicts.length !== 9
+  report.cecCouncil.sourceNameConflicts.length !== 9 ||
+  report.status !== 'ready' ||
+  report.counts.pendingVerificationScopes !== 0 ||
+  report.publication.councilRosterStatus !== 'formally-announced' ||
+  report.publication.finalAnnouncementDates.mayoral !== '2026-11-12' ||
+  report.publication.finalAnnouncementDates.council !== '2026-11-17'
 )
   throw new Error(
     'Council roster reconciliation must cover 101 rows with zero structural CEC mismatches and nine pending source-name conflicts.',
@@ -573,10 +597,14 @@ const coverageReport = {
   researchCutoff: '2026-11-09',
   rosterSnapshotDate: dataset.snapshotDate,
   researchSnapshotDate: dataset.snapshotDate,
-  status: 'partial-before-final-announcement',
-  sourceIds: ['source-khec-65366', 'source-cec-vote2026-t-64000'],
+  status: 'formally-announced',
+  sourceIds: [
+    'source-khec-65759',
+    'source-khec-66006',
+    'source-cec-vote2026-t-64000',
+  ],
   identityFieldPolicy:
-    'CEC election-directory party/registration and birth fields are source-backed identity data; party/registration is not proof of party membership. KHEC drawn names, identifiers, and non-final number semantics remain canonical.',
+    'CEC election-directory party/registration and birth fields are source-backed identity data; party/registration is not proof of party membership. KHEC final-announcement names, identifiers, and final numbers are canonical.',
   substantivePublicationPolicy:
     'Retained research evidence and source-backed records are reported separately; unsupported claims are not published.',
   summary: coverageSummary,
@@ -623,7 +651,7 @@ const coverageMarkdown = [
   `- Roster snapshot: ${dataset.snapshotDate}`,
   `- Research snapshot: ${dataset.snapshotDate}`,
   '- Scope: 15 districts, 101 council candidates; mayoral profiles are excluded from the candidate matrix.',
-  '- Identity fields: CEC election-directory party/registration and birth fields are source-backed; they do not establish party membership. KHEC drawn names, stable identifiers, and non-final ballot semantics remain canonical.',
+  '- Identity fields: CEC election-directory party/registration and birth fields are source-backed; they do not establish party membership. KHEC final-announcement names, stable identifiers, and final ballot numbers are canonical.',
   '- Substantive tabs: Retained research and source-backed records are measured separately; unsupported claims are not displayed.',
   '',
   '## Overall section coverage',
@@ -681,5 +709,5 @@ await writeFile(
   'utf8',
 );
 console.log(
-  `Validated official snapshot ${dataset.snapshotDate}: ${report.counts.approvedMayors} approved mayors, ${report.counts.councilPublishedRows} preliminary council rows, ${report.counts.officialDistricts} districts, ${report.counts.pendingVerificationScopes} source-check scope; CEC council identity ${report.cecCouncil?.matchedRows ?? 0}/101 with ${report.cecCouncil?.sourceNameConflicts.length ?? 0} name conflicts. Coverage report written for ${candidateCoverage.length} council candidates.`,
+  `Validated official snapshot ${dataset.snapshotDate}: ${report.counts.approvedMayors} approved mayors, ${report.counts.councilPublishedRows} formally announced council rows, ${report.counts.officialDistricts} districts, ${report.counts.pendingVerificationScopes} pending source checks; CEC council identity ${report.cecCouncil?.matchedRows ?? 0}/101 with ${report.cecCouncil?.sourceNameConflicts.length ?? 0} name conflicts. Coverage report written for ${candidateCoverage.length} council candidates.`,
 );

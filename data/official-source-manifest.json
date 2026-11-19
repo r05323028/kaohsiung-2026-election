@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "datasetId": "kaohsiung-2026-local-election",
-  "retrievedAt": "2026-11-05",
+  "retrievedAt": "2026-11-19",
   "publisherPolicy": "primary-official-sources-only",
   "election": {
     "year": 2026,
     "rocYear": 115,
     "electionDate": "2026-11-28",
-    "mayoralAnnouncementScheduled": "2026-11-12",
-    "councilAnnouncementScheduled": "2026-11-17",
-    "statusAtSnapshot": "partial-before-final-announcements"
+    "statusAtSnapshot": "formally-announced",
+    "mayoralAnnouncementDate": "2026-11-12",
+    "councilAnnouncementDate": "2026-11-17"
   },
   "sources": [
     {
@@ -420,6 +420,57 @@
       "sha256": "898a9a56ca1bae3966b7ad51c31e4a809ee1ff1c532edae308a54b96307b503d",
       "contentType": "json-snapshot",
       "role": "candidate-research-reference",
+      "verificationStatus": "verified",
+      "publicationStatus": "research-reference-only"
+    },
+    {
+      "id": "source-khec-65759",
+      "publisher": "高雄市選舉委員會",
+      "title": "公告高雄市第5屆市長選舉候選人名單、競選活動期間之起、止日期及每日競選活動之起、止時間。",
+      "canonicalUrl": "https://www.cec.gov.tw/khec/article/65759",
+      "apiUrl": "https://web.cec.gov.tw/api/khec/article/65759",
+      "publicationDate": "2026-11-12",
+      "retrievalDate": "2026-11-19",
+      "rawPath": "data/raw/official/2026/khec-65759.json",
+      "sha256": "aa01acd20973f2cd6caa9e3a75544b22931b1d88ee258ba109a883ddfa788823",
+      "attachmentPath": "data/raw/official/2026/khec-65759-mayoral-final-announcement.pdf",
+      "attachmentSha256": "0ae4a845ca81a622ffb379c3e6b873e553c762627a19953a00458df9bd282844",
+      "contentType": "json+pdf-snapshot",
+      "role": "final-candidate-announcement",
+      "verificationStatus": "verified",
+      "publicationStatus": "published"
+    },
+    {
+      "id": "source-khec-66006",
+      "publisher": "高雄市選舉委員會",
+      "title": "公告高雄市議會第5屆市議員及高雄市桃源區、那瑪夏區、茂林區第4屆區長選舉候選人名單、競選活動期間之起、止日期及每日競選活動之起、止時間。",
+      "canonicalUrl": "https://www.cec.gov.tw/khec/article/66006",
+      "apiUrl": "https://web.cec.gov.tw/api/khec/article/66006",
+      "publicationDate": "2026-11-17",
+      "retrievalDate": "2026-11-19",
+      "rawPath": "data/raw/official/2026/khec-66006.json",
+      "sha256": "3e730b470150383ad5e68ceef744df1db101d27ebfe0eb874fb4c4f1c602b96b",
+      "attachmentPath": "data/raw/official/2026/khec-66006-council-final-announcement.pdf",
+      "attachmentSha256": "739145c1cf58225b0e5509d2ce929260d7aea7a328778436c4be4e95ba857eb0",
+      "contentType": "json+pdf-snapshot",
+      "role": "final-candidate-announcement",
+      "verificationStatus": "verified",
+      "publicationStatus": "published"
+    },
+    {
+      "id": "source-khec-bulletin-2026-11-19",
+      "publisher": "高雄市選舉委員會",
+      "title": "高雄市選舉委員會公告列表（2026-11-19 快照）",
+      "canonicalUrl": "https://www.cec.gov.tw/khec/home/bulletin",
+      "apiUrl": "https://www.cec.gov.tw/api/khec/home/bulletin",
+      "publicationDate": "2026-11-19",
+      "retrievalDate": "2026-11-19",
+      "rawPath": "data/raw/official/2026/khec-bulletin-2026-11-19.json",
+      "sha256": "c289649ba958d8c6c6ef3b8b850784d62b38c35af82f9f0ea9d1ee6166413619",
+      "attachmentPath": null,
+      "attachmentSha256": null,
+      "contentType": "json-snapshot",
+      "role": "bulletin-index",
       "verificationStatus": "verified",
       "publicationStatus": "research-reference-only"
     }

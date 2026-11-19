@@ -19,12 +19,15 @@ import {
 import { parseCecMayoralCandidates } from '../src/data/official/adapters';
 import {
   auditBallotNumbers,
-  BALLOT_NUMBER_DRAW_PAGE,
-  BALLOT_NUMBER_PUBLICATION_DATE,
-  BALLOT_NUMBER_SOURCE_ID,
   type BallotNumberStatus,
   ballotNumberContestKey,
   ballotNumberText,
+  FINAL_BALLOT_NUMBER_COUNCIL_PUBLICATION_DATE,
+  FINAL_BALLOT_NUMBER_COUNCIL_SOURCE_ID,
+  FINAL_BALLOT_NUMBER_MAYOR_PUBLICATION_DATE,
+  FINAL_BALLOT_NUMBER_MAYOR_SOURCE_ID,
+  finalBallotNumberPage,
+  finalBallotNumberSource,
   formatBallotNumber,
   parseBallotNumber,
 } from '../src/data/official/ballot';
@@ -115,10 +118,12 @@ const issue = (code: string, message: string) => {
   issues.push({ code, message });
 };
 
-const expectedTableReference = (district: District) =>
-  district.electionType === 'mayoral'
-    ? `第${BALLOT_NUMBER_DRAW_PAGE}頁・高雄市市長`
-    : `第${BALLOT_NUMBER_DRAW_PAGE}頁・${district.districtLabel.split('・')[1] ?? district.districtLabel}`;
+const expectedTableReference = (district: District) => {
+  const page = finalBallotNumberPage(district.electionType, district.id);
+  return district.electionType === 'mayoral'
+    ? `第${page}頁・高雄市市長`
+    : `第${page}頁・${district.districtLabel.split('・')[1] ?? district.districtLabel}`;
+};
 
 const auditRows: AuditRow[] = dataset.candidates.map((candidate) => {
   const district = districtById.get(candidate.districtId);
@@ -147,7 +152,10 @@ const auditRows: AuditRow[] = dataset.candidates.map((candidate) => {
     constituency: district?.districtLabel ?? candidate.districtId,
     ballotNumber: candidate.candidateNumber,
     sourcePage: candidate.candidateNumberSource
-      ? String(candidate.candidateNumberSource.page ?? BALLOT_NUMBER_DRAW_PAGE)
+      ? String(
+          candidate.candidateNumberSource.page ??
+            finalBallotNumberPage(candidate.electionType, candidate.districtId),
+        )
       : '—',
     verificationStatus:
       officialRow === undefined
@@ -194,27 +202,37 @@ const ballotEntries = dataset.candidates.map((candidate) => ({
   candidateNumberStatus: candidate.candidateNumberStatus as BallotNumberStatus,
 }));
 
-const provenanceSource = dataset.sources.find(
-  (source) => source.id === BALLOT_NUMBER_SOURCE_ID,
-);
-if (!provenanceSource)
-  issue(
-    'source.missing',
-    `Ballot source ${BALLOT_NUMBER_SOURCE_ID} is absent from the dataset.`,
-  );
-if (provenanceSource?.publicationDate !== BALLOT_NUMBER_PUBLICATION_DATE)
-  issue(
-    'source.publicationDate',
-    `Ballot source publication date is ${provenanceSource?.publicationDate ?? 'missing'}, expected ${BALLOT_NUMBER_PUBLICATION_DATE}.`,
-  );
+const finalSourceExpectations = [
+  {
+    id: FINAL_BALLOT_NUMBER_MAYOR_SOURCE_ID,
+    publicationDate: FINAL_BALLOT_NUMBER_MAYOR_PUBLICATION_DATE,
+  },
+  {
+    id: FINAL_BALLOT_NUMBER_COUNCIL_SOURCE_ID,
+    publicationDate: FINAL_BALLOT_NUMBER_COUNCIL_PUBLICATION_DATE,
+  },
+];
+for (const expected of finalSourceExpectations) {
+  const source = dataset.sources.find((item) => item.id === expected.id);
+  if (!source)
+    issue(
+      'source.missing',
+      `Final announcement source ${expected.id} is absent from the dataset.`,
+    );
+  if (source?.publicationDate !== expected.publicationDate)
+    issue(
+      'source.publicationDate',
+      `Final announcement ${expected.id} publication date is ${source?.publicationDate ?? 'missing'}, expected ${expected.publicationDate}.`,
+    );
+}
 
 const audit = auditBallotNumbers(ballotEntries, {
   hasProvenance: (entry) => {
     const candidate = dataset.candidates.find(
       (item) => item.id === entry.candidateId,
     );
-    return (
-      candidate?.candidateNumberSource?.sourceId === BALLOT_NUMBER_SOURCE_ID
+    return finalSourceExpectations.some(
+      (source) => candidate?.candidateNumberSource?.sourceId === source.id,
     );
   },
 });
@@ -255,36 +273,45 @@ for (const candidate of dataset.candidates) {
     );
     continue;
   }
-  if (provenance.sourceId !== BALLOT_NUMBER_SOURCE_ID)
+  const finalSource = finalBallotNumberSource(candidate.electionType);
+  const finalPage = finalBallotNumberPage(
+    candidate.electionType,
+    candidate.districtId,
+  );
+  if (provenance.sourceId !== finalSource.sourceId)
     issue(
       'provenance.source',
-      `${candidate.id} cites ${provenance.sourceId}, expected ${BALLOT_NUMBER_SOURCE_ID}.`,
+      `${candidate.id} cites ${provenance.sourceId}, expected ${finalSource.sourceId}.`,
     );
-  if (provenance.publicationDate !== BALLOT_NUMBER_PUBLICATION_DATE)
+  if (provenance.publicationDate !== finalSource.publicationDate)
     issue(
       'provenance.date',
-      `${candidate.id} cites publication date ${provenance.publicationDate}.`,
+      `${candidate.id} cites publication date ${provenance.publicationDate}, expected ${finalSource.publicationDate}.`,
     );
-  if (provenance.page !== BALLOT_NUMBER_DRAW_PAGE)
+  if (provenance.page !== finalPage)
     issue(
       'provenance.page',
-      `${candidate.id} cites page ${provenance.page ?? 'none'}.`,
+      `${candidate.id} cites page ${provenance.page ?? 'none'}, expected ${finalPage}.`,
     );
   if (provenance.tableReference !== expectedTableReference(district))
     issue(
       'provenance.tableReference',
       `${candidate.id} cites "${provenance.tableReference}", expected "${expectedTableReference(district)}".`,
     );
-  const finalWithoutStatus =
-    candidate.candidateNumberIsFinal &&
-    candidate.candidateNumberStatus !== 'final';
-  const statusWithoutFinal =
-    !candidate.candidateNumberIsFinal &&
-    candidate.candidateNumberStatus === 'final';
-  if (finalWithoutStatus || statusWithoutFinal)
+  if (candidate.candidateNumberStatus !== 'final')
+    issue(
+      'number.notFinal',
+      `${candidate.id} has candidateNumberStatus=${candidate.candidateNumberStatus}; final announcements make every number final.`,
+    );
+  if (!candidate.candidateNumberIsFinal)
     issue(
       'number.finalFlag',
-      `${candidate.id} disagrees between candidateNumberStatus=${candidate.candidateNumberStatus} and candidateNumberIsFinal=${candidate.candidateNumberIsFinal}.`,
+      `${candidate.id} has candidateNumberIsFinal=false.`,
+    );
+  if (candidate.formalStatus !== 'formally-announced')
+    issue(
+      'number.formalStatus',
+      `${candidate.id} has formalStatus=${candidate.formalStatus}.`,
     );
 }
 
@@ -556,24 +583,39 @@ if (normalizedMayors.length > 0) {
 }
 
 /* Report assembly. */
-const sourceEntry = manifest.sources.find(
-  (source) => source.id === BALLOT_NUMBER_SOURCE_ID,
-);
-let attachmentSha256 = sourceEntry?.attachmentSha256 ?? null;
-const attachmentPath = sourceEntry?.attachmentPath ?? null;
-if (attachmentPath) {
+const finalSourceDetails = finalSourceExpectations.map((expected) => {
+  const entry = manifest.sources.find((source) => source.id === expected.id);
+  return {
+    ...expected,
+    title: entry?.title ?? null,
+    url: entry?.url ?? null,
+    attachmentPath: entry?.attachmentPath ?? null,
+    sha256: entry?.attachmentSha256 ?? null,
+  };
+});
+for (const detail of finalSourceDetails) {
+  if (!detail.attachmentPath) {
+    issue(
+      'source.attachment',
+      `Final announcement ${detail.id} has no attachmentPath in the manifest.`,
+    );
+    continue;
+  }
   try {
-    const bytes = await readFile(path.join(root, attachmentPath));
+    const bytes = await readFile(path.join(root, detail.attachmentPath));
     const digest = createHash('sha256').update(bytes).digest('hex');
-    if (digest !== attachmentSha256) {
+    if (digest !== detail.sha256) {
       issue(
         'source.sha256',
-        `Ballot PDF hash ${digest} does not match the manifest (${attachmentSha256 ?? 'missing'}).`,
+        `Final announcement ${detail.id} hash ${digest} does not match the manifest (${detail.sha256 ?? 'missing'}).`,
       );
-      attachmentSha256 ??= digest;
+      detail.sha256 ??= digest;
     }
   } catch {
-    issue('source.attachment', `Ballot PDF ${attachmentPath} cannot be read.`);
+    issue(
+      'source.attachment',
+      `Final announcement ${detail.attachmentPath} cannot be read.`,
+    );
   }
 }
 
@@ -668,21 +710,23 @@ const markdown = [
   '',
   '## 1. 權威來源',
   '',
-  `- 來源：${sourceEntry?.title ?? '高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表'}`,
+  ...finalSourceDetails.flatMap((detail) => [
+    `- 來源：${detail.title ?? detail.id}`,
+    `- 官方網址：${detail.url ?? '未登錄'}`,
+    `- 發布日期：${detail.publicationDate}`,
+    `- 附件：${detail.attachmentPath ?? '未登錄'}`,
+    `- PDF SHA-256：${detail.sha256 ?? '未登錄'}`,
+  ]),
   '- 發布機關：高雄市選舉委員會（KHEC）',
-  `- 官方網址：https://www.cec.gov.tw/khec/article/65366`,
-  `- 發布日期：${BALLOT_NUMBER_PUBLICATION_DATE}`,
-  `- 附件：${attachmentPath ?? '未登錄'}`,
-  `- PDF SHA-256：${attachmentSha256 ?? '未登錄'}`,
-  '- 抽定表僅列出「選舉區、候選人姓名、號次」，不含政黨欄位；政黨資料仍以既有來源為準，未由此表推論。',
-  '- 號次抽定（2026-10-27）與正式候選人名冊公告（預定 2026-11-17）是兩個獨立程序，本報告不將抽定表描述為正式公告。',
+  '- 正式公告名單列出「選舉區、候選人姓名、號次」，不含政黨欄位；政黨資料仍以既有來源為準，未由此表推論。',
+  '- 市長正式公告（2026-11-12）與市議員正式公告（2026-11-17）使抽定號次成為最終號次；本報告以正式公告為號次權威來源。',
   '',
   '## 2. 方法',
   '',
   '- 以官方 PDF 原始附件逐列核對；本專案保存的逐列抄錄位於 `data/normalized/2026/kaohsiung-council-roster.json`（101 列）與市長候選人目錄（5 列），合計 106 列。',
   '- 身分比對鍵為「選舉類型 + 選舉區 + 正規化姓名（NFKC、去除空白、忽略大小寫）」，並同時要求號次與官方列一致；不以姓名單獨比對，不以陣列順序推論號次。',
   '- 市長、普通議員（第1–11選舉區）、原住民議員（第12–15選舉區）為互斥賽局，號次重複只在同一賽局內視為衝突。',
-  '- 每一筆號次都必須帶有 `candidateNumberSource`（來源 ID、2026-10-27、第 1 頁、表格參照）；缺少來源即視為失敗。',
+  '- 每一筆號次都必須帶有 `candidateNumberSource`（正式公告來源 ID、公告日期、對應頁次、表格參照）；缺少來源即視為失敗。',
   '',
   '## 3. 覆蓋率',
   '',
@@ -705,9 +749,9 @@ const markdown = [
   `- 未對應官方列：${auditRows.filter((row) => row.verificationStatus === 'unmatched').length}`,
   `- 姓名變體（號次一致、姓名以既有來源為準）：${auditRows.filter((row) => row.verificationStatus === 'verified-source-name-variant').length}`,
   '',
-  '抽定表影像判讀與既有名冊有 4 處字形差異，號次完全相同。這些差異屬字形判讀層級，未變更任何候選人姓名，保留給人工複核：',
+  '正式公告影像判讀與既有名冊有 4 處字形差異，號次完全相同。這些差異屬字形判讀層級，未變更任何候選人姓名，保留給人工複核：',
   '',
-  '| 選舉區 | 號次 | 既有名冊 | 抽定表影像判讀 |',
+  '| 選舉區 | 號次 | 既有名冊 | 正式公告影像判讀 |',
   '| --- | ---: | --- | --- |',
   ...nameObservations.map(
     (item) =>
@@ -719,9 +763,9 @@ const markdown = [
   '- `src/data/official/ballot.ts`：號次正規化、解析、排序、顯示與賽局稽核的單一來源。',
   '- `src/data/official/schema.ts`：新增 `candidateNumberSource` 結構與驗證，號次與來源必須成對出現。',
   '- `data/approved/2026/kaohsiung-election.json`：106 位候選人補上 `candidateNumberSource`；號次數值與既有抄錄一致，未變更。',
-  '- `scripts/merge-council-roster.ts`：重新產生議員資料時保留來源欄位。',
+  '- 議員名冊以 2026-11-17 正式公告為準；變更名冊後重新執行 validate:official 與 validate:ballot-numbers。',
   '- `src/data/official/index.ts`、`src/data/index.ts`：候選人清單、選舉區清單、搜尋索引依號次數值排序，並輸出 `ballotNumber`。',
-  '- `src/data/view.ts`：修復「已抽定卻顯示待公告」的對應錯誤。',
+  '- `src/data/view.ts`：修正選票號次狀態的公開對應。',
   '- UI：`CandidateCard.astro`、`ProfileTabs.tsx`、`GlobalHeader.tsx`、`candidates/[slug].astro`、`districts/index.astro`、`districts/[slug].astro`、`CityExplorer.tsx`、`src/styles/global.css`。',
   '- 文案：移除「正式號次待公告」等過期描述；號次標示為「選票號次」。',
   '',
@@ -768,7 +812,7 @@ const markdown = [
 await mkdir(path.join(root, '.cache/reports'), { recursive: true });
 await writeFile(
   path.join(root, '.cache/reports/ballot-number-sync.json'),
-  `${JSON.stringify({ generatedAt: testedAt, ok, source: { id: BALLOT_NUMBER_SOURCE_ID, publicationDate: BALLOT_NUMBER_PUBLICATION_DATE, attachmentSha256 }, counts: { officialRows: officialRows.length, candidates: dataset.candidates.length, matched: matchedRowKeys.size, contests: contests.size }, audit, coverage: coverageRows, nameObservations, issues, rows: auditRows }, null, 2)}\n`,
+  `${JSON.stringify({ generatedAt: testedAt, ok, sources: finalSourceDetails, counts: { officialRows: officialRows.length, candidates: dataset.candidates.length, matched: matchedRowKeys.size, contests: contests.size }, audit, coverage: coverageRows, nameObservations, issues, rows: auditRows }, null, 2)}\n`,
   'utf8',
 );
 await writeFile(

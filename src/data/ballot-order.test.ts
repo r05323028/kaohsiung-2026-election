@@ -6,8 +6,8 @@ import {
   officialDataset,
 } from './official';
 import {
-  BALLOT_NUMBER_PUBLICATION_DATE,
-  BALLOT_NUMBER_SOURCE_ID,
+  finalBallotNumberPage,
+  finalBallotNumberSource,
   formatBallotNumber,
   parseBallotNumber,
 } from './official/ballot';
@@ -25,14 +25,19 @@ describe('official ballot numbers in the shipped dataset', () => {
     expect(approved).toHaveLength(106);
     for (const candidate of approved) {
       expect(parseBallotNumber(candidate.candidateNumber)).not.toBeNull();
-      expect(['drawn', 'final']).toContain(candidate.candidateNumberStatus);
+      expect(candidate.candidateNumberStatus).toBe('final');
+      expect(candidate.candidateNumberIsFinal).toBe(true);
+      expect(candidate.formalStatus).toBe('formally-announced');
+      const finalSource = finalBallotNumberSource(candidate.electionType);
       expect(candidate.candidateNumberSource?.sourceId).toBe(
-        BALLOT_NUMBER_SOURCE_ID,
+        finalSource.sourceId,
       );
       expect(candidate.candidateNumberSource?.publicationDate).toBe(
-        BALLOT_NUMBER_PUBLICATION_DATE,
+        finalSource.publicationDate,
       );
-      expect(candidate.candidateNumberSource?.page).toBe(1);
+      expect(candidate.candidateNumberSource?.page).toBe(
+        finalBallotNumberPage(candidate.electionType, candidate.districtId),
+      );
       expect(candidate.candidateNumberSource?.tableReference ?? '').not.toBe(
         '',
       );
@@ -117,12 +122,10 @@ describe('official ballot numbers in the shipped dataset', () => {
     }
   });
 
-  it('keeps drawn numbers visible to the public view model', () => {
-    const drawn = candidateProfiles.filter(
-      (profile) => profile.candidacy.candidateNumberStatus === 'drawn',
-    );
-    expect(drawn.length).toBeGreaterThan(0);
-    for (const profile of drawn) {
+  it('keeps final numbers visible to the public view model', () => {
+    expect(candidateProfiles).toHaveLength(106);
+    for (const profile of candidateProfiles) {
+      expect(profile.candidacy.candidateNumberStatus).toBe('final');
       expect(profile.candidacy.candidateNumber).not.toBe('');
       expect(profile.candidacy.candidateNumber).not.toBe('待公告');
     }

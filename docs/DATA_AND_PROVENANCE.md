@@ -22,7 +22,7 @@
 
 ## 官方選舉資料
 
-`data/approved/2026/kaohsiung-election.json` 是候選人、選區、號次與官方來源的 canonical roster。`npm run validate:official` 會重算 raw checksum、檢查名冊順序、CEC／KHEC 對帳、候選人與選區完整性，診斷寫入 `.cache/reports/`。`numberStatus`、`pendingVerification` 與來源公告狀態表達技術對帳進度，不是內容審查佇列。
+data/approved/2026/kaohsiung-election.json 是候選人、選區、號次與官方來源的 canonical roster。npm run validate:official 會重算 raw checksum、檢查名冊順序、CEC／KHEC 對帳、候選人與選區完整性，診斷寫入 .cache/reports/。2026-11-19 快照已完成市長（2026-11-12）與市議員（2026-11-17）正式公告對帳；candidateNumberStatus、formalStatus、pendingVerification 與來源公告狀態表達技術對帳進度，不是內容審查佇列。
 
 同名或相似姓名不是同一人的證據。合併身分需有來源特有 ID、選區、職務與時間脈絡；不足時保留 `insufficient-evidence` 或 `defer`，不發布依賴該身分的 claim。
 

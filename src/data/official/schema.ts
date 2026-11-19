@@ -89,9 +89,12 @@ export const OfficialDatasetSchema = z.object({
     year: z.literal(2026),
     rocYear: z.literal(115),
     electionDate: DateOnlySchema,
-    mayoralAnnouncementScheduled: DateOnlySchema,
-    councilAnnouncementScheduled: DateOnlySchema,
-    status: z.literal('partial-before-final-announcements'),
+    mayoralAnnouncementDate: DateOnlySchema,
+    councilAnnouncementDate: DateOnlySchema,
+    status: z.enum([
+      'partial-before-final-announcements',
+      'formally-announced',
+    ]),
   }),
   sources: z.array(OfficialSourceSchema).min(1),
   districts: z.array(OfficialDistrictSchema).min(1),
@@ -123,6 +126,22 @@ export function validateOfficialDataset(input: unknown): OfficialDataset {
     );
   }
   const dataset = parsed.data;
+  if (dataset.election.status === 'formally-announced') {
+    if (dataset.pendingVerification.length > 0)
+      throw new Error(
+        'Formally announced dataset retains pending verification scopes.',
+      );
+    const incomplete = dataset.candidates.filter(
+      (candidate) =>
+        candidate.formalStatus !== 'formally-announced' ||
+        candidate.candidateNumberStatus !== 'final' ||
+        !candidate.candidateNumberIsFinal,
+    );
+    if (incomplete.length > 0)
+      throw new Error(
+        `Formally announced dataset has non-final candidates: ${incomplete.map((candidate) => candidate.id).join(', ')}`,
+      );
+  }
   const unique = (label: string, ids: string[]) => {
     const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
     if (duplicates.length > 0)
@@ -169,7 +188,14 @@ export function validateOfficialDataset(input: unknown): OfficialDataset {
       throw new Error(
         `Candidate ${candidate.id} marks a non-final number as final.`,
       );
-    enforceBallotNumber(candidate, dataset.sources);
+    enforceBallotNumber(candidate, dataset.sources, dataset.election);
+    if (
+      candidate.candidateNumberStatus === 'final' &&
+      candidate.formalStatus !== 'formally-announced'
+    )
+      throw new Error(
+        `Candidate ${candidate.id} has a final number without a formal announcement.`,
+      );
     if (candidate.partyStatus === 'published' && !candidate.politicalParty)
       throw new Error(
         `Candidate ${candidate.id} marks party as published without a party value.`,
@@ -219,6 +245,7 @@ export function validateOfficialDataset(input: unknown): OfficialDataset {
 function enforceBallotNumber(
   candidate: OfficialCandidate,
   sources: readonly OfficialSource[],
+  election: OfficialDataset['election'],
 ) {
   if (candidate.candidateNumberStatus === 'not-published') {
     if (candidate.candidateNumber !== '')
@@ -245,4 +272,14 @@ function enforceBallotNumber(
     throw new Error(
       `Candidate ${candidate.id} ballot-number provenance date ${provenance.publicationDate} does not match source ${provenance.sourceId}.`,
     );
+  if (candidate.candidateNumberStatus === 'final') {
+    const expectedDate =
+      candidate.electionType === 'mayoral'
+        ? election.mayoralAnnouncementDate
+        : election.councilAnnouncementDate;
+    if (provenance.publicationDate !== expectedDate)
+      throw new Error(
+        `Candidate ${candidate.id} final number cites ${provenance.publicationDate}, expected announcement date ${expectedDate}.`,
+      );
+  }
 }

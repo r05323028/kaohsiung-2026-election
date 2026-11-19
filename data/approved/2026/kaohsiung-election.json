@@ -1,13 +1,13 @@
 {
   "datasetId": "kaohsiung-2026-local-election",
-  "snapshotDate": "2026-11-05",
+  "snapshotDate": "2026-11-19",
   "election": {
     "year": 2026,
     "rocYear": 115,
     "electionDate": "2026-11-28",
-    "mayoralAnnouncementScheduled": "2026-11-12",
-    "councilAnnouncementScheduled": "2026-11-17",
-    "status": "partial-before-final-announcements"
+    "status": "formally-announced",
+    "mayoralAnnouncementDate": "2026-11-12",
+    "councilAnnouncementDate": "2026-11-17"
   },
   "sources": [
     {
@@ -38,7 +38,7 @@
       "publicationDate": "2026-10-27",
       "retrievalDate": "2026-11-04",
       "verificationStatus": "Verified",
-      "note": "官方號次抽定表；在預定公告前，號次明確標示為已抽定但非最終公告。"
+      "note": "官方號次抽定表；正式公告後號次已確認，最終名單見 65759 與 66006。"
     },
     {
       "id": "source-khec-65368",
@@ -58,7 +58,7 @@
       "publicationDate": null,
       "retrievalDate": "2026-11-05",
       "verificationStatus": "Verified",
-      "note": "中央選舉委員會選舉專區留存快照；本筆僅採用姓名、政黨、出生日期與號次欄位。頁面未標示獨立出版日期；正式候選人公告預定於 2026-11-12，肖像與空白經歷欄位未採用。"
+      "note": "中央選舉委員會選舉專區留存快照；本筆僅採用姓名、政黨、出生日期與號次欄位。市長正式候選人公告已於 2026-11-12 發布。頁面未標示獨立出版日期；肖像與空白經歷欄位未採用。"
     },
     {
       "id": "source-cec-vote2026-t-64000",
@@ -68,7 +68,27 @@
       "publicationDate": null,
       "retrievalDate": "2026-11-05",
       "verificationStatus": "Verified",
-      "note": "中央選舉委員會選舉專區留存快照；本次僅採用姓名、政黨／登記欄與出生日期欄位。政黨／登記欄不等同黨籍認定；候選人正式公告預定於 2026-11-17。肖像路徑因未確認再利用權利不採用，空白教育、經歷與政見欄位不推論。"
+      "note": "中央選舉委員會選舉專區留存快照；本次僅採用姓名、政黨／登記欄與出生日期欄位。政黨／登記欄不等同黨籍認定；市議員正式候選人公告已於 2026-11-17 發布。肖像路徑因未確認再利用權利不採用，空白教育、經歷與政見欄位不推論。"
+    },
+    {
+      "id": "source-khec-65759",
+      "title": "公告高雄市第5屆市長選舉候選人名單、競選活動期間之起、止日期及每日競選活動之起、止時間。",
+      "publisher": "高雄市選舉委員會",
+      "url": "https://www.cec.gov.tw/khec/article/65759",
+      "publicationDate": "2026-11-12",
+      "retrievalDate": "2026-11-19",
+      "verificationStatus": "Verified",
+      "note": "高雄市選舉委員會正式公告第5屆市長候選人名單；號次為最終公告。"
+    },
+    {
+      "id": "source-khec-66006",
+      "title": "公告高雄市議會第5屆市議員及高雄市桃源區、那瑪夏區、茂林區第4屆區長選舉候選人名單、競選活動期間之起、止日期及每日競選活動之起、止時間。",
+      "publisher": "高雄市選舉委員會",
+      "url": "https://www.cec.gov.tw/khec/article/66006",
+      "publicationDate": "2026-11-17",
+      "retrievalDate": "2026-11-19",
+      "verificationStatus": "Verified",
+      "note": "高雄市選舉委員會正式公告第5屆市議員候選人名單；66005 為重複公告別名，不增加獨立證據。"
     }
   ],
   "districts": [
@@ -80,10 +100,11 @@
       "electionType": "mayoral",
       "constituencyType": "citywide-mayor",
       "description": "2026 高雄市長選舉的全市選舉區。",
-      "scopeNote": "藝術化城市場景不呈現官方選舉邊界。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-12 正式公告市長候選人名單。藝術化城市場景不呈現官方選舉邊界。",
       "sourceIds": [
         "source-cec-central-63625",
-        "source-khec-65366"
+        "source-khec-65366",
+        "source-khec-65759"
       ],
       "publicationStatus": "approved"
     },
@@ -95,11 +116,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第1選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -111,11 +133,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第2選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -127,11 +150,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第3選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -143,11 +167,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第4選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -159,11 +184,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第5選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -175,11 +201,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第6選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -191,11 +218,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第7選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -207,11 +235,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第8選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -223,11 +252,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第9選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -239,11 +269,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第10選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -255,11 +286,12 @@
       "electionType": "city-council",
       "constituencyType": "ordinary-council",
       "description": "中央選舉委員會公告的高雄市議員第11選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -271,11 +303,12 @@
       "electionType": "indigenous-council",
       "constituencyType": "indigenous-council",
       "description": "中央選舉委員會公告的高雄市平地原住民第12選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -287,11 +320,12 @@
       "electionType": "indigenous-council",
       "constituencyType": "indigenous-council",
       "description": "中央選舉委員會公告的高雄市山地原住民第13選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -303,11 +337,12 @@
       "electionType": "indigenous-council",
       "constituencyType": "indigenous-council",
       "description": "中央選舉委員會公告的高雄市山地原住民第14選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     },
@@ -319,11 +354,12 @@
       "electionType": "indigenous-council",
       "constituencyType": "indigenous-council",
       "description": "中央選舉委員會公告的高雄市山地原住民第15選舉區。",
-      "scopeNote": "目前公開的是高雄市選舉委員會官方號次抽定之預公告名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。正式市議員候選人公告預定於 2026-11-17；缺少其他資料不表示不存在。",
+      "scopeNote": "高雄市選舉委員會已於 2026-11-17 正式公告第5屆市議員候選人名單；中央選舉委員會選舉專區資料列另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。缺少其他資料不表示不存在。",
       "sourceIds": [
         "source-cec-central-63625",
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "publicationStatus": "approved"
     }
@@ -338,26 +374,27 @@
       "electionYear": 2026,
       "electionType": "mayoral",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "politicalParty": "司法改革黨",
-      "currentPosition": "2026 高雄市長候選人（資格審定）",
+      "currentPosition": "2026 高雄市長候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；高雄市選舉委員會 2026-11-12 正式公告市長候選人名單，號次 1 為最終公告。",
       "sourceIds": [
         "source-cec-central-65213",
         "source-khec-65366",
-        "source-cec-vote2026-c1-64000"
+        "source-cec-vote2026-c1-64000",
+        "source-khec-65759"
       ],
       "candidateStatus": "qualified",
-      "formalStatus": "pending-announcement",
+      "formalStatus": "formally-announced",
       "partyStatus": "published",
       "birthDate": "1956-05-27",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-65759",
+        "publicationDate": "2026-11-12",
         "page": 1,
         "tableReference": "第1頁・高雄市市長"
       }
@@ -371,26 +408,27 @@
       "electionYear": 2026,
       "electionType": "mayoral",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市長候選人（資格審定）",
+      "currentPosition": "2026 高雄市長候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；高雄市選舉委員會 2026-11-12 正式公告市長候選人名單，號次 2 為最終公告。",
       "sourceIds": [
         "source-cec-central-65213",
         "source-khec-65366",
-        "source-cec-vote2026-c1-64000"
+        "source-cec-vote2026-c1-64000",
+        "source-khec-65759"
       ],
       "candidateStatus": "qualified",
-      "formalStatus": "pending-announcement",
+      "formalStatus": "formally-announced",
       "partyStatus": "published",
       "birthDate": "1963-08-29",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-65759",
+        "publicationDate": "2026-11-12",
         "page": 1,
         "tableReference": "第1頁・高雄市市長"
       }
@@ -404,26 +442,27 @@
       "electionYear": 2026,
       "electionType": "mayoral",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市長候選人（資格審定）",
+      "currentPosition": "2026 高雄市長候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；高雄市選舉委員會 2026-11-12 正式公告市長候選人名單，號次 3 為最終公告。",
       "sourceIds": [
         "source-cec-central-65213",
         "source-khec-65366",
-        "source-cec-vote2026-c1-64000"
+        "source-cec-vote2026-c1-64000",
+        "source-khec-65759"
       ],
       "candidateStatus": "qualified",
-      "formalStatus": "pending-announcement",
+      "formalStatus": "formally-announced",
       "partyStatus": "published",
       "birthDate": "1962-04-29",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-65759",
+        "publicationDate": "2026-11-12",
         "page": 1,
         "tableReference": "第1頁・高雄市市長"
       }
@@ -437,26 +476,27 @@
       "electionYear": 2026,
       "electionType": "mayoral",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市長候選人（資格審定）",
+      "currentPosition": "2026 高雄市長候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；高雄市選舉委員會 2026-11-12 正式公告市長候選人名單，號次 4 為最終公告。",
       "sourceIds": [
         "source-cec-central-65213",
         "source-khec-65366",
-        "source-cec-vote2026-c1-64000"
+        "source-cec-vote2026-c1-64000",
+        "source-khec-65759"
       ],
       "candidateStatus": "qualified",
-      "formalStatus": "pending-announcement",
+      "formalStatus": "formally-announced",
       "partyStatus": "published",
       "birthDate": "1963-11-24",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-65759",
+        "publicationDate": "2026-11-12",
         "page": 1,
         "tableReference": "第1頁・高雄市市長"
       }
@@ -470,26 +510,27 @@
       "electionYear": 2026,
       "electionType": "mayoral",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
       "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市長候選人（資格審定）",
+      "currentPosition": "2026 高雄市長候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；目前號次為抽定，正式候選人公告預定於 2026-11-12。",
+      "summary": "中央選舉委員會資格審定文章列名，且選舉專區快照列出其政黨、出生日期與號次；高雄市選舉委員會 2026-11-12 正式公告市長候選人名單，號次 5 為最終公告。",
       "sourceIds": [
         "source-cec-central-65213",
         "source-khec-65366",
-        "source-cec-vote2026-c1-64000"
+        "source-cec-vote2026-c1-64000",
+        "source-khec-65759"
       ],
       "candidateStatus": "qualified",
-      "formalStatus": "pending-announcement",
+      "formalStatus": "formally-announced",
       "partyStatus": "published",
       "birthDate": "1973-11-15",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-65759",
+        "publicationDate": "2026-11-12",
         "page": 1,
         "tableReference": "第1頁・高雄市市長"
       }
@@ -503,25 +544,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第1選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1995-05-19",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第1選舉區"
       }
@@ -535,25 +577,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第1選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1959-11-05",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第1選舉區"
       }
@@ -567,25 +610,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第1選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1985-06-11",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第1選舉區"
       }
@@ -599,25 +643,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第1選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1962-09-24",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第1選舉區"
       }
@@ -631,25 +676,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第1選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1955-08-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第1選舉區"
       }
@@ -663,25 +709,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第2選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1949-11-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第2選舉區"
       }
@@ -695,25 +742,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第2選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1987-11-22",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第2選舉區"
       }
@@ -727,25 +775,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第2選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1962-03-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第2選舉區"
       }
@@ -759,25 +808,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第2選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1988-12-19",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第2選舉區"
       }
@@ -791,25 +841,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第2選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1959-04-20",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第2選舉區"
       }
@@ -823,25 +874,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1965-02-21",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -855,26 +907,27 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1986-08-21",
       "cecDirectoryName": "張騏晟",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -888,25 +941,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1978-11-06",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -920,25 +974,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1943-10-10",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -952,26 +1007,27 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1972-10-14",
       "cecDirectoryName": "黃秋媖",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -985,25 +1041,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1981-11-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -1017,25 +1074,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1984-01-04",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -1049,26 +1107,27 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "8",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第3選舉區，號次 8 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1991-06-24",
       "cecDirectoryName": "蔡秉璁",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第3選舉區"
       }
@@ -1082,25 +1141,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1982-07-17",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1114,25 +1174,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1970-06-25",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1146,25 +1207,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1987-10-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1178,25 +1240,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1960-08-30",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1210,25 +1273,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1979-03-21",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1242,25 +1306,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1975-08-30",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1274,25 +1339,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1962-12-14",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1306,25 +1372,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "8",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 8 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1987-11-09",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1338,25 +1405,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "9",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 9 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1996-03-25",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1370,25 +1438,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "10",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 10 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1966-03-23",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1402,25 +1471,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "11",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 11 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1968-11-30",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1434,25 +1504,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "12",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第4選舉區，號次 12 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1975-10-17",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第4選舉區"
       }
@@ -1466,25 +1537,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1965-10-19",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1498,25 +1570,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1968-09-04",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1530,25 +1603,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1972-10-07",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1562,25 +1636,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1964-02-14",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1594,25 +1669,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1982-02-26",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1626,25 +1702,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1969-04-29",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1658,25 +1735,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第5選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1969-11-08",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第5選舉區"
       }
@@ -1690,25 +1768,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第6選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1973-09-19",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第6選舉區"
       }
@@ -1722,25 +1801,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第6選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1957-06-24",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第6選舉區"
       }
@@ -1754,25 +1834,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第6選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1978-03-25",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第6選舉區"
       }
@@ -1786,25 +1867,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第6選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1970-11-12",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第6選舉區"
       }
@@ -1818,25 +1900,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1980-04-01",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -1850,25 +1933,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1953-11-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -1882,25 +1966,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1972-11-24",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -1914,25 +1999,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1981-10-23",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -1946,25 +2032,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1976-04-09",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -1978,25 +2065,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1991-07-27",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2010,25 +2098,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "台灣民眾黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1981-04-12",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2042,25 +2131,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "8",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 8 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1956-03-04",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2074,26 +2164,27 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "9",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 9 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1990-12-14",
       "cecDirectoryName": "鄭孟洳",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2107,25 +2198,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "10",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 10 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1967-10-31",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2139,25 +2231,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "11",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 11 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1972-02-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2171,25 +2264,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "12",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第7選舉區，號次 12 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1959-01-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第7選舉區"
       }
@@ -2203,25 +2297,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1978-11-11",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2235,25 +2330,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1981-01-01",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2267,25 +2363,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1985-06-03",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2299,25 +2396,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1976-11-12",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2331,25 +2429,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1976-06-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2363,25 +2462,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1971-05-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2395,25 +2495,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1965-06-13",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2427,25 +2528,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "8",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 8 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1958-07-27",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2459,25 +2561,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "9",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第8選舉區，號次 9 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1970-07-20",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第8選舉區"
       }
@@ -2491,25 +2594,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1984-05-30",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2523,25 +2627,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1953-10-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2555,25 +2660,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1995-08-13",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2587,25 +2693,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1977-10-29",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2619,25 +2726,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1974-07-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2651,25 +2759,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1961-11-07",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2683,25 +2792,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1977-12-24",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2715,25 +2825,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "8",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 8 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1990-09-30",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2747,25 +2858,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "9",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 9 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1982-09-28",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2779,25 +2891,26 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "10",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第9選舉區，號次 10 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1977-09-29",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
         "page": 1,
         "tableReference": "第1頁・第9選舉區"
       }
@@ -2811,27 +2924,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "司法改革黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1956-07-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -2843,27 +2957,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1993-11-19",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -2875,27 +2990,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "勞動黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1974-11-21",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -2907,27 +3023,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1978-03-23",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -2939,28 +3056,29 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1988-07-20",
       "cecDirectoryName": "張藝璉",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -2972,27 +3090,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "小民參政歐巴桑聯盟",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1985-11-18",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3004,27 +3123,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "7",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 7 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1966-02-04",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3036,27 +3156,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "8",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 8 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1970-03-10",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3068,27 +3189,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "9",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 9 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1958-10-27",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3100,28 +3222,29 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "10",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 10 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1987-10-03",
       "cecDirectoryName": "李紘毅",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3133,27 +3256,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "11",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 11 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1965-12-02",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3165,27 +3289,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "12",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 12 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1987-09-07",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3197,27 +3322,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "13",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第10選舉區，號次 13 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1988-10-26",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第10選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第10選舉區"
       }
     },
     {
@@ -3229,27 +3355,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第11選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1978-11-22",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第11選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第11選舉區"
       }
     },
     {
@@ -3261,27 +3388,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第11選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1962-09-15",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第11選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第11選舉區"
       }
     },
     {
@@ -3293,27 +3421,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第11選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1982-04-22",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第11選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第11選舉區"
       }
     },
     {
@@ -3325,27 +3454,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "4",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第11選舉區，號次 4 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1961-07-14",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第11選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第11選舉區"
       }
     },
     {
@@ -3357,27 +3487,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "5",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第11選舉區，號次 5 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1973-09-30",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第11選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第11選舉區"
       }
     },
     {
@@ -3389,27 +3520,28 @@
       "electionYear": 2026,
       "electionType": "city-council",
       "candidateNumber": "6",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於普通・第11選舉區，號次 6 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1995-03-15",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第11選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第11選舉區"
       }
     },
     {
@@ -3421,27 +3553,28 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "民主進步黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於平地原住民・第12選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1971-02-13",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第12選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第12選舉區"
       }
     },
     {
@@ -3453,27 +3586,28 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於平地原住民・第12選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1978-04-16",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第12選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第12選舉區"
       }
     },
     {
@@ -3485,27 +3619,28 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於平地原住民・第12選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1960-03-20",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第12選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第12選舉區"
       }
     },
     {
@@ -3517,27 +3652,28 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第13選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1972-02-27",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第13選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第13選舉區"
       }
     },
     {
@@ -3549,28 +3685,29 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第13選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1967-06-08",
       "cecDirectoryName": "葛姵瑩",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第13選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第13選舉區"
       }
     },
     {
@@ -3582,28 +3719,29 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第14選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1968-03-06",
       "cecDirectoryName": "洪英雄 Salizan．binkinuan",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第14選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第14選舉區"
       }
     },
     {
@@ -3615,27 +3753,28 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第14選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1964-05-25",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第14選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第14選舉區"
       }
     },
     {
@@ -3647,28 +3786,29 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "3",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第14選舉區，號次 3 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1972-02-18",
       "cecDirectoryName": "高忠德 Takiludun．Anu",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第14選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第14選舉區"
       }
     },
     {
@@ -3680,27 +3820,28 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "1",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "無",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第15選舉區，號次 1 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1995-06-07",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第15選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第15選舉區"
       }
     },
     {
@@ -3712,42 +3853,30 @@
       "electionYear": 2026,
       "electionType": "indigenous-council",
       "candidateNumber": "2",
-      "candidateNumberStatus": "drawn",
-      "candidateNumberIsFinal": false,
-      "candidateStatus": "number-drawn",
-      "formalStatus": "pending-announcement",
-      "qualificationStatus": "unavailable",
+      "candidateNumberStatus": "final",
+      "candidateNumberIsFinal": true,
+      "candidateStatus": "qualified",
+      "formalStatus": "formally-announced",
+      "qualificationStatus": "approved",
       "publicationStatus": "approved",
       "partyStatus": "published",
       "politicalParty": "中國國民黨",
-      "currentPosition": "2026 高雄市議員候選人（號次抽定，正式公告待發布）",
+      "currentPosition": "2026 高雄市議員候選人",
       "portraitReference": "尚未提供官方肖像參照",
-      "summary": "高雄市選舉委員會官方號次抽定表列名；這是預公告資料，正式市議員候選人公告預定於 2026-11-17，其他人物資料尚未完成查證。",
+      "summary": "高雄市選舉委員會 2026-11-17 正式公告第5屆市議員候選人名單，列名於山地原住民・第15選舉區，號次 2 為最終公告；中央選舉委員會選舉專區另提供政黨／登記欄與出生日期，政黨／登記欄不等同黨籍認定。",
       "sourceIds": [
         "source-khec-65366",
-        "source-cec-vote2026-t-64000"
+        "source-cec-vote2026-t-64000",
+        "source-khec-66006"
       ],
       "birthDate": "1971-05-13",
       "candidateNumberSource": {
-        "sourceId": "source-khec-65366",
-        "publicationDate": "2026-10-27",
-        "page": 1,
-        "tableReference": "第1頁・第15選舉區"
+        "sourceId": "source-khec-66006",
+        "publicationDate": "2026-11-17",
+        "page": 2,
+        "tableReference": "第2頁・第15選舉區"
       }
     }
   ],
-  "pendingVerification": [
-    {
-      "sourceId": "source-khec-65366",
-      "scope": "city-council formal announcement",
-      "reason": "號次抽定表的 101 筆市議員列名已完成預公告展示審核，但正式市議員候選人公告預定於 2026-11-17；公告後必須重新比對。",
-      "expectedResolutionDate": "2026-11-17"
-    },
-    {
-      "sourceId": "source-cec-vote2026-t-64000",
-      "scope": "council CEC/KHEC source-name reconciliation",
-      "reason": "中央選舉委員會資料列與高雄市選舉委員會號次抽定表有 9 筆姓名／原住民族羅馬字差異；保留 KHEC 列名與穩定識別，不在正式公告前靜默合併。",
-      "expectedResolutionDate": "2026-11-17"
-    }
-  ]
+  "pendingVerification": []
 }

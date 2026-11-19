@@ -1,13 +1,13 @@
 /**
  * Official ballot-number (號次) helpers for the 2026 Kaohsiung election.
  *
- * Source of truth: 高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表,
+ * Drawing source: 高雄市第5屆市長、市議員選舉候選人姓名號次抽定一覽表,
  * published by 高雄市選舉委員會 on 2026-10-27 (KHEC article 65366).
  *
- * The draw is a finished official procedure, but it is a separate step from
- * the final candidate-roster announcement (scheduled 2026-11-17). Candidates
- * therefore keep `candidateNumberStatus: 'drawn'` and
- * `candidateNumberIsFinal: false` while still displaying the official number.
+ * Final sources: KHEC articles 65759 (mayors, 2026-11-12) and 66006
+ * (council, 2026-11-17). The final announcements carry the same numbers as
+ * the drawing and make them final; the drawing constants remain as retained
+ * provenance for the earlier stage of the election.
  */
 
 export const BALLOT_NUMBER_SOURCE_ID = 'source-khec-65366';
@@ -18,6 +18,41 @@ export const BALLOT_NUMBER_SOURCE_TITLE =
 export const BALLOT_NUMBER_PUBLISHER = '高雄市選舉委員會';
 export const BALLOT_NUMBER_PUBLICATION_DATE = '2026-10-27';
 export const BALLOT_NUMBER_DRAW_PAGE = 1;
+
+export const FINAL_BALLOT_NUMBER_MAYOR_SOURCE_ID = 'source-khec-65759';
+export const FINAL_BALLOT_NUMBER_COUNCIL_SOURCE_ID = 'source-khec-66006';
+export const FINAL_BALLOT_NUMBER_MAYOR_PUBLICATION_DATE = '2026-11-12';
+export const FINAL_BALLOT_NUMBER_COUNCIL_PUBLICATION_DATE = '2026-11-17';
+
+export type FinalBallotNumberElectionType =
+  | 'mayoral'
+  | 'city-council'
+  | 'indigenous-council';
+
+/** Page containing a district in the final council announcement. */
+export function finalBallotNumberPage(
+  electionType: FinalBallotNumberElectionType,
+  districtId: string,
+): number {
+  if (electionType === 'mayoral') return 1;
+  const districtNumber = Number(/-([0-9]{2})$/.exec(districtId)?.[1] ?? 0);
+  return districtNumber <= 9 ? 1 : 2;
+}
+
+/** Final announcement source and date for a contest. */
+export function finalBallotNumberSource(
+  electionType: FinalBallotNumberElectionType,
+): { sourceId: string; publicationDate: string } {
+  return electionType === 'mayoral'
+    ? {
+        sourceId: FINAL_BALLOT_NUMBER_MAYOR_SOURCE_ID,
+        publicationDate: FINAL_BALLOT_NUMBER_MAYOR_PUBLICATION_DATE,
+      }
+    : {
+        sourceId: FINAL_BALLOT_NUMBER_COUNCIL_SOURCE_ID,
+        publicationDate: FINAL_BALLOT_NUMBER_COUNCIL_PUBLICATION_DATE,
+      };
+}
 
 export type BallotNumberStatus = 'drawn' | 'final' | 'not-published';
 

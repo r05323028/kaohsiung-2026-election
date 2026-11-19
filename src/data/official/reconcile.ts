@@ -50,6 +50,8 @@ export type ReconciliationReport = {
     drawingAlias: string;
     constituency: string;
     councilDirectory?: string;
+    finalMayor?: string;
+    finalCouncil?: string;
   };
   sourceAliases: Array<{
     sourceId: string;
@@ -76,9 +78,12 @@ export type ReconciliationReport = {
   publication: {
     approvedCandidateCount: number;
     approvedDistrictCount: number;
-    finalAnnouncementsPending: string[];
+    finalAnnouncementDates: {
+      mayoral: string;
+      council: string;
+    };
     councilCandidatesPublished: boolean;
-    councilRosterStatus: 'preliminary-drawn-non-final' | 'not-published';
+    councilRosterStatus: 'formally-announced' | 'not-published';
   };
 };
 
@@ -391,6 +396,8 @@ export function reconcileOfficialData(
       ...(cecCouncil
         ? { councilDirectory: 'source-cec-vote2026-t-64000' }
         : {}),
+      finalMayor: 'source-khec-65759',
+      finalCouncil: 'source-khec-66006',
     },
     sourceAliases: [
       {
@@ -435,15 +442,13 @@ export function reconcileOfficialData(
       approvedDistrictCount: dataset.districts.filter(
         (district) => district.publicationStatus === 'approved',
       ).length,
-      finalAnnouncementsPending: [
-        '高雄市長候選人正式公告（預定 2026-11-12）',
-        '高雄市議員候選人正式公告（預定 2026-11-17）',
-      ],
+      finalAnnouncementDates: {
+        mayoral: dataset.election.mayoralAnnouncementDate,
+        council: dataset.election.councilAnnouncementDate,
+      },
       councilCandidatesPublished: councilCandidates.length > 0,
       councilRosterStatus:
-        councilCandidates.length > 0
-          ? 'preliminary-drawn-non-final'
-          : 'not-published',
+        councilCandidates.length > 0 ? 'formally-announced' : 'not-published',
     },
   };
 }
@@ -526,9 +531,9 @@ export function reconciliationMarkdown(report: ReconciliationReport): string {
     cecCouncilSection,
     '## Publication decision',
     '',
-    `The approved slice publishes ${report.publication.approvedCandidateCount} source-backed candidate profiles across ${report.publication.approvedDistrictCount} districts. The council roster is ${report.publication.councilRosterStatus}; all displayed numbers remain drawn/non-final and the formal council announcement is still pending.`,
+    `The approved slice publishes ${report.publication.approvedCandidateCount} source-backed candidate profiles across ${report.publication.approvedDistrictCount} districts. The council roster is ${report.publication.councilRosterStatus}; all displayed numbers are final.`,
     '',
-    `Final-announcement blockers: ${report.publication.finalAnnouncementsPending.join('；')}。`,
+    `Final announcements: mayor ${report.publication.finalAnnouncementDates.mayoral}; council ${report.publication.finalAnnouncementDates.council}。`,
     '',
     '## Matched mayor names',
     '',

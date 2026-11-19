@@ -19,7 +19,8 @@ import {
 } from '../src/data/public-records/research';
 
 const ROOT = process.cwd();
-const SNAPSHOT_DATE = '2026-11-05';
+const SNAPSHOT_DATE = '2026-11-19';
+const OBSERVED_AT = '2026-11-19T00:00:00.000Z';
 const PATHS = {
   roster: 'data/approved/2026/kaohsiung-election.json',
   sourceManifest: 'data/research/2026/candidate-research-source-manifest.json',
@@ -338,7 +339,7 @@ async function buildFromSnapshots(
     c1Input,
     councilInput,
     SNAPSHOT_DATE,
-    sources[0]?.retrievedAt ?? '2026-11-05T16:15:19.349Z',
+    OBSERVED_AT,
     {
       runId: runId(options),
       ...(options.candidateIds ? { candidateIds: options.candidateIds } : {}),

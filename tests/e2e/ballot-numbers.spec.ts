@@ -32,7 +32,7 @@ test('district page lists candidates by numeric ballot number', async ({
   await expect(cards.last()).toContainText('選票號次 12 號');
   await expect(cards.last()).toContainText('尹立');
   await expect(page.locator('.profile-section-heading p')).toContainText(
-    '抽定號次',
+    '官方正式公告號次',
   );
 });
 

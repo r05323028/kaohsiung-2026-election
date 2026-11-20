@@ -688,6 +688,191 @@ test('mobile district details close cleanly across constituency and district swi
   await expect(explorer).toHaveAttribute('data-candidate-scope', 'citywide');
 });
 
+for (const width of [375, 390]) {
+  test(`family graph keeps long labels readable at ${width}px`, async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto('/candidates/kaohsiung-council-09-07bd8300/');
+    const profile = page.getByTestId('profile-tabs');
+    await expect(profile).toHaveAttribute('data-hydrated', 'true', {
+      timeout: 30_000,
+    });
+    await profile
+      .getByRole('tab', { name: '家族政商關係', exact: true })
+      .click();
+
+    const graph = profile.getByTestId('political-family-graph');
+    const longLabel = graph.getByTestId(
+      'family-relationship-family-relation-37bf4372028f',
+    );
+    await expect(longLabel).toBeVisible();
+    await expect(longLabel).toContainText(
+      '外祖父（報導並用「祖父」與「外孫女」兩種稱謂）',
+    );
+    await expect(longLabel).toHaveAttribute('data-label-lines', /^[2-9]\d*$/);
+
+    const geometry = await graph.evaluate((element) => {
+      const canvas = element.querySelector('.political-family-canvas');
+      const svg = element.querySelector('.political-family-svg');
+      const pageWrap = document.querySelector('.page-wrap');
+      if (!canvas || !svg || !pageWrap)
+        throw new Error('family graph canvas is missing');
+      const labels = [
+        ...element.querySelectorAll<HTMLElement>(
+          '[data-family-edge-label="true"]',
+        ),
+      ];
+      const nodes = [
+        ...element.querySelectorAll<HTMLElement>('[data-family-node="true"]'),
+      ];
+      const rect = (value: Element) => {
+        const box = value.getBoundingClientRect();
+        return {
+          left: box.left,
+          top: box.top,
+          right: box.right,
+          bottom: box.bottom,
+        };
+      };
+      const overlaps = (
+        first: ReturnType<typeof rect>,
+        second: ReturnType<typeof rect>,
+      ) =>
+        first.left < second.right &&
+        first.right > second.left &&
+        first.top < second.bottom &&
+        first.bottom > second.top;
+      const canvasRect = rect(canvas);
+      const svgRect = rect(svg);
+      const labelRects = labels.map(rect);
+      const nodeRects = nodes.map(rect);
+      return {
+        labelCount: labels.length,
+        allTextFits: labels.every(
+          (label) =>
+            label.scrollWidth <= label.clientWidth + 1 &&
+            label.scrollHeight <= label.clientHeight + 1,
+        ),
+        labelsInsideCanvas: labelRects.every(
+          (label) =>
+            label.left >= canvasRect.left - 1 &&
+            label.right <= canvasRect.right + 1 &&
+            label.top >= canvasRect.top - 1 &&
+            label.bottom <= canvasRect.bottom + 1,
+        ),
+        labelsInsideSvg: labelRects.every(
+          (label) =>
+            label.left >= svgRect.left - 1 &&
+            label.right <= svgRect.right + 1 &&
+            label.top >= svgRect.top - 1 &&
+            label.bottom <= svgRect.bottom + 1,
+        ),
+        labelNodeOverlapCount: labelRects.reduce(
+          (count, label) =>
+            count + nodeRects.filter((node) => overlaps(label, node)).length,
+          0,
+        ),
+        labelLabelOverlapCount: labelRects.reduce(
+          (count, label, index) =>
+            count +
+            labelRects
+              .slice(index + 1)
+              .filter((other) => overlaps(label, other)).length,
+          0,
+        ),
+        canvasWidth: canvasRect.right - canvasRect.left,
+        pageWrapWidth: pageWrap.getBoundingClientRect().width,
+      };
+    });
+    expect(geometry.canvasWidth).toBeGreaterThan(0);
+    expect(geometry.canvasWidth).toBeLessThanOrEqual(width + 2);
+    expect(
+      Math.abs(geometry.canvasWidth - geometry.pageWrapWidth),
+    ).toBeLessThanOrEqual(2);
+    expect(geometry.labelCount).toBeGreaterThan(0);
+    expect(geometry.allTextFits).toBe(true);
+    expect(geometry.labelsInsideCanvas).toBe(true);
+    expect(geometry.labelsInsideSvg).toBe(true);
+    expect(geometry.labelNodeOverlapCount).toBe(0);
+    expect(geometry.labelLabelOverlapCount).toBe(0);
+
+    await graph.scrollIntoViewIfNeeded();
+    const svgBox = await graph.locator('.political-family-svg').boundingBox();
+    if (!svgBox) throw new Error('family graph svg is missing');
+    await page.mouse.move(svgBox.x + 4, svgBox.y + 4);
+    await page.mouse.down();
+    await page.mouse.move(
+      svgBox.x + Math.min(svgBox.width - 4, 32),
+      svgBox.y + Math.min(svgBox.height - 4, 32),
+      { steps: 4 },
+    );
+    await page.mouse.up();
+
+    const afterPan = await graph.evaluate((element) => {
+      const canvas = element.querySelector('.political-family-canvas');
+      const svg = element.querySelector('.political-family-svg');
+      if (!canvas || !svg) throw new Error('family graph canvas is missing');
+      const labels = [
+        ...element.querySelectorAll<HTMLElement>(
+          '[data-family-edge-label="true"]',
+        ),
+      ];
+      const nodes = [
+        ...element.querySelectorAll<HTMLElement>('[data-family-node="true"]'),
+      ];
+      const rect = (value: Element) => value.getBoundingClientRect();
+      const overlaps = (first: DOMRect, second: DOMRect) =>
+        first.left < second.right &&
+        first.right > second.left &&
+        first.top < second.bottom &&
+        first.bottom > second.top;
+      const canvasRect = rect(canvas);
+      const svgRect = rect(svg);
+      return {
+        allTextFits: labels.every(
+          (label) =>
+            label.scrollWidth <= label.clientWidth + 1 &&
+            label.scrollHeight <= label.clientHeight + 1,
+        ),
+        labelsInsideCanvas: labels.every((label) => {
+          const box = rect(label);
+          return (
+            box.left >= canvasRect.left - 1 &&
+            box.right <= canvasRect.right + 1 &&
+            box.top >= canvasRect.top - 1 &&
+            box.bottom <= canvasRect.bottom + 1
+          );
+        }),
+        labelsInsideSvg: labels.every((label) => {
+          const box = rect(label);
+          return (
+            box.left >= svgRect.left - 1 &&
+            box.right <= svgRect.right + 1 &&
+            box.top >= svgRect.top - 1 &&
+            box.bottom <= svgRect.bottom + 1
+          );
+        }),
+        labelNodeOverlapCount: labels.reduce(
+          (count, label) =>
+            count +
+            nodes.filter((node) => overlaps(rect(label), rect(node))).length,
+          0,
+        ),
+      };
+    });
+    expect(afterPan.allTextFits).toBe(true);
+    expect(afterPan.labelsInsideCanvas).toBe(true);
+    expect(afterPan.labelsInsideSvg).toBe(true);
+    expect(afterPan.labelNodeOverlapCount).toBe(0);
+
+    await graph.screenshot({
+      path: `.cache/reports/family-graph-mobile-${width}.png`,
+    });
+  });
+}
+
 test('mobile roster keeps every constituency reachable and opens an off-screen profile', async ({
   page,
 }) => {

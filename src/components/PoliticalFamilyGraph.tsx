@@ -1,5 +1,5 @@
 import type { PointerEvent as ReactPointerEvent } from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { PublicCandidateProfile } from '../data';
 import type {
   PoliticalFamilyPublicRelationship,
@@ -15,10 +15,523 @@ import type {
 } from '../data/political-family/schema';
 
 type Point = { x: number; y: number };
-type DragState = { x: number; y: number; panX: number; panY: number };
+export type GraphRect = { x: number; y: number; width: number; height: number };
+type DragState = {
+  x: number;
+  y: number;
+  panX: number;
+  panY: number;
+  scaleX: number;
+  scaleY: number;
+};
 
 const GRAPH_WIDTH = 780;
 const GRAPH_HEIGHT = 500;
+const GRAPH_PADDING = 28;
+const NODE_WIDTH = 184;
+const NODE_HEIGHT = 84;
+const NODE_GAP = 18;
+const EDGE_LABEL_GAP = 16;
+const LABEL_LINE_HEIGHT = 16;
+const LABEL_HORIZONTAL_PADDING = 20;
+const LABEL_VERTICAL_PADDING = 12;
+const LABEL_MAX_TEXT_WIDTH = 180;
+const LABEL_MIN_WIDTH = 52;
+
+export type RelationshipLabelMetrics = {
+  width: number;
+  height: number;
+  lines: string[];
+  lineHeight: number;
+};
+
+export type PoliticalFamilyGraphEdge = {
+  relationship: PoliticalFamilyPublicRelationship;
+  pointA: Point;
+  pointB: Point;
+  midpoint: Point;
+  label: RelationshipLabelMetrics;
+  labelBounds: GraphRect;
+};
+
+export type PoliticalFamilyGraphLayout = {
+  people: PoliticalPerson[];
+  candidatePerson: PoliticalPerson | undefined;
+  points: Map<string, Point>;
+  nodeBounds: Map<string, GraphRect>;
+  edges: PoliticalFamilyGraphEdge[];
+  contentBounds: GraphRect;
+  width: number;
+  height: number;
+};
+
+function estimatedCharacterWidth(character: string): number {
+  if (/\s/u.test(character)) return 5;
+  if ((character.codePointAt(0) ?? 0) <= 0xff) return 8;
+  return 13;
+}
+
+function estimatedTextWidth(text: string): number {
+  return Array.from(text).reduce(
+    (width, character) => width + estimatedCharacterWidth(character),
+    0,
+  );
+}
+
+export function wrapRelationshipLabel(
+  label: string,
+  maxTextWidth = LABEL_MAX_TEXT_WIDTH,
+): string[] {
+  const lines: string[] = [];
+  for (const paragraph of label.split(/\r?\n/u)) {
+    if (paragraph.length === 0) {
+      lines.push('');
+      continue;
+    }
+    let line = '';
+    for (const character of Array.from(paragraph)) {
+      if (line && estimatedTextWidth(`${line}${character}`) > maxTextWidth) {
+        lines.push(line);
+        line = character;
+      } else {
+        line += character;
+      }
+    }
+    if (line) lines.push(line);
+  }
+  return lines.length > 0 ? lines : [''];
+}
+
+export function measureRelationshipLabel(
+  label: string,
+  maxTextWidth = LABEL_MAX_TEXT_WIDTH,
+): RelationshipLabelMetrics {
+  const lines = wrapRelationshipLabel(label, maxTextWidth);
+  const maxLineWidth = Math.max(
+    ...lines.map((line) => estimatedTextWidth(line)),
+  );
+  return {
+    width: Math.max(
+      LABEL_MIN_WIDTH,
+      Math.ceil(maxLineWidth + LABEL_HORIZONTAL_PADDING),
+    ),
+    height: lines.length * LABEL_LINE_HEIGHT + LABEL_VERTICAL_PADDING,
+    lines,
+    lineHeight: LABEL_LINE_HEIGHT,
+  };
+}
+
+export function rectanglesOverlap(
+  first: GraphRect,
+  second: GraphRect,
+  gap = 0,
+): boolean {
+  return (
+    first.x < second.x + second.width + gap &&
+    first.x + first.width + gap > second.x &&
+    first.y < second.y + second.height + gap &&
+    first.y + first.height + gap > second.y
+  );
+}
+
+function rectForPoint(
+  point: Point,
+  width = NODE_WIDTH,
+  height = NODE_HEIGHT,
+): GraphRect {
+  return {
+    x: point.x - width / 2,
+    y: point.y - height / 2,
+    width,
+    height,
+  };
+}
+
+function expandRect(rect: GraphRect, other: GraphRect): GraphRect {
+  const x = Math.min(rect.x, other.x);
+  const y = Math.min(rect.y, other.y);
+  const right = Math.max(rect.x + rect.width, other.x + other.width);
+  const bottom = Math.max(rect.y + rect.height, other.y + other.height);
+  return { x, y, width: right - x, height: bottom - y };
+}
+
+function translateRect(rect: GraphRect, x: number, y: number): GraphRect {
+  return { ...rect, x: rect.x + x, y: rect.y + y };
+}
+
+function relationshipAngles(count: number, compact: boolean): number[] {
+  if (!compact) {
+    return Array.from(
+      { length: count },
+      (_, index) => -Math.PI / 2 + (index * 2 * Math.PI) / Math.max(count, 1),
+    );
+  }
+
+  // Keep mobile spokes mostly vertical so the label box can remain readable
+  // within a narrow viewport instead of forcing a wide, scaled-down graph.
+  const compactAngles = [
+    -Math.PI / 2,
+    Math.PI / 2,
+    -Math.PI / 2 - 0.52,
+    -Math.PI / 2 + 0.52,
+    Math.PI / 2 - 0.52,
+    Math.PI / 2 + 0.52,
+  ];
+  return Array.from({ length: count }, (_, index) => {
+    if (compactAngles[index] !== undefined) return compactAngles[index];
+    const angle = -Math.PI / 2 + (index * 2 * Math.PI) / Math.max(count, 1);
+    return Math.abs(Math.cos(angle)) > 0.92 ? angle + 0.22 : angle;
+  });
+}
+
+function buildEdgeLayouts(
+  points: Map<string, Point>,
+  relationships: PoliticalFamilyPublicRelationship[],
+): PoliticalFamilyGraphEdge[] {
+  const pairCounts = new Map<string, number>();
+  const pairIndexes = new Map<string, number>();
+  for (const relationship of relationships) {
+    const key = [relationship.personAId, relationship.personBId]
+      .sort()
+      .join('|');
+    pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1);
+  }
+
+  return relationships.flatMap((relationship) => {
+    const pointA = points.get(relationship.personAId);
+    const pointB = points.get(relationship.personBId);
+    if (!pointA || !pointB) return [];
+    const label = measureRelationshipLabel(relationship.relationshipLabel);
+    const key = [relationship.personAId, relationship.personBId]
+      .sort()
+      .join('|');
+    const pairIndex = pairIndexes.get(key) ?? 0;
+    pairIndexes.set(key, pairIndex + 1);
+    const pairCount = pairCounts.get(key) ?? 1;
+    const midpoint = {
+      x: (pointA.x + pointB.x) / 2,
+      y: (pointA.y + pointB.y) / 2,
+    };
+    if (pairCount > 1) {
+      const dx = pointB.x - pointA.x;
+      const dy = pointB.y - pointA.y;
+      const length = Math.hypot(dx, dy) || 1;
+      const offset = (pairIndex - (pairCount - 1) / 2) * (label.height + 8);
+      midpoint.x += (-dy / length) * offset;
+      midpoint.y += (dx / length) * offset;
+    }
+    return [
+      {
+        relationship,
+        pointA,
+        pointB,
+        midpoint,
+        label,
+        labelBounds: {
+          x: midpoint.x - label.width / 2,
+          y: midpoint.y - label.height / 2,
+          width: label.width,
+          height: label.height,
+        },
+      },
+    ];
+  });
+}
+
+function translateEdgeLabel(
+  edge: PoliticalFamilyGraphEdge,
+  x: number,
+  y: number,
+): PoliticalFamilyGraphEdge {
+  const midpoint = {
+    x: edge.midpoint.x + x,
+    y: edge.midpoint.y + y,
+  };
+  return {
+    ...edge,
+    midpoint,
+    labelBounds: {
+      x: midpoint.x - edge.label.width / 2,
+      y: midpoint.y - edge.label.height / 2,
+      width: edge.label.width,
+      height: edge.label.height,
+    },
+  };
+}
+
+function overlapShift(
+  first: GraphRect,
+  second: GraphRect,
+  gap: number,
+): Point | undefined {
+  const firstCenter = {
+    x: first.x + first.width / 2,
+    y: first.y + first.height / 2,
+  };
+  const secondCenter = {
+    x: second.x + second.width / 2,
+    y: second.y + second.height / 2,
+  };
+  const overlapX =
+    Math.min(first.x + first.width, second.x + second.width) -
+    Math.max(first.x, second.x);
+  const overlapY =
+    Math.min(first.y + first.height, second.y + second.height) -
+    Math.max(first.y, second.y);
+  if (overlapX <= 0 || overlapY <= 0) return undefined;
+  if (overlapX <= overlapY) {
+    return {
+      x: (firstCenter.x <= secondCenter.x ? -1 : 1) * (overlapX / 2 + gap),
+      y: 0,
+    };
+  }
+  return {
+    x: 0,
+    y: (firstCenter.y <= secondCenter.y ? -1 : 1) * (overlapY / 2 + gap),
+  };
+}
+
+function resolveLabelCollisions(
+  points: Map<string, Point>,
+  initialEdges: PoliticalFamilyGraphEdge[],
+): PoliticalFamilyGraphEdge[] {
+  const edges = [...initialEdges];
+  const nodeBounds = [...points.values()].map((point) => rectForPoint(point));
+
+  for (let attempt = 0; attempt < 64; attempt += 1) {
+    let moved = false;
+    for (let index = 0; index < edges.length && !moved; index += 1) {
+      for (
+        let otherIndex = index + 1;
+        otherIndex < edges.length;
+        otherIndex += 1
+      ) {
+        const first = edges[index];
+        const second = edges[otherIndex];
+        if (!first || !second) continue;
+        const shift = overlapShift(first.labelBounds, second.labelBounds, 8);
+        if (!shift) continue;
+        edges[index] = translateEdgeLabel(first, shift.x, shift.y);
+        edges[otherIndex] = translateEdgeLabel(second, -shift.x, -shift.y);
+        moved = true;
+        break;
+      }
+    }
+    if (moved) continue;
+
+    for (let index = 0; index < edges.length && !moved; index += 1) {
+      const edge = edges[index];
+      if (!edge) continue;
+      for (const nodeBoundsForId of nodeBounds) {
+        const shift = overlapShift(
+          edge.labelBounds,
+          nodeBoundsForId,
+          EDGE_LABEL_GAP,
+        );
+        if (!shift) continue;
+        edges[index] = translateEdgeLabel(edge, shift.x * 2, shift.y * 2);
+        moved = true;
+        break;
+      }
+    }
+    if (!moved) break;
+  }
+  return edges;
+}
+
+function hasLayoutCollision(
+  points: Map<string, Point>,
+  edges: PoliticalFamilyGraphEdge[],
+): boolean {
+  const nodeBounds = [...points.entries()].map(
+    ([id, point]) => [id, rectForPoint(point)] as const,
+  );
+  for (let index = 0; index < nodeBounds.length; index += 1) {
+    for (
+      let otherIndex = index + 1;
+      otherIndex < nodeBounds.length;
+      otherIndex += 1
+    ) {
+      const firstNode = nodeBounds[index];
+      const secondNode = nodeBounds[otherIndex];
+      if (
+        firstNode &&
+        secondNode &&
+        rectanglesOverlap(firstNode[1], secondNode[1], NODE_GAP)
+      )
+        return true;
+    }
+  }
+  for (const edge of edges) {
+    for (const [id, nodeBoundsForId] of nodeBounds) {
+      const isEndpoint =
+        id === edge.relationship.personAId ||
+        id === edge.relationship.personBId;
+      if (
+        !isEndpoint &&
+        rectanglesOverlap(edge.labelBounds, nodeBoundsForId, EDGE_LABEL_GAP)
+      )
+        return true;
+    }
+  }
+  for (let index = 0; index < edges.length; index += 1) {
+    for (
+      let otherIndex = index + 1;
+      otherIndex < edges.length;
+      otherIndex += 1
+    ) {
+      const firstEdge = edges[index];
+      const secondEdge = edges[otherIndex];
+      if (
+        firstEdge &&
+        secondEdge &&
+        rectanglesOverlap(firstEdge.labelBounds, secondEdge.labelBounds, 8)
+      )
+        return true;
+    }
+  }
+  return edges.some((edge) =>
+    [edge.relationship.personAId, edge.relationship.personBId].some((id) =>
+      rectanglesOverlap(
+        edge.labelBounds,
+        rectForPoint(points.get(id) ?? { x: 0, y: 0 }),
+        EDGE_LABEL_GAP,
+      ),
+    ),
+  );
+}
+
+export function buildPoliticalFamilyGraphLayout(
+  people: PoliticalPerson[],
+  relationships: PoliticalFamilyPublicRelationship[],
+  candidatePersonId: string,
+  minimumWidth = GRAPH_WIDTH,
+): PoliticalFamilyGraphLayout {
+  const candidatePerson = people.find(
+    (person) => person.id === candidatePersonId,
+  );
+  const relatives = people.filter((person) => person.id !== candidatePersonId);
+  const compact = minimumWidth < 600;
+  const safeMinimumWidth = Math.max(260, minimumWidth);
+  if (!candidatePerson) {
+    return {
+      people,
+      candidatePerson,
+      points: new Map(),
+      nodeBounds: new Map(),
+      edges: [],
+      contentBounds: { x: 0, y: 0, width: 0, height: 0 },
+      width: safeMinimumWidth,
+      height: compact ? 320 : GRAPH_HEIGHT,
+    };
+  }
+
+  const angles = relationshipAngles(relatives.length, compact);
+  const baseRadius = Math.max(
+    compact ? 220 : 250,
+    180 + relatives.length * (compact ? 28 : 24),
+  );
+  let radiusX = compact
+    ? Math.max(18, (safeMinimumWidth - NODE_WIDTH - GRAPH_PADDING * 2) / 2)
+    : baseRadius;
+  let radiusY = compact
+    ? Math.max(220, baseRadius * 0.9)
+    : Math.max(190, baseRadius * 0.82);
+
+  const createPoints = (): Map<string, Point> => {
+    const points = new Map<string, Point>([
+      [candidatePerson.id, { x: 0, y: 0 }],
+    ]);
+    relatives.forEach((person, index) => {
+      const angle = angles[index] ?? -Math.PI / 2;
+      points.set(person.id, {
+        x: Math.cos(angle) * radiusX,
+        y: Math.sin(angle) * radiusY,
+      });
+    });
+    return points;
+  };
+
+  let points = createPoints();
+  let edges = resolveLabelCollisions(
+    points,
+    buildEdgeLayouts(points, relationships),
+  );
+  for (
+    let attempt = 0;
+    attempt < 24 && hasLayoutCollision(points, edges);
+    attempt += 1
+  ) {
+    radiusY += compact ? 32 : 20;
+    if (!compact) radiusX += 20;
+    points = createPoints();
+    edges = resolveLabelCollisions(
+      points,
+      buildEdgeLayouts(points, relationships),
+    );
+  }
+
+  const nodeBounds = new Map(
+    [...points.entries()].map(([id, point]) => [id, rectForPoint(point)]),
+  );
+  let rawBounds: GraphRect | undefined;
+  for (const bounds of nodeBounds.values())
+    rawBounds = rawBounds ? expandRect(rawBounds, bounds) : bounds;
+  for (const edge of edges)
+    rawBounds = rawBounds
+      ? expandRect(rawBounds, edge.labelBounds)
+      : edge.labelBounds;
+  const content = rawBounds ?? { x: 0, y: 0, width: 0, height: 0 };
+  const paddedWidth = content.width + GRAPH_PADDING * 2;
+  const paddedHeight = content.height + GRAPH_PADDING * 2;
+  const width = Math.max(safeMinimumWidth, paddedWidth);
+  const height = Math.max(compact ? 320 : GRAPH_HEIGHT, paddedHeight);
+  const offsetX = GRAPH_PADDING - content.x + (width - paddedWidth) / 2;
+  const offsetY = GRAPH_PADDING - content.y + (height - paddedHeight) / 2;
+  const shiftPoint = (point: Point): Point => ({
+    x: point.x + offsetX,
+    y: point.y + offsetY,
+  });
+  const shiftedPoints = new Map(
+    [...points.entries()].map(([id, point]) => [id, shiftPoint(point)]),
+  );
+  const shiftedNodeBounds = new Map(
+    [...nodeBounds.entries()].map(([id, bounds]) => [
+      id,
+      translateRect(bounds, offsetX, offsetY),
+    ]),
+  );
+  const shiftedEdges = edges.map((edge) => ({
+    ...edge,
+    pointA: shiftPoint(edge.pointA),
+    pointB: shiftPoint(edge.pointB),
+    midpoint: shiftPoint(edge.midpoint),
+    labelBounds: translateRect(edge.labelBounds, offsetX, offsetY),
+  }));
+  return {
+    people,
+    candidatePerson,
+    points: shiftedPoints,
+    nodeBounds: shiftedNodeBounds,
+    edges: shiftedEdges,
+    contentBounds: translateRect(content, offsetX, offsetY),
+    width,
+    height,
+  };
+}
+
+function clampPan(pan: Point, layout: PoliticalFamilyGraphLayout): Point {
+  const minX = -layout.contentBounds.x;
+  const maxX =
+    layout.width - (layout.contentBounds.x + layout.contentBounds.width);
+  const minY = -layout.contentBounds.y;
+  const maxY =
+    layout.height - (layout.contentBounds.y + layout.contentBounds.height);
+  return {
+    x: Math.min(maxX, Math.max(minX, pan.x)),
+    y: Math.min(maxY, Math.max(minY, pan.y)),
+  };
+}
 
 export const NEUTRAL_RELATION_NOTE =
   '家族與商業關係本身不代表不當或不當影響；未顯示的資料表示尚無已查證紀錄，不代表不存在關係。';
@@ -227,7 +740,12 @@ function FamilyNode({
       data-testid={`family-node-${person.id}`}
       transform={`translate(${point.x} ${point.y})`}
     >
-      <foreignObject x="-92" y="-42" width="184" height="84">
+      <foreignObject
+        x={-NODE_WIDTH / 2}
+        y={-NODE_HEIGHT / 2}
+        width={NODE_WIDTH}
+        height={NODE_HEIGHT}
+      >
         <button
           className="political-family-node__button"
           type="button"
@@ -468,6 +986,8 @@ export default function PoliticalFamilyGraph({
     string | null
   >(null);
   const [pan, setPan] = useState<Point>({ x: 0, y: 0 });
+  const [canvasWidth, setCanvasWidth] = useState(GRAPH_WIDTH);
+  const canvasRef = useRef<HTMLDivElement | null>(null);
   const dragRef = useRef<DragState | null>(null);
   const familyResetKey = `${family?.people.map((person) => person.id).join(',') ?? ''}|${family?.relationships.map((relationship) => relationship.id).join(',') ?? ''}`;
 
@@ -479,36 +999,41 @@ export default function PoliticalFamilyGraph({
     dragRef.current = null;
   }, [candidate.person.id, familyResetKey]);
 
+  useLayoutEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const measure = () => {
+      const width = Math.round(canvas.getBoundingClientRect().width);
+      if (width > 0) {
+        setCanvasWidth((currentWidth) =>
+          currentWidth === width ? currentWidth : width,
+        );
+      }
+    };
+    measure();
+
+    if (typeof ResizeObserver === 'undefined') return;
+    const observer = new ResizeObserver(measure);
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, []);
+
   const sourcesById = useMemo(
     () => new Map((family?.sources ?? []).map((source) => [source.id, source])),
     [family?.sources],
   );
-  const layout = useMemo(() => {
-    const people = family?.people ?? [];
-    const candidatePerson = people.find(
-      (person) => person.id === candidate.person.id,
-    );
-    const relatives = people.filter(
-      (person) => person.id !== candidatePerson?.id,
-    );
-    const points = new Map<string, Point>();
-    if (candidatePerson)
-      points.set(candidatePerson.id, {
-        x: GRAPH_WIDTH / 2,
-        y: GRAPH_HEIGHT / 2,
-      });
-    const radiusX = Math.min(280, 150 + relatives.length * 18);
-    const radiusY = Math.min(170, 115 + relatives.length * 10);
-    relatives.forEach((person, index) => {
-      const angle =
-        -Math.PI / 2 + (index * 2 * Math.PI) / Math.max(relatives.length, 1);
-      points.set(person.id, {
-        x: GRAPH_WIDTH / 2 + Math.cos(angle) * radiusX,
-        y: GRAPH_HEIGHT / 2 + Math.sin(angle) * radiusY,
-      });
-    });
-    return { people, points, candidatePerson };
-  }, [candidate.person.id, family?.people]);
+  const layout = useMemo(
+    () =>
+      buildPoliticalFamilyGraphLayout(
+        family?.people ?? [],
+        family?.relationships ?? [],
+        candidate.person.id,
+        canvasWidth,
+      ),
+    [candidate.person.id, canvasWidth, family?.people, family?.relationships],
+  );
+  const visiblePan = clampPan(pan, layout);
 
   const legendGroups = useMemo(
     () =>
@@ -573,21 +1098,29 @@ export default function PoliticalFamilyGraph({
   }
 
   const onPointerDown = (event: ReactPointerEvent<SVGSVGElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
     dragRef.current = {
       x: event.clientX,
       y: event.clientY,
-      panX: pan.x,
-      panY: pan.y,
+      panX: visiblePan.x,
+      panY: visiblePan.y,
+      scaleX: layout.width / Math.max(bounds.width, 1),
+      scaleY: layout.height / Math.max(bounds.height, 1),
     };
     event.currentTarget.setPointerCapture(event.pointerId);
   };
   const onPointerMove = (event: ReactPointerEvent<SVGSVGElement>) => {
     const drag = dragRef.current;
     if (!drag) return;
-    setPan({
-      x: drag.panX + (event.clientX - drag.x),
-      y: drag.panY + (event.clientY - drag.y),
-    });
+    setPan(
+      clampPan(
+        {
+          x: drag.panX + (event.clientX - drag.x) * drag.scaleX,
+          y: drag.panY + (event.clientY - drag.y) * drag.scaleY,
+        },
+        layout,
+      ),
+    );
   };
   const endPan = (event: ReactPointerEvent<SVGSVGElement>) => {
     dragRef.current = null;
@@ -646,10 +1179,10 @@ export default function PoliticalFamilyGraph({
           ))}
         </ul>
       ) : null}
-      <div className="political-family-canvas">
+      <div ref={canvasRef} className="political-family-canvas">
         <svg
           className="political-family-svg"
-          viewBox={`0 0 ${GRAPH_WIDTH} ${GRAPH_HEIGHT}`}
+          viewBox={`0 0 ${layout.width} ${layout.height}`}
           aria-labelledby="political-family-graph-title"
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
@@ -657,35 +1190,33 @@ export default function PoliticalFamilyGraph({
           onPointerCancel={endPan}
         >
           <title id="political-family-graph-title">候選人家族政商關係圖</title>
-          <g transform={`translate(${pan.x} ${pan.y})`}>
-            {family.relationships.map((relationship) => {
-              const pointA = layout.points.get(relationship.personAId);
-              const pointB = layout.points.get(relationship.personBId);
-              if (!pointA || !pointB) return null;
-              const midpointX = (pointA.x + pointB.x) / 2;
-              const midpointY = (pointA.y + pointB.y) / 2;
-              const relationLabel = `${
-                layout.people.find(
-                  (person) => person.id === relationship.personAId,
-                )?.displayName ?? relationship.personAId
-              }・${relationship.relationshipLabel}・${
-                layout.people.find(
-                  (person) => person.id === relationship.personBId,
-                )?.displayName ?? relationship.personBId
-              }`;
+          <g transform={`translate(${visiblePan.x} ${visiblePan.y})`}>
+            {layout.edges.map((edge) => {
+              const { relationship } = edge;
+              const personA = layout.people.find(
+                (person) => person.id === relationship.personAId,
+              );
+              const personB = layout.people.find(
+                (person) => person.id === relationship.personBId,
+              );
+              const relationLabel = [
+                personA?.displayName ?? relationship.personAId,
+                relationship.relationshipLabel,
+                personB?.displayName ?? relationship.personBId,
+              ].join('・');
               return (
                 <g key={relationship.id} className="political-family-edge">
                   <line
-                    x1={pointA.x}
-                    y1={pointA.y}
-                    x2={pointB.x}
-                    y2={pointB.y}
+                    x1={edge.pointA.x}
+                    y1={edge.pointA.y}
+                    x2={edge.pointB.x}
+                    y2={edge.pointB.y}
                   />
                   <foreignObject
-                    x={midpointX - 50}
-                    y={midpointY - 16}
-                    width="100"
-                    height="32"
+                    x={edge.labelBounds.x}
+                    y={edge.labelBounds.y}
+                    width={edge.labelBounds.width}
+                    height={edge.labelBounds.height}
                   >
                     <button
                       className="political-family-edge__button"
@@ -693,6 +1224,8 @@ export default function PoliticalFamilyGraph({
                       aria-label={relationLabel}
                       aria-pressed={selectedRelationshipId === relationship.id}
                       data-testid={`family-relationship-${relationship.id}`}
+                      data-family-edge-label="true"
+                      data-label-lines={edge.label.lines.length}
                       onPointerDown={(event) => event.stopPropagation()}
                       onClick={(event) => {
                         event.stopPropagation();
@@ -700,7 +1233,11 @@ export default function PoliticalFamilyGraph({
                         setSelectedRelationshipId(relationship.id);
                       }}
                     >
-                      {relationship.relationshipLabel}
+                      {edge.label.lines.map((line) => (
+                        <span key={`${relationship.id}-label-${line}`}>
+                          {line || '\u00a0'}
+                        </span>
+                      ))}
                     </button>
                   </foreignObject>
                 </g>

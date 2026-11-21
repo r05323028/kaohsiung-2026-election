@@ -1,130 +1,36 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-10-8aa5784f",
   "candidateName": "鄭光峰",
-  "verifiedAt": "2026-11-12T16:29:05.035Z",
+  "verifiedAt": "2026-11-20T13:28:28.235Z",
   "articles": [
     {
-      "articleId": "news-d37e2d3c",
+      "articleId": "news-2025808d",
       "candidateIds": [
         "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
       ],
-      "headline": "食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理",
-      "publisher": "自由時報",
-      "publisherType": "national-news",
-      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5511593",
-      "publicationDate": "2026-07-20",
-      "dateStatus": "confirmed",
-      "updatedDate": "2026-07-20",
-      "retrievedAt": "2026-11-12T16:28:59.782Z",
-      "summary": null,
-      "summaryBasis": null,
-      "topicTags": [
-        "other"
-      ],
-      "contentType": "reporting",
-      "eventKey": "食安太依賴末端抽驗鄭光峰應建立原料到成品三級管理@2026-07-20",
-      "duplicateOf": null,
-      "relatedArticleIds": [],
-      "evidence": {
-        "excerpt": "近日食用油檢出苯駢芘，引發外界聯想起多年前頂新劣油事件；民進黨高市議員鄭光峰認為台灣食安過度依賴末端抽驗，應建立原料、製程與成品三級管理。鄭光峰說明，苯駢芘是有機物高溫裂解或不完全燃燒時可能產生的污染物，食用油超標可能與原料乾燥、焙炒、燃燒煙氣或製程溫度控制不當有關；頂新劣油案則涉及不具供人食用品質的油脂原料，被當作食用油原料使用。前者是化學污染與製程管理問題，後者涉及原料資格、供應鏈追溯與蓄意假冒，兩者不一樣。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他進一步提及健康危害方面，苯駢芘被國際癌症研究機構列為第一級致癌物，長期、反覆暴露確實可能增加癌症風險，但「檢出」或「超標」不等於吃一次便會罹癌，實際風險仍取決於污染濃度、食用量、體重及暴露時間。他提醒政府除公布檢驗數字，更應以一般民眾能理解的方式說明暴露程度，而不是一味強調「不必恐慌」或「一級致癌物」。鄭光峰認為，2起油品事件都暴露出台灣食安管理過度依賴末端抽驗的問題，成品抽驗固然重要，卻只能檢查事先列出的項目，無法涵蓋所有未知污染物，也很難回答污染究竟發生在哪一階段；依",
-        "excerptSha256": "ee5e37ab60dd061b278ed7cc317a3dc8fa5fece1e07ead4df5022cea8bed1fca",
-        "documentSha256": "72deac1c7e7c79c533d6e1da5367a7c5d2d81f235ed6defe29d0d75ff32f1144",
-        "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:59.782Z"
-      },
-      "identity": {
-        "matchedName": "鄭光峰",
-        "matchedIn": "headline-and-body",
-        "contextSignals": [
-          "市議員",
-          "議員"
-        ],
-        "namesakeRisk": "low",
-        "note": "姓名與選區／職稱線索同時出現於報導。"
-      },
-      "verification": {
-        "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:59.782Z",
-        "verifierVersion": "news-verifier-v1",
-        "checks": [
-          {
-            "check": "source-reachable",
-            "passed": true,
-            "detail": "HTTP 200"
-          },
-          {
-            "check": "url-canonical",
-            "passed": true,
-            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5511593"
-          },
-          {
-            "check": "publisher-match",
-            "passed": true,
-            "detail": "claimed=自由時報 fetched=自由時報電子報"
-          },
-          {
-            "check": "headline-match",
-            "passed": true,
-            "detail": "claimed=食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理 fetched=食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理"
-          },
-          {
-            "check": "publication-date",
-            "passed": true,
-            "detail": "claimed=2026-07-20 fetched=2026-07-20"
-          },
-          {
-            "check": "identity",
-            "passed": true,
-            "detail": "low / 市議員、議員"
-          },
-          {
-            "check": "relevance",
-            "passed": true,
-            "detail": "name present in fetched document"
-          },
-          {
-            "check": "not-duplicate",
-            "passed": true,
-            "detail": "dedupe runs in the normalize stage"
-          }
-        ],
-        "notes": []
-      },
-      "publication": {
-        "status": "not-published",
-        "blockers": [
-          "publication-policy-not-evaluated"
-        ]
-      }
-    },
-    {
-      "articleId": "news-a0119433",
-      "candidateIds": [
-        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
-      ],
-      "headline": "鳳林國小動土！大林蒲遷村落實「先建後遷」 鄭光峰曝關鍵內幕",
+      "headline": "分析／綠營老將也怕掉票！連霸議題挫咧等 鄭光峰帶新人兩頭燒",
       "publisher": "ETtoday新聞雲",
       "publisherType": "digital-native",
-      "canonicalUrl": "https://ettoday.net/news/20261029/3262983.htm",
-      "publicationDate": "2026-10-29",
+      "canonicalUrl": "https://ettoday.net/news/20261120/3275026.htm",
+      "publicationDate": "2026-11-20",
       "dateStatus": "confirmed",
-      "updatedDate": "2026-10-29",
-      "retrievedAt": "2026-11-12T16:29:03.572Z",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:28:26.500Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
-        "public-service"
+        "election"
       ],
       "contentType": "reporting",
-      "eventKey": "鳳林國小動土大林蒲遷村落實先建後遷鄭光峰曝關鍵內幕@2026-10-29",
+      "eventKey": "分析／綠營老將也怕掉票連霸議題挫咧等鄭光峰帶新人兩頭燒@2026-11-20",
       "duplicateOf": null,
       "relatedArticleIds": [],
       "evidence": {
-        "excerpt": "▲陳其邁在28日進行鳳林國小的興建動土典禮 。（圖／記者吳奕靖翻攝） 配合大林蒲遷村，高雄市鳳林國小新校區28日正式動土，市長陳其邁直言，這不只是一所學校開工，更象徵大林蒲遷村進入實質推動階段。長期投入遷村議題的民進黨前鎮小港市議員參選人鄭光峰也表示，從遷村條件、個案陳情到土地持分問題一路陪居民走來，如今看到學校先蓋，代表「先建後遷」終於從承諾變成看得見的工程。 鳳林國小新校區位於鳳山區，配合大林蒲遷村安置規劃興建，陳其邁28日親自出席動土。他表示，大林蒲遷村歷經多年協調，從來不只是把居民從一個地方搬到另一個地方，背後牽涉居住權、教育權、文化保存及生活方式延續，其中孩子搬遷後「到哪裡上學」，更一直是地方最關心的事情之一。 也因此，市府採取「先建後遷」，鳳林國小、鳳林國中等公共設施陸續先行動工，希望居民真正搬遷前，新的生活環境與教育資源就已經準備好。大林蒲安置地道路工程也已提前進場，市府規劃116年啟動抽籤配地及補償費發價，整體遷村工作逐步進入實作階段。 新鳳林國小規劃18班、約可容納540名學生，校園除了國小教學空間，也納入幼兒園、托育功能，並規劃沉浸式雙語教學空間、智慧閱讀站，預計119年2月完工、同年9月招生。校園設計也將大林蒲文史、海洋文化帶進新校舍，希望學生搬了家，地方記憶不要跟著消失。 ▲市議員鄭光峰表示非常興奮，這對大林蒲居民來說是個歷史重點里程播 。（圖／記者吳奕靖",
-        "excerptSha256": "85783e2ef6a93e62564aaec724750f792e9fed365c48c6bd0491080a58dd458a",
-        "documentSha256": "9dda923ffa6f73dec1bf45d9e1f7cef7e409540f0be043984113a7d35542735f",
+        "excerpt": "▲ 鄭光峰在11日成立前鎮聯合競選總部。（圖／記者吳奕靖翻攝） 誰說政壇老將就沒有掉票危機？高雄市議員選戰倒數，民進黨沒有配票，各自拚戰，尋求7連霸的鄭光峰，選區13搶7，還得帶兩名新人；鳳山的陳慧文、張漢忠有參選經驗的新人一起拚，李喬如的鼓山、鹽埕、旗津則是同額競選。議長康裕成四處站台，回選區站路口，畢竟選票沒開出來前，人人有信心，個個沒把握。 「戒慎恐懼」這4個字，從高雄市長陳其邁口中說出來，幾乎已經成為這次高雄市長選戰的關鍵字，不過需要「戒慎恐懼」的恐怕不只有市長候選人賴瑞隆，就連民進黨的政壇老將，今年也有各自的選戰考題。已經當了6屆市議員的鄭光峰，從縣市合併前的高雄市議會第6、7屆，一路做到縣市合併後的第1至4屆，這次要挑戰7連霸，不過，今年前鎮、小港選區應選席次從8席減為7席，一共有13人登記參選，民進黨除了鄭光峰之外，還提名黃敬雅、吳昱鋒兩名新人。 這次選舉，由於民進黨沒有配票機制，大家各自努力，而鄭光峰身為政壇老將，一方面要帶著黨內新人一起拚戰，另一方面又得兼顧自己的票源，等於是「蠟燭兩頭燒」。相較於其他資深「母雞」來說，鄭光峰這次確實",
+        "excerptSha256": "6ff661a4bb681b1e62a62d198e201ca3bd0569c5d189b567b7684d23e7db1275",
+        "documentSha256": "3645575001eb9cdf7d42b7861d427a44c6809f18470939fa6e20e24b417a5af7",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:29:03.572Z"
+        "capturedAt": "2026-11-20T13:28:26.500Z"
       },
       "identity": {
         "matchedName": "鄭光峰",
@@ -143,7 +49,106 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:29:03.572Z",
+        "verifiedAt": "2026-11-20T13:28:26.500Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261120/3275026.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=分析／綠營老將也怕掉票！連霸議題挫咧等 鄭光峰帶新人兩頭燒 fetched=分析／綠營老將也怕掉票！連霸議題挫咧等 鄭光峰帶新人兩頭燒"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-20 fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-a0119433",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "鳳林國小動土！大林蒲遷村落實「先建後遷」 鄭光峰曝關鍵內幕",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261029/3262983.htm",
+      "publicationDate": "2026-10-29",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-29",
+      "retrievedAt": "2026-11-20T13:28:27.007Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "鳳林國小動土大林蒲遷村落實先建後遷鄭光峰曝關鍵內幕@2026-10-29",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲陳其邁在28日進行鳳林國小的興建動土典禮 。（圖／記者吳奕靖翻攝） 配合大林蒲遷村，高雄市鳳林國小新校區28日正式動土，市長陳其邁直言，這不只是一所學校開工，更象徵大林蒲遷村進入實質推動階段。長期投入遷村議題的民進黨前鎮小港市議員參選人鄭光峰也表示，從遷村條件、個案陳情到土地持分問題一路陪居民走來，如今看到學校先蓋，代表「先建後遷」終於從承諾變成看得見的工程。 鳳林國小新校區位於鳳山區，配合大林蒲遷村安置規劃興建，陳其邁28日親自出席動土。他表示，大林蒲遷村歷經多年協調，從來不只是把居民從一個地方搬到另一個地方，背後牽涉居住權、教育權、文化保存及生活方式延續，其中孩子搬遷後「到哪裡上學」，更一直是地方最關心的事情之一。 也因此，市府採取「先建後遷」，鳳林國小、鳳林國中等公共設施陸續先行動工，希望居民真正搬遷前，新的生活環境與教育資源就已經準備好。大林蒲安置地道路工程也已提前進場，市府規劃116年啟動抽籤配地及補償費發價，整體遷村工作逐步進入實作階段。 新鳳林國小規劃18班、約可容納540名學生，校園除了國小教學空間，也納入幼兒園、托育功能，並規劃沉浸式雙語教學空間、智慧閱讀站，預計119年2月完工、同年9月招生。校園設計也將大林蒲文史、海洋文化帶進新校舍，希望學生搬了家，地方記憶不要跟著消失。 ▲市議員鄭光峰表示非常興奮，這對大林蒲居民來說是個歷史重點里程播 。（圖／記者吳奕靖",
+        "excerptSha256": "85783e2ef6a93e62564aaec724750f792e9fed365c48c6bd0491080a58dd458a",
+        "documentSha256": "6da45cf6b9d0191b168551e2fe1db1c821c1240de06d240df06dfc795b9abb80",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:27.007Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:27.007Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -192,7 +197,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -385,20 +390,106 @@
           "publication-policy-not-evaluated"
         ]
       }
+    },
+    {
+      "articleId": "news-d37e2d3c",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5511593",
+      "publicationDate": "2026-07-20",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-07-20",
+      "retrievedAt": "2026-11-12T16:28:59.782Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "食安太依賴末端抽驗鄭光峰應建立原料到成品三級管理@2026-07-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "近日食用油檢出苯駢芘，引發外界聯想起多年前頂新劣油事件；民進黨高市議員鄭光峰認為台灣食安過度依賴末端抽驗，應建立原料、製程與成品三級管理。鄭光峰說明，苯駢芘是有機物高溫裂解或不完全燃燒時可能產生的污染物，食用油超標可能與原料乾燥、焙炒、燃燒煙氣或製程溫度控制不當有關；頂新劣油案則涉及不具供人食用品質的油脂原料，被當作食用油原料使用。前者是化學污染與製程管理問題，後者涉及原料資格、供應鏈追溯與蓄意假冒，兩者不一樣。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他進一步提及健康危害方面，苯駢芘被國際癌症研究機構列為第一級致癌物，長期、反覆暴露確實可能增加癌症風險，但「檢出」或「超標」不等於吃一次便會罹癌，實際風險仍取決於污染濃度、食用量、體重及暴露時間。他提醒政府除公布檢驗數字，更應以一般民眾能理解的方式說明暴露程度，而不是一味強調「不必恐慌」或「一級致癌物」。鄭光峰認為，2起油品事件都暴露出台灣食安管理過度依賴末端抽驗的問題，成品抽驗固然重要，卻只能檢查事先列出的項目，無法涵蓋所有未知污染物，也很難回答污染究竟發生在哪一階段；依",
+        "excerptSha256": "ee5e37ab60dd061b278ed7cc317a3dc8fa5fece1e07ead4df5022cea8bed1fca",
+        "documentSha256": "72deac1c7e7c79c533d6e1da5367a7c5d2d81f235ed6defe29d0d75ff32f1144",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:28:59.782Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:28:59.782Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5511593"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理 fetched=食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-07-20 fetched=2026-07-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ]
+      }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598890",
-      "headline": "高市議員贈「AI詩」 陳其邁笑說：還以為是哪間廟宇籤詩",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5589192",
-      "headline": "高雄這位里長當10屆40年 未登記選連任卻「悄悄走了」",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5398098",
+      "headline": "高雄親子遊樂園何時開園?公園處長：預計今年7、8月間",
       "reasons": [
         "failed:identity"
       ],
@@ -407,22 +498,6 @@
     {
       "url": "https://news.ltn.com.tw/news/life/breakingnews/5559046",
       "headline": "卸任市長前對高雄還有願景 陳其邁：南部24小時國際機場",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5510698",
-      "headline": "民進黨11席中評委出爐！ 邱志偉當選主委",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5398098",
-      "headline": "高雄親子遊樂園何時開園?公園處長：預計今年7、8月間",
       "reasons": [
         "failed:identity"
       ],
@@ -439,6 +514,54 @@
     {
       "url": "https://news.ltn.com.tw/news/politics/breakingnews/5359613",
       "headline": "民進黨高市議員第十選區初選民調放榜 跌破眼鏡",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5510698",
+      "headline": "民進黨11席中評委出爐！ 邱志偉當選主委",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5511593",
+      "headline": "食安太依賴末端抽驗 鄭光峰：應建立原料到成品三級管理",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5589192",
+      "headline": "高雄這位里長當10屆40年 未登記選連任卻「悄悄走了」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598890",
+      "headline": "高市議員贈「AI詩」 陳其邁笑說：還以為是哪間廟宇籤詩",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://www.ettoday.net/news/20260806/3214489.htm",
+      "headline": "上市營建公司捐300萬助百年媽祖廟 議員鄭光峰讚老董「孟嘗君」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://www.ettoday.net/news/20260808/3215509.htm",
+      "headline": "獨／清新校園女神照曝光！ 高雄議員鄭光峰醫科女兒赴美實習",
       "reasons": [
         "failed:identity"
       ],

@@ -16,7 +16,7 @@ const ROOT = process.cwd();
 
 export const NEWS_PATHS = {
   roster: 'data/approved/2026/kaohsiung-election.json',
-  rawDiscovery: 'data/raw/2026/news/discovery',
+  rawDiscovery: 'data/raw/2026/news/discovery/2026-11-20',
   normalized: 'data/normalized/2026/candidate-news.json',
   normalizedArticles: 'data/normalized/2026/news',
   sourceSummaries: 'data/approved/2026/candidate-news-source-summaries.json',

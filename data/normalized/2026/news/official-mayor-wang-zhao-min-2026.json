@@ -1,61 +1,206 @@
 {
   "candidateId": "official-mayor-wang-zhao-min-2026",
   "candidateName": "王肇民",
-  "verifiedAt": "2026-11-12T16:27:39.983Z",
-  "articles": [],
+  "verifiedAt": "2026-11-20T13:27:44.624Z",
+  "articles": [
+    {
+      "articleId": "news-db2b0738",
+      "candidateIds": [
+        "official-mayor-wang-zhao-min-2026"
+      ],
+      "headline": "統籌款爭議 高雄市長候選人王肇民：分配須考量北漂人口指數",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5642776",
+      "publicationDate": "2026-11-16",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-16",
+      "retrievedAt": "2026-11-20T13:27:38.196Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "統籌款爭議高雄市長候選人王肇民分配須考量北漂人口指數@2026-11-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "統籌分配款爭議是高雄市長選舉藍綠主要話題之一，無黨籍高雄市長候選人王肇民則是列入選舉公報政見，認為統籌分配款必須納入高雄承受空污、重污指數，及北漂人口指數。王肇民日前在政見發表會上，提及其參選核心理念是奉行先總統蔣公遺訓「實踐三民主義，光復大陸國土，復興民族文化，堅守民主陣容」，並應推動族群融合，包容體諒，迎回先總統蔣公銅像，引起關注。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 其餘政見也隨公報呈現，包括推動西濱捷運線、高雄天空之路山城纜車線等。他同時強調台北可以、高雄就可以，台北有的、高雄也要有，且還要做得更好；認為統籌分配款必須納入高雄承受空污、重污指數及北漂人口指數。此外，他主張宜居高雄、經濟發展、社福升級，大林蒲遷村必須先給國家賠償、6年價差補償，舊縣區資源欠缺必須補足，西濱受苦漁民必須照顧，山城原民同胞必須被重視，城鄉教育資源落差必須均衡。",
+        "excerptSha256": "198123e40bbda30f91b8251d6fd3f1961c4fd47086377d0aba81ccc7ef330daf",
+        "documentSha256": "625ac5ffce028c10dcd1817e7225138cb185088272075aa33f666e7644a992b3",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.196Z"
+      },
+      "identity": {
+        "matchedName": "王肇民",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.196Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5642776"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=統籌款爭議 高雄市長候選人王肇民：分配須考量北漂人口指數 fetched=統籌款爭議 高雄市長候選人王肇民：分配須考量北漂人口指數"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-70b4680e",
+      "candidateIds": [
+        "official-mayor-wang-zhao-min-2026"
+      ],
+      "headline": "高雄市長政見會》王肇民：參選理念是奉行先總統蔣公遺訓",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640714",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.933Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見會》王肇民參選理念是奉行先總統蔣公遺訓@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會將於今（14日）登場，無黨籍王肇民，他強調參選核心理念是奉行先總統蔣公遺訓，當有人說要共產黨和談，就要想到「光復大陸國土」，不能跟共產黨談統一，一定要三民主義統一中國。63歲的王肇民是建設公司負責人，曾參與2024年總統大選。日前他在岡山壽天宮舉辦政見宣傳會，台下僅個位數聽眾，但他仍堅持講完68分鐘政見。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 王肇民今天一開場就說，他參選核心理念，是奉行先總統蔣公遺訓：「實踐三民主義，光復大陸國土，復興中華文化，堅守民主陣容」。他認為，因為大家現在對國家發展有點模糊，請大家回想蔣公這四點，大家要記住。例如有人說要共產黨和談，就要想到光復大陸國土，不能跟共產黨談統一中國，一定要三民主義統一中國。王肇民強調，當選後將把中正文化中心拆掉的蔣公銅像，把它修好迎回安座於文化中心，希望不要刻意政治化，族群能互相包容體諒，團結在一起，才能面對強大的中共。針對高雄的政見，王肇民表示要建設高雄大未來，登記參選後，他花了80幾天走遍38個行政區，認為西濱海域投入的市",
+        "excerptSha256": "bf2357515a0411531aa85506faf06cb19210121122979ac9bf7df36ba132cf28",
+        "documentSha256": "5c6f5ab561344420c90fb63a364b06933c015ad84dedd3b7b092848884181375",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.933Z"
+      },
+      "identity": {
+        "matchedName": "王肇民",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.933Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640714"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見會》王肇民：參選理念是奉行先總統蔣公遺訓 fetched=高雄市長政見會》王肇民：參選理念是奉行先總統蔣公遺訓"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    }
+  ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5632595",
-      "headline": "造勢晚會台下僅8人&hellip;&hellip;高雄這候選人不看稿講好講滿68分鐘吸百萬人觀看",
-      "reasons": [
-        "failed:headline-match",
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5627376",
-      "headline": "11/14高雄市長選舉公辦政見發表會 無提問無辯論",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
-      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
-      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
-      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
-      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
-      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5561125",
+      "headline": "2024擬參選正副總統 高雄市長選舉殺出第4人",
       "reasons": [
         "failed:identity"
       ],
@@ -70,8 +215,65 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5561125",
-      "headline": "2024擬參選正副總統 高雄市長選舉殺出第4人",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
+      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
+      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
+      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
+      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5627376",
+      "headline": "11/14高雄市長選舉公辦政見發表會 無提問無辯論",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5632595",
+      "headline": "造勢晚會台下僅8人&hellip;&hellip;高雄這候選人不看稿講好講滿68分鐘吸百萬人觀看",
+      "reasons": [
+        "failed:headline-match",
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640311",
+      "headline": "高雄市長公辦政見會今登場 除藍綠外另3人背景一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
+      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
       "reasons": [
         "failed:identity"
       ],

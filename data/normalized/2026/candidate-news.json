@@ -1,7 +1,3499 @@
 {
   "datasetId": "kaohsiung-2026-candidate-news-normalized",
-  "snapshotDate": "2026-11-12",
+  "snapshotDate": "2026-11-20",
   "articles": [
+    {
+      "articleId": "news-2025808d",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-8aa5784f"
+      ],
+      "headline": "分析／綠營老將也怕掉票！連霸議題挫咧等 鄭光峰帶新人兩頭燒",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261120/3275026.htm",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:28:26.500Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "分析／綠營老將也怕掉票連霸議題挫咧等鄭光峰帶新人兩頭燒@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲ 鄭光峰在11日成立前鎮聯合競選總部。（圖／記者吳奕靖翻攝） 誰說政壇老將就沒有掉票危機？高雄市議員選戰倒數，民進黨沒有配票，各自拚戰，尋求7連霸的鄭光峰，選區13搶7，還得帶兩名新人；鳳山的陳慧文、張漢忠有參選經驗的新人一起拚，李喬如的鼓山、鹽埕、旗津則是同額競選。議長康裕成四處站台，回選區站路口，畢竟選票沒開出來前，人人有信心，個個沒把握。 「戒慎恐懼」這4個字，從高雄市長陳其邁口中說出來，幾乎已經成為這次高雄市長選戰的關鍵字，不過需要「戒慎恐懼」的恐怕不只有市長候選人賴瑞隆，就連民進黨的政壇老將，今年也有各自的選戰考題。已經當了6屆市議員的鄭光峰，從縣市合併前的高雄市議會第6、7屆，一路做到縣市合併後的第1至4屆，這次要挑戰7連霸，不過，今年前鎮、小港選區應選席次從8席減為7席，一共有13人登記參選，民進黨除了鄭光峰之外，還提名黃敬雅、吳昱鋒兩名新人。 這次選舉，由於民進黨沒有配票機制，大家各自努力，而鄭光峰身為政壇老將，一方面要帶著黨內新人一起拚戰，另一方面又得兼顧自己的票源，等於是「蠟燭兩頭燒」。相較於其他資深「母雞」來說，鄭光峰這次確實",
+        "excerptSha256": "6ff661a4bb681b1e62a62d198e201ca3bd0569c5d189b567b7684d23e7db1275",
+        "documentSha256": "3645575001eb9cdf7d42b7861d427a44c6809f18470939fa6e20e24b417a5af7",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:26.500Z"
+      },
+      "identity": {
+        "matchedName": "鄭光峰",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:26.500Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261120/3275026.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=分析／綠營老將也怕掉票！連霸議題挫咧等 鄭光峰帶新人兩頭燒 fetched=分析／綠營老將也怕掉票！連霸議題挫咧等 鄭光峰帶新人兩頭燒"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-20 fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-5c6bcf22",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "市場拜票 賴瑞隆︰鳳山是未來發展重鎮",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/paper/1779164",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:39.839Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "市場拜票賴瑞隆︰鳳山是未來發展重鎮@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄最大票倉 賴展現超人氣 攤商送上菜頭、蒜苗喊「當選」選戰倒數最後衝刺，民進黨高雄市長候選人賴瑞隆昨天到鳳山共同市場拜票，旁邊就是高雄最大眷村鳳山新城，支持者高喊「當選」。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 高雄市長選舉具投票權人數約二三〇萬人，其中鳳山區達二十九．六萬人，是最大票倉。賴瑞隆在黨籍立委許智傑、議員張漢忠、陳慧文、林智鴻、議員候選人鄧巧佩、蘇致榮等人陪同下，深入鳳山共同市場拜票。議員候選人陪同 爭取選民支持賴瑞隆自稱是在菜市場長大，他緊握每一雙手，逐一跟鄉親拜票，還比出愛心手勢，爭取更多選民支持，也祝福攤商生意興隆支持。支持者沿途爭相合照、索取簽名等，展現超人氣，還送上菜頭、蒜苗、包子等，象徵「好彩頭」、「當選」、「包中」等。賴瑞隆受訪表示，鳳山近年來進步很大、建設很多，捷運黃線施工、LaLaport明年三月開幕等，很多重大建設持續進行，鳳山是未來高雄發展重鎮，他拜託大家返鄉投票、出門投票，投下高雄進步關鍵一票，讓民進黨候選人一起當選、一起建設高雄，再創高雄的黃金十年。柯志恩車掃 沿途機車貪食蛇加入國民黨市長候選人柯志恩從十",
+        "excerptSha256": "1a901b9a5073c45eb9b323bff027c0c009b2a284de426fa8a3f4a0fb9ee469d5",
+        "documentSha256": "c779dce5c40b87b3affb20ab69b5b527106d0aea7ca82c62d23724b42be60885",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:39.839Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:39.839Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/paper/1779164"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=市場拜票 賴瑞隆︰鳳山是未來發展重鎮 fetched=市場拜票 賴瑞隆︰鳳山是未來發展重鎮"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-79bea1b9",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026"
+      ],
+      "headline": "呼籲小草票投柯志恩？ 柯文哲推給「他」來回答",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647480",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:39.834Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "呼籲小草票投柯志恩柯文哲推給他來回答@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026九合一選舉將於下週六（28）日投票，民眾黨創黨主席柯志恩今（20）日到高雄為黨內唯一的市議員候選人林于凱做最後催票，被問是否呼籲小草票投國民黨高雄市長候選人柯志恩，未正面回應，反而請林于凱來回答，至於選前之夜也可能以嘉義、竹北為主。柯文哲昨日受訪提及小草不會投給沈伯洋，至於會不會呼籲小草投柯志恩？柯文哲未正面回應，反將題目推給林于凱回答，林于凱表示，就他所知小草百分之百支持柯志恩，因為一個不讀不回、只會讀稿的市長無法被期待。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 林于凱說，他曾提出了很多疑問，結果一個號稱要接第4棒的接棒者竟然都沒有辦法回答這些問題，為什麼只有包庇自己的綠全會（民主進步黨全國黨員代表大會）？為什麼打造量身修法替炒股來解套？為什麼原本不符合外監資格的農田水利會會長，透過民進黨團的修法就可以去外役監服爽役後提前出獄，提問都不讀不回，如果不知道為何連署，就是配合黨意的橡皮圖章，這樣的市長有什麼值得期待，所以無條件支持柯志恩。至於選前之夜是否再為柯志恩站台？柯文哲表示，最後階段每個候選人努力去",
+        "excerptSha256": "a499fe5dea3b4f0af6484a26789d03600e6b9c32535bf49ab832fba7d870129f",
+        "documentSha256": "4646fd6650b5263d3bc9eb9b402321f32e738d1e9b09ac967602009aaf7e2858",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:39.834Z"
+      },
+      "identity": {
+        "matchedName": "柯志恩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:39.834Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647480"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=呼籲小草票投柯志恩？ 柯文哲推給「他」來回答 fetched=呼籲小草票投柯志恩？ 柯文哲推給「他」來回答"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-8bdf11ba",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026"
+      ],
+      "headline": "坦言陳其邁非常認真 柯志恩：原高雄縣要少輸她才有機會",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647474",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:40.369Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "坦言陳其邁非常認真柯志恩原高雄縣要少輸她才有機會@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市長候選人柯志恩接受媒體人陳雅琳「高雄市選舉大對話」專訪，節目今（20）日中午播出，她坦言現任市長陳其邁非常認真，對高雄盡心盡力；也希望這次原高雄市選票能贏多一點，原高雄縣要少輸才有機會。柯志恩強調，這4年來她勤走基層，穿破4雙鞋子，高雄890里的里長，她拜訪過520位。雖然這次高雄沉默螺旋非常明顯，但最近有些改變，特別是辯論會後，顯現表態的比率比以前高出非常多，她也很驚訝。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 主持人陳雅琳說，她覺得高雄也不一定是個蠻綠的地方，民進黨執政之前，其實是國民黨市長，且畢竟韓國瑜有選上過市長；柯志恩則回說「合併之後很難」，且韓國瑜罷免票比他選上的票還多，所以高雄人非常愛恨分明；她認為高雄的選票結構上，即使現在她認為有機會贏，她都會「希望（原）高雄市贏多一點，（原）高雄縣要少輸才有機會」。主持人問她「與賴瑞隆最大不同在哪裡？」柯說，高雄應該國際化，她在國際化上應該比賴更具有優勢，因為她過去擔任立法院「台美國會議員聯誼會」會長；她也覺得",
+        "excerptSha256": "647a3cfffc87bbc3f6a09caf4930ebd76585754b7ab40f2f4a925b2ff845b52c",
+        "documentSha256": "2a8735749d7a75744e17a275186efb1f4fad4e9765cf8d4c4d08b704053fd35c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:40.369Z"
+      },
+      "identity": {
+        "matchedName": "柯志恩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:40.369Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647474"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=坦言陳其邁非常認真 柯志恩：原高雄縣要少輸她才有機會 fetched=坦言陳其邁非常認真 柯志恩：原高雄縣要少輸她才有機會"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-41dbfb02",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026",
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "柯文哲表態支持柯志恩 賴瑞隆回應了",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647759",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:38.602Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "柯文哲表態支持柯志恩賴瑞隆回應了@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民眾黨創黨主席柯文哲今（20）日南下高雄時，表態支持國民黨市長候選人柯志恩；對此，民進黨市長候選人賴瑞隆下午受訪時強調，候選人一定爭取各方的支持，他也一樣爭取蔡英文前總統、賴清德總統、蕭美琴副總統、陳其邁市長等人的支持。柯文哲今早到高雄為黨內唯一的市議員候選人林于凱催票，被問是否呼籲小草票投柯志恩？他請身旁的林于凱回答，林則強調「無條件支持柯志恩」，柯隨後也說「就這樣決定！」請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆今天上午陪同苗栗縣長候選人陳品安車隊掃街，今天下午趕回高雄，前往岡山、燕巢等地車掃。對此他受訪表示，柯志恩爭取任何人支持，這些都是合理的，候選人一定爭取各方的支持，「我們一樣全力爭取像蔡英文前總統、賴清德總統、蕭美琴副總統、陳其邁市長，甚至於謝長廷市長，還有所有的立委們大家的支持！」賴強調，相信高雄是一個整體進步的團隊，過去以來歷任市長努力的成績，都是最好的一個基礎。更重要的是，這20年來他始終跟高雄市民站在一起，全力建設高雄，他有信心這20幾年來的努力，與歷任市長的努力，會得到市民認同與支持，讓高雄繼續進步向前，也再次拜託大家務必",
+        "excerptSha256": "2042725272790242274da69e1ebf818c3b69dbadbde2d7b93e1329f1510ce1c8",
+        "documentSha256": "8445286de9aa37d675407398f93a7699a8254586a65f922a21b45f914195eb9f",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.602Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市長",
+          "高雄",
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.602Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647759"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=柯文哲表態支持柯志恩 賴瑞隆回應了 fetched=柯文哲表態支持柯志恩 賴瑞隆回應了"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市長、高雄、市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-e1735c46",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026",
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "高屏澎選戰》賴瑞隆周春米吳淑瑾合體催票 柯志恩持續大車掃",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/paper/1779199",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:40.340Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高屏澎選戰》賴瑞隆周春米吳淑瑾合體催票柯志恩持續大車掃@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "距離投票僅剩八天，民進黨高屏澎三地聯手出擊，高雄市長候選人賴瑞隆昨天合體屏東縣長周春米、澎湖縣長候選人吳淑瑾，一起用家鄉味呼喚南部遊子返鄉投票；國民黨高雄市長候選人柯志恩則持續大車掃，凝聚氣勢。綠營三選將 籲遊子返鄉投票綠營三位候選人昨天一起穿上圍裙，周春米準備屏東黑珍珠蓮霧、吳淑瑾調製五味醬汁，賴瑞隆則負責汆燙高雄野蓮，搭配澎湖土魠魚，共同完成「酥炸五味土魠魚」。隨後各自端出各縣市具特色的家鄉料理，喚起遊子心中對故鄉的思念。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆表示，台灣辦桌是大家分工合作，才能完成一桌好菜，高屏澎三縣市也是如此，這場選舉不只是選出未來四年的地方首長，更攸關南台灣下一個十年的發展方向，「顧好家鄉味，更要顧好家鄉的未來！」周春米強調，總統賴清德積極推動「均衡台灣」，讓南台灣擁有更多發展機會，屏東正處於發展的關鍵時刻，呼籲在全台各地求學、打拚的屏東孩子，一定要在十一月廿八日返鄉投票。吳淑瑾則說，高屏澎本來就是一家人，彼此緊密相連、共同打拚，她向全台澎湖遊子喊話「家鄉需要你！」柯志恩車掃",
+        "excerptSha256": "b48bb80de2be4facc527d5d1ec9d2d1a22a44547e739e8395fc5a9682040c98f",
+        "documentSha256": "8b38bca7407c94bf87caef1efaf28c2bde566cbb19063fa2e714056de4d314c1",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:40.340Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:40.340Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/paper/1779199"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高屏澎選戰》賴瑞隆周春米吳淑瑾合體催票 柯志恩持續大車掃 fetched=高屏澎選戰》賴瑞隆周春米吳淑瑾合體催票 柯志恩持續大車掃"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-c48722dc",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-fa7345e8"
+      ],
+      "headline": "曾臨危授命選高雄市長 李眉蓁陷危機啟動搶救大作戰",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647102",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:51.360Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "曾臨危授命選高雄市長李眉蓁陷危機啟動搶救大作戰@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市議員選戰進入最後衝刺，左營、楠梓選區12人角逐9席，國民黨五位現任女將全力拚連任，民進黨提名四人，另有陳善慧兒子等無黨籍候選人投入。國民黨李眉蓁2020年曾臨危授命投入高雄市長補選，因多次參選、高知名度，反陷入「穩當選」危機，藍營要角震驚之餘，紛紛站台力挺，展開搶救李眉蓁大作戰。李眉蓁雖歷經市長、立委選戰，擁有高曝光，卻也面臨「大家以為她很穩」的尷尬。在11月上旬競總成立時坦言，走訪基層經常聽見支持者認為她選過市長、立委，應該很有把握，因此打算把票分給其他人。她擔心的是知名度與實際選票的落差，一旦支持者自行配票，原本的好感就未必能轉為入匭的支持。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 李眉蓁說，她是左營女兒、右昌媳婦，長年服務左楠。2020年高雄市長補選，她在國民黨低潮時接下重任，挫折後重新回到校園完成學業，並持續投入地方。這份遇到困難仍願意承擔的俠氣，正是黨內要角力挺她的原因。10月25日眷村老歌活動，鄭麗文到場為她懇託。11月1日，韓國瑜南下左營，稱她是壓不扁的玫瑰，呼籲集中選票、不要分票。柯志恩也在競總活動稱讚她是最勇敢的媽媽，請鄉親用選票肯定。重量級人物接力助陣，凸顯連任保衛戰受",
+        "excerptSha256": "de493381a3e15d785c6249cc61f83de4ec3cf5569e1f34ce62d9ae91313184de",
+        "documentSha256": "0e2caa5768982e7de48e27df80a6df920124220fc70c54d43224a5c6e4fc2eff",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:51.360Z"
+      },
+      "identity": {
+        "matchedName": "李眉蓁",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "左營",
+          "楠梓",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:51.360Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647102"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=曾臨危授命選高雄市長 李眉蓁陷危機啟動搶救大作戰 fetched=曾臨危授命選高雄市長 李眉蓁陷危機啟動搶救大作戰"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 左營、楠梓、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-c3872149",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-caaa9960"
+      ],
+      "headline": "鳳山激戰 鍾易仲推客家九大政績爭取文化扎根",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647105",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:28:17.204Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "legislative",
+        "public-service",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "鳳山激戰鍾易仲推客家九大政績爭取文化扎根@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰進入最後階段，各候選人忙著掃街拜票、爭取曝光。尋求連任的國民黨籍高雄市鳳山區市議員候選人鍾易仲，透過充滿客家意象的溫馨文宣，細數任內「為客家打拚的九件事」，用問政紀錄向客家鄉親報告推動成果。鍾易仲來自美濃客家原鄉，也是澎湖女婿，長期關注族群文化傳承與離鄉打拚的生活。他曾在議會指出，客家人在原鄉說母語、接觸文化都是日常，搬到都市後，這些機會卻可能慢慢減少，鳳山是高雄客家人口最多的行政區，如何讓文化在城市裡繼續紮根，一直是他關心的事。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 文宣上的「九件事」，包含已實現的成果，也有任內提出、仍持續爭取落實的工作。例如11月12日在衛武營音樂廳登場的「共下，唱一擺：高雄市客家社團聯合展演」，由市府客委會主辦，集結22組客家社團及多元藝術團隊，讓不同世代一起唱出家鄉的聲音，就是他爭取的成果。此外，鍾易仲也爭取編列客語認證獎勵經費，專業級最高5000元。他並督促新客家文化園區修繕活化，持續爭取鳳山與三民納入客家文化重點發展區、鳳山設置客語服務窗口及伯公照護站，讓語言服務與長輩照顧更貼近日常。在青年發展方面，他提案爭",
+        "excerptSha256": "2e9a237f0515ce1ee5ad6848ff7edade99162e99d721e4d8977534fdb27327ad",
+        "documentSha256": "2bb8ae68acd4bd2d70819d0c370674dcd3f22c3e250c2bb5d36820f667f201d5",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:17.204Z"
+      },
+      "identity": {
+        "matchedName": "鍾易仲",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:17.204Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647105"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=鳳山激戰 鍾易仲推客家九大政績爭取文化扎根 fetched=鳳山激戰 鍾易仲推客家九大政績爭取文化扎根"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-58c0a0c2",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆三民區大車掃 豐裕里長特製人形牌強力應援",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5648088",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:38.222Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆三民區大車掃豐裕里長特製人形牌強力應援@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民進黨高雄市長候選人賴瑞隆今（20日）進行大車掃，晚上7點行經三民區拜票，至中庸街與力行路口時，當地豐裕里插畫家里長謝錫元特別製作賴瑞隆及市議員的人形牌應援，讓車上的候選人忍不住驚呼。賴瑞隆今晚7點在立委李昆澤及議長康裕成、三民區市議員何權峰、鄭孟洳、張博洋的陪同下，在三民區進行大車掃，沿路受到不少市民的加油打氣，高喊凍蒜。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 身為插畫藝術家的豐裕里里長謝錫元，每逢選舉為讓社區居民感受熱潮，總會親手製作加油物品，讓候選人車掃行經時，能感受當地里民的熱情，謝錫元在日前獲知車掃的行經路線，早早就利用時間以紙板製作賴瑞隆、康裕成、何權峰、鄭孟洳和張博洋的人形加油牌，還特別寫上各自的競選號次，每個加油牌把候選人的特徵都畫了出來，模樣相當討喜，晚間和10多名志工們在路口為車隊加油，雖然只有短短幾秒鐘，卻顯得相當歡樂。",
+        "excerptSha256": "f61fc056e5ff7fccdafeab9efcfea50f4efd78dab11f64d0f981bbb406882e7d",
+        "documentSha256": "21c9644195f9ff6d9462729c2d9af2185682474c9d98af26128a00e4ef11708b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.222Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.222Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5648088"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆三民區大車掃 豐裕里長特製人形牌強力應援 fetched=賴瑞隆三民區大車掃 豐裕里長特製人形牌強力應援"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-d9f28716",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆大旗美造勢明天登場 搖滾區開放報名秒殺",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647269",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:39.501Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆大旗美造勢明天登場搖滾區開放報名秒殺@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選前黃金週末，民進黨高雄市長候選人賴瑞隆明（21）日將在旗山體育場舉辦「大旗美團結應援大會」，行政院長卓榮泰、民進黨立法院黨團總召蔡其昌、高雄市長陳其邁及議長康裕成將輪番站台助講，這次首度將搖滾區帶到大旗美造勢，開放報名即秒殺額滿。賴瑞隆競總指出，卓榮泰與蔡其昌都從幕僚做起，在行政與立法崗位上累積扎實歷練，展現民進黨人才務實做事的精神。卓榮泰在立法院備詢時，多次與賴瑞隆討論高雄重大建設，蔡其昌則與賴瑞隆在國會並肩10年。兩人明天不僅是以行政院長與黨團總召的身分站台，更是以戰友的角色，給予賴瑞隆最堅定的支持。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆旗山場將延續前幾場「快樂、希望」的風格，邀請台灣民謠大師陳明章與福爾摩沙淡水走唱團、美濃客家歌手陳俊名登台演出，並準備多個小彩蛋，留待現場揭曉。賴瑞隆邀請所有「小風扇」自製應援小物、繫上「隆洋」飄帶，用最快樂、最有希望的方式，展現對高雄的熱愛。賴競總今（20）日表示，這次首度將搖滾區帶到大旗美造勢，開放報名即宣告額滿。許多「小風扇」跟著賴",
+        "excerptSha256": "0bd0808133377fa5724e89d1c695be3fe2dd3198c3b734d566de47230a6fb034",
+        "documentSha256": "e5afa2adfb7497e17e2bbb887c26338332c216d23ff798f07c0e70e80176793c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:39.501Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:39.501Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647269"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆大旗美造勢明天登場 搖滾區開放報名秒殺 fetched=賴瑞隆大旗美造勢明天登場 搖滾區開放報名秒殺"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-8f3dead9",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆赴苗栗陪車掃 陳品安、林月琴盼借鏡高雄轉型經驗",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647516",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:38.873Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆赴苗栗陪車掃陳品安林月琴盼借鏡高雄轉型經驗@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市長候選人、立法委員賴瑞隆今（20）日前往苗栗，陪同民進黨苗栗縣長候選人陳品安及苗栗市長候選人林月琴進行車隊掃街拜票，展現跨縣市團結氣勢。陳品安競選總部表示，雙方分別身為「客家女婿」與「客家媳婦」，未來期盼透過城市交流，借鏡高雄在科技產業與觀光轉型的經驗，為苗栗開創更多發展機會。陳品安指出，賴瑞隆與陳品安都相當重視客家及文化政策；陳品安強調表示，高雄過去也曾面臨傳統產業轉型課題，近年逐步拓展科技產業與觀光發展，累積不少值得學習的治理經驗，期盼透過未來的城市交流帶動苗栗進步。她也提到，苗栗市作為縣政所在地，過去曾有繁榮風貌，近年面臨人口外移等挑戰，需要縣政、市政攜手合作並結合中央資源重現榮景，呼籲鄉親支持「一票陳品安、一票林月琴」。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆則提出支持陳品安的3個理由，包括陳品安同為高雄鄉親及台大學妹，自13年前在苑裡投入義務律師服務到擔任縣議員，一路深耕地方；其次，他的岳母也是苗栗人，讓他長期關心苗栗發展；第三，高雄近年從產業轉型到舉辦",
+        "excerptSha256": "8d448be5281a733ed984fcd68af598c989db0e241f9f6f0e455aafd4a2bf0f54",
+        "documentSha256": "f72722e324fb4da8e69e7488f38f3ae28aa80e4a4269cb3b5619158b5f4d4a89",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.873Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.873Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647516"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆赴苗栗陪車掃 陳品安、林月琴盼借鏡高雄轉型經驗 fetched=賴瑞隆赴苗栗陪車掃 陳品安、林月琴盼借鏡高雄轉型經驗"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-22ee86fb",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026"
+      ],
+      "headline": "獲柯文哲表態支持 柯志恩感謝情義相挺",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5647895",
+      "publicationDate": "2026-11-20",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-20",
+      "retrievedAt": "2026-11-20T13:27:38.222Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "獲柯文哲表態支持柯志恩感謝情義相挺@2026-11-20",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民眾黨創黨主席柯文哲今（20日）南下高雄時，表態支持國民黨高雄市長候選人柯志恩；對此，柯志恩傍晚受訪時，感謝柯文哲的情義相挺。柯文哲今早到高雄為黨內唯一的市議員候選人林于凱催票，被問是否呼籲小草票投柯志恩？他請身旁的林于凱回答，林則強調「無條件支持柯志恩」，柯隨後也說「就這樣決定！」請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 對此，柯志恩今天傍晚趕回高雄車掃前受訪說，非常感謝柯文哲主席的情義相挺，本來今早是要跟他們一起車掃，但因為立法院要表決，只好跟他說抱歉。「但我們一定力挺林于凱這位優秀議員，也能進入議會跟國民黨議員共同監督市政」，她認為藍白一起合作，才有辦法讓高雄政治越來越清明。對於柯文哲稱投票率愈高，對柯志恩愈有利；柯志恩強調，11月28日投票本來就是公民權，鼓勵各地北漂的高雄子弟，都能夠回到高雄行使公民權，歡迎大家11月28日共同出來投票。談到這幾天的大車掃，柯志恩也很驚訝，指相較於4年前，這一次車掃搖下車窗跟她比OK、或是路邊隨機停下跟她比OK的人數非常多，她非常謝謝大家的支持，還剩下幾天時間，會更加努力。明晚的選前",
+        "excerptSha256": "67fbbdced41975859520f578a100b45d01f6818dd05df2dfc37ea5f40eb77273",
+        "documentSha256": "3773839410813e7b352ca9d1586551742b1b7e871a499b0cf3203b860bb576d1",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.222Z"
+      },
+      "identity": {
+        "matchedName": "柯志恩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "市議員",
+          "議員",
+          "議會"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.222Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5647895"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=獲柯文哲表態支持 柯志恩感謝情義相挺 fetched=獲柯文哲表態支持 柯志恩感謝情義相挺"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-20"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、市議員、議員、議會"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-e74aa1d6",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "邱于軒指控選前之夜動員義消參加 賴瑞隆回應了",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5646293",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:42.555Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "邱于軒指控選前之夜動員義消參加賴瑞隆回應了@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "民進黨高雄市長候選人賴瑞隆預計於27日舉辦選前之夜大造勢，但國民黨議員邱于軒接獲義消投訴，指義消總隊動員各分隊參加此活動；對此，賴瑞隆今（19）受訪說，義消也有很多好朋友們，任何活動邀請義消朋友參加，基於個人名義他們也都會參與。邱于軒今天指出，選舉動員本是常態，但一再將腦筋動到義消頭上，屢屢引發基層反彈，「賴瑞隆真的該適可而止了！」，從民眾提供賴瑞隆選前之夜的座位配置圖來看，選前之夜約1萬5千人已座無虛席，場面既然已經夠大，又何必非要動員義消來充數？請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 邱于軒說，據她了解，義消總隊直接要求各分隊要有固定的出席人數，參加賴瑞隆的造勢活動，引發眾怒，已經不只一個分隊跟她抱怨。她也把陳情民眾的原話原封不動送給賴瑞隆：「我們義消是用來救災救護的，不是給賴瑞隆做場面用的！」對此，賴瑞隆今天中午受訪時表示，「我們支持義消，義消也協助高雄非常多事項，義消也有很多好朋友們，任何活動邀請義消朋友參加，基於個人名義他們也都會參與」，選舉過程中歡迎所有支持賴",
+        "excerptSha256": "6c8617c5264fca05fb8c984bf9b774b5b5a6a93f88e847f94bf79a54bfff1e68",
+        "documentSha256": "9dd1b508a59f615ba0699e98751930cbd25c363e6b066bc81d1ac74d481c2310",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:42.555Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:42.555Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5646293"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=邱于軒指控選前之夜動員義消參加 賴瑞隆回應了 fetched=邱于軒指控選前之夜動員義消參加 賴瑞隆回應了"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-954ef390",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026"
+      ],
+      "headline": "柯志恩24小時拚3場大車掃 氣氛熱烈",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5645917",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:41.290Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "柯志恩24小時拚3場大車掃氣氛熱烈@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市長選戰進入倒數階段，國民黨高雄市長候選人柯志恩自17日晚間6點起展開鹽埕、鼓山大車掃後，緊接著於18日下午3點深入林園、大寮掃街，晚間6點再進行前金、新興、苓雅大車掃，24小時內連續3場高強度車掃，沿途大批支持者替他加油，氣氛熱烈。柯志恩競辦指出，隨著3場大規模掃街，機車「貪食蛇車隊」也越來越壯觀。支持者們在機車上繫上飄帶、國旗及柯志恩應援旗幟，每當車隊停等紅燈，就有人向戰車上的柯志恩高喊「凍蒜」，柯也頻頻比出愛心熱情回應。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 18日下午的林園、大寮車掃行程中，不少在家中的長輩聽到車隊廣播聲，特地走到家門口向柯志恩比讚加油；更有便當店店員衝出店外熱情揮手致意。掃街過程也出現許多創意應援，有支持者送上象徵「凍蒜」與「好彩頭」的大蒜及菜頭，還有民眾將國民飲料品牌的利樂包紅茶，精心排列成柯志恩的選舉號次「3」。一名支持者表示，「好像看到2018年韓流貪食蛇車隊的盛況！」期盼最後幾天有更多人站出來，展現翻轉高雄的心聲。柯志恩競選團隊也預告，今（19）日下午柯志恩將",
+        "excerptSha256": "1bfc43df934051225ec5ce511f316eef76045da26f143c267854a1e1b93b64a2",
+        "documentSha256": "f229cc7fb12df80704896351b2099550e1adc0b57e33201ac78dff41b6e4e79c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:41.290Z"
+      },
+      "identity": {
+        "matchedName": "柯志恩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:41.290Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5645917"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=柯志恩24小時拚3場大車掃 氣氛熱烈 fetched=柯志恩24小時拚3場大車掃 氣氛熱烈"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-638bf0b1",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026",
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "過去4年立院「高雄地方發展」發言 網揭賴瑞隆56次柯志恩僅3次",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5646469",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:41.619Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "過去4年立院高雄地方發展發言網揭賴瑞隆56次柯志恩僅3次@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "過去4年，哪些立委持續關心高雄？臉書社團「高雄好過日」根據報導者觀測站統計，第一名是民進黨高雄市長候選人賴瑞隆，高達56次，國民黨高雄市長候選人柯志恩則僅有3次。「高雄好過日」今天發文指出，國民黨市長候選人柯志恩自述自己「這次最大的優勢，就是沒有離開，4年來持續留在高雄深耕。」然而真的是這樣嗎？請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 「高雄好過日」說，根據報導者觀測站分類整理立法院第11屆會期發言，有關「高雄地方發展」的主題中，第一名是賴瑞隆，高達56次，幾乎每個高雄相關的委員會、預算審查會，都有他爭取建設、預算的發言。而柯志恩只有3次，是賴瑞隆的1/18，併酸她「也許人沒有離開，但同樣作為住在高雄的立委，柯志恩幾乎沒有立法院替高雄喉舌」。「高雄地方發展」的主題中，傅崐萁、翁曉玲、葉元之關心高雄的次數各有1次，加起來和柯志恩一樣多，「高雄好過日」說明，傅崐萁在講高雄有天坑，翁曉玲在講高雄有紅太陽，葉元之在講足球選手跌倒，到底高雄市府要不要負責，「都是在找議題攻擊高雄」。「高雄好過日」認為，有些事，不要選舉時才看，要平常就看，才能知道這個人的態度，才能知道",
+        "excerptSha256": "771e909b6c61ef7ea74bdc27d0acf5e48fa867c12acad5aa9ec9d4a1932d4c34",
+        "documentSha256": "ba7c4cdf9e49be6d6035db6b30dc51f6de18085ff8d67786d279ec11d72353c5",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:41.619Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:41.619Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5646469"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=過去4年立院「高雄地方發展」發言 網揭賴瑞隆56次柯志恩僅3次 fetched=過去4年立院「高雄地方發展」發言 網揭賴瑞隆56次柯志恩僅3次"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-e0c931bc",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆合體周春米、吳淑瑾 端出家鄉味呼喚南部囝仔返鄉投票",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5646318",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:41.926Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆合體周春米吳淑瑾端出家鄉味呼喚南部囝仔返鄉投票@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "距離2026年九合一地方公職人員選舉僅剩9天，民進黨高屏澎三地聯手，高雄市長候選人賴瑞隆今（19）日偕同屏東縣長周春米、澎湖縣長候選人吳淑瑾，一起用家鄉味呼喚南部囝仔返鄉投票！三人今天於賴瑞隆競選總部舉辦「一趟家鄉WAY・顧好家鄉味」記者會，一起穿上圍裙，在高雄內門辦桌第三代總舖師的指導下大展身手。周春米準備屏東黑珍珠蓮霧、吳淑瑾調製五味醬汁，賴瑞隆則負責汆燙高雄野蓮，搭配澎湖土魠魚，共同完成「酥炸五味土魠魚」。隨後各自端出各具特色的家鄉料理，喚起遊子心中對故鄉的思念。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆表示，傳統辦桌最珍貴的精神，就是厝邊頭尾作伙「湊腳手」，大家分工合作，才能完成一桌好菜。高屏澎也是如此，這場選舉不只是選出未來4年的地方首長，更攸關南台灣下一個10年的發展方向，「顧好家鄉味，更要顧好家鄉的未來！」周春米強調，屏東正處於發展的關鍵時刻，各項重大建設持續推進，更需要穩健向前，賴清德總統積極推動「均衡台灣」，讓南台灣擁有更多發展機會，呼籲在全台各地求學、打拚的屏東孩子，一定要在11月28日返鄉投票。吳淑瑾則說，",
+        "excerptSha256": "f33ea3b0d74d843720b22a6608edc051883199a133752e899ebe2e61cf2d72ca",
+        "documentSha256": "4b11da933ff87bab5c37fbd56fbac92f031df531160db6b51a007935dcbbcb9f",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:41.926Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:41.926Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5646318"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆合體周春米、吳淑瑾 端出家鄉味呼喚南部囝仔返鄉投票 fetched=賴瑞隆合體周春米、吳淑瑾 端出家鄉味呼喚南部囝仔返鄉投票"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-211095f4",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5646057",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:43.286Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆走訪鳳山共同市場拜票受歡迎支持者高喊當選@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰倒數9天最後衝刺，民進黨高雄市長候選人賴瑞隆今天走訪鳳山共同市場拜票，旁邊就是高雄最大眷村鳳山新城，受到民眾歡迎，現場高喊「當選」，場面熱鬧滾滾。賴瑞隆今天在黨籍立委許智傑、議員張漢忠、陳慧文、林智鴻、議員候選人鄧巧佩、蘇致榮等人陪同下，深入鳳山共同市場拜票，由市場理事長郭正棟親自迎接，祝福一行人高票當選。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 賴瑞隆自稱是在菜市場長大，再度回到菜市場跟鄉親拜票，他緊握每一雙手，逐一跟鄉親拜票，態度謙卑、誠懇請託，還比出愛心手勢，爭取更多選民支持，也祝福攤商生意興隆支持。支持者沿途爭相合照、索取簽名等，展現超人氣，還送上菜頭、蒜苗、包子等，象徵「好彩頭」、「當選」、「包中」等，現場高喊賴瑞隆「凍蒜」，場面熱鬧滾滾。他沿途受到支持者歡迎，排隊合照、索取簽名等，還送上菜頭、包子、粽子等，象徵「好彩頭」、「包中」等，高喊賴瑞隆「凍蒜」、「賴市長好」，展現超人氣；賴瑞隆也很接地氣，帶著黨籍議員狂吃、狂買，讓攤商笑開懷。賴瑞隆受訪表示，鳳山近年來進步很大、建設很多，",
+        "excerptSha256": "84ad2bb846ca6db2ff3dbe42f5cd07cdcce95366bce36183dfc15fc15969fd71",
+        "documentSha256": "3b4ce6c4653e20d8e6f1e8435cf5fc0eb85aaf2a508ef74f78b8812d0807bb5e",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:43.286Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:43.286Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5646057"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！ fetched=賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-c70fa4a3",
+      "candidateIds": [
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆高雄大車掃 女跑者一路追風",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5646522",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:41.021Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆高雄大車掃女跑者一路追風@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰倒數9天，高雄街頭掀起「隆來瘋」！高雄市長候選人賴瑞隆今（19）日上午展開第五天「隆捲風號」大車掃，在立委黃捷及市議員湯詠瑜、郭建盟、黃文益陪同下，深入前金、新興、苓雅三區，沿途鄉親熱情揮手、自製創意應援旗幟；不讓台北沈伯洋車掃專美於前，今天更有跑者一路追隨車隊奔跑。車隊從高雄流行音樂中心出發，賴瑞隆以創意手板向市民真情告白，將市民擺在C位，所到之處熱情應援接連不斷，沿途店家即使忙著做生意，仍特地走出門口揮手加油，不少民眾手繫「隆洋飄帶」，隨著車隊經過熱情揮舞。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 更有支持者發揮創意，以數十條飄帶製作巨型應援旗幟，場面相當壯觀；還有鄉親特地送上象徵「好彩頭」的菜頭以及鳳梨，為賴瑞隆獻上最真摯的勝選祝福。其中最令人動容的一幕，是一名女性跑者跟隨「隆捲風號」奔跑了好長一段路，以雙腳展現對高雄未來的堅定支持，讓賴瑞隆備感溫暖。賴競總表示，選戰的長跑即將抵達終點，但高雄邁向下一個黃金10年的接力賽，才正要開始。今天傍晚車隊更將深入前鎮、小港；明（20）日下午3點也將前往岡",
+        "excerptSha256": "6c6b33248f69a8364e1d22e7b6e3eec4529ed0be7e24a7943fb583fa20a047a3",
+        "documentSha256": "29a619321d9688f1fab48f657927025cd81939ac9639728f83d2d8b64b619740",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:41.021Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "市議員",
+          "議員"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:41.021Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5646522"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆高雄大車掃 女跑者一路追風 fetched=賴瑞隆高雄大車掃 女跑者一路追風"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、市議員、議員"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-59f96fde",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026",
+        "official-mayor-lai-rui-long-2026"
+      ],
+      "headline": "賴瑞隆旗山vs.柯志恩鳳山 週六拚場",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/paper/1779065",
+      "publicationDate": "2026-11-19",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-19",
+      "retrievedAt": "2026-11-20T13:27:44.037Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆旗山vs.柯志恩鳳山週六拚場@2026-11-19",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "賴大旗美團結應援大會 卓榮泰、蔡其昌站台 柯鳳山大勝利之夜 王金平、韓國瑜助陣選戰黃金週衝刺，民進黨高雄市長候選人賴瑞隆將舉辦大旗美團結應援大會，國民黨高雄市長候選人柯智恩則在鳳山規劃大勝利之夜，行政院長卓榮泰與立法院長韓國瑜將分別站台，也是兩人首度在高雄較勁。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 卓榮泰、韓國瑜 首度高雄較勁賴瑞隆競選總部說明，大旗美團結應援大會將於廿一日週六下午在旗山體育場舉行，包括「大師兄」行政院長卓榮泰、「蔡總機」立委蔡其昌，及「陳三歲」高雄市長陳其邁等綠營大咖將上台助講。卓榮泰先前與賴瑞隆數度在行政院施政或地方建設場合同框，二〇二四年底高雄新車站天棚啟用典禮，二〇二六年三月楠梓園區聯外交通計畫動土典禮，廿一日旗山造勢將是此次選戰卓榮泰首度站上競選舞台為賴瑞隆助講。綠營指出，包括選前黃金週與選前之夜，民進黨規劃由中央輔選團隊分進合擊，拉抬各地選情，爭取鄉親支持並衝高投票率，下一場選前之夜，還會有大咖上陣。柯志恩競總表示，「贏回高雄．大勝利之夜」廿一日週六晚上在高雄捷運鳳山西站旁台糖空地舉行，邀請前立法院長王金平、立法院長韓國瑜、立委牛煦庭",
+        "excerptSha256": "1972c2843f644627f4e42dd1fea016b48da273100c07af25061519dddc1b3e37",
+        "documentSha256": "5ba6e2fedd08bb8d4d016246fd64e35194cde2a982435426d2b9a166bdf7a6e4",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:44.037Z"
+      },
+      "identity": {
+        "matchedName": "賴瑞隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:44.037Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/paper/1779065"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆旗山vs.柯志恩鳳山 週六拚場 fetched=賴瑞隆旗山vs.柯志恩鳳山 週六拚場"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-19"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-3231ac20",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-4b269f51"
+      ],
+      "headline": "三民區兒童遊戲場鋼筋裸露 議員候選人林于凱批威脅兒童安全",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5645474",
+      "publicationDate": "2026-11-18",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-18",
+      "retrievedAt": "2026-11-20T13:28:09.597Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "三民區兒童遊戲場鋼筋裸露議員候選人林于凱批威脅兒童安全@2026-11-18",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市議員第7選舉區（三民區）市議員選舉為 「12搶8」；民眾黨提名候選人林于凱今（18）日前往灣仔內兒童遊戲場會勘，抨擊公園多處鋼筋裸露，有些鋼條直接朝上，對於兒童安全造成莫大威脅。林于凱表示，灣仔內兒童遊戲場是2001年建成，但近幾年疏於維護，居民反映這裡是登革熱熱區，但公園排水系統堵塞，下雨後多處積水未退，且時常有狗屎，更糟糕的是，多處水泥崩塌、鋼筋直接裸露，威脅兒童的安全。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 林於凱認為高雄有6都密度最高的公園，但公園蓋好了後續缺乏維護，就產生這樣的情況，除了公園維護預算編列不足，只能由臨時工進行環境清理，加上民眾公德心不足，最後淪落街友休息地。他直指該公園維護情況離譜，對比剛剛光啟用的高雄機廠遊樂園，三民區市中心的兒童遊戲場，卻淪落至此，現場不見兒童，居民說常有街友在這邊隨地便溺，抱怨已反映多次都無人理會，要求市府公園處正視，希望能優先改善處理。",
+        "excerptSha256": "8018b63856b182468d1a26d7b6db63ffb8df2abee7ab325ba55ab8eb6a739da1",
+        "documentSha256": "ee94e6c6b841ebb2c2a513cfd9fe385135f3b291729060c7cdbc64de2bc77589",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:09.597Z"
+      },
+      "identity": {
+        "matchedName": "林于凱",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "三民",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:09.597Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5645474"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=三民區兒童遊戲場鋼筋裸露 議員候選人林于凱批威脅兒童安全 fetched=三民區兒童遊戲場鋼筋裸露 議員候選人林于凱批威脅兒童安全"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-18"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 三民、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-3633f103",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026"
+      ],
+      "headline": "反對水庫設置光電 柯志恩：上任後全面檢討、逐步拆除",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5645466",
+      "publicationDate": "2026-11-18",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-18",
+      "retrievedAt": "2026-11-20T13:27:42.540Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "反對水庫設置光電柯志恩上任後全面檢討逐步拆除@2026-11-18",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市長候選人柯志恩今表示，守護高雄山林與水源沒有任何妥協空間，表態反對在水庫設置水面型光電，喊話上任後將全面檢討並逐步推動拆除既有設施。柯志恩指出，從過去的美濃大峽谷、燕巢垃圾山，到柏油山與廢柴山事件，高雄土地與自然環境屢遭破壞，令她深感痛心。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 針對高雄阿公店水庫、鳳山水庫等既有水面光電設施，她主張上任後全面重新檢討，在市民對用水安全的疑慮尚未釐清前，應停止未來設置計畫，並逐步推動拆除既有設施，讓水源保護回歸最嚴謹的要求。另針對近期特定人士刻意強調鳳山水庫光電案是在韓國瑜擔任市長期間核定，試圖將議題導向政治攻防，柯志恩還原完整時序指出，該計畫自陳菊市長任內由台電招標、韓國瑜市長任內核發許可，直至陳其邁市長任內才正式動工並完工，歷經三任不同市府團隊。她認為無論是哪一任市長推動、哪一個政黨支持，只要涉及環境保護與市民安全，就應該勇於檢討、該改就改！強調自己守護的從來不是任何政黨派系的利益，而是高雄這片土地與市民的健康安全。柯志恩表",
+        "excerptSha256": "c1ab6cdbc64e16151810bbbbbf63c3cd0173e69b4b831d10a832a7a6c6cbcfdf",
+        "documentSha256": "2f95ae819081310d5305998b37fcd00d9bcaa4a6b352e23319d2300aadcb162b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:42.540Z"
+      },
+      "identity": {
+        "matchedName": "柯志恩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:42.540Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5645466"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=反對水庫設置光電 柯志恩：上任後全面檢討、逐步拆除 fetched=反對水庫設置光電 柯志恩：上任後全面檢討、逐步拆除"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-18"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-09494083",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-7a196bc1"
+      ],
+      "headline": "林智鴻政見發表會喊「戒慎恐懼」 籲選民堅定相挺",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5645611",
+      "publicationDate": "2026-11-18",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-18",
+      "retrievedAt": "2026-11-20T13:28:14.172Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "林智鴻政見發表會喊戒慎恐懼籲選民堅定相挺@2026-11-18",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市議員林智鴻今天出席政見發表會，以「戒慎恐懼」表達面對選戰心情，高雄正站在延續進步關鍵路口，每一票都很重要。他說，始終把選民託付化為建設與服務，未來將與民進黨高雄市長候選人賴瑞隆共同打拚，懇請鄉親「堅定相挺、關鍵一席」，讓理性專業的問政力量繼續為鳳山努力。「我相信高雄，但依舊戒慎恐懼！」林智鴻說，政見發表不只是講他的主張，更是提出未來4年與賴瑞隆共同努力方向，高雄累積的進步需要繼續守護，面對財劃法惡修後的高雄預算，以及城市發展後續挑戰，更需要能與市府合作、理性監督的議會，他爭取成為延續建設關鍵一席，讓高雄延續光榮「不必在我，但一定有我！」請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 林智鴻細數從鳳翔國中新校舍、新甲國小改建，到鳳山溪整治精進、特色公園與滯洪池建設，他始終秉持「從頭顧到好」。問政不比誰大聲、道具多，而是理性問政、持續追蹤，並獲高督盟連續4年問政優質肯定。未來將以「好經濟、好教育、好生活」為主軸，推進中崙產業園區、強化校園心理支持，並爭取高鐵鳳山站及敬",
+        "excerptSha256": "5493aad10d0e1fb49289944669da4d24dcb7019804bfd30b451b316cb5cac7b3",
+        "documentSha256": "a6b63944625559d5dd1b62aabb1d2ad59e206ac0fca0ba27c7a5d513fb334281",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:14.172Z"
+      },
+      "identity": {
+        "matchedName": "林智鴻",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:14.172Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5645611"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=林智鴻政見發表會喊「戒慎恐懼」 籲選民堅定相挺 fetched=林智鴻政見發表會喊「戒慎恐懼」 籲選民堅定相挺"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-18"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-84bcf496",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-b92be47d"
+      ],
+      "headline": "陳其邁誇不輸沈伯洋 張博洋：兩股「洋流」讓台灣更有力量",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5644439",
+      "publicationDate": "2026-11-18",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-18",
+      "retrievedAt": "2026-11-20T13:28:06.838Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "陳其邁誇不輸沈伯洋張博洋兩股洋流讓台灣更有力量@2026-11-18",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市長陳其邁為無黨籍高市議員張博洋站台，稱他頭腦好、一點都不會輸給台北的沈伯洋，民進黨多位高雄市籍立委也發聲力挺，張博洋喊話，希望南北兩股溫暖的「洋」流，一起讓台灣更有力量。高市三民區議員張博洋是罷韓四君子之一，本土意識強、反應佳、地方服務踏實，儘管是無黨籍，卻獲得市長陳其邁與民進黨立委強力推薦，日前競選總部成立時，高雄綠營大咖們紛紛站台喊話相挺。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳其邁表示，張博洋頭腦很好、反應很好，「一點都不輸台北的沈伯洋」；立委李昆澤以籃球比賽做比喻，打籃球先發要有五個人，一起保護高雄政策預算，這5個人裡面一定要有張博洋，先發的戰將張博洋！立委邱議瑩指出，張博洋要在民進黨這個大家庭裡繼續奮鬥、繼續打拼，與賴瑞隆市長一起努力，所以拜託讓張博洋當選；立委許智傑說，快樂希望是陳水扁，陽光自信是沈伯洋，所以快樂希望加上陽光自信是張博洋！張博洋強調，從議會監督到地方建設，這幾年他始終相信，好的政策需要有人支持，市民的權益更需要有人堅持把關，謝謝每位願意相信、支持",
+        "excerptSha256": "e3e36ad85d0f51418c5cc6eed7047825973ae903e3e69fecef7457ea236a7d0f",
+        "documentSha256": "4b396317177b566545461ee42675705756fa00880ff276ef62d00360554fff23",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:06.838Z"
+      },
+      "identity": {
+        "matchedName": "張博洋",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "三民",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:06.838Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5644439"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=陳其邁誇不輸沈伯洋 張博洋：兩股「洋流」讓台灣更有力量 fetched=陳其邁誇不輸沈伯洋 張博洋：兩股「洋流」讓台灣更有力量"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-18"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 三民、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-ff75c33d",
+      "candidateIds": [
+        "official-mayor-ke-zhi-en-2026"
+      ],
+      "headline": "簽署消防改革承諾 柯志恩：補人力、增輪休、保障勞權",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5645020",
+      "publicationDate": "2026-11-18",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-18",
+      "retrievedAt": "2026-11-20T13:27:44.026Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "簽署消防改革承諾柯志恩補人力增輪休保障勞權@2026-11-18",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市長候選人柯志恩簽署消防改革承諾，將朝補人力、增輪休、保障勞權等三大方向推進。消防員工作權益促進會日前提出「消防改革承諾書」，為第一線消防弟兄爭取更完善的勞動條件，柯志恩第一時間簽署表達支持，強調消防員站在守護市民生命財產第一線，市府有責任成為消防員最堅強的後盾。從補足人力、改善勤務制度到保障合理工時，消防改革不能再等，更不能只停留在口號。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 柯志恩表示，高雄消防服務人口比為六都第一，平均每名消防員服務1637位市民，在現有人力尚未完全補足情況下，未來將持續編列預算員額，並與內政部消防署積極協調，儘速擴編消防人力，讓第一線消防員不再長期處於人力吃緊的狀態。過去消防員每次值勤約18至22小時，中間僅短暫用餐及休息時間，如今改採每日16小時勤務，看似縮短工時，實際上卻可能出現「上班8小時、休息8小時、再返回執勤8小時」的情況，若再加上通勤、勤務準備及臨時出勤，未必能真正達到休息效果，甚至可能造成部分時段人力不足。柯志恩認為，勤務制",
+        "excerptSha256": "0d72b5c05d85cfaca2d69bfb16d1b52aa0e0d1a205cecf4f8f738dd67a0398d6",
+        "documentSha256": "98a2e955a825971d61cce6464b8ee0168f004a2ac774d71e6bb63e133f569b7b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:44.026Z"
+      },
+      "identity": {
+        "matchedName": "柯志恩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:44.026Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5645020"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=簽署消防改革承諾 柯志恩：補人力、增輪休、保障勞權 fetched=簽署消防改革承諾 柯志恩：補人力、增輪休、保障勞權"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-18"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-6cb55bb6",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-04-4c6bef68"
+      ],
+      "headline": "「八包煎餃」候選人挑戰SUP立槳 張以理：別讓煎餃變水餃",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5642572",
+      "publicationDate": "2026-11-16",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-16",
+      "retrievedAt": "2026-11-20T13:27:55.030Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "八包煎餃候選人挑戰sup立槳張以理別讓煎餃變水餃@2026-11-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "以口號「八包煎餃」創造高聲量的民進黨高市左楠區議員候選人張以理，今再度發揮創意，到左營蓮池潭挑戰SUP立槳，用行動訴求「不要讓我落水（落選）」、「別讓煎餃變水餃」。高雄左楠區議員選情陷入膠著，多人吶喊苦戰、搶救、危險，張以理則打破傳統選戰的悲情牌，以充滿創意與正能量的「理式風格」推出全新催票影片，前往左營知名地標蓮池潭挑戰SUP立槳，用「不要讓我落水（落選）」、「別讓煎餃變水餃」的幽默寓意，真實傳達選情在當選邊緣的危機感。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 張以理表示，卸下局長光環後，他選擇走入基層、傾聽民意百態，無論是「親子停車格」劃設、「24小時臨托」普及、「青年可負擔宅」建設，還是點亮城市活力的「高雄夜經濟」，這些跨世代的政策，都需要有人在議會殿堂裡用力推動。回顧這一年的選舉歷程，他感謝網友透過「鬍鬚張」、「煎餃張」等創意影片認識他，當聽到支持者回饋「原來政治選舉也可以這麼歡樂、這麼不一樣」時，他堅信用正向的力量打選戰。但張以理也坦言選情沒有很樂觀，拜託大家不要因為覺得張以理很穩，就分票或不投票，",
+        "excerptSha256": "65817675998edfbd22ad5ee822e2fecb1180ad3b83363ecc0f6d57d9a954470d",
+        "documentSha256": "d69a7dc52328959c172522b3d371215286c06b6d9a7db072409f5fc1cdb4f8bb",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:55.030Z"
+      },
+      "identity": {
+        "matchedName": "張以理",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "左營",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:55.030Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5642572"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=「八包煎餃」候選人挑戰SUP立槳 張以理：別讓煎餃變水餃 fetched=「八包煎餃」候選人挑戰SUP立槳 張以理：別讓煎餃變水餃"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 左營、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-71132666",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-7a196bc1"
+      ],
+      "headline": "立委張雅琳陪林智鴻拜票 力保親子公園政策一席！",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5642899",
+      "publicationDate": "2026-11-16",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-16",
+      "retrievedAt": "2026-11-20T13:28:15.519Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "立委張雅琳陪林智鴻拜票力保親子公園政策一席@2026-11-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "曾任還我特色公園行動聯盟（下稱特公盟）理事長的民進黨立委張雅琳今天陪同高雄市議員林智鴻掃街拜票，肯定他將親子家庭的期待轉化為公園建設成果，包括高雄親子遊樂園區、機器人特色公園、五甲公園政績有目共睹，林智鴻近日再簽署特公盟連署，持續支持親子團體訴求，她肯定，林智鴻從倡議到落實，用長期行動回應孩子與家長的需要。張雅琳與林智鴻早於8年前就曾與時為參選人的高雄市長陳其邁同台推動特色公園政策，就是希望公園規劃能聽見孩子聲音，讓遊戲空間更符合家庭需求，她肯定林智鴻推動建設，包括3億元原台鐵高雄機廠變身高雄親子遊樂園、4500萬元機器人主題特色公園、2500萬元五甲國宅地景遊戲特色公園。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 此外，林智鴻推動五甲公園整體改善，打造水滴型特色遊具與全齡共享空間，並爭取龍成五甲公園改造、水映公園遊具更新，讓親子建設深入社區，其中有關兒童表意權納入公園設計，更是在林智鴻提案修正自治條例下，落實於高雄各區公園規劃中。如今看見林智鴻持續推動改善，今年仍不改初心，簽署特公盟連署，支持親子團體訴求，展現對兒童遊戲權的重視，張",
+        "excerptSha256": "1bffdac28bc71266154e3c584f43947a37a5abf5e145d0d6a48594c69dc74d47",
+        "documentSha256": "cb5c36081f637d92cdf1c90381ffb902e9077fd8c354e26e1385769e23e7e309",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:15.519Z"
+      },
+      "identity": {
+        "matchedName": "林智鴻",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:15.519Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5642899"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=立委張雅琳陪林智鴻拜票 力保親子公園政策一席！ fetched=立委張雅琳陪林智鴻拜票 力保親子公園政策一席！"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-5525b718",
+      "candidateIds": [
+        "official-mayor-zhang-jing-2026"
+      ],
+      "headline": "高雄市長選舉公報來了 張靜：廢檢舉魔人紅單、發「委屈補償金」",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5642750",
+      "publicationDate": "2026-11-16",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-16",
+      "retrievedAt": "2026-11-20T13:27:38.219Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長選舉公報來了張靜廢檢舉魔人紅單發委屈補償金@2026-11-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "第五屆高雄市長選舉公報出爐。藍綠之外的候選人所提政見頗多亮點，曾任法官、檢察官的1號張靜第1條政見就頗吸睛，主張所有檢舉魔人與科技執法的紅單一律廢除，不得處罰就沒有訴累發生，第8條更訴求每半年一次，發放高雄市民「委屈補償金」至少3千元。張靜共提出11項政見，其餘10項也頗貼近生活，第2、所有國家賠償事件之請求，設立人民陪審團制度，由高雄市民議決高雄市政府及所屬機關是否應予賠償，避免官官相護，死不認錯，也減少訴累。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 3、提高低收入戶及中低收入戶的人口比例至高雄市全體市民人口的8%至9%，以保護更多的弱勢人民，並因此消除乞丐及街友，讓市容更乾淨4、嚴懲貪污、追查弊案，新潮流要倒高雄才會好。5、嚴查毒品，全面改革高中職以下的教育制度，校事會議設在市府教育局內，達到尊師重道，親師和諧，校園安全三大目標。6、成立法律基金，為被偷、被搶、被詐、被重大傷害甚至死亡的高雄市民提供義務律師之諮詢及訴訟服務。7、決戰黑心毒油、守護食品安全，追查源頭，嚴格把關。8、每半年一次，為高雄市的環境汙染，發放所有高雄市民委屈補",
+        "excerptSha256": "f7612ae03e3ff9a03a5ce388bd9d4c5de5785a29706d734a70a05dac18cee2ea",
+        "documentSha256": "e5d9785edad94fbf0f0e66048734cda911f8c6c76a341f8ff69bf4ceca293deb",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.219Z"
+      },
+      "identity": {
+        "matchedName": "張靜",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.219Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5642750"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長選舉公報來了 張靜：廢檢舉魔人紅單、發「委屈補償金」 fetched=高雄市長選舉公報來了 張靜：廢檢舉魔人紅單、發「委屈補償金」"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-db2b0738",
+      "candidateIds": [
+        "official-mayor-wang-zhao-min-2026"
+      ],
+      "headline": "統籌款爭議 高雄市長候選人王肇民：分配須考量北漂人口指數",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5642776",
+      "publicationDate": "2026-11-16",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-16",
+      "retrievedAt": "2026-11-20T13:27:38.196Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "統籌款爭議高雄市長候選人王肇民分配須考量北漂人口指數@2026-11-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "統籌分配款爭議是高雄市長選舉藍綠主要話題之一，無黨籍高雄市長候選人王肇民則是列入選舉公報政見，認為統籌分配款必須納入高雄承受空污、重污指數，及北漂人口指數。王肇民日前在政見發表會上，提及其參選核心理念是奉行先總統蔣公遺訓「實踐三民主義，光復大陸國土，復興民族文化，堅守民主陣容」，並應推動族群融合，包容體諒，迎回先總統蔣公銅像，引起關注。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 其餘政見也隨公報呈現，包括推動西濱捷運線、高雄天空之路山城纜車線等。他同時強調台北可以、高雄就可以，台北有的、高雄也要有，且還要做得更好；認為統籌分配款必須納入高雄承受空污、重污指數及北漂人口指數。此外，他主張宜居高雄、經濟發展、社福升級，大林蒲遷村必須先給國家賠償、6年價差補償，舊縣區資源欠缺必須補足，西濱受苦漁民必須照顧，山城原民同胞必須被重視，城鄉教育資源落差必須均衡。",
+        "excerptSha256": "198123e40bbda30f91b8251d6fd3f1961c4fd47086377d0aba81ccc7ef330daf",
+        "documentSha256": "625ac5ffce028c10dcd1817e7225138cb185088272075aa33f666e7644a992b3",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.196Z"
+      },
+      "identity": {
+        "matchedName": "王肇民",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.196Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5642776"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=統籌款爭議 高雄市長候選人王肇民：分配須考量北漂人口指數 fetched=統籌款爭議 高雄市長候選人王肇民：分配須考量北漂人口指數"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-1e57cad0",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-7a196bc1"
+      ],
+      "headline": "阮昭雄力挺林智鴻陪騎腳踏車拜票 猛虧全台這場助選最累！",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5641755",
+      "publicationDate": "2026-11-15",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-15",
+      "retrievedAt": "2026-11-20T13:28:16.370Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "阮昭雄力挺林智鴻陪騎腳踏車拜票猛虧全台這場助選最累@2026-11-15",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "高雄市議員林智鴻今天再度在鳳山開騎，力邀行政院副秘書長阮昭雄陪騎，出發前發放「洋流」飄帶，猛虧「全台最累助選！」，突顯林智鴻千錘百鍊、腳踏實地精神，「是鳳山不可或缺議員特質！」，呼籲選民力守關鍵一席。曾任多屆台北市議員的阮昭雄指出，在民進黨台北市長候選人沈伯洋拚搏之下，講政策重回台灣政治主流，讓許多沒有家族勢力、沒有資源綁樁「進步型政治人物」，在太陽花學運多年後再度受人矚目！林智鴻照顧弱勢，也關注國際趨勢，正是高雄市議會中符合「洋流精神」戰將之一。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 阮昭雄表示，林智鴻曾受前行政院長謝長廷栽培，更是前監察院長陳菊在市長任內得力助手，6年來在議會與市長陳其邁合作無間，是議會最有論述、最有團隊精神，也最有行動力優質議員，和他落實腳踏車低碳掃街一樣，「用低碳理念說服選民，用團隊合作創造共好，且政治承諾說到做到！」阮昭雄打趣表示，比起造勢站台演講或站在吉普車上掃街，這場腳踏車掃街真的「很硬」，直虧「這是全台最累助選！」，林智鴻選舉期間",
+        "excerptSha256": "89a0b0c2b788e3b990621ae82b19748e4a5a06d73abc85e0205e4dbf74c4269c",
+        "documentSha256": "fa8e8c50c3e7cd51b53cb04fee38d98918c95c2d29061a36b5cead5d9e3015c2",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:16.370Z"
+      },
+      "identity": {
+        "matchedName": "林智鴻",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:16.370Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5641755"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=阮昭雄力挺林智鴻陪騎腳踏車拜票 猛虧全台這場助選最累！ fetched=阮昭雄力挺林智鴻陪騎腳踏車拜票 猛虧全台這場助選最累！"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-15"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-0e17fb13",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-e192bb1a"
+      ],
+      "headline": "林楚茵、阮昭雄接力陪掃 鄧巧佩力拚鳳山關鍵一席",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5641677",
+      "publicationDate": "2026-11-15",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-15",
+      "retrievedAt": "2026-11-20T13:28:18.119Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "林楚茵阮昭雄接力陪掃鄧巧佩力拚鳳山關鍵一席@2026-11-15",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰倒數最後關鍵，鳳山區市議員戰況激烈，民進黨新人鄧巧佩面臨艱困選情，立法委員林楚茵、行政院政務副秘書長阮昭雄連2天接力陪同車隊掃街，懇託鳳山鄉親支持，為鄧巧佩爭取更多選票。高雄市最大票倉的鳳山區市議員選戰10人爭搶8席，林楚茵昨南下陪同鄧巧佩掃街拜票，她表示，鄧巧佩身為新人，沒有既有選票基礎，目前選情真的非常危險，她這次特別南下陪同車掃，希望全力搶救她的選情，拜託鄉親一定要出門投票，給認真、專業、有服務經驗的新人一個機會。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 今天由行政院政務副秘書長阮昭雄接力陪掃，阮昭雄肯定鄧巧佩擁有護理師專業，以及多年政治幕僚與地方服務經驗，具備處理民眾問題的能力。他表示，鄧巧佩長期認真做事，值得鄉親信任與支持，希望讓真正有能力、願意承擔的人進入議會，為地方服務。鄧巧佩表示，自己沒有雄厚的政治資源，只能一步一腳印走進市場、站上路口，努力爭取鄉親認同，即使掃街遇上大雨，也不願停下腳步。她坦言，這場選舉可能只差幾張選票，但她絕不退縮，一定會拚盡全力，堅持到最後一刻。鄧巧佩喊出選情告",
+        "excerptSha256": "e87cfae1f415c983bbec12162d2d1c4805a8e26aa1c786d4bb4a5bd373c9c4ee",
+        "documentSha256": "28a959611f3d1efb8a3ad160db0ee703f9d42eea56725ecd599fad475d1c6d5b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:18.119Z"
+      },
+      "identity": {
+        "matchedName": "鄧巧佩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:18.119Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5641677"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=林楚茵、阮昭雄接力陪掃 鄧巧佩力拚鳳山關鍵一席 fetched=林楚茵、阮昭雄接力陪掃 鄧巧佩力拚鳳山關鍵一席"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-15"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-f0ce8442",
+      "candidateIds": [
+        "official-mayor-hong-fang-long-2026"
+      ],
+      "headline": "高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640686",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.862Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy",
+        "local-issue"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見發表會》洪方隆政見聚焦氣候變遷籲重視淹水危機@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會今（14日）下午2點登場，無黨籍候選人洪方隆表示，他將焦點放在氣候變遷問題，呼籲六都候選人為了下一代，都應該重視這迫切問題。洪方隆一開始強調，參選是以前沒想過的事，這次沒有帶任何人下來，沒有競選旗幟、看板，只有1000包面紙、名片，他認為市長應該更重視執行力。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他特別提及，迄今沒有看到任何一位候選人討論氣候變遷，高雄面臨關鍵時期，根據「綠色和平」發布模擬，2050年高雄市中心許多地區淹水，85大樓、美麗島都淹水，雖然聽聽就好，還是要準備，不論是誰當選市長，都能關心這問題，為了下一代，要關心氣候變遷問題。他說曾參考Google解決方案，包括海線在海邊慢慢遷移，市中心有上百萬人居住，防守加上慢慢遷徙，橋頭糖廠森林要有更多環境差異評估，才可以做規劃。他說，如果海平面上升，可以往哪裡去呢？要讓人民去討論這些問題要不要做，不僅高雄，六都候選人都要注重氣候變遷問題。",
+        "excerptSha256": "44959e8d9f93076a29f80933949fc01e61ff7701d1eaae0f68e32488c130f240",
+        "documentSha256": "f178fbc4780b4c0dccbf021c0e6129f7666e220c2005c50fe1000c1128c61d43",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.862Z"
+      },
+      "identity": {
+        "matchedName": "洪方隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.862Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640686"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機 fetched=高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-70b4680e",
+      "candidateIds": [
+        "official-mayor-wang-zhao-min-2026"
+      ],
+      "headline": "高雄市長政見會》王肇民：參選理念是奉行先總統蔣公遺訓",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640714",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.933Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見會》王肇民參選理念是奉行先總統蔣公遺訓@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會將於今（14日）登場，無黨籍王肇民，他強調參選核心理念是奉行先總統蔣公遺訓，當有人說要共產黨和談，就要想到「光復大陸國土」，不能跟共產黨談統一，一定要三民主義統一中國。63歲的王肇民是建設公司負責人，曾參與2024年總統大選。日前他在岡山壽天宮舉辦政見宣傳會，台下僅個位數聽眾，但他仍堅持講完68分鐘政見。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 王肇民今天一開場就說，他參選核心理念，是奉行先總統蔣公遺訓：「實踐三民主義，光復大陸國土，復興中華文化，堅守民主陣容」。他認為，因為大家現在對國家發展有點模糊，請大家回想蔣公這四點，大家要記住。例如有人說要共產黨和談，就要想到光復大陸國土，不能跟共產黨談統一中國，一定要三民主義統一中國。王肇民強調，當選後將把中正文化中心拆掉的蔣公銅像，把它修好迎回安座於文化中心，希望不要刻意政治化，族群能互相包容體諒，團結在一起，才能面對強大的中共。針對高雄的政見，王肇民表示要建設高雄大未來，登記參選後，他花了80幾天走遍38個行政區，認為西濱海域投入的市",
+        "excerptSha256": "bf2357515a0411531aa85506faf06cb19210121122979ac9bf7df36ba132cf28",
+        "documentSha256": "5c6f5ab561344420c90fb63a364b06933c015ad84dedd3b7b092848884181375",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.933Z"
+      },
+      "identity": {
+        "matchedName": "王肇民",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.933Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640714"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見會》王肇民：參選理念是奉行先總統蔣公遺訓 fetched=高雄市長政見會》王肇民：參選理念是奉行先總統蔣公遺訓"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-60b8cc0c",
+      "candidateIds": [
+        "official-mayor-hong-fang-long-2026"
+      ],
+      "headline": "高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640770",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.221Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見會》洪方隆讚5位候選人優點盼整合打造更好高雄@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會今天登場，無黨籍候選人洪方隆評比其他候選人，稱讚5位候選人都有優點，如果可以集合起來，對高雄市民會非常好。洪方隆說，剛剛第一輪發表後有人問他，無黨派的人，如在藍綠間勝出？他表示，可能沒有想到要贏，他的想法是要讓高雄市民有更好生活、更好的收入及更好環境；雖然參選一小步，對自己人生是一大步，無限的可能，大家都想給市民更好的生活。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他評比其他候選人優點，指柯志恩在高雄新建高速公路，賴瑞隆的海上國際機場，他都非常贊同；他說，五位候選人都很用心，如果將大家優點集合起來，對高雄市民非常好。他強調三大主張，就是市民知情權、不可篡改及量化可檢驗，他認為柯志恩及賴瑞隆是可能當選的，希望未來能做到；他提出高雄要優先處理事項，包括氣候變遷、市政改革再造、低薪、環境治理及城鄉平權。",
+        "excerptSha256": "7e1224b209c28b94c41c4f8e2c8ccc3d6a1a260c8272aee1226080933cbc8927",
+        "documentSha256": "29f4ae8c43cd541546b5c68c02c1bbe6d156507793dc6636a7a66d70cfe4905d",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.221Z"
+      },
+      "identity": {
+        "matchedName": "洪方隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.221Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640770"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄 fetched=高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-02e6a57e",
+      "candidateIds": [
+        "official-mayor-zhang-jing-2026"
+      ],
+      "headline": "高雄市長政見會》張靜：每半年發放每人3千元「委屈補償金」",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640624",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.843Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見會》張靜每半年發放每人3千元委屈補償金@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會今（14日）下午2點登場，首位登場的司法改革黨張靜，針對治水議題，他強調當選後將邀請專家李鴻源，擔任第一副市長；同時爭取中央將市區污染源工廠貨物稅按比例回饋，每半年發放每位市民至少3000元「委屈補償金」。高雄市長選舉公辦政見發表會於慶聯電視台舉行，5位市長候選人各有2輪發表政見時段，合計每人共24分鐘。70歲的張靜抽中第一位發言，他目前是司法改革黨黨主席，曾擔任過法官及檢察官。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 張靜一開始就說「你討厭國民黨與民進黨嗎？過去含淚投票嗎？」這次不必再含淚，他是唯一的三鐵市長，提出「三公（關公、包公、土地公）一體」政見，分別代表「鐵拳」、「鐵權」與「鐵泉」三種施政面向，主張成立跨局處的「食品安全委員會」，並設立廉政委員會，嚴懲貪污。在水資源與防洪方面，張靜主張徹底解決高雄水患，並同步穩定民生、工業及農業用水，承諾若當選市長，將邀請專家李鴻源擔任第一副市長。此外，在人與政府互動方面，張靜主張警察機關不得在高雄市內任意使用拒馬、蛇籠等設施阻隔人民與政府機關，除非發生暴",
+        "excerptSha256": "2f5d84efe8c2493680634115f2f304b5c3d04c448887717a021baf71079fcce1",
+        "documentSha256": "9e72a9a064216d834ff883fe853fbd7554b2b3df69947c0be565fc0b1d64ae1c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.843Z"
+      },
+      "identity": {
+        "matchedName": "張靜",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "司法改革黨"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.843Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640624"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見會》張靜：每半年發放每人3千元「委屈補償金」 fetched=高雄市長政見會》張靜：每半年發放每人3千元「委屈補償金」"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、司法改革黨"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-1cfa89cf",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-9cddec16"
+      ],
+      "headline": "遭國民黨封殺 高雄副議長曾俊傑選情告急陳其邁喊搶救",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640339",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:28:05.619Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "遭國民黨封殺高雄副議長曾俊傑選情告急陳其邁喊搶救@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "4年前退出國民黨的高雄市副議長曾俊傑，昨（13）日晚成立競選總部，陳其邁、賴瑞隆聯手為曾俊傑催票，強調他遭國民黨封殺，選情真的非常「危險」，拜託鄉親讓他繼續連任。爭取6連霸的曾俊傑昨晚成立競選總部，5000張椅子坐無虛席，展現高人氣，立委李昆澤、邱議瑩、許智傑、林岱樺、李柏毅及前立委趙天麟都到場，曾麗燕等多位議員也現身相挺，三民區里長更幾乎到齊。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 市長陳其邁致詞說，面臨激烈選舉，曾俊傑遭逢國民黨封殺，選情辛苦，真的非常「危險」。4年前如果不是曾俊傑的支持，民進黨在議會沒辦法過半，他特別感謝曾俊傑在議會給予他與市府的支持與溫暖，協助市政建設大步向前。陳其邁細數曾俊傑的市政建設成績，包括爭取肉品市場停宰、催生果菜市場遷建、24小時南部大機場、西三民運動中心、中都濕地公園及雙湖公園等公園建設、黃線捷運等，肯定曾俊傑的用心問政及努力爭取地方權益。曾俊傑則說，對地方鄉親一直以來的支持，他有滿滿的感謝。這20年來，大家都看見高雄的進步及三民區的改變，包括鐵",
+        "excerptSha256": "0ad6de07b5bb254dce4df5468bfce5ecb9ec2f8ed5d576627f728332fafb7f5e",
+        "documentSha256": "993dad0e10237a438759b2bf610ef9499a806d3112d7d5d44314bb9b3e083255",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:05.619Z"
+      },
+      "identity": {
+        "matchedName": "曾俊傑",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "三民",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:05.619Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640339"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=遭國民黨封殺 高雄副議長曾俊傑選情告急陳其邁喊搶救 fetched=遭國民黨封殺 高雄副議長曾俊傑選情告急陳其邁喊搶救"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 三民、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-d4366c62",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-08-3c0e0184"
+      ],
+      "headline": "路口拜票遭男子持手機直播開嗆 高市議員黃文益無奈稱被嚇到",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5639541",
+      "publicationDate": "2026-11-13",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-11-13",
+      "retrievedAt": "2026-11-20T13:28:12.195Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "路口拜票遭男子持手機直播開嗆高市議員黃文益無奈稱被嚇到@2026-11-13",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "距離11月28日九合一選舉投票日只剩2週，各候選人正進行最後衝刺拜票，爭取高雄市第8選區（前金區、新興區、苓雅區）連任的民進黨議員黃文益，昨早在站路口拜票時，突遭1名男子持手機直播開嗆，黃文益今早無奈表示被嚇到，警方也說明原由。黃文益指出，昨天早上他在苓雅區中正路與福德路口拜票，突然聽到有人在背後罵他，「你還有空在這裡揮手，向你陳情都沒處理」，指向他陳情1個多月都沒有處理，大罵了2分多鐘。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 事後了解，該名男子是有名的檢舉達人，男子9月檢舉福德派出所轄區的違規事件，後續跑到派出所開直播指員警瀆職，被制止派出所內不能直播，10月跑到黃文益的服務處陳情，指他被員警咆哮，希望黃要求警局查辦不適任的員警。黃文益表示，助理事後聯繫警方，得知該男子已有利用管道進行申訴，督察也已在調查，且男子也提告了員警瀆職，服務處主任未回覆他警方已在處理，男子因此覺得申請沒有被處理，沒有幫他出口氣，所以在黃站路口時開直播飆罵他。黃文益認為，這樣的行為已對他和團隊造成困擾和恐慌，不僅產生非常大的壓力，且影響他的名譽和造成其他人誤會，現在已不敢預告站路口拜票行程，警方也會加強",
+        "excerptSha256": "aeb8f3b377cd550e30f47f701d6ac50174983a00720c7ada97ed1b8b10036b43",
+        "documentSha256": "ca1e8c3df62fb79ff0060e0c07eefdd9f604a6feca6eef16f542f9c4d8f60236",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:12.195Z"
+      },
+      "identity": {
+        "matchedName": "黃文益",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第8選區",
+          "新興",
+          "前金",
+          "苓雅",
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:12.195Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5639541"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=路口拜票遭男子持手機直播開嗆 高市議員黃文益無奈稱被嚇到 fetched=路口拜票遭男子持手機直播開嗆 高市議員黃文益無奈稱被嚇到"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-13 fetched=2026-11-13"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第8選區、新興、前金、苓雅、市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
     {
       "articleId": "news-96ecce4c",
       "candidateIds": [
@@ -9128,6 +12620,105 @@
       "publication": {
         "status": "published",
         "blockers": []
+      }
+    },
+    {
+      "articleId": "news-3e8971af",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-10-c96d364f"
+      ],
+      "headline": "賴瑞隆接棒黃敬雅！競總成立8立委站台 最怕流傳「穩當選」傳言",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261005/3248981.htm",
+      "publicationDate": "2026-10-05",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-05",
+      "retrievedAt": "2026-11-20T13:28:29.873Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "賴瑞隆接棒黃敬雅競總成立8立委站台最怕流傳穩當選傳言@2026-10-05",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲民進黨參選高雄「鎮港」市議員黃敬雅成立競選總部 。（圖／記者吳奕靖翻攝） 民進黨高雄市議員參選人黃敬雅4日在前鎮、小港成立競選總部，現場湧入逾3000人，高雄8席現任立委全員到齊力挺。高雄市長候選人賴瑞隆也到場，黃敬雅則喊出要接下賴瑞隆在前鎮、小港的服務棒子，不過她也特別澄清基層流傳「有婦女保障、穩當選」說法，直言最怕支持者因此分票。 黃敬雅競選總部成立大會今天登場，包括衛福部政務次長林靜儀、高雄市長候選人賴瑞隆、高雄市黨部主委黃捷、高雄市議會議長康裕成，以及高雄8席現任立委都到場，現場支持者超過3000人，人潮一路延伸至周邊巷弄。林靜儀致詞時表示，自己認識黃敬雅多年，形容她是「贏過死亡的人」，也因此更加珍惜生命，把心力投入高雄及公共服務，她表示，中央在長者、兒童照顧等政策已有不少資源，需要地方民代協助銜接、落實。 ▲民進黨參選高雄「鎮港」市議員黃敬雅喊出「關鍵一席」 。（圖／記者吳奕靖翻攝） 賴瑞隆則感謝前鎮、小港居民過去對他的支持，表示高雄要持續發展，需要更多新世代投入公共事務，也希望黃敬雅能進入議會，延續地方服務，前議員陳致中則將黃敬雅定位為民進黨爭取議會過半的「關鍵",
+        "excerptSha256": "779e4d8560c83eb63683faf1959a14a4ba4c0f560ae5bc58a8546a984a3f6942",
+        "documentSha256": "70d5aaa9bd1c48e2e17fd0418249bfafde5656697f800dd954d40660272d6374",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:29.873Z"
+      },
+      "identity": {
+        "matchedName": "黃敬雅",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "前鎮",
+          "小港",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:29.873Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261005/3248981.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=賴瑞隆接棒黃敬雅！競總成立8立委站台 最怕流傳「穩當選」傳言 fetched=賴瑞隆接棒黃敬雅！競總成立8立委站台 最怕流傳「穩當選」傳言"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-05 fetched=2026-10-05"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 前鎮、小港、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
       }
     },
     {
@@ -20324,6 +23915,103 @@
       }
     },
     {
+      "articleId": "news-e4eb3ace",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-01-3ac62854"
+      ],
+      "headline": "民進黨高市議員第1選區初選 林富寶、林慧欣出線 | 政治 | 中央社 CNA",
+      "publisher": "中央社",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://cna.com.tw/news/aipl/202204120126.aspx",
+      "publicationDate": "2022-04-12",
+      "dateStatus": "confirmed",
+      "updatedDate": "2022-04-12",
+      "retrievedAt": "2026-11-20T13:27:44.029Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "民進黨高市議員第1選區初選林富寶林慧欣出線政治中央社cna@2022-04-12",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "程 東協財經／ 2026年11月19日東協快訊 東協財經／ 台達電新加坡子公司發放現金股利2.5億美元 東協財經／ 2026年11月18日東協快訊 東協財經／ 矽格新加坡子公司股臨會 通過現金減資案 東協財經／ 2026年11月17日東協快訊 東協財經／ 台達電拓展生產據點 增資馬來西亞子公司1.2億美元 訊息平台 財經訊息 知訊台 中央訊息 首頁 / 政治 民進黨 新聞專題 民進黨 首頁 / 政治 民進黨高市議員第1選區初選 林富寶、林慧欣出線 2022/4/12 12:50 （4/12 19:57 更新） 請同意我們的隱私權規範，才能啟用聽新聞的功能。 （中央社記者蔡孟妤高雄12日電）民進黨高市議員黨內初選民調，昨首日由第1選區率先舉行，結果今天中午出爐，由現任議員林富寶和新潮流菊系新人林慧欣出線。今天則抽中第6選區續辦民調，該區呈3搶2態勢。 民進黨11日起舉辦高市議員初選民調，共有8選區需辦理初選，每天上午抽出當日要進行民調的選區，並預計隔日中午公布民調結果。 昨初選首日抽中第1選區（旗山、美濃等9區）辦理民調，該選區應選3席，民進黨提名2席，由林富寶和新人林慧欣、李庭慧、劉金松、蒙勝南5人爭取出線。 其中新潮流菊系的林慧欣和湧言會的李庭慧廝殺激烈，林慧欣有立委邱議瑩支持，李庭慧則有湧言會等民代相挺。民進黨今天近中午公布初選結果，除林富寶過關外，另1名額由林慧欣搶下，代表菊系打贏首仗。 根據民調結果，3家民調公司的平均民調分數，林富寶達0.3291最高，其次是林慧欣的0.3067，李庭慧則以0.2592排第3。 第1選區初選落幕，今天上午抽中第6選區（鼓山、旗津、鹽埕3",
+        "excerptSha256": "afff9cd1b0be5ab247becf2b3f24a18746a8084bef6f6795950701712a375139",
+        "documentSha256": "61102122a1ee3a3928f4009ab813b57a66d542b518fc107a81ab21cb2f5fbc44",
+        "metadataSource": "open-graph",
+        "capturedAt": "2026-11-20T13:27:44.029Z"
+      },
+      "identity": {
+        "matchedName": "林慧欣",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第1選區",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:44.029Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "no canonical tag"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=中央社 fetched=中央社 CNA"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=民進黨高市議員第1選區初選 林富寶、林慧欣出線 fetched=民進黨高市議員第1選區初選 林富寶、林慧欣出線 | 政治 | 中央社 CNA"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2022-04-12 fetched=2022-04-12"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第1選區、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
       "articleId": "news-99359ffc",
       "candidateIds": [
         "official-candidate-2026-district-kaohsiung-council-02-df6f2338"
@@ -20607,7 +24295,7 @@
         }
       ],
       "discovered": 13,
-      "verified": 2,
+      "verified": 4,
       "published": 2,
       "blockers": []
     },
@@ -20615,7 +24303,7 @@
       "candidateId": "official-mayor-wang-zhao-min-2026",
       "candidateName": "王肇民",
       "districtId": "district-kaohsiung-mayor-2026",
-      "status": "verification-failed",
+      "status": "verified-not-published",
       "attempts": [
         {
           "sourceId": "ltn",
@@ -20679,10 +24367,10 @@
         }
       ],
       "discovered": 9,
-      "verified": 0,
+      "verified": 2,
       "published": 0,
       "blockers": [
-        "no-verified-articles"
+        "source-summary-not-attached"
       ]
     },
     {
@@ -20753,7 +24441,7 @@
         }
       ],
       "discovered": 18,
-      "verified": 11,
+      "verified": 21,
       "published": 11,
       "blockers": []
     },
@@ -20825,7 +24513,7 @@
         }
       ],
       "discovered": 6,
-      "verified": 1,
+      "verified": 3,
       "published": 1,
       "blockers": []
     },
@@ -20897,7 +24585,7 @@
         }
       ],
       "discovered": 18,
-      "verified": 9,
+      "verified": 21,
       "published": 9,
       "blockers": []
     },
@@ -21023,7 +24711,7 @@
         }
       ],
       "discovered": 10,
-      "verified": 2,
+      "verified": 3,
       "published": 2,
       "blockers": []
     },
@@ -21871,7 +25559,7 @@
         }
       ],
       "discovered": 18,
-      "verified": 6,
+      "verified": 7,
       "published": 6,
       "blockers": []
     },
@@ -21997,7 +25685,7 @@
         }
       ],
       "discovered": 15,
-      "verified": 8,
+      "verified": 9,
       "published": 8,
       "blockers": []
     },
@@ -22913,7 +26601,7 @@
         }
       ],
       "discovered": 9,
-      "verified": 2,
+      "verified": 3,
       "published": 2,
       "blockers": []
     },
@@ -22955,7 +26643,7 @@
         }
       ],
       "discovered": 10,
-      "verified": 5,
+      "verified": 6,
       "published": 5,
       "blockers": []
     },
@@ -22997,7 +26685,7 @@
         }
       ],
       "discovered": 13,
-      "verified": 4,
+      "verified": 5,
       "published": 4,
       "blockers": []
     },
@@ -23417,7 +27105,7 @@
         }
       ],
       "discovered": 8,
-      "verified": 2,
+      "verified": 3,
       "published": 2,
       "blockers": []
     },
@@ -23631,7 +27319,7 @@
         }
       ],
       "discovered": 12,
-      "verified": 8,
+      "verified": 11,
       "published": 8,
       "blockers": []
     },
@@ -23971,7 +27659,7 @@
         }
       ],
       "discovered": 13,
-      "verified": 5,
+      "verified": 6,
       "published": 5,
       "blockers": []
     },
@@ -24013,7 +27701,7 @@
         }
       ],
       "discovered": 6,
-      "verified": 5,
+      "verified": 6,
       "published": 5,
       "blockers": []
     },
@@ -24311,7 +27999,7 @@
         }
       ],
       "discovered": 11,
-      "verified": 4,
+      "verified": 5,
       "published": 4,
       "blockers": []
     },
@@ -24565,7 +28253,7 @@
         }
       ],
       "discovered": 15,
-      "verified": 3,
+      "verified": 4,
       "published": 3,
       "blockers": []
     },
@@ -25256,5 +28944,5 @@
       ]
     }
   ],
-  "note": "來源發現與獨立重抓驗證結果；未通過驗證的紀錄維持未發布，資料集變更透過 Pull Request 審查。"
+  "note": "截至 2026-11-20 完成全名冊三來源新聞發現與獨立重抓驗證；保留既有驗證證據與來源摘要，新驗證文章未附來源摘要，維持未發布並留待 Pull Request 審查。"
 }

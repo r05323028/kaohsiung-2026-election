@@ -1,8 +1,109 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe",
   "candidateName": "陳美雅",
-  "verifiedAt": "2026-11-12T16:28:29.146Z",
+  "verifiedAt": "2026-11-20T13:28:08.182Z",
   "articles": [
+    {
+      "articleId": "news-1589f969",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe"
+      ],
+      "headline": "只要還能呼吸就投妳！催淚真情告白 百歲人瑞挺柯志恩、陳美雅",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261025/3260532.htm",
+      "publicationDate": "2026-10-25",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-10-25",
+      "retrievedAt": "2026-11-20T13:28:07.759Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election"
+      ],
+      "contentType": "reporting",
+      "eventKey": "只要還能呼吸就投妳催淚真情告白百歲人瑞挺柯志恩陳美雅@2026-10-25",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "國民黨高雄市議員陳美雅今（25）日舉辦競選總部成立大會，現場出現兩名百歲人瑞，其中一人約103歲、另一人約109歲，甚至當面向陳美雅喊話，「只要我還能呼吸，我一定會投妳一票」，也表態支持柯志恩。陳美雅聽完紅了眼眶，不過兩名長輩因身體因素，還沒等到柯志恩上午11時30分抵達，就先行離場。 ▲柯志恩合體陳美雅，宣示要搶下第一高票 。（圖／記者吳奕靖攝） 陳美雅受訪時表示，今天現場除了許多年輕支持者，也來了多名90多歲長輩，其中最讓她感動的，就是兩名超過百歲的人瑞，她說，其中一名長輩約103歲，另一人約109歲，特別到場只為「看她一眼」、替她說聲加油，還告訴她，只要有活動就會盡量出席。 陳美雅說，長輩走路其實已經不太方便，卻仍願意到現場支持，希望她能順利連任，也表態希望高雄市長選舉能「翻轉」，支持柯志恩。不過真正讓陳美雅差點掉淚的，是其中一名百歲長輩的一句話，她轉述，對方告訴她：「只要我還能呼吸，我一定會投妳一票。」 陳美雅說，聽到這句話時「真的快要眼淚掉下來」，因為對方已經一百多歲，仍然願意親自來到活動現場，這種情意也讓她感受到更強烈的使命感。「能夠讓這些伯伯、媽媽",
+        "excerptSha256": "883292c5a449e3c3bdea30c680ab61047498d6af9116369db364b583ee2cc160",
+        "documentSha256": "c5101c0489f6d5165af6a7f0ee5ad9924e8ce606ad99e2e945af483eeabb9933",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:07.759Z"
+      },
+      "identity": {
+        "matchedName": "陳美雅",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "第6選區",
+          "鼓山",
+          "鹽埕",
+          "旗津",
+          "市議員",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:07.759Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261025/3260532.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=只要還能呼吸就投妳！催淚真情告白 百歲人瑞挺柯志恩、陳美雅 fetched=只要還能呼吸就投妳！催淚真情告白 百歲人瑞挺柯志恩、陳美雅"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-10-25 fetched=2026-10-25"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 第6選區、鼓山、鹽埕、旗津、市議員、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
     {
       "articleId": "news-79f73dc9",
       "candidateIds": [
@@ -15,7 +116,7 @@
       "publicationDate": "2026-08-25",
       "dateStatus": "confirmed",
       "updatedDate": "2026-08-25",
-      "retrievedAt": "2026-11-12T16:28:25.065Z",
+      "retrievedAt": "2026-11-20T13:28:04.981Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -28,9 +129,9 @@
       "evidence": {
         "excerpt": "高雄昨夜至今晨持續遭受大豪雨猛襲，鼓山區多條路都傳出嚴重積水，市議員陳美雅強調極端天候不可能一滴水都不積，但同樣地方一淹再淹、且陸續投入不少資源，政府應說清楚問題在哪?陳美雅表示，鼓山區鼓山三路、翠華路、銘傳路、逢甲路、九如四路及內惟等地，近日接連傳出嚴重積淹水，暴雨傾瀉而下，市區道路瞬間化身汪洋，許多居民是半夜中驚醒，忙著移車、搬家具，更有家庭看著雨水湧入家門，只能拿起水桶、畚箕，一桶又一桶的把水舀出。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳美雅進一步指出鼓山地區近幾年可逐筆核對的治水工程經費包括柴山滯洪公園2.4億元、鼓山運河整治6192萬元、鼓山三路抽水站9299萬7,906元、抽水站增設抽水機組2700萬元，及柴山營區6處攔砂壩、2處沉砂滯洪池共3750萬元，加總接近4.6億元，還不包含歷年排水系統、箱涵、側溝與清疏等相關經費。但鼓山地區近日卻接連發生積淹水，顯然投入的資源並未帶來相對應的防洪成效，龐大公共資源持續投入，市民當然有權追問「如果同樣地方一淹再淹，問題到底出在哪裡」。她說，沒有人要求政府在極端天候",
         "excerptSha256": "0067041bed689357aac537dc1d778f3977bb38e404b83dddd455eea0f73d8810",
-        "documentSha256": "fbc8b5f0f865d1b367919dcdff96ef1a873556e441f76bcbe75e8713030df99b",
+        "documentSha256": "44214431350c990fb13f484b11060b9ee43ec5c0c449480e8b8523ef2754d16f",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:25.065Z"
+        "capturedAt": "2026-11-20T13:28:04.981Z"
       },
       "identity": {
         "matchedName": "陳美雅",
@@ -46,7 +147,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:25.065Z",
+        "verifiedAt": "2026-11-20T13:28:04.981Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -95,7 +196,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -111,7 +212,7 @@
       "publicationDate": "2026-08-22",
       "dateStatus": "confirmed",
       "updatedDate": "2026-08-22",
-      "retrievedAt": "2026-11-12T16:28:25.713Z",
+      "retrievedAt": "2026-11-20T13:28:05.604Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -126,9 +227,9 @@
       "evidence": {
         "excerpt": "高雄連日豪雨造成多處積淹水，拚連任的國民黨現任議員陳美雅今質疑，中央補助2700萬元的鼓山三路抽水站工程，今年6月才完工，鼓山三路豪雨竟然又積水，認為防洪應提出完整的系統性解決方案，不是每逢豪雨再重複搶排、搶修，要求市府檢討、說明。陳美雅指出，高雄市政府7月底才宣布，中央補助2700萬元辦理「鼓山三路抽水站增設抽水機組工程」，今年6月才剛完工，增設2部抽水機後，總抽水量能提升至10 CMS，並新設2部撈污機，「2700萬元的防汛工程才剛完工，現在遇到豪雨，鼓山三路又出現積水，問題到底出在哪裡？」請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳美雅表示，高雄投入治水的經費並不少。依高雄市政府115年度水利局預算，水利局全年歲出約115.62億元，其中光是「排水防洪」就編列約46.94億元。中央多年來也持續挹注高雄治水經費，前瞻基礎建設第1至3期「縣市管河川及區域排水整體改善計畫」補助高雄約48.56億元；行政院另公布，2024至2026年間再投入高雄區域排水、雨水下水道功能提升及災後水利設施復建等經費，合計約",
         "excerptSha256": "e6c12b0b81204501d7c80ee1b6ff59af42b52bafd7c1e20cfcc55552e4c81219",
-        "documentSha256": "e2101b053bb43f4bf4c160f4658a63c5ea9c36b718870aefee4672fa5bde82c4",
+        "documentSha256": "a1b95c5cedda9c1f6a132f62a40c9a825f94eb1cfeaa631522d80308b5119c0e",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:25.713Z"
+        "capturedAt": "2026-11-20T13:28:05.604Z"
       },
       "identity": {
         "matchedName": "陳美雅",
@@ -143,7 +244,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:25.713Z",
+        "verifiedAt": "2026-11-20T13:28:05.604Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -192,7 +293,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -386,121 +487,28 @@
           "publication-policy-not-evaluated"
         ]
       }
-    },
-    {
-      "articleId": "news-1589f969",
-      "candidateIds": [
-        "official-candidate-2026-district-kaohsiung-council-06-b48fe8fe"
-      ],
-      "headline": "只要還能呼吸就投妳！催淚真情告白 百歲人瑞挺柯志恩、陳美雅",
-      "publisher": "ETtoday新聞雲",
-      "publisherType": "digital-native",
-      "canonicalUrl": "https://ettoday.net/news/20261025/3260532.htm",
-      "publicationDate": "2026-10-25",
-      "dateStatus": "confirmed",
-      "updatedDate": "2026-10-25",
-      "retrievedAt": "2026-11-12T16:28:28.763Z",
-      "summary": null,
-      "summaryBasis": null,
-      "topicTags": [
-        "election"
-      ],
-      "contentType": "reporting",
-      "eventKey": "只要還能呼吸就投妳催淚真情告白百歲人瑞挺柯志恩陳美雅@2026-10-25",
-      "duplicateOf": null,
-      "relatedArticleIds": [],
-      "evidence": {
-        "excerpt": "國民黨高雄市議員陳美雅今（25）日舉辦競選總部成立大會，現場出現兩名百歲人瑞，其中一人約103歲、另一人約109歲，甚至當面向陳美雅喊話，「只要我還能呼吸，我一定會投妳一票」，也表態支持柯志恩。陳美雅聽完紅了眼眶，不過兩名長輩因身體因素，還沒等到柯志恩上午11時30分抵達，就先行離場。 ▲柯志恩合體陳美雅，宣示要搶下第一高票 。（圖／記者吳奕靖攝） 陳美雅受訪時表示，今天現場除了許多年輕支持者，也來了多名90多歲長輩，其中最讓她感動的，就是兩名超過百歲的人瑞，她說，其中一名長輩約103歲，另一人約109歲，特別到場只為「看她一眼」、替她說聲加油，還告訴她，只要有活動就會盡量出席。 陳美雅說，長輩走路其實已經不太方便，卻仍願意到現場支持，希望她能順利連任，也表態希望高雄市長選舉能「翻轉」，支持柯志恩。不過真正讓陳美雅差點掉淚的，是其中一名百歲長輩的一句話，她轉述，對方告訴她：「只要我還能呼吸，我一定會投妳一票。」 陳美雅說，聽到這句話時「真的快要眼淚掉下來」，因為對方已經一百多歲，仍然願意親自來到活動現場，這種情意也讓她感受到更強烈的使命感。「能夠讓這些伯伯、媽媽",
-        "excerptSha256": "883292c5a449e3c3bdea30c680ab61047498d6af9116369db364b583ee2cc160",
-        "documentSha256": "b0c3f084e424f0102fc86f35733bf0456b6e2d0b17c6ab180d7e6a9f3231976a",
-        "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:28.763Z"
-      },
-      "identity": {
-        "matchedName": "陳美雅",
-        "matchedIn": "headline-and-body",
-        "contextSignals": [
-          "第6選區",
-          "鼓山",
-          "鹽埕",
-          "旗津",
-          "市議員",
-          "議員",
-          "市議會",
-          "議會",
-          "高雄"
-        ],
-        "namesakeRisk": "low",
-        "note": "姓名與選區／職稱線索同時出現於報導。"
-      },
-      "verification": {
-        "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:28.763Z",
-        "verifierVersion": "news-verifier-v1",
-        "checks": [
-          {
-            "check": "source-reachable",
-            "passed": true,
-            "detail": "HTTP 200"
-          },
-          {
-            "check": "url-canonical",
-            "passed": true,
-            "detail": "https://ettoday.net/news/20261025/3260532.htm"
-          },
-          {
-            "check": "publisher-match",
-            "passed": true,
-            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
-          },
-          {
-            "check": "headline-match",
-            "passed": true,
-            "detail": "claimed=只要還能呼吸就投妳！催淚真情告白 百歲人瑞挺柯志恩、陳美雅 fetched=只要還能呼吸就投妳！催淚真情告白 百歲人瑞挺柯志恩、陳美雅"
-          },
-          {
-            "check": "publication-date",
-            "passed": true,
-            "detail": "claimed=2026-10-25 fetched=2026-10-25"
-          },
-          {
-            "check": "identity",
-            "passed": true,
-            "detail": "low / 第6選區、鼓山、鹽埕、旗津、市議員、議員、市議會、議會、高雄"
-          },
-          {
-            "check": "relevance",
-            "passed": true,
-            "detail": "name present in fetched document"
-          },
-          {
-            "check": "not-duplicate",
-            "passed": true,
-            "detail": "dedupe runs in the normalize stage"
-          }
-        ],
-        "notes": []
-      },
-      "publication": {
-        "status": "not-published",
-        "blockers": [
-          "publication-policy-not-evaluated"
-        ]
-      }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
-      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5516933",
+      "headline": "耗資近5億高雄新九如橋鳥居欄杆惹議 藍議員批浪費公帑應究責",
       "reasons": [
         "failed:identity"
       ],
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5558551",
-      "headline": "高雄市議員登記首日13人完成 邱俊憲搶得頭香",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5524739",
+      "headline": "高雄新九如橋通車 陳美雅：居民憂道路墊高增淹水風險",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5540979",
+      "headline": "高雄三民運動中心剛啟用就問題一堆 陳美雅：追加3.64億花哪去？",
       "reasons": [
         "failed:identity"
       ],
@@ -515,8 +523,24 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5516933",
-      "headline": "耗資近5億高雄新九如橋鳥居欄杆惹議 藍議員批浪費公帑應究責",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5558551",
+      "headline": "高雄市議員登記首日13人完成 邱俊憲搶得頭香",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
+      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5642422",
+      "headline": "高市議員第六選區4候選人同額競選 當選門檻3860票",
       "reasons": [
         "failed:identity"
       ],

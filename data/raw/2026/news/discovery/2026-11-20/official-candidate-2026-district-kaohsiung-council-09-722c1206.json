@@ -1,0 +1,95 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-09-722c1206",
+  "candidateName": "張漢忠",
+  "researchedAt": "2026-11-20T13:25:02.325Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "張漢忠",
+      "fetchedAt": "2026-11-20T13:25:00.236Z",
+      "httpStatus": 200,
+      "documentSha256": "c46a9fd22062be5f5ed6567eb4e889862370d52ac8809abd6dd113a7affd7db2",
+      "status": "results",
+      "resultCount": 8,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "張漢忠",
+      "fetchedAt": "2026-11-20T13:25:01.065Z",
+      "httpStatus": 200,
+      "documentSha256": "3f00d920fc55ede256b08750166dfdce9e4210a8fbcd4dd4a64047ca9fc8dd1e",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "張漢忠",
+      "fetchedAt": "2026-11-20T13:25:01.853Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1779164",
+      "headline": "市場拜票 賴瑞隆︰鳳山是未來發展重鎮",
+      "publicationDate": null,
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646057",
+      "headline": "賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！",
+      "publicationDate": null,
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1778587",
+      "headline": "賴瑞隆市場拜票 大啖旗山香蕉力挺蕉農",
+      "publicationDate": null,
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640396",
+      "headline": "賴瑞隆肉豆公市場掃街拜票 大啖旗山香蕉酸爆柯志恩",
+      "publicationDate": null,
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5625985",
+      "headline": "高雄綠營造勢椅子漫過藍營競總前 李雅靜轟執政傲慢",
+      "publicationDate": "2026-11-01",
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5552731",
+      "headline": "高市議會勘災農損 康裕成：市府應留意菜價波動",
+      "publicationDate": "2026-08-26",
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5545238",
+      "headline": "高市議會開議前辦普渡 議長康裕成：願高雄平安順利、好運接棒",
+      "publicationDate": "2026-08-19",
+      "query": "張漢忠"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5360896",
+      "headline": "民進黨高市鳳山區議員提名初選民調出爐 林智鴻最高",
+      "publicationDate": "2026-03-06",
+      "query": "張漢忠"
+    }
+  ]
+}

@@ -1,37 +1,38 @@
 {
   "candidateId": "official-mayor-hong-fang-long-2026",
   "candidateName": "洪方隆",
-  "verifiedAt": "2026-11-12T16:27:39.128Z",
+  "verifiedAt": "2026-11-20T13:27:44.033Z",
   "articles": [
     {
-      "articleId": "news-916940e0",
+      "articleId": "news-f0ce8442",
       "candidateIds": [
         "official-mayor-hong-fang-long-2026"
       ],
-      "headline": "高雄市長選舉第五人登記 洪方隆：政治責任化、政見要檢驗",
+      "headline": "高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機",
       "publisher": "自由時報",
       "publisherType": "national-news",
-      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5563088",
-      "publicationDate": "2026-09-04",
-      "dateStatus": "confirmed",
-      "updatedDate": "2026-09-04",
-      "retrievedAt": "2026-11-12T16:27:38.413Z",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640686",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.862Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
         "election",
-        "policy"
+        "policy",
+        "local-issue"
       ],
       "contentType": "reporting",
-      "eventKey": "高雄市長選舉第五人登記洪方隆政治責任化政見要檢驗@2026-09-04",
+      "eventKey": "高雄市長政見發表會》洪方隆政見聚焦氣候變遷籲重視淹水危機@2026-11-14",
       "duplicateOf": null,
       "relatedArticleIds": [],
       "evidence": {
-        "excerpt": "下屆高雄市長選舉今出現第五位參選者洪方隆，他提出台灣面臨的七大核心問題，並疾呼政治應該責任化，所有政見都應檢驗，沒做到就該有懲罰機制。洪方隆今年63歲、中興大學環境工程系畢業，曾至美國哥倫比亞大學深造，對社會發展感到憂心，決定參選市長表述理念，也希望拋磚引玉、盼更多人關注。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他提到台灣目前面臨七大核心議題，分別是政治透明度、詐騙、低薪、淹水與環境、食安、少子化、以及公務人員改革與政黨化問題。他認為政見應提出責任制與罰則，要求候選人對提出的政見負責、並設置未達成的懲罰機制，並以實際成效為評估標準；這部分從高雄開始推動，進而要求全台候選人在提出政見時，須承諾並接受監督與落實，避免選前空談與選後失責的現象。洪方隆也強調政治體制改革之外的創新路徑，認為公民社會與社會創新、可在現有體制外推動實際改變，特別在低薪、社工、護理等領域。",
-        "excerptSha256": "5d535b903cbcdf7e9db7e8e394b0d8843267e6f5994dc390fea4add242bf97c5",
-        "documentSha256": "9816ebba124217a4d8bd3c1607bc8e264d3882d0f436d0d24ef49aa0451df057",
+        "excerpt": "2026高雄市長選舉公辦政見發表會今（14日）下午2點登場，無黨籍候選人洪方隆表示，他將焦點放在氣候變遷問題，呼籲六都候選人為了下一代，都應該重視這迫切問題。洪方隆一開始強調，參選是以前沒想過的事，這次沒有帶任何人下來，沒有競選旗幟、看板，只有1000包面紙、名片，他認為市長應該更重視執行力。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他特別提及，迄今沒有看到任何一位候選人討論氣候變遷，高雄面臨關鍵時期，根據「綠色和平」發布模擬，2050年高雄市中心許多地區淹水，85大樓、美麗島都淹水，雖然聽聽就好，還是要準備，不論是誰當選市長，都能關心這問題，為了下一代，要關心氣候變遷問題。他說曾參考Google解決方案，包括海線在海邊慢慢遷移，市中心有上百萬人居住，防守加上慢慢遷徙，橋頭糖廠森林要有更多環境差異評估，才可以做規劃。他說，如果海平面上升，可以往哪裡去呢？要讓人民去討論這些問題要不要做，不僅高雄，六都候選人都要注重氣候變遷問題。",
+        "excerptSha256": "44959e8d9f93076a29f80933949fc01e61ff7701d1eaae0f68e32488c130f240",
+        "documentSha256": "f178fbc4780b4c0dccbf021c0e6129f7666e220c2005c50fe1000c1128c61d43",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:27:38.413Z"
+        "capturedAt": "2026-11-20T13:27:38.862Z"
       },
       "identity": {
         "matchedName": "洪方隆",
@@ -46,7 +47,199 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:27:38.413Z",
+        "verifiedAt": "2026-11-20T13:27:38.862Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640686"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機 fetched=高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-60b8cc0c",
+      "candidateIds": [
+        "official-mayor-hong-fang-long-2026"
+      ],
+      "headline": "高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640770",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.221Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見會》洪方隆讚5位候選人優點盼整合打造更好高雄@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會今天登場，無黨籍候選人洪方隆評比其他候選人，稱讚5位候選人都有優點，如果可以集合起來，對高雄市民會非常好。洪方隆說，剛剛第一輪發表後有人問他，無黨派的人，如在藍綠間勝出？他表示，可能沒有想到要贏，他的想法是要讓高雄市民有更好生活、更好的收入及更好環境；雖然參選一小步，對自己人生是一大步，無限的可能，大家都想給市民更好的生活。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他評比其他候選人優點，指柯志恩在高雄新建高速公路，賴瑞隆的海上國際機場，他都非常贊同；他說，五位候選人都很用心，如果將大家優點集合起來，對高雄市民非常好。他強調三大主張，就是市民知情權、不可篡改及量化可檢驗，他認為柯志恩及賴瑞隆是可能當選的，希望未來能做到；他提出高雄要優先處理事項，包括氣候變遷、市政改革再造、低薪、環境治理及城鄉平權。",
+        "excerptSha256": "7e1224b209c28b94c41c4f8e2c8ccc3d6a1a260c8272aee1226080933cbc8927",
+        "documentSha256": "29f4ae8c43cd541546b5c68c02c1bbe6d156507793dc6636a7a66d70cfe4905d",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.221Z"
+      },
+      "identity": {
+        "matchedName": "洪方隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.221Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640770"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄 fetched=高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-916940e0",
+      "candidateIds": [
+        "official-mayor-hong-fang-long-2026"
+      ],
+      "headline": "高雄市長選舉第五人登記 洪方隆：政治責任化、政見要檢驗",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5563088",
+      "publicationDate": "2026-09-04",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-09-04",
+      "retrievedAt": "2026-11-20T13:27:43.332Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長選舉第五人登記洪方隆政治責任化政見要檢驗@2026-09-04",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "下屆高雄市長選舉今出現第五位參選者洪方隆，他提出台灣面臨的七大核心問題，並疾呼政治應該責任化，所有政見都應檢驗，沒做到就該有懲罰機制。洪方隆今年63歲、中興大學環境工程系畢業，曾至美國哥倫比亞大學深造，對社會發展感到憂心，決定參選市長表述理念，也希望拋磚引玉、盼更多人關注。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他提到台灣目前面臨七大核心議題，分別是政治透明度、詐騙、低薪、淹水與環境、食安、少子化、以及公務人員改革與政黨化問題。他認為政見應提出責任制與罰則，要求候選人對提出的政見負責、並設置未達成的懲罰機制，並以實際成效為評估標準；這部分從高雄開始推動，進而要求全台候選人在提出政見時，須承諾並接受監督與落實，避免選前空談與選後失責的現象。洪方隆也強調政治體制改革之外的創新路徑，認為公民社會與社會創新、可在現有體制外推動實際改變，特別在低薪、社工、護理等領域。",
+        "excerptSha256": "5d535b903cbcdf7e9db7e8e394b0d8843267e6f5994dc390fea4add242bf97c5",
+        "documentSha256": "c45c0ee027b4023d6b006d932edf2f968bf17688a7c4c53a79ad8a01bbe06103",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:43.332Z"
+      },
+      "identity": {
+        "matchedName": "洪方隆",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:43.332Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -95,31 +288,15 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
-      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
-      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
-      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
+      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
       "reasons": [
         "failed:identity"
       ],
@@ -134,8 +311,32 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
-      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
+      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
+      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640311",
+      "headline": "高雄市長公辦政見會今登場 除藍綠外另3人背景一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
+      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
       "reasons": [
         "failed:identity"
       ],

@@ -1,0 +1,95 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-07-e0f94c56",
+  "candidateName": "黃香菽",
+  "researchedAt": "2026-11-20T13:24:57.405Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "黃香菽",
+      "fetchedAt": "2026-11-20T13:24:55.304Z",
+      "httpStatus": 200,
+      "documentSha256": "c6b5a9e80a0e338af263c8d708efccb37b578bbae75d52e1bfb3da0024a9165d",
+      "status": "results",
+      "resultCount": 8,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "黃香菽",
+      "fetchedAt": "2026-11-20T13:24:56.177Z",
+      "httpStatus": 200,
+      "documentSha256": "66f0eba4939d597efe20258e6b4de05a38e090c3c2486388ab8bf57ef3454479",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "黃香菽",
+      "fetchedAt": "2026-11-20T13:24:56.938Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1778278",
+      "headline": "柯志恩澎湖助選 合體陳振中拜票",
+      "publicationDate": "2026-11-13",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5625446",
+      "headline": "高雄藍白合 韓國瑜、柯文哲今高雄合體",
+      "publicationDate": "2026-11-01",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618473",
+      "headline": "高市議員黃香菽力拚4連霸 柯志恩站台大讚「俠女精神」",
+      "publicationDate": "2026-10-25",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5596825",
+      "headline": "藍營議員黃香菽讚陳其邁守諾做好做滿 給四肯定一期許",
+      "publicationDate": "2026-10-06",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5592933",
+      "headline": "市場掃街被一路「餵食」 柯志恩：這下不怕餓肚子",
+      "publicationDate": "2026-10-02",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5573562",
+      "headline": "遭匿名看板抹黑攻擊 柯志恩不忍了提告違反《選罷法》",
+      "publicationDate": "2026-09-14",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562987",
+      "headline": "前高市副議長交棒女兒 黃韻涵成國民黨團KK連線「準」成員",
+      "publicationDate": "2026-09-04",
+      "query": "黃香菽"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5559172",
+      "headline": "高市國民黨團肯定陳其邁 黃香菽：市民還有四個期待",
+      "publicationDate": "2026-09-01",
+      "query": "黃香菽"
+    }
+  ]
+}

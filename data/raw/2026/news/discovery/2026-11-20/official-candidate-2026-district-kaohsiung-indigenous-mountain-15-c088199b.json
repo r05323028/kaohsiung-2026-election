@@ -1,0 +1,53 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-c088199b",
+  "candidateName": "陳奕蓁",
+  "researchedAt": "2026-11-20T13:25:11.024Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "陳奕蓁",
+      "fetchedAt": "2026-11-20T13:25:09.039Z",
+      "httpStatus": 200,
+      "documentSha256": "0349134f8db967a9b8e0ec662a9d4962f8e9b22e68c5aa0ad53b7e58995ed0d9",
+      "status": "results",
+      "resultCount": 2,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "陳奕蓁",
+      "fetchedAt": "2026-11-20T13:25:09.977Z",
+      "httpStatus": 200,
+      "documentSha256": "5f9baa543f4689ed16dacbcbe7d7b46e1f304e6fdbef3f49b2e6aa850375df3c",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "陳奕蓁",
+      "fetchedAt": "2026-11-20T13:25:10.506Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/local/paper/431868",
+      "headline": "全國高中化學闖關賽 精誠讚啦",
+      "publicationDate": "2010-10-01",
+      "query": "陳奕蓁"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/194264",
+      "headline": "小三陳奕蓁 民俗舞蹈全國冠軍",
+      "publicationDate": "2008-03-08",
+      "query": "陳奕蓁"
+    }
+  ]
+}

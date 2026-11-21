@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-07-b54eba4a",
+  "candidateName": "鄭孟洽",
+  "researchedAt": "2026-11-20T13:24:58.440Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "鄭孟洽",
+      "fetchedAt": "2026-11-20T13:24:56.596Z",
+      "httpStatus": 404,
+      "documentSha256": "402374ab26d364aa0616973a78281b97677d3f153eab62135a1b48d6d53daae9",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "鄭孟洽",
+      "fetchedAt": "2026-11-20T13:24:57.397Z",
+      "httpStatus": 200,
+      "documentSha256": "e95980b4a48f41c6b6de424623cc8496c71127dea294257ff9e12fd21d2ba3f2",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "鄭孟洽",
+      "fetchedAt": "2026-11-20T13:24:57.919Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

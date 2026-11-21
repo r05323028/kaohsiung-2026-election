@@ -1,0 +1,67 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-03-a187a5ce",
+  "candidateName": "蔣黃女",
+  "researchedAt": "2026-11-20T13:24:49.644Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "蔣黃女",
+      "fetchedAt": "2026-11-20T13:24:47.795Z",
+      "httpStatus": 200,
+      "documentSha256": "9dcfc8f10848a5cc89a7def255f7b7aba91c121d6331d0a716f0b55694e2ad16",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "蔣黃女",
+      "fetchedAt": "2026-11-20T13:24:48.574Z",
+      "httpStatus": 200,
+      "documentSha256": "3e3667cd93f656a46c51e624b4fed476a6ff399c07c8afd6b5c7d069c189661f",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "蔣黃女",
+      "fetchedAt": "2026-11-20T13:24:49.158Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5609378",
+      "headline": "施明德前妻艾琳達明重回橋頭 陪83歲「森林阿嬤」掃街",
+      "publicationDate": "2026-10-17",
+      "query": "蔣黃女"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1774070",
+      "headline": "83歲「森林阿嬤」 國慶日請命",
+      "publicationDate": "2026-10-11",
+      "query": "蔣黃女"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5601762",
+      "headline": "83歲阿嬤選議員護橋頭糖廠森林 國慶日場外向賴總統請命",
+      "publicationDate": "2026-10-10",
+      "query": "蔣黃女"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563312",
+      "headline": "守護橋頭森林 83歲蔣黃女登記參選高雄市議員",
+      "publicationDate": "2026-09-04",
+      "query": "蔣黃女"
+    }
+  ]
+}

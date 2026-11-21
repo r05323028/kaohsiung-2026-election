@@ -1,0 +1,53 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-08-c9cc4aad",
+  "candidateName": "陳雅敏",
+  "researchedAt": "2026-11-20T13:25:00.908Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "陳雅敏",
+      "fetchedAt": "2026-11-20T13:24:59.190Z",
+      "httpStatus": 200,
+      "documentSha256": "5e04028ee7bccd80174397aea246f3e0ccbb094ae26123274c758326d3f03cce",
+      "status": "results",
+      "resultCount": 2,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "陳雅敏",
+      "fetchedAt": "2026-11-20T13:24:59.911Z",
+      "httpStatus": 200,
+      "documentSha256": "db76b47df04895cf3a5125cad01a6963654ddd95ed8cdd77698f6810d3965af6",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "陳雅敏",
+      "fetchedAt": "2026-11-20T13:25:00.435Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5626333",
+      "headline": "韓國瑜南下高雄輔選 第八選區藍營激戰升溫",
+      "publicationDate": "2026-11-02",
+      "query": "陳雅敏"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/2891634",
+      "headline": "挺韓議長許崑源中風病重？ 秘書駁傳聞：健康得很！",
+      "publicationDate": "2019-08-21",
+      "query": "陳雅敏"
+    }
+  ]
+}

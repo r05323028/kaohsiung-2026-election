@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-13-9632ac0c",
+  "candidateName": "葛娜瑩",
+  "researchedAt": "2026-11-20T13:25:09.672Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "葛娜瑩",
+      "fetchedAt": "2026-11-20T13:25:08.080Z",
+      "httpStatus": 404,
+      "documentSha256": "c70dc8ef866ad5c7240e46d6047960717981470393536c05bb9b7661988ea943",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "葛娜瑩",
+      "fetchedAt": "2026-11-20T13:25:08.731Z",
+      "httpStatus": 200,
+      "documentSha256": "d0086ba0050cdd4a98d2f16cbd08e2d3d6670db0e51b46182cc8ea961171e8a6",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "葛娜瑩",
+      "fetchedAt": "2026-11-20T13:25:09.200Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

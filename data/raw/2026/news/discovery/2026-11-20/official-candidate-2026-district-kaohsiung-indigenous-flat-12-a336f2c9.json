@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-a336f2c9",
+  "candidateName": "宋紹銘",
+  "researchedAt": "2026-11-20T13:25:09.038Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "宋紹銘",
+      "fetchedAt": "2026-11-20T13:25:07.152Z",
+      "httpStatus": 200,
+      "documentSha256": "4e65d5220336762efafc808a00054dea5dde358b623323c7bb977286402b255f",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "宋紹銘",
+      "fetchedAt": "2026-11-20T13:25:07.920Z",
+      "httpStatus": 200,
+      "documentSha256": "c7ea66fa4fe439e9c7e1e80d2b00536935950492ce7d2c25e1f7f8972926162b",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "宋紹銘",
+      "fetchedAt": "2026-11-20T13:25:08.562Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

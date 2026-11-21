@@ -1,0 +1,46 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-mountain-15-7d5e5bca",
+  "candidateName": "金禾雅",
+  "researchedAt": "2026-11-20T13:25:10.151Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "金禾雅",
+      "fetchedAt": "2026-11-20T13:25:08.410Z",
+      "httpStatus": 200,
+      "documentSha256": "634f3a14f511a02368f315441b1d385cbc379acd0cb0fa0f0f02938c66a9a3a0",
+      "status": "results",
+      "resultCount": 1,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "金禾雅",
+      "fetchedAt": "2026-11-20T13:25:09.156Z",
+      "httpStatus": 200,
+      "documentSha256": "a7fffa596df9d2ba76f007a6dfde727022c679ee3c90ba89876c1187448ed1ed",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "金禾雅",
+      "fetchedAt": "2026-11-20T13:25:09.673Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5549492",
+      "headline": "高雄原民議員范織欽不選了 推薦原民女歌手接棒",
+      "publicationDate": "2026-08-23",
+      "query": "金禾雅"
+    }
+  ]
+}

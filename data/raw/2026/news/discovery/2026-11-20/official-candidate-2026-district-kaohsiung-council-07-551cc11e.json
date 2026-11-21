@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-07-551cc11e",
+  "candidateName": "余聖明",
+  "researchedAt": "2026-11-20T13:24:59.184Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "余聖明",
+      "fetchedAt": "2026-11-20T13:24:57.407Z",
+      "httpStatus": 200,
+      "documentSha256": "a6fd2c8b30f2a4bc8a654179fa9531b3ce461f360257b3a566db1089d6a08f63",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "余聖明",
+      "fetchedAt": "2026-11-20T13:24:58.173Z",
+      "httpStatus": 200,
+      "documentSha256": "e837f59020bbc76a5d4c5a07a408d991179432a3531d7335c841199e3bb9123e",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "余聖明",
+      "fetchedAt": "2026-11-20T13:24:58.712Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

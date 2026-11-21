@@ -1,7 +1,7 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-01-b7b307c1",
   "candidateName": "林義迪",
-  "verifiedAt": "2026-11-12T16:27:47.513Z",
+  "verifiedAt": "2026-11-20T13:27:45.123Z",
   "articles": [
     {
       "articleId": "news-cd2b9178",
@@ -15,7 +15,7 @@
       "publicationDate": "2026-10-11",
       "dateStatus": "confirmed",
       "updatedDate": "2026-10-11",
-      "retrievedAt": "2026-11-12T16:27:40.355Z",
+      "retrievedAt": "2026-11-20T13:27:38.930Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -29,9 +29,9 @@
       "evidence": {
         "excerpt": "國民黨高市議員第一選區參選人林義迪今（11）日上午熱鬧舉辦競選總部成立大會，旗山老街封街，湧入上千名支持者，展現林義迪的地方基層實力。高市議員第一選區涵蓋旗山、美濃、甲仙、六龜、杉林、內門、桃源、那瑪夏、茂林等9區，應選3席，國民黨提名現任議員林義迪及新人李振豪，民進黨提名現任議員林富寶及林慧欣，另有無黨籍鍾炳光、公民黨林榮傑登記參選，呈現6搶3局面。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 林義迪從政資歷近30年，歷任旗山鎮大德里第15、16、17屆里長，前立委鍾紹和旗山區服務處主任、旗山鎮長及旗山區長，縣市合併後高市議會第1屆、第3屆和第4屆市議員，同時具有豐富基層服務經驗及地方行政首長經歷，議會質詢或選民服務都有口碑，基本盤穩固。今日競選總部成立大會，由國民黨高雄市長參選人柯志恩授戰旗，包括前立委鍾紹和、黃昭順、前旗山鎮長陳鋕成和全國農會理事長蕭漢俊等人均站台力挺，現場湧入上千名支持者熱鬧滾滾。",
         "excerptSha256": "d69eb67ebdb2648a9ca54ccd7a21450b335bd63ebdbf31fb06adcebebeba377d",
-        "documentSha256": "cec60196c8bc220ecd8b343a74c322b6accc7f76f9300734e688f75b661daf1e",
+        "documentSha256": "8b2c7313294fca47aa1bc724b35ddb8ee1f6f58da32cbc3cb186dd7ed0e0e625",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:27:40.355Z"
+        "capturedAt": "2026-11-20T13:27:38.930Z"
       },
       "identity": {
         "matchedName": "林義迪",
@@ -58,7 +58,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:27:40.355Z",
+        "verifiedAt": "2026-11-20T13:27:38.930Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -107,79 +107,15 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
-      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5586617",
-      "headline": "復刻韓流三山造勢？柯志恩：「韓院長」會給大家「surprise」",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5545238",
-      "headline": "高市議會開議前辦普渡 議長康裕成：願高雄平安順利、好運接棒",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5484186",
-      "headline": "大雨狂炸高雄 柯志恩：協助災民爭取災損補助",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5433861",
-      "headline": "議員質疑高雄山區幸福小黃一人不載 陳其邁：羅列標準、該載就載",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/society/breakingnews/5395378",
-      "headline": "高雄第一季雜草與公墓火警增「兩倍」! 消防局長：多管道加強宣導",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5383664",
-      "headline": "國民黨高市議員第一批次提名共29人登記 僅三民區4搶3有競爭",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5176767",
-      "headline": "揭美濃大峽谷案被當「棋子」？柯志恩回應了",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5033778",
-      "headline": "高市議員建議馬頭山納入國家自然公園 林欽榮：可推進",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/4871540",
+      "headline": "台86線延伸內門 高市交通局長稱台南關廟龍崎意見多、估2033才完工",
       "reasons": [
         "failed:identity"
       ],
@@ -194,8 +130,72 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/4871540",
-      "headline": "台86線延伸內門 高市交通局長稱台南關廟龍崎意見多、估2033才完工",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5033778",
+      "headline": "高市議員建議馬頭山納入國家自然公園 林欽榮：可推進",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5433861",
+      "headline": "議員質疑高雄山區幸福小黃一人不載 陳其邁：羅列標準、該載就載",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5176767",
+      "headline": "揭美濃大峽谷案被當「棋子」？柯志恩回應了",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5383664",
+      "headline": "國民黨高市議員第一批次提名共29人登記 僅三民區4搶3有競爭",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5484186",
+      "headline": "大雨狂炸高雄 柯志恩：協助災民爭取災損補助",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5545238",
+      "headline": "高市議會開議前辦普渡 議長康裕成：願高雄平安順利、好運接棒",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5586617",
+      "headline": "復刻韓流三山造勢？柯志恩：「韓院長」會給大家「surprise」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5395378",
+      "headline": "高雄第一季雜草與公墓火警增「兩倍」! 消防局長：多管道加強宣導",
       "reasons": [
         "failed:identity"
       ],

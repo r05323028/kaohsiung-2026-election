@@ -1,0 +1,132 @@
+{
+  "candidateId": "official-mayor-hong-fang-long-2026",
+  "candidateName": "洪方隆",
+  "researchedAt": "2026-11-20T13:24:47.132Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "洪方隆",
+      "fetchedAt": "2026-11-20T13:24:41.338Z",
+      "httpStatus": 200,
+      "documentSha256": "d41ca261d0c69f67396a20a07c7ee2ebb5a6a3d9519bb1d5ab8a703ee8738bc5",
+      "status": "results",
+      "resultCount": 9,
+      "error": null
+    },
+    {
+      "sourceId": "ltn",
+      "query": "洪方隆 高雄市長",
+      "fetchedAt": "2026-11-20T13:24:42.295Z",
+      "httpStatus": 200,
+      "documentSha256": "41865598627110bd2fd37d16406b57896a5d8a474f015a54502de07c8234771e",
+      "status": "results",
+      "resultCount": 9,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "洪方隆",
+      "fetchedAt": "2026-11-20T13:24:43.145Z",
+      "httpStatus": 200,
+      "documentSha256": "cc663a2b1e57e08d9bb26588e7a3e280c57790982b8e91e92565869b71cc77a5",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "洪方隆 高雄市長",
+      "fetchedAt": "2026-11-20T13:24:43.669Z",
+      "httpStatus": 200,
+      "documentSha256": "945046bfa7b55f9ff9dcf4d19d12a66b6706e89936ec9d44cb31f2600f40007b",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "洪方隆",
+      "fetchedAt": "2026-11-20T13:24:44.342Z",
+      "httpStatus": 200,
+      "documentSha256": "df1e0bcdf3344d6cd0fb2a9aa8b3c2373a22c2662669c1d821e2863dbeeb65ec",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "洪方隆 高雄市長",
+      "fetchedAt": "2026-11-20T13:24:46.661Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640770",
+      "headline": "高雄市長政見會》洪方隆讚5位候選人優點 盼整合打造更好高雄",
+      "publicationDate": null,
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640686",
+      "headline": "高雄市長政見發表會》洪方隆政見聚焦氣候變遷 籲重視淹水危機",
+      "publicationDate": null,
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640311",
+      "headline": "高雄市長公辦政見會今登場 除藍綠外另3人背景一次看",
+      "publicationDate": null,
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
+      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
+      "publicationDate": "2026-10-28",
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
+      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
+      "publicationDate": "2026-10-27",
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
+      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "publicationDate": "2026-10-20",
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
+      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
+      "publicationDate": "2026-10-19",
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
+      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "publicationDate": "2026-09-05",
+      "query": "洪方隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563088",
+      "headline": "高雄市長選舉第五人登記 洪方隆：政治責任化、政見要檢驗",
+      "publicationDate": "2026-09-04",
+      "query": "洪方隆"
+    }
+  ]
+}

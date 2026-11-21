@@ -1,0 +1,67 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-05-f0652f41",
+  "candidateName": "江瑞鴻",
+  "researchedAt": "2026-11-20T13:24:54.418Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "江瑞鴻",
+      "fetchedAt": "2026-11-20T13:24:52.697Z",
+      "httpStatus": 200,
+      "documentSha256": "59ed6cf53402aa4d9e84334064fa754fcd89767f3328056a4f42ba6c150ed660",
+      "status": "results",
+      "resultCount": 4,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "江瑞鴻",
+      "fetchedAt": "2026-11-20T13:24:53.435Z",
+      "httpStatus": 200,
+      "documentSha256": "1b392c081c65389c639e80af3adf8f19a7bc09251fdf7b96547c9d6bfd14b33e",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "江瑞鴻",
+      "fetchedAt": "2026-11-20T13:24:53.944Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5558039",
+      "headline": "陳其邁最後一次被黨團質詢 民進黨團贈應援手燈",
+      "publicationDate": "2026-08-31",
+      "query": "江瑞鴻"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5463424",
+      "headline": "高市議會出訪澳洲提台積電 曾俊傑：歡迎投資高雄",
+      "publicationDate": "2026-06-07",
+      "query": "江瑞鴻"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5395253",
+      "headline": "鄭習會今啟程 高雄綠營諷見「習」小妹進京、這柯「髮夾彎」力挺",
+      "publicationDate": "2026-04-07",
+      "query": "江瑞鴻"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5372079",
+      "headline": "第4屆高市議會最後一次大會日程出爐 8/20至10/28共計70天",
+      "publicationDate": "2026-03-16",
+      "query": "江瑞鴻"
+    }
+  ]
+}

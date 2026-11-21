@@ -1,8 +1,103 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d",
   "candidateName": "邱于軒",
-  "verifiedAt": "2026-11-12T16:29:14.514Z",
+  "verifiedAt": "2026-11-20T13:28:32.776Z",
   "articles": [
+    {
+      "articleId": "news-becd773b",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d"
+      ],
+      "headline": "柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？",
+      "publisher": "ETtoday新聞雲",
+      "publisherType": "digital-native",
+      "canonicalUrl": "https://ettoday.net/news/20261109/3269080.htm",
+      "publicationDate": "2026-11-09",
+      "dateStatus": "confirmed",
+      "updatedDate": "2026-11-09",
+      "retrievedAt": "2026-11-12T16:29:14.010Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "other"
+      ],
+      "contentType": "reporting",
+      "eventKey": "柯志恩拋高雄人優先買票遭轟邱于軒怒沒打算讓市民享福@2026-11-09",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "▲柯志恩拋「高雄人優先買票」遭轟，邱于軒怒：沒打算讓市民享福。（圖／記者賴文萱翻攝） 國民黨高雄市長候選人柯志恩日前提出參考國外「居民優先購票」制度，研議保留少部分演唱會票券供高雄市民優先購買，讓在地居民共享演唱會經濟成果，卻遭民進黨高雄市長候選人賴瑞隆批評恐助長黃牛、衝擊外地旅客消費。高雄市議員邱于軒今（9）日痛批，原來民進黨口口聲聲的演唱會經濟，從頭到尾就沒打算讓高雄市民一起享受。 邱于軒表示，居民優先購票制度在國際間早有相關案例，包括愛爾蘭都柏林Croke Park球場、英國倫敦熱刺球場，以及Glastonbury音樂節等，都曾透過不同形式的在地居民購票安排，兼顧大型活動發展與周邊居民權益。國際大型演唱會帶來觀光效益的同時，也讓在地居民承受交通管制、噪音及環境負荷，因此透過制度設計，讓居民享有適度參與機會，本來就是值得討論的政策方向。 沒想到賴瑞隆連政策內容都沒看清楚，就急著扣帽子、潑冷水，政策理解能力如此貧乏，實在令人替高雄的未來感到憂心。 邱于軒質疑，柯志恩提出的是「少部分票券供居民優先購買」，從來沒有主張限制外地旅客購票，更沒有要排擠觀光客。賴瑞隆卻硬要將兩者畫上等號",
+        "excerptSha256": "ae47fb26d6056d08f7775231ed2e5b23c1314ea8b1178151e9efad67a27856fd",
+        "documentSha256": "24ce825a3015b1005d34c01ded89affccaac735d728caf2278a06740bd983415",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-12T16:29:14.010Z"
+      },
+      "identity": {
+        "matchedName": "邱于軒",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "市議員",
+          "議員",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-12T16:29:14.010Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://ettoday.net/news/20261109/3269080.htm"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？ fetched=柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=2026-11-09 fetched=2026-11-09"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 市議員、議員、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "publication-policy-not-evaluated"
+        ]
+      }
+    },
     {
       "articleId": "news-2b35783b",
       "candidateIds": [
@@ -300,7 +395,7 @@
       "publicationDate": "2026-10-07",
       "dateStatus": "confirmed",
       "updatedDate": "2026-10-07",
-      "retrievedAt": "2026-11-12T16:29:11.068Z",
+      "retrievedAt": "2026-11-20T13:28:30.314Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -313,9 +408,9 @@
       "evidence": {
         "excerpt": "39歲劉姓男子駕駛高市議員邱于軒的宣傳車，疑似身體不適，突然擦撞停放路邊的白色汽車，劉男無酒駕，也無人受傷，確切肇事原因及責任歸屬，有待鑑定。昨（7）日晚間約7點，劉男駕駛高市議員邱于軒的宣傳車，行經大寮區力行路，突然自撞停放路邊的白色汽車，左後方有明顯擦撞痕跡及撞痕，雖然沒有人受傷，劉男自稱身體不適，但未就醫。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 邱于軒在臉書粉專證實，「活動結束後，同仁開車途中發生擦撞，幸好人都平安」，並上傳車禍照片。不過，案發當時，邱于軒沒有在宣傳車內。",
         "excerptSha256": "9b5e999fe06b4bc7a85e759d28eec8213b1467327310bf04f708661233354b28",
-        "documentSha256": "88845710f11a6fd092e960c6d85cc4597dd9514aaea98839015c707234c67564",
+        "documentSha256": "35277ae4acb29988fd5fd9ff30bffa7314dd3abf815b9d98487144cd660aa575",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:29:11.068Z"
+        "capturedAt": "2026-11-20T13:28:30.314Z"
       },
       "identity": {
         "matchedName": "邱于軒",
@@ -330,7 +425,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:29:11.068Z",
+        "verifiedAt": "2026-11-20T13:28:30.314Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -379,7 +474,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -476,107 +571,12 @@
           "publication-policy-not-evaluated"
         ]
       }
-    },
-    {
-      "articleId": "news-becd773b",
-      "candidateIds": [
-        "official-candidate-2026-district-kaohsiung-council-11-a4e7a38d"
-      ],
-      "headline": "柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？",
-      "publisher": "ETtoday新聞雲",
-      "publisherType": "digital-native",
-      "canonicalUrl": "https://ettoday.net/news/20261109/3269080.htm",
-      "publicationDate": "2026-11-09",
-      "dateStatus": "confirmed",
-      "updatedDate": "2026-11-09",
-      "retrievedAt": "2026-11-12T16:29:14.010Z",
-      "summary": null,
-      "summaryBasis": null,
-      "topicTags": [
-        "other"
-      ],
-      "contentType": "reporting",
-      "eventKey": "柯志恩拋高雄人優先買票遭轟邱于軒怒沒打算讓市民享福@2026-11-09",
-      "duplicateOf": null,
-      "relatedArticleIds": [],
-      "evidence": {
-        "excerpt": "▲柯志恩拋「高雄人優先買票」遭轟，邱于軒怒：沒打算讓市民享福。（圖／記者賴文萱翻攝） 國民黨高雄市長候選人柯志恩日前提出參考國外「居民優先購票」制度，研議保留少部分演唱會票券供高雄市民優先購買，讓在地居民共享演唱會經濟成果，卻遭民進黨高雄市長候選人賴瑞隆批評恐助長黃牛、衝擊外地旅客消費。高雄市議員邱于軒今（9）日痛批，原來民進黨口口聲聲的演唱會經濟，從頭到尾就沒打算讓高雄市民一起享受。 邱于軒表示，居民優先購票制度在國際間早有相關案例，包括愛爾蘭都柏林Croke Park球場、英國倫敦熱刺球場，以及Glastonbury音樂節等，都曾透過不同形式的在地居民購票安排，兼顧大型活動發展與周邊居民權益。國際大型演唱會帶來觀光效益的同時，也讓在地居民承受交通管制、噪音及環境負荷，因此透過制度設計，讓居民享有適度參與機會，本來就是值得討論的政策方向。 沒想到賴瑞隆連政策內容都沒看清楚，就急著扣帽子、潑冷水，政策理解能力如此貧乏，實在令人替高雄的未來感到憂心。 邱于軒質疑，柯志恩提出的是「少部分票券供居民優先購買」，從來沒有主張限制外地旅客購票，更沒有要排擠觀光客。賴瑞隆卻硬要將兩者畫上等號",
-        "excerptSha256": "ae47fb26d6056d08f7775231ed2e5b23c1314ea8b1178151e9efad67a27856fd",
-        "documentSha256": "24ce825a3015b1005d34c01ded89affccaac735d728caf2278a06740bd983415",
-        "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:29:14.010Z"
-      },
-      "identity": {
-        "matchedName": "邱于軒",
-        "matchedIn": "headline-and-body",
-        "contextSignals": [
-          "市議員",
-          "議員",
-          "高雄"
-        ],
-        "namesakeRisk": "low",
-        "note": "姓名與選區／職稱線索同時出現於報導。"
-      },
-      "verification": {
-        "status": "verified",
-        "verifiedAt": "2026-11-12T16:29:14.010Z",
-        "verifierVersion": "news-verifier-v1",
-        "checks": [
-          {
-            "check": "source-reachable",
-            "passed": true,
-            "detail": "HTTP 200"
-          },
-          {
-            "check": "url-canonical",
-            "passed": true,
-            "detail": "https://ettoday.net/news/20261109/3269080.htm"
-          },
-          {
-            "check": "publisher-match",
-            "passed": true,
-            "detail": "claimed=ETtoday新聞雲 fetched=ETtoday新聞雲"
-          },
-          {
-            "check": "headline-match",
-            "passed": true,
-            "detail": "claimed=柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？ fetched=柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？"
-          },
-          {
-            "check": "publication-date",
-            "passed": true,
-            "detail": "claimed=2026-11-09 fetched=2026-11-09"
-          },
-          {
-            "check": "identity",
-            "passed": true,
-            "detail": "low / 市議員、議員、高雄"
-          },
-          {
-            "check": "relevance",
-            "passed": true,
-            "detail": "name present in fetched document"
-          },
-          {
-            "check": "not-duplicate",
-            "passed": true,
-            "detail": "dedupe runs in the normalize stage"
-          }
-        ],
-        "notes": []
-      },
-      "publication": {
-        "status": "not-published",
-        "blockers": [
-          "publication-policy-not-evaluated"
-        ]
-      }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5620613",
-      "headline": "民眾黨主席黃國昌要挖角國民黨高雄議員？2人這樣說",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5562307",
+      "headline": "雨炸高雄 大寮會昭街路面坍塌",
       "reasons": [
         "failed:identity"
       ],
@@ -591,14 +591,6 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/society/breakingnews/5602122",
-      "headline": "中油林園廠燃燒塔爆強烈火光 網諷：慶祝雙十國慶點燃聖火？",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
       "url": "https://news.ltn.com.tw/news/politics/breakingnews/5589383",
       "headline": "校園圍牆掛選舉布條挨批 賴瑞隆競辦致歉撤下",
       "reasons": [
@@ -607,8 +599,64 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5562307",
-      "headline": "雨炸高雄 大寮會昭街路面坍塌",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598086",
+      "headline": "緊急到醫院吊點滴 高市議員邱于軒：真的累了",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5602623",
+      "headline": "挺柯看板列綠營民代惹議 邱于軒：綠營未查證抹黑大翻車",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5603351",
+      "headline": "陳其邁總質詢又獲禮物 邱于軒送「多啦A夢」籲重視兒虐",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5620613",
+      "headline": "民眾黨主席黃國昌要挖角國民黨高雄議員？2人這樣說",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5633654",
+      "headline": "公督盟稱柯志恩「聽話的狗」 邱于軒：賴瑞隆21次優秀立委已無公信力",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646293",
+      "headline": "邱于軒指控選前之夜動員義消參加 賴瑞隆回應了",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5602122",
+      "headline": "中油林園廠燃燒塔爆強烈火光 網諷：慶祝雙十國慶點燃聖火？",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://www.ettoday.net/news/20261109/3269080.htm",
+      "headline": "柯志恩拋「高雄人優先買票」遭轟 邱于軒怒：沒打算讓市民享福？",
       "reasons": [
         "failed:identity"
       ],

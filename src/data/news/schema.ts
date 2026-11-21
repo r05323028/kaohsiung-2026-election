@@ -14,7 +14,7 @@ export const NEWS_PUBLISHED_DATASET_ID =
   'kaohsiung-2026-candidate-news-published';
 export const NEWS_NORMALIZED_DATASET_ID =
   'kaohsiung-2026-candidate-news-normalized';
-export const NEWS_SNAPSHOT_DATE = '2026-11-12';
+export const NEWS_SNAPSHOT_DATE = '2026-11-20';
 
 export const NewsDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const IsoTimestampSchema = z.iso.datetime({ offset: true });

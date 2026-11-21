@@ -1,8 +1,107 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-07-9cddec16",
   "candidateName": "曾俊傑",
-  "verifiedAt": "2026-11-12T16:28:34.710Z",
+  "verifiedAt": "2026-11-20T13:28:11.432Z",
   "articles": [
+    {
+      "articleId": "news-1cfa89cf",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-07-9cddec16"
+      ],
+      "headline": "遭國民黨封殺 高雄副議長曾俊傑選情告急陳其邁喊搶救",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640339",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:28:05.619Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service",
+        "career"
+      ],
+      "contentType": "reporting",
+      "eventKey": "遭國民黨封殺高雄副議長曾俊傑選情告急陳其邁喊搶救@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "4年前退出國民黨的高雄市副議長曾俊傑，昨（13）日晚成立競選總部，陳其邁、賴瑞隆聯手為曾俊傑催票，強調他遭國民黨封殺，選情真的非常「危險」，拜託鄉親讓他繼續連任。爭取6連霸的曾俊傑昨晚成立競選總部，5000張椅子坐無虛席，展現高人氣，立委李昆澤、邱議瑩、許智傑、林岱樺、李柏毅及前立委趙天麟都到場，曾麗燕等多位議員也現身相挺，三民區里長更幾乎到齊。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 市長陳其邁致詞說，面臨激烈選舉，曾俊傑遭逢國民黨封殺，選情辛苦，真的非常「危險」。4年前如果不是曾俊傑的支持，民進黨在議會沒辦法過半，他特別感謝曾俊傑在議會給予他與市府的支持與溫暖，協助市政建設大步向前。陳其邁細數曾俊傑的市政建設成績，包括爭取肉品市場停宰、催生果菜市場遷建、24小時南部大機場、西三民運動中心、中都濕地公園及雙湖公園等公園建設、黃線捷運等，肯定曾俊傑的用心問政及努力爭取地方權益。曾俊傑則說，對地方鄉親一直以來的支持，他有滿滿的感謝。這20年來，大家都看見高雄的進步及三民區的改變，包括鐵",
+        "excerptSha256": "0ad6de07b5bb254dce4df5468bfce5ecb9ec2f8ed5d576627f728332fafb7f5e",
+        "documentSha256": "993dad0e10237a438759b2bf610ef9499a806d3112d7d5d44314bb9b3e083255",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:05.619Z"
+      },
+      "identity": {
+        "matchedName": "曾俊傑",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "三民",
+          "議員",
+          "市議會",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:05.619Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640339"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=遭國民黨封殺 高雄副議長曾俊傑選情告急陳其邁喊搶救 fetched=遭國民黨封殺 高雄副議長曾俊傑選情告急陳其邁喊搶救"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 三民、議員、市議會、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
     {
       "articleId": "news-3b09f27b",
       "candidateIds": [
@@ -108,7 +207,7 @@
       "publicationDate": "2026-09-02",
       "dateStatus": "confirmed",
       "updatedDate": "2026-09-02",
-      "retrievedAt": "2026-11-12T16:28:34.309Z",
+      "retrievedAt": "2026-11-20T13:28:10.960Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -122,9 +221,9 @@
       "evidence": {
         "excerpt": "▲激戰三民區，無黨籍副議長曾俊傑今日身穿綠營外套，出席賴瑞隆登記參選記者會。（圖／記者吳世龍攝） 傳統藍綠激戰區的高雄三民區，今年因為人口增加，議員應選席次從7席增加至8席，不過，民進黨提名維持現任三席，並保留與無黨籍合作空間，但近來地方盛傳，恐有另一組正副議長的新組合要挑戰康裕成連任議長之路。今（2）日民進黨高雄市長參選人賴瑞隆登記參選，退出國民黨的無黨籍副議長曾俊傑，身穿綠營外套出現在「高雄隊」當中，未來佈局受到關注。 據了解，三民區本次議員應選席次為八席，民進黨提名維持現任三席，保留與無黨籍合作空間，2022年首次當選後馬上加入議會民進黨黨團運作的⁨張博洋，被認為是首要合作對象。 不過，無黨籍副議長曾俊傑也在今年加入民進黨團，加上前民進黨議員黃淑美脫黨參選，綠營面臨僧多粥少的分票局面。地方人士分析，現任民進黨三席再加上加入兩位無黨籍議員，泛綠陣營等於大幅過半，藍軍扣除黨團總召黃香菽，六連霸議員黃柏霖，今年新增的一席應還是國民黨陣營比較有機會拿下。 ▲地方盛傳，恐有另一組正副議長的新組合要挑戰康裕成連任議長之路。（圖／記者吳世龍攝） 地方席次變動，牽涉下屆議長選舉，近",
         "excerptSha256": "1b04b5d15a03e06d66e2b8d0fb365f8859275e64f4d1dd247407c7d956ad8d0e",
-        "documentSha256": "04a8c2c615215be5a6186c3515ab94eb74a997a963ab61b7246d652b8f3969e3",
+        "documentSha256": "fa3202e0ed76714b2b9c97711a554a1c066130e66875ae30fedb374028009fa9",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:34.309Z"
+        "capturedAt": "2026-11-20T13:28:10.960Z"
       },
       "identity": {
         "matchedName": "曾俊傑",
@@ -141,7 +240,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:34.309Z",
+        "verifiedAt": "2026-11-20T13:28:10.960Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -190,31 +289,15 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5610319",
-      "headline": "子弟兵張耀中競總成立 陳其邁：請支持「其邁的分身」",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5605559",
-      "headline": "沒有最大只有更大 陳其邁總質詢收下第三支「大麥」",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5605475",
-      "headline": "高雄市副議長挺南星國際機場 陳其邁：已委託國外專業顧問評估",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5566876",
+      "headline": "高雄公共樹灑專區近乎「休耕」 曾俊傑建議納一殯改造計畫",
       "reasons": [
         "failed:identity"
       ],
@@ -229,8 +312,16 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5547395",
-      "headline": "高雄肉品市場轉型定案 藍黨團總召：陳其邁透露不再殺豬了",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5605475",
+      "headline": "高雄市副議長挺南星國際機場 陳其邁：已委託國外專業顧問評估",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5491605",
+      "headline": "挨批捨樹蓋傘！北市府反批「竹篙湊菜刀」 蔣萬安：議員沒了解清楚",
       "reasons": [
         "failed:identity"
       ],
@@ -245,8 +336,24 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5491605",
-      "headline": "挨批捨樹蓋傘！北市府反批「竹篙湊菜刀」 蔣萬安：議員沒了解清楚",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5547395",
+      "headline": "高雄肉品市場轉型定案 藍黨團總召：陳其邁透露不再殺豬了",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5605559",
+      "headline": "沒有最大只有更大 陳其邁總質詢收下第三支「大麥」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5610319",
+      "headline": "子弟兵張耀中競總成立 陳其邁：請支持「其邁的分身」",
       "reasons": [
         "failed:identity"
       ],

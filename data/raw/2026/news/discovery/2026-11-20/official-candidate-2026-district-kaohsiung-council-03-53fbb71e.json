@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-03-53fbb71e",
+  "candidateName": "張驥晟",
+  "researchedAt": "2026-11-20T13:24:48.717Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "張驥晟",
+      "fetchedAt": "2026-11-20T13:24:47.134Z",
+      "httpStatus": 404,
+      "documentSha256": "192050cfcc7f661c3c4c6aedacd4848217fd82f622ecfe049d96c8dbd041dab1",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "張驥晟",
+      "fetchedAt": "2026-11-20T13:24:47.727Z",
+      "httpStatus": 200,
+      "documentSha256": "396de345e230efa6d6ee9cee77093d51c4b458badbdb3c203ee2f3e084bedcd4",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "張驥晟",
+      "fetchedAt": "2026-11-20T13:24:48.249Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

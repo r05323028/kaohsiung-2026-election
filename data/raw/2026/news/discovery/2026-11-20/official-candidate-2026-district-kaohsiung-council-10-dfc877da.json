@@ -1,0 +1,81 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-dfc877da",
+  "candidateName": "李政憲",
+  "researchedAt": "2026-11-20T13:25:04.473Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "李政憲",
+      "fetchedAt": "2026-11-20T13:25:02.651Z",
+      "httpStatus": 200,
+      "documentSha256": "799af5f1bb446fedfc049fcf304ffbd36d4f988ebd0dbdd720a9ea75a1b6f0bd",
+      "status": "results",
+      "resultCount": 5,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "李政憲",
+      "fetchedAt": "2026-11-20T13:25:03.435Z",
+      "httpStatus": 200,
+      "documentSha256": "7da3ffa8d452b70a7b6621218ba4e73ea6d34b12d763b68eefd11ab3c3d29de0",
+      "status": "results",
+      "resultCount": 1,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "李政憲",
+      "fetchedAt": "2026-11-20T13:25:04.004Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5620545",
+      "headline": "司改黨高雄3位候選人都抽到「1號」 張靜：好兆頭",
+      "publicationDate": "2026-10-27",
+      "query": "李政憲"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/society/breakingnews/5518727",
+      "headline": "翁未吃早餐竟摔車！警這招救援助返家",
+      "publicationDate": "2026-07-27",
+      "query": "李政憲"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5493871",
+      "headline": "司改黨3週年黨慶移師高雄 張俊宏為張靜披彩帶",
+      "publicationDate": "2026-07-04",
+      "query": "李政憲"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5418711",
+      "headline": "司改黨主席宣布參選高雄市長 張靜：六大制度問題要改",
+      "publicationDate": "2026-04-28",
+      "query": "李政憲"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1616786",
+      "headline": "《立委選舉登記》王金平領軍 藍營選將聯合造勢",
+      "publicationDate": "2023-11-22",
+      "query": "李政憲"
+    },
+    {
+      "sourceId": "ettoday",
+      "url": "https://www.ettoday.net/news/20260303/3125886.htm",
+      "headline": "南投縣政府人事處長李政憲37年公務生涯謝幕 陳嘉祥接任履新",
+      "publicationDate": "2026-03-03",
+      "query": "李政憲"
+    }
+  ]
+}

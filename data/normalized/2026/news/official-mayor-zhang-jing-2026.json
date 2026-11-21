@@ -1,8 +1,202 @@
 {
   "candidateId": "official-mayor-zhang-jing-2026",
   "candidateName": "張靜",
-  "verifiedAt": "2026-11-12T16:27:41.287Z",
+  "verifiedAt": "2026-11-20T13:27:44.053Z",
   "articles": [
+    {
+      "articleId": "news-5525b718",
+      "candidateIds": [
+        "official-mayor-zhang-jing-2026"
+      ],
+      "headline": "高雄市長選舉公報來了 張靜：廢檢舉魔人紅單、發「委屈補償金」",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5642750",
+      "publicationDate": "2026-11-16",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-16",
+      "retrievedAt": "2026-11-20T13:27:38.219Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長選舉公報來了張靜廢檢舉魔人紅單發委屈補償金@2026-11-16",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "第五屆高雄市長選舉公報出爐。藍綠之外的候選人所提政見頗多亮點，曾任法官、檢察官的1號張靜第1條政見就頗吸睛，主張所有檢舉魔人與科技執法的紅單一律廢除，不得處罰就沒有訴累發生，第8條更訴求每半年一次，發放高雄市民「委屈補償金」至少3千元。張靜共提出11項政見，其餘10項也頗貼近生活，第2、所有國家賠償事件之請求，設立人民陪審團制度，由高雄市民議決高雄市政府及所屬機關是否應予賠償，避免官官相護，死不認錯，也減少訴累。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 3、提高低收入戶及中低收入戶的人口比例至高雄市全體市民人口的8%至9%，以保護更多的弱勢人民，並因此消除乞丐及街友，讓市容更乾淨4、嚴懲貪污、追查弊案，新潮流要倒高雄才會好。5、嚴查毒品，全面改革高中職以下的教育制度，校事會議設在市府教育局內，達到尊師重道，親師和諧，校園安全三大目標。6、成立法律基金，為被偷、被搶、被詐、被重大傷害甚至死亡的高雄市民提供義務律師之諮詢及訴訟服務。7、決戰黑心毒油、守護食品安全，追查源頭，嚴格把關。8、每半年一次，為高雄市的環境汙染，發放所有高雄市民委屈補",
+        "excerptSha256": "f7612ae03e3ff9a03a5ce388bd9d4c5de5785a29706d734a70a05dac18cee2ea",
+        "documentSha256": "e5d9785edad94fbf0f0e66048734cda911f8c6c76a341f8ff69bf4ceca293deb",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.219Z"
+      },
+      "identity": {
+        "matchedName": "張靜",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.219Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5642750"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長選舉公報來了 張靜：廢檢舉魔人紅單、發「委屈補償金」 fetched=高雄市長選舉公報來了 張靜：廢檢舉魔人紅單、發「委屈補償金」"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-16"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
+    {
+      "articleId": "news-02e6a57e",
+      "candidateIds": [
+        "official-mayor-zhang-jing-2026"
+      ],
+      "headline": "高雄市長政見會》張靜：每半年發放每人3千元「委屈補償金」",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5640624",
+      "publicationDate": "2026-11-14",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-14",
+      "retrievedAt": "2026-11-20T13:27:38.843Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "policy",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "高雄市長政見會》張靜每半年發放每人3千元委屈補償金@2026-11-14",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "2026高雄市長選舉公辦政見發表會今（14日）下午2點登場，首位登場的司法改革黨張靜，針對治水議題，他強調當選後將邀請專家李鴻源，擔任第一副市長；同時爭取中央將市區污染源工廠貨物稅按比例回饋，每半年發放每位市民至少3000元「委屈補償金」。高雄市長選舉公辦政見發表會於慶聯電視台舉行，5位市長候選人各有2輪發表政見時段，合計每人共24分鐘。70歲的張靜抽中第一位發言，他目前是司法改革黨黨主席，曾擔任過法官及檢察官。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 張靜一開始就說「你討厭國民黨與民進黨嗎？過去含淚投票嗎？」這次不必再含淚，他是唯一的三鐵市長，提出「三公（關公、包公、土地公）一體」政見，分別代表「鐵拳」、「鐵權」與「鐵泉」三種施政面向，主張成立跨局處的「食品安全委員會」，並設立廉政委員會，嚴懲貪污。在水資源與防洪方面，張靜主張徹底解決高雄水患，並同步穩定民生、工業及農業用水，承諾若當選市長，將邀請專家李鴻源擔任第一副市長。此外，在人與政府互動方面，張靜主張警察機關不得在高雄市內任意使用拒馬、蛇籠等設施阻隔人民與政府機關，除非發生暴",
+        "excerptSha256": "2f5d84efe8c2493680634115f2f304b5c3d04c448887717a021baf71079fcce1",
+        "documentSha256": "9e72a9a064216d834ff883fe853fbd7554b2b3df69947c0be565fc0b1d64ae1c",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:27:38.843Z"
+      },
+      "identity": {
+        "matchedName": "張靜",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "高雄市長",
+          "市長",
+          "高雄",
+          "司法改革黨"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:27:38.843Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5640624"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=高雄市長政見會》張靜：每半年發放每人3千元「委屈補償金」 fetched=高雄市長政見會》張靜：每半年發放每人3千元「委屈補償金」"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-14"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 高雄市長、市長、高雄、司法改革黨"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
     {
       "articleId": "news-aa12dd74",
       "candidateIds": [
@@ -15,7 +209,7 @@
       "publicationDate": "2026-10-27",
       "dateStatus": "confirmed",
       "updatedDate": "2026-10-27",
-      "retrievedAt": "2026-11-12T16:27:36.214Z",
+      "retrievedAt": "2026-11-20T13:27:41.023Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -28,9 +222,9 @@
       "evidence": {
         "excerpt": "司法改革黨3位候選人分別投入高雄市長、議員、里長選舉，今號次抽籤結果全都是「1號」，身兼黨主席的市長參選人張靜認為，這是選戰好兆頭。司改黨高雄3位候選人，分別是黨主席張靜參選市長、前鎮與小港區市議員候選人李政憲、鹽埕區府北里長候選人葉傑成。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 張靜表示，3人同時抽中1號，對團隊而言是值得關注的巧合，也為接下來的選戰帶來好兆頭，不過選舉最終仍須回歸候選人理念、政見與實際行動，如何將抽籤帶來的話題轉化為選民認同，並提出符合市民需求的政策，才是參選團隊接下來的重要課題。除號次抽籤的好運，司改黨今也宣布政黨合作，原先已與台灣工黨及左翼聯盟展開合作，再邀請全民健康黨主席簡明廉出席，正式公布雙方合作方向，盼整合不同政黨的理念與資源，共同投入公共議題及選舉工作。簡明廉強調健康黨以「反針害、反藥害、反毒害」為主要主張，關注民眾健康、安全及相關公共政策議題，並宣布將全力支持張靜主席及司法改革黨所有候選人，希望透過政黨合作，讓相關理念獲得更多社會關注。",
         "excerptSha256": "d622076ea7dc0361e9e7c5065ee49e269d47fdfeae2723bd83ff0cd1ab317a1e",
-        "documentSha256": "f1669f94a9dc72a1021a44b3550a8e0c4f71669631153fa658ee3b1a40d6503a",
+        "documentSha256": "3b562190d1f21862521d44ecaa5810918ba490063ad62f5bd3714be51ee96587",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:27:36.214Z"
+        "capturedAt": "2026-11-20T13:27:41.023Z"
       },
       "identity": {
         "matchedName": "張靜",
@@ -48,7 +242,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:27:36.214Z",
+        "verifiedAt": "2026-11-20T13:27:41.023Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -97,7 +291,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -113,7 +307,7 @@
       "publicationDate": "2026-09-19",
       "dateStatus": "confirmed",
       "updatedDate": "2026-09-19",
-      "retrievedAt": "2026-11-12T16:27:38.016Z",
+      "retrievedAt": "2026-11-20T13:27:42.786Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -127,9 +321,9 @@
       "evidence": {
         "excerpt": "司法改革黨高雄市長參選人張靜今發表三公一體政見，其中交通三箭提到、拆除或遷移高雄火車站擋在馬路中間的舊願景館（帝冠車站），打通貫穿高雄南北大動脈的中博大道。張靜提出「三公一體」市政主張，以關公、包公、土地公分別對應安全、公平與財富，首場政見聚焦高雄土地公，以「開源節流、藏富於民」為核心，從增加市民收入、降低家庭支出、弱勢照顧、交通成本、居住負擔到產業發展等面向提出10項政策。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他的政見主張市府所屬公共運輸全面免費，包括捷運、輕軌、公車及船舶，市府所屬景點也主張免收門票，並提出「交通三箭」，一、拆除或遷移高雄火車站擋在馬路中間的舊願景館，打通貫穿高雄南北大動脈的「中博大道」；二、將原鐵路地下化後的現有路廊，改建為東西向的高雄市民大道；三、將高雄輕軌予以地下化成為高雄捷運環狀路線，原輕軌路面改為平面道路，減少市區平面交通瓶頸。交通執法方面，張靜提出應檢討檢舉及科技執法所產生的罰單制度，主張取消相關處罰，以降低市民申訴及訴訟成本；但這項主張涉及",
         "excerptSha256": "f8dff90db0a6de5ab47db3ed57431e8cfbe3ae75c11a23922f0b9f559da6f9b8",
-        "documentSha256": "30b5723e3c1f3bc209ed3038e08bf7a5de626d581b2e7c05a602ee1a23d4464a",
+        "documentSha256": "763efce42c54fcd6ca075e24fb4792b7b25c559b05c60623dc212864c8b88824",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:27:38.016Z"
+        "capturedAt": "2026-11-20T13:27:42.786Z"
       },
       "identity": {
         "matchedName": "張靜",
@@ -145,7 +339,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:27:38.016Z",
+        "verifiedAt": "2026-11-20T13:27:42.786Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -194,71 +388,15 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     }
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5627376",
-      "headline": "11/14高雄市長選舉公辦政見發表會 無提問無辯論",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
-      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
-      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
-      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
-      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/paper/1769401",
-      "headline": "高雄市長5搶1 賴瑞隆、柯志恩對決",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
-      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562588",
-      "headline": "下屆高雄市長已4人參戰 議員選舉累計90人登記",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5557822",
+      "headline": "高雄市長選舉搶頭香的不是賴瑞隆、柯志恩 「他」由張俊宏陪同登記",
       "reasons": [
         "failed:identity"
       ],
@@ -273,8 +411,72 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5557822",
-      "headline": "高雄市長選舉搶頭香的不是賴瑞隆、柯志恩 「他」由張俊宏陪同登記",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562588",
+      "headline": "下屆高雄市長已4人參戰 議員選舉累計90人登記",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5563705",
+      "headline": "高雄市長5人競逐創紀錄 議員選舉第6選區首見「同額」",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5611464",
+      "headline": "高雄市長5候選人財產申報 柯志恩有心投資、賴瑞隆以妻為貴",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5612165",
+      "headline": "追風任務啟動 賴瑞隆：做伙來想「隆隆的號次口號」！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619748",
+      "headline": "高雄市長號次出爐！ 賴瑞隆5號、柯志恩3號",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5627376",
+      "headline": "11/14高雄市長選舉公辦政見發表會 無提問無辯論",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640311",
+      "headline": "高雄市長公辦政見會今登場 除藍綠外另3人背景一次看",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1769401",
+      "headline": "高雄市長5搶1 賴瑞隆、柯志恩對決",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1776257",
+      "headline": "賴瑞隆：進步接棒 柯志恩：解決沉痾",
       "reasons": [
         "failed:identity"
       ],

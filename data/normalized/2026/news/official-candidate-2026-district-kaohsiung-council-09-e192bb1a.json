@@ -1,8 +1,106 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-09-e192bb1a",
   "candidateName": "鄧巧佩",
-  "verifiedAt": "2026-11-12T16:28:55.333Z",
+  "verifiedAt": "2026-11-20T13:28:20.803Z",
   "articles": [
+    {
+      "articleId": "news-0e17fb13",
+      "candidateIds": [
+        "official-candidate-2026-district-kaohsiung-council-09-e192bb1a"
+      ],
+      "headline": "林楚茵、阮昭雄接力陪掃 鄧巧佩力拚鳳山關鍵一席",
+      "publisher": "自由時報",
+      "publisherType": "national-news",
+      "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5641677",
+      "publicationDate": "2026-11-15",
+      "dateStatus": "inferred-from-url",
+      "updatedDate": "2026-11-15",
+      "retrievedAt": "2026-11-20T13:28:18.119Z",
+      "summary": null,
+      "summaryBasis": null,
+      "topicTags": [
+        "election",
+        "public-service"
+      ],
+      "contentType": "reporting",
+      "eventKey": "林楚茵阮昭雄接力陪掃鄧巧佩力拚鳳山關鍵一席@2026-11-15",
+      "duplicateOf": null,
+      "relatedArticleIds": [],
+      "evidence": {
+        "excerpt": "選戰倒數最後關鍵，鳳山區市議員戰況激烈，民進黨新人鄧巧佩面臨艱困選情，立法委員林楚茵、行政院政務副秘書長阮昭雄連2天接力陪同車隊掃街，懇託鳳山鄉親支持，為鄧巧佩爭取更多選票。高雄市最大票倉的鳳山區市議員選戰10人爭搶8席，林楚茵昨南下陪同鄧巧佩掃街拜票，她表示，鄧巧佩身為新人，沒有既有選票基礎，目前選情真的非常危險，她這次特別南下陪同車掃，希望全力搶救她的選情，拜託鄉親一定要出門投票，給認真、專業、有服務經驗的新人一個機會。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 今天由行政院政務副秘書長阮昭雄接力陪掃，阮昭雄肯定鄧巧佩擁有護理師專業，以及多年政治幕僚與地方服務經驗，具備處理民眾問題的能力。他表示，鄧巧佩長期認真做事，值得鄉親信任與支持，希望讓真正有能力、願意承擔的人進入議會，為地方服務。鄧巧佩表示，自己沒有雄厚的政治資源，只能一步一腳印走進市場、站上路口，努力爭取鄉親認同，即使掃街遇上大雨，也不願停下腳步。她坦言，這場選舉可能只差幾張選票，但她絕不退縮，一定會拚盡全力，堅持到最後一刻。鄧巧佩喊出選情告",
+        "excerptSha256": "e87cfae1f415c983bbec12162d2d1c4805a8e26aa1c786d4bb4a5bd373c9c4ee",
+        "documentSha256": "28a959611f3d1efb8a3ad160db0ee703f9d42eea56725ecd599fad475d1c6d5b",
+        "metadataSource": "json-ld",
+        "capturedAt": "2026-11-20T13:28:18.119Z"
+      },
+      "identity": {
+        "matchedName": "鄧巧佩",
+        "matchedIn": "headline-and-body",
+        "contextSignals": [
+          "鳳山",
+          "市議員",
+          "議員",
+          "議會",
+          "高雄"
+        ],
+        "namesakeRisk": "low",
+        "note": "姓名與選區／職稱線索同時出現於報導。"
+      },
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-11-20T13:28:18.119Z",
+        "verifierVersion": "news-verifier-v1",
+        "checks": [
+          {
+            "check": "source-reachable",
+            "passed": true,
+            "detail": "HTTP 200"
+          },
+          {
+            "check": "url-canonical",
+            "passed": true,
+            "detail": "https://news.ltn.com.tw/news/politics/breakingnews/5641677"
+          },
+          {
+            "check": "publisher-match",
+            "passed": true,
+            "detail": "claimed=自由時報 fetched=自由時報電子報"
+          },
+          {
+            "check": "headline-match",
+            "passed": true,
+            "detail": "claimed=林楚茵、阮昭雄接力陪掃 鄧巧佩力拚鳳山關鍵一席 fetched=林楚茵、阮昭雄接力陪掃 鄧巧佩力拚鳳山關鍵一席"
+          },
+          {
+            "check": "publication-date",
+            "passed": true,
+            "detail": "claimed=none fetched=2026-11-15"
+          },
+          {
+            "check": "identity",
+            "passed": true,
+            "detail": "low / 鳳山、市議員、議員、議會、高雄"
+          },
+          {
+            "check": "relevance",
+            "passed": true,
+            "detail": "name present in fetched document"
+          },
+          {
+            "check": "not-duplicate",
+            "passed": true,
+            "detail": "dedupe runs in the normalize stage"
+          }
+        ],
+        "notes": []
+      },
+      "publication": {
+        "status": "not-published",
+        "blockers": [
+          "source-summary-not-attached"
+        ]
+      }
+    },
     {
       "articleId": "news-8e50bb5b",
       "candidateIds": [
@@ -13,9 +111,9 @@
       "publisherType": "national-news",
       "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5638219",
       "publicationDate": "2026-11-12",
-      "dateStatus": "inferred-from-url",
+      "dateStatus": "confirmed",
       "updatedDate": "2026-11-12",
-      "retrievedAt": "2026-11-12T16:28:51.690Z",
+      "retrievedAt": "2026-11-20T13:28:19.143Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -28,9 +126,9 @@
       "evidence": {
         "excerpt": "針對資深音樂人羅大佑近日點名蔡英文、蕭美琴與陳菊未婚無子女，並稱沒有孩子的人「對下一代不會想太多」；民進黨高雄市鳳山區議員候選人鄧巧佩反嗆羅大佑，蔡英文等3人為下一代貢獻不可被抹滅，強調對下一代的責任，從來無關結婚生子。資深音樂人羅大佑近日於廣播節目點名前總統蔡英文、現任副總統蕭美琴與前監察院長陳菊「沒有結婚、沒有子女」，並稱沒有孩子的人「對下一代不會想太多」。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 民進黨高雄市鳳山區議員候選人鄧巧佩反嗆羅大佑，蔡英文、蕭美琴、陳菊等前輩，在公共領域為下一代帶來的貢獻絕不可被抹滅，強調對下一代的責任，從來無關有沒有結婚生小孩。鄧巧佩說，一個人是否關心下一代，不該由有沒有結婚、生育來衡量。生育是個人的人生選擇，照顧下一代則是整個社會共同的責任。有人透過生育、養育孩子，有人透過專業照顧孩子，也有人透過制度與政策，為孩子創造更好的未來。這些付出，都值得被尊重。鄧巧佩指出，她是2個孩子的媽媽，也曾經是一名護理師。她看過許多沒有孩子的護理師、老師與托育人員，同樣用專業與心力守護每一個孩子。真正重要的，不是誰有沒有自己的孩子，而是願意為下一代留下什麼樣的社",
         "excerptSha256": "3d985aa8ec4fe6e07a75297c439681e79ba42c01e28be1bb4ec016cb9560f54e",
-        "documentSha256": "f07fae4b975f80143ebba277f06c219ce84d0ddada1ea98a0edb3b2a84a1acc1",
+        "documentSha256": "69c7e2a3d82b45639589c297b0f2c991fe1521aa54e4564758693293f764bda4",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:51.690Z"
+        "capturedAt": "2026-11-20T13:28:19.143Z"
       },
       "identity": {
         "matchedName": "鄧巧佩",
@@ -45,7 +143,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:51.690Z",
+        "verifiedAt": "2026-11-20T13:28:19.143Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -71,7 +169,7 @@
           {
             "check": "publication-date",
             "passed": true,
-            "detail": "claimed=none fetched=2026-11-12"
+            "detail": "claimed=2026-11-12 fetched=2026-11-12"
           },
           {
             "check": "identity",
@@ -94,7 +192,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -108,9 +206,9 @@
       "publisherType": "national-news",
       "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5635659",
       "publicationDate": "2026-11-10",
-      "dateStatus": "inferred-from-url",
+      "dateStatus": "confirmed",
       "updatedDate": "2026-11-10",
-      "retrievedAt": "2026-11-12T16:28:52.341Z",
+      "retrievedAt": "2026-11-20T13:28:19.748Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -123,9 +221,9 @@
       "evidence": {
         "excerpt": "選戰倒數最後衝刺，民進黨台北、高雄市黨部主委吳沛憶、黃捷首度合體鳳山，為鳳山區市議員候選人鄧巧佩助選，左楠區市議員候選人張以理也驚喜現身，4人大啖鳳山在地美食，吃播力挺鄧巧佩，搭配車隊掃街，搶救鳳山關鍵一席。吳沛憶昨天南下與黃捷一起為鄧巧佩站台助選，先於鄧巧佩競選總部品嘗鳳山在地美食，因「8包煎餃」在社群爆紅的張以理也來串門子，4人合體吃播笑聲不斷。隨後車隊鳳山掃街，沿途受到民眾熱情揮手回應，還有支持者騎車加入隊伍助勢。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 鄧巧佩今天分享吃播趣味影片，張以理將鄧巧佩10號選舉號次融入美食哏，高喊「10顆煎包一起配，鳳山就選鄧巧佩！」，沒想到張以理再次忘詞，引起現場哄堂大笑；從「8包煎餃」到「10顆煎包」，2位新人以美食掀起選戰話題，在網路社群創下不少流量。黃捷推薦鄧巧佩是她長期信任的執行長，鳳山需要有專業、有熱忱的新世代民意代表，鄧巧佩就是最值得託付人選，希望鄧巧佩延續鳳山的進步價值，捍衛本土優先、堅持性別平權，她也提出寵物友善、親子育兒、醫療長照、改善交通的政見，希望未來2人能在中央與地方攜手合作，繼續",
         "excerptSha256": "9fc096052264dfa438aed6365288240f2110b030088ffda8321e7f7de5985f15",
-        "documentSha256": "5f28be48b631d407d5ee9d5583be36c93f09607b1279836305b56371ae16b823",
+        "documentSha256": "498b6f2ab26db2698871408d889aa18afc934ea92ab9e75345b45c141ab08452",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:52.341Z"
+        "capturedAt": "2026-11-20T13:28:19.748Z"
       },
       "identity": {
         "matchedName": "鄧巧佩",
@@ -141,7 +239,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:52.341Z",
+        "verifiedAt": "2026-11-20T13:28:19.748Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -167,7 +265,7 @@
           {
             "check": "publication-date",
             "passed": true,
-            "detail": "claimed=none fetched=2026-11-10"
+            "detail": "claimed=2026-11-10 fetched=2026-11-10"
           },
           {
             "check": "identity",
@@ -190,7 +288,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -206,7 +304,7 @@
       "publicationDate": "2026-10-28",
       "dateStatus": "confirmed",
       "updatedDate": "2026-10-28",
-      "retrievedAt": "2026-11-12T16:28:52.708Z",
+      "retrievedAt": "2026-11-20T13:28:20.021Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -219,9 +317,9 @@
       "evidence": {
         "excerpt": "高雄市議員選舉完成號次抽籤，民進黨市議員候選人鄧巧佩抽中10號，在立委黃捷陪同下以車隊掃街拜票，支持者送上2艘親手以積木組裝「洋流號」，1艘送給鄧巧佩、1艘透過黃捷轉交台北市長候選人沈伯洋，以手作積木傳遞祝福與支持，期待2人一起當選。立法委員黃捷親自陪同鄧巧佩以車隊穿梭鳳山區掃街拜票，展現對子弟兵的力挺，林姓支持者送上2艘親手以積木組裝「洋流號」表達支持，他表示自己在鳳山成長，熱愛高雄與台灣，平時喜歡組裝積木，因此將對公共事務的關心化為創作。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 他認為，「洋流號」象徵乘風破浪、勇敢向前的精神，讓他想到鄧巧佩與沈伯洋積極勤跑基層、親切與民眾互動的身影，因此特別親手以積木組裝「洋流號」，1艘贈送鄧巧佩，另1艘希望透過黃捷轉交給台北市長候選人沈伯洋。黃捷肯定巧佩在她的辦公室擔任執行長，不僅認真協助處理各項選民服務，也積極走入地方、了解民眾需求，看見巧佩對於民眾的努力與用心。對於支持者特地準備手作禮物，她認為這是對巧佩努力的肯定，也呼籲鳳山市民踴躍投票，支持認真且進步的",
         "excerptSha256": "a745587d0010a233b88ab0fb4c60c4c4e264f8712922c8e24cfa8bf17030f4f2",
-        "documentSha256": "5105db6073c26542ee64363a713f30fcf86339c231b38f450a7e4fa4047723e1",
+        "documentSha256": "2341e4aa4380281cf7204728b150a2f6c4ed40072e83d855f776338abb5b40b7",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:52.708Z"
+        "capturedAt": "2026-11-20T13:28:20.021Z"
       },
       "identity": {
         "matchedName": "鄧巧佩",
@@ -238,7 +336,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:52.708Z",
+        "verifiedAt": "2026-11-20T13:28:20.021Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -287,7 +385,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -487,6 +585,22 @@
     {
       "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
       "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646057",
+      "headline": "賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1778587",
+      "headline": "賴瑞隆市場拜票 大啖旗山香蕉力挺蕉農",
       "reasons": [
         "failed:identity"
       ],

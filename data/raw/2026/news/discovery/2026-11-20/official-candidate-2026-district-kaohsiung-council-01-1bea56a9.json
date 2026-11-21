@@ -1,0 +1,95 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-01-1bea56a9",
+  "candidateName": "鍾炳光",
+  "researchedAt": "2026-11-20T13:24:46.055Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "鍾炳光",
+      "fetchedAt": "2026-11-20T13:24:44.351Z",
+      "httpStatus": 200,
+      "documentSha256": "07f56f80585d354ce82570a408ed48374f93cab24a2b8d13c58de6795a3f35f9",
+      "status": "results",
+      "resultCount": 8,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "鍾炳光",
+      "fetchedAt": "2026-11-20T13:24:45.048Z",
+      "httpStatus": 200,
+      "documentSha256": "eef45f1f4d73dc0f6494d5274c12c076869e55a2f4abe4d1070b350ed777fff6",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "鍾炳光",
+      "fetchedAt": "2026-11-20T13:24:45.584Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5619984",
+      "headline": "高市議員101選將抽幸運號碼 完整名單一次看",
+      "publicationDate": "2026-10-27",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1681936",
+      "headline": "大寮紅豆花田季 花開9成",
+      "publicationDate": "2024-12-13",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/4891857",
+      "headline": "「大寮紅豆花田季」未演先轟動 活動內容大幅加碼",
+      "publicationDate": "2024-12-12",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/4603362",
+      "headline": "六堆運動會圓滿閉幕 明年第60屆後堆內埔鄉主辦",
+      "publicationDate": "2024-03-10",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/4270825",
+      "headline": "高雄區長大調動 林清益接民政局副局長",
+      "publicationDate": "2023-04-14",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1561936",
+      "headline": "美濃花海開園點燈 邀民眾走春",
+      "publicationDate": "2023-01-10",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/4179761",
+      "headline": "「花現美濃幸福時」開園點燈 持續至1/29",
+      "publicationDate": "2023-01-09",
+      "query": "鍾炳光"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/3813052",
+      "headline": "美濃小鎮點燈向醫務致敬 繽紛花海迎虎年遊客",
+      "publicationDate": "2022-01-25",
+      "query": "鍾炳光"
+    }
+  ]
+}

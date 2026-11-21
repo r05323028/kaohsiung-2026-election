@@ -1,7 +1,7 @@
 {
   "candidateId": "official-candidate-2026-district-kaohsiung-council-09-10ba5344",
   "candidateName": "陳慧文",
-  "verifiedAt": "2026-11-12T16:28:51.688Z",
+  "verifiedAt": "2026-11-20T13:28:20.592Z",
   "articles": [
     {
       "articleId": "news-21137780",
@@ -13,9 +13,9 @@
       "publisherType": "national-news",
       "canonicalUrl": "https://news.ltn.com.tw/news/politics/breakingnews/5637387",
       "publicationDate": "2026-11-11",
-      "dateStatus": "inferred-from-url",
+      "dateStatus": "confirmed",
       "updatedDate": "2026-11-11",
-      "retrievedAt": "2026-11-12T16:28:45.550Z",
+      "retrievedAt": "2026-11-20T13:28:16.893Z",
       "summary": null,
       "summaryBasis": null,
       "topicTags": [
@@ -28,9 +28,9 @@
       "evidence": {
         "excerpt": "針對資深音樂人羅大佑近日點名蔡英文、蕭美琴與陳菊未婚無子女，並稱沒有孩子的人「對下一代不會想太多」；同樣未婚無子女的高雄市議員陳慧文今天反擊，女性政治人物為公共事務的付出，不該以婚育來衡量，強調守護下一代是日常、責任。資深音樂人羅大佑近日於廣播節目點名蔡英文、蕭美琴與陳菊「沒有結婚、沒有子女」，並稱沒有孩子的人「對下一代不會想太多」；同樣未婚、無子女的高雄市議員陳慧文今天聽聞後，直言很難想像現在還有這樣的言論。請繼續往下閱讀... displayDFP('ad-PCIR1', 'pc'); displayDFP('ad-IR1', 'm'); 陳慧文今天表示，女性政治人物為公共事務的付出，不應再被「結婚了沒、有沒有生小孩」這把尺來衡量；而對下一代的牽掛，看的從來不是身分證上的欄位，每一位女性的人生價值，也不該由婚育來定義。陳慧文指出，自己也沒有孩子，但在鳳山服務20多年，每天勤跑基層，走進學校與社區，接觸過無數個家庭，「守護每一位孩子就是我們的日常、我們的責任」。",
         "excerptSha256": "cfaf552dd7b645d74dc9b3cd74ea75ca2cafe2e18a3ede88345af918df7f4822",
-        "documentSha256": "fac5b47aa3615bcf5deeafaaf37840a65fadde1d42a67da575a6e196e82cb9a6",
+        "documentSha256": "4c1e6a0c451d8eb11cb9fd7c9c9a792f0efd2d9d98a924c52b694de60dbb8929",
         "metadataSource": "json-ld",
-        "capturedAt": "2026-11-12T16:28:45.550Z"
+        "capturedAt": "2026-11-20T13:28:16.893Z"
       },
       "identity": {
         "matchedName": "陳慧文",
@@ -46,7 +46,7 @@
       },
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-11-12T16:28:45.550Z",
+        "verifiedAt": "2026-11-20T13:28:16.893Z",
         "verifierVersion": "news-verifier-v1",
         "checks": [
           {
@@ -72,7 +72,7 @@
           {
             "check": "publication-date",
             "passed": true,
-            "detail": "claimed=none fetched=2026-11-11"
+            "detail": "claimed=2026-11-11 fetched=2026-11-11"
           },
           {
             "check": "identity",
@@ -95,7 +95,7 @@
       "publication": {
         "status": "not-published",
         "blockers": [
-          "publication-policy-not-evaluated"
+          "source-summary-not-attached"
         ]
       }
     },
@@ -293,48 +293,8 @@
   ],
   "rejected": [
     {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5631377",
-      "headline": "半年前預言沈伯洋民調追平、當選市長！陳水扁自嘲：神預測還是大槓龜？",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5630274",
-      "headline": "陳水扁看好沈伯洋 有機會成為第二位綠營台北市長",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5630056",
-      "headline": "越資深越危險！陳水扁贈「五羊開泰」墨寶挺她拚五連霸",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618919",
-      "headline": "致敬沈伯洋政策島 高市議員推「政績島」16個「百變隆隆」在島上巡邏",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
-      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
-      "reasons": [
-        "failed:identity"
-      ],
-      "httpStatus": 200
-    },
-    {
-      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
-      "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "url": "https://news.ltn.com.tw/news/life/breakingnews/5520748",
+      "headline": "新九如橋7/31上午11點通車 輕軌第86個路口現身",
       "reasons": [
         "failed:identity"
       ],
@@ -349,8 +309,88 @@
       "httpStatus": 200
     },
     {
-      "url": "https://news.ltn.com.tw/news/life/breakingnews/5520748",
-      "headline": "新九如橋7/31上午11點通車 輕軌第86個路口現身",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5582161",
+      "headline": "高雄市議長康裕成率跨世代女力隊 開箱「喔熊輕軌」漫遊城市",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5598112",
+      "headline": "高雄公督盟公布議員評鑑 第七會期藍綠11人獲問政優質",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5618919",
+      "headline": "致敬沈伯洋政策島 高市議員推「政績島」16個「百變隆隆」在島上巡邏",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5630056",
+      "headline": "越資深越危險！陳水扁贈「五羊開泰」墨寶挺她拚五連霸",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5630274",
+      "headline": "陳水扁看好沈伯洋 有機會成為第二位綠營台北市長",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5631377",
+      "headline": "半年前預言沈伯洋民調追平、當選市長！陳水扁自嘲：神預測還是大槓龜？",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5639616",
+      "headline": "綠議員推「慧安心哨」夯爆 陳水扁開箱吹響防分票警鐘",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5640396",
+      "headline": "賴瑞隆肉豆公市場掃街拜票 大啖旗山香蕉酸爆柯志恩",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646057",
+      "headline": "賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1778587",
+      "headline": "賴瑞隆市場拜票 大啖旗山香蕉力挺蕉農",
+      "reasons": [
+        "failed:identity"
+      ],
+      "httpStatus": 200
+    },
+    {
+      "url": "https://news.ltn.com.tw/news/politics/paper/1779164",
+      "headline": "市場拜票 賴瑞隆︰鳳山是未來發展重鎮",
       "reasons": [
         "failed:identity"
       ],

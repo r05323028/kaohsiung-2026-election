@@ -33,7 +33,7 @@ npm run validate:all 完全離線執行：
 - 全名冊研究：research:execute → research:validate → research:verify。
 - 基本資料：basic:queue → basic:seed → basic:merge → basic:publish → basic:report。
 - 政策：policy:research → policy:build → policy:report。
-- 新聞：news:discover → news:verify；不使用自動發布引擎。
+- 新聞：news:discover → news:verify；raw discovery snapshots 使用日期目錄保存，不使用自動發布引擎。
 - 從政歷程：fetch scripts → political-career:build → political-career:report。
 - 政策／歷程分類：policy-career:build 讀取決定性 curation overrides。
 - 家族關係：political-family:generate；發布資格由獨立驗證、職務證據與完整性規則決定。

@@ -1,0 +1,38 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-10-e768fad7",
+  "candidateName": "李絃毅",
+  "researchedAt": "2026-11-20T13:25:06.157Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "李絃毅",
+      "fetchedAt": "2026-11-20T13:25:04.477Z",
+      "httpStatus": 404,
+      "documentSha256": "940c767d49e88f5bde72645d707789f3caf96286fc7c0388245947f5172709c9",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "李絃毅",
+      "fetchedAt": "2026-11-20T13:25:05.089Z",
+      "httpStatus": 200,
+      "documentSha256": "dff5b42d0e3cf67b027435153775adfa75fe248e0f8fb95c15e35d8a758b9cce",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "李絃毅",
+      "fetchedAt": "2026-11-20T13:25:05.684Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": []
+}

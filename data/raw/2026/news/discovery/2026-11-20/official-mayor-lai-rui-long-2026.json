@@ -1,0 +1,188 @@
+{
+  "candidateId": "official-mayor-lai-rui-long-2026",
+  "candidateName": "賴瑞隆",
+  "researchedAt": "2026-11-20T13:24:45.860Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "賴瑞隆",
+      "fetchedAt": "2026-11-20T13:24:41.339Z",
+      "httpStatus": 200,
+      "documentSha256": "98a3ac06b2f2e3e72698480aba44f8f57bd7d40e982bc76960787139cb8f5f7e",
+      "status": "results",
+      "resultCount": 13,
+      "error": null
+    },
+    {
+      "sourceId": "ltn",
+      "query": "賴瑞隆 高雄市長",
+      "fetchedAt": "2026-11-20T13:24:42.320Z",
+      "httpStatus": 200,
+      "documentSha256": "6dd4d09ba4dabe5cf8e3de9d5233217d21261ae16eb1992f05f57ca2b301e979",
+      "status": "results",
+      "resultCount": 16,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "賴瑞隆",
+      "fetchedAt": "2026-11-20T13:24:43.436Z",
+      "httpStatus": 200,
+      "documentSha256": "83c714df21bf1d76ea337b9ae2f4560ee60f855885cef34b7c31446ca18f01e1",
+      "status": "results",
+      "resultCount": 1,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "賴瑞隆 高雄市長",
+      "fetchedAt": "2026-11-20T13:24:44.088Z",
+      "httpStatus": 200,
+      "documentSha256": "01c4b1297dbc93368c12205d7d829a556a7e5af534083c1939c5d6bd32b02cd1",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "賴瑞隆",
+      "fetchedAt": "2026-11-20T13:24:44.814Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    },
+    {
+      "sourceId": "cna",
+      "query": "賴瑞隆 高雄市長",
+      "fetchedAt": "2026-11-20T13:24:45.340Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5648088",
+      "headline": "賴瑞隆三民區大車掃 豐裕里長特製人形牌強力應援",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5647759",
+      "headline": "柯文哲表態支持柯志恩 賴瑞隆回應了",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5647516",
+      "headline": "賴瑞隆赴苗栗陪車掃 陳品安、林月琴盼借鏡高雄轉型經驗",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5647269",
+      "headline": "賴瑞隆大旗美造勢明天登場 搖滾區開放報名秒殺",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1779164",
+      "headline": "市場拜票 賴瑞隆︰鳳山是未來發展重鎮",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1779199",
+      "headline": "高屏澎選戰》賴瑞隆周春米吳淑瑾合體催票 柯志恩持續大車掃",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646522",
+      "headline": "賴瑞隆高雄大車掃 女跑者一路追風",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646469",
+      "headline": "過去4年立院「高雄地方發展」發言 網揭賴瑞隆56次柯志恩僅3次",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646318",
+      "headline": "賴瑞隆合體周春米、吳淑瑾 端出家鄉味呼喚南部囝仔返鄉投票",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646293",
+      "headline": "邱于軒指控選前之夜動員義消參加 賴瑞隆回應了",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5646057",
+      "headline": "賴瑞隆走訪鳳山共同市場拜票受歡迎 支持者高喊當選！",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1779065",
+      "headline": "賴瑞隆旗山vs.柯志恩鳳山 週六拚場",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5645611",
+      "headline": "林智鴻政見發表會喊「戒慎恐懼」 籲選民堅定相挺",
+      "publicationDate": null,
+      "query": "賴瑞隆"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5645587",
+      "headline": "簽消防改革承諾書 賴瑞隆：補人力、降工時、合理加班費",
+      "publicationDate": null,
+      "query": "賴瑞隆 高雄市長"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5644517",
+      "headline": "賴瑞隆黃金週大旗美團結應援大會 大師兄、蔡總機、陳三歲都上陣",
+      "publicationDate": null,
+      "query": "賴瑞隆 高雄市長"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/paper/1778934",
+      "headline": "賴瑞隆市場掃街 「一路買5包」成特色",
+      "publicationDate": null,
+      "query": "賴瑞隆 高雄市長"
+    },
+    {
+      "sourceId": "ettoday",
+      "url": "https://www.ettoday.net/news/20261119/3274975.htm",
+      "headline": "酥炸土魠魚催票！賴瑞隆揪周春米、吳淑瑾：南部囝仔返鄉投票",
+      "publicationDate": "2026-11-19",
+      "query": "賴瑞隆"
+    }
+  ]
+}

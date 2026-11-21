@@ -1,0 +1,46 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-council-08-4a8b9046",
+  "candidateName": "鄒約翰",
+  "researchedAt": "2026-11-20T13:25:01.187Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "鄒約翰",
+      "fetchedAt": "2026-11-20T13:24:59.502Z",
+      "httpStatus": 200,
+      "documentSha256": "19789db74e27b4c5e59c8a3a869136e0cc49851eb6565900e26e950fc64f511c",
+      "status": "results",
+      "resultCount": 1,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "鄒約翰",
+      "fetchedAt": "2026-11-20T13:25:00.171Z",
+      "httpStatus": 200,
+      "documentSha256": "04d721069cab511b96d6eda3541431e13bc0809f908f31dd1e10443b7324cfe5",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "鄒約翰",
+      "fetchedAt": "2026-11-20T13:25:00.715Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5562721",
+      "headline": "參選高市議員 公民老師張藝璉學習增閱歷、退役軍官鄒約翰為勞工發聲",
+      "publicationDate": "2026-09-04",
+      "query": "鄒約翰"
+    }
+  ]
+}

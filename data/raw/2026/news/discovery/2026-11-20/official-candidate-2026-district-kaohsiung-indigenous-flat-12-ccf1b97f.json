@@ -1,0 +1,60 @@
+{
+  "candidateId": "official-candidate-2026-district-kaohsiung-indigenous-flat-12-ccf1b97f",
+  "candidateName": "巫振興",
+  "researchedAt": "2026-11-20T13:25:08.404Z",
+  "attempts": [
+    {
+      "sourceId": "ltn",
+      "query": "巫振興",
+      "fetchedAt": "2026-11-20T13:25:06.516Z",
+      "httpStatus": 200,
+      "documentSha256": "d55edc4b0ff16bf8540bde57e467373f797eb6f0a81032fa7e716a079ad4c511",
+      "status": "results",
+      "resultCount": 3,
+      "error": null
+    },
+    {
+      "sourceId": "ettoday",
+      "query": "巫振興",
+      "fetchedAt": "2026-11-20T13:25:07.362Z",
+      "httpStatus": 200,
+      "documentSha256": "e37c8cfd7989bf7a6e8d263961c8cda951100cdcfd8c8233dfe31b0f065b7096",
+      "status": "no-results",
+      "resultCount": 0,
+      "error": null
+    },
+    {
+      "sourceId": "cna",
+      "query": "巫振興",
+      "fetchedAt": "2026-11-20T13:25:07.882Z",
+      "httpStatus": 429,
+      "documentSha256": "6ff059e12183cc1b0cea42b12c922ecedd2c6400fc4948d4e257b9fcbb152515",
+      "status": "source-error",
+      "resultCount": 0,
+      "error": "HTTP 429"
+    }
+  ],
+  "hits": [
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/life/paper/1765049",
+      "headline": "原住民日 賴瑞隆提7項政策、守護族人權益",
+      "publicationDate": "2026-08-02",
+      "query": "巫振興"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5524932",
+      "headline": "迎接0801原住民日 賴瑞隆與族人一起製作「杜侖」、「吉拿富」",
+      "publicationDate": "2026-08-01",
+      "query": "巫振興"
+    },
+    {
+      "sourceId": "ltn",
+      "url": "https://news.ltn.com.tw/news/politics/breakingnews/5522081",
+      "headline": "綠徵召原民6帥搶攻四都議會 賴清德：讓族人聲音被聽見",
+      "publicationDate": "2026-07-29",
+      "query": "巫振興"
+    }
+  ]
+}

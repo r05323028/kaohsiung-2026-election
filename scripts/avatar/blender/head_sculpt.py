@@ -46,6 +46,8 @@ import head_kit  # noqa: E402  (needs the sys.path mutation above)
 
 TAU = math.tau
 HEAD_Z_TOP = 1.017
+
+
 DEBUG = bool(os.environ.get("HEAD_SCULPT_DEBUG"))
 
 
@@ -117,9 +119,9 @@ class Style:
         self.eye_hw = 0.054 + 0.042 * num(params, "eyeSize", 0.55)
         self.eye_hh = 0.030 + 0.018 * num(params, "eyeHeight", 0.48)
         self.eye_tilt = num(params, "eyeTilt", 0.0) * 10.0  # degrees
-        self.iris_r = 0.028 + 0.012 * num(params, "eyeSize", 0.55)
+        self.iris_r = 0.032 + 0.012 * num(params, "eyeSize", 0.55)
 
-        self.brow_hh = 0.0100 + 0.0100 * num(params, "eyebrowThickness", 0.4)
+        self.brow_hh = 0.0075 + 0.0075 * num(params, "eyebrowThickness", 0.4)
         self.brow_angle = num(params, "eyebrowAngle", 0.0)
 
         self.nose_w = 0.052 + 0.055 * num(params, "noseWidth", 0.4)
@@ -279,13 +281,79 @@ def tube(path, radius_of, material: bpy.types.Material, name: str, sides: int = 
 # ------------------------------------------------------------- deformation
 
 
-def sculpt_shell(obj: bpy.types.Object, st: Style) -> None:
+NOSE_AMPLITUDE = [
+    (0.00, 0.00),
+    (0.18, 0.10),
+    (0.38, 0.32),
+    (0.56, 0.62),
+    (0.72, 0.88),
+    (0.82, 1.00),
+    (0.90, 0.98),
+    (0.98, 0.72),
+    (1.05, 0.30),
+    (1.10, 0.00),
+]
+
+
+NOSE_WIDTH = [
+    (0.00, 0.24),
+    (0.20, 0.32),
+    (0.40, 0.46),
+    (0.58, 0.62),
+    (0.72, 0.58),
+    (0.84, 0.80),
+    (0.92, 1.00),
+    (1.00, 0.80),
+    (1.10, 0.22),
+]
+
+
+NOSE_POWER = [(0.00, 1.65), (0.70, 1.50), (1.10, 1.85)]
+
+
+NOSE_ROOT_Z = 0.490
+
+
+NOSE_SPAN = 0.170
+
+
+def nose_amplitude(st) -> float:
+    return 0.86 * st.nose_len
+
+
+def nose_half_width(st) -> float:
+    return 1.02 * st.nose_w
+
+
+def nose_depth(st, x: float, z: float) -> float:
+    """Forward projection of the nose mass at (x, z); zero at the silhouette."""
+    u = (NOSE_ROOT_Z - z) / NOSE_SPAN
+    if u <= 0.0 or u >= 1.10:
+        return 0.0
+    amp = table_lookup(NOSE_AMPLITUDE, u)
+    wide = table_lookup(NOSE_WIDTH, u)
+    power = table_lookup(NOSE_POWER, u)
+    alar = 0.42 * gauss(u, 0.900, 0.075) * gauss(abs(x), 0.62 * nose_half_width(st), 0.30 * nose_half_width(st))
+    amplitude = nose_amplitude(st) * (amp + alar)
+    half = nose_half_width(st) * wide
+    if half <= 1e-6:
+        return 0.0
+    ax = min(1.0, abs(x) / half)
+    # cos^p is smooth at the crest and at the silhouette: no fin edge.
+    return amplitude * math.cos(0.5 * math.pi * ax) ** power
+
+
+def nose_front_y(surface, st, x: float, z: float) -> float:
+    return surface.front_y(x, z, fallback=-0.44) - nose_depth(st, x, z)
+
+
+def sculpt_shell(obj, st):
     """Apply the additive anatomical fields to the imported head shell."""
     mesh = obj.data
     eye_cx = st.eye_cx
     eye_cz = st.eye_cz
     jaw_gain = (0.030 + 0.090 * st.jaw) * st.b_jaw
-    chin_push = (0.012 + 0.026 * (1.0 - st.chin_round)) * st.b_chin
+    chin_push = (0.014 + 0.030 * (1.0 - st.chin_round)) * st.b_chin
 
     for vert in mesh.vertices:
         x, y, z = vert.co
@@ -295,13 +363,17 @@ def sculpt_shell(obj: bpy.types.Object, st: Style) -> None:
 
         # 1. jaw band widening: the widest point of a square face sits low.
         x *= 1.0 + jaw_gain * gauss(nz, 0.225, 0.130)
-        gonion = gauss(nz, 0.245, 0.095) * gauss(ax, 0.88, 0.20) * st.b_jaw
+        gonion = gauss(nz, 0.255, 0.075) * gauss(ax, 0.90, 0.155) * st.b_jaw
         if x:
-            x += math.copysign(0.050 * gonion, x)
+            x += math.copysign(0.045 * gonion, x)
 
-        # 2. chin: forward mass, wide rather than pointed.
-        chin = gauss(nz, 0.135, 0.080) * gauss(x / 0.514, 0.0, 0.34) * front
+        # 2. chin: forward mass, narrower than the jaw so the corner reads.
+        chin = gauss(nz, 0.130, 0.070) * gauss(x / 0.514, 0.0, 0.26) * front
         y -= chin_push * chin
+
+        # 2b. jaw plane: a flat front plane instead of a round cheek barrel.
+        jaw_plane = gauss(nz, 0.200, 0.095) * gauss(ax, 0.72, 0.20) * front
+        y -= 0.016 * jaw_plane * st.b_jaw
 
         # 3. cheekbones: lateral + slight forward.
         cheek_z = gauss(nz, 0.415, 0.070)
@@ -318,8 +390,8 @@ def sculpt_shell(obj: bpy.types.Object, st: Style) -> None:
             * (0.45 + 0.85 * st.cheek)
             * st.b_jowl
         )
-        x += math.copysign(0.016 * jowl, x) if x else 0.0
-        y -= 0.007 * jowl
+        x += math.copysign(0.011 * jowl, x) if x else 0.0
+        y -= 0.004 * jowl
 
         # 5. eye sockets: recess so the eyeball has somewhere to sit.
         socket = 0.0
@@ -352,8 +424,13 @@ def sculpt_shell(obj: bpy.types.Object, st: Style) -> None:
         # 10. cranium: taper the crown instead of leaving a perfect dome.
         x *= 1.0 - 0.030 * sstep(0.80, 1.02, nz)
 
+        # 11. lower face: a shallow taper keeps the chin square, not pointed.
+        x *= 1.0 - 0.08 * sstep(0.32, 0.02, nz)
+
         vert.co = Vector((x, y, z))
     mesh.update()
+
+
 
 
 # -------------------------------------------------------------------- hair
@@ -380,41 +457,69 @@ REPLACED_BASE_OBJECTS = (
 # the skull (+Y), 0 / 180 are the sides. The hairline sits highest over the
 # brow, drops over the temples and runs low at the nape.
 HAIRLINE_TABLE = [
-    (-180.0, 0.512),
-    (-160.0, 0.560),
-    (-135.0, 0.612),
-    (-112.0, 0.652),
-    (-90.0, 0.668),
-    (-68.0, 0.672),
-    (-45.0, 0.632),
-    (-22.0, 0.586),
-    (0.0, 0.534),
-    (22.0, 0.518),
-    (50.0, 0.442),
-    (90.0, 0.302),
-    (130.0, 0.342),
-    (160.0, 0.440),
-    (180.0, 0.512),
+    (-180.0, 0.508),
+    (-165.0, 0.552),
+    (-148.0, 0.618),
+    (-130.0, 0.664),
+    (-112.0, 0.694),
+    (-96.0, 0.702),
+    (-80.0, 0.700),
+    (-62.0, 0.686),
+    (-44.0, 0.638),
+    (-25.0, 0.576),
+    (0.0, 0.528),
+    (22.0, 0.514),
+    (50.0, 0.446),
+    (90.0, 0.318),
+    (130.0, 0.350),
+    (160.0, 0.442),
+    (180.0, 0.508),
 ]
 
 
-def hairline_height_of_angle(angle: float, st: Style) -> float:
+
+
+def hairline_height_of_angle(angle: float, st) -> float:
+    # The cap sweeps theta from -180 to 180 while the table is authored on
+    # -180..180 around the face axis, so folds past the seam have to wrap.
+    angle = (angle + 180.0) % 360.0 - 180.0
     height = table_lookup(HAIRLINE_TABLE, angle)
     if st.hair_style in ("short-side-part", "side-sweep", "slick-back"):
-        # Side part on the wearer's right (-X): the fringe is combed across the
-        # brow toward +X, so the hairline dips on that side and lifts at the part.
-        dipped = 0.085 * gauss(angle, -42.0, 26.0)
-        lifted = 0.075 * gauss(angle, -142.0, 26.0)
-        height += lifted - dipped
+        # Part on the wearer's right (-X): the hair is combed across the brow,
+        # so the hairline lifts at the part and sits lower on the swept side.
+        height += 0.028 * gauss(angle, -128.0, 22.0)
+        height -= 0.042 * gauss(angle, -34.0, 30.0)
     if st.hair_style == "bald":
         return 2.0
     return height
 
 
+
+
 SKULL_CENTRE = Vector((0.0, -0.008, 0.52))
 
 
-def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
+
+
+PART_A = Vector((-0.112, -0.480, 0.0))
+
+
+PART_B = Vector((-0.152, 0.400, 0.0))
+
+
+def part_distance(x: float, y: float) -> float:
+    """Distance from (x, y) to the parting line, in the horizontal plane."""
+    ab = PART_B - PART_A
+    ap = Vector((x - PART_A.x, y - PART_A.y, 0.0))
+    denom = ab.x * ab.x + ab.y * ab.y
+    t = clamp((ap.x * ab.x + ap.y * ab.y) / denom) if denom else 0.0
+    closest = PART_A + ab * t
+    return math.hypot(x - closest.x, y - closest.y)
+
+
+
+
+def build_hair(surface, st, material):
     """Procedural hair cap conforming to the skull, cut on the analytic hairline.
 
     The cap is parameterised by direction from the skull centre instead of by
@@ -425,21 +530,17 @@ def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
     if st.hair_style == "bald":
         return None
 
-    theta_steps = 72
-    row_steps = 13
-    crown = 0.030 + 0.058 * st.hair_volume
+    theta_steps = 88
+    row_steps = 15
+    crown = 0.022 + 0.036 * st.hair_volume
 
     top_phi = 82.0
     bottoms = []
     for column in range(theta_steps):
         theta = -180.0 + 360.0 * column / theta_steps
-        # z = centre.z + R * sin(phi)  ->  invert the hairline height.
         target = (hairline_height_of_angle(theta - 90.0, st) - SKULL_CENTRE.z) / 0.505
         bottoms.append(max(-52.0, min(60.0, math.degrees(math.asin(clamp(target, -0.86, 0.86))))))
 
-    # Sample the skull once per grid node. Rays that graze the surface return
-    # noisy radii, so smooth them around the ring before they reach the mesh;
-    # unsmoothed radii show up as a saw-tooth hairline on the far side.
     directions = []
     skull_radius = []
     for column in range(theta_steps):
@@ -449,7 +550,7 @@ def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
         radii = []
         for row in range(row_steps):
             t = row / (row_steps - 1)
-            phi = lerp(top_phi, bottom, t ** 0.86)
+            phi = lerp(top_phi, bottom, t**0.70)
             direction = direction_of(theta, phi)
             hit, _normal = surface.cast(SKULL_CENTRE, direction)
             dirs.append(direction)
@@ -469,34 +570,33 @@ def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
     verts = []
     for column in range(theta_steps):
         theta = -180.0 + 360.0 * column / theta_steps
+        angle = theta - 90.0
         for row in range(row_steps):
             t = row / (row_steps - 1)
             direction = directions[column][row]
             radius = max(skull_radius[column][row], smoothed[column][row])
-            rise = sstep(0.0, 1.0, 1.0 - t)
-            thickness = 0.0090 + crown * rise
-            # Comb groove along the part on the wearer's right.
             px = SKULL_CENTRE.x + direction.x * radius
             py = SKULL_CENTRE.y + direction.y * radius
-            part_x = -0.115 - 0.10 * (py + 0.45) / 0.55
-            groove = gauss(px - part_x, 0.0, 0.018) * sstep(0.45, 0.12, t)
-            thickness *= 1.0 - 0.30 * groove
-            thickness *= 1.0 - 0.22 * sstep(0.72, 1.0, t)
-            # Fringe: the front rows hang out over the brow instead of hugging
-            # the skull, which is what reads as combed hair rather than a cap.
-            angle = theta - 90.0
-            thickness += (
-                0.030
-                * gauss(angle, -96.0, 62.0)
-                * sstep(0.40, 1.0, t)
-                * (1.0 - 0.75 * sstep(0.88, 1.0, t))
-            )
-            # A little side weight so the silhouette is not a perfect dome.
-            thickness *= 1.0 + 0.14 * gauss(angle, 6.0, 40.0)
-            # The rim sits just proud of the scalp; the shell is closed below by
-            # an inward skirt (see below) so the far side never shows the open
-            # underside of the shell as a saw-tooth edge.
-            thickness = lerp(thickness, 0.0025, sstep(0.90, 1.0, t))
+            rise = sstep(0.0, 1.0, 1.0 - t)
+            thickness = 0.0075 + crown * rise
+
+            # Parting: a groove from the hairline back over the crown, with the
+            # mass building on the combed side of the line.
+            gap = part_distance(px, py)
+            groove = gauss(gap, 0.0, 0.026)
+            thickness *= 1.0 - 0.92 * groove
+            # The combed side rides higher, so the parting reads as a step.
+            side = (py - PART_A.y) * (PART_B.x - PART_A.x) - (px - PART_A.x) * (PART_B.y - PART_A.y)
+            thickness += 0.010 * sstep(-0.014, 0.014, side) * sstep(0.02, 0.16, t)
+
+            # Fringe: the front rows lift off the brow and sweep across it.
+            thickness += 0.012 * gauss(angle, -108.0, 46.0) * sstep(0.35, 0.92, t) * (1.0 - 0.7 * sstep(0.90, 1.0, t))
+            # Comb relief keeps the shell from reading as a moulded helmet.
+            thickness += 0.0024 * math.sin(math.radians(theta) * 11.0) * gauss(angle, -90.0, 95.0) * sstep(0.25, 0.80, t)
+            # Side weight so the silhouette is not a perfect dome.
+            thickness *= 1.0 + 0.12 * gauss(angle, 4.0, 38.0)
+            # The rim thins towards the hairline: no hard black band.
+            thickness = lerp(thickness, 0.0016, sstep(0.82, 1.0, t) * (1.0 - 0.55 * groove))
             verts.append(SKULL_CENTRE + direction * (radius + thickness))
 
     faces = []
@@ -507,7 +607,6 @@ def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
             b = nxt * row_steps + row
             faces.append((a, b + 1, a + 1))
             faces.append((a, b, b + 1))
-    # Close the crown with a fan through the pole.
     pole = len(verts)
     top_hit, _top_normal = surface.cast(SKULL_CENTRE, Vector((0.0, 0.0, 1.0)))
     top_radius = (top_hit - SKULL_CENTRE).length if top_hit is not None else 0.497
@@ -515,8 +614,6 @@ def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
     for column in range(theta_steps):
         nxt = (column + 1) % theta_steps
         faces.append((pole, column * row_steps, nxt * row_steps))
-    # Inward skirt at the hairline: without it the shell is a single-sided cap
-    # and the open rim shows the scalp through it wherever the rim is seen edge-on.
     inner_ring = []
     for column in range(theta_steps):
         direction = directions[column][row_steps - 1]
@@ -534,9 +631,11 @@ def build_hair(surface: Surface, st: Style, material) -> bpy.types.Object:
     return obj
 
 
-def direction_of(theta_deg: float, phi_deg: float) -> Vector:
-    theta = math.radians(theta_deg)
-    phi = math.radians(phi_deg)
+
+
+def direction_of(theta: float, phi: float) -> Vector:
+    theta = math.radians(theta)
+    phi = math.radians(phi)
     return Vector(
         (
             math.sin(theta) * math.cos(phi),
@@ -549,36 +648,37 @@ def direction_of(theta_deg: float, phi_deg: float) -> Vector:
 # -------------------------------------------------------------------- face
 
 
-def build_eye(surface: Surface, st: Style, sign: float, materials) -> list:
-    """Almond eye patch that hugs the face, plus iris and highlight."""
+def build_eye(surface, st, sign: float, materials):
+    """Almond sclera, seated iris and a lash line, all flush with the face."""
     cx = sign * st.eye_cx
     cz = st.eye_cz
     hw = st.eye_hw
     hh = st.eye_hh
     tilt = math.radians(st.eye_tilt * -sign)
     cs, sn = math.cos(tilt), math.sin(tilt)
+    power = 1.55
 
-    rings, segs = 4, 20
-    verts = []
-    center = surface.front_point(cx, cz)
-    verts.append(center + Vector((0.0, -0.004, 0.0)))
+    def rim(angle: float, radius: float):
+        superellipse = 1.0 / (
+            abs(math.cos(angle)) ** power + abs(math.sin(angle)) ** power
+        ) ** (1.0 / power)
+        ex = math.cos(angle) * superellipse * hw * radius
+        ez = math.sin(angle) * superellipse * hh * radius
+        return cx + ex * cs - ez * sn, cz + ex * sn + ez * cs
+
+    def patch(x: float, z: float, radius: float) -> Vector:
+        return surface.front_point(x, z) + Vector(
+            (0.0, -(0.0022 * (1.0 - radius * radius) + 0.0006), 0.0)
+        )
+
+    rings, segs = 4, 24
+    verts = [patch(cx, cz, 0.0)]
     for ring in range(1, rings + 1):
-        radius = ring / rings
         for step in range(segs):
-            angle = TAU * step / segs
-            superellipse = 1.0 / (
-                abs(math.cos(angle)) ** 1.55 + abs(math.sin(angle)) ** 1.55
-            ) ** (1.0 / 1.55)
-            ex = math.cos(angle) * superellipse * hw * radius
-            ez = math.sin(angle) * superellipse * hh * radius
-            # tilted almond: outer corner slightly higher
-            px = cx + ex * cs - ez * sn
-            pz = cz + ex * sn + ez * cs
-            point = surface.front_point(px, pz)
-            bulge = 0.009 * (1.0 - radius * radius) + 0.004
-            verts.append(point + Vector((0.0, -bulge, 0.0)))
+            px, pz = rim(TAU * step / segs, ring / rings)
+            verts.append(patch(px, pz, ring / rings))
     faces = []
-    for step in range(segs):  # centre fan
+    for step in range(segs):
         faces.append((0, 1 + step, 1 + (step + 1) % segs))
     for ring in range(rings - 1):
         offset = 1 + ring * segs
@@ -590,119 +690,99 @@ def build_eye(surface: Surface, st: Style, sign: float, materials) -> list:
     eye = new_object("EyePatch", verts, faces, materials["EyeWhite"])
     recalc_normals(eye)
 
-    # Iris: shallow dome riding on the eye surface.
-    iris_verts = []
+    # Iris: a shallow dome seated on the sclera, dead ahead of the socket.
+    radius = st.iris_r
+    iris_centre = surface.front_point(cx, cz)
+    plane = iris_centre.y - 0.0034
+    iris_verts = [Vector((cx, plane - 0.0011, cz - 0.001))]
     iris_faces = []
-    iris_c = Vector((cx + sign * 0.004, 0.0, cz - 0.002))
-    iris_point = surface.front_point(iris_c.x, iris_c.z) + Vector((0.0, -0.012, 0.0))
-    iris_verts.append(iris_point)
-    seg = 18
-    for step in range(seg):
-        angle = TAU * step / seg
-        iris_verts.append(
-            iris_point
-            + Vector(
-                (
-                    math.cos(angle) * st.iris_r,
-                    0.0035,
-                    math.sin(angle) * st.iris_r * 1.06,
-                )
-            )
-        )
-    for step in range(seg):
-        iris_faces.append((0, 1 + step, 1 + (step + 1) % seg))
-    iris = new_object("Iris", iris_verts, iris_faces, materials["Eye"])
-    recalc_normals(iris)
-
-    # Catch-light: a small sphere keeps a soft specular-ish dot.
-    hl = []
-    hl_faces = []
-    hl_r = st.iris_r * 0.34
-    hl_c = iris_point + Vector((-st.iris_r * 0.34, -0.004, st.iris_r * 0.36))
-    steps, slices = 6, 8
-    hl.append(hl_c + Vector((0.0, 0.0, hl_r)))
-    for i in range(1, steps):
-        phi = math.pi * i / steps
-        for j in range(slices):
-            theta = TAU * j / slices
-            hl.append(
-                hl_c
-                + Vector(
+    ring_radii = (0.55, 1.0)
+    for index, ring in enumerate(ring_radii):
+        for step in range(segs):
+            angle = TAU * step / segs
+            iris_verts.append(
+                Vector(
                     (
-                        math.sin(phi) * math.cos(theta) * hl_r,
-                        math.sin(phi) * math.sin(theta) * hl_r * 0.7,
-                        math.cos(phi) * hl_r,
+                        cx + math.cos(angle) * radius * ring,
+                        plane - 0.0011 * (1.0 - ring * ring),
+                        cz - 0.001 + math.sin(angle) * radius * ring * 1.02,
                     )
                 )
             )
-    hl.append(hl_c - Vector((0.0, 0.0, hl_r)))
-    bottom = len(hl) - 1
-    for j in range(slices):
-        hl_faces.append((0, 1 + (j + 1) % slices, 1 + j))
-    for i in range(steps - 2):
-        base = 1 + i * slices
-        nxt = base + slices
-        for j in range(slices):
-            hl_faces.append(
+    for step in range(segs):
+        iris_faces.append((0, 1 + step, 1 + (step + 1) % segs))
+    base = 1 + segs
+    for step in range(segs):
+        a = 1 + step
+        b = 1 + (step + 1) % segs
+        iris_faces.append((a, base + step, base + (step + 1) % segs, b))
+    iris = new_object("Iris", iris_verts, iris_faces, materials["Eye"])
+    recalc_normals(iris)
+
+    # Catch-light: a flat disc on the upper outer quadrant of the iris.
+    highlight_radius = radius * 0.30
+    hl_cx = cx + sign * radius * 0.30
+    hl_cz = cz + radius * 0.34
+    hl_y = plane - 0.0019
+    hl_verts = [Vector((hl_cx, hl_y, hl_cz))]
+    hl_faces = []
+    hl_segs = 12
+    for step in range(hl_segs):
+        angle = TAU * step / hl_segs
+        hl_verts.append(
+            Vector(
                 (
-                    base + j,
-                    base + (j + 1) % slices,
-                    nxt + (j + 1) % slices,
-                    nxt + j,
+                    hl_cx + math.cos(angle) * highlight_radius,
+                    hl_y,
+                    hl_cz + math.sin(angle) * highlight_radius,
                 )
             )
-    base = 1 + (steps - 2) * slices
-    for j in range(slices):
-        hl_faces.append((bottom, base + j, base + (j + 1) % slices))
-    highlight = new_object("EyeGlint", hl, hl_faces, materials["EyeHighlight"])
+        )
+    for step in range(hl_segs):
+        hl_faces.append((0, 1 + step, 1 + (step + 1) % hl_segs))
+    highlight = new_object("EyeGlint", hl_verts, hl_faces, materials["EyeHighlight"])
     recalc_normals(highlight)
 
-    # Upper lid line: follows the almond's upper rim and gives the eye a fold.
-    lash = []
-    lash_faces = []
-    count = 16
-    for step in range(count + 1):
-        angle = math.pi * (0.06 + 0.88 * step / count)
-        superellipse = 1.0 / (
-            abs(math.cos(angle)) ** 1.55 + abs(math.sin(angle)) ** 1.55
-        ) ** (1.0 / 1.55)
-        ex = math.cos(angle) * superellipse * hw
-        ez = math.sin(angle) * superellipse * hh
-        px = cx + ex * cs - ez * sn
-        pz = cz + ex * sn + ez * cs
-        point = surface.front_point(px, pz) + Vector((0.0, -0.006, 0.0))
-        taper = 0.004 + 0.0055 * math.sin(math.pi * step / count)
-        lash.append(point + Vector((0.0, 0.0, taper)))
-        lash.append(point + Vector((0.0, 0.0, -taper * 0.55)))
-    for index in range(count):
-        a = index * 2
-        lash_faces.append((a, a + 2, a + 3, a + 1))
-    lid = new_object("Lid", lash, lash_faces, materials["Brow"])
-    recalc_normals(lid)
-    return [eye, iris, highlight, lid]
-
-
-def build_brow(surface: Surface, st: Style, sign: float, material):
+    # Lash line: a tapered band along the upper rim of the almond.
+    count = 18
     stations = []
-    count = 12
-    x_in = 0.044
-    x_out = 0.044 + st.eye_hw * 2.0 + 0.095
+    for step in range(count + 1):
+        t = step / count
+        angle = math.pi * (0.02 + 0.96 * t)
+        px, pz = rim(angle, 1.0)
+        point = surface.front_point(px, pz) + Vector((0.0, -0.0036, 0.0))
+        taper = 0.0038 * (0.30 + 0.70 * math.sin(math.pi * clamp(t)) ** 0.55)
+        stations.append((point + Vector((0.0, 0.0, taper)), point + Vector((0.0, 0.0, -taper * 0.45))))
+    lash = ribbon(stations, materials["Brow"], "Lash")
+    return [eye, iris, highlight, lash]
+
+
+
+
+def build_brow(surface, st, sign: float, material):
+    stations = []
+    count = 14
+    x_in = 0.052
+    x_out = 0.052 + st.eye_hw * 2.0 + 0.074
     for step in range(count + 1):
         t = step / count
         x = sign * lerp(x_in, x_out, t)
-        # gentle arch peaking laterally, outer end dropping
         z = (
-            0.494
-            + 0.007 * math.sin(math.pi * min(1.0, t * 1.25))
-            - 0.022 * sstep(0.60, 1.0, t)
+            0.486
+            - 0.004 * sstep(0.14, 0.0, t)
+            + 0.010 * math.sin(math.pi * min(1.0, t * 1.35))
+            - 0.014 * sstep(0.72, 1.0, t)
             + st.brow_angle * 0.012 * t
         )
-        point = surface.front_point(x, z) + Vector((0.0, -0.006, 0.0))
-        height = st.brow_hh * (0.55 + 0.65 * math.sin(math.pi * clamp(t * 1.15 + 0.1)))
+        point = surface.front_point(x, z) + Vector((0.0, -0.0036, 0.0))
+        profile = math.sin(math.pi * clamp(0.02 + 0.96 * t)) ** 1.15
+        height = st.brow_hh * (0.28 + 1.00 * profile)
         stations.append(
-            (point + Vector((0.0, 0.0, height)), point + Vector((0.0, 0.0, -height)))
+            (point + Vector((0.0, 0.0, height)), point + Vector((0.0, 0.0, -height * 0.80)))
         )
     return ribbon(stations, material, "Brow")
+
+
 
 
 def ellipsoid(centre: Vector, radii: tuple, material, name: str,
@@ -745,113 +825,86 @@ def ellipsoid(centre: Vector, radii: tuple, material, name: str,
     return obj
 
 
-def build_nose(surface: Surface, st: Style, materials):
-    """Bridge wedge plus a round tip and alae, the classic chibi nose mass."""
-    tip_z = st.nose_tip_z + 0.014
-    root_z = st.nose_root_z - 0.020
-    tip_front = surface.front_y(0.0, tip_z, fallback=-0.46)
-    parts = []
-
-    # Bulb
-    bulb_c = Vector((0.0, tip_front - st.nose_len * 0.52, tip_z))
-    parts.append(
-        ellipsoid(
-            bulb_c,
-            (st.nose_w * 0.30 + 0.010, st.nose_len * 0.72, 0.019),
-            materials["Skin"],
-            "NoseTip",
-            segments=14,
-            rings=10,
-        )
-    )
-
-    # Alae
-    for sign in (-1.0, 1.0):
-        ala_c = Vector(
-            (sign * (st.nose_w * 0.26 + 0.005), tip_front - st.nose_len * 0.26, tip_z - 0.005)
-        )
-        parts.append(
-            ellipsoid(
-                ala_c,
-                (st.nose_w * 0.17 + 0.005, st.nose_len * 0.52, 0.013),
-                materials["Skin"],
-                "NoseAla",
-                segments=10,
-                rings=7,
-            )
-        )
-
-    # Bridge: narrow loft from between the brows down to the bulb.
-    rings, segs = 8, 14
+def build_nose(surface, st, materials):
+    """Single conforming loft: bridge, tip and alae in one welded surface."""
+    rows, cols = 15, 23
     verts = []
-    for ring in range(rings):
-        t = ring / (rings - 1)
-        z = lerp(root_z, tip_z - 0.004, t)
-        base_y = surface.front_y(0.0, z, fallback=-0.44)
-        width = lerp(0.013, st.nose_w * 0.24 + 0.007, sstep(0.0, 0.85, t))
-        protrusion = st.nose_len * (0.10 + 0.76 * sstep(-0.15, 0.60, t))
-        y_front = base_y - protrusion
-        y_back = base_y + 0.026
-        y_mid = 0.5 * (y_front + y_back)
-        y_rad = 0.5 * (y_back - y_front)
-        for step in range(segs):
-            angle = TAU * step / segs
-            px = width * math.copysign(abs(math.cos(angle)) ** 0.75, math.cos(angle))
-            py = y_mid + y_rad * math.sin(angle)
-            verts.append(Vector((px, py, z)))
-    faces = grid_faces(rings, segs, closed_cols=True)
-    top = len(verts)
-    verts.append(Vector((0.0, surface.front_y(0.0, root_z) + 0.008, root_z + 0.006)))
-    bottom = len(verts)
-    verts.append(Vector((0.0, tip_front - st.nose_len * 0.55, tip_z - 0.020)))
-    for step in range(segs):
-        nxt = (step + 1) % segs
-        faces.append((top, nxt, step))
-        last = (rings - 1) * segs
-        faces.append((bottom, last + step, last + nxt))
-    parts.append(new_object("NoseBridge", verts, faces, materials["Skin"]))
-    recalc_normals(parts[-1])
+    for row in range(rows):
+        u = 1.10 * row / (rows - 1)
+        z = NOSE_ROOT_Z - u * NOSE_SPAN
+        wide = table_lookup(NOSE_WIDTH, u)
+        half = nose_half_width(st) * wide
+        for col in range(cols):
+            x = lerp(-half, half, col / (cols - 1))
+            base = surface.front_y(x, z, fallback=-0.44)
+            depth = nose_depth(st, x, z)
+            verts.append(Vector((x, base + 0.0015 - depth, z)))
+    obj = new_object("Nose", verts, grid_faces(rows, cols), materials["Skin"])
+    recalc_normals(obj)
+    parts = [obj]
 
-    # Nostrils: small dark dimples on the underside of the bulb.
+    # Nostrils: shallow dark dimples tucked under the alar wings.
+    half = nose_half_width(st)
     for sign in (-1.0, 1.0):
-        cx = sign * (st.nose_w * 0.22 + 0.010)
-        cz = tip_z - 0.012
-        centre = Vector((cx, tip_front - st.nose_len * 0.34, cz))
-        radius = 0.0060
+        cx = sign * 0.42 * half
+        cz = NOSE_ROOT_Z - 0.965 * NOSE_SPAN
+        front = nose_front_y(surface, st, cx, cz)
+        centre = Vector((cx, front + 0.004, cz))
+        radius = 0.0055
         nv = [
-            centre + Vector((0.0, 0.0, radius * 0.8)),
-            centre + Vector((-radius, -0.004, 0.0)),
-            centre + Vector((0.0, -0.008, 0.0)),
-            centre + Vector((radius, -0.004, 0.0)),
-            centre + Vector((0.0, 0.005, 0.0)),
-            centre + Vector((0.0, 0.0, -radius * 0.5)),
+            centre + Vector((0.0, 0.0, radius * 0.55)),
+            centre + Vector((-radius, 0.0035, 0.0)),
+            centre + Vector((0.0, 0.0060, -0.0010)),
+            centre + Vector((radius, 0.0035, 0.0)),
+            centre + Vector((0.0, -0.0030, 0.0)),
+            centre + Vector((0.0, 0.0010, -radius * 0.45)),
         ]
-        nf = [
-            (0, 1, 2), (0, 2, 3),
-            (5, 2, 1), (5, 3, 2),
-            (4, 1, 0), (4, 3, 1), (4, 0, 3),
-        ]
+        nf = [(0, 1, 4), (0, 4, 3), (5, 2, 1), (5, 3, 2), (1, 2, 4), (3, 4, 2)]
         parts.append(new_object("Nostril", nv, nf, materials["Nose"]))
         recalc_normals(parts[-1])
     return parts
 
 
-def build_mouth(surface: Surface, st: Style, material):
+
+
+def build_mouth(surface, st, material):
     stations = []
-    count = 14
+    count = 18
     for step in range(count + 1):
         t = step / count
         x = lerp(-st.mouth_hw, st.mouth_hw, t)
-        lift = 0.016 * (2.0 * t - 1.0) ** 2
-        z = st.mouth_cz + lift
-        point = surface.front_point(x, z) + Vector((0.0, -0.005, 0.0))
-        height = (0.0060 + 0.0045 * st.mouth_full) * (
-            0.35 + 0.85 * math.sin(math.pi * clamp(0.06 + 0.94 * (1.0 - abs(2 * t - 1)) ** 0.7))
-        )
+        u = 2.0 * t - 1.0
+        z = st.mouth_cz + 0.012 * u * u
+        point = surface.front_point(x, z) + Vector((0.0, -0.0032, 0.0))
+        taper = math.sin(math.pi * clamp(0.05 + 0.92 * (1.0 - abs(u) ** 1.5))) ** 0.55
+        height = (0.0055 + 0.0075 * st.mouth_full) * (0.22 + 0.90 * taper)
         stations.append(
             (point + Vector((0.0, 0.0, height)), point + Vector((0.0, 0.0, -height)))
         )
     return ribbon(stations, material, "Mouth")
+
+
+
+
+def build_lower_lip(surface, st, material):
+    """Soft pad under the mouth line so the lip has volume from every angle."""
+    rows, cols = 5, 13
+    verts = []
+    for row in range(rows):
+        t = row / (rows - 1)
+        z = lerp(st.mouth_cz - 0.008, st.mouth_cz - 0.034, t)
+        halo = math.sin(math.pi * clamp(0.10 + 0.90 * t)) ** 0.6
+        half = st.mouth_hw * (0.30 + 0.68 * halo)
+        for col in range(cols):
+            x = lerp(-half, half, col / (cols - 1))
+            base = surface.front_y(x, z, fallback=-0.44)
+            depth = 0.0055 * halo * (1.0 - (abs(x) / max(half, 1e-6)) ** 2.2)
+            verts.append(Vector((x, base + 0.0010 - depth, z)))
+    obj = new_object("LowerLip", verts, grid_faces(rows, cols), material)
+    recalc_normals(obj)
+    return obj
+
+
 
 
 # ----------------------------------------------------------------- glasses
@@ -881,77 +934,88 @@ def rounded_rect_path(cx: float, cz: float, hw: float, hh: float, radius: float,
     return points
 
 
-def build_glasses(surface: Surface, st: Style, material):
+
+
+def build_glasses(surface, st, material):
+    """Wire frames that sit on the face: rims track the cheek, temples the skull."""
     if not st.glasses:
         return []
     cx = st.eye_cx
     cz = st.eye_cz
     flat = st.glasses_style in ("rectangular", "square", "half-rim")
-    lens_hw = st.eye_hw * (1.62 if flat else 1.35) + (0.014 if flat else 0.004)
-    lens_hh = st.eye_hh * (1.58 if flat else 1.55) + (0.006 if flat else 0.0)
-    radius = 0.018 if flat else lens_hh * 0.72
-    rim_r = 0.0026 + 0.0036 * st.frame_t
+    lens_hw = st.eye_hw * (1.85 if flat else 1.30) + (0.020 if flat else 0.006)
+    lens_hh = st.eye_hh * (1.52 if flat else 1.50) + (0.010 if flat else 0.0)
+    radius = 0.020 if flat else lens_hh * 0.72
+    rim_r = 0.0046 + 0.0050 * st.frame_t
+    plane_y = surface.front_y(cx, cz) - 0.030
+
+    def frame_y(px: float, pz: float) -> float:
+        face = surface.front_y(px, pz, fallback=plane_y + 0.02)
+        # Follow the cheek for most of the offset, but keep a lens-like plane.
+        return face - 0.011 - 0.18 * (face - plane_y)
 
     objects = []
-    plane_y = surface.front_y(cx, cz) - (0.010 + lens_hh * 0.06)
     for sign in (-1.0, 1.0):
         center_x = sign * cx
-        path_points = rounded_rect_path(center_x, cz, lens_hw, lens_hh, radius, 32)
         path = []
-        for px, pz, corner in path_points:
-            # Frame recedes at its outer edge so it follows the cheek.
-            curve = ((px - center_x) / max(lens_hw, 1e-6)) ** 2 * 0.016
-            path.append(Vector((px, plane_y + curve, pz)))
+        for px, pz, _corner in rounded_rect_path(center_x, cz, lens_hw, lens_hh, radius, 40):
+            path.append(Vector((px, frame_y(px, pz), pz)))
         path.append(path[0])
-        top_side = (1.25 if flat else 1.10)
 
-        def radius_of(index, point, center_x=center_x, top_side=top_side, cz=cz):
-            return rim_r * (top_side if point.z > cz else 1.0)
+        def radius_of(index, point, cz=cz):
+            return rim_r * (1.15 if point.z > cz else 1.0)
 
         objects.append(tube(path, radius_of, material, "GlassesRim", sides=4))
-    # Bridge
+
+    # Bridge: arcs over the nose root and meets both rims.
+    bridge_z = cz + lens_hh * 0.52
     bridge = []
-    for step in range(7):
-        t = step / 6
-        x = lerp(-st.eye_hw * 0.42, st.eye_hw * 0.42, t)
-        z = cz + lens_hh * 0.52 + 0.014 * math.sin(math.pi * t)
-        bridge.append(Vector((x, plane_y + 0.004, z)))
+    for step in range(9):
+        t = step / 8
+        x = lerp(-(cx - lens_hw * 0.94), cx - lens_hw * 0.94, t)
+        z = bridge_z + 0.009 * math.sin(math.pi * t)
+        face = surface.front_y(x, z, fallback=plane_y)
+        nose = nose_front_y(surface, st, x, z)
+        y = min(face - 0.006, nose - 0.005)
+        bridge.append(Vector((x, y, z)))
     objects.append(tube(bridge, lambda _i, _p: rim_r * 0.85, material, "GlassesBridge", sides=4))
 
-    # Temples: from the outer corner back to the ear.
+    # Temples: wrap from the outer corner around the cheek to the ear.
     for sign in (-1.0, 1.0):
-        ear_x = 0.442 * sign
-        outer_x = sign * (cx + lens_hw)
-        path = [
-            Vector((outer_x, plane_y + 0.010, cz + lens_hh * 0.30)),
-            Vector((outer_x + 0.028 * sign, plane_y + 0.075, cz + lens_hh * 0.22)),
-            Vector((lerp(outer_x, ear_x, 0.55), plane_y + 0.180, cz + lens_hh * 0.10)),
-            Vector((ear_x, -0.008, cz + 0.010)),
-        ]
-        dense = []
-        for index in range(9):
-            t = index / 8
-            # Catmull-ish blend of the four control points
-            p = (
-                path[0] * ((1 - t) ** 3)
-                + path[1] * (3 * (1 - t) ** 2 * t)
-                + path[2] * (3 * (1 - t) * t * t)
-                + path[3] * (t**3)
+        corner_z = cz + lens_hh * 0.18
+        corner = Vector((sign * (cx + lens_hw + 0.004), frame_y(sign * (cx + lens_hw), corner_z), corner_z))
+        path = [corner]
+        steps = 8
+        for index in range(1, steps + 1):
+            t = index / steps
+            y = lerp(corner.y + 0.010, -0.026, t)
+            z = lerp(corner_z, cz + 0.014, t)
+            hit, _normal = surface.cast(
+                Vector((sign * 1.3, y, z)), Vector((-sign, 0.0, 0.0))
             )
-            dense.append(p)
-        objects.append(tube(dense, lambda _i, _p: rim_r * 0.72, material, "GlassesTemple", sides=4))
+            side = abs(hit.x) + 0.006 if hit is not None else 0.53
+            x = sign * max(side, abs(corner.x) + 0.002)
+            path.append(Vector((x, y, z)))
+        objects.append(tube(path, lambda _i, _p: rim_r * 0.80, material, "GlassesTemple", sides=4))
 
-    # Nose pads: short arms from the bridge back to the nose.
+    # Nose pads: short arms from each rim in to the side of the nose.
     for sign in (-1.0, 1.0):
-        x = sign * st.eye_hw * 0.55
-        z = cz + lens_hh * 0.20
-        inner = Vector((x, plane_y + 0.002, z))
-        surface_y = surface.front_y(sign * 0.030, z, fallback=plane_y)
-        outer = Vector((sign * 0.028, surface_y + 0.004, z))
+        x = sign * (cx - lens_hw * 0.88)
+        z = cz + lens_hh * 0.26
+        inner = Vector((x, frame_y(x, z), z))
+        outer_y = nose_front_y(surface, st, sign * 0.024, z) - 0.002
         objects.append(
-            tube([inner, outer], lambda _i, _p: rim_r * 0.55, material, "GlassesPad", sides=4)
+            tube(
+                [inner, Vector((sign * 0.042, outer_y, z + 0.006))],
+                lambda _i, _p: rim_r * 0.55,
+                material,
+                "GlassesPad",
+                sides=4,
+            )
         )
     return objects
+
+
 
 
 # ------------------------------------------------------------------- build
@@ -962,13 +1026,22 @@ def build(params: dict, base_path: Path):
     objects = head_kit.import_base_head(base_path)
     materials = head_kit.assign_materials()
     head_kit.apply_palette(materials, params)
+    # The imported ear meshes keep their own lighter skin slot; the palette
+    # skin has to win or they read as plastic tabs.
+    for name in ("Ear_L", "Ear_R", "EarInner_L", "EarInner_R"):
+        ear = objects.get(name)
+        if ear is not None and ear.data.materials:
+            ear.data.materials[0] = materials["Skin"]
     st = Style(params)
 
     # Recolour the imported eye material to a warm iris tone.
     head_kit.set_color(materials["Eye"], (0.235, 0.150, 0.105))
     materials["EyeWhite"] = head_kit.colored_material("EyeWhite", (0.945, 0.925, 0.890))
+    for node in materials["Hair"].node_tree.nodes:
+        if node.type == "BSDF_PRINCIPLED":
+            node.inputs["Roughness"].default_value = 0.95
     if "Mouth" in materials:
-        head_kit.set_color(materials["Mouth"], (0.255, 0.135, 0.125))
+        head_kit.set_color(materials["Mouth"], (0.340, 0.180, 0.158))
 
     shell = objects["SculptedHead"]
     sculpt_shell(shell, st)
@@ -984,9 +1057,9 @@ def build(params: dict, base_path: Path):
         center /= len(ear.data.vertices)
         sign = -1.0 if center.x < 0 else 1.0
         ear.data.transform(
-            Matrix.Translation(Vector((sign * 0.020, 0.030, -0.026)))
+            Matrix.Translation(Vector((sign * 0.010, 0.014, -0.010)))
             @ Matrix.Translation(center)
-            @ Matrix.Scale(1.12, 4)
+            @ Matrix.Scale(1.02, 4)
             @ Matrix.Translation(-center)
         )
         ear.data.update()
@@ -1007,6 +1080,7 @@ def build(params: dict, base_path: Path):
         extras.append(build_brow(surface, st, sign, materials["Brow"]))
     extras.extend(build_nose(surface, st, materials))
     extras.append(build_mouth(surface, st, materials["Mouth"]))
+    extras.append(build_lower_lip(surface, st, materials["Skin"]))
     extras.extend(build_glasses(surface, st, materials["Glasses"]))
 
     # Decimation happens before joining so the nose and brows keep their shape.
@@ -1014,11 +1088,13 @@ def build(params: dict, base_path: Path):
         if obj is shell:
             continue
         head_kit.decimate(obj, 0.16 if name.startswith("Ear") else 0.60)
-    head_kit.decimate(hair, 0.90)
+    if hair is not None:
+        head_kit.decimate(hair, 0.90)
     for obj in extras:
         head_kit.decimate(obj, 0.65)
 
     kit = [obj for obj in objects.values()] + [hair] + extras
+    kit = [obj for obj in kit if obj is not None]
     dbg("before decimation", {o.name: head_kit.triangle_count(o) for o in kit})
     kit = [obj for obj in kit if obj.name in bpy.data.objects]
     joined = head_kit.join_by_material(kit)
@@ -1032,6 +1108,8 @@ def build(params: dict, base_path: Path):
 def render_view(path: str, yaw_deg: float) -> None:
     scene = bpy.context.scene
     scene.render.engine = "BLENDER_WORKBENCH"
+    scene.view_settings.view_transform = "Standard"
+    scene.view_settings.look = "None"
     scene.display.shading.light = "STUDIO"
     scene.display.shading.color_type = "MATERIAL"
     scene.display.shading.show_shadows = True

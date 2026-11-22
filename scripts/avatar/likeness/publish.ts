@@ -1,59 +1,13 @@
-import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
-import path from 'node:path';
+import { readFile, writeFile } from 'node:fs/promises';
 import { deriveLoadable, serializeLoadable } from './derive';
+import { syncPublicKits } from './sync-public-kits';
 
 const MANIFEST_PATH = 'data/avatars/likeness/manifest.json';
 const REVIEW_PATH = 'data/avatars/likeness/review.json';
 const LOADABLE_PATH = 'data/avatars/likeness/loadable.json';
-/** Generated kits live outside the published tree until a human approves them. */
-const KIT_DIR = 'data/avatars/likeness/kits';
 const PUBLIC_KIT_DIR = 'public/assets/avatars/likeness';
 
 const check = process.argv.includes('--check');
-
-/**
- * Mirrors approved kits into the served directory and removes everything else,
- * so unapproved likenesses never ship in the static build.
- */
-async function syncPublicKits(kits: { path: string }[], problems: string[]) {
-  await mkdir(PUBLIC_KIT_DIR, { recursive: true });
-  const wanted = new Map(
-    kits.map(
-      (kit) =>
-        [
-          path.basename(kit.path),
-          path.join(KIT_DIR, path.basename(kit.path)),
-        ] as const,
-    ),
-  );
-  const present = (await readdir(PUBLIC_KIT_DIR)).filter((name) =>
-    name.endsWith('.glb'),
-  );
-
-  for (const [name, source] of wanted) {
-    const bytes = await readFile(source).catch(() => null);
-    const target = path.join(PUBLIC_KIT_DIR, name);
-    if (!bytes) {
-      problems.push(`${name}: approved kit is missing from ${KIT_DIR}`);
-      continue;
-    }
-    if (check) {
-      const published = await readFile(target).catch(() => null);
-      if (!published) problems.push(`${name}: approved kit is not published`);
-      else if (!published.equals(bytes))
-        problems.push(`${name}: published bytes differ from the approved kit`);
-    } else {
-      await writeFile(target, bytes);
-    }
-  }
-
-  for (const name of present) {
-    if (wanted.has(name)) continue;
-    if (check)
-      problems.push(`${name}: unapproved kit present in ${PUBLIC_KIT_DIR}`);
-    else await rm(path.join(PUBLIC_KIT_DIR, name));
-  }
-}
 
 async function main() {
   const manifestBytes = await readFile(MANIFEST_PATH);
@@ -62,6 +16,10 @@ async function main() {
   if (errors.length > 0) {
     console.error(`publish: ${errors.length} review problem(s):`);
     for (const error of errors) console.error(`  - ${error}`);
+    // Fail closed: an invalidated approval must not keep its old asset served.
+    const purge: string[] = [];
+    await syncPublicKits([], purge, { check });
+    for (const problem of purge) console.error(`  - ${problem}`);
     process.exit(1);
   }
 
@@ -76,7 +34,7 @@ async function main() {
       );
   }
 
-  await syncPublicKits(loadable.kits, problems);
+  await syncPublicKits(loadable.kits, problems, { check });
 
   if (problems.length > 0) {
     console.error(`publish: ${problems.length} problem(s):`);

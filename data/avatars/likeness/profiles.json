@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "note": "Selects which Blender generator builds a candidate's head kit. 'deform' is the shared import-and-deform kit every appearance used before the sculpting pilot; 'sculpted' builds the head from scratch with parametric facial fields, procedural hair, modelled eyes and glasses. Add an entry only after the appearance record exists in appearances.json.",
+  "profiles": {
+    "mayor-lai-rui-long-2026": "sculpted"
+  }
+}

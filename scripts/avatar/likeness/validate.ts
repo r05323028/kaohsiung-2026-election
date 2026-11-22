@@ -13,6 +13,7 @@ import { officialDataset } from '../../../src/data/official/index';
 import { LIKENESS_BUDGETS } from './budgets';
 import { deriveLoadable, serializeLoadable, sha256 } from './derive';
 import { readGlbStats } from './glb-stats';
+import { parseLikenessProfiles } from './profiles';
 
 const ROOT = process.cwd();
 /** Kits are generated outside the published tree; publish copies approved ones into public/. */
@@ -20,6 +21,7 @@ const KIT_DIR = path.join(ROOT, 'data/avatars/likeness/kits');
 const MANIFEST_PATH = 'data/avatars/likeness/manifest.json';
 const PHOTOS_PATH = 'data/avatars/likeness/photos.json';
 const APPEARANCES_PATH = 'data/avatars/likeness/appearances.json';
+const PROFILES_PATH = 'data/avatars/likeness/profiles.json';
 const REVIEW_PATH = 'data/avatars/likeness/review.json';
 const LOADABLE_PATH = 'data/avatars/likeness/loadable.json';
 const ROSTER_SOURCE = 'data/approved/2026/kaohsiung-election.json';
@@ -130,6 +132,23 @@ async function main() {
   const photosById = new Map(
     photos.photos.map((photo) => [photo.photoId, photo] as const),
   );
+  const profileIds = await readFile(PROFILES_PATH, 'utf8')
+    .then((bytes) =>
+      Object.keys(parseLikenessProfiles(JSON.parse(bytes)).profiles),
+    )
+    .catch((error: unknown) => {
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') return [];
+      throw error;
+    });
+  for (const appearanceId of profileIds) {
+    if (
+      !appearances.appearances.some(
+        (entry) => entry.appearanceId === appearanceId,
+      )
+    )
+      fail(`${PROFILES_PATH}: unknown appearance ${appearanceId}`);
+  }
+
   const appearanceByCandidate = new Map(
     appearances.appearances.map(
       (appearance) => [appearance.candidateId, appearance] as const,

@@ -11,6 +11,7 @@
 - npm run build：validate:all → Astro build → 公開文案檢查。
 - npm run build:astro：只產生靜態輸出；單獨執行 validate:profile-copy 前先執行它。
 - npm run build:pages：部署用 Astro build + 公開文案檢查。
+- LIKENESS_PREVIEW=1 npm run dev 後開 ?likenessPreview=1，可在市景中目視尚未核可的 likeness 頭像：dev-only 路由 /__dev/likeness/ 只讀 data/avatars/likeness/kits，不寫入 review.json 或 loadable.json，production bundle 不含此路由。
 
 ## 驗證分組
 

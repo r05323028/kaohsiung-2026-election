@@ -31,6 +31,13 @@ import { configureSimulation, getActor } from '../world/simulation';
 import { ADMIN_ADJACENCY, ADMIN_SUMMARY_BY_ID } from '../world/summary';
 import CandidateBottomSheet from './CandidateBottomSheet';
 import type { DetailLevel, SceneFocus } from './CityScene';
+import LikenessPreviewPanel from './likeness-preview/LikenessPreviewPanel';
+import {
+  enableLikenessPreview,
+  previewTargetsCandidate,
+  resetLikenessPreview,
+  useLikenessPreview,
+} from './likeness-preview/store';
 
 const CityScene = lazy(() => import('./CityScene'));
 const ProfileTabs = lazy(() => import('./ProfileTabs'));
@@ -161,6 +168,7 @@ export default function CityExplorer({ districts, candidates }: Props) {
   // Overview is the absence of a district selection. Keeping a district slug
   // here would carry a stale constituency into the URL, coverage card, and HUD
   // on every "back to city" transition.
+  const preview = useLikenessPreview();
   const [selectedDistrictSlug, setSelectedDistrictSlug] = useState('');
   const [selectedCandidateSlug, setSelectedCandidateSlug] = useState<
     string | null
@@ -625,6 +633,19 @@ export default function CityExplorer({ districts, candidates }: Props) {
     setViewNonce((value) => value + 1);
   }, []);
 
+  // Development-only: the query parameter 'likenessPreview' unlocks the
+  // unpublished head kit overlay. Production builds drop the whole branch, and
+  // the store itself refuses every mutation outside import.meta.env.DEV.
+  useEffect(() => {
+    if (!import.meta.env.DEV) return undefined;
+    const requested = new URLSearchParams(window.location.search).has(
+      'likenessPreview',
+    );
+    if (!requested) return undefined;
+    void enableLikenessPreview();
+    return () => resetLikenessPreview();
+  }, []);
+
   useEffect(() => {
     Object.assign(window, { __kaohsiungSelectDistrict: selectDistrict });
     return () => {
@@ -714,6 +735,14 @@ export default function CityExplorer({ districts, candidates }: Props) {
       data-testid="city-explorer"
       data-scene-focus={sceneFocus.key}
       data-candidate-scope={candidateVisibilityScope.kind}
+      // Dev-only: lets the preview overlay hide the fixed profile panel, which
+      // would otherwise cover the head being inspected. The attribute is
+      // undefined outside a dev build, so production markup is unchanged.
+      data-likeness-view={
+        import.meta.env.DEV && preview.status === 'ready'
+          ? preview.view
+          : undefined
+      }
       data-candidate-count={visibleCandidates.length}
       data-roster-count={candidates.length}
       data-hydrated={webglSupported === null ? 'false' : 'true'}
@@ -731,6 +760,14 @@ export default function CityExplorer({ districts, candidates }: Props) {
               >
                 <CityScene
                   candidates={candidates}
+                  preview={
+                    preview.status === 'ready' &&
+                    preview.view !== 'city' &&
+                    preview.activeSlug !== null &&
+                    previewTargetsCandidate(preview, selectedCandidateSlug)
+                      ? { slug: preview.activeSlug, view: preview.view }
+                      : null
+                  }
                   detail={detail}
                   focus={sceneFocus}
                   followActorSlug={followActorSlug}
@@ -752,6 +789,11 @@ export default function CityExplorer({ districts, candidates }: Props) {
               <div className="scene-loading city-loading" role="status">
                 正在準備高雄六角迷你城市…
               </div>
+            )}
+            {import.meta.env.DEV && (
+              <LikenessPreviewPanel
+                active={previewTargetsCandidate(preview, selectedCandidateSlug)}
+              />
             )}
           </div>
         ) : webglSupported === false ? (

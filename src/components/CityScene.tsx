@@ -28,6 +28,8 @@ import {
 } from '../world/simulation';
 import ActorLayer from './ActorLayer';
 import HexWorldLayer from './HexWorldLayer';
+import DevLikenessPreviewCamera from './likeness-preview/PreviewCameraRig';
+import type { LikenessPreviewView } from './likeness-preview/store';
 
 export type DetailLevel = 'low' | 'medium' | 'high';
 export type SceneFocus = HexFocus & { key: string };
@@ -46,9 +48,18 @@ type CitySceneProps = {
   onSelectCandidate: (slug: string) => void;
   onSelectAdmin: (id: string | null) => void;
   onHoverAdmin: (id: string | null) => void;
+  /** Development-only unpublished head kit preview; always null in production. */
+  preview?: { slug: string; view: LikenessPreviewView } | null;
   onManualCamera?: () => void;
   onReady?: () => void;
 };
+
+/**
+ * The preview camera zooms far past the city limits because a head is ~0.5
+ * world units tall; these bounds only apply while a preview view is active.
+ */
+const PREVIEW_MIN_ZOOM = 0.01;
+const PREVIEW_MAX_ZOOM = 4000;
 
 /* ------------------------------------------------------------------ */
 /* Camera rig                                                          */
@@ -66,12 +77,15 @@ function CameraRig({
   followActorSlug,
   restoreCameraOnProfileClose,
   onManualCamera,
+  previewActive,
 }: {
   focus: SceneFocus;
   reducedMotion: boolean;
   followActorSlug: string | null;
   restoreCameraOnProfileClose: boolean;
   onManualCamera: (() => void) | undefined;
+  /** A development-only preview view is driving the camera. */
+  previewActive: boolean;
 }) {
   const { camera, size } = useThree();
   const controls = useRef<OrbitControlsImpl | null>(null);
@@ -85,6 +99,7 @@ function CameraRig({
   const manualSinceCandidate = useRef(false);
   const manualDuringCandidate = useRef(false);
   const interactionStart = useRef<CameraView | null>(null);
+  const previewSnapshot = useRef<CameraView | null>(null);
   const focusKey = focus.key;
   const [targetX, targetY, targetZ] = focus.target;
   const [offsetX, offsetY, offsetZ] = focus.offset;
@@ -135,6 +150,36 @@ function CameraRig({
     const node = controls.current;
     if (!node || !controlsReady) return undefined;
     const cam = camera as THREE.OrthographicCamera;
+    if (previewActive) {
+      // The preview rig owns the camera and zoom. Remember the city framing
+      // once, so leaving the preview restores exactly what the user had.
+      if (!previewSnapshot.current) {
+        previewSnapshot.current = {
+          position: cam.position.clone(),
+          target: node.target.clone(),
+          zoom: cam.zoom,
+        };
+      }
+      timeline.current?.kill();
+      timeline.current = null;
+      lastFocusKey.current = focusKey;
+      return undefined;
+    }
+    const snapshot = previewSnapshot.current;
+    if (snapshot) {
+      // Back from a preview: restore and stop. Letting the normal branch run
+      // would derive the city framing from the preview camera's tiny zoom.
+      previewSnapshot.current = null;
+      timeline.current?.kill();
+      timeline.current = null;
+      cam.position.copy(snapshot.position);
+      cam.zoom = snapshot.zoom;
+      cam.updateProjectionMatrix();
+      node.target.copy(snapshot.target);
+      node.update();
+      lastFocusKey.current = focusKey;
+      return undefined;
+    }
     const key = focusKey;
     const candidateFocus = key.startsWith('candidate-');
     const wasCandidate =
@@ -298,11 +343,12 @@ function CameraRig({
     targetY,
     targetZ,
     restoreCameraOnProfileClose,
+    previewActive,
   ]);
 
   useFrame((_, frameDelta) => {
     const node = controls.current;
-    if (!node) return;
+    if (!node || previewActive) return;
     if (!manualSinceCandidate.current && followSlugRef.current) {
       if (!timeline.current?.isActive()) {
         const actor = getActor(followSlugRef.current);
@@ -352,6 +398,7 @@ function CameraRig({
         if (node) setControlsReady(true);
       }}
       makeDefault
+      enabled={!previewActive}
       enableDamping
       dampingFactor={0.1}
       enableRotate={false}
@@ -368,8 +415,8 @@ function CameraRig({
       }}
       zoomToCursor
       panSpeed={0.9}
-      minZoom={3.2}
-      maxZoom={760}
+      minZoom={previewActive ? PREVIEW_MIN_ZOOM : 3.2}
+      maxZoom={previewActive ? PREVIEW_MAX_ZOOM : 760}
       minPolarAngle={0.32}
       maxPolarAngle={Math.PI / 2.25}
     />
@@ -479,8 +526,10 @@ function CityWorld({
   onSelectAdmin,
   onHoverAdmin,
   onManualCamera,
+  preview,
 }: Omit<CitySceneProps, 'onReady'>) {
   const { camera, controls } = useThree();
+  const previewActive = Boolean(preview && preview.view !== 'city');
   useEffect(() => {
     selectActor(selectedCandidateSlug);
     followActor(followActorSlug);
@@ -568,12 +617,16 @@ function CityWorld({
       />
 
       <CameraRig
+        previewActive={previewActive}
         focus={focus}
         followActorSlug={followActorSlug}
         reducedMotion={reducedMotion}
         restoreCameraOnProfileClose={restoreCameraOnProfileClose}
         onManualCamera={onManualCamera}
       />
+      {preview && preview.view !== 'city' && (
+        <DevLikenessPreviewCamera view={preview.view} slug={preview.slug} />
+      )}
       <StaticShadowMap />
       <SceneDiagnostics />
 
@@ -589,6 +642,7 @@ function CityWorld({
       <Suspense fallback={null}>
         <ActorLayer
           candidates={candidates}
+          pinnedActorSlug={preview?.slug ?? null}
           focus={focus}
           reducedMotion={reducedMotion}
           selectedCandidateSlug={selectedCandidateSlug}

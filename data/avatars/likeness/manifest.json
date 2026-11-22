@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "pipelineVersion": "likeness-1",
-  "generatedAt": "2026-11-21T12:28:14.132Z",
+  "generatedAt": "2026-11-22T12:03:37.288Z",
   "roster": {
     "source": "data/approved/2026/kaohsiung-election.json",
     "candidateCount": 106,
@@ -1279,18 +1279,18 @@
       "state": "generated",
       "headKit": {
         "path": "/assets/avatars/likeness/lai-rui-long-2026-head.glb",
-        "sha256": "865c0884ded7ee8bab60d60b3baa9182f4ae3c5e36a1087b3bb672ef338b0560",
-        "fileSizeBytes": 159540,
+        "sha256": "143094cea695ad4bc6cf9909998ff6cce57a563207d173501227dd5bc4b25774",
+        "fileSizeBytes": 180012,
         "meshCount": 9,
         "materialCount": 9,
-        "triangleCount": 7060,
+        "triangleCount": 7890,
         "bounds": {
-          "minX": -0.6072825789451599,
-          "maxX": 0.6083390712738037,
+          "minX": -0.5900529026985168,
+          "maxX": 0.5895969271659851,
           "minY": -0.14504599571228027,
-          "maxY": 1.082668423652649,
-          "minZ": -0.4608291983604431,
-          "maxZ": 0.5205855965614319
+          "maxY": 1.0610076189041138,
+          "minZ": -0.4606516659259796,
+          "maxZ": 0.49874448776245117
         },
         "generator": "Khronos glTF Blender I/O v5.3.43",
         "blenderVersion": "5.3.0"

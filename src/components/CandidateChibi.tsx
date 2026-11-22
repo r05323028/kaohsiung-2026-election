@@ -9,6 +9,7 @@ import CandidateHeadKit from './CandidateHeadKit';
 import { buildCandidateModel } from './candidate-geometry';
 import { CANDIDATE_MODEL } from './candidate-model';
 import { characterStyle } from './character-style';
+import HeadKitBoundary from './HeadKitBoundary';
 
 useGLTF.preload(withBase(CANDIDATE_MODEL.basePath));
 
@@ -159,11 +160,13 @@ export default function CandidateChibi({
       <primitive object={model.root} />
       {headKit && model.pivots.head ? (
         <Suspense fallback={null}>
-          <CandidateHeadKit
-            head={model.pivots.head}
-            path={headKit.path}
-            skinMeshes={skinMeshes}
-          />
+          <HeadKitBoundary key={headKit.path}>
+            <CandidateHeadKit
+              head={model.pivots.head}
+              path={headKit.path}
+              skinMeshes={skinMeshes}
+            />
+          </HeadKitBoundary>
         </Suspense>
       ) : null}
     </group>

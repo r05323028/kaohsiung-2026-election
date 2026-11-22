@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "pipelineVersion": "likeness-1",
-  "generatedAt": "2026-11-19T13:58:48.126Z",
+  "generatedAt": "2026-11-21T12:28:14.132Z",
   "roster": {
     "source": "data/approved/2026/kaohsiung-election.json",
     "candidateCount": 106,
@@ -1276,8 +1276,25 @@
       "photoIdentityConfidence": "source-linked",
       "appearanceId": "mayor-lai-rui-long-2026",
       "appearanceSha256": "3e76877a278b73307ba8a2eeacad6ec93f5a7105185e104e5015de9b2a5d4302",
-      "state": "extracted",
-      "headKit": null,
+      "state": "generated",
+      "headKit": {
+        "path": "/assets/avatars/likeness/lai-rui-long-2026-head.glb",
+        "sha256": "865c0884ded7ee8bab60d60b3baa9182f4ae3c5e36a1087b3bb672ef338b0560",
+        "fileSizeBytes": 159540,
+        "meshCount": 9,
+        "materialCount": 9,
+        "triangleCount": 7060,
+        "bounds": {
+          "minX": -0.6072825789451599,
+          "maxX": 0.6083390712738037,
+          "minY": -0.14504599571228027,
+          "maxY": 1.082668423652649,
+          "minZ": -0.4608291983604431,
+          "maxZ": 0.5205855965614319
+        },
+        "generator": "Khronos glTF Blender I/O v5.3.43",
+        "blenderVersion": "5.3.0"
+      },
       "blockedReason": null
     },
     {

@@ -17,6 +17,12 @@ import { officialDataset } from '../../../src/data/official/index';
 import { LIKENESS_BUDGETS } from './budgets';
 import { readGlbStats } from './glb-stats';
 import { headKitParamsFor } from './params';
+import {
+  HEAD_SCRIPTS,
+  type HeadProfile,
+  parseLikenessProfiles,
+  profileFor,
+} from './profiles';
 
 const run = promisify(execFile);
 
@@ -24,6 +30,7 @@ const ROOT = process.cwd();
 const ROSTER_SOURCE = 'data/approved/2026/kaohsiung-election.json';
 const PHOTOS_PATH = 'data/avatars/likeness/photos.json';
 const APPEARANCES_PATH = 'data/avatars/likeness/appearances.json';
+const PROFILES_PATH = 'data/avatars/likeness/profiles.json';
 const MANIFEST_PATH = 'data/avatars/likeness/manifest.json';
 /** Kits stay out of the published tree until publish copies approved ones in. */
 const OUT_DIR = 'data/avatars/likeness/kits';
@@ -31,7 +38,6 @@ const PARAMS_DIR = 'tmp/avatar-pipeline/params';
 const RENDER_DIR = '.cache/reports/avatar/heads';
 const PIPELINE_VERSION = 'likeness-1';
 const BLENDER = process.env.BLENDER_BIN ?? 'blender';
-const HEAD_SCRIPT = 'scripts/avatar/blender/head_kit.py';
 const VIEWS = 'front,three-quarter';
 
 type Options = {
@@ -138,6 +144,7 @@ async function runBlender(
   appearance: LikenessAppearance,
   slug: string,
   options: Options,
+  profile: HeadProfile,
 ) {
   const params = headKitParamsFor(appearance);
   const paramsPath = path.join(PARAMS_DIR, `${slug}.json`);
@@ -150,7 +157,7 @@ async function runBlender(
     '-b',
     '--factory-startup',
     '-P',
-    HEAD_SCRIPT,
+    HEAD_SCRIPTS[profile],
     '--',
     '--params',
     paramsPath,
@@ -166,17 +173,27 @@ async function runBlender(
       VIEWS,
     );
   }
+  let output = '';
   try {
-    await run(BLENDER, args, {
+    const result = await run(BLENDER, args, {
       cwd: ROOT,
       timeout: 180_000,
       maxBuffer: 8 * 1024 * 1024,
     });
+    output = `${result.stdout}\n${result.stderr}`;
   } catch (error) {
     const detail = error instanceof Error ? error.message : String(error);
-    throw new Error(`${slug}: blender failed (${BLENDER}): ${detail}`);
+    throw new Error(
+      `${slug}: blender failed (${BLENDER} ${HEAD_SCRIPTS[profile]}): ${detail}`,
+    );
   }
-  return glbPath;
+  // Record the Blender that actually wrote the bytes; Blender prints its own
+  // version banner on every run, so this needs no manual bookkeeping.
+  const banner = /Blender\s+(\d+\.\d+\.\d+)/u.exec(output);
+  return {
+    glbPath,
+    blenderVersion: banner?.[1] ?? process.env.BLENDER_VERSION ?? 'unknown',
+  };
 }
 
 type IdentityConfidence = LikenessPhoto['identityConfidence'];
@@ -202,6 +219,17 @@ export function worstConfidence(
   return worst;
 }
 
+/** `--skip-blender` keeps whatever version the previous run recorded. */
+function previousBlenderVersion(
+  manifest: LikenessManifest | null,
+  candidateId: string,
+) {
+  const existing = manifest?.candidates.find(
+    (entry) => entry.candidateId === candidateId,
+  );
+  return existing?.headKit?.blenderVersion ?? 'unknown';
+}
+
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const photosFile = parseLikenessPhotos(
@@ -210,6 +238,13 @@ async function main() {
   const appearances = parseLikenessAppearances(
     JSON.parse(await readFile(APPEARANCES_PATH, 'utf8')),
   ).appearances;
+
+  const profiles = await readFile(PROFILES_PATH, 'utf8')
+    .then((bytes) => parseLikenessProfiles(JSON.parse(bytes)))
+    .catch((error: unknown) => {
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null;
+      throw error;
+    });
 
   const roster = officialDataset.candidates;
   const rosterById = new Map(
@@ -247,6 +282,10 @@ async function main() {
     appearancesByCandidate.set(appearance.candidateId, appearance);
   }
 
+  const previousManifest = await readFile(MANIFEST_PATH, 'utf8')
+    .then((bytes) => parseLikenessManifest(JSON.parse(bytes)))
+    .catch(() => null);
+
   const generated = new Map<string, LikenessDisposition['headKit']>();
   const generatedFiles = new Set<string>();
 
@@ -257,9 +296,17 @@ async function main() {
     const candidate = rosterById.get(candidateId);
     if (!candidate) throw new Error(`${candidateId}: missing from roster`);
     if (options.manifestOnly) continue;
-    const glbPath = options.skipBlender
-      ? path.join(OUT_DIR, `${candidate.slug}-head.glb`)
-      : await runBlender(appearance, candidate.slug, options);
+    const profile = profileFor(profiles, appearance.appearanceId);
+    const built = options.skipBlender
+      ? {
+          glbPath: path.join(OUT_DIR, `${candidate.slug}-head.glb`),
+          blenderVersion: previousBlenderVersion(
+            previousManifest,
+            appearance.candidateId,
+          ),
+        }
+      : await runBlender(appearance, candidate.slug, options, profile);
+    const glbPath = built.glbPath;
     const { stats } = await readGlbStats(glbPath);
     assertBudgets(stats, candidate.slug);
     generated.set(candidateId, {
@@ -278,11 +325,11 @@ async function main() {
         maxZ: stats.bounds.maxZ,
       },
       generator: stats.generator,
-      blenderVersion: process.env.BLENDER_VERSION ?? '4.5',
+      blenderVersion: built.blenderVersion,
     });
     generatedFiles.add(candidate.slug);
     console.log(
-      `generated ${candidate.slug} (${stats.triangleCount} tris, ${(stats.fileSizeBytes / 1024).toFixed(1)} KB)`,
+      `generated ${candidate.slug} via ${profile} (${stats.triangleCount} tris, ${(stats.fileSizeBytes / 1024).toFixed(1)} KB)`,
     );
   }
 

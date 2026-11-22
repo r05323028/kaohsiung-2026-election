@@ -50,19 +50,22 @@
 | --- | --- | --- |
 | 照片研究 | `scripts/avatar/photos/` | `data/avatars/likeness/photos.json`：URL、作者、授權、擷取日、身分連結方式、可用性 |
 | 臉部量測 | `scripts/avatar/face/extract.py`（MediaPipe FaceLandmarker） | `appearances.json`：每個參數帶 `basis`（observed／estimated／default）與引用 photoId |
-| 幾何生成 | `scripts/avatar/blender/head_kit.py`、`scripts/avatar/likeness/generate.ts` | 匯入 base 模型頭部載體後變形，輸出 HeadPivot 局部座標的 GLB 至 `data/avatars/likeness/kits/`（不在公開目錄） |
+| 幾何生成 | `scripts/avatar/blender/{head_kit,head_sculpt}.py`、`scripts/avatar/likeness/generate.ts` | 依 `data/avatars/likeness/profiles.json` 選生成器，輸出 HeadPivot 局部座標的 GLB 至 `data/avatars/likeness/kits/`（不在公開目錄） |
 | 批次與 Manifest | `scripts/avatar/likeness/generate.ts` | `data/avatars/likeness/manifest.json`：106 筆 disposition |
 | 發布條件 | `scripts/avatar/likeness/{derive,publish,validate}.ts` | `review.json`（人工）→ `loadable.json` ＋複製已核准 GLB 到 `public/assets/avatars/likeness/`（執行期唯一入口） |
 
 - 生成契約：決定性（相同參數 → 相同位元組）、不連網、無貼圖／骨架／動畫、每個網格一個材質（8–10 draw calls）。預算：2,000–14,000 三角形、6–40 網格、4–16 材質、40–400 KB，bounds 檢查以 HeadPivot 局部座標（下巴 y≈0、前方 +Z）為準。
 - 變形範圍：臉長／寬、下巴與下顎、頰、眼距與眼型、眉、鼻、嘴、髮量與髮長（bob／及肩／長直髮以 base 髮殼延伸；bun／ponytail 為附加幾何）、眼鏡（rectangular／square／round／half-rim）、鬍鬚元件（目前無已證實的鬍鬚案例）。眼、眉、鼻、嘴以剛體縮放與位移，不動 base 的雕塑拓撲。
+- 生成 profile：`data/avatars/likeness/profiles.json` 是唯一的生成器選擇依據（`deform` → `head_kit.py`、`sculpted` → `head_sculpt.py`，未登錄者一律 `deform`）。放在獨立檔案而非外觀欄位，因為 `scripts/avatar/face/extract.py` 會整份重寫 `appearances.json`；`scripts/avatar/likeness/validate.ts` 會拒絕指向不存在外觀的 profile。
+- 雕塑式頭部（`sculpted`）：`scripts/avatar/blender/head_sculpt.py` 不變形 base 的五官，而是匯入 base 只取頭骨載體後重建——以對稱高斯場雕塑下顎、下巴、顴骨、下顎角、眼窩、眉骨、太陽穴、法令與前額斜率；眼睛是貼合表面的極座標杏仁片＋虹膜穹頂＋高光＋上眼瞼線；鼻、眉、嘴為放樣帶狀幾何；頭髮是依頭骨半徑參數化的 72×13 程序化髮殼（9–60 mm 厚度、髮際線查找表、分線、瀏海重量、內側裙邊封住開口），眼鏡是以圓角矩形路徑掃出的鏡框、鏡腳與鼻墊。所有形狀由外觀參數與 `faceShape` 決定，無貼圖、無 `Math.random`、無隨機種子。
+- 換人做法：①`avatars:likeness:extract` 產生外觀；②在 `profiles.json` 加一筆 `"<appearanceId>": "sculpted"`；③`avatars:likeness:generate -- --candidate <candidateId> --render` 產生 GLB 與 `.cache/reports/avatar/heads/` 對照圖；④`avatars:likeness:publish` → `avatars:likeness:validate`；⑤由具名人工在 `review.json` 寫入 decision（agent 不得代寫）。新增臉型或髮型只需擴充腳本內的欄位與查找表，模板與參數同檔。
 - 發布邊界：未核准的 GLB 只存在 `data/`，不會進 `public/` 或 `dist/`；`publish` 會同步公開目錄並刪除不在核准清單內的檔案，`--check` 驗證位元相同。
 - 身分與審查：`photoIdentityConfidence` 只表示「照片是該候選人條目或官方名冊的代表圖」，不代表人臉比對成功。`review.json` 由人撰寫，每筆決定以 `appearanceSha256` 與 `headKitSha256` 釘住受審版本；重新生成或重新擷取後核准自動作廢。未核准者一律回退共用 base 頭像。
 - 狀態語意：`generated`（有頭像與外觀）、`extracted`（有外觀、無頭像）、`research-pending`、`blocked-no-photo`、`blocked-license`。缺照片不是「沒有特徵」，只是沒有可用證據。
 - 指令：`avatars:likeness:extract`（venv Python）→ `avatars:likeness:generate --all`（或 `--candidate <id>` 可重複、`--render` 產生 `.cache/reports/avatar/heads/`）→ `avatars:likeness:publish`（`--check` 只驗證）→ `avatars:likeness:validate`（已納入 `validate:all`）。
 - 現況（2026-11-16）：106 位候選人中 12 位有授權且可由來源連結的照片；5 位完成頭像（柯志恩、賴瑞隆、張博洋、陳美雅、黃文志）作為 POC，7 位僅完成外觀擷取，其餘 94 位 `blocked-no-photo`。尚無人工核准，`loadable.json` 為空，公開站仍使用共用 base 頭像。
-- 效能：單一頭像 12,242–12,910 三角形、8–9 網格、224–255 KB，對照 base 頭部 19 網格／33,196 三角形；頭像只在 detail LOD 的角色掛載，`useGLTF` 快取共用，瀏覽器端不做任何推論。
-- 限制：沒有採用 image-to-3D（TRELLIS 等需 GPU 與額外權重授權審查，且輸出拓撲不利動畫）；髮型庫以 base 髮殼的輪廓為上限，長髮以延伸髮片表示，不是獨立雕塑；相似度仍是風格化近似，必須人工審查。
+- 效能：變形頭像 12,242–12,910 三角形、8–9 網格、224–255 KB；雕塑式試點（賴瑞隆）7,060 三角形、9 網格、9 材質、156 KB，明細見 manifest，對照 base 頭部 19 網格／33,196 三角形；頭像只在 detail LOD 的角色掛載，`useGLTF` 快取共用，瀏覽器端不做任何推論。
+- 限制：licensed 參考照只有正面一張（`photos.json` 的 `commons-lai-rui-long`，Wikimedia Commons，作者立法院，GWOIA 姓名標示、允許改作但須標示），沒有側面或三分之四視角，因此幾何推導以正面比例為主，側面深度是風格化估計；正面照片只能證明「這是官方名冊上的代表圖」，不等於人臉比對。髮絲是連續髮殼而非獨立髮束。沒有採用 image-to-3D（TRELLIS 等需 GPU 與額外權重授權審查，且輸出拓撲不利動畫）；髮型庫以 base 髮殼的輪廓為上限，長髮以延伸髮片表示，不是獨立雕塑；相似度仍是風格化近似，必須人工審查。
 
 ## 設計與無障礙
 

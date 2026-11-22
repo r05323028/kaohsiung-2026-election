@@ -1,4 +1,5 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+import { readFile, rename, rm, writeFile } from 'node:fs/promises';
 import { deriveLoadable, serializeLoadable } from './derive';
 import { syncPublicKits } from './sync-public-kits';
 
@@ -6,6 +7,18 @@ const MANIFEST_PATH = 'data/avatars/likeness/manifest.json';
 const REVIEW_PATH = 'data/avatars/likeness/review.json';
 const LOADABLE_PATH = 'data/avatars/likeness/loadable.json';
 const PUBLIC_KIT_DIR = 'public/assets/avatars/likeness';
+
+/** Same temp-then-rename rule as the GLBs: never expose a truncated manifest. */
+async function writeAtomic(target: string, contents: string) {
+  const temp = `${target}.tmp-${randomUUID()}`;
+  try {
+    await writeFile(temp, contents, 'utf8');
+    await rename(temp, target);
+  } catch (error) {
+    await rm(temp, { force: true });
+    throw error;
+  }
+}
 
 const check = process.argv.includes('--check');
 
@@ -52,7 +65,10 @@ async function main() {
     return;
   }
 
-  await writeFile(LOADABLE_PATH, serialized, 'utf8');
+  // Kits are mirrored first: `syncPublicKits` has already hashed every source,
+  // so the runtime only reads a kit path that loadable.json advertises once the
+  // exact approved bytes are in place. Both writes are atomic.
+  await writeAtomic(LOADABLE_PATH, serialized);
   console.log(
     `publish: wrote ${LOADABLE_PATH} and ${loadable.kits.length} kit(s) to ${PUBLIC_KIT_DIR}`,
   );

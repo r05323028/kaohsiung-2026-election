@@ -9,7 +9,11 @@ import CandidateHeadKit from './CandidateHeadKit';
 import { buildCandidateModel } from './candidate-geometry';
 import { CANDIDATE_MODEL } from './candidate-model';
 import { characterStyle } from './character-style';
-import HeadKitBoundary from './HeadKitBoundary';
+import {
+  previewHeadKitForSlug,
+  previewWalkForSlug,
+  useLikenessPreview,
+} from './likeness-preview/store';
 
 useGLTF.preload(withBase(CANDIDATE_MODEL.basePath));
 
@@ -40,7 +44,12 @@ export default function CandidateChibi({
   );
   // Only approved kits are listed in loadable.json; everything else keeps the
   // shared base head, so this lookup is the single publication gate at runtime.
-  const headKit = headKitForSlug(candidate.candidacy.slug);
+  // The dev preview store can override it on a dev server only, and it never
+  // mutates loadable.json or the published kit directory.
+  const preview = useLikenessPreview();
+  const slug = candidate.candidacy.slug;
+  const headKit = headKitForSlug(slug) ?? previewHeadKitForSlug(slug, preview);
+  const previewWalk = previewWalkForSlug(slug, preview);
   const skinMeshes = useMemo(() => {
     const meshes: THREE.Object3D[] = [];
     model.root.traverse((node) => {
@@ -69,8 +78,14 @@ export default function CandidateChibi({
   useFrame((state, delta) => {
     const clock = state.clock.getElapsedTime();
     const current = motion.current;
-    const liveWalking = renderMotion?.walking ?? walking;
-    const livePhase = renderMotion?.walkPhase ?? walkPhase;
+    const liveWalking =
+      previewWalk === null
+        ? (renderMotion?.walking ?? walking)
+        : previewWalk === 'walk';
+    // A walk override marches in place, so let the chibi advance its own phase
+    // instead of pinning it to the actor's travelled distance.
+    const livePhase =
+      previewWalk === null ? (renderMotion?.walkPhase ?? walkPhase) : undefined;
     const targetBlend = liveWalking && !reducedMotion ? 1 : 0;
     current.blend = THREE.MathUtils.damp(
       current.blend,
@@ -160,13 +175,11 @@ export default function CandidateChibi({
       <primitive object={model.root} />
       {headKit && model.pivots.head ? (
         <Suspense fallback={null}>
-          <HeadKitBoundary key={headKit.path}>
-            <CandidateHeadKit
-              head={model.pivots.head}
-              path={headKit.path}
-              skinMeshes={skinMeshes}
-            />
-          </HeadKitBoundary>
+          <CandidateHeadKit
+            head={model.pivots.head}
+            path={headKit.path}
+            skinMeshes={skinMeshes}
+          />
         </Suspense>
       ) : null}
     </group>

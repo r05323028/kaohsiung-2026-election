@@ -35,6 +35,11 @@ import { characterStyle } from './character-style';
 type ActorLayerProps = {
   candidates: PublicCandidateCard[];
   selectedCandidateSlug: string | null;
+  /**
+   * Development-only: force a specific actor into the detailed LOD so an
+   * unpublished head kit can be inspected regardless of camera distance.
+   */
+  pinnedActorSlug?: string | null;
   focus: HexFocus;
   visibilityScope: CandidateVisibilityScope;
   reducedMotion: boolean;
@@ -348,6 +353,7 @@ function focusAdminIds(focus: HexFocus): Set<string> {
 export default function ActorLayer({
   candidates,
   selectedCandidateSlug,
+  pinnedActorSlug = null,
   focus,
   visibilityScope,
   reducedMotion,
@@ -454,24 +460,35 @@ export default function ActorLayer({
             );
           })
         : [];
-    const selected = selectedCandidateSlug
-      ? actors.find((actor) => actor.slug === selectedCandidateSlug)
-      : undefined;
-    if (
-      selected &&
-      candidateBySlug.has(selected.slug) &&
-      visibleSlugSet.has(selected.slug) &&
-      !list.includes(selected)
-    ) {
-      list.push(selected);
+    // The selected candidate and the pinned preview actor are always rendered
+    // at full detail, otherwise their name badge or head kit would vanish
+    // behind the distance cap.
+    for (const slug of [selectedCandidateSlug, pinnedActorSlug]) {
+      if (!slug) continue;
+      const forced = actors.find((actor) => actor.slug === slug);
+      // Only the preview pin may sit outside the current visibility scope: the
+      // citywide view lists mayoral candidates, yet a council candidate's kit
+      // must still be inspectable. The pin is set by the dev preview alone.
+      const pinned = slug === pinnedActorSlug && slug !== selectedCandidateSlug;
+      if (
+        forced &&
+        candidateBySlug.has(forced.slug) &&
+        (pinned || visibleSlugSet.has(forced.slug)) &&
+        !list.includes(forced)
+      ) {
+        list.push(forced);
+      }
     }
+    // Forced actors sort ahead of the distance order so the detail budget below
+    // can never drop the candidate sheet's actor or the pinned preview actor.
+    const rank = (actor: WorldActor) =>
+      actor.slug === selectedCandidateSlug
+        ? 0
+        : actor.slug === pinnedActorSlug
+          ? 1
+          : 2;
     return list
-      .sort(
-        (a, b) =>
-          Number(b.slug === selectedCandidateSlug) -
-            Number(a.slug === selectedCandidateSlug) ||
-          distance(a) - distance(b),
-      )
+      .sort((a, b) => rank(a) - rank(b) || distance(a) - distance(b))
       .slice(0, MAX_DETAILED_ACTORS);
   }, [
     actors,
@@ -479,6 +496,7 @@ export default function ActorLayer({
     focus.target,
     focusedAdminIds,
     lod,
+    pinnedActorSlug,
     selectedCandidateSlug,
     showFocusedRegion,
     visibleSlugSet,
@@ -932,6 +950,7 @@ export default function ActorLayer({
         return (
           <group
             key={actor.slug}
+            name={`actor-${actor.slug}`}
             ref={(node) => {
               if (node) avatarRefs.current.set(actor.slug, node);
               else avatarRefs.current.delete(actor.slug);

@@ -1,4 +1,12 @@
-import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import {
+  mkdir,
+  mkdtemp,
+  readdir,
+  readFile,
+  rm,
+  utimes,
+  writeFile,
+} from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
@@ -22,7 +30,6 @@ beforeEach(async () => {
   kitDir = path.join(root, 'kits');
   publicDir = path.join(root, 'public');
   await writeFile(path.join(root, '.keep'), '');
-  const { mkdir } = await import('node:fs/promises');
   await mkdir(kitDir, { recursive: true });
 });
 
@@ -53,7 +60,6 @@ describe('syncPublicKits', () => {
       path.join(kitDir, NAME),
       Buffer.from('edited-after-review'),
     );
-    const { mkdir } = await import('node:fs/promises');
     await mkdir(publicDir, { recursive: true });
     await writeFile(path.join(publicDir, NAME), APPROVED);
 
@@ -66,7 +72,10 @@ describe('syncPublicKits', () => {
     expect(await exists(path.join(publicDir, NAME))).toBe(false);
   });
 
-  it('reports a missing approved kit and never writes it', async () => {
+  it('reports a missing approved kit, never writes it, and drops an old copy', async () => {
+    await mkdir(publicDir, { recursive: true });
+    await writeFile(path.join(publicDir, NAME), APPROVED);
+
     const problems: string[] = [];
     await syncPublicKits([kit], problems, { kitDir, publicDir });
 
@@ -77,7 +86,6 @@ describe('syncPublicKits', () => {
   });
 
   it('removes a published kit that is not in the approved set', async () => {
-    const { mkdir } = await import('node:fs/promises');
     await mkdir(publicDir, { recursive: true });
     await writeFile(path.join(publicDir, 'old-2026-head.glb'), APPROVED);
 
@@ -88,12 +96,77 @@ describe('syncPublicKits', () => {
     expect(await exists(path.join(publicDir, 'old-2026-head.glb'))).toBe(false);
   });
 
+  it('removes every unapproved entry, not only lowercase .glb files', async () => {
+    await mkdir(path.join(publicDir, 'stray-dir'), { recursive: true });
+    await writeFile(path.join(publicDir, 'stray-dir', 'notes.txt'), 'x');
+    await writeFile(path.join(publicDir, 'UPPER.GLB'), APPROVED);
+    await writeFile(path.join(publicDir, 'kit.gltf'), APPROVED);
+    await writeFile(path.join(publicDir, '.DS_Store'), '');
+
+    const problems: string[] = [];
+    await syncPublicKits([], problems, { kitDir, publicDir });
+
+    expect(problems).toEqual([]);
+    expect(await readdir(publicDir)).toEqual([]);
+  });
+
   it('checks without writing in --check mode', async () => {
     await writeFile(path.join(kitDir, NAME), APPROVED);
     const problems: string[] = [];
     await syncPublicKits([kit], problems, { kitDir, publicDir, check: true });
 
     expect(problems).toEqual([`${NAME}: approved kit is not published`]);
-    expect(await exists(path.join(publicDir, NAME))).toBe(false);
+    expect(await exists(publicDir)).toBe(false);
+  });
+
+  it('reports published bytes that drifted, in --check mode', async () => {
+    await writeFile(path.join(kitDir, NAME), APPROVED);
+    await mkdir(publicDir, { recursive: true });
+    await writeFile(path.join(publicDir, NAME), Buffer.from('drifted'));
+
+    const problems: string[] = [];
+    await syncPublicKits([kit], problems, { kitDir, publicDir, check: true });
+
+    expect(problems).toEqual([
+      `${NAME}: published bytes differ from the approved kit`,
+    ]);
+    expect(await readFile(path.join(publicDir, NAME))).toEqual(
+      Buffer.from('drifted'),
+    );
+  });
+
+  it('publishes atomically and leaves no temp file behind', async () => {
+    await writeFile(path.join(kitDir, NAME), APPROVED);
+    const problems: string[] = [];
+    await syncPublicKits([kit], problems, { kitDir, publicDir });
+
+    expect(problems).toEqual([]);
+    expect(await readdir(publicDir)).toEqual([NAME]);
+  });
+
+  it('sweeps a stale temp file from an interrupted write', async () => {
+    await mkdir(publicDir, { recursive: true });
+    const leftover = `${NAME}.tmp-999`;
+    await writeFile(path.join(publicDir, leftover), Buffer.from('half'));
+    const old = new Date(Date.now() - 60 * 60_000);
+    await utimes(path.join(publicDir, leftover), old, old);
+
+    const problems: string[] = [];
+    await syncPublicKits([], problems, { kitDir, publicDir });
+
+    expect(problems).toEqual([]);
+    expect(await exists(path.join(publicDir, leftover))).toBe(false);
+  });
+
+  it('leaves a fresh temp file alone because another publisher may own it', async () => {
+    await mkdir(publicDir, { recursive: true });
+    const inFlight = `${NAME}.tmp-live`;
+    await writeFile(path.join(publicDir, inFlight), Buffer.from('half'));
+
+    const problems: string[] = [];
+    await syncPublicKits([], problems, { kitDir, publicDir });
+
+    expect(problems).toEqual([]);
+    expect(await exists(path.join(publicDir, inFlight))).toBe(true);
   });
 });

@@ -1,6 +1,10 @@
-import { Component, type ReactNode } from 'react';
+import { Component, type ErrorInfo, type ReactNode } from 'react';
 
-type Props = { children: ReactNode };
+type Props = {
+  children: ReactNode;
+  /** Called once per caught error; the parent decides whether to remount. */
+  onError?: (error: unknown, info: ErrorInfo) => void;
+};
 type State = { failed: boolean };
 
 /**
@@ -8,15 +12,21 @@ type State = { failed: boolean };
  * must keep the shared base head instead of losing the whole scene. Letting the
  * rejection reach the scene-wide boundary would latch that boundary and unmount
  * the city for the rest of the session, so it is caught here and rendered as
- * nothing. The rejected URL stays in the loader cache, so recovery from a
- * transient failure needs a reload; key this boundary by kit path so switching
- * candidates starts clean.
+ * nothing.
+ *
+ * Recovery is the parent's job: it can clear the rejected loader cache entry and
+ * remount this boundary with a new key. Key the boundary by kit path and retry
+ * revision so switching candidates always starts clean.
  */
 export default class HeadKitBoundary extends Component<Props, State> {
   override state: State = { failed: false };
 
   static getDerivedStateFromError(): State {
     return { failed: true };
+  }
+
+  override componentDidCatch(error: unknown, info: ErrorInfo) {
+    this.props.onError?.(error, info);
   }
 
   override render() {
